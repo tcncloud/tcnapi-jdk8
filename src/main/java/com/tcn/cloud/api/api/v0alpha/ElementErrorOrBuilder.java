@@ -52,5 +52,5 @@ public interface ElementErrorOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.ElementError.BadFieldTypeOrBuilder getBadFieldTypeOrBuilder();
 
-  public com.tcn.cloud.api.api.v0alpha.ElementError.ReasonCase getReasonCase();
+  com.tcn.cloud.api.api.v0alpha.ElementError.ReasonCase getReasonCase();
 }

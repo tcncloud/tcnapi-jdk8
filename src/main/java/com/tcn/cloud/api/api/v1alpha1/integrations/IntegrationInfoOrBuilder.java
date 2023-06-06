@@ -161,10 +161,11 @@ public interface IntegrationInfoOrBuilder extends
    *
    * <code>map&lt;int32, .api.v1alpha1.integrations.Parameter&gt; group_params = 5 [json_name = "groupParams"];</code>
    */
-
-  com.tcn.cloud.api.api.v1alpha1.integrations.Parameter getGroupParamsOrDefault(
+  /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrations.Parameter getGroupParamsOrDefault(
       int key,
-      com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue);
+      /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue);
   /**
    * <pre>
    * the plugin fields for this integration.
@@ -175,7 +176,6 @@ public interface IntegrationInfoOrBuilder extends
    *
    * <code>map&lt;int32, .api.v1alpha1.integrations.Parameter&gt; group_params = 5 [json_name = "groupParams"];</code>
    */
-
   com.tcn.cloud.api.api.v1alpha1.integrations.Parameter getGroupParamsOrThrow(
       int key);
 }

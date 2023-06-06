@@ -25,82 +25,6 @@ private static final long serialVersionUID = 0L;
     return new GetCampaignCompletionStatusRes();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private GetCampaignCompletionStatusRes(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            broadcastsExist_ = input.readBool();
-            break;
-          }
-          case 16: {
-
-            percentComplete_ = input.readInt32();
-            break;
-          }
-          case 26: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              completionStatus_ = com.google.protobuf.MapField.newMapField(
-                  CompletionStatusDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000001;
-            }
-            com.google.protobuf.MapEntry<java.lang.Long, com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus>
-            completionStatus__ = input.readMessage(
-                CompletionStatusDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            completionStatus_.getMutableMap().put(
-                completionStatus__.getKey(), completionStatus__.getValue());
-            break;
-          }
-          case 32: {
-
-            totalTasks_ = input.readInt32();
-            break;
-          }
-          case 40: {
-
-            totalTasksCompleted_ = input.readInt32();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_GetCampaignCompletionStatusRes_descriptor;
@@ -213,74 +137,6 @@ private static final long serialVersionUID = 0L;
       return new TaskGroupCompletionStatus();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TaskGroupCompletionStatus(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              taskGroupSid_ = input.readInt64();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 24: {
-
-              percentComplete_ = input.readInt32();
-              break;
-            }
-            case 32: {
-
-              totalTasks_ = input.readInt32();
-              break;
-            }
-            case 40: {
-
-              totalTasksCompleted_ = input.readInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_GetCampaignCompletionStatusRes_TaskGroupCompletionStatus_descriptor;
@@ -295,7 +151,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int TASK_GROUP_SID_FIELD_NUMBER = 1;
-    private long taskGroupSid_;
+    private long taskGroupSid_ = 0L;
     /**
      * <pre>
      * id of the running task group.
@@ -310,7 +166,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      * name of the running task group.
@@ -356,7 +213,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int PERCENT_COMPLETE_FIELD_NUMBER = 3;
-    private int percentComplete_;
+    private int percentComplete_ = 0;
     /**
      * <pre>
      * percentage of task completed for the given task group.
@@ -371,7 +228,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int TOTAL_TASKS_FIELD_NUMBER = 4;
-    private int totalTasks_;
+    private int totalTasks_ = 0;
     /**
      * <pre>
      * total tasks for a single task group
@@ -386,7 +243,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int TOTAL_TASKS_COMPLETED_FIELD_NUMBER = 5;
-    private int totalTasksCompleted_;
+    private int totalTasksCompleted_ = 0;
     /**
      * <pre>
      * total tasks completed for a single task group
@@ -417,7 +274,7 @@ private static final long serialVersionUID = 0L;
       if (taskGroupSid_ != 0L) {
         output.writeInt64(1, taskGroupSid_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       if (percentComplete_ != 0) {
@@ -429,7 +286,7 @@ private static final long serialVersionUID = 0L;
       if (totalTasksCompleted_ != 0) {
         output.writeInt32(5, totalTasksCompleted_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -442,7 +299,7 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, taskGroupSid_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       if (percentComplete_ != 0) {
@@ -457,7 +314,7 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(5, totalTasksCompleted_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -482,7 +339,7 @@ private static final long serialVersionUID = 0L;
           != other.getTotalTasks()) return false;
       if (getTotalTasksCompleted()
           != other.getTotalTasksCompleted()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -504,7 +361,7 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getTotalTasks();
       hash = (37 * hash) + TOTAL_TASKS_COMPLETED_FIELD_NUMBER;
       hash = (53 * hash) + getTotalTasksCompleted();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -553,11 +410,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -621,32 +480,23 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         taskGroupSid_ = 0L;
-
         name_ = "";
-
         percentComplete_ = 0;
-
         totalTasks_ = 0;
-
         totalTasksCompleted_ = 0;
-
         return this;
       }
 
@@ -673,13 +523,28 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus buildPartial() {
         com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus result = new com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus(this);
-        result.taskGroupSid_ = taskGroupSid_;
-        result.name_ = name_;
-        result.percentComplete_ = percentComplete_;
-        result.totalTasks_ = totalTasks_;
-        result.totalTasksCompleted_ = totalTasksCompleted_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.taskGroupSid_ = taskGroupSid_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.percentComplete_ = percentComplete_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.totalTasks_ = totalTasks_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.totalTasksCompleted_ = totalTasksCompleted_;
+        }
       }
 
       @java.lang.Override
@@ -731,6 +596,7 @@ private static final long serialVersionUID = 0L;
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.getPercentComplete() != 0) {
@@ -742,7 +608,7 @@ private static final long serialVersionUID = 0L;
         if (other.getTotalTasksCompleted() != 0) {
           setTotalTasksCompleted(other.getTotalTasksCompleted());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -757,19 +623,58 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                taskGroupSid_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                percentComplete_ = input.readInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                totalTasks_ = input.readInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                totalTasksCompleted_ = input.readInt32();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private long taskGroupSid_ ;
       /**
@@ -794,8 +699,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTaskGroupSid(long value) {
-        
+
         taskGroupSid_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -808,7 +714,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearTaskGroupSid() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         taskGroupSid_ = 0L;
         onChanged();
         return this;
@@ -867,11 +773,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -884,8 +788,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -900,12 +804,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -933,8 +835,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setPercentComplete(int value) {
-        
+
         percentComplete_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -947,7 +850,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearPercentComplete() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         percentComplete_ = 0;
         onChanged();
         return this;
@@ -976,8 +879,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTotalTasks(int value) {
-        
+
         totalTasks_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -990,7 +894,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearTotalTasks() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         totalTasks_ = 0;
         onChanged();
         return this;
@@ -1019,8 +923,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTotalTasksCompleted(int value) {
-        
+
         totalTasksCompleted_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1033,7 +938,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearTotalTasksCompleted() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         totalTasksCompleted_ = 0;
         onChanged();
         return this;
@@ -1071,7 +976,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TaskGroupCompletionStatus(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1092,7 +1008,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BROADCASTS_EXIST_FIELD_NUMBER = 1;
-  private boolean broadcastsExist_;
+  private boolean broadcastsExist_ = false;
   /**
    * <pre>
    * indicates if any running task groups (broadcasts) were found.
@@ -1107,7 +1023,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PERCENT_COMPLETE_FIELD_NUMBER = 2;
-  private int percentComplete_;
+  private int percentComplete_ = 0;
   /**
    * <pre>
    * percentage of completion of tasks for found matching task groups.
@@ -1133,6 +1049,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
                 com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus.getDefaultInstance());
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.Long, com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus> completionStatus_;
   private com.google.protobuf.MapField<java.lang.Long, com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus>
@@ -1143,7 +1060,6 @@ private static final long serialVersionUID = 0L;
     }
     return completionStatus_;
   }
-
   public int getCompletionStatusCount() {
     return internalGetCompletionStatus().getMap().size();
   }
@@ -1154,11 +1070,10 @@ private static final long serialVersionUID = 0L;
    *
    * <code>map&lt;int64, .api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus&gt; completion_status = 3 [json_name = "completionStatus"];</code>
    */
-
   @java.lang.Override
   public boolean containsCompletionStatus(
       long key) {
-    
+
     return internalGetCompletionStatus().getMap().containsKey(key);
   }
   /**
@@ -1177,7 +1092,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int64, .api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus&gt; completion_status = 3 [json_name = "completionStatus"];</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.Long, com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus> getCompletionStatusMap() {
     return internalGetCompletionStatus().getMap();
   }
@@ -1189,11 +1103,12 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int64, .api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus&gt; completion_status = 3 [json_name = "completionStatus"];</code>
    */
   @java.lang.Override
-
-  public com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus getCompletionStatusOrDefault(
+  public /* nullable */
+com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus getCompletionStatusOrDefault(
       long key,
-      com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus defaultValue) {
-    
+      /* nullable */
+com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus defaultValue) {
+
     java.util.Map<java.lang.Long, com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus> map =
         internalGetCompletionStatus().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1206,10 +1121,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int64, .api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus&gt; completion_status = 3 [json_name = "completionStatus"];</code>
    */
   @java.lang.Override
-
   public com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus getCompletionStatusOrThrow(
       long key) {
-    
+
     java.util.Map<java.lang.Long, com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus> map =
         internalGetCompletionStatus().getMap();
     if (!map.containsKey(key)) {
@@ -1219,7 +1133,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_TASKS_FIELD_NUMBER = 4;
-  private int totalTasks_;
+  private int totalTasks_ = 0;
   /**
    * <pre>
    * total tasks for all task groups
@@ -1234,7 +1148,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_TASKS_COMPLETED_FIELD_NUMBER = 5;
-  private int totalTasksCompleted_;
+  private int totalTasksCompleted_ = 0;
   /**
    * <pre>
    * total tasks completed for all task groups
@@ -1280,7 +1194,7 @@ private static final long serialVersionUID = 0L;
     if (totalTasksCompleted_ != 0) {
       output.writeInt32(5, totalTasksCompleted_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -1315,7 +1229,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(5, totalTasksCompleted_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1340,7 +1254,7 @@ private static final long serialVersionUID = 0L;
         != other.getTotalTasks()) return false;
     if (getTotalTasksCompleted()
         != other.getTotalTasksCompleted()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1364,7 +1278,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getTotalTasks();
     hash = (37 * hash) + TOTAL_TASKS_COMPLETED_FIELD_NUMBER;
     hash = (53 * hash) + getTotalTasksCompleted();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1413,11 +1327,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1503,31 +1419,23 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       broadcastsExist_ = false;
-
       percentComplete_ = 0;
-
       internalGetMutableCompletionStatus().clear();
       totalTasks_ = 0;
-
       totalTasksCompleted_ = 0;
-
       return this;
     }
 
@@ -1554,15 +1462,29 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes buildPartial() {
       com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes result = new com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes(this);
-      int from_bitField0_ = bitField0_;
-      result.broadcastsExist_ = broadcastsExist_;
-      result.percentComplete_ = percentComplete_;
-      result.completionStatus_ = internalGetCompletionStatus();
-      result.completionStatus_.makeImmutable();
-      result.totalTasks_ = totalTasks_;
-      result.totalTasksCompleted_ = totalTasksCompleted_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.broadcastsExist_ = broadcastsExist_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.percentComplete_ = percentComplete_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.completionStatus_ = internalGetCompletionStatus();
+        result.completionStatus_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.totalTasks_ = totalTasks_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.totalTasksCompleted_ = totalTasksCompleted_;
+      }
     }
 
     @java.lang.Override
@@ -1617,13 +1539,14 @@ private static final long serialVersionUID = 0L;
       }
       internalGetMutableCompletionStatus().mergeFrom(
           other.internalGetCompletionStatus());
+      bitField0_ |= 0x00000004;
       if (other.getTotalTasks() != 0) {
         setTotalTasks(other.getTotalTasks());
       }
       if (other.getTotalTasksCompleted() != 0) {
         setTotalTasksCompleted(other.getTotalTasksCompleted());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1638,17 +1561,59 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              broadcastsExist_ = input.readBool();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              percentComplete_ = input.readInt32();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 26: {
+              com.google.protobuf.MapEntry<java.lang.Long, com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus>
+              completionStatus__ = input.readMessage(
+                  CompletionStatusDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableCompletionStatus().getMutableMap().put(
+                  completionStatus__.getKey(), completionStatus__.getValue());
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 32: {
+              totalTasks_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              totalTasksCompleted_ = input.readInt32();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -1676,8 +1641,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBroadcastsExist(boolean value) {
-      
+
       broadcastsExist_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1690,7 +1656,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBroadcastsExist() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       broadcastsExist_ = false;
       onChanged();
       return this;
@@ -1719,8 +1685,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPercentComplete(int value) {
-      
+
       percentComplete_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1733,7 +1700,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPercentComplete() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       percentComplete_ = 0;
       onChanged();
       return this;
@@ -1742,7 +1709,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.Long, com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus> completionStatus_;
     private com.google.protobuf.MapField<java.lang.Long, com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus>
-    internalGetCompletionStatus() {
+        internalGetCompletionStatus() {
       if (completionStatus_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             CompletionStatusDefaultEntryHolder.defaultEntry);
@@ -1750,8 +1717,7 @@ private static final long serialVersionUID = 0L;
       return completionStatus_;
     }
     private com.google.protobuf.MapField<java.lang.Long, com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus>
-    internalGetMutableCompletionStatus() {
-      onChanged();;
+        internalGetMutableCompletionStatus() {
       if (completionStatus_ == null) {
         completionStatus_ = com.google.protobuf.MapField.newMapField(
             CompletionStatusDefaultEntryHolder.defaultEntry);
@@ -1759,9 +1725,10 @@ private static final long serialVersionUID = 0L;
       if (!completionStatus_.isMutable()) {
         completionStatus_ = completionStatus_.copy();
       }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return completionStatus_;
     }
-
     public int getCompletionStatusCount() {
       return internalGetCompletionStatus().getMap().size();
     }
@@ -1772,11 +1739,10 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;int64, .api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus&gt; completion_status = 3 [json_name = "completionStatus"];</code>
      */
-
     @java.lang.Override
     public boolean containsCompletionStatus(
         long key) {
-      
+
       return internalGetCompletionStatus().getMap().containsKey(key);
     }
     /**
@@ -1795,7 +1761,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int64, .api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus&gt; completion_status = 3 [json_name = "completionStatus"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.Long, com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus> getCompletionStatusMap() {
       return internalGetCompletionStatus().getMap();
     }
@@ -1807,11 +1772,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int64, .api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus&gt; completion_status = 3 [json_name = "completionStatus"];</code>
      */
     @java.lang.Override
-
-    public com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus getCompletionStatusOrDefault(
+    public /* nullable */
+com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus getCompletionStatusOrDefault(
         long key,
-        com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus defaultValue) {
-      
+        /* nullable */
+com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus defaultValue) {
+
       java.util.Map<java.lang.Long, com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus> map =
           internalGetCompletionStatus().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1824,10 +1790,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int64, .api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus&gt; completion_status = 3 [json_name = "completionStatus"];</code>
      */
     @java.lang.Override
-
     public com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus getCompletionStatusOrThrow(
         long key) {
-      
+
       java.util.Map<java.lang.Long, com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus> map =
           internalGetCompletionStatus().getMap();
       if (!map.containsKey(key)) {
@@ -1835,8 +1800,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearCompletionStatus() {
+      bitField0_ = (bitField0_ & ~0x00000004);
       internalGetMutableCompletionStatus().getMutableMap()
           .clear();
       return this;
@@ -1848,10 +1813,9 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;int64, .api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus&gt; completion_status = 3 [json_name = "completionStatus"];</code>
      */
-
     public Builder removeCompletionStatus(
         long key) {
-      
+
       internalGetMutableCompletionStatus().getMutableMap()
           .remove(key);
       return this;
@@ -1861,7 +1825,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.Long, com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus>
-    getMutableCompletionStatus() {
+        getMutableCompletionStatus() {
+      bitField0_ |= 0x00000004;
       return internalGetMutableCompletionStatus().getMutableMap();
     }
     /**
@@ -1874,10 +1839,11 @@ private static final long serialVersionUID = 0L;
     public Builder putCompletionStatus(
         long key,
         com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus value) {
-      
-      if (value == null) { throw new java.lang.NullPointerException(); }
+
+      if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableCompletionStatus().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000004;
       return this;
     }
     /**
@@ -1887,11 +1853,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;int64, .api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus&gt; completion_status = 3 [json_name = "completionStatus"];</code>
      */
-
     public Builder putAllCompletionStatus(
         java.util.Map<java.lang.Long, com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus> values) {
       internalGetMutableCompletionStatus().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000004;
       return this;
     }
 
@@ -1918,8 +1884,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalTasks(int value) {
-      
+
       totalTasks_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1932,7 +1899,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalTasks() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       totalTasks_ = 0;
       onChanged();
       return this;
@@ -1961,8 +1928,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalTasksCompleted(int value) {
-      
+
       totalTasksCompleted_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1975,7 +1943,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalTasksCompleted() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       totalTasksCompleted_ = 0;
       onChanged();
       return this;
@@ -2013,7 +1981,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GetCampaignCompletionStatusRes(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

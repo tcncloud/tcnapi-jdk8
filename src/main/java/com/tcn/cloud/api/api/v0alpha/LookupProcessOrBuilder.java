@@ -129,5 +129,5 @@ public interface LookupProcessOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.LookupProcess.UrlLookupOrBuilder getUrlOrBuilder();
 
-  public com.tcn.cloud.api.api.v0alpha.LookupProcess.ProcCase getProcCase();
+  com.tcn.cloud.api.api.v0alpha.LookupProcess.ProcCase getProcCase();
 }

@@ -30,90 +30,6 @@ private static final long serialVersionUID = 0L;
     return new FilterPreferences();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private FilterPreferences(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            orgId_ = s;
-            break;
-          }
-          case 82: {
-            com.tcn.cloud.api.api.commons.org.ReportFilter.Builder subBuilder = null;
-            if (defaultAutoReportFilter_ != null) {
-              subBuilder = defaultAutoReportFilter_.toBuilder();
-            }
-            defaultAutoReportFilter_ = input.readMessage(com.tcn.cloud.api.api.commons.org.ReportFilter.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(defaultAutoReportFilter_);
-              defaultAutoReportFilter_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 88: {
-
-            sendEmptyAutoReports_ = input.readBool();
-            break;
-          }
-          case 96: {
-
-            displayBroadcastResendFilter_ = input.readBool();
-            break;
-          }
-          case 106: {
-            com.tcn.cloud.api.api.commons.org.ReportFilter.Builder subBuilder = null;
-            if (defaultBroadcastResendFilter_ != null) {
-              subBuilder = defaultBroadcastResendFilter_.toBuilder();
-            }
-            defaultBroadcastResendFilter_ = input.readMessage(com.tcn.cloud.api.api.commons.org.ReportFilter.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(defaultBroadcastResendFilter_);
-              defaultBroadcastResendFilter_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_FilterPreferences_descriptor;
@@ -128,7 +44,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ORG_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object orgId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object orgId_ = "";
   /**
    * <pre>
    * Org ID.
@@ -208,11 +125,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.ReportFilterOrBuilder getDefaultAutoReportFilterOrBuilder() {
-    return getDefaultAutoReportFilter();
+    return defaultAutoReportFilter_ == null ? com.tcn.cloud.api.api.commons.org.ReportFilter.getDefaultInstance() : defaultAutoReportFilter_;
   }
 
   public static final int SEND_EMPTY_AUTO_REPORTS_FIELD_NUMBER = 11;
-  private boolean sendEmptyAutoReports_;
+  private boolean sendEmptyAutoReports_ = false;
   /**
    * <pre>
    * Whether to send auto-reports even if they are empty.
@@ -227,7 +144,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAY_BROADCAST_RESEND_FILTER_FIELD_NUMBER = 12;
-  private boolean displayBroadcastResendFilter_;
+  private boolean displayBroadcastResendFilter_ = false;
   /**
    * <pre>
    * Whether or not to display the setting in the 'Resend' window.
@@ -276,7 +193,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.ReportFilterOrBuilder getDefaultBroadcastResendFilterOrBuilder() {
-    return getDefaultBroadcastResendFilter();
+    return defaultBroadcastResendFilter_ == null ? com.tcn.cloud.api.api.commons.org.ReportFilter.getDefaultInstance() : defaultBroadcastResendFilter_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -293,7 +210,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getOrgIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
     }
     if (defaultAutoReportFilter_ != null) {
@@ -308,7 +225,7 @@ private static final long serialVersionUID = 0L;
     if (defaultBroadcastResendFilter_ != null) {
       output.writeMessage(13, getDefaultBroadcastResendFilter());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -317,7 +234,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getOrgIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
     }
     if (defaultAutoReportFilter_ != null) {
@@ -336,7 +253,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getDefaultBroadcastResendFilter());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -367,7 +284,7 @@ private static final long serialVersionUID = 0L;
       if (!getDefaultBroadcastResendFilter()
           .equals(other.getDefaultBroadcastResendFilter())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -394,7 +311,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DEFAULT_BROADCAST_RESEND_FILTER_FIELD_NUMBER;
       hash = (53 * hash) + getDefaultBroadcastResendFilter().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -443,11 +360,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.org.FilterPreferences parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.org.FilterPreferences parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -515,38 +434,29 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.org.FilterPreferences.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       orgId_ = "";
-
-      if (defaultAutoReportFilterBuilder_ == null) {
-        defaultAutoReportFilter_ = null;
-      } else {
-        defaultAutoReportFilter_ = null;
+      defaultAutoReportFilter_ = null;
+      if (defaultAutoReportFilterBuilder_ != null) {
+        defaultAutoReportFilterBuilder_.dispose();
         defaultAutoReportFilterBuilder_ = null;
       }
       sendEmptyAutoReports_ = false;
-
       displayBroadcastResendFilter_ = false;
-
-      if (defaultBroadcastResendFilterBuilder_ == null) {
-        defaultBroadcastResendFilter_ = null;
-      } else {
-        defaultBroadcastResendFilter_ = null;
+      defaultBroadcastResendFilter_ = null;
+      if (defaultBroadcastResendFilterBuilder_ != null) {
+        defaultBroadcastResendFilterBuilder_.dispose();
         defaultBroadcastResendFilterBuilder_ = null;
       }
       return this;
@@ -575,21 +485,32 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.org.FilterPreferences buildPartial() {
       com.tcn.cloud.api.api.commons.org.FilterPreferences result = new com.tcn.cloud.api.api.commons.org.FilterPreferences(this);
-      result.orgId_ = orgId_;
-      if (defaultAutoReportFilterBuilder_ == null) {
-        result.defaultAutoReportFilter_ = defaultAutoReportFilter_;
-      } else {
-        result.defaultAutoReportFilter_ = defaultAutoReportFilterBuilder_.build();
-      }
-      result.sendEmptyAutoReports_ = sendEmptyAutoReports_;
-      result.displayBroadcastResendFilter_ = displayBroadcastResendFilter_;
-      if (defaultBroadcastResendFilterBuilder_ == null) {
-        result.defaultBroadcastResendFilter_ = defaultBroadcastResendFilter_;
-      } else {
-        result.defaultBroadcastResendFilter_ = defaultBroadcastResendFilterBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.org.FilterPreferences result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.orgId_ = orgId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.defaultAutoReportFilter_ = defaultAutoReportFilterBuilder_ == null
+            ? defaultAutoReportFilter_
+            : defaultAutoReportFilterBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.sendEmptyAutoReports_ = sendEmptyAutoReports_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.displayBroadcastResendFilter_ = displayBroadcastResendFilter_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.defaultBroadcastResendFilter_ = defaultBroadcastResendFilterBuilder_ == null
+            ? defaultBroadcastResendFilter_
+            : defaultBroadcastResendFilterBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -638,6 +559,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.commons.org.FilterPreferences.getDefaultInstance()) return this;
       if (!other.getOrgId().isEmpty()) {
         orgId_ = other.orgId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasDefaultAutoReportFilter()) {
@@ -652,7 +574,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasDefaultBroadcastResendFilter()) {
         mergeDefaultBroadcastResendFilter(other.getDefaultBroadcastResendFilter());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -667,19 +589,62 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.org.FilterPreferences parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              orgId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 82: {
+              input.readMessage(
+                  getDefaultAutoReportFilterFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 82
+            case 88: {
+              sendEmptyAutoReports_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 88
+            case 96: {
+              displayBroadcastResendFilter_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 96
+            case 106: {
+              input.readMessage(
+                  getDefaultBroadcastResendFilterFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 106
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.org.FilterPreferences) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object orgId_ = "";
     /**
@@ -734,11 +699,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrgId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       orgId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -751,8 +714,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOrgId() {
-      
       orgId_ = getDefaultInstance().getOrgId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -767,12 +730,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrgIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       orgId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -789,7 +750,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the defaultAutoReportFilter field is set.
      */
     public boolean hasDefaultAutoReportFilter() {
-      return defaultAutoReportFilterBuilder_ != null || defaultAutoReportFilter_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -819,11 +780,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         defaultAutoReportFilter_ = value;
-        onChanged();
       } else {
         defaultAutoReportFilterBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -837,11 +798,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.ReportFilter.Builder builderForValue) {
       if (defaultAutoReportFilterBuilder_ == null) {
         defaultAutoReportFilter_ = builderForValue.build();
-        onChanged();
       } else {
         defaultAutoReportFilterBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -853,17 +814,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDefaultAutoReportFilter(com.tcn.cloud.api.api.commons.org.ReportFilter value) {
       if (defaultAutoReportFilterBuilder_ == null) {
-        if (defaultAutoReportFilter_ != null) {
-          defaultAutoReportFilter_ =
-            com.tcn.cloud.api.api.commons.org.ReportFilter.newBuilder(defaultAutoReportFilter_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          defaultAutoReportFilter_ != null &&
+          defaultAutoReportFilter_ != com.tcn.cloud.api.api.commons.org.ReportFilter.getDefaultInstance()) {
+          getDefaultAutoReportFilterBuilder().mergeFrom(value);
         } else {
           defaultAutoReportFilter_ = value;
         }
-        onChanged();
       } else {
         defaultAutoReportFilterBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -874,14 +836,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.ReportFilter default_auto_report_filter = 10 [json_name = "defaultAutoReportFilter"];</code>
      */
     public Builder clearDefaultAutoReportFilter() {
-      if (defaultAutoReportFilterBuilder_ == null) {
-        defaultAutoReportFilter_ = null;
-        onChanged();
-      } else {
-        defaultAutoReportFilter_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      defaultAutoReportFilter_ = null;
+      if (defaultAutoReportFilterBuilder_ != null) {
+        defaultAutoReportFilterBuilder_.dispose();
         defaultAutoReportFilterBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -892,7 +853,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.ReportFilter default_auto_report_filter = 10 [json_name = "defaultAutoReportFilter"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ReportFilter.Builder getDefaultAutoReportFilterBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getDefaultAutoReportFilterFieldBuilder().getBuilder();
     }
@@ -955,8 +916,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSendEmptyAutoReports(boolean value) {
-      
+
       sendEmptyAutoReports_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -969,7 +931,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSendEmptyAutoReports() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       sendEmptyAutoReports_ = false;
       onChanged();
       return this;
@@ -998,8 +960,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisplayBroadcastResendFilter(boolean value) {
-      
+
       displayBroadcastResendFilter_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1012,7 +975,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayBroadcastResendFilter() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       displayBroadcastResendFilter_ = false;
       onChanged();
       return this;
@@ -1030,7 +993,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the defaultBroadcastResendFilter field is set.
      */
     public boolean hasDefaultBroadcastResendFilter() {
-      return defaultBroadcastResendFilterBuilder_ != null || defaultBroadcastResendFilter_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1060,11 +1023,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         defaultBroadcastResendFilter_ = value;
-        onChanged();
       } else {
         defaultBroadcastResendFilterBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1078,11 +1041,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.ReportFilter.Builder builderForValue) {
       if (defaultBroadcastResendFilterBuilder_ == null) {
         defaultBroadcastResendFilter_ = builderForValue.build();
-        onChanged();
       } else {
         defaultBroadcastResendFilterBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1094,17 +1057,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDefaultBroadcastResendFilter(com.tcn.cloud.api.api.commons.org.ReportFilter value) {
       if (defaultBroadcastResendFilterBuilder_ == null) {
-        if (defaultBroadcastResendFilter_ != null) {
-          defaultBroadcastResendFilter_ =
-            com.tcn.cloud.api.api.commons.org.ReportFilter.newBuilder(defaultBroadcastResendFilter_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000010) != 0) &&
+          defaultBroadcastResendFilter_ != null &&
+          defaultBroadcastResendFilter_ != com.tcn.cloud.api.api.commons.org.ReportFilter.getDefaultInstance()) {
+          getDefaultBroadcastResendFilterBuilder().mergeFrom(value);
         } else {
           defaultBroadcastResendFilter_ = value;
         }
-        onChanged();
       } else {
         defaultBroadcastResendFilterBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1115,14 +1079,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.ReportFilter default_broadcast_resend_filter = 13 [json_name = "defaultBroadcastResendFilter"];</code>
      */
     public Builder clearDefaultBroadcastResendFilter() {
-      if (defaultBroadcastResendFilterBuilder_ == null) {
-        defaultBroadcastResendFilter_ = null;
-        onChanged();
-      } else {
-        defaultBroadcastResendFilter_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      defaultBroadcastResendFilter_ = null;
+      if (defaultBroadcastResendFilterBuilder_ != null) {
+        defaultBroadcastResendFilterBuilder_.dispose();
         defaultBroadcastResendFilterBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1133,7 +1096,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.ReportFilter default_broadcast_resend_filter = 13 [json_name = "defaultBroadcastResendFilter"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ReportFilter.Builder getDefaultBroadcastResendFilterBuilder() {
-      
+      bitField0_ |= 0x00000010;
       onChanged();
       return getDefaultBroadcastResendFilterFieldBuilder().getBuilder();
     }
@@ -1205,7 +1168,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new FilterPreferences(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

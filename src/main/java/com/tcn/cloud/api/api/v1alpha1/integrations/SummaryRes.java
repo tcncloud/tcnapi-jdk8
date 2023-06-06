@@ -27,86 +27,6 @@ private static final long serialVersionUID = 0L;
     return new SummaryRes();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private SummaryRes(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary.Builder subBuilder = null;
-            if (yearSummary_ != null) {
-              subBuilder = yearSummary_.toBuilder();
-            }
-            yearSummary_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(yearSummary_);
-              yearSummary_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              monthSummaries_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            monthSummaries_.add(
-                input.readMessage(com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary.parser(), extensionRegistry));
-            break;
-          }
-          case 26: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              weekSummaries_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary>();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            weekSummaries_.add(
-                input.readMessage(com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        monthSummaries_ = java.util.Collections.unmodifiableList(monthSummaries_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        weekSummaries_ = java.util.Collections.unmodifiableList(weekSummaries_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_SummaryRes_descriptor;
@@ -143,10 +63,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummaryOrBuilder getYearSummaryOrBuilder() {
-    return getYearSummary();
+    return yearSummary_ == null ? com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary.getDefaultInstance() : yearSummary_;
   }
 
   public static final int MONTH_SUMMARIES_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary> monthSummaries_;
   /**
    * <code>repeated .api.v1alpha1.integrations.CalendarSummary month_summaries = 2 [json_name = "monthSummaries"];</code>
@@ -187,6 +108,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WEEK_SUMMARIES_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary> weekSummaries_;
   /**
    * <code>repeated .api.v1alpha1.integrations.CalendarSummary week_summaries = 3 [json_name = "weekSummaries"];</code>
@@ -249,7 +171,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < weekSummaries_.size(); i++) {
       output.writeMessage(3, weekSummaries_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -270,7 +192,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, weekSummaries_.get(i));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -294,7 +216,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getMonthSummariesList())) return false;
     if (!getWeekSummariesList()
         .equals(other.getWeekSummariesList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -317,7 +239,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + WEEK_SUMMARIES_FIELD_NUMBER;
       hash = (53 * hash) + getWeekSummariesList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -366,11 +288,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.integrations.SummaryRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.integrations.SummaryRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -434,42 +358,37 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.SummaryRes.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getMonthSummariesFieldBuilder();
-        getWeekSummariesFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (yearSummaryBuilder_ == null) {
-        yearSummary_ = null;
-      } else {
-        yearSummary_ = null;
+      bitField0_ = 0;
+      yearSummary_ = null;
+      if (yearSummaryBuilder_ != null) {
+        yearSummaryBuilder_.dispose();
         yearSummaryBuilder_ = null;
       }
       if (monthSummariesBuilder_ == null) {
         monthSummaries_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        monthSummaries_ = null;
         monthSummariesBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000002);
       if (weekSummariesBuilder_ == null) {
         weekSummaries_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
+        weekSummaries_ = null;
         weekSummariesBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -496,32 +415,40 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrations.SummaryRes buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrations.SummaryRes result = new com.tcn.cloud.api.api.v1alpha1.integrations.SummaryRes(this);
-      int from_bitField0_ = bitField0_;
-      if (yearSummaryBuilder_ == null) {
-        result.yearSummary_ = yearSummary_;
-      } else {
-        result.yearSummary_ = yearSummaryBuilder_.build();
-      }
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.integrations.SummaryRes result) {
       if (monthSummariesBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           monthSummaries_ = java.util.Collections.unmodifiableList(monthSummaries_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.monthSummaries_ = monthSummaries_;
       } else {
         result.monthSummaries_ = monthSummariesBuilder_.build();
       }
       if (weekSummariesBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           weekSummaries_ = java.util.Collections.unmodifiableList(weekSummaries_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.weekSummaries_ = weekSummaries_;
       } else {
         result.weekSummaries_ = weekSummariesBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.SummaryRes result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.yearSummary_ = yearSummaryBuilder_ == null
+            ? yearSummary_
+            : yearSummaryBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -575,7 +502,7 @@ private static final long serialVersionUID = 0L;
         if (!other.monthSummaries_.isEmpty()) {
           if (monthSummaries_.isEmpty()) {
             monthSummaries_ = other.monthSummaries_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureMonthSummariesIsMutable();
             monthSummaries_.addAll(other.monthSummaries_);
@@ -588,7 +515,7 @@ private static final long serialVersionUID = 0L;
             monthSummariesBuilder_.dispose();
             monthSummariesBuilder_ = null;
             monthSummaries_ = other.monthSummaries_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             monthSummariesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getMonthSummariesFieldBuilder() : null;
@@ -601,7 +528,7 @@ private static final long serialVersionUID = 0L;
         if (!other.weekSummaries_.isEmpty()) {
           if (weekSummaries_.isEmpty()) {
             weekSummaries_ = other.weekSummaries_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureWeekSummariesIsMutable();
             weekSummaries_.addAll(other.weekSummaries_);
@@ -614,7 +541,7 @@ private static final long serialVersionUID = 0L;
             weekSummariesBuilder_.dispose();
             weekSummariesBuilder_ = null;
             weekSummaries_ = other.weekSummaries_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
             weekSummariesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getWeekSummariesFieldBuilder() : null;
@@ -623,7 +550,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -638,17 +565,63 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.integrations.SummaryRes parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getYearSummaryFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary.parser(),
+                      extensionRegistry);
+              if (monthSummariesBuilder_ == null) {
+                ensureMonthSummariesIsMutable();
+                monthSummaries_.add(m);
+              } else {
+                monthSummariesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
+            case 26: {
+              com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary.parser(),
+                      extensionRegistry);
+              if (weekSummariesBuilder_ == null) {
+                ensureWeekSummariesIsMutable();
+                weekSummaries_.add(m);
+              } else {
+                weekSummariesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 26
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.integrations.SummaryRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -661,7 +634,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the yearSummary field is set.
      */
     public boolean hasYearSummary() {
-      return yearSummaryBuilder_ != null || yearSummary_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.api.v1alpha1.integrations.CalendarSummary year_summary = 1 [json_name = "yearSummary"];</code>
@@ -683,11 +656,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         yearSummary_ = value;
-        onChanged();
       } else {
         yearSummaryBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -697,11 +670,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary.Builder builderForValue) {
       if (yearSummaryBuilder_ == null) {
         yearSummary_ = builderForValue.build();
-        onChanged();
       } else {
         yearSummaryBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -709,38 +682,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeYearSummary(com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary value) {
       if (yearSummaryBuilder_ == null) {
-        if (yearSummary_ != null) {
-          yearSummary_ =
-            com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary.newBuilder(yearSummary_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          yearSummary_ != null &&
+          yearSummary_ != com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary.getDefaultInstance()) {
+          getYearSummaryBuilder().mergeFrom(value);
         } else {
           yearSummary_ = value;
         }
-        onChanged();
       } else {
         yearSummaryBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v1alpha1.integrations.CalendarSummary year_summary = 1 [json_name = "yearSummary"];</code>
      */
     public Builder clearYearSummary() {
-      if (yearSummaryBuilder_ == null) {
-        yearSummary_ = null;
-        onChanged();
-      } else {
-        yearSummary_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      yearSummary_ = null;
+      if (yearSummaryBuilder_ != null) {
+        yearSummaryBuilder_.dispose();
         yearSummaryBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v1alpha1.integrations.CalendarSummary year_summary = 1 [json_name = "yearSummary"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary.Builder getYearSummaryBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getYearSummaryFieldBuilder().getBuilder();
     }
@@ -775,9 +748,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary> monthSummaries_ =
       java.util.Collections.emptyList();
     private void ensureMonthSummariesIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         monthSummaries_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary>(monthSummaries_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -927,7 +900,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearMonthSummaries() {
       if (monthSummariesBuilder_ == null) {
         monthSummaries_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         monthSummariesBuilder_.clear();
@@ -1004,7 +977,7 @@ private static final long serialVersionUID = 0L;
         monthSummariesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary, com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummaryOrBuilder>(
                 monthSummaries_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         monthSummaries_ = null;
@@ -1015,9 +988,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary> weekSummaries_ =
       java.util.Collections.emptyList();
     private void ensureWeekSummariesIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         weekSummaries_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary>(weekSummaries_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -1167,7 +1140,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearWeekSummaries() {
       if (weekSummariesBuilder_ == null) {
         weekSummaries_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         weekSummariesBuilder_.clear();
@@ -1244,7 +1217,7 @@ private static final long serialVersionUID = 0L;
         weekSummariesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary, com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummaryOrBuilder>(
                 weekSummaries_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         weekSummaries_ = null;
@@ -1284,7 +1257,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new SummaryRes(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

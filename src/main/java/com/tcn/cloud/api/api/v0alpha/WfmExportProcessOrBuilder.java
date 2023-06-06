@@ -9,6 +9,11 @@ public interface WfmExportProcessOrBuilder extends
 
   /**
    * <code>int64 single = 1 [json_name = "single"];</code>
+   * @return Whether the single field is set.
+   */
+  boolean hasSingle();
+  /**
+   * <code>int64 single = 1 [json_name = "single"];</code>
    * @return The single.
    */
   long getSingle();
@@ -28,5 +33,5 @@ public interface WfmExportProcessOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.WfmMultiSkillOrBuilder getMultiOrBuilder();
 
-  public com.tcn.cloud.api.api.v0alpha.WfmExportProcess.SkillProfileCase getSkillProfileCase();
+  com.tcn.cloud.api.api.v0alpha.WfmExportProcess.SkillProfileCase getSkillProfileCase();
 }

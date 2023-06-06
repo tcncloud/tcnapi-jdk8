@@ -30,116 +30,6 @@ private static final long serialVersionUID = 0L;
     return new AnaAccount();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private AnaAccount(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            uuid_ = s;
-            break;
-          }
-          case 16: {
-
-            p3ClientSid_ = input.readInt64();
-            break;
-          }
-          case 26: {
-            com.google.protobuf.Timestamp.Builder subBuilder = null;
-            if (registrationDate_ != null) {
-              subBuilder = registrationDate_.toBuilder();
-            }
-            registrationDate_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(registrationDate_);
-              registrationDate_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 33: {
-
-            pricePerDoc_ = input.readDouble();
-            break;
-          }
-          case 40: {
-            int rawValue = input.readEnum();
-
-            anaTimeZone_ = rawValue;
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            homeDashboard_ = s;
-            break;
-          }
-          case 56: {
-
-            adoptable_ = input.readBool();
-            break;
-          }
-          case 66: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            defaultTimeFilter_ = s;
-            break;
-          }
-          case 74: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            neoHomeDashboard_ = s;
-            break;
-          }
-          case 160: {
-
-            currentMonthMaxDocCount_ = input.readInt64();
-            break;
-          }
-          case 168: {
-
-            currentWeeks_ = input.readInt64();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.AnaProto.internal_static_api_v0alpha_AnaAccount_descriptor;
@@ -154,7 +44,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int UUID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object uuid_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object uuid_ = "";
   /**
    * <code>string uuid = 1 [json_name = "uuid"];</code>
    * @return The uuid.
@@ -192,7 +83,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int P3_CLIENT_SID_FIELD_NUMBER = 2;
-  private long p3ClientSid_;
+  private long p3ClientSid_ = 0L;
   /**
    * <code>int64 p3_client_sid = 2 [json_name = "p3ClientSid"];</code>
    * @return The p3ClientSid.
@@ -225,11 +116,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getRegistrationDateOrBuilder() {
-    return getRegistrationDate();
+    return registrationDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : registrationDate_;
   }
 
   public static final int PRICE_PER_DOC_FIELD_NUMBER = 4;
-  private double pricePerDoc_;
+  private double pricePerDoc_ = 0D;
   /**
    * <code>double price_per_doc = 4 [json_name = "pricePerDoc"];</code>
    * @return The pricePerDoc.
@@ -240,7 +131,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ANA_TIME_ZONE_FIELD_NUMBER = 5;
-  private int anaTimeZone_;
+  private int anaTimeZone_ = 0;
   /**
    * <code>.api.commons.AnaTimeZone ana_time_zone = 5 [json_name = "anaTimeZone"];</code>
    * @return The enum numeric value on the wire for anaTimeZone.
@@ -253,13 +144,13 @@ private static final long serialVersionUID = 0L;
    * @return The anaTimeZone.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.AnaTimeZone getAnaTimeZone() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.AnaTimeZone result = com.tcn.cloud.api.api.commons.AnaTimeZone.valueOf(anaTimeZone_);
+    com.tcn.cloud.api.api.commons.AnaTimeZone result = com.tcn.cloud.api.api.commons.AnaTimeZone.forNumber(anaTimeZone_);
     return result == null ? com.tcn.cloud.api.api.commons.AnaTimeZone.UNRECOGNIZED : result;
   }
 
   public static final int HOME_DASHBOARD_FIELD_NUMBER = 6;
-  private volatile java.lang.Object homeDashboard_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object homeDashboard_ = "";
   /**
    * <code>string home_dashboard = 6 [json_name = "homeDashboard"];</code>
    * @return The homeDashboard.
@@ -297,7 +188,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ADOPTABLE_FIELD_NUMBER = 7;
-  private boolean adoptable_;
+  private boolean adoptable_ = false;
   /**
    * <code>bool adoptable = 7 [json_name = "adoptable"];</code>
    * @return The adoptable.
@@ -308,7 +199,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFAULT_TIME_FILTER_FIELD_NUMBER = 8;
-  private volatile java.lang.Object defaultTimeFilter_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object defaultTimeFilter_ = "";
   /**
    * <code>string default_time_filter = 8 [json_name = "defaultTimeFilter"];</code>
    * @return The defaultTimeFilter.
@@ -346,7 +238,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NEO_HOME_DASHBOARD_FIELD_NUMBER = 9;
-  private volatile java.lang.Object neoHomeDashboard_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object neoHomeDashboard_ = "";
   /**
    * <code>string neo_home_dashboard = 9 [json_name = "neoHomeDashboard"];</code>
    * @return The neoHomeDashboard.
@@ -384,7 +277,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CURRENT_MONTH_MAX_DOC_COUNT_FIELD_NUMBER = 20;
-  private long currentMonthMaxDocCount_;
+  private long currentMonthMaxDocCount_ = 0L;
   /**
    * <code>int64 current_month_max_doc_count = 20 [json_name = "currentMonthMaxDocCount"];</code>
    * @return The currentMonthMaxDocCount.
@@ -395,7 +288,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CURRENT_WEEKS_FIELD_NUMBER = 21;
-  private long currentWeeks_;
+  private long currentWeeks_ = 0L;
   /**
    * <code>int64 current_weeks = 21 [json_name = "currentWeeks"];</code>
    * @return The currentWeeks.
@@ -419,7 +312,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getUuidBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uuid_);
     }
     if (p3ClientSid_ != 0L) {
@@ -428,22 +321,22 @@ private static final long serialVersionUID = 0L;
     if (registrationDate_ != null) {
       output.writeMessage(3, getRegistrationDate());
     }
-    if (pricePerDoc_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(pricePerDoc_) != 0) {
       output.writeDouble(4, pricePerDoc_);
     }
     if (anaTimeZone_ != com.tcn.cloud.api.api.commons.AnaTimeZone.ANA_TIME_ZONE_UNKNOWN.getNumber()) {
       output.writeEnum(5, anaTimeZone_);
     }
-    if (!getHomeDashboardBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(homeDashboard_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, homeDashboard_);
     }
     if (adoptable_ != false) {
       output.writeBool(7, adoptable_);
     }
-    if (!getDefaultTimeFilterBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultTimeFilter_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, defaultTimeFilter_);
     }
-    if (!getNeoHomeDashboardBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(neoHomeDashboard_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, neoHomeDashboard_);
     }
     if (currentMonthMaxDocCount_ != 0L) {
@@ -452,7 +345,7 @@ private static final long serialVersionUID = 0L;
     if (currentWeeks_ != 0L) {
       output.writeInt64(21, currentWeeks_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -461,7 +354,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getUuidBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uuid_);
     }
     if (p3ClientSid_ != 0L) {
@@ -472,7 +365,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getRegistrationDate());
     }
-    if (pricePerDoc_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(pricePerDoc_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(4, pricePerDoc_);
     }
@@ -480,17 +373,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(5, anaTimeZone_);
     }
-    if (!getHomeDashboardBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(homeDashboard_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, homeDashboard_);
     }
     if (adoptable_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(7, adoptable_);
     }
-    if (!getDefaultTimeFilterBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultTimeFilter_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, defaultTimeFilter_);
     }
-    if (!getNeoHomeDashboardBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(neoHomeDashboard_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, neoHomeDashboard_);
     }
     if (currentMonthMaxDocCount_ != 0L) {
@@ -501,7 +394,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(21, currentWeeks_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -541,7 +434,7 @@ private static final long serialVersionUID = 0L;
         != other.getCurrentMonthMaxDocCount()) return false;
     if (getCurrentWeeks()
         != other.getCurrentWeeks()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -581,7 +474,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + CURRENT_WEEKS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getCurrentWeeks());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -630,11 +523,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.AnaAccount parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.AnaAccount parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -698,48 +593,33 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.AnaAccount.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       uuid_ = "";
-
       p3ClientSid_ = 0L;
-
-      if (registrationDateBuilder_ == null) {
-        registrationDate_ = null;
-      } else {
-        registrationDate_ = null;
+      registrationDate_ = null;
+      if (registrationDateBuilder_ != null) {
+        registrationDateBuilder_.dispose();
         registrationDateBuilder_ = null;
       }
       pricePerDoc_ = 0D;
-
       anaTimeZone_ = 0;
-
       homeDashboard_ = "";
-
       adoptable_ = false;
-
       defaultTimeFilter_ = "";
-
       neoHomeDashboard_ = "";
-
       currentMonthMaxDocCount_ = 0L;
-
       currentWeeks_ = 0L;
-
       return this;
     }
 
@@ -766,23 +646,48 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.AnaAccount buildPartial() {
       com.tcn.cloud.api.api.v0alpha.AnaAccount result = new com.tcn.cloud.api.api.v0alpha.AnaAccount(this);
-      result.uuid_ = uuid_;
-      result.p3ClientSid_ = p3ClientSid_;
-      if (registrationDateBuilder_ == null) {
-        result.registrationDate_ = registrationDate_;
-      } else {
-        result.registrationDate_ = registrationDateBuilder_.build();
-      }
-      result.pricePerDoc_ = pricePerDoc_;
-      result.anaTimeZone_ = anaTimeZone_;
-      result.homeDashboard_ = homeDashboard_;
-      result.adoptable_ = adoptable_;
-      result.defaultTimeFilter_ = defaultTimeFilter_;
-      result.neoHomeDashboard_ = neoHomeDashboard_;
-      result.currentMonthMaxDocCount_ = currentMonthMaxDocCount_;
-      result.currentWeeks_ = currentWeeks_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.AnaAccount result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.uuid_ = uuid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.p3ClientSid_ = p3ClientSid_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.registrationDate_ = registrationDateBuilder_ == null
+            ? registrationDate_
+            : registrationDateBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.pricePerDoc_ = pricePerDoc_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.anaTimeZone_ = anaTimeZone_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.homeDashboard_ = homeDashboard_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.adoptable_ = adoptable_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.defaultTimeFilter_ = defaultTimeFilter_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.neoHomeDashboard_ = neoHomeDashboard_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.currentMonthMaxDocCount_ = currentMonthMaxDocCount_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.currentWeeks_ = currentWeeks_;
+      }
     }
 
     @java.lang.Override
@@ -831,6 +736,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.AnaAccount.getDefaultInstance()) return this;
       if (!other.getUuid().isEmpty()) {
         uuid_ = other.uuid_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.getP3ClientSid() != 0L) {
@@ -847,6 +753,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getHomeDashboard().isEmpty()) {
         homeDashboard_ = other.homeDashboard_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.getAdoptable() != false) {
@@ -854,10 +761,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getDefaultTimeFilter().isEmpty()) {
         defaultTimeFilter_ = other.defaultTimeFilter_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (!other.getNeoHomeDashboard().isEmpty()) {
         neoHomeDashboard_ = other.neoHomeDashboard_;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       if (other.getCurrentMonthMaxDocCount() != 0L) {
@@ -866,7 +775,7 @@ private static final long serialVersionUID = 0L;
       if (other.getCurrentWeeks() != 0L) {
         setCurrentWeeks(other.getCurrentWeeks());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -881,19 +790,90 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.AnaAccount parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              uuid_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 16: {
+              p3ClientSid_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 26: {
+              input.readMessage(
+                  getRegistrationDateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 33: {
+              pricePerDoc_ = input.readDouble();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 33
+            case 40: {
+              anaTimeZone_ = input.readEnum();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 50: {
+              homeDashboard_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 56: {
+              adoptable_ = input.readBool();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            case 66: {
+              defaultTimeFilter_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            case 74: {
+              neoHomeDashboard_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
+            case 160: {
+              currentMonthMaxDocCount_ = input.readInt64();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 160
+            case 168: {
+              currentWeeks_ = input.readInt64();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 168
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.AnaAccount) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object uuid_ = "";
     /**
@@ -936,11 +916,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUuid(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       uuid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -949,8 +927,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUuid() {
-      
       uuid_ = getDefaultInstance().getUuid();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -961,12 +939,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUuidBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       uuid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -986,8 +962,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setP3ClientSid(long value) {
-      
+
       p3ClientSid_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -996,7 +973,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearP3ClientSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       p3ClientSid_ = 0L;
       onChanged();
       return this;
@@ -1010,7 +987,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the registrationDate field is set.
      */
     public boolean hasRegistrationDate() {
-      return registrationDateBuilder_ != null || registrationDate_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp registration_date = 3 [json_name = "registrationDate"];</code>
@@ -1032,11 +1009,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         registrationDate_ = value;
-        onChanged();
       } else {
         registrationDateBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1046,11 +1023,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (registrationDateBuilder_ == null) {
         registrationDate_ = builderForValue.build();
-        onChanged();
       } else {
         registrationDateBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1058,38 +1035,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeRegistrationDate(com.google.protobuf.Timestamp value) {
       if (registrationDateBuilder_ == null) {
-        if (registrationDate_ != null) {
-          registrationDate_ =
-            com.google.protobuf.Timestamp.newBuilder(registrationDate_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          registrationDate_ != null &&
+          registrationDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getRegistrationDateBuilder().mergeFrom(value);
         } else {
           registrationDate_ = value;
         }
-        onChanged();
       } else {
         registrationDateBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp registration_date = 3 [json_name = "registrationDate"];</code>
      */
     public Builder clearRegistrationDate() {
-      if (registrationDateBuilder_ == null) {
-        registrationDate_ = null;
-        onChanged();
-      } else {
-        registrationDate_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      registrationDate_ = null;
+      if (registrationDateBuilder_ != null) {
+        registrationDateBuilder_.dispose();
         registrationDateBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp registration_date = 3 [json_name = "registrationDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getRegistrationDateBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getRegistrationDateFieldBuilder().getBuilder();
     }
@@ -1136,8 +1113,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPricePerDoc(double value) {
-      
+
       pricePerDoc_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1146,7 +1124,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPricePerDoc() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       pricePerDoc_ = 0D;
       onChanged();
       return this;
@@ -1166,8 +1144,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAnaTimeZoneValue(int value) {
-      
       anaTimeZone_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1177,8 +1155,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.AnaTimeZone getAnaTimeZone() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.AnaTimeZone result = com.tcn.cloud.api.api.commons.AnaTimeZone.valueOf(anaTimeZone_);
+      com.tcn.cloud.api.api.commons.AnaTimeZone result = com.tcn.cloud.api.api.commons.AnaTimeZone.forNumber(anaTimeZone_);
       return result == null ? com.tcn.cloud.api.api.commons.AnaTimeZone.UNRECOGNIZED : result;
     }
     /**
@@ -1190,7 +1167,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000010;
       anaTimeZone_ = value.getNumber();
       onChanged();
       return this;
@@ -1200,7 +1177,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAnaTimeZone() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       anaTimeZone_ = 0;
       onChanged();
       return this;
@@ -1247,11 +1224,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHomeDashboard(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       homeDashboard_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1260,8 +1235,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHomeDashboard() {
-      
       homeDashboard_ = getDefaultInstance().getHomeDashboard();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1272,12 +1247,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHomeDashboardBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       homeDashboard_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1297,8 +1270,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAdoptable(boolean value) {
-      
+
       adoptable_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1307,7 +1281,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAdoptable() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       adoptable_ = false;
       onChanged();
       return this;
@@ -1354,11 +1328,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDefaultTimeFilter(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       defaultTimeFilter_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1367,8 +1339,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultTimeFilter() {
-      
       defaultTimeFilter_ = getDefaultInstance().getDefaultTimeFilter();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1379,12 +1351,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDefaultTimeFilterBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       defaultTimeFilter_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1430,11 +1400,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNeoHomeDashboard(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       neoHomeDashboard_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1443,8 +1411,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNeoHomeDashboard() {
-      
       neoHomeDashboard_ = getDefaultInstance().getNeoHomeDashboard();
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -1455,12 +1423,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNeoHomeDashboardBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       neoHomeDashboard_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1480,8 +1446,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCurrentMonthMaxDocCount(long value) {
-      
+
       currentMonthMaxDocCount_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1490,7 +1457,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCurrentMonthMaxDocCount() {
-      
+      bitField0_ = (bitField0_ & ~0x00000200);
       currentMonthMaxDocCount_ = 0L;
       onChanged();
       return this;
@@ -1511,8 +1478,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCurrentWeeks(long value) {
-      
+
       currentWeeks_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -1521,7 +1489,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCurrentWeeks() {
-      
+      bitField0_ = (bitField0_ & ~0x00000400);
       currentWeeks_ = 0L;
       onChanged();
       return this;
@@ -1559,7 +1527,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AnaAccount(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

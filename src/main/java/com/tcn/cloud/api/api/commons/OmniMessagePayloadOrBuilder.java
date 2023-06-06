@@ -439,5 +439,5 @@ public interface OmniMessagePayloadOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.OmniCannedMessageOrBuilder getCannedMessageOrBuilder();
 
-  public com.tcn.cloud.api.api.commons.OmniMessagePayload.PayloadCase getPayloadCase();
+  com.tcn.cloud.api.api.commons.OmniMessagePayload.PayloadCase getPayloadCase();
 }

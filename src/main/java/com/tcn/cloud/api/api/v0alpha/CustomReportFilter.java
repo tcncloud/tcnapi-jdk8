@@ -39,192 +39,6 @@ private static final long serialVersionUID = 0L;
     return new CustomReportFilter();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private CustomReportFilter(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            name_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            description_ = s;
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            conjunction_ = rawValue;
-            break;
-          }
-          case 32: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              callResultsFilterList_ = newLongList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            callResultsFilterList_.addLong(input.readInt64());
-            break;
-          }
-          case 34: {
-            int length = input.readRawVarint32();
-            int limit = input.pushLimit(length);
-            if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-              callResultsFilterList_ = newLongList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            while (input.getBytesUntilLimit() > 0) {
-              callResultsFilterList_.addLong(input.readInt64());
-            }
-            input.popLimit(limit);
-            break;
-          }
-          case 42: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              dtmfExpressionList_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr>();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            dtmfExpressionList_.add(
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr.parser(), extensionRegistry));
-            break;
-          }
-          case 50: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-              agentResponseExpressionList_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr>();
-              mutable_bitField0_ |= 0x00000004;
-            }
-            agentResponseExpressionList_.add(
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr.parser(), extensionRegistry));
-            break;
-          }
-          case 58: {
-            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-              lastTemplateElementExpressionList_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr>();
-              mutable_bitField0_ |= 0x00000008;
-            }
-            lastTemplateElementExpressionList_.add(
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr.parser(), extensionRegistry));
-            break;
-          }
-          case 66: {
-            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-              excludeDtmfExpressionList_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr>();
-              mutable_bitField0_ |= 0x00000010;
-            }
-            excludeDtmfExpressionList_.add(
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr.parser(), extensionRegistry));
-            break;
-          }
-          case 72: {
-
-            xmlClientPropertySid_ = input.readInt64();
-            break;
-          }
-          case 80: {
-            if (!((mutable_bitField0_ & 0x00000020) != 0)) {
-              huntGroupSidIncludeList_ = newLongList();
-              mutable_bitField0_ |= 0x00000020;
-            }
-            huntGroupSidIncludeList_.addLong(input.readInt64());
-            break;
-          }
-          case 82: {
-            int length = input.readRawVarint32();
-            int limit = input.pushLimit(length);
-            if (!((mutable_bitField0_ & 0x00000020) != 0) && input.getBytesUntilLimit() > 0) {
-              huntGroupSidIncludeList_ = newLongList();
-              mutable_bitField0_ |= 0x00000020;
-            }
-            while (input.getBytesUntilLimit() > 0) {
-              huntGroupSidIncludeList_.addLong(input.readInt64());
-            }
-            input.popLimit(limit);
-            break;
-          }
-          case 88: {
-            if (!((mutable_bitField0_ & 0x00000040) != 0)) {
-              huntGroupSidExcludeList_ = newLongList();
-              mutable_bitField0_ |= 0x00000040;
-            }
-            huntGroupSidExcludeList_.addLong(input.readInt64());
-            break;
-          }
-          case 90: {
-            int length = input.readRawVarint32();
-            int limit = input.pushLimit(length);
-            if (!((mutable_bitField0_ & 0x00000040) != 0) && input.getBytesUntilLimit() > 0) {
-              huntGroupSidExcludeList_ = newLongList();
-              mutable_bitField0_ |= 0x00000040;
-            }
-            while (input.getBytesUntilLimit() > 0) {
-              huntGroupSidExcludeList_.addLong(input.readInt64());
-            }
-            input.popLimit(limit);
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        callResultsFilterList_.makeImmutable(); // C
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        dtmfExpressionList_ = java.util.Collections.unmodifiableList(dtmfExpressionList_);
-      }
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
-        agentResponseExpressionList_ = java.util.Collections.unmodifiableList(agentResponseExpressionList_);
-      }
-      if (((mutable_bitField0_ & 0x00000008) != 0)) {
-        lastTemplateElementExpressionList_ = java.util.Collections.unmodifiableList(lastTemplateElementExpressionList_);
-      }
-      if (((mutable_bitField0_ & 0x00000010) != 0)) {
-        excludeDtmfExpressionList_ = java.util.Collections.unmodifiableList(excludeDtmfExpressionList_);
-      }
-      if (((mutable_bitField0_ & 0x00000020) != 0)) {
-        huntGroupSidIncludeList_.makeImmutable(); // C
-      }
-      if (((mutable_bitField0_ & 0x00000040) != 0)) {
-        huntGroupSidExcludeList_.makeImmutable(); // C
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_CustomReportFilter_descriptor;
@@ -367,7 +181,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * Filter name
@@ -413,7 +228,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 2;
-  private volatile java.lang.Object description_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
   /**
    * <pre>
    * Filter description
@@ -459,7 +275,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONJUNCTION_FIELD_NUMBER = 3;
-  private int conjunction_;
+  private int conjunction_ = 0;
   /**
    * <pre>
    * Filter conjunction
@@ -480,12 +296,12 @@ private static final long serialVersionUID = 0L;
    * @return The conjunction.
    */
   @java.lang.Override public com.tcn.cloud.api.api.v0alpha.CustomReportFilter.FilterConjunction getConjunction() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.v0alpha.CustomReportFilter.FilterConjunction result = com.tcn.cloud.api.api.v0alpha.CustomReportFilter.FilterConjunction.valueOf(conjunction_);
+    com.tcn.cloud.api.api.v0alpha.CustomReportFilter.FilterConjunction result = com.tcn.cloud.api.api.v0alpha.CustomReportFilter.FilterConjunction.forNumber(conjunction_);
     return result == null ? com.tcn.cloud.api.api.v0alpha.CustomReportFilter.FilterConjunction.UNRECOGNIZED : result;
   }
 
   public static final int CALL_RESULTS_FILTER_LIST_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList callResultsFilterList_;
   /**
    * <pre>
@@ -526,6 +342,7 @@ private static final long serialVersionUID = 0L;
   private int callResultsFilterListMemoizedSerializedSize = -1;
 
   public static final int DTMF_EXPRESSION_LIST_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr> dtmfExpressionList_;
   /**
    * <pre>
@@ -586,6 +403,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENT_RESPONSE_EXPRESSION_LIST_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr> agentResponseExpressionList_;
   /**
    * <pre>
@@ -646,6 +464,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LAST_TEMPLATE_ELEMENT_EXPRESSION_LIST_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr> lastTemplateElementExpressionList_;
   /**
    * <pre>
@@ -706,6 +525,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EXCLUDE_DTMF_EXPRESSION_LIST_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr> excludeDtmfExpressionList_;
   /**
    * <pre>
@@ -766,6 +586,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HUNT_GROUP_SID_INCLUDE_LIST_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList huntGroupSidIncludeList_;
   /**
    * <pre>
@@ -806,6 +627,7 @@ private static final long serialVersionUID = 0L;
   private int huntGroupSidIncludeListMemoizedSerializedSize = -1;
 
   public static final int HUNT_GROUP_SID_EXCLUDE_LIST_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList huntGroupSidExcludeList_;
   /**
    * <pre>
@@ -846,7 +668,7 @@ private static final long serialVersionUID = 0L;
   private int huntGroupSidExcludeListMemoizedSerializedSize = -1;
 
   public static final int XML_CLIENT_PROPERTY_SID_FIELD_NUMBER = 9;
-  private long xmlClientPropertySid_;
+  private long xmlClientPropertySid_ = 0L;
   /**
    * <pre>
    * property sid
@@ -875,10 +697,10 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     getSerializedSize();
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
     }
     if (conjunction_ != com.tcn.cloud.api.api.v0alpha.CustomReportFilter.FilterConjunction.AND.getNumber()) {
@@ -920,7 +742,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < huntGroupSidExcludeList_.size(); i++) {
       output.writeInt64NoTag(huntGroupSidExcludeList_.getLong(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -929,10 +751,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
     }
     if (conjunction_ != com.tcn.cloud.api.api.v0alpha.CustomReportFilter.FilterConjunction.AND.getNumber()) {
@@ -1001,7 +823,7 @@ private static final long serialVersionUID = 0L;
       }
       huntGroupSidExcludeListMemoizedSerializedSize = dataSize;
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1037,7 +859,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getHuntGroupSidExcludeListList())) return false;
     if (getXmlClientPropertySid()
         != other.getXmlClientPropertySid()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1085,7 +907,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + XML_CLIENT_PROPERTY_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getXmlClientPropertySid());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1134,11 +956,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.CustomReportFilter parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.CustomReportFilter parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1206,64 +1030,53 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CustomReportFilter.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDtmfExpressionListFieldBuilder();
-        getAgentResponseExpressionListFieldBuilder();
-        getLastTemplateElementExpressionListFieldBuilder();
-        getExcludeDtmfExpressionListFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       name_ = "";
-
       description_ = "";
-
       conjunction_ = 0;
-
       callResultsFilterList_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000001);
       if (dtmfExpressionListBuilder_ == null) {
         dtmfExpressionList_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
+        dtmfExpressionList_ = null;
         dtmfExpressionListBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000010);
       if (agentResponseExpressionListBuilder_ == null) {
         agentResponseExpressionList_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
+        agentResponseExpressionList_ = null;
         agentResponseExpressionListBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000020);
       if (lastTemplateElementExpressionListBuilder_ == null) {
         lastTemplateElementExpressionList_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
       } else {
+        lastTemplateElementExpressionList_ = null;
         lastTemplateElementExpressionListBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000040);
       if (excludeDtmfExpressionListBuilder_ == null) {
         excludeDtmfExpressionList_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
       } else {
+        excludeDtmfExpressionList_ = null;
         excludeDtmfExpressionListBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000080);
       huntGroupSidIncludeList_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000020);
       huntGroupSidExcludeList_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000040);
       xmlClientPropertySid_ = 0L;
-
       return this;
     }
 
@@ -1290,64 +1103,80 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.CustomReportFilter buildPartial() {
       com.tcn.cloud.api.api.v0alpha.CustomReportFilter result = new com.tcn.cloud.api.api.v0alpha.CustomReportFilter(this);
-      int from_bitField0_ = bitField0_;
-      result.name_ = name_;
-      result.description_ = description_;
-      result.conjunction_ = conjunction_;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.CustomReportFilter result) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         callResultsFilterList_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000008);
       }
       result.callResultsFilterList_ = callResultsFilterList_;
       if (dtmfExpressionListBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           dtmfExpressionList_ = java.util.Collections.unmodifiableList(dtmfExpressionList_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.dtmfExpressionList_ = dtmfExpressionList_;
       } else {
         result.dtmfExpressionList_ = dtmfExpressionListBuilder_.build();
       }
       if (agentResponseExpressionListBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           agentResponseExpressionList_ = java.util.Collections.unmodifiableList(agentResponseExpressionList_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.agentResponseExpressionList_ = agentResponseExpressionList_;
       } else {
         result.agentResponseExpressionList_ = agentResponseExpressionListBuilder_.build();
       }
       if (lastTemplateElementExpressionListBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0)) {
+        if (((bitField0_ & 0x00000040) != 0)) {
           lastTemplateElementExpressionList_ = java.util.Collections.unmodifiableList(lastTemplateElementExpressionList_);
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.lastTemplateElementExpressionList_ = lastTemplateElementExpressionList_;
       } else {
         result.lastTemplateElementExpressionList_ = lastTemplateElementExpressionListBuilder_.build();
       }
       if (excludeDtmfExpressionListBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000080) != 0)) {
           excludeDtmfExpressionList_ = java.util.Collections.unmodifiableList(excludeDtmfExpressionList_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000080);
         }
         result.excludeDtmfExpressionList_ = excludeDtmfExpressionList_;
       } else {
         result.excludeDtmfExpressionList_ = excludeDtmfExpressionListBuilder_.build();
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         huntGroupSidIncludeList_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000100);
       }
       result.huntGroupSidIncludeList_ = huntGroupSidIncludeList_;
-      if (((bitField0_ & 0x00000040) != 0)) {
+      if (((bitField0_ & 0x00000200) != 0)) {
         huntGroupSidExcludeList_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000200);
       }
       result.huntGroupSidExcludeList_ = huntGroupSidExcludeList_;
-      result.xmlClientPropertySid_ = xmlClientPropertySid_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.CustomReportFilter result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.conjunction_ = conjunction_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.xmlClientPropertySid_ = xmlClientPropertySid_;
+      }
     }
 
     @java.lang.Override
@@ -1396,10 +1225,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.CustomReportFilter.getDefaultInstance()) return this;
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.conjunction_ != 0) {
@@ -1408,7 +1239,7 @@ private static final long serialVersionUID = 0L;
       if (!other.callResultsFilterList_.isEmpty()) {
         if (callResultsFilterList_.isEmpty()) {
           callResultsFilterList_ = other.callResultsFilterList_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           ensureCallResultsFilterListIsMutable();
           callResultsFilterList_.addAll(other.callResultsFilterList_);
@@ -1419,7 +1250,7 @@ private static final long serialVersionUID = 0L;
         if (!other.dtmfExpressionList_.isEmpty()) {
           if (dtmfExpressionList_.isEmpty()) {
             dtmfExpressionList_ = other.dtmfExpressionList_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureDtmfExpressionListIsMutable();
             dtmfExpressionList_.addAll(other.dtmfExpressionList_);
@@ -1432,7 +1263,7 @@ private static final long serialVersionUID = 0L;
             dtmfExpressionListBuilder_.dispose();
             dtmfExpressionListBuilder_ = null;
             dtmfExpressionList_ = other.dtmfExpressionList_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000010);
             dtmfExpressionListBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getDtmfExpressionListFieldBuilder() : null;
@@ -1445,7 +1276,7 @@ private static final long serialVersionUID = 0L;
         if (!other.agentResponseExpressionList_.isEmpty()) {
           if (agentResponseExpressionList_.isEmpty()) {
             agentResponseExpressionList_ = other.agentResponseExpressionList_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureAgentResponseExpressionListIsMutable();
             agentResponseExpressionList_.addAll(other.agentResponseExpressionList_);
@@ -1458,7 +1289,7 @@ private static final long serialVersionUID = 0L;
             agentResponseExpressionListBuilder_.dispose();
             agentResponseExpressionListBuilder_ = null;
             agentResponseExpressionList_ = other.agentResponseExpressionList_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000020);
             agentResponseExpressionListBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAgentResponseExpressionListFieldBuilder() : null;
@@ -1471,7 +1302,7 @@ private static final long serialVersionUID = 0L;
         if (!other.lastTemplateElementExpressionList_.isEmpty()) {
           if (lastTemplateElementExpressionList_.isEmpty()) {
             lastTemplateElementExpressionList_ = other.lastTemplateElementExpressionList_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensureLastTemplateElementExpressionListIsMutable();
             lastTemplateElementExpressionList_.addAll(other.lastTemplateElementExpressionList_);
@@ -1484,7 +1315,7 @@ private static final long serialVersionUID = 0L;
             lastTemplateElementExpressionListBuilder_.dispose();
             lastTemplateElementExpressionListBuilder_ = null;
             lastTemplateElementExpressionList_ = other.lastTemplateElementExpressionList_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000040);
             lastTemplateElementExpressionListBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getLastTemplateElementExpressionListFieldBuilder() : null;
@@ -1497,7 +1328,7 @@ private static final long serialVersionUID = 0L;
         if (!other.excludeDtmfExpressionList_.isEmpty()) {
           if (excludeDtmfExpressionList_.isEmpty()) {
             excludeDtmfExpressionList_ = other.excludeDtmfExpressionList_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000080);
           } else {
             ensureExcludeDtmfExpressionListIsMutable();
             excludeDtmfExpressionList_.addAll(other.excludeDtmfExpressionList_);
@@ -1510,7 +1341,7 @@ private static final long serialVersionUID = 0L;
             excludeDtmfExpressionListBuilder_.dispose();
             excludeDtmfExpressionListBuilder_ = null;
             excludeDtmfExpressionList_ = other.excludeDtmfExpressionList_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000080);
             excludeDtmfExpressionListBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getExcludeDtmfExpressionListFieldBuilder() : null;
@@ -1522,7 +1353,7 @@ private static final long serialVersionUID = 0L;
       if (!other.huntGroupSidIncludeList_.isEmpty()) {
         if (huntGroupSidIncludeList_.isEmpty()) {
           huntGroupSidIncludeList_ = other.huntGroupSidIncludeList_;
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000100);
         } else {
           ensureHuntGroupSidIncludeListIsMutable();
           huntGroupSidIncludeList_.addAll(other.huntGroupSidIncludeList_);
@@ -1532,7 +1363,7 @@ private static final long serialVersionUID = 0L;
       if (!other.huntGroupSidExcludeList_.isEmpty()) {
         if (huntGroupSidExcludeList_.isEmpty()) {
           huntGroupSidExcludeList_ = other.huntGroupSidExcludeList_;
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000200);
         } else {
           ensureHuntGroupSidExcludeListIsMutable();
           huntGroupSidExcludeList_.addAll(other.huntGroupSidExcludeList_);
@@ -1542,7 +1373,7 @@ private static final long serialVersionUID = 0L;
       if (other.getXmlClientPropertySid() != 0L) {
         setXmlClientPropertySid(other.getXmlClientPropertySid());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1557,17 +1388,150 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.CustomReportFilter parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              name_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              description_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              conjunction_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              long v = input.readInt64();
+              ensureCallResultsFilterListIsMutable();
+              callResultsFilterList_.addLong(v);
+              break;
+            } // case 32
+            case 34: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureCallResultsFilterListIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                callResultsFilterList_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 34
+            case 42: {
+              com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr.parser(),
+                      extensionRegistry);
+              if (dtmfExpressionListBuilder_ == null) {
+                ensureDtmfExpressionListIsMutable();
+                dtmfExpressionList_.add(m);
+              } else {
+                dtmfExpressionListBuilder_.addMessage(m);
+              }
+              break;
+            } // case 42
+            case 50: {
+              com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr.parser(),
+                      extensionRegistry);
+              if (agentResponseExpressionListBuilder_ == null) {
+                ensureAgentResponseExpressionListIsMutable();
+                agentResponseExpressionList_.add(m);
+              } else {
+                agentResponseExpressionListBuilder_.addMessage(m);
+              }
+              break;
+            } // case 50
+            case 58: {
+              com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr.parser(),
+                      extensionRegistry);
+              if (lastTemplateElementExpressionListBuilder_ == null) {
+                ensureLastTemplateElementExpressionListIsMutable();
+                lastTemplateElementExpressionList_.add(m);
+              } else {
+                lastTemplateElementExpressionListBuilder_.addMessage(m);
+              }
+              break;
+            } // case 58
+            case 66: {
+              com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr.parser(),
+                      extensionRegistry);
+              if (excludeDtmfExpressionListBuilder_ == null) {
+                ensureExcludeDtmfExpressionListIsMutable();
+                excludeDtmfExpressionList_.add(m);
+              } else {
+                excludeDtmfExpressionListBuilder_.addMessage(m);
+              }
+              break;
+            } // case 66
+            case 72: {
+              xmlClientPropertySid_ = input.readInt64();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 72
+            case 80: {
+              long v = input.readInt64();
+              ensureHuntGroupSidIncludeListIsMutable();
+              huntGroupSidIncludeList_.addLong(v);
+              break;
+            } // case 80
+            case 82: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureHuntGroupSidIncludeListIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                huntGroupSidIncludeList_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 82
+            case 88: {
+              long v = input.readInt64();
+              ensureHuntGroupSidExcludeListIsMutable();
+              huntGroupSidExcludeList_.addLong(v);
+              break;
+            } // case 88
+            case 90: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureHuntGroupSidExcludeListIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                huntGroupSidExcludeList_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 90
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.CustomReportFilter) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -1625,11 +1589,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1642,8 +1604,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1658,12 +1620,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1721,11 +1681,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       description_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1738,8 +1696,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-      
       description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1754,12 +1712,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1786,8 +1742,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConjunctionValue(int value) {
-      
       conjunction_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1801,8 +1757,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.CustomReportFilter.FilterConjunction getConjunction() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.v0alpha.CustomReportFilter.FilterConjunction result = com.tcn.cloud.api.api.v0alpha.CustomReportFilter.FilterConjunction.valueOf(conjunction_);
+      com.tcn.cloud.api.api.v0alpha.CustomReportFilter.FilterConjunction result = com.tcn.cloud.api.api.v0alpha.CustomReportFilter.FilterConjunction.forNumber(conjunction_);
       return result == null ? com.tcn.cloud.api.api.v0alpha.CustomReportFilter.FilterConjunction.UNRECOGNIZED : result;
     }
     /**
@@ -1818,7 +1773,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       conjunction_ = value.getNumber();
       onChanged();
       return this;
@@ -1832,7 +1787,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConjunction() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       conjunction_ = 0;
       onChanged();
       return this;
@@ -1840,10 +1795,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList callResultsFilterList_ = emptyLongList();
     private void ensureCallResultsFilterListIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         callResultsFilterList_ = mutableCopy(callResultsFilterList_);
-        bitField0_ |= 0x00000001;
-       }
+        bitField0_ |= 0x00000008;
+      }
     }
     /**
      * <pre>
@@ -1855,7 +1810,7 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getCallResultsFilterListList() {
-      return ((bitField0_ & 0x00000001) != 0) ?
+      return ((bitField0_ & 0x00000008) != 0) ?
                java.util.Collections.unmodifiableList(callResultsFilterList_) : callResultsFilterList_;
     }
     /**
@@ -1893,6 +1848,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallResultsFilterList(
         int index, long value) {
+
       ensureCallResultsFilterListIsMutable();
       callResultsFilterList_.setLong(index, value);
       onChanged();
@@ -1908,6 +1864,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addCallResultsFilterList(long value) {
+
       ensureCallResultsFilterListIsMutable();
       callResultsFilterList_.addLong(value);
       onChanged();
@@ -1940,7 +1897,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCallResultsFilterList() {
       callResultsFilterList_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1948,9 +1905,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr> dtmfExpressionList_ =
       java.util.Collections.emptyList();
     private void ensureDtmfExpressionListIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         dtmfExpressionList_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr>(dtmfExpressionList_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000010;
        }
     }
 
@@ -2144,7 +2101,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearDtmfExpressionList() {
       if (dtmfExpressionListBuilder_ == null) {
         dtmfExpressionList_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
       } else {
         dtmfExpressionListBuilder_.clear();
@@ -2249,7 +2206,7 @@ private static final long serialVersionUID = 0L;
         dtmfExpressionListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr, com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr.Builder, com.tcn.cloud.api.api.v0alpha.ComplexBooleanExprOrBuilder>(
                 dtmfExpressionList_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
         dtmfExpressionList_ = null;
@@ -2260,9 +2217,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr> agentResponseExpressionList_ =
       java.util.Collections.emptyList();
     private void ensureAgentResponseExpressionListIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000020) != 0)) {
         agentResponseExpressionList_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr>(agentResponseExpressionList_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000020;
        }
     }
 
@@ -2456,7 +2413,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearAgentResponseExpressionList() {
       if (agentResponseExpressionListBuilder_ == null) {
         agentResponseExpressionList_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
       } else {
         agentResponseExpressionListBuilder_.clear();
@@ -2561,7 +2518,7 @@ private static final long serialVersionUID = 0L;
         agentResponseExpressionListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr, com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr.Builder, com.tcn.cloud.api.api.v0alpha.ComplexBooleanExprOrBuilder>(
                 agentResponseExpressionList_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
         agentResponseExpressionList_ = null;
@@ -2572,9 +2529,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr> lastTemplateElementExpressionList_ =
       java.util.Collections.emptyList();
     private void ensureLastTemplateElementExpressionListIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000040) != 0)) {
         lastTemplateElementExpressionList_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr>(lastTemplateElementExpressionList_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000040;
        }
     }
 
@@ -2768,7 +2725,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearLastTemplateElementExpressionList() {
       if (lastTemplateElementExpressionListBuilder_ == null) {
         lastTemplateElementExpressionList_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
       } else {
         lastTemplateElementExpressionListBuilder_.clear();
@@ -2873,7 +2830,7 @@ private static final long serialVersionUID = 0L;
         lastTemplateElementExpressionListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr, com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr.Builder, com.tcn.cloud.api.api.v0alpha.ComplexBooleanExprOrBuilder>(
                 lastTemplateElementExpressionList_,
-                ((bitField0_ & 0x00000008) != 0),
+                ((bitField0_ & 0x00000040) != 0),
                 getParentForChildren(),
                 isClean());
         lastTemplateElementExpressionList_ = null;
@@ -2884,9 +2841,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr> excludeDtmfExpressionList_ =
       java.util.Collections.emptyList();
     private void ensureExcludeDtmfExpressionListIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!((bitField0_ & 0x00000080) != 0)) {
         excludeDtmfExpressionList_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr>(excludeDtmfExpressionList_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000080;
        }
     }
 
@@ -3080,7 +3037,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearExcludeDtmfExpressionList() {
       if (excludeDtmfExpressionListBuilder_ == null) {
         excludeDtmfExpressionList_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
       } else {
         excludeDtmfExpressionListBuilder_.clear();
@@ -3185,7 +3142,7 @@ private static final long serialVersionUID = 0L;
         excludeDtmfExpressionListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr, com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpr.Builder, com.tcn.cloud.api.api.v0alpha.ComplexBooleanExprOrBuilder>(
                 excludeDtmfExpressionList_,
-                ((bitField0_ & 0x00000010) != 0),
+                ((bitField0_ & 0x00000080) != 0),
                 getParentForChildren(),
                 isClean());
         excludeDtmfExpressionList_ = null;
@@ -3195,10 +3152,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList huntGroupSidIncludeList_ = emptyLongList();
     private void ensureHuntGroupSidIncludeListIsMutable() {
-      if (!((bitField0_ & 0x00000020) != 0)) {
+      if (!((bitField0_ & 0x00000100) != 0)) {
         huntGroupSidIncludeList_ = mutableCopy(huntGroupSidIncludeList_);
-        bitField0_ |= 0x00000020;
-       }
+        bitField0_ |= 0x00000100;
+      }
     }
     /**
      * <pre>
@@ -3210,7 +3167,7 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getHuntGroupSidIncludeListList() {
-      return ((bitField0_ & 0x00000020) != 0) ?
+      return ((bitField0_ & 0x00000100) != 0) ?
                java.util.Collections.unmodifiableList(huntGroupSidIncludeList_) : huntGroupSidIncludeList_;
     }
     /**
@@ -3248,6 +3205,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHuntGroupSidIncludeList(
         int index, long value) {
+
       ensureHuntGroupSidIncludeListIsMutable();
       huntGroupSidIncludeList_.setLong(index, value);
       onChanged();
@@ -3263,6 +3221,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addHuntGroupSidIncludeList(long value) {
+
       ensureHuntGroupSidIncludeListIsMutable();
       huntGroupSidIncludeList_.addLong(value);
       onChanged();
@@ -3295,17 +3254,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearHuntGroupSidIncludeList() {
       huntGroupSidIncludeList_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
 
     private com.google.protobuf.Internal.LongList huntGroupSidExcludeList_ = emptyLongList();
     private void ensureHuntGroupSidExcludeListIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!((bitField0_ & 0x00000200) != 0)) {
         huntGroupSidExcludeList_ = mutableCopy(huntGroupSidExcludeList_);
-        bitField0_ |= 0x00000040;
-       }
+        bitField0_ |= 0x00000200;
+      }
     }
     /**
      * <pre>
@@ -3317,7 +3276,7 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getHuntGroupSidExcludeListList() {
-      return ((bitField0_ & 0x00000040) != 0) ?
+      return ((bitField0_ & 0x00000200) != 0) ?
                java.util.Collections.unmodifiableList(huntGroupSidExcludeList_) : huntGroupSidExcludeList_;
     }
     /**
@@ -3355,6 +3314,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHuntGroupSidExcludeList(
         int index, long value) {
+
       ensureHuntGroupSidExcludeListIsMutable();
       huntGroupSidExcludeList_.setLong(index, value);
       onChanged();
@@ -3370,6 +3330,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addHuntGroupSidExcludeList(long value) {
+
       ensureHuntGroupSidExcludeListIsMutable();
       huntGroupSidExcludeList_.addLong(value);
       onChanged();
@@ -3402,7 +3363,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearHuntGroupSidExcludeList() {
       huntGroupSidExcludeList_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -3430,8 +3391,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setXmlClientPropertySid(long value) {
-      
+
       xmlClientPropertySid_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -3444,7 +3406,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearXmlClientPropertySid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000400);
       xmlClientPropertySid_ = 0L;
       onChanged();
       return this;
@@ -3482,7 +3444,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new CustomReportFilter(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

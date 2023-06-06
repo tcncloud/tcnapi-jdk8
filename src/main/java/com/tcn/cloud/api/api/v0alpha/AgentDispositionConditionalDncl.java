@@ -28,78 +28,6 @@ private static final long serialVersionUID = 0L;
     return new AgentDispositionConditionalDncl();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private AgentDispositionConditionalDncl(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            name_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            description_ = s;
-            break;
-          }
-          case 24: {
-
-            countrySid_ = input.readInt64();
-            break;
-          }
-          case 34: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              dispositionRulesTable_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionRulesTable>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            dispositionRulesTable_.add(
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionRulesTable.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        dispositionRulesTable_ = java.util.Collections.unmodifiableList(dispositionRulesTable_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_AgentDispositionConditionalDncl_descriptor;
@@ -177,67 +105,6 @@ private static final long serialVersionUID = 0L;
       return new DispositionRulesTable();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private DispositionRulesTable(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              dispositionKey_ = s;
-              break;
-            }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                dispositionExpirationTable_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionExpirationTable>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              dispositionExpirationTable_.add(
-                  input.readMessage(com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionExpirationTable.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          dispositionExpirationTable_ = java.util.Collections.unmodifiableList(dispositionExpirationTable_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_AgentDispositionConditionalDncl_DispositionRulesTable_descriptor;
@@ -252,7 +119,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int DISPOSITION_KEY_FIELD_NUMBER = 1;
-    private volatile java.lang.Object dispositionKey_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object dispositionKey_ = "";
     /**
      * <code>string disposition_key = 1 [json_name = "dispositionKey"];</code>
      * @return The dispositionKey.
@@ -290,6 +158,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int DISPOSITION_EXPIRATION_TABLE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private java.util.List<com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionExpirationTable> dispositionExpirationTable_;
     /**
      * <code>repeated .api.v0alpha.AgentDispositionConditionalDncl.DispositionExpirationTable disposition_expiration_table = 3 [json_name = "dispositionExpirationTable"];</code>
@@ -343,13 +212,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDispositionKeyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dispositionKey_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dispositionKey_);
       }
       for (int i = 0; i < dispositionExpirationTable_.size(); i++) {
         output.writeMessage(3, dispositionExpirationTable_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -358,14 +227,14 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (!getDispositionKeyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dispositionKey_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dispositionKey_);
       }
       for (int i = 0; i < dispositionExpirationTable_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, dispositionExpirationTable_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -384,7 +253,7 @@ private static final long serialVersionUID = 0L;
           .equals(other.getDispositionKey())) return false;
       if (!getDispositionExpirationTableList()
           .equals(other.getDispositionExpirationTableList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -401,7 +270,7 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + DISPOSITION_EXPIRATION_TABLE_FIELD_NUMBER;
         hash = (53 * hash) + getDispositionExpirationTableList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -450,11 +319,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionRulesTable parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionRulesTable parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -518,31 +389,26 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionRulesTable.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDispositionExpirationTableFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         dispositionKey_ = "";
-
         if (dispositionExpirationTableBuilder_ == null) {
           dispositionExpirationTable_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          dispositionExpirationTable_ = null;
           dispositionExpirationTableBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -569,19 +435,29 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionRulesTable buildPartial() {
         com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionRulesTable result = new com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionRulesTable(this);
-        int from_bitField0_ = bitField0_;
-        result.dispositionKey_ = dispositionKey_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionRulesTable result) {
         if (dispositionExpirationTableBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             dispositionExpirationTable_ = java.util.Collections.unmodifiableList(dispositionExpirationTable_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.dispositionExpirationTable_ = dispositionExpirationTable_;
         } else {
           result.dispositionExpirationTable_ = dispositionExpirationTableBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionRulesTable result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.dispositionKey_ = dispositionKey_;
+        }
       }
 
       @java.lang.Override
@@ -630,13 +506,14 @@ private static final long serialVersionUID = 0L;
         if (other == com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionRulesTable.getDefaultInstance()) return this;
         if (!other.getDispositionKey().isEmpty()) {
           dispositionKey_ = other.dispositionKey_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (dispositionExpirationTableBuilder_ == null) {
           if (!other.dispositionExpirationTable_.isEmpty()) {
             if (dispositionExpirationTable_.isEmpty()) {
               dispositionExpirationTable_ = other.dispositionExpirationTable_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureDispositionExpirationTableIsMutable();
               dispositionExpirationTable_.addAll(other.dispositionExpirationTable_);
@@ -649,7 +526,7 @@ private static final long serialVersionUID = 0L;
               dispositionExpirationTableBuilder_.dispose();
               dispositionExpirationTableBuilder_ = null;
               dispositionExpirationTable_ = other.dispositionExpirationTable_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
               dispositionExpirationTableBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getDispositionExpirationTableFieldBuilder() : null;
@@ -658,7 +535,7 @@ private static final long serialVersionUID = 0L;
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -673,17 +550,48 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionRulesTable parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                dispositionKey_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 26: {
+                com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionExpirationTable m =
+                    input.readMessage(
+                        com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionExpirationTable.parser(),
+                        extensionRegistry);
+                if (dispositionExpirationTableBuilder_ == null) {
+                  ensureDispositionExpirationTableIsMutable();
+                  dispositionExpirationTable_.add(m);
+                } else {
+                  dispositionExpirationTableBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionRulesTable) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -729,11 +637,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setDispositionKey(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         dispositionKey_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -742,8 +648,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearDispositionKey() {
-        
         dispositionKey_ = getDefaultInstance().getDispositionKey();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -754,12 +660,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setDispositionKeyBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         dispositionKey_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -767,9 +671,9 @@ private static final long serialVersionUID = 0L;
       private java.util.List<com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionExpirationTable> dispositionExpirationTable_ =
         java.util.Collections.emptyList();
       private void ensureDispositionExpirationTableIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           dispositionExpirationTable_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionExpirationTable>(dispositionExpirationTable_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -919,7 +823,7 @@ private static final long serialVersionUID = 0L;
       public Builder clearDispositionExpirationTable() {
         if (dispositionExpirationTableBuilder_ == null) {
           dispositionExpirationTable_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           dispositionExpirationTableBuilder_.clear();
@@ -996,7 +900,7 @@ private static final long serialVersionUID = 0L;
           dispositionExpirationTableBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionExpirationTable, com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionExpirationTable.Builder, com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionExpirationTableOrBuilder>(
                   dispositionExpirationTable_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           dispositionExpirationTable_ = null;
@@ -1036,7 +940,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DispositionRulesTable(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1101,59 +1016,6 @@ private static final long serialVersionUID = 0L;
       return new DispositionExpirationTable();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private DispositionExpirationTable(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              dispositionValue_ = s;
-              break;
-            }
-            case 16: {
-
-              integer_ = input.readInt64();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_AgentDispositionConditionalDncl_DispositionExpirationTable_descriptor;
@@ -1168,7 +1030,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int DISPOSITION_VALUE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object dispositionValue_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object dispositionValue_ = "";
     /**
      * <code>string disposition_value = 1 [json_name = "dispositionValue"];</code>
      * @return The dispositionValue.
@@ -1206,7 +1069,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int INTEGER_FIELD_NUMBER = 2;
-    private long integer_;
+    private long integer_ = 0L;
     /**
      * <code>int64 integer = 2 [json_name = "integer"];</code>
      * @return The integer.
@@ -1230,13 +1093,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDispositionValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dispositionValue_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dispositionValue_);
       }
       if (integer_ != 0L) {
         output.writeInt64(2, integer_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1245,14 +1108,14 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (!getDispositionValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dispositionValue_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dispositionValue_);
       }
       if (integer_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, integer_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1271,7 +1134,7 @@ private static final long serialVersionUID = 0L;
           .equals(other.getDispositionValue())) return false;
       if (getInteger()
           != other.getInteger()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1287,7 +1150,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + INTEGER_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getInteger());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1336,11 +1199,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionExpirationTable parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionExpirationTable parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1404,26 +1269,20 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionExpirationTable.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         dispositionValue_ = "";
-
         integer_ = 0L;
-
         return this;
       }
 
@@ -1450,10 +1309,19 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionExpirationTable buildPartial() {
         com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionExpirationTable result = new com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionExpirationTable(this);
-        result.dispositionValue_ = dispositionValue_;
-        result.integer_ = integer_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionExpirationTable result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.dispositionValue_ = dispositionValue_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.integer_ = integer_;
+        }
       }
 
       @java.lang.Override
@@ -1502,12 +1370,13 @@ private static final long serialVersionUID = 0L;
         if (other == com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionExpirationTable.getDefaultInstance()) return this;
         if (!other.getDispositionValue().isEmpty()) {
           dispositionValue_ = other.dispositionValue_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.getInteger() != 0L) {
           setInteger(other.getInteger());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1522,19 +1391,43 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionExpirationTable parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                dispositionValue_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                integer_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionExpirationTable) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object dispositionValue_ = "";
       /**
@@ -1577,11 +1470,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setDispositionValue(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         dispositionValue_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1590,8 +1481,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearDispositionValue() {
-        
         dispositionValue_ = getDefaultInstance().getDispositionValue();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1602,12 +1493,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setDispositionValueBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         dispositionValue_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1627,8 +1516,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setInteger(long value) {
-        
+
         integer_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1637,7 +1527,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearInteger() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         integer_ = 0L;
         onChanged();
         return this;
@@ -1675,7 +1565,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DispositionExpirationTable(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1696,7 +1597,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <code>string name = 1 [json_name = "name"];</code>
    * @return The name.
@@ -1734,7 +1636,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 2;
-  private volatile java.lang.Object description_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
   /**
    * <code>string description = 2 [json_name = "description"];</code>
    * @return The description.
@@ -1772,7 +1675,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COUNTRY_SID_FIELD_NUMBER = 3;
-  private long countrySid_;
+  private long countrySid_ = 0L;
   /**
    * <code>int64 country_sid = 3 [json_name = "countrySid"];</code>
    * @return The countrySid.
@@ -1783,6 +1686,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPOSITION_RULES_TABLE_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionRulesTable> dispositionRulesTable_;
   /**
    * <code>repeated .api.v0alpha.AgentDispositionConditionalDncl.DispositionRulesTable disposition_rules_table = 4 [json_name = "dispositionRulesTable"];</code>
@@ -1836,10 +1740,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
     }
     if (countrySid_ != 0L) {
@@ -1848,7 +1752,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < dispositionRulesTable_.size(); i++) {
       output.writeMessage(4, dispositionRulesTable_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -1857,10 +1761,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
     }
     if (countrySid_ != 0L) {
@@ -1871,7 +1775,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, dispositionRulesTable_.get(i));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1894,7 +1798,7 @@ private static final long serialVersionUID = 0L;
         != other.getCountrySid()) return false;
     if (!getDispositionRulesTableList()
         .equals(other.getDispositionRulesTableList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1916,7 +1820,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DISPOSITION_RULES_TABLE_FIELD_NUMBER;
       hash = (53 * hash) + getDispositionRulesTableList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1965,11 +1869,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2033,35 +1939,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDispositionRulesTableFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       name_ = "";
-
       description_ = "";
-
       countrySid_ = 0L;
-
       if (dispositionRulesTableBuilder_ == null) {
         dispositionRulesTable_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        dispositionRulesTable_ = null;
         dispositionRulesTableBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -2088,21 +1987,35 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl buildPartial() {
       com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl result = new com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl(this);
-      int from_bitField0_ = bitField0_;
-      result.name_ = name_;
-      result.description_ = description_;
-      result.countrySid_ = countrySid_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl result) {
       if (dispositionRulesTableBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           dispositionRulesTable_ = java.util.Collections.unmodifiableList(dispositionRulesTable_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.dispositionRulesTable_ = dispositionRulesTable_;
       } else {
         result.dispositionRulesTable_ = dispositionRulesTableBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.countrySid_ = countrySid_;
+      }
     }
 
     @java.lang.Override
@@ -2151,10 +2064,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.getDefaultInstance()) return this;
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getCountrySid() != 0L) {
@@ -2164,7 +2079,7 @@ private static final long serialVersionUID = 0L;
         if (!other.dispositionRulesTable_.isEmpty()) {
           if (dispositionRulesTable_.isEmpty()) {
             dispositionRulesTable_ = other.dispositionRulesTable_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureDispositionRulesTableIsMutable();
             dispositionRulesTable_.addAll(other.dispositionRulesTable_);
@@ -2177,7 +2092,7 @@ private static final long serialVersionUID = 0L;
             dispositionRulesTableBuilder_.dispose();
             dispositionRulesTableBuilder_ = null;
             dispositionRulesTable_ = other.dispositionRulesTable_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000008);
             dispositionRulesTableBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getDispositionRulesTableFieldBuilder() : null;
@@ -2186,7 +2101,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -2201,17 +2116,58 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              name_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              description_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              countrySid_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
+              com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionRulesTable m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionRulesTable.parser(),
+                      extensionRegistry);
+              if (dispositionRulesTableBuilder_ == null) {
+                ensureDispositionRulesTableIsMutable();
+                dispositionRulesTable_.add(m);
+              } else {
+                dispositionRulesTableBuilder_.addMessage(m);
+              }
+              break;
+            } // case 34
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -2257,11 +2213,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -2270,8 +2224,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -2282,12 +2236,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -2333,11 +2285,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       description_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -2346,8 +2296,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-      
       description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -2358,12 +2308,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -2383,8 +2331,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCountrySid(long value) {
-      
+
       countrySid_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -2393,7 +2342,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCountrySid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       countrySid_ = 0L;
       onChanged();
       return this;
@@ -2402,9 +2351,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionRulesTable> dispositionRulesTable_ =
       java.util.Collections.emptyList();
     private void ensureDispositionRulesTableIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         dispositionRulesTable_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionRulesTable>(dispositionRulesTable_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -2554,7 +2503,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearDispositionRulesTable() {
       if (dispositionRulesTableBuilder_ == null) {
         dispositionRulesTable_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         dispositionRulesTableBuilder_.clear();
@@ -2631,7 +2580,7 @@ private static final long serialVersionUID = 0L;
         dispositionRulesTableBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionRulesTable, com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionRulesTable.Builder, com.tcn.cloud.api.api.v0alpha.AgentDispositionConditionalDncl.DispositionRulesTableOrBuilder>(
                 dispositionRulesTable_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         dispositionRulesTable_ = null;
@@ -2671,7 +2620,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AgentDispositionConditionalDncl(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

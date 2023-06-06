@@ -46,10 +46,11 @@ public interface GetInvoiceResOrBuilder extends
    *
    * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; fields = 1 [json_name = "fields"];</code>
    */
-
-  com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getFieldsOrDefault(
+  /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getFieldsOrDefault(
       java.lang.String key,
-      com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue);
+      /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue);
   /**
    * <pre>
    * the raw data
@@ -57,7 +58,6 @@ public interface GetInvoiceResOrBuilder extends
    *
    * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; fields = 1 [json_name = "fields"];</code>
    */
-
   com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getFieldsOrThrow(
       java.lang.String key);
 

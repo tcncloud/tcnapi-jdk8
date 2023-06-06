@@ -32,66 +32,6 @@ private static final long serialVersionUID = 0L;
     return new AssignEmailConversationReq();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private AssignEmailConversationReq(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            emailConversationId_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            userId_ = s;
-            break;
-          }
-          case 32: {
-            int rawValue = input.readEnum();
-
-            assignmentType_ = rawValue;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.EmailapiProto.internal_static_api_v0alpha_AssignEmailConversationReq_descriptor;
@@ -106,7 +46,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EMAIL_CONVERSATION_ID_FIELD_NUMBER = 2;
-  private volatile java.lang.Object emailConversationId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object emailConversationId_ = "";
   /**
    * <pre>
    * EmailConversationId
@@ -152,7 +93,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USER_ID_FIELD_NUMBER = 3;
-  private volatile java.lang.Object userId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object userId_ = "";
   /**
    * <pre>
    * UserId
@@ -198,7 +140,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ASSIGNMENT_TYPE_FIELD_NUMBER = 4;
-  private int assignmentType_;
+  private int assignmentType_ = 0;
   /**
    * <pre>
    * AssignmentType
@@ -219,8 +161,7 @@ private static final long serialVersionUID = 0L;
    * @return The assignmentType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.AgentConversationAssignmentType getAssignmentType() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.AgentConversationAssignmentType result = com.tcn.cloud.api.api.commons.AgentConversationAssignmentType.valueOf(assignmentType_);
+    com.tcn.cloud.api.api.commons.AgentConversationAssignmentType result = com.tcn.cloud.api.api.commons.AgentConversationAssignmentType.forNumber(assignmentType_);
     return result == null ? com.tcn.cloud.api.api.commons.AgentConversationAssignmentType.UNRECOGNIZED : result;
   }
 
@@ -238,16 +179,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getEmailConversationIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailConversationId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, emailConversationId_);
     }
-    if (!getUserIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, userId_);
     }
     if (assignmentType_ != com.tcn.cloud.api.api.commons.AgentConversationAssignmentType.PRIMARY_AGENT.getNumber()) {
       output.writeEnum(4, assignmentType_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -256,17 +197,17 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getEmailConversationIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailConversationId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, emailConversationId_);
     }
-    if (!getUserIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, userId_);
     }
     if (assignmentType_ != com.tcn.cloud.api.api.commons.AgentConversationAssignmentType.PRIMARY_AGENT.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, assignmentType_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -286,7 +227,7 @@ private static final long serialVersionUID = 0L;
     if (!getUserId()
         .equals(other.getUserId())) return false;
     if (assignmentType_ != other.assignmentType_) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -303,7 +244,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getUserId().hashCode();
     hash = (37 * hash) + ASSIGNMENT_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + assignmentType_;
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -352,11 +293,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.AssignEmailConversationReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.AssignEmailConversationReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -424,28 +367,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.AssignEmailConversationReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       emailConversationId_ = "";
-
       userId_ = "";
-
       assignmentType_ = 0;
-
       return this;
     }
 
@@ -472,11 +408,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.AssignEmailConversationReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.AssignEmailConversationReq result = new com.tcn.cloud.api.api.v0alpha.AssignEmailConversationReq(this);
-      result.emailConversationId_ = emailConversationId_;
-      result.userId_ = userId_;
-      result.assignmentType_ = assignmentType_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.AssignEmailConversationReq result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.emailConversationId_ = emailConversationId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.userId_ = userId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.assignmentType_ = assignmentType_;
+      }
     }
 
     @java.lang.Override
@@ -525,16 +472,18 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.AssignEmailConversationReq.getDefaultInstance()) return this;
       if (!other.getEmailConversationId().isEmpty()) {
         emailConversationId_ = other.emailConversationId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getUserId().isEmpty()) {
         userId_ = other.userId_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.assignmentType_ != 0) {
         setAssignmentTypeValue(other.getAssignmentTypeValue());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -549,19 +498,48 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.AssignEmailConversationReq parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              emailConversationId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 18
+            case 26: {
+              userId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 26
+            case 32: {
+              assignmentType_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 32
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.AssignEmailConversationReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object emailConversationId_ = "";
     /**
@@ -616,11 +594,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmailConversationId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       emailConversationId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -633,8 +609,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEmailConversationId() {
-      
       emailConversationId_ = getDefaultInstance().getEmailConversationId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -649,12 +625,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmailConversationIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       emailConversationId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -712,11 +686,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       userId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -729,8 +701,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUserId() {
-      
       userId_ = getDefaultInstance().getUserId();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -745,12 +717,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       userId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -777,8 +747,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAssignmentTypeValue(int value) {
-      
       assignmentType_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -792,8 +762,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.AgentConversationAssignmentType getAssignmentType() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.AgentConversationAssignmentType result = com.tcn.cloud.api.api.commons.AgentConversationAssignmentType.valueOf(assignmentType_);
+      com.tcn.cloud.api.api.commons.AgentConversationAssignmentType result = com.tcn.cloud.api.api.commons.AgentConversationAssignmentType.forNumber(assignmentType_);
       return result == null ? com.tcn.cloud.api.api.commons.AgentConversationAssignmentType.UNRECOGNIZED : result;
     }
     /**
@@ -809,7 +778,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       assignmentType_ = value.getNumber();
       onChanged();
       return this;
@@ -823,7 +792,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAssignmentType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       assignmentType_ = 0;
       onChanged();
       return this;
@@ -861,7 +830,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AssignEmailConversationReq(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

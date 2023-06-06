@@ -32,127 +32,6 @@ private static final long serialVersionUID = 0L;
     return new GetOpenTimesBitmapsRes();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private GetOpenTimesBitmapsRes(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-            int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              inheritedBitmap_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            inheritedBitmap_.add(rawValue);
-            break;
-          }
-          case 10: {
-            int length = input.readRawVarint32();
-            int oldLimit = input.pushLimit(length);
-            while(input.getBytesUntilLimit() > 0) {
-              int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                inheritedBitmap_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              inheritedBitmap_.add(rawValue);
-            }
-            input.popLimit(oldLimit);
-            break;
-          }
-          case 16: {
-            int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              ownBitmap_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            ownBitmap_.add(rawValue);
-            break;
-          }
-          case 18: {
-            int length = input.readRawVarint32();
-            int oldLimit = input.pushLimit(length);
-            while(input.getBytesUntilLimit() > 0) {
-              int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                ownBitmap_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              ownBitmap_.add(rawValue);
-            }
-            input.popLimit(oldLimit);
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-              resultingBitmap_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField0_ |= 0x00000004;
-            }
-            resultingBitmap_.add(rawValue);
-            break;
-          }
-          case 26: {
-            int length = input.readRawVarint32();
-            int oldLimit = input.pushLimit(length);
-            while(input.getBytesUntilLimit() > 0) {
-              int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                resultingBitmap_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              resultingBitmap_.add(rawValue);
-            }
-            input.popLimit(oldLimit);
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        inheritedBitmap_ = java.util.Collections.unmodifiableList(inheritedBitmap_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        ownBitmap_ = java.util.Collections.unmodifiableList(ownBitmap_);
-      }
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
-        resultingBitmap_ = java.util.Collections.unmodifiableList(resultingBitmap_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_GetOpenTimesBitmapsRes_descriptor;
@@ -167,14 +46,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INHERITED_BITMAP_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> inheritedBitmap_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.OpenTimesOption> inheritedBitmap_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.OpenTimesOption>() {
             public com.tcn.cloud.api.api.commons.OpenTimesOption convert(java.lang.Integer from) {
-              @SuppressWarnings("deprecation")
-              com.tcn.cloud.api.api.commons.OpenTimesOption result = com.tcn.cloud.api.api.commons.OpenTimesOption.valueOf(from);
+              com.tcn.cloud.api.api.commons.OpenTimesOption result = com.tcn.cloud.api.api.commons.OpenTimesOption.forNumber(from);
               return result == null ? com.tcn.cloud.api.api.commons.OpenTimesOption.UNRECOGNIZED : result;
             }
           };
@@ -245,14 +124,14 @@ private static final long serialVersionUID = 0L;
   private int inheritedBitmapMemoizedSerializedSize;
 
   public static final int OWN_BITMAP_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> ownBitmap_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.OpenTimesOption> ownBitmap_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.OpenTimesOption>() {
             public com.tcn.cloud.api.api.commons.OpenTimesOption convert(java.lang.Integer from) {
-              @SuppressWarnings("deprecation")
-              com.tcn.cloud.api.api.commons.OpenTimesOption result = com.tcn.cloud.api.api.commons.OpenTimesOption.valueOf(from);
+              com.tcn.cloud.api.api.commons.OpenTimesOption result = com.tcn.cloud.api.api.commons.OpenTimesOption.forNumber(from);
               return result == null ? com.tcn.cloud.api.api.commons.OpenTimesOption.UNRECOGNIZED : result;
             }
           };
@@ -323,14 +202,14 @@ private static final long serialVersionUID = 0L;
   private int ownBitmapMemoizedSerializedSize;
 
   public static final int RESULTING_BITMAP_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> resultingBitmap_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.OpenTimesOption> resultingBitmap_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.OpenTimesOption>() {
             public com.tcn.cloud.api.api.commons.OpenTimesOption convert(java.lang.Integer from) {
-              @SuppressWarnings("deprecation")
-              com.tcn.cloud.api.api.commons.OpenTimesOption result = com.tcn.cloud.api.api.commons.OpenTimesOption.valueOf(from);
+              com.tcn.cloud.api.api.commons.OpenTimesOption result = com.tcn.cloud.api.api.commons.OpenTimesOption.forNumber(from);
               return result == null ? com.tcn.cloud.api.api.commons.OpenTimesOption.UNRECOGNIZED : result;
             }
           };
@@ -436,7 +315,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < resultingBitmap_.size(); i++) {
       output.writeEnumNoTag(resultingBitmap_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -481,7 +360,7 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }resultingBitmapMemoizedSerializedSize = dataSize;
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -499,7 +378,7 @@ private static final long serialVersionUID = 0L;
     if (!inheritedBitmap_.equals(other.inheritedBitmap_)) return false;
     if (!ownBitmap_.equals(other.ownBitmap_)) return false;
     if (!resultingBitmap_.equals(other.resultingBitmap_)) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -522,7 +401,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + RESULTING_BITMAP_FIELD_NUMBER;
       hash = (53 * hash) + resultingBitmap_.hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -571,11 +450,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -643,22 +524,18 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       inheritedBitmap_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);
       ownBitmap_ = java.util.Collections.emptyList();
@@ -691,7 +568,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes result = new com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes result) {
       if (((bitField0_ & 0x00000001) != 0)) {
         inheritedBitmap_ = java.util.Collections.unmodifiableList(inheritedBitmap_);
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -707,8 +590,10 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000004);
       }
       result.resultingBitmap_ = resultingBitmap_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override
@@ -785,7 +670,7 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -800,17 +685,81 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int tmpRaw = input.readEnum();
+              ensureInheritedBitmapIsMutable();
+              inheritedBitmap_.add(tmpRaw);
+              break;
+            } // case 8
+            case 10: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureInheritedBitmapIsMutable();
+                inheritedBitmap_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 10
+            case 16: {
+              int tmpRaw = input.readEnum();
+              ensureOwnBitmapIsMutable();
+              ownBitmap_.add(tmpRaw);
+              break;
+            } // case 16
+            case 18: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureOwnBitmapIsMutable();
+                ownBitmap_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 18
+            case 24: {
+              int tmpRaw = input.readEnum();
+              ensureResultingBitmapIsMutable();
+              resultingBitmap_.add(tmpRaw);
+              break;
+            } // case 24
+            case 26: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureResultingBitmapIsMutable();
+                resultingBitmap_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 26
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -958,8 +907,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .api.commons.OpenTimesOption inherited_bitmap = 1 [json_name = "inheritedBitmap"];</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of inheritedBitmap at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for inheritedBitmap to set.
      * @return This builder for chaining.
      */
     public Builder setInheritedBitmapValue(
@@ -1146,8 +1095,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .api.commons.OpenTimesOption own_bitmap = 2 [json_name = "ownBitmap"];</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of ownBitmap at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for ownBitmap to set.
      * @return This builder for chaining.
      */
     public Builder setOwnBitmapValue(
@@ -1334,8 +1283,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .api.commons.OpenTimesOption resulting_bitmap = 3 [json_name = "resultingBitmap"];</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of resultingBitmap at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for resultingBitmap to set.
      * @return This builder for chaining.
      */
     public Builder setResultingBitmapValue(
@@ -1411,7 +1360,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GetOpenTimesBitmapsRes(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

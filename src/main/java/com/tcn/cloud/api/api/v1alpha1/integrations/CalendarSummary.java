@@ -26,79 +26,6 @@ private static final long serialVersionUID = 0L;
     return new CalendarSummary();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private CalendarSummary(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            calendarNum_ = input.readInt32();
-            break;
-          }
-          case 18: {
-            com.tcn.cloud.api.api.v1alpha1.integrations.TransactionSummary.Builder subBuilder = null;
-            if (summary_ != null) {
-              subBuilder = summary_.toBuilder();
-            }
-            summary_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.integrations.TransactionSummary.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(summary_);
-              summary_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 26: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              typeSummaries_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTypeSummary>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            typeSummaries_.add(
-                input.readMessage(com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTypeSummary.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        typeSummaries_ = java.util.Collections.unmodifiableList(typeSummaries_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_CalendarSummary_descriptor;
@@ -113,7 +40,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALENDAR_NUM_FIELD_NUMBER = 1;
-  private int calendarNum_;
+  private int calendarNum_ = 0;
   /**
    * <pre>
    * calendar_num is in either YYYY, MM, or WW format
@@ -150,10 +77,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.integrations.TransactionSummaryOrBuilder getSummaryOrBuilder() {
-    return getSummary();
+    return summary_ == null ? com.tcn.cloud.api.api.v1alpha1.integrations.TransactionSummary.getDefaultInstance() : summary_;
   }
 
   public static final int TYPE_SUMMARIES_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTypeSummary> typeSummaries_;
   /**
    * <pre>
@@ -236,7 +164,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < typeSummaries_.size(); i++) {
       output.writeMessage(3, typeSummaries_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -257,7 +185,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, typeSummaries_.get(i));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -281,7 +209,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getTypeSummariesList()
         .equals(other.getTypeSummariesList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -302,7 +230,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TYPE_SUMMARIES_FIELD_NUMBER;
       hash = (53 * hash) + getTypeSummariesList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -351,11 +279,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -419,37 +349,31 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getTypeSummariesFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       calendarNum_ = 0;
-
-      if (summaryBuilder_ == null) {
-        summary_ = null;
-      } else {
-        summary_ = null;
+      summary_ = null;
+      if (summaryBuilder_ != null) {
+        summaryBuilder_.dispose();
         summaryBuilder_ = null;
       }
       if (typeSummariesBuilder_ == null) {
         typeSummaries_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        typeSummaries_ = null;
         typeSummariesBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -476,24 +400,34 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary result = new com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary(this);
-      int from_bitField0_ = bitField0_;
-      result.calendarNum_ = calendarNum_;
-      if (summaryBuilder_ == null) {
-        result.summary_ = summary_;
-      } else {
-        result.summary_ = summaryBuilder_.build();
-      }
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary result) {
       if (typeSummariesBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           typeSummaries_ = java.util.Collections.unmodifiableList(typeSummaries_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.typeSummaries_ = typeSummaries_;
       } else {
         result.typeSummaries_ = typeSummariesBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.calendarNum_ = calendarNum_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.summary_ = summaryBuilder_ == null
+            ? summary_
+            : summaryBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -550,7 +484,7 @@ private static final long serialVersionUID = 0L;
         if (!other.typeSummaries_.isEmpty()) {
           if (typeSummaries_.isEmpty()) {
             typeSummaries_ = other.typeSummaries_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureTypeSummariesIsMutable();
             typeSummaries_.addAll(other.typeSummaries_);
@@ -563,7 +497,7 @@ private static final long serialVersionUID = 0L;
             typeSummariesBuilder_.dispose();
             typeSummariesBuilder_ = null;
             typeSummaries_ = other.typeSummaries_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
             typeSummariesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getTypeSummariesFieldBuilder() : null;
@@ -572,7 +506,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -587,17 +521,55 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              calendarNum_ = input.readInt32();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              input.readMessage(
+                  getSummaryFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTypeSummary m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTypeSummary.parser(),
+                      extensionRegistry);
+              if (typeSummariesBuilder_ == null) {
+                ensureTypeSummariesIsMutable();
+                typeSummaries_.add(m);
+              } else {
+                typeSummariesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 26
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -625,8 +597,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCalendarNum(int value) {
-      
+
       calendarNum_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -639,7 +612,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCalendarNum() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       calendarNum_ = 0;
       onChanged();
       return this;
@@ -653,7 +626,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the summary field is set.
      */
     public boolean hasSummary() {
-      return summaryBuilder_ != null || summary_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.api.v1alpha1.integrations.TransactionSummary summary = 2 [json_name = "summary"];</code>
@@ -675,11 +648,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         summary_ = value;
-        onChanged();
       } else {
         summaryBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -689,11 +662,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.integrations.TransactionSummary.Builder builderForValue) {
       if (summaryBuilder_ == null) {
         summary_ = builderForValue.build();
-        onChanged();
       } else {
         summaryBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -701,38 +674,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSummary(com.tcn.cloud.api.api.v1alpha1.integrations.TransactionSummary value) {
       if (summaryBuilder_ == null) {
-        if (summary_ != null) {
-          summary_ =
-            com.tcn.cloud.api.api.v1alpha1.integrations.TransactionSummary.newBuilder(summary_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          summary_ != null &&
+          summary_ != com.tcn.cloud.api.api.v1alpha1.integrations.TransactionSummary.getDefaultInstance()) {
+          getSummaryBuilder().mergeFrom(value);
         } else {
           summary_ = value;
         }
-        onChanged();
       } else {
         summaryBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v1alpha1.integrations.TransactionSummary summary = 2 [json_name = "summary"];</code>
      */
     public Builder clearSummary() {
-      if (summaryBuilder_ == null) {
-        summary_ = null;
-        onChanged();
-      } else {
-        summary_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      summary_ = null;
+      if (summaryBuilder_ != null) {
+        summaryBuilder_.dispose();
         summaryBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v1alpha1.integrations.TransactionSummary summary = 2 [json_name = "summary"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.TransactionSummary.Builder getSummaryBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getSummaryFieldBuilder().getBuilder();
     }
@@ -767,9 +740,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTypeSummary> typeSummaries_ =
       java.util.Collections.emptyList();
     private void ensureTypeSummariesIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         typeSummaries_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTypeSummary>(typeSummaries_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -963,7 +936,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearTypeSummaries() {
       if (typeSummariesBuilder_ == null) {
         typeSummaries_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         typeSummariesBuilder_.clear();
@@ -1068,7 +1041,7 @@ private static final long serialVersionUID = 0L;
         typeSummariesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTypeSummary, com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTypeSummary.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTypeSummaryOrBuilder>(
                 typeSummaries_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         typeSummaries_ = null;
@@ -1108,7 +1081,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new CalendarSummary(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

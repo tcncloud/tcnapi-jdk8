@@ -25,68 +25,6 @@ private static final long serialVersionUID = 0L;
     return new ManualApprovalSettings();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private ManualApprovalSettings(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            allowed_ = input.readBool();
-            break;
-          }
-          case 16: {
-
-            confirm_ = input.readBool();
-            break;
-          }
-          case 24: {
-
-            smsAllowed_ = input.readBool();
-            break;
-          }
-          case 32: {
-
-            smsNumberConfirmation_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_ManualApprovalSettings_descriptor;
@@ -101,7 +39,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ALLOWED_FIELD_NUMBER = 1;
-  private boolean allowed_;
+  private boolean allowed_ = false;
   /**
    * <code>bool allowed = 1 [json_name = "allowed"];</code>
    * @return The allowed.
@@ -112,7 +50,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONFIRM_FIELD_NUMBER = 2;
-  private boolean confirm_;
+  private boolean confirm_ = false;
   /**
    * <code>bool confirm = 2 [json_name = "confirm"];</code>
    * @return The confirm.
@@ -123,7 +61,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SMS_ALLOWED_FIELD_NUMBER = 3;
-  private boolean smsAllowed_;
+  private boolean smsAllowed_ = false;
   /**
    * <code>bool sms_allowed = 3 [json_name = "smsAllowed"];</code>
    * @return The smsAllowed.
@@ -134,7 +72,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SMS_NUMBER_CONFIRMATION_FIELD_NUMBER = 4;
-  private boolean smsNumberConfirmation_;
+  private boolean smsNumberConfirmation_ = false;
   /**
    * <code>bool sms_number_confirmation = 4 [json_name = "smsNumberConfirmation"];</code>
    * @return The smsNumberConfirmation.
@@ -170,7 +108,7 @@ private static final long serialVersionUID = 0L;
     if (smsNumberConfirmation_ != false) {
       output.writeBool(4, smsNumberConfirmation_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -195,7 +133,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, smsNumberConfirmation_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -218,7 +156,7 @@ private static final long serialVersionUID = 0L;
         != other.getSmsAllowed()) return false;
     if (getSmsNumberConfirmation()
         != other.getSmsNumberConfirmation()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -241,7 +179,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + SMS_NUMBER_CONFIRMATION_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getSmsNumberConfirmation());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -290,11 +228,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.ManualApprovalSettings parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.ManualApprovalSettings parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -358,30 +298,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ManualApprovalSettings.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       allowed_ = false;
-
       confirm_ = false;
-
       smsAllowed_ = false;
-
       smsNumberConfirmation_ = false;
-
       return this;
     }
 
@@ -408,12 +340,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ManualApprovalSettings buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ManualApprovalSettings result = new com.tcn.cloud.api.api.v0alpha.ManualApprovalSettings(this);
-      result.allowed_ = allowed_;
-      result.confirm_ = confirm_;
-      result.smsAllowed_ = smsAllowed_;
-      result.smsNumberConfirmation_ = smsNumberConfirmation_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ManualApprovalSettings result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.allowed_ = allowed_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.confirm_ = confirm_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.smsAllowed_ = smsAllowed_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.smsNumberConfirmation_ = smsNumberConfirmation_;
+      }
     }
 
     @java.lang.Override
@@ -472,7 +417,7 @@ private static final long serialVersionUID = 0L;
       if (other.getSmsNumberConfirmation() != false) {
         setSmsNumberConfirmation(other.getSmsNumberConfirmation());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -487,19 +432,53 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.ManualApprovalSettings parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              allowed_ = input.readBool();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              confirm_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              smsAllowed_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              smsNumberConfirmation_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ManualApprovalSettings) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private boolean allowed_ ;
     /**
@@ -516,8 +495,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllowed(boolean value) {
-      
+
       allowed_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -526,7 +506,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllowed() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       allowed_ = false;
       onChanged();
       return this;
@@ -547,8 +527,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConfirm(boolean value) {
-      
+
       confirm_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -557,7 +538,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConfirm() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       confirm_ = false;
       onChanged();
       return this;
@@ -578,8 +559,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSmsAllowed(boolean value) {
-      
+
       smsAllowed_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -588,7 +570,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSmsAllowed() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       smsAllowed_ = false;
       onChanged();
       return this;
@@ -609,8 +591,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSmsNumberConfirmation(boolean value) {
-      
+
       smsNumberConfirmation_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -619,7 +602,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSmsNumberConfirmation() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       smsNumberConfirmation_ = false;
       onChanged();
       return this;
@@ -657,7 +640,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ManualApprovalSettings(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

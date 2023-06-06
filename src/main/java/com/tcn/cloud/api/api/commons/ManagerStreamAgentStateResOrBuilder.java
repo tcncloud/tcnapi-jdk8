@@ -37,5 +37,5 @@ public interface ManagerStreamAgentStateResOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.KeepAliveOrBuilder getHeartBeatOrBuilder();
 
-  public com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes.ManagerAgentStateCase getManagerAgentStateCase();
+  com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes.ManagerAgentStateCase getManagerAgentStateCase();
 }

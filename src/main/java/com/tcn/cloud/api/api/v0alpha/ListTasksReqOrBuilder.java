@@ -49,5 +49,5 @@ public interface ListTasksReqOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.ListTasksReq.ByCampaignOrBuilder getByCampaignOrBuilder();
 
-  public com.tcn.cloud.api.api.v0alpha.ListTasksReq.FilterCase getFilterCase();
+  com.tcn.cloud.api.api.v0alpha.ListTasksReq.FilterCase getFilterCase();
 }

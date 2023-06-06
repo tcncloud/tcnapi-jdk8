@@ -46,10 +46,11 @@ public interface BillingRegionMapOrBuilder extends
    *
    * <code>map&lt;string, .api.v0alpha.PhoneBillingRates&gt; region_rates = 1 [json_name = "regionRates"];</code>
    */
-
-  com.tcn.cloud.api.api.v0alpha.PhoneBillingRates getRegionRatesOrDefault(
+  /* nullable */
+com.tcn.cloud.api.api.v0alpha.PhoneBillingRates getRegionRatesOrDefault(
       java.lang.String key,
-      com.tcn.cloud.api.api.v0alpha.PhoneBillingRates defaultValue);
+      /* nullable */
+com.tcn.cloud.api.api.v0alpha.PhoneBillingRates defaultValue);
   /**
    * <pre>
    * Key: region name
@@ -57,7 +58,6 @@ public interface BillingRegionMapOrBuilder extends
    *
    * <code>map&lt;string, .api.v0alpha.PhoneBillingRates&gt; region_rates = 1 [json_name = "regionRates"];</code>
    */
-
   com.tcn.cloud.api.api.v0alpha.PhoneBillingRates getRegionRatesOrThrow(
       java.lang.String key);
 }

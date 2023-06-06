@@ -37,5 +37,5 @@ public interface DashboardTypeOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.RealTimeConfigOrBuilder getRealTimeOrBuilder();
 
-  public com.tcn.cloud.api.api.v0alpha.DashboardType.TypeCase getTypeCase();
+  com.tcn.cloud.api.api.v0alpha.DashboardType.TypeCase getTypeCase();
 }

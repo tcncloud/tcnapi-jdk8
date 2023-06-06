@@ -26,64 +26,6 @@ private static final long serialVersionUID = 0L;
     return new AgentStatisticsSettings();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private AgentStatisticsSettings(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            showStatistics_ = input.readBool();
-            break;
-          }
-          case 16: {
-
-            showCallHistory_ = input.readBool();
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            filterCallHistory_ = rawValue;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_AgentStatisticsSettings_descriptor;
@@ -206,7 +148,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SHOW_STATISTICS_FIELD_NUMBER = 1;
-  private boolean showStatistics_;
+  private boolean showStatistics_ = false;
   /**
    * <code>bool show_statistics = 1 [json_name = "showStatistics"];</code>
    * @return The showStatistics.
@@ -217,7 +159,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SHOW_CALL_HISTORY_FIELD_NUMBER = 2;
-  private boolean showCallHistory_;
+  private boolean showCallHistory_ = false;
   /**
    * <code>bool show_call_history = 2 [json_name = "showCallHistory"];</code>
    * @return The showCallHistory.
@@ -228,7 +170,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FILTER_CALL_HISTORY_FIELD_NUMBER = 3;
-  private int filterCallHistory_;
+  private int filterCallHistory_ = 0;
   /**
    * <code>.api.v0alpha.AgentStatisticsSettings.HistoryFilter filter_call_history = 3 [json_name = "filterCallHistory"];</code>
    * @return The enum numeric value on the wire for filterCallHistory.
@@ -241,8 +183,7 @@ private static final long serialVersionUID = 0L;
    * @return The filterCallHistory.
    */
   @java.lang.Override public com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings.HistoryFilter getFilterCallHistory() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings.HistoryFilter result = com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings.HistoryFilter.valueOf(filterCallHistory_);
+    com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings.HistoryFilter result = com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings.HistoryFilter.forNumber(filterCallHistory_);
     return result == null ? com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings.HistoryFilter.UNRECOGNIZED : result;
   }
 
@@ -269,7 +210,7 @@ private static final long serialVersionUID = 0L;
     if (filterCallHistory_ != com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings.HistoryFilter.TODAY.getNumber()) {
       output.writeEnum(3, filterCallHistory_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -290,7 +231,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, filterCallHistory_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -310,7 +251,7 @@ private static final long serialVersionUID = 0L;
     if (getShowCallHistory()
         != other.getShowCallHistory()) return false;
     if (filterCallHistory_ != other.filterCallHistory_) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -329,7 +270,7 @@ private static final long serialVersionUID = 0L;
         getShowCallHistory());
     hash = (37 * hash) + FILTER_CALL_HISTORY_FIELD_NUMBER;
     hash = (53 * hash) + filterCallHistory_;
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -378,11 +319,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -446,28 +389,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       showStatistics_ = false;
-
       showCallHistory_ = false;
-
       filterCallHistory_ = 0;
-
       return this;
     }
 
@@ -494,11 +430,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings buildPartial() {
       com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings result = new com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings(this);
-      result.showStatistics_ = showStatistics_;
-      result.showCallHistory_ = showCallHistory_;
-      result.filterCallHistory_ = filterCallHistory_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.showStatistics_ = showStatistics_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.showCallHistory_ = showCallHistory_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.filterCallHistory_ = filterCallHistory_;
+      }
     }
 
     @java.lang.Override
@@ -554,7 +501,7 @@ private static final long serialVersionUID = 0L;
       if (other.filterCallHistory_ != 0) {
         setFilterCallHistoryValue(other.getFilterCallHistoryValue());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -569,19 +516,48 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              showStatistics_ = input.readBool();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              showCallHistory_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              filterCallHistory_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private boolean showStatistics_ ;
     /**
@@ -598,8 +574,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setShowStatistics(boolean value) {
-      
+
       showStatistics_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -608,7 +585,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearShowStatistics() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       showStatistics_ = false;
       onChanged();
       return this;
@@ -629,8 +606,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setShowCallHistory(boolean value) {
-      
+
       showCallHistory_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -639,7 +617,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearShowCallHistory() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       showCallHistory_ = false;
       onChanged();
       return this;
@@ -659,8 +637,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFilterCallHistoryValue(int value) {
-      
       filterCallHistory_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -670,8 +648,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings.HistoryFilter getFilterCallHistory() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings.HistoryFilter result = com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings.HistoryFilter.valueOf(filterCallHistory_);
+      com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings.HistoryFilter result = com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings.HistoryFilter.forNumber(filterCallHistory_);
       return result == null ? com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings.HistoryFilter.UNRECOGNIZED : result;
     }
     /**
@@ -683,7 +660,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       filterCallHistory_ = value.getNumber();
       onChanged();
       return this;
@@ -693,7 +670,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFilterCallHistory() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       filterCallHistory_ = 0;
       onChanged();
       return this;
@@ -731,7 +708,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AgentStatisticsSettings(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

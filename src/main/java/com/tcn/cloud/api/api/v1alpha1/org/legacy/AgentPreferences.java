@@ -21,8 +21,10 @@ private static final long serialVersionUID = 0L;
   }
   private AgentPreferences() {
     defaultAgentDialIn_ = "";
-    configDialInNumbers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    clientDialInNumbers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    configDialInNumbers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    clientDialInNumbers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -32,109 +34,6 @@ private static final long serialVersionUID = 0L;
     return new AgentPreferences();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private AgentPreferences(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            defaultAgentDialIn_ = s;
-            break;
-          }
-          case 16: {
-
-            pbxExtensionLength_ = input.readInt32();
-            break;
-          }
-          case 24: {
-
-            defaultSoftphoneVolumeIn_ = input.readInt32();
-            break;
-          }
-          case 32: {
-
-            defaultSoftphoneVolumeOut_ = input.readInt32();
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              configDialInNumbers_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            configDialInNumbers_.add(s);
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              clientDialInNumbers_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            clientDialInNumbers_.add(s);
-            break;
-          }
-          case 56: {
-
-            manualDialCallerIdPrivacy_ = input.readBool();
-            break;
-          }
-          case 64: {
-
-            useManualDialCallerIdPrivacy_ = input.readBool();
-            break;
-          }
-          case 72: {
-
-            messageNotificationsDisabled_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        configDialInNumbers_ = configDialInNumbers_.getUnmodifiableView();
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        clientDialInNumbers_ = clientDialInNumbers_.getUnmodifiableView();
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.legacy.EntitiesProto.internal_static_api_v1alpha1_org_legacy_AgentPreferences_descriptor;
@@ -149,7 +48,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFAULT_AGENT_DIAL_IN_FIELD_NUMBER = 1;
-  private volatile java.lang.Object defaultAgentDialIn_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object defaultAgentDialIn_ = "";
   /**
    * <pre>
    * Default agent dial in number
@@ -195,7 +95,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PBX_EXTENSION_LENGTH_FIELD_NUMBER = 2;
-  private int pbxExtensionLength_;
+  private int pbxExtensionLength_ = 0;
   /**
    * <pre>
    * PBX extension length [3-9]
@@ -210,7 +110,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFAULT_SOFTPHONE_VOLUME_IN_FIELD_NUMBER = 3;
-  private int defaultSoftphoneVolumeIn_;
+  private int defaultSoftphoneVolumeIn_ = 0;
   /**
    * <pre>
    * Default softphone input volume percent [0-100]
@@ -225,7 +125,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFAULT_SOFTPHONE_VOLUME_OUT_FIELD_NUMBER = 4;
-  private int defaultSoftphoneVolumeOut_;
+  private int defaultSoftphoneVolumeOut_ = 0;
   /**
    * <pre>
    * Default softphone output volume percent [0-100]
@@ -240,7 +140,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONFIG_DIAL_IN_NUMBERS_FIELD_NUMBER = 5;
-  private com.google.protobuf.LazyStringList configDialInNumbers_;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList configDialInNumbers_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * (READ ONLY) List of agent dial-in numbers defined by regional skunk config
@@ -291,7 +193,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CLIENT_DIAL_IN_NUMBERS_FIELD_NUMBER = 6;
-  private com.google.protobuf.LazyStringList clientDialInNumbers_;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList clientDialInNumbers_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * List of client-defined custom agent dial-in numbers
@@ -342,7 +246,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MANUAL_DIAL_CALLER_ID_PRIVACY_FIELD_NUMBER = 7;
-  private boolean manualDialCallerIdPrivacy_;
+  private boolean manualDialCallerIdPrivacy_ = false;
   /**
    * <pre>
    * Allows agent to use privacy headers on the manual dial caller ID
@@ -357,7 +261,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USE_MANUAL_DIAL_CALLER_ID_PRIVACY_FIELD_NUMBER = 8;
-  private boolean useManualDialCallerIdPrivacy_;
+  private boolean useManualDialCallerIdPrivacy_ = false;
   /**
    * <pre>
    * The default/initial setting for the caller ID privacy
@@ -372,7 +276,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MESSAGE_NOTIFICATIONS_DISABLED_FIELD_NUMBER = 9;
-  private boolean messageNotificationsDisabled_;
+  private boolean messageNotificationsDisabled_ = false;
   /**
    * <pre>
    * Toggles agent message notifications.
@@ -400,7 +304,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getDefaultAgentDialInBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultAgentDialIn_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, defaultAgentDialIn_);
     }
     if (pbxExtensionLength_ != 0) {
@@ -427,7 +331,7 @@ private static final long serialVersionUID = 0L;
     if (messageNotificationsDisabled_ != false) {
       output.writeBool(9, messageNotificationsDisabled_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -436,7 +340,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getDefaultAgentDialInBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultAgentDialIn_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, defaultAgentDialIn_);
     }
     if (pbxExtensionLength_ != 0) {
@@ -479,7 +383,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(9, messageNotificationsDisabled_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -512,7 +416,7 @@ private static final long serialVersionUID = 0L;
         != other.getUseManualDialCallerIdPrivacy()) return false;
     if (getMessageNotificationsDisabled()
         != other.getMessageNotificationsDisabled()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -548,7 +452,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + MESSAGE_NOTIFICATIONS_DISABLED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getMessageNotificationsDisabled());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -597,11 +501,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentPreferences parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentPreferences parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -669,40 +575,29 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentPreferences.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       defaultAgentDialIn_ = "";
-
       pbxExtensionLength_ = 0;
-
       defaultSoftphoneVolumeIn_ = 0;
-
       defaultSoftphoneVolumeOut_ = 0;
-
-      configDialInNumbers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
-      clientDialInNumbers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      configDialInNumbers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      clientDialInNumbers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       manualDialCallerIdPrivacy_ = false;
-
       useManualDialCallerIdPrivacy_ = false;
-
       messageNotificationsDisabled_ = false;
-
       return this;
     }
 
@@ -729,26 +624,42 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentPreferences buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentPreferences result = new com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentPreferences(this);
-      int from_bitField0_ = bitField0_;
-      result.defaultAgentDialIn_ = defaultAgentDialIn_;
-      result.pbxExtensionLength_ = pbxExtensionLength_;
-      result.defaultSoftphoneVolumeIn_ = defaultSoftphoneVolumeIn_;
-      result.defaultSoftphoneVolumeOut_ = defaultSoftphoneVolumeOut_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        configDialInNumbers_ = configDialInNumbers_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.configDialInNumbers_ = configDialInNumbers_;
-      if (((bitField0_ & 0x00000002) != 0)) {
-        clientDialInNumbers_ = clientDialInNumbers_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.clientDialInNumbers_ = clientDialInNumbers_;
-      result.manualDialCallerIdPrivacy_ = manualDialCallerIdPrivacy_;
-      result.useManualDialCallerIdPrivacy_ = useManualDialCallerIdPrivacy_;
-      result.messageNotificationsDisabled_ = messageNotificationsDisabled_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentPreferences result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.defaultAgentDialIn_ = defaultAgentDialIn_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.pbxExtensionLength_ = pbxExtensionLength_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.defaultSoftphoneVolumeIn_ = defaultSoftphoneVolumeIn_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.defaultSoftphoneVolumeOut_ = defaultSoftphoneVolumeOut_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        configDialInNumbers_.makeImmutable();
+        result.configDialInNumbers_ = configDialInNumbers_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        clientDialInNumbers_.makeImmutable();
+        result.clientDialInNumbers_ = clientDialInNumbers_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.manualDialCallerIdPrivacy_ = manualDialCallerIdPrivacy_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.useManualDialCallerIdPrivacy_ = useManualDialCallerIdPrivacy_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.messageNotificationsDisabled_ = messageNotificationsDisabled_;
+      }
     }
 
     @java.lang.Override
@@ -797,6 +708,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentPreferences.getDefaultInstance()) return this;
       if (!other.getDefaultAgentDialIn().isEmpty()) {
         defaultAgentDialIn_ = other.defaultAgentDialIn_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.getPbxExtensionLength() != 0) {
@@ -811,7 +723,7 @@ private static final long serialVersionUID = 0L;
       if (!other.configDialInNumbers_.isEmpty()) {
         if (configDialInNumbers_.isEmpty()) {
           configDialInNumbers_ = other.configDialInNumbers_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000010;
         } else {
           ensureConfigDialInNumbersIsMutable();
           configDialInNumbers_.addAll(other.configDialInNumbers_);
@@ -821,7 +733,7 @@ private static final long serialVersionUID = 0L;
       if (!other.clientDialInNumbers_.isEmpty()) {
         if (clientDialInNumbers_.isEmpty()) {
           clientDialInNumbers_ = other.clientDialInNumbers_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ |= 0x00000020;
         } else {
           ensureClientDialInNumbersIsMutable();
           clientDialInNumbers_.addAll(other.clientDialInNumbers_);
@@ -837,7 +749,7 @@ private static final long serialVersionUID = 0L;
       if (other.getMessageNotificationsDisabled() != false) {
         setMessageNotificationsDisabled(other.getMessageNotificationsDisabled());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -852,17 +764,77 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentPreferences parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              defaultAgentDialIn_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 16: {
+              pbxExtensionLength_ = input.readInt32();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              defaultSoftphoneVolumeIn_ = input.readInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              defaultSoftphoneVolumeOut_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureConfigDialInNumbersIsMutable();
+              configDialInNumbers_.add(s);
+              break;
+            } // case 42
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureClientDialInNumbersIsMutable();
+              clientDialInNumbers_.add(s);
+              break;
+            } // case 50
+            case 56: {
+              manualDialCallerIdPrivacy_ = input.readBool();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            case 64: {
+              useManualDialCallerIdPrivacy_ = input.readBool();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
+            case 72: {
+              messageNotificationsDisabled_ = input.readBool();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentPreferences) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -920,11 +892,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDefaultAgentDialIn(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       defaultAgentDialIn_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -937,8 +907,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultAgentDialIn() {
-      
       defaultAgentDialIn_ = getDefaultInstance().getDefaultAgentDialIn();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -953,12 +923,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDefaultAgentDialInBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       defaultAgentDialIn_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -986,8 +954,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPbxExtensionLength(int value) {
-      
+
       pbxExtensionLength_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1000,7 +969,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPbxExtensionLength() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       pbxExtensionLength_ = 0;
       onChanged();
       return this;
@@ -1029,8 +998,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDefaultSoftphoneVolumeIn(int value) {
-      
+
       defaultSoftphoneVolumeIn_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1043,7 +1013,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultSoftphoneVolumeIn() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       defaultSoftphoneVolumeIn_ = 0;
       onChanged();
       return this;
@@ -1072,8 +1042,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDefaultSoftphoneVolumeOut(int value) {
-      
+
       defaultSoftphoneVolumeOut_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1086,18 +1057,19 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultSoftphoneVolumeOut() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       defaultSoftphoneVolumeOut_ = 0;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList configDialInNumbers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList configDialInNumbers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureConfigDialInNumbersIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!configDialInNumbers_.isModifiable()) {
         configDialInNumbers_ = new com.google.protobuf.LazyStringArrayList(configDialInNumbers_);
-        bitField0_ |= 0x00000001;
-       }
+      }
+      bitField0_ |= 0x00000010;
     }
     /**
      * <pre>
@@ -1109,7 +1081,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getConfigDialInNumbersList() {
-      return configDialInNumbers_.getUnmodifiableView();
+      configDialInNumbers_.makeImmutable();
+      return configDialInNumbers_;
     }
     /**
      * <pre>
@@ -1159,11 +1132,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConfigDialInNumbers(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureConfigDialInNumbersIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureConfigDialInNumbersIsMutable();
       configDialInNumbers_.set(index, value);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1178,11 +1150,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addConfigDialInNumbers(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureConfigDialInNumbersIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureConfigDialInNumbersIsMutable();
       configDialInNumbers_.add(value);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1200,6 +1171,7 @@ private static final long serialVersionUID = 0L;
       ensureConfigDialInNumbersIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, configDialInNumbers_);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1212,8 +1184,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConfigDialInNumbers() {
-      configDialInNumbers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      configDialInNumbers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000010);;
       onChanged();
       return this;
     }
@@ -1228,22 +1201,22 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addConfigDialInNumbersBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureConfigDialInNumbersIsMutable();
       configDialInNumbers_.add(value);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList clientDialInNumbers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList clientDialInNumbers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureClientDialInNumbersIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!clientDialInNumbers_.isModifiable()) {
         clientDialInNumbers_ = new com.google.protobuf.LazyStringArrayList(clientDialInNumbers_);
-        bitField0_ |= 0x00000002;
-       }
+      }
+      bitField0_ |= 0x00000020;
     }
     /**
      * <pre>
@@ -1255,7 +1228,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getClientDialInNumbersList() {
-      return clientDialInNumbers_.getUnmodifiableView();
+      clientDialInNumbers_.makeImmutable();
+      return clientDialInNumbers_;
     }
     /**
      * <pre>
@@ -1305,11 +1279,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setClientDialInNumbers(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureClientDialInNumbersIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureClientDialInNumbersIsMutable();
       clientDialInNumbers_.set(index, value);
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1324,11 +1297,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addClientDialInNumbers(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureClientDialInNumbersIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureClientDialInNumbersIsMutable();
       clientDialInNumbers_.add(value);
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1346,6 +1318,7 @@ private static final long serialVersionUID = 0L;
       ensureClientDialInNumbersIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, clientDialInNumbers_);
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1358,8 +1331,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearClientDialInNumbers() {
-      clientDialInNumbers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      clientDialInNumbers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000020);;
       onChanged();
       return this;
     }
@@ -1374,12 +1348,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addClientDialInNumbersBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureClientDialInNumbersIsMutable();
       clientDialInNumbers_.add(value);
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1407,8 +1380,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setManualDialCallerIdPrivacy(boolean value) {
-      
+
       manualDialCallerIdPrivacy_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1421,7 +1395,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearManualDialCallerIdPrivacy() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       manualDialCallerIdPrivacy_ = false;
       onChanged();
       return this;
@@ -1450,8 +1424,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setUseManualDialCallerIdPrivacy(boolean value) {
-      
+
       useManualDialCallerIdPrivacy_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1464,7 +1439,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUseManualDialCallerIdPrivacy() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       useManualDialCallerIdPrivacy_ = false;
       onChanged();
       return this;
@@ -1493,8 +1468,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMessageNotificationsDisabled(boolean value) {
-      
+
       messageNotificationsDisabled_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1507,7 +1483,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMessageNotificationsDisabled() {
-      
+      bitField0_ = (bitField0_ & ~0x00000100);
       messageNotificationsDisabled_ = false;
       onChanged();
       return this;
@@ -1545,7 +1521,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AgentPreferences(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

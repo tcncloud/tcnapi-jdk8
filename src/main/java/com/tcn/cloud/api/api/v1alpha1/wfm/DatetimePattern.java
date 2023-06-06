@@ -31,73 +31,6 @@ private static final long serialVersionUID = 0L;
     return new DatetimePattern();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private DatetimePattern(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              weekMaps_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            weekMaps_.add(
-                input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.parser(), extensionRegistry));
-            break;
-          }
-          case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              calendarItems_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.CalendarItem>();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            calendarItems_.add(
-                input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.CalendarItem.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        weekMaps_ = java.util.Collections.unmodifiableList(weekMaps_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        calendarItems_ = java.util.Collections.unmodifiableList(calendarItems_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_DatetimePattern_descriptor;
@@ -209,74 +142,6 @@ private static final long serialVersionUID = 0L;
       return new WeekMap();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private WeekMap(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.tcn.cloud.api.api.commons.DatetimeRange.Builder subBuilder = null;
-              if (datetimeRange_ != null) {
-                subBuilder = datetimeRange_.toBuilder();
-              }
-              datetimeRange_ = input.readMessage(com.tcn.cloud.api.api.commons.DatetimeRange.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(datetimeRange_);
-                datetimeRange_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                dayMaps_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.WeekMapDOW>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              dayMaps_.add(
-                  input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.WeekMapDOW.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          dayMaps_ = java.util.Collections.unmodifiableList(dayMaps_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_DatetimePattern_WeekMap_descriptor;
@@ -383,77 +248,6 @@ private static final long serialVersionUID = 0L;
         return new WeekMapDOW();
       }
 
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private WeekMapDOW(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                int rawValue = input.readEnum();
-
-                dayOfWeek_ = rawValue;
-                break;
-              }
-              case 16: {
-
-                startMinuteInDay_ = input.readInt32();
-                break;
-              }
-              case 24: {
-
-                endMinuteInDay_ = input.readInt32();
-                break;
-              }
-              case 34: {
-                com.tcn.cloud.api.api.commons.OptionTypes.Builder subBuilder = null;
-                if (value_ != null) {
-                  subBuilder = value_.toBuilder();
-                }
-                value_ = input.readMessage(com.tcn.cloud.api.api.commons.OptionTypes.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(value_);
-                  value_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-              default: {
-                if (!parseUnknownField(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_DatetimePattern_WeekMap_WeekMapDOW_descriptor;
@@ -468,7 +262,7 @@ private static final long serialVersionUID = 0L;
       }
 
       public static final int DAY_OF_WEEK_FIELD_NUMBER = 1;
-      private int dayOfWeek_;
+      private int dayOfWeek_ = 0;
       /**
        * <pre>
        * Which day of the week the entity represents.
@@ -489,13 +283,12 @@ private static final long serialVersionUID = 0L;
        * @return The dayOfWeek.
        */
       @java.lang.Override public com.tcn.cloud.api.api.commons.DayOfWeek getDayOfWeek() {
-        @SuppressWarnings("deprecation")
-        com.tcn.cloud.api.api.commons.DayOfWeek result = com.tcn.cloud.api.api.commons.DayOfWeek.valueOf(dayOfWeek_);
+        com.tcn.cloud.api.api.commons.DayOfWeek result = com.tcn.cloud.api.api.commons.DayOfWeek.forNumber(dayOfWeek_);
         return result == null ? com.tcn.cloud.api.api.commons.DayOfWeek.UNRECOGNIZED : result;
       }
 
       public static final int START_MINUTE_IN_DAY_FIELD_NUMBER = 2;
-      private int startMinuteInDay_;
+      private int startMinuteInDay_ = 0;
       /**
        * <pre>
        * Which minute the entity starts at.
@@ -510,7 +303,7 @@ private static final long serialVersionUID = 0L;
       }
 
       public static final int END_MINUTE_IN_DAY_FIELD_NUMBER = 3;
-      private int endMinuteInDay_;
+      private int endMinuteInDay_ = 0;
       /**
        * <pre>
        * Which minute the entity ends at.
@@ -559,7 +352,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public com.tcn.cloud.api.api.commons.OptionTypesOrBuilder getValueOrBuilder() {
-        return getValue();
+        return value_ == null ? com.tcn.cloud.api.api.commons.OptionTypes.getDefaultInstance() : value_;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -588,7 +381,7 @@ private static final long serialVersionUID = 0L;
         if (value_ != null) {
           output.writeMessage(4, getValue());
         }
-        unknownFields.writeTo(output);
+        getUnknownFields().writeTo(output);
       }
 
       @java.lang.Override
@@ -613,7 +406,7 @@ private static final long serialVersionUID = 0L;
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(4, getValue());
         }
-        size += unknownFields.getSerializedSize();
+        size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
         return size;
       }
@@ -638,7 +431,7 @@ private static final long serialVersionUID = 0L;
           if (!getValue()
               .equals(other.getValue())) return false;
         }
-        if (!unknownFields.equals(other.unknownFields)) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
 
@@ -659,7 +452,7 @@ private static final long serialVersionUID = 0L;
           hash = (37 * hash) + VALUE_FIELD_NUMBER;
           hash = (53 * hash) + getValue().hashCode();
         }
-        hash = (29 * hash) + unknownFields.hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
         return hash;
       }
@@ -708,11 +501,13 @@ private static final long serialVersionUID = 0L;
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
+
       public static com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.WeekMapDOW parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
+
       public static com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.WeekMapDOW parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -776,32 +571,24 @@ private static final long serialVersionUID = 0L;
 
         // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.WeekMapDOW.newBuilder()
         private Builder() {
-          maybeForceBuilderInitialization();
+
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
+
         }
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           dayOfWeek_ = 0;
-
           startMinuteInDay_ = 0;
-
           endMinuteInDay_ = 0;
-
-          if (valueBuilder_ == null) {
-            value_ = null;
-          } else {
-            value_ = null;
+          value_ = null;
+          if (valueBuilder_ != null) {
+            valueBuilder_.dispose();
             valueBuilder_ = null;
           }
           return this;
@@ -830,16 +617,27 @@ private static final long serialVersionUID = 0L;
         @java.lang.Override
         public com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.WeekMapDOW buildPartial() {
           com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.WeekMapDOW result = new com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.WeekMapDOW(this);
-          result.dayOfWeek_ = dayOfWeek_;
-          result.startMinuteInDay_ = startMinuteInDay_;
-          result.endMinuteInDay_ = endMinuteInDay_;
-          if (valueBuilder_ == null) {
-            result.value_ = value_;
-          } else {
-            result.value_ = valueBuilder_.build();
-          }
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.WeekMapDOW result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.dayOfWeek_ = dayOfWeek_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.startMinuteInDay_ = startMinuteInDay_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.endMinuteInDay_ = endMinuteInDay_;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.value_ = valueBuilder_ == null
+                ? value_
+                : valueBuilder_.build();
+          }
         }
 
         @java.lang.Override
@@ -898,7 +696,7 @@ private static final long serialVersionUID = 0L;
           if (other.hasValue()) {
             mergeValue(other.getValue());
           }
-          this.mergeUnknownFields(other.unknownFields);
+          this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
         }
@@ -913,19 +711,55 @@ private static final long serialVersionUID = 0L;
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.WeekMapDOW parsedMessage = null;
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
           try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  dayOfWeek_ = input.readEnum();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 16: {
+                  startMinuteInDay_ = input.readInt32();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 16
+                case 24: {
+                  endMinuteInDay_ = input.readInt32();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 24
+                case 34: {
+                  input.readMessage(
+                      getValueFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 34
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.WeekMapDOW) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
+            onChanged();
+          } // finally
           return this;
         }
+        private int bitField0_;
 
         private int dayOfWeek_ = 0;
         /**
@@ -949,8 +783,8 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder setDayOfWeekValue(int value) {
-          
           dayOfWeek_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -964,8 +798,7 @@ private static final long serialVersionUID = 0L;
          */
         @java.lang.Override
         public com.tcn.cloud.api.api.commons.DayOfWeek getDayOfWeek() {
-          @SuppressWarnings("deprecation")
-          com.tcn.cloud.api.api.commons.DayOfWeek result = com.tcn.cloud.api.api.commons.DayOfWeek.valueOf(dayOfWeek_);
+          com.tcn.cloud.api.api.commons.DayOfWeek result = com.tcn.cloud.api.api.commons.DayOfWeek.forNumber(dayOfWeek_);
           return result == null ? com.tcn.cloud.api.api.commons.DayOfWeek.UNRECOGNIZED : result;
         }
         /**
@@ -981,7 +814,7 @@ private static final long serialVersionUID = 0L;
           if (value == null) {
             throw new NullPointerException();
           }
-          
+          bitField0_ |= 0x00000001;
           dayOfWeek_ = value.getNumber();
           onChanged();
           return this;
@@ -995,7 +828,7 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder clearDayOfWeek() {
-          
+          bitField0_ = (bitField0_ & ~0x00000001);
           dayOfWeek_ = 0;
           onChanged();
           return this;
@@ -1024,8 +857,9 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder setStartMinuteInDay(int value) {
-          
+
           startMinuteInDay_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -1038,7 +872,7 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder clearStartMinuteInDay() {
-          
+          bitField0_ = (bitField0_ & ~0x00000002);
           startMinuteInDay_ = 0;
           onChanged();
           return this;
@@ -1067,8 +901,9 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder setEndMinuteInDay(int value) {
-          
+
           endMinuteInDay_ = value;
+          bitField0_ |= 0x00000004;
           onChanged();
           return this;
         }
@@ -1081,7 +916,7 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder clearEndMinuteInDay() {
-          
+          bitField0_ = (bitField0_ & ~0x00000004);
           endMinuteInDay_ = 0;
           onChanged();
           return this;
@@ -1099,7 +934,7 @@ private static final long serialVersionUID = 0L;
          * @return Whether the value field is set.
          */
         public boolean hasValue() {
-          return valueBuilder_ != null || value_ != null;
+          return ((bitField0_ & 0x00000008) != 0);
         }
         /**
          * <pre>
@@ -1129,11 +964,11 @@ private static final long serialVersionUID = 0L;
               throw new NullPointerException();
             }
             value_ = value;
-            onChanged();
           } else {
             valueBuilder_.setMessage(value);
           }
-
+          bitField0_ |= 0x00000008;
+          onChanged();
           return this;
         }
         /**
@@ -1147,11 +982,11 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.OptionTypes.Builder builderForValue) {
           if (valueBuilder_ == null) {
             value_ = builderForValue.build();
-            onChanged();
           } else {
             valueBuilder_.setMessage(builderForValue.build());
           }
-
+          bitField0_ |= 0x00000008;
+          onChanged();
           return this;
         }
         /**
@@ -1163,17 +998,18 @@ private static final long serialVersionUID = 0L;
          */
         public Builder mergeValue(com.tcn.cloud.api.api.commons.OptionTypes value) {
           if (valueBuilder_ == null) {
-            if (value_ != null) {
-              value_ =
-                com.tcn.cloud.api.api.commons.OptionTypes.newBuilder(value_).mergeFrom(value).buildPartial();
+            if (((bitField0_ & 0x00000008) != 0) &&
+              value_ != null &&
+              value_ != com.tcn.cloud.api.api.commons.OptionTypes.getDefaultInstance()) {
+              getValueBuilder().mergeFrom(value);
             } else {
               value_ = value;
             }
-            onChanged();
           } else {
             valueBuilder_.mergeFrom(value);
           }
-
+          bitField0_ |= 0x00000008;
+          onChanged();
           return this;
         }
         /**
@@ -1184,14 +1020,13 @@ private static final long serialVersionUID = 0L;
          * <code>.api.commons.OptionTypes value = 4 [json_name = "value"];</code>
          */
         public Builder clearValue() {
-          if (valueBuilder_ == null) {
-            value_ = null;
-            onChanged();
-          } else {
-            value_ = null;
+          bitField0_ = (bitField0_ & ~0x00000008);
+          value_ = null;
+          if (valueBuilder_ != null) {
+            valueBuilder_.dispose();
             valueBuilder_ = null;
           }
-
+          onChanged();
           return this;
         }
         /**
@@ -1202,7 +1037,7 @@ private static final long serialVersionUID = 0L;
          * <code>.api.commons.OptionTypes value = 4 [json_name = "value"];</code>
          */
         public com.tcn.cloud.api.api.commons.OptionTypes.Builder getValueBuilder() {
-          
+          bitField0_ |= 0x00000008;
           onChanged();
           return getValueFieldBuilder().getBuilder();
         }
@@ -1274,7 +1109,18 @@ private static final long serialVersionUID = 0L;
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new WeekMapDOW(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 
@@ -1329,10 +1175,11 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getDatetimeRangeOrBuilder() {
-      return getDatetimeRange();
+      return datetimeRange_ == null ? com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : datetimeRange_;
     }
 
     public static final int DAY_MAPS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.WeekMapDOW> dayMaps_;
     /**
      * <pre>
@@ -1412,7 +1259,7 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < dayMaps_.size(); i++) {
         output.writeMessage(2, dayMaps_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1429,7 +1276,7 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, dayMaps_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1451,7 +1298,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!getDayMapsList()
           .equals(other.getDayMapsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1470,7 +1317,7 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + DAY_MAPS_FIELD_NUMBER;
         hash = (53 * hash) + getDayMapsList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1519,11 +1366,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1587,35 +1436,30 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDayMapsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (datetimeRangeBuilder_ == null) {
-          datetimeRange_ = null;
-        } else {
-          datetimeRange_ = null;
+        bitField0_ = 0;
+        datetimeRange_ = null;
+        if (datetimeRangeBuilder_ != null) {
+          datetimeRangeBuilder_.dispose();
           datetimeRangeBuilder_ = null;
         }
         if (dayMapsBuilder_ == null) {
           dayMaps_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          dayMaps_ = null;
           dayMapsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -1642,23 +1486,31 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap buildPartial() {
         com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap result = new com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap(this);
-        int from_bitField0_ = bitField0_;
-        if (datetimeRangeBuilder_ == null) {
-          result.datetimeRange_ = datetimeRange_;
-        } else {
-          result.datetimeRange_ = datetimeRangeBuilder_.build();
-        }
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap result) {
         if (dayMapsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             dayMaps_ = java.util.Collections.unmodifiableList(dayMaps_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.dayMaps_ = dayMaps_;
         } else {
           result.dayMaps_ = dayMapsBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.datetimeRange_ = datetimeRangeBuilder_ == null
+              ? datetimeRange_
+              : datetimeRangeBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -1712,7 +1564,7 @@ private static final long serialVersionUID = 0L;
           if (!other.dayMaps_.isEmpty()) {
             if (dayMaps_.isEmpty()) {
               dayMaps_ = other.dayMaps_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureDayMapsIsMutable();
               dayMaps_.addAll(other.dayMaps_);
@@ -1725,7 +1577,7 @@ private static final long serialVersionUID = 0L;
               dayMapsBuilder_.dispose();
               dayMapsBuilder_ = null;
               dayMaps_ = other.dayMaps_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
               dayMapsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getDayMapsFieldBuilder() : null;
@@ -1734,7 +1586,7 @@ private static final long serialVersionUID = 0L;
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1749,17 +1601,50 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDatetimeRangeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.WeekMapDOW m =
+                    input.readMessage(
+                        com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.WeekMapDOW.parser(),
+                        extensionRegistry);
+                if (dayMapsBuilder_ == null) {
+                  ensureDayMapsIsMutable();
+                  dayMaps_.add(m);
+                } else {
+                  dayMapsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1776,7 +1661,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the datetimeRange field is set.
        */
       public boolean hasDatetimeRange() {
-        return datetimeRangeBuilder_ != null || datetimeRange_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -1806,11 +1691,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           datetimeRange_ = value;
-          onChanged();
         } else {
           datetimeRangeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1824,11 +1709,11 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.commons.DatetimeRange.Builder builderForValue) {
         if (datetimeRangeBuilder_ == null) {
           datetimeRange_ = builderForValue.build();
-          onChanged();
         } else {
           datetimeRangeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1840,17 +1725,18 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeDatetimeRange(com.tcn.cloud.api.api.commons.DatetimeRange value) {
         if (datetimeRangeBuilder_ == null) {
-          if (datetimeRange_ != null) {
-            datetimeRange_ =
-              com.tcn.cloud.api.api.commons.DatetimeRange.newBuilder(datetimeRange_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            datetimeRange_ != null &&
+            datetimeRange_ != com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance()) {
+            getDatetimeRangeBuilder().mergeFrom(value);
           } else {
             datetimeRange_ = value;
           }
-          onChanged();
         } else {
           datetimeRangeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1861,14 +1747,13 @@ private static final long serialVersionUID = 0L;
        * <code>.api.commons.DatetimeRange datetime_range = 1 [json_name = "datetimeRange"];</code>
        */
       public Builder clearDatetimeRange() {
-        if (datetimeRangeBuilder_ == null) {
-          datetimeRange_ = null;
-          onChanged();
-        } else {
-          datetimeRange_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        datetimeRange_ = null;
+        if (datetimeRangeBuilder_ != null) {
+          datetimeRangeBuilder_.dispose();
           datetimeRangeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1879,7 +1764,7 @@ private static final long serialVersionUID = 0L;
        * <code>.api.commons.DatetimeRange datetime_range = 1 [json_name = "datetimeRange"];</code>
        */
       public com.tcn.cloud.api.api.commons.DatetimeRange.Builder getDatetimeRangeBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getDatetimeRangeFieldBuilder().getBuilder();
       }
@@ -1922,9 +1807,9 @@ private static final long serialVersionUID = 0L;
       private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.WeekMapDOW> dayMaps_ =
         java.util.Collections.emptyList();
       private void ensureDayMapsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           dayMaps_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.WeekMapDOW>(dayMaps_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -2118,7 +2003,7 @@ private static final long serialVersionUID = 0L;
       public Builder clearDayMaps() {
         if (dayMapsBuilder_ == null) {
           dayMaps_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           dayMapsBuilder_.clear();
@@ -2223,7 +2108,7 @@ private static final long serialVersionUID = 0L;
           dayMapsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.WeekMapDOW, com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.WeekMapDOW.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.WeekMapDOWOrBuilder>(
                   dayMaps_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           dayMaps_ = null;
@@ -2263,7 +2148,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new WeekMap(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2363,74 +2259,6 @@ private static final long serialVersionUID = 0L;
       return new CalendarItem();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CalendarItem(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.tcn.cloud.api.api.commons.DatetimeRange.Builder subBuilder = null;
-              if (datetimeRange_ != null) {
-                subBuilder = datetimeRange_.toBuilder();
-              }
-              datetimeRange_ = input.readMessage(com.tcn.cloud.api.api.commons.DatetimeRange.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(datetimeRange_);
-                datetimeRange_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              com.tcn.cloud.api.api.commons.OptionTypes.Builder subBuilder = null;
-              if (value_ != null) {
-                subBuilder = value_.toBuilder();
-              }
-              value_ = input.readMessage(com.tcn.cloud.api.api.commons.OptionTypes.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(value_);
-                value_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_DatetimePattern_CalendarItem_descriptor;
@@ -2479,7 +2307,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getDatetimeRangeOrBuilder() {
-      return getDatetimeRange();
+      return datetimeRange_ == null ? com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : datetimeRange_;
     }
 
     public static final int VALUE_FIELD_NUMBER = 2;
@@ -2517,7 +2345,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.OptionTypesOrBuilder getValueOrBuilder() {
-      return getValue();
+      return value_ == null ? com.tcn.cloud.api.api.commons.OptionTypes.getDefaultInstance() : value_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2540,7 +2368,7 @@ private static final long serialVersionUID = 0L;
       if (value_ != null) {
         output.writeMessage(2, getValue());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2557,7 +2385,7 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getValue());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2582,7 +2410,7 @@ private static final long serialVersionUID = 0L;
         if (!getValue()
             .equals(other.getValue())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2601,7 +2429,7 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + VALUE_FIELD_NUMBER;
         hash = (53 * hash) + getValue().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2650,11 +2478,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.CalendarItem parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.CalendarItem parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2718,32 +2548,26 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.CalendarItem.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (datetimeRangeBuilder_ == null) {
-          datetimeRange_ = null;
-        } else {
-          datetimeRange_ = null;
+        bitField0_ = 0;
+        datetimeRange_ = null;
+        if (datetimeRangeBuilder_ != null) {
+          datetimeRangeBuilder_.dispose();
           datetimeRangeBuilder_ = null;
         }
-        if (valueBuilder_ == null) {
-          value_ = null;
-        } else {
-          value_ = null;
+        value_ = null;
+        if (valueBuilder_ != null) {
+          valueBuilder_.dispose();
           valueBuilder_ = null;
         }
         return this;
@@ -2772,18 +2596,23 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.CalendarItem buildPartial() {
         com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.CalendarItem result = new com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.CalendarItem(this);
-        if (datetimeRangeBuilder_ == null) {
-          result.datetimeRange_ = datetimeRange_;
-        } else {
-          result.datetimeRange_ = datetimeRangeBuilder_.build();
-        }
-        if (valueBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = valueBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.CalendarItem result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.datetimeRange_ = datetimeRangeBuilder_ == null
+              ? datetimeRange_
+              : datetimeRangeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.value_ = valueBuilder_ == null
+              ? value_
+              : valueBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -2836,7 +2665,7 @@ private static final long serialVersionUID = 0L;
         if (other.hasValue()) {
           mergeValue(other.getValue());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2851,19 +2680,47 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.CalendarItem parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDatetimeRangeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getValueFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.CalendarItem) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.tcn.cloud.api.api.commons.DatetimeRange datetimeRange_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2877,7 +2734,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the datetimeRange field is set.
        */
       public boolean hasDatetimeRange() {
-        return datetimeRangeBuilder_ != null || datetimeRange_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -2907,11 +2764,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           datetimeRange_ = value;
-          onChanged();
         } else {
           datetimeRangeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2925,11 +2782,11 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.commons.DatetimeRange.Builder builderForValue) {
         if (datetimeRangeBuilder_ == null) {
           datetimeRange_ = builderForValue.build();
-          onChanged();
         } else {
           datetimeRangeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2941,17 +2798,18 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeDatetimeRange(com.tcn.cloud.api.api.commons.DatetimeRange value) {
         if (datetimeRangeBuilder_ == null) {
-          if (datetimeRange_ != null) {
-            datetimeRange_ =
-              com.tcn.cloud.api.api.commons.DatetimeRange.newBuilder(datetimeRange_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            datetimeRange_ != null &&
+            datetimeRange_ != com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance()) {
+            getDatetimeRangeBuilder().mergeFrom(value);
           } else {
             datetimeRange_ = value;
           }
-          onChanged();
         } else {
           datetimeRangeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2962,14 +2820,13 @@ private static final long serialVersionUID = 0L;
        * <code>.api.commons.DatetimeRange datetime_range = 1 [json_name = "datetimeRange"];</code>
        */
       public Builder clearDatetimeRange() {
-        if (datetimeRangeBuilder_ == null) {
-          datetimeRange_ = null;
-          onChanged();
-        } else {
-          datetimeRange_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        datetimeRange_ = null;
+        if (datetimeRangeBuilder_ != null) {
+          datetimeRangeBuilder_.dispose();
           datetimeRangeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2980,7 +2837,7 @@ private static final long serialVersionUID = 0L;
        * <code>.api.commons.DatetimeRange datetime_range = 1 [json_name = "datetimeRange"];</code>
        */
       public com.tcn.cloud.api.api.commons.DatetimeRange.Builder getDatetimeRangeBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getDatetimeRangeFieldBuilder().getBuilder();
       }
@@ -3032,7 +2889,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the value field is set.
        */
       public boolean hasValue() {
-        return valueBuilder_ != null || value_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -3062,11 +2919,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           value_ = value;
-          onChanged();
         } else {
           valueBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3080,11 +2937,11 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.commons.OptionTypes.Builder builderForValue) {
         if (valueBuilder_ == null) {
           value_ = builderForValue.build();
-          onChanged();
         } else {
           valueBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3096,17 +2953,18 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeValue(com.tcn.cloud.api.api.commons.OptionTypes value) {
         if (valueBuilder_ == null) {
-          if (value_ != null) {
-            value_ =
-              com.tcn.cloud.api.api.commons.OptionTypes.newBuilder(value_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            value_ != null &&
+            value_ != com.tcn.cloud.api.api.commons.OptionTypes.getDefaultInstance()) {
+            getValueBuilder().mergeFrom(value);
           } else {
             value_ = value;
           }
-          onChanged();
         } else {
           valueBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3117,14 +2975,13 @@ private static final long serialVersionUID = 0L;
        * <code>.api.commons.OptionTypes value = 2 [json_name = "value"];</code>
        */
       public Builder clearValue() {
-        if (valueBuilder_ == null) {
-          value_ = null;
-          onChanged();
-        } else {
-          value_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        value_ = null;
+        if (valueBuilder_ != null) {
+          valueBuilder_.dispose();
           valueBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3135,7 +2992,7 @@ private static final long serialVersionUID = 0L;
        * <code>.api.commons.OptionTypes value = 2 [json_name = "value"];</code>
        */
       public com.tcn.cloud.api.api.commons.OptionTypes.Builder getValueBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getValueFieldBuilder().getBuilder();
       }
@@ -3207,7 +3064,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CalendarItem(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3228,6 +3096,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WEEK_MAPS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap> weekMaps_;
   /**
    * <pre>
@@ -3288,6 +3157,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALENDAR_ITEMS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.CalendarItem> calendarItems_;
   /**
    * <pre>
@@ -3367,7 +3237,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < calendarItems_.size(); i++) {
       output.writeMessage(2, calendarItems_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -3384,7 +3254,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, calendarItems_.get(i));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -3403,7 +3273,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getWeekMapsList())) return false;
     if (!getCalendarItemsList()
         .equals(other.getCalendarItemsList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -3422,7 +3292,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CALENDAR_ITEMS_FIELD_NUMBER;
       hash = (53 * hash) + getCalendarItemsList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -3471,11 +3341,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3543,36 +3415,32 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getWeekMapsFieldBuilder();
-        getCalendarItemsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (weekMapsBuilder_ == null) {
         weekMaps_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        weekMaps_ = null;
         weekMapsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000001);
       if (calendarItemsBuilder_ == null) {
         calendarItems_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
+        calendarItems_ = null;
         calendarItemsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -3599,7 +3467,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern result = new com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern result) {
       if (weekMapsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           weekMaps_ = java.util.Collections.unmodifiableList(weekMaps_);
@@ -3618,8 +3492,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.calendarItems_ = calendarItemsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override
@@ -3718,7 +3594,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -3733,17 +3609,56 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.WeekMap.parser(),
+                      extensionRegistry);
+              if (weekMapsBuilder_ == null) {
+                ensureWeekMapsIsMutable();
+                weekMaps_.add(m);
+              } else {
+                weekMapsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 10
+            case 18: {
+              com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.CalendarItem m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern.CalendarItem.parser(),
+                      extensionRegistry);
+              if (calendarItemsBuilder_ == null) {
+                ensureCalendarItemsIsMutable();
+                calendarItems_.add(m);
+              } else {
+                calendarItemsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.DatetimePattern) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -4404,7 +4319,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new DatetimePattern(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

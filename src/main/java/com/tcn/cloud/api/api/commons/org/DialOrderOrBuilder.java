@@ -14,6 +14,16 @@ public interface DialOrderOrBuilder extends
    * </pre>
    *
    * <code>.api.commons.DialOrderType standard = 1 [json_name = "standard"];</code>
+   * @return Whether the standard field is set.
+   */
+  boolean hasStandard();
+  /**
+   * <pre>
+   * Standard order enum, (CUSTOM_DIAL_ORDER should not be set here but
+   * indicated by setting a CustomDialOrder below).
+   * </pre>
+   *
+   * <code>.api.commons.DialOrderType standard = 1 [json_name = "standard"];</code>
    * @return The enum numeric value on the wire for standard.
    */
   int getStandardValue();
@@ -58,5 +68,5 @@ public interface DialOrderOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.org.CustomDialOrderOrBuilder getCustomOrBuilder();
 
-  public com.tcn.cloud.api.api.commons.org.DialOrder.TypeCase getTypeCase();
+  com.tcn.cloud.api.api.commons.org.DialOrder.TypeCase getTypeCase();
 }

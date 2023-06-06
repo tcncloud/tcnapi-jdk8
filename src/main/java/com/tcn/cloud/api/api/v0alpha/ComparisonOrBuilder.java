@@ -67,5 +67,5 @@ public interface ComparisonOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.Comparison.DateOrBuilder getDateOrBuilder();
 
-  public com.tcn.cloud.api.api.v0alpha.Comparison.ComparisonTypeCase getComparisonTypeCase();
+  com.tcn.cloud.api.api.v0alpha.Comparison.ComparisonTypeCase getComparisonTypeCase();
 }

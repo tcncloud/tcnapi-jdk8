@@ -16,7 +16,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private InvoiceDynamicJourney() {
-    matchFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    matchFields_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     totalField_ = "";
   }
 
@@ -27,80 +28,6 @@ private static final long serialVersionUID = 0L;
     return new InvoiceDynamicJourney();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private InvoiceDynamicJourney(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              matchFields_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            matchFields_.add(s);
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            totalField_ = s;
-            break;
-          }
-          case 26: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              journeyFields_ = com.google.protobuf.MapField.newMapField(
-                  JourneyFieldsDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000002;
-            }
-            com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.commons.integrations.ListOfStrings>
-            journeyFields__ = input.readMessage(
-                JourneyFieldsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            journeyFields_.getMutableMap().put(
-                journeyFields__.getKey(), journeyFields__.getValue());
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        matchFields_ = matchFields_.getUnmodifiableView();
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_InvoiceDynamicJourney_descriptor;
@@ -127,7 +54,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MATCH_FIELDS_FIELD_NUMBER = 1;
-  private com.google.protobuf.LazyStringList matchFields_;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList matchFields_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <code>repeated string match_fields = 1 [json_name = "matchFields"];</code>
    * @return A list containing the matchFields.
@@ -162,7 +91,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_FIELD_FIELD_NUMBER = 2;
-  private volatile java.lang.Object totalField_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object totalField_ = "";
   /**
    * <code>string total_field = 2 [json_name = "totalField"];</code>
    * @return The totalField.
@@ -211,6 +141,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
                 com.tcn.cloud.api.api.commons.integrations.ListOfStrings.getDefaultInstance());
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, com.tcn.cloud.api.api.commons.integrations.ListOfStrings> journeyFields_;
   private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.commons.integrations.ListOfStrings>
@@ -221,18 +152,16 @@ private static final long serialVersionUID = 0L;
     }
     return journeyFields_;
   }
-
   public int getJourneyFieldsCount() {
     return internalGetJourneyFields().getMap().size();
   }
   /**
    * <code>map&lt;string, .api.commons.integrations.ListOfStrings&gt; journey_fields = 3 [json_name = "journeyFields"];</code>
    */
-
   @java.lang.Override
   public boolean containsJourneyFields(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     return internalGetJourneyFields().getMap().containsKey(key);
   }
   /**
@@ -247,7 +176,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.commons.integrations.ListOfStrings&gt; journey_fields = 3 [json_name = "journeyFields"];</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.integrations.ListOfStrings> getJourneyFieldsMap() {
     return internalGetJourneyFields().getMap();
   }
@@ -255,11 +183,12 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.commons.integrations.ListOfStrings&gt; journey_fields = 3 [json_name = "journeyFields"];</code>
    */
   @java.lang.Override
-
-  public com.tcn.cloud.api.api.commons.integrations.ListOfStrings getJourneyFieldsOrDefault(
+  public /* nullable */
+com.tcn.cloud.api.api.commons.integrations.ListOfStrings getJourneyFieldsOrDefault(
       java.lang.String key,
-      com.tcn.cloud.api.api.commons.integrations.ListOfStrings defaultValue) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+      /* nullable */
+com.tcn.cloud.api.api.commons.integrations.ListOfStrings defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.integrations.ListOfStrings> map =
         internalGetJourneyFields().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -268,10 +197,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.commons.integrations.ListOfStrings&gt; journey_fields = 3 [json_name = "journeyFields"];</code>
    */
   @java.lang.Override
-
   public com.tcn.cloud.api.api.commons.integrations.ListOfStrings getJourneyFieldsOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.integrations.ListOfStrings> map =
         internalGetJourneyFields().getMap();
     if (!map.containsKey(key)) {
@@ -297,7 +225,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < matchFields_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, matchFields_.getRaw(i));
     }
-    if (!getTotalFieldBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalField_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, totalField_);
     }
     com.google.protobuf.GeneratedMessageV3
@@ -306,7 +234,7 @@ private static final long serialVersionUID = 0L;
         internalGetJourneyFields(),
         JourneyFieldsDefaultEntryHolder.defaultEntry,
         3);
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -323,7 +251,7 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getMatchFieldsList().size();
     }
-    if (!getTotalFieldBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalField_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, totalField_);
     }
     for (java.util.Map.Entry<java.lang.String, com.tcn.cloud.api.api.commons.integrations.ListOfStrings> entry
@@ -336,7 +264,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, journeyFields__);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -357,7 +285,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTotalField())) return false;
     if (!internalGetJourneyFields().equals(
         other.internalGetJourneyFields())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -378,7 +306,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + JOURNEY_FIELDS_FIELD_NUMBER;
       hash = (53 * hash) + internalGetJourneyFields().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -427,11 +355,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.integrations.InvoiceDynamicJourney parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.integrations.InvoiceDynamicJourney parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -517,26 +447,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.integrations.InvoiceDynamicJourney.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      matchFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = 0;
+      matchFields_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       totalField_ = "";
-
       internalGetMutableJourneyFields().clear();
       return this;
     }
@@ -564,17 +489,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.integrations.InvoiceDynamicJourney buildPartial() {
       com.tcn.cloud.api.api.commons.integrations.InvoiceDynamicJourney result = new com.tcn.cloud.api.api.commons.integrations.InvoiceDynamicJourney(this);
-      int from_bitField0_ = bitField0_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        matchFields_ = matchFields_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.matchFields_ = matchFields_;
-      result.totalField_ = totalField_;
-      result.journeyFields_ = internalGetJourneyFields();
-      result.journeyFields_.makeImmutable();
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.integrations.InvoiceDynamicJourney result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        matchFields_.makeImmutable();
+        result.matchFields_ = matchFields_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.totalField_ = totalField_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.journeyFields_ = internalGetJourneyFields();
+        result.journeyFields_.makeImmutable();
+      }
     }
 
     @java.lang.Override
@@ -624,7 +556,7 @@ private static final long serialVersionUID = 0L;
       if (!other.matchFields_.isEmpty()) {
         if (matchFields_.isEmpty()) {
           matchFields_ = other.matchFields_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000001;
         } else {
           ensureMatchFieldsIsMutable();
           matchFields_.addAll(other.matchFields_);
@@ -633,11 +565,13 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getTotalField().isEmpty()) {
         totalField_ = other.totalField_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       internalGetMutableJourneyFields().mergeFrom(
           other.internalGetJourneyFields());
-      this.mergeUnknownFields(other.unknownFields);
+      bitField0_ |= 0x00000004;
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -652,27 +586,61 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.integrations.InvoiceDynamicJourney parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureMatchFieldsIsMutable();
+              matchFields_.add(s);
+              break;
+            } // case 10
+            case 18: {
+              totalField_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.commons.integrations.ListOfStrings>
+              journeyFields__ = input.readMessage(
+                  JourneyFieldsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableJourneyFields().getMutableMap().put(
+                  journeyFields__.getKey(), journeyFields__.getValue());
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.integrations.InvoiceDynamicJourney) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringList matchFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList matchFields_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureMatchFieldsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!matchFields_.isModifiable()) {
         matchFields_ = new com.google.protobuf.LazyStringArrayList(matchFields_);
-        bitField0_ |= 0x00000001;
-       }
+      }
+      bitField0_ |= 0x00000001;
     }
     /**
      * <code>repeated string match_fields = 1 [json_name = "matchFields"];</code>
@@ -680,7 +648,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getMatchFieldsList() {
-      return matchFields_.getUnmodifiableView();
+      matchFields_.makeImmutable();
+      return matchFields_;
     }
     /**
      * <code>repeated string match_fields = 1 [json_name = "matchFields"];</code>
@@ -714,11 +683,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMatchFields(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureMatchFieldsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureMatchFieldsIsMutable();
       matchFields_.set(index, value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -729,11 +697,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addMatchFields(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureMatchFieldsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureMatchFieldsIsMutable();
       matchFields_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -747,6 +714,7 @@ private static final long serialVersionUID = 0L;
       ensureMatchFieldsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, matchFields_);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -755,8 +723,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMatchFields() {
-      matchFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      matchFields_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000001);;
       onChanged();
       return this;
     }
@@ -767,12 +736,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addMatchFieldsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureMatchFieldsIsMutable();
       matchFields_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -818,11 +786,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTotalField(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       totalField_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -831,8 +797,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalField() {
-      
       totalField_ = getDefaultInstance().getTotalField();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -843,12 +809,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTotalFieldBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       totalField_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -856,7 +820,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.String, com.tcn.cloud.api.api.commons.integrations.ListOfStrings> journeyFields_;
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.commons.integrations.ListOfStrings>
-    internalGetJourneyFields() {
+        internalGetJourneyFields() {
       if (journeyFields_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             JourneyFieldsDefaultEntryHolder.defaultEntry);
@@ -864,8 +828,7 @@ private static final long serialVersionUID = 0L;
       return journeyFields_;
     }
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.commons.integrations.ListOfStrings>
-    internalGetMutableJourneyFields() {
-      onChanged();;
+        internalGetMutableJourneyFields() {
       if (journeyFields_ == null) {
         journeyFields_ = com.google.protobuf.MapField.newMapField(
             JourneyFieldsDefaultEntryHolder.defaultEntry);
@@ -873,20 +836,20 @@ private static final long serialVersionUID = 0L;
       if (!journeyFields_.isMutable()) {
         journeyFields_ = journeyFields_.copy();
       }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return journeyFields_;
     }
-
     public int getJourneyFieldsCount() {
       return internalGetJourneyFields().getMap().size();
     }
     /**
      * <code>map&lt;string, .api.commons.integrations.ListOfStrings&gt; journey_fields = 3 [json_name = "journeyFields"];</code>
      */
-
     @java.lang.Override
     public boolean containsJourneyFields(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetJourneyFields().getMap().containsKey(key);
     }
     /**
@@ -901,7 +864,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, .api.commons.integrations.ListOfStrings&gt; journey_fields = 3 [json_name = "journeyFields"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.integrations.ListOfStrings> getJourneyFieldsMap() {
       return internalGetJourneyFields().getMap();
     }
@@ -909,11 +871,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, .api.commons.integrations.ListOfStrings&gt; journey_fields = 3 [json_name = "journeyFields"];</code>
      */
     @java.lang.Override
-
-    public com.tcn.cloud.api.api.commons.integrations.ListOfStrings getJourneyFieldsOrDefault(
+    public /* nullable */
+com.tcn.cloud.api.api.commons.integrations.ListOfStrings getJourneyFieldsOrDefault(
         java.lang.String key,
-        com.tcn.cloud.api.api.commons.integrations.ListOfStrings defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+        /* nullable */
+com.tcn.cloud.api.api.commons.integrations.ListOfStrings defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.integrations.ListOfStrings> map =
           internalGetJourneyFields().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -922,10 +885,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, .api.commons.integrations.ListOfStrings&gt; journey_fields = 3 [json_name = "journeyFields"];</code>
      */
     @java.lang.Override
-
     public com.tcn.cloud.api.api.commons.integrations.ListOfStrings getJourneyFieldsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.integrations.ListOfStrings> map =
           internalGetJourneyFields().getMap();
       if (!map.containsKey(key)) {
@@ -933,8 +895,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearJourneyFields() {
+      bitField0_ = (bitField0_ & ~0x00000004);
       internalGetMutableJourneyFields().getMutableMap()
           .clear();
       return this;
@@ -942,10 +904,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>map&lt;string, .api.commons.integrations.ListOfStrings&gt; journey_fields = 3 [json_name = "journeyFields"];</code>
      */
-
     public Builder removeJourneyFields(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       internalGetMutableJourneyFields().getMutableMap()
           .remove(key);
       return this;
@@ -955,7 +916,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.integrations.ListOfStrings>
-    getMutableJourneyFields() {
+        getMutableJourneyFields() {
+      bitField0_ |= 0x00000004;
       return internalGetMutableJourneyFields().getMutableMap();
     }
     /**
@@ -964,20 +926,21 @@ private static final long serialVersionUID = 0L;
     public Builder putJourneyFields(
         java.lang.String key,
         com.tcn.cloud.api.api.commons.integrations.ListOfStrings value) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      if (value == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableJourneyFields().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000004;
       return this;
     }
     /**
      * <code>map&lt;string, .api.commons.integrations.ListOfStrings&gt; journey_fields = 3 [json_name = "journeyFields"];</code>
      */
-
     public Builder putAllJourneyFields(
         java.util.Map<java.lang.String, com.tcn.cloud.api.api.commons.integrations.ListOfStrings> values) {
       internalGetMutableJourneyFields().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000004;
       return this;
     }
     @java.lang.Override
@@ -1013,7 +976,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new InvoiceDynamicJourney(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

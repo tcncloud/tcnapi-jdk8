@@ -29,157 +29,6 @@ private static final long serialVersionUID = 0L;
     return new UpdateHuntGroupSettingsRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private UpdateHuntGroupSettingsRequest(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            huntGroupSid_ = input.readInt64();
-            break;
-          }
-          case 18: {
-            com.tcn.cloud.api.api.commons.org.GeneralSettings.Builder subBuilder = null;
-            if (generalSettings_ != null) {
-              subBuilder = generalSettings_.toBuilder();
-            }
-            generalSettings_ = input.readMessage(com.tcn.cloud.api.api.commons.org.GeneralSettings.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(generalSettings_);
-              generalSettings_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 26: {
-            com.tcn.cloud.api.api.commons.org.CommunicationSettings.Builder subBuilder = null;
-            if (communicationSettings_ != null) {
-              subBuilder = communicationSettings_.toBuilder();
-            }
-            communicationSettings_ = input.readMessage(com.tcn.cloud.api.api.commons.org.CommunicationSettings.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(communicationSettings_);
-              communicationSettings_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 34: {
-            com.tcn.cloud.api.api.commons.org.CallbackSettings.Builder subBuilder = null;
-            if (callbackSettings_ != null) {
-              subBuilder = callbackSettings_.toBuilder();
-            }
-            callbackSettings_ = input.readMessage(com.tcn.cloud.api.api.commons.org.CallbackSettings.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(callbackSettings_);
-              callbackSettings_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 42: {
-            com.tcn.cloud.api.api.commons.org.PreviewDialSettings.Builder subBuilder = null;
-            if (previewDialSettings_ != null) {
-              subBuilder = previewDialSettings_.toBuilder();
-            }
-            previewDialSettings_ = input.readMessage(com.tcn.cloud.api.api.commons.org.PreviewDialSettings.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(previewDialSettings_);
-              previewDialSettings_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 50: {
-            com.tcn.cloud.api.api.commons.org.ManualDialSettings.Builder subBuilder = null;
-            if (manualDialSettings_ != null) {
-              subBuilder = manualDialSettings_.toBuilder();
-            }
-            manualDialSettings_ = input.readMessage(com.tcn.cloud.api.api.commons.org.ManualDialSettings.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(manualDialSettings_);
-              manualDialSettings_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 58: {
-            com.tcn.cloud.api.api.commons.org.TransferCallSettings.Builder subBuilder = null;
-            if (transferCallSettings_ != null) {
-              subBuilder = transferCallSettings_.toBuilder();
-            }
-            transferCallSettings_ = input.readMessage(com.tcn.cloud.api.api.commons.org.TransferCallSettings.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(transferCallSettings_);
-              transferCallSettings_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 66: {
-            com.tcn.cloud.api.api.commons.org.NumberHistorySettings.Builder subBuilder = null;
-            if (numberHistorySettings_ != null) {
-              subBuilder = numberHistorySettings_.toBuilder();
-            }
-            numberHistorySettings_ = input.readMessage(com.tcn.cloud.api.api.commons.org.NumberHistorySettings.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(numberHistorySettings_);
-              numberHistorySettings_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 802: {
-            com.google.protobuf.FieldMask.Builder subBuilder = null;
-            if (fieldMask_ != null) {
-              subBuilder = fieldMask_.toBuilder();
-            }
-            fieldMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(fieldMask_);
-              fieldMask_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.HuntgroupProto.internal_static_api_v1alpha1_org_UpdateHuntGroupSettingsRequest_descriptor;
@@ -194,7 +43,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HUNT_GROUP_SID_FIELD_NUMBER = 1;
-  private long huntGroupSid_;
+  private long huntGroupSid_ = 0L;
   /**
    * <pre>
    * Hunt group sid.
@@ -243,7 +92,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.GeneralSettingsOrBuilder getGeneralSettingsOrBuilder() {
-    return getGeneralSettings();
+    return generalSettings_ == null ? com.tcn.cloud.api.api.commons.org.GeneralSettings.getDefaultInstance() : generalSettings_;
   }
 
   public static final int COMMUNICATION_SETTINGS_FIELD_NUMBER = 3;
@@ -281,7 +130,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.CommunicationSettingsOrBuilder getCommunicationSettingsOrBuilder() {
-    return getCommunicationSettings();
+    return communicationSettings_ == null ? com.tcn.cloud.api.api.commons.org.CommunicationSettings.getDefaultInstance() : communicationSettings_;
   }
 
   public static final int CALLBACK_SETTINGS_FIELD_NUMBER = 4;
@@ -319,7 +168,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.CallbackSettingsOrBuilder getCallbackSettingsOrBuilder() {
-    return getCallbackSettings();
+    return callbackSettings_ == null ? com.tcn.cloud.api.api.commons.org.CallbackSettings.getDefaultInstance() : callbackSettings_;
   }
 
   public static final int PREVIEW_DIAL_SETTINGS_FIELD_NUMBER = 5;
@@ -357,7 +206,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.PreviewDialSettingsOrBuilder getPreviewDialSettingsOrBuilder() {
-    return getPreviewDialSettings();
+    return previewDialSettings_ == null ? com.tcn.cloud.api.api.commons.org.PreviewDialSettings.getDefaultInstance() : previewDialSettings_;
   }
 
   public static final int MANUAL_DIAL_SETTINGS_FIELD_NUMBER = 6;
@@ -395,7 +244,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.ManualDialSettingsOrBuilder getManualDialSettingsOrBuilder() {
-    return getManualDialSettings();
+    return manualDialSettings_ == null ? com.tcn.cloud.api.api.commons.org.ManualDialSettings.getDefaultInstance() : manualDialSettings_;
   }
 
   public static final int TRANSFER_CALL_SETTINGS_FIELD_NUMBER = 7;
@@ -433,7 +282,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.TransferCallSettingsOrBuilder getTransferCallSettingsOrBuilder() {
-    return getTransferCallSettings();
+    return transferCallSettings_ == null ? com.tcn.cloud.api.api.commons.org.TransferCallSettings.getDefaultInstance() : transferCallSettings_;
   }
 
   public static final int NUMBER_HISTORY_SETTINGS_FIELD_NUMBER = 8;
@@ -471,7 +320,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.NumberHistorySettingsOrBuilder getNumberHistorySettingsOrBuilder() {
-    return getNumberHistorySettings();
+    return numberHistorySettings_ == null ? com.tcn.cloud.api.api.commons.org.NumberHistorySettings.getDefaultInstance() : numberHistorySettings_;
   }
 
   public static final int FIELD_MASK_FIELD_NUMBER = 100;
@@ -509,7 +358,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
-    return getFieldMask();
+    return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -553,7 +402,7 @@ private static final long serialVersionUID = 0L;
     if (fieldMask_ != null) {
       output.writeMessage(100, getFieldMask());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -598,7 +447,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(100, getFieldMask());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -655,7 +504,7 @@ private static final long serialVersionUID = 0L;
       if (!getFieldMask()
           .equals(other.getFieldMask())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -701,7 +550,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FIELD_MASK_FIELD_NUMBER;
       hash = (53 * hash) + getFieldMask().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -750,11 +599,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupSettingsRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupSettingsRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -822,70 +673,57 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupSettingsRequest.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       huntGroupSid_ = 0L;
-
-      if (generalSettingsBuilder_ == null) {
-        generalSettings_ = null;
-      } else {
-        generalSettings_ = null;
+      generalSettings_ = null;
+      if (generalSettingsBuilder_ != null) {
+        generalSettingsBuilder_.dispose();
         generalSettingsBuilder_ = null;
       }
-      if (communicationSettingsBuilder_ == null) {
-        communicationSettings_ = null;
-      } else {
-        communicationSettings_ = null;
+      communicationSettings_ = null;
+      if (communicationSettingsBuilder_ != null) {
+        communicationSettingsBuilder_.dispose();
         communicationSettingsBuilder_ = null;
       }
-      if (callbackSettingsBuilder_ == null) {
-        callbackSettings_ = null;
-      } else {
-        callbackSettings_ = null;
+      callbackSettings_ = null;
+      if (callbackSettingsBuilder_ != null) {
+        callbackSettingsBuilder_.dispose();
         callbackSettingsBuilder_ = null;
       }
-      if (previewDialSettingsBuilder_ == null) {
-        previewDialSettings_ = null;
-      } else {
-        previewDialSettings_ = null;
+      previewDialSettings_ = null;
+      if (previewDialSettingsBuilder_ != null) {
+        previewDialSettingsBuilder_.dispose();
         previewDialSettingsBuilder_ = null;
       }
-      if (manualDialSettingsBuilder_ == null) {
-        manualDialSettings_ = null;
-      } else {
-        manualDialSettings_ = null;
+      manualDialSettings_ = null;
+      if (manualDialSettingsBuilder_ != null) {
+        manualDialSettingsBuilder_.dispose();
         manualDialSettingsBuilder_ = null;
       }
-      if (transferCallSettingsBuilder_ == null) {
-        transferCallSettings_ = null;
-      } else {
-        transferCallSettings_ = null;
+      transferCallSettings_ = null;
+      if (transferCallSettingsBuilder_ != null) {
+        transferCallSettingsBuilder_.dispose();
         transferCallSettingsBuilder_ = null;
       }
-      if (numberHistorySettingsBuilder_ == null) {
-        numberHistorySettings_ = null;
-      } else {
-        numberHistorySettings_ = null;
+      numberHistorySettings_ = null;
+      if (numberHistorySettingsBuilder_ != null) {
+        numberHistorySettingsBuilder_.dispose();
         numberHistorySettingsBuilder_ = null;
       }
-      if (fieldMaskBuilder_ == null) {
-        fieldMask_ = null;
-      } else {
-        fieldMask_ = null;
+      fieldMask_ = null;
+      if (fieldMaskBuilder_ != null) {
+        fieldMaskBuilder_.dispose();
         fieldMaskBuilder_ = null;
       }
       return this;
@@ -914,49 +752,56 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupSettingsRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupSettingsRequest result = new com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupSettingsRequest(this);
-      result.huntGroupSid_ = huntGroupSid_;
-      if (generalSettingsBuilder_ == null) {
-        result.generalSettings_ = generalSettings_;
-      } else {
-        result.generalSettings_ = generalSettingsBuilder_.build();
-      }
-      if (communicationSettingsBuilder_ == null) {
-        result.communicationSettings_ = communicationSettings_;
-      } else {
-        result.communicationSettings_ = communicationSettingsBuilder_.build();
-      }
-      if (callbackSettingsBuilder_ == null) {
-        result.callbackSettings_ = callbackSettings_;
-      } else {
-        result.callbackSettings_ = callbackSettingsBuilder_.build();
-      }
-      if (previewDialSettingsBuilder_ == null) {
-        result.previewDialSettings_ = previewDialSettings_;
-      } else {
-        result.previewDialSettings_ = previewDialSettingsBuilder_.build();
-      }
-      if (manualDialSettingsBuilder_ == null) {
-        result.manualDialSettings_ = manualDialSettings_;
-      } else {
-        result.manualDialSettings_ = manualDialSettingsBuilder_.build();
-      }
-      if (transferCallSettingsBuilder_ == null) {
-        result.transferCallSettings_ = transferCallSettings_;
-      } else {
-        result.transferCallSettings_ = transferCallSettingsBuilder_.build();
-      }
-      if (numberHistorySettingsBuilder_ == null) {
-        result.numberHistorySettings_ = numberHistorySettings_;
-      } else {
-        result.numberHistorySettings_ = numberHistorySettingsBuilder_.build();
-      }
-      if (fieldMaskBuilder_ == null) {
-        result.fieldMask_ = fieldMask_;
-      } else {
-        result.fieldMask_ = fieldMaskBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupSettingsRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.huntGroupSid_ = huntGroupSid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.generalSettings_ = generalSettingsBuilder_ == null
+            ? generalSettings_
+            : generalSettingsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.communicationSettings_ = communicationSettingsBuilder_ == null
+            ? communicationSettings_
+            : communicationSettingsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.callbackSettings_ = callbackSettingsBuilder_ == null
+            ? callbackSettings_
+            : callbackSettingsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.previewDialSettings_ = previewDialSettingsBuilder_ == null
+            ? previewDialSettings_
+            : previewDialSettingsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.manualDialSettings_ = manualDialSettingsBuilder_ == null
+            ? manualDialSettings_
+            : manualDialSettingsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.transferCallSettings_ = transferCallSettingsBuilder_ == null
+            ? transferCallSettings_
+            : transferCallSettingsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.numberHistorySettings_ = numberHistorySettingsBuilder_ == null
+            ? numberHistorySettings_
+            : numberHistorySettingsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.fieldMask_ = fieldMaskBuilder_ == null
+            ? fieldMask_
+            : fieldMaskBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1030,7 +875,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasFieldMask()) {
         mergeFieldMask(other.getFieldMask());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1045,19 +890,94 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupSettingsRequest parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              huntGroupSid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              input.readMessage(
+                  getGeneralSettingsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getCommunicationSettingsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getCallbackSettingsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getPreviewDialSettingsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  getManualDialSettingsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  getTransferCallSettingsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 66: {
+              input.readMessage(
+                  getNumberHistorySettingsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            case 802: {
+              input.readMessage(
+                  getFieldMaskFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 802
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupSettingsRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private long huntGroupSid_ ;
     /**
@@ -1082,8 +1002,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHuntGroupSid(long value) {
-      
+
       huntGroupSid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1096,7 +1017,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHuntGroupSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       huntGroupSid_ = 0L;
       onChanged();
       return this;
@@ -1114,7 +1035,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the generalSettings field is set.
      */
     public boolean hasGeneralSettings() {
-      return generalSettingsBuilder_ != null || generalSettings_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1144,11 +1065,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         generalSettings_ = value;
-        onChanged();
       } else {
         generalSettingsBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1162,11 +1083,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.GeneralSettings.Builder builderForValue) {
       if (generalSettingsBuilder_ == null) {
         generalSettings_ = builderForValue.build();
-        onChanged();
       } else {
         generalSettingsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1178,17 +1099,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeGeneralSettings(com.tcn.cloud.api.api.commons.org.GeneralSettings value) {
       if (generalSettingsBuilder_ == null) {
-        if (generalSettings_ != null) {
-          generalSettings_ =
-            com.tcn.cloud.api.api.commons.org.GeneralSettings.newBuilder(generalSettings_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          generalSettings_ != null &&
+          generalSettings_ != com.tcn.cloud.api.api.commons.org.GeneralSettings.getDefaultInstance()) {
+          getGeneralSettingsBuilder().mergeFrom(value);
         } else {
           generalSettings_ = value;
         }
-        onChanged();
       } else {
         generalSettingsBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1199,14 +1121,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings general_settings = 2 [json_name = "generalSettings"];</code>
      */
     public Builder clearGeneralSettings() {
-      if (generalSettingsBuilder_ == null) {
-        generalSettings_ = null;
-        onChanged();
-      } else {
-        generalSettings_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      generalSettings_ = null;
+      if (generalSettingsBuilder_ != null) {
+        generalSettingsBuilder_.dispose();
         generalSettingsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1217,7 +1138,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings general_settings = 2 [json_name = "generalSettings"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.GeneralSettings.Builder getGeneralSettingsBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getGeneralSettingsFieldBuilder().getBuilder();
     }
@@ -1269,7 +1190,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the communicationSettings field is set.
      */
     public boolean hasCommunicationSettings() {
-      return communicationSettingsBuilder_ != null || communicationSettings_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1299,11 +1220,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         communicationSettings_ = value;
-        onChanged();
       } else {
         communicationSettingsBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1317,11 +1238,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.CommunicationSettings.Builder builderForValue) {
       if (communicationSettingsBuilder_ == null) {
         communicationSettings_ = builderForValue.build();
-        onChanged();
       } else {
         communicationSettingsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1333,17 +1254,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCommunicationSettings(com.tcn.cloud.api.api.commons.org.CommunicationSettings value) {
       if (communicationSettingsBuilder_ == null) {
-        if (communicationSettings_ != null) {
-          communicationSettings_ =
-            com.tcn.cloud.api.api.commons.org.CommunicationSettings.newBuilder(communicationSettings_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          communicationSettings_ != null &&
+          communicationSettings_ != com.tcn.cloud.api.api.commons.org.CommunicationSettings.getDefaultInstance()) {
+          getCommunicationSettingsBuilder().mergeFrom(value);
         } else {
           communicationSettings_ = value;
         }
-        onChanged();
       } else {
         communicationSettingsBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1354,14 +1276,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.CommunicationSettings communication_settings = 3 [json_name = "communicationSettings"];</code>
      */
     public Builder clearCommunicationSettings() {
-      if (communicationSettingsBuilder_ == null) {
-        communicationSettings_ = null;
-        onChanged();
-      } else {
-        communicationSettings_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      communicationSettings_ = null;
+      if (communicationSettingsBuilder_ != null) {
+        communicationSettingsBuilder_.dispose();
         communicationSettingsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1372,7 +1293,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.CommunicationSettings communication_settings = 3 [json_name = "communicationSettings"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.CommunicationSettings.Builder getCommunicationSettingsBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getCommunicationSettingsFieldBuilder().getBuilder();
     }
@@ -1424,7 +1345,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the callbackSettings field is set.
      */
     public boolean hasCallbackSettings() {
-      return callbackSettingsBuilder_ != null || callbackSettings_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1454,11 +1375,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         callbackSettings_ = value;
-        onChanged();
       } else {
         callbackSettingsBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1472,11 +1393,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.CallbackSettings.Builder builderForValue) {
       if (callbackSettingsBuilder_ == null) {
         callbackSettings_ = builderForValue.build();
-        onChanged();
       } else {
         callbackSettingsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1488,17 +1409,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCallbackSettings(com.tcn.cloud.api.api.commons.org.CallbackSettings value) {
       if (callbackSettingsBuilder_ == null) {
-        if (callbackSettings_ != null) {
-          callbackSettings_ =
-            com.tcn.cloud.api.api.commons.org.CallbackSettings.newBuilder(callbackSettings_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000008) != 0) &&
+          callbackSettings_ != null &&
+          callbackSettings_ != com.tcn.cloud.api.api.commons.org.CallbackSettings.getDefaultInstance()) {
+          getCallbackSettingsBuilder().mergeFrom(value);
         } else {
           callbackSettings_ = value;
         }
-        onChanged();
       } else {
         callbackSettingsBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1509,14 +1431,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.CallbackSettings callback_settings = 4 [json_name = "callbackSettings"];</code>
      */
     public Builder clearCallbackSettings() {
-      if (callbackSettingsBuilder_ == null) {
-        callbackSettings_ = null;
-        onChanged();
-      } else {
-        callbackSettings_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      callbackSettings_ = null;
+      if (callbackSettingsBuilder_ != null) {
+        callbackSettingsBuilder_.dispose();
         callbackSettingsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1527,7 +1448,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.CallbackSettings callback_settings = 4 [json_name = "callbackSettings"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.CallbackSettings.Builder getCallbackSettingsBuilder() {
-      
+      bitField0_ |= 0x00000008;
       onChanged();
       return getCallbackSettingsFieldBuilder().getBuilder();
     }
@@ -1579,7 +1500,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the previewDialSettings field is set.
      */
     public boolean hasPreviewDialSettings() {
-      return previewDialSettingsBuilder_ != null || previewDialSettings_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1609,11 +1530,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         previewDialSettings_ = value;
-        onChanged();
       } else {
         previewDialSettingsBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1627,11 +1548,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.PreviewDialSettings.Builder builderForValue) {
       if (previewDialSettingsBuilder_ == null) {
         previewDialSettings_ = builderForValue.build();
-        onChanged();
       } else {
         previewDialSettingsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1643,17 +1564,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePreviewDialSettings(com.tcn.cloud.api.api.commons.org.PreviewDialSettings value) {
       if (previewDialSettingsBuilder_ == null) {
-        if (previewDialSettings_ != null) {
-          previewDialSettings_ =
-            com.tcn.cloud.api.api.commons.org.PreviewDialSettings.newBuilder(previewDialSettings_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000010) != 0) &&
+          previewDialSettings_ != null &&
+          previewDialSettings_ != com.tcn.cloud.api.api.commons.org.PreviewDialSettings.getDefaultInstance()) {
+          getPreviewDialSettingsBuilder().mergeFrom(value);
         } else {
           previewDialSettings_ = value;
         }
-        onChanged();
       } else {
         previewDialSettingsBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1664,14 +1586,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.PreviewDialSettings preview_dial_settings = 5 [json_name = "previewDialSettings"];</code>
      */
     public Builder clearPreviewDialSettings() {
-      if (previewDialSettingsBuilder_ == null) {
-        previewDialSettings_ = null;
-        onChanged();
-      } else {
-        previewDialSettings_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      previewDialSettings_ = null;
+      if (previewDialSettingsBuilder_ != null) {
+        previewDialSettingsBuilder_.dispose();
         previewDialSettingsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1682,7 +1603,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.PreviewDialSettings preview_dial_settings = 5 [json_name = "previewDialSettings"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.PreviewDialSettings.Builder getPreviewDialSettingsBuilder() {
-      
+      bitField0_ |= 0x00000010;
       onChanged();
       return getPreviewDialSettingsFieldBuilder().getBuilder();
     }
@@ -1734,7 +1655,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the manualDialSettings field is set.
      */
     public boolean hasManualDialSettings() {
-      return manualDialSettingsBuilder_ != null || manualDialSettings_ != null;
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -1764,11 +1685,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         manualDialSettings_ = value;
-        onChanged();
       } else {
         manualDialSettingsBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1782,11 +1703,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.ManualDialSettings.Builder builderForValue) {
       if (manualDialSettingsBuilder_ == null) {
         manualDialSettings_ = builderForValue.build();
-        onChanged();
       } else {
         manualDialSettingsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1798,17 +1719,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeManualDialSettings(com.tcn.cloud.api.api.commons.org.ManualDialSettings value) {
       if (manualDialSettingsBuilder_ == null) {
-        if (manualDialSettings_ != null) {
-          manualDialSettings_ =
-            com.tcn.cloud.api.api.commons.org.ManualDialSettings.newBuilder(manualDialSettings_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000020) != 0) &&
+          manualDialSettings_ != null &&
+          manualDialSettings_ != com.tcn.cloud.api.api.commons.org.ManualDialSettings.getDefaultInstance()) {
+          getManualDialSettingsBuilder().mergeFrom(value);
         } else {
           manualDialSettings_ = value;
         }
-        onChanged();
       } else {
         manualDialSettingsBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1819,14 +1741,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.ManualDialSettings manual_dial_settings = 6 [json_name = "manualDialSettings"];</code>
      */
     public Builder clearManualDialSettings() {
-      if (manualDialSettingsBuilder_ == null) {
-        manualDialSettings_ = null;
-        onChanged();
-      } else {
-        manualDialSettings_ = null;
+      bitField0_ = (bitField0_ & ~0x00000020);
+      manualDialSettings_ = null;
+      if (manualDialSettingsBuilder_ != null) {
+        manualDialSettingsBuilder_.dispose();
         manualDialSettingsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1837,7 +1758,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.ManualDialSettings manual_dial_settings = 6 [json_name = "manualDialSettings"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ManualDialSettings.Builder getManualDialSettingsBuilder() {
-      
+      bitField0_ |= 0x00000020;
       onChanged();
       return getManualDialSettingsFieldBuilder().getBuilder();
     }
@@ -1889,7 +1810,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the transferCallSettings field is set.
      */
     public boolean hasTransferCallSettings() {
-      return transferCallSettingsBuilder_ != null || transferCallSettings_ != null;
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -1919,11 +1840,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         transferCallSettings_ = value;
-        onChanged();
       } else {
         transferCallSettingsBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -1937,11 +1858,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.TransferCallSettings.Builder builderForValue) {
       if (transferCallSettingsBuilder_ == null) {
         transferCallSettings_ = builderForValue.build();
-        onChanged();
       } else {
         transferCallSettingsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -1953,17 +1874,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTransferCallSettings(com.tcn.cloud.api.api.commons.org.TransferCallSettings value) {
       if (transferCallSettingsBuilder_ == null) {
-        if (transferCallSettings_ != null) {
-          transferCallSettings_ =
-            com.tcn.cloud.api.api.commons.org.TransferCallSettings.newBuilder(transferCallSettings_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000040) != 0) &&
+          transferCallSettings_ != null &&
+          transferCallSettings_ != com.tcn.cloud.api.api.commons.org.TransferCallSettings.getDefaultInstance()) {
+          getTransferCallSettingsBuilder().mergeFrom(value);
         } else {
           transferCallSettings_ = value;
         }
-        onChanged();
       } else {
         transferCallSettingsBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -1974,14 +1896,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.TransferCallSettings transfer_call_settings = 7 [json_name = "transferCallSettings"];</code>
      */
     public Builder clearTransferCallSettings() {
-      if (transferCallSettingsBuilder_ == null) {
-        transferCallSettings_ = null;
-        onChanged();
-      } else {
-        transferCallSettings_ = null;
+      bitField0_ = (bitField0_ & ~0x00000040);
+      transferCallSettings_ = null;
+      if (transferCallSettingsBuilder_ != null) {
+        transferCallSettingsBuilder_.dispose();
         transferCallSettingsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1992,7 +1913,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.TransferCallSettings transfer_call_settings = 7 [json_name = "transferCallSettings"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.TransferCallSettings.Builder getTransferCallSettingsBuilder() {
-      
+      bitField0_ |= 0x00000040;
       onChanged();
       return getTransferCallSettingsFieldBuilder().getBuilder();
     }
@@ -2044,7 +1965,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the numberHistorySettings field is set.
      */
     public boolean hasNumberHistorySettings() {
-      return numberHistorySettingsBuilder_ != null || numberHistorySettings_ != null;
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -2074,11 +1995,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         numberHistorySettings_ = value;
-        onChanged();
       } else {
         numberHistorySettingsBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -2092,11 +2013,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.NumberHistorySettings.Builder builderForValue) {
       if (numberHistorySettingsBuilder_ == null) {
         numberHistorySettings_ = builderForValue.build();
-        onChanged();
       } else {
         numberHistorySettingsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -2108,17 +2029,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeNumberHistorySettings(com.tcn.cloud.api.api.commons.org.NumberHistorySettings value) {
       if (numberHistorySettingsBuilder_ == null) {
-        if (numberHistorySettings_ != null) {
-          numberHistorySettings_ =
-            com.tcn.cloud.api.api.commons.org.NumberHistorySettings.newBuilder(numberHistorySettings_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000080) != 0) &&
+          numberHistorySettings_ != null &&
+          numberHistorySettings_ != com.tcn.cloud.api.api.commons.org.NumberHistorySettings.getDefaultInstance()) {
+          getNumberHistorySettingsBuilder().mergeFrom(value);
         } else {
           numberHistorySettings_ = value;
         }
-        onChanged();
       } else {
         numberHistorySettingsBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -2129,14 +2051,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.NumberHistorySettings number_history_settings = 8 [json_name = "numberHistorySettings"];</code>
      */
     public Builder clearNumberHistorySettings() {
-      if (numberHistorySettingsBuilder_ == null) {
-        numberHistorySettings_ = null;
-        onChanged();
-      } else {
-        numberHistorySettings_ = null;
+      bitField0_ = (bitField0_ & ~0x00000080);
+      numberHistorySettings_ = null;
+      if (numberHistorySettingsBuilder_ != null) {
+        numberHistorySettingsBuilder_.dispose();
         numberHistorySettingsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -2147,7 +2068,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.NumberHistorySettings number_history_settings = 8 [json_name = "numberHistorySettings"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.NumberHistorySettings.Builder getNumberHistorySettingsBuilder() {
-      
+      bitField0_ |= 0x00000080;
       onChanged();
       return getNumberHistorySettingsFieldBuilder().getBuilder();
     }
@@ -2199,7 +2120,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the fieldMask field is set.
      */
     public boolean hasFieldMask() {
-      return fieldMaskBuilder_ != null || fieldMask_ != null;
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -2229,11 +2150,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         fieldMask_ = value;
-        onChanged();
       } else {
         fieldMaskBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -2247,11 +2168,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.FieldMask.Builder builderForValue) {
       if (fieldMaskBuilder_ == null) {
         fieldMask_ = builderForValue.build();
-        onChanged();
       } else {
         fieldMaskBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -2263,17 +2184,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFieldMask(com.google.protobuf.FieldMask value) {
       if (fieldMaskBuilder_ == null) {
-        if (fieldMask_ != null) {
-          fieldMask_ =
-            com.google.protobuf.FieldMask.newBuilder(fieldMask_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000100) != 0) &&
+          fieldMask_ != null &&
+          fieldMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
+          getFieldMaskBuilder().mergeFrom(value);
         } else {
           fieldMask_ = value;
         }
-        onChanged();
       } else {
         fieldMaskBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -2284,14 +2206,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.FieldMask field_mask = 100 [json_name = "fieldMask"];</code>
      */
     public Builder clearFieldMask() {
-      if (fieldMaskBuilder_ == null) {
-        fieldMask_ = null;
-        onChanged();
-      } else {
-        fieldMask_ = null;
+      bitField0_ = (bitField0_ & ~0x00000100);
+      fieldMask_ = null;
+      if (fieldMaskBuilder_ != null) {
+        fieldMaskBuilder_.dispose();
         fieldMaskBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -2302,7 +2223,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.FieldMask field_mask = 100 [json_name = "fieldMask"];</code>
      */
     public com.google.protobuf.FieldMask.Builder getFieldMaskBuilder() {
-      
+      bitField0_ |= 0x00000100;
       onChanged();
       return getFieldMaskFieldBuilder().getBuilder();
     }
@@ -2374,7 +2295,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new UpdateHuntGroupSettingsRequest(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

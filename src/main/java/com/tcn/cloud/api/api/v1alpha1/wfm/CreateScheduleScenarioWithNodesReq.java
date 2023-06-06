@@ -38,115 +38,6 @@ private static final long serialVersionUID = 0L;
     return new CreateScheduleScenarioWithNodesReq();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private CreateScheduleScenarioWithNodesReq(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.tcn.cloud.api.api.v1alpha1.wfm.ScheduleScenario.Builder subBuilder = null;
-            if (scheduleScenario_ != null) {
-              subBuilder = scheduleScenario_.toBuilder();
-            }
-            scheduleScenario_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.ScheduleScenario.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(scheduleScenario_);
-              scheduleScenario_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            callCenterNodeName_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            callCenterNodeDescription_ = s;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            clientNodeName_ = s;
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            clientNodeDescription_ = s;
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            locationNodeName_ = s;
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            locationNodeDescription_ = s;
-            break;
-          }
-          case 66: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            programNodeName_ = s;
-            break;
-          }
-          case 74: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            programNodeDescription_ = s;
-            break;
-          }
-          case 80: {
-            int rawValue = input.readEnum();
-
-            timeZoneVal_ = rawValue;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_CreateScheduleScenarioWithNodesReq_descriptor;
@@ -195,11 +86,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.wfm.ScheduleScenarioOrBuilder getScheduleScenarioOrBuilder() {
-    return getScheduleScenario();
+    return scheduleScenario_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.ScheduleScenario.getDefaultInstance() : scheduleScenario_;
   }
 
   public static final int CALL_CENTER_NODE_NAME_FIELD_NUMBER = 2;
-  private volatile java.lang.Object callCenterNodeName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object callCenterNodeName_ = "";
   /**
    * <pre>
    * Name for the created call center node.
@@ -245,7 +137,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_CENTER_NODE_DESCRIPTION_FIELD_NUMBER = 3;
-  private volatile java.lang.Object callCenterNodeDescription_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object callCenterNodeDescription_ = "";
   /**
    * <pre>
    * Description for the created call center node.
@@ -291,7 +184,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CLIENT_NODE_NAME_FIELD_NUMBER = 4;
-  private volatile java.lang.Object clientNodeName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object clientNodeName_ = "";
   /**
    * <pre>
    * Name for the created client node.
@@ -337,7 +231,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CLIENT_NODE_DESCRIPTION_FIELD_NUMBER = 5;
-  private volatile java.lang.Object clientNodeDescription_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object clientNodeDescription_ = "";
   /**
    * <pre>
    * Description for the created client node.
@@ -383,7 +278,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOCATION_NODE_NAME_FIELD_NUMBER = 6;
-  private volatile java.lang.Object locationNodeName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object locationNodeName_ = "";
   /**
    * <pre>
    * Name for the created location node.
@@ -429,7 +325,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOCATION_NODE_DESCRIPTION_FIELD_NUMBER = 7;
-  private volatile java.lang.Object locationNodeDescription_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object locationNodeDescription_ = "";
   /**
    * <pre>
    * Description for the location center node.
@@ -475,7 +372,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PROGRAM_NODE_NAME_FIELD_NUMBER = 8;
-  private volatile java.lang.Object programNodeName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object programNodeName_ = "";
   /**
    * <pre>
    * Name for the created program node.
@@ -521,7 +419,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PROGRAM_NODE_DESCRIPTION_FIELD_NUMBER = 9;
-  private volatile java.lang.Object programNodeDescription_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object programNodeDescription_ = "";
   /**
    * <pre>
    * Description for the created program node.
@@ -567,7 +466,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TIME_ZONE_VAL_FIELD_NUMBER = 10;
-  private int timeZoneVal_;
+  private int timeZoneVal_ = 0;
   /**
    * <pre>
    * TimeZoneVal is the desired timezone for the created nodes.
@@ -588,8 +487,7 @@ private static final long serialVersionUID = 0L;
    * @return The timeZoneVal.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.TimeZone getTimeZoneVal() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.valueOf(timeZoneVal_);
+    com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.forNumber(timeZoneVal_);
     return result == null ? com.tcn.cloud.api.api.commons.TimeZone.UNRECOGNIZED : result;
   }
 
@@ -610,34 +508,34 @@ private static final long serialVersionUID = 0L;
     if (scheduleScenario_ != null) {
       output.writeMessage(1, getScheduleScenario());
     }
-    if (!getCallCenterNodeNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callCenterNodeName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, callCenterNodeName_);
     }
-    if (!getCallCenterNodeDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callCenterNodeDescription_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, callCenterNodeDescription_);
     }
-    if (!getClientNodeNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientNodeName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, clientNodeName_);
     }
-    if (!getClientNodeDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientNodeDescription_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, clientNodeDescription_);
     }
-    if (!getLocationNodeNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locationNodeName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, locationNodeName_);
     }
-    if (!getLocationNodeDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locationNodeDescription_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, locationNodeDescription_);
     }
-    if (!getProgramNodeNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(programNodeName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, programNodeName_);
     }
-    if (!getProgramNodeDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(programNodeDescription_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, programNodeDescription_);
     }
     if (timeZoneVal_ != com.tcn.cloud.api.api.commons.TimeZone.TIME_ZONE_AMERICA_PUERTO_RICO.getNumber()) {
       output.writeEnum(10, timeZoneVal_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -650,35 +548,35 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getScheduleScenario());
     }
-    if (!getCallCenterNodeNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callCenterNodeName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, callCenterNodeName_);
     }
-    if (!getCallCenterNodeDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callCenterNodeDescription_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, callCenterNodeDescription_);
     }
-    if (!getClientNodeNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientNodeName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, clientNodeName_);
     }
-    if (!getClientNodeDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientNodeDescription_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, clientNodeDescription_);
     }
-    if (!getLocationNodeNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locationNodeName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, locationNodeName_);
     }
-    if (!getLocationNodeDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locationNodeDescription_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, locationNodeDescription_);
     }
-    if (!getProgramNodeNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(programNodeName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, programNodeName_);
     }
-    if (!getProgramNodeDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(programNodeDescription_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, programNodeDescription_);
     }
     if (timeZoneVal_ != com.tcn.cloud.api.api.commons.TimeZone.TIME_ZONE_AMERICA_PUERTO_RICO.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(10, timeZoneVal_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -715,7 +613,7 @@ private static final long serialVersionUID = 0L;
     if (!getProgramNodeDescription()
         .equals(other.getProgramNodeDescription())) return false;
     if (timeZoneVal_ != other.timeZoneVal_) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -748,7 +646,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getProgramNodeDescription().hashCode();
     hash = (37 * hash) + TIME_ZONE_VAL_FIELD_NUMBER;
     hash = (53 * hash) + timeZoneVal_;
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -797,11 +695,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -869,46 +769,32 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (scheduleScenarioBuilder_ == null) {
-        scheduleScenario_ = null;
-      } else {
-        scheduleScenario_ = null;
+      bitField0_ = 0;
+      scheduleScenario_ = null;
+      if (scheduleScenarioBuilder_ != null) {
+        scheduleScenarioBuilder_.dispose();
         scheduleScenarioBuilder_ = null;
       }
       callCenterNodeName_ = "";
-
       callCenterNodeDescription_ = "";
-
       clientNodeName_ = "";
-
       clientNodeDescription_ = "";
-
       locationNodeName_ = "";
-
       locationNodeDescription_ = "";
-
       programNodeName_ = "";
-
       programNodeDescription_ = "";
-
       timeZoneVal_ = 0;
-
       return this;
     }
 
@@ -935,22 +821,45 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq(this);
-      if (scheduleScenarioBuilder_ == null) {
-        result.scheduleScenario_ = scheduleScenario_;
-      } else {
-        result.scheduleScenario_ = scheduleScenarioBuilder_.build();
-      }
-      result.callCenterNodeName_ = callCenterNodeName_;
-      result.callCenterNodeDescription_ = callCenterNodeDescription_;
-      result.clientNodeName_ = clientNodeName_;
-      result.clientNodeDescription_ = clientNodeDescription_;
-      result.locationNodeName_ = locationNodeName_;
-      result.locationNodeDescription_ = locationNodeDescription_;
-      result.programNodeName_ = programNodeName_;
-      result.programNodeDescription_ = programNodeDescription_;
-      result.timeZoneVal_ = timeZoneVal_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.scheduleScenario_ = scheduleScenarioBuilder_ == null
+            ? scheduleScenario_
+            : scheduleScenarioBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.callCenterNodeName_ = callCenterNodeName_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.callCenterNodeDescription_ = callCenterNodeDescription_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.clientNodeName_ = clientNodeName_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.clientNodeDescription_ = clientNodeDescription_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.locationNodeName_ = locationNodeName_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.locationNodeDescription_ = locationNodeDescription_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.programNodeName_ = programNodeName_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.programNodeDescription_ = programNodeDescription_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.timeZoneVal_ = timeZoneVal_;
+      }
     }
 
     @java.lang.Override
@@ -1002,40 +911,48 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCallCenterNodeName().isEmpty()) {
         callCenterNodeName_ = other.callCenterNodeName_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getCallCenterNodeDescription().isEmpty()) {
         callCenterNodeDescription_ = other.callCenterNodeDescription_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getClientNodeName().isEmpty()) {
         clientNodeName_ = other.clientNodeName_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getClientNodeDescription().isEmpty()) {
         clientNodeDescription_ = other.clientNodeDescription_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.getLocationNodeName().isEmpty()) {
         locationNodeName_ = other.locationNodeName_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (!other.getLocationNodeDescription().isEmpty()) {
         locationNodeDescription_ = other.locationNodeDescription_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (!other.getProgramNodeName().isEmpty()) {
         programNodeName_ = other.programNodeName_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (!other.getProgramNodeDescription().isEmpty()) {
         programNodeDescription_ = other.programNodeDescription_;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       if (other.timeZoneVal_ != 0) {
         setTimeZoneValValue(other.getTimeZoneValValue());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1050,19 +967,85 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getScheduleScenarioFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              callCenterNodeName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              callCenterNodeDescription_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              clientNodeName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              clientNodeDescription_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              locationNodeName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
+              locationNodeDescription_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 66: {
+              programNodeName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            case 74: {
+              programNodeDescription_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
+            case 80: {
+              timeZoneVal_ = input.readEnum();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.tcn.cloud.api.api.v1alpha1.wfm.ScheduleScenario scheduleScenario_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1076,7 +1059,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the scheduleScenario field is set.
      */
     public boolean hasScheduleScenario() {
-      return scheduleScenarioBuilder_ != null || scheduleScenario_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1106,11 +1089,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         scheduleScenario_ = value;
-        onChanged();
       } else {
         scheduleScenarioBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -1124,11 +1107,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.ScheduleScenario.Builder builderForValue) {
       if (scheduleScenarioBuilder_ == null) {
         scheduleScenario_ = builderForValue.build();
-        onChanged();
       } else {
         scheduleScenarioBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -1140,17 +1123,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeScheduleScenario(com.tcn.cloud.api.api.v1alpha1.wfm.ScheduleScenario value) {
       if (scheduleScenarioBuilder_ == null) {
-        if (scheduleScenario_ != null) {
-          scheduleScenario_ =
-            com.tcn.cloud.api.api.v1alpha1.wfm.ScheduleScenario.newBuilder(scheduleScenario_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          scheduleScenario_ != null &&
+          scheduleScenario_ != com.tcn.cloud.api.api.v1alpha1.wfm.ScheduleScenario.getDefaultInstance()) {
+          getScheduleScenarioBuilder().mergeFrom(value);
         } else {
           scheduleScenario_ = value;
         }
-        onChanged();
       } else {
         scheduleScenarioBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -1161,14 +1145,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.ScheduleScenario schedule_scenario = 1 [json_name = "scheduleScenario"];</code>
      */
     public Builder clearScheduleScenario() {
-      if (scheduleScenarioBuilder_ == null) {
-        scheduleScenario_ = null;
-        onChanged();
-      } else {
-        scheduleScenario_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      scheduleScenario_ = null;
+      if (scheduleScenarioBuilder_ != null) {
+        scheduleScenarioBuilder_.dispose();
         scheduleScenarioBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1179,7 +1162,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.ScheduleScenario schedule_scenario = 1 [json_name = "scheduleScenario"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ScheduleScenario.Builder getScheduleScenarioBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getScheduleScenarioFieldBuilder().getBuilder();
     }
@@ -1272,11 +1255,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallCenterNodeName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       callCenterNodeName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1289,8 +1270,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallCenterNodeName() {
-      
       callCenterNodeName_ = getDefaultInstance().getCallCenterNodeName();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1305,12 +1286,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallCenterNodeNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       callCenterNodeName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1368,11 +1347,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallCenterNodeDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       callCenterNodeDescription_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1385,8 +1362,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallCenterNodeDescription() {
-      
       callCenterNodeDescription_ = getDefaultInstance().getCallCenterNodeDescription();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1401,12 +1378,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallCenterNodeDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       callCenterNodeDescription_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1464,11 +1439,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setClientNodeName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       clientNodeName_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1481,8 +1454,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearClientNodeName() {
-      
       clientNodeName_ = getDefaultInstance().getClientNodeName();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1497,12 +1470,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setClientNodeNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       clientNodeName_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1560,11 +1531,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setClientNodeDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       clientNodeDescription_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1577,8 +1546,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearClientNodeDescription() {
-      
       clientNodeDescription_ = getDefaultInstance().getClientNodeDescription();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1593,12 +1562,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setClientNodeDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       clientNodeDescription_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1656,11 +1623,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLocationNodeName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       locationNodeName_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1673,8 +1638,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLocationNodeName() {
-      
       locationNodeName_ = getDefaultInstance().getLocationNodeName();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1689,12 +1654,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLocationNodeNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       locationNodeName_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1752,11 +1715,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLocationNodeDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       locationNodeDescription_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1769,8 +1730,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLocationNodeDescription() {
-      
       locationNodeDescription_ = getDefaultInstance().getLocationNodeDescription();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1785,12 +1746,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLocationNodeDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       locationNodeDescription_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1848,11 +1807,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProgramNodeName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       programNodeName_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1865,8 +1822,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProgramNodeName() {
-      
       programNodeName_ = getDefaultInstance().getProgramNodeName();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1881,12 +1838,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProgramNodeNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       programNodeName_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1944,11 +1899,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProgramNodeDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       programNodeDescription_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1961,8 +1914,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProgramNodeDescription() {
-      
       programNodeDescription_ = getDefaultInstance().getProgramNodeDescription();
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -1977,12 +1930,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProgramNodeDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       programNodeDescription_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2009,8 +1960,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTimeZoneValValue(int value) {
-      
       timeZoneVal_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2024,8 +1975,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.TimeZone getTimeZoneVal() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.valueOf(timeZoneVal_);
+      com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.forNumber(timeZoneVal_);
       return result == null ? com.tcn.cloud.api.api.commons.TimeZone.UNRECOGNIZED : result;
     }
     /**
@@ -2041,7 +1991,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000200;
       timeZoneVal_ = value.getNumber();
       onChanged();
       return this;
@@ -2055,7 +2005,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTimeZoneVal() {
-      
+      bitField0_ = (bitField0_ & ~0x00000200);
       timeZoneVal_ = 0;
       onChanged();
       return this;
@@ -2093,7 +2043,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new CreateScheduleScenarioWithNodesReq(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

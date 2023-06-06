@@ -27,73 +27,6 @@ private static final long serialVersionUID = 0L;
     return new CreateChartReq();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private CreateChartReq(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            title_ = s;
-            break;
-          }
-          case 18: {
-            com.tcn.cloud.api.api.v0alpha.ChartDetails.Builder subBuilder = null;
-            if (chartDetails_ != null) {
-              subBuilder = chartDetails_.toBuilder();
-            }
-            chartDetails_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.ChartDetails.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(chartDetails_);
-              chartDetails_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            displayLabels_ = rawValue;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.AnaProto.internal_static_api_v0alpha_CreateChartReq_descriptor;
@@ -108,7 +41,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TITLE_FIELD_NUMBER = 1;
-  private volatile java.lang.Object title_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object title_ = "";
   /**
    * <code>string title = 1 [json_name = "title"];</code>
    * @return The title.
@@ -168,11 +102,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.ChartDetailsOrBuilder getChartDetailsOrBuilder() {
-    return getChartDetails();
+    return chartDetails_ == null ? com.tcn.cloud.api.api.v0alpha.ChartDetails.getDefaultInstance() : chartDetails_;
   }
 
   public static final int DISPLAY_LABELS_FIELD_NUMBER = 3;
-  private int displayLabels_;
+  private int displayLabels_ = 0;
   /**
    * <code>.api.commons.ChartDisplayLabels display_labels = 3 [json_name = "displayLabels"];</code>
    * @return The enum numeric value on the wire for displayLabels.
@@ -185,8 +119,7 @@ private static final long serialVersionUID = 0L;
    * @return The displayLabels.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.ChartDisplayLabels getDisplayLabels() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.ChartDisplayLabels result = com.tcn.cloud.api.api.commons.ChartDisplayLabels.valueOf(displayLabels_);
+    com.tcn.cloud.api.api.commons.ChartDisplayLabels result = com.tcn.cloud.api.api.commons.ChartDisplayLabels.forNumber(displayLabels_);
     return result == null ? com.tcn.cloud.api.api.commons.ChartDisplayLabels.UNRECOGNIZED : result;
   }
 
@@ -204,7 +137,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getTitleBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
     }
     if (chartDetails_ != null) {
@@ -213,7 +146,7 @@ private static final long serialVersionUID = 0L;
     if (displayLabels_ != com.tcn.cloud.api.api.commons.ChartDisplayLabels.CHART_DISPLAY_LABELS_NEVER.getNumber()) {
       output.writeEnum(3, displayLabels_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -222,7 +155,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getTitleBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
     }
     if (chartDetails_ != null) {
@@ -233,7 +166,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, displayLabels_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -256,7 +189,7 @@ private static final long serialVersionUID = 0L;
           .equals(other.getChartDetails())) return false;
     }
     if (displayLabels_ != other.displayLabels_) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -275,7 +208,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + DISPLAY_LABELS_FIELD_NUMBER;
     hash = (53 * hash) + displayLabels_;
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -324,11 +257,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.CreateChartReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.CreateChartReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -392,32 +327,25 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CreateChartReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       title_ = "";
-
-      if (chartDetailsBuilder_ == null) {
-        chartDetails_ = null;
-      } else {
-        chartDetails_ = null;
+      chartDetails_ = null;
+      if (chartDetailsBuilder_ != null) {
+        chartDetailsBuilder_.dispose();
         chartDetailsBuilder_ = null;
       }
       displayLabels_ = 0;
-
       return this;
     }
 
@@ -444,15 +372,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.CreateChartReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.CreateChartReq result = new com.tcn.cloud.api.api.v0alpha.CreateChartReq(this);
-      result.title_ = title_;
-      if (chartDetailsBuilder_ == null) {
-        result.chartDetails_ = chartDetails_;
-      } else {
-        result.chartDetails_ = chartDetailsBuilder_.build();
-      }
-      result.displayLabels_ = displayLabels_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.CreateChartReq result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.title_ = title_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.chartDetails_ = chartDetailsBuilder_ == null
+            ? chartDetails_
+            : chartDetailsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.displayLabels_ = displayLabels_;
+      }
     }
 
     @java.lang.Override
@@ -501,6 +438,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.CreateChartReq.getDefaultInstance()) return this;
       if (!other.getTitle().isEmpty()) {
         title_ = other.title_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasChartDetails()) {
@@ -509,7 +447,7 @@ private static final long serialVersionUID = 0L;
       if (other.displayLabels_ != 0) {
         setDisplayLabelsValue(other.getDisplayLabelsValue());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -524,19 +462,50 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.CreateChartReq parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              title_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  getChartDetailsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              displayLabels_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.CreateChartReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object title_ = "";
     /**
@@ -579,11 +548,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTitle(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       title_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -592,8 +559,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTitle() {
-      
       title_ = getDefaultInstance().getTitle();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -604,12 +571,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTitleBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       title_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -622,7 +587,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the chartDetails field is set.
      */
     public boolean hasChartDetails() {
-      return chartDetailsBuilder_ != null || chartDetails_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.api.v0alpha.ChartDetails chart_details = 2 [json_name = "chartDetails"];</code>
@@ -644,11 +609,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         chartDetails_ = value;
-        onChanged();
       } else {
         chartDetailsBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -658,11 +623,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.ChartDetails.Builder builderForValue) {
       if (chartDetailsBuilder_ == null) {
         chartDetails_ = builderForValue.build();
-        onChanged();
       } else {
         chartDetailsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -670,38 +635,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeChartDetails(com.tcn.cloud.api.api.v0alpha.ChartDetails value) {
       if (chartDetailsBuilder_ == null) {
-        if (chartDetails_ != null) {
-          chartDetails_ =
-            com.tcn.cloud.api.api.v0alpha.ChartDetails.newBuilder(chartDetails_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          chartDetails_ != null &&
+          chartDetails_ != com.tcn.cloud.api.api.v0alpha.ChartDetails.getDefaultInstance()) {
+          getChartDetailsBuilder().mergeFrom(value);
         } else {
           chartDetails_ = value;
         }
-        onChanged();
       } else {
         chartDetailsBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v0alpha.ChartDetails chart_details = 2 [json_name = "chartDetails"];</code>
      */
     public Builder clearChartDetails() {
-      if (chartDetailsBuilder_ == null) {
-        chartDetails_ = null;
-        onChanged();
-      } else {
-        chartDetails_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      chartDetails_ = null;
+      if (chartDetailsBuilder_ != null) {
+        chartDetailsBuilder_.dispose();
         chartDetailsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v0alpha.ChartDetails chart_details = 2 [json_name = "chartDetails"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.ChartDetails.Builder getChartDetailsBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getChartDetailsFieldBuilder().getBuilder();
     }
@@ -747,8 +712,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisplayLabelsValue(int value) {
-      
       displayLabels_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -758,8 +723,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ChartDisplayLabels getDisplayLabels() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.ChartDisplayLabels result = com.tcn.cloud.api.api.commons.ChartDisplayLabels.valueOf(displayLabels_);
+      com.tcn.cloud.api.api.commons.ChartDisplayLabels result = com.tcn.cloud.api.api.commons.ChartDisplayLabels.forNumber(displayLabels_);
       return result == null ? com.tcn.cloud.api.api.commons.ChartDisplayLabels.UNRECOGNIZED : result;
     }
     /**
@@ -771,7 +735,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       displayLabels_ = value.getNumber();
       onChanged();
       return this;
@@ -781,7 +745,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayLabels() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       displayLabels_ = 0;
       onChanged();
       return this;
@@ -819,7 +783,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new CreateChartReq(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

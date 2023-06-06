@@ -52,5 +52,5 @@ public interface SortReqOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.RecordProtoOrBuilder getRecordOrBuilder();
 
-  public com.tcn.cloud.api.api.v0alpha.SortReq.RequestCase getRequestCase();
+  com.tcn.cloud.api.api.v0alpha.SortReq.RequestCase getRequestCase();
 }

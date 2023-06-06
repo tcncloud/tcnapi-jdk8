@@ -31,106 +31,6 @@ private static final long serialVersionUID = 0L;
     return new SkillProficiency();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private SkillProficiency(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            skillProficiencySid_ = input.readInt64();
-            break;
-          }
-          case 16: {
-
-            skillSid_ = input.readInt64();
-            break;
-          }
-          case 26: {
-            com.google.protobuf.Int64Value.Builder subBuilder = null;
-            if (preferredSkillProfileSid_ != null) {
-              subBuilder = preferredSkillProfileSid_.toBuilder();
-            }
-            preferredSkillProfileSid_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(preferredSkillProfileSid_);
-              preferredSkillProfileSid_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 32: {
-
-            manualProficiencyValue_ = input.readInt32();
-            break;
-          }
-          case 42: {
-            com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder subBuilder = null;
-            if (parentEntity_ != null) {
-              subBuilder = parentEntity_.toBuilder();
-            }
-            parentEntity_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(parentEntity_);
-              parentEntity_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            skillName_ = s;
-            break;
-          }
-          case 66: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            skillProfileName_ = s;
-            break;
-          }
-          case 72: {
-
-            skillProfileProficiencyValue_ = input.readInt32();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_SkillProficiency_descriptor;
@@ -145,7 +45,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SKILL_PROFICIENCY_SID_FIELD_NUMBER = 1;
-  private long skillProficiencySid_;
+  private long skillProficiencySid_ = 0L;
   /**
    * <pre>
    * ID of the skill proficiency.
@@ -160,7 +60,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SKILL_SID_FIELD_NUMBER = 2;
-  private long skillSid_;
+  private long skillSid_ = 0L;
   /**
    * <pre>
    * ID of the skill that this proficiency belongs to.
@@ -215,11 +115,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getPreferredSkillProfileSidOrBuilder() {
-    return getPreferredSkillProfileSid();
+    return preferredSkillProfileSid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : preferredSkillProfileSid_;
   }
 
   public static final int MANUAL_PROFICIENCY_VALUE_FIELD_NUMBER = 4;
-  private int manualProficiencyValue_;
+  private int manualProficiencyValue_ = 0;
   /**
    * <pre>
    * Manual proficiency value (from 1 to 100), it will be used when &#64;preferred_skill_profile_sid is NULL.
@@ -268,11 +168,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntityOrBuilder getParentEntityOrBuilder() {
-    return getParentEntity();
+    return parentEntity_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.getDefaultInstance() : parentEntity_;
   }
 
   public static final int SKILL_NAME_FIELD_NUMBER = 7;
-  private volatile java.lang.Object skillName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object skillName_ = "";
   /**
    * <pre>
    * The following fields are only used in the return of List requests of the entity.
@@ -320,7 +221,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SKILL_PROFILE_NAME_FIELD_NUMBER = 8;
-  private volatile java.lang.Object skillProfileName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object skillProfileName_ = "";
   /**
    * <pre>
    * Name of the skill profile with &#64;preferred_skill_profile_sid, will be blank if said field is NULL.
@@ -366,7 +268,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SKILL_PROFILE_PROFICIENCY_VALUE_FIELD_NUMBER = 9;
-  private int skillProfileProficiencyValue_;
+  private int skillProfileProficiencyValue_ = 0;
   /**
    * <pre>
    * Proficiency value that &#64;preferred_skill_profile_sid has for the given &#64;skill_sid, it will be 0 if &#64;preferred_skill_profile_sid is NULL.
@@ -409,16 +311,16 @@ private static final long serialVersionUID = 0L;
     if (parentEntity_ != null) {
       output.writeMessage(5, getParentEntity());
     }
-    if (!getSkillNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(skillName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, skillName_);
     }
-    if (!getSkillProfileNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(skillProfileName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, skillProfileName_);
     }
     if (skillProfileProficiencyValue_ != 0) {
       output.writeInt32(9, skillProfileProficiencyValue_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -447,17 +349,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getParentEntity());
     }
-    if (!getSkillNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(skillName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, skillName_);
     }
-    if (!getSkillProfileNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(skillProfileName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, skillProfileName_);
     }
     if (skillProfileProficiencyValue_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(9, skillProfileProficiencyValue_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -494,7 +396,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getSkillProfileName())) return false;
     if (getSkillProfileProficiencyValue()
         != other.getSkillProfileProficiencyValue()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -527,7 +429,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getSkillProfileName().hashCode();
     hash = (37 * hash) + SKILL_PROFILE_PROFICIENCY_VALUE_FIELD_NUMBER;
     hash = (53 * hash) + getSkillProfileProficiencyValue();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -576,11 +478,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.SkillProficiency parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.SkillProficiency parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -648,46 +552,34 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.SkillProficiency.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       skillProficiencySid_ = 0L;
-
       skillSid_ = 0L;
-
-      if (preferredSkillProfileSidBuilder_ == null) {
-        preferredSkillProfileSid_ = null;
-      } else {
-        preferredSkillProfileSid_ = null;
+      preferredSkillProfileSid_ = null;
+      if (preferredSkillProfileSidBuilder_ != null) {
+        preferredSkillProfileSidBuilder_.dispose();
         preferredSkillProfileSidBuilder_ = null;
       }
       manualProficiencyValue_ = 0;
-
-      if (parentEntityBuilder_ == null) {
-        parentEntity_ = null;
-      } else {
-        parentEntity_ = null;
+      parentEntity_ = null;
+      if (parentEntityBuilder_ != null) {
+        parentEntityBuilder_.dispose();
         parentEntityBuilder_ = null;
       }
       skillName_ = "";
-
       skillProfileName_ = "";
-
       skillProfileProficiencyValue_ = 0;
-
       return this;
     }
 
@@ -714,24 +606,41 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.SkillProficiency buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.SkillProficiency result = new com.tcn.cloud.api.api.v1alpha1.wfm.SkillProficiency(this);
-      result.skillProficiencySid_ = skillProficiencySid_;
-      result.skillSid_ = skillSid_;
-      if (preferredSkillProfileSidBuilder_ == null) {
-        result.preferredSkillProfileSid_ = preferredSkillProfileSid_;
-      } else {
-        result.preferredSkillProfileSid_ = preferredSkillProfileSidBuilder_.build();
-      }
-      result.manualProficiencyValue_ = manualProficiencyValue_;
-      if (parentEntityBuilder_ == null) {
-        result.parentEntity_ = parentEntity_;
-      } else {
-        result.parentEntity_ = parentEntityBuilder_.build();
-      }
-      result.skillName_ = skillName_;
-      result.skillProfileName_ = skillProfileName_;
-      result.skillProfileProficiencyValue_ = skillProfileProficiencyValue_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.SkillProficiency result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.skillProficiencySid_ = skillProficiencySid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.skillSid_ = skillSid_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.preferredSkillProfileSid_ = preferredSkillProfileSidBuilder_ == null
+            ? preferredSkillProfileSid_
+            : preferredSkillProfileSidBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.manualProficiencyValue_ = manualProficiencyValue_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.parentEntity_ = parentEntityBuilder_ == null
+            ? parentEntity_
+            : parentEntityBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.skillName_ = skillName_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.skillProfileName_ = skillProfileName_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.skillProfileProficiencyValue_ = skillProfileProficiencyValue_;
+      }
     }
 
     @java.lang.Override
@@ -795,16 +704,18 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getSkillName().isEmpty()) {
         skillName_ = other.skillName_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (!other.getSkillProfileName().isEmpty()) {
         skillProfileName_ = other.skillProfileName_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.getSkillProfileProficiencyValue() != 0) {
         setSkillProfileProficiencyValue(other.getSkillProfileProficiencyValue());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -819,19 +730,77 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.SkillProficiency parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              skillProficiencySid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              skillSid_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 26: {
+              input.readMessage(
+                  getPreferredSkillProfileSidFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 32: {
+              manualProficiencyValue_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
+              input.readMessage(
+                  getParentEntityFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 58: {
+              skillName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 58
+            case 66: {
+              skillProfileName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 66
+            case 72: {
+              skillProfileProficiencyValue_ = input.readInt32();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 72
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.SkillProficiency) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private long skillProficiencySid_ ;
     /**
@@ -856,8 +825,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSkillProficiencySid(long value) {
-      
+
       skillProficiencySid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -870,7 +840,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkillProficiencySid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       skillProficiencySid_ = 0L;
       onChanged();
       return this;
@@ -899,8 +869,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSkillSid(long value) {
-      
+
       skillSid_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -913,7 +884,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkillSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       skillSid_ = 0L;
       onChanged();
       return this;
@@ -933,7 +904,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the preferredSkillProfileSid field is set.
      */
     public boolean hasPreferredSkillProfileSid() {
-      return preferredSkillProfileSidBuilder_ != null || preferredSkillProfileSid_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -967,11 +938,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         preferredSkillProfileSid_ = value;
-        onChanged();
       } else {
         preferredSkillProfileSidBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -987,11 +958,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value.Builder builderForValue) {
       if (preferredSkillProfileSidBuilder_ == null) {
         preferredSkillProfileSid_ = builderForValue.build();
-        onChanged();
       } else {
         preferredSkillProfileSidBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1005,17 +976,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePreferredSkillProfileSid(com.google.protobuf.Int64Value value) {
       if (preferredSkillProfileSidBuilder_ == null) {
-        if (preferredSkillProfileSid_ != null) {
-          preferredSkillProfileSid_ =
-            com.google.protobuf.Int64Value.newBuilder(preferredSkillProfileSid_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          preferredSkillProfileSid_ != null &&
+          preferredSkillProfileSid_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+          getPreferredSkillProfileSidBuilder().mergeFrom(value);
         } else {
           preferredSkillProfileSid_ = value;
         }
-        onChanged();
       } else {
         preferredSkillProfileSidBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1028,14 +1000,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value preferred_skill_profile_sid = 3 [json_name = "preferredSkillProfileSid"];</code>
      */
     public Builder clearPreferredSkillProfileSid() {
-      if (preferredSkillProfileSidBuilder_ == null) {
-        preferredSkillProfileSid_ = null;
-        onChanged();
-      } else {
-        preferredSkillProfileSid_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      preferredSkillProfileSid_ = null;
+      if (preferredSkillProfileSidBuilder_ != null) {
+        preferredSkillProfileSidBuilder_.dispose();
         preferredSkillProfileSidBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1048,7 +1019,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value preferred_skill_profile_sid = 3 [json_name = "preferredSkillProfileSid"];</code>
      */
     public com.google.protobuf.Int64Value.Builder getPreferredSkillProfileSidBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getPreferredSkillProfileSidFieldBuilder().getBuilder();
     }
@@ -1115,8 +1086,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setManualProficiencyValue(int value) {
-      
+
       manualProficiencyValue_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1129,7 +1101,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearManualProficiencyValue() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       manualProficiencyValue_ = 0;
       onChanged();
       return this;
@@ -1147,7 +1119,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the parentEntity field is set.
      */
     public boolean hasParentEntity() {
-      return parentEntityBuilder_ != null || parentEntity_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1177,11 +1149,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         parentEntity_ = value;
-        onChanged();
       } else {
         parentEntityBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1195,11 +1167,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder builderForValue) {
       if (parentEntityBuilder_ == null) {
         parentEntity_ = builderForValue.build();
-        onChanged();
       } else {
         parentEntityBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1211,17 +1183,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeParentEntity(com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity value) {
       if (parentEntityBuilder_ == null) {
-        if (parentEntity_ != null) {
-          parentEntity_ =
-            com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.newBuilder(parentEntity_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000010) != 0) &&
+          parentEntity_ != null &&
+          parentEntity_ != com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.getDefaultInstance()) {
+          getParentEntityBuilder().mergeFrom(value);
         } else {
           parentEntity_ = value;
         }
-        onChanged();
       } else {
         parentEntityBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1232,14 +1205,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.ParentEntity parent_entity = 5 [json_name = "parentEntity"];</code>
      */
     public Builder clearParentEntity() {
-      if (parentEntityBuilder_ == null) {
-        parentEntity_ = null;
-        onChanged();
-      } else {
-        parentEntity_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      parentEntity_ = null;
+      if (parentEntityBuilder_ != null) {
+        parentEntityBuilder_.dispose();
         parentEntityBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1250,7 +1222,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.ParentEntity parent_entity = 5 [json_name = "parentEntity"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder getParentEntityBuilder() {
-      
+      bitField0_ |= 0x00000010;
       onChanged();
       return getParentEntityFieldBuilder().getBuilder();
     }
@@ -1346,11 +1318,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSkillName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       skillName_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1364,8 +1334,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkillName() {
-      
       skillName_ = getDefaultInstance().getSkillName();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1381,12 +1351,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSkillNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       skillName_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1444,11 +1412,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSkillProfileName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       skillProfileName_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1461,8 +1427,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkillProfileName() {
-      
       skillProfileName_ = getDefaultInstance().getSkillProfileName();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1477,12 +1443,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSkillProfileNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       skillProfileName_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1510,8 +1474,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSkillProfileProficiencyValue(int value) {
-      
+
       skillProfileProficiencyValue_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1524,7 +1489,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkillProfileProficiencyValue() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       skillProfileProficiencyValue_ = 0;
       onChanged();
       return this;
@@ -1562,7 +1527,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new SkillProficiency(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

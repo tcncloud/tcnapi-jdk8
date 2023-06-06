@@ -47,14 +47,14 @@ public interface GetAgentResponseDataResOrBuilder extends
   /**
    * <code>map&lt;string, string&gt; responses = 3 [json_name = "responses"];</code>
    */
-
-  java.lang.String getResponsesOrDefault(
+  /* nullable */
+java.lang.String getResponsesOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue);
+      /* nullable */
+java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; responses = 3 [json_name = "responses"];</code>
    */
-
   java.lang.String getResponsesOrThrow(
       java.lang.String key);
 }

@@ -25,100 +25,6 @@ private static final long serialVersionUID = 0L;
     return new GetDetailedPortalReq();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private GetDetailedPortalReq(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.tcn.cloud.api.api.v1alpha1.integrations.PortalId.Builder subBuilder = null;
-            if (entity_ != null) {
-              subBuilder = entity_.toBuilder();
-            }
-            entity_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.integrations.PortalId.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(entity_);
-              entity_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-            com.google.protobuf.FieldMask.Builder subBuilder = null;
-            if (portalMask_ != null) {
-              subBuilder = portalMask_.toBuilder();
-            }
-            portalMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(portalMask_);
-              portalMask_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 26: {
-            com.google.protobuf.FieldMask.Builder subBuilder = null;
-            if (portalConfigMask_ != null) {
-              subBuilder = portalConfigMask_.toBuilder();
-            }
-            portalConfigMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(portalConfigMask_);
-              portalConfigMask_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 34: {
-            com.google.protobuf.FieldMask.Builder subBuilder = null;
-            if (pluginInstanceMask_ != null) {
-              subBuilder = pluginInstanceMask_.toBuilder();
-            }
-            pluginInstanceMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(pluginInstanceMask_);
-              pluginInstanceMask_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.integrations.PortalsProto.internal_static_api_v1alpha1_integrations_GetDetailedPortalReq_descriptor;
@@ -155,7 +61,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.integrations.PortalIdOrBuilder getEntityOrBuilder() {
-    return getEntity();
+    return entity_ == null ? com.tcn.cloud.api.api.v1alpha1.integrations.PortalId.getDefaultInstance() : entity_;
   }
 
   public static final int PORTAL_MASK_FIELD_NUMBER = 2;
@@ -181,7 +87,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.FieldMaskOrBuilder getPortalMaskOrBuilder() {
-    return getPortalMask();
+    return portalMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : portalMask_;
   }
 
   public static final int PORTAL_CONFIG_MASK_FIELD_NUMBER = 3;
@@ -222,7 +128,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.FieldMaskOrBuilder getPortalConfigMaskOrBuilder() {
-    return getPortalConfigMask();
+    return portalConfigMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : portalConfigMask_;
   }
 
   public static final int PLUGIN_INSTANCE_MASK_FIELD_NUMBER = 4;
@@ -263,7 +169,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.FieldMaskOrBuilder getPluginInstanceMaskOrBuilder() {
-    return getPluginInstanceMask();
+    return pluginInstanceMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : pluginInstanceMask_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -292,7 +198,7 @@ private static final long serialVersionUID = 0L;
     if (pluginInstanceMask_ != null) {
       output.writeMessage(4, getPluginInstanceMask());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -317,7 +223,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getPluginInstanceMask());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -352,7 +258,7 @@ private static final long serialVersionUID = 0L;
       if (!getPluginInstanceMask()
           .equals(other.getPluginInstanceMask())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -379,7 +285,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PLUGIN_INSTANCE_MASK_FIELD_NUMBER;
       hash = (53 * hash) + getPluginInstanceMask().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -428,11 +334,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -496,44 +404,36 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (entityBuilder_ == null) {
-        entity_ = null;
-      } else {
-        entity_ = null;
+      bitField0_ = 0;
+      entity_ = null;
+      if (entityBuilder_ != null) {
+        entityBuilder_.dispose();
         entityBuilder_ = null;
       }
-      if (portalMaskBuilder_ == null) {
-        portalMask_ = null;
-      } else {
-        portalMask_ = null;
+      portalMask_ = null;
+      if (portalMaskBuilder_ != null) {
+        portalMaskBuilder_.dispose();
         portalMaskBuilder_ = null;
       }
-      if (portalConfigMaskBuilder_ == null) {
-        portalConfigMask_ = null;
-      } else {
-        portalConfigMask_ = null;
+      portalConfigMask_ = null;
+      if (portalConfigMaskBuilder_ != null) {
+        portalConfigMaskBuilder_.dispose();
         portalConfigMaskBuilder_ = null;
       }
-      if (pluginInstanceMaskBuilder_ == null) {
-        pluginInstanceMask_ = null;
-      } else {
-        pluginInstanceMask_ = null;
+      pluginInstanceMask_ = null;
+      if (pluginInstanceMaskBuilder_ != null) {
+        pluginInstanceMaskBuilder_.dispose();
         pluginInstanceMaskBuilder_ = null;
       }
       return this;
@@ -562,28 +462,33 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq result = new com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq(this);
-      if (entityBuilder_ == null) {
-        result.entity_ = entity_;
-      } else {
-        result.entity_ = entityBuilder_.build();
-      }
-      if (portalMaskBuilder_ == null) {
-        result.portalMask_ = portalMask_;
-      } else {
-        result.portalMask_ = portalMaskBuilder_.build();
-      }
-      if (portalConfigMaskBuilder_ == null) {
-        result.portalConfigMask_ = portalConfigMask_;
-      } else {
-        result.portalConfigMask_ = portalConfigMaskBuilder_.build();
-      }
-      if (pluginInstanceMaskBuilder_ == null) {
-        result.pluginInstanceMask_ = pluginInstanceMask_;
-      } else {
-        result.pluginInstanceMask_ = pluginInstanceMaskBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.entity_ = entityBuilder_ == null
+            ? entity_
+            : entityBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.portalMask_ = portalMaskBuilder_ == null
+            ? portalMask_
+            : portalMaskBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.portalConfigMask_ = portalConfigMaskBuilder_ == null
+            ? portalConfigMask_
+            : portalConfigMaskBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.pluginInstanceMask_ = pluginInstanceMaskBuilder_ == null
+            ? pluginInstanceMask_
+            : pluginInstanceMaskBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -642,7 +547,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasPluginInstanceMask()) {
         mergePluginInstanceMask(other.getPluginInstanceMask());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -657,19 +562,61 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getEntityFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  getPortalMaskFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getPortalConfigMaskFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getPluginInstanceMaskFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.tcn.cloud.api.api.v1alpha1.integrations.PortalId entity_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -679,7 +626,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the entity field is set.
      */
     public boolean hasEntity() {
-      return entityBuilder_ != null || entity_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.api.v1alpha1.integrations.PortalId entity = 1 [json_name = "entity"];</code>
@@ -701,11 +648,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         entity_ = value;
-        onChanged();
       } else {
         entityBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -715,11 +662,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.integrations.PortalId.Builder builderForValue) {
       if (entityBuilder_ == null) {
         entity_ = builderForValue.build();
-        onChanged();
       } else {
         entityBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -727,38 +674,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeEntity(com.tcn.cloud.api.api.v1alpha1.integrations.PortalId value) {
       if (entityBuilder_ == null) {
-        if (entity_ != null) {
-          entity_ =
-            com.tcn.cloud.api.api.v1alpha1.integrations.PortalId.newBuilder(entity_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          entity_ != null &&
+          entity_ != com.tcn.cloud.api.api.v1alpha1.integrations.PortalId.getDefaultInstance()) {
+          getEntityBuilder().mergeFrom(value);
         } else {
           entity_ = value;
         }
-        onChanged();
       } else {
         entityBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v1alpha1.integrations.PortalId entity = 1 [json_name = "entity"];</code>
      */
     public Builder clearEntity() {
-      if (entityBuilder_ == null) {
-        entity_ = null;
-        onChanged();
-      } else {
-        entity_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      entity_ = null;
+      if (entityBuilder_ != null) {
+        entityBuilder_.dispose();
         entityBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v1alpha1.integrations.PortalId entity = 1 [json_name = "entity"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.PortalId.Builder getEntityBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getEntityFieldBuilder().getBuilder();
     }
@@ -798,7 +745,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the portalMask field is set.
      */
     public boolean hasPortalMask() {
-      return portalMaskBuilder_ != null || portalMask_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.google.protobuf.FieldMask portal_mask = 2 [json_name = "portalMask"];</code>
@@ -820,11 +767,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         portalMask_ = value;
-        onChanged();
       } else {
         portalMaskBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -834,11 +781,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.FieldMask.Builder builderForValue) {
       if (portalMaskBuilder_ == null) {
         portalMask_ = builderForValue.build();
-        onChanged();
       } else {
         portalMaskBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -846,38 +793,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePortalMask(com.google.protobuf.FieldMask value) {
       if (portalMaskBuilder_ == null) {
-        if (portalMask_ != null) {
-          portalMask_ =
-            com.google.protobuf.FieldMask.newBuilder(portalMask_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          portalMask_ != null &&
+          portalMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
+          getPortalMaskBuilder().mergeFrom(value);
         } else {
           portalMask_ = value;
         }
-        onChanged();
       } else {
         portalMaskBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.FieldMask portal_mask = 2 [json_name = "portalMask"];</code>
      */
     public Builder clearPortalMask() {
-      if (portalMaskBuilder_ == null) {
-        portalMask_ = null;
-        onChanged();
-      } else {
-        portalMask_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      portalMask_ = null;
+      if (portalMaskBuilder_ != null) {
+        portalMaskBuilder_.dispose();
         portalMaskBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.FieldMask portal_mask = 2 [json_name = "portalMask"];</code>
      */
     public com.google.protobuf.FieldMask.Builder getPortalMaskBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getPortalMaskFieldBuilder().getBuilder();
     }
@@ -922,7 +869,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the portalConfigMask field is set.
      */
     public boolean hasPortalConfigMask() {
-      return portalConfigMaskBuilder_ != null || portalConfigMask_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -954,11 +901,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         portalConfigMask_ = value;
-        onChanged();
       } else {
         portalConfigMaskBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -973,11 +920,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.FieldMask.Builder builderForValue) {
       if (portalConfigMaskBuilder_ == null) {
         portalConfigMask_ = builderForValue.build();
-        onChanged();
       } else {
         portalConfigMaskBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -990,17 +937,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePortalConfigMask(com.google.protobuf.FieldMask value) {
       if (portalConfigMaskBuilder_ == null) {
-        if (portalConfigMask_ != null) {
-          portalConfigMask_ =
-            com.google.protobuf.FieldMask.newBuilder(portalConfigMask_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          portalConfigMask_ != null &&
+          portalConfigMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
+          getPortalConfigMaskBuilder().mergeFrom(value);
         } else {
           portalConfigMask_ = value;
         }
-        onChanged();
       } else {
         portalConfigMaskBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1012,14 +960,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.FieldMask portal_config_mask = 3 [json_name = "portalConfigMask"];</code>
      */
     public Builder clearPortalConfigMask() {
-      if (portalConfigMaskBuilder_ == null) {
-        portalConfigMask_ = null;
-        onChanged();
-      } else {
-        portalConfigMask_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      portalConfigMask_ = null;
+      if (portalConfigMaskBuilder_ != null) {
+        portalConfigMaskBuilder_.dispose();
         portalConfigMaskBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1031,7 +978,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.FieldMask portal_config_mask = 3 [json_name = "portalConfigMask"];</code>
      */
     public com.google.protobuf.FieldMask.Builder getPortalConfigMaskBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getPortalConfigMaskFieldBuilder().getBuilder();
     }
@@ -1086,7 +1033,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the pluginInstanceMask field is set.
      */
     public boolean hasPluginInstanceMask() {
-      return pluginInstanceMaskBuilder_ != null || pluginInstanceMask_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1118,11 +1065,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         pluginInstanceMask_ = value;
-        onChanged();
       } else {
         pluginInstanceMaskBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1137,11 +1084,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.FieldMask.Builder builderForValue) {
       if (pluginInstanceMaskBuilder_ == null) {
         pluginInstanceMask_ = builderForValue.build();
-        onChanged();
       } else {
         pluginInstanceMaskBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1154,17 +1101,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePluginInstanceMask(com.google.protobuf.FieldMask value) {
       if (pluginInstanceMaskBuilder_ == null) {
-        if (pluginInstanceMask_ != null) {
-          pluginInstanceMask_ =
-            com.google.protobuf.FieldMask.newBuilder(pluginInstanceMask_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000008) != 0) &&
+          pluginInstanceMask_ != null &&
+          pluginInstanceMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
+          getPluginInstanceMaskBuilder().mergeFrom(value);
         } else {
           pluginInstanceMask_ = value;
         }
-        onChanged();
       } else {
         pluginInstanceMaskBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1176,14 +1124,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.FieldMask plugin_instance_mask = 4 [json_name = "pluginInstanceMask"];</code>
      */
     public Builder clearPluginInstanceMask() {
-      if (pluginInstanceMaskBuilder_ == null) {
-        pluginInstanceMask_ = null;
-        onChanged();
-      } else {
-        pluginInstanceMask_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      pluginInstanceMask_ = null;
+      if (pluginInstanceMaskBuilder_ != null) {
+        pluginInstanceMaskBuilder_.dispose();
         pluginInstanceMaskBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1195,7 +1142,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.FieldMask plugin_instance_mask = 4 [json_name = "pluginInstanceMask"];</code>
      */
     public com.google.protobuf.FieldMask.Builder getPluginInstanceMaskBuilder() {
-      
+      bitField0_ |= 0x00000008;
       onChanged();
       return getPluginInstanceMaskFieldBuilder().getBuilder();
     }
@@ -1269,7 +1216,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GetDetailedPortalReq(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -2329,5 +2329,5 @@ public interface ExecuteFlowOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPaymentsOrBuilder getShift4CcPaymentOrBuilder();
 
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteFlow.ValueCase getValueCase();
+  com.tcn.cloud.api.api.commons.integrations.ExecuteFlow.ValueCase getValueCase();
 }

@@ -31,90 +31,6 @@ private static final long serialVersionUID = 0L;
     return new UpdateSkillProfileReq();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private UpdateSkillProfileReq(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            skillProfileSid_ = input.readInt64();
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            name_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            description_ = s;
-            break;
-          }
-          case 37: {
-
-            averageSpeedOfAnswerInSeconds_ = input.readFloat();
-            break;
-          }
-          case 45: {
-
-            averageHandleTimeInSeconds_ = input.readFloat();
-            break;
-          }
-          case 53: {
-
-            averageAfterCallWorkInSeconds_ = input.readFloat();
-            break;
-          }
-          case 61: {
-
-            averageTimeToAbortInSeconds_ = input.readFloat();
-            break;
-          }
-          case 64: {
-
-            areAveragesManual_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_UpdateSkillProfileReq_descriptor;
@@ -129,7 +45,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SKILL_PROFILE_SID_FIELD_NUMBER = 1;
-  private long skillProfileSid_;
+  private long skillProfileSid_ = 0L;
   /**
    * <pre>
    * skill profile id to modify.
@@ -144,7 +60,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 2;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * new name that the skill profile will have.
@@ -190,7 +107,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 3;
-  private volatile java.lang.Object description_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
   /**
    * <pre>
    * new description that the skill profile will have.
@@ -236,7 +154,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_SPEED_OF_ANSWER_IN_SECONDS_FIELD_NUMBER = 4;
-  private float averageSpeedOfAnswerInSeconds_;
+  private float averageSpeedOfAnswerInSeconds_ = 0F;
   /**
    * <pre>
    * average time that calls took to be answered.
@@ -251,7 +169,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_HANDLE_TIME_IN_SECONDS_FIELD_NUMBER = 5;
-  private float averageHandleTimeInSeconds_;
+  private float averageHandleTimeInSeconds_ = 0F;
   /**
    * <pre>
    * average duration of answered calls.
@@ -266,7 +184,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_AFTER_CALL_WORK_IN_SECONDS_FIELD_NUMBER = 6;
-  private float averageAfterCallWorkInSeconds_;
+  private float averageAfterCallWorkInSeconds_ = 0F;
   /**
    * <pre>
    * average time that agents spent in wrap up.
@@ -281,7 +199,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_TIME_TO_ABORT_IN_SECONDS_FIELD_NUMBER = 7;
-  private float averageTimeToAbortInSeconds_;
+  private float averageTimeToAbortInSeconds_ = 0F;
   /**
    * <pre>
    * average time that callers waited before hanging unanswered calls.
@@ -296,7 +214,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ARE_AVERAGES_MANUAL_FIELD_NUMBER = 8;
-  private boolean areAveragesManual_;
+  private boolean areAveragesManual_ = false;
   /**
    * <pre>
    * indicates whether or not the averages were manually entered by the user (if false then the averages were automatically calculated from the historical data).
@@ -327,28 +245,28 @@ private static final long serialVersionUID = 0L;
     if (skillProfileSid_ != 0L) {
       output.writeInt64(1, skillProfileSid_);
     }
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
     }
-    if (averageSpeedOfAnswerInSeconds_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(averageSpeedOfAnswerInSeconds_) != 0) {
       output.writeFloat(4, averageSpeedOfAnswerInSeconds_);
     }
-    if (averageHandleTimeInSeconds_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(averageHandleTimeInSeconds_) != 0) {
       output.writeFloat(5, averageHandleTimeInSeconds_);
     }
-    if (averageAfterCallWorkInSeconds_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(averageAfterCallWorkInSeconds_) != 0) {
       output.writeFloat(6, averageAfterCallWorkInSeconds_);
     }
-    if (averageTimeToAbortInSeconds_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(averageTimeToAbortInSeconds_) != 0) {
       output.writeFloat(7, averageTimeToAbortInSeconds_);
     }
     if (areAveragesManual_ != false) {
       output.writeBool(8, areAveragesManual_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -361,25 +279,25 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, skillProfileSid_);
     }
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
     }
-    if (averageSpeedOfAnswerInSeconds_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(averageSpeedOfAnswerInSeconds_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(4, averageSpeedOfAnswerInSeconds_);
     }
-    if (averageHandleTimeInSeconds_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(averageHandleTimeInSeconds_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(5, averageHandleTimeInSeconds_);
     }
-    if (averageAfterCallWorkInSeconds_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(averageAfterCallWorkInSeconds_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(6, averageAfterCallWorkInSeconds_);
     }
-    if (averageTimeToAbortInSeconds_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(averageTimeToAbortInSeconds_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(7, averageTimeToAbortInSeconds_);
     }
@@ -387,7 +305,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(8, areAveragesManual_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -422,7 +340,7 @@ private static final long serialVersionUID = 0L;
             other.getAverageTimeToAbortInSeconds())) return false;
     if (getAreAveragesManual()
         != other.getAreAveragesManual()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -455,7 +373,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ARE_AVERAGES_MANUAL_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getAreAveragesManual());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -504,11 +422,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -576,38 +496,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       skillProfileSid_ = 0L;
-
       name_ = "";
-
       description_ = "";
-
       averageSpeedOfAnswerInSeconds_ = 0F;
-
       averageHandleTimeInSeconds_ = 0F;
-
       averageAfterCallWorkInSeconds_ = 0F;
-
       averageTimeToAbortInSeconds_ = 0F;
-
       areAveragesManual_ = false;
-
       return this;
     }
 
@@ -634,16 +542,37 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq(this);
-      result.skillProfileSid_ = skillProfileSid_;
-      result.name_ = name_;
-      result.description_ = description_;
-      result.averageSpeedOfAnswerInSeconds_ = averageSpeedOfAnswerInSeconds_;
-      result.averageHandleTimeInSeconds_ = averageHandleTimeInSeconds_;
-      result.averageAfterCallWorkInSeconds_ = averageAfterCallWorkInSeconds_;
-      result.averageTimeToAbortInSeconds_ = averageTimeToAbortInSeconds_;
-      result.areAveragesManual_ = areAveragesManual_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.skillProfileSid_ = skillProfileSid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.averageSpeedOfAnswerInSeconds_ = averageSpeedOfAnswerInSeconds_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.averageHandleTimeInSeconds_ = averageHandleTimeInSeconds_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.averageAfterCallWorkInSeconds_ = averageAfterCallWorkInSeconds_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.averageTimeToAbortInSeconds_ = averageTimeToAbortInSeconds_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.areAveragesManual_ = areAveragesManual_;
+      }
     }
 
     @java.lang.Override
@@ -695,10 +624,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.getAverageSpeedOfAnswerInSeconds() != 0F) {
@@ -716,7 +647,7 @@ private static final long serialVersionUID = 0L;
       if (other.getAreAveragesManual() != false) {
         setAreAveragesManual(other.getAreAveragesManual());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -731,19 +662,73 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              skillProfileSid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              name_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              description_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 37: {
+              averageSpeedOfAnswerInSeconds_ = input.readFloat();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 37
+            case 45: {
+              averageHandleTimeInSeconds_ = input.readFloat();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 45
+            case 53: {
+              averageAfterCallWorkInSeconds_ = input.readFloat();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 53
+            case 61: {
+              averageTimeToAbortInSeconds_ = input.readFloat();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 61
+            case 64: {
+              areAveragesManual_ = input.readBool();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private long skillProfileSid_ ;
     /**
@@ -768,8 +753,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSkillProfileSid(long value) {
-      
+
       skillProfileSid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -782,7 +768,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkillProfileSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       skillProfileSid_ = 0L;
       onChanged();
       return this;
@@ -841,11 +827,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -858,8 +842,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -874,12 +858,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -937,11 +919,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       description_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -954,8 +934,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-      
       description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -970,12 +950,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1003,8 +981,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageSpeedOfAnswerInSeconds(float value) {
-      
+
       averageSpeedOfAnswerInSeconds_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1017,7 +996,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageSpeedOfAnswerInSeconds() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       averageSpeedOfAnswerInSeconds_ = 0F;
       onChanged();
       return this;
@@ -1046,8 +1025,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageHandleTimeInSeconds(float value) {
-      
+
       averageHandleTimeInSeconds_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1060,7 +1040,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageHandleTimeInSeconds() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       averageHandleTimeInSeconds_ = 0F;
       onChanged();
       return this;
@@ -1089,8 +1069,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageAfterCallWorkInSeconds(float value) {
-      
+
       averageAfterCallWorkInSeconds_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1103,7 +1084,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageAfterCallWorkInSeconds() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       averageAfterCallWorkInSeconds_ = 0F;
       onChanged();
       return this;
@@ -1132,8 +1113,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageTimeToAbortInSeconds(float value) {
-      
+
       averageTimeToAbortInSeconds_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1146,7 +1128,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageTimeToAbortInSeconds() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       averageTimeToAbortInSeconds_ = 0F;
       onChanged();
       return this;
@@ -1175,8 +1157,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAreAveragesManual(boolean value) {
-      
+
       areAveragesManual_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1189,7 +1172,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAreAveragesManual() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       areAveragesManual_ = false;
       onChanged();
       return this;
@@ -1227,7 +1210,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new UpdateSkillProfileReq(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

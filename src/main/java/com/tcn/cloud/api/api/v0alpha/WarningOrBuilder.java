@@ -37,5 +37,5 @@ public interface WarningOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.MissingLocationsOrBuilder getMissingLocationsOrBuilder();
 
-  public com.tcn.cloud.api.api.v0alpha.Warning.WarningTypeCase getWarningTypeCase();
+  com.tcn.cloud.api.api.v0alpha.Warning.WarningTypeCase getWarningTypeCase();
 }

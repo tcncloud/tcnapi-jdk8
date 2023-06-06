@@ -27,165 +27,6 @@ private static final long serialVersionUID = 0L;
     return new GetCallDataRes();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private GetCallDataRes(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              ivrData_ = com.google.protobuf.MapField.newMapField(
-                  IvrDataDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000001;
-            }
-            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-            ivrData__ = input.readMessage(
-                IvrDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            ivrData_.getMutableMap().put(
-                ivrData__.getKey(), ivrData__.getValue());
-            break;
-          }
-          case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              phoneEnhancedData_ = com.google.protobuf.MapField.newMapField(
-                  PhoneEnhancedDataDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000002;
-            }
-            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-            phoneEnhancedData__ = input.readMessage(
-                PhoneEnhancedDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            phoneEnhancedData_.getMutableMap().put(
-                phoneEnhancedData__.getKey(), phoneEnhancedData__.getValue());
-            break;
-          }
-          case 26: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-              dataCollectData_ = com.google.protobuf.MapField.newMapField(
-                  DataCollectDataDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000004;
-            }
-            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-            dataCollectData__ = input.readMessage(
-                DataCollectDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            dataCollectData_.getMutableMap().put(
-                dataCollectData__.getKey(), dataCollectData__.getValue());
-            break;
-          }
-          case 34: {
-            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-              dataDipData_ = com.google.protobuf.MapField.newMapField(
-                  DataDipDataDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000008;
-            }
-            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-            dataDipData__ = input.readMessage(
-                DataDipDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            dataDipData_.getMutableMap().put(
-                dataDipData__.getKey(), dataDipData__.getValue());
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            callerIdName_ = s;
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            linkbackHuntGroup_ = s;
-            break;
-          }
-          case 58: {
-            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-              sipHeaderData_ = com.google.protobuf.MapField.newMapField(
-                  SipHeaderDataDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000010;
-            }
-            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-            sipHeaderData__ = input.readMessage(
-                SipHeaderDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            sipHeaderData_.getMutableMap().put(
-                sipHeaderData__.getKey(), sipHeaderData__.getValue());
-            break;
-          }
-          case 66: {
-            if (!((mutable_bitField0_ & 0x00000020) != 0)) {
-              queuedCallbackData_ = com.google.protobuf.MapField.newMapField(
-                  QueuedCallbackDataDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000020;
-            }
-            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-            queuedCallbackData__ = input.readMessage(
-                QueuedCallbackDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            queuedCallbackData_.getMutableMap().put(
-                queuedCallbackData__.getKey(), queuedCallbackData__.getValue());
-            break;
-          }
-          case 74: {
-            if (!((mutable_bitField0_ & 0x00000040) != 0)) {
-              journeyRetrievedData_ = com.google.protobuf.MapField.newMapField(
-                  JourneyRetrievedDataDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000040;
-            }
-            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-            journeyRetrievedData__ = input.readMessage(
-                JourneyRetrievedDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            journeyRetrievedData_.getMutableMap().put(
-                journeyRetrievedData__.getKey(), journeyRetrievedData__.getValue());
-            break;
-          }
-          case 82: {
-            if (!((mutable_bitField0_ & 0x00000080) != 0)) {
-              integrationData_ = com.google.protobuf.MapField.newMapField(
-                  IntegrationDataDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000080;
-            }
-            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-            integrationData__ = input.readMessage(
-                IntegrationDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            integrationData_.getMutableMap().put(
-                integrationData__.getKey(), integrationData__.getValue());
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_GetCallDataRes_descriptor;
@@ -237,6 +78,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.String> ivrData_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -247,18 +89,16 @@ private static final long serialVersionUID = 0L;
     }
     return ivrData_;
   }
-
   public int getIvrDataCount() {
     return internalGetIvrData().getMap().size();
   }
   /**
    * <code>map&lt;string, string&gt; ivr_data = 1 [json_name = "ivrData"];</code>
    */
-
   @java.lang.Override
   public boolean containsIvrData(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     return internalGetIvrData().getMap().containsKey(key);
   }
   /**
@@ -273,7 +113,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; ivr_data = 1 [json_name = "ivrData"];</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.String, java.lang.String> getIvrDataMap() {
     return internalGetIvrData().getMap();
   }
@@ -281,11 +120,12 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; ivr_data = 1 [json_name = "ivrData"];</code>
    */
   @java.lang.Override
-
-  public java.lang.String getIvrDataOrDefault(
+  public /* nullable */
+java.lang.String getIvrDataOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+      /* nullable */
+java.lang.String defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetIvrData().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -294,10 +134,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; ivr_data = 1 [json_name = "ivrData"];</code>
    */
   @java.lang.Override
-
   public java.lang.String getIvrDataOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetIvrData().getMap();
     if (!map.containsKey(key)) {
@@ -318,6 +157,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.String> phoneEnhancedData_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -328,18 +168,16 @@ private static final long serialVersionUID = 0L;
     }
     return phoneEnhancedData_;
   }
-
   public int getPhoneEnhancedDataCount() {
     return internalGetPhoneEnhancedData().getMap().size();
   }
   /**
    * <code>map&lt;string, string&gt; phone_enhanced_data = 2 [json_name = "phoneEnhancedData"];</code>
    */
-
   @java.lang.Override
   public boolean containsPhoneEnhancedData(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     return internalGetPhoneEnhancedData().getMap().containsKey(key);
   }
   /**
@@ -354,7 +192,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; phone_enhanced_data = 2 [json_name = "phoneEnhancedData"];</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.String, java.lang.String> getPhoneEnhancedDataMap() {
     return internalGetPhoneEnhancedData().getMap();
   }
@@ -362,11 +199,12 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; phone_enhanced_data = 2 [json_name = "phoneEnhancedData"];</code>
    */
   @java.lang.Override
-
-  public java.lang.String getPhoneEnhancedDataOrDefault(
+  public /* nullable */
+java.lang.String getPhoneEnhancedDataOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+      /* nullable */
+java.lang.String defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetPhoneEnhancedData().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -375,10 +213,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; phone_enhanced_data = 2 [json_name = "phoneEnhancedData"];</code>
    */
   @java.lang.Override
-
   public java.lang.String getPhoneEnhancedDataOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetPhoneEnhancedData().getMap();
     if (!map.containsKey(key)) {
@@ -399,6 +236,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.String> dataCollectData_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -409,18 +247,16 @@ private static final long serialVersionUID = 0L;
     }
     return dataCollectData_;
   }
-
   public int getDataCollectDataCount() {
     return internalGetDataCollectData().getMap().size();
   }
   /**
    * <code>map&lt;string, string&gt; data_collect_data = 3 [json_name = "dataCollectData"];</code>
    */
-
   @java.lang.Override
   public boolean containsDataCollectData(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     return internalGetDataCollectData().getMap().containsKey(key);
   }
   /**
@@ -435,7 +271,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; data_collect_data = 3 [json_name = "dataCollectData"];</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.String, java.lang.String> getDataCollectDataMap() {
     return internalGetDataCollectData().getMap();
   }
@@ -443,11 +278,12 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; data_collect_data = 3 [json_name = "dataCollectData"];</code>
    */
   @java.lang.Override
-
-  public java.lang.String getDataCollectDataOrDefault(
+  public /* nullable */
+java.lang.String getDataCollectDataOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+      /* nullable */
+java.lang.String defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetDataCollectData().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -456,10 +292,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; data_collect_data = 3 [json_name = "dataCollectData"];</code>
    */
   @java.lang.Override
-
   public java.lang.String getDataCollectDataOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetDataCollectData().getMap();
     if (!map.containsKey(key)) {
@@ -480,6 +315,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.String> dataDipData_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -490,18 +326,16 @@ private static final long serialVersionUID = 0L;
     }
     return dataDipData_;
   }
-
   public int getDataDipDataCount() {
     return internalGetDataDipData().getMap().size();
   }
   /**
    * <code>map&lt;string, string&gt; data_dip_data = 4 [json_name = "dataDipData"];</code>
    */
-
   @java.lang.Override
   public boolean containsDataDipData(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     return internalGetDataDipData().getMap().containsKey(key);
   }
   /**
@@ -516,7 +350,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; data_dip_data = 4 [json_name = "dataDipData"];</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.String, java.lang.String> getDataDipDataMap() {
     return internalGetDataDipData().getMap();
   }
@@ -524,11 +357,12 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; data_dip_data = 4 [json_name = "dataDipData"];</code>
    */
   @java.lang.Override
-
-  public java.lang.String getDataDipDataOrDefault(
+  public /* nullable */
+java.lang.String getDataDipDataOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+      /* nullable */
+java.lang.String defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetDataDipData().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -537,10 +371,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; data_dip_data = 4 [json_name = "dataDipData"];</code>
    */
   @java.lang.Override
-
   public java.lang.String getDataDipDataOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetDataDipData().getMap();
     if (!map.containsKey(key)) {
@@ -550,7 +383,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALLER_ID_NAME_FIELD_NUMBER = 5;
-  private volatile java.lang.Object callerIdName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object callerIdName_ = "";
   /**
    * <code>string caller_id_name = 5 [json_name = "callerIdName"];</code>
    * @return The callerIdName.
@@ -588,7 +422,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LINKBACK_HUNT_GROUP_FIELD_NUMBER = 6;
-  private volatile java.lang.Object linkbackHuntGroup_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object linkbackHuntGroup_ = "";
   /**
    * <code>string linkback_hunt_group = 6 [json_name = "linkbackHuntGroup"];</code>
    * @return The linkbackHuntGroup.
@@ -637,6 +472,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.String> sipHeaderData_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -647,18 +483,16 @@ private static final long serialVersionUID = 0L;
     }
     return sipHeaderData_;
   }
-
   public int getSipHeaderDataCount() {
     return internalGetSipHeaderData().getMap().size();
   }
   /**
    * <code>map&lt;string, string&gt; sip_header_data = 7 [json_name = "sipHeaderData"];</code>
    */
-
   @java.lang.Override
   public boolean containsSipHeaderData(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     return internalGetSipHeaderData().getMap().containsKey(key);
   }
   /**
@@ -673,7 +507,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; sip_header_data = 7 [json_name = "sipHeaderData"];</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.String, java.lang.String> getSipHeaderDataMap() {
     return internalGetSipHeaderData().getMap();
   }
@@ -681,11 +514,12 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; sip_header_data = 7 [json_name = "sipHeaderData"];</code>
    */
   @java.lang.Override
-
-  public java.lang.String getSipHeaderDataOrDefault(
+  public /* nullable */
+java.lang.String getSipHeaderDataOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+      /* nullable */
+java.lang.String defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetSipHeaderData().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -694,10 +528,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; sip_header_data = 7 [json_name = "sipHeaderData"];</code>
    */
   @java.lang.Override
-
   public java.lang.String getSipHeaderDataOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetSipHeaderData().getMap();
     if (!map.containsKey(key)) {
@@ -718,6 +551,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.String> queuedCallbackData_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -728,18 +562,16 @@ private static final long serialVersionUID = 0L;
     }
     return queuedCallbackData_;
   }
-
   public int getQueuedCallbackDataCount() {
     return internalGetQueuedCallbackData().getMap().size();
   }
   /**
    * <code>map&lt;string, string&gt; queued_callback_data = 8 [json_name = "queuedCallbackData"];</code>
    */
-
   @java.lang.Override
   public boolean containsQueuedCallbackData(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     return internalGetQueuedCallbackData().getMap().containsKey(key);
   }
   /**
@@ -754,7 +586,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; queued_callback_data = 8 [json_name = "queuedCallbackData"];</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.String, java.lang.String> getQueuedCallbackDataMap() {
     return internalGetQueuedCallbackData().getMap();
   }
@@ -762,11 +593,12 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; queued_callback_data = 8 [json_name = "queuedCallbackData"];</code>
    */
   @java.lang.Override
-
-  public java.lang.String getQueuedCallbackDataOrDefault(
+  public /* nullable */
+java.lang.String getQueuedCallbackDataOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+      /* nullable */
+java.lang.String defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetQueuedCallbackData().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -775,10 +607,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; queued_callback_data = 8 [json_name = "queuedCallbackData"];</code>
    */
   @java.lang.Override
-
   public java.lang.String getQueuedCallbackDataOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetQueuedCallbackData().getMap();
     if (!map.containsKey(key)) {
@@ -799,6 +630,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.String> journeyRetrievedData_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -809,18 +641,16 @@ private static final long serialVersionUID = 0L;
     }
     return journeyRetrievedData_;
   }
-
   public int getJourneyRetrievedDataCount() {
     return internalGetJourneyRetrievedData().getMap().size();
   }
   /**
    * <code>map&lt;string, string&gt; journey_retrieved_data = 9 [json_name = "journeyRetrievedData"];</code>
    */
-
   @java.lang.Override
   public boolean containsJourneyRetrievedData(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     return internalGetJourneyRetrievedData().getMap().containsKey(key);
   }
   /**
@@ -835,7 +665,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; journey_retrieved_data = 9 [json_name = "journeyRetrievedData"];</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.String, java.lang.String> getJourneyRetrievedDataMap() {
     return internalGetJourneyRetrievedData().getMap();
   }
@@ -843,11 +672,12 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; journey_retrieved_data = 9 [json_name = "journeyRetrievedData"];</code>
    */
   @java.lang.Override
-
-  public java.lang.String getJourneyRetrievedDataOrDefault(
+  public /* nullable */
+java.lang.String getJourneyRetrievedDataOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+      /* nullable */
+java.lang.String defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetJourneyRetrievedData().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -856,10 +686,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; journey_retrieved_data = 9 [json_name = "journeyRetrievedData"];</code>
    */
   @java.lang.Override
-
   public java.lang.String getJourneyRetrievedDataOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetJourneyRetrievedData().getMap();
     if (!map.containsKey(key)) {
@@ -880,6 +709,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.String> integrationData_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -890,18 +720,16 @@ private static final long serialVersionUID = 0L;
     }
     return integrationData_;
   }
-
   public int getIntegrationDataCount() {
     return internalGetIntegrationData().getMap().size();
   }
   /**
    * <code>map&lt;string, string&gt; integration_data = 10 [json_name = "integrationData"];</code>
    */
-
   @java.lang.Override
   public boolean containsIntegrationData(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     return internalGetIntegrationData().getMap().containsKey(key);
   }
   /**
@@ -916,7 +744,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; integration_data = 10 [json_name = "integrationData"];</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.String, java.lang.String> getIntegrationDataMap() {
     return internalGetIntegrationData().getMap();
   }
@@ -924,11 +751,12 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; integration_data = 10 [json_name = "integrationData"];</code>
    */
   @java.lang.Override
-
-  public java.lang.String getIntegrationDataOrDefault(
+  public /* nullable */
+java.lang.String getIntegrationDataOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+      /* nullable */
+java.lang.String defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetIntegrationData().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -937,10 +765,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; integration_data = 10 [json_name = "integrationData"];</code>
    */
   @java.lang.Override
-
   public java.lang.String getIntegrationDataOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetIntegrationData().getMap();
     if (!map.containsKey(key)) {
@@ -987,10 +814,10 @@ private static final long serialVersionUID = 0L;
         internalGetDataDipData(),
         DataDipDataDefaultEntryHolder.defaultEntry,
         4);
-    if (!getCallerIdNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerIdName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, callerIdName_);
     }
-    if (!getLinkbackHuntGroupBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(linkbackHuntGroup_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, linkbackHuntGroup_);
     }
     com.google.protobuf.GeneratedMessageV3
@@ -1017,7 +844,7 @@ private static final long serialVersionUID = 0L;
         internalGetIntegrationData(),
         IntegrationDataDefaultEntryHolder.defaultEntry,
         10);
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -1066,10 +893,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, dataDipData__);
     }
-    if (!getCallerIdNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerIdName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, callerIdName_);
     }
-    if (!getLinkbackHuntGroupBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(linkbackHuntGroup_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, linkbackHuntGroup_);
     }
     for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -1112,7 +939,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, integrationData__);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1147,7 +974,7 @@ private static final long serialVersionUID = 0L;
         other.internalGetJourneyRetrievedData())) return false;
     if (!internalGetIntegrationData().equals(
         other.internalGetIntegrationData())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1194,7 +1021,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + INTEGRATION_DATA_FIELD_NUMBER;
       hash = (53 * hash) + internalGetIntegrationData().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1243,11 +1070,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.GetCallDataRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.GetCallDataRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1361,30 +1190,24 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetCallDataRes.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       internalGetMutableIvrData().clear();
       internalGetMutablePhoneEnhancedData().clear();
       internalGetMutableDataCollectData().clear();
       internalGetMutableDataDipData().clear();
       callerIdName_ = "";
-
       linkbackHuntGroup_ = "";
-
       internalGetMutableSipHeaderData().clear();
       internalGetMutableQueuedCallbackData().clear();
       internalGetMutableJourneyRetrievedData().clear();
@@ -1415,27 +1238,51 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.GetCallDataRes buildPartial() {
       com.tcn.cloud.api.api.v0alpha.GetCallDataRes result = new com.tcn.cloud.api.api.v0alpha.GetCallDataRes(this);
-      int from_bitField0_ = bitField0_;
-      result.ivrData_ = internalGetIvrData();
-      result.ivrData_.makeImmutable();
-      result.phoneEnhancedData_ = internalGetPhoneEnhancedData();
-      result.phoneEnhancedData_.makeImmutable();
-      result.dataCollectData_ = internalGetDataCollectData();
-      result.dataCollectData_.makeImmutable();
-      result.dataDipData_ = internalGetDataDipData();
-      result.dataDipData_.makeImmutable();
-      result.callerIdName_ = callerIdName_;
-      result.linkbackHuntGroup_ = linkbackHuntGroup_;
-      result.sipHeaderData_ = internalGetSipHeaderData();
-      result.sipHeaderData_.makeImmutable();
-      result.queuedCallbackData_ = internalGetQueuedCallbackData();
-      result.queuedCallbackData_.makeImmutable();
-      result.journeyRetrievedData_ = internalGetJourneyRetrievedData();
-      result.journeyRetrievedData_.makeImmutable();
-      result.integrationData_ = internalGetIntegrationData();
-      result.integrationData_.makeImmutable();
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetCallDataRes result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.ivrData_ = internalGetIvrData();
+        result.ivrData_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.phoneEnhancedData_ = internalGetPhoneEnhancedData();
+        result.phoneEnhancedData_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.dataCollectData_ = internalGetDataCollectData();
+        result.dataCollectData_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.dataDipData_ = internalGetDataDipData();
+        result.dataDipData_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.callerIdName_ = callerIdName_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.linkbackHuntGroup_ = linkbackHuntGroup_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.sipHeaderData_ = internalGetSipHeaderData();
+        result.sipHeaderData_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.queuedCallbackData_ = internalGetQueuedCallbackData();
+        result.queuedCallbackData_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.journeyRetrievedData_ = internalGetJourneyRetrievedData();
+        result.journeyRetrievedData_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.integrationData_ = internalGetIntegrationData();
+        result.integrationData_.makeImmutable();
+      }
     }
 
     @java.lang.Override
@@ -1484,29 +1331,39 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.GetCallDataRes.getDefaultInstance()) return this;
       internalGetMutableIvrData().mergeFrom(
           other.internalGetIvrData());
+      bitField0_ |= 0x00000001;
       internalGetMutablePhoneEnhancedData().mergeFrom(
           other.internalGetPhoneEnhancedData());
+      bitField0_ |= 0x00000002;
       internalGetMutableDataCollectData().mergeFrom(
           other.internalGetDataCollectData());
+      bitField0_ |= 0x00000004;
       internalGetMutableDataDipData().mergeFrom(
           other.internalGetDataDipData());
+      bitField0_ |= 0x00000008;
       if (!other.getCallerIdName().isEmpty()) {
         callerIdName_ = other.callerIdName_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.getLinkbackHuntGroup().isEmpty()) {
         linkbackHuntGroup_ = other.linkbackHuntGroup_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       internalGetMutableSipHeaderData().mergeFrom(
           other.internalGetSipHeaderData());
+      bitField0_ |= 0x00000040;
       internalGetMutableQueuedCallbackData().mergeFrom(
           other.internalGetQueuedCallbackData());
+      bitField0_ |= 0x00000080;
       internalGetMutableJourneyRetrievedData().mergeFrom(
           other.internalGetJourneyRetrievedData());
+      bitField0_ |= 0x00000100;
       internalGetMutableIntegrationData().mergeFrom(
           other.internalGetIntegrationData());
-      this.mergeUnknownFields(other.unknownFields);
+      bitField0_ |= 0x00000200;
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1521,17 +1378,112 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.GetCallDataRes parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              ivrData__ = input.readMessage(
+                  IvrDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableIvrData().getMutableMap().put(
+                  ivrData__.getKey(), ivrData__.getValue());
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              phoneEnhancedData__ = input.readMessage(
+                  PhoneEnhancedDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutablePhoneEnhancedData().getMutableMap().put(
+                  phoneEnhancedData__.getKey(), phoneEnhancedData__.getValue());
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              dataCollectData__ = input.readMessage(
+                  DataCollectDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableDataCollectData().getMutableMap().put(
+                  dataCollectData__.getKey(), dataCollectData__.getValue());
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              dataDipData__ = input.readMessage(
+                  DataDipDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableDataDipData().getMutableMap().put(
+                  dataDipData__.getKey(), dataDipData__.getValue());
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              callerIdName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              linkbackHuntGroup_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              sipHeaderData__ = input.readMessage(
+                  SipHeaderDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableSipHeaderData().getMutableMap().put(
+                  sipHeaderData__.getKey(), sipHeaderData__.getValue());
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 66: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              queuedCallbackData__ = input.readMessage(
+                  QueuedCallbackDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableQueuedCallbackData().getMutableMap().put(
+                  queuedCallbackData__.getKey(), queuedCallbackData__.getValue());
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            case 74: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              journeyRetrievedData__ = input.readMessage(
+                  JourneyRetrievedDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableJourneyRetrievedData().getMutableMap().put(
+                  journeyRetrievedData__.getKey(), journeyRetrievedData__.getValue());
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
+            case 82: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              integrationData__ = input.readMessage(
+                  IntegrationDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableIntegrationData().getMutableMap().put(
+                  integrationData__.getKey(), integrationData__.getValue());
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 82
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.GetCallDataRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -1539,7 +1491,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> ivrData_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetIvrData() {
+        internalGetIvrData() {
       if (ivrData_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             IvrDataDefaultEntryHolder.defaultEntry);
@@ -1547,8 +1499,7 @@ private static final long serialVersionUID = 0L;
       return ivrData_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetMutableIvrData() {
-      onChanged();;
+        internalGetMutableIvrData() {
       if (ivrData_ == null) {
         ivrData_ = com.google.protobuf.MapField.newMapField(
             IvrDataDefaultEntryHolder.defaultEntry);
@@ -1556,20 +1507,20 @@ private static final long serialVersionUID = 0L;
       if (!ivrData_.isMutable()) {
         ivrData_ = ivrData_.copy();
       }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return ivrData_;
     }
-
     public int getIvrDataCount() {
       return internalGetIvrData().getMap().size();
     }
     /**
      * <code>map&lt;string, string&gt; ivr_data = 1 [json_name = "ivrData"];</code>
      */
-
     @java.lang.Override
     public boolean containsIvrData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetIvrData().getMap().containsKey(key);
     }
     /**
@@ -1584,7 +1535,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; ivr_data = 1 [json_name = "ivrData"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getIvrDataMap() {
       return internalGetIvrData().getMap();
     }
@@ -1592,11 +1542,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; ivr_data = 1 [json_name = "ivrData"];</code>
      */
     @java.lang.Override
-
-    public java.lang.String getIvrDataOrDefault(
+    public /* nullable */
+java.lang.String getIvrDataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+        /* nullable */
+java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetIvrData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1605,10 +1556,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; ivr_data = 1 [json_name = "ivrData"];</code>
      */
     @java.lang.Override
-
     public java.lang.String getIvrDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetIvrData().getMap();
       if (!map.containsKey(key)) {
@@ -1616,8 +1566,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearIvrData() {
+      bitField0_ = (bitField0_ & ~0x00000001);
       internalGetMutableIvrData().getMutableMap()
           .clear();
       return this;
@@ -1625,10 +1575,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>map&lt;string, string&gt; ivr_data = 1 [json_name = "ivrData"];</code>
      */
-
     public Builder removeIvrData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       internalGetMutableIvrData().getMutableMap()
           .remove(key);
       return this;
@@ -1638,7 +1587,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
-    getMutableIvrData() {
+        getMutableIvrData() {
+      bitField0_ |= 0x00000001;
       return internalGetMutableIvrData().getMutableMap();
     }
     /**
@@ -1647,27 +1597,28 @@ private static final long serialVersionUID = 0L;
     public Builder putIvrData(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      if (value == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableIvrData().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000001;
       return this;
     }
     /**
      * <code>map&lt;string, string&gt; ivr_data = 1 [json_name = "ivrData"];</code>
      */
-
     public Builder putAllIvrData(
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableIvrData().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000001;
       return this;
     }
 
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> phoneEnhancedData_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetPhoneEnhancedData() {
+        internalGetPhoneEnhancedData() {
       if (phoneEnhancedData_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             PhoneEnhancedDataDefaultEntryHolder.defaultEntry);
@@ -1675,8 +1626,7 @@ private static final long serialVersionUID = 0L;
       return phoneEnhancedData_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetMutablePhoneEnhancedData() {
-      onChanged();;
+        internalGetMutablePhoneEnhancedData() {
       if (phoneEnhancedData_ == null) {
         phoneEnhancedData_ = com.google.protobuf.MapField.newMapField(
             PhoneEnhancedDataDefaultEntryHolder.defaultEntry);
@@ -1684,20 +1634,20 @@ private static final long serialVersionUID = 0L;
       if (!phoneEnhancedData_.isMutable()) {
         phoneEnhancedData_ = phoneEnhancedData_.copy();
       }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return phoneEnhancedData_;
     }
-
     public int getPhoneEnhancedDataCount() {
       return internalGetPhoneEnhancedData().getMap().size();
     }
     /**
      * <code>map&lt;string, string&gt; phone_enhanced_data = 2 [json_name = "phoneEnhancedData"];</code>
      */
-
     @java.lang.Override
     public boolean containsPhoneEnhancedData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetPhoneEnhancedData().getMap().containsKey(key);
     }
     /**
@@ -1712,7 +1662,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; phone_enhanced_data = 2 [json_name = "phoneEnhancedData"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getPhoneEnhancedDataMap() {
       return internalGetPhoneEnhancedData().getMap();
     }
@@ -1720,11 +1669,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; phone_enhanced_data = 2 [json_name = "phoneEnhancedData"];</code>
      */
     @java.lang.Override
-
-    public java.lang.String getPhoneEnhancedDataOrDefault(
+    public /* nullable */
+java.lang.String getPhoneEnhancedDataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+        /* nullable */
+java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetPhoneEnhancedData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1733,10 +1683,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; phone_enhanced_data = 2 [json_name = "phoneEnhancedData"];</code>
      */
     @java.lang.Override
-
     public java.lang.String getPhoneEnhancedDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetPhoneEnhancedData().getMap();
       if (!map.containsKey(key)) {
@@ -1744,8 +1693,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearPhoneEnhancedData() {
+      bitField0_ = (bitField0_ & ~0x00000002);
       internalGetMutablePhoneEnhancedData().getMutableMap()
           .clear();
       return this;
@@ -1753,10 +1702,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>map&lt;string, string&gt; phone_enhanced_data = 2 [json_name = "phoneEnhancedData"];</code>
      */
-
     public Builder removePhoneEnhancedData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       internalGetMutablePhoneEnhancedData().getMutableMap()
           .remove(key);
       return this;
@@ -1766,7 +1714,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
-    getMutablePhoneEnhancedData() {
+        getMutablePhoneEnhancedData() {
+      bitField0_ |= 0x00000002;
       return internalGetMutablePhoneEnhancedData().getMutableMap();
     }
     /**
@@ -1775,27 +1724,28 @@ private static final long serialVersionUID = 0L;
     public Builder putPhoneEnhancedData(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      if (value == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutablePhoneEnhancedData().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000002;
       return this;
     }
     /**
      * <code>map&lt;string, string&gt; phone_enhanced_data = 2 [json_name = "phoneEnhancedData"];</code>
      */
-
     public Builder putAllPhoneEnhancedData(
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutablePhoneEnhancedData().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000002;
       return this;
     }
 
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> dataCollectData_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetDataCollectData() {
+        internalGetDataCollectData() {
       if (dataCollectData_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             DataCollectDataDefaultEntryHolder.defaultEntry);
@@ -1803,8 +1753,7 @@ private static final long serialVersionUID = 0L;
       return dataCollectData_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetMutableDataCollectData() {
-      onChanged();;
+        internalGetMutableDataCollectData() {
       if (dataCollectData_ == null) {
         dataCollectData_ = com.google.protobuf.MapField.newMapField(
             DataCollectDataDefaultEntryHolder.defaultEntry);
@@ -1812,20 +1761,20 @@ private static final long serialVersionUID = 0L;
       if (!dataCollectData_.isMutable()) {
         dataCollectData_ = dataCollectData_.copy();
       }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return dataCollectData_;
     }
-
     public int getDataCollectDataCount() {
       return internalGetDataCollectData().getMap().size();
     }
     /**
      * <code>map&lt;string, string&gt; data_collect_data = 3 [json_name = "dataCollectData"];</code>
      */
-
     @java.lang.Override
     public boolean containsDataCollectData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetDataCollectData().getMap().containsKey(key);
     }
     /**
@@ -1840,7 +1789,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; data_collect_data = 3 [json_name = "dataCollectData"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getDataCollectDataMap() {
       return internalGetDataCollectData().getMap();
     }
@@ -1848,11 +1796,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; data_collect_data = 3 [json_name = "dataCollectData"];</code>
      */
     @java.lang.Override
-
-    public java.lang.String getDataCollectDataOrDefault(
+    public /* nullable */
+java.lang.String getDataCollectDataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+        /* nullable */
+java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetDataCollectData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1861,10 +1810,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; data_collect_data = 3 [json_name = "dataCollectData"];</code>
      */
     @java.lang.Override
-
     public java.lang.String getDataCollectDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetDataCollectData().getMap();
       if (!map.containsKey(key)) {
@@ -1872,8 +1820,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearDataCollectData() {
+      bitField0_ = (bitField0_ & ~0x00000004);
       internalGetMutableDataCollectData().getMutableMap()
           .clear();
       return this;
@@ -1881,10 +1829,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>map&lt;string, string&gt; data_collect_data = 3 [json_name = "dataCollectData"];</code>
      */
-
     public Builder removeDataCollectData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       internalGetMutableDataCollectData().getMutableMap()
           .remove(key);
       return this;
@@ -1894,7 +1841,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
-    getMutableDataCollectData() {
+        getMutableDataCollectData() {
+      bitField0_ |= 0x00000004;
       return internalGetMutableDataCollectData().getMutableMap();
     }
     /**
@@ -1903,27 +1851,28 @@ private static final long serialVersionUID = 0L;
     public Builder putDataCollectData(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      if (value == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableDataCollectData().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000004;
       return this;
     }
     /**
      * <code>map&lt;string, string&gt; data_collect_data = 3 [json_name = "dataCollectData"];</code>
      */
-
     public Builder putAllDataCollectData(
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableDataCollectData().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000004;
       return this;
     }
 
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> dataDipData_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetDataDipData() {
+        internalGetDataDipData() {
       if (dataDipData_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             DataDipDataDefaultEntryHolder.defaultEntry);
@@ -1931,8 +1880,7 @@ private static final long serialVersionUID = 0L;
       return dataDipData_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetMutableDataDipData() {
-      onChanged();;
+        internalGetMutableDataDipData() {
       if (dataDipData_ == null) {
         dataDipData_ = com.google.protobuf.MapField.newMapField(
             DataDipDataDefaultEntryHolder.defaultEntry);
@@ -1940,20 +1888,20 @@ private static final long serialVersionUID = 0L;
       if (!dataDipData_.isMutable()) {
         dataDipData_ = dataDipData_.copy();
       }
+      bitField0_ |= 0x00000008;
+      onChanged();
       return dataDipData_;
     }
-
     public int getDataDipDataCount() {
       return internalGetDataDipData().getMap().size();
     }
     /**
      * <code>map&lt;string, string&gt; data_dip_data = 4 [json_name = "dataDipData"];</code>
      */
-
     @java.lang.Override
     public boolean containsDataDipData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetDataDipData().getMap().containsKey(key);
     }
     /**
@@ -1968,7 +1916,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; data_dip_data = 4 [json_name = "dataDipData"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getDataDipDataMap() {
       return internalGetDataDipData().getMap();
     }
@@ -1976,11 +1923,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; data_dip_data = 4 [json_name = "dataDipData"];</code>
      */
     @java.lang.Override
-
-    public java.lang.String getDataDipDataOrDefault(
+    public /* nullable */
+java.lang.String getDataDipDataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+        /* nullable */
+java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetDataDipData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1989,10 +1937,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; data_dip_data = 4 [json_name = "dataDipData"];</code>
      */
     @java.lang.Override
-
     public java.lang.String getDataDipDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetDataDipData().getMap();
       if (!map.containsKey(key)) {
@@ -2000,8 +1947,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearDataDipData() {
+      bitField0_ = (bitField0_ & ~0x00000008);
       internalGetMutableDataDipData().getMutableMap()
           .clear();
       return this;
@@ -2009,10 +1956,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>map&lt;string, string&gt; data_dip_data = 4 [json_name = "dataDipData"];</code>
      */
-
     public Builder removeDataDipData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       internalGetMutableDataDipData().getMutableMap()
           .remove(key);
       return this;
@@ -2022,7 +1968,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
-    getMutableDataDipData() {
+        getMutableDataDipData() {
+      bitField0_ |= 0x00000008;
       return internalGetMutableDataDipData().getMutableMap();
     }
     /**
@@ -2031,20 +1978,21 @@ private static final long serialVersionUID = 0L;
     public Builder putDataDipData(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      if (value == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableDataDipData().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000008;
       return this;
     }
     /**
      * <code>map&lt;string, string&gt; data_dip_data = 4 [json_name = "dataDipData"];</code>
      */
-
     public Builder putAllDataDipData(
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableDataDipData().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000008;
       return this;
     }
 
@@ -2089,11 +2037,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallerIdName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       callerIdName_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -2102,8 +2048,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallerIdName() {
-      
       callerIdName_ = getDefaultInstance().getCallerIdName();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -2114,12 +2060,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallerIdNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       callerIdName_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -2165,11 +2109,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLinkbackHuntGroup(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       linkbackHuntGroup_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2178,8 +2120,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLinkbackHuntGroup() {
-      
       linkbackHuntGroup_ = getDefaultInstance().getLinkbackHuntGroup();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -2190,12 +2132,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLinkbackHuntGroupBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       linkbackHuntGroup_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2203,7 +2143,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> sipHeaderData_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetSipHeaderData() {
+        internalGetSipHeaderData() {
       if (sipHeaderData_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             SipHeaderDataDefaultEntryHolder.defaultEntry);
@@ -2211,8 +2151,7 @@ private static final long serialVersionUID = 0L;
       return sipHeaderData_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetMutableSipHeaderData() {
-      onChanged();;
+        internalGetMutableSipHeaderData() {
       if (sipHeaderData_ == null) {
         sipHeaderData_ = com.google.protobuf.MapField.newMapField(
             SipHeaderDataDefaultEntryHolder.defaultEntry);
@@ -2220,20 +2159,20 @@ private static final long serialVersionUID = 0L;
       if (!sipHeaderData_.isMutable()) {
         sipHeaderData_ = sipHeaderData_.copy();
       }
+      bitField0_ |= 0x00000040;
+      onChanged();
       return sipHeaderData_;
     }
-
     public int getSipHeaderDataCount() {
       return internalGetSipHeaderData().getMap().size();
     }
     /**
      * <code>map&lt;string, string&gt; sip_header_data = 7 [json_name = "sipHeaderData"];</code>
      */
-
     @java.lang.Override
     public boolean containsSipHeaderData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetSipHeaderData().getMap().containsKey(key);
     }
     /**
@@ -2248,7 +2187,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; sip_header_data = 7 [json_name = "sipHeaderData"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getSipHeaderDataMap() {
       return internalGetSipHeaderData().getMap();
     }
@@ -2256,11 +2194,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; sip_header_data = 7 [json_name = "sipHeaderData"];</code>
      */
     @java.lang.Override
-
-    public java.lang.String getSipHeaderDataOrDefault(
+    public /* nullable */
+java.lang.String getSipHeaderDataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+        /* nullable */
+java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetSipHeaderData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2269,10 +2208,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; sip_header_data = 7 [json_name = "sipHeaderData"];</code>
      */
     @java.lang.Override
-
     public java.lang.String getSipHeaderDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetSipHeaderData().getMap();
       if (!map.containsKey(key)) {
@@ -2280,8 +2218,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearSipHeaderData() {
+      bitField0_ = (bitField0_ & ~0x00000040);
       internalGetMutableSipHeaderData().getMutableMap()
           .clear();
       return this;
@@ -2289,10 +2227,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>map&lt;string, string&gt; sip_header_data = 7 [json_name = "sipHeaderData"];</code>
      */
-
     public Builder removeSipHeaderData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       internalGetMutableSipHeaderData().getMutableMap()
           .remove(key);
       return this;
@@ -2302,7 +2239,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
-    getMutableSipHeaderData() {
+        getMutableSipHeaderData() {
+      bitField0_ |= 0x00000040;
       return internalGetMutableSipHeaderData().getMutableMap();
     }
     /**
@@ -2311,27 +2249,28 @@ private static final long serialVersionUID = 0L;
     public Builder putSipHeaderData(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      if (value == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableSipHeaderData().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000040;
       return this;
     }
     /**
      * <code>map&lt;string, string&gt; sip_header_data = 7 [json_name = "sipHeaderData"];</code>
      */
-
     public Builder putAllSipHeaderData(
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableSipHeaderData().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000040;
       return this;
     }
 
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> queuedCallbackData_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetQueuedCallbackData() {
+        internalGetQueuedCallbackData() {
       if (queuedCallbackData_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             QueuedCallbackDataDefaultEntryHolder.defaultEntry);
@@ -2339,8 +2278,7 @@ private static final long serialVersionUID = 0L;
       return queuedCallbackData_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetMutableQueuedCallbackData() {
-      onChanged();;
+        internalGetMutableQueuedCallbackData() {
       if (queuedCallbackData_ == null) {
         queuedCallbackData_ = com.google.protobuf.MapField.newMapField(
             QueuedCallbackDataDefaultEntryHolder.defaultEntry);
@@ -2348,20 +2286,20 @@ private static final long serialVersionUID = 0L;
       if (!queuedCallbackData_.isMutable()) {
         queuedCallbackData_ = queuedCallbackData_.copy();
       }
+      bitField0_ |= 0x00000080;
+      onChanged();
       return queuedCallbackData_;
     }
-
     public int getQueuedCallbackDataCount() {
       return internalGetQueuedCallbackData().getMap().size();
     }
     /**
      * <code>map&lt;string, string&gt; queued_callback_data = 8 [json_name = "queuedCallbackData"];</code>
      */
-
     @java.lang.Override
     public boolean containsQueuedCallbackData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetQueuedCallbackData().getMap().containsKey(key);
     }
     /**
@@ -2376,7 +2314,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; queued_callback_data = 8 [json_name = "queuedCallbackData"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getQueuedCallbackDataMap() {
       return internalGetQueuedCallbackData().getMap();
     }
@@ -2384,11 +2321,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; queued_callback_data = 8 [json_name = "queuedCallbackData"];</code>
      */
     @java.lang.Override
-
-    public java.lang.String getQueuedCallbackDataOrDefault(
+    public /* nullable */
+java.lang.String getQueuedCallbackDataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+        /* nullable */
+java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetQueuedCallbackData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2397,10 +2335,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; queued_callback_data = 8 [json_name = "queuedCallbackData"];</code>
      */
     @java.lang.Override
-
     public java.lang.String getQueuedCallbackDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetQueuedCallbackData().getMap();
       if (!map.containsKey(key)) {
@@ -2408,8 +2345,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearQueuedCallbackData() {
+      bitField0_ = (bitField0_ & ~0x00000080);
       internalGetMutableQueuedCallbackData().getMutableMap()
           .clear();
       return this;
@@ -2417,10 +2354,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>map&lt;string, string&gt; queued_callback_data = 8 [json_name = "queuedCallbackData"];</code>
      */
-
     public Builder removeQueuedCallbackData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       internalGetMutableQueuedCallbackData().getMutableMap()
           .remove(key);
       return this;
@@ -2430,7 +2366,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
-    getMutableQueuedCallbackData() {
+        getMutableQueuedCallbackData() {
+      bitField0_ |= 0x00000080;
       return internalGetMutableQueuedCallbackData().getMutableMap();
     }
     /**
@@ -2439,27 +2376,28 @@ private static final long serialVersionUID = 0L;
     public Builder putQueuedCallbackData(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      if (value == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableQueuedCallbackData().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000080;
       return this;
     }
     /**
      * <code>map&lt;string, string&gt; queued_callback_data = 8 [json_name = "queuedCallbackData"];</code>
      */
-
     public Builder putAllQueuedCallbackData(
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableQueuedCallbackData().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000080;
       return this;
     }
 
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> journeyRetrievedData_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetJourneyRetrievedData() {
+        internalGetJourneyRetrievedData() {
       if (journeyRetrievedData_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             JourneyRetrievedDataDefaultEntryHolder.defaultEntry);
@@ -2467,8 +2405,7 @@ private static final long serialVersionUID = 0L;
       return journeyRetrievedData_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetMutableJourneyRetrievedData() {
-      onChanged();;
+        internalGetMutableJourneyRetrievedData() {
       if (journeyRetrievedData_ == null) {
         journeyRetrievedData_ = com.google.protobuf.MapField.newMapField(
             JourneyRetrievedDataDefaultEntryHolder.defaultEntry);
@@ -2476,20 +2413,20 @@ private static final long serialVersionUID = 0L;
       if (!journeyRetrievedData_.isMutable()) {
         journeyRetrievedData_ = journeyRetrievedData_.copy();
       }
+      bitField0_ |= 0x00000100;
+      onChanged();
       return journeyRetrievedData_;
     }
-
     public int getJourneyRetrievedDataCount() {
       return internalGetJourneyRetrievedData().getMap().size();
     }
     /**
      * <code>map&lt;string, string&gt; journey_retrieved_data = 9 [json_name = "journeyRetrievedData"];</code>
      */
-
     @java.lang.Override
     public boolean containsJourneyRetrievedData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetJourneyRetrievedData().getMap().containsKey(key);
     }
     /**
@@ -2504,7 +2441,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; journey_retrieved_data = 9 [json_name = "journeyRetrievedData"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getJourneyRetrievedDataMap() {
       return internalGetJourneyRetrievedData().getMap();
     }
@@ -2512,11 +2448,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; journey_retrieved_data = 9 [json_name = "journeyRetrievedData"];</code>
      */
     @java.lang.Override
-
-    public java.lang.String getJourneyRetrievedDataOrDefault(
+    public /* nullable */
+java.lang.String getJourneyRetrievedDataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+        /* nullable */
+java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetJourneyRetrievedData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2525,10 +2462,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; journey_retrieved_data = 9 [json_name = "journeyRetrievedData"];</code>
      */
     @java.lang.Override
-
     public java.lang.String getJourneyRetrievedDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetJourneyRetrievedData().getMap();
       if (!map.containsKey(key)) {
@@ -2536,8 +2472,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearJourneyRetrievedData() {
+      bitField0_ = (bitField0_ & ~0x00000100);
       internalGetMutableJourneyRetrievedData().getMutableMap()
           .clear();
       return this;
@@ -2545,10 +2481,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>map&lt;string, string&gt; journey_retrieved_data = 9 [json_name = "journeyRetrievedData"];</code>
      */
-
     public Builder removeJourneyRetrievedData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       internalGetMutableJourneyRetrievedData().getMutableMap()
           .remove(key);
       return this;
@@ -2558,7 +2493,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
-    getMutableJourneyRetrievedData() {
+        getMutableJourneyRetrievedData() {
+      bitField0_ |= 0x00000100;
       return internalGetMutableJourneyRetrievedData().getMutableMap();
     }
     /**
@@ -2567,27 +2503,28 @@ private static final long serialVersionUID = 0L;
     public Builder putJourneyRetrievedData(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      if (value == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableJourneyRetrievedData().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000100;
       return this;
     }
     /**
      * <code>map&lt;string, string&gt; journey_retrieved_data = 9 [json_name = "journeyRetrievedData"];</code>
      */
-
     public Builder putAllJourneyRetrievedData(
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableJourneyRetrievedData().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000100;
       return this;
     }
 
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> integrationData_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetIntegrationData() {
+        internalGetIntegrationData() {
       if (integrationData_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             IntegrationDataDefaultEntryHolder.defaultEntry);
@@ -2595,8 +2532,7 @@ private static final long serialVersionUID = 0L;
       return integrationData_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetMutableIntegrationData() {
-      onChanged();;
+        internalGetMutableIntegrationData() {
       if (integrationData_ == null) {
         integrationData_ = com.google.protobuf.MapField.newMapField(
             IntegrationDataDefaultEntryHolder.defaultEntry);
@@ -2604,20 +2540,20 @@ private static final long serialVersionUID = 0L;
       if (!integrationData_.isMutable()) {
         integrationData_ = integrationData_.copy();
       }
+      bitField0_ |= 0x00000200;
+      onChanged();
       return integrationData_;
     }
-
     public int getIntegrationDataCount() {
       return internalGetIntegrationData().getMap().size();
     }
     /**
      * <code>map&lt;string, string&gt; integration_data = 10 [json_name = "integrationData"];</code>
      */
-
     @java.lang.Override
     public boolean containsIntegrationData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetIntegrationData().getMap().containsKey(key);
     }
     /**
@@ -2632,7 +2568,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; integration_data = 10 [json_name = "integrationData"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getIntegrationDataMap() {
       return internalGetIntegrationData().getMap();
     }
@@ -2640,11 +2575,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; integration_data = 10 [json_name = "integrationData"];</code>
      */
     @java.lang.Override
-
-    public java.lang.String getIntegrationDataOrDefault(
+    public /* nullable */
+java.lang.String getIntegrationDataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+        /* nullable */
+java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetIntegrationData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2653,10 +2589,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; integration_data = 10 [json_name = "integrationData"];</code>
      */
     @java.lang.Override
-
     public java.lang.String getIntegrationDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetIntegrationData().getMap();
       if (!map.containsKey(key)) {
@@ -2664,8 +2599,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearIntegrationData() {
+      bitField0_ = (bitField0_ & ~0x00000200);
       internalGetMutableIntegrationData().getMutableMap()
           .clear();
       return this;
@@ -2673,10 +2608,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>map&lt;string, string&gt; integration_data = 10 [json_name = "integrationData"];</code>
      */
-
     public Builder removeIntegrationData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       internalGetMutableIntegrationData().getMutableMap()
           .remove(key);
       return this;
@@ -2686,7 +2620,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
-    getMutableIntegrationData() {
+        getMutableIntegrationData() {
+      bitField0_ |= 0x00000200;
       return internalGetMutableIntegrationData().getMutableMap();
     }
     /**
@@ -2695,20 +2630,21 @@ private static final long serialVersionUID = 0L;
     public Builder putIntegrationData(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      if (value == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableIntegrationData().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000200;
       return this;
     }
     /**
      * <code>map&lt;string, string&gt; integration_data = 10 [json_name = "integrationData"];</code>
      */
-
     public Builder putAllIntegrationData(
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableIntegrationData().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000200;
       return this;
     }
     @java.lang.Override
@@ -2744,7 +2680,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GetCallDataRes(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

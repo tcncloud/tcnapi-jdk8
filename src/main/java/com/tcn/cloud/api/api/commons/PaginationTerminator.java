@@ -26,101 +26,6 @@ private static final long serialVersionUID = 0L;
     return new PaginationTerminator();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private PaginationTerminator(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            key_ = s;
-            break;
-          }
-          case 16: {
-
-            negate_ = input.readBool();
-            break;
-          }
-          case 24: {
-            opCase_ = 3;
-            op_ = input.readBool();
-            break;
-          }
-          case 33: {
-            opCase_ = 4;
-            op_ = input.readDouble();
-            break;
-          }
-          case 41: {
-            opCase_ = 5;
-            op_ = input.readDouble();
-            break;
-          }
-          case 49: {
-            opCase_ = 6;
-            op_ = input.readDouble();
-            break;
-          }
-          case 56: {
-            opCase_ = 7;
-            op_ = input.readInt64();
-            break;
-          }
-          case 66: {
-            java.lang.String s = input.readStringRequireUtf8();
-            opCase_ = 8;
-            op_ = s;
-            break;
-          }
-          case 74: {
-            java.lang.String s = input.readStringRequireUtf8();
-            opCase_ = 9;
-            op_ = s;
-            break;
-          }
-          case 80: {
-            opCase_ = 10;
-            op_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.LmsProto.internal_static_api_commons_PaginationTerminator_descriptor;
@@ -135,6 +40,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int opCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object op_;
   public enum OpCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -188,7 +94,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int KEY_FIELD_NUMBER = 1;
-  private volatile java.lang.Object key_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object key_ = "";
   /**
    * <pre>
    * the key we are checking
@@ -234,7 +141,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NEGATE_FIELD_NUMBER = 2;
-  private boolean negate_;
+  private boolean negate_ = false;
   /**
    * <pre>
    * negate the results of the operation check.
@@ -250,6 +157,19 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EXISTS_CHECK_FIELD_NUMBER = 3;
+  /**
+   * <pre>
+   * if true terminate if the key exists.
+   * if false terminate if the key does not exist.
+   * </pre>
+   *
+   * <code>bool exists_check = 3 [json_name = "existsCheck"];</code>
+   * @return Whether the existsCheck field is set.
+   */
+  @java.lang.Override
+  public boolean hasExistsCheck() {
+    return opCase_ == 3;
+  }
   /**
    * <pre>
    * if true terminate if the key exists.
@@ -274,6 +194,18 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>double num_greater_than = 4 [json_name = "numGreaterThan"];</code>
+   * @return Whether the numGreaterThan field is set.
+   */
+  @java.lang.Override
+  public boolean hasNumGreaterThan() {
+    return opCase_ == 4;
+  }
+  /**
+   * <pre>
+   * terminate if the number value the key points to is greater than this
+   * </pre>
+   *
+   * <code>double num_greater_than = 4 [json_name = "numGreaterThan"];</code>
    * @return The numGreaterThan.
    */
   @java.lang.Override
@@ -291,6 +223,18 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>double num_less_than = 5 [json_name = "numLessThan"];</code>
+   * @return Whether the numLessThan field is set.
+   */
+  @java.lang.Override
+  public boolean hasNumLessThan() {
+    return opCase_ == 5;
+  }
+  /**
+   * <pre>
+   * terminate if the number value the key points to is less than this
+   * </pre>
+   *
+   * <code>double num_less_than = 5 [json_name = "numLessThan"];</code>
    * @return The numLessThan.
    */
   @java.lang.Override
@@ -302,6 +246,18 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NUM_EQUALS_FIELD_NUMBER = 6;
+  /**
+   * <pre>
+   * terminate if the number value the key points to is equal to this
+   * </pre>
+   *
+   * <code>double num_equals = 6 [json_name = "numEquals"];</code>
+   * @return Whether the numEquals field is set.
+   */
+  @java.lang.Override
+  public boolean hasNumEquals() {
+    return opCase_ == 6;
+  }
   /**
    * <pre>
    * terminate if the number value the key points to is equal to this
@@ -326,6 +282,19 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 count_less_than = 7 [json_name = "countLessThan"];</code>
+   * @return Whether the countLessThan field is set.
+   */
+  @java.lang.Override
+  public boolean hasCountLessThan() {
+    return opCase_ == 7;
+  }
+  /**
+   * <pre>
+   * terminate if the number of records in the array key points is less than this.
+   * if key points to a non array, it has a count of 0
+   * </pre>
+   *
+   * <code>int64 count_less_than = 7 [json_name = "countLessThan"];</code>
    * @return The countLessThan.
    */
   @java.lang.Override
@@ -337,6 +306,17 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STR_EQUALS_FIELD_NUMBER = 8;
+  /**
+   * <pre>
+   * terminate if the str value the key points to equals this
+   * </pre>
+   *
+   * <code>string str_equals = 8 [json_name = "strEquals"];</code>
+   * @return Whether the strEquals field is set.
+   */
+  public boolean hasStrEquals() {
+    return opCase_ == 8;
+  }
   /**
    * <pre>
    * terminate if the str value the key points to equals this
@@ -396,6 +376,17 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string str_contains = 9 [json_name = "strContains"];</code>
+   * @return Whether the strContains field is set.
+   */
+  public boolean hasStrContains() {
+    return opCase_ == 9;
+  }
+  /**
+   * <pre>
+   * terminate if the str value the key points to contains this
+   * </pre>
+   *
+   * <code>string str_contains = 9 [json_name = "strContains"];</code>
    * @return The strContains.
    */
   public java.lang.String getStrContains() {
@@ -449,6 +440,18 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>bool bool_equals = 10 [json_name = "boolEquals"];</code>
+   * @return Whether the boolEquals field is set.
+   */
+  @java.lang.Override
+  public boolean hasBoolEquals() {
+    return opCase_ == 10;
+  }
+  /**
+   * <pre>
+   * termintae if the bool value key points equals this
+   * </pre>
+   *
+   * <code>bool bool_equals = 10 [json_name = "boolEquals"];</code>
    * @return The boolEquals.
    */
   @java.lang.Override
@@ -473,7 +476,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getKeyBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
     }
     if (negate_ != false) {
@@ -509,7 +512,7 @@ private static final long serialVersionUID = 0L;
       output.writeBool(
           10, (boolean)((java.lang.Boolean) op_));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -518,7 +521,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getKeyBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
     }
     if (negate_ != false) {
@@ -561,7 +564,7 @@ private static final long serialVersionUID = 0L;
         .computeBoolSize(
             10, (boolean)((java.lang.Boolean) op_));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -620,7 +623,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -678,7 +681,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -727,11 +730,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.PaginationTerminator parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.PaginationTerminator parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -795,26 +800,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.PaginationTerminator.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       key_ = "";
-
       negate_ = false;
-
       opCase_ = 0;
       op_ = null;
       return this;
@@ -843,35 +842,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.PaginationTerminator buildPartial() {
       com.tcn.cloud.api.api.commons.PaginationTerminator result = new com.tcn.cloud.api.api.commons.PaginationTerminator(this);
-      result.key_ = key_;
-      result.negate_ = negate_;
-      if (opCase_ == 3) {
-        result.op_ = op_;
-      }
-      if (opCase_ == 4) {
-        result.op_ = op_;
-      }
-      if (opCase_ == 5) {
-        result.op_ = op_;
-      }
-      if (opCase_ == 6) {
-        result.op_ = op_;
-      }
-      if (opCase_ == 7) {
-        result.op_ = op_;
-      }
-      if (opCase_ == 8) {
-        result.op_ = op_;
-      }
-      if (opCase_ == 9) {
-        result.op_ = op_;
-      }
-      if (opCase_ == 10) {
-        result.op_ = op_;
-      }
-      result.opCase_ = opCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.PaginationTerminator result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.key_ = key_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.negate_ = negate_;
+      }
+    }
+
+    private void buildPartialOneofs(com.tcn.cloud.api.api.commons.PaginationTerminator result) {
+      result.opCase_ = opCase_;
+      result.op_ = this.op_;
     }
 
     @java.lang.Override
@@ -920,6 +909,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.commons.PaginationTerminator.getDefaultInstance()) return this;
       if (!other.getKey().isEmpty()) {
         key_ = other.key_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.getNegate() != false) {
@@ -966,7 +956,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -981,17 +971,82 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.PaginationTerminator parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              key_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 16: {
+              negate_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              op_ = input.readBool();
+              opCase_ = 3;
+              break;
+            } // case 24
+            case 33: {
+              op_ = input.readDouble();
+              opCase_ = 4;
+              break;
+            } // case 33
+            case 41: {
+              op_ = input.readDouble();
+              opCase_ = 5;
+              break;
+            } // case 41
+            case 49: {
+              op_ = input.readDouble();
+              opCase_ = 6;
+              break;
+            } // case 49
+            case 56: {
+              op_ = input.readInt64();
+              opCase_ = 7;
+              break;
+            } // case 56
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+              opCase_ = 8;
+              op_ = s;
+              break;
+            } // case 66
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+              opCase_ = 9;
+              op_ = s;
+              break;
+            } // case 74
+            case 80: {
+              op_ = input.readBool();
+              opCase_ = 10;
+              break;
+            } // case 80
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.PaginationTerminator) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int opCase_ = 0;
@@ -1009,6 +1064,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private java.lang.Object key_ = "";
     /**
@@ -1063,11 +1119,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKey(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       key_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1080,8 +1134,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearKey() {
-      
       key_ = getDefaultInstance().getKey();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1096,12 +1150,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeyBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       key_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1131,8 +1183,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNegate(boolean value) {
-      
+
       negate_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1146,12 +1199,24 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNegate() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       negate_ = false;
       onChanged();
       return this;
     }
 
+    /**
+     * <pre>
+     * if true terminate if the key exists.
+     * if false terminate if the key does not exist.
+     * </pre>
+     *
+     * <code>bool exists_check = 3 [json_name = "existsCheck"];</code>
+     * @return Whether the existsCheck field is set.
+     */
+    public boolean hasExistsCheck() {
+      return opCase_ == 3;
+    }
     /**
      * <pre>
      * if true terminate if the key exists.
@@ -1178,6 +1243,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setExistsCheck(boolean value) {
+
       opCase_ = 3;
       op_ = value;
       onChanged();
@@ -1207,6 +1273,17 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>double num_greater_than = 4 [json_name = "numGreaterThan"];</code>
+     * @return Whether the numGreaterThan field is set.
+     */
+    public boolean hasNumGreaterThan() {
+      return opCase_ == 4;
+    }
+    /**
+     * <pre>
+     * terminate if the number value the key points to is greater than this
+     * </pre>
+     *
+     * <code>double num_greater_than = 4 [json_name = "numGreaterThan"];</code>
      * @return The numGreaterThan.
      */
     public double getNumGreaterThan() {
@@ -1225,6 +1302,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNumGreaterThan(double value) {
+
       opCase_ = 4;
       op_ = value;
       onChanged();
@@ -1253,6 +1331,17 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>double num_less_than = 5 [json_name = "numLessThan"];</code>
+     * @return Whether the numLessThan field is set.
+     */
+    public boolean hasNumLessThan() {
+      return opCase_ == 5;
+    }
+    /**
+     * <pre>
+     * terminate if the number value the key points to is less than this
+     * </pre>
+     *
+     * <code>double num_less_than = 5 [json_name = "numLessThan"];</code>
      * @return The numLessThan.
      */
     public double getNumLessThan() {
@@ -1271,6 +1360,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNumLessThan(double value) {
+
       opCase_ = 5;
       op_ = value;
       onChanged();
@@ -1299,6 +1389,17 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>double num_equals = 6 [json_name = "numEquals"];</code>
+     * @return Whether the numEquals field is set.
+     */
+    public boolean hasNumEquals() {
+      return opCase_ == 6;
+    }
+    /**
+     * <pre>
+     * terminate if the number value the key points to is equal to this
+     * </pre>
+     *
+     * <code>double num_equals = 6 [json_name = "numEquals"];</code>
      * @return The numEquals.
      */
     public double getNumEquals() {
@@ -1317,6 +1418,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNumEquals(double value) {
+
       opCase_ = 6;
       op_ = value;
       onChanged();
@@ -1346,6 +1448,18 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 count_less_than = 7 [json_name = "countLessThan"];</code>
+     * @return Whether the countLessThan field is set.
+     */
+    public boolean hasCountLessThan() {
+      return opCase_ == 7;
+    }
+    /**
+     * <pre>
+     * terminate if the number of records in the array key points is less than this.
+     * if key points to a non array, it has a count of 0
+     * </pre>
+     *
+     * <code>int64 count_less_than = 7 [json_name = "countLessThan"];</code>
      * @return The countLessThan.
      */
     public long getCountLessThan() {
@@ -1365,6 +1479,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCountLessThan(long value) {
+
       opCase_ = 7;
       op_ = value;
       onChanged();
@@ -1388,6 +1503,18 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    /**
+     * <pre>
+     * terminate if the str value the key points to equals this
+     * </pre>
+     *
+     * <code>string str_equals = 8 [json_name = "strEquals"];</code>
+     * @return Whether the strEquals field is set.
+     */
+    @java.lang.Override
+    public boolean hasStrEquals() {
+      return opCase_ == 8;
+    }
     /**
      * <pre>
      * terminate if the str value the key points to equals this
@@ -1452,10 +1579,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStrEquals(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  opCase_ = 8;
+      if (value == null) { throw new NullPointerException(); }
+      opCase_ = 8;
       op_ = value;
       onChanged();
       return this;
@@ -1487,16 +1612,26 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStrEqualsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       opCase_ = 8;
       op_ = value;
       onChanged();
       return this;
     }
 
+    /**
+     * <pre>
+     * terminate if the str value the key points to contains this
+     * </pre>
+     *
+     * <code>string str_contains = 9 [json_name = "strContains"];</code>
+     * @return Whether the strContains field is set.
+     */
+    @java.lang.Override
+    public boolean hasStrContains() {
+      return opCase_ == 9;
+    }
     /**
      * <pre>
      * terminate if the str value the key points to contains this
@@ -1561,10 +1696,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStrContains(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  opCase_ = 9;
+      if (value == null) { throw new NullPointerException(); }
+      opCase_ = 9;
       op_ = value;
       onChanged();
       return this;
@@ -1596,16 +1729,25 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStrContainsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       opCase_ = 9;
       op_ = value;
       onChanged();
       return this;
     }
 
+    /**
+     * <pre>
+     * termintae if the bool value key points equals this
+     * </pre>
+     *
+     * <code>bool bool_equals = 10 [json_name = "boolEquals"];</code>
+     * @return Whether the boolEquals field is set.
+     */
+    public boolean hasBoolEquals() {
+      return opCase_ == 10;
+    }
     /**
      * <pre>
      * termintae if the bool value key points equals this
@@ -1630,6 +1772,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBoolEquals(boolean value) {
+
       opCase_ = 10;
       op_ = value;
       onChanged();
@@ -1684,7 +1827,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new PaginationTerminator(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -14,6 +14,8 @@ public interface ListUserDescriptionsRequestOrBuilder extends
    * </pre>
    *
    * <code>string region_id = 1 [json_name = "regionId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListUserDescriptionsRequest.region_id is deprecated.
+   *     See api/v0alpha/org.proto;l=3155
    * @return The regionId.
    */
   @java.lang.Deprecated java.lang.String getRegionId();
@@ -24,6 +26,8 @@ public interface ListUserDescriptionsRequestOrBuilder extends
    * </pre>
    *
    * <code>string region_id = 1 [json_name = "regionId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListUserDescriptionsRequest.region_id is deprecated.
+   *     See api/v0alpha/org.proto;l=3155
    * @return The bytes for regionId.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -36,6 +40,8 @@ public interface ListUserDescriptionsRequestOrBuilder extends
    * </pre>
    *
    * <code>string org_id_filter = 2 [json_name = "orgIdFilter", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListUserDescriptionsRequest.org_id_filter is deprecated.
+   *     See api/v0alpha/org.proto;l=3158
    * @return The orgIdFilter.
    */
   @java.lang.Deprecated java.lang.String getOrgIdFilter();
@@ -46,6 +52,8 @@ public interface ListUserDescriptionsRequestOrBuilder extends
    * </pre>
    *
    * <code>string org_id_filter = 2 [json_name = "orgIdFilter", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListUserDescriptionsRequest.org_id_filter is deprecated.
+   *     See api/v0alpha/org.proto;l=3158
    * @return The bytes for orgIdFilter.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString

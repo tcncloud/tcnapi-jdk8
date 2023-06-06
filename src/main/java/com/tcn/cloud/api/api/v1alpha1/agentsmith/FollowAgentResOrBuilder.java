@@ -145,5 +145,5 @@ public interface FollowAgentResOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.agentsmith.AgentSessionEndEventOrBuilder getAgentSessionEndOrBuilder();
 
-  public com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentRes.EventCase getEventCase();
+  com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentRes.EventCase getEventCase();
 }

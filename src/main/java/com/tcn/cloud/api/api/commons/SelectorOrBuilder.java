@@ -172,5 +172,5 @@ public interface SelectorOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.PluginExpOrBuilder getPluginOrBuilder();
 
-  public com.tcn.cloud.api.api.commons.Selector.SelectionRuleCase getSelectionRuleCase();
+  com.tcn.cloud.api.api.commons.Selector.SelectionRuleCase getSelectionRuleCase();
 }

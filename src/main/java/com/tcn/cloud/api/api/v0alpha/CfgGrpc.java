@@ -1,25 +1,13 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.14.0)",
+    value = "by gRPC proto compiler (version 1.55.1)",
     comments = "Source: api/v0alpha/cfg.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class CfgGrpc {
 
   private CfgGrpc() {}
@@ -41,29 +29,35 @@ public final class CfgGrpc {
     if ((getGetWebAgentConfigMethod = CfgGrpc.getGetWebAgentConfigMethod) == null) {
       synchronized (CfgGrpc.class) {
         if ((getGetWebAgentConfigMethod = CfgGrpc.getGetWebAgentConfigMethod) == null) {
-          CfgGrpc.getGetWebAgentConfigMethod = getGetWebAgentConfigMethod = 
+          CfgGrpc.getGetWebAgentConfigMethod = getGetWebAgentConfigMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetConfigReq, com.tcn.cloud.api.api.v0alpha.WebAgent>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Cfg", "GetWebAgentConfig"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetWebAgentConfig"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetConfigReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.WebAgent.getDefaultInstance()))
-                  .setSchemaDescriptor(new CfgMethodDescriptorSupplier("GetWebAgentConfig"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CfgMethodDescriptorSupplier("GetWebAgentConfig"))
+              .build();
         }
-     }
-     return getGetWebAgentConfigMethod;
+      }
+    }
+    return getGetWebAgentConfigMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static CfgStub newStub(io.grpc.Channel channel) {
-    return new CfgStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CfgStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CfgStub>() {
+        @java.lang.Override
+        public CfgStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CfgStub(channel, callOptions);
+        }
+      };
+    return CfgStub.newStub(factory, channel);
   }
 
   /**
@@ -71,7 +65,14 @@ public final class CfgGrpc {
    */
   public static CfgBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new CfgBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CfgBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CfgBlockingStub>() {
+        @java.lang.Override
+        public CfgBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CfgBlockingStub(channel, callOptions);
+        }
+      };
+    return CfgBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -79,48 +80,52 @@ public final class CfgGrpc {
    */
   public static CfgFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new CfgFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CfgFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CfgFutureStub>() {
+        @java.lang.Override
+        public CfgFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CfgFutureStub(channel, callOptions);
+        }
+      };
+    return CfgFutureStub.newStub(factory, channel);
   }
 
   /**
    */
-  public static abstract class CfgImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void getWebAgentConfig(com.tcn.cloud.api.api.v0alpha.GetConfigReq request,
+    default void getWebAgentConfig(com.tcn.cloud.api.api.v0alpha.GetConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.WebAgent> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetWebAgentConfigMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getGetWebAgentConfigMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetConfigReq,
-                com.tcn.cloud.api.api.v0alpha.WebAgent>(
-                  this, METHODID_GET_WEB_AGENT_CONFIG)))
-          .build();
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetWebAgentConfigMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service Cfg.
    */
-  public static final class CfgStub extends io.grpc.stub.AbstractStub<CfgStub> {
-    private CfgStub(io.grpc.Channel channel) {
-      super(channel);
-    }
+  public static abstract class CfgImplBase
+      implements io.grpc.BindableService, AsyncService {
 
-    private CfgStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return CfgGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Cfg.
+   */
+  public static final class CfgStub
+      extends io.grpc.stub.AbstractAsyncStub<CfgStub> {
+    private CfgStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CfgStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CfgStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CfgStub(channel, callOptions);
     }
 
@@ -128,52 +133,48 @@ public final class CfgGrpc {
      */
     public void getWebAgentConfig(com.tcn.cloud.api.api.v0alpha.GetConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.WebAgent> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetWebAgentConfigMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Cfg.
    */
-  public static final class CfgBlockingStub extends io.grpc.stub.AbstractStub<CfgBlockingStub> {
-    private CfgBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CfgBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CfgBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<CfgBlockingStub> {
+    private CfgBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CfgBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CfgBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CfgBlockingStub(channel, callOptions);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.WebAgent getWebAgentConfig(com.tcn.cloud.api.api.v0alpha.GetConfigReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetWebAgentConfigMethod(), getCallOptions(), request);
     }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Cfg.
    */
-  public static final class CfgFutureStub extends io.grpc.stub.AbstractStub<CfgFutureStub> {
-    private CfgFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CfgFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CfgFutureStub
+      extends io.grpc.stub.AbstractFutureStub<CfgFutureStub> {
+    private CfgFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CfgFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CfgFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CfgFutureStub(channel, callOptions);
     }
 
@@ -181,7 +182,7 @@ public final class CfgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.WebAgent> getWebAgentConfig(
         com.tcn.cloud.api.api.v0alpha.GetConfigReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetWebAgentConfigMethod(), getCallOptions()), request);
     }
   }
@@ -193,10 +194,10 @@ public final class CfgGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final CfgImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(CfgImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -223,6 +224,18 @@ public final class CfgGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getGetWebAgentConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetConfigReq,
+              com.tcn.cloud.api.api.v0alpha.WebAgent>(
+                service, METHODID_GET_WEB_AGENT_CONFIG)))
+        .build();
   }
 
   private static abstract class CfgBaseDescriptorSupplier

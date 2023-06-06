@@ -146,10 +146,11 @@ public interface ProcessReqOrBuilder extends
    *
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; params = 6 [json_name = "params"];</code>
    */
-
-  com.tcn.cloud.api.api.v1alpha1.integrations.Value getParamsOrDefault(
+  /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrations.Value getParamsOrDefault(
       java.lang.String key,
-      com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
+      /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
   /**
    * <pre>
    * parameters used for this request. These are combined with the parameters stored in the config
@@ -157,7 +158,6 @@ public interface ProcessReqOrBuilder extends
    *
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; params = 6 [json_name = "params"];</code>
    */
-
   com.tcn.cloud.api.api.v1alpha1.integrations.Value getParamsOrThrow(
       java.lang.String key);
 

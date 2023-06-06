@@ -41,238 +41,6 @@ private static final long serialVersionUID = 0L;
     return new ManualDialSettings();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private ManualDialSettings(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            enableManualDial_ = input.readBool();
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            queueConfigurationName_ = s;
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            defaultCallRecording_ = rawValue;
-            break;
-          }
-          case 32: {
-            int rawValue = input.readEnum();
-
-            cellPhoneScrub_ = rawValue;
-            break;
-          }
-          case 40: {
-            int rawValue = input.readEnum();
-
-            timeZoneRestriction_ = rawValue;
-            break;
-          }
-          case 48: {
-            int rawValue = input.readEnum();
-
-            timeZoneValidationPostalCode_ = rawValue;
-            break;
-          }
-          case 58: {
-            com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceScrub.Builder subBuilder = null;
-            if (naturalComplianceScrub_ != null) {
-              subBuilder = naturalComplianceScrub_.toBuilder();
-            }
-            naturalComplianceScrub_ = input.readMessage(com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceScrub.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(naturalComplianceScrub_);
-              naturalComplianceScrub_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 66: {
-            com.tcn.cloud.api.api.commons.org.ManualDialSettings.ScrubOverride.Builder subBuilder = null;
-            if (scrubOverride_ != null) {
-              subBuilder = scrubOverride_.toBuilder();
-            }
-            scrubOverride_ = input.readMessage(com.tcn.cloud.api.api.commons.org.ManualDialSettings.ScrubOverride.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(scrubOverride_);
-              scrubOverride_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 72: {
-
-            enableWhitelist_ = input.readBool();
-            break;
-          }
-          case 80: {
-            int rawValue = input.readEnum();
-
-            defaultOutboundCountry_ = rawValue;
-            break;
-          }
-          case 88: {
-
-            displayOutboundCountrySelection_ = input.readBool();
-            break;
-          }
-          case 96: {
-
-            displayOutboundNumberPhoneBook_ = input.readBool();
-            break;
-          }
-          case 104: {
-            int rawValue = input.readEnum();
-
-            defaultCallerIdCountry_ = rawValue;
-            break;
-          }
-          case 112: {
-
-            displayCallerIdCountrySelection_ = input.readBool();
-            break;
-          }
-          case 120: {
-
-            displayCallerIdPhoneBook_ = input.readBool();
-            break;
-          }
-          case 128: {
-
-            enableCustomizableCallerId_ = input.readBool();
-            break;
-          }
-          case 138: {
-            com.tcn.cloud.api.api.commons.org.ManualDialSettings.DefaultCallerId.Builder subBuilder = null;
-            if (defaultCallerId_ != null) {
-              subBuilder = defaultCallerId_.toBuilder();
-            }
-            defaultCallerId_ = input.readMessage(com.tcn.cloud.api.api.commons.org.ManualDialSettings.DefaultCallerId.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(defaultCallerId_);
-              defaultCallerId_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 144: {
-
-            enableCallerIdBucket_ = input.readBool();
-            break;
-          }
-          case 152: {
-
-            randomCallerIdBucket_ = input.readInt64();
-            break;
-          }
-          case 160: {
-
-            automateRandomCallerId_ = input.readBool();
-            break;
-          }
-          case 168: {
-
-            enableMaskCallerId_ = input.readBool();
-            break;
-          }
-          case 176: {
-
-            enableSipAddress_ = input.readBool();
-            break;
-          }
-          case 186: {
-            com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata.Builder subBuilder = null;
-            if (naturalLanguageComplianceMetadata_ != null) {
-              subBuilder = naturalLanguageComplianceMetadata_.toBuilder();
-            }
-            naturalLanguageComplianceMetadata_ = input.readMessage(com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(naturalLanguageComplianceMetadata_);
-              naturalLanguageComplianceMetadata_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 192: {
-            int rawValue = input.readEnum();
-
-            dataDipScope_ = rawValue;
-            break;
-          }
-          case 200: {
-
-            dataDipConfigSid_ = input.readInt64();
-            break;
-          }
-          case 208: {
-            int rawValue = input.readEnum();
-
-            dataDipResultHandling_ = rawValue;
-            break;
-          }
-          case 218: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              dataDipIntegrationMappings_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.ManualDialSettings.DataDipIntegrationMapping>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            dataDipIntegrationMappings_.add(
-                input.readMessage(com.tcn.cloud.api.api.commons.org.ManualDialSettings.DataDipIntegrationMapping.parser(), extensionRegistry));
-            break;
-          }
-          case 224: {
-            int rawValue = input.readEnum();
-
-            dataDipIntegrationHandling_ = rawValue;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        dataDipIntegrationMappings_ = java.util.Collections.unmodifiableList(dataDipIntegrationMappings_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_ManualDialSettings_descriptor;
@@ -356,68 +124,6 @@ private static final long serialVersionUID = 0L;
       return new ScrubOverride();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private ScrubOverride(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              enableDnclOverride_ = input.readBool();
-              break;
-            }
-            case 16: {
-
-              enableCellScrubOverride_ = input.readBool();
-              break;
-            }
-            case 24: {
-
-              enableTimeZoneScrubOverride_ = input.readBool();
-              break;
-            }
-            case 32: {
-
-              naturalComplianceOverride_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_ManualDialSettings_ScrubOverride_descriptor;
@@ -432,7 +138,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int ENABLE_DNCL_OVERRIDE_FIELD_NUMBER = 1;
-    private boolean enableDnclOverride_;
+    private boolean enableDnclOverride_ = false;
     /**
      * <pre>
      * Allow the agent to override DNCL scrubbing.
@@ -447,7 +153,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int ENABLE_CELL_SCRUB_OVERRIDE_FIELD_NUMBER = 2;
-    private boolean enableCellScrubOverride_;
+    private boolean enableCellScrubOverride_ = false;
     /**
      * <pre>
      * Allow the agent to override cell phone scrubbing.
@@ -462,7 +168,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int ENABLE_TIME_ZONE_SCRUB_OVERRIDE_FIELD_NUMBER = 3;
-    private boolean enableTimeZoneScrubOverride_;
+    private boolean enableTimeZoneScrubOverride_ = false;
     /**
      * <pre>
      * Allow the agent to override the global time zone scrubbing.
@@ -477,7 +183,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int NATURAL_COMPLIANCE_OVERRIDE_FIELD_NUMBER = 4;
-    private boolean naturalComplianceOverride_;
+    private boolean naturalComplianceOverride_ = false;
     /**
      * <pre>
      * Allow the agent to override Natural Language Compliance scrubbing.
@@ -517,7 +223,7 @@ private static final long serialVersionUID = 0L;
       if (naturalComplianceOverride_ != false) {
         output.writeBool(4, naturalComplianceOverride_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -542,7 +248,7 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, naturalComplianceOverride_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -565,7 +271,7 @@ private static final long serialVersionUID = 0L;
           != other.getEnableTimeZoneScrubOverride()) return false;
       if (getNaturalComplianceOverride()
           != other.getNaturalComplianceOverride()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -588,7 +294,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + NATURAL_COMPLIANCE_OVERRIDE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getNaturalComplianceOverride());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -637,11 +343,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.tcn.cloud.api.api.commons.org.ManualDialSettings.ScrubOverride parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.tcn.cloud.api.api.commons.org.ManualDialSettings.ScrubOverride parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -709,30 +417,22 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.commons.org.ManualDialSettings.ScrubOverride.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         enableDnclOverride_ = false;
-
         enableCellScrubOverride_ = false;
-
         enableTimeZoneScrubOverride_ = false;
-
         naturalComplianceOverride_ = false;
-
         return this;
       }
 
@@ -759,12 +459,25 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.commons.org.ManualDialSettings.ScrubOverride buildPartial() {
         com.tcn.cloud.api.api.commons.org.ManualDialSettings.ScrubOverride result = new com.tcn.cloud.api.api.commons.org.ManualDialSettings.ScrubOverride(this);
-        result.enableDnclOverride_ = enableDnclOverride_;
-        result.enableCellScrubOverride_ = enableCellScrubOverride_;
-        result.enableTimeZoneScrubOverride_ = enableTimeZoneScrubOverride_;
-        result.naturalComplianceOverride_ = naturalComplianceOverride_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.commons.org.ManualDialSettings.ScrubOverride result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.enableDnclOverride_ = enableDnclOverride_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.enableCellScrubOverride_ = enableCellScrubOverride_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.enableTimeZoneScrubOverride_ = enableTimeZoneScrubOverride_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.naturalComplianceOverride_ = naturalComplianceOverride_;
+        }
       }
 
       @java.lang.Override
@@ -823,7 +536,7 @@ private static final long serialVersionUID = 0L;
         if (other.getNaturalComplianceOverride() != false) {
           setNaturalComplianceOverride(other.getNaturalComplianceOverride());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -838,19 +551,53 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.tcn.cloud.api.api.commons.org.ManualDialSettings.ScrubOverride parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                enableDnclOverride_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                enableCellScrubOverride_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                enableTimeZoneScrubOverride_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                naturalComplianceOverride_ = input.readBool();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.tcn.cloud.api.api.commons.org.ManualDialSettings.ScrubOverride) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private boolean enableDnclOverride_ ;
       /**
@@ -875,8 +622,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setEnableDnclOverride(boolean value) {
-        
+
         enableDnclOverride_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -889,7 +637,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearEnableDnclOverride() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         enableDnclOverride_ = false;
         onChanged();
         return this;
@@ -918,8 +666,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setEnableCellScrubOverride(boolean value) {
-        
+
         enableCellScrubOverride_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -932,7 +681,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearEnableCellScrubOverride() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         enableCellScrubOverride_ = false;
         onChanged();
         return this;
@@ -961,8 +710,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setEnableTimeZoneScrubOverride(boolean value) {
-        
+
         enableTimeZoneScrubOverride_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -975,7 +725,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearEnableTimeZoneScrubOverride() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         enableTimeZoneScrubOverride_ = false;
         onChanged();
         return this;
@@ -1004,8 +754,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setNaturalComplianceOverride(boolean value) {
-        
+
         naturalComplianceOverride_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1018,7 +769,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearNaturalComplianceOverride() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         naturalComplianceOverride_ = false;
         onChanged();
         return this;
@@ -1056,7 +807,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ScrubOverride(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1147,60 +909,6 @@ private static final long serialVersionUID = 0L;
       return new DefaultCallerId();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private DefaultCallerId(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              usage_ = rawValue;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              customCallerId_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_ManualDialSettings_DefaultCallerId_descriptor;
@@ -1215,7 +923,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int USAGE_FIELD_NUMBER = 1;
-    private int usage_;
+    private int usage_ = 0;
     /**
      * <pre>
      * Describes how the field is used; none, custom or agent caller ID.
@@ -1236,13 +944,13 @@ private static final long serialVersionUID = 0L;
      * @return The usage.
      */
     @java.lang.Override public com.tcn.cloud.api.api.commons.DefaultManualDialCallerId getUsage() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.DefaultManualDialCallerId result = com.tcn.cloud.api.api.commons.DefaultManualDialCallerId.valueOf(usage_);
+      com.tcn.cloud.api.api.commons.DefaultManualDialCallerId result = com.tcn.cloud.api.api.commons.DefaultManualDialCallerId.forNumber(usage_);
       return result == null ? com.tcn.cloud.api.api.commons.DefaultManualDialCallerId.UNRECOGNIZED : result;
     }
 
     public static final int CUSTOM_CALLER_ID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object customCallerId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object customCallerId_ = "";
     /**
      * <pre>
      * The caller ID (if needed).
@@ -1304,10 +1012,10 @@ private static final long serialVersionUID = 0L;
       if (usage_ != com.tcn.cloud.api.api.commons.DefaultManualDialCallerId.DEFAULT_MANUAL_DIAL_CALLER_ID_NONE.getNumber()) {
         output.writeEnum(1, usage_);
       }
-      if (!getCustomCallerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customCallerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, customCallerId_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1320,10 +1028,10 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, usage_);
       }
-      if (!getCustomCallerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customCallerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, customCallerId_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1341,7 +1049,7 @@ private static final long serialVersionUID = 0L;
       if (usage_ != other.usage_) return false;
       if (!getCustomCallerId()
           .equals(other.getCustomCallerId())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1356,7 +1064,7 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + usage_;
       hash = (37 * hash) + CUSTOM_CALLER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getCustomCallerId().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1405,11 +1113,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.tcn.cloud.api.api.commons.org.ManualDialSettings.DefaultCallerId parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.tcn.cloud.api.api.commons.org.ManualDialSettings.DefaultCallerId parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1477,26 +1187,20 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.commons.org.ManualDialSettings.DefaultCallerId.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         usage_ = 0;
-
         customCallerId_ = "";
-
         return this;
       }
 
@@ -1523,10 +1227,19 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.commons.org.ManualDialSettings.DefaultCallerId buildPartial() {
         com.tcn.cloud.api.api.commons.org.ManualDialSettings.DefaultCallerId result = new com.tcn.cloud.api.api.commons.org.ManualDialSettings.DefaultCallerId(this);
-        result.usage_ = usage_;
-        result.customCallerId_ = customCallerId_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.commons.org.ManualDialSettings.DefaultCallerId result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.usage_ = usage_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.customCallerId_ = customCallerId_;
+        }
       }
 
       @java.lang.Override
@@ -1578,9 +1291,10 @@ private static final long serialVersionUID = 0L;
         }
         if (!other.getCustomCallerId().isEmpty()) {
           customCallerId_ = other.customCallerId_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1595,19 +1309,43 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.tcn.cloud.api.api.commons.org.ManualDialSettings.DefaultCallerId parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                usage_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                customCallerId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.tcn.cloud.api.api.commons.org.ManualDialSettings.DefaultCallerId) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private int usage_ = 0;
       /**
@@ -1631,8 +1369,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setUsageValue(int value) {
-        
         usage_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1646,8 +1384,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public com.tcn.cloud.api.api.commons.DefaultManualDialCallerId getUsage() {
-        @SuppressWarnings("deprecation")
-        com.tcn.cloud.api.api.commons.DefaultManualDialCallerId result = com.tcn.cloud.api.api.commons.DefaultManualDialCallerId.valueOf(usage_);
+        com.tcn.cloud.api.api.commons.DefaultManualDialCallerId result = com.tcn.cloud.api.api.commons.DefaultManualDialCallerId.forNumber(usage_);
         return result == null ? com.tcn.cloud.api.api.commons.DefaultManualDialCallerId.UNRECOGNIZED : result;
       }
       /**
@@ -1663,7 +1400,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         usage_ = value.getNumber();
         onChanged();
         return this;
@@ -1677,7 +1414,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearUsage() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         usage_ = 0;
         onChanged();
         return this;
@@ -1736,11 +1473,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setCustomCallerId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         customCallerId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1753,8 +1488,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearCustomCallerId() {
-        
         customCallerId_ = getDefaultInstance().getCustomCallerId();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1769,12 +1504,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setCustomCallerIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         customCallerId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1811,7 +1544,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DefaultCallerId(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1912,65 +1656,6 @@ private static final long serialVersionUID = 0L;
       return new DataDipIntegrationMapping();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private DataDipIntegrationMapping(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              mappingType_ = rawValue;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              dataDipReturnKey_ = s;
-              break;
-            }
-            case 24: {
-
-              contactFieldDescriptionSid_ = input.readInt64();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_ManualDialSettings_DataDipIntegrationMapping_descriptor;
@@ -1985,7 +1670,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int MAPPING_TYPE_FIELD_NUMBER = 1;
-    private int mappingType_;
+    private int mappingType_ = 0;
     /**
      * <pre>
      * Mapping type; manual dial number, caller ID or field description.
@@ -2006,13 +1691,13 @@ private static final long serialVersionUID = 0L;
      * @return The mappingType.
      */
     @java.lang.Override public com.tcn.cloud.api.api.commons.ManualDialDataDipIntegration getMappingType() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.ManualDialDataDipIntegration result = com.tcn.cloud.api.api.commons.ManualDialDataDipIntegration.valueOf(mappingType_);
+      com.tcn.cloud.api.api.commons.ManualDialDataDipIntegration result = com.tcn.cloud.api.api.commons.ManualDialDataDipIntegration.forNumber(mappingType_);
       return result == null ? com.tcn.cloud.api.api.commons.ManualDialDataDipIntegration.UNRECOGNIZED : result;
     }
 
     public static final int DATA_DIP_RETURN_KEY_FIELD_NUMBER = 2;
-    private volatile java.lang.Object dataDipReturnKey_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object dataDipReturnKey_ = "";
     /**
      * <pre>
      * The key of the data dipped data to map to the manual call data.
@@ -2058,7 +1743,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int CONTACT_FIELD_DESCRIPTION_SID_FIELD_NUMBER = 3;
-    private long contactFieldDescriptionSid_;
+    private long contactFieldDescriptionSid_ = 0L;
     /**
      * <pre>
      * The contact field description to map to when it is the type.
@@ -2089,13 +1774,13 @@ private static final long serialVersionUID = 0L;
       if (mappingType_ != com.tcn.cloud.api.api.commons.ManualDialDataDipIntegration.MANUAL_DIAL_DATA_DIP_INTEGRATION_UNSPECIFIED.getNumber()) {
         output.writeEnum(1, mappingType_);
       }
-      if (!getDataDipReturnKeyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataDipReturnKey_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, dataDipReturnKey_);
       }
       if (contactFieldDescriptionSid_ != 0L) {
         output.writeInt64(3, contactFieldDescriptionSid_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2108,14 +1793,14 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, mappingType_);
       }
-      if (!getDataDipReturnKeyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataDipReturnKey_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, dataDipReturnKey_);
       }
       if (contactFieldDescriptionSid_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, contactFieldDescriptionSid_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2135,7 +1820,7 @@ private static final long serialVersionUID = 0L;
           .equals(other.getDataDipReturnKey())) return false;
       if (getContactFieldDescriptionSid()
           != other.getContactFieldDescriptionSid()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2153,7 +1838,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CONTACT_FIELD_DESCRIPTION_SID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getContactFieldDescriptionSid());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2202,11 +1887,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.tcn.cloud.api.api.commons.org.ManualDialSettings.DataDipIntegrationMapping parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.tcn.cloud.api.api.commons.org.ManualDialSettings.DataDipIntegrationMapping parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2274,28 +1961,21 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.commons.org.ManualDialSettings.DataDipIntegrationMapping.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         mappingType_ = 0;
-
         dataDipReturnKey_ = "";
-
         contactFieldDescriptionSid_ = 0L;
-
         return this;
       }
 
@@ -2322,11 +2002,22 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.commons.org.ManualDialSettings.DataDipIntegrationMapping buildPartial() {
         com.tcn.cloud.api.api.commons.org.ManualDialSettings.DataDipIntegrationMapping result = new com.tcn.cloud.api.api.commons.org.ManualDialSettings.DataDipIntegrationMapping(this);
-        result.mappingType_ = mappingType_;
-        result.dataDipReturnKey_ = dataDipReturnKey_;
-        result.contactFieldDescriptionSid_ = contactFieldDescriptionSid_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.commons.org.ManualDialSettings.DataDipIntegrationMapping result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.mappingType_ = mappingType_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.dataDipReturnKey_ = dataDipReturnKey_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.contactFieldDescriptionSid_ = contactFieldDescriptionSid_;
+        }
       }
 
       @java.lang.Override
@@ -2378,12 +2069,13 @@ private static final long serialVersionUID = 0L;
         }
         if (!other.getDataDipReturnKey().isEmpty()) {
           dataDipReturnKey_ = other.dataDipReturnKey_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.getContactFieldDescriptionSid() != 0L) {
           setContactFieldDescriptionSid(other.getContactFieldDescriptionSid());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2398,19 +2090,48 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.tcn.cloud.api.api.commons.org.ManualDialSettings.DataDipIntegrationMapping parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                mappingType_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                dataDipReturnKey_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                contactFieldDescriptionSid_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.tcn.cloud.api.api.commons.org.ManualDialSettings.DataDipIntegrationMapping) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private int mappingType_ = 0;
       /**
@@ -2434,8 +2155,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setMappingTypeValue(int value) {
-        
         mappingType_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2449,8 +2170,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public com.tcn.cloud.api.api.commons.ManualDialDataDipIntegration getMappingType() {
-        @SuppressWarnings("deprecation")
-        com.tcn.cloud.api.api.commons.ManualDialDataDipIntegration result = com.tcn.cloud.api.api.commons.ManualDialDataDipIntegration.valueOf(mappingType_);
+        com.tcn.cloud.api.api.commons.ManualDialDataDipIntegration result = com.tcn.cloud.api.api.commons.ManualDialDataDipIntegration.forNumber(mappingType_);
         return result == null ? com.tcn.cloud.api.api.commons.ManualDialDataDipIntegration.UNRECOGNIZED : result;
       }
       /**
@@ -2466,7 +2186,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         mappingType_ = value.getNumber();
         onChanged();
         return this;
@@ -2480,7 +2200,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearMappingType() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         mappingType_ = 0;
         onChanged();
         return this;
@@ -2539,11 +2259,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setDataDipReturnKey(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         dataDipReturnKey_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2556,8 +2274,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearDataDipReturnKey() {
-        
         dataDipReturnKey_ = getDefaultInstance().getDataDipReturnKey();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -2572,12 +2290,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setDataDipReturnKeyBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         dataDipReturnKey_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2605,8 +2321,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setContactFieldDescriptionSid(long value) {
-        
+
         contactFieldDescriptionSid_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2619,7 +2336,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearContactFieldDescriptionSid() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         contactFieldDescriptionSid_ = 0L;
         onChanged();
         return this;
@@ -2657,7 +2374,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DataDipIntegrationMapping(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2678,7 +2406,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENABLE_MANUAL_DIAL_FIELD_NUMBER = 1;
-  private boolean enableManualDial_;
+  private boolean enableManualDial_ = false;
   /**
    * <pre>
    * Allow the agent to make manual dial calls.
@@ -2693,7 +2421,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int QUEUE_CONFIGURATION_NAME_FIELD_NUMBER = 2;
-  private volatile java.lang.Object queueConfigurationName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object queueConfigurationName_ = "";
   /**
    * <pre>
    * ACD queue configuration folder name.
@@ -2739,7 +2468,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFAULT_CALL_RECORDING_FIELD_NUMBER = 3;
-  private int defaultCallRecording_;
+  private int defaultCallRecording_ = 0;
   /**
    * <pre>
    * The default setting for recording manual dial calls.
@@ -2760,13 +2489,12 @@ private static final long serialVersionUID = 0L;
    * @return The defaultCallRecording.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom getDefaultCallRecording() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom result = com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.valueOf(defaultCallRecording_);
+    com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom result = com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.forNumber(defaultCallRecording_);
     return result == null ? com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.UNRECOGNIZED : result;
   }
 
   public static final int CELL_PHONE_SCRUB_FIELD_NUMBER = 4;
-  private int cellPhoneScrub_;
+  private int cellPhoneScrub_ = 0;
   /**
    * <pre>
    * Determines whether to scrub cell phone calls.
@@ -2787,13 +2515,12 @@ private static final long serialVersionUID = 0L;
    * @return The cellPhoneScrub.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom getCellPhoneScrub() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom result = com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.valueOf(cellPhoneScrub_);
+    com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom result = com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.forNumber(cellPhoneScrub_);
     return result == null ? com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.UNRECOGNIZED : result;
   }
 
   public static final int TIME_ZONE_RESTRICTION_FIELD_NUMBER = 5;
-  private int timeZoneRestriction_;
+  private int timeZoneRestriction_ = 0;
   /**
    * <pre>
    * Determines whether to scrub calls by time zone.
@@ -2814,13 +2541,12 @@ private static final long serialVersionUID = 0L;
    * @return The timeZoneRestriction.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom getTimeZoneRestriction() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom result = com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.valueOf(timeZoneRestriction_);
+    com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom result = com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.forNumber(timeZoneRestriction_);
     return result == null ? com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.UNRECOGNIZED : result;
   }
 
   public static final int TIME_ZONE_VALIDATION_POSTAL_CODE_FIELD_NUMBER = 6;
-  private int timeZoneValidationPostalCode_;
+  private int timeZoneValidationPostalCode_ = 0;
   /**
    * <pre>
    * Determines whether to allow or require collection of ZIP/postal
@@ -2843,8 +2569,7 @@ private static final long serialVersionUID = 0L;
    * @return The timeZoneValidationPostalCode.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.ManualDialTimeZoneValidation getTimeZoneValidationPostalCode() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.ManualDialTimeZoneValidation result = com.tcn.cloud.api.api.commons.ManualDialTimeZoneValidation.valueOf(timeZoneValidationPostalCode_);
+    com.tcn.cloud.api.api.commons.ManualDialTimeZoneValidation result = com.tcn.cloud.api.api.commons.ManualDialTimeZoneValidation.forNumber(timeZoneValidationPostalCode_);
     return result == null ? com.tcn.cloud.api.api.commons.ManualDialTimeZoneValidation.UNRECOGNIZED : result;
   }
 
@@ -2883,7 +2608,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceScrubOrBuilder getNaturalComplianceScrubOrBuilder() {
-    return getNaturalComplianceScrub();
+    return naturalComplianceScrub_ == null ? com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceScrub.getDefaultInstance() : naturalComplianceScrub_;
   }
 
   public static final int SCRUB_OVERRIDE_FIELD_NUMBER = 8;
@@ -2921,11 +2646,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.ManualDialSettings.ScrubOverrideOrBuilder getScrubOverrideOrBuilder() {
-    return getScrubOverride();
+    return scrubOverride_ == null ? com.tcn.cloud.api.api.commons.org.ManualDialSettings.ScrubOverride.getDefaultInstance() : scrubOverride_;
   }
 
   public static final int ENABLE_WHITELIST_FIELD_NUMBER = 9;
-  private boolean enableWhitelist_;
+  private boolean enableWhitelist_ = false;
   /**
    * <pre>
    * Allow toll-free white list for manual dial calls.
@@ -2940,7 +2665,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFAULT_OUTBOUND_COUNTRY_FIELD_NUMBER = 10;
-  private int defaultOutboundCountry_;
+  private int defaultOutboundCountry_ = 0;
   /**
    * <pre>
    * The default selected country for outbound number.
@@ -2961,13 +2686,12 @@ private static final long serialVersionUID = 0L;
    * @return The defaultOutboundCountry.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.Country getDefaultOutboundCountry() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.Country result = com.tcn.cloud.api.api.commons.Country.valueOf(defaultOutboundCountry_);
+    com.tcn.cloud.api.api.commons.Country result = com.tcn.cloud.api.api.commons.Country.forNumber(defaultOutboundCountry_);
     return result == null ? com.tcn.cloud.api.api.commons.Country.UNRECOGNIZED : result;
   }
 
   public static final int DISPLAY_OUTBOUND_COUNTRY_SELECTION_FIELD_NUMBER = 11;
-  private boolean displayOutboundCountrySelection_;
+  private boolean displayOutboundCountrySelection_ = false;
   /**
    * <pre>
    * Determines whether to display the country select menu to the agent.
@@ -2982,7 +2706,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAY_OUTBOUND_NUMBER_PHONE_BOOK_FIELD_NUMBER = 12;
-  private boolean displayOutboundNumberPhoneBook_;
+  private boolean displayOutboundNumberPhoneBook_ = false;
   /**
    * <pre>
    * Determines whether to display the outbound number phone book to the agent.
@@ -2997,7 +2721,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFAULT_CALLER_ID_COUNTRY_FIELD_NUMBER = 13;
-  private int defaultCallerIdCountry_;
+  private int defaultCallerIdCountry_ = 0;
   /**
    * <pre>
    * Indicates the default Country to use with the caller ID number.
@@ -3020,13 +2744,12 @@ private static final long serialVersionUID = 0L;
    * @return The defaultCallerIdCountry.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.Country getDefaultCallerIdCountry() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.Country result = com.tcn.cloud.api.api.commons.Country.valueOf(defaultCallerIdCountry_);
+    com.tcn.cloud.api.api.commons.Country result = com.tcn.cloud.api.api.commons.Country.forNumber(defaultCallerIdCountry_);
     return result == null ? com.tcn.cloud.api.api.commons.Country.UNRECOGNIZED : result;
   }
 
   public static final int DISPLAY_CALLER_ID_COUNTRY_SELECTION_FIELD_NUMBER = 14;
-  private boolean displayCallerIdCountrySelection_;
+  private boolean displayCallerIdCountrySelection_ = false;
   /**
    * <pre>
    * Determines whether to display the caller ID country select menu to
@@ -3043,7 +2766,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAY_CALLER_ID_PHONE_BOOK_FIELD_NUMBER = 15;
-  private boolean displayCallerIdPhoneBook_;
+  private boolean displayCallerIdPhoneBook_ = false;
   /**
    * <pre>
    * Determines whether to display the caller ID phone book to the agent.
@@ -3059,7 +2782,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENABLE_CUSTOMIZABLE_CALLER_ID_FIELD_NUMBER = 16;
-  private boolean enableCustomizableCallerId_;
+  private boolean enableCustomizableCallerId_ = false;
   /**
    * <pre>
    * Determines whether the agent may customize/edit the caller ID.
@@ -3112,11 +2835,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.ManualDialSettings.DefaultCallerIdOrBuilder getDefaultCallerIdOrBuilder() {
-    return getDefaultCallerId();
+    return defaultCallerId_ == null ? com.tcn.cloud.api.api.commons.org.ManualDialSettings.DefaultCallerId.getDefaultInstance() : defaultCallerId_;
   }
 
   public static final int ENABLE_CALLER_ID_BUCKET_FIELD_NUMBER = 18;
-  private boolean enableCallerIdBucket_;
+  private boolean enableCallerIdBucket_ = false;
   /**
    * <pre>
    * Determines whether to allow the use of caller ID buckets in the agent app.
@@ -3132,7 +2855,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RANDOM_CALLER_ID_BUCKET_FIELD_NUMBER = 19;
-  private long randomCallerIdBucket_;
+  private long randomCallerIdBucket_ = 0L;
   /**
    * <pre>
    * Indicates which caller ID bucket to use.
@@ -3148,7 +2871,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AUTOMATE_RANDOM_CALLER_ID_FIELD_NUMBER = 20;
-  private boolean automateRandomCallerId_;
+  private boolean automateRandomCallerId_ = false;
   /**
    * <pre>
    * Determines whether to automatically select a random caller ID.
@@ -3164,7 +2887,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENABLE_MASK_CALLER_ID_FIELD_NUMBER = 21;
-  private boolean enableMaskCallerId_;
+  private boolean enableMaskCallerId_ = false;
   /**
    * <pre>
    * Determines whether to mask the caller ID from the agent.
@@ -3180,7 +2903,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENABLE_SIP_ADDRESS_FIELD_NUMBER = 22;
-  private boolean enableSipAddress_;
+  private boolean enableSipAddress_ = false;
   /**
    * <pre>
    * Determines whether to enable SIP addresses as an optional outbound
@@ -3237,11 +2960,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadataOrBuilder getNaturalLanguageComplianceMetadataOrBuilder() {
-    return getNaturalLanguageComplianceMetadata();
+    return naturalLanguageComplianceMetadata_ == null ? com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata.getDefaultInstance() : naturalLanguageComplianceMetadata_;
   }
 
   public static final int DATA_DIP_SCOPE_FIELD_NUMBER = 24;
-  private int dataDipScope_;
+  private int dataDipScope_ = 0;
   /**
    * <pre>
    * Application scope; disabled, standard calls, scheduled callbacks or all.
@@ -3262,13 +2985,12 @@ private static final long serialVersionUID = 0L;
    * @return The dataDipScope.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.ManualDialDataDipScope getDataDipScope() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.ManualDialDataDipScope result = com.tcn.cloud.api.api.commons.ManualDialDataDipScope.valueOf(dataDipScope_);
+    com.tcn.cloud.api.api.commons.ManualDialDataDipScope result = com.tcn.cloud.api.api.commons.ManualDialDataDipScope.forNumber(dataDipScope_);
     return result == null ? com.tcn.cloud.api.api.commons.ManualDialDataDipScope.UNRECOGNIZED : result;
   }
 
   public static final int DATA_DIP_CONFIG_SID_FIELD_NUMBER = 25;
-  private long dataDipConfigSid_;
+  private long dataDipConfigSid_ = 0L;
   /**
    * <pre>
    * The ID of the data dip config to execute.
@@ -3283,7 +3005,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DATA_DIP_RESULT_HANDLING_FIELD_NUMBER = 26;
-  private int dataDipResultHandling_;
+  private int dataDipResultHandling_ = 0;
   /**
    * <pre>
    * The action to take if data dip execution fails.
@@ -3304,12 +3026,12 @@ private static final long serialVersionUID = 0L;
    * @return The dataDipResultHandling.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.ManualDialDataDipHandling getDataDipResultHandling() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.ManualDialDataDipHandling result = com.tcn.cloud.api.api.commons.ManualDialDataDipHandling.valueOf(dataDipResultHandling_);
+    com.tcn.cloud.api.api.commons.ManualDialDataDipHandling result = com.tcn.cloud.api.api.commons.ManualDialDataDipHandling.forNumber(dataDipResultHandling_);
     return result == null ? com.tcn.cloud.api.api.commons.ManualDialDataDipHandling.UNRECOGNIZED : result;
   }
 
   public static final int DATA_DIP_INTEGRATION_MAPPINGS_FIELD_NUMBER = 27;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.ManualDialSettings.DataDipIntegrationMapping> dataDipIntegrationMappings_;
   /**
    * <pre>
@@ -3370,7 +3092,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DATA_DIP_INTEGRATION_HANDLING_FIELD_NUMBER = 28;
-  private int dataDipIntegrationHandling_;
+  private int dataDipIntegrationHandling_ = 0;
   /**
    * <pre>
    * The action to take if the integration mapping fails.
@@ -3391,8 +3113,7 @@ private static final long serialVersionUID = 0L;
    * @return The dataDipIntegrationHandling.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.ManualDialDataDipHandling getDataDipIntegrationHandling() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.ManualDialDataDipHandling result = com.tcn.cloud.api.api.commons.ManualDialDataDipHandling.valueOf(dataDipIntegrationHandling_);
+    com.tcn.cloud.api.api.commons.ManualDialDataDipHandling result = com.tcn.cloud.api.api.commons.ManualDialDataDipHandling.forNumber(dataDipIntegrationHandling_);
     return result == null ? com.tcn.cloud.api.api.commons.ManualDialDataDipHandling.UNRECOGNIZED : result;
   }
 
@@ -3413,7 +3134,7 @@ private static final long serialVersionUID = 0L;
     if (enableManualDial_ != false) {
       output.writeBool(1, enableManualDial_);
     }
-    if (!getQueueConfigurationNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(queueConfigurationName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, queueConfigurationName_);
     }
     if (defaultCallRecording_ != com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.HUNT_GROUP_USE_ORG_DEFAULT.getNumber()) {
@@ -3494,7 +3215,7 @@ private static final long serialVersionUID = 0L;
     if (dataDipIntegrationHandling_ != com.tcn.cloud.api.api.commons.ManualDialDataDipHandling.MANUAL_DIAL_DATA_DIP_HANDLING_CANCEL.getNumber()) {
       output.writeEnum(28, dataDipIntegrationHandling_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -3507,7 +3228,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(1, enableManualDial_);
     }
-    if (!getQueueConfigurationNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(queueConfigurationName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, queueConfigurationName_);
     }
     if (defaultCallRecording_ != com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.HUNT_GROUP_USE_ORG_DEFAULT.getNumber()) {
@@ -3614,7 +3335,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(28, dataDipIntegrationHandling_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -3688,7 +3409,7 @@ private static final long serialVersionUID = 0L;
     if (!getDataDipIntegrationMappingsList()
         .equals(other.getDataDipIntegrationMappingsList())) return false;
     if (dataDipIntegrationHandling_ != other.dataDipIntegrationHandling_) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -3778,7 +3499,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + DATA_DIP_INTEGRATION_HANDLING_FIELD_NUMBER;
     hash = (53 * hash) + dataDipIntegrationHandling_;
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -3827,11 +3548,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.org.ManualDialSettings parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.org.ManualDialSettings parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3900,99 +3623,68 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.org.ManualDialSettings.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDataDipIntegrationMappingsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       enableManualDial_ = false;
-
       queueConfigurationName_ = "";
-
       defaultCallRecording_ = 0;
-
       cellPhoneScrub_ = 0;
-
       timeZoneRestriction_ = 0;
-
       timeZoneValidationPostalCode_ = 0;
-
-      if (naturalComplianceScrubBuilder_ == null) {
-        naturalComplianceScrub_ = null;
-      } else {
-        naturalComplianceScrub_ = null;
+      naturalComplianceScrub_ = null;
+      if (naturalComplianceScrubBuilder_ != null) {
+        naturalComplianceScrubBuilder_.dispose();
         naturalComplianceScrubBuilder_ = null;
       }
-      if (scrubOverrideBuilder_ == null) {
-        scrubOverride_ = null;
-      } else {
-        scrubOverride_ = null;
+      scrubOverride_ = null;
+      if (scrubOverrideBuilder_ != null) {
+        scrubOverrideBuilder_.dispose();
         scrubOverrideBuilder_ = null;
       }
       enableWhitelist_ = false;
-
       defaultOutboundCountry_ = 0;
-
       displayOutboundCountrySelection_ = false;
-
       displayOutboundNumberPhoneBook_ = false;
-
       defaultCallerIdCountry_ = 0;
-
       displayCallerIdCountrySelection_ = false;
-
       displayCallerIdPhoneBook_ = false;
-
       enableCustomizableCallerId_ = false;
-
-      if (defaultCallerIdBuilder_ == null) {
-        defaultCallerId_ = null;
-      } else {
-        defaultCallerId_ = null;
+      defaultCallerId_ = null;
+      if (defaultCallerIdBuilder_ != null) {
+        defaultCallerIdBuilder_.dispose();
         defaultCallerIdBuilder_ = null;
       }
       enableCallerIdBucket_ = false;
-
       randomCallerIdBucket_ = 0L;
-
       automateRandomCallerId_ = false;
-
       enableMaskCallerId_ = false;
-
       enableSipAddress_ = false;
-
-      if (naturalLanguageComplianceMetadataBuilder_ == null) {
-        naturalLanguageComplianceMetadata_ = null;
-      } else {
-        naturalLanguageComplianceMetadata_ = null;
+      naturalLanguageComplianceMetadata_ = null;
+      if (naturalLanguageComplianceMetadataBuilder_ != null) {
+        naturalLanguageComplianceMetadataBuilder_.dispose();
         naturalLanguageComplianceMetadataBuilder_ = null;
       }
       dataDipScope_ = 0;
-
       dataDipConfigSid_ = 0L;
-
       dataDipResultHandling_ = 0;
-
       if (dataDipIntegrationMappingsBuilder_ == null) {
         dataDipIntegrationMappings_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        dataDipIntegrationMappings_ = null;
         dataDipIntegrationMappingsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x04000000);
       dataDipIntegrationHandling_ = 0;
-
       return this;
     }
 
@@ -4019,61 +3711,115 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.org.ManualDialSettings buildPartial() {
       com.tcn.cloud.api.api.commons.org.ManualDialSettings result = new com.tcn.cloud.api.api.commons.org.ManualDialSettings(this);
-      int from_bitField0_ = bitField0_;
-      result.enableManualDial_ = enableManualDial_;
-      result.queueConfigurationName_ = queueConfigurationName_;
-      result.defaultCallRecording_ = defaultCallRecording_;
-      result.cellPhoneScrub_ = cellPhoneScrub_;
-      result.timeZoneRestriction_ = timeZoneRestriction_;
-      result.timeZoneValidationPostalCode_ = timeZoneValidationPostalCode_;
-      if (naturalComplianceScrubBuilder_ == null) {
-        result.naturalComplianceScrub_ = naturalComplianceScrub_;
-      } else {
-        result.naturalComplianceScrub_ = naturalComplianceScrubBuilder_.build();
-      }
-      if (scrubOverrideBuilder_ == null) {
-        result.scrubOverride_ = scrubOverride_;
-      } else {
-        result.scrubOverride_ = scrubOverrideBuilder_.build();
-      }
-      result.enableWhitelist_ = enableWhitelist_;
-      result.defaultOutboundCountry_ = defaultOutboundCountry_;
-      result.displayOutboundCountrySelection_ = displayOutboundCountrySelection_;
-      result.displayOutboundNumberPhoneBook_ = displayOutboundNumberPhoneBook_;
-      result.defaultCallerIdCountry_ = defaultCallerIdCountry_;
-      result.displayCallerIdCountrySelection_ = displayCallerIdCountrySelection_;
-      result.displayCallerIdPhoneBook_ = displayCallerIdPhoneBook_;
-      result.enableCustomizableCallerId_ = enableCustomizableCallerId_;
-      if (defaultCallerIdBuilder_ == null) {
-        result.defaultCallerId_ = defaultCallerId_;
-      } else {
-        result.defaultCallerId_ = defaultCallerIdBuilder_.build();
-      }
-      result.enableCallerIdBucket_ = enableCallerIdBucket_;
-      result.randomCallerIdBucket_ = randomCallerIdBucket_;
-      result.automateRandomCallerId_ = automateRandomCallerId_;
-      result.enableMaskCallerId_ = enableMaskCallerId_;
-      result.enableSipAddress_ = enableSipAddress_;
-      if (naturalLanguageComplianceMetadataBuilder_ == null) {
-        result.naturalLanguageComplianceMetadata_ = naturalLanguageComplianceMetadata_;
-      } else {
-        result.naturalLanguageComplianceMetadata_ = naturalLanguageComplianceMetadataBuilder_.build();
-      }
-      result.dataDipScope_ = dataDipScope_;
-      result.dataDipConfigSid_ = dataDipConfigSid_;
-      result.dataDipResultHandling_ = dataDipResultHandling_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.org.ManualDialSettings result) {
       if (dataDipIntegrationMappingsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x04000000) != 0)) {
           dataDipIntegrationMappings_ = java.util.Collections.unmodifiableList(dataDipIntegrationMappings_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x04000000);
         }
         result.dataDipIntegrationMappings_ = dataDipIntegrationMappings_;
       } else {
         result.dataDipIntegrationMappings_ = dataDipIntegrationMappingsBuilder_.build();
       }
-      result.dataDipIntegrationHandling_ = dataDipIntegrationHandling_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.org.ManualDialSettings result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.enableManualDial_ = enableManualDial_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.queueConfigurationName_ = queueConfigurationName_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.defaultCallRecording_ = defaultCallRecording_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.cellPhoneScrub_ = cellPhoneScrub_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.timeZoneRestriction_ = timeZoneRestriction_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.timeZoneValidationPostalCode_ = timeZoneValidationPostalCode_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.naturalComplianceScrub_ = naturalComplianceScrubBuilder_ == null
+            ? naturalComplianceScrub_
+            : naturalComplianceScrubBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.scrubOverride_ = scrubOverrideBuilder_ == null
+            ? scrubOverride_
+            : scrubOverrideBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.enableWhitelist_ = enableWhitelist_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.defaultOutboundCountry_ = defaultOutboundCountry_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.displayOutboundCountrySelection_ = displayOutboundCountrySelection_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.displayOutboundNumberPhoneBook_ = displayOutboundNumberPhoneBook_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.defaultCallerIdCountry_ = defaultCallerIdCountry_;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.displayCallerIdCountrySelection_ = displayCallerIdCountrySelection_;
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.displayCallerIdPhoneBook_ = displayCallerIdPhoneBook_;
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.enableCustomizableCallerId_ = enableCustomizableCallerId_;
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.defaultCallerId_ = defaultCallerIdBuilder_ == null
+            ? defaultCallerId_
+            : defaultCallerIdBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00020000) != 0)) {
+        result.enableCallerIdBucket_ = enableCallerIdBucket_;
+      }
+      if (((from_bitField0_ & 0x00040000) != 0)) {
+        result.randomCallerIdBucket_ = randomCallerIdBucket_;
+      }
+      if (((from_bitField0_ & 0x00080000) != 0)) {
+        result.automateRandomCallerId_ = automateRandomCallerId_;
+      }
+      if (((from_bitField0_ & 0x00100000) != 0)) {
+        result.enableMaskCallerId_ = enableMaskCallerId_;
+      }
+      if (((from_bitField0_ & 0x00200000) != 0)) {
+        result.enableSipAddress_ = enableSipAddress_;
+      }
+      if (((from_bitField0_ & 0x00400000) != 0)) {
+        result.naturalLanguageComplianceMetadata_ = naturalLanguageComplianceMetadataBuilder_ == null
+            ? naturalLanguageComplianceMetadata_
+            : naturalLanguageComplianceMetadataBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00800000) != 0)) {
+        result.dataDipScope_ = dataDipScope_;
+      }
+      if (((from_bitField0_ & 0x01000000) != 0)) {
+        result.dataDipConfigSid_ = dataDipConfigSid_;
+      }
+      if (((from_bitField0_ & 0x02000000) != 0)) {
+        result.dataDipResultHandling_ = dataDipResultHandling_;
+      }
+      if (((from_bitField0_ & 0x08000000) != 0)) {
+        result.dataDipIntegrationHandling_ = dataDipIntegrationHandling_;
+      }
     }
 
     @java.lang.Override
@@ -4125,6 +3871,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getQueueConfigurationName().isEmpty()) {
         queueConfigurationName_ = other.queueConfigurationName_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.defaultCallRecording_ != 0) {
@@ -4203,7 +3950,7 @@ private static final long serialVersionUID = 0L;
         if (!other.dataDipIntegrationMappings_.isEmpty()) {
           if (dataDipIntegrationMappings_.isEmpty()) {
             dataDipIntegrationMappings_ = other.dataDipIntegrationMappings_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x04000000);
           } else {
             ensureDataDipIntegrationMappingsIsMutable();
             dataDipIntegrationMappings_.addAll(other.dataDipIntegrationMappings_);
@@ -4216,7 +3963,7 @@ private static final long serialVersionUID = 0L;
             dataDipIntegrationMappingsBuilder_.dispose();
             dataDipIntegrationMappingsBuilder_ = null;
             dataDipIntegrationMappings_ = other.dataDipIntegrationMappings_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x04000000);
             dataDipIntegrationMappingsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getDataDipIntegrationMappingsFieldBuilder() : null;
@@ -4228,7 +3975,7 @@ private static final long serialVersionUID = 0L;
       if (other.dataDipIntegrationHandling_ != 0) {
         setDataDipIntegrationHandlingValue(other.getDataDipIntegrationHandlingValue());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -4243,17 +3990,186 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.org.ManualDialSettings parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              enableManualDial_ = input.readBool();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              queueConfigurationName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              defaultCallRecording_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              cellPhoneScrub_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              timeZoneRestriction_ = input.readEnum();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 48: {
+              timeZoneValidationPostalCode_ = input.readEnum();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 58: {
+              input.readMessage(
+                  getNaturalComplianceScrubFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 66: {
+              input.readMessage(
+                  getScrubOverrideFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            case 72: {
+              enableWhitelist_ = input.readBool();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
+            case 80: {
+              defaultOutboundCountry_ = input.readEnum();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
+            case 88: {
+              displayOutboundCountrySelection_ = input.readBool();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 88
+            case 96: {
+              displayOutboundNumberPhoneBook_ = input.readBool();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 96
+            case 104: {
+              defaultCallerIdCountry_ = input.readEnum();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 104
+            case 112: {
+              displayCallerIdCountrySelection_ = input.readBool();
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 112
+            case 120: {
+              displayCallerIdPhoneBook_ = input.readBool();
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 120
+            case 128: {
+              enableCustomizableCallerId_ = input.readBool();
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 128
+            case 138: {
+              input.readMessage(
+                  getDefaultCallerIdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 138
+            case 144: {
+              enableCallerIdBucket_ = input.readBool();
+              bitField0_ |= 0x00020000;
+              break;
+            } // case 144
+            case 152: {
+              randomCallerIdBucket_ = input.readInt64();
+              bitField0_ |= 0x00040000;
+              break;
+            } // case 152
+            case 160: {
+              automateRandomCallerId_ = input.readBool();
+              bitField0_ |= 0x00080000;
+              break;
+            } // case 160
+            case 168: {
+              enableMaskCallerId_ = input.readBool();
+              bitField0_ |= 0x00100000;
+              break;
+            } // case 168
+            case 176: {
+              enableSipAddress_ = input.readBool();
+              bitField0_ |= 0x00200000;
+              break;
+            } // case 176
+            case 186: {
+              input.readMessage(
+                  getNaturalLanguageComplianceMetadataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00400000;
+              break;
+            } // case 186
+            case 192: {
+              dataDipScope_ = input.readEnum();
+              bitField0_ |= 0x00800000;
+              break;
+            } // case 192
+            case 200: {
+              dataDipConfigSid_ = input.readInt64();
+              bitField0_ |= 0x01000000;
+              break;
+            } // case 200
+            case 208: {
+              dataDipResultHandling_ = input.readEnum();
+              bitField0_ |= 0x02000000;
+              break;
+            } // case 208
+            case 218: {
+              com.tcn.cloud.api.api.commons.org.ManualDialSettings.DataDipIntegrationMapping m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.org.ManualDialSettings.DataDipIntegrationMapping.parser(),
+                      extensionRegistry);
+              if (dataDipIntegrationMappingsBuilder_ == null) {
+                ensureDataDipIntegrationMappingsIsMutable();
+                dataDipIntegrationMappings_.add(m);
+              } else {
+                dataDipIntegrationMappingsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 218
+            case 224: {
+              dataDipIntegrationHandling_ = input.readEnum();
+              bitField0_ |= 0x08000000;
+              break;
+            } // case 224
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.org.ManualDialSettings) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -4281,8 +4197,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnableManualDial(boolean value) {
-      
+
       enableManualDial_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -4295,7 +4212,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableManualDial() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       enableManualDial_ = false;
       onChanged();
       return this;
@@ -4354,11 +4271,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setQueueConfigurationName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       queueConfigurationName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -4371,8 +4286,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearQueueConfigurationName() {
-      
       queueConfigurationName_ = getDefaultInstance().getQueueConfigurationName();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -4387,12 +4302,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setQueueConfigurationNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       queueConfigurationName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -4419,8 +4332,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDefaultCallRecordingValue(int value) {
-      
       defaultCallRecording_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -4434,8 +4347,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom getDefaultCallRecording() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom result = com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.valueOf(defaultCallRecording_);
+      com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom result = com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.forNumber(defaultCallRecording_);
       return result == null ? com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.UNRECOGNIZED : result;
     }
     /**
@@ -4451,7 +4363,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       defaultCallRecording_ = value.getNumber();
       onChanged();
       return this;
@@ -4465,7 +4377,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultCallRecording() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       defaultCallRecording_ = 0;
       onChanged();
       return this;
@@ -4493,8 +4405,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCellPhoneScrubValue(int value) {
-      
       cellPhoneScrub_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -4508,8 +4420,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom getCellPhoneScrub() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom result = com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.valueOf(cellPhoneScrub_);
+      com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom result = com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.forNumber(cellPhoneScrub_);
       return result == null ? com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.UNRECOGNIZED : result;
     }
     /**
@@ -4525,7 +4436,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       cellPhoneScrub_ = value.getNumber();
       onChanged();
       return this;
@@ -4539,7 +4450,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCellPhoneScrub() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       cellPhoneScrub_ = 0;
       onChanged();
       return this;
@@ -4567,8 +4478,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTimeZoneRestrictionValue(int value) {
-      
       timeZoneRestriction_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -4582,8 +4493,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom getTimeZoneRestriction() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom result = com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.valueOf(timeZoneRestriction_);
+      com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom result = com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.forNumber(timeZoneRestriction_);
       return result == null ? com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.UNRECOGNIZED : result;
     }
     /**
@@ -4599,7 +4509,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000010;
       timeZoneRestriction_ = value.getNumber();
       onChanged();
       return this;
@@ -4613,7 +4523,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTimeZoneRestriction() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       timeZoneRestriction_ = 0;
       onChanged();
       return this;
@@ -4643,8 +4553,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTimeZoneValidationPostalCodeValue(int value) {
-      
       timeZoneValidationPostalCode_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -4659,8 +4569,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ManualDialTimeZoneValidation getTimeZoneValidationPostalCode() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.ManualDialTimeZoneValidation result = com.tcn.cloud.api.api.commons.ManualDialTimeZoneValidation.valueOf(timeZoneValidationPostalCode_);
+      com.tcn.cloud.api.api.commons.ManualDialTimeZoneValidation result = com.tcn.cloud.api.api.commons.ManualDialTimeZoneValidation.forNumber(timeZoneValidationPostalCode_);
       return result == null ? com.tcn.cloud.api.api.commons.ManualDialTimeZoneValidation.UNRECOGNIZED : result;
     }
     /**
@@ -4677,7 +4586,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000020;
       timeZoneValidationPostalCode_ = value.getNumber();
       onChanged();
       return this;
@@ -4692,7 +4601,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTimeZoneValidationPostalCode() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       timeZoneValidationPostalCode_ = 0;
       onChanged();
       return this;
@@ -4710,7 +4619,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the naturalComplianceScrub field is set.
      */
     public boolean hasNaturalComplianceScrub() {
-      return naturalComplianceScrubBuilder_ != null || naturalComplianceScrub_ != null;
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -4740,11 +4649,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         naturalComplianceScrub_ = value;
-        onChanged();
       } else {
         naturalComplianceScrubBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -4758,11 +4667,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceScrub.Builder builderForValue) {
       if (naturalComplianceScrubBuilder_ == null) {
         naturalComplianceScrub_ = builderForValue.build();
-        onChanged();
       } else {
         naturalComplianceScrubBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -4774,17 +4683,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeNaturalComplianceScrub(com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceScrub value) {
       if (naturalComplianceScrubBuilder_ == null) {
-        if (naturalComplianceScrub_ != null) {
-          naturalComplianceScrub_ =
-            com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceScrub.newBuilder(naturalComplianceScrub_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000040) != 0) &&
+          naturalComplianceScrub_ != null &&
+          naturalComplianceScrub_ != com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceScrub.getDefaultInstance()) {
+          getNaturalComplianceScrubBuilder().mergeFrom(value);
         } else {
           naturalComplianceScrub_ = value;
         }
-        onChanged();
       } else {
         naturalComplianceScrubBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -4795,14 +4705,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.NaturalLanguageComplianceScrub natural_compliance_scrub = 7 [json_name = "naturalComplianceScrub"];</code>
      */
     public Builder clearNaturalComplianceScrub() {
-      if (naturalComplianceScrubBuilder_ == null) {
-        naturalComplianceScrub_ = null;
-        onChanged();
-      } else {
-        naturalComplianceScrub_ = null;
+      bitField0_ = (bitField0_ & ~0x00000040);
+      naturalComplianceScrub_ = null;
+      if (naturalComplianceScrubBuilder_ != null) {
+        naturalComplianceScrubBuilder_.dispose();
         naturalComplianceScrubBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -4813,7 +4722,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.NaturalLanguageComplianceScrub natural_compliance_scrub = 7 [json_name = "naturalComplianceScrub"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceScrub.Builder getNaturalComplianceScrubBuilder() {
-      
+      bitField0_ |= 0x00000040;
       onChanged();
       return getNaturalComplianceScrubFieldBuilder().getBuilder();
     }
@@ -4865,7 +4774,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the scrubOverride field is set.
      */
     public boolean hasScrubOverride() {
-      return scrubOverrideBuilder_ != null || scrubOverride_ != null;
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -4895,11 +4804,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         scrubOverride_ = value;
-        onChanged();
       } else {
         scrubOverrideBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -4913,11 +4822,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.ManualDialSettings.ScrubOverride.Builder builderForValue) {
       if (scrubOverrideBuilder_ == null) {
         scrubOverride_ = builderForValue.build();
-        onChanged();
       } else {
         scrubOverrideBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -4929,17 +4838,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeScrubOverride(com.tcn.cloud.api.api.commons.org.ManualDialSettings.ScrubOverride value) {
       if (scrubOverrideBuilder_ == null) {
-        if (scrubOverride_ != null) {
-          scrubOverride_ =
-            com.tcn.cloud.api.api.commons.org.ManualDialSettings.ScrubOverride.newBuilder(scrubOverride_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000080) != 0) &&
+          scrubOverride_ != null &&
+          scrubOverride_ != com.tcn.cloud.api.api.commons.org.ManualDialSettings.ScrubOverride.getDefaultInstance()) {
+          getScrubOverrideBuilder().mergeFrom(value);
         } else {
           scrubOverride_ = value;
         }
-        onChanged();
       } else {
         scrubOverrideBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -4950,14 +4860,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.ManualDialSettings.ScrubOverride scrub_override = 8 [json_name = "scrubOverride"];</code>
      */
     public Builder clearScrubOverride() {
-      if (scrubOverrideBuilder_ == null) {
-        scrubOverride_ = null;
-        onChanged();
-      } else {
-        scrubOverride_ = null;
+      bitField0_ = (bitField0_ & ~0x00000080);
+      scrubOverride_ = null;
+      if (scrubOverrideBuilder_ != null) {
+        scrubOverrideBuilder_.dispose();
         scrubOverrideBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -4968,7 +4877,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.ManualDialSettings.ScrubOverride scrub_override = 8 [json_name = "scrubOverride"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ManualDialSettings.ScrubOverride.Builder getScrubOverrideBuilder() {
-      
+      bitField0_ |= 0x00000080;
       onChanged();
       return getScrubOverrideFieldBuilder().getBuilder();
     }
@@ -5031,8 +4940,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnableWhitelist(boolean value) {
-      
+
       enableWhitelist_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -5045,7 +4955,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableWhitelist() {
-      
+      bitField0_ = (bitField0_ & ~0x00000100);
       enableWhitelist_ = false;
       onChanged();
       return this;
@@ -5073,8 +4983,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDefaultOutboundCountryValue(int value) {
-      
       defaultOutboundCountry_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -5088,8 +4998,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.Country getDefaultOutboundCountry() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.Country result = com.tcn.cloud.api.api.commons.Country.valueOf(defaultOutboundCountry_);
+      com.tcn.cloud.api.api.commons.Country result = com.tcn.cloud.api.api.commons.Country.forNumber(defaultOutboundCountry_);
       return result == null ? com.tcn.cloud.api.api.commons.Country.UNRECOGNIZED : result;
     }
     /**
@@ -5105,7 +5014,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000200;
       defaultOutboundCountry_ = value.getNumber();
       onChanged();
       return this;
@@ -5119,7 +5028,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultOutboundCountry() {
-      
+      bitField0_ = (bitField0_ & ~0x00000200);
       defaultOutboundCountry_ = 0;
       onChanged();
       return this;
@@ -5148,8 +5057,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisplayOutboundCountrySelection(boolean value) {
-      
+
       displayOutboundCountrySelection_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -5162,7 +5072,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayOutboundCountrySelection() {
-      
+      bitField0_ = (bitField0_ & ~0x00000400);
       displayOutboundCountrySelection_ = false;
       onChanged();
       return this;
@@ -5191,8 +5101,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisplayOutboundNumberPhoneBook(boolean value) {
-      
+
       displayOutboundNumberPhoneBook_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -5205,7 +5116,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayOutboundNumberPhoneBook() {
-      
+      bitField0_ = (bitField0_ & ~0x00000800);
       displayOutboundNumberPhoneBook_ = false;
       onChanged();
       return this;
@@ -5235,8 +5146,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDefaultCallerIdCountryValue(int value) {
-      
       defaultCallerIdCountry_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -5251,8 +5162,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.Country getDefaultCallerIdCountry() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.Country result = com.tcn.cloud.api.api.commons.Country.valueOf(defaultCallerIdCountry_);
+      com.tcn.cloud.api.api.commons.Country result = com.tcn.cloud.api.api.commons.Country.forNumber(defaultCallerIdCountry_);
       return result == null ? com.tcn.cloud.api.api.commons.Country.UNRECOGNIZED : result;
     }
     /**
@@ -5269,7 +5179,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00001000;
       defaultCallerIdCountry_ = value.getNumber();
       onChanged();
       return this;
@@ -5284,7 +5194,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultCallerIdCountry() {
-      
+      bitField0_ = (bitField0_ & ~0x00001000);
       defaultCallerIdCountry_ = 0;
       onChanged();
       return this;
@@ -5317,8 +5227,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisplayCallerIdCountrySelection(boolean value) {
-      
+
       displayCallerIdCountrySelection_ = value;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -5333,7 +5244,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayCallerIdCountrySelection() {
-      
+      bitField0_ = (bitField0_ & ~0x00002000);
       displayCallerIdCountrySelection_ = false;
       onChanged();
       return this;
@@ -5364,8 +5275,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisplayCallerIdPhoneBook(boolean value) {
-      
+
       displayCallerIdPhoneBook_ = value;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -5379,7 +5291,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayCallerIdPhoneBook() {
-      
+      bitField0_ = (bitField0_ & ~0x00004000);
       displayCallerIdPhoneBook_ = false;
       onChanged();
       return this;
@@ -5410,8 +5322,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnableCustomizableCallerId(boolean value) {
-      
+
       enableCustomizableCallerId_ = value;
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -5425,7 +5338,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableCustomizableCallerId() {
-      
+      bitField0_ = (bitField0_ & ~0x00008000);
       enableCustomizableCallerId_ = false;
       onChanged();
       return this;
@@ -5444,7 +5357,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the defaultCallerId field is set.
      */
     public boolean hasDefaultCallerId() {
-      return defaultCallerIdBuilder_ != null || defaultCallerId_ != null;
+      return ((bitField0_ & 0x00010000) != 0);
     }
     /**
      * <pre>
@@ -5476,11 +5389,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         defaultCallerId_ = value;
-        onChanged();
       } else {
         defaultCallerIdBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00010000;
+      onChanged();
       return this;
     }
     /**
@@ -5495,11 +5408,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.ManualDialSettings.DefaultCallerId.Builder builderForValue) {
       if (defaultCallerIdBuilder_ == null) {
         defaultCallerId_ = builderForValue.build();
-        onChanged();
       } else {
         defaultCallerIdBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00010000;
+      onChanged();
       return this;
     }
     /**
@@ -5512,17 +5425,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDefaultCallerId(com.tcn.cloud.api.api.commons.org.ManualDialSettings.DefaultCallerId value) {
       if (defaultCallerIdBuilder_ == null) {
-        if (defaultCallerId_ != null) {
-          defaultCallerId_ =
-            com.tcn.cloud.api.api.commons.org.ManualDialSettings.DefaultCallerId.newBuilder(defaultCallerId_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00010000) != 0) &&
+          defaultCallerId_ != null &&
+          defaultCallerId_ != com.tcn.cloud.api.api.commons.org.ManualDialSettings.DefaultCallerId.getDefaultInstance()) {
+          getDefaultCallerIdBuilder().mergeFrom(value);
         } else {
           defaultCallerId_ = value;
         }
-        onChanged();
       } else {
         defaultCallerIdBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00010000;
+      onChanged();
       return this;
     }
     /**
@@ -5534,14 +5448,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.ManualDialSettings.DefaultCallerId default_caller_id = 17 [json_name = "defaultCallerId"];</code>
      */
     public Builder clearDefaultCallerId() {
-      if (defaultCallerIdBuilder_ == null) {
-        defaultCallerId_ = null;
-        onChanged();
-      } else {
-        defaultCallerId_ = null;
+      bitField0_ = (bitField0_ & ~0x00010000);
+      defaultCallerId_ = null;
+      if (defaultCallerIdBuilder_ != null) {
+        defaultCallerIdBuilder_.dispose();
         defaultCallerIdBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -5553,7 +5466,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.ManualDialSettings.DefaultCallerId default_caller_id = 17 [json_name = "defaultCallerId"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ManualDialSettings.DefaultCallerId.Builder getDefaultCallerIdBuilder() {
-      
+      bitField0_ |= 0x00010000;
       onChanged();
       return getDefaultCallerIdFieldBuilder().getBuilder();
     }
@@ -5620,8 +5533,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnableCallerIdBucket(boolean value) {
-      
+
       enableCallerIdBucket_ = value;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -5635,7 +5549,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableCallerIdBucket() {
-      
+      bitField0_ = (bitField0_ & ~0x00020000);
       enableCallerIdBucket_ = false;
       onChanged();
       return this;
@@ -5666,8 +5580,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRandomCallerIdBucket(long value) {
-      
+
       randomCallerIdBucket_ = value;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -5681,7 +5596,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRandomCallerIdBucket() {
-      
+      bitField0_ = (bitField0_ & ~0x00040000);
       randomCallerIdBucket_ = 0L;
       onChanged();
       return this;
@@ -5712,8 +5627,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAutomateRandomCallerId(boolean value) {
-      
+
       automateRandomCallerId_ = value;
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -5727,7 +5643,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAutomateRandomCallerId() {
-      
+      bitField0_ = (bitField0_ & ~0x00080000);
       automateRandomCallerId_ = false;
       onChanged();
       return this;
@@ -5758,8 +5674,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnableMaskCallerId(boolean value) {
-      
+
       enableMaskCallerId_ = value;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -5773,7 +5690,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableMaskCallerId() {
-      
+      bitField0_ = (bitField0_ & ~0x00100000);
       enableMaskCallerId_ = false;
       onChanged();
       return this;
@@ -5806,8 +5723,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnableSipAddress(boolean value) {
-      
+
       enableSipAddress_ = value;
+      bitField0_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -5822,7 +5740,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableSipAddress() {
-      
+      bitField0_ = (bitField0_ & ~0x00200000);
       enableSipAddress_ = false;
       onChanged();
       return this;
@@ -5842,7 +5760,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the naturalLanguageComplianceMetadata field is set.
      */
     public boolean hasNaturalLanguageComplianceMetadata() {
-      return naturalLanguageComplianceMetadataBuilder_ != null || naturalLanguageComplianceMetadata_ != null;
+      return ((bitField0_ & 0x00400000) != 0);
     }
     /**
      * <pre>
@@ -5876,11 +5794,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         naturalLanguageComplianceMetadata_ = value;
-        onChanged();
       } else {
         naturalLanguageComplianceMetadataBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00400000;
+      onChanged();
       return this;
     }
     /**
@@ -5896,11 +5814,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata.Builder builderForValue) {
       if (naturalLanguageComplianceMetadataBuilder_ == null) {
         naturalLanguageComplianceMetadata_ = builderForValue.build();
-        onChanged();
       } else {
         naturalLanguageComplianceMetadataBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00400000;
+      onChanged();
       return this;
     }
     /**
@@ -5914,17 +5832,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeNaturalLanguageComplianceMetadata(com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata value) {
       if (naturalLanguageComplianceMetadataBuilder_ == null) {
-        if (naturalLanguageComplianceMetadata_ != null) {
-          naturalLanguageComplianceMetadata_ =
-            com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata.newBuilder(naturalLanguageComplianceMetadata_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00400000) != 0) &&
+          naturalLanguageComplianceMetadata_ != null &&
+          naturalLanguageComplianceMetadata_ != com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata.getDefaultInstance()) {
+          getNaturalLanguageComplianceMetadataBuilder().mergeFrom(value);
         } else {
           naturalLanguageComplianceMetadata_ = value;
         }
-        onChanged();
       } else {
         naturalLanguageComplianceMetadataBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00400000;
+      onChanged();
       return this;
     }
     /**
@@ -5937,14 +5856,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.NaturalLanguageComplianceMetadata natural_language_compliance_metadata = 23 [json_name = "naturalLanguageComplianceMetadata"];</code>
      */
     public Builder clearNaturalLanguageComplianceMetadata() {
-      if (naturalLanguageComplianceMetadataBuilder_ == null) {
-        naturalLanguageComplianceMetadata_ = null;
-        onChanged();
-      } else {
-        naturalLanguageComplianceMetadata_ = null;
+      bitField0_ = (bitField0_ & ~0x00400000);
+      naturalLanguageComplianceMetadata_ = null;
+      if (naturalLanguageComplianceMetadataBuilder_ != null) {
+        naturalLanguageComplianceMetadataBuilder_.dispose();
         naturalLanguageComplianceMetadataBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -5957,7 +5875,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.NaturalLanguageComplianceMetadata natural_language_compliance_metadata = 23 [json_name = "naturalLanguageComplianceMetadata"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata.Builder getNaturalLanguageComplianceMetadataBuilder() {
-      
+      bitField0_ |= 0x00400000;
       onChanged();
       return getNaturalLanguageComplianceMetadataFieldBuilder().getBuilder();
     }
@@ -6023,8 +5941,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDataDipScopeValue(int value) {
-      
       dataDipScope_ = value;
+      bitField0_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -6038,8 +5956,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ManualDialDataDipScope getDataDipScope() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.ManualDialDataDipScope result = com.tcn.cloud.api.api.commons.ManualDialDataDipScope.valueOf(dataDipScope_);
+      com.tcn.cloud.api.api.commons.ManualDialDataDipScope result = com.tcn.cloud.api.api.commons.ManualDialDataDipScope.forNumber(dataDipScope_);
       return result == null ? com.tcn.cloud.api.api.commons.ManualDialDataDipScope.UNRECOGNIZED : result;
     }
     /**
@@ -6055,7 +5972,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00800000;
       dataDipScope_ = value.getNumber();
       onChanged();
       return this;
@@ -6069,7 +5986,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDataDipScope() {
-      
+      bitField0_ = (bitField0_ & ~0x00800000);
       dataDipScope_ = 0;
       onChanged();
       return this;
@@ -6098,8 +6015,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDataDipConfigSid(long value) {
-      
+
       dataDipConfigSid_ = value;
+      bitField0_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -6112,7 +6030,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDataDipConfigSid() {
-      
+      bitField0_ = (bitField0_ & ~0x01000000);
       dataDipConfigSid_ = 0L;
       onChanged();
       return this;
@@ -6140,8 +6058,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDataDipResultHandlingValue(int value) {
-      
       dataDipResultHandling_ = value;
+      bitField0_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -6155,8 +6073,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ManualDialDataDipHandling getDataDipResultHandling() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.ManualDialDataDipHandling result = com.tcn.cloud.api.api.commons.ManualDialDataDipHandling.valueOf(dataDipResultHandling_);
+      com.tcn.cloud.api.api.commons.ManualDialDataDipHandling result = com.tcn.cloud.api.api.commons.ManualDialDataDipHandling.forNumber(dataDipResultHandling_);
       return result == null ? com.tcn.cloud.api.api.commons.ManualDialDataDipHandling.UNRECOGNIZED : result;
     }
     /**
@@ -6172,7 +6089,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x02000000;
       dataDipResultHandling_ = value.getNumber();
       onChanged();
       return this;
@@ -6186,7 +6103,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDataDipResultHandling() {
-      
+      bitField0_ = (bitField0_ & ~0x02000000);
       dataDipResultHandling_ = 0;
       onChanged();
       return this;
@@ -6195,9 +6112,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.commons.org.ManualDialSettings.DataDipIntegrationMapping> dataDipIntegrationMappings_ =
       java.util.Collections.emptyList();
     private void ensureDataDipIntegrationMappingsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x04000000) != 0)) {
         dataDipIntegrationMappings_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.ManualDialSettings.DataDipIntegrationMapping>(dataDipIntegrationMappings_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x04000000;
        }
     }
 
@@ -6391,7 +6308,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearDataDipIntegrationMappings() {
       if (dataDipIntegrationMappingsBuilder_ == null) {
         dataDipIntegrationMappings_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x04000000);
         onChanged();
       } else {
         dataDipIntegrationMappingsBuilder_.clear();
@@ -6496,7 +6413,7 @@ private static final long serialVersionUID = 0L;
         dataDipIntegrationMappingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.org.ManualDialSettings.DataDipIntegrationMapping, com.tcn.cloud.api.api.commons.org.ManualDialSettings.DataDipIntegrationMapping.Builder, com.tcn.cloud.api.api.commons.org.ManualDialSettings.DataDipIntegrationMappingOrBuilder>(
                 dataDipIntegrationMappings_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x04000000) != 0),
                 getParentForChildren(),
                 isClean());
         dataDipIntegrationMappings_ = null;
@@ -6526,8 +6443,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDataDipIntegrationHandlingValue(int value) {
-      
       dataDipIntegrationHandling_ = value;
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -6541,8 +6458,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ManualDialDataDipHandling getDataDipIntegrationHandling() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.ManualDialDataDipHandling result = com.tcn.cloud.api.api.commons.ManualDialDataDipHandling.valueOf(dataDipIntegrationHandling_);
+      com.tcn.cloud.api.api.commons.ManualDialDataDipHandling result = com.tcn.cloud.api.api.commons.ManualDialDataDipHandling.forNumber(dataDipIntegrationHandling_);
       return result == null ? com.tcn.cloud.api.api.commons.ManualDialDataDipHandling.UNRECOGNIZED : result;
     }
     /**
@@ -6558,7 +6474,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x08000000;
       dataDipIntegrationHandling_ = value.getNumber();
       onChanged();
       return this;
@@ -6572,7 +6488,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDataDipIntegrationHandling() {
-      
+      bitField0_ = (bitField0_ & ~0x08000000);
       dataDipIntegrationHandling_ = 0;
       onChanged();
       return this;
@@ -6610,7 +6526,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ManualDialSettings(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

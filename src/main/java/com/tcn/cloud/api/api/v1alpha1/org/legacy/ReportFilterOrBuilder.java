@@ -13,6 +13,15 @@ public interface ReportFilterOrBuilder extends
    * </pre>
    *
    * <code>.api.commons.StandardReportFilter standard = 1 [json_name = "standard"];</code>
+   * @return Whether the standard field is set.
+   */
+  boolean hasStandard();
+  /**
+   * <pre>
+   * Standard report filter (enum)
+   * </pre>
+   *
+   * <code>.api.commons.StandardReportFilter standard = 1 [json_name = "standard"];</code>
    * @return The enum numeric value on the wire for standard.
    */
   int getStandardValue();
@@ -32,9 +41,18 @@ public interface ReportFilterOrBuilder extends
    * </pre>
    *
    * <code>int64 custom = 2 [json_name = "custom"];</code>
+   * @return Whether the custom field is set.
+   */
+  boolean hasCustom();
+  /**
+   * <pre>
+   * Custom report filter sid (XML client property)
+   * </pre>
+   *
+   * <code>int64 custom = 2 [json_name = "custom"];</code>
    * @return The custom.
    */
   long getCustom();
 
-  public com.tcn.cloud.api.api.v1alpha1.org.legacy.ReportFilter.ChoiceCase getChoiceCase();
+  com.tcn.cloud.api.api.v1alpha1.org.legacy.ReportFilter.ChoiceCase getChoiceCase();
 }

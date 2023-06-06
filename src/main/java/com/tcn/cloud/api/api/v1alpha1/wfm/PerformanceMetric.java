@@ -32,132 +32,6 @@ private static final long serialVersionUID = 0L;
     return new PerformanceMetric();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private PerformanceMetric(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.tcn.cloud.api.api.commons.DatetimeRange.Builder subBuilder = null;
-            if (dateRange_ != null) {
-              subBuilder = dateRange_.toBuilder();
-            }
-            dateRange_ = input.readMessage(com.tcn.cloud.api.api.commons.DatetimeRange.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dateRange_);
-              dateRange_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 16: {
-
-            totalCallsRequired_ = input.readInt32();
-            break;
-          }
-          case 24: {
-
-            totalFtesAchieved_ = input.readInt32();
-            break;
-          }
-          case 32: {
-
-            numIntervalsWithRequiredCalls_ = input.readInt32();
-            break;
-          }
-          case 40: {
-
-            numIntervalsWithFtesButNoSchedules_ = input.readInt32();
-            break;
-          }
-          case 48: {
-
-            numIntervalsWithFtesButNoForecastedCalls_ = input.readInt32();
-            break;
-          }
-          case 56: {
-
-            totalUnscheduledCalls_ = input.readInt32();
-            break;
-          }
-          case 64: {
-
-            totalUnnecessaryFtes_ = input.readInt32();
-            break;
-          }
-          case 72: {
-
-            intervalWidthInMinutes_ = input.readInt32();
-            break;
-          }
-          case 80: {
-            int rawValue = input.readEnum();
-
-            metricType_ = rawValue;
-            break;
-          }
-          case 90: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              fteIntervals_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            fteIntervals_.add(
-                input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval.parser(), extensionRegistry));
-            break;
-          }
-          case 98: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              serviceLevelIntervals_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval>();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            serviceLevelIntervals_.add(
-                input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        fteIntervals_ = java.util.Collections.unmodifiableList(fteIntervals_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        serviceLevelIntervals_ = java.util.Collections.unmodifiableList(serviceLevelIntervals_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_PerformanceMetric_descriptor;
@@ -206,11 +80,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getDateRangeOrBuilder() {
-    return getDateRange();
+    return dateRange_ == null ? com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : dateRange_;
   }
 
   public static final int TOTAL_CALLS_REQUIRED_FIELD_NUMBER = 2;
-  private int totalCallsRequired_;
+  private int totalCallsRequired_ = 0;
   /**
    * <pre>
    * The total calls required over the &#64;date_range, as determined by the forecast.
@@ -225,7 +99,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_FTES_ACHIEVED_FIELD_NUMBER = 3;
-  private int totalFtesAchieved_;
+  private int totalFtesAchieved_ = 0;
   /**
    * <pre>
    * The total calls the the schedule is likely to address with the current shift instances.
@@ -240,7 +114,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NUM_INTERVALS_WITH_REQUIRED_CALLS_FIELD_NUMBER = 4;
-  private int numIntervalsWithRequiredCalls_;
+  private int numIntervalsWithRequiredCalls_ = 0;
   /**
    * <pre>
    * The number of intervals with required calls.
@@ -255,7 +129,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NUM_INTERVALS_WITH_FTES_BUT_NO_SCHEDULES_FIELD_NUMBER = 5;
-  private int numIntervalsWithFtesButNoSchedules_;
+  private int numIntervalsWithFtesButNoSchedules_ = 0;
   /**
    * <pre>
    * The number of intervals with FTE's but no schedules.
@@ -270,7 +144,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NUM_INTERVALS_WITH_FTES_BUT_NO_FORECASTED_CALLS_FIELD_NUMBER = 6;
-  private int numIntervalsWithFtesButNoForecastedCalls_;
+  private int numIntervalsWithFtesButNoForecastedCalls_ = 0;
   /**
    * <pre>
    * the number of intervals with FTE's but no forecasted calls.
@@ -285,7 +159,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_UNSCHEDULED_CALLS_FIELD_NUMBER = 7;
-  private int totalUnscheduledCalls_;
+  private int totalUnscheduledCalls_ = 0;
   /**
    * <pre>
    * The total calls forecsted where there are no FTE's scheduled.
@@ -300,7 +174,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_UNNECESSARY_FTES_FIELD_NUMBER = 8;
-  private int totalUnnecessaryFtes_;
+  private int totalUnnecessaryFtes_ = 0;
   /**
    * <pre>
    * The total number of FTE's scheduled where there were no forecasted calls.
@@ -315,7 +189,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INTERVAL_WIDTH_IN_MINUTES_FIELD_NUMBER = 9;
-  private int intervalWidthInMinutes_;
+  private int intervalWidthInMinutes_ = 0;
   /**
    * <pre>
    * Width of each interval in minutes.
@@ -330,7 +204,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int METRIC_TYPE_FIELD_NUMBER = 10;
-  private int metricType_;
+  private int metricType_ = 0;
   /**
    * <pre>
    * The type of metric being reported.
@@ -351,12 +225,12 @@ private static final long serialVersionUID = 0L;
    * @return The metricType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.PerformanceMetricType getMetricType() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.PerformanceMetricType result = com.tcn.cloud.api.api.commons.PerformanceMetricType.valueOf(metricType_);
+    com.tcn.cloud.api.api.commons.PerformanceMetricType result = com.tcn.cloud.api.api.commons.PerformanceMetricType.forNumber(metricType_);
     return result == null ? com.tcn.cloud.api.api.commons.PerformanceMetricType.UNRECOGNIZED : result;
   }
 
   public static final int FTE_INTERVALS_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval> fteIntervals_;
   /**
    * <pre>
@@ -432,6 +306,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SERVICE_LEVEL_INTERVALS_FIELD_NUMBER = 12;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval> serviceLevelIntervals_;
   /**
    * <pre>
@@ -541,7 +416,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < serviceLevelIntervals_.size(); i++) {
       output.writeMessage(12, serviceLevelIntervals_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -598,7 +473,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, serviceLevelIntervals_.get(i));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -639,7 +514,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getFteIntervalsList())) return false;
     if (!getServiceLevelIntervalsList()
         .equals(other.getServiceLevelIntervalsList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -680,7 +555,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SERVICE_LEVEL_INTERVALS_FIELD_NUMBER;
       hash = (53 * hash) + getServiceLevelIntervalsList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -729,11 +604,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -801,60 +678,46 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getFteIntervalsFieldBuilder();
-        getServiceLevelIntervalsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (dateRangeBuilder_ == null) {
-        dateRange_ = null;
-      } else {
-        dateRange_ = null;
+      bitField0_ = 0;
+      dateRange_ = null;
+      if (dateRangeBuilder_ != null) {
+        dateRangeBuilder_.dispose();
         dateRangeBuilder_ = null;
       }
       totalCallsRequired_ = 0;
-
       totalFtesAchieved_ = 0;
-
       numIntervalsWithRequiredCalls_ = 0;
-
       numIntervalsWithFtesButNoSchedules_ = 0;
-
       numIntervalsWithFtesButNoForecastedCalls_ = 0;
-
       totalUnscheduledCalls_ = 0;
-
       totalUnnecessaryFtes_ = 0;
-
       intervalWidthInMinutes_ = 0;
-
       metricType_ = 0;
-
       if (fteIntervalsBuilder_ == null) {
         fteIntervals_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        fteIntervals_ = null;
         fteIntervalsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000400);
       if (serviceLevelIntervalsBuilder_ == null) {
         serviceLevelIntervals_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
+        serviceLevelIntervals_ = null;
         serviceLevelIntervalsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000800);
       return this;
     }
 
@@ -881,41 +744,67 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric result = new com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric(this);
-      int from_bitField0_ = bitField0_;
-      if (dateRangeBuilder_ == null) {
-        result.dateRange_ = dateRange_;
-      } else {
-        result.dateRange_ = dateRangeBuilder_.build();
-      }
-      result.totalCallsRequired_ = totalCallsRequired_;
-      result.totalFtesAchieved_ = totalFtesAchieved_;
-      result.numIntervalsWithRequiredCalls_ = numIntervalsWithRequiredCalls_;
-      result.numIntervalsWithFtesButNoSchedules_ = numIntervalsWithFtesButNoSchedules_;
-      result.numIntervalsWithFtesButNoForecastedCalls_ = numIntervalsWithFtesButNoForecastedCalls_;
-      result.totalUnscheduledCalls_ = totalUnscheduledCalls_;
-      result.totalUnnecessaryFtes_ = totalUnnecessaryFtes_;
-      result.intervalWidthInMinutes_ = intervalWidthInMinutes_;
-      result.metricType_ = metricType_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric result) {
       if (fteIntervalsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000400) != 0)) {
           fteIntervals_ = java.util.Collections.unmodifiableList(fteIntervals_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000400);
         }
         result.fteIntervals_ = fteIntervals_;
       } else {
         result.fteIntervals_ = fteIntervalsBuilder_.build();
       }
       if (serviceLevelIntervalsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000800) != 0)) {
           serviceLevelIntervals_ = java.util.Collections.unmodifiableList(serviceLevelIntervals_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000800);
         }
         result.serviceLevelIntervals_ = serviceLevelIntervals_;
       } else {
         result.serviceLevelIntervals_ = serviceLevelIntervalsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.dateRange_ = dateRangeBuilder_ == null
+            ? dateRange_
+            : dateRangeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.totalCallsRequired_ = totalCallsRequired_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.totalFtesAchieved_ = totalFtesAchieved_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.numIntervalsWithRequiredCalls_ = numIntervalsWithRequiredCalls_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.numIntervalsWithFtesButNoSchedules_ = numIntervalsWithFtesButNoSchedules_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.numIntervalsWithFtesButNoForecastedCalls_ = numIntervalsWithFtesButNoForecastedCalls_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.totalUnscheduledCalls_ = totalUnscheduledCalls_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.totalUnnecessaryFtes_ = totalUnnecessaryFtes_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.intervalWidthInMinutes_ = intervalWidthInMinutes_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.metricType_ = metricType_;
+      }
     }
 
     @java.lang.Override
@@ -996,7 +885,7 @@ private static final long serialVersionUID = 0L;
         if (!other.fteIntervals_.isEmpty()) {
           if (fteIntervals_.isEmpty()) {
             fteIntervals_ = other.fteIntervals_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000400);
           } else {
             ensureFteIntervalsIsMutable();
             fteIntervals_.addAll(other.fteIntervals_);
@@ -1009,7 +898,7 @@ private static final long serialVersionUID = 0L;
             fteIntervalsBuilder_.dispose();
             fteIntervalsBuilder_ = null;
             fteIntervals_ = other.fteIntervals_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000400);
             fteIntervalsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFteIntervalsFieldBuilder() : null;
@@ -1022,7 +911,7 @@ private static final long serialVersionUID = 0L;
         if (!other.serviceLevelIntervals_.isEmpty()) {
           if (serviceLevelIntervals_.isEmpty()) {
             serviceLevelIntervals_ = other.serviceLevelIntervals_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000800);
           } else {
             ensureServiceLevelIntervalsIsMutable();
             serviceLevelIntervals_.addAll(other.serviceLevelIntervals_);
@@ -1035,7 +924,7 @@ private static final long serialVersionUID = 0L;
             serviceLevelIntervalsBuilder_.dispose();
             serviceLevelIntervalsBuilder_ = null;
             serviceLevelIntervals_ = other.serviceLevelIntervals_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000800);
             serviceLevelIntervalsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getServiceLevelIntervalsFieldBuilder() : null;
@@ -1044,7 +933,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1059,17 +948,108 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getDateRangeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 16: {
+              totalCallsRequired_ = input.readInt32();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              totalFtesAchieved_ = input.readInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              numIntervalsWithRequiredCalls_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              numIntervalsWithFtesButNoSchedules_ = input.readInt32();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 48: {
+              numIntervalsWithFtesButNoForecastedCalls_ = input.readInt32();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 56: {
+              totalUnscheduledCalls_ = input.readInt32();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            case 64: {
+              totalUnnecessaryFtes_ = input.readInt32();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
+            case 72: {
+              intervalWidthInMinutes_ = input.readInt32();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
+            case 80: {
+              metricType_ = input.readEnum();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
+            case 90: {
+              com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval.parser(),
+                      extensionRegistry);
+              if (fteIntervalsBuilder_ == null) {
+                ensureFteIntervalsIsMutable();
+                fteIntervals_.add(m);
+              } else {
+                fteIntervalsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 90
+            case 98: {
+              com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.parser(),
+                      extensionRegistry);
+              if (serviceLevelIntervalsBuilder_ == null) {
+                ensureServiceLevelIntervalsIsMutable();
+                serviceLevelIntervals_.add(m);
+              } else {
+                serviceLevelIntervalsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 98
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -1086,7 +1066,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dateRange field is set.
      */
     public boolean hasDateRange() {
-      return dateRangeBuilder_ != null || dateRange_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1116,11 +1096,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dateRange_ = value;
-        onChanged();
       } else {
         dateRangeBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -1134,11 +1114,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.DatetimeRange.Builder builderForValue) {
       if (dateRangeBuilder_ == null) {
         dateRange_ = builderForValue.build();
-        onChanged();
       } else {
         dateRangeBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -1150,17 +1130,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDateRange(com.tcn.cloud.api.api.commons.DatetimeRange value) {
       if (dateRangeBuilder_ == null) {
-        if (dateRange_ != null) {
-          dateRange_ =
-            com.tcn.cloud.api.api.commons.DatetimeRange.newBuilder(dateRange_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          dateRange_ != null &&
+          dateRange_ != com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance()) {
+          getDateRangeBuilder().mergeFrom(value);
         } else {
           dateRange_ = value;
         }
-        onChanged();
       } else {
         dateRangeBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -1171,14 +1152,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.DatetimeRange date_range = 1 [json_name = "dateRange"];</code>
      */
     public Builder clearDateRange() {
-      if (dateRangeBuilder_ == null) {
-        dateRange_ = null;
-        onChanged();
-      } else {
-        dateRange_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      dateRange_ = null;
+      if (dateRangeBuilder_ != null) {
+        dateRangeBuilder_.dispose();
         dateRangeBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1189,7 +1169,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.DatetimeRange date_range = 1 [json_name = "dateRange"];</code>
      */
     public com.tcn.cloud.api.api.commons.DatetimeRange.Builder getDateRangeBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getDateRangeFieldBuilder().getBuilder();
     }
@@ -1252,8 +1232,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalCallsRequired(int value) {
-      
+
       totalCallsRequired_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1266,7 +1247,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalCallsRequired() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       totalCallsRequired_ = 0;
       onChanged();
       return this;
@@ -1295,8 +1276,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalFtesAchieved(int value) {
-      
+
       totalFtesAchieved_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1309,7 +1291,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalFtesAchieved() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       totalFtesAchieved_ = 0;
       onChanged();
       return this;
@@ -1338,8 +1320,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNumIntervalsWithRequiredCalls(int value) {
-      
+
       numIntervalsWithRequiredCalls_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1352,7 +1335,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNumIntervalsWithRequiredCalls() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       numIntervalsWithRequiredCalls_ = 0;
       onChanged();
       return this;
@@ -1381,8 +1364,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNumIntervalsWithFtesButNoSchedules(int value) {
-      
+
       numIntervalsWithFtesButNoSchedules_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1395,7 +1379,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNumIntervalsWithFtesButNoSchedules() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       numIntervalsWithFtesButNoSchedules_ = 0;
       onChanged();
       return this;
@@ -1424,8 +1408,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNumIntervalsWithFtesButNoForecastedCalls(int value) {
-      
+
       numIntervalsWithFtesButNoForecastedCalls_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1438,7 +1423,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNumIntervalsWithFtesButNoForecastedCalls() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       numIntervalsWithFtesButNoForecastedCalls_ = 0;
       onChanged();
       return this;
@@ -1467,8 +1452,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalUnscheduledCalls(int value) {
-      
+
       totalUnscheduledCalls_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1481,7 +1467,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalUnscheduledCalls() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       totalUnscheduledCalls_ = 0;
       onChanged();
       return this;
@@ -1510,8 +1496,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalUnnecessaryFtes(int value) {
-      
+
       totalUnnecessaryFtes_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1524,7 +1511,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalUnnecessaryFtes() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       totalUnnecessaryFtes_ = 0;
       onChanged();
       return this;
@@ -1553,8 +1540,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIntervalWidthInMinutes(int value) {
-      
+
       intervalWidthInMinutes_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1567,7 +1555,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIntervalWidthInMinutes() {
-      
+      bitField0_ = (bitField0_ & ~0x00000100);
       intervalWidthInMinutes_ = 0;
       onChanged();
       return this;
@@ -1595,8 +1583,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMetricTypeValue(int value) {
-      
       metricType_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1610,8 +1598,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.PerformanceMetricType getMetricType() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.PerformanceMetricType result = com.tcn.cloud.api.api.commons.PerformanceMetricType.valueOf(metricType_);
+      com.tcn.cloud.api.api.commons.PerformanceMetricType result = com.tcn.cloud.api.api.commons.PerformanceMetricType.forNumber(metricType_);
       return result == null ? com.tcn.cloud.api.api.commons.PerformanceMetricType.UNRECOGNIZED : result;
     }
     /**
@@ -1627,7 +1614,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000200;
       metricType_ = value.getNumber();
       onChanged();
       return this;
@@ -1641,7 +1628,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMetricType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000200);
       metricType_ = 0;
       onChanged();
       return this;
@@ -1650,9 +1637,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval> fteIntervals_ =
       java.util.Collections.emptyList();
     private void ensureFteIntervalsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000400) != 0)) {
         fteIntervals_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval>(fteIntervals_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000400;
        }
     }
 
@@ -1879,7 +1866,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFteIntervals() {
       if (fteIntervalsBuilder_ == null) {
         fteIntervals_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
       } else {
         fteIntervalsBuilder_.clear();
@@ -2005,7 +1992,7 @@ private static final long serialVersionUID = 0L;
         fteIntervalsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedInterval.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.FTERequiredVsAchievedIntervalOrBuilder>(
                 fteIntervals_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000400) != 0),
                 getParentForChildren(),
                 isClean());
         fteIntervals_ = null;
@@ -2016,9 +2003,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval> serviceLevelIntervals_ =
       java.util.Collections.emptyList();
     private void ensureServiceLevelIntervalsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000800) != 0)) {
         serviceLevelIntervals_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval>(serviceLevelIntervals_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000800;
        }
     }
 
@@ -2212,7 +2199,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearServiceLevelIntervals() {
       if (serviceLevelIntervalsBuilder_ == null) {
         serviceLevelIntervals_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000800);
         onChanged();
       } else {
         serviceLevelIntervalsBuilder_.clear();
@@ -2317,7 +2304,7 @@ private static final long serialVersionUID = 0L;
         serviceLevelIntervalsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval, com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelIntervalOrBuilder>(
                 serviceLevelIntervals_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000800) != 0),
                 getParentForChildren(),
                 isClean());
         serviceLevelIntervals_ = null;
@@ -2357,7 +2344,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new PerformanceMetric(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

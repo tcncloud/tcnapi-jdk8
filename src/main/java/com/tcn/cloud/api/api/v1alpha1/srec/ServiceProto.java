@@ -82,18 +82,18 @@ public final class ServiceProto {
       "\004\n\004Srec\022\272\001\n\024ListScreenRecordings\022..api.v" +
       "1alpha1.srec.ListScreenRecordingsRequest" +
       "\032/.api.v1alpha1.srec.ListScreenRecording" +
-      "sResponse\"A\272\270\221\002\005\n\003\010\371\003\202\323\344\223\0021:\001*\",/api/v1a" +
-      "lpha1/srec/srec/listscreenrecordings\022\276\001\n" +
+      "sResponse\"A\272\270\221\002\005\n\003\010\371\003\202\323\344\223\0021\",/api/v1alph" +
+      "a1/srec/srec/listscreenrecordings:\001*\022\276\001\n" +
       "\025GetScreenRecordingURL\022/.api.v1alpha1.sr" +
       "ec.GetScreenRecordingURLRequest\0320.api.v1" +
       "alpha1.srec.GetScreenRecordingURLRespons" +
-      "e\"B\272\270\221\002\005\n\003\010\371\003\202\323\344\223\0022:\001*\"-/api/v1alpha1/sr" +
-      "ec/srec/getscreenrecordingurl\022\276\001\n\025Delete" +
+      "e\"B\272\270\221\002\005\n\003\010\371\003\202\323\344\223\0022\"-/api/v1alpha1/srec/" +
+      "srec/getscreenrecordingurl:\001*\022\276\001\n\025Delete" +
       "ScreenRecording\022/.api.v1alpha1.srec.Dele" +
       "teScreenRecordingRequest\0320.api.v1alpha1." +
       "srec.DeleteScreenRecordingResponse\"B\272\270\221\002" +
-      "\005\n\003\010\373\003\202\323\344\223\0022:\001*\"-/api/v1alpha1/srec/srec" +
-      "/deletescreenrecordingB\231\001\n#com.tcn.cloud" +
+      "\005\n\003\010\373\003\202\323\344\223\0022\"-/api/v1alpha1/srec/srec/de" +
+      "letescreenrecording:\001*B\231\001\n#com.tcn.cloud" +
       ".api.api.v1alpha1.srecB\014ServiceProtoP\001\242\002" +
       "\003AVS\252\002\021Api.V1alpha1.Srec\312\002\021Api\\V1alpha1\\" +
       "Srec\342\002\035Api\\V1alpha1\\Srec\\GPBMetadata\352\002\023A" +

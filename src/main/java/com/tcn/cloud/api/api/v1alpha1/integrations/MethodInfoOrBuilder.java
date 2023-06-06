@@ -225,10 +225,11 @@ public interface MethodInfoOrBuilder extends
    *
    * <code>map&lt;int32, .api.v1alpha1.integrations.Parameter&gt; runtime_params = 7 [json_name = "runtimeParams"];</code>
    */
-
-  com.tcn.cloud.api.api.v1alpha1.integrations.Parameter getRuntimeParamsOrDefault(
+  /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrations.Parameter getRuntimeParamsOrDefault(
       int key,
-      com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue);
+      /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue);
   /**
    * <pre>
    * fields specific to this method that should come over during the runtime
@@ -238,7 +239,6 @@ public interface MethodInfoOrBuilder extends
    *
    * <code>map&lt;int32, .api.v1alpha1.integrations.Parameter&gt; runtime_params = 7 [json_name = "runtimeParams"];</code>
    */
-
   com.tcn.cloud.api.api.v1alpha1.integrations.Parameter getRuntimeParamsOrThrow(
       int key);
 }

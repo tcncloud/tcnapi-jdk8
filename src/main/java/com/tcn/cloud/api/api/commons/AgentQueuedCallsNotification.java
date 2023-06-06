@@ -28,85 +28,6 @@ private static final long serialVersionUID = 0L;
     return new AgentQueuedCallsNotification();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private AgentQueuedCallsNotification(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 130: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              agentQueueCalls_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            agentQueueCalls_.add(
-                input.readMessage(com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData.parser(), extensionRegistry));
-            break;
-          }
-          case 138: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              onHoldCalls_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData>();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            onHoldCalls_.add(
-                input.readMessage(com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData.parser(), extensionRegistry));
-            break;
-          }
-          case 146: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-              hqmCalls_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData>();
-              mutable_bitField0_ |= 0x00000004;
-            }
-            hqmCalls_.add(
-                input.readMessage(com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        agentQueueCalls_ = java.util.Collections.unmodifiableList(agentQueueCalls_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        onHoldCalls_ = java.util.Collections.unmodifiableList(onHoldCalls_);
-      }
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
-        hqmCalls_ = java.util.Collections.unmodifiableList(hqmCalls_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.GhostnotifierProto.internal_static_api_commons_AgentQueuedCallsNotification_descriptor;
@@ -333,7 +254,8 @@ private static final long serialVersionUID = 0L;
       phoneNumber_ = "";
       callerId_ = "";
       callType_ = 0;
-      skills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      skills_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       queuedNotificationType_ = 0;
     }
 
@@ -344,121 +266,6 @@ private static final long serialVersionUID = 0L;
       return new QueuedCallData();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private QueuedCallData(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              callSid_ = input.readInt64();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              phoneNumber_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              callerId_ = s;
-              break;
-            }
-            case 32: {
-              int rawValue = input.readEnum();
-
-              callType_ = rawValue;
-              break;
-            }
-            case 42: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (startDate_ != null) {
-                subBuilder = startDate_.toBuilder();
-              }
-              startDate_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(startDate_);
-                startDate_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 50: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (holdDate_ != null) {
-                subBuilder = holdDate_.toBuilder();
-              }
-              holdDate_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(holdDate_);
-                holdDate_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                skills_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              skills_.add(s);
-              break;
-            }
-            case 64: {
-
-              agentSpecific_ = input.readBool();
-              break;
-            }
-            case 72: {
-              int rawValue = input.readEnum();
-
-              queuedNotificationType_ = rawValue;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          skills_ = skills_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.commons.GhostnotifierProto.internal_static_api_commons_AgentQueuedCallsNotification_QueuedCallData_descriptor;
@@ -473,7 +280,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int CALL_SID_FIELD_NUMBER = 1;
-    private long callSid_;
+    private long callSid_ = 0L;
     /**
      * <pre>
      * id of the found call.
@@ -488,7 +295,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int PHONE_NUMBER_FIELD_NUMBER = 2;
-    private volatile java.lang.Object phoneNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object phoneNumber_ = "";
     /**
      * <pre>
      * number dialed when the call was placed.
@@ -534,7 +342,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int CALLER_ID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object callerId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object callerId_ = "";
     /**
      * <pre>
      * caller_id used when the call was placed.
@@ -580,7 +389,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int CALL_TYPE_FIELD_NUMBER = 4;
-    private int callType_;
+    private int callType_ = 0;
     /**
      * <pre>
      * call type of the found call.
@@ -601,8 +410,7 @@ private static final long serialVersionUID = 0L;
      * @return The callType.
      */
     @java.lang.Override public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.valueOf(callType_);
+      com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callType_);
       return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
     }
 
@@ -641,7 +449,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getStartDateOrBuilder() {
-      return getStartDate();
+      return startDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDate_;
     }
 
     public static final int HOLD_DATE_FIELD_NUMBER = 6;
@@ -679,11 +487,13 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getHoldDateOrBuilder() {
-      return getHoldDate();
+      return holdDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : holdDate_;
     }
 
     public static final int SKILLS_FIELD_NUMBER = 7;
-    private com.google.protobuf.LazyStringList skills_;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList skills_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * formatted skills that the call requires.
@@ -734,7 +544,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int AGENT_SPECIFIC_FIELD_NUMBER = 8;
-    private boolean agentSpecific_;
+    private boolean agentSpecific_ = false;
     /**
      * <pre>
      * indicates if the call is specific to the agent (multi-hold) or it can be picked up by multiple agents (queued and HQM calls).
@@ -749,7 +559,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int QUEUED_NOTIFICATION_TYPE_FIELD_NUMBER = 9;
-    private int queuedNotificationType_;
+    private int queuedNotificationType_ = 0;
     /**
      * <pre>
      * queued notification type of the call.
@@ -770,8 +580,7 @@ private static final long serialVersionUID = 0L;
      * @return The queuedNotificationType.
      */
     @java.lang.Override public com.tcn.cloud.api.api.commons.QueuedNotificationType getQueuedNotificationType() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.QueuedNotificationType result = com.tcn.cloud.api.api.commons.QueuedNotificationType.valueOf(queuedNotificationType_);
+      com.tcn.cloud.api.api.commons.QueuedNotificationType result = com.tcn.cloud.api.api.commons.QueuedNotificationType.forNumber(queuedNotificationType_);
       return result == null ? com.tcn.cloud.api.api.commons.QueuedNotificationType.UNRECOGNIZED : result;
     }
 
@@ -792,10 +601,10 @@ private static final long serialVersionUID = 0L;
       if (callSid_ != 0L) {
         output.writeInt64(1, callSid_);
       }
-      if (!getPhoneNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, phoneNumber_);
       }
-      if (!getCallerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, callerId_);
       }
       if (callType_ != com.tcn.cloud.api.api.commons.CallType.Enum.INBOUND.getNumber()) {
@@ -816,7 +625,7 @@ private static final long serialVersionUID = 0L;
       if (queuedNotificationType_ != com.tcn.cloud.api.api.commons.QueuedNotificationType.QueuedNotificationType_GENERAL_INITIAL.getNumber()) {
         output.writeEnum(9, queuedNotificationType_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -829,10 +638,10 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, callSid_);
       }
-      if (!getPhoneNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, phoneNumber_);
       }
-      if (!getCallerIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, callerId_);
       }
       if (callType_ != com.tcn.cloud.api.api.commons.CallType.Enum.INBOUND.getNumber()) {
@@ -863,7 +672,7 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(9, queuedNotificationType_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -900,7 +709,7 @@ private static final long serialVersionUID = 0L;
       if (getAgentSpecific()
           != other.getAgentSpecific()) return false;
       if (queuedNotificationType_ != other.queuedNotificationType_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -937,7 +746,7 @@ private static final long serialVersionUID = 0L;
           getAgentSpecific());
       hash = (37 * hash) + QUEUED_NOTIFICATION_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + queuedNotificationType_;
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -986,11 +795,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1054,48 +865,36 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         callSid_ = 0L;
-
         phoneNumber_ = "";
-
         callerId_ = "";
-
         callType_ = 0;
-
-        if (startDateBuilder_ == null) {
-          startDate_ = null;
-        } else {
-          startDate_ = null;
+        startDate_ = null;
+        if (startDateBuilder_ != null) {
+          startDateBuilder_.dispose();
           startDateBuilder_ = null;
         }
-        if (holdDateBuilder_ == null) {
-          holdDate_ = null;
-        } else {
-          holdDate_ = null;
+        holdDate_ = null;
+        if (holdDateBuilder_ != null) {
+          holdDateBuilder_.dispose();
           holdDateBuilder_ = null;
         }
-        skills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        skills_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         agentSpecific_ = false;
-
         queuedNotificationType_ = 0;
-
         return this;
       }
 
@@ -1122,30 +921,45 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData buildPartial() {
         com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData result = new com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData(this);
-        int from_bitField0_ = bitField0_;
-        result.callSid_ = callSid_;
-        result.phoneNumber_ = phoneNumber_;
-        result.callerId_ = callerId_;
-        result.callType_ = callType_;
-        if (startDateBuilder_ == null) {
-          result.startDate_ = startDate_;
-        } else {
-          result.startDate_ = startDateBuilder_.build();
-        }
-        if (holdDateBuilder_ == null) {
-          result.holdDate_ = holdDate_;
-        } else {
-          result.holdDate_ = holdDateBuilder_.build();
-        }
-        if (((bitField0_ & 0x00000001) != 0)) {
-          skills_ = skills_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.skills_ = skills_;
-        result.agentSpecific_ = agentSpecific_;
-        result.queuedNotificationType_ = queuedNotificationType_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.callSid_ = callSid_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.phoneNumber_ = phoneNumber_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.callerId_ = callerId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.callType_ = callType_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.startDate_ = startDateBuilder_ == null
+              ? startDate_
+              : startDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.holdDate_ = holdDateBuilder_ == null
+              ? holdDate_
+              : holdDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          skills_.makeImmutable();
+          result.skills_ = skills_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.agentSpecific_ = agentSpecific_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.queuedNotificationType_ = queuedNotificationType_;
+        }
       }
 
       @java.lang.Override
@@ -1197,10 +1011,12 @@ private static final long serialVersionUID = 0L;
         }
         if (!other.getPhoneNumber().isEmpty()) {
           phoneNumber_ = other.phoneNumber_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getCallerId().isEmpty()) {
           callerId_ = other.callerId_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.callType_ != 0) {
@@ -1215,7 +1031,7 @@ private static final long serialVersionUID = 0L;
         if (!other.skills_.isEmpty()) {
           if (skills_.isEmpty()) {
             skills_ = other.skills_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ |= 0x00000040;
           } else {
             ensureSkillsIsMutable();
             skills_.addAll(other.skills_);
@@ -1228,7 +1044,7 @@ private static final long serialVersionUID = 0L;
         if (other.queuedNotificationType_ != 0) {
           setQueuedNotificationTypeValue(other.getQueuedNotificationTypeValue());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1243,17 +1059,80 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                callSid_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                phoneNumber_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                callerId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                callType_ = input.readEnum();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                input.readMessage(
+                    getStartDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getHoldDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureSkillsIsMutable();
+                skills_.add(s);
+                break;
+              } // case 58
+              case 64: {
+                agentSpecific_ = input.readBool();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 72: {
+                queuedNotificationType_ = input.readEnum();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1281,8 +1160,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setCallSid(long value) {
-        
+
         callSid_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1295,7 +1175,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearCallSid() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         callSid_ = 0L;
         onChanged();
         return this;
@@ -1354,11 +1234,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setPhoneNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         phoneNumber_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1371,8 +1249,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearPhoneNumber() {
-        
         phoneNumber_ = getDefaultInstance().getPhoneNumber();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1387,12 +1265,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setPhoneNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         phoneNumber_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1450,11 +1326,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setCallerId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         callerId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1467,8 +1341,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearCallerId() {
-        
         callerId_ = getDefaultInstance().getCallerId();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1483,12 +1357,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setCallerIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         callerId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1515,8 +1387,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setCallTypeValue(int value) {
-        
         callType_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1530,8 +1402,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
-        @SuppressWarnings("deprecation")
-        com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.valueOf(callType_);
+        com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callType_);
         return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
       }
       /**
@@ -1547,7 +1418,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000008;
         callType_ = value.getNumber();
         onChanged();
         return this;
@@ -1561,7 +1432,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearCallType() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         callType_ = 0;
         onChanged();
         return this;
@@ -1579,7 +1450,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the startDate field is set.
        */
       public boolean hasStartDate() {
-        return startDateBuilder_ != null || startDate_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
@@ -1609,11 +1480,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           startDate_ = value;
-          onChanged();
         } else {
           startDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1627,11 +1498,11 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (startDateBuilder_ == null) {
           startDate_ = builderForValue.build();
-          onChanged();
         } else {
           startDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1643,17 +1514,18 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeStartDate(com.google.protobuf.Timestamp value) {
         if (startDateBuilder_ == null) {
-          if (startDate_ != null) {
-            startDate_ =
-              com.google.protobuf.Timestamp.newBuilder(startDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            startDate_ != null &&
+            startDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getStartDateBuilder().mergeFrom(value);
           } else {
             startDate_ = value;
           }
-          onChanged();
         } else {
           startDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1664,14 +1536,13 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.Timestamp start_date = 5 [json_name = "startDate"];</code>
        */
       public Builder clearStartDate() {
-        if (startDateBuilder_ == null) {
-          startDate_ = null;
-          onChanged();
-        } else {
-          startDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        startDate_ = null;
+        if (startDateBuilder_ != null) {
+          startDateBuilder_.dispose();
           startDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1682,7 +1553,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.Timestamp start_date = 5 [json_name = "startDate"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getStartDateBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getStartDateFieldBuilder().getBuilder();
       }
@@ -1734,7 +1605,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the holdDate field is set.
        */
       public boolean hasHoldDate() {
-        return holdDateBuilder_ != null || holdDate_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <pre>
@@ -1764,11 +1635,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           holdDate_ = value;
-          onChanged();
         } else {
           holdDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1782,11 +1653,11 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (holdDateBuilder_ == null) {
           holdDate_ = builderForValue.build();
-          onChanged();
         } else {
           holdDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1798,17 +1669,18 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeHoldDate(com.google.protobuf.Timestamp value) {
         if (holdDateBuilder_ == null) {
-          if (holdDate_ != null) {
-            holdDate_ =
-              com.google.protobuf.Timestamp.newBuilder(holdDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            holdDate_ != null &&
+            holdDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getHoldDateBuilder().mergeFrom(value);
           } else {
             holdDate_ = value;
           }
-          onChanged();
         } else {
           holdDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1819,14 +1691,13 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.Timestamp hold_date = 6 [json_name = "holdDate"];</code>
        */
       public Builder clearHoldDate() {
-        if (holdDateBuilder_ == null) {
-          holdDate_ = null;
-          onChanged();
-        } else {
-          holdDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        holdDate_ = null;
+        if (holdDateBuilder_ != null) {
+          holdDateBuilder_.dispose();
           holdDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1837,7 +1708,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.Timestamp hold_date = 6 [json_name = "holdDate"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getHoldDateBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getHoldDateFieldBuilder().getBuilder();
       }
@@ -1877,12 +1748,13 @@ private static final long serialVersionUID = 0L;
         return holdDateBuilder_;
       }
 
-      private com.google.protobuf.LazyStringList skills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList skills_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureSkillsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!skills_.isModifiable()) {
           skills_ = new com.google.protobuf.LazyStringArrayList(skills_);
-          bitField0_ |= 0x00000001;
-         }
+        }
+        bitField0_ |= 0x00000040;
       }
       /**
        * <pre>
@@ -1894,7 +1766,8 @@ private static final long serialVersionUID = 0L;
        */
       public com.google.protobuf.ProtocolStringList
           getSkillsList() {
-        return skills_.getUnmodifiableView();
+        skills_.makeImmutable();
+        return skills_;
       }
       /**
        * <pre>
@@ -1944,11 +1817,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setSkills(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSkillsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureSkillsIsMutable();
         skills_.set(index, value);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1963,11 +1835,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addSkills(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSkillsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureSkillsIsMutable();
         skills_.add(value);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1985,6 +1856,7 @@ private static final long serialVersionUID = 0L;
         ensureSkillsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, skills_);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1997,8 +1869,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearSkills() {
-        skills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        skills_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);;
         onChanged();
         return this;
       }
@@ -2013,12 +1886,11 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addSkillsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureSkillsIsMutable();
         skills_.add(value);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2046,8 +1918,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setAgentSpecific(boolean value) {
-        
+
         agentSpecific_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -2060,7 +1933,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearAgentSpecific() {
-        
+        bitField0_ = (bitField0_ & ~0x00000080);
         agentSpecific_ = false;
         onChanged();
         return this;
@@ -2088,8 +1961,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setQueuedNotificationTypeValue(int value) {
-        
         queuedNotificationType_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -2103,8 +1976,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public com.tcn.cloud.api.api.commons.QueuedNotificationType getQueuedNotificationType() {
-        @SuppressWarnings("deprecation")
-        com.tcn.cloud.api.api.commons.QueuedNotificationType result = com.tcn.cloud.api.api.commons.QueuedNotificationType.valueOf(queuedNotificationType_);
+        com.tcn.cloud.api.api.commons.QueuedNotificationType result = com.tcn.cloud.api.api.commons.QueuedNotificationType.forNumber(queuedNotificationType_);
         return result == null ? com.tcn.cloud.api.api.commons.QueuedNotificationType.UNRECOGNIZED : result;
       }
       /**
@@ -2120,7 +1992,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000100;
         queuedNotificationType_ = value.getNumber();
         onChanged();
         return this;
@@ -2134,7 +2006,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearQueuedNotificationType() {
-        
+        bitField0_ = (bitField0_ & ~0x00000100);
         queuedNotificationType_ = 0;
         onChanged();
         return this;
@@ -2172,7 +2044,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new QueuedCallData(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2193,6 +2076,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENT_QUEUE_CALLS_FIELD_NUMBER = 16;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData> agentQueueCalls_;
   /**
    * <pre>
@@ -2253,6 +2137,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ON_HOLD_CALLS_FIELD_NUMBER = 17;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData> onHoldCalls_;
   /**
    * <pre>
@@ -2313,6 +2198,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HQM_CALLS_FIELD_NUMBER = 18;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData> hqmCalls_;
   /**
    * <pre>
@@ -2400,7 +2286,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < hqmCalls_.size(); i++) {
       output.writeMessage(18, hqmCalls_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -2421,7 +2307,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(18, hqmCalls_.get(i));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -2442,7 +2328,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getOnHoldCallsList())) return false;
     if (!getHqmCallsList()
         .equals(other.getHqmCallsList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -2465,7 +2351,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + HQM_CALLS_FIELD_NUMBER;
       hash = (53 * hash) + getHqmCallsList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -2514,11 +2400,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2582,43 +2470,39 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getAgentQueueCallsFieldBuilder();
-        getOnHoldCallsFieldBuilder();
-        getHqmCallsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (agentQueueCallsBuilder_ == null) {
         agentQueueCalls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        agentQueueCalls_ = null;
         agentQueueCallsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000001);
       if (onHoldCallsBuilder_ == null) {
         onHoldCalls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
+        onHoldCalls_ = null;
         onHoldCallsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000002);
       if (hqmCallsBuilder_ == null) {
         hqmCalls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
+        hqmCalls_ = null;
         hqmCallsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -2645,7 +2529,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification buildPartial() {
       com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification result = new com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification result) {
       if (agentQueueCallsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           agentQueueCalls_ = java.util.Collections.unmodifiableList(agentQueueCalls_);
@@ -2673,8 +2563,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.hqmCalls_ = hqmCallsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override
@@ -2799,7 +2691,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -2814,17 +2706,69 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 130: {
+              com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData.parser(),
+                      extensionRegistry);
+              if (agentQueueCallsBuilder_ == null) {
+                ensureAgentQueueCallsIsMutable();
+                agentQueueCalls_.add(m);
+              } else {
+                agentQueueCallsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 130
+            case 138: {
+              com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData.parser(),
+                      extensionRegistry);
+              if (onHoldCallsBuilder_ == null) {
+                ensureOnHoldCallsIsMutable();
+                onHoldCalls_.add(m);
+              } else {
+                onHoldCallsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 138
+            case 146: {
+              com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.QueuedCallData.parser(),
+                      extensionRegistry);
+              if (hqmCallsBuilder_ == null) {
+                ensureHqmCallsIsMutable();
+                hqmCalls_.add(m);
+              } else {
+                hqmCallsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 146
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -3815,7 +3759,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AgentQueuedCallsNotification(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

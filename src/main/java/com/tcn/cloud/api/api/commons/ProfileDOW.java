@@ -29,83 +29,6 @@ private static final long serialVersionUID = 0L;
     return new ProfileDOW();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private ProfileDOW(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 13: {
-
-            sunday_ = input.readFloat();
-            break;
-          }
-          case 21: {
-
-            monday_ = input.readFloat();
-            break;
-          }
-          case 29: {
-
-            tuesday_ = input.readFloat();
-            break;
-          }
-          case 37: {
-
-            wednesday_ = input.readFloat();
-            break;
-          }
-          case 45: {
-
-            thursday_ = input.readFloat();
-            break;
-          }
-          case 53: {
-
-            friday_ = input.readFloat();
-            break;
-          }
-          case 61: {
-
-            saturday_ = input.readFloat();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_ProfileDOW_descriptor;
@@ -120,7 +43,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SUNDAY_FIELD_NUMBER = 1;
-  private float sunday_;
+  private float sunday_ = 0F;
   /**
    * <code>float sunday = 1 [json_name = "sunday"];</code>
    * @return The sunday.
@@ -131,7 +54,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MONDAY_FIELD_NUMBER = 2;
-  private float monday_;
+  private float monday_ = 0F;
   /**
    * <code>float monday = 2 [json_name = "monday"];</code>
    * @return The monday.
@@ -142,7 +65,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TUESDAY_FIELD_NUMBER = 3;
-  private float tuesday_;
+  private float tuesday_ = 0F;
   /**
    * <code>float tuesday = 3 [json_name = "tuesday"];</code>
    * @return The tuesday.
@@ -153,7 +76,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WEDNESDAY_FIELD_NUMBER = 4;
-  private float wednesday_;
+  private float wednesday_ = 0F;
   /**
    * <code>float wednesday = 4 [json_name = "wednesday"];</code>
    * @return The wednesday.
@@ -164,7 +87,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int THURSDAY_FIELD_NUMBER = 5;
-  private float thursday_;
+  private float thursday_ = 0F;
   /**
    * <code>float thursday = 5 [json_name = "thursday"];</code>
    * @return The thursday.
@@ -175,7 +98,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FRIDAY_FIELD_NUMBER = 6;
-  private float friday_;
+  private float friday_ = 0F;
   /**
    * <code>float friday = 6 [json_name = "friday"];</code>
    * @return The friday.
@@ -186,7 +109,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SATURDAY_FIELD_NUMBER = 7;
-  private float saturday_;
+  private float saturday_ = 0F;
   /**
    * <code>float saturday = 7 [json_name = "saturday"];</code>
    * @return The saturday.
@@ -210,28 +133,28 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (sunday_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(sunday_) != 0) {
       output.writeFloat(1, sunday_);
     }
-    if (monday_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(monday_) != 0) {
       output.writeFloat(2, monday_);
     }
-    if (tuesday_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(tuesday_) != 0) {
       output.writeFloat(3, tuesday_);
     }
-    if (wednesday_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(wednesday_) != 0) {
       output.writeFloat(4, wednesday_);
     }
-    if (thursday_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(thursday_) != 0) {
       output.writeFloat(5, thursday_);
     }
-    if (friday_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(friday_) != 0) {
       output.writeFloat(6, friday_);
     }
-    if (saturday_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(saturday_) != 0) {
       output.writeFloat(7, saturday_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -240,35 +163,35 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (sunday_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(sunday_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(1, sunday_);
     }
-    if (monday_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(monday_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(2, monday_);
     }
-    if (tuesday_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(tuesday_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(3, tuesday_);
     }
-    if (wednesday_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(wednesday_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(4, wednesday_);
     }
-    if (thursday_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(thursday_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(5, thursday_);
     }
-    if (friday_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(friday_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(6, friday_);
     }
-    if (saturday_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(saturday_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(7, saturday_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -304,7 +227,7 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Float.floatToIntBits(getSaturday())
         != java.lang.Float.floatToIntBits(
             other.getSaturday())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -336,7 +259,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + SATURDAY_FIELD_NUMBER;
     hash = (53 * hash) + java.lang.Float.floatToIntBits(
         getSaturday());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -385,11 +308,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.ProfileDOW parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.ProfileDOW parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -457,36 +382,25 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.ProfileDOW.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       sunday_ = 0F;
-
       monday_ = 0F;
-
       tuesday_ = 0F;
-
       wednesday_ = 0F;
-
       thursday_ = 0F;
-
       friday_ = 0F;
-
       saturday_ = 0F;
-
       return this;
     }
 
@@ -513,15 +427,34 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ProfileDOW buildPartial() {
       com.tcn.cloud.api.api.commons.ProfileDOW result = new com.tcn.cloud.api.api.commons.ProfileDOW(this);
-      result.sunday_ = sunday_;
-      result.monday_ = monday_;
-      result.tuesday_ = tuesday_;
-      result.wednesday_ = wednesday_;
-      result.thursday_ = thursday_;
-      result.friday_ = friday_;
-      result.saturday_ = saturday_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.ProfileDOW result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.sunday_ = sunday_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.monday_ = monday_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.tuesday_ = tuesday_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.wednesday_ = wednesday_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.thursday_ = thursday_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.friday_ = friday_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.saturday_ = saturday_;
+      }
     }
 
     @java.lang.Override
@@ -589,7 +522,7 @@ private static final long serialVersionUID = 0L;
       if (other.getSaturday() != 0F) {
         setSaturday(other.getSaturday());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -604,19 +537,68 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.ProfileDOW parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 13: {
+              sunday_ = input.readFloat();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 13
+            case 21: {
+              monday_ = input.readFloat();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 21
+            case 29: {
+              tuesday_ = input.readFloat();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 29
+            case 37: {
+              wednesday_ = input.readFloat();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 37
+            case 45: {
+              thursday_ = input.readFloat();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 45
+            case 53: {
+              friday_ = input.readFloat();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 53
+            case 61: {
+              saturday_ = input.readFloat();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 61
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.ProfileDOW) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private float sunday_ ;
     /**
@@ -633,8 +615,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSunday(float value) {
-      
+
       sunday_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -643,7 +626,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSunday() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       sunday_ = 0F;
       onChanged();
       return this;
@@ -664,8 +647,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMonday(float value) {
-      
+
       monday_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -674,7 +658,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMonday() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       monday_ = 0F;
       onChanged();
       return this;
@@ -695,8 +679,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTuesday(float value) {
-      
+
       tuesday_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -705,7 +690,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTuesday() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       tuesday_ = 0F;
       onChanged();
       return this;
@@ -726,8 +711,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWednesday(float value) {
-      
+
       wednesday_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -736,7 +722,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWednesday() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       wednesday_ = 0F;
       onChanged();
       return this;
@@ -757,8 +743,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setThursday(float value) {
-      
+
       thursday_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -767,7 +754,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearThursday() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       thursday_ = 0F;
       onChanged();
       return this;
@@ -788,8 +775,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFriday(float value) {
-      
+
       friday_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -798,7 +786,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFriday() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       friday_ = 0F;
       onChanged();
       return this;
@@ -819,8 +807,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSaturday(float value) {
-      
+
       saturday_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -829,7 +818,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSaturday() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       saturday_ = 0F;
       onChanged();
       return this;
@@ -867,7 +856,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ProfileDOW(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

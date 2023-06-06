@@ -26,110 +26,6 @@ private static final long serialVersionUID = 0L;
     return new FrequencyExp();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private FrequencyExp(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            count_ = input.readInt64();
-            break;
-          }
-          case 16: {
-
-            duration_ = input.readInt64();
-            break;
-          }
-          case 26: {
-            com.tcn.cloud.api.api.commons.ResultsMod.Builder subBuilder = null;
-            if (results_ != null) {
-              subBuilder = results_.toBuilder();
-            }
-            results_ = input.readMessage(com.tcn.cloud.api.api.commons.ResultsMod.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(results_);
-              results_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 34: {
-            com.tcn.cloud.api.api.commons.DispositionMod.Builder subBuilder = null;
-            if (dispositions_ != null) {
-              subBuilder = dispositions_.toBuilder();
-            }
-            dispositions_ = input.readMessage(com.tcn.cloud.api.api.commons.DispositionMod.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dispositions_);
-              dispositions_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 42: {
-            com.tcn.cloud.api.api.commons.FieldNamesMod.Builder subBuilder = null;
-            if (fieldNames_ != null) {
-              subBuilder = fieldNames_.toBuilder();
-            }
-            fieldNames_ = input.readMessage(com.tcn.cloud.api.api.commons.FieldNamesMod.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(fieldNames_);
-              fieldNames_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 50: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              checkingEntities_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.EntityExp>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            checkingEntities_.add(
-                input.readMessage(com.tcn.cloud.api.api.commons.EntityExp.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        checkingEntities_ = java.util.Collections.unmodifiableList(checkingEntities_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.ComplianceProto.internal_static_api_commons_FrequencyExp_descriptor;
@@ -144,7 +40,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COUNT_FIELD_NUMBER = 1;
-  private long count_;
+  private long count_ = 0L;
   /**
    * <pre>
    * Maximum number of tries
@@ -159,7 +55,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DURATION_FIELD_NUMBER = 2;
-  private long duration_;
+  private long duration_ = 0L;
   /**
    * <pre>
    * Measured in nanoseconds
@@ -196,7 +92,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.ResultsModOrBuilder getResultsOrBuilder() {
-    return getResults();
+    return results_ == null ? com.tcn.cloud.api.api.commons.ResultsMod.getDefaultInstance() : results_;
   }
 
   public static final int DISPOSITIONS_FIELD_NUMBER = 4;
@@ -222,7 +118,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.DispositionModOrBuilder getDispositionsOrBuilder() {
-    return getDispositions();
+    return dispositions_ == null ? com.tcn.cloud.api.api.commons.DispositionMod.getDefaultInstance() : dispositions_;
   }
 
   public static final int FIELD_NAMES_FIELD_NUMBER = 5;
@@ -248,10 +144,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.FieldNamesModOrBuilder getFieldNamesOrBuilder() {
-    return getFieldNames();
+    return fieldNames_ == null ? com.tcn.cloud.api.api.commons.FieldNamesMod.getDefaultInstance() : fieldNames_;
   }
 
   public static final int CHECKING_ENTITIES_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.EntityExp> checkingEntities_;
   /**
    * <code>repeated .api.commons.EntityExp checking_entities = 6 [json_name = "checkingEntities"];</code>
@@ -323,7 +220,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < checkingEntities_.size(); i++) {
       output.writeMessage(6, checkingEntities_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -356,7 +253,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, checkingEntities_.get(i));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -392,7 +289,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getCheckingEntitiesList()
         .equals(other.getCheckingEntitiesList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -425,7 +322,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CHECKING_ENTITIES_FIELD_NUMBER;
       hash = (53 * hash) + getCheckingEntitiesList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -474,11 +371,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.FrequencyExp parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.FrequencyExp parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -542,51 +441,42 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.FrequencyExp.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getCheckingEntitiesFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       count_ = 0L;
-
       duration_ = 0L;
-
-      if (resultsBuilder_ == null) {
-        results_ = null;
-      } else {
-        results_ = null;
+      results_ = null;
+      if (resultsBuilder_ != null) {
+        resultsBuilder_.dispose();
         resultsBuilder_ = null;
       }
-      if (dispositionsBuilder_ == null) {
-        dispositions_ = null;
-      } else {
-        dispositions_ = null;
+      dispositions_ = null;
+      if (dispositionsBuilder_ != null) {
+        dispositionsBuilder_.dispose();
         dispositionsBuilder_ = null;
       }
-      if (fieldNamesBuilder_ == null) {
-        fieldNames_ = null;
-      } else {
-        fieldNames_ = null;
+      fieldNames_ = null;
+      if (fieldNamesBuilder_ != null) {
+        fieldNamesBuilder_.dispose();
         fieldNamesBuilder_ = null;
       }
       if (checkingEntitiesBuilder_ == null) {
         checkingEntities_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        checkingEntities_ = null;
         checkingEntitiesBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000020);
       return this;
     }
 
@@ -613,35 +503,47 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.FrequencyExp buildPartial() {
       com.tcn.cloud.api.api.commons.FrequencyExp result = new com.tcn.cloud.api.api.commons.FrequencyExp(this);
-      int from_bitField0_ = bitField0_;
-      result.count_ = count_;
-      result.duration_ = duration_;
-      if (resultsBuilder_ == null) {
-        result.results_ = results_;
-      } else {
-        result.results_ = resultsBuilder_.build();
-      }
-      if (dispositionsBuilder_ == null) {
-        result.dispositions_ = dispositions_;
-      } else {
-        result.dispositions_ = dispositionsBuilder_.build();
-      }
-      if (fieldNamesBuilder_ == null) {
-        result.fieldNames_ = fieldNames_;
-      } else {
-        result.fieldNames_ = fieldNamesBuilder_.build();
-      }
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.FrequencyExp result) {
       if (checkingEntitiesBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           checkingEntities_ = java.util.Collections.unmodifiableList(checkingEntities_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.checkingEntities_ = checkingEntities_;
       } else {
         result.checkingEntities_ = checkingEntitiesBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.FrequencyExp result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.count_ = count_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.duration_ = duration_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.results_ = resultsBuilder_ == null
+            ? results_
+            : resultsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.dispositions_ = dispositionsBuilder_ == null
+            ? dispositions_
+            : dispositionsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.fieldNames_ = fieldNamesBuilder_ == null
+            ? fieldNames_
+            : fieldNamesBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -707,7 +609,7 @@ private static final long serialVersionUID = 0L;
         if (!other.checkingEntities_.isEmpty()) {
           if (checkingEntities_.isEmpty()) {
             checkingEntities_ = other.checkingEntities_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureCheckingEntitiesIsMutable();
             checkingEntities_.addAll(other.checkingEntities_);
@@ -720,7 +622,7 @@ private static final long serialVersionUID = 0L;
             checkingEntitiesBuilder_.dispose();
             checkingEntitiesBuilder_ = null;
             checkingEntities_ = other.checkingEntities_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000020);
             checkingEntitiesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getCheckingEntitiesFieldBuilder() : null;
@@ -729,7 +631,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -744,17 +646,74 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.FrequencyExp parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              count_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              duration_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 26: {
+              input.readMessage(
+                  getResultsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getDispositionsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getFieldNamesFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              com.tcn.cloud.api.api.commons.EntityExp m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.EntityExp.parser(),
+                      extensionRegistry);
+              if (checkingEntitiesBuilder_ == null) {
+                ensureCheckingEntitiesIsMutable();
+                checkingEntities_.add(m);
+              } else {
+                checkingEntitiesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 50
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.FrequencyExp) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -782,8 +741,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCount(long value) {
-      
+
       count_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -796,7 +756,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCount() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       count_ = 0L;
       onChanged();
       return this;
@@ -825,8 +785,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDuration(long value) {
-      
+
       duration_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -839,7 +800,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDuration() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       duration_ = 0L;
       onChanged();
       return this;
@@ -853,7 +814,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the results field is set.
      */
     public boolean hasResults() {
-      return resultsBuilder_ != null || results_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.api.commons.ResultsMod results = 3 [json_name = "results"];</code>
@@ -875,11 +836,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         results_ = value;
-        onChanged();
       } else {
         resultsBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -889,11 +850,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.ResultsMod.Builder builderForValue) {
       if (resultsBuilder_ == null) {
         results_ = builderForValue.build();
-        onChanged();
       } else {
         resultsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -901,38 +862,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeResults(com.tcn.cloud.api.api.commons.ResultsMod value) {
       if (resultsBuilder_ == null) {
-        if (results_ != null) {
-          results_ =
-            com.tcn.cloud.api.api.commons.ResultsMod.newBuilder(results_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          results_ != null &&
+          results_ != com.tcn.cloud.api.api.commons.ResultsMod.getDefaultInstance()) {
+          getResultsBuilder().mergeFrom(value);
         } else {
           results_ = value;
         }
-        onChanged();
       } else {
         resultsBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.commons.ResultsMod results = 3 [json_name = "results"];</code>
      */
     public Builder clearResults() {
-      if (resultsBuilder_ == null) {
-        results_ = null;
-        onChanged();
-      } else {
-        results_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      results_ = null;
+      if (resultsBuilder_ != null) {
+        resultsBuilder_.dispose();
         resultsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.commons.ResultsMod results = 3 [json_name = "results"];</code>
      */
     public com.tcn.cloud.api.api.commons.ResultsMod.Builder getResultsBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getResultsFieldBuilder().getBuilder();
     }
@@ -972,7 +933,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dispositions field is set.
      */
     public boolean hasDispositions() {
-      return dispositionsBuilder_ != null || dispositions_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>.api.commons.DispositionMod dispositions = 4 [json_name = "dispositions"];</code>
@@ -994,11 +955,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dispositions_ = value;
-        onChanged();
       } else {
         dispositionsBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1008,11 +969,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.DispositionMod.Builder builderForValue) {
       if (dispositionsBuilder_ == null) {
         dispositions_ = builderForValue.build();
-        onChanged();
       } else {
         dispositionsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1020,38 +981,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDispositions(com.tcn.cloud.api.api.commons.DispositionMod value) {
       if (dispositionsBuilder_ == null) {
-        if (dispositions_ != null) {
-          dispositions_ =
-            com.tcn.cloud.api.api.commons.DispositionMod.newBuilder(dispositions_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000008) != 0) &&
+          dispositions_ != null &&
+          dispositions_ != com.tcn.cloud.api.api.commons.DispositionMod.getDefaultInstance()) {
+          getDispositionsBuilder().mergeFrom(value);
         } else {
           dispositions_ = value;
         }
-        onChanged();
       } else {
         dispositionsBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.commons.DispositionMod dispositions = 4 [json_name = "dispositions"];</code>
      */
     public Builder clearDispositions() {
-      if (dispositionsBuilder_ == null) {
-        dispositions_ = null;
-        onChanged();
-      } else {
-        dispositions_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      dispositions_ = null;
+      if (dispositionsBuilder_ != null) {
+        dispositionsBuilder_.dispose();
         dispositionsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.commons.DispositionMod dispositions = 4 [json_name = "dispositions"];</code>
      */
     public com.tcn.cloud.api.api.commons.DispositionMod.Builder getDispositionsBuilder() {
-      
+      bitField0_ |= 0x00000008;
       onChanged();
       return getDispositionsFieldBuilder().getBuilder();
     }
@@ -1091,7 +1052,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the fieldNames field is set.
      */
     public boolean hasFieldNames() {
-      return fieldNamesBuilder_ != null || fieldNames_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <code>.api.commons.FieldNamesMod field_names = 5 [json_name = "fieldNames"];</code>
@@ -1113,11 +1074,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         fieldNames_ = value;
-        onChanged();
       } else {
         fieldNamesBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1127,11 +1088,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.FieldNamesMod.Builder builderForValue) {
       if (fieldNamesBuilder_ == null) {
         fieldNames_ = builderForValue.build();
-        onChanged();
       } else {
         fieldNamesBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1139,38 +1100,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFieldNames(com.tcn.cloud.api.api.commons.FieldNamesMod value) {
       if (fieldNamesBuilder_ == null) {
-        if (fieldNames_ != null) {
-          fieldNames_ =
-            com.tcn.cloud.api.api.commons.FieldNamesMod.newBuilder(fieldNames_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000010) != 0) &&
+          fieldNames_ != null &&
+          fieldNames_ != com.tcn.cloud.api.api.commons.FieldNamesMod.getDefaultInstance()) {
+          getFieldNamesBuilder().mergeFrom(value);
         } else {
           fieldNames_ = value;
         }
-        onChanged();
       } else {
         fieldNamesBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.commons.FieldNamesMod field_names = 5 [json_name = "fieldNames"];</code>
      */
     public Builder clearFieldNames() {
-      if (fieldNamesBuilder_ == null) {
-        fieldNames_ = null;
-        onChanged();
-      } else {
-        fieldNames_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      fieldNames_ = null;
+      if (fieldNamesBuilder_ != null) {
+        fieldNamesBuilder_.dispose();
         fieldNamesBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.commons.FieldNamesMod field_names = 5 [json_name = "fieldNames"];</code>
      */
     public com.tcn.cloud.api.api.commons.FieldNamesMod.Builder getFieldNamesBuilder() {
-      
+      bitField0_ |= 0x00000010;
       onChanged();
       return getFieldNamesFieldBuilder().getBuilder();
     }
@@ -1205,9 +1166,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.commons.EntityExp> checkingEntities_ =
       java.util.Collections.emptyList();
     private void ensureCheckingEntitiesIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000020) != 0)) {
         checkingEntities_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.EntityExp>(checkingEntities_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000020;
        }
     }
 
@@ -1357,7 +1318,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearCheckingEntities() {
       if (checkingEntitiesBuilder_ == null) {
         checkingEntities_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
       } else {
         checkingEntitiesBuilder_.clear();
@@ -1434,7 +1395,7 @@ private static final long serialVersionUID = 0L;
         checkingEntitiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.EntityExp, com.tcn.cloud.api.api.commons.EntityExp.Builder, com.tcn.cloud.api.api.commons.EntityExpOrBuilder>(
                 checkingEntities_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
         checkingEntities_ = null;
@@ -1474,7 +1435,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new FrequencyExp(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

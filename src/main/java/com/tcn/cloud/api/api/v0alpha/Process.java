@@ -26,516 +26,6 @@ private static final long serialVersionUID = 0L;
     return new Process();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private Process(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 242: {
-            com.tcn.cloud.api.api.v0alpha.AppendProcess.Builder subBuilder = null;
-            if (procCase_ == 30) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.AppendProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.AppendProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.AppendProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 30;
-            break;
-          }
-          case 250: {
-            com.tcn.cloud.api.api.v0alpha.SortCriteria.Builder subBuilder = null;
-            if (procCase_ == 31) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.SortCriteria) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.SortCriteria.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.SortCriteria) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 31;
-            break;
-          }
-          case 258: {
-            com.tcn.cloud.api.api.v0alpha.FilterProcess.Builder subBuilder = null;
-            if (procCase_ == 32) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.FilterProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.FilterProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.FilterProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 32;
-            break;
-          }
-          case 338: {
-            com.tcn.cloud.api.api.v0alpha.GSExportProcess.Builder subBuilder = null;
-            if (procCase_ == 42) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.GSExportProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.GSExportProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.GSExportProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 42;
-            break;
-          }
-          case 354: {
-            com.tcn.cloud.api.api.v0alpha.P3ExportProcess.Builder subBuilder = null;
-            if (procCase_ == 44) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.P3ExportProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.P3ExportProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.P3ExportProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 44;
-            break;
-          }
-          case 362: {
-            com.tcn.cloud.api.api.v0alpha.ComplProcess.Builder subBuilder = null;
-            if (procCase_ == 45) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.ComplProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.ComplProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.ComplProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 45;
-            break;
-          }
-          case 370: {
-            com.tcn.cloud.api.api.v0alpha.DeDupCriteria.Builder subBuilder = null;
-            if (procCase_ == 46) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.DeDupCriteria) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.DeDupCriteria.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.DeDupCriteria) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 46;
-            break;
-          }
-          case 378: {
-            com.tcn.cloud.api.api.v0alpha.CFSExportProcess.Builder subBuilder = null;
-            if (procCase_ == 47) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.CFSExportProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.CFSExportProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.CFSExportProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 47;
-            break;
-          }
-          case 386: {
-            com.tcn.cloud.api.api.v0alpha.SftpExportProcess.Builder subBuilder = null;
-            if (procCase_ == 48) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.SftpExportProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.SftpExportProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.SftpExportProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 48;
-            break;
-          }
-          case 394: {
-            com.tcn.cloud.api.api.v0alpha.ReshapeProcess.Builder subBuilder = null;
-            if (procCase_ == 49) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.ReshapeProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.ReshapeProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.ReshapeProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 49;
-            break;
-          }
-          case 402: {
-            com.tcn.cloud.api.api.v0alpha.LookupProcess.Builder subBuilder = null;
-            if (procCase_ == 50) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.LookupProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.LookupProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.LookupProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 50;
-            break;
-          }
-          case 410: {
-            com.tcn.cloud.api.api.v0alpha.EntrypointProcess.Builder subBuilder = null;
-            if (procCase_ == 51) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.EntrypointProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.EntrypointProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.EntrypointProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 51;
-            break;
-          }
-          case 418: {
-            com.tcn.cloud.api.api.v0alpha.ComplianceExportProcess.Builder subBuilder = null;
-            if (procCase_ == 52) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.ComplianceExportProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.ComplianceExportProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.ComplianceExportProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 52;
-            break;
-          }
-          case 426: {
-            com.tcn.cloud.api.api.v0alpha.ApiEntrypoint.Builder subBuilder = null;
-            if (procCase_ == 53) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.ApiEntrypoint) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.ApiEntrypoint.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.ApiEntrypoint) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 53;
-            break;
-          }
-          case 434: {
-            com.tcn.cloud.api.api.v0alpha.SftpImport.Builder subBuilder = null;
-            if (procCase_ == 54) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.SftpImport) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.SftpImport.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.SftpImport) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 54;
-            break;
-          }
-          case 442: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            expression_ = s;
-            break;
-          }
-          case 450: {
-            com.tcn.cloud.api.api.v0alpha.ScrubProcess.Builder subBuilder = null;
-            if (procCase_ == 56) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.ScrubProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.ScrubProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.ScrubProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 56;
-            break;
-          }
-          case 458: {
-            com.tcn.cloud.api.api.v0alpha.FrequencyProcess.Builder subBuilder = null;
-            if (procCase_ == 57) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.FrequencyProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.FrequencyProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.FrequencyProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 57;
-            break;
-          }
-          case 466: {
-            com.tcn.cloud.api.api.v0alpha.CjsImportProcess.Builder subBuilder = null;
-            if (procCase_ == 58) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.CjsImportProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.CjsImportProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.CjsImportProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 58;
-            break;
-          }
-          case 474: {
-            com.tcn.cloud.api.api.v0alpha.CjsExportProcess.Builder subBuilder = null;
-            if (procCase_ == 59) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.CjsExportProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.CjsExportProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.CjsExportProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 59;
-            break;
-          }
-          case 482: {
-            com.tcn.cloud.api.api.v0alpha.CjsEnrichmentProcess.Builder subBuilder = null;
-            if (procCase_ == 60) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.CjsEnrichmentProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.CjsEnrichmentProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.CjsEnrichmentProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 60;
-            break;
-          }
-          case 490: {
-            com.tcn.cloud.api.api.v0alpha.WebEntrypointProcess.Builder subBuilder = null;
-            if (procCase_ == 61) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.WebEntrypointProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.WebEntrypointProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.WebEntrypointProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 61;
-            break;
-          }
-          case 498: {
-            com.tcn.cloud.api.api.v0alpha.DeleteScrubEntriesProcess.Builder subBuilder = null;
-            if (procCase_ == 62) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.DeleteScrubEntriesProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.DeleteScrubEntriesProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.DeleteScrubEntriesProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 62;
-            break;
-          }
-          case 506: {
-            com.tcn.cloud.api.api.v0alpha.WfmExportProcess.Builder subBuilder = null;
-            if (procCase_ == 63) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.WfmExportProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.WfmExportProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.WfmExportProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 63;
-            break;
-          }
-          case 514: {
-            com.tcn.cloud.api.api.v0alpha.PaymentLinkEnrichment.Builder subBuilder = null;
-            if (procCase_ == 64) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.PaymentLinkEnrichment) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.PaymentLinkEnrichment.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.PaymentLinkEnrichment) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 64;
-            break;
-          }
-          case 522: {
-            com.tcn.cloud.api.api.v0alpha.RndEnrichmentProcess.Builder subBuilder = null;
-            if (procCase_ == 65) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.RndEnrichmentProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.RndEnrichmentProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.RndEnrichmentProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 65;
-            break;
-          }
-          case 530: {
-            com.tcn.cloud.api.api.v0alpha.ConsentEnrichmentProcess.Builder subBuilder = null;
-            if (procCase_ == 66) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.ConsentEnrichmentProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.ConsentEnrichmentProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.ConsentEnrichmentProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 66;
-            break;
-          }
-          case 538: {
-            com.tcn.cloud.api.api.v0alpha.ConsentExportProcess.Builder subBuilder = null;
-            if (procCase_ == 67) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.ConsentExportProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.ConsentExportProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.ConsentExportProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 67;
-            break;
-          }
-          case 554: {
-            com.tcn.cloud.api.api.v0alpha.ComplianceProcessor.Builder subBuilder = null;
-            if (procCase_ == 69) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.ComplianceProcessor) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.ComplianceProcessor.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.ComplianceProcessor) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 69;
-            break;
-          }
-          case 562: {
-            com.tcn.cloud.api.api.v0alpha.ConsentEntrypointProcess.Builder subBuilder = null;
-            if (procCase_ == 70) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.ConsentEntrypointProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.ConsentEntrypointProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.ConsentEntrypointProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 70;
-            break;
-          }
-          case 570: {
-            com.tcn.cloud.api.api.v0alpha.PortalLinkEnrichment.Builder subBuilder = null;
-            if (procCase_ == 71) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.PortalLinkEnrichment) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.PortalLinkEnrichment.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.PortalLinkEnrichment) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 71;
-            break;
-          }
-          case 578: {
-            com.tcn.cloud.api.api.v0alpha.BulkWebEntrypointProcess.Builder subBuilder = null;
-            if (procCase_ == 72) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.BulkWebEntrypointProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.BulkWebEntrypointProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.BulkWebEntrypointProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 72;
-            break;
-          }
-          case 586: {
-            com.tcn.cloud.api.api.v0alpha.OmniExchangeProcess.Builder subBuilder = null;
-            if (procCase_ == 73) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.OmniExchangeProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.OmniExchangeProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.OmniExchangeProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 73;
-            break;
-          }
-          case 594: {
-            com.tcn.cloud.api.api.v0alpha.WebExchangeProcess.Builder subBuilder = null;
-            if (procCase_ == 74) {
-              subBuilder = ((com.tcn.cloud.api.api.v0alpha.WebExchangeProcess) proc_).toBuilder();
-            }
-            proc_ =
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.WebExchangeProcess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.WebExchangeProcess) proc_);
-              proc_ = subBuilder.buildPartial();
-            }
-            procCase_ = 74;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_Process_descriptor;
@@ -550,6 +40,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int procCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object proc_;
   public enum ProcCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -653,7 +144,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EXPRESSION_FIELD_NUMBER = 55;
-  private volatile java.lang.Object expression_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object expression_ = "";
   /**
    * <code>string expression = 55 [json_name = "expression"];</code>
    * @return The expression.
@@ -852,6 +344,8 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.api.v0alpha.ComplProcess compl = 45 [json_name = "compl", deprecated = true];</code>
+   * @deprecated api.v0alpha.Process.compl is deprecated.
+   *     See api/v0alpha/lms.proto;l=620
    * @return Whether the compl field is set.
    */
   @java.lang.Override
@@ -864,6 +358,8 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.api.v0alpha.ComplProcess compl = 45 [json_name = "compl", deprecated = true];</code>
+   * @deprecated api.v0alpha.Process.compl is deprecated.
+   *     See api/v0alpha/lms.proto;l=620
    * @return The compl.
    */
   @java.lang.Override
@@ -1050,6 +546,8 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.api.v0alpha.EntrypointProcess entrypoint = 51 [json_name = "entrypoint", deprecated = true];</code>
+   * @deprecated api.v0alpha.Process.entrypoint is deprecated.
+   *     See api/v0alpha/lms.proto;l=627
    * @return Whether the entrypoint field is set.
    */
   @java.lang.Override
@@ -1062,6 +560,8 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.api.v0alpha.EntrypointProcess entrypoint = 51 [json_name = "entrypoint", deprecated = true];</code>
+   * @deprecated api.v0alpha.Process.entrypoint is deprecated.
+   *     See api/v0alpha/lms.proto;l=627
    * @return The entrypoint.
    */
   @java.lang.Override
@@ -1478,6 +978,8 @@ private static final long serialVersionUID = 0L;
   public static final int LINK_ENRICH_FIELD_NUMBER = 64;
   /**
    * <code>.api.v0alpha.PaymentLinkEnrichment link_enrich = 64 [json_name = "linkEnrich", deprecated = true];</code>
+   * @deprecated api.v0alpha.Process.link_enrich is deprecated.
+   *     See api/v0alpha/lms.proto;l=646
    * @return Whether the linkEnrich field is set.
    */
   @java.lang.Override
@@ -1486,6 +988,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <code>.api.v0alpha.PaymentLinkEnrichment link_enrich = 64 [json_name = "linkEnrich", deprecated = true];</code>
+   * @deprecated api.v0alpha.Process.link_enrich is deprecated.
+   *     See api/v0alpha/lms.proto;l=646
    * @return The linkEnrich.
    */
   @java.lang.Override
@@ -1907,7 +1411,7 @@ private static final long serialVersionUID = 0L;
     if (procCase_ == 54) {
       output.writeMessage(54, (com.tcn.cloud.api.api.v0alpha.SftpImport) proc_);
     }
-    if (!getExpressionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(expression_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 55, expression_);
     }
     if (procCase_ == 56) {
@@ -1964,7 +1468,7 @@ private static final long serialVersionUID = 0L;
     if (procCase_ == 74) {
       output.writeMessage(74, (com.tcn.cloud.api.api.v0alpha.WebExchangeProcess) proc_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -2033,7 +1537,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(54, (com.tcn.cloud.api.api.v0alpha.SftpImport) proc_);
     }
-    if (!getExpressionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(expression_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(55, expression_);
     }
     if (procCase_ == 56) {
@@ -2108,7 +1612,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(74, (com.tcn.cloud.api.api.v0alpha.WebExchangeProcess) proc_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -2262,7 +1766,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -2411,7 +1915,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -2460,11 +1964,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.Process parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.Process parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2528,24 +2034,119 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.Process.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      bitField1_ = 0;
       expression_ = "";
-
+      if (appendBuilder_ != null) {
+        appendBuilder_.clear();
+      }
+      if (sortBuilder_ != null) {
+        sortBuilder_.clear();
+      }
+      if (filterBuilder_ != null) {
+        filterBuilder_.clear();
+      }
+      if (gsExportBuilder_ != null) {
+        gsExportBuilder_.clear();
+      }
+      if (p3ExportBuilder_ != null) {
+        p3ExportBuilder_.clear();
+      }
+      if (complBuilder_ != null) {
+        complBuilder_.clear();
+      }
+      if (dedupBuilder_ != null) {
+        dedupBuilder_.clear();
+      }
+      if (cfsExportBuilder_ != null) {
+        cfsExportBuilder_.clear();
+      }
+      if (sftpExportBuilder_ != null) {
+        sftpExportBuilder_.clear();
+      }
+      if (reshapeBuilder_ != null) {
+        reshapeBuilder_.clear();
+      }
+      if (lookupBuilder_ != null) {
+        lookupBuilder_.clear();
+      }
+      if (entrypointBuilder_ != null) {
+        entrypointBuilder_.clear();
+      }
+      if (complianceExportBuilder_ != null) {
+        complianceExportBuilder_.clear();
+      }
+      if (apiEntrypointBuilder_ != null) {
+        apiEntrypointBuilder_.clear();
+      }
+      if (sftpImportBuilder_ != null) {
+        sftpImportBuilder_.clear();
+      }
+      if (scrubBuilder_ != null) {
+        scrubBuilder_.clear();
+      }
+      if (frequencyBuilder_ != null) {
+        frequencyBuilder_.clear();
+      }
+      if (cjsImportBuilder_ != null) {
+        cjsImportBuilder_.clear();
+      }
+      if (cjsExportBuilder_ != null) {
+        cjsExportBuilder_.clear();
+      }
+      if (cjsEnrichBuilder_ != null) {
+        cjsEnrichBuilder_.clear();
+      }
+      if (webEntrypointBuilder_ != null) {
+        webEntrypointBuilder_.clear();
+      }
+      if (deleteScrubEntriesBuilder_ != null) {
+        deleteScrubEntriesBuilder_.clear();
+      }
+      if (wfmExportBuilder_ != null) {
+        wfmExportBuilder_.clear();
+      }
+      if (linkEnrichBuilder_ != null) {
+        linkEnrichBuilder_.clear();
+      }
+      if (rndBuilder_ != null) {
+        rndBuilder_.clear();
+      }
+      if (consentEnrichBuilder_ != null) {
+        consentEnrichBuilder_.clear();
+      }
+      if (consentExportBuilder_ != null) {
+        consentExportBuilder_.clear();
+      }
+      if (complianceProcessorBuilder_ != null) {
+        complianceProcessorBuilder_.clear();
+      }
+      if (consentEntrypointBuilder_ != null) {
+        consentEntrypointBuilder_.clear();
+      }
+      if (portalLinkEnrichBuilder_ != null) {
+        portalLinkEnrichBuilder_.clear();
+      }
+      if (bulkWebEntrypointBuilder_ != null) {
+        bulkWebEntrypointBuilder_.clear();
+      }
+      if (omniExchangeProcessBuilder_ != null) {
+        omniExchangeProcessBuilder_.clear();
+      }
+      if (webExchangeProcessBuilder_ != null) {
+        webExchangeProcessBuilder_.clear();
+      }
       procCase_ = 0;
       proc_ = null;
       return this;
@@ -2574,241 +2175,159 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.Process buildPartial() {
       com.tcn.cloud.api.api.v0alpha.Process result = new com.tcn.cloud.api.api.v0alpha.Process(this);
-      result.expression_ = expression_;
-      if (procCase_ == 30) {
-        if (appendBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = appendBuilder_.build();
-        }
-      }
-      if (procCase_ == 31) {
-        if (sortBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = sortBuilder_.build();
-        }
-      }
-      if (procCase_ == 32) {
-        if (filterBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = filterBuilder_.build();
-        }
-      }
-      if (procCase_ == 42) {
-        if (gsExportBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = gsExportBuilder_.build();
-        }
-      }
-      if (procCase_ == 44) {
-        if (p3ExportBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = p3ExportBuilder_.build();
-        }
-      }
-      if (procCase_ == 45) {
-        if (complBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = complBuilder_.build();
-        }
-      }
-      if (procCase_ == 46) {
-        if (dedupBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = dedupBuilder_.build();
-        }
-      }
-      if (procCase_ == 47) {
-        if (cfsExportBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = cfsExportBuilder_.build();
-        }
-      }
-      if (procCase_ == 48) {
-        if (sftpExportBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = sftpExportBuilder_.build();
-        }
-      }
-      if (procCase_ == 49) {
-        if (reshapeBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = reshapeBuilder_.build();
-        }
-      }
-      if (procCase_ == 50) {
-        if (lookupBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = lookupBuilder_.build();
-        }
-      }
-      if (procCase_ == 51) {
-        if (entrypointBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = entrypointBuilder_.build();
-        }
-      }
-      if (procCase_ == 52) {
-        if (complianceExportBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = complianceExportBuilder_.build();
-        }
-      }
-      if (procCase_ == 53) {
-        if (apiEntrypointBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = apiEntrypointBuilder_.build();
-        }
-      }
-      if (procCase_ == 54) {
-        if (sftpImportBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = sftpImportBuilder_.build();
-        }
-      }
-      if (procCase_ == 56) {
-        if (scrubBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = scrubBuilder_.build();
-        }
-      }
-      if (procCase_ == 57) {
-        if (frequencyBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = frequencyBuilder_.build();
-        }
-      }
-      if (procCase_ == 58) {
-        if (cjsImportBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = cjsImportBuilder_.build();
-        }
-      }
-      if (procCase_ == 59) {
-        if (cjsExportBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = cjsExportBuilder_.build();
-        }
-      }
-      if (procCase_ == 60) {
-        if (cjsEnrichBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = cjsEnrichBuilder_.build();
-        }
-      }
-      if (procCase_ == 61) {
-        if (webEntrypointBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = webEntrypointBuilder_.build();
-        }
-      }
-      if (procCase_ == 62) {
-        if (deleteScrubEntriesBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = deleteScrubEntriesBuilder_.build();
-        }
-      }
-      if (procCase_ == 63) {
-        if (wfmExportBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = wfmExportBuilder_.build();
-        }
-      }
-      if (procCase_ == 64) {
-        if (linkEnrichBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = linkEnrichBuilder_.build();
-        }
-      }
-      if (procCase_ == 65) {
-        if (rndBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = rndBuilder_.build();
-        }
-      }
-      if (procCase_ == 66) {
-        if (consentEnrichBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = consentEnrichBuilder_.build();
-        }
-      }
-      if (procCase_ == 67) {
-        if (consentExportBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = consentExportBuilder_.build();
-        }
-      }
-      if (procCase_ == 69) {
-        if (complianceProcessorBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = complianceProcessorBuilder_.build();
-        }
-      }
-      if (procCase_ == 70) {
-        if (consentEntrypointBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = consentEntrypointBuilder_.build();
-        }
-      }
-      if (procCase_ == 71) {
-        if (portalLinkEnrichBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = portalLinkEnrichBuilder_.build();
-        }
-      }
-      if (procCase_ == 72) {
-        if (bulkWebEntrypointBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = bulkWebEntrypointBuilder_.build();
-        }
-      }
-      if (procCase_ == 73) {
-        if (omniExchangeProcessBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = omniExchangeProcessBuilder_.build();
-        }
-      }
-      if (procCase_ == 74) {
-        if (webExchangeProcessBuilder_ == null) {
-          result.proc_ = proc_;
-        } else {
-          result.proc_ = webExchangeProcessBuilder_.build();
-        }
-      }
-      result.procCase_ = procCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      if (bitField1_ != 0) { buildPartial1(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.Process result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.expression_ = expression_;
+      }
+    }
+
+    private void buildPartial1(com.tcn.cloud.api.api.v0alpha.Process result) {
+      int from_bitField1_ = bitField1_;
+    }
+
+    private void buildPartialOneofs(com.tcn.cloud.api.api.v0alpha.Process result) {
+      result.procCase_ = procCase_;
+      result.proc_ = this.proc_;
+      if (procCase_ == 30 &&
+          appendBuilder_ != null) {
+        result.proc_ = appendBuilder_.build();
+      }
+      if (procCase_ == 31 &&
+          sortBuilder_ != null) {
+        result.proc_ = sortBuilder_.build();
+      }
+      if (procCase_ == 32 &&
+          filterBuilder_ != null) {
+        result.proc_ = filterBuilder_.build();
+      }
+      if (procCase_ == 42 &&
+          gsExportBuilder_ != null) {
+        result.proc_ = gsExportBuilder_.build();
+      }
+      if (procCase_ == 44 &&
+          p3ExportBuilder_ != null) {
+        result.proc_ = p3ExportBuilder_.build();
+      }
+      if (procCase_ == 45 &&
+          complBuilder_ != null) {
+        result.proc_ = complBuilder_.build();
+      }
+      if (procCase_ == 46 &&
+          dedupBuilder_ != null) {
+        result.proc_ = dedupBuilder_.build();
+      }
+      if (procCase_ == 47 &&
+          cfsExportBuilder_ != null) {
+        result.proc_ = cfsExportBuilder_.build();
+      }
+      if (procCase_ == 48 &&
+          sftpExportBuilder_ != null) {
+        result.proc_ = sftpExportBuilder_.build();
+      }
+      if (procCase_ == 49 &&
+          reshapeBuilder_ != null) {
+        result.proc_ = reshapeBuilder_.build();
+      }
+      if (procCase_ == 50 &&
+          lookupBuilder_ != null) {
+        result.proc_ = lookupBuilder_.build();
+      }
+      if (procCase_ == 51 &&
+          entrypointBuilder_ != null) {
+        result.proc_ = entrypointBuilder_.build();
+      }
+      if (procCase_ == 52 &&
+          complianceExportBuilder_ != null) {
+        result.proc_ = complianceExportBuilder_.build();
+      }
+      if (procCase_ == 53 &&
+          apiEntrypointBuilder_ != null) {
+        result.proc_ = apiEntrypointBuilder_.build();
+      }
+      if (procCase_ == 54 &&
+          sftpImportBuilder_ != null) {
+        result.proc_ = sftpImportBuilder_.build();
+      }
+      if (procCase_ == 56 &&
+          scrubBuilder_ != null) {
+        result.proc_ = scrubBuilder_.build();
+      }
+      if (procCase_ == 57 &&
+          frequencyBuilder_ != null) {
+        result.proc_ = frequencyBuilder_.build();
+      }
+      if (procCase_ == 58 &&
+          cjsImportBuilder_ != null) {
+        result.proc_ = cjsImportBuilder_.build();
+      }
+      if (procCase_ == 59 &&
+          cjsExportBuilder_ != null) {
+        result.proc_ = cjsExportBuilder_.build();
+      }
+      if (procCase_ == 60 &&
+          cjsEnrichBuilder_ != null) {
+        result.proc_ = cjsEnrichBuilder_.build();
+      }
+      if (procCase_ == 61 &&
+          webEntrypointBuilder_ != null) {
+        result.proc_ = webEntrypointBuilder_.build();
+      }
+      if (procCase_ == 62 &&
+          deleteScrubEntriesBuilder_ != null) {
+        result.proc_ = deleteScrubEntriesBuilder_.build();
+      }
+      if (procCase_ == 63 &&
+          wfmExportBuilder_ != null) {
+        result.proc_ = wfmExportBuilder_.build();
+      }
+      if (procCase_ == 64 &&
+          linkEnrichBuilder_ != null) {
+        result.proc_ = linkEnrichBuilder_.build();
+      }
+      if (procCase_ == 65 &&
+          rndBuilder_ != null) {
+        result.proc_ = rndBuilder_.build();
+      }
+      if (procCase_ == 66 &&
+          consentEnrichBuilder_ != null) {
+        result.proc_ = consentEnrichBuilder_.build();
+      }
+      if (procCase_ == 67 &&
+          consentExportBuilder_ != null) {
+        result.proc_ = consentExportBuilder_.build();
+      }
+      if (procCase_ == 69 &&
+          complianceProcessorBuilder_ != null) {
+        result.proc_ = complianceProcessorBuilder_.build();
+      }
+      if (procCase_ == 70 &&
+          consentEntrypointBuilder_ != null) {
+        result.proc_ = consentEntrypointBuilder_.build();
+      }
+      if (procCase_ == 71 &&
+          portalLinkEnrichBuilder_ != null) {
+        result.proc_ = portalLinkEnrichBuilder_.build();
+      }
+      if (procCase_ == 72 &&
+          bulkWebEntrypointBuilder_ != null) {
+        result.proc_ = bulkWebEntrypointBuilder_.build();
+      }
+      if (procCase_ == 73 &&
+          omniExchangeProcessBuilder_ != null) {
+        result.proc_ = omniExchangeProcessBuilder_.build();
+      }
+      if (procCase_ == 74 &&
+          webExchangeProcessBuilder_ != null) {
+        result.proc_ = webExchangeProcessBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -2857,6 +2376,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.Process.getDefaultInstance()) return this;
       if (!other.getExpression().isEmpty()) {
         expression_ = other.expression_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       switch (other.getProcCase()) {
@@ -2996,7 +2516,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -3011,17 +2531,266 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.Process parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 242: {
+              input.readMessage(
+                  getAppendFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 30;
+              break;
+            } // case 242
+            case 250: {
+              input.readMessage(
+                  getSortFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 31;
+              break;
+            } // case 250
+            case 258: {
+              input.readMessage(
+                  getFilterFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 32;
+              break;
+            } // case 258
+            case 338: {
+              input.readMessage(
+                  getGsExportFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 42;
+              break;
+            } // case 338
+            case 354: {
+              input.readMessage(
+                  getP3ExportFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 44;
+              break;
+            } // case 354
+            case 362: {
+              input.readMessage(
+                  getComplFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 45;
+              break;
+            } // case 362
+            case 370: {
+              input.readMessage(
+                  getDedupFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 46;
+              break;
+            } // case 370
+            case 378: {
+              input.readMessage(
+                  getCfsExportFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 47;
+              break;
+            } // case 378
+            case 386: {
+              input.readMessage(
+                  getSftpExportFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 48;
+              break;
+            } // case 386
+            case 394: {
+              input.readMessage(
+                  getReshapeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 49;
+              break;
+            } // case 394
+            case 402: {
+              input.readMessage(
+                  getLookupFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 50;
+              break;
+            } // case 402
+            case 410: {
+              input.readMessage(
+                  getEntrypointFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 51;
+              break;
+            } // case 410
+            case 418: {
+              input.readMessage(
+                  getComplianceExportFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 52;
+              break;
+            } // case 418
+            case 426: {
+              input.readMessage(
+                  getApiEntrypointFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 53;
+              break;
+            } // case 426
+            case 434: {
+              input.readMessage(
+                  getSftpImportFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 54;
+              break;
+            } // case 434
+            case 442: {
+              expression_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 442
+            case 450: {
+              input.readMessage(
+                  getScrubFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 56;
+              break;
+            } // case 450
+            case 458: {
+              input.readMessage(
+                  getFrequencyFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 57;
+              break;
+            } // case 458
+            case 466: {
+              input.readMessage(
+                  getCjsImportFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 58;
+              break;
+            } // case 466
+            case 474: {
+              input.readMessage(
+                  getCjsExportFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 59;
+              break;
+            } // case 474
+            case 482: {
+              input.readMessage(
+                  getCjsEnrichFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 60;
+              break;
+            } // case 482
+            case 490: {
+              input.readMessage(
+                  getWebEntrypointFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 61;
+              break;
+            } // case 490
+            case 498: {
+              input.readMessage(
+                  getDeleteScrubEntriesFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 62;
+              break;
+            } // case 498
+            case 506: {
+              input.readMessage(
+                  getWfmExportFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 63;
+              break;
+            } // case 506
+            case 514: {
+              input.readMessage(
+                  getLinkEnrichFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 64;
+              break;
+            } // case 514
+            case 522: {
+              input.readMessage(
+                  getRndFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 65;
+              break;
+            } // case 522
+            case 530: {
+              input.readMessage(
+                  getConsentEnrichFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 66;
+              break;
+            } // case 530
+            case 538: {
+              input.readMessage(
+                  getConsentExportFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 67;
+              break;
+            } // case 538
+            case 554: {
+              input.readMessage(
+                  getComplianceProcessorFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 69;
+              break;
+            } // case 554
+            case 562: {
+              input.readMessage(
+                  getConsentEntrypointFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 70;
+              break;
+            } // case 562
+            case 570: {
+              input.readMessage(
+                  getPortalLinkEnrichFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 71;
+              break;
+            } // case 570
+            case 578: {
+              input.readMessage(
+                  getBulkWebEntrypointFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 72;
+              break;
+            } // case 578
+            case 586: {
+              input.readMessage(
+                  getOmniExchangeProcessFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 73;
+              break;
+            } // case 586
+            case 594: {
+              input.readMessage(
+                  getWebExchangeProcessFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 74;
+              break;
+            } // case 594
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.Process) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int procCase_ = 0;
@@ -3039,6 +2808,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
+    private int bitField1_;
 
     private java.lang.Object expression_ = "";
     /**
@@ -3081,11 +2852,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setExpression(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       expression_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -3094,8 +2863,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearExpression() {
-      
       expression_ = getDefaultInstance().getExpression();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -3106,12 +2875,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setExpressionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       expression_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -3190,8 +2957,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 30) {
           appendBuilder_.mergeFrom(value);
+        } else {
+          appendBuilder_.setMessage(value);
         }
-        appendBuilder_.setMessage(value);
       }
       procCase_ = 30;
       return this;
@@ -3253,7 +3021,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 30;
-      onChanged();;
+      onChanged();
       return appendBuilder_;
     }
 
@@ -3331,8 +3099,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 31) {
           sortBuilder_.mergeFrom(value);
+        } else {
+          sortBuilder_.setMessage(value);
         }
-        sortBuilder_.setMessage(value);
       }
       procCase_ = 31;
       return this;
@@ -3394,7 +3163,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 31;
-      onChanged();;
+      onChanged();
       return sortBuilder_;
     }
 
@@ -3472,8 +3241,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 32) {
           filterBuilder_.mergeFrom(value);
+        } else {
+          filterBuilder_.setMessage(value);
         }
-        filterBuilder_.setMessage(value);
       }
       procCase_ = 32;
       return this;
@@ -3535,7 +3305,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 32;
-      onChanged();;
+      onChanged();
       return filterBuilder_;
     }
 
@@ -3613,8 +3383,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 42) {
           gsExportBuilder_.mergeFrom(value);
+        } else {
+          gsExportBuilder_.setMessage(value);
         }
-        gsExportBuilder_.setMessage(value);
       }
       procCase_ = 42;
       return this;
@@ -3676,7 +3447,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 42;
-      onChanged();;
+      onChanged();
       return gsExportBuilder_;
     }
 
@@ -3754,8 +3525,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 44) {
           p3ExportBuilder_.mergeFrom(value);
+        } else {
+          p3ExportBuilder_.setMessage(value);
         }
-        p3ExportBuilder_.setMessage(value);
       }
       procCase_ = 44;
       return this;
@@ -3817,7 +3589,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 44;
-      onChanged();;
+      onChanged();
       return p3ExportBuilder_;
     }
 
@@ -3829,6 +3601,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.api.v0alpha.ComplProcess compl = 45 [json_name = "compl", deprecated = true];</code>
+     * @deprecated api.v0alpha.Process.compl is deprecated.
+     *     See api/v0alpha/lms.proto;l=620
      * @return Whether the compl field is set.
      */
     @java.lang.Override
@@ -3841,6 +3615,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.api.v0alpha.ComplProcess compl = 45 [json_name = "compl", deprecated = true];</code>
+     * @deprecated api.v0alpha.Process.compl is deprecated.
+     *     See api/v0alpha/lms.proto;l=620
      * @return The compl.
      */
     @java.lang.Override
@@ -3915,8 +3691,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 45) {
           complBuilder_.mergeFrom(value);
+        } else {
+          complBuilder_.setMessage(value);
         }
-        complBuilder_.setMessage(value);
       }
       procCase_ = 45;
       return this;
@@ -3994,7 +3771,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 45;
-      onChanged();;
+      onChanged();
       return complBuilder_;
     }
 
@@ -4072,8 +3849,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 46) {
           dedupBuilder_.mergeFrom(value);
+        } else {
+          dedupBuilder_.setMessage(value);
         }
-        dedupBuilder_.setMessage(value);
       }
       procCase_ = 46;
       return this;
@@ -4135,7 +3913,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 46;
-      onChanged();;
+      onChanged();
       return dedupBuilder_;
     }
 
@@ -4213,8 +3991,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 47) {
           cfsExportBuilder_.mergeFrom(value);
+        } else {
+          cfsExportBuilder_.setMessage(value);
         }
-        cfsExportBuilder_.setMessage(value);
       }
       procCase_ = 47;
       return this;
@@ -4276,7 +4055,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 47;
-      onChanged();;
+      onChanged();
       return cfsExportBuilder_;
     }
 
@@ -4354,8 +4133,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 48) {
           sftpExportBuilder_.mergeFrom(value);
+        } else {
+          sftpExportBuilder_.setMessage(value);
         }
-        sftpExportBuilder_.setMessage(value);
       }
       procCase_ = 48;
       return this;
@@ -4417,7 +4197,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 48;
-      onChanged();;
+      onChanged();
       return sftpExportBuilder_;
     }
 
@@ -4495,8 +4275,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 49) {
           reshapeBuilder_.mergeFrom(value);
+        } else {
+          reshapeBuilder_.setMessage(value);
         }
-        reshapeBuilder_.setMessage(value);
       }
       procCase_ = 49;
       return this;
@@ -4558,7 +4339,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 49;
-      onChanged();;
+      onChanged();
       return reshapeBuilder_;
     }
 
@@ -4636,8 +4417,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 50) {
           lookupBuilder_.mergeFrom(value);
+        } else {
+          lookupBuilder_.setMessage(value);
         }
-        lookupBuilder_.setMessage(value);
       }
       procCase_ = 50;
       return this;
@@ -4699,7 +4481,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 50;
-      onChanged();;
+      onChanged();
       return lookupBuilder_;
     }
 
@@ -4711,6 +4493,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.api.v0alpha.EntrypointProcess entrypoint = 51 [json_name = "entrypoint", deprecated = true];</code>
+     * @deprecated api.v0alpha.Process.entrypoint is deprecated.
+     *     See api/v0alpha/lms.proto;l=627
      * @return Whether the entrypoint field is set.
      */
     @java.lang.Override
@@ -4723,6 +4507,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.api.v0alpha.EntrypointProcess entrypoint = 51 [json_name = "entrypoint", deprecated = true];</code>
+     * @deprecated api.v0alpha.Process.entrypoint is deprecated.
+     *     See api/v0alpha/lms.proto;l=627
      * @return The entrypoint.
      */
     @java.lang.Override
@@ -4797,8 +4583,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 51) {
           entrypointBuilder_.mergeFrom(value);
+        } else {
+          entrypointBuilder_.setMessage(value);
         }
-        entrypointBuilder_.setMessage(value);
       }
       procCase_ = 51;
       return this;
@@ -4876,7 +4663,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 51;
-      onChanged();;
+      onChanged();
       return entrypointBuilder_;
     }
 
@@ -4954,8 +4741,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 52) {
           complianceExportBuilder_.mergeFrom(value);
+        } else {
+          complianceExportBuilder_.setMessage(value);
         }
-        complianceExportBuilder_.setMessage(value);
       }
       procCase_ = 52;
       return this;
@@ -5017,7 +4805,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 52;
-      onChanged();;
+      onChanged();
       return complianceExportBuilder_;
     }
 
@@ -5095,8 +4883,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 53) {
           apiEntrypointBuilder_.mergeFrom(value);
+        } else {
+          apiEntrypointBuilder_.setMessage(value);
         }
-        apiEntrypointBuilder_.setMessage(value);
       }
       procCase_ = 53;
       return this;
@@ -5158,7 +4947,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 53;
-      onChanged();;
+      onChanged();
       return apiEntrypointBuilder_;
     }
 
@@ -5236,8 +5025,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 54) {
           sftpImportBuilder_.mergeFrom(value);
+        } else {
+          sftpImportBuilder_.setMessage(value);
         }
-        sftpImportBuilder_.setMessage(value);
       }
       procCase_ = 54;
       return this;
@@ -5299,7 +5089,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 54;
-      onChanged();;
+      onChanged();
       return sftpImportBuilder_;
     }
 
@@ -5377,8 +5167,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 56) {
           scrubBuilder_.mergeFrom(value);
+        } else {
+          scrubBuilder_.setMessage(value);
         }
-        scrubBuilder_.setMessage(value);
       }
       procCase_ = 56;
       return this;
@@ -5440,7 +5231,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 56;
-      onChanged();;
+      onChanged();
       return scrubBuilder_;
     }
 
@@ -5518,8 +5309,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 57) {
           frequencyBuilder_.mergeFrom(value);
+        } else {
+          frequencyBuilder_.setMessage(value);
         }
-        frequencyBuilder_.setMessage(value);
       }
       procCase_ = 57;
       return this;
@@ -5581,7 +5373,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 57;
-      onChanged();;
+      onChanged();
       return frequencyBuilder_;
     }
 
@@ -5684,8 +5476,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 58) {
           cjsImportBuilder_.mergeFrom(value);
+        } else {
+          cjsImportBuilder_.setMessage(value);
         }
-        cjsImportBuilder_.setMessage(value);
       }
       procCase_ = 58;
       return this;
@@ -5767,7 +5560,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 58;
-      onChanged();;
+      onChanged();
       return cjsImportBuilder_;
     }
 
@@ -5875,8 +5668,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 59) {
           cjsExportBuilder_.mergeFrom(value);
+        } else {
+          cjsExportBuilder_.setMessage(value);
         }
-        cjsExportBuilder_.setMessage(value);
       }
       procCase_ = 59;
       return this;
@@ -5962,7 +5756,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 59;
-      onChanged();;
+      onChanged();
       return cjsExportBuilder_;
     }
 
@@ -6065,8 +5859,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 60) {
           cjsEnrichBuilder_.mergeFrom(value);
+        } else {
+          cjsEnrichBuilder_.setMessage(value);
         }
-        cjsEnrichBuilder_.setMessage(value);
       }
       procCase_ = 60;
       return this;
@@ -6148,7 +5943,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 60;
-      onChanged();;
+      onChanged();
       return cjsEnrichBuilder_;
     }
 
@@ -6226,8 +6021,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 61) {
           webEntrypointBuilder_.mergeFrom(value);
+        } else {
+          webEntrypointBuilder_.setMessage(value);
         }
-        webEntrypointBuilder_.setMessage(value);
       }
       procCase_ = 61;
       return this;
@@ -6289,7 +6085,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 61;
-      onChanged();;
+      onChanged();
       return webEntrypointBuilder_;
     }
 
@@ -6367,8 +6163,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 62) {
           deleteScrubEntriesBuilder_.mergeFrom(value);
+        } else {
+          deleteScrubEntriesBuilder_.setMessage(value);
         }
-        deleteScrubEntriesBuilder_.setMessage(value);
       }
       procCase_ = 62;
       return this;
@@ -6430,7 +6227,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 62;
-      onChanged();;
+      onChanged();
       return deleteScrubEntriesBuilder_;
     }
 
@@ -6508,8 +6305,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 63) {
           wfmExportBuilder_.mergeFrom(value);
+        } else {
+          wfmExportBuilder_.setMessage(value);
         }
-        wfmExportBuilder_.setMessage(value);
       }
       procCase_ = 63;
       return this;
@@ -6571,7 +6369,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 63;
-      onChanged();;
+      onChanged();
       return wfmExportBuilder_;
     }
 
@@ -6579,6 +6377,8 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.PaymentLinkEnrichment, com.tcn.cloud.api.api.v0alpha.PaymentLinkEnrichment.Builder, com.tcn.cloud.api.api.v0alpha.PaymentLinkEnrichmentOrBuilder> linkEnrichBuilder_;
     /**
      * <code>.api.v0alpha.PaymentLinkEnrichment link_enrich = 64 [json_name = "linkEnrich", deprecated = true];</code>
+     * @deprecated api.v0alpha.Process.link_enrich is deprecated.
+     *     See api/v0alpha/lms.proto;l=646
      * @return Whether the linkEnrich field is set.
      */
     @java.lang.Override
@@ -6587,6 +6387,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>.api.v0alpha.PaymentLinkEnrichment link_enrich = 64 [json_name = "linkEnrich", deprecated = true];</code>
+     * @deprecated api.v0alpha.Process.link_enrich is deprecated.
+     *     See api/v0alpha/lms.proto;l=646
      * @return The linkEnrich.
      */
     @java.lang.Override
@@ -6649,8 +6451,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 64) {
           linkEnrichBuilder_.mergeFrom(value);
+        } else {
+          linkEnrichBuilder_.setMessage(value);
         }
-        linkEnrichBuilder_.setMessage(value);
       }
       procCase_ = 64;
       return this;
@@ -6712,7 +6515,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 64;
-      onChanged();;
+      onChanged();
       return linkEnrichBuilder_;
     }
 
@@ -6790,8 +6593,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 65) {
           rndBuilder_.mergeFrom(value);
+        } else {
+          rndBuilder_.setMessage(value);
         }
-        rndBuilder_.setMessage(value);
       }
       procCase_ = 65;
       return this;
@@ -6853,7 +6657,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 65;
-      onChanged();;
+      onChanged();
       return rndBuilder_;
     }
 
@@ -6951,8 +6755,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 66) {
           consentEnrichBuilder_.mergeFrom(value);
+        } else {
+          consentEnrichBuilder_.setMessage(value);
         }
-        consentEnrichBuilder_.setMessage(value);
       }
       procCase_ = 66;
       return this;
@@ -7030,7 +6835,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 66;
-      onChanged();;
+      onChanged();
       return consentEnrichBuilder_;
     }
 
@@ -7128,8 +6933,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 67) {
           consentExportBuilder_.mergeFrom(value);
+        } else {
+          consentExportBuilder_.setMessage(value);
         }
-        consentExportBuilder_.setMessage(value);
       }
       procCase_ = 67;
       return this;
@@ -7207,7 +7013,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 67;
-      onChanged();;
+      onChanged();
       return consentExportBuilder_;
     }
 
@@ -7310,8 +7116,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 69) {
           complianceProcessorBuilder_.mergeFrom(value);
+        } else {
+          complianceProcessorBuilder_.setMessage(value);
         }
-        complianceProcessorBuilder_.setMessage(value);
       }
       procCase_ = 69;
       return this;
@@ -7393,7 +7200,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 69;
-      onChanged();;
+      onChanged();
       return complianceProcessorBuilder_;
     }
 
@@ -7471,8 +7278,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 70) {
           consentEntrypointBuilder_.mergeFrom(value);
+        } else {
+          consentEntrypointBuilder_.setMessage(value);
         }
-        consentEntrypointBuilder_.setMessage(value);
       }
       procCase_ = 70;
       return this;
@@ -7534,7 +7342,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 70;
-      onChanged();;
+      onChanged();
       return consentEntrypointBuilder_;
     }
 
@@ -7612,8 +7420,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 71) {
           portalLinkEnrichBuilder_.mergeFrom(value);
+        } else {
+          portalLinkEnrichBuilder_.setMessage(value);
         }
-        portalLinkEnrichBuilder_.setMessage(value);
       }
       procCase_ = 71;
       return this;
@@ -7675,7 +7484,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 71;
-      onChanged();;
+      onChanged();
       return portalLinkEnrichBuilder_;
     }
 
@@ -7753,8 +7562,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 72) {
           bulkWebEntrypointBuilder_.mergeFrom(value);
+        } else {
+          bulkWebEntrypointBuilder_.setMessage(value);
         }
-        bulkWebEntrypointBuilder_.setMessage(value);
       }
       procCase_ = 72;
       return this;
@@ -7816,7 +7626,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 72;
-      onChanged();;
+      onChanged();
       return bulkWebEntrypointBuilder_;
     }
 
@@ -7914,8 +7724,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 73) {
           omniExchangeProcessBuilder_.mergeFrom(value);
+        } else {
+          omniExchangeProcessBuilder_.setMessage(value);
         }
-        omniExchangeProcessBuilder_.setMessage(value);
       }
       procCase_ = 73;
       return this;
@@ -7993,7 +7804,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 73;
-      onChanged();;
+      onChanged();
       return omniExchangeProcessBuilder_;
     }
 
@@ -8091,8 +7902,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (procCase_ == 74) {
           webExchangeProcessBuilder_.mergeFrom(value);
+        } else {
+          webExchangeProcessBuilder_.setMessage(value);
         }
-        webExchangeProcessBuilder_.setMessage(value);
       }
       procCase_ = 74;
       return this;
@@ -8170,7 +7982,7 @@ private static final long serialVersionUID = 0L;
         proc_ = null;
       }
       procCase_ = 74;
-      onChanged();;
+      onChanged();
       return webExchangeProcessBuilder_;
     }
     @java.lang.Override
@@ -8206,7 +8018,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Process(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

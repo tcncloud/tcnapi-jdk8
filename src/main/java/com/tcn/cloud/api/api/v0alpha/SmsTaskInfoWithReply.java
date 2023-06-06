@@ -26,74 +26,6 @@ private static final long serialVersionUID = 0L;
     return new SmsTaskInfoWithReply();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private SmsTaskInfoWithReply(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.tcn.cloud.api.api.v0alpha.SmsTaskInfoRes.Builder subBuilder = null;
-            if (smsTaskInfoRes_ != null) {
-              subBuilder = smsTaskInfoRes_.toBuilder();
-            }
-            smsTaskInfoRes_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.SmsTaskInfoRes.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(smsTaskInfoRes_);
-              smsTaskInfoRes_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              smsReceivedReplies_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.SmsReceivedReplies>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            smsReceivedReplies_.add(
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.SmsReceivedReplies.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        smsReceivedReplies_ = java.util.Collections.unmodifiableList(smsReceivedReplies_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.SmsapiProto.internal_static_api_v0alpha_SmsTaskInfoWithReply_descriptor;
@@ -130,10 +62,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.SmsTaskInfoResOrBuilder getSmsTaskInfoResOrBuilder() {
-    return getSmsTaskInfoRes();
+    return smsTaskInfoRes_ == null ? com.tcn.cloud.api.api.v0alpha.SmsTaskInfoRes.getDefaultInstance() : smsTaskInfoRes_;
   }
 
   public static final int SMS_RECEIVED_REPLIES_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.SmsReceivedReplies> smsReceivedReplies_;
   /**
    * <code>repeated .api.v0alpha.SmsReceivedReplies sms_received_replies = 2 [json_name = "smsReceivedReplies"];</code>
@@ -193,7 +126,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < smsReceivedReplies_.size(); i++) {
       output.writeMessage(2, smsReceivedReplies_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -210,7 +143,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, smsReceivedReplies_.get(i));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -232,7 +165,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getSmsReceivedRepliesList()
         .equals(other.getSmsReceivedRepliesList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -251,7 +184,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SMS_RECEIVED_REPLIES_FIELD_NUMBER;
       hash = (53 * hash) + getSmsReceivedRepliesList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -300,11 +233,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.SmsTaskInfoWithReply parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.SmsTaskInfoWithReply parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -368,35 +303,30 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.SmsTaskInfoWithReply.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getSmsReceivedRepliesFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (smsTaskInfoResBuilder_ == null) {
-        smsTaskInfoRes_ = null;
-      } else {
-        smsTaskInfoRes_ = null;
+      bitField0_ = 0;
+      smsTaskInfoRes_ = null;
+      if (smsTaskInfoResBuilder_ != null) {
+        smsTaskInfoResBuilder_.dispose();
         smsTaskInfoResBuilder_ = null;
       }
       if (smsReceivedRepliesBuilder_ == null) {
         smsReceivedReplies_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        smsReceivedReplies_ = null;
         smsReceivedRepliesBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -423,23 +353,31 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.SmsTaskInfoWithReply buildPartial() {
       com.tcn.cloud.api.api.v0alpha.SmsTaskInfoWithReply result = new com.tcn.cloud.api.api.v0alpha.SmsTaskInfoWithReply(this);
-      int from_bitField0_ = bitField0_;
-      if (smsTaskInfoResBuilder_ == null) {
-        result.smsTaskInfoRes_ = smsTaskInfoRes_;
-      } else {
-        result.smsTaskInfoRes_ = smsTaskInfoResBuilder_.build();
-      }
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.SmsTaskInfoWithReply result) {
       if (smsReceivedRepliesBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           smsReceivedReplies_ = java.util.Collections.unmodifiableList(smsReceivedReplies_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.smsReceivedReplies_ = smsReceivedReplies_;
       } else {
         result.smsReceivedReplies_ = smsReceivedRepliesBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.SmsTaskInfoWithReply result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.smsTaskInfoRes_ = smsTaskInfoResBuilder_ == null
+            ? smsTaskInfoRes_
+            : smsTaskInfoResBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -493,7 +431,7 @@ private static final long serialVersionUID = 0L;
         if (!other.smsReceivedReplies_.isEmpty()) {
           if (smsReceivedReplies_.isEmpty()) {
             smsReceivedReplies_ = other.smsReceivedReplies_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureSmsReceivedRepliesIsMutable();
             smsReceivedReplies_.addAll(other.smsReceivedReplies_);
@@ -506,7 +444,7 @@ private static final long serialVersionUID = 0L;
             smsReceivedRepliesBuilder_.dispose();
             smsReceivedRepliesBuilder_ = null;
             smsReceivedReplies_ = other.smsReceivedReplies_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             smsReceivedRepliesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getSmsReceivedRepliesFieldBuilder() : null;
@@ -515,7 +453,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -530,17 +468,50 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.SmsTaskInfoWithReply parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getSmsTaskInfoResFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              com.tcn.cloud.api.api.v0alpha.SmsReceivedReplies m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v0alpha.SmsReceivedReplies.parser(),
+                      extensionRegistry);
+              if (smsReceivedRepliesBuilder_ == null) {
+                ensureSmsReceivedRepliesIsMutable();
+                smsReceivedReplies_.add(m);
+              } else {
+                smsReceivedRepliesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.SmsTaskInfoWithReply) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -553,7 +524,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the smsTaskInfoRes field is set.
      */
     public boolean hasSmsTaskInfoRes() {
-      return smsTaskInfoResBuilder_ != null || smsTaskInfoRes_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.api.v0alpha.SmsTaskInfoRes sms_task_info_res = 1 [json_name = "smsTaskInfoRes"];</code>
@@ -575,11 +546,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         smsTaskInfoRes_ = value;
-        onChanged();
       } else {
         smsTaskInfoResBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -589,11 +560,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.SmsTaskInfoRes.Builder builderForValue) {
       if (smsTaskInfoResBuilder_ == null) {
         smsTaskInfoRes_ = builderForValue.build();
-        onChanged();
       } else {
         smsTaskInfoResBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -601,38 +572,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSmsTaskInfoRes(com.tcn.cloud.api.api.v0alpha.SmsTaskInfoRes value) {
       if (smsTaskInfoResBuilder_ == null) {
-        if (smsTaskInfoRes_ != null) {
-          smsTaskInfoRes_ =
-            com.tcn.cloud.api.api.v0alpha.SmsTaskInfoRes.newBuilder(smsTaskInfoRes_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          smsTaskInfoRes_ != null &&
+          smsTaskInfoRes_ != com.tcn.cloud.api.api.v0alpha.SmsTaskInfoRes.getDefaultInstance()) {
+          getSmsTaskInfoResBuilder().mergeFrom(value);
         } else {
           smsTaskInfoRes_ = value;
         }
-        onChanged();
       } else {
         smsTaskInfoResBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v0alpha.SmsTaskInfoRes sms_task_info_res = 1 [json_name = "smsTaskInfoRes"];</code>
      */
     public Builder clearSmsTaskInfoRes() {
-      if (smsTaskInfoResBuilder_ == null) {
-        smsTaskInfoRes_ = null;
-        onChanged();
-      } else {
-        smsTaskInfoRes_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      smsTaskInfoRes_ = null;
+      if (smsTaskInfoResBuilder_ != null) {
+        smsTaskInfoResBuilder_.dispose();
         smsTaskInfoResBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v0alpha.SmsTaskInfoRes sms_task_info_res = 1 [json_name = "smsTaskInfoRes"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.SmsTaskInfoRes.Builder getSmsTaskInfoResBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getSmsTaskInfoResFieldBuilder().getBuilder();
     }
@@ -667,9 +638,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v0alpha.SmsReceivedReplies> smsReceivedReplies_ =
       java.util.Collections.emptyList();
     private void ensureSmsReceivedRepliesIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         smsReceivedReplies_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.SmsReceivedReplies>(smsReceivedReplies_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -819,7 +790,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearSmsReceivedReplies() {
       if (smsReceivedRepliesBuilder_ == null) {
         smsReceivedReplies_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         smsReceivedRepliesBuilder_.clear();
@@ -896,7 +867,7 @@ private static final long serialVersionUID = 0L;
         smsReceivedRepliesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v0alpha.SmsReceivedReplies, com.tcn.cloud.api.api.v0alpha.SmsReceivedReplies.Builder, com.tcn.cloud.api.api.v0alpha.SmsReceivedRepliesOrBuilder>(
                 smsReceivedReplies_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         smsReceivedReplies_ = null;
@@ -936,7 +907,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new SmsTaskInfoWithReply(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

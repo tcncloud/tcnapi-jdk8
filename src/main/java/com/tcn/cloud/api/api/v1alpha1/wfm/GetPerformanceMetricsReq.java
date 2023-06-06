@@ -30,105 +30,6 @@ private static final long serialVersionUID = 0L;
     return new GetPerformanceMetricsReq();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private GetPerformanceMetricsReq(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.tcn.cloud.api.api.commons.ScheduleSelector.Builder subBuilder = null;
-            if (scheduleSelector_ != null) {
-              subBuilder = scheduleSelector_.toBuilder();
-            }
-            scheduleSelector_ = input.readMessage(com.tcn.cloud.api.api.commons.ScheduleSelector.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(scheduleSelector_);
-              scheduleSelector_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-            com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder subBuilder = null;
-            if (nodeSelector_ != null) {
-              subBuilder = nodeSelector_.toBuilder();
-            }
-            nodeSelector_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(nodeSelector_);
-              nodeSelector_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 26: {
-            com.tcn.cloud.api.api.commons.DatetimeRange.Builder subBuilder = null;
-            if (datetimeRange_ != null) {
-              subBuilder = datetimeRange_.toBuilder();
-            }
-            datetimeRange_ = input.readMessage(com.tcn.cloud.api.api.commons.DatetimeRange.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(datetimeRange_);
-              datetimeRange_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 34: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              metricParams_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            metricParams_.add(
-                input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter.parser(), extensionRegistry));
-            break;
-          }
-          case 40: {
-
-            intervalWidthInMinutes_ = input.readInt32();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        metricParams_ = java.util.Collections.unmodifiableList(metricParams_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_GetPerformanceMetricsReq_descriptor;
@@ -177,7 +78,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.ScheduleSelectorOrBuilder getScheduleSelectorOrBuilder() {
-    return getScheduleSelector();
+    return scheduleSelector_ == null ? com.tcn.cloud.api.api.commons.ScheduleSelector.getDefaultInstance() : scheduleSelector_;
   }
 
   public static final int NODE_SELECTOR_FIELD_NUMBER = 2;
@@ -215,7 +116,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntityOrBuilder getNodeSelectorOrBuilder() {
-    return getNodeSelector();
+    return nodeSelector_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.getDefaultInstance() : nodeSelector_;
   }
 
   public static final int DATETIME_RANGE_FIELD_NUMBER = 3;
@@ -253,10 +154,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getDatetimeRangeOrBuilder() {
-    return getDatetimeRange();
+    return datetimeRange_ == null ? com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : datetimeRange_;
   }
 
   public static final int METRIC_PARAMS_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter> metricParams_;
   /**
    * <pre>
@@ -317,7 +219,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INTERVAL_WIDTH_IN_MINUTES_FIELD_NUMBER = 5;
-  private int intervalWidthInMinutes_;
+  private int intervalWidthInMinutes_ = 0;
   /**
    * <pre>
    * The number of minutes to consolidate each metric interval into.
@@ -361,7 +263,7 @@ private static final long serialVersionUID = 0L;
     if (intervalWidthInMinutes_ != 0) {
       output.writeInt32(5, intervalWidthInMinutes_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -390,7 +292,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(5, intervalWidthInMinutes_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -424,7 +326,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getMetricParamsList())) return false;
     if (getIntervalWidthInMinutes()
         != other.getIntervalWidthInMinutes()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -453,7 +355,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + INTERVAL_WIDTH_IN_MINUTES_FIELD_NUMBER;
     hash = (53 * hash) + getIntervalWidthInMinutes();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -502,11 +404,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -574,49 +478,41 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getMetricParamsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (scheduleSelectorBuilder_ == null) {
-        scheduleSelector_ = null;
-      } else {
-        scheduleSelector_ = null;
+      bitField0_ = 0;
+      scheduleSelector_ = null;
+      if (scheduleSelectorBuilder_ != null) {
+        scheduleSelectorBuilder_.dispose();
         scheduleSelectorBuilder_ = null;
       }
-      if (nodeSelectorBuilder_ == null) {
-        nodeSelector_ = null;
-      } else {
-        nodeSelector_ = null;
+      nodeSelector_ = null;
+      if (nodeSelectorBuilder_ != null) {
+        nodeSelectorBuilder_.dispose();
         nodeSelectorBuilder_ = null;
       }
-      if (datetimeRangeBuilder_ == null) {
-        datetimeRange_ = null;
-      } else {
-        datetimeRange_ = null;
+      datetimeRange_ = null;
+      if (datetimeRangeBuilder_ != null) {
+        datetimeRangeBuilder_.dispose();
         datetimeRangeBuilder_ = null;
       }
       if (metricParamsBuilder_ == null) {
         metricParams_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        metricParams_ = null;
         metricParamsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000008);
       intervalWidthInMinutes_ = 0;
-
       return this;
     }
 
@@ -643,34 +539,44 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq(this);
-      int from_bitField0_ = bitField0_;
-      if (scheduleSelectorBuilder_ == null) {
-        result.scheduleSelector_ = scheduleSelector_;
-      } else {
-        result.scheduleSelector_ = scheduleSelectorBuilder_.build();
-      }
-      if (nodeSelectorBuilder_ == null) {
-        result.nodeSelector_ = nodeSelector_;
-      } else {
-        result.nodeSelector_ = nodeSelectorBuilder_.build();
-      }
-      if (datetimeRangeBuilder_ == null) {
-        result.datetimeRange_ = datetimeRange_;
-      } else {
-        result.datetimeRange_ = datetimeRangeBuilder_.build();
-      }
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq result) {
       if (metricParamsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           metricParams_ = java.util.Collections.unmodifiableList(metricParams_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.metricParams_ = metricParams_;
       } else {
         result.metricParams_ = metricParamsBuilder_.build();
       }
-      result.intervalWidthInMinutes_ = intervalWidthInMinutes_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.scheduleSelector_ = scheduleSelectorBuilder_ == null
+            ? scheduleSelector_
+            : scheduleSelectorBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.nodeSelector_ = nodeSelectorBuilder_ == null
+            ? nodeSelector_
+            : nodeSelectorBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.datetimeRange_ = datetimeRangeBuilder_ == null
+            ? datetimeRange_
+            : datetimeRangeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.intervalWidthInMinutes_ = intervalWidthInMinutes_;
+      }
     }
 
     @java.lang.Override
@@ -730,7 +636,7 @@ private static final long serialVersionUID = 0L;
         if (!other.metricParams_.isEmpty()) {
           if (metricParams_.isEmpty()) {
             metricParams_ = other.metricParams_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureMetricParamsIsMutable();
             metricParams_.addAll(other.metricParams_);
@@ -743,7 +649,7 @@ private static final long serialVersionUID = 0L;
             metricParamsBuilder_.dispose();
             metricParamsBuilder_ = null;
             metricParams_ = other.metricParams_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000008);
             metricParamsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getMetricParamsFieldBuilder() : null;
@@ -755,7 +661,7 @@ private static final long serialVersionUID = 0L;
       if (other.getIntervalWidthInMinutes() != 0) {
         setIntervalWidthInMinutes(other.getIntervalWidthInMinutes());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -770,17 +676,69 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getScheduleSelectorFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  getNodeSelectorFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getDatetimeRangeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter.parser(),
+                      extensionRegistry);
+              if (metricParamsBuilder_ == null) {
+                ensureMetricParamsIsMutable();
+                metricParams_.add(m);
+              } else {
+                metricParamsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 34
+            case 40: {
+              intervalWidthInMinutes_ = input.readInt32();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -797,7 +755,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the scheduleSelector field is set.
      */
     public boolean hasScheduleSelector() {
-      return scheduleSelectorBuilder_ != null || scheduleSelector_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -827,11 +785,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         scheduleSelector_ = value;
-        onChanged();
       } else {
         scheduleSelectorBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -845,11 +803,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.ScheduleSelector.Builder builderForValue) {
       if (scheduleSelectorBuilder_ == null) {
         scheduleSelector_ = builderForValue.build();
-        onChanged();
       } else {
         scheduleSelectorBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -861,17 +819,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeScheduleSelector(com.tcn.cloud.api.api.commons.ScheduleSelector value) {
       if (scheduleSelectorBuilder_ == null) {
-        if (scheduleSelector_ != null) {
-          scheduleSelector_ =
-            com.tcn.cloud.api.api.commons.ScheduleSelector.newBuilder(scheduleSelector_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          scheduleSelector_ != null &&
+          scheduleSelector_ != com.tcn.cloud.api.api.commons.ScheduleSelector.getDefaultInstance()) {
+          getScheduleSelectorBuilder().mergeFrom(value);
         } else {
           scheduleSelector_ = value;
         }
-        onChanged();
       } else {
         scheduleSelectorBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -882,14 +841,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.ScheduleSelector schedule_selector = 1 [json_name = "scheduleSelector"];</code>
      */
     public Builder clearScheduleSelector() {
-      if (scheduleSelectorBuilder_ == null) {
-        scheduleSelector_ = null;
-        onChanged();
-      } else {
-        scheduleSelector_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      scheduleSelector_ = null;
+      if (scheduleSelectorBuilder_ != null) {
+        scheduleSelectorBuilder_.dispose();
         scheduleSelectorBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -900,7 +858,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.ScheduleSelector schedule_selector = 1 [json_name = "scheduleSelector"];</code>
      */
     public com.tcn.cloud.api.api.commons.ScheduleSelector.Builder getScheduleSelectorBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getScheduleSelectorFieldBuilder().getBuilder();
     }
@@ -952,7 +910,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the nodeSelector field is set.
      */
     public boolean hasNodeSelector() {
-      return nodeSelectorBuilder_ != null || nodeSelector_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -982,11 +940,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         nodeSelector_ = value;
-        onChanged();
       } else {
         nodeSelectorBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1000,11 +958,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder builderForValue) {
       if (nodeSelectorBuilder_ == null) {
         nodeSelector_ = builderForValue.build();
-        onChanged();
       } else {
         nodeSelectorBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1016,17 +974,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeNodeSelector(com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity value) {
       if (nodeSelectorBuilder_ == null) {
-        if (nodeSelector_ != null) {
-          nodeSelector_ =
-            com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.newBuilder(nodeSelector_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          nodeSelector_ != null &&
+          nodeSelector_ != com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.getDefaultInstance()) {
+          getNodeSelectorBuilder().mergeFrom(value);
         } else {
           nodeSelector_ = value;
         }
-        onChanged();
       } else {
         nodeSelectorBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1037,14 +996,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
      */
     public Builder clearNodeSelector() {
-      if (nodeSelectorBuilder_ == null) {
-        nodeSelector_ = null;
-        onChanged();
-      } else {
-        nodeSelector_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      nodeSelector_ = null;
+      if (nodeSelectorBuilder_ != null) {
+        nodeSelectorBuilder_.dispose();
         nodeSelectorBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1055,7 +1013,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.ParentEntity node_selector = 2 [json_name = "nodeSelector"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder getNodeSelectorBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getNodeSelectorFieldBuilder().getBuilder();
     }
@@ -1107,7 +1065,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the datetimeRange field is set.
      */
     public boolean hasDatetimeRange() {
-      return datetimeRangeBuilder_ != null || datetimeRange_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1137,11 +1095,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         datetimeRange_ = value;
-        onChanged();
       } else {
         datetimeRangeBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1155,11 +1113,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.DatetimeRange.Builder builderForValue) {
       if (datetimeRangeBuilder_ == null) {
         datetimeRange_ = builderForValue.build();
-        onChanged();
       } else {
         datetimeRangeBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1171,17 +1129,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDatetimeRange(com.tcn.cloud.api.api.commons.DatetimeRange value) {
       if (datetimeRangeBuilder_ == null) {
-        if (datetimeRange_ != null) {
-          datetimeRange_ =
-            com.tcn.cloud.api.api.commons.DatetimeRange.newBuilder(datetimeRange_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          datetimeRange_ != null &&
+          datetimeRange_ != com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance()) {
+          getDatetimeRangeBuilder().mergeFrom(value);
         } else {
           datetimeRange_ = value;
         }
-        onChanged();
       } else {
         datetimeRangeBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1192,14 +1151,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.DatetimeRange datetime_range = 3 [json_name = "datetimeRange"];</code>
      */
     public Builder clearDatetimeRange() {
-      if (datetimeRangeBuilder_ == null) {
-        datetimeRange_ = null;
-        onChanged();
-      } else {
-        datetimeRange_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      datetimeRange_ = null;
+      if (datetimeRangeBuilder_ != null) {
+        datetimeRangeBuilder_.dispose();
         datetimeRangeBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1210,7 +1168,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.DatetimeRange datetime_range = 3 [json_name = "datetimeRange"];</code>
      */
     public com.tcn.cloud.api.api.commons.DatetimeRange.Builder getDatetimeRangeBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getDatetimeRangeFieldBuilder().getBuilder();
     }
@@ -1253,9 +1211,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter> metricParams_ =
       java.util.Collections.emptyList();
     private void ensureMetricParamsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         metricParams_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter>(metricParams_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -1449,7 +1407,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearMetricParams() {
       if (metricParamsBuilder_ == null) {
         metricParams_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         metricParamsBuilder_.clear();
@@ -1554,7 +1512,7 @@ private static final long serialVersionUID = 0L;
         metricParamsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameterOrBuilder>(
                 metricParams_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         metricParams_ = null;
@@ -1587,8 +1545,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIntervalWidthInMinutes(int value) {
-      
+
       intervalWidthInMinutes_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1602,7 +1561,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIntervalWidthInMinutes() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       intervalWidthInMinutes_ = 0;
       onChanged();
       return this;
@@ -1640,7 +1599,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GetPerformanceMetricsReq(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

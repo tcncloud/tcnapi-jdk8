@@ -29,61 +29,6 @@ private static final long serialVersionUID = 0L;
     return new GetRecordingPreferencesResponse();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private GetRecordingPreferencesResponse(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.tcn.cloud.api.api.commons.org.RecordingPreferences.Builder subBuilder = null;
-            if (recordingPreferences_ != null) {
-              subBuilder = recordingPreferences_.toBuilder();
-            }
-            recordingPreferences_ = input.readMessage(com.tcn.cloud.api.api.commons.org.RecordingPreferences.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(recordingPreferences_);
-              recordingPreferences_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.PreferencesProto.internal_static_api_v1alpha1_org_GetRecordingPreferencesResponse_descriptor;
@@ -132,7 +77,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.RecordingPreferencesOrBuilder getRecordingPreferencesOrBuilder() {
-    return getRecordingPreferences();
+    return recordingPreferences_ == null ? com.tcn.cloud.api.api.commons.org.RecordingPreferences.getDefaultInstance() : recordingPreferences_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -152,7 +97,7 @@ private static final long serialVersionUID = 0L;
     if (recordingPreferences_ != null) {
       output.writeMessage(1, getRecordingPreferences());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -165,7 +110,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getRecordingPreferences());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -185,7 +130,7 @@ private static final long serialVersionUID = 0L;
       if (!getRecordingPreferences()
           .equals(other.getRecordingPreferences())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -200,7 +145,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + RECORDING_PREFERENCES_FIELD_NUMBER;
       hash = (53 * hash) + getRecordingPreferences().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -249,11 +194,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.GetRecordingPreferencesResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.GetRecordingPreferencesResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -321,26 +268,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.GetRecordingPreferencesResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (recordingPreferencesBuilder_ == null) {
-        recordingPreferences_ = null;
-      } else {
-        recordingPreferences_ = null;
+      bitField0_ = 0;
+      recordingPreferences_ = null;
+      if (recordingPreferencesBuilder_ != null) {
+        recordingPreferencesBuilder_.dispose();
         recordingPreferencesBuilder_ = null;
       }
       return this;
@@ -369,13 +311,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.GetRecordingPreferencesResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.GetRecordingPreferencesResponse result = new com.tcn.cloud.api.api.v1alpha1.org.GetRecordingPreferencesResponse(this);
-      if (recordingPreferencesBuilder_ == null) {
-        result.recordingPreferences_ = recordingPreferences_;
-      } else {
-        result.recordingPreferences_ = recordingPreferencesBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.GetRecordingPreferencesResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.recordingPreferences_ = recordingPreferencesBuilder_ == null
+            ? recordingPreferences_
+            : recordingPreferencesBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -425,7 +372,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasRecordingPreferences()) {
         mergeRecordingPreferences(other.getRecordingPreferences());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -440,19 +387,40 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.org.GetRecordingPreferencesResponse parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getRecordingPreferencesFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.GetRecordingPreferencesResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.tcn.cloud.api.api.commons.org.RecordingPreferences recordingPreferences_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -466,7 +434,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the recordingPreferences field is set.
      */
     public boolean hasRecordingPreferences() {
-      return recordingPreferencesBuilder_ != null || recordingPreferences_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -496,11 +464,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         recordingPreferences_ = value;
-        onChanged();
       } else {
         recordingPreferencesBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -514,11 +482,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.RecordingPreferences.Builder builderForValue) {
       if (recordingPreferencesBuilder_ == null) {
         recordingPreferences_ = builderForValue.build();
-        onChanged();
       } else {
         recordingPreferencesBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -530,17 +498,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeRecordingPreferences(com.tcn.cloud.api.api.commons.org.RecordingPreferences value) {
       if (recordingPreferencesBuilder_ == null) {
-        if (recordingPreferences_ != null) {
-          recordingPreferences_ =
-            com.tcn.cloud.api.api.commons.org.RecordingPreferences.newBuilder(recordingPreferences_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          recordingPreferences_ != null &&
+          recordingPreferences_ != com.tcn.cloud.api.api.commons.org.RecordingPreferences.getDefaultInstance()) {
+          getRecordingPreferencesBuilder().mergeFrom(value);
         } else {
           recordingPreferences_ = value;
         }
-        onChanged();
       } else {
         recordingPreferencesBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -551,14 +520,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.RecordingPreferences recording_preferences = 1 [json_name = "recordingPreferences"];</code>
      */
     public Builder clearRecordingPreferences() {
-      if (recordingPreferencesBuilder_ == null) {
-        recordingPreferences_ = null;
-        onChanged();
-      } else {
-        recordingPreferences_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      recordingPreferences_ = null;
+      if (recordingPreferencesBuilder_ != null) {
+        recordingPreferencesBuilder_.dispose();
         recordingPreferencesBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -569,7 +537,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.RecordingPreferences recording_preferences = 1 [json_name = "recordingPreferences"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.RecordingPreferences.Builder getRecordingPreferencesBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getRecordingPreferencesFieldBuilder().getBuilder();
     }
@@ -641,7 +609,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GetRecordingPreferencesResponse(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

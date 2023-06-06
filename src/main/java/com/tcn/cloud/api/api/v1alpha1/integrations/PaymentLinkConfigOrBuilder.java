@@ -57,6 +57,8 @@ public interface PaymentLinkConfigOrBuilder extends
    * </pre>
    *
    * <code>string collection_id = 5 [json_name = "collectionId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.collection_id is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=497
    * @return The collectionId.
    */
   @java.lang.Deprecated java.lang.String getCollectionId();
@@ -66,6 +68,8 @@ public interface PaymentLinkConfigOrBuilder extends
    * </pre>
    *
    * <code>string collection_id = 5 [json_name = "collectionId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.collection_id is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=497
    * @return The bytes for collectionId.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -77,6 +81,8 @@ public interface PaymentLinkConfigOrBuilder extends
    * </pre>
    *
    * <code>.api.commons.integrations.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.integration_id is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=499
    * @return The enum numeric value on the wire for integrationId.
    */
   @java.lang.Deprecated int getIntegrationIdValue();
@@ -86,6 +92,8 @@ public interface PaymentLinkConfigOrBuilder extends
    * </pre>
    *
    * <code>.api.commons.integrations.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.integration_id is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=499
    * @return The integrationId.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationId();
@@ -96,6 +104,8 @@ public interface PaymentLinkConfigOrBuilder extends
    * </pre>
    *
    * <code>.api.commons.integrations.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_method_id is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=501
    * @return The enum numeric value on the wire for verificationMethodId.
    */
   @java.lang.Deprecated int getVerificationMethodIdValue();
@@ -105,17 +115,23 @@ public interface PaymentLinkConfigOrBuilder extends
    * </pre>
    *
    * <code>.api.commons.integrations.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_method_id is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=501
    * @return The verificationMethodId.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.RequestMethod getVerificationMethodId();
 
   /**
    * <code>.api.commons.integrations.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.invoice_method_id is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=502
    * @return The enum numeric value on the wire for invoiceMethodId.
    */
   @java.lang.Deprecated int getInvoiceMethodIdValue();
   /**
    * <code>.api.commons.integrations.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.invoice_method_id is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=502
    * @return The invoiceMethodId.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.RequestMethod getInvoiceMethodId();
@@ -126,6 +142,8 @@ public interface PaymentLinkConfigOrBuilder extends
    * </pre>
    *
    * <code>.api.commons.integrations.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.payment_method_id is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=504
    * @return The enum numeric value on the wire for paymentMethodId.
    */
   @java.lang.Deprecated int getPaymentMethodIdValue();
@@ -135,6 +153,8 @@ public interface PaymentLinkConfigOrBuilder extends
    * </pre>
    *
    * <code>.api.commons.integrations.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.payment_method_id is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=504
    * @return The paymentMethodId.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.RequestMethod getPaymentMethodId();
@@ -194,10 +214,11 @@ public interface PaymentLinkConfigOrBuilder extends
    *
    * <code>map&lt;string, string&gt; name_mapping = 10 [json_name = "nameMapping"];</code>
    */
-
-  java.lang.String getNameMappingOrDefault(
+  /* nullable */
+java.lang.String getNameMappingOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue);
+      /* nullable */
+java.lang.String defaultValue);
   /**
    * <pre>
    * journey names and method parameter names might not match one to one
@@ -209,7 +230,6 @@ public interface PaymentLinkConfigOrBuilder extends
    *
    * <code>map&lt;string, string&gt; name_mapping = 10 [json_name = "nameMapping"];</code>
    */
-
   java.lang.String getNameMappingOrThrow(
       java.lang.String key);
 
@@ -219,6 +239,8 @@ public interface PaymentLinkConfigOrBuilder extends
    * </pre>
    *
    * <code>repeated string verification_fields = 11 [json_name = "verificationFields", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_fields is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=512
    * @return A list containing the verificationFields.
    */
   @java.lang.Deprecated java.util.List<java.lang.String>
@@ -229,6 +251,8 @@ public interface PaymentLinkConfigOrBuilder extends
    * </pre>
    *
    * <code>repeated string verification_fields = 11 [json_name = "verificationFields", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_fields is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=512
    * @return The count of verificationFields.
    */
   @java.lang.Deprecated int getVerificationFieldsCount();
@@ -238,6 +262,8 @@ public interface PaymentLinkConfigOrBuilder extends
    * </pre>
    *
    * <code>repeated string verification_fields = 11 [json_name = "verificationFields", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_fields is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=512
    * @param index The index of the element to return.
    * @return The verificationFields at the given index.
    */
@@ -248,6 +274,8 @@ public interface PaymentLinkConfigOrBuilder extends
    * </pre>
    *
    * <code>repeated string verification_fields = 11 [json_name = "verificationFields", deprecated = true];</code>
+   * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_fields is deprecated.
+   *     See api/v1alpha1/integrations/service.proto;l=512
    * @param index The index of the value to return.
    * @return The bytes of the verificationFields at the given index.
    */
@@ -470,14 +498,14 @@ public interface PaymentLinkConfigOrBuilder extends
   /**
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; base_data = 23 [json_name = "baseData"];</code>
    */
-
-  com.tcn.cloud.api.api.v1alpha1.integrations.Value getBaseDataOrDefault(
+  /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrations.Value getBaseDataOrDefault(
       java.lang.String key,
-      com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
+      /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
   /**
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; base_data = 23 [json_name = "baseData"];</code>
    */
-
   com.tcn.cloud.api.api.v1alpha1.integrations.Value getBaseDataOrThrow(
       java.lang.String key);
 

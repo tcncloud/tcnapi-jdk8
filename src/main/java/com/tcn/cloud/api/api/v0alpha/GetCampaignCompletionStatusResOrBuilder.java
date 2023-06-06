@@ -66,10 +66,11 @@ public interface GetCampaignCompletionStatusResOrBuilder extends
    *
    * <code>map&lt;int64, .api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus&gt; completion_status = 3 [json_name = "completionStatus"];</code>
    */
-
-  com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus getCompletionStatusOrDefault(
+  /* nullable */
+com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus getCompletionStatusOrDefault(
       long key,
-      com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus defaultValue);
+      /* nullable */
+com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus defaultValue);
   /**
    * <pre>
    * info of all the matching running task groups.
@@ -77,7 +78,6 @@ public interface GetCampaignCompletionStatusResOrBuilder extends
    *
    * <code>map&lt;int64, .api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus&gt; completion_status = 3 [json_name = "completionStatus"];</code>
    */
-
   com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.TaskGroupCompletionStatus getCompletionStatusOrThrow(
       long key);
 

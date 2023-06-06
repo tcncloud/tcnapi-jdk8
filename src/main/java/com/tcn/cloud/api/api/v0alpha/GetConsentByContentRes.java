@@ -27,78 +27,6 @@ private static final long serialVersionUID = 0L;
     return new GetConsentByContentRes();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private GetConsentByContentRes(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            orgId_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            profileName_ = s;
-            break;
-          }
-          case 26: {
-            com.tcn.cloud.api.api.v0alpha.Consent.Builder subBuilder = null;
-            if (consent_ != null) {
-              subBuilder = consent_.toBuilder();
-            }
-            consent_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.Consent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(consent_);
-              consent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 32: {
-
-            disabled_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.ComplianceProto.internal_static_api_v0alpha_GetConsentByContentRes_descriptor;
@@ -113,7 +41,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ORG_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object orgId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object orgId_ = "";
   /**
    * <pre>
    * id of assigned org
@@ -159,7 +88,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PROFILE_NAME_FIELD_NUMBER = 2;
-  private volatile java.lang.Object profileName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object profileName_ = "";
   /**
    * <pre>
    * name of consent profile
@@ -239,11 +169,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.ConsentOrBuilder getConsentOrBuilder() {
-    return getConsent();
+    return consent_ == null ? com.tcn.cloud.api.api.v0alpha.Consent.getDefaultInstance() : consent_;
   }
 
   public static final int DISABLED_FIELD_NUMBER = 4;
-  private boolean disabled_;
+  private boolean disabled_ = false;
   /**
    * <pre>
    * consent profile disabled
@@ -271,10 +201,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getOrgIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
     }
-    if (!getProfileNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(profileName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, profileName_);
     }
     if (consent_ != null) {
@@ -283,7 +213,7 @@ private static final long serialVersionUID = 0L;
     if (disabled_ != false) {
       output.writeBool(4, disabled_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -292,10 +222,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getOrgIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
     }
-    if (!getProfileNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(profileName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, profileName_);
     }
     if (consent_ != null) {
@@ -306,7 +236,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, disabled_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -332,7 +262,7 @@ private static final long serialVersionUID = 0L;
     }
     if (getDisabled()
         != other.getDisabled()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -354,7 +284,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + DISABLED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getDisabled());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -403,11 +333,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -471,34 +403,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       orgId_ = "";
-
       profileName_ = "";
-
-      if (consentBuilder_ == null) {
-        consent_ = null;
-      } else {
-        consent_ = null;
+      consent_ = null;
+      if (consentBuilder_ != null) {
+        consentBuilder_.dispose();
         consentBuilder_ = null;
       }
       disabled_ = false;
-
       return this;
     }
 
@@ -525,16 +449,27 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes buildPartial() {
       com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes result = new com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes(this);
-      result.orgId_ = orgId_;
-      result.profileName_ = profileName_;
-      if (consentBuilder_ == null) {
-        result.consent_ = consent_;
-      } else {
-        result.consent_ = consentBuilder_.build();
-      }
-      result.disabled_ = disabled_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.orgId_ = orgId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.profileName_ = profileName_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.consent_ = consentBuilder_ == null
+            ? consent_
+            : consentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.disabled_ = disabled_;
+      }
     }
 
     @java.lang.Override
@@ -583,10 +518,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes.getDefaultInstance()) return this;
       if (!other.getOrgId().isEmpty()) {
         orgId_ = other.orgId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getProfileName().isEmpty()) {
         profileName_ = other.profileName_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasConsent()) {
@@ -595,7 +532,7 @@ private static final long serialVersionUID = 0L;
       if (other.getDisabled() != false) {
         setDisabled(other.getDisabled());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -610,19 +547,55 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              orgId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              profileName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getConsentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 32: {
+              disabled_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object orgId_ = "";
     /**
@@ -677,11 +650,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrgId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       orgId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -694,8 +665,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOrgId() {
-      
       orgId_ = getDefaultInstance().getOrgId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -710,12 +681,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrgIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       orgId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -773,11 +742,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProfileName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       profileName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -790,8 +757,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProfileName() {
-      
       profileName_ = getDefaultInstance().getProfileName();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -806,12 +773,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProfileNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       profileName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -828,7 +793,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the consent field is set.
      */
     public boolean hasConsent() {
-      return consentBuilder_ != null || consent_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -858,11 +823,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         consent_ = value;
-        onChanged();
       } else {
         consentBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -876,11 +841,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.Consent.Builder builderForValue) {
       if (consentBuilder_ == null) {
         consent_ = builderForValue.build();
-        onChanged();
       } else {
         consentBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -892,17 +857,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeConsent(com.tcn.cloud.api.api.v0alpha.Consent value) {
       if (consentBuilder_ == null) {
-        if (consent_ != null) {
-          consent_ =
-            com.tcn.cloud.api.api.v0alpha.Consent.newBuilder(consent_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          consent_ != null &&
+          consent_ != com.tcn.cloud.api.api.v0alpha.Consent.getDefaultInstance()) {
+          getConsentBuilder().mergeFrom(value);
         } else {
           consent_ = value;
         }
-        onChanged();
       } else {
         consentBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -913,14 +879,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.Consent consent = 3 [json_name = "consent"];</code>
      */
     public Builder clearConsent() {
-      if (consentBuilder_ == null) {
-        consent_ = null;
-        onChanged();
-      } else {
-        consent_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      consent_ = null;
+      if (consentBuilder_ != null) {
+        consentBuilder_.dispose();
         consentBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -931,7 +896,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.Consent consent = 3 [json_name = "consent"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.Consent.Builder getConsentBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getConsentFieldBuilder().getBuilder();
     }
@@ -994,8 +959,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisabled(boolean value) {
-      
+
       disabled_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1008,7 +974,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisabled() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       disabled_ = false;
       onChanged();
       return this;
@@ -1046,7 +1012,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GetConsentByContentRes(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

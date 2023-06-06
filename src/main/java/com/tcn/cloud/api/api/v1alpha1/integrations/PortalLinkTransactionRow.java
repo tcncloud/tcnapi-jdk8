@@ -30,105 +30,6 @@ private static final long serialVersionUID = 0L;
     return new PortalLinkTransactionRow();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private PortalLinkTransactionRow(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            views_ = input.readInt32();
-            break;
-          }
-          case 16: {
-
-            verifyAttempts_ = input.readInt32();
-            break;
-          }
-          case 24: {
-
-            verifySuccesses_ = input.readInt32();
-            break;
-          }
-          case 32: {
-
-            paymentAttempts_ = input.readInt32();
-            break;
-          }
-          case 40: {
-
-            paymentSuccesses_ = input.readInt32();
-            break;
-          }
-          case 49: {
-
-            paymentAmount_ = input.readDouble();
-            break;
-          }
-          case 58: {
-            com.google.protobuf.Timestamp.Builder subBuilder = null;
-            if (date_ != null) {
-              subBuilder = date_.toBuilder();
-            }
-            date_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(date_);
-              date_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 66: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              linkData_ = com.google.protobuf.MapField.newMapField(
-                  LinkDataDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000001;
-            }
-            com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
-            linkData__ = input.readMessage(
-                LinkDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            linkData_.getMutableMap().put(
-                linkData__.getKey(), linkData__.getValue());
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_PortalLinkTransactionRow_descriptor;
@@ -155,7 +56,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VIEWS_FIELD_NUMBER = 1;
-  private int views_;
+  private int views_ = 0;
   /**
    * <pre>
    * all this from the PortalLink.Metadata map
@@ -170,7 +71,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VERIFY_ATTEMPTS_FIELD_NUMBER = 2;
-  private int verifyAttempts_;
+  private int verifyAttempts_ = 0;
   /**
    * <code>int32 verify_attempts = 2 [json_name = "verifyAttempts"];</code>
    * @return The verifyAttempts.
@@ -181,7 +82,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VERIFY_SUCCESSES_FIELD_NUMBER = 3;
-  private int verifySuccesses_;
+  private int verifySuccesses_ = 0;
   /**
    * <code>int32 verify_successes = 3 [json_name = "verifySuccesses"];</code>
    * @return The verifySuccesses.
@@ -192,7 +93,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAYMENT_ATTEMPTS_FIELD_NUMBER = 4;
-  private int paymentAttempts_;
+  private int paymentAttempts_ = 0;
   /**
    * <code>int32 payment_attempts = 4 [json_name = "paymentAttempts"];</code>
    * @return The paymentAttempts.
@@ -203,7 +104,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAYMENT_SUCCESSES_FIELD_NUMBER = 5;
-  private int paymentSuccesses_;
+  private int paymentSuccesses_ = 0;
   /**
    * <code>int32 payment_successes = 5 [json_name = "paymentSuccesses"];</code>
    * @return The paymentSuccesses.
@@ -214,7 +115,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAYMENT_AMOUNT_FIELD_NUMBER = 6;
-  private double paymentAmount_;
+  private double paymentAmount_ = 0D;
   /**
    * <code>double payment_amount = 6 [json_name = "paymentAmount"];</code>
    * @return The paymentAmount.
@@ -247,7 +148,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getDateOrBuilder() {
-    return getDate();
+    return date_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : date_;
   }
 
   public static final int LINK_DATA_FIELD_NUMBER = 8;
@@ -262,6 +163,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
                 com.tcn.cloud.api.api.v1alpha1.integrations.Value.getDefaultInstance());
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> linkData_;
   private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
@@ -272,7 +174,6 @@ private static final long serialVersionUID = 0L;
     }
     return linkData_;
   }
-
   public int getLinkDataCount() {
     return internalGetLinkData().getMap().size();
   }
@@ -283,11 +184,10 @@ private static final long serialVersionUID = 0L;
    *
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; link_data = 8 [json_name = "linkData"];</code>
    */
-
   @java.lang.Override
   public boolean containsLinkData(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     return internalGetLinkData().getMap().containsKey(key);
   }
   /**
@@ -306,7 +206,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; link_data = 8 [json_name = "linkData"];</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> getLinkDataMap() {
     return internalGetLinkData().getMap();
   }
@@ -318,11 +217,12 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; link_data = 8 [json_name = "linkData"];</code>
    */
   @java.lang.Override
-
-  public com.tcn.cloud.api.api.v1alpha1.integrations.Value getLinkDataOrDefault(
+  public /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrations.Value getLinkDataOrDefault(
       java.lang.String key,
-      com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+      /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> map =
         internalGetLinkData().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -335,10 +235,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; link_data = 8 [json_name = "linkData"];</code>
    */
   @java.lang.Override
-
   public com.tcn.cloud.api.api.v1alpha1.integrations.Value getLinkDataOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> map =
         internalGetLinkData().getMap();
     if (!map.containsKey(key)) {
@@ -376,7 +275,7 @@ private static final long serialVersionUID = 0L;
     if (paymentSuccesses_ != 0) {
       output.writeInt32(5, paymentSuccesses_);
     }
-    if (paymentAmount_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(paymentAmount_) != 0) {
       output.writeDouble(6, paymentAmount_);
     }
     if (date_ != null) {
@@ -388,7 +287,7 @@ private static final long serialVersionUID = 0L;
         internalGetLinkData(),
         LinkDataDefaultEntryHolder.defaultEntry,
         8);
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -417,7 +316,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(5, paymentSuccesses_);
     }
-    if (paymentAmount_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(paymentAmount_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(6, paymentAmount_);
     }
@@ -435,7 +334,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, linkData__);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -470,7 +369,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!internalGetLinkData().equals(
         other.internalGetLinkData())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -502,7 +401,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + LINK_DATA_FIELD_NUMBER;
       hash = (53 * hash) + internalGetLinkData().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -551,11 +450,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.integrations.PortalLinkTransactionRow parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.integrations.PortalLinkTransactionRow parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -646,38 +547,27 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.PortalLinkTransactionRow.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       views_ = 0;
-
       verifyAttempts_ = 0;
-
       verifySuccesses_ = 0;
-
       paymentAttempts_ = 0;
-
       paymentSuccesses_ = 0;
-
       paymentAmount_ = 0D;
-
-      if (dateBuilder_ == null) {
-        date_ = null;
-      } else {
-        date_ = null;
+      date_ = null;
+      if (dateBuilder_ != null) {
+        dateBuilder_.dispose();
         dateBuilder_ = null;
       }
       internalGetMutableLinkData().clear();
@@ -707,22 +597,40 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrations.PortalLinkTransactionRow buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrations.PortalLinkTransactionRow result = new com.tcn.cloud.api.api.v1alpha1.integrations.PortalLinkTransactionRow(this);
-      int from_bitField0_ = bitField0_;
-      result.views_ = views_;
-      result.verifyAttempts_ = verifyAttempts_;
-      result.verifySuccesses_ = verifySuccesses_;
-      result.paymentAttempts_ = paymentAttempts_;
-      result.paymentSuccesses_ = paymentSuccesses_;
-      result.paymentAmount_ = paymentAmount_;
-      if (dateBuilder_ == null) {
-        result.date_ = date_;
-      } else {
-        result.date_ = dateBuilder_.build();
-      }
-      result.linkData_ = internalGetLinkData();
-      result.linkData_.makeImmutable();
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.PortalLinkTransactionRow result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.views_ = views_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.verifyAttempts_ = verifyAttempts_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.verifySuccesses_ = verifySuccesses_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.paymentAttempts_ = paymentAttempts_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.paymentSuccesses_ = paymentSuccesses_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.paymentAmount_ = paymentAmount_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.date_ = dateBuilder_ == null
+            ? date_
+            : dateBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.linkData_ = internalGetLinkData();
+        result.linkData_.makeImmutable();
+      }
     }
 
     @java.lang.Override
@@ -792,7 +700,8 @@ private static final long serialVersionUID = 0L;
       }
       internalGetMutableLinkData().mergeFrom(
           other.internalGetLinkData());
-      this.mergeUnknownFields(other.unknownFields);
+      bitField0_ |= 0x00000080;
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -807,17 +716,76 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.integrations.PortalLinkTransactionRow parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              views_ = input.readInt32();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              verifyAttempts_ = input.readInt32();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              verifySuccesses_ = input.readInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              paymentAttempts_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              paymentSuccesses_ = input.readInt32();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 49: {
+              paymentAmount_ = input.readDouble();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 49
+            case 58: {
+              input.readMessage(
+                  getDateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 66: {
+              com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
+              linkData__ = input.readMessage(
+                  LinkDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableLinkData().getMutableMap().put(
+                  linkData__.getKey(), linkData__.getValue());
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.integrations.PortalLinkTransactionRow) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -845,8 +813,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setViews(int value) {
-      
+
       views_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -859,7 +828,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearViews() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       views_ = 0;
       onChanged();
       return this;
@@ -880,8 +849,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setVerifyAttempts(int value) {
-      
+
       verifyAttempts_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -890,7 +860,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVerifyAttempts() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       verifyAttempts_ = 0;
       onChanged();
       return this;
@@ -911,8 +881,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setVerifySuccesses(int value) {
-      
+
       verifySuccesses_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -921,7 +892,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVerifySuccesses() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       verifySuccesses_ = 0;
       onChanged();
       return this;
@@ -942,8 +913,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPaymentAttempts(int value) {
-      
+
       paymentAttempts_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -952,7 +924,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPaymentAttempts() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       paymentAttempts_ = 0;
       onChanged();
       return this;
@@ -973,8 +945,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPaymentSuccesses(int value) {
-      
+
       paymentSuccesses_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -983,7 +956,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPaymentSuccesses() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       paymentSuccesses_ = 0;
       onChanged();
       return this;
@@ -1004,8 +977,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPaymentAmount(double value) {
-      
+
       paymentAmount_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1014,7 +988,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPaymentAmount() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       paymentAmount_ = 0D;
       onChanged();
       return this;
@@ -1028,7 +1002,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the date field is set.
      */
     public boolean hasDate() {
-      return dateBuilder_ != null || date_ != null;
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp date = 7 [json_name = "date"];</code>
@@ -1050,11 +1024,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         date_ = value;
-        onChanged();
       } else {
         dateBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -1064,11 +1038,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (dateBuilder_ == null) {
         date_ = builderForValue.build();
-        onChanged();
       } else {
         dateBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -1076,38 +1050,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDate(com.google.protobuf.Timestamp value) {
       if (dateBuilder_ == null) {
-        if (date_ != null) {
-          date_ =
-            com.google.protobuf.Timestamp.newBuilder(date_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000040) != 0) &&
+          date_ != null &&
+          date_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getDateBuilder().mergeFrom(value);
         } else {
           date_ = value;
         }
-        onChanged();
       } else {
         dateBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp date = 7 [json_name = "date"];</code>
      */
     public Builder clearDate() {
-      if (dateBuilder_ == null) {
-        date_ = null;
-        onChanged();
-      } else {
-        date_ = null;
+      bitField0_ = (bitField0_ & ~0x00000040);
+      date_ = null;
+      if (dateBuilder_ != null) {
+        dateBuilder_.dispose();
         dateBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp date = 7 [json_name = "date"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getDateBuilder() {
-      
+      bitField0_ |= 0x00000040;
       onChanged();
       return getDateFieldBuilder().getBuilder();
     }
@@ -1142,7 +1116,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> linkData_;
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
-    internalGetLinkData() {
+        internalGetLinkData() {
       if (linkData_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             LinkDataDefaultEntryHolder.defaultEntry);
@@ -1150,8 +1124,7 @@ private static final long serialVersionUID = 0L;
       return linkData_;
     }
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
-    internalGetMutableLinkData() {
-      onChanged();;
+        internalGetMutableLinkData() {
       if (linkData_ == null) {
         linkData_ = com.google.protobuf.MapField.newMapField(
             LinkDataDefaultEntryHolder.defaultEntry);
@@ -1159,9 +1132,10 @@ private static final long serialVersionUID = 0L;
       if (!linkData_.isMutable()) {
         linkData_ = linkData_.copy();
       }
+      bitField0_ |= 0x00000080;
+      onChanged();
       return linkData_;
     }
-
     public int getLinkDataCount() {
       return internalGetLinkData().getMap().size();
     }
@@ -1172,11 +1146,10 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; link_data = 8 [json_name = "linkData"];</code>
      */
-
     @java.lang.Override
     public boolean containsLinkData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetLinkData().getMap().containsKey(key);
     }
     /**
@@ -1195,7 +1168,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; link_data = 8 [json_name = "linkData"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> getLinkDataMap() {
       return internalGetLinkData().getMap();
     }
@@ -1207,11 +1179,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; link_data = 8 [json_name = "linkData"];</code>
      */
     @java.lang.Override
-
-    public com.tcn.cloud.api.api.v1alpha1.integrations.Value getLinkDataOrDefault(
+    public /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrations.Value getLinkDataOrDefault(
         java.lang.String key,
-        com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+        /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> map =
           internalGetLinkData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1224,10 +1197,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; link_data = 8 [json_name = "linkData"];</code>
      */
     @java.lang.Override
-
     public com.tcn.cloud.api.api.v1alpha1.integrations.Value getLinkDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> map =
           internalGetLinkData().getMap();
       if (!map.containsKey(key)) {
@@ -1235,8 +1207,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearLinkData() {
+      bitField0_ = (bitField0_ & ~0x00000080);
       internalGetMutableLinkData().getMutableMap()
           .clear();
       return this;
@@ -1248,10 +1220,9 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; link_data = 8 [json_name = "linkData"];</code>
      */
-
     public Builder removeLinkData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       internalGetMutableLinkData().getMutableMap()
           .remove(key);
       return this;
@@ -1261,7 +1232,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
-    getMutableLinkData() {
+        getMutableLinkData() {
+      bitField0_ |= 0x00000080;
       return internalGetMutableLinkData().getMutableMap();
     }
     /**
@@ -1274,10 +1246,11 @@ private static final long serialVersionUID = 0L;
     public Builder putLinkData(
         java.lang.String key,
         com.tcn.cloud.api.api.v1alpha1.integrations.Value value) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      if (value == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableLinkData().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000080;
       return this;
     }
     /**
@@ -1287,11 +1260,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; link_data = 8 [json_name = "linkData"];</code>
      */
-
     public Builder putAllLinkData(
         java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> values) {
       internalGetMutableLinkData().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000080;
       return this;
     }
     @java.lang.Override
@@ -1327,7 +1300,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new PortalLinkTransactionRow(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -27,89 +27,6 @@ private static final long serialVersionUID = 0L;
     return new DiceDocument();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private DiceDocument(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            diceValue_ = input.readInt32();
-            break;
-          }
-          case 16: {
-
-            diceValueMax_ = input.readInt32();
-            break;
-          }
-          case 24: {
-
-            diceValueMin_ = input.readInt32();
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            lastMessage_ = s;
-            break;
-          }
-          case 42: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              variables_ = com.google.protobuf.MapField.newMapField(
-                  VariablesDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000001;
-            }
-            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-            variables__ = input.readMessage(
-                VariablesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            variables_.getMutableMap().put(
-                variables__.getKey(), variables__.getValue());
-            break;
-          }
-          case 802: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            error_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.workflows.ExampleProto.internal_static_api_commons_workflows_DiceDocument_descriptor;
@@ -136,7 +53,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DICEVALUE_FIELD_NUMBER = 1;
-  private int diceValue_;
+  private int diceValue_ = 0;
   /**
    * <code>int32 diceValue = 1 [json_name = "diceValue"];</code>
    * @return The diceValue.
@@ -147,7 +64,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DICEVALUEMAX_FIELD_NUMBER = 2;
-  private int diceValueMax_;
+  private int diceValueMax_ = 0;
   /**
    * <code>int32 diceValueMax = 2 [json_name = "diceValueMax"];</code>
    * @return The diceValueMax.
@@ -158,7 +75,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DICEVALUEMIN_FIELD_NUMBER = 3;
-  private int diceValueMin_;
+  private int diceValueMin_ = 0;
   /**
    * <code>int32 diceValueMin = 3 [json_name = "diceValueMin"];</code>
    * @return The diceValueMin.
@@ -169,7 +86,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LAST_MESSAGE_FIELD_NUMBER = 4;
-  private volatile java.lang.Object lastMessage_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object lastMessage_ = "";
   /**
    * <code>string last_message = 4 [json_name = "lastMessage"];</code>
    * @return The lastMessage.
@@ -218,6 +136,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.String> variables_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -228,18 +147,16 @@ private static final long serialVersionUID = 0L;
     }
     return variables_;
   }
-
   public int getVariablesCount() {
     return internalGetVariables().getMap().size();
   }
   /**
    * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
    */
-
   @java.lang.Override
   public boolean containsVariables(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     return internalGetVariables().getMap().containsKey(key);
   }
   /**
@@ -254,7 +171,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.String, java.lang.String> getVariablesMap() {
     return internalGetVariables().getMap();
   }
@@ -262,11 +178,12 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
    */
   @java.lang.Override
-
-  public java.lang.String getVariablesOrDefault(
+  public /* nullable */
+java.lang.String getVariablesOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+      /* nullable */
+java.lang.String defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetVariables().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -275,10 +192,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
    */
   @java.lang.Override
-
   public java.lang.String getVariablesOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetVariables().getMap();
     if (!map.containsKey(key)) {
@@ -288,7 +204,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ERROR_FIELD_NUMBER = 100;
-  private volatile java.lang.Object error_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object error_ = "";
   /**
    * <code>string error = 100 [json_name = "error"];</code>
    * @return The error.
@@ -348,7 +265,7 @@ private static final long serialVersionUID = 0L;
     if (diceValueMin_ != 0) {
       output.writeInt32(3, diceValueMin_);
     }
-    if (!getLastMessageBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastMessage_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, lastMessage_);
     }
     com.google.protobuf.GeneratedMessageV3
@@ -357,10 +274,10 @@ private static final long serialVersionUID = 0L;
         internalGetVariables(),
         VariablesDefaultEntryHolder.defaultEntry,
         5);
-    if (!getErrorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 100, error_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -381,7 +298,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(3, diceValueMin_);
     }
-    if (!getLastMessageBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastMessage_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, lastMessage_);
     }
     for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -394,10 +311,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, variables__);
     }
-    if (!getErrorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(100, error_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -424,7 +341,7 @@ private static final long serialVersionUID = 0L;
         other.internalGetVariables())) return false;
     if (!getError()
         .equals(other.getError())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -449,7 +366,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + ERROR_FIELD_NUMBER;
     hash = (53 * hash) + getError().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -498,11 +415,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.workflows.DiceDocument parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.workflows.DiceDocument parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -588,33 +507,24 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.workflows.DiceDocument.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       diceValue_ = 0;
-
       diceValueMax_ = 0;
-
       diceValueMin_ = 0;
-
       lastMessage_ = "";
-
       internalGetMutableVariables().clear();
       error_ = "";
-
       return this;
     }
 
@@ -641,16 +551,32 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.workflows.DiceDocument buildPartial() {
       com.tcn.cloud.api.api.commons.workflows.DiceDocument result = new com.tcn.cloud.api.api.commons.workflows.DiceDocument(this);
-      int from_bitField0_ = bitField0_;
-      result.diceValue_ = diceValue_;
-      result.diceValueMax_ = diceValueMax_;
-      result.diceValueMin_ = diceValueMin_;
-      result.lastMessage_ = lastMessage_;
-      result.variables_ = internalGetVariables();
-      result.variables_.makeImmutable();
-      result.error_ = error_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.workflows.DiceDocument result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.diceValue_ = diceValue_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.diceValueMax_ = diceValueMax_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.diceValueMin_ = diceValueMin_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.lastMessage_ = lastMessage_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.variables_ = internalGetVariables();
+        result.variables_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.error_ = error_;
+      }
     }
 
     @java.lang.Override
@@ -708,15 +634,18 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getLastMessage().isEmpty()) {
         lastMessage_ = other.lastMessage_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       internalGetMutableVariables().mergeFrom(
           other.internalGetVariables());
+      bitField0_ |= 0x00000010;
       if (!other.getError().isEmpty()) {
         error_ = other.error_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -731,17 +660,64 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.workflows.DiceDocument parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              diceValue_ = input.readInt32();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              diceValueMax_ = input.readInt32();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              diceValueMin_ = input.readInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
+              lastMessage_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              variables__ = input.readMessage(
+                  VariablesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableVariables().getMutableMap().put(
+                  variables__.getKey(), variables__.getValue());
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 802: {
+              error_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 802
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.workflows.DiceDocument) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -761,8 +737,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDiceValue(int value) {
-      
+
       diceValue_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -771,7 +748,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDiceValue() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       diceValue_ = 0;
       onChanged();
       return this;
@@ -792,8 +769,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDiceValueMax(int value) {
-      
+
       diceValueMax_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -802,7 +780,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDiceValueMax() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       diceValueMax_ = 0;
       onChanged();
       return this;
@@ -823,8 +801,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDiceValueMin(int value) {
-      
+
       diceValueMin_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -833,7 +812,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDiceValueMin() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       diceValueMin_ = 0;
       onChanged();
       return this;
@@ -880,11 +859,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLastMessage(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       lastMessage_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -893,8 +870,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLastMessage() {
-      
       lastMessage_ = getDefaultInstance().getLastMessage();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -905,12 +882,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLastMessageBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       lastMessage_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -918,7 +893,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> variables_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetVariables() {
+        internalGetVariables() {
       if (variables_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             VariablesDefaultEntryHolder.defaultEntry);
@@ -926,8 +901,7 @@ private static final long serialVersionUID = 0L;
       return variables_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetMutableVariables() {
-      onChanged();;
+        internalGetMutableVariables() {
       if (variables_ == null) {
         variables_ = com.google.protobuf.MapField.newMapField(
             VariablesDefaultEntryHolder.defaultEntry);
@@ -935,20 +909,20 @@ private static final long serialVersionUID = 0L;
       if (!variables_.isMutable()) {
         variables_ = variables_.copy();
       }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return variables_;
     }
-
     public int getVariablesCount() {
       return internalGetVariables().getMap().size();
     }
     /**
      * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
      */
-
     @java.lang.Override
     public boolean containsVariables(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetVariables().getMap().containsKey(key);
     }
     /**
@@ -963,7 +937,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getVariablesMap() {
       return internalGetVariables().getMap();
     }
@@ -971,11 +944,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
      */
     @java.lang.Override
-
-    public java.lang.String getVariablesOrDefault(
+    public /* nullable */
+java.lang.String getVariablesOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+        /* nullable */
+java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetVariables().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -984,10 +958,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
      */
     @java.lang.Override
-
     public java.lang.String getVariablesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetVariables().getMap();
       if (!map.containsKey(key)) {
@@ -995,8 +968,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearVariables() {
+      bitField0_ = (bitField0_ & ~0x00000010);
       internalGetMutableVariables().getMutableMap()
           .clear();
       return this;
@@ -1004,10 +977,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
      */
-
     public Builder removeVariables(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       internalGetMutableVariables().getMutableMap()
           .remove(key);
       return this;
@@ -1017,7 +989,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
-    getMutableVariables() {
+        getMutableVariables() {
+      bitField0_ |= 0x00000010;
       return internalGetMutableVariables().getMutableMap();
     }
     /**
@@ -1026,20 +999,21 @@ private static final long serialVersionUID = 0L;
     public Builder putVariables(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      if (value == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableVariables().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000010;
       return this;
     }
     /**
      * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
      */
-
     public Builder putAllVariables(
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableVariables().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000010;
       return this;
     }
 
@@ -1084,11 +1058,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setError(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       error_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1097,8 +1069,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearError() {
-      
       error_ = getDefaultInstance().getError();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1109,12 +1081,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setErrorBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       error_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1151,7 +1121,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new DiceDocument(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

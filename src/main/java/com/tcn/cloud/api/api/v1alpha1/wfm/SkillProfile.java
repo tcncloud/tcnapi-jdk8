@@ -32,144 +32,6 @@ private static final long serialVersionUID = 0L;
     return new SkillProfile();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private SkillProfile(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            skillProfileSid_ = input.readInt64();
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            name_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            description_ = s;
-            break;
-          }
-          case 34: {
-            com.google.protobuf.Timestamp.Builder subBuilder = null;
-            if (createDate_ != null) {
-              subBuilder = createDate_.toBuilder();
-            }
-            createDate_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(createDate_);
-              createDate_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 40: {
-
-            unnamed_ = input.readBool();
-            break;
-          }
-          case 50: {
-            com.google.protobuf.Timestamp.Builder subBuilder = null;
-            if (inactiveAsOfDate_ != null) {
-              subBuilder = inactiveAsOfDate_.toBuilder();
-            }
-            inactiveAsOfDate_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(inactiveAsOfDate_);
-              inactiveAsOfDate_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 58: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              skills7_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.Skill>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            skills7_.add(
-                input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.Skill.parser(), extensionRegistry));
-            break;
-          }
-          case 64: {
-
-            skillsCount8_ = input.readInt32();
-            break;
-          }
-          case 77: {
-
-            occurrence_ = input.readFloat();
-            break;
-          }
-          case 85: {
-
-            averageSpeedOfAnswerInSeconds_ = input.readFloat();
-            break;
-          }
-          case 93: {
-
-            averageHandleTimeInSeconds_ = input.readFloat();
-            break;
-          }
-          case 101: {
-
-            averageAfterCallWorkInSeconds_ = input.readFloat();
-            break;
-          }
-          case 109: {
-
-            averageTimeToAbortInSeconds_ = input.readFloat();
-            break;
-          }
-          case 112: {
-
-            areAveragesManual_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        skills7_ = java.util.Collections.unmodifiableList(skills7_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_SkillProfile_descriptor;
@@ -184,7 +46,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SKILL_PROFILE_SID_FIELD_NUMBER = 1;
-  private long skillProfileSid_;
+  private long skillProfileSid_ = 0L;
   /**
    * <pre>
    * ID of the skill profile.
@@ -199,7 +61,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 2;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * name of the skill profile.
@@ -245,7 +108,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 3;
-  private volatile java.lang.Object description_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
   /**
    * <pre>
    * description about the skill profile.
@@ -325,11 +189,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getCreateDateOrBuilder() {
-    return getCreateDate();
+    return createDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createDate_;
   }
 
   public static final int UNNAMED_FIELD_NUMBER = 5;
-  private boolean unnamed_;
+  private boolean unnamed_ = false;
   /**
    * <pre>
    * indicates whether the autogenerated name of the skill profile has been modified by the org.
@@ -378,10 +242,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getInactiveAsOfDateOrBuilder() {
-    return getInactiveAsOfDate();
+    return inactiveAsOfDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : inactiveAsOfDate_;
   }
 
   public static final int SKILLS_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Skill> skills7_;
   // An alternative name is used for field "skills" because:
   //     both repeated field "skills" and singular field "skills_count" generate the method "getSkillsCount()"
@@ -444,7 +309,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SKILLS_COUNT_FIELD_NUMBER = 8;
-  private int skillsCount8_;
+  private int skillsCount8_ = 0;
   // An alternative name is used for field "skills_count" because:
   //     both repeated field "skills" and singular field "skills_count" generate the method "getSkillsCount()"
   /**
@@ -461,7 +326,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OCCURRENCE_FIELD_NUMBER = 9;
-  private float occurrence_;
+  private float occurrence_ = 0F;
   /**
    * <pre>
    * percentage of total calls that had this skill profile.
@@ -476,7 +341,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_SPEED_OF_ANSWER_IN_SECONDS_FIELD_NUMBER = 10;
-  private float averageSpeedOfAnswerInSeconds_;
+  private float averageSpeedOfAnswerInSeconds_ = 0F;
   /**
    * <pre>
    * average time that calls took to be answered.
@@ -491,7 +356,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_HANDLE_TIME_IN_SECONDS_FIELD_NUMBER = 11;
-  private float averageHandleTimeInSeconds_;
+  private float averageHandleTimeInSeconds_ = 0F;
   /**
    * <pre>
    * average duration of answered calls.
@@ -506,7 +371,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_AFTER_CALL_WORK_IN_SECONDS_FIELD_NUMBER = 12;
-  private float averageAfterCallWorkInSeconds_;
+  private float averageAfterCallWorkInSeconds_ = 0F;
   /**
    * <pre>
    * average time that agents spent in wrap up.
@@ -521,7 +386,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_TIME_TO_ABORT_IN_SECONDS_FIELD_NUMBER = 13;
-  private float averageTimeToAbortInSeconds_;
+  private float averageTimeToAbortInSeconds_ = 0F;
   /**
    * <pre>
    * average time that callers waited before hanging unanswered calls.
@@ -536,7 +401,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ARE_AVERAGES_MANUAL_FIELD_NUMBER = 14;
-  private boolean areAveragesManual_;
+  private boolean areAveragesManual_ = false;
   /**
    * <pre>
    * indicates whether or not the averages were manually entered by the user (if false then the averages were automatically calculated from the historical data).
@@ -567,10 +432,10 @@ private static final long serialVersionUID = 0L;
     if (skillProfileSid_ != 0L) {
       output.writeInt64(1, skillProfileSid_);
     }
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
     }
     if (createDate_ != null) {
@@ -588,25 +453,25 @@ private static final long serialVersionUID = 0L;
     if (skillsCount8_ != 0) {
       output.writeInt32(8, skillsCount8_);
     }
-    if (occurrence_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(occurrence_) != 0) {
       output.writeFloat(9, occurrence_);
     }
-    if (averageSpeedOfAnswerInSeconds_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(averageSpeedOfAnswerInSeconds_) != 0) {
       output.writeFloat(10, averageSpeedOfAnswerInSeconds_);
     }
-    if (averageHandleTimeInSeconds_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(averageHandleTimeInSeconds_) != 0) {
       output.writeFloat(11, averageHandleTimeInSeconds_);
     }
-    if (averageAfterCallWorkInSeconds_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(averageAfterCallWorkInSeconds_) != 0) {
       output.writeFloat(12, averageAfterCallWorkInSeconds_);
     }
-    if (averageTimeToAbortInSeconds_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(averageTimeToAbortInSeconds_) != 0) {
       output.writeFloat(13, averageTimeToAbortInSeconds_);
     }
     if (areAveragesManual_ != false) {
       output.writeBool(14, areAveragesManual_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -619,10 +484,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, skillProfileSid_);
     }
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
     }
     if (createDate_ != null) {
@@ -645,23 +510,23 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(8, skillsCount8_);
     }
-    if (occurrence_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(occurrence_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(9, occurrence_);
     }
-    if (averageSpeedOfAnswerInSeconds_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(averageSpeedOfAnswerInSeconds_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(10, averageSpeedOfAnswerInSeconds_);
     }
-    if (averageHandleTimeInSeconds_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(averageHandleTimeInSeconds_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(11, averageHandleTimeInSeconds_);
     }
-    if (averageAfterCallWorkInSeconds_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(averageAfterCallWorkInSeconds_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(12, averageAfterCallWorkInSeconds_);
     }
-    if (averageTimeToAbortInSeconds_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(averageTimeToAbortInSeconds_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(13, averageTimeToAbortInSeconds_);
     }
@@ -669,7 +534,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(14, areAveragesManual_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -723,7 +588,7 @@ private static final long serialVersionUID = 0L;
             other.getAverageTimeToAbortInSeconds())) return false;
     if (getAreAveragesManual()
         != other.getAreAveragesManual()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -776,7 +641,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ARE_AVERAGES_MANUAL_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getAreAveragesManual());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -825,11 +690,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -897,63 +764,46 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getSkills7FieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       skillProfileSid_ = 0L;
-
       name_ = "";
-
       description_ = "";
-
-      if (createDateBuilder_ == null) {
-        createDate_ = null;
-      } else {
-        createDate_ = null;
+      createDate_ = null;
+      if (createDateBuilder_ != null) {
+        createDateBuilder_.dispose();
         createDateBuilder_ = null;
       }
       unnamed_ = false;
-
-      if (inactiveAsOfDateBuilder_ == null) {
-        inactiveAsOfDate_ = null;
-      } else {
-        inactiveAsOfDate_ = null;
+      inactiveAsOfDate_ = null;
+      if (inactiveAsOfDateBuilder_ != null) {
+        inactiveAsOfDateBuilder_.dispose();
         inactiveAsOfDateBuilder_ = null;
       }
       if (skills7Builder_ == null) {
         skills7_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        skills7_ = null;
         skills7Builder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000040);
       skillsCount8_ = 0;
-
       occurrence_ = 0F;
-
       averageSpeedOfAnswerInSeconds_ = 0F;
-
       averageHandleTimeInSeconds_ = 0F;
-
       averageAfterCallWorkInSeconds_ = 0F;
-
       averageTimeToAbortInSeconds_ = 0F;
-
       areAveragesManual_ = false;
-
       return this;
     }
 
@@ -980,39 +830,69 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile result = new com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile(this);
-      int from_bitField0_ = bitField0_;
-      result.skillProfileSid_ = skillProfileSid_;
-      result.name_ = name_;
-      result.description_ = description_;
-      if (createDateBuilder_ == null) {
-        result.createDate_ = createDate_;
-      } else {
-        result.createDate_ = createDateBuilder_.build();
-      }
-      result.unnamed_ = unnamed_;
-      if (inactiveAsOfDateBuilder_ == null) {
-        result.inactiveAsOfDate_ = inactiveAsOfDate_;
-      } else {
-        result.inactiveAsOfDate_ = inactiveAsOfDateBuilder_.build();
-      }
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile result) {
       if (skills7Builder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000040) != 0)) {
           skills7_ = java.util.Collections.unmodifiableList(skills7_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.skills7_ = skills7_;
       } else {
         result.skills7_ = skills7Builder_.build();
       }
-      result.skillsCount8_ = skillsCount8_;
-      result.occurrence_ = occurrence_;
-      result.averageSpeedOfAnswerInSeconds_ = averageSpeedOfAnswerInSeconds_;
-      result.averageHandleTimeInSeconds_ = averageHandleTimeInSeconds_;
-      result.averageAfterCallWorkInSeconds_ = averageAfterCallWorkInSeconds_;
-      result.averageTimeToAbortInSeconds_ = averageTimeToAbortInSeconds_;
-      result.areAveragesManual_ = areAveragesManual_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.skillProfileSid_ = skillProfileSid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.createDate_ = createDateBuilder_ == null
+            ? createDate_
+            : createDateBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.unnamed_ = unnamed_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.inactiveAsOfDate_ = inactiveAsOfDateBuilder_ == null
+            ? inactiveAsOfDate_
+            : inactiveAsOfDateBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.skillsCount8_ = skillsCount8_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.occurrence_ = occurrence_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.averageSpeedOfAnswerInSeconds_ = averageSpeedOfAnswerInSeconds_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.averageHandleTimeInSeconds_ = averageHandleTimeInSeconds_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.averageAfterCallWorkInSeconds_ = averageAfterCallWorkInSeconds_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.averageTimeToAbortInSeconds_ = averageTimeToAbortInSeconds_;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.areAveragesManual_ = areAveragesManual_;
+      }
     }
 
     @java.lang.Override
@@ -1064,10 +944,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasCreateDate()) {
@@ -1083,7 +965,7 @@ private static final long serialVersionUID = 0L;
         if (!other.skills7_.isEmpty()) {
           if (skills7_.isEmpty()) {
             skills7_ = other.skills7_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensureSkills7IsMutable();
             skills7_.addAll(other.skills7_);
@@ -1096,7 +978,7 @@ private static final long serialVersionUID = 0L;
             skills7Builder_.dispose();
             skills7Builder_ = null;
             skills7_ = other.skills7_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000040);
             skills7Builder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getSkills7FieldBuilder() : null;
@@ -1126,7 +1008,7 @@ private static final long serialVersionUID = 0L;
       if (other.getAreAveragesManual() != false) {
         setAreAveragesManual(other.getAreAveragesManual());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1141,17 +1023,112 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              skillProfileSid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              name_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              description_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getCreateDateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 40: {
+              unnamed_ = input.readBool();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 50: {
+              input.readMessage(
+                  getInactiveAsOfDateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
+              com.tcn.cloud.api.api.v1alpha1.wfm.Skill m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.wfm.Skill.parser(),
+                      extensionRegistry);
+              if (skills7Builder_ == null) {
+                ensureSkills7IsMutable();
+                skills7_.add(m);
+              } else {
+                skills7Builder_.addMessage(m);
+              }
+              break;
+            } // case 58
+            case 64: {
+              skillsCount8_ = input.readInt32();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
+            case 77: {
+              occurrence_ = input.readFloat();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 77
+            case 85: {
+              averageSpeedOfAnswerInSeconds_ = input.readFloat();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 85
+            case 93: {
+              averageHandleTimeInSeconds_ = input.readFloat();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 93
+            case 101: {
+              averageAfterCallWorkInSeconds_ = input.readFloat();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 101
+            case 109: {
+              averageTimeToAbortInSeconds_ = input.readFloat();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 109
+            case 112: {
+              areAveragesManual_ = input.readBool();
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 112
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -1179,8 +1156,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSkillProfileSid(long value) {
-      
+
       skillProfileSid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1193,7 +1171,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkillProfileSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       skillProfileSid_ = 0L;
       onChanged();
       return this;
@@ -1252,11 +1230,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1269,8 +1245,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1285,12 +1261,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1348,11 +1322,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       description_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1365,8 +1337,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-      
       description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1381,12 +1353,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1403,7 +1373,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the createDate field is set.
      */
     public boolean hasCreateDate() {
-      return createDateBuilder_ != null || createDate_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1433,11 +1403,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         createDate_ = value;
-        onChanged();
       } else {
         createDateBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1451,11 +1421,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (createDateBuilder_ == null) {
         createDate_ = builderForValue.build();
-        onChanged();
       } else {
         createDateBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1467,17 +1437,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCreateDate(com.google.protobuf.Timestamp value) {
       if (createDateBuilder_ == null) {
-        if (createDate_ != null) {
-          createDate_ =
-            com.google.protobuf.Timestamp.newBuilder(createDate_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000008) != 0) &&
+          createDate_ != null &&
+          createDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getCreateDateBuilder().mergeFrom(value);
         } else {
           createDate_ = value;
         }
-        onChanged();
       } else {
         createDateBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1488,14 +1459,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp create_date = 4 [json_name = "createDate"];</code>
      */
     public Builder clearCreateDate() {
-      if (createDateBuilder_ == null) {
-        createDate_ = null;
-        onChanged();
-      } else {
-        createDate_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      createDate_ = null;
+      if (createDateBuilder_ != null) {
+        createDateBuilder_.dispose();
         createDateBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1506,7 +1476,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp create_date = 4 [json_name = "createDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreateDateBuilder() {
-      
+      bitField0_ |= 0x00000008;
       onChanged();
       return getCreateDateFieldBuilder().getBuilder();
     }
@@ -1569,8 +1539,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setUnnamed(boolean value) {
-      
+
       unnamed_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1583,7 +1554,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUnnamed() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       unnamed_ = false;
       onChanged();
       return this;
@@ -1601,7 +1572,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the inactiveAsOfDate field is set.
      */
     public boolean hasInactiveAsOfDate() {
-      return inactiveAsOfDateBuilder_ != null || inactiveAsOfDate_ != null;
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -1631,11 +1602,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         inactiveAsOfDate_ = value;
-        onChanged();
       } else {
         inactiveAsOfDateBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1649,11 +1620,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (inactiveAsOfDateBuilder_ == null) {
         inactiveAsOfDate_ = builderForValue.build();
-        onChanged();
       } else {
         inactiveAsOfDateBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1665,17 +1636,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeInactiveAsOfDate(com.google.protobuf.Timestamp value) {
       if (inactiveAsOfDateBuilder_ == null) {
-        if (inactiveAsOfDate_ != null) {
-          inactiveAsOfDate_ =
-            com.google.protobuf.Timestamp.newBuilder(inactiveAsOfDate_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000020) != 0) &&
+          inactiveAsOfDate_ != null &&
+          inactiveAsOfDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getInactiveAsOfDateBuilder().mergeFrom(value);
         } else {
           inactiveAsOfDate_ = value;
         }
-        onChanged();
       } else {
         inactiveAsOfDateBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1686,14 +1658,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp inactive_as_of_date = 6 [json_name = "inactiveAsOfDate"];</code>
      */
     public Builder clearInactiveAsOfDate() {
-      if (inactiveAsOfDateBuilder_ == null) {
-        inactiveAsOfDate_ = null;
-        onChanged();
-      } else {
-        inactiveAsOfDate_ = null;
+      bitField0_ = (bitField0_ & ~0x00000020);
+      inactiveAsOfDate_ = null;
+      if (inactiveAsOfDateBuilder_ != null) {
+        inactiveAsOfDateBuilder_.dispose();
         inactiveAsOfDateBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1704,7 +1675,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp inactive_as_of_date = 6 [json_name = "inactiveAsOfDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getInactiveAsOfDateBuilder() {
-      
+      bitField0_ |= 0x00000020;
       onChanged();
       return getInactiveAsOfDateFieldBuilder().getBuilder();
     }
@@ -1747,9 +1718,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Skill> skills7_ =
       java.util.Collections.emptyList();
     private void ensureSkills7IsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000040) != 0)) {
         skills7_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.Skill>(skills7_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000040;
        }
     }
 
@@ -1943,7 +1914,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearSkills7() {
       if (skills7Builder_ == null) {
         skills7_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
       } else {
         skills7Builder_.clear();
@@ -2048,7 +2019,7 @@ private static final long serialVersionUID = 0L;
         skills7Builder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.wfm.Skill, com.tcn.cloud.api.api.v1alpha1.wfm.Skill.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.SkillOrBuilder>(
                 skills7_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000040) != 0),
                 getParentForChildren(),
                 isClean());
         skills7_ = null;
@@ -2079,8 +2050,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSkillsCount8(int value) {
-      
+
       skillsCount8_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2093,7 +2065,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkillsCount8() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       skillsCount8_ = 0;
       onChanged();
       return this;
@@ -2122,8 +2094,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOccurrence(float value) {
-      
+
       occurrence_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2136,7 +2109,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOccurrence() {
-      
+      bitField0_ = (bitField0_ & ~0x00000100);
       occurrence_ = 0F;
       onChanged();
       return this;
@@ -2165,8 +2138,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageSpeedOfAnswerInSeconds(float value) {
-      
+
       averageSpeedOfAnswerInSeconds_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2179,7 +2153,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageSpeedOfAnswerInSeconds() {
-      
+      bitField0_ = (bitField0_ & ~0x00000200);
       averageSpeedOfAnswerInSeconds_ = 0F;
       onChanged();
       return this;
@@ -2208,8 +2182,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageHandleTimeInSeconds(float value) {
-      
+
       averageHandleTimeInSeconds_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2222,7 +2197,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageHandleTimeInSeconds() {
-      
+      bitField0_ = (bitField0_ & ~0x00000400);
       averageHandleTimeInSeconds_ = 0F;
       onChanged();
       return this;
@@ -2251,8 +2226,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageAfterCallWorkInSeconds(float value) {
-      
+
       averageAfterCallWorkInSeconds_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2265,7 +2241,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageAfterCallWorkInSeconds() {
-      
+      bitField0_ = (bitField0_ & ~0x00000800);
       averageAfterCallWorkInSeconds_ = 0F;
       onChanged();
       return this;
@@ -2294,8 +2270,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageTimeToAbortInSeconds(float value) {
-      
+
       averageTimeToAbortInSeconds_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2308,7 +2285,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageTimeToAbortInSeconds() {
-      
+      bitField0_ = (bitField0_ & ~0x00001000);
       averageTimeToAbortInSeconds_ = 0F;
       onChanged();
       return this;
@@ -2337,8 +2314,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAreAveragesManual(boolean value) {
-      
+
       areAveragesManual_ = value;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -2351,7 +2329,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAreAveragesManual() {
-      
+      bitField0_ = (bitField0_ & ~0x00002000);
       areAveragesManual_ = false;
       onChanged();
       return this;
@@ -2389,7 +2367,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new SkillProfile(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

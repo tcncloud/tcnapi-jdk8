@@ -40,6 +40,15 @@ public interface ActionOrBuilder extends
    * </pre>
    *
    * <code>string call_ended = 2 [json_name = "callEnded"];</code>
+   * @return Whether the callEnded field is set.
+   */
+  boolean hasCallEnded();
+  /**
+   * <pre>
+   * CallEnded is the reason the call ended.
+   * </pre>
+   *
+   * <code>string call_ended = 2 [json_name = "callEnded"];</code>
    * @return The callEnded.
    */
   java.lang.String getCallEnded();
@@ -54,5 +63,5 @@ public interface ActionOrBuilder extends
   com.google.protobuf.ByteString
       getCallEndedBytes();
 
-  public com.tcn.cloud.api.api.v1alpha1.vanalytics.aclpb.Action.KindCase getKindCase();
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.aclpb.Action.KindCase getKindCase();
 }

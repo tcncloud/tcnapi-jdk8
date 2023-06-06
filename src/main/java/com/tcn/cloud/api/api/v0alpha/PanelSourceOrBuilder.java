@@ -13,6 +13,15 @@ public interface PanelSourceOrBuilder extends
    * </pre>
    *
    * <code>string insight_id = 1 [json_name = "insightId"];</code>
+   * @return Whether the insightId field is set.
+   */
+  boolean hasInsightId();
+  /**
+   * <pre>
+   * Used for new BI insights in operator
+   * </pre>
+   *
+   * <code>string insight_id = 1 [json_name = "insightId"];</code>
    * @return The insightId.
    */
   java.lang.String getInsightId();
@@ -33,6 +42,15 @@ public interface PanelSourceOrBuilder extends
    * </pre>
    *
    * <code>string legacy_insight_id = 2 [json_name = "legacyInsightId"];</code>
+   * @return Whether the legacyInsightId field is set.
+   */
+  boolean hasLegacyInsightId();
+  /**
+   * <pre>
+   * Used for old insights in BI
+   * </pre>
+   *
+   * <code>string legacy_insight_id = 2 [json_name = "legacyInsightId"];</code>
    * @return The legacyInsightId.
    */
   java.lang.String getLegacyInsightId();
@@ -47,5 +65,5 @@ public interface PanelSourceOrBuilder extends
   com.google.protobuf.ByteString
       getLegacyInsightIdBytes();
 
-  public com.tcn.cloud.api.api.v0alpha.PanelSource.PanelTypeCase getPanelTypeCase();
+  com.tcn.cloud.api.api.v0alpha.PanelSource.PanelTypeCase getPanelTypeCase();
 }

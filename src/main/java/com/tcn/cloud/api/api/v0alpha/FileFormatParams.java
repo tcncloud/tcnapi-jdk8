@@ -28,81 +28,6 @@ private static final long serialVersionUID = 0L;
     return new FileFormatParams();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private FileFormatParams(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 80: {
-
-            skipFirstNoLines_ = input.readInt32();
-            break;
-          }
-          case 90: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            skipLinesMatchRegex_ = s;
-            break;
-          }
-          case 96: {
-
-            trimSpaces_ = input.readBool();
-            break;
-          }
-          case 106: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            customDelimiter_ = s;
-            break;
-          }
-          case 112: {
-
-            skipFirstLine_ = input.readBool();
-            break;
-          }
-          case 122: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            jsonDotPath_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_FileFormatParams_descriptor;
@@ -117,13 +42,15 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SKIP_FIRST_NO_LINES_FIELD_NUMBER = 10;
-  private int skipFirstNoLines_;
+  private int skipFirstNoLines_ = 0;
   /**
    * <pre>
    * use skip_first_lines
    * </pre>
    *
    * <code>int32 skip_first_no_lines = 10 [json_name = "skipFirstNoLines", deprecated = true];</code>
+   * @deprecated api.v0alpha.FileFormatParams.skip_first_no_lines is deprecated.
+   *     See api/v0alpha/lms.proto;l=1703
    * @return The skipFirstNoLines.
    */
   @java.lang.Override
@@ -132,9 +59,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SKIP_LINES_MATCH_REGEX_FIELD_NUMBER = 11;
-  private volatile java.lang.Object skipLinesMatchRegex_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object skipLinesMatchRegex_ = "";
   /**
    * <code>string skip_lines_match_regex = 11 [json_name = "skipLinesMatchRegex", deprecated = true];</code>
+   * @deprecated api.v0alpha.FileFormatParams.skip_lines_match_regex is deprecated.
+   *     See api/v0alpha/lms.proto;l=1704
    * @return The skipLinesMatchRegex.
    */
   @java.lang.Override
@@ -152,6 +82,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <code>string skip_lines_match_regex = 11 [json_name = "skipLinesMatchRegex", deprecated = true];</code>
+   * @deprecated api.v0alpha.FileFormatParams.skip_lines_match_regex is deprecated.
+   *     See api/v0alpha/lms.proto;l=1704
    * @return The bytes for skipLinesMatchRegex.
    */
   @java.lang.Override
@@ -170,7 +102,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TRIM_SPACES_FIELD_NUMBER = 12;
-  private boolean trimSpaces_;
+  private boolean trimSpaces_ = false;
   /**
    * <code>bool trim_spaces = 12 [json_name = "trimSpaces"];</code>
    * @return The trimSpaces.
@@ -181,7 +113,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOM_DELIMITER_FIELD_NUMBER = 13;
-  private volatile java.lang.Object customDelimiter_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customDelimiter_ = "";
   /**
    * <code>string custom_delimiter = 13 [json_name = "customDelimiter"];</code>
    * @return The customDelimiter.
@@ -219,7 +152,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SKIP_FIRST_LINE_FIELD_NUMBER = 14;
-  private boolean skipFirstLine_;
+  private boolean skipFirstLine_ = false;
   /**
    * <code>bool skip_first_line = 14 [json_name = "skipFirstLine"];</code>
    * @return The skipFirstLine.
@@ -230,7 +163,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int JSON_DOT_PATH_FIELD_NUMBER = 15;
-  private volatile java.lang.Object jsonDotPath_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object jsonDotPath_ = "";
   /**
    * <pre>
    * for json file formats:
@@ -304,22 +238,22 @@ private static final long serialVersionUID = 0L;
     if (skipFirstNoLines_ != 0) {
       output.writeInt32(10, skipFirstNoLines_);
     }
-    if (!getSkipLinesMatchRegexBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(skipLinesMatchRegex_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, skipLinesMatchRegex_);
     }
     if (trimSpaces_ != false) {
       output.writeBool(12, trimSpaces_);
     }
-    if (!getCustomDelimiterBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customDelimiter_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 13, customDelimiter_);
     }
     if (skipFirstLine_ != false) {
       output.writeBool(14, skipFirstLine_);
     }
-    if (!getJsonDotPathBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonDotPath_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 15, jsonDotPath_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -332,24 +266,24 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(10, skipFirstNoLines_);
     }
-    if (!getSkipLinesMatchRegexBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(skipLinesMatchRegex_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, skipLinesMatchRegex_);
     }
     if (trimSpaces_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(12, trimSpaces_);
     }
-    if (!getCustomDelimiterBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customDelimiter_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, customDelimiter_);
     }
     if (skipFirstLine_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(14, skipFirstLine_);
     }
-    if (!getJsonDotPathBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonDotPath_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, jsonDotPath_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -376,7 +310,7 @@ private static final long serialVersionUID = 0L;
         != other.getSkipFirstLine()) return false;
     if (!getJsonDotPath()
         .equals(other.getJsonDotPath())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -401,7 +335,7 @@ private static final long serialVersionUID = 0L;
         getSkipFirstLine());
     hash = (37 * hash) + JSON_DOT_PATH_FIELD_NUMBER;
     hash = (53 * hash) + getJsonDotPath().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -450,11 +384,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.FileFormatParams parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.FileFormatParams parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -518,34 +454,24 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.FileFormatParams.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       skipFirstNoLines_ = 0;
-
       skipLinesMatchRegex_ = "";
-
       trimSpaces_ = false;
-
       customDelimiter_ = "";
-
       skipFirstLine_ = false;
-
       jsonDotPath_ = "";
-
       return this;
     }
 
@@ -572,14 +498,31 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.FileFormatParams buildPartial() {
       com.tcn.cloud.api.api.v0alpha.FileFormatParams result = new com.tcn.cloud.api.api.v0alpha.FileFormatParams(this);
-      result.skipFirstNoLines_ = skipFirstNoLines_;
-      result.skipLinesMatchRegex_ = skipLinesMatchRegex_;
-      result.trimSpaces_ = trimSpaces_;
-      result.customDelimiter_ = customDelimiter_;
-      result.skipFirstLine_ = skipFirstLine_;
-      result.jsonDotPath_ = jsonDotPath_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.FileFormatParams result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.skipFirstNoLines_ = skipFirstNoLines_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.skipLinesMatchRegex_ = skipLinesMatchRegex_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.trimSpaces_ = trimSpaces_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.customDelimiter_ = customDelimiter_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.skipFirstLine_ = skipFirstLine_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.jsonDotPath_ = jsonDotPath_;
+      }
     }
 
     @java.lang.Override
@@ -631,6 +574,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getSkipLinesMatchRegex().isEmpty()) {
         skipLinesMatchRegex_ = other.skipLinesMatchRegex_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getTrimSpaces() != false) {
@@ -638,6 +582,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCustomDelimiter().isEmpty()) {
         customDelimiter_ = other.customDelimiter_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.getSkipFirstLine() != false) {
@@ -645,9 +590,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getJsonDotPath().isEmpty()) {
         jsonDotPath_ = other.jsonDotPath_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -662,19 +608,63 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.FileFormatParams parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 80: {
+              skipFirstNoLines_ = input.readInt32();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 80
+            case 90: {
+              skipLinesMatchRegex_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 90
+            case 96: {
+              trimSpaces_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 96
+            case 106: {
+              customDelimiter_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 106
+            case 112: {
+              skipFirstLine_ = input.readBool();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 112
+            case 122: {
+              jsonDotPath_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 122
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.FileFormatParams) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private int skipFirstNoLines_ ;
     /**
@@ -683,6 +673,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 skip_first_no_lines = 10 [json_name = "skipFirstNoLines", deprecated = true];</code>
+     * @deprecated api.v0alpha.FileFormatParams.skip_first_no_lines is deprecated.
+     *     See api/v0alpha/lms.proto;l=1703
      * @return The skipFirstNoLines.
      */
     @java.lang.Override
@@ -695,12 +687,15 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 skip_first_no_lines = 10 [json_name = "skipFirstNoLines", deprecated = true];</code>
+     * @deprecated api.v0alpha.FileFormatParams.skip_first_no_lines is deprecated.
+     *     See api/v0alpha/lms.proto;l=1703
      * @param value The skipFirstNoLines to set.
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder setSkipFirstNoLines(int value) {
-      
+
       skipFirstNoLines_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -710,10 +705,12 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 skip_first_no_lines = 10 [json_name = "skipFirstNoLines", deprecated = true];</code>
+     * @deprecated api.v0alpha.FileFormatParams.skip_first_no_lines is deprecated.
+     *     See api/v0alpha/lms.proto;l=1703
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearSkipFirstNoLines() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       skipFirstNoLines_ = 0;
       onChanged();
       return this;
@@ -722,6 +719,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object skipLinesMatchRegex_ = "";
     /**
      * <code>string skip_lines_match_regex = 11 [json_name = "skipLinesMatchRegex", deprecated = true];</code>
+     * @deprecated api.v0alpha.FileFormatParams.skip_lines_match_regex is deprecated.
+     *     See api/v0alpha/lms.proto;l=1704
      * @return The skipLinesMatchRegex.
      */
     @java.lang.Deprecated public java.lang.String getSkipLinesMatchRegex() {
@@ -738,6 +737,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string skip_lines_match_regex = 11 [json_name = "skipLinesMatchRegex", deprecated = true];</code>
+     * @deprecated api.v0alpha.FileFormatParams.skip_lines_match_regex is deprecated.
+     *     See api/v0alpha/lms.proto;l=1704
      * @return The bytes for skipLinesMatchRegex.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -755,42 +756,44 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string skip_lines_match_regex = 11 [json_name = "skipLinesMatchRegex", deprecated = true];</code>
+     * @deprecated api.v0alpha.FileFormatParams.skip_lines_match_regex is deprecated.
+     *     See api/v0alpha/lms.proto;l=1704
      * @param value The skipLinesMatchRegex to set.
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder setSkipLinesMatchRegex(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       skipLinesMatchRegex_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <code>string skip_lines_match_regex = 11 [json_name = "skipLinesMatchRegex", deprecated = true];</code>
+     * @deprecated api.v0alpha.FileFormatParams.skip_lines_match_regex is deprecated.
+     *     See api/v0alpha/lms.proto;l=1704
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearSkipLinesMatchRegex() {
-      
       skipLinesMatchRegex_ = getDefaultInstance().getSkipLinesMatchRegex();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
      * <code>string skip_lines_match_regex = 11 [json_name = "skipLinesMatchRegex", deprecated = true];</code>
+     * @deprecated api.v0alpha.FileFormatParams.skip_lines_match_regex is deprecated.
+     *     See api/v0alpha/lms.proto;l=1704
      * @param value The bytes for skipLinesMatchRegex to set.
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder setSkipLinesMatchRegexBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       skipLinesMatchRegex_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -810,8 +813,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTrimSpaces(boolean value) {
-      
+
       trimSpaces_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -820,7 +824,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTrimSpaces() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       trimSpaces_ = false;
       onChanged();
       return this;
@@ -867,11 +871,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomDelimiter(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customDelimiter_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -880,8 +882,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomDelimiter() {
-      
       customDelimiter_ = getDefaultInstance().getCustomDelimiter();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -892,12 +894,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomDelimiterBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customDelimiter_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -917,8 +917,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSkipFirstLine(boolean value) {
-      
+
       skipFirstLine_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -927,7 +928,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkipFirstLine() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       skipFirstLine_ = false;
       onChanged();
       return this;
@@ -1004,11 +1005,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setJsonDotPath(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       jsonDotPath_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1027,8 +1026,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearJsonDotPath() {
-      
       jsonDotPath_ = getDefaultInstance().getJsonDotPath();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1049,12 +1048,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setJsonDotPathBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       jsonDotPath_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1091,7 +1088,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new FileFormatParams(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

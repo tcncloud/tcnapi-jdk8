@@ -49,5 +49,5 @@ public interface PortalTypeOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.integrations.IVRPortalOrBuilder getIvrPortalOrBuilder();
 
-  public com.tcn.cloud.api.api.v1alpha1.integrations.PortalType.DataCase getDataCase();
+  com.tcn.cloud.api.api.v1alpha1.integrations.PortalType.DataCase getDataCase();
 }

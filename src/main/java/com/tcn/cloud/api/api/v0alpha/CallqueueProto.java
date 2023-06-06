@@ -244,74 +244,74 @@ public final class CallqueueProto {
       "allQueue\022\271\001\n\032DequeuePreviewRecordOrCall\022" +
       "*.api.v0alpha.DequeuePreviewRecordOrCall" +
       "Req\032*.api.v0alpha.DequeuePreviewRecordOr" +
-      "CallRes\"C\272\270\221\002\002\030\001\202\323\344\223\0026:\001*\"1/api/v0alpha/" +
-      "callqueue/dequeuepreviewrecordorcall\022\241\001\n" +
+      "CallRes\"C\272\270\221\002\002\030\001\202\323\344\223\0026\"1/api/v0alpha/cal" +
+      "lqueue/dequeuepreviewrecordorcall:\001*\022\241\001\n" +
       "\024EnqueuePreviewRecord\022$.api.v0alpha.Enqu" +
       "euePreviewRecordReq\032$.api.v0alpha.Enqueu" +
-      "ePreviewRecordRes\"=\272\270\221\002\002\030\001\202\323\344\223\0020:\001*\"+/ap" +
-      "i/v0alpha/callqueue/enqueuepreviewrecord" +
+      "ePreviewRecordRes\"=\272\270\221\002\002\030\001\202\323\344\223\0020\"+/api/v" +
+      "0alpha/callqueue/enqueuepreviewrecord:\001*" +
       "\022\335\001\n#DequeueScrubbedCallForPreviewRecord" +
       "\0223.api.v0alpha.DequeueScrubbedCallForPre" +
       "viewRecordReq\0323.api.v0alpha.DequeueScrub" +
       "bedCallForPreviewRecordRes\"L\272\270\221\002\002\030\001\202\323\344\223\002" +
-      "?:\001*\":/api/v0alpha/callqueue/dequeuescru" +
-      "bbedcallforpreviewrecord\022\305\001\n\035ClearPrevie" +
+      "?\":/api/v0alpha/callqueue/dequeuescrubbe" +
+      "dcallforpreviewrecord:\001*\022\305\001\n\035ClearPrevie" +
       "wRecordReturnQueue\022-.api.v0alpha.ClearPr" +
       "eviewRecordReturnQueueReq\032-.api.v0alpha." +
       "ClearPreviewRecordReturnQueueRes\"F\272\270\221\002\002\030" +
-      "\001\202\323\344\223\0029:\001*\"4/api/v0alpha/callqueue/clear" +
-      "previewrecordreturnqueue\022\251\001\n\026EnqueuePrev" +
+      "\001\202\323\344\223\0029\"4/api/v0alpha/callqueue/clearpre" +
+      "viewrecordreturnqueue:\001*\022\251\001\n\026EnqueuePrev" +
       "iewDialCall\022&.api.v0alpha.EnqueuePreview" +
       "DialCallReq\032&.api.v0alpha.EnqueuePreview" +
-      "DialCallRes\"?\272\270\221\002\002\030\001\202\323\344\223\0022:\001*\"-/api/v0al" +
-      "pha/callqueue/enqueuepreviewdialcall\022\241\001\n" +
+      "DialCallRes\"?\272\270\221\002\002\030\001\202\323\344\223\0022\"-/api/v0alpha" +
+      "/callqueue/enqueuepreviewdialcall:\001*\022\241\001\n" +
       "\024ClearManualDialQueue\022$.api.v0alpha.Clea" +
       "rManualDialQueueReq\032$.api.v0alpha.ClearM" +
-      "anualDialQueueRes\"=\272\270\221\002\002\030\001\202\323\344\223\0020:\001*\"+/ap" +
-      "i/v0alpha/callqueue/clearmanualdialqueue" +
+      "anualDialQueueRes\"=\272\270\221\002\002\030\001\202\323\344\223\0020\"+/api/v" +
+      "0alpha/callqueue/clearmanualdialqueue:\001*" +
       "\022\245\001\n\025ProcessManualDialCall\022%.api.v0alpha" +
       ".ProcessManualDialCallReq\032%.api.v0alpha." +
-      "ProcessManualDialCallRes\">\272\270\221\002\002\030\001\202\323\344\223\0021:" +
-      "\001*\",/api/v0alpha/callqueue/processmanual" +
-      "dialcall\022\301\001\n\034DequeueCallForManualApprova" +
+      "ProcessManualDialCallRes\">\272\270\221\002\002\030\001\202\323\344\223\0021\"" +
+      ",/api/v0alpha/callqueue/processmanualdia" +
+      "lcall:\001*\022\301\001\n\034DequeueCallForManualApprova" +
       "l\022,.api.v0alpha.DequeueCallForManualAppr" +
       "ovalReq\032,.api.v0alpha.DequeueCallForManu" +
-      "alApprovalRes\"E\272\270\221\002\002\030\001\202\323\344\223\0028:\001*\"3/api/v0" +
-      "alpha/callqueue/dequeuecallformanualappr" +
-      "oval\022\275\001\n\033EnqueueManuallyApprovedCall\022+.a" +
+      "alApprovalRes\"E\272\270\221\002\002\030\001\202\323\344\223\0028\"3/api/v0alp" +
+      "ha/callqueue/dequeuecallformanualapprova" +
+      "l:\001*\022\275\001\n\033EnqueueManuallyApprovedCall\022+.a" +
       "pi.v0alpha.EnqueueManuallyApprovedCallRe" +
       "q\032+.api.v0alpha.EnqueueManuallyApprovedC" +
-      "allRes\"D\272\270\221\002\002\030\001\202\323\344\223\0027:\001*\"2/api/v0alpha/c" +
-      "allqueue/enqueuemanuallyapprovedcall\022\275\001\n" +
+      "allRes\"D\272\270\221\002\002\030\001\202\323\344\223\0027\"2/api/v0alpha/call" +
+      "queue/enqueuemanuallyapprovedcall:\001*\022\275\001\n" +
       "\033EnqueueManuallyRejectedCall\022+.api.v0alp" +
       "ha.EnqueueManuallyRejectedCallReq\032+.api." +
       "v0alpha.EnqueueManuallyRejectedCallRes\"D" +
-      "\272\270\221\002\002\030\001\202\323\344\223\0027:\001*\"2/api/v0alpha/callqueue" +
-      "/enqueuemanuallyrejectedcall\022\275\001\n\033Requeue" +
+      "\272\270\221\002\002\030\001\202\323\344\223\0027\"2/api/v0alpha/callqueue/en" +
+      "queuemanuallyrejectedcall:\001*\022\275\001\n\033Requeue" +
       "ManuallyApprovedCall\022+.api.v0alpha.Reque" +
       "ueManuallyApprovedCallReq\032+.api.v0alpha." +
       "RequeueManuallyApprovedCallRes\"D\272\270\221\002\002\030\001\202" +
-      "\323\344\223\0027:\001*\"2/api/v0alpha/callqueue/requeue" +
-      "manuallyapprovedcall\022\271\001\n\032EnqueueManually" +
+      "\323\344\223\0027\"2/api/v0alpha/callqueue/requeueman" +
+      "uallyapprovedcall:\001*\022\271\001\n\032EnqueueManually" +
       "ApprovedSms\022*.api.v0alpha.EnqueueManuall" +
       "yApprovedSmsReq\032*.api.v0alpha.EnqueueMan" +
-      "uallyApprovedSmsRes\"C\272\270\221\002\002\030\001\202\323\344\223\0026:\001*\"1/" +
-      "api/v0alpha/callqueue/enqueuemanuallyapp" +
-      "rovedsms\022\271\001\n\032EnqueueManuallyRejectedSms\022" +
+      "uallyApprovedSmsRes\"C\272\270\221\002\002\030\001\202\323\344\223\0026\"1/api" +
+      "/v0alpha/callqueue/enqueuemanuallyapprov" +
+      "edsms:\001*\022\271\001\n\032EnqueueManuallyRejectedSms\022" +
       "*.api.v0alpha.EnqueueManuallyRejectedSms" +
       "Req\032*.api.v0alpha.EnqueueManuallyRejecte" +
-      "dSmsRes\"C\272\270\221\002\002\030\001\202\323\344\223\0026:\001*\"1/api/v0alpha/" +
-      "callqueue/enqueuemanuallyrejectedsms\022\271\001\n" +
+      "dSmsRes\"C\272\270\221\002\002\030\001\202\323\344\223\0026\"1/api/v0alpha/cal" +
+      "lqueue/enqueuemanuallyrejectedsms:\001*\022\271\001\n" +
       "\032RequeueManuallyApprovedSms\022*.api.v0alph" +
       "a.RequeueManuallyApprovedSmsReq\032*.api.v0" +
       "alpha.RequeueManuallyApprovedSmsRes\"C\272\270\221" +
-      "\002\002\030\001\202\323\344\223\0026:\001*\"1/api/v0alpha/callqueue/re" +
-      "queuemanuallyapprovedsms\022\311\001\n\036DequeueSmsM" +
+      "\002\002\030\001\202\323\344\223\0026\"1/api/v0alpha/callqueue/reque" +
+      "uemanuallyapprovedsms:\001*\022\311\001\n\036DequeueSmsM" +
       "amForManualApproval\022..api.v0alpha.Dequeu" +
       "eSmsMamForManualApprovalReq\032..api.v0alph" +
       "a.DequeueSmsMamForManualApprovalRes\"G\272\270\221" +
-      "\002\002\030\001\202\323\344\223\002::\001*\"5/api/v0alpha/callqueue/de" +
-      "queuesmsmamformanualapprovalB|\n\035com.tcn." +
+      "\002\002\030\001\202\323\344\223\002:\"5/api/v0alpha/callqueue/deque" +
+      "uesmsmamformanualapproval:\001*B|\n\035com.tcn." +
       "cloud.api.api.v0alphaB\016CallqueueProtoP\001\242" +
       "\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\" +
       "V0alpha\\GPBMetadata\352\002\014Api::V0alphab\006prot" +

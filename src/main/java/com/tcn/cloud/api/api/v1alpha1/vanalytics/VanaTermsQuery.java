@@ -20,7 +20,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private VanaTermsQuery() {
-    terms_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    terms_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -30,71 +31,6 @@ private static final long serialVersionUID = 0L;
     return new VanaTermsQuery();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private VanaTermsQuery(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              terms_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            terms_.add(s);
-            break;
-          }
-          case 16: {
-
-            lacks_ = input.readBool();
-            break;
-          }
-          case 24: {
-
-            all_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        terms_ = terms_.getUnmodifiableView();
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_VanaTermsQuery_descriptor;
@@ -109,7 +45,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TERMS_FIELD_NUMBER = 1;
-  private com.google.protobuf.LazyStringList terms_;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList terms_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Required. The terms to be filtered on.
@@ -160,7 +98,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LACKS_FIELD_NUMBER = 2;
-  private boolean lacks_;
+  private boolean lacks_ = false;
   /**
    * <pre>
    * Optional. If true then filters out where terms match.
@@ -175,7 +113,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ALL_FIELD_NUMBER = 3;
-  private boolean all_;
+  private boolean all_ = false;
   /**
    * <pre>
    * Optional. If true then all terms must match.
@@ -212,7 +150,7 @@ private static final long serialVersionUID = 0L;
     if (all_ != false) {
       output.writeBool(3, all_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -237,7 +175,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(3, all_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -258,7 +196,7 @@ private static final long serialVersionUID = 0L;
         != other.getLacks()) return false;
     if (getAll()
         != other.getAll()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -279,7 +217,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ALL_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getAll());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -328,11 +266,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.vanalytics.VanaTermsQuery parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.vanalytics.VanaTermsQuery parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -400,28 +340,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.VanaTermsQuery.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      terms_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = 0;
+      terms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       lacks_ = false;
-
       all_ = false;
-
       return this;
     }
 
@@ -448,16 +382,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.vanalytics.VanaTermsQuery buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.vanalytics.VanaTermsQuery result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.VanaTermsQuery(this);
-      int from_bitField0_ = bitField0_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        terms_ = terms_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.terms_ = terms_;
-      result.lacks_ = lacks_;
-      result.all_ = all_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.VanaTermsQuery result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        terms_.makeImmutable();
+        result.terms_ = terms_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.lacks_ = lacks_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.all_ = all_;
+      }
     }
 
     @java.lang.Override
@@ -507,7 +448,7 @@ private static final long serialVersionUID = 0L;
       if (!other.terms_.isEmpty()) {
         if (terms_.isEmpty()) {
           terms_ = other.terms_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000001;
         } else {
           ensureTermsIsMutable();
           terms_.addAll(other.terms_);
@@ -520,7 +461,7 @@ private static final long serialVersionUID = 0L;
       if (other.getAll() != false) {
         setAll(other.getAll());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -535,27 +476,57 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.vanalytics.VanaTermsQuery parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureTermsIsMutable();
+              terms_.add(s);
+              break;
+            } // case 10
+            case 16: {
+              lacks_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              all_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.vanalytics.VanaTermsQuery) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringList terms_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList terms_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureTermsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!terms_.isModifiable()) {
         terms_ = new com.google.protobuf.LazyStringArrayList(terms_);
-        bitField0_ |= 0x00000001;
-       }
+      }
+      bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
@@ -567,7 +538,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getTermsList() {
-      return terms_.getUnmodifiableView();
+      terms_.makeImmutable();
+      return terms_;
     }
     /**
      * <pre>
@@ -617,11 +589,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTerms(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTermsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureTermsIsMutable();
       terms_.set(index, value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -636,11 +607,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addTerms(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTermsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureTermsIsMutable();
       terms_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -658,6 +628,7 @@ private static final long serialVersionUID = 0L;
       ensureTermsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, terms_);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -670,8 +641,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTerms() {
-      terms_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      terms_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000001);;
       onChanged();
       return this;
     }
@@ -686,12 +658,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addTermsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureTermsIsMutable();
       terms_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -719,8 +690,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLacks(boolean value) {
-      
+
       lacks_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -733,7 +705,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLacks() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       lacks_ = false;
       onChanged();
       return this;
@@ -762,8 +734,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAll(boolean value) {
-      
+
       all_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -776,7 +749,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAll() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       all_ = false;
       onChanged();
       return this;
@@ -814,7 +787,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new VanaTermsQuery(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -116,10 +116,11 @@ public interface HttpReqOrBuilder extends
    *
    * <code>map&lt;string, string&gt; headers = 2 [json_name = "headers"];</code>
    */
-
-  java.lang.String getHeadersOrDefault(
+  /* nullable */
+java.lang.String getHeadersOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue);
+      /* nullable */
+java.lang.String defaultValue);
   /**
    * <pre>
    * initial headers must have static values for all the key value pairs.
@@ -131,7 +132,6 @@ public interface HttpReqOrBuilder extends
    *
    * <code>map&lt;string, string&gt; headers = 2 [json_name = "headers"];</code>
    */
-
   java.lang.String getHeadersOrThrow(
       java.lang.String key);
 
@@ -239,10 +239,11 @@ public interface HttpReqOrBuilder extends
    *
    * <code>map&lt;string, string&gt; named_response_values = 5 [json_name = "namedResponseValues"];</code>
    */
-
-  java.lang.String getNamedResponseValuesOrDefault(
+  /* nullable */
+java.lang.String getNamedResponseValuesOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue);
+      /* nullable */
+java.lang.String defaultValue);
   /**
    * <pre>
    * the values to save from this response.
@@ -256,7 +257,6 @@ public interface HttpReqOrBuilder extends
    *
    * <code>map&lt;string, string&gt; named_response_values = 5 [json_name = "namedResponseValues"];</code>
    */
-
   java.lang.String getNamedResponseValuesOrThrow(
       java.lang.String key);
 }

@@ -32,66 +32,6 @@ private static final long serialVersionUID = 0L;
     return new FileNameSegment();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private FileNameSegment(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            segmentType_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            formatPattern_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            timeZoneId_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_FileNameSegment_descriptor;
@@ -106,7 +46,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SEGMENT_TYPE_FIELD_NUMBER = 1;
-  private volatile java.lang.Object segmentType_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object segmentType_ = "";
   /**
    * <pre>
    * Segment type
@@ -152,7 +93,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FORMAT_PATTERN_FIELD_NUMBER = 2;
-  private volatile java.lang.Object formatPattern_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object formatPattern_ = "";
   /**
    * <pre>
    * Format pattern (if applicable)
@@ -198,7 +140,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TIME_ZONE_ID_FIELD_NUMBER = 3;
-  private volatile java.lang.Object timeZoneId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object timeZoneId_ = "";
   /**
    * <pre>
    * Time Zone Id (e.g. America/Denver, if applicable)
@@ -257,16 +200,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getSegmentTypeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(segmentType_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, segmentType_);
     }
-    if (!getFormatPatternBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formatPattern_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, formatPattern_);
     }
-    if (!getTimeZoneIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeZoneId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, timeZoneId_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -275,16 +218,16 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getSegmentTypeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(segmentType_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, segmentType_);
     }
-    if (!getFormatPatternBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formatPattern_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, formatPattern_);
     }
-    if (!getTimeZoneIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeZoneId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, timeZoneId_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -305,7 +248,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getFormatPattern())) return false;
     if (!getTimeZoneId()
         .equals(other.getTimeZoneId())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -322,7 +265,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getFormatPattern().hashCode();
     hash = (37 * hash) + TIME_ZONE_ID_FIELD_NUMBER;
     hash = (53 * hash) + getTimeZoneId().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -371,11 +314,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.FileNameSegment parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.FileNameSegment parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -443,28 +388,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.FileNameSegment.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       segmentType_ = "";
-
       formatPattern_ = "";
-
       timeZoneId_ = "";
-
       return this;
     }
 
@@ -491,11 +429,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.FileNameSegment buildPartial() {
       com.tcn.cloud.api.api.v0alpha.FileNameSegment result = new com.tcn.cloud.api.api.v0alpha.FileNameSegment(this);
-      result.segmentType_ = segmentType_;
-      result.formatPattern_ = formatPattern_;
-      result.timeZoneId_ = timeZoneId_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.FileNameSegment result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.segmentType_ = segmentType_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.formatPattern_ = formatPattern_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.timeZoneId_ = timeZoneId_;
+      }
     }
 
     @java.lang.Override
@@ -544,17 +493,20 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.FileNameSegment.getDefaultInstance()) return this;
       if (!other.getSegmentType().isEmpty()) {
         segmentType_ = other.segmentType_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getFormatPattern().isEmpty()) {
         formatPattern_ = other.formatPattern_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getTimeZoneId().isEmpty()) {
         timeZoneId_ = other.timeZoneId_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -569,19 +521,48 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.FileNameSegment parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              segmentType_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              formatPattern_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              timeZoneId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.FileNameSegment) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object segmentType_ = "";
     /**
@@ -636,11 +617,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSegmentType(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       segmentType_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -653,8 +632,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSegmentType() {
-      
       segmentType_ = getDefaultInstance().getSegmentType();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -669,12 +648,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSegmentTypeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       segmentType_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -732,11 +709,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFormatPattern(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       formatPattern_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -749,8 +724,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFormatPattern() {
-      
       formatPattern_ = getDefaultInstance().getFormatPattern();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -765,12 +740,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFormatPatternBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       formatPattern_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -828,11 +801,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTimeZoneId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       timeZoneId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -845,8 +816,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTimeZoneId() {
-      
       timeZoneId_ = getDefaultInstance().getTimeZoneId();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -861,12 +832,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTimeZoneIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       timeZoneId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -903,7 +872,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new FileNameSegment(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

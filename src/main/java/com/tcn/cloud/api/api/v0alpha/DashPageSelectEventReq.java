@@ -25,79 +25,6 @@ private static final long serialVersionUID = 0L;
     return new DashPageSelectEventReq();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private DashPageSelectEventReq(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.Builder subBuilder = null;
-            if (selectionDashPage_ != null) {
-              subBuilder = selectionDashPage_.toBuilder();
-            }
-            selectionDashPage_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(selectionDashPage_);
-              selectionDashPage_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-            com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.Builder subBuilder = null;
-            if (sourceDashPage_ != null) {
-              subBuilder = sourceDashPage_.toBuilder();
-            }
-            sourceDashPage_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(sourceDashPage_);
-              sourceDashPage_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 24: {
-
-            fromHome_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.AnaProto.internal_static_api_v0alpha_DashPageSelectEventReq_descriptor;
@@ -134,7 +61,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReqOrBuilder getSelectionDashPageOrBuilder() {
-    return getSelectionDashPage();
+    return selectionDashPage_ == null ? com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.getDefaultInstance() : selectionDashPage_;
   }
 
   public static final int SOURCE_DASH_PAGE_FIELD_NUMBER = 2;
@@ -160,11 +87,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReqOrBuilder getSourceDashPageOrBuilder() {
-    return getSourceDashPage();
+    return sourceDashPage_ == null ? com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.getDefaultInstance() : sourceDashPage_;
   }
 
   public static final int FROM_HOME_FIELD_NUMBER = 3;
-  private boolean fromHome_;
+  private boolean fromHome_ = false;
   /**
    * <code>bool from_home = 3 [json_name = "fromHome"];</code>
    * @return The fromHome.
@@ -197,7 +124,7 @@ private static final long serialVersionUID = 0L;
     if (fromHome_ != false) {
       output.writeBool(3, fromHome_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -218,7 +145,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(3, fromHome_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -245,7 +172,7 @@ private static final long serialVersionUID = 0L;
     }
     if (getFromHome()
         != other.getFromHome()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -267,7 +194,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + FROM_HOME_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getFromHome());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -316,11 +243,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.DashPageSelectEventReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.DashPageSelectEventReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -384,36 +313,29 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.DashPageSelectEventReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (selectionDashPageBuilder_ == null) {
-        selectionDashPage_ = null;
-      } else {
-        selectionDashPage_ = null;
+      bitField0_ = 0;
+      selectionDashPage_ = null;
+      if (selectionDashPageBuilder_ != null) {
+        selectionDashPageBuilder_.dispose();
         selectionDashPageBuilder_ = null;
       }
-      if (sourceDashPageBuilder_ == null) {
-        sourceDashPage_ = null;
-      } else {
-        sourceDashPage_ = null;
+      sourceDashPage_ = null;
+      if (sourceDashPageBuilder_ != null) {
+        sourceDashPageBuilder_.dispose();
         sourceDashPageBuilder_ = null;
       }
       fromHome_ = false;
-
       return this;
     }
 
@@ -440,19 +362,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.DashPageSelectEventReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.DashPageSelectEventReq result = new com.tcn.cloud.api.api.v0alpha.DashPageSelectEventReq(this);
-      if (selectionDashPageBuilder_ == null) {
-        result.selectionDashPage_ = selectionDashPage_;
-      } else {
-        result.selectionDashPage_ = selectionDashPageBuilder_.build();
-      }
-      if (sourceDashPageBuilder_ == null) {
-        result.sourceDashPage_ = sourceDashPage_;
-      } else {
-        result.sourceDashPage_ = sourceDashPageBuilder_.build();
-      }
-      result.fromHome_ = fromHome_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.DashPageSelectEventReq result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.selectionDashPage_ = selectionDashPageBuilder_ == null
+            ? selectionDashPage_
+            : selectionDashPageBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.sourceDashPage_ = sourceDashPageBuilder_ == null
+            ? sourceDashPage_
+            : sourceDashPageBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.fromHome_ = fromHome_;
+      }
     }
 
     @java.lang.Override
@@ -508,7 +437,7 @@ private static final long serialVersionUID = 0L;
       if (other.getFromHome() != false) {
         setFromHome(other.getFromHome());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -523,19 +452,52 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.DashPageSelectEventReq parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getSelectionDashPageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  getSourceDashPageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              fromHome_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.DashPageSelectEventReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq selectionDashPage_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -545,7 +507,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the selectionDashPage field is set.
      */
     public boolean hasSelectionDashPage() {
-      return selectionDashPageBuilder_ != null || selectionDashPage_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.api.v0alpha.RecommendedDashPageReq selection_dash_page = 1 [json_name = "selectionDashPage"];</code>
@@ -567,11 +529,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         selectionDashPage_ = value;
-        onChanged();
       } else {
         selectionDashPageBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -581,11 +543,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.Builder builderForValue) {
       if (selectionDashPageBuilder_ == null) {
         selectionDashPage_ = builderForValue.build();
-        onChanged();
       } else {
         selectionDashPageBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -593,38 +555,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSelectionDashPage(com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq value) {
       if (selectionDashPageBuilder_ == null) {
-        if (selectionDashPage_ != null) {
-          selectionDashPage_ =
-            com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.newBuilder(selectionDashPage_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          selectionDashPage_ != null &&
+          selectionDashPage_ != com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.getDefaultInstance()) {
+          getSelectionDashPageBuilder().mergeFrom(value);
         } else {
           selectionDashPage_ = value;
         }
-        onChanged();
       } else {
         selectionDashPageBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v0alpha.RecommendedDashPageReq selection_dash_page = 1 [json_name = "selectionDashPage"];</code>
      */
     public Builder clearSelectionDashPage() {
-      if (selectionDashPageBuilder_ == null) {
-        selectionDashPage_ = null;
-        onChanged();
-      } else {
-        selectionDashPage_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      selectionDashPage_ = null;
+      if (selectionDashPageBuilder_ != null) {
+        selectionDashPageBuilder_.dispose();
         selectionDashPageBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v0alpha.RecommendedDashPageReq selection_dash_page = 1 [json_name = "selectionDashPage"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.Builder getSelectionDashPageBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getSelectionDashPageFieldBuilder().getBuilder();
     }
@@ -664,7 +626,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the sourceDashPage field is set.
      */
     public boolean hasSourceDashPage() {
-      return sourceDashPageBuilder_ != null || sourceDashPage_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.api.v0alpha.RecommendedDashPageReq source_dash_page = 2 [json_name = "sourceDashPage"];</code>
@@ -686,11 +648,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         sourceDashPage_ = value;
-        onChanged();
       } else {
         sourceDashPageBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -700,11 +662,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.Builder builderForValue) {
       if (sourceDashPageBuilder_ == null) {
         sourceDashPage_ = builderForValue.build();
-        onChanged();
       } else {
         sourceDashPageBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -712,38 +674,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSourceDashPage(com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq value) {
       if (sourceDashPageBuilder_ == null) {
-        if (sourceDashPage_ != null) {
-          sourceDashPage_ =
-            com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.newBuilder(sourceDashPage_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          sourceDashPage_ != null &&
+          sourceDashPage_ != com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.getDefaultInstance()) {
+          getSourceDashPageBuilder().mergeFrom(value);
         } else {
           sourceDashPage_ = value;
         }
-        onChanged();
       } else {
         sourceDashPageBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v0alpha.RecommendedDashPageReq source_dash_page = 2 [json_name = "sourceDashPage"];</code>
      */
     public Builder clearSourceDashPage() {
-      if (sourceDashPageBuilder_ == null) {
-        sourceDashPage_ = null;
-        onChanged();
-      } else {
-        sourceDashPage_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      sourceDashPage_ = null;
+      if (sourceDashPageBuilder_ != null) {
+        sourceDashPageBuilder_.dispose();
         sourceDashPageBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v0alpha.RecommendedDashPageReq source_dash_page = 2 [json_name = "sourceDashPage"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.Builder getSourceDashPageBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getSourceDashPageFieldBuilder().getBuilder();
     }
@@ -790,8 +752,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFromHome(boolean value) {
-      
+
       fromHome_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -800,7 +763,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFromHome() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       fromHome_ = false;
       onChanged();
       return this;
@@ -838,7 +801,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new DashPageSelectEventReq(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

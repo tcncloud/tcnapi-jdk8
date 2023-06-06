@@ -30,93 +30,6 @@ private static final long serialVersionUID = 0L;
     return new PBXExtension();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private PBXExtension(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            pbxExtensionSid_ = input.readInt64();
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            pbxExtension_ = s;
-            break;
-          }
-          case 32: {
-
-            joinSid_ = input.readInt64();
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            joinType_ = s;
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            emailSubject_ = s;
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            emailBody_ = s;
-            break;
-          }
-          case 66: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            emailAddresses_ = s;
-            break;
-          }
-          case 72: {
-
-            agentAccess_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_PBXExtension_descriptor;
@@ -131,7 +44,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PBX_EXTENSION_SID_FIELD_NUMBER = 1;
-  private long pbxExtensionSid_;
+  private long pbxExtensionSid_ = 0L;
   /**
    * <code>int64 pbx_extension_sid = 1 [json_name = "pbxExtensionSid"];</code>
    * @return The pbxExtensionSid.
@@ -142,7 +55,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PBX_EXTENSION_FIELD_NUMBER = 2;
-  private volatile java.lang.Object pbxExtension_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object pbxExtension_ = "";
   /**
    * <code>string pbx_extension = 2 [json_name = "pbxExtension"];</code>
    * @return The pbxExtension.
@@ -180,7 +94,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int JOIN_SID_FIELD_NUMBER = 4;
-  private long joinSid_;
+  private long joinSid_ = 0L;
   /**
    * <code>int64 join_sid = 4 [json_name = "joinSid"];</code>
    * @return The joinSid.
@@ -191,7 +105,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int JOIN_TYPE_FIELD_NUMBER = 5;
-  private volatile java.lang.Object joinType_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object joinType_ = "";
   /**
    * <code>string join_type = 5 [json_name = "joinType"];</code>
    * @return The joinType.
@@ -229,7 +144,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EMAIL_SUBJECT_FIELD_NUMBER = 6;
-  private volatile java.lang.Object emailSubject_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object emailSubject_ = "";
   /**
    * <code>string email_subject = 6 [json_name = "emailSubject"];</code>
    * @return The emailSubject.
@@ -267,7 +183,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EMAIL_BODY_FIELD_NUMBER = 7;
-  private volatile java.lang.Object emailBody_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object emailBody_ = "";
   /**
    * <code>string email_body = 7 [json_name = "emailBody"];</code>
    * @return The emailBody.
@@ -305,7 +222,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EMAIL_ADDRESSES_FIELD_NUMBER = 8;
-  private volatile java.lang.Object emailAddresses_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object emailAddresses_ = "";
   /**
    * <code>string email_addresses = 8 [json_name = "emailAddresses"];</code>
    * @return The emailAddresses.
@@ -343,7 +261,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENT_ACCESS_FIELD_NUMBER = 9;
-  private boolean agentAccess_;
+  private boolean agentAccess_ = false;
   /**
    * <code>bool agent_access = 9 [json_name = "agentAccess"];</code>
    * @return The agentAccess.
@@ -370,28 +288,28 @@ private static final long serialVersionUID = 0L;
     if (pbxExtensionSid_ != 0L) {
       output.writeInt64(1, pbxExtensionSid_);
     }
-    if (!getPbxExtensionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pbxExtension_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, pbxExtension_);
     }
     if (joinSid_ != 0L) {
       output.writeInt64(4, joinSid_);
     }
-    if (!getJoinTypeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(joinType_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, joinType_);
     }
-    if (!getEmailSubjectBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailSubject_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, emailSubject_);
     }
-    if (!getEmailBodyBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailBody_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, emailBody_);
     }
-    if (!getEmailAddressesBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailAddresses_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, emailAddresses_);
     }
     if (agentAccess_ != false) {
       output.writeBool(9, agentAccess_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -404,30 +322,30 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, pbxExtensionSid_);
     }
-    if (!getPbxExtensionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pbxExtension_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, pbxExtension_);
     }
     if (joinSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(4, joinSid_);
     }
-    if (!getJoinTypeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(joinType_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, joinType_);
     }
-    if (!getEmailSubjectBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailSubject_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, emailSubject_);
     }
-    if (!getEmailBodyBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailBody_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, emailBody_);
     }
-    if (!getEmailAddressesBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailAddresses_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, emailAddresses_);
     }
     if (agentAccess_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(9, agentAccess_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -458,7 +376,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getEmailAddresses())) return false;
     if (getAgentAccess()
         != other.getAgentAccess()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -488,7 +406,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + AGENT_ACCESS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getAgentAccess());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -537,11 +455,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.PBXExtension parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.PBXExtension parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -605,38 +525,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.PBXExtension.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       pbxExtensionSid_ = 0L;
-
       pbxExtension_ = "";
-
       joinSid_ = 0L;
-
       joinType_ = "";
-
       emailSubject_ = "";
-
       emailBody_ = "";
-
       emailAddresses_ = "";
-
       agentAccess_ = false;
-
       return this;
     }
 
@@ -663,16 +571,37 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.PBXExtension buildPartial() {
       com.tcn.cloud.api.api.v0alpha.PBXExtension result = new com.tcn.cloud.api.api.v0alpha.PBXExtension(this);
-      result.pbxExtensionSid_ = pbxExtensionSid_;
-      result.pbxExtension_ = pbxExtension_;
-      result.joinSid_ = joinSid_;
-      result.joinType_ = joinType_;
-      result.emailSubject_ = emailSubject_;
-      result.emailBody_ = emailBody_;
-      result.emailAddresses_ = emailAddresses_;
-      result.agentAccess_ = agentAccess_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.PBXExtension result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.pbxExtensionSid_ = pbxExtensionSid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.pbxExtension_ = pbxExtension_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.joinSid_ = joinSid_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.joinType_ = joinType_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.emailSubject_ = emailSubject_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.emailBody_ = emailBody_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.emailAddresses_ = emailAddresses_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.agentAccess_ = agentAccess_;
+      }
     }
 
     @java.lang.Override
@@ -724,6 +653,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getPbxExtension().isEmpty()) {
         pbxExtension_ = other.pbxExtension_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getJoinSid() != 0L) {
@@ -731,24 +661,28 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getJoinType().isEmpty()) {
         joinType_ = other.joinType_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getEmailSubject().isEmpty()) {
         emailSubject_ = other.emailSubject_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.getEmailBody().isEmpty()) {
         emailBody_ = other.emailBody_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (!other.getEmailAddresses().isEmpty()) {
         emailAddresses_ = other.emailAddresses_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.getAgentAccess() != false) {
         setAgentAccess(other.getAgentAccess());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -763,19 +697,73 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.PBXExtension parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              pbxExtensionSid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              pbxExtension_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 32: {
+              joinSid_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 32
+            case 42: {
+              joinType_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 42
+            case 50: {
+              emailSubject_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 50
+            case 58: {
+              emailBody_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 58
+            case 66: {
+              emailAddresses_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 66
+            case 72: {
+              agentAccess_ = input.readBool();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 72
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.PBXExtension) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private long pbxExtensionSid_ ;
     /**
@@ -792,8 +780,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPbxExtensionSid(long value) {
-      
+
       pbxExtensionSid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -802,7 +791,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPbxExtensionSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       pbxExtensionSid_ = 0L;
       onChanged();
       return this;
@@ -849,11 +838,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPbxExtension(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       pbxExtension_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -862,8 +849,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPbxExtension() {
-      
       pbxExtension_ = getDefaultInstance().getPbxExtension();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -874,12 +861,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPbxExtensionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       pbxExtension_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -899,8 +884,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setJoinSid(long value) {
-      
+
       joinSid_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -909,7 +895,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearJoinSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       joinSid_ = 0L;
       onChanged();
       return this;
@@ -956,11 +942,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setJoinType(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       joinType_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -969,8 +953,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearJoinType() {
-      
       joinType_ = getDefaultInstance().getJoinType();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -981,12 +965,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setJoinTypeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       joinType_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1032,11 +1014,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmailSubject(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       emailSubject_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1045,8 +1025,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEmailSubject() {
-      
       emailSubject_ = getDefaultInstance().getEmailSubject();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1057,12 +1037,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmailSubjectBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       emailSubject_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1108,11 +1086,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmailBody(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       emailBody_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1121,8 +1097,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEmailBody() {
-      
       emailBody_ = getDefaultInstance().getEmailBody();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1133,12 +1109,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmailBodyBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       emailBody_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1184,11 +1158,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmailAddresses(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       emailAddresses_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1197,8 +1169,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEmailAddresses() {
-      
       emailAddresses_ = getDefaultInstance().getEmailAddresses();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1209,12 +1181,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmailAddressesBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       emailAddresses_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1234,8 +1204,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAgentAccess(boolean value) {
-      
+
       agentAccess_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1244,7 +1215,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAgentAccess() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       agentAccess_ = false;
       onChanged();
       return this;
@@ -1282,7 +1253,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new PBXExtension(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

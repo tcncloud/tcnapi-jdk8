@@ -26,74 +26,6 @@ private static final long serialVersionUID = 0L;
     return new EmailMessageReplyWithAttachments();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private EmailMessageReplyWithAttachments(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.tcn.cloud.api.api.v0alpha.EmailMessageReply.Builder subBuilder = null;
-            if (emailMessageReply_ != null) {
-              subBuilder = emailMessageReply_.toBuilder();
-            }
-            emailMessageReply_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.EmailMessageReply.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(emailMessageReply_);
-              emailMessageReply_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              attachments_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.EmailMessageReplyAttachment>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            attachments_.add(
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.EmailMessageReplyAttachment.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        attachments_ = java.util.Collections.unmodifiableList(attachments_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.EmailapiProto.internal_static_api_v0alpha_EmailMessageReplyWithAttachments_descriptor;
@@ -130,10 +62,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.EmailMessageReplyOrBuilder getEmailMessageReplyOrBuilder() {
-    return getEmailMessageReply();
+    return emailMessageReply_ == null ? com.tcn.cloud.api.api.v0alpha.EmailMessageReply.getDefaultInstance() : emailMessageReply_;
   }
 
   public static final int ATTACHMENTS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.EmailMessageReplyAttachment> attachments_;
   /**
    * <code>repeated .api.v0alpha.EmailMessageReplyAttachment attachments = 2 [json_name = "attachments"];</code>
@@ -193,7 +126,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < attachments_.size(); i++) {
       output.writeMessage(2, attachments_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -210,7 +143,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, attachments_.get(i));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -232,7 +165,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getAttachmentsList()
         .equals(other.getAttachmentsList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -251,7 +184,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ATTACHMENTS_FIELD_NUMBER;
       hash = (53 * hash) + getAttachmentsList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -300,11 +233,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -368,35 +303,30 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getAttachmentsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (emailMessageReplyBuilder_ == null) {
-        emailMessageReply_ = null;
-      } else {
-        emailMessageReply_ = null;
+      bitField0_ = 0;
+      emailMessageReply_ = null;
+      if (emailMessageReplyBuilder_ != null) {
+        emailMessageReplyBuilder_.dispose();
         emailMessageReplyBuilder_ = null;
       }
       if (attachmentsBuilder_ == null) {
         attachments_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        attachments_ = null;
         attachmentsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -423,23 +353,31 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments buildPartial() {
       com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments result = new com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments(this);
-      int from_bitField0_ = bitField0_;
-      if (emailMessageReplyBuilder_ == null) {
-        result.emailMessageReply_ = emailMessageReply_;
-      } else {
-        result.emailMessageReply_ = emailMessageReplyBuilder_.build();
-      }
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments result) {
       if (attachmentsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           attachments_ = java.util.Collections.unmodifiableList(attachments_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.attachments_ = attachments_;
       } else {
         result.attachments_ = attachmentsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.emailMessageReply_ = emailMessageReplyBuilder_ == null
+            ? emailMessageReply_
+            : emailMessageReplyBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -493,7 +431,7 @@ private static final long serialVersionUID = 0L;
         if (!other.attachments_.isEmpty()) {
           if (attachments_.isEmpty()) {
             attachments_ = other.attachments_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureAttachmentsIsMutable();
             attachments_.addAll(other.attachments_);
@@ -506,7 +444,7 @@ private static final long serialVersionUID = 0L;
             attachmentsBuilder_.dispose();
             attachmentsBuilder_ = null;
             attachments_ = other.attachments_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             attachmentsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAttachmentsFieldBuilder() : null;
@@ -515,7 +453,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -530,17 +468,50 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getEmailMessageReplyFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              com.tcn.cloud.api.api.v0alpha.EmailMessageReplyAttachment m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v0alpha.EmailMessageReplyAttachment.parser(),
+                      extensionRegistry);
+              if (attachmentsBuilder_ == null) {
+                ensureAttachmentsIsMutable();
+                attachments_.add(m);
+              } else {
+                attachmentsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -553,7 +524,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the emailMessageReply field is set.
      */
     public boolean hasEmailMessageReply() {
-      return emailMessageReplyBuilder_ != null || emailMessageReply_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.api.v0alpha.EmailMessageReply email_message_reply = 1 [json_name = "emailMessageReply"];</code>
@@ -575,11 +546,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         emailMessageReply_ = value;
-        onChanged();
       } else {
         emailMessageReplyBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -589,11 +560,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.EmailMessageReply.Builder builderForValue) {
       if (emailMessageReplyBuilder_ == null) {
         emailMessageReply_ = builderForValue.build();
-        onChanged();
       } else {
         emailMessageReplyBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -601,38 +572,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeEmailMessageReply(com.tcn.cloud.api.api.v0alpha.EmailMessageReply value) {
       if (emailMessageReplyBuilder_ == null) {
-        if (emailMessageReply_ != null) {
-          emailMessageReply_ =
-            com.tcn.cloud.api.api.v0alpha.EmailMessageReply.newBuilder(emailMessageReply_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          emailMessageReply_ != null &&
+          emailMessageReply_ != com.tcn.cloud.api.api.v0alpha.EmailMessageReply.getDefaultInstance()) {
+          getEmailMessageReplyBuilder().mergeFrom(value);
         } else {
           emailMessageReply_ = value;
         }
-        onChanged();
       } else {
         emailMessageReplyBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v0alpha.EmailMessageReply email_message_reply = 1 [json_name = "emailMessageReply"];</code>
      */
     public Builder clearEmailMessageReply() {
-      if (emailMessageReplyBuilder_ == null) {
-        emailMessageReply_ = null;
-        onChanged();
-      } else {
-        emailMessageReply_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      emailMessageReply_ = null;
+      if (emailMessageReplyBuilder_ != null) {
+        emailMessageReplyBuilder_.dispose();
         emailMessageReplyBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v0alpha.EmailMessageReply email_message_reply = 1 [json_name = "emailMessageReply"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.EmailMessageReply.Builder getEmailMessageReplyBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getEmailMessageReplyFieldBuilder().getBuilder();
     }
@@ -667,9 +638,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v0alpha.EmailMessageReplyAttachment> attachments_ =
       java.util.Collections.emptyList();
     private void ensureAttachmentsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         attachments_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.EmailMessageReplyAttachment>(attachments_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -819,7 +790,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearAttachments() {
       if (attachmentsBuilder_ == null) {
         attachments_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         attachmentsBuilder_.clear();
@@ -896,7 +867,7 @@ private static final long serialVersionUID = 0L;
         attachmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v0alpha.EmailMessageReplyAttachment, com.tcn.cloud.api.api.v0alpha.EmailMessageReplyAttachment.Builder, com.tcn.cloud.api.api.v0alpha.EmailMessageReplyAttachmentOrBuilder>(
                 attachments_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         attachments_ = null;
@@ -936,7 +907,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new EmailMessageReplyWithAttachments(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

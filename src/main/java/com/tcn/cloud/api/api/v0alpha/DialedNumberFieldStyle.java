@@ -25,74 +25,6 @@ private static final long serialVersionUID = 0L;
     return new DialedNumberFieldStyle();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private DialedNumberFieldStyle(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.tcn.cloud.api.api.v0alpha.Color.Builder subBuilder = null;
-            if (textColor_ != null) {
-              subBuilder = textColor_.toBuilder();
-            }
-            textColor_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.Color.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(textColor_);
-              textColor_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-            com.tcn.cloud.api.api.v0alpha.Color.Builder subBuilder = null;
-            if (backgroundColor_ != null) {
-              subBuilder = backgroundColor_.toBuilder();
-            }
-            backgroundColor_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.Color.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(backgroundColor_);
-              backgroundColor_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_DialedNumberFieldStyle_descriptor;
@@ -129,7 +61,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.ColorOrBuilder getTextColorOrBuilder() {
-    return getTextColor();
+    return textColor_ == null ? com.tcn.cloud.api.api.v0alpha.Color.getDefaultInstance() : textColor_;
   }
 
   public static final int BACKGROUND_COLOR_FIELD_NUMBER = 2;
@@ -155,7 +87,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.ColorOrBuilder getBackgroundColorOrBuilder() {
-    return getBackgroundColor();
+    return backgroundColor_ == null ? com.tcn.cloud.api.api.v0alpha.Color.getDefaultInstance() : backgroundColor_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -178,7 +110,7 @@ private static final long serialVersionUID = 0L;
     if (backgroundColor_ != null) {
       output.writeMessage(2, getBackgroundColor());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -195,7 +127,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getBackgroundColor());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -220,7 +152,7 @@ private static final long serialVersionUID = 0L;
       if (!getBackgroundColor()
           .equals(other.getBackgroundColor())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -239,7 +171,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + BACKGROUND_COLOR_FIELD_NUMBER;
       hash = (53 * hash) + getBackgroundColor().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -288,11 +220,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.DialedNumberFieldStyle parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.DialedNumberFieldStyle parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -356,32 +290,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.DialedNumberFieldStyle.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (textColorBuilder_ == null) {
-        textColor_ = null;
-      } else {
-        textColor_ = null;
+      bitField0_ = 0;
+      textColor_ = null;
+      if (textColorBuilder_ != null) {
+        textColorBuilder_.dispose();
         textColorBuilder_ = null;
       }
-      if (backgroundColorBuilder_ == null) {
-        backgroundColor_ = null;
-      } else {
-        backgroundColor_ = null;
+      backgroundColor_ = null;
+      if (backgroundColorBuilder_ != null) {
+        backgroundColorBuilder_.dispose();
         backgroundColorBuilder_ = null;
       }
       return this;
@@ -410,18 +338,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.DialedNumberFieldStyle buildPartial() {
       com.tcn.cloud.api.api.v0alpha.DialedNumberFieldStyle result = new com.tcn.cloud.api.api.v0alpha.DialedNumberFieldStyle(this);
-      if (textColorBuilder_ == null) {
-        result.textColor_ = textColor_;
-      } else {
-        result.textColor_ = textColorBuilder_.build();
-      }
-      if (backgroundColorBuilder_ == null) {
-        result.backgroundColor_ = backgroundColor_;
-      } else {
-        result.backgroundColor_ = backgroundColorBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.DialedNumberFieldStyle result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.textColor_ = textColorBuilder_ == null
+            ? textColor_
+            : textColorBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.backgroundColor_ = backgroundColorBuilder_ == null
+            ? backgroundColor_
+            : backgroundColorBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -474,7 +407,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasBackgroundColor()) {
         mergeBackgroundColor(other.getBackgroundColor());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -489,19 +422,47 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.DialedNumberFieldStyle parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getTextColorFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  getBackgroundColorFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.DialedNumberFieldStyle) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.tcn.cloud.api.api.v0alpha.Color textColor_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -511,7 +472,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the textColor field is set.
      */
     public boolean hasTextColor() {
-      return textColorBuilder_ != null || textColor_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.api.v0alpha.Color text_color = 1 [json_name = "textColor"];</code>
@@ -533,11 +494,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         textColor_ = value;
-        onChanged();
       } else {
         textColorBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -547,11 +508,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.Color.Builder builderForValue) {
       if (textColorBuilder_ == null) {
         textColor_ = builderForValue.build();
-        onChanged();
       } else {
         textColorBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -559,38 +520,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTextColor(com.tcn.cloud.api.api.v0alpha.Color value) {
       if (textColorBuilder_ == null) {
-        if (textColor_ != null) {
-          textColor_ =
-            com.tcn.cloud.api.api.v0alpha.Color.newBuilder(textColor_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          textColor_ != null &&
+          textColor_ != com.tcn.cloud.api.api.v0alpha.Color.getDefaultInstance()) {
+          getTextColorBuilder().mergeFrom(value);
         } else {
           textColor_ = value;
         }
-        onChanged();
       } else {
         textColorBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v0alpha.Color text_color = 1 [json_name = "textColor"];</code>
      */
     public Builder clearTextColor() {
-      if (textColorBuilder_ == null) {
-        textColor_ = null;
-        onChanged();
-      } else {
-        textColor_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      textColor_ = null;
+      if (textColorBuilder_ != null) {
+        textColorBuilder_.dispose();
         textColorBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v0alpha.Color text_color = 1 [json_name = "textColor"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.Color.Builder getTextColorBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getTextColorFieldBuilder().getBuilder();
     }
@@ -630,7 +591,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the backgroundColor field is set.
      */
     public boolean hasBackgroundColor() {
-      return backgroundColorBuilder_ != null || backgroundColor_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.api.v0alpha.Color background_color = 2 [json_name = "backgroundColor"];</code>
@@ -652,11 +613,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         backgroundColor_ = value;
-        onChanged();
       } else {
         backgroundColorBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -666,11 +627,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.Color.Builder builderForValue) {
       if (backgroundColorBuilder_ == null) {
         backgroundColor_ = builderForValue.build();
-        onChanged();
       } else {
         backgroundColorBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -678,38 +639,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeBackgroundColor(com.tcn.cloud.api.api.v0alpha.Color value) {
       if (backgroundColorBuilder_ == null) {
-        if (backgroundColor_ != null) {
-          backgroundColor_ =
-            com.tcn.cloud.api.api.v0alpha.Color.newBuilder(backgroundColor_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          backgroundColor_ != null &&
+          backgroundColor_ != com.tcn.cloud.api.api.v0alpha.Color.getDefaultInstance()) {
+          getBackgroundColorBuilder().mergeFrom(value);
         } else {
           backgroundColor_ = value;
         }
-        onChanged();
       } else {
         backgroundColorBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v0alpha.Color background_color = 2 [json_name = "backgroundColor"];</code>
      */
     public Builder clearBackgroundColor() {
-      if (backgroundColorBuilder_ == null) {
-        backgroundColor_ = null;
-        onChanged();
-      } else {
-        backgroundColor_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      backgroundColor_ = null;
+      if (backgroundColorBuilder_ != null) {
+        backgroundColorBuilder_.dispose();
         backgroundColorBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v0alpha.Color background_color = 2 [json_name = "backgroundColor"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.Color.Builder getBackgroundColorBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getBackgroundColorFieldBuilder().getBuilder();
     }
@@ -773,7 +734,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new DialedNumberFieldStyle(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

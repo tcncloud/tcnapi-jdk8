@@ -25,104 +25,6 @@ private static final long serialVersionUID = 0L;
     return new Flow();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private Flow(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.tcn.cloud.api.api.commons.integrations.InvoiceFlow.Builder subBuilder = null;
-            if (valueCase_ == 1) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.integrations.InvoiceFlow) value_).toBuilder();
-            }
-            value_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.integrations.InvoiceFlow.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.integrations.InvoiceFlow) value_);
-              value_ = subBuilder.buildPartial();
-            }
-            valueCase_ = 1;
-            break;
-          }
-          case 18: {
-            com.tcn.cloud.api.api.commons.integrations.PaymentFlow.Builder subBuilder = null;
-            if (valueCase_ == 2) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.integrations.PaymentFlow) value_).toBuilder();
-            }
-            value_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.integrations.PaymentFlow.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.integrations.PaymentFlow) value_);
-              value_ = subBuilder.buildPartial();
-            }
-            valueCase_ = 2;
-            break;
-          }
-          case 26: {
-            com.tcn.cloud.api.api.commons.integrations.VerificationFlow.Builder subBuilder = null;
-            if (valueCase_ == 3) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.integrations.VerificationFlow) value_).toBuilder();
-            }
-            value_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.integrations.VerificationFlow.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.integrations.VerificationFlow) value_);
-              value_ = subBuilder.buildPartial();
-            }
-            valueCase_ = 3;
-            break;
-          }
-          case 34: {
-            com.tcn.cloud.api.api.commons.integrations.ExecuteFlow.Builder subBuilder = null;
-            if (valueCase_ == 4) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.integrations.ExecuteFlow) value_).toBuilder();
-            }
-            value_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.integrations.ExecuteFlow.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.integrations.ExecuteFlow) value_);
-              value_ = subBuilder.buildPartial();
-            }
-            valueCase_ = 4;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_Flow_descriptor;
@@ -137,6 +39,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int valueCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object value_;
   public enum ValueCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -331,7 +234,7 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 4) {
       output.writeMessage(4, (com.tcn.cloud.api.api.commons.integrations.ExecuteFlow) value_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -356,7 +259,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, (com.tcn.cloud.api.api.commons.integrations.ExecuteFlow) value_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -392,7 +295,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -423,7 +326,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -472,11 +375,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.integrations.Flow parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.integrations.Flow parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -540,22 +445,30 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.integrations.Flow.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      if (invoiceFlowBuilder_ != null) {
+        invoiceFlowBuilder_.clear();
+      }
+      if (paymentFlowBuilder_ != null) {
+        paymentFlowBuilder_.clear();
+      }
+      if (verificationFlowBuilder_ != null) {
+        verificationFlowBuilder_.clear();
+      }
+      if (executeFlowBuilder_ != null) {
+        executeFlowBuilder_.clear();
+      }
       valueCase_ = 0;
       value_ = null;
       return this;
@@ -584,37 +497,35 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.integrations.Flow buildPartial() {
       com.tcn.cloud.api.api.commons.integrations.Flow result = new com.tcn.cloud.api.api.commons.integrations.Flow(this);
-      if (valueCase_ == 1) {
-        if (invoiceFlowBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = invoiceFlowBuilder_.build();
-        }
-      }
-      if (valueCase_ == 2) {
-        if (paymentFlowBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = paymentFlowBuilder_.build();
-        }
-      }
-      if (valueCase_ == 3) {
-        if (verificationFlowBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = verificationFlowBuilder_.build();
-        }
-      }
-      if (valueCase_ == 4) {
-        if (executeFlowBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = executeFlowBuilder_.build();
-        }
-      }
-      result.valueCase_ = valueCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.integrations.Flow result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.tcn.cloud.api.api.commons.integrations.Flow result) {
+      result.valueCase_ = valueCase_;
+      result.value_ = this.value_;
+      if (valueCase_ == 1 &&
+          invoiceFlowBuilder_ != null) {
+        result.value_ = invoiceFlowBuilder_.build();
+      }
+      if (valueCase_ == 2 &&
+          paymentFlowBuilder_ != null) {
+        result.value_ = paymentFlowBuilder_.build();
+      }
+      if (valueCase_ == 3 &&
+          verificationFlowBuilder_ != null) {
+        result.value_ = verificationFlowBuilder_.build();
+      }
+      if (valueCase_ == 4 &&
+          executeFlowBuilder_ != null) {
+        result.value_ = executeFlowBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -682,7 +593,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -697,17 +608,58 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.integrations.Flow parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getInvoiceFlowFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 1;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  getPaymentFlowFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 2;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getVerificationFlowFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getExecuteFlowFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4;
+              break;
+            } // case 34
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.integrations.Flow) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int valueCase_ = 0;
@@ -725,6 +677,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.integrations.InvoiceFlow, com.tcn.cloud.api.api.commons.integrations.InvoiceFlow.Builder, com.tcn.cloud.api.api.commons.integrations.InvoiceFlowOrBuilder> invoiceFlowBuilder_;
@@ -800,8 +753,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (valueCase_ == 1) {
           invoiceFlowBuilder_.mergeFrom(value);
+        } else {
+          invoiceFlowBuilder_.setMessage(value);
         }
-        invoiceFlowBuilder_.setMessage(value);
       }
       valueCase_ = 1;
       return this;
@@ -863,7 +817,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 1;
-      onChanged();;
+      onChanged();
       return invoiceFlowBuilder_;
     }
 
@@ -941,8 +895,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (valueCase_ == 2) {
           paymentFlowBuilder_.mergeFrom(value);
+        } else {
+          paymentFlowBuilder_.setMessage(value);
         }
-        paymentFlowBuilder_.setMessage(value);
       }
       valueCase_ = 2;
       return this;
@@ -1004,7 +959,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 2;
-      onChanged();;
+      onChanged();
       return paymentFlowBuilder_;
     }
 
@@ -1082,8 +1037,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (valueCase_ == 3) {
           verificationFlowBuilder_.mergeFrom(value);
+        } else {
+          verificationFlowBuilder_.setMessage(value);
         }
-        verificationFlowBuilder_.setMessage(value);
       }
       valueCase_ = 3;
       return this;
@@ -1145,7 +1101,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 3;
-      onChanged();;
+      onChanged();
       return verificationFlowBuilder_;
     }
 
@@ -1223,8 +1179,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (valueCase_ == 4) {
           executeFlowBuilder_.mergeFrom(value);
+        } else {
+          executeFlowBuilder_.setMessage(value);
         }
-        executeFlowBuilder_.setMessage(value);
       }
       valueCase_ = 4;
       return this;
@@ -1286,7 +1243,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 4;
-      onChanged();;
+      onChanged();
       return executeFlowBuilder_;
     }
     @java.lang.Override
@@ -1322,7 +1279,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Flow(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

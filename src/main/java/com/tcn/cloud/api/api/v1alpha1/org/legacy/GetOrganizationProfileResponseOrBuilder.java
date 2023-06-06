@@ -138,10 +138,11 @@ public interface GetOrganizationProfileResponseOrBuilder extends
    *
    * <code>map&lt;string, .api.v1alpha1.org.legacy.RegionUrls&gt; allowed_regions = 16 [json_name = "allowedRegions"];</code>
    */
-
-  com.tcn.cloud.api.api.v1alpha1.org.legacy.RegionUrls getAllowedRegionsOrDefault(
+  /* nullable */
+com.tcn.cloud.api.api.v1alpha1.org.legacy.RegionUrls getAllowedRegionsOrDefault(
       java.lang.String key,
-      com.tcn.cloud.api.api.v1alpha1.org.legacy.RegionUrls defaultValue);
+      /* nullable */
+com.tcn.cloud.api.api.v1alpha1.org.legacy.RegionUrls defaultValue);
   /**
    * <pre>
    * map of region_id to array of api_endpoints
@@ -149,7 +150,6 @@ public interface GetOrganizationProfileResponseOrBuilder extends
    *
    * <code>map&lt;string, .api.v1alpha1.org.legacy.RegionUrls&gt; allowed_regions = 16 [json_name = "allowedRegions"];</code>
    */
-
   com.tcn.cloud.api.api.v1alpha1.org.legacy.RegionUrls getAllowedRegionsOrThrow(
       java.lang.String key);
 }

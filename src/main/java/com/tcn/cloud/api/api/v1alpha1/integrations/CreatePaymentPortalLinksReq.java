@@ -27,80 +27,6 @@ private static final long serialVersionUID = 0L;
     return new CreatePaymentPortalLinksReq();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private CreatePaymentPortalLinksReq(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            linkConfigId_ = s;
-            break;
-          }
-          case 34: {
-            com.google.protobuf.Timestamp.Builder subBuilder = null;
-            if (expiry_ != null) {
-              subBuilder = expiry_.toBuilder();
-            }
-            expiry_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(expiry_);
-              expiry_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 42: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              userData_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.Task>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            userData_.add(
-                input.readMessage(com.tcn.cloud.api.api.v1alpha1.integrations.Task.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        userData_ = java.util.Collections.unmodifiableList(userData_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_CreatePaymentPortalLinksReq_descriptor;
@@ -115,7 +41,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LINK_CONFIG_ID_FIELD_NUMBER = 3;
-  private volatile java.lang.Object linkConfigId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object linkConfigId_ = "";
   /**
    * <pre>
    * the pk of link_config table that contains method we will be creating links for
@@ -195,10 +122,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getExpiryOrBuilder() {
-    return getExpiry();
+    return expiry_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiry_;
   }
 
   public static final int USER_DATA_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Task> userData_;
   /**
    * <pre>
@@ -277,7 +205,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getLinkConfigIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(linkConfigId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, linkConfigId_);
     }
     if (expiry_ != null) {
@@ -286,7 +214,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < userData_.size(); i++) {
       output.writeMessage(5, userData_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -295,7 +223,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getLinkConfigIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(linkConfigId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, linkConfigId_);
     }
     if (expiry_ != null) {
@@ -306,7 +234,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, userData_.get(i));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -330,7 +258,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getUserDataList()
         .equals(other.getUserDataList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -351,7 +279,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + USER_DATA_FIELD_NUMBER;
       hash = (53 * hash) + getUserDataList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -400,11 +328,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -468,37 +398,31 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getUserDataFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       linkConfigId_ = "";
-
-      if (expiryBuilder_ == null) {
-        expiry_ = null;
-      } else {
-        expiry_ = null;
+      expiry_ = null;
+      if (expiryBuilder_ != null) {
+        expiryBuilder_.dispose();
         expiryBuilder_ = null;
       }
       if (userDataBuilder_ == null) {
         userData_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        userData_ = null;
         userDataBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -525,24 +449,34 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksReq result = new com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksReq(this);
-      int from_bitField0_ = bitField0_;
-      result.linkConfigId_ = linkConfigId_;
-      if (expiryBuilder_ == null) {
-        result.expiry_ = expiry_;
-      } else {
-        result.expiry_ = expiryBuilder_.build();
-      }
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksReq result) {
       if (userDataBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           userData_ = java.util.Collections.unmodifiableList(userData_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.userData_ = userData_;
       } else {
         result.userData_ = userDataBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksReq result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.linkConfigId_ = linkConfigId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.expiry_ = expiryBuilder_ == null
+            ? expiry_
+            : expiryBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -591,6 +525,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksReq.getDefaultInstance()) return this;
       if (!other.getLinkConfigId().isEmpty()) {
         linkConfigId_ = other.linkConfigId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasExpiry()) {
@@ -600,7 +535,7 @@ private static final long serialVersionUID = 0L;
         if (!other.userData_.isEmpty()) {
           if (userData_.isEmpty()) {
             userData_ = other.userData_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureUserDataIsMutable();
             userData_.addAll(other.userData_);
@@ -613,7 +548,7 @@ private static final long serialVersionUID = 0L;
             userDataBuilder_.dispose();
             userDataBuilder_ = null;
             userData_ = other.userData_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
             userDataBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getUserDataFieldBuilder() : null;
@@ -622,7 +557,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -637,17 +572,55 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksReq parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 26: {
+              linkConfigId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getExpiryFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 34
+            case 42: {
+              com.tcn.cloud.api.api.v1alpha1.integrations.Task m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.integrations.Task.parser(),
+                      extensionRegistry);
+              if (userDataBuilder_ == null) {
+                ensureUserDataIsMutable();
+                userData_.add(m);
+              } else {
+                userDataBuilder_.addMessage(m);
+              }
+              break;
+            } // case 42
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -705,11 +678,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLinkConfigId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       linkConfigId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -722,8 +693,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLinkConfigId() {
-      
       linkConfigId_ = getDefaultInstance().getLinkConfigId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -738,12 +709,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLinkConfigIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       linkConfigId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -760,7 +729,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the expiry field is set.
      */
     public boolean hasExpiry() {
-      return expiryBuilder_ != null || expiry_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -790,11 +759,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         expiry_ = value;
-        onChanged();
       } else {
         expiryBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -808,11 +777,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (expiryBuilder_ == null) {
         expiry_ = builderForValue.build();
-        onChanged();
       } else {
         expiryBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -824,17 +793,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeExpiry(com.google.protobuf.Timestamp value) {
       if (expiryBuilder_ == null) {
-        if (expiry_ != null) {
-          expiry_ =
-            com.google.protobuf.Timestamp.newBuilder(expiry_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          expiry_ != null &&
+          expiry_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getExpiryBuilder().mergeFrom(value);
         } else {
           expiry_ = value;
         }
-        onChanged();
       } else {
         expiryBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -845,14 +815,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp expiry = 4 [json_name = "expiry"];</code>
      */
     public Builder clearExpiry() {
-      if (expiryBuilder_ == null) {
-        expiry_ = null;
-        onChanged();
-      } else {
-        expiry_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      expiry_ = null;
+      if (expiryBuilder_ != null) {
+        expiryBuilder_.dispose();
         expiryBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -863,7 +832,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp expiry = 4 [json_name = "expiry"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getExpiryBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getExpiryFieldBuilder().getBuilder();
     }
@@ -906,9 +875,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Task> userData_ =
       java.util.Collections.emptyList();
     private void ensureUserDataIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         userData_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.Task>(userData_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -1113,7 +1082,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearUserData() {
       if (userDataBuilder_ == null) {
         userData_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         userDataBuilder_.clear();
@@ -1225,7 +1194,7 @@ private static final long serialVersionUID = 0L;
         userDataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.integrations.Task, com.tcn.cloud.api.api.v1alpha1.integrations.Task.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.TaskOrBuilder>(
                 userData_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         userData_ = null;
@@ -1265,7 +1234,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new CreatePaymentPortalLinksReq(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

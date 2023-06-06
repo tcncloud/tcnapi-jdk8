@@ -30,96 +30,6 @@ private static final long serialVersionUID = 0L;
     return new RevokeConsentReq();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private RevokeConsentReq(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            consentId_ = input.readInt64();
-            break;
-          }
-          case 26: {
-            com.google.protobuf.Timestamp.Builder subBuilder = null;
-            if (revoked_ != null) {
-              subBuilder = revoked_.toBuilder();
-            }
-            revoked_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(revoked_);
-              revoked_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            consentProfileId_ = s;
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            content_ = s;
-            break;
-          }
-          case 48: {
-            int rawValue = input.readEnum();
-
-            channelType_ = rawValue;
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            revokedReason_ = s;
-            break;
-          }
-          case 64: {
-            int rawValue = input.readEnum();
-
-            contentType_ = rawValue;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.ComplianceProto.internal_static_api_v0alpha_RevokeConsentReq_descriptor;
@@ -134,7 +44,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONSENT_ID_FIELD_NUMBER = 1;
-  private long consentId_;
+  private long consentId_ = 0L;
   /**
    * <code>int64 consent_id = 1 [json_name = "consentId"];</code>
    * @return The consentId.
@@ -167,11 +77,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getRevokedOrBuilder() {
-    return getRevoked();
+    return revoked_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : revoked_;
   }
 
   public static final int CONSENT_PROFILE_ID_FIELD_NUMBER = 4;
-  private volatile java.lang.Object consentProfileId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object consentProfileId_ = "";
   /**
    * <code>string consent_profile_id = 4 [json_name = "consentProfileId"];</code>
    * @return The consentProfileId.
@@ -209,7 +120,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONTENT_FIELD_NUMBER = 5;
-  private volatile java.lang.Object content_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object content_ = "";
   /**
    * <code>string content = 5 [json_name = "content"];</code>
    * @return The content.
@@ -247,7 +159,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CHANNEL_TYPE_FIELD_NUMBER = 6;
-  private int channelType_;
+  private int channelType_ = 0;
   /**
    * <code>.api.commons.Channel channel_type = 6 [json_name = "channelType"];</code>
    * @return The enum numeric value on the wire for channelType.
@@ -260,13 +172,13 @@ private static final long serialVersionUID = 0L;
    * @return The channelType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.Channel getChannelType() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.Channel result = com.tcn.cloud.api.api.commons.Channel.valueOf(channelType_);
+    com.tcn.cloud.api.api.commons.Channel result = com.tcn.cloud.api.api.commons.Channel.forNumber(channelType_);
     return result == null ? com.tcn.cloud.api.api.commons.Channel.UNRECOGNIZED : result;
   }
 
   public static final int REVOKED_REASON_FIELD_NUMBER = 7;
-  private volatile java.lang.Object revokedReason_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object revokedReason_ = "";
   /**
    * <code>string revoked_reason = 7 [json_name = "revokedReason"];</code>
    * @return The revokedReason.
@@ -304,7 +216,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONTENT_TYPE_FIELD_NUMBER = 8;
-  private int contentType_;
+  private int contentType_ = 0;
   /**
    * <code>.api.commons.ContentType content_type = 8 [json_name = "contentType"];</code>
    * @return The enum numeric value on the wire for contentType.
@@ -317,8 +229,7 @@ private static final long serialVersionUID = 0L;
    * @return The contentType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.ContentType getContentType() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.ContentType result = com.tcn.cloud.api.api.commons.ContentType.valueOf(contentType_);
+    com.tcn.cloud.api.api.commons.ContentType result = com.tcn.cloud.api.api.commons.ContentType.forNumber(contentType_);
     return result == null ? com.tcn.cloud.api.api.commons.ContentType.UNRECOGNIZED : result;
   }
 
@@ -342,22 +253,22 @@ private static final long serialVersionUID = 0L;
     if (revoked_ != null) {
       output.writeMessage(3, getRevoked());
     }
-    if (!getConsentProfileIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consentProfileId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, consentProfileId_);
     }
-    if (!getContentBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, content_);
     }
     if (channelType_ != com.tcn.cloud.api.api.commons.Channel.CHANNEL_CALL.getNumber()) {
       output.writeEnum(6, channelType_);
     }
-    if (!getRevokedReasonBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(revokedReason_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, revokedReason_);
     }
     if (contentType_ != com.tcn.cloud.api.api.commons.ContentType.CT_PHONE_NUMBER.getNumber()) {
       output.writeEnum(8, contentType_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -374,24 +285,24 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getRevoked());
     }
-    if (!getConsentProfileIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consentProfileId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, consentProfileId_);
     }
-    if (!getContentBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, content_);
     }
     if (channelType_ != com.tcn.cloud.api.api.commons.Channel.CHANNEL_CALL.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(6, channelType_);
     }
-    if (!getRevokedReasonBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(revokedReason_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, revokedReason_);
     }
     if (contentType_ != com.tcn.cloud.api.api.commons.ContentType.CT_PHONE_NUMBER.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(8, contentType_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -421,7 +332,7 @@ private static final long serialVersionUID = 0L;
     if (!getRevokedReason()
         .equals(other.getRevokedReason())) return false;
     if (contentType_ != other.contentType_) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -449,7 +360,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getRevokedReason().hashCode();
     hash = (37 * hash) + CONTENT_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + contentType_;
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -498,11 +409,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.RevokeConsentReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.RevokeConsentReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -566,40 +479,29 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.RevokeConsentReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       consentId_ = 0L;
-
-      if (revokedBuilder_ == null) {
-        revoked_ = null;
-      } else {
-        revoked_ = null;
+      revoked_ = null;
+      if (revokedBuilder_ != null) {
+        revokedBuilder_.dispose();
         revokedBuilder_ = null;
       }
       consentProfileId_ = "";
-
       content_ = "";
-
       channelType_ = 0;
-
       revokedReason_ = "";
-
       contentType_ = 0;
-
       return this;
     }
 
@@ -626,19 +528,36 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.RevokeConsentReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.RevokeConsentReq result = new com.tcn.cloud.api.api.v0alpha.RevokeConsentReq(this);
-      result.consentId_ = consentId_;
-      if (revokedBuilder_ == null) {
-        result.revoked_ = revoked_;
-      } else {
-        result.revoked_ = revokedBuilder_.build();
-      }
-      result.consentProfileId_ = consentProfileId_;
-      result.content_ = content_;
-      result.channelType_ = channelType_;
-      result.revokedReason_ = revokedReason_;
-      result.contentType_ = contentType_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.RevokeConsentReq result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.consentId_ = consentId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.revoked_ = revokedBuilder_ == null
+            ? revoked_
+            : revokedBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.consentProfileId_ = consentProfileId_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.content_ = content_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.channelType_ = channelType_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.revokedReason_ = revokedReason_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.contentType_ = contentType_;
+      }
     }
 
     @java.lang.Override
@@ -693,10 +612,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getConsentProfileId().isEmpty()) {
         consentProfileId_ = other.consentProfileId_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getContent().isEmpty()) {
         content_ = other.content_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.channelType_ != 0) {
@@ -704,12 +625,13 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getRevokedReason().isEmpty()) {
         revokedReason_ = other.revokedReason_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.contentType_ != 0) {
         setContentTypeValue(other.getContentTypeValue());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -724,19 +646,70 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.RevokeConsentReq parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              consentId_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 26: {
+              input.readMessage(
+                  getRevokedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 26
+            case 34: {
+              consentProfileId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 34
+            case 42: {
+              content_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 42
+            case 48: {
+              channelType_ = input.readEnum();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 48
+            case 58: {
+              revokedReason_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 58
+            case 64: {
+              contentType_ = input.readEnum();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 64
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.RevokeConsentReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private long consentId_ ;
     /**
@@ -753,8 +726,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConsentId(long value) {
-      
+
       consentId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -763,7 +737,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConsentId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       consentId_ = 0L;
       onChanged();
       return this;
@@ -777,7 +751,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the revoked field is set.
      */
     public boolean hasRevoked() {
-      return revokedBuilder_ != null || revoked_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp revoked = 3 [json_name = "revoked"];</code>
@@ -799,11 +773,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         revoked_ = value;
-        onChanged();
       } else {
         revokedBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -813,11 +787,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (revokedBuilder_ == null) {
         revoked_ = builderForValue.build();
-        onChanged();
       } else {
         revokedBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -825,38 +799,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeRevoked(com.google.protobuf.Timestamp value) {
       if (revokedBuilder_ == null) {
-        if (revoked_ != null) {
-          revoked_ =
-            com.google.protobuf.Timestamp.newBuilder(revoked_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          revoked_ != null &&
+          revoked_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getRevokedBuilder().mergeFrom(value);
         } else {
           revoked_ = value;
         }
-        onChanged();
       } else {
         revokedBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp revoked = 3 [json_name = "revoked"];</code>
      */
     public Builder clearRevoked() {
-      if (revokedBuilder_ == null) {
-        revoked_ = null;
-        onChanged();
-      } else {
-        revoked_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      revoked_ = null;
+      if (revokedBuilder_ != null) {
+        revokedBuilder_.dispose();
         revokedBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp revoked = 3 [json_name = "revoked"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getRevokedBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getRevokedFieldBuilder().getBuilder();
     }
@@ -929,11 +903,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConsentProfileId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       consentProfileId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -942,8 +914,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConsentProfileId() {
-      
       consentProfileId_ = getDefaultInstance().getConsentProfileId();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -954,12 +926,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConsentProfileIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       consentProfileId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1005,11 +975,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setContent(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       content_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1018,8 +986,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearContent() {
-      
       content_ = getDefaultInstance().getContent();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1030,12 +998,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setContentBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       content_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1054,8 +1020,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setChannelTypeValue(int value) {
-      
       channelType_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1065,8 +1031,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.Channel getChannelType() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.Channel result = com.tcn.cloud.api.api.commons.Channel.valueOf(channelType_);
+      com.tcn.cloud.api.api.commons.Channel result = com.tcn.cloud.api.api.commons.Channel.forNumber(channelType_);
       return result == null ? com.tcn.cloud.api.api.commons.Channel.UNRECOGNIZED : result;
     }
     /**
@@ -1078,7 +1043,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000010;
       channelType_ = value.getNumber();
       onChanged();
       return this;
@@ -1088,7 +1053,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearChannelType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       channelType_ = 0;
       onChanged();
       return this;
@@ -1135,11 +1100,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRevokedReason(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       revokedReason_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1148,8 +1111,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRevokedReason() {
-      
       revokedReason_ = getDefaultInstance().getRevokedReason();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1160,12 +1123,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRevokedReasonBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       revokedReason_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1184,8 +1145,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setContentTypeValue(int value) {
-      
       contentType_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1195,8 +1156,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ContentType getContentType() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.ContentType result = com.tcn.cloud.api.api.commons.ContentType.valueOf(contentType_);
+      com.tcn.cloud.api.api.commons.ContentType result = com.tcn.cloud.api.api.commons.ContentType.forNumber(contentType_);
       return result == null ? com.tcn.cloud.api.api.commons.ContentType.UNRECOGNIZED : result;
     }
     /**
@@ -1208,7 +1168,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000040;
       contentType_ = value.getNumber();
       onChanged();
       return this;
@@ -1218,7 +1178,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearContentType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       contentType_ = 0;
       onChanged();
       return this;
@@ -1256,7 +1216,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new RevokeConsentReq(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

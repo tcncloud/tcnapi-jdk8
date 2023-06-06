@@ -31,75 +31,6 @@ private static final long serialVersionUID = 0L;
     return new BusinessPreferences();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private BusinessPreferences(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            weeksOfData_ = input.readInt32();
-            break;
-          }
-          case 16: {
-            int rawValue = input.readEnum();
-
-            timeZone_ = rawValue;
-            break;
-          }
-          case 24: {
-
-            multiClientAccess_ = input.readBool();
-            break;
-          }
-          case 32: {
-
-            customVisualizations_ = input.readBool();
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            timeFilter_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.legacy.EntitiesProto.internal_static_api_v1alpha1_org_legacy_BusinessPreferences_descriptor;
@@ -114,7 +45,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WEEKS_OF_DATA_FIELD_NUMBER = 1;
-  private int weeksOfData_;
+  private int weeksOfData_ = 0;
   /**
    * <pre>
    * Default number of weeks shown in business intelligence analytics visualizer
@@ -129,7 +60,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TIME_ZONE_FIELD_NUMBER = 2;
-  private int timeZone_;
+  private int timeZone_ = 0;
   /**
    * <pre>
    * Time zone for business intelligence
@@ -150,13 +81,12 @@ private static final long serialVersionUID = 0L;
    * @return The timeZone.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.AnaTimeZone getTimeZone() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.AnaTimeZone result = com.tcn.cloud.api.api.commons.AnaTimeZone.valueOf(timeZone_);
+    com.tcn.cloud.api.api.commons.AnaTimeZone result = com.tcn.cloud.api.api.commons.AnaTimeZone.forNumber(timeZone_);
     return result == null ? com.tcn.cloud.api.api.commons.AnaTimeZone.UNRECOGNIZED : result;
   }
 
   public static final int MULTI_CLIENT_ACCESS_FIELD_NUMBER = 3;
-  private boolean multiClientAccess_;
+  private boolean multiClientAccess_ = false;
   /**
    * <pre>
    * Controls adoption for multi-client access
@@ -171,7 +101,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOM_VISUALIZATIONS_FIELD_NUMBER = 4;
-  private boolean customVisualizations_;
+  private boolean customVisualizations_ = false;
   /**
    * <pre>
    * Controls custom reports visualization
@@ -186,7 +116,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TIME_FILTER_FIELD_NUMBER = 5;
-  private volatile java.lang.Object timeFilter_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object timeFilter_ = "";
   /**
    * <pre>
    * Default time filter in custom dashboard and visualizations
@@ -257,10 +188,10 @@ private static final long serialVersionUID = 0L;
     if (customVisualizations_ != false) {
       output.writeBool(4, customVisualizations_);
     }
-    if (!getTimeFilterBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeFilter_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, timeFilter_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -285,10 +216,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, customVisualizations_);
     }
-    if (!getTimeFilterBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeFilter_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, timeFilter_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -312,7 +243,7 @@ private static final long serialVersionUID = 0L;
         != other.getCustomVisualizations()) return false;
     if (!getTimeFilter()
         .equals(other.getTimeFilter())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -335,7 +266,7 @@ private static final long serialVersionUID = 0L;
         getCustomVisualizations());
     hash = (37 * hash) + TIME_FILTER_FIELD_NUMBER;
     hash = (53 * hash) + getTimeFilter().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -384,11 +315,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.BusinessPreferences parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.BusinessPreferences parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -456,32 +389,23 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.BusinessPreferences.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       weeksOfData_ = 0;
-
       timeZone_ = 0;
-
       multiClientAccess_ = false;
-
       customVisualizations_ = false;
-
       timeFilter_ = "";
-
       return this;
     }
 
@@ -508,13 +432,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.BusinessPreferences buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.legacy.BusinessPreferences result = new com.tcn.cloud.api.api.v1alpha1.org.legacy.BusinessPreferences(this);
-      result.weeksOfData_ = weeksOfData_;
-      result.timeZone_ = timeZone_;
-      result.multiClientAccess_ = multiClientAccess_;
-      result.customVisualizations_ = customVisualizations_;
-      result.timeFilter_ = timeFilter_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.BusinessPreferences result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.weeksOfData_ = weeksOfData_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.timeZone_ = timeZone_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.multiClientAccess_ = multiClientAccess_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.customVisualizations_ = customVisualizations_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.timeFilter_ = timeFilter_;
+      }
     }
 
     @java.lang.Override
@@ -575,9 +514,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getTimeFilter().isEmpty()) {
         timeFilter_ = other.timeFilter_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -592,19 +532,58 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.org.legacy.BusinessPreferences parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              weeksOfData_ = input.readInt32();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              timeZone_ = input.readEnum();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              multiClientAccess_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              customVisualizations_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
+              timeFilter_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.legacy.BusinessPreferences) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private int weeksOfData_ ;
     /**
@@ -629,8 +608,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWeeksOfData(int value) {
-      
+
       weeksOfData_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -643,7 +623,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWeeksOfData() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       weeksOfData_ = 0;
       onChanged();
       return this;
@@ -671,8 +651,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTimeZoneValue(int value) {
-      
       timeZone_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -686,8 +666,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.AnaTimeZone getTimeZone() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.AnaTimeZone result = com.tcn.cloud.api.api.commons.AnaTimeZone.valueOf(timeZone_);
+      com.tcn.cloud.api.api.commons.AnaTimeZone result = com.tcn.cloud.api.api.commons.AnaTimeZone.forNumber(timeZone_);
       return result == null ? com.tcn.cloud.api.api.commons.AnaTimeZone.UNRECOGNIZED : result;
     }
     /**
@@ -703,7 +682,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       timeZone_ = value.getNumber();
       onChanged();
       return this;
@@ -717,7 +696,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTimeZone() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       timeZone_ = 0;
       onChanged();
       return this;
@@ -746,8 +725,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMultiClientAccess(boolean value) {
-      
+
       multiClientAccess_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -760,7 +740,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMultiClientAccess() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       multiClientAccess_ = false;
       onChanged();
       return this;
@@ -789,8 +769,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCustomVisualizations(boolean value) {
-      
+
       customVisualizations_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -803,7 +784,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomVisualizations() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       customVisualizations_ = false;
       onChanged();
       return this;
@@ -862,11 +843,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTimeFilter(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       timeFilter_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -879,8 +858,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTimeFilter() {
-      
       timeFilter_ = getDefaultInstance().getTimeFilter();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -895,12 +874,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTimeFilterBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       timeFilter_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -937,7 +914,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new BusinessPreferences(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

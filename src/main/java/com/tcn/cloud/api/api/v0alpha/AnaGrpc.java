@@ -1,25 +1,13 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.14.0)",
+    value = "by gRPC proto compiler (version 1.55.1)",
     comments = "Source: api/v0alpha/ana.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class AnaGrpc {
 
   private AnaGrpc() {}
@@ -41,22 +29,21 @@ public final class AnaGrpc {
     if ((getGetSpecifiedVisualizationsMethod = AnaGrpc.getGetSpecifiedVisualizationsMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getGetSpecifiedVisualizationsMethod = AnaGrpc.getGetSpecifiedVisualizationsMethod) == null) {
-          AnaGrpc.getGetSpecifiedVisualizationsMethod = getGetSpecifiedVisualizationsMethod = 
+          AnaGrpc.getGetSpecifiedVisualizationsMethod = getGetSpecifiedVisualizationsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetSpecifiedVisualizationsReq, com.tcn.cloud.api.api.v0alpha.Visualizations>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "GetSpecifiedVisualizations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSpecifiedVisualizations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetSpecifiedVisualizationsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Visualizations.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetSpecifiedVisualizations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetSpecifiedVisualizations"))
+              .build();
         }
-     }
-     return getGetSpecifiedVisualizationsMethod;
+      }
+    }
+    return getGetSpecifiedVisualizationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RegisterAccountReq,
@@ -73,22 +60,21 @@ public final class AnaGrpc {
     if ((getRegisterAccountMethod = AnaGrpc.getRegisterAccountMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getRegisterAccountMethod = AnaGrpc.getRegisterAccountMethod) == null) {
-          AnaGrpc.getRegisterAccountMethod = getRegisterAccountMethod = 
+          AnaGrpc.getRegisterAccountMethod = getRegisterAccountMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RegisterAccountReq, com.tcn.cloud.api.api.v0alpha.AnaAccount>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "RegisterAccount"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RegisterAccount"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RegisterAccountReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AnaAccount.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("RegisterAccount"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("RegisterAccount"))
+              .build();
         }
-     }
-     return getRegisterAccountMethod;
+      }
+    }
+    return getRegisterAccountMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SetWeeksReq,
@@ -105,22 +91,21 @@ public final class AnaGrpc {
     if ((getSetWeeksMethod = AnaGrpc.getSetWeeksMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getSetWeeksMethod = AnaGrpc.getSetWeeksMethod) == null) {
-          AnaGrpc.getSetWeeksMethod = getSetWeeksMethod = 
+          AnaGrpc.getSetWeeksMethod = getSetWeeksMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SetWeeksReq, com.tcn.cloud.api.api.v0alpha.SetWeeksRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "SetWeeks"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetWeeks"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SetWeeksReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SetWeeksRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("SetWeeks"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("SetWeeks"))
+              .build();
         }
-     }
-     return getSetWeeksMethod;
+      }
+    }
+    return getSetWeeksMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterReq,
@@ -137,22 +122,21 @@ public final class AnaGrpc {
     if ((getSetDefaultTimeFilterMethod = AnaGrpc.getSetDefaultTimeFilterMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getSetDefaultTimeFilterMethod = AnaGrpc.getSetDefaultTimeFilterMethod) == null) {
-          AnaGrpc.getSetDefaultTimeFilterMethod = getSetDefaultTimeFilterMethod = 
+          AnaGrpc.getSetDefaultTimeFilterMethod = getSetDefaultTimeFilterMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterReq, com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "SetDefaultTimeFilter"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetDefaultTimeFilter"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("SetDefaultTimeFilter"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("SetDefaultTimeFilter"))
+              .build();
         }
-     }
-     return getSetDefaultTimeFilterMethod;
+      }
+    }
+    return getSetDefaultTimeFilterMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardReq,
@@ -169,22 +153,21 @@ public final class AnaGrpc {
     if ((getSetDefaultDashboardMethod = AnaGrpc.getSetDefaultDashboardMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getSetDefaultDashboardMethod = AnaGrpc.getSetDefaultDashboardMethod) == null) {
-          AnaGrpc.getSetDefaultDashboardMethod = getSetDefaultDashboardMethod = 
+          AnaGrpc.getSetDefaultDashboardMethod = getSetDefaultDashboardMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardReq, com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "SetDefaultDashboard"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetDefaultDashboard"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("SetDefaultDashboard"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("SetDefaultDashboard"))
+              .build();
         }
-     }
-     return getSetDefaultDashboardMethod;
+      }
+    }
+    return getSetDefaultDashboardMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetAccountReq,
@@ -201,22 +184,21 @@ public final class AnaGrpc {
     if ((getGetAccountMethod = AnaGrpc.getGetAccountMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getGetAccountMethod = AnaGrpc.getGetAccountMethod) == null) {
-          AnaGrpc.getGetAccountMethod = getGetAccountMethod = 
+          AnaGrpc.getGetAccountMethod = getGetAccountMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetAccountReq, com.tcn.cloud.api.api.v0alpha.AnaAccount>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "GetAccount"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAccount"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAccountReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AnaAccount.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetAccount"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetAccount"))
+              .build();
         }
-     }
-     return getGetAccountMethod;
+      }
+    }
+    return getGetAccountMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetSpecifiedAccountReq,
@@ -233,22 +215,21 @@ public final class AnaGrpc {
     if ((getGetSpecifiedAccountMethod = AnaGrpc.getGetSpecifiedAccountMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getGetSpecifiedAccountMethod = AnaGrpc.getGetSpecifiedAccountMethod) == null) {
-          AnaGrpc.getGetSpecifiedAccountMethod = getGetSpecifiedAccountMethod = 
+          AnaGrpc.getGetSpecifiedAccountMethod = getGetSpecifiedAccountMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetSpecifiedAccountReq, com.tcn.cloud.api.api.v0alpha.AnaAccount>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "GetSpecifiedAccount"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSpecifiedAccount"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetSpecifiedAccountReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AnaAccount.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetSpecifiedAccount"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetSpecifiedAccount"))
+              .build();
         }
-     }
-     return getGetSpecifiedAccountMethod;
+      }
+    }
+    return getGetSpecifiedAccountMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetAuthorizedAnalyticsLinkReq,
@@ -265,22 +246,21 @@ public final class AnaGrpc {
     if ((getGetAuthorizedAnalyticsLinkMethod = AnaGrpc.getGetAuthorizedAnalyticsLinkMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getGetAuthorizedAnalyticsLinkMethod = AnaGrpc.getGetAuthorizedAnalyticsLinkMethod) == null) {
-          AnaGrpc.getGetAuthorizedAnalyticsLinkMethod = getGetAuthorizedAnalyticsLinkMethod = 
+          AnaGrpc.getGetAuthorizedAnalyticsLinkMethod = getGetAuthorizedAnalyticsLinkMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetAuthorizedAnalyticsLinkReq, com.tcn.cloud.api.api.v0alpha.GetAuthorizedAnalyticsLinkRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "GetAuthorizedAnalyticsLink"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAuthorizedAnalyticsLink"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAuthorizedAnalyticsLinkReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAuthorizedAnalyticsLinkRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetAuthorizedAnalyticsLink"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetAuthorizedAnalyticsLink"))
+              .build();
         }
-     }
-     return getGetAuthorizedAnalyticsLinkMethod;
+      }
+    }
+    return getGetAuthorizedAnalyticsLinkMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingReq,
@@ -297,22 +277,21 @@ public final class AnaGrpc {
     if ((getGenerateMonthlyBillingMethod = AnaGrpc.getGenerateMonthlyBillingMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getGenerateMonthlyBillingMethod = AnaGrpc.getGenerateMonthlyBillingMethod) == null) {
-          AnaGrpc.getGenerateMonthlyBillingMethod = getGenerateMonthlyBillingMethod = 
+          AnaGrpc.getGenerateMonthlyBillingMethod = getGenerateMonthlyBillingMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingReq, com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "GenerateMonthlyBilling"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GenerateMonthlyBilling"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GenerateMonthlyBilling"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GenerateMonthlyBilling"))
+              .build();
         }
-     }
-     return getGenerateMonthlyBillingMethod;
+      }
+    }
+    return getGenerateMonthlyBillingMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetTimeZoneReq,
@@ -329,22 +308,21 @@ public final class AnaGrpc {
     if ((getGetTimeZoneMethod = AnaGrpc.getGetTimeZoneMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getGetTimeZoneMethod = AnaGrpc.getGetTimeZoneMethod) == null) {
-          AnaGrpc.getGetTimeZoneMethod = getGetTimeZoneMethod = 
+          AnaGrpc.getGetTimeZoneMethod = getGetTimeZoneMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetTimeZoneReq, com.tcn.cloud.api.api.v0alpha.TimeZone>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "GetTimeZone"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTimeZone"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetTimeZoneReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.TimeZone.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetTimeZone"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetTimeZone"))
+              .build();
         }
-     }
-     return getGetTimeZoneMethod;
+      }
+    }
+    return getGetTimeZoneMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SetTimeZoneReq,
@@ -361,22 +339,21 @@ public final class AnaGrpc {
     if ((getSetTimeZoneMethod = AnaGrpc.getSetTimeZoneMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getSetTimeZoneMethod = AnaGrpc.getSetTimeZoneMethod) == null) {
-          AnaGrpc.getSetTimeZoneMethod = getSetTimeZoneMethod = 
+          AnaGrpc.getSetTimeZoneMethod = getSetTimeZoneMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SetTimeZoneReq, com.tcn.cloud.api.api.v0alpha.SetTimeZoneRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "SetTimeZone"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetTimeZone"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SetTimeZoneReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SetTimeZoneRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("SetTimeZone"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("SetTimeZone"))
+              .build();
         }
-     }
-     return getSetTimeZoneMethod;
+      }
+    }
+    return getSetTimeZoneMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CopyDashVizReq,
@@ -393,22 +370,21 @@ public final class AnaGrpc {
     if ((getCopyDashVizMethod = AnaGrpc.getCopyDashVizMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getCopyDashVizMethod = AnaGrpc.getCopyDashVizMethod) == null) {
-          AnaGrpc.getCopyDashVizMethod = getCopyDashVizMethod = 
+          AnaGrpc.getCopyDashVizMethod = getCopyDashVizMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CopyDashVizReq, com.tcn.cloud.api.api.v0alpha.CopyDashVizRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "CopyDashViz"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CopyDashViz"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CopyDashVizReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CopyDashVizRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("CopyDashViz"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("CopyDashViz"))
+              .build();
         }
-     }
-     return getCopyDashVizMethod;
+      }
+    }
+    return getCopyDashVizMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetSpecifiedBillingSummaryReq,
@@ -425,22 +401,21 @@ public final class AnaGrpc {
     if ((getGetSpecifiedBillingSummaryMethod = AnaGrpc.getGetSpecifiedBillingSummaryMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getGetSpecifiedBillingSummaryMethod = AnaGrpc.getGetSpecifiedBillingSummaryMethod) == null) {
-          AnaGrpc.getGetSpecifiedBillingSummaryMethod = getGetSpecifiedBillingSummaryMethod = 
+          AnaGrpc.getGetSpecifiedBillingSummaryMethod = getGetSpecifiedBillingSummaryMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetSpecifiedBillingSummaryReq, com.tcn.cloud.api.api.v0alpha.BillingSummary>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "GetSpecifiedBillingSummary"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSpecifiedBillingSummary"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetSpecifiedBillingSummaryReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.BillingSummary.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetSpecifiedBillingSummary"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetSpecifiedBillingSummary"))
+              .build();
         }
-     }
-     return getGetSpecifiedBillingSummaryMethod;
+      }
+    }
+    return getGetSpecifiedBillingSummaryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetBillingSummaryReq,
@@ -457,22 +432,21 @@ public final class AnaGrpc {
     if ((getGetBillingSummaryMethod = AnaGrpc.getGetBillingSummaryMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getGetBillingSummaryMethod = AnaGrpc.getGetBillingSummaryMethod) == null) {
-          AnaGrpc.getGetBillingSummaryMethod = getGetBillingSummaryMethod = 
+          AnaGrpc.getGetBillingSummaryMethod = getGetBillingSummaryMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetBillingSummaryReq, com.tcn.cloud.api.api.v0alpha.BillingSummary>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "GetBillingSummary"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetBillingSummary"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetBillingSummaryReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.BillingSummary.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetBillingSummary"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetBillingSummary"))
+              .build();
         }
-     }
-     return getGetBillingSummaryMethod;
+      }
+    }
+    return getGetBillingSummaryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq,
@@ -489,22 +463,21 @@ public final class AnaGrpc {
     if ((getEnableCustomReportsMethod = AnaGrpc.getEnableCustomReportsMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getEnableCustomReportsMethod = AnaGrpc.getEnableCustomReportsMethod) == null) {
-          AnaGrpc.getEnableCustomReportsMethod = getEnableCustomReportsMethod = 
+          AnaGrpc.getEnableCustomReportsMethod = getEnableCustomReportsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq, com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "EnableCustomReports"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EnableCustomReports"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("EnableCustomReports"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("EnableCustomReports"))
+              .build();
         }
-     }
-     return getEnableCustomReportsMethod;
+      }
+    }
+    return getEnableCustomReportsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq,
@@ -521,22 +494,21 @@ public final class AnaGrpc {
     if ((getDisableCustomReportsMethod = AnaGrpc.getDisableCustomReportsMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getDisableCustomReportsMethod = AnaGrpc.getDisableCustomReportsMethod) == null) {
-          AnaGrpc.getDisableCustomReportsMethod = getDisableCustomReportsMethod = 
+          AnaGrpc.getDisableCustomReportsMethod = getDisableCustomReportsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq, com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "DisableCustomReports"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DisableCustomReports"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("DisableCustomReports"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("DisableCustomReports"))
+              .build();
         }
-     }
-     return getDisableCustomReportsMethod;
+      }
+    }
+    return getDisableCustomReportsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq,
@@ -553,22 +525,21 @@ public final class AnaGrpc {
     if ((getMakeAdoptableMethod = AnaGrpc.getMakeAdoptableMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getMakeAdoptableMethod = AnaGrpc.getMakeAdoptableMethod) == null) {
-          AnaGrpc.getMakeAdoptableMethod = getMakeAdoptableMethod = 
+          AnaGrpc.getMakeAdoptableMethod = getMakeAdoptableMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq, com.tcn.cloud.api.api.v0alpha.MakeAdoptableRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "MakeAdoptable"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MakeAdoptable"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.MakeAdoptableRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("MakeAdoptable"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("MakeAdoptable"))
+              .build();
         }
-     }
-     return getMakeAdoptableMethod;
+      }
+    }
+    return getMakeAdoptableMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq,
@@ -585,22 +556,21 @@ public final class AnaGrpc {
     if ((getMakeUnadoptableMethod = AnaGrpc.getMakeUnadoptableMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getMakeUnadoptableMethod = AnaGrpc.getMakeUnadoptableMethod) == null) {
-          AnaGrpc.getMakeUnadoptableMethod = getMakeUnadoptableMethod = 
+          AnaGrpc.getMakeUnadoptableMethod = getMakeUnadoptableMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq, com.tcn.cloud.api.api.v0alpha.MakeAdoptableRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "MakeUnadoptable"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MakeUnadoptable"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.MakeAdoptableRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("MakeUnadoptable"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("MakeUnadoptable"))
+              .build();
         }
-     }
-     return getMakeUnadoptableMethod;
+      }
+    }
+    return getMakeUnadoptableMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq,
@@ -617,22 +587,21 @@ public final class AnaGrpc {
     if ((getAdoptAnaAccountMethod = AnaGrpc.getAdoptAnaAccountMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getAdoptAnaAccountMethod = AnaGrpc.getAdoptAnaAccountMethod) == null) {
-          AnaGrpc.getAdoptAnaAccountMethod = getAdoptAnaAccountMethod = 
+          AnaGrpc.getAdoptAnaAccountMethod = getAdoptAnaAccountMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq, com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "AdoptAnaAccount"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AdoptAnaAccount"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("AdoptAnaAccount"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("AdoptAnaAccount"))
+              .build();
         }
-     }
-     return getAdoptAnaAccountMethod;
+      }
+    }
+    return getAdoptAnaAccountMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq,
@@ -649,22 +618,21 @@ public final class AnaGrpc {
     if ((getDisownAnaAccountMethod = AnaGrpc.getDisownAnaAccountMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getDisownAnaAccountMethod = AnaGrpc.getDisownAnaAccountMethod) == null) {
-          AnaGrpc.getDisownAnaAccountMethod = getDisownAnaAccountMethod = 
+          AnaGrpc.getDisownAnaAccountMethod = getDisownAnaAccountMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq, com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "DisownAnaAccount"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DisownAnaAccount"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("DisownAnaAccount"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("DisownAnaAccount"))
+              .build();
         }
-     }
-     return getDisownAnaAccountMethod;
+      }
+    }
+    return getDisownAnaAccountMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetAccessibleClientsReq,
@@ -681,22 +649,21 @@ public final class AnaGrpc {
     if ((getGetAccessibleClientsMethod = AnaGrpc.getGetAccessibleClientsMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getGetAccessibleClientsMethod = AnaGrpc.getGetAccessibleClientsMethod) == null) {
-          AnaGrpc.getGetAccessibleClientsMethod = getGetAccessibleClientsMethod = 
+          AnaGrpc.getGetAccessibleClientsMethod = getGetAccessibleClientsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetAccessibleClientsReq, com.tcn.cloud.api.api.v0alpha.SimpleRelations>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "GetAccessibleClients"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAccessibleClients"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAccessibleClientsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SimpleRelations.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetAccessibleClients"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetAccessibleClients"))
+              .build();
         }
-     }
-     return getGetAccessibleClientsMethod;
+      }
+    }
+    return getGetAccessibleClientsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetFamilyReq,
@@ -713,22 +680,21 @@ public final class AnaGrpc {
     if ((getGetFamilyMethod = AnaGrpc.getGetFamilyMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getGetFamilyMethod = AnaGrpc.getGetFamilyMethod) == null) {
-          AnaGrpc.getGetFamilyMethod = getGetFamilyMethod = 
+          AnaGrpc.getGetFamilyMethod = getGetFamilyMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetFamilyReq, com.tcn.cloud.api.api.v0alpha.Family>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "GetFamily"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetFamily"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetFamilyReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Family.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetFamily"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetFamily"))
+              .build();
         }
-     }
-     return getGetFamilyMethod;
+      }
+    }
+    return getGetFamilyMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetVisibilityReq,
@@ -745,22 +711,21 @@ public final class AnaGrpc {
     if ((getGetAllowedDataVisibilityMethod = AnaGrpc.getGetAllowedDataVisibilityMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getGetAllowedDataVisibilityMethod = AnaGrpc.getGetAllowedDataVisibilityMethod) == null) {
-          AnaGrpc.getGetAllowedDataVisibilityMethod = getGetAllowedDataVisibilityMethod = 
+          AnaGrpc.getGetAllowedDataVisibilityMethod = getGetAllowedDataVisibilityMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetVisibilityReq, com.tcn.cloud.api.api.v0alpha.DataVisibility>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "GetAllowedDataVisibility"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAllowedDataVisibility"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetVisibilityReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DataVisibility.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetAllowedDataVisibility"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetAllowedDataVisibility"))
+              .build();
         }
-     }
-     return getGetAllowedDataVisibilityMethod;
+      }
+    }
+    return getGetAllowedDataVisibilityMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetVisibilityReq,
@@ -777,22 +742,21 @@ public final class AnaGrpc {
     if ((getGetCurrentDataVisibilityMethod = AnaGrpc.getGetCurrentDataVisibilityMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getGetCurrentDataVisibilityMethod = AnaGrpc.getGetCurrentDataVisibilityMethod) == null) {
-          AnaGrpc.getGetCurrentDataVisibilityMethod = getGetCurrentDataVisibilityMethod = 
+          AnaGrpc.getGetCurrentDataVisibilityMethod = getGetCurrentDataVisibilityMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetVisibilityReq, com.tcn.cloud.api.api.v0alpha.DataVisibility>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "GetCurrentDataVisibility"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCurrentDataVisibility"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetVisibilityReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DataVisibility.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetCurrentDataVisibility"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetCurrentDataVisibility"))
+              .build();
         }
-     }
-     return getGetCurrentDataVisibilityMethod;
+      }
+    }
+    return getGetCurrentDataVisibilityMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetVisibilityReq,
@@ -809,22 +773,21 @@ public final class AnaGrpc {
     if ((getGetIndicesVisibilityMethod = AnaGrpc.getGetIndicesVisibilityMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getGetIndicesVisibilityMethod = AnaGrpc.getGetIndicesVisibilityMethod) == null) {
-          AnaGrpc.getGetIndicesVisibilityMethod = getGetIndicesVisibilityMethod = 
+          AnaGrpc.getGetIndicesVisibilityMethod = getGetIndicesVisibilityMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetVisibilityReq, com.tcn.cloud.api.api.v0alpha.IndicesVisibility>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "GetIndicesVisibility"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetIndicesVisibility"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetVisibilityReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.IndicesVisibility.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetIndicesVisibility"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetIndicesVisibility"))
+              .build();
         }
-     }
-     return getGetIndicesVisibilityMethod;
+      }
+    }
+    return getGetIndicesVisibilityMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetVisibilityReq,
@@ -841,22 +804,21 @@ public final class AnaGrpc {
     if ((getGetAuditableDataVisibilityMethod = AnaGrpc.getGetAuditableDataVisibilityMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getGetAuditableDataVisibilityMethod = AnaGrpc.getGetAuditableDataVisibilityMethod) == null) {
-          AnaGrpc.getGetAuditableDataVisibilityMethod = getGetAuditableDataVisibilityMethod = 
+          AnaGrpc.getGetAuditableDataVisibilityMethod = getGetAuditableDataVisibilityMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetVisibilityReq, com.tcn.cloud.api.api.v0alpha.DataVisibility>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "GetAuditableDataVisibility"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAuditableDataVisibility"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetVisibilityReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DataVisibility.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetAuditableDataVisibility"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetAuditableDataVisibility"))
+              .build();
         }
-     }
-     return getGetAuditableDataVisibilityMethod;
+      }
+    }
+    return getGetAuditableDataVisibilityMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesReq,
@@ -873,22 +835,21 @@ public final class AnaGrpc {
     if ((getGetOrganizationNamesMethod = AnaGrpc.getGetOrganizationNamesMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getGetOrganizationNamesMethod = AnaGrpc.getGetOrganizationNamesMethod) == null) {
-          AnaGrpc.getGetOrganizationNamesMethod = getGetOrganizationNamesMethod = 
+          AnaGrpc.getGetOrganizationNamesMethod = getGetOrganizationNamesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesReq, com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "GetOrganizationNames"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOrganizationNames"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetOrganizationNames"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetOrganizationNames"))
+              .build();
         }
-     }
-     return getGetOrganizationNamesMethod;
+      }
+    }
+    return getGetOrganizationNamesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GenerateVizDataByIdReq,
@@ -905,22 +866,21 @@ public final class AnaGrpc {
     if ((getGenerateVizDataByIdMethod = AnaGrpc.getGenerateVizDataByIdMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getGenerateVizDataByIdMethod = AnaGrpc.getGenerateVizDataByIdMethod) == null) {
-          AnaGrpc.getGenerateVizDataByIdMethod = getGenerateVizDataByIdMethod = 
+          AnaGrpc.getGenerateVizDataByIdMethod = getGenerateVizDataByIdMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GenerateVizDataByIdReq, com.tcn.cloud.api.api.v0alpha.GenerateVizDataByIdRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "GenerateVizDataById"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GenerateVizDataById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GenerateVizDataByIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GenerateVizDataByIdRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GenerateVizDataById"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GenerateVizDataById"))
+              .build();
         }
-     }
-     return getGenerateVizDataByIdMethod;
+      }
+    }
+    return getGenerateVizDataByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetClientStatusReq,
@@ -937,22 +897,21 @@ public final class AnaGrpc {
     if ((getGetClientStatusMethod = AnaGrpc.getGetClientStatusMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getGetClientStatusMethod = AnaGrpc.getGetClientStatusMethod) == null) {
-          AnaGrpc.getGetClientStatusMethod = getGetClientStatusMethod = 
+          AnaGrpc.getGetClientStatusMethod = getGetClientStatusMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetClientStatusReq, com.tcn.cloud.api.api.v0alpha.GetClientStatusResp>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "GetClientStatus"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetClientStatus"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetClientStatusReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetClientStatusResp.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetClientStatus"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("GetClientStatus"))
+              .build();
         }
-     }
-     return getGetClientStatusMethod;
+      }
+    }
+    return getGetClientStatusMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ReloadClientDataReq,
@@ -969,22 +928,21 @@ public final class AnaGrpc {
     if ((getReloadClientDataMethod = AnaGrpc.getReloadClientDataMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getReloadClientDataMethod = AnaGrpc.getReloadClientDataMethod) == null) {
-          AnaGrpc.getReloadClientDataMethod = getReloadClientDataMethod = 
+          AnaGrpc.getReloadClientDataMethod = getReloadClientDataMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ReloadClientDataReq, com.tcn.cloud.api.api.v0alpha.ReloadClientDataResp>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "ReloadClientData"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ReloadClientData"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ReloadClientDataReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ReloadClientDataResp.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("ReloadClientData"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("ReloadClientData"))
+              .build();
         }
-     }
-     return getReloadClientDataMethod;
+      }
+    }
+    return getReloadClientDataMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListVisualizationsLegacyReq,
@@ -1001,29 +959,35 @@ public final class AnaGrpc {
     if ((getListVisualizationsLegacyMethod = AnaGrpc.getListVisualizationsLegacyMethod) == null) {
       synchronized (AnaGrpc.class) {
         if ((getListVisualizationsLegacyMethod = AnaGrpc.getListVisualizationsLegacyMethod) == null) {
-          AnaGrpc.getListVisualizationsLegacyMethod = getListVisualizationsLegacyMethod = 
+          AnaGrpc.getListVisualizationsLegacyMethod = getListVisualizationsLegacyMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListVisualizationsLegacyReq, com.tcn.cloud.api.api.v0alpha.ListVisualizationsLegacyRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Ana", "ListVisualizationsLegacy"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListVisualizationsLegacy"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListVisualizationsLegacyReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListVisualizationsLegacyRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnaMethodDescriptorSupplier("ListVisualizationsLegacy"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnaMethodDescriptorSupplier("ListVisualizationsLegacy"))
+              .build();
         }
-     }
-     return getListVisualizationsLegacyMethod;
+      }
+    }
+    return getListVisualizationsLegacyMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static AnaStub newStub(io.grpc.Channel channel) {
-    return new AnaStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AnaStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AnaStub>() {
+        @java.lang.Override
+        public AnaStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AnaStub(channel, callOptions);
+        }
+      };
+    return AnaStub.newStub(factory, channel);
   }
 
   /**
@@ -1031,7 +995,14 @@ public final class AnaGrpc {
    */
   public static AnaBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AnaBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AnaBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AnaBlockingStub>() {
+        @java.lang.Override
+        public AnaBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AnaBlockingStub(channel, callOptions);
+        }
+      };
+    return AnaBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -1039,21 +1010,28 @@ public final class AnaGrpc {
    */
   public static AnaFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AnaFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AnaFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AnaFutureStub>() {
+        @java.lang.Override
+        public AnaFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AnaFutureStub(channel, callOptions);
+        }
+      };
+    return AnaFutureStub.newStub(factory, channel);
   }
 
   /**
    */
-  public static abstract class AnaImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * gets all visualizations for a specific client
      * </pre>
      */
-    public void getSpecifiedVisualizations(com.tcn.cloud.api.api.v0alpha.GetSpecifiedVisualizationsReq request,
+    default void getSpecifiedVisualizations(com.tcn.cloud.api.api.v0alpha.GetSpecifiedVisualizationsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Visualizations> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetSpecifiedVisualizationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSpecifiedVisualizationsMethod(), responseObserver);
     }
 
     /**
@@ -1065,9 +1043,9 @@ public final class AnaGrpc {
      *  EDIT_ADMIN_CLIENT_PREFERENCES
      * </pre>
      */
-    public void registerAccount(com.tcn.cloud.api.api.v0alpha.RegisterAccountReq request,
+    default void registerAccount(com.tcn.cloud.api.api.v0alpha.RegisterAccountReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AnaAccount> responseObserver) {
-      asyncUnimplementedUnaryCall(getRegisterAccountMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRegisterAccountMethod(), responseObserver);
     }
 
     /**
@@ -1075,9 +1053,9 @@ public final class AnaGrpc {
      * sets the length of analytics history the client can view
      * </pre>
      */
-    public void setWeeks(com.tcn.cloud.api.api.v0alpha.SetWeeksReq request,
+    default void setWeeks(com.tcn.cloud.api.api.v0alpha.SetWeeksReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SetWeeksRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetWeeksMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetWeeksMethod(), responseObserver);
     }
 
     /**
@@ -1086,9 +1064,9 @@ public final class AnaGrpc {
      * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
-    public void setDefaultTimeFilter(com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterReq request,
+    default void setDefaultTimeFilter(com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetDefaultTimeFilterMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetDefaultTimeFilterMethod(), responseObserver);
     }
 
     /**
@@ -1097,9 +1075,9 @@ public final class AnaGrpc {
      * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
-    public void setDefaultDashboard(com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardReq request,
+    default void setDefaultDashboard(com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetDefaultDashboardMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetDefaultDashboardMethod(), responseObserver);
     }
 
     /**
@@ -1108,9 +1086,9 @@ public final class AnaGrpc {
      * org.Permission_VIEW_REPORTS
      * </pre>
      */
-    public void getAccount(com.tcn.cloud.api.api.v0alpha.GetAccountReq request,
+    default void getAccount(com.tcn.cloud.api.api.v0alpha.GetAccountReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AnaAccount> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAccountMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAccountMethod(), responseObserver);
     }
 
     /**
@@ -1118,9 +1096,9 @@ public final class AnaGrpc {
      * gets account details using the org_id provided
      * </pre>
      */
-    public void getSpecifiedAccount(com.tcn.cloud.api.api.v0alpha.GetSpecifiedAccountReq request,
+    default void getSpecifiedAccount(com.tcn.cloud.api.api.v0alpha.GetSpecifiedAccountReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AnaAccount> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetSpecifiedAccountMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSpecifiedAccountMethod(), responseObserver);
     }
 
     /**
@@ -1128,9 +1106,9 @@ public final class AnaGrpc {
      * Gets an authorized url for the clients BI analytics page
      * </pre>
      */
-    public void getAuthorizedAnalyticsLink(com.tcn.cloud.api.api.v0alpha.GetAuthorizedAnalyticsLinkReq request,
+    default void getAuthorizedAnalyticsLink(com.tcn.cloud.api.api.v0alpha.GetAuthorizedAnalyticsLinkReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAuthorizedAnalyticsLinkRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAuthorizedAnalyticsLinkMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAuthorizedAnalyticsLinkMethod(), responseObserver);
     }
 
     /**
@@ -1139,9 +1117,9 @@ public final class AnaGrpc {
      * org.Permission_VIEW_BILLING
      * </pre>
      */
-    public void generateMonthlyBilling(com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingReq request,
+    default void generateMonthlyBilling(com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGenerateMonthlyBillingMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateMonthlyBillingMethod(), responseObserver);
     }
 
     /**
@@ -1150,9 +1128,9 @@ public final class AnaGrpc {
      * org.Permission_VIEW_REPORTS
      * </pre>
      */
-    public void getTimeZone(com.tcn.cloud.api.api.v0alpha.GetTimeZoneReq request,
+    default void getTimeZone(com.tcn.cloud.api.api.v0alpha.GetTimeZoneReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.TimeZone> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetTimeZoneMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTimeZoneMethod(), responseObserver);
     }
 
     /**
@@ -1161,9 +1139,9 @@ public final class AnaGrpc {
      * org.Permission_VIEW_REPORTS
      * </pre>
      */
-    public void setTimeZone(com.tcn.cloud.api.api.v0alpha.SetTimeZoneReq request,
+    default void setTimeZone(com.tcn.cloud.api.api.v0alpha.SetTimeZoneReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SetTimeZoneRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetTimeZoneMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetTimeZoneMethod(), responseObserver);
     }
 
     /**
@@ -1172,9 +1150,9 @@ public final class AnaGrpc {
      * corresponding with the ids provided
      * </pre>
      */
-    public void copyDashViz(com.tcn.cloud.api.api.v0alpha.CopyDashVizReq request,
+    default void copyDashViz(com.tcn.cloud.api.api.v0alpha.CopyDashVizReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CopyDashVizRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCopyDashVizMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyDashVizMethod(), responseObserver);
     }
 
     /**
@@ -1182,9 +1160,9 @@ public final class AnaGrpc {
      * returns a summary of all billing factors for the specified client, whether client is pro, and which of those features contribute to making the client pro
      * </pre>
      */
-    public void getSpecifiedBillingSummary(com.tcn.cloud.api.api.v0alpha.GetSpecifiedBillingSummaryReq request,
+    default void getSpecifiedBillingSummary(com.tcn.cloud.api.api.v0alpha.GetSpecifiedBillingSummaryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.BillingSummary> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetSpecifiedBillingSummaryMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSpecifiedBillingSummaryMethod(), responseObserver);
     }
 
     /**
@@ -1193,9 +1171,9 @@ public final class AnaGrpc {
      * pro, and which of those features contribute to making the client pro
      * </pre>
      */
-    public void getBillingSummary(com.tcn.cloud.api.api.v0alpha.GetBillingSummaryReq request,
+    default void getBillingSummary(com.tcn.cloud.api.api.v0alpha.GetBillingSummaryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.BillingSummary> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetBillingSummaryMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBillingSummaryMethod(), responseObserver);
     }
 
     /**
@@ -1204,9 +1182,9 @@ public final class AnaGrpc {
      * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
-    public void enableCustomReports(com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq request,
+    default void enableCustomReports(com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getEnableCustomReportsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnableCustomReportsMethod(), responseObserver);
     }
 
     /**
@@ -1215,9 +1193,9 @@ public final class AnaGrpc {
      * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
-    public void disableCustomReports(com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq request,
+    default void disableCustomReports(com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDisableCustomReportsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisableCustomReportsMethod(), responseObserver);
     }
 
     /**
@@ -1226,9 +1204,9 @@ public final class AnaGrpc {
      * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
-    public void makeAdoptable(com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq request,
+    default void makeAdoptable(com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.MakeAdoptableRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getMakeAdoptableMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMakeAdoptableMethod(), responseObserver);
     }
 
     /**
@@ -1237,9 +1215,9 @@ public final class AnaGrpc {
      * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
-    public void makeUnadoptable(com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq request,
+    default void makeUnadoptable(com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.MakeAdoptableRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getMakeUnadoptableMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMakeUnadoptableMethod(), responseObserver);
     }
 
     /**
@@ -1247,9 +1225,9 @@ public final class AnaGrpc {
      * allow the parent to view the data of the adoptable child
      * </pre>
      */
-    public void adoptAnaAccount(com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq request,
+    default void adoptAnaAccount(com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getAdoptAnaAccountMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAdoptAnaAccountMethod(), responseObserver);
     }
 
     /**
@@ -1257,9 +1235,9 @@ public final class AnaGrpc {
      * disallow the parent from viewing the data of the child
      * </pre>
      */
-    public void disownAnaAccount(com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq request,
+    default void disownAnaAccount(com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDisownAnaAccountMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisownAnaAccountMethod(), responseObserver);
     }
 
     /**
@@ -1267,9 +1245,9 @@ public final class AnaGrpc {
      * gets all clients that can be viewed by the client including the client
      * </pre>
      */
-    public void getAccessibleClients(com.tcn.cloud.api.api.v0alpha.GetAccessibleClientsReq request,
+    default void getAccessibleClients(com.tcn.cloud.api.api.v0alpha.GetAccessibleClientsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SimpleRelations> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAccessibleClientsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAccessibleClientsMethod(), responseObserver);
     }
 
     /**
@@ -1278,9 +1256,9 @@ public final class AnaGrpc {
      * client is the parent or child account
      * </pre>
      */
-    public void getFamily(com.tcn.cloud.api.api.v0alpha.GetFamilyReq request,
+    default void getFamily(com.tcn.cloud.api.api.v0alpha.GetFamilyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Family> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetFamilyMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetFamilyMethod(), responseObserver);
     }
 
     /**
@@ -1289,9 +1267,9 @@ public final class AnaGrpc {
      * truth); internal use only
      * </pre>
      */
-    public void getAllowedDataVisibility(com.tcn.cloud.api.api.v0alpha.GetVisibilityReq request,
+    default void getAllowedDataVisibility(com.tcn.cloud.api.api.v0alpha.GetVisibilityReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DataVisibility> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAllowedDataVisibilityMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAllowedDataVisibilityMethod(), responseObserver);
     }
 
     /**
@@ -1300,9 +1278,9 @@ public final class AnaGrpc {
      * indices structure; internal use only
      * </pre>
      */
-    public void getCurrentDataVisibility(com.tcn.cloud.api.api.v0alpha.GetVisibilityReq request,
+    default void getCurrentDataVisibility(com.tcn.cloud.api.api.v0alpha.GetVisibilityReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DataVisibility> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCurrentDataVisibilityMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCurrentDataVisibilityMethod(), responseObserver);
     }
 
     /**
@@ -1311,9 +1289,9 @@ public final class AnaGrpc {
      * indices; internal use only
      * </pre>
      */
-    public void getIndicesVisibility(com.tcn.cloud.api.api.v0alpha.GetVisibilityReq request,
+    default void getIndicesVisibility(com.tcn.cloud.api.api.v0alpha.GetVisibilityReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.IndicesVisibility> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetIndicesVisibilityMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetIndicesVisibilityMethod(), responseObserver);
     }
 
     /**
@@ -1322,9 +1300,9 @@ public final class AnaGrpc {
      * internal use only
      * </pre>
      */
-    public void getAuditableDataVisibility(com.tcn.cloud.api.api.v0alpha.GetVisibilityReq request,
+    default void getAuditableDataVisibility(com.tcn.cloud.api.api.v0alpha.GetVisibilityReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DataVisibility> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAuditableDataVisibilityMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAuditableDataVisibilityMethod(), responseObserver);
     }
 
     /**
@@ -1332,9 +1310,9 @@ public final class AnaGrpc {
      * gets a map of client sids to organization names
      * </pre>
      */
-    public void getOrganizationNames(com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesReq request,
+    default void getOrganizationNames(com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetOrganizationNamesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOrganizationNamesMethod(), responseObserver);
     }
 
     /**
@@ -1342,9 +1320,9 @@ public final class AnaGrpc {
      * generate visualization data for the id
      * </pre>
      */
-    public void generateVizDataById(com.tcn.cloud.api.api.v0alpha.GenerateVizDataByIdReq request,
+    default void generateVizDataById(com.tcn.cloud.api.api.v0alpha.GenerateVizDataByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GenerateVizDataByIdRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGenerateVizDataByIdMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateVizDataByIdMethod(), responseObserver);
     }
 
     /**
@@ -1357,9 +1335,9 @@ public final class AnaGrpc {
      *      CUSTOMER_SUPPORT
      * </pre>
      */
-    public void getClientStatus(com.tcn.cloud.api.api.v0alpha.GetClientStatusReq request,
+    default void getClientStatus(com.tcn.cloud.api.api.v0alpha.GetClientStatusReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetClientStatusResp> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetClientStatusMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetClientStatusMethod(), responseObserver);
     }
 
     /**
@@ -1371,9 +1349,9 @@ public final class AnaGrpc {
      *      WIP - DEV_OPS
      * </pre>
      */
-    public void reloadClientData(com.tcn.cloud.api.api.v0alpha.ReloadClientDataReq request,
+    default void reloadClientData(com.tcn.cloud.api.api.v0alpha.ReloadClientDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ReloadClientDataResp> responseObserver) {
-      asyncUnimplementedUnaryCall(getReloadClientDataMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReloadClientDataMethod(), responseObserver);
     }
 
     /**
@@ -1381,249 +1359,36 @@ public final class AnaGrpc {
      * list all clients visualizations id and title
      * </pre>
      */
-    public void listVisualizationsLegacy(com.tcn.cloud.api.api.v0alpha.ListVisualizationsLegacyReq request,
+    default void listVisualizationsLegacy(com.tcn.cloud.api.api.v0alpha.ListVisualizationsLegacyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListVisualizationsLegacyRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListVisualizationsLegacyMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getGetSpecifiedVisualizationsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetSpecifiedVisualizationsReq,
-                com.tcn.cloud.api.api.v0alpha.Visualizations>(
-                  this, METHODID_GET_SPECIFIED_VISUALIZATIONS)))
-          .addMethod(
-            getRegisterAccountMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.RegisterAccountReq,
-                com.tcn.cloud.api.api.v0alpha.AnaAccount>(
-                  this, METHODID_REGISTER_ACCOUNT)))
-          .addMethod(
-            getSetWeeksMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.SetWeeksReq,
-                com.tcn.cloud.api.api.v0alpha.SetWeeksRes>(
-                  this, METHODID_SET_WEEKS)))
-          .addMethod(
-            getSetDefaultTimeFilterMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterReq,
-                com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterRes>(
-                  this, METHODID_SET_DEFAULT_TIME_FILTER)))
-          .addMethod(
-            getSetDefaultDashboardMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardReq,
-                com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardRes>(
-                  this, METHODID_SET_DEFAULT_DASHBOARD)))
-          .addMethod(
-            getGetAccountMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetAccountReq,
-                com.tcn.cloud.api.api.v0alpha.AnaAccount>(
-                  this, METHODID_GET_ACCOUNT)))
-          .addMethod(
-            getGetSpecifiedAccountMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetSpecifiedAccountReq,
-                com.tcn.cloud.api.api.v0alpha.AnaAccount>(
-                  this, METHODID_GET_SPECIFIED_ACCOUNT)))
-          .addMethod(
-            getGetAuthorizedAnalyticsLinkMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetAuthorizedAnalyticsLinkReq,
-                com.tcn.cloud.api.api.v0alpha.GetAuthorizedAnalyticsLinkRes>(
-                  this, METHODID_GET_AUTHORIZED_ANALYTICS_LINK)))
-          .addMethod(
-            getGenerateMonthlyBillingMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingReq,
-                com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingRes>(
-                  this, METHODID_GENERATE_MONTHLY_BILLING)))
-          .addMethod(
-            getGetTimeZoneMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetTimeZoneReq,
-                com.tcn.cloud.api.api.v0alpha.TimeZone>(
-                  this, METHODID_GET_TIME_ZONE)))
-          .addMethod(
-            getSetTimeZoneMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.SetTimeZoneReq,
-                com.tcn.cloud.api.api.v0alpha.SetTimeZoneRes>(
-                  this, METHODID_SET_TIME_ZONE)))
-          .addMethod(
-            getCopyDashVizMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.CopyDashVizReq,
-                com.tcn.cloud.api.api.v0alpha.CopyDashVizRes>(
-                  this, METHODID_COPY_DASH_VIZ)))
-          .addMethod(
-            getGetSpecifiedBillingSummaryMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetSpecifiedBillingSummaryReq,
-                com.tcn.cloud.api.api.v0alpha.BillingSummary>(
-                  this, METHODID_GET_SPECIFIED_BILLING_SUMMARY)))
-          .addMethod(
-            getGetBillingSummaryMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetBillingSummaryReq,
-                com.tcn.cloud.api.api.v0alpha.BillingSummary>(
-                  this, METHODID_GET_BILLING_SUMMARY)))
-          .addMethod(
-            getEnableCustomReportsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq,
-                com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledRes>(
-                  this, METHODID_ENABLE_CUSTOM_REPORTS)))
-          .addMethod(
-            getDisableCustomReportsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq,
-                com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledRes>(
-                  this, METHODID_DISABLE_CUSTOM_REPORTS)))
-          .addMethod(
-            getMakeAdoptableMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq,
-                com.tcn.cloud.api.api.v0alpha.MakeAdoptableRes>(
-                  this, METHODID_MAKE_ADOPTABLE)))
-          .addMethod(
-            getMakeUnadoptableMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq,
-                com.tcn.cloud.api.api.v0alpha.MakeAdoptableRes>(
-                  this, METHODID_MAKE_UNADOPTABLE)))
-          .addMethod(
-            getAdoptAnaAccountMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq,
-                com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationRes>(
-                  this, METHODID_ADOPT_ANA_ACCOUNT)))
-          .addMethod(
-            getDisownAnaAccountMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq,
-                com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationRes>(
-                  this, METHODID_DISOWN_ANA_ACCOUNT)))
-          .addMethod(
-            getGetAccessibleClientsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetAccessibleClientsReq,
-                com.tcn.cloud.api.api.v0alpha.SimpleRelations>(
-                  this, METHODID_GET_ACCESSIBLE_CLIENTS)))
-          .addMethod(
-            getGetFamilyMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetFamilyReq,
-                com.tcn.cloud.api.api.v0alpha.Family>(
-                  this, METHODID_GET_FAMILY)))
-          .addMethod(
-            getGetAllowedDataVisibilityMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetVisibilityReq,
-                com.tcn.cloud.api.api.v0alpha.DataVisibility>(
-                  this, METHODID_GET_ALLOWED_DATA_VISIBILITY)))
-          .addMethod(
-            getGetCurrentDataVisibilityMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetVisibilityReq,
-                com.tcn.cloud.api.api.v0alpha.DataVisibility>(
-                  this, METHODID_GET_CURRENT_DATA_VISIBILITY)))
-          .addMethod(
-            getGetIndicesVisibilityMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetVisibilityReq,
-                com.tcn.cloud.api.api.v0alpha.IndicesVisibility>(
-                  this, METHODID_GET_INDICES_VISIBILITY)))
-          .addMethod(
-            getGetAuditableDataVisibilityMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetVisibilityReq,
-                com.tcn.cloud.api.api.v0alpha.DataVisibility>(
-                  this, METHODID_GET_AUDITABLE_DATA_VISIBILITY)))
-          .addMethod(
-            getGetOrganizationNamesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesReq,
-                com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesRes>(
-                  this, METHODID_GET_ORGANIZATION_NAMES)))
-          .addMethod(
-            getGenerateVizDataByIdMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GenerateVizDataByIdReq,
-                com.tcn.cloud.api.api.v0alpha.GenerateVizDataByIdRes>(
-                  this, METHODID_GENERATE_VIZ_DATA_BY_ID)))
-          .addMethod(
-            getGetClientStatusMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetClientStatusReq,
-                com.tcn.cloud.api.api.v0alpha.GetClientStatusResp>(
-                  this, METHODID_GET_CLIENT_STATUS)))
-          .addMethod(
-            getReloadClientDataMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ReloadClientDataReq,
-                com.tcn.cloud.api.api.v0alpha.ReloadClientDataResp>(
-                  this, METHODID_RELOAD_CLIENT_DATA)))
-          .addMethod(
-            getListVisualizationsLegacyMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListVisualizationsLegacyReq,
-                com.tcn.cloud.api.api.v0alpha.ListVisualizationsLegacyRes>(
-                  this, METHODID_LIST_VISUALIZATIONS_LEGACY)))
-          .build();
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListVisualizationsLegacyMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service Ana.
    */
-  public static final class AnaStub extends io.grpc.stub.AbstractStub<AnaStub> {
-    private AnaStub(io.grpc.Channel channel) {
-      super(channel);
-    }
+  public static abstract class AnaImplBase
+      implements io.grpc.BindableService, AsyncService {
 
-    private AnaStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return AnaGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Ana.
+   */
+  public static final class AnaStub
+      extends io.grpc.stub.AbstractAsyncStub<AnaStub> {
+    private AnaStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AnaStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AnaStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AnaStub(channel, callOptions);
     }
 
@@ -1634,7 +1399,7 @@ public final class AnaGrpc {
      */
     public void getSpecifiedVisualizations(com.tcn.cloud.api.api.v0alpha.GetSpecifiedVisualizationsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Visualizations> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSpecifiedVisualizationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1649,7 +1414,7 @@ public final class AnaGrpc {
      */
     public void registerAccount(com.tcn.cloud.api.api.v0alpha.RegisterAccountReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AnaAccount> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRegisterAccountMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1660,7 +1425,7 @@ public final class AnaGrpc {
      */
     public void setWeeks(com.tcn.cloud.api.api.v0alpha.SetWeeksReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SetWeeksRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSetWeeksMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1672,7 +1437,7 @@ public final class AnaGrpc {
      */
     public void setDefaultTimeFilter(com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSetDefaultTimeFilterMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1684,7 +1449,7 @@ public final class AnaGrpc {
      */
     public void setDefaultDashboard(com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSetDefaultDashboardMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1696,7 +1461,7 @@ public final class AnaGrpc {
      */
     public void getAccount(com.tcn.cloud.api.api.v0alpha.GetAccountReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AnaAccount> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAccountMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1707,7 +1472,7 @@ public final class AnaGrpc {
      */
     public void getSpecifiedAccount(com.tcn.cloud.api.api.v0alpha.GetSpecifiedAccountReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AnaAccount> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSpecifiedAccountMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1718,7 +1483,7 @@ public final class AnaGrpc {
      */
     public void getAuthorizedAnalyticsLink(com.tcn.cloud.api.api.v0alpha.GetAuthorizedAnalyticsLinkReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAuthorizedAnalyticsLinkRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAuthorizedAnalyticsLinkMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1730,7 +1495,7 @@ public final class AnaGrpc {
      */
     public void generateMonthlyBilling(com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGenerateMonthlyBillingMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1742,7 +1507,7 @@ public final class AnaGrpc {
      */
     public void getTimeZone(com.tcn.cloud.api.api.v0alpha.GetTimeZoneReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.TimeZone> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetTimeZoneMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1754,7 +1519,7 @@ public final class AnaGrpc {
      */
     public void setTimeZone(com.tcn.cloud.api.api.v0alpha.SetTimeZoneReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SetTimeZoneRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSetTimeZoneMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1766,7 +1531,7 @@ public final class AnaGrpc {
      */
     public void copyDashViz(com.tcn.cloud.api.api.v0alpha.CopyDashVizReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CopyDashVizRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCopyDashVizMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1777,7 +1542,7 @@ public final class AnaGrpc {
      */
     public void getSpecifiedBillingSummary(com.tcn.cloud.api.api.v0alpha.GetSpecifiedBillingSummaryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.BillingSummary> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSpecifiedBillingSummaryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1789,7 +1554,7 @@ public final class AnaGrpc {
      */
     public void getBillingSummary(com.tcn.cloud.api.api.v0alpha.GetBillingSummaryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.BillingSummary> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetBillingSummaryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1801,7 +1566,7 @@ public final class AnaGrpc {
      */
     public void enableCustomReports(com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getEnableCustomReportsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1813,7 +1578,7 @@ public final class AnaGrpc {
      */
     public void disableCustomReports(com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDisableCustomReportsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1825,7 +1590,7 @@ public final class AnaGrpc {
      */
     public void makeAdoptable(com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.MakeAdoptableRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMakeAdoptableMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1837,7 +1602,7 @@ public final class AnaGrpc {
      */
     public void makeUnadoptable(com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.MakeAdoptableRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMakeUnadoptableMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1848,7 +1613,7 @@ public final class AnaGrpc {
      */
     public void adoptAnaAccount(com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAdoptAnaAccountMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1859,7 +1624,7 @@ public final class AnaGrpc {
      */
     public void disownAnaAccount(com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDisownAnaAccountMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1870,7 +1635,7 @@ public final class AnaGrpc {
      */
     public void getAccessibleClients(com.tcn.cloud.api.api.v0alpha.GetAccessibleClientsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SimpleRelations> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAccessibleClientsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1882,7 +1647,7 @@ public final class AnaGrpc {
      */
     public void getFamily(com.tcn.cloud.api.api.v0alpha.GetFamilyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Family> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetFamilyMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1894,7 +1659,7 @@ public final class AnaGrpc {
      */
     public void getAllowedDataVisibility(com.tcn.cloud.api.api.v0alpha.GetVisibilityReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DataVisibility> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAllowedDataVisibilityMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1906,7 +1671,7 @@ public final class AnaGrpc {
      */
     public void getCurrentDataVisibility(com.tcn.cloud.api.api.v0alpha.GetVisibilityReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DataVisibility> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetCurrentDataVisibilityMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1918,7 +1683,7 @@ public final class AnaGrpc {
      */
     public void getIndicesVisibility(com.tcn.cloud.api.api.v0alpha.GetVisibilityReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.IndicesVisibility> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetIndicesVisibilityMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1930,7 +1695,7 @@ public final class AnaGrpc {
      */
     public void getAuditableDataVisibility(com.tcn.cloud.api.api.v0alpha.GetVisibilityReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DataVisibility> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAuditableDataVisibilityMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1941,7 +1706,7 @@ public final class AnaGrpc {
      */
     public void getOrganizationNames(com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetOrganizationNamesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1952,7 +1717,7 @@ public final class AnaGrpc {
      */
     public void generateVizDataById(com.tcn.cloud.api.api.v0alpha.GenerateVizDataByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GenerateVizDataByIdRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGenerateVizDataByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1968,7 +1733,7 @@ public final class AnaGrpc {
      */
     public void getClientStatus(com.tcn.cloud.api.api.v0alpha.GetClientStatusReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetClientStatusResp> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetClientStatusMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1983,7 +1748,7 @@ public final class AnaGrpc {
      */
     public void reloadClientData(com.tcn.cloud.api.api.v0alpha.ReloadClientDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ReloadClientDataResp> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getReloadClientDataMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1994,26 +1759,24 @@ public final class AnaGrpc {
      */
     public void listVisualizationsLegacy(com.tcn.cloud.api.api.v0alpha.ListVisualizationsLegacyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListVisualizationsLegacyRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListVisualizationsLegacyMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Ana.
    */
-  public static final class AnaBlockingStub extends io.grpc.stub.AbstractStub<AnaBlockingStub> {
-    private AnaBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AnaBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AnaBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<AnaBlockingStub> {
+    private AnaBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AnaBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AnaBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AnaBlockingStub(channel, callOptions);
     }
 
@@ -2023,7 +1786,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.Visualizations getSpecifiedVisualizations(com.tcn.cloud.api.api.v0alpha.GetSpecifiedVisualizationsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSpecifiedVisualizationsMethod(), getCallOptions(), request);
     }
 
@@ -2037,7 +1800,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.AnaAccount registerAccount(com.tcn.cloud.api.api.v0alpha.RegisterAccountReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRegisterAccountMethod(), getCallOptions(), request);
     }
 
@@ -2047,7 +1810,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SetWeeksRes setWeeks(com.tcn.cloud.api.api.v0alpha.SetWeeksReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetWeeksMethod(), getCallOptions(), request);
     }
 
@@ -2058,7 +1821,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterRes setDefaultTimeFilter(com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetDefaultTimeFilterMethod(), getCallOptions(), request);
     }
 
@@ -2069,7 +1832,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardRes setDefaultDashboard(com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetDefaultDashboardMethod(), getCallOptions(), request);
     }
 
@@ -2080,7 +1843,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.AnaAccount getAccount(com.tcn.cloud.api.api.v0alpha.GetAccountReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAccountMethod(), getCallOptions(), request);
     }
 
@@ -2090,7 +1853,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.AnaAccount getSpecifiedAccount(com.tcn.cloud.api.api.v0alpha.GetSpecifiedAccountReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSpecifiedAccountMethod(), getCallOptions(), request);
     }
 
@@ -2100,7 +1863,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetAuthorizedAnalyticsLinkRes getAuthorizedAnalyticsLink(com.tcn.cloud.api.api.v0alpha.GetAuthorizedAnalyticsLinkReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAuthorizedAnalyticsLinkMethod(), getCallOptions(), request);
     }
 
@@ -2111,7 +1874,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingRes generateMonthlyBilling(com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGenerateMonthlyBillingMethod(), getCallOptions(), request);
     }
 
@@ -2122,7 +1885,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.TimeZone getTimeZone(com.tcn.cloud.api.api.v0alpha.GetTimeZoneReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetTimeZoneMethod(), getCallOptions(), request);
     }
 
@@ -2133,7 +1896,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SetTimeZoneRes setTimeZone(com.tcn.cloud.api.api.v0alpha.SetTimeZoneReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetTimeZoneMethod(), getCallOptions(), request);
     }
 
@@ -2144,7 +1907,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CopyDashVizRes copyDashViz(com.tcn.cloud.api.api.v0alpha.CopyDashVizReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCopyDashVizMethod(), getCallOptions(), request);
     }
 
@@ -2154,7 +1917,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.BillingSummary getSpecifiedBillingSummary(com.tcn.cloud.api.api.v0alpha.GetSpecifiedBillingSummaryReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSpecifiedBillingSummaryMethod(), getCallOptions(), request);
     }
 
@@ -2165,7 +1928,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.BillingSummary getBillingSummary(com.tcn.cloud.api.api.v0alpha.GetBillingSummaryReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetBillingSummaryMethod(), getCallOptions(), request);
     }
 
@@ -2176,7 +1939,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledRes enableCustomReports(com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getEnableCustomReportsMethod(), getCallOptions(), request);
     }
 
@@ -2187,7 +1950,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledRes disableCustomReports(com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDisableCustomReportsMethod(), getCallOptions(), request);
     }
 
@@ -2198,7 +1961,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.MakeAdoptableRes makeAdoptable(com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMakeAdoptableMethod(), getCallOptions(), request);
     }
 
@@ -2209,7 +1972,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.MakeAdoptableRes makeUnadoptable(com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMakeUnadoptableMethod(), getCallOptions(), request);
     }
 
@@ -2219,7 +1982,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationRes adoptAnaAccount(com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAdoptAnaAccountMethod(), getCallOptions(), request);
     }
 
@@ -2229,7 +1992,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationRes disownAnaAccount(com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDisownAnaAccountMethod(), getCallOptions(), request);
     }
 
@@ -2239,7 +2002,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SimpleRelations getAccessibleClients(com.tcn.cloud.api.api.v0alpha.GetAccessibleClientsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAccessibleClientsMethod(), getCallOptions(), request);
     }
 
@@ -2250,7 +2013,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.Family getFamily(com.tcn.cloud.api.api.v0alpha.GetFamilyReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetFamilyMethod(), getCallOptions(), request);
     }
 
@@ -2261,7 +2024,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DataVisibility getAllowedDataVisibility(com.tcn.cloud.api.api.v0alpha.GetVisibilityReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAllowedDataVisibilityMethod(), getCallOptions(), request);
     }
 
@@ -2272,7 +2035,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DataVisibility getCurrentDataVisibility(com.tcn.cloud.api.api.v0alpha.GetVisibilityReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetCurrentDataVisibilityMethod(), getCallOptions(), request);
     }
 
@@ -2283,7 +2046,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.IndicesVisibility getIndicesVisibility(com.tcn.cloud.api.api.v0alpha.GetVisibilityReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetIndicesVisibilityMethod(), getCallOptions(), request);
     }
 
@@ -2294,7 +2057,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DataVisibility getAuditableDataVisibility(com.tcn.cloud.api.api.v0alpha.GetVisibilityReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAuditableDataVisibilityMethod(), getCallOptions(), request);
     }
 
@@ -2304,7 +2067,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesRes getOrganizationNames(com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetOrganizationNamesMethod(), getCallOptions(), request);
     }
 
@@ -2314,7 +2077,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GenerateVizDataByIdRes generateVizDataById(com.tcn.cloud.api.api.v0alpha.GenerateVizDataByIdReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGenerateVizDataByIdMethod(), getCallOptions(), request);
     }
 
@@ -2329,7 +2092,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetClientStatusResp getClientStatus(com.tcn.cloud.api.api.v0alpha.GetClientStatusReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetClientStatusMethod(), getCallOptions(), request);
     }
 
@@ -2343,7 +2106,7 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ReloadClientDataResp reloadClientData(com.tcn.cloud.api.api.v0alpha.ReloadClientDataReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getReloadClientDataMethod(), getCallOptions(), request);
     }
 
@@ -2353,26 +2116,24 @@ public final class AnaGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListVisualizationsLegacyRes listVisualizationsLegacy(com.tcn.cloud.api.api.v0alpha.ListVisualizationsLegacyReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListVisualizationsLegacyMethod(), getCallOptions(), request);
     }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Ana.
    */
-  public static final class AnaFutureStub extends io.grpc.stub.AbstractStub<AnaFutureStub> {
-    private AnaFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AnaFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AnaFutureStub
+      extends io.grpc.stub.AbstractFutureStub<AnaFutureStub> {
+    private AnaFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AnaFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AnaFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AnaFutureStub(channel, callOptions);
     }
 
@@ -2383,7 +2144,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Visualizations> getSpecifiedVisualizations(
         com.tcn.cloud.api.api.v0alpha.GetSpecifiedVisualizationsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetSpecifiedVisualizationsMethod(), getCallOptions()), request);
     }
 
@@ -2398,7 +2159,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AnaAccount> registerAccount(
         com.tcn.cloud.api.api.v0alpha.RegisterAccountReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRegisterAccountMethod(), getCallOptions()), request);
     }
 
@@ -2409,7 +2170,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SetWeeksRes> setWeeks(
         com.tcn.cloud.api.api.v0alpha.SetWeeksReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSetWeeksMethod(), getCallOptions()), request);
     }
 
@@ -2421,7 +2182,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterRes> setDefaultTimeFilter(
         com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSetDefaultTimeFilterMethod(), getCallOptions()), request);
     }
 
@@ -2433,7 +2194,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardRes> setDefaultDashboard(
         com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSetDefaultDashboardMethod(), getCallOptions()), request);
     }
 
@@ -2445,7 +2206,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AnaAccount> getAccount(
         com.tcn.cloud.api.api.v0alpha.GetAccountReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAccountMethod(), getCallOptions()), request);
     }
 
@@ -2456,7 +2217,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AnaAccount> getSpecifiedAccount(
         com.tcn.cloud.api.api.v0alpha.GetSpecifiedAccountReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetSpecifiedAccountMethod(), getCallOptions()), request);
     }
 
@@ -2467,7 +2228,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetAuthorizedAnalyticsLinkRes> getAuthorizedAnalyticsLink(
         com.tcn.cloud.api.api.v0alpha.GetAuthorizedAnalyticsLinkReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAuthorizedAnalyticsLinkMethod(), getCallOptions()), request);
     }
 
@@ -2479,7 +2240,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingRes> generateMonthlyBilling(
         com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGenerateMonthlyBillingMethod(), getCallOptions()), request);
     }
 
@@ -2491,7 +2252,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.TimeZone> getTimeZone(
         com.tcn.cloud.api.api.v0alpha.GetTimeZoneReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetTimeZoneMethod(), getCallOptions()), request);
     }
 
@@ -2503,7 +2264,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SetTimeZoneRes> setTimeZone(
         com.tcn.cloud.api.api.v0alpha.SetTimeZoneReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSetTimeZoneMethod(), getCallOptions()), request);
     }
 
@@ -2515,7 +2276,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CopyDashVizRes> copyDashViz(
         com.tcn.cloud.api.api.v0alpha.CopyDashVizReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCopyDashVizMethod(), getCallOptions()), request);
     }
 
@@ -2526,7 +2287,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.BillingSummary> getSpecifiedBillingSummary(
         com.tcn.cloud.api.api.v0alpha.GetSpecifiedBillingSummaryReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetSpecifiedBillingSummaryMethod(), getCallOptions()), request);
     }
 
@@ -2538,7 +2299,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.BillingSummary> getBillingSummary(
         com.tcn.cloud.api.api.v0alpha.GetBillingSummaryReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetBillingSummaryMethod(), getCallOptions()), request);
     }
 
@@ -2550,7 +2311,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledRes> enableCustomReports(
         com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getEnableCustomReportsMethod(), getCallOptions()), request);
     }
 
@@ -2562,7 +2323,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledRes> disableCustomReports(
         com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDisableCustomReportsMethod(), getCallOptions()), request);
     }
 
@@ -2574,7 +2335,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.MakeAdoptableRes> makeAdoptable(
         com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMakeAdoptableMethod(), getCallOptions()), request);
     }
 
@@ -2586,7 +2347,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.MakeAdoptableRes> makeUnadoptable(
         com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMakeUnadoptableMethod(), getCallOptions()), request);
     }
 
@@ -2597,7 +2358,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationRes> adoptAnaAccount(
         com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAdoptAnaAccountMethod(), getCallOptions()), request);
     }
 
@@ -2608,7 +2369,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationRes> disownAnaAccount(
         com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDisownAnaAccountMethod(), getCallOptions()), request);
     }
 
@@ -2619,7 +2380,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SimpleRelations> getAccessibleClients(
         com.tcn.cloud.api.api.v0alpha.GetAccessibleClientsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAccessibleClientsMethod(), getCallOptions()), request);
     }
 
@@ -2631,7 +2392,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Family> getFamily(
         com.tcn.cloud.api.api.v0alpha.GetFamilyReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetFamilyMethod(), getCallOptions()), request);
     }
 
@@ -2643,7 +2404,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DataVisibility> getAllowedDataVisibility(
         com.tcn.cloud.api.api.v0alpha.GetVisibilityReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAllowedDataVisibilityMethod(), getCallOptions()), request);
     }
 
@@ -2655,7 +2416,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DataVisibility> getCurrentDataVisibility(
         com.tcn.cloud.api.api.v0alpha.GetVisibilityReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetCurrentDataVisibilityMethod(), getCallOptions()), request);
     }
 
@@ -2667,7 +2428,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.IndicesVisibility> getIndicesVisibility(
         com.tcn.cloud.api.api.v0alpha.GetVisibilityReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetIndicesVisibilityMethod(), getCallOptions()), request);
     }
 
@@ -2679,7 +2440,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DataVisibility> getAuditableDataVisibility(
         com.tcn.cloud.api.api.v0alpha.GetVisibilityReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAuditableDataVisibilityMethod(), getCallOptions()), request);
     }
 
@@ -2690,7 +2451,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesRes> getOrganizationNames(
         com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetOrganizationNamesMethod(), getCallOptions()), request);
     }
 
@@ -2701,7 +2462,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GenerateVizDataByIdRes> generateVizDataById(
         com.tcn.cloud.api.api.v0alpha.GenerateVizDataByIdReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGenerateVizDataByIdMethod(), getCallOptions()), request);
     }
 
@@ -2717,7 +2478,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetClientStatusResp> getClientStatus(
         com.tcn.cloud.api.api.v0alpha.GetClientStatusReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetClientStatusMethod(), getCallOptions()), request);
     }
 
@@ -2732,7 +2493,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ReloadClientDataResp> reloadClientData(
         com.tcn.cloud.api.api.v0alpha.ReloadClientDataReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getReloadClientDataMethod(), getCallOptions()), request);
     }
 
@@ -2743,7 +2504,7 @@ public final class AnaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListVisualizationsLegacyRes> listVisualizationsLegacy(
         com.tcn.cloud.api.api.v0alpha.ListVisualizationsLegacyReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListVisualizationsLegacyMethod(), getCallOptions()), request);
     }
   }
@@ -2785,10 +2546,10 @@ public final class AnaGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AnaImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AnaImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -2935,6 +2696,228 @@ public final class AnaGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getGetSpecifiedVisualizationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetSpecifiedVisualizationsReq,
+              com.tcn.cloud.api.api.v0alpha.Visualizations>(
+                service, METHODID_GET_SPECIFIED_VISUALIZATIONS)))
+        .addMethod(
+          getRegisterAccountMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.RegisterAccountReq,
+              com.tcn.cloud.api.api.v0alpha.AnaAccount>(
+                service, METHODID_REGISTER_ACCOUNT)))
+        .addMethod(
+          getSetWeeksMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SetWeeksReq,
+              com.tcn.cloud.api.api.v0alpha.SetWeeksRes>(
+                service, METHODID_SET_WEEKS)))
+        .addMethod(
+          getSetDefaultTimeFilterMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterReq,
+              com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterRes>(
+                service, METHODID_SET_DEFAULT_TIME_FILTER)))
+        .addMethod(
+          getSetDefaultDashboardMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardReq,
+              com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardRes>(
+                service, METHODID_SET_DEFAULT_DASHBOARD)))
+        .addMethod(
+          getGetAccountMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetAccountReq,
+              com.tcn.cloud.api.api.v0alpha.AnaAccount>(
+                service, METHODID_GET_ACCOUNT)))
+        .addMethod(
+          getGetSpecifiedAccountMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetSpecifiedAccountReq,
+              com.tcn.cloud.api.api.v0alpha.AnaAccount>(
+                service, METHODID_GET_SPECIFIED_ACCOUNT)))
+        .addMethod(
+          getGetAuthorizedAnalyticsLinkMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetAuthorizedAnalyticsLinkReq,
+              com.tcn.cloud.api.api.v0alpha.GetAuthorizedAnalyticsLinkRes>(
+                service, METHODID_GET_AUTHORIZED_ANALYTICS_LINK)))
+        .addMethod(
+          getGenerateMonthlyBillingMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingReq,
+              com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingRes>(
+                service, METHODID_GENERATE_MONTHLY_BILLING)))
+        .addMethod(
+          getGetTimeZoneMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetTimeZoneReq,
+              com.tcn.cloud.api.api.v0alpha.TimeZone>(
+                service, METHODID_GET_TIME_ZONE)))
+        .addMethod(
+          getSetTimeZoneMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SetTimeZoneReq,
+              com.tcn.cloud.api.api.v0alpha.SetTimeZoneRes>(
+                service, METHODID_SET_TIME_ZONE)))
+        .addMethod(
+          getCopyDashVizMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CopyDashVizReq,
+              com.tcn.cloud.api.api.v0alpha.CopyDashVizRes>(
+                service, METHODID_COPY_DASH_VIZ)))
+        .addMethod(
+          getGetSpecifiedBillingSummaryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetSpecifiedBillingSummaryReq,
+              com.tcn.cloud.api.api.v0alpha.BillingSummary>(
+                service, METHODID_GET_SPECIFIED_BILLING_SUMMARY)))
+        .addMethod(
+          getGetBillingSummaryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetBillingSummaryReq,
+              com.tcn.cloud.api.api.v0alpha.BillingSummary>(
+                service, METHODID_GET_BILLING_SUMMARY)))
+        .addMethod(
+          getEnableCustomReportsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq,
+              com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledRes>(
+                service, METHODID_ENABLE_CUSTOM_REPORTS)))
+        .addMethod(
+          getDisableCustomReportsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq,
+              com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledRes>(
+                service, METHODID_DISABLE_CUSTOM_REPORTS)))
+        .addMethod(
+          getMakeAdoptableMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq,
+              com.tcn.cloud.api.api.v0alpha.MakeAdoptableRes>(
+                service, METHODID_MAKE_ADOPTABLE)))
+        .addMethod(
+          getMakeUnadoptableMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq,
+              com.tcn.cloud.api.api.v0alpha.MakeAdoptableRes>(
+                service, METHODID_MAKE_UNADOPTABLE)))
+        .addMethod(
+          getAdoptAnaAccountMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq,
+              com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationRes>(
+                service, METHODID_ADOPT_ANA_ACCOUNT)))
+        .addMethod(
+          getDisownAnaAccountMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq,
+              com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationRes>(
+                service, METHODID_DISOWN_ANA_ACCOUNT)))
+        .addMethod(
+          getGetAccessibleClientsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetAccessibleClientsReq,
+              com.tcn.cloud.api.api.v0alpha.SimpleRelations>(
+                service, METHODID_GET_ACCESSIBLE_CLIENTS)))
+        .addMethod(
+          getGetFamilyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetFamilyReq,
+              com.tcn.cloud.api.api.v0alpha.Family>(
+                service, METHODID_GET_FAMILY)))
+        .addMethod(
+          getGetAllowedDataVisibilityMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetVisibilityReq,
+              com.tcn.cloud.api.api.v0alpha.DataVisibility>(
+                service, METHODID_GET_ALLOWED_DATA_VISIBILITY)))
+        .addMethod(
+          getGetCurrentDataVisibilityMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetVisibilityReq,
+              com.tcn.cloud.api.api.v0alpha.DataVisibility>(
+                service, METHODID_GET_CURRENT_DATA_VISIBILITY)))
+        .addMethod(
+          getGetIndicesVisibilityMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetVisibilityReq,
+              com.tcn.cloud.api.api.v0alpha.IndicesVisibility>(
+                service, METHODID_GET_INDICES_VISIBILITY)))
+        .addMethod(
+          getGetAuditableDataVisibilityMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetVisibilityReq,
+              com.tcn.cloud.api.api.v0alpha.DataVisibility>(
+                service, METHODID_GET_AUDITABLE_DATA_VISIBILITY)))
+        .addMethod(
+          getGetOrganizationNamesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesReq,
+              com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesRes>(
+                service, METHODID_GET_ORGANIZATION_NAMES)))
+        .addMethod(
+          getGenerateVizDataByIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GenerateVizDataByIdReq,
+              com.tcn.cloud.api.api.v0alpha.GenerateVizDataByIdRes>(
+                service, METHODID_GENERATE_VIZ_DATA_BY_ID)))
+        .addMethod(
+          getGetClientStatusMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetClientStatusReq,
+              com.tcn.cloud.api.api.v0alpha.GetClientStatusResp>(
+                service, METHODID_GET_CLIENT_STATUS)))
+        .addMethod(
+          getReloadClientDataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ReloadClientDataReq,
+              com.tcn.cloud.api.api.v0alpha.ReloadClientDataResp>(
+                service, METHODID_RELOAD_CLIENT_DATA)))
+        .addMethod(
+          getListVisualizationsLegacyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListVisualizationsLegacyReq,
+              com.tcn.cloud.api.api.v0alpha.ListVisualizationsLegacyRes>(
+                service, METHODID_LIST_VISUALIZATIONS_LEGACY)))
+        .build();
   }
 
   private static abstract class AnaBaseDescriptorSupplier

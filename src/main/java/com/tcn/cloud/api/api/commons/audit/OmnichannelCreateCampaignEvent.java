@@ -33,95 +33,6 @@ private static final long serialVersionUID = 0L;
     return new OmnichannelCreateCampaignEvent();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private OmnichannelCreateCampaignEvent(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            name_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            description_ = s;
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            channelType_ = rawValue;
-            break;
-          }
-          case 32: {
-            int rawValue = input.readEnum();
-
-            campaignDirection_ = rawValue;
-            break;
-          }
-          case 40: {
-
-            campaignSid_ = input.readInt64();
-            break;
-          }
-          case 50: {
-            com.tcn.cloud.api.api.commons.OmniCampaign.Builder subBuilder = null;
-            if (omniCampaign_ != null) {
-              subBuilder = omniCampaign_.toBuilder();
-            }
-            omniCampaign_ = input.readMessage(com.tcn.cloud.api.api.commons.OmniCampaign.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(omniCampaign_);
-              omniCampaign_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 56: {
-
-            projectSid_ = input.readInt64();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.audit.OmnichannelEventsProto.internal_static_api_commons_audit_OmnichannelCreateCampaignEvent_descriptor;
@@ -136,7 +47,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * campaign name
@@ -182,7 +94,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 2;
-  private volatile java.lang.Object description_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
   /**
    * <pre>
    * campaign description
@@ -228,7 +141,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CHANNEL_TYPE_FIELD_NUMBER = 3;
-  private int channelType_;
+  private int channelType_ = 0;
   /**
    * <pre>
    * campaign type
@@ -249,13 +162,12 @@ private static final long serialVersionUID = 0L;
    * @return The channelType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.ChannelType getChannelType() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.valueOf(channelType_);
+    com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.forNumber(channelType_);
     return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
   }
 
   public static final int CAMPAIGN_DIRECTION_FIELD_NUMBER = 4;
-  private int campaignDirection_;
+  private int campaignDirection_ = 0;
   /**
    * <pre>
    * campaign direction
@@ -276,13 +188,12 @@ private static final long serialVersionUID = 0L;
    * @return The campaignDirection.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.CampaignDirection getCampaignDirection() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.CampaignDirection result = com.tcn.cloud.api.api.commons.CampaignDirection.valueOf(campaignDirection_);
+    com.tcn.cloud.api.api.commons.CampaignDirection result = com.tcn.cloud.api.api.commons.CampaignDirection.forNumber(campaignDirection_);
     return result == null ? com.tcn.cloud.api.api.commons.CampaignDirection.UNRECOGNIZED : result;
   }
 
   public static final int CAMPAIGN_SID_FIELD_NUMBER = 5;
-  private long campaignSid_;
+  private long campaignSid_ = 0L;
   /**
    * <pre>
    * generated campaign sid
@@ -331,11 +242,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.OmniCampaignOrBuilder getOmniCampaignOrBuilder() {
-    return getOmniCampaign();
+    return omniCampaign_ == null ? com.tcn.cloud.api.api.commons.OmniCampaign.getDefaultInstance() : omniCampaign_;
   }
 
   public static final int PROJECT_SID_FIELD_NUMBER = 7;
-  private long projectSid_;
+  private long projectSid_ = 0L;
   /**
    * <pre>
    * project identifier
@@ -363,10 +274,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
     }
     if (channelType_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
@@ -384,7 +295,7 @@ private static final long serialVersionUID = 0L;
     if (projectSid_ != 0L) {
       output.writeInt64(7, projectSid_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -393,10 +304,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
     }
     if (channelType_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
@@ -419,7 +330,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(7, projectSid_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -449,7 +360,7 @@ private static final long serialVersionUID = 0L;
     }
     if (getProjectSid()
         != other.getProjectSid()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -478,7 +389,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + PROJECT_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getProjectSid());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -527,11 +438,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.audit.OmnichannelCreateCampaignEvent parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.audit.OmnichannelCreateCampaignEvent parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -599,40 +512,29 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.audit.OmnichannelCreateCampaignEvent.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       name_ = "";
-
       description_ = "";
-
       channelType_ = 0;
-
       campaignDirection_ = 0;
-
       campaignSid_ = 0L;
-
-      if (omniCampaignBuilder_ == null) {
-        omniCampaign_ = null;
-      } else {
-        omniCampaign_ = null;
+      omniCampaign_ = null;
+      if (omniCampaignBuilder_ != null) {
+        omniCampaignBuilder_.dispose();
         omniCampaignBuilder_ = null;
       }
       projectSid_ = 0L;
-
       return this;
     }
 
@@ -659,19 +561,36 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.audit.OmnichannelCreateCampaignEvent buildPartial() {
       com.tcn.cloud.api.api.commons.audit.OmnichannelCreateCampaignEvent result = new com.tcn.cloud.api.api.commons.audit.OmnichannelCreateCampaignEvent(this);
-      result.name_ = name_;
-      result.description_ = description_;
-      result.channelType_ = channelType_;
-      result.campaignDirection_ = campaignDirection_;
-      result.campaignSid_ = campaignSid_;
-      if (omniCampaignBuilder_ == null) {
-        result.omniCampaign_ = omniCampaign_;
-      } else {
-        result.omniCampaign_ = omniCampaignBuilder_.build();
-      }
-      result.projectSid_ = projectSid_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.audit.OmnichannelCreateCampaignEvent result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.channelType_ = channelType_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.campaignDirection_ = campaignDirection_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.campaignSid_ = campaignSid_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.omniCampaign_ = omniCampaignBuilder_ == null
+            ? omniCampaign_
+            : omniCampaignBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.projectSid_ = projectSid_;
+      }
     }
 
     @java.lang.Override
@@ -720,10 +639,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.commons.audit.OmnichannelCreateCampaignEvent.getDefaultInstance()) return this;
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.channelType_ != 0) {
@@ -741,7 +662,7 @@ private static final long serialVersionUID = 0L;
       if (other.getProjectSid() != 0L) {
         setProjectSid(other.getProjectSid());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -756,19 +677,70 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.audit.OmnichannelCreateCampaignEvent parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              name_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              description_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              channelType_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              campaignDirection_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              campaignSid_ = input.readInt64();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 50: {
+              input.readMessage(
+                  getOmniCampaignFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 56: {
+              projectSid_ = input.readInt64();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.audit.OmnichannelCreateCampaignEvent) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object name_ = "";
     /**
@@ -823,11 +795,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -840,8 +810,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -856,12 +826,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -919,11 +887,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       description_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -936,8 +902,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-      
       description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -952,12 +918,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -984,8 +948,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setChannelTypeValue(int value) {
-      
       channelType_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -999,8 +963,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ChannelType getChannelType() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.valueOf(channelType_);
+      com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.forNumber(channelType_);
       return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
     }
     /**
@@ -1016,7 +979,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       channelType_ = value.getNumber();
       onChanged();
       return this;
@@ -1030,7 +993,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearChannelType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       channelType_ = 0;
       onChanged();
       return this;
@@ -1058,8 +1021,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCampaignDirectionValue(int value) {
-      
       campaignDirection_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1073,8 +1036,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.CampaignDirection getCampaignDirection() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.CampaignDirection result = com.tcn.cloud.api.api.commons.CampaignDirection.valueOf(campaignDirection_);
+      com.tcn.cloud.api.api.commons.CampaignDirection result = com.tcn.cloud.api.api.commons.CampaignDirection.forNumber(campaignDirection_);
       return result == null ? com.tcn.cloud.api.api.commons.CampaignDirection.UNRECOGNIZED : result;
     }
     /**
@@ -1090,7 +1052,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       campaignDirection_ = value.getNumber();
       onChanged();
       return this;
@@ -1104,7 +1066,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaignDirection() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       campaignDirection_ = 0;
       onChanged();
       return this;
@@ -1133,8 +1095,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCampaignSid(long value) {
-      
+
       campaignSid_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1147,7 +1110,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaignSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       campaignSid_ = 0L;
       onChanged();
       return this;
@@ -1165,7 +1128,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the omniCampaign field is set.
      */
     public boolean hasOmniCampaign() {
-      return omniCampaignBuilder_ != null || omniCampaign_ != null;
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -1195,11 +1158,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         omniCampaign_ = value;
-        onChanged();
       } else {
         omniCampaignBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1213,11 +1176,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.OmniCampaign.Builder builderForValue) {
       if (omniCampaignBuilder_ == null) {
         omniCampaign_ = builderForValue.build();
-        onChanged();
       } else {
         omniCampaignBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1229,17 +1192,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeOmniCampaign(com.tcn.cloud.api.api.commons.OmniCampaign value) {
       if (omniCampaignBuilder_ == null) {
-        if (omniCampaign_ != null) {
-          omniCampaign_ =
-            com.tcn.cloud.api.api.commons.OmniCampaign.newBuilder(omniCampaign_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000020) != 0) &&
+          omniCampaign_ != null &&
+          omniCampaign_ != com.tcn.cloud.api.api.commons.OmniCampaign.getDefaultInstance()) {
+          getOmniCampaignBuilder().mergeFrom(value);
         } else {
           omniCampaign_ = value;
         }
-        onChanged();
       } else {
         omniCampaignBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1250,14 +1214,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.OmniCampaign omni_campaign = 6 [json_name = "omniCampaign"];</code>
      */
     public Builder clearOmniCampaign() {
-      if (omniCampaignBuilder_ == null) {
-        omniCampaign_ = null;
-        onChanged();
-      } else {
-        omniCampaign_ = null;
+      bitField0_ = (bitField0_ & ~0x00000020);
+      omniCampaign_ = null;
+      if (omniCampaignBuilder_ != null) {
+        omniCampaignBuilder_.dispose();
         omniCampaignBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1268,7 +1231,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.OmniCampaign omni_campaign = 6 [json_name = "omniCampaign"];</code>
      */
     public com.tcn.cloud.api.api.commons.OmniCampaign.Builder getOmniCampaignBuilder() {
-      
+      bitField0_ |= 0x00000020;
       onChanged();
       return getOmniCampaignFieldBuilder().getBuilder();
     }
@@ -1331,8 +1294,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setProjectSid(long value) {
-      
+
       projectSid_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1345,7 +1309,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProjectSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       projectSid_ = 0L;
       onChanged();
       return this;
@@ -1383,7 +1347,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new OmnichannelCreateCampaignEvent(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

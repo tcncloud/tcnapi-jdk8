@@ -141,5 +141,5 @@ public interface AsmEventOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.ConversationPulledEventOrBuilder getConversationPulledEventOrBuilder();
 
-  public com.tcn.cloud.api.api.commons.AsmEvent.EventCase getEventCase();
+  com.tcn.cloud.api.api.commons.AsmEvent.EventCase getEventCase();
 }

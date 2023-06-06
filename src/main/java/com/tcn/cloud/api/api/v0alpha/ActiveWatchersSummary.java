@@ -26,69 +26,6 @@ private static final long serialVersionUID = 0L;
     return new ActiveWatchersSummary();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private ActiveWatchersSummary(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            activeWatchersCurrent_ = input.readInt64();
-            break;
-          }
-          case 16: {
-
-            processedWatchers_ = input.readInt64();
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            watchersActivator_ = s;
-            break;
-          }
-          case 32: {
-
-            proStatus_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.AnaProto.internal_static_api_v0alpha_ActiveWatchersSummary_descriptor;
@@ -103,7 +40,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ACTIVE_WATCHERS_CURRENT_FIELD_NUMBER = 1;
-  private long activeWatchersCurrent_;
+  private long activeWatchersCurrent_ = 0L;
   /**
    * <code>int64 active_watchers_current = 1 [json_name = "activeWatchersCurrent"];</code>
    * @return The activeWatchersCurrent.
@@ -114,7 +51,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PROCESSED_WATCHERS_FIELD_NUMBER = 2;
-  private long processedWatchers_;
+  private long processedWatchers_ = 0L;
   /**
    * <code>int64 processed_watchers = 2 [json_name = "processedWatchers"];</code>
    * @return The processedWatchers.
@@ -125,7 +62,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WATCHERS_ACTIVATOR_FIELD_NUMBER = 3;
-  private volatile java.lang.Object watchersActivator_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object watchersActivator_ = "";
   /**
    * <pre>
    * user id of activator of most recently processed watcher
@@ -171,7 +109,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PRO_STATUS_FIELD_NUMBER = 4;
-  private boolean proStatus_;
+  private boolean proStatus_ = false;
   /**
    * <code>bool pro_status = 4 [json_name = "proStatus"];</code>
    * @return The proStatus.
@@ -201,13 +139,13 @@ private static final long serialVersionUID = 0L;
     if (processedWatchers_ != 0L) {
       output.writeInt64(2, processedWatchers_);
     }
-    if (!getWatchersActivatorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(watchersActivator_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, watchersActivator_);
     }
     if (proStatus_ != false) {
       output.writeBool(4, proStatus_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -224,14 +162,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, processedWatchers_);
     }
-    if (!getWatchersActivatorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(watchersActivator_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, watchersActivator_);
     }
     if (proStatus_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, proStatus_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -254,7 +192,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getWatchersActivator())) return false;
     if (getProStatus()
         != other.getProStatus()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -276,7 +214,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + PRO_STATUS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getProStatus());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -325,11 +263,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.ActiveWatchersSummary parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.ActiveWatchersSummary parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -393,30 +333,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ActiveWatchersSummary.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       activeWatchersCurrent_ = 0L;
-
       processedWatchers_ = 0L;
-
       watchersActivator_ = "";
-
       proStatus_ = false;
-
       return this;
     }
 
@@ -443,12 +375,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ActiveWatchersSummary buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ActiveWatchersSummary result = new com.tcn.cloud.api.api.v0alpha.ActiveWatchersSummary(this);
-      result.activeWatchersCurrent_ = activeWatchersCurrent_;
-      result.processedWatchers_ = processedWatchers_;
-      result.watchersActivator_ = watchersActivator_;
-      result.proStatus_ = proStatus_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ActiveWatchersSummary result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.activeWatchersCurrent_ = activeWatchersCurrent_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.processedWatchers_ = processedWatchers_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.watchersActivator_ = watchersActivator_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.proStatus_ = proStatus_;
+      }
     }
 
     @java.lang.Override
@@ -503,12 +448,13 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getWatchersActivator().isEmpty()) {
         watchersActivator_ = other.watchersActivator_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.getProStatus() != false) {
         setProStatus(other.getProStatus());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -523,19 +469,53 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.ActiveWatchersSummary parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              activeWatchersCurrent_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              processedWatchers_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 26: {
+              watchersActivator_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 32: {
+              proStatus_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ActiveWatchersSummary) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private long activeWatchersCurrent_ ;
     /**
@@ -552,8 +532,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setActiveWatchersCurrent(long value) {
-      
+
       activeWatchersCurrent_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -562,7 +543,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActiveWatchersCurrent() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       activeWatchersCurrent_ = 0L;
       onChanged();
       return this;
@@ -583,8 +564,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setProcessedWatchers(long value) {
-      
+
       processedWatchers_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -593,7 +575,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProcessedWatchers() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       processedWatchers_ = 0L;
       onChanged();
       return this;
@@ -652,11 +634,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setWatchersActivator(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       watchersActivator_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -669,8 +649,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWatchersActivator() {
-      
       watchersActivator_ = getDefaultInstance().getWatchersActivator();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -685,12 +665,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setWatchersActivatorBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       watchersActivator_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -710,8 +688,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setProStatus(boolean value) {
-      
+
       proStatus_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -720,7 +699,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       proStatus_ = false;
       onChanged();
       return this;
@@ -758,7 +737,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ActiveWatchersSummary(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

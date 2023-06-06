@@ -58,10 +58,11 @@ public interface GetReceiptResOrBuilder extends
    *
    * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; request = 2 [json_name = "request"];</code>
    */
-
-  com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getRequestOrDefault(
+  /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getRequestOrDefault(
       java.lang.String key,
-      com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue);
+      /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue);
   /**
    * <pre>
    * the non-sensitive request fields used to make the payment
@@ -69,7 +70,6 @@ public interface GetReceiptResOrBuilder extends
    *
    * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; request = 2 [json_name = "request"];</code>
    */
-
   com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getRequestOrThrow(
       java.lang.String key);
 
@@ -112,10 +112,11 @@ public interface GetReceiptResOrBuilder extends
    *
    * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; response = 3 [json_name = "response"];</code>
    */
-
-  com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getResponseOrDefault(
+  /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getResponseOrDefault(
       java.lang.String key,
-      com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue);
+      /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue);
   /**
    * <pre>
    * the response from the payment
@@ -123,7 +124,6 @@ public interface GetReceiptResOrBuilder extends
    *
    * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; response = 3 [json_name = "response"];</code>
    */
-
   com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getResponseOrThrow(
       java.lang.String key);
 

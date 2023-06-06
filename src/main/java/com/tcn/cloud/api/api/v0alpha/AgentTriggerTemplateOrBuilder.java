@@ -181,5 +181,5 @@ public interface AgentTriggerTemplateOrBuilder extends
   com.google.protobuf.ByteString
       getIdBytes();
 
-  public com.tcn.cloud.api.api.v0alpha.AgentTriggerTemplate.StatusCase getStatusCase();
+  com.tcn.cloud.api.api.v0alpha.AgentTriggerTemplate.StatusCase getStatusCase();
 }

@@ -78,5 +78,5 @@ public interface CreateFilterReqOrBuilder extends
    */
   int getTagsValue(int index);
 
-  public com.tcn.cloud.api.api.v0alpha.CreateFilterReq.CreationTypeCase getCreationTypeCase();
+  com.tcn.cloud.api.api.v0alpha.CreateFilterReq.CreationTypeCase getCreationTypeCase();
 }

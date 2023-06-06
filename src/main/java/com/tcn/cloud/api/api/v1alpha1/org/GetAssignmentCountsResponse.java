@@ -29,62 +29,6 @@ private static final long serialVersionUID = 0L;
     return new GetAssignmentCountsResponse();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private GetAssignmentCountsResponse(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              counts_ = com.google.protobuf.MapField.newMapField(
-                  CountsDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000001;
-            }
-            com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Long>
-            counts__ = input.readMessage(
-                CountsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            counts_.getMutableMap().put(
-                counts__.getKey(), counts__.getValue());
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.LabelsProto.internal_static_api_v1alpha1_org_GetAssignmentCountsResponse_descriptor;
@@ -122,6 +66,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.INT64,
                 0L);
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.Integer, java.lang.Long> counts_;
   private com.google.protobuf.MapField<java.lang.Integer, java.lang.Long>
@@ -132,7 +77,6 @@ private static final long serialVersionUID = 0L;
     }
     return counts_;
   }
-
   public int getCountsCount() {
     return internalGetCounts().getMap().size();
   }
@@ -145,11 +89,10 @@ private static final long serialVersionUID = 0L;
    *
    * <code>map&lt;int32, int64&gt; counts = 1 [json_name = "counts"];</code>
    */
-
   @java.lang.Override
   public boolean containsCounts(
       int key) {
-    
+
     return internalGetCounts().getMap().containsKey(key);
   }
   /**
@@ -170,7 +113,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int32, int64&gt; counts = 1 [json_name = "counts"];</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.Integer, java.lang.Long> getCountsMap() {
     return internalGetCounts().getMap();
   }
@@ -184,11 +126,10 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int32, int64&gt; counts = 1 [json_name = "counts"];</code>
    */
   @java.lang.Override
-
   public long getCountsOrDefault(
       int key,
       long defaultValue) {
-    
+
     java.util.Map<java.lang.Integer, java.lang.Long> map =
         internalGetCounts().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -203,10 +144,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int32, int64&gt; counts = 1 [json_name = "counts"];</code>
    */
   @java.lang.Override
-
   public long getCountsOrThrow(
       int key) {
-    
+
     java.util.Map<java.lang.Integer, java.lang.Long> map =
         internalGetCounts().getMap();
     if (!map.containsKey(key)) {
@@ -235,7 +175,7 @@ private static final long serialVersionUID = 0L;
         internalGetCounts(),
         CountsDefaultEntryHolder.defaultEntry,
         1);
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -254,7 +194,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, counts__);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -271,7 +211,7 @@ private static final long serialVersionUID = 0L;
 
     if (!internalGetCounts().equals(
         other.internalGetCounts())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -286,7 +226,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + COUNTS_FIELD_NUMBER;
       hash = (53 * hash) + internalGetCounts().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -335,11 +275,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.GetAssignmentCountsResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.GetAssignmentCountsResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -429,22 +371,18 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.GetAssignmentCountsResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       internalGetMutableCounts().clear();
       return this;
     }
@@ -472,11 +410,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.GetAssignmentCountsResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.GetAssignmentCountsResponse result = new com.tcn.cloud.api.api.v1alpha1.org.GetAssignmentCountsResponse(this);
-      int from_bitField0_ = bitField0_;
-      result.counts_ = internalGetCounts();
-      result.counts_.makeImmutable();
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.GetAssignmentCountsResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.counts_ = internalGetCounts();
+        result.counts_.makeImmutable();
+      }
     }
 
     @java.lang.Override
@@ -525,7 +469,8 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v1alpha1.org.GetAssignmentCountsResponse.getDefaultInstance()) return this;
       internalGetMutableCounts().mergeFrom(
           other.internalGetCounts());
-      this.mergeUnknownFields(other.unknownFields);
+      bitField0_ |= 0x00000001;
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -540,17 +485,39 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.org.GetAssignmentCountsResponse parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.Long>
+              counts__ = input.readMessage(
+                  CountsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableCounts().getMutableMap().put(
+                  counts__.getKey(), counts__.getValue());
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.GetAssignmentCountsResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -558,7 +525,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.Integer, java.lang.Long> counts_;
     private com.google.protobuf.MapField<java.lang.Integer, java.lang.Long>
-    internalGetCounts() {
+        internalGetCounts() {
       if (counts_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             CountsDefaultEntryHolder.defaultEntry);
@@ -566,8 +533,7 @@ private static final long serialVersionUID = 0L;
       return counts_;
     }
     private com.google.protobuf.MapField<java.lang.Integer, java.lang.Long>
-    internalGetMutableCounts() {
-      onChanged();;
+        internalGetMutableCounts() {
       if (counts_ == null) {
         counts_ = com.google.protobuf.MapField.newMapField(
             CountsDefaultEntryHolder.defaultEntry);
@@ -575,9 +541,10 @@ private static final long serialVersionUID = 0L;
       if (!counts_.isMutable()) {
         counts_ = counts_.copy();
       }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return counts_;
     }
-
     public int getCountsCount() {
       return internalGetCounts().getMap().size();
     }
@@ -590,11 +557,10 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;int32, int64&gt; counts = 1 [json_name = "counts"];</code>
      */
-
     @java.lang.Override
     public boolean containsCounts(
         int key) {
-      
+
       return internalGetCounts().getMap().containsKey(key);
     }
     /**
@@ -615,7 +581,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int32, int64&gt; counts = 1 [json_name = "counts"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.Integer, java.lang.Long> getCountsMap() {
       return internalGetCounts().getMap();
     }
@@ -629,11 +594,10 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int32, int64&gt; counts = 1 [json_name = "counts"];</code>
      */
     @java.lang.Override
-
     public long getCountsOrDefault(
         int key,
         long defaultValue) {
-      
+
       java.util.Map<java.lang.Integer, java.lang.Long> map =
           internalGetCounts().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -648,10 +612,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int32, int64&gt; counts = 1 [json_name = "counts"];</code>
      */
     @java.lang.Override
-
     public long getCountsOrThrow(
         int key) {
-      
+
       java.util.Map<java.lang.Integer, java.lang.Long> map =
           internalGetCounts().getMap();
       if (!map.containsKey(key)) {
@@ -659,8 +622,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearCounts() {
+      bitField0_ = (bitField0_ & ~0x00000001);
       internalGetMutableCounts().getMutableMap()
           .clear();
       return this;
@@ -674,10 +637,9 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;int32, int64&gt; counts = 1 [json_name = "counts"];</code>
      */
-
     public Builder removeCounts(
         int key) {
-      
+
       internalGetMutableCounts().getMutableMap()
           .remove(key);
       return this;
@@ -687,7 +649,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.Integer, java.lang.Long>
-    getMutableCounts() {
+        getMutableCounts() {
+      bitField0_ |= 0x00000001;
       return internalGetMutableCounts().getMutableMap();
     }
     /**
@@ -702,10 +665,11 @@ private static final long serialVersionUID = 0L;
     public Builder putCounts(
         int key,
         long value) {
-      
-      
+
+
       internalGetMutableCounts().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000001;
       return this;
     }
     /**
@@ -717,11 +681,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;int32, int64&gt; counts = 1 [json_name = "counts"];</code>
      */
-
     public Builder putAllCounts(
         java.util.Map<java.lang.Integer, java.lang.Long> values) {
       internalGetMutableCounts().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000001;
       return this;
     }
     @java.lang.Override
@@ -757,7 +721,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GetAssignmentCountsResponse(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -9,10 +9,20 @@ public interface Uint32ExprOrBuilder extends
 
   /**
    * <code>uint32 gt = 1 [json_name = "gt"];</code>
+   * @return Whether the gt field is set.
+   */
+  boolean hasGt();
+  /**
+   * <code>uint32 gt = 1 [json_name = "gt"];</code>
    * @return The gt.
    */
   int getGt();
 
+  /**
+   * <code>uint32 gte = 2 [json_name = "gte"];</code>
+   * @return Whether the gte field is set.
+   */
+  boolean hasGte();
   /**
    * <code>uint32 gte = 2 [json_name = "gte"];</code>
    * @return The gte.
@@ -21,10 +31,20 @@ public interface Uint32ExprOrBuilder extends
 
   /**
    * <code>uint32 lt = 3 [json_name = "lt"];</code>
+   * @return Whether the lt field is set.
+   */
+  boolean hasLt();
+  /**
+   * <code>uint32 lt = 3 [json_name = "lt"];</code>
    * @return The lt.
    */
   int getLt();
 
+  /**
+   * <code>uint32 lte = 4 [json_name = "lte"];</code>
+   * @return Whether the lte field is set.
+   */
+  boolean hasLte();
   /**
    * <code>uint32 lte = 4 [json_name = "lte"];</code>
    * @return The lte.
@@ -33,10 +53,20 @@ public interface Uint32ExprOrBuilder extends
 
   /**
    * <code>uint32 eq = 5 [json_name = "eq"];</code>
+   * @return Whether the eq field is set.
+   */
+  boolean hasEq();
+  /**
+   * <code>uint32 eq = 5 [json_name = "eq"];</code>
    * @return The eq.
    */
   int getEq();
 
+  /**
+   * <code>uint32 not_eq = 6 [json_name = "notEq"];</code>
+   * @return Whether the notEq field is set.
+   */
+  boolean hasNotEq();
   /**
    * <code>uint32 not_eq = 6 [json_name = "notEq"];</code>
    * @return The notEq.
@@ -58,5 +88,5 @@ public interface Uint32ExprOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.vanalytics.Uint32RangeOrBuilder getRangeOrBuilder();
 
-  public com.tcn.cloud.api.api.v1alpha1.vanalytics.Uint32Expr.WhereCase getWhereCase();
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.Uint32Expr.WhereCase getWhereCase();
 }

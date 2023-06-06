@@ -31,114 +31,6 @@ private static final long serialVersionUID = 0L;
     return new AutoEvaluationQuestion();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private AutoEvaluationQuestion(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 16: {
-
-            autoEvaluationQuestionId_ = input.readInt64();
-            break;
-          }
-          case 24: {
-
-            autoEvaluationId_ = input.readInt64();
-            break;
-          }
-          case 32: {
-
-            autoEvaluationSectionId_ = input.readInt64();
-            break;
-          }
-          case 40: {
-
-            autoQuestionId_ = input.readInt64();
-            break;
-          }
-          case 48: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              flagged_ = newLongList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            flagged_.addLong(input.readInt64());
-            break;
-          }
-          case 50: {
-            int length = input.readRawVarint32();
-            int limit = input.pushLimit(length);
-            if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-              flagged_ = newLongList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            while (input.getBytesUntilLimit() > 0) {
-              flagged_.addLong(input.readInt64());
-            }
-            input.popLimit(limit);
-            break;
-          }
-          case 56: {
-
-            passed_ = input.readBool();
-            break;
-          }
-          case 64: {
-
-            sortOrder_ = input.readInt32();
-            break;
-          }
-          case 88: {
-            int rawValue = input.readEnum();
-
-            riskLevel_ = rawValue;
-            break;
-          }
-          case 112: {
-
-            expressionMatched_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        flagged_.makeImmutable(); // C
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_AutoEvaluationQuestion_descriptor;
@@ -153,7 +45,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AUTO_EVALUATION_QUESTION_ID_FIELD_NUMBER = 2;
-  private long autoEvaluationQuestionId_;
+  private long autoEvaluationQuestionId_ = 0L;
   /**
    * <pre>
    * unique id of auto evaluation question.
@@ -168,7 +60,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AUTO_EVALUATION_ID_FIELD_NUMBER = 3;
-  private long autoEvaluationId_;
+  private long autoEvaluationId_ = 0L;
   /**
    * <pre>
    * unique id of evaluation.
@@ -183,7 +75,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AUTO_EVALUATION_SECTION_ID_FIELD_NUMBER = 4;
-  private long autoEvaluationSectionId_;
+  private long autoEvaluationSectionId_ = 0L;
   /**
    * <pre>
    * unique id of evaluation section.
@@ -198,7 +90,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AUTO_QUESTION_ID_FIELD_NUMBER = 5;
-  private long autoQuestionId_;
+  private long autoQuestionId_ = 0L;
   /**
    * <pre>
    * unique id of auto question.
@@ -213,6 +105,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FLAGGED_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList flagged_;
   /**
    * <pre>
@@ -253,7 +146,7 @@ private static final long serialVersionUID = 0L;
   private int flaggedMemoizedSerializedSize = -1;
 
   public static final int PASSED_FIELD_NUMBER = 7;
-  private boolean passed_;
+  private boolean passed_ = false;
   /**
    * <pre>
    * whether the auto question evaluation was passed/failed.
@@ -268,7 +161,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SORT_ORDER_FIELD_NUMBER = 8;
-  private int sortOrder_;
+  private int sortOrder_ = 0;
   /**
    * <pre>
    * order number of auto evaluation question.
@@ -283,7 +176,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RISK_LEVEL_FIELD_NUMBER = 11;
-  private int riskLevel_;
+  private int riskLevel_ = 0;
   /**
    * <pre>
    * The risk level of the evaluation question.
@@ -304,13 +197,12 @@ private static final long serialVersionUID = 0L;
    * @return The riskLevel.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.RiskLevel getRiskLevel() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.RiskLevel result = com.tcn.cloud.api.api.commons.RiskLevel.valueOf(riskLevel_);
+    com.tcn.cloud.api.api.commons.RiskLevel result = com.tcn.cloud.api.api.commons.RiskLevel.forNumber(riskLevel_);
     return result == null ? com.tcn.cloud.api.api.commons.RiskLevel.UNRECOGNIZED : result;
   }
 
   public static final int EXPRESSION_MATCHED_FIELD_NUMBER = 14;
-  private boolean expressionMatched_;
+  private boolean expressionMatched_ = false;
   /**
    * <pre>
    * Whether the flag expression matched.
@@ -370,7 +262,7 @@ private static final long serialVersionUID = 0L;
     if (expressionMatched_ != false) {
       output.writeBool(14, expressionMatched_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -425,7 +317,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(14, expressionMatched_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -457,7 +349,7 @@ private static final long serialVersionUID = 0L;
     if (riskLevel_ != other.riskLevel_) return false;
     if (getExpressionMatched()
         != other.getExpressionMatched()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -494,7 +386,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + EXPRESSION_MATCHED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getExpressionMatched());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -543,11 +435,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.AutoEvaluationQuestion parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.AutoEvaluationQuestion parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -615,40 +509,27 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.AutoEvaluationQuestion.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       autoEvaluationQuestionId_ = 0L;
-
       autoEvaluationId_ = 0L;
-
       autoEvaluationSectionId_ = 0L;
-
       autoQuestionId_ = 0L;
-
       flagged_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000001);
       passed_ = false;
-
       sortOrder_ = 0;
-
       riskLevel_ = 0;
-
       expressionMatched_ = false;
-
       return this;
     }
 
@@ -675,22 +556,46 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.AutoEvaluationQuestion buildPartial() {
       com.tcn.cloud.api.api.commons.AutoEvaluationQuestion result = new com.tcn.cloud.api.api.commons.AutoEvaluationQuestion(this);
-      int from_bitField0_ = bitField0_;
-      result.autoEvaluationQuestionId_ = autoEvaluationQuestionId_;
-      result.autoEvaluationId_ = autoEvaluationId_;
-      result.autoEvaluationSectionId_ = autoEvaluationSectionId_;
-      result.autoQuestionId_ = autoQuestionId_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        flagged_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.flagged_ = flagged_;
-      result.passed_ = passed_;
-      result.sortOrder_ = sortOrder_;
-      result.riskLevel_ = riskLevel_;
-      result.expressionMatched_ = expressionMatched_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.AutoEvaluationQuestion result) {
+      if (((bitField0_ & 0x00000010) != 0)) {
+        flagged_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000010);
+      }
+      result.flagged_ = flagged_;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.AutoEvaluationQuestion result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.autoEvaluationQuestionId_ = autoEvaluationQuestionId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.autoEvaluationId_ = autoEvaluationId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.autoEvaluationSectionId_ = autoEvaluationSectionId_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.autoQuestionId_ = autoQuestionId_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.passed_ = passed_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.sortOrder_ = sortOrder_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.riskLevel_ = riskLevel_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.expressionMatched_ = expressionMatched_;
+      }
     }
 
     @java.lang.Override
@@ -752,7 +657,7 @@ private static final long serialVersionUID = 0L;
       if (!other.flagged_.isEmpty()) {
         if (flagged_.isEmpty()) {
           flagged_ = other.flagged_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
           ensureFlaggedIsMutable();
           flagged_.addAll(other.flagged_);
@@ -771,7 +676,7 @@ private static final long serialVersionUID = 0L;
       if (other.getExpressionMatched() != false) {
         setExpressionMatched(other.getExpressionMatched());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -786,17 +691,86 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.AutoEvaluationQuestion parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+              autoEvaluationQuestionId_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 16
+            case 24: {
+              autoEvaluationId_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 24
+            case 32: {
+              autoEvaluationSectionId_ = input.readInt64();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 32
+            case 40: {
+              autoQuestionId_ = input.readInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 40
+            case 48: {
+              long v = input.readInt64();
+              ensureFlaggedIsMutable();
+              flagged_.addLong(v);
+              break;
+            } // case 48
+            case 50: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureFlaggedIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                flagged_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            } // case 50
+            case 56: {
+              passed_ = input.readBool();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 56
+            case 64: {
+              sortOrder_ = input.readInt32();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 64
+            case 88: {
+              riskLevel_ = input.readEnum();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 88
+            case 112: {
+              expressionMatched_ = input.readBool();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 112
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.AutoEvaluationQuestion) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -824,8 +798,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAutoEvaluationQuestionId(long value) {
-      
+
       autoEvaluationQuestionId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -838,7 +813,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAutoEvaluationQuestionId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       autoEvaluationQuestionId_ = 0L;
       onChanged();
       return this;
@@ -867,8 +842,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAutoEvaluationId(long value) {
-      
+
       autoEvaluationId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -881,7 +857,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAutoEvaluationId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       autoEvaluationId_ = 0L;
       onChanged();
       return this;
@@ -910,8 +886,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAutoEvaluationSectionId(long value) {
-      
+
       autoEvaluationSectionId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -924,7 +901,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAutoEvaluationSectionId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       autoEvaluationSectionId_ = 0L;
       onChanged();
       return this;
@@ -953,8 +930,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAutoQuestionId(long value) {
-      
+
       autoQuestionId_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -967,7 +945,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAutoQuestionId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       autoQuestionId_ = 0L;
       onChanged();
       return this;
@@ -975,10 +953,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList flagged_ = emptyLongList();
     private void ensureFlaggedIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         flagged_ = mutableCopy(flagged_);
-        bitField0_ |= 0x00000001;
-       }
+        bitField0_ |= 0x00000010;
+      }
     }
     /**
      * <pre>
@@ -990,7 +968,7 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getFlaggedList() {
-      return ((bitField0_ & 0x00000001) != 0) ?
+      return ((bitField0_ & 0x00000010) != 0) ?
                java.util.Collections.unmodifiableList(flagged_) : flagged_;
     }
     /**
@@ -1028,6 +1006,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFlagged(
         int index, long value) {
+
       ensureFlaggedIsMutable();
       flagged_.setLong(index, value);
       onChanged();
@@ -1043,6 +1022,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addFlagged(long value) {
+
       ensureFlaggedIsMutable();
       flagged_.addLong(value);
       onChanged();
@@ -1075,7 +1055,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearFlagged() {
       flagged_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1103,8 +1083,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPassed(boolean value) {
-      
+
       passed_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1117,7 +1098,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPassed() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       passed_ = false;
       onChanged();
       return this;
@@ -1146,8 +1127,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSortOrder(int value) {
-      
+
       sortOrder_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1160,7 +1142,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSortOrder() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       sortOrder_ = 0;
       onChanged();
       return this;
@@ -1188,8 +1170,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRiskLevelValue(int value) {
-      
       riskLevel_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1203,8 +1185,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.RiskLevel getRiskLevel() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.RiskLevel result = com.tcn.cloud.api.api.commons.RiskLevel.valueOf(riskLevel_);
+      com.tcn.cloud.api.api.commons.RiskLevel result = com.tcn.cloud.api.api.commons.RiskLevel.forNumber(riskLevel_);
       return result == null ? com.tcn.cloud.api.api.commons.RiskLevel.UNRECOGNIZED : result;
     }
     /**
@@ -1220,7 +1201,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000080;
       riskLevel_ = value.getNumber();
       onChanged();
       return this;
@@ -1234,7 +1215,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRiskLevel() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       riskLevel_ = 0;
       onChanged();
       return this;
@@ -1263,8 +1244,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setExpressionMatched(boolean value) {
-      
+
       expressionMatched_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1277,7 +1259,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearExpressionMatched() {
-      
+      bitField0_ = (bitField0_ & ~0x00000100);
       expressionMatched_ = false;
       onChanged();
       return this;
@@ -1315,7 +1297,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AutoEvaluationQuestion(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

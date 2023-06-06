@@ -26,82 +26,6 @@ private static final long serialVersionUID = 0L;
     return new SmsConversationAssignedAgent();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private SmsConversationAssignedAgent(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            smsConversationId_ = s;
-            break;
-          }
-          case 16: {
-
-            assignedAgentId_ = input.readInt64();
-            break;
-          }
-          case 24: {
-
-            primaryAgent_ = input.readBool();
-            break;
-          }
-          case 32: {
-
-            notify_ = input.readBool();
-            break;
-          }
-          case 42: {
-            com.google.protobuf.Timestamp.Builder subBuilder = null;
-            if (createdOn_ != null) {
-              subBuilder = createdOn_.toBuilder();
-            }
-            createdOn_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(createdOn_);
-              createdOn_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.SmsapiProto.internal_static_api_v0alpha_SmsConversationAssignedAgent_descriptor;
@@ -116,7 +40,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SMS_CONVERSATION_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object smsConversationId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object smsConversationId_ = "";
   /**
    * <code>string sms_conversation_id = 1 [json_name = "smsConversationId"];</code>
    * @return The smsConversationId.
@@ -154,7 +79,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ASSIGNED_AGENT_ID_FIELD_NUMBER = 2;
-  private long assignedAgentId_;
+  private long assignedAgentId_ = 0L;
   /**
    * <code>int64 assigned_agent_id = 2 [json_name = "assignedAgentId"];</code>
    * @return The assignedAgentId.
@@ -165,7 +90,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PRIMARY_AGENT_FIELD_NUMBER = 3;
-  private boolean primaryAgent_;
+  private boolean primaryAgent_ = false;
   /**
    * <code>bool primary_agent = 3 [json_name = "primaryAgent"];</code>
    * @return The primaryAgent.
@@ -176,7 +101,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NOTIFY_FIELD_NUMBER = 4;
-  private boolean notify_;
+  private boolean notify_ = false;
   /**
    * <code>bool notify = 4 [json_name = "notify"];</code>
    * @return The notify.
@@ -209,7 +134,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getCreatedOnOrBuilder() {
-    return getCreatedOn();
+    return createdOn_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdOn_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -226,7 +151,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getSmsConversationIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(smsConversationId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, smsConversationId_);
     }
     if (assignedAgentId_ != 0L) {
@@ -241,7 +166,7 @@ private static final long serialVersionUID = 0L;
     if (createdOn_ != null) {
       output.writeMessage(5, getCreatedOn());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -250,7 +175,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getSmsConversationIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(smsConversationId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, smsConversationId_);
     }
     if (assignedAgentId_ != 0L) {
@@ -269,7 +194,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getCreatedOn());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -297,7 +222,7 @@ private static final long serialVersionUID = 0L;
       if (!getCreatedOn()
           .equals(other.getCreatedOn())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -323,7 +248,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CREATED_ON_FIELD_NUMBER;
       hash = (53 * hash) + getCreatedOn().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -372,11 +297,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.SmsConversationAssignedAgent parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.SmsConversationAssignedAgent parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -440,34 +367,25 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.SmsConversationAssignedAgent.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       smsConversationId_ = "";
-
       assignedAgentId_ = 0L;
-
       primaryAgent_ = false;
-
       notify_ = false;
-
-      if (createdOnBuilder_ == null) {
-        createdOn_ = null;
-      } else {
-        createdOn_ = null;
+      createdOn_ = null;
+      if (createdOnBuilder_ != null) {
+        createdOnBuilder_.dispose();
         createdOnBuilder_ = null;
       }
       return this;
@@ -496,17 +414,30 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.SmsConversationAssignedAgent buildPartial() {
       com.tcn.cloud.api.api.v0alpha.SmsConversationAssignedAgent result = new com.tcn.cloud.api.api.v0alpha.SmsConversationAssignedAgent(this);
-      result.smsConversationId_ = smsConversationId_;
-      result.assignedAgentId_ = assignedAgentId_;
-      result.primaryAgent_ = primaryAgent_;
-      result.notify_ = notify_;
-      if (createdOnBuilder_ == null) {
-        result.createdOn_ = createdOn_;
-      } else {
-        result.createdOn_ = createdOnBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.SmsConversationAssignedAgent result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.smsConversationId_ = smsConversationId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.assignedAgentId_ = assignedAgentId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.primaryAgent_ = primaryAgent_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.notify_ = notify_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.createdOn_ = createdOnBuilder_ == null
+            ? createdOn_
+            : createdOnBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -555,6 +486,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.SmsConversationAssignedAgent.getDefaultInstance()) return this;
       if (!other.getSmsConversationId().isEmpty()) {
         smsConversationId_ = other.smsConversationId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.getAssignedAgentId() != 0L) {
@@ -569,7 +501,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasCreatedOn()) {
         mergeCreatedOn(other.getCreatedOn());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -584,19 +516,60 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.SmsConversationAssignedAgent parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              smsConversationId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 16: {
+              assignedAgentId_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              primaryAgent_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              notify_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
+              input.readMessage(
+                  getCreatedOnFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.SmsConversationAssignedAgent) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object smsConversationId_ = "";
     /**
@@ -639,11 +612,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSmsConversationId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       smsConversationId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -652,8 +623,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSmsConversationId() {
-      
       smsConversationId_ = getDefaultInstance().getSmsConversationId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -664,12 +635,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSmsConversationIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       smsConversationId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -689,8 +658,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAssignedAgentId(long value) {
-      
+
       assignedAgentId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -699,7 +669,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAssignedAgentId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       assignedAgentId_ = 0L;
       onChanged();
       return this;
@@ -720,8 +690,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPrimaryAgent(boolean value) {
-      
+
       primaryAgent_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -730,7 +701,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPrimaryAgent() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       primaryAgent_ = false;
       onChanged();
       return this;
@@ -751,8 +722,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNotify(boolean value) {
-      
+
       notify_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -761,7 +733,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNotify() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       notify_ = false;
       onChanged();
       return this;
@@ -775,7 +747,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the createdOn field is set.
      */
     public boolean hasCreatedOn() {
-      return createdOnBuilder_ != null || createdOn_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp created_on = 5 [json_name = "createdOn"];</code>
@@ -797,11 +769,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         createdOn_ = value;
-        onChanged();
       } else {
         createdOnBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -811,11 +783,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (createdOnBuilder_ == null) {
         createdOn_ = builderForValue.build();
-        onChanged();
       } else {
         createdOnBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -823,38 +795,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCreatedOn(com.google.protobuf.Timestamp value) {
       if (createdOnBuilder_ == null) {
-        if (createdOn_ != null) {
-          createdOn_ =
-            com.google.protobuf.Timestamp.newBuilder(createdOn_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000010) != 0) &&
+          createdOn_ != null &&
+          createdOn_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getCreatedOnBuilder().mergeFrom(value);
         } else {
           createdOn_ = value;
         }
-        onChanged();
       } else {
         createdOnBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp created_on = 5 [json_name = "createdOn"];</code>
      */
     public Builder clearCreatedOn() {
-      if (createdOnBuilder_ == null) {
-        createdOn_ = null;
-        onChanged();
-      } else {
-        createdOn_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      createdOn_ = null;
+      if (createdOnBuilder_ != null) {
+        createdOnBuilder_.dispose();
         createdOnBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp created_on = 5 [json_name = "createdOn"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreatedOnBuilder() {
-      
+      bitField0_ |= 0x00000010;
       onChanged();
       return getCreatedOnFieldBuilder().getBuilder();
     }
@@ -918,7 +890,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new SmsConversationAssignedAgent(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

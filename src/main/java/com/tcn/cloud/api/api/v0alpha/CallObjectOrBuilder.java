@@ -65,14 +65,12 @@ public interface CallObjectOrBuilder extends
   /**
    * <code>map&lt;string, bool&gt; skills = 11 [json_name = "skills"];</code>
    */
-
   boolean getSkillsOrDefault(
       java.lang.String key,
       boolean defaultValue);
   /**
    * <code>map&lt;string, bool&gt; skills = 11 [json_name = "skills"];</code>
    */
-
   boolean getSkillsOrThrow(
       java.lang.String key);
 
@@ -211,14 +209,14 @@ public interface CallObjectOrBuilder extends
   /**
    * <code>map&lt;string, string&gt; agent_response_data = 20 [json_name = "agentResponseData"];</code>
    */
-
-  java.lang.String getAgentResponseDataOrDefault(
+  /* nullable */
+java.lang.String getAgentResponseDataOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue);
+      /* nullable */
+java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; agent_response_data = 20 [json_name = "agentResponseData"];</code>
    */
-
   java.lang.String getAgentResponseDataOrThrow(
       java.lang.String key);
 

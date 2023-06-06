@@ -235,47 +235,47 @@ public final class DashboardsProto {
       "\324\r\n\nDashboards\022\235\001\n\017CreateDashboard\022#.api" +
       ".v0alpha.CreateDashboardRequest\032$.api.v0" +
       "alpha.CreateDashboardResponse\"?\272\270\221\002\010\n\006\010\331" +
-      "\004\010\332\004\202\323\344\223\002,:\001*\"\'/api/v0alpha/dashboards/C" +
-      "reateDashboard\022\203\001\n\014GetDashboard\022 .api.v0" +
+      "\004\010\332\004\202\323\344\223\002,\"\'/api/v0alpha/dashboards/Crea" +
+      "teDashboard:\001*\022\203\001\n\014GetDashboard\022 .api.v0" +
       "alpha.GetDashboardRequest\032\026.api.v0alpha." +
-      "Dashboard\"9\272\270\221\002\005\n\003\010\331\004\202\323\344\223\002):\001*\"$/api/v0a" +
-      "lpha/dashboards/GetDashboard\022\230\001\n\023GetDefa" +
+      "Dashboard\"9\272\270\221\002\005\n\003\010\331\004\202\323\344\223\002)\"$/api/v0alph" +
+      "a/dashboards/GetDashboard:\001*\022\230\001\n\023GetDefa" +
       "ultDashboard\022\'.api.v0alpha.GetDefaultDas" +
       "hboardRequest\032\026.api.v0alpha.Dashboard\"@\272" +
-      "\270\221\002\005\n\003\010\331\004\202\323\344\223\0020:\001*\"+/api/v0alpha/dashboa" +
-      "rds/GetDefaultDashboard\022\226\001\n\016ListDashboar" +
+      "\270\221\002\005\n\003\010\331\004\202\323\344\223\0020\"+/api/v0alpha/dashboards" +
+      "/GetDefaultDashboard:\001*\022\226\001\n\016ListDashboar" +
       "ds\022\".api.v0alpha.ListDashboardsRequest\032#" +
       ".api.v0alpha.ListDashboardsResponse\";\272\270\221" +
-      "\002\005\n\003\010\331\004\202\323\344\223\002+:\001*\"&/api/v0alpha/dashboard" +
-      "s/ListDashboards\022\234\001\n\020ListProductTypes\022$." +
+      "\002\005\n\003\010\331\004\202\323\344\223\002+\"&/api/v0alpha/dashboards/L" +
+      "istDashboards:\001*\022\234\001\n\020ListProductTypes\022$." +
       "api.v0alpha.ListProductTypesRequest\032#.ap" +
       "i.v0alpha.ListProductTypesResult\"=\272\270\221\002\005\n" +
-      "\003\010\331\004\202\323\344\223\002-:\001*\"(/api/v0alpha/dashboards/L" +
-      "istProductTypes\022\217\001\n\017DeleteDashboard\022#.ap" +
+      "\003\010\331\004\202\323\344\223\002-\"(/api/v0alpha/dashboards/List" +
+      "ProductTypes:\001*\022\217\001\n\017DeleteDashboard\022#.ap" +
       "i.v0alpha.DeleteDashboardRequest\032\026.googl" +
-      "e.protobuf.Empty\"?\272\270\221\002\010\n\006\010\331\004\010\332\004\202\323\344\223\002,:\001*" +
-      "\"\'/api/v0alpha/dashboards/DeleteDashboar" +
-      "d\022\233\001\n\023SetDefaultDashboard\022\'.api.v0alpha." +
+      "e.protobuf.Empty\"?\272\270\221\002\010\n\006\010\331\004\010\332\004\202\323\344\223\002,\"\'/" +
+      "api/v0alpha/dashboards/DeleteDashboard:\001" +
+      "*\022\233\001\n\023SetDefaultDashboard\022\'.api.v0alpha." +
       "SetDefaultDashboardRequest\032\026.google.prot" +
-      "obuf.Empty\"C\272\270\221\002\010\n\006\010\331\004\010\332\004\202\323\344\223\0020:\001*\"+/api" +
-      "/v0alpha/dashboards/SetDefaultDashboard\022" +
+      "obuf.Empty\"C\272\270\221\002\010\n\006\010\331\004\010\332\004\202\323\344\223\0020\"+/api/v0" +
+      "alpha/dashboards/SetDefaultDashboard:\001*\022" +
       "\217\001\n\017UpdateDashboard\022#.api.v0alpha.Update" +
       "DashboardRequest\032\026.google.protobuf.Empty" +
-      "\"?\272\270\221\002\010\n\006\010\331\004\010\332\004\202\323\344\223\002,:\001*\"\'/api/v0alpha/d" +
-      "ashboards/UpdateDashboard\022\310\001\n\"UpdateDash" +
+      "\"?\272\270\221\002\010\n\006\010\331\004\010\332\004\202\323\344\223\002,\"\'/api/v0alpha/dash" +
+      "boards/UpdateDashboard:\001*\022\310\001\n\"UpdateDash" +
       "boardTitleAndDescription\0226.api.v0alpha.U" +
       "pdateDashboardTitleAndDescriptionRequest" +
       "\032\026.google.protobuf.Empty\"R\272\270\221\002\010\n\006\010\331\004\010\332\004\202" +
-      "\323\344\223\002?:\001*\":/api/v0alpha/dashboards/Update" +
-      "DashboardTitleAndDescription\022\233\001\n\023UpdateD" +
+      "\323\344\223\002?\":/api/v0alpha/dashboards/UpdateDas" +
+      "hboardTitleAndDescription:\001*\022\233\001\n\023UpdateD" +
       "ashboardView\022\'.api.v0alpha.UpdateDashboa" +
       "rdViewRequest\032\026.google.protobuf.Empty\"C\272" +
-      "\270\221\002\010\n\006\010\331\004\010\332\004\202\323\344\223\0020:\001*\"+/api/v0alpha/dash" +
-      "boards/UpdateDashboardView\022\241\001\n\025UpdateDas" +
+      "\270\221\002\010\n\006\010\331\004\010\332\004\202\323\344\223\0020\"+/api/v0alpha/dashboa" +
+      "rds/UpdateDashboardView:\001*\022\241\001\n\025UpdateDas" +
       "hboardLayout\022).api.v0alpha.UpdateDashboa" +
       "rdLayoutRequest\032\026.google.protobuf.Empty\"" +
-      "E\272\270\221\002\010\n\006\010\331\004\010\332\004\202\323\344\223\0022:\001*\"-/api/v0alpha/da" +
-      "shboards/UpdateDashboardLayoutB}\n\035com.tc" +
+      "E\272\270\221\002\010\n\006\010\331\004\010\332\004\202\323\344\223\0022\"-/api/v0alpha/dashb" +
+      "oards/UpdateDashboardLayout:\001*B}\n\035com.tc" +
       "n.cloud.api.api.v0alphaB\017DashboardsProto" +
       "P\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027A" +
       "pi\\V0alpha\\GPBMetadata\352\002\014Api::V0alphab\006p" +

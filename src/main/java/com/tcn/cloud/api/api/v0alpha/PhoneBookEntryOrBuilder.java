@@ -77,5 +77,5 @@ public interface PhoneBookEntryOrBuilder extends
    */
   boolean getPhoneNumberHidden();
 
-  public com.tcn.cloud.api.api.v0alpha.PhoneBookEntry.PhoneBookEntryCase getPhoneBookEntryCase();
+  com.tcn.cloud.api.api.v0alpha.PhoneBookEntry.PhoneBookEntryCase getPhoneBookEntryCase();
 }

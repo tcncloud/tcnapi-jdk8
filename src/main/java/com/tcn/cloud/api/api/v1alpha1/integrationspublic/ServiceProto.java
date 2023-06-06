@@ -291,31 +291,31 @@ public final class ServiceProto {
       "lue:\0028\0012\306\010\n\022IntegrationsPublic\022\250\001\n\013GetLi" +
       "nkData\022/.api.v1alpha1.integrationspublic" +
       ".GetLinkDataReq\032/.api.v1alpha1.integrati" +
-      "onspublic.GetLinkDataRes\"7\202\323\344\223\0021:\001*\",/ap" +
-      "i/v1alpha1/integrationspublic/getlinkdat" +
-      "a\022\304\001\n\022SubmitVerification\0226.api.v1alpha1." +
+      "onspublic.GetLinkDataRes\"7\202\323\344\223\0021\",/api/v" +
+      "1alpha1/integrationspublic/getlinkdata:\001" +
+      "*\022\304\001\n\022SubmitVerification\0226.api.v1alpha1." +
       "integrationspublic.SubmitVerificationReq" +
       "\0326.api.v1alpha1.integrationspublic.Submi" +
-      "tVerificationRes\">\202\323\344\223\0028:\001*\"3/api/v1alph" +
-      "a1/integrationspublic/submitverification" +
+      "tVerificationRes\">\202\323\344\223\0028\"3/api/v1alpha1/" +
+      "integrationspublic/submitverification:\001*" +
       "\022\274\001\n\020SessionKeepAlive\0224.api.v1alpha1.int" +
       "egrationspublic.SessionKeepAliveReq\0324.ap" +
       "i.v1alpha1.integrationspublic.SessionKee" +
-      "pAliveRes\"<\202\323\344\223\0026:\001*\"1/api/v1alpha1/inte" +
-      "grationspublic/sessionkeepalive\022\244\001\n\nGetI" +
+      "pAliveRes\"<\202\323\344\223\0026\"1/api/v1alpha1/integra" +
+      "tionspublic/sessionkeepalive:\001*\022\244\001\n\nGetI" +
       "nvoice\022..api.v1alpha1.integrationspublic" +
       ".GetInvoiceReq\032..api.v1alpha1.integratio" +
-      "nspublic.GetInvoiceRes\"6\202\323\344\223\0020:\001*\"+/api/" +
-      "v1alpha1/integrationspublic/getinvoice\022\260" +
+      "nspublic.GetInvoiceRes\"6\202\323\344\223\0020\"+/api/v1a" +
+      "lpha1/integrationspublic/getinvoice:\001*\022\260" +
       "\001\n\rSubmitPayment\0221.api.v1alpha1.integrat" +
       "ionspublic.SubmitPaymentReq\0321.api.v1alph" +
       "a1.integrationspublic.SubmitPaymentRes\"9" +
-      "\202\323\344\223\0023:\001*\"./api/v1alpha1/integrationspub" +
-      "lic/submitpayment\022\244\001\n\nGetReceipt\022..api.v" +
+      "\202\323\344\223\0023\"./api/v1alpha1/integrationspublic" +
+      "/submitpayment:\001*\022\244\001\n\nGetReceipt\022..api.v" +
       "1alpha1.integrationspublic.GetReceiptReq" +
       "\032..api.v1alpha1.integrationspublic.GetRe" +
-      "ceiptRes\"6\202\323\344\223\0020:\001*\"+/api/v1alpha1/integ" +
-      "rationspublic/getreceiptB\337\001\n1com.tcn.clo" +
+      "ceiptRes\"6\202\323\344\223\0020\"+/api/v1alpha1/integrat" +
+      "ionspublic/getreceipt:\001*B\337\001\n1com.tcn.clo" +
       "ud.api.api.v1alpha1.integrationspublicB\014" +
       "ServiceProtoP\001\242\002\003AVI\252\002\037Api.V1alpha1.Inte" +
       "grationspublic\312\002\037Api\\V1alpha1\\Integratio" +

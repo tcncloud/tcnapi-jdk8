@@ -32,106 +32,6 @@ private static final long serialVersionUID = 0L;
     return new RegressionTemplate();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private RegressionTemplate(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            regressionTemplateSid_ = input.readInt64();
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            name_ = s;
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            modelType_ = rawValue;
-            break;
-          }
-          case 32: {
-
-            excludeCallDataForNWeeks_ = input.readInt32();
-            break;
-          }
-          case 40: {
-
-            numWeeksAgoToEmphasize_ = input.readInt32();
-            break;
-          }
-          case 53: {
-
-            maxDeviation_ = input.readFloat();
-            break;
-          }
-          case 61: {
-
-            trendSensitivity_ = input.readFloat();
-            break;
-          }
-          case 64: {
-
-            excludeIntervalsWithNoCalls_ = input.readBool();
-            break;
-          }
-          case 72: {
-            int rawValue = input.readEnum();
-
-            avgsProcessingType_ = rawValue;
-            break;
-          }
-          case 80: {
-
-            includeSeasonality_ = input.readBool();
-            break;
-          }
-          case 88: {
-
-            includeTrend_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_RegressionTemplate_descriptor;
@@ -146,7 +46,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REGRESSION_TEMPLATE_SID_FIELD_NUMBER = 1;
-  private long regressionTemplateSid_;
+  private long regressionTemplateSid_ = 0L;
   /**
    * <pre>
    * ID of the regression template.
@@ -161,7 +61,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 2;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * Name of the regression template.
@@ -207,7 +108,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MODEL_TYPE_FIELD_NUMBER = 3;
-  private int modelType_;
+  private int modelType_ = 0;
   /**
    * <pre>
    * Selected algorithmic method to be used
@@ -228,13 +129,12 @@ private static final long serialVersionUID = 0L;
    * @return The modelType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.RegressionForecasterModelTypes getModelType() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.RegressionForecasterModelTypes result = com.tcn.cloud.api.api.commons.RegressionForecasterModelTypes.valueOf(modelType_);
+    com.tcn.cloud.api.api.commons.RegressionForecasterModelTypes result = com.tcn.cloud.api.api.commons.RegressionForecasterModelTypes.forNumber(modelType_);
     return result == null ? com.tcn.cloud.api.api.commons.RegressionForecasterModelTypes.UNRECOGNIZED : result;
   }
 
   public static final int EXCLUDE_CALL_DATA_FOR_N_WEEKS_FIELD_NUMBER = 4;
-  private int excludeCallDataForNWeeks_;
+  private int excludeCallDataForNWeeks_ = 0;
   /**
    * <pre>
    * Number of weeks of training data to exclude when building a forecast.
@@ -249,7 +149,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NUM_WEEKS_AGO_TO_EMPHASIZE_FIELD_NUMBER = 5;
-  private int numWeeksAgoToEmphasize_;
+  private int numWeeksAgoToEmphasize_ = 0;
   /**
    * <pre>
    * Number of weeks in the past to emphasize;
@@ -264,7 +164,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MAX_DEVIATION_FIELD_NUMBER = 6;
-  private float maxDeviation_;
+  private float maxDeviation_ = 0F;
   /**
    * <pre>
    * Value that especificies the max value of deviations to use. Greater deviations than the specified values will be excluded.
@@ -280,7 +180,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TREND_SENSITIVITY_FIELD_NUMBER = 7;
-  private float trendSensitivity_;
+  private float trendSensitivity_ = 0F;
   /**
    * <pre>
    * Percentage from 0 to 100 that specifies the trend sensitivity.
@@ -295,7 +195,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EXCLUDE_INTERVALS_WITH_NO_CALLS_FIELD_NUMBER = 8;
-  private boolean excludeIntervalsWithNoCalls_;
+  private boolean excludeIntervalsWithNoCalls_ = false;
   /**
    * <pre>
    * Whether or not to exclude intervals with no calls.
@@ -310,7 +210,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVGS_PROCESSING_TYPE_FIELD_NUMBER = 9;
-  private int avgsProcessingType_;
+  private int avgsProcessingType_ = 0;
   /**
    * <pre>
    * Processing type for the averages.
@@ -331,13 +231,12 @@ private static final long serialVersionUID = 0L;
    * @return The avgsProcessingType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.RegressionForecasterAvgsProcessingType getAvgsProcessingType() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.RegressionForecasterAvgsProcessingType result = com.tcn.cloud.api.api.commons.RegressionForecasterAvgsProcessingType.valueOf(avgsProcessingType_);
+    com.tcn.cloud.api.api.commons.RegressionForecasterAvgsProcessingType result = com.tcn.cloud.api.api.commons.RegressionForecasterAvgsProcessingType.forNumber(avgsProcessingType_);
     return result == null ? com.tcn.cloud.api.api.commons.RegressionForecasterAvgsProcessingType.UNRECOGNIZED : result;
   }
 
   public static final int INCLUDE_SEASONALITY_FIELD_NUMBER = 10;
-  private boolean includeSeasonality_;
+  private boolean includeSeasonality_ = false;
   /**
    * <pre>
    * Whether or not to include seasonality.
@@ -352,7 +251,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INCLUDE_TREND_FIELD_NUMBER = 11;
-  private boolean includeTrend_;
+  private boolean includeTrend_ = false;
   /**
    * <pre>
    * Whether or not to include trend.
@@ -383,7 +282,7 @@ private static final long serialVersionUID = 0L;
     if (regressionTemplateSid_ != 0L) {
       output.writeInt64(1, regressionTemplateSid_);
     }
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
     }
     if (modelType_ != com.tcn.cloud.api.api.commons.RegressionForecasterModelTypes.RANDOM_FOREST.getNumber()) {
@@ -395,10 +294,10 @@ private static final long serialVersionUID = 0L;
     if (numWeeksAgoToEmphasize_ != 0) {
       output.writeInt32(5, numWeeksAgoToEmphasize_);
     }
-    if (maxDeviation_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(maxDeviation_) != 0) {
       output.writeFloat(6, maxDeviation_);
     }
-    if (trendSensitivity_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(trendSensitivity_) != 0) {
       output.writeFloat(7, trendSensitivity_);
     }
     if (excludeIntervalsWithNoCalls_ != false) {
@@ -413,7 +312,7 @@ private static final long serialVersionUID = 0L;
     if (includeTrend_ != false) {
       output.writeBool(11, includeTrend_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -426,7 +325,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, regressionTemplateSid_);
     }
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
     }
     if (modelType_ != com.tcn.cloud.api.api.commons.RegressionForecasterModelTypes.RANDOM_FOREST.getNumber()) {
@@ -441,11 +340,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(5, numWeeksAgoToEmphasize_);
     }
-    if (maxDeviation_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(maxDeviation_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(6, maxDeviation_);
     }
-    if (trendSensitivity_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(trendSensitivity_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(7, trendSensitivity_);
     }
@@ -465,7 +364,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(11, includeTrend_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -502,7 +401,7 @@ private static final long serialVersionUID = 0L;
         != other.getIncludeSeasonality()) return false;
     if (getIncludeTrend()
         != other.getIncludeTrend()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -541,7 +440,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + INCLUDE_TREND_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIncludeTrend());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -590,11 +489,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -662,44 +563,29 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       regressionTemplateSid_ = 0L;
-
       name_ = "";
-
       modelType_ = 0;
-
       excludeCallDataForNWeeks_ = 0;
-
       numWeeksAgoToEmphasize_ = 0;
-
       maxDeviation_ = 0F;
-
       trendSensitivity_ = 0F;
-
       excludeIntervalsWithNoCalls_ = false;
-
       avgsProcessingType_ = 0;
-
       includeSeasonality_ = false;
-
       includeTrend_ = false;
-
       return this;
     }
 
@@ -726,19 +612,46 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate result = new com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate(this);
-      result.regressionTemplateSid_ = regressionTemplateSid_;
-      result.name_ = name_;
-      result.modelType_ = modelType_;
-      result.excludeCallDataForNWeeks_ = excludeCallDataForNWeeks_;
-      result.numWeeksAgoToEmphasize_ = numWeeksAgoToEmphasize_;
-      result.maxDeviation_ = maxDeviation_;
-      result.trendSensitivity_ = trendSensitivity_;
-      result.excludeIntervalsWithNoCalls_ = excludeIntervalsWithNoCalls_;
-      result.avgsProcessingType_ = avgsProcessingType_;
-      result.includeSeasonality_ = includeSeasonality_;
-      result.includeTrend_ = includeTrend_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.regressionTemplateSid_ = regressionTemplateSid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.modelType_ = modelType_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.excludeCallDataForNWeeks_ = excludeCallDataForNWeeks_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.numWeeksAgoToEmphasize_ = numWeeksAgoToEmphasize_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.maxDeviation_ = maxDeviation_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.trendSensitivity_ = trendSensitivity_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.excludeIntervalsWithNoCalls_ = excludeIntervalsWithNoCalls_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.avgsProcessingType_ = avgsProcessingType_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.includeSeasonality_ = includeSeasonality_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.includeTrend_ = includeTrend_;
+      }
     }
 
     @java.lang.Override
@@ -790,6 +703,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.modelType_ != 0) {
@@ -819,7 +733,7 @@ private static final long serialVersionUID = 0L;
       if (other.getIncludeTrend() != false) {
         setIncludeTrend(other.getIncludeTrend());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -834,19 +748,88 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              regressionTemplateSid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              name_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              modelType_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              excludeCallDataForNWeeks_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              numWeeksAgoToEmphasize_ = input.readInt32();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 53: {
+              maxDeviation_ = input.readFloat();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 53
+            case 61: {
+              trendSensitivity_ = input.readFloat();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 61
+            case 64: {
+              excludeIntervalsWithNoCalls_ = input.readBool();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
+            case 72: {
+              avgsProcessingType_ = input.readEnum();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
+            case 80: {
+              includeSeasonality_ = input.readBool();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
+            case 88: {
+              includeTrend_ = input.readBool();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 88
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private long regressionTemplateSid_ ;
     /**
@@ -871,8 +854,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRegressionTemplateSid(long value) {
-      
+
       regressionTemplateSid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -885,7 +869,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRegressionTemplateSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       regressionTemplateSid_ = 0L;
       onChanged();
       return this;
@@ -944,11 +928,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -961,8 +943,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -977,12 +959,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1009,8 +989,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setModelTypeValue(int value) {
-      
       modelType_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1024,8 +1004,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.RegressionForecasterModelTypes getModelType() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.RegressionForecasterModelTypes result = com.tcn.cloud.api.api.commons.RegressionForecasterModelTypes.valueOf(modelType_);
+      com.tcn.cloud.api.api.commons.RegressionForecasterModelTypes result = com.tcn.cloud.api.api.commons.RegressionForecasterModelTypes.forNumber(modelType_);
       return result == null ? com.tcn.cloud.api.api.commons.RegressionForecasterModelTypes.UNRECOGNIZED : result;
     }
     /**
@@ -1041,7 +1020,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       modelType_ = value.getNumber();
       onChanged();
       return this;
@@ -1055,7 +1034,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearModelType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       modelType_ = 0;
       onChanged();
       return this;
@@ -1084,8 +1063,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setExcludeCallDataForNWeeks(int value) {
-      
+
       excludeCallDataForNWeeks_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1098,7 +1078,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearExcludeCallDataForNWeeks() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       excludeCallDataForNWeeks_ = 0;
       onChanged();
       return this;
@@ -1127,8 +1107,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNumWeeksAgoToEmphasize(int value) {
-      
+
       numWeeksAgoToEmphasize_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1141,7 +1122,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNumWeeksAgoToEmphasize() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       numWeeksAgoToEmphasize_ = 0;
       onChanged();
       return this;
@@ -1172,8 +1153,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMaxDeviation(float value) {
-      
+
       maxDeviation_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1187,7 +1169,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMaxDeviation() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       maxDeviation_ = 0F;
       onChanged();
       return this;
@@ -1216,8 +1198,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTrendSensitivity(float value) {
-      
+
       trendSensitivity_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1230,7 +1213,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTrendSensitivity() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       trendSensitivity_ = 0F;
       onChanged();
       return this;
@@ -1259,8 +1242,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setExcludeIntervalsWithNoCalls(boolean value) {
-      
+
       excludeIntervalsWithNoCalls_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1273,7 +1257,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearExcludeIntervalsWithNoCalls() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       excludeIntervalsWithNoCalls_ = false;
       onChanged();
       return this;
@@ -1301,8 +1285,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAvgsProcessingTypeValue(int value) {
-      
       avgsProcessingType_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1316,8 +1300,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.RegressionForecasterAvgsProcessingType getAvgsProcessingType() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.RegressionForecasterAvgsProcessingType result = com.tcn.cloud.api.api.commons.RegressionForecasterAvgsProcessingType.valueOf(avgsProcessingType_);
+      com.tcn.cloud.api.api.commons.RegressionForecasterAvgsProcessingType result = com.tcn.cloud.api.api.commons.RegressionForecasterAvgsProcessingType.forNumber(avgsProcessingType_);
       return result == null ? com.tcn.cloud.api.api.commons.RegressionForecasterAvgsProcessingType.UNRECOGNIZED : result;
     }
     /**
@@ -1333,7 +1316,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000100;
       avgsProcessingType_ = value.getNumber();
       onChanged();
       return this;
@@ -1347,7 +1330,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAvgsProcessingType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000100);
       avgsProcessingType_ = 0;
       onChanged();
       return this;
@@ -1376,8 +1359,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIncludeSeasonality(boolean value) {
-      
+
       includeSeasonality_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1390,7 +1374,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIncludeSeasonality() {
-      
+      bitField0_ = (bitField0_ & ~0x00000200);
       includeSeasonality_ = false;
       onChanged();
       return this;
@@ -1419,8 +1403,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIncludeTrend(boolean value) {
-      
+
       includeTrend_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -1433,7 +1418,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIncludeTrend() {
-      
+      bitField0_ = (bitField0_ & ~0x00000400);
       includeTrend_ = false;
       onChanged();
       return this;
@@ -1471,7 +1456,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new RegressionTemplate(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -27,73 +27,6 @@ private static final long serialVersionUID = 0L;
     return new AssignRuleSetReq();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private AssignRuleSetReq(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.tcn.cloud.api.api.commons.CommType.Builder subBuilder = null;
-            if (commType_ != null) {
-              subBuilder = commType_.toBuilder();
-            }
-            commType_ = input.readMessage(com.tcn.cloud.api.api.commons.CommType.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(commType_);
-              commType_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            commId_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            ruleSetId_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.ComplianceProto.internal_static_api_v0alpha_AssignRuleSetReq_descriptor;
@@ -130,11 +63,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.CommTypeOrBuilder getCommTypeOrBuilder() {
-    return getCommType();
+    return commType_ == null ? com.tcn.cloud.api.api.commons.CommType.getDefaultInstance() : commType_;
   }
 
   public static final int COMM_ID_FIELD_NUMBER = 2;
-  private volatile java.lang.Object commId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object commId_ = "";
   /**
    * <code>string comm_id = 2 [json_name = "commId"];</code>
    * @return The commId.
@@ -172,7 +106,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RULE_SET_ID_FIELD_NUMBER = 3;
-  private volatile java.lang.Object ruleSetId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object ruleSetId_ = "";
   /**
    * <code>string rule_set_id = 3 [json_name = "ruleSetId"];</code>
    * @return The ruleSetId.
@@ -226,13 +161,13 @@ private static final long serialVersionUID = 0L;
     if (commType_ != null) {
       output.writeMessage(1, getCommType());
     }
-    if (!getCommIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(commId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, commId_);
     }
-    if (!getRuleSetIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ruleSetId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ruleSetId_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -245,13 +180,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getCommType());
     }
-    if (!getCommIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(commId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, commId_);
     }
-    if (!getRuleSetIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ruleSetId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, ruleSetId_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -275,7 +210,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCommId())) return false;
     if (!getRuleSetId()
         .equals(other.getRuleSetId())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -294,7 +229,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getCommId().hashCode();
     hash = (37 * hash) + RULE_SET_ID_FIELD_NUMBER;
     hash = (53 * hash) + getRuleSetId().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -343,11 +278,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -411,32 +348,25 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (commTypeBuilder_ == null) {
-        commType_ = null;
-      } else {
-        commType_ = null;
+      bitField0_ = 0;
+      commType_ = null;
+      if (commTypeBuilder_ != null) {
+        commTypeBuilder_.dispose();
         commTypeBuilder_ = null;
       }
       commId_ = "";
-
       ruleSetId_ = "";
-
       return this;
     }
 
@@ -463,15 +393,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq result = new com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq(this);
-      if (commTypeBuilder_ == null) {
-        result.commType_ = commType_;
-      } else {
-        result.commType_ = commTypeBuilder_.build();
-      }
-      result.commId_ = commId_;
-      result.ruleSetId_ = ruleSetId_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.commType_ = commTypeBuilder_ == null
+            ? commType_
+            : commTypeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.commId_ = commId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.ruleSetId_ = ruleSetId_;
+      }
     }
 
     @java.lang.Override
@@ -523,13 +462,15 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCommId().isEmpty()) {
         commId_ = other.commId_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getRuleSetId().isEmpty()) {
         ruleSetId_ = other.ruleSetId_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -544,19 +485,50 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getCommTypeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              commId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              ruleSetId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.tcn.cloud.api.api.commons.CommType commType_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -566,7 +538,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the commType field is set.
      */
     public boolean hasCommType() {
-      return commTypeBuilder_ != null || commType_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.api.commons.CommType comm_type = 1 [json_name = "commType"];</code>
@@ -588,11 +560,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         commType_ = value;
-        onChanged();
       } else {
         commTypeBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -602,11 +574,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.CommType.Builder builderForValue) {
       if (commTypeBuilder_ == null) {
         commType_ = builderForValue.build();
-        onChanged();
       } else {
         commTypeBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -614,38 +586,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCommType(com.tcn.cloud.api.api.commons.CommType value) {
       if (commTypeBuilder_ == null) {
-        if (commType_ != null) {
-          commType_ =
-            com.tcn.cloud.api.api.commons.CommType.newBuilder(commType_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          commType_ != null &&
+          commType_ != com.tcn.cloud.api.api.commons.CommType.getDefaultInstance()) {
+          getCommTypeBuilder().mergeFrom(value);
         } else {
           commType_ = value;
         }
-        onChanged();
       } else {
         commTypeBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.commons.CommType comm_type = 1 [json_name = "commType"];</code>
      */
     public Builder clearCommType() {
-      if (commTypeBuilder_ == null) {
-        commType_ = null;
-        onChanged();
-      } else {
-        commType_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      commType_ = null;
+      if (commTypeBuilder_ != null) {
+        commTypeBuilder_.dispose();
         commTypeBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.commons.CommType comm_type = 1 [json_name = "commType"];</code>
      */
     public com.tcn.cloud.api.api.commons.CommType.Builder getCommTypeBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getCommTypeFieldBuilder().getBuilder();
     }
@@ -718,11 +690,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCommId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       commId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -731,8 +701,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCommId() {
-      
       commId_ = getDefaultInstance().getCommId();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -743,12 +713,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCommIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       commId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -794,11 +762,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRuleSetId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       ruleSetId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -807,8 +773,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRuleSetId() {
-      
       ruleSetId_ = getDefaultInstance().getRuleSetId();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -819,12 +785,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRuleSetIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ruleSetId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -861,7 +825,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AssignRuleSetReq(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

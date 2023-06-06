@@ -34,83 +34,6 @@ private static final long serialVersionUID = 0L;
     return new OutboundEmailCampaignWithProjectDetails();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private OutboundEmailCampaignWithProjectDetails(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            campaignId_ = s;
-            break;
-          }
-          case 16: {
-
-            campaignSid_ = input.readInt64();
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            campaignName_ = s;
-            break;
-          }
-          case 32: {
-            int rawValue = input.readEnum();
-
-            status_ = rawValue;
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            projectId_ = s;
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            projectName_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.EmailapiProto.internal_static_api_v0alpha_OutboundEmailCampaignWithProjectDetails_descriptor;
@@ -125,7 +48,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGN_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object campaignId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object campaignId_ = "";
   /**
    * <pre>
    *campaign id
@@ -171,7 +95,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGN_SID_FIELD_NUMBER = 2;
-  private long campaignSid_;
+  private long campaignSid_ = 0L;
   /**
    * <pre>
    *campaign sid
@@ -186,7 +110,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGN_NAME_FIELD_NUMBER = 3;
-  private volatile java.lang.Object campaignName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object campaignName_ = "";
   /**
    * <pre>
    *campaign name
@@ -232,7 +157,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 4;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * campaign status
@@ -253,13 +178,13 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.EmailStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.EmailStatus result = com.tcn.cloud.api.api.commons.EmailStatus.valueOf(status_);
+    com.tcn.cloud.api.api.commons.EmailStatus result = com.tcn.cloud.api.api.commons.EmailStatus.forNumber(status_);
     return result == null ? com.tcn.cloud.api.api.commons.EmailStatus.UNRECOGNIZED : result;
   }
 
   public static final int PROJECT_ID_FIELD_NUMBER = 5;
-  private volatile java.lang.Object projectId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object projectId_ = "";
   /**
    * <pre>
    *project id
@@ -305,7 +230,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PROJECT_NAME_FIELD_NUMBER = 6;
-  private volatile java.lang.Object projectName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object projectName_ = "";
   /**
    * <pre>
    *project name
@@ -364,25 +290,25 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getCampaignIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(campaignId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, campaignId_);
     }
     if (campaignSid_ != 0L) {
       output.writeInt64(2, campaignSid_);
     }
-    if (!getCampaignNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(campaignName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, campaignName_);
     }
     if (status_ != com.tcn.cloud.api.api.commons.EmailStatus.EMAIL_STATUS_UNKKNOWN.getNumber()) {
       output.writeEnum(4, status_);
     }
-    if (!getProjectIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, projectId_);
     }
-    if (!getProjectNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, projectName_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -391,27 +317,27 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getCampaignIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(campaignId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, campaignId_);
     }
     if (campaignSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, campaignSid_);
     }
-    if (!getCampaignNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(campaignName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, campaignName_);
     }
     if (status_ != com.tcn.cloud.api.api.commons.EmailStatus.EMAIL_STATUS_UNKKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, status_);
     }
-    if (!getProjectIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, projectId_);
     }
-    if (!getProjectNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, projectName_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -437,7 +363,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getProjectId())) return false;
     if (!getProjectName()
         .equals(other.getProjectName())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -461,7 +387,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getProjectId().hashCode();
     hash = (37 * hash) + PROJECT_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getProjectName().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -510,11 +436,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.OutboundEmailCampaignWithProjectDetails parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.OutboundEmailCampaignWithProjectDetails parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -582,34 +510,24 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.OutboundEmailCampaignWithProjectDetails.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       campaignId_ = "";
-
       campaignSid_ = 0L;
-
       campaignName_ = "";
-
       status_ = 0;
-
       projectId_ = "";
-
       projectName_ = "";
-
       return this;
     }
 
@@ -636,14 +554,31 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.OutboundEmailCampaignWithProjectDetails buildPartial() {
       com.tcn.cloud.api.api.v0alpha.OutboundEmailCampaignWithProjectDetails result = new com.tcn.cloud.api.api.v0alpha.OutboundEmailCampaignWithProjectDetails(this);
-      result.campaignId_ = campaignId_;
-      result.campaignSid_ = campaignSid_;
-      result.campaignName_ = campaignName_;
-      result.status_ = status_;
-      result.projectId_ = projectId_;
-      result.projectName_ = projectName_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.OutboundEmailCampaignWithProjectDetails result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.campaignId_ = campaignId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.campaignSid_ = campaignSid_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.campaignName_ = campaignName_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.projectId_ = projectId_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.projectName_ = projectName_;
+      }
     }
 
     @java.lang.Override
@@ -692,6 +627,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.OutboundEmailCampaignWithProjectDetails.getDefaultInstance()) return this;
       if (!other.getCampaignId().isEmpty()) {
         campaignId_ = other.campaignId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.getCampaignSid() != 0L) {
@@ -699,6 +635,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCampaignName().isEmpty()) {
         campaignName_ = other.campaignName_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.status_ != 0) {
@@ -706,13 +643,15 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getProjectId().isEmpty()) {
         projectId_ = other.projectId_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.getProjectName().isEmpty()) {
         projectName_ = other.projectName_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -727,19 +666,63 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.OutboundEmailCampaignWithProjectDetails parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              campaignId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 16: {
+              campaignSid_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 26: {
+              campaignName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 32: {
+              status_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
+              projectId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              projectName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.OutboundEmailCampaignWithProjectDetails) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object campaignId_ = "";
     /**
@@ -794,11 +777,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       campaignId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -811,8 +792,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaignId() {
-      
       campaignId_ = getDefaultInstance().getCampaignId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -827,12 +808,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       campaignId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -860,8 +839,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCampaignSid(long value) {
-      
+
       campaignSid_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -874,7 +854,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaignSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       campaignSid_ = 0L;
       onChanged();
       return this;
@@ -933,11 +913,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       campaignName_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -950,8 +928,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaignName() {
-      
       campaignName_ = getDefaultInstance().getCampaignName();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -966,12 +944,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       campaignName_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -998,8 +974,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1013,8 +989,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.EmailStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.EmailStatus result = com.tcn.cloud.api.api.commons.EmailStatus.valueOf(status_);
+      com.tcn.cloud.api.api.commons.EmailStatus result = com.tcn.cloud.api.api.commons.EmailStatus.forNumber(status_);
       return result == null ? com.tcn.cloud.api.api.commons.EmailStatus.UNRECOGNIZED : result;
     }
     /**
@@ -1030,7 +1005,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -1044,7 +1019,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       status_ = 0;
       onChanged();
       return this;
@@ -1103,11 +1078,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProjectId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       projectId_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1120,8 +1093,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProjectId() {
-      
       projectId_ = getDefaultInstance().getProjectId();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1136,12 +1109,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProjectIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       projectId_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1199,11 +1170,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProjectName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       projectName_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1216,8 +1185,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProjectName() {
-      
       projectName_ = getDefaultInstance().getProjectName();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1232,12 +1201,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProjectNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       projectName_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1274,7 +1241,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new OutboundEmailCampaignWithProjectDetails(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

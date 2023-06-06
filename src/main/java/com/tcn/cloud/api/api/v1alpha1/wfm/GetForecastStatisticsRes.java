@@ -30,104 +30,6 @@ private static final long serialVersionUID = 0L;
     return new GetForecastStatisticsRes();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private GetForecastStatisticsRes(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            numIntervalsMeasured_ = input.readInt32();
-            break;
-          }
-          case 16: {
-
-            totalCallsHistorical_ = input.readInt32();
-            break;
-          }
-          case 24: {
-
-            totalCallsPredicted_ = input.readInt32();
-            break;
-          }
-          case 37: {
-
-            percentCallsOverUnder_ = input.readFloat();
-            break;
-          }
-          case 45: {
-
-            rmsErrorCalls_ = input.readFloat();
-            break;
-          }
-          case 53: {
-
-            rmsErrorATAB_ = input.readFloat();
-            break;
-          }
-          case 61: {
-
-            rmsErrorASA_ = input.readFloat();
-            break;
-          }
-          case 69: {
-
-            rmsErrorACW_ = input.readFloat();
-            break;
-          }
-          case 77: {
-
-            rmsErrorAHT_ = input.readFloat();
-            break;
-          }
-          case 80: {
-
-            areStatsInvalid_ = input.readBool();
-            break;
-          }
-          case 90: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            invalidReason_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_GetForecastStatisticsRes_descriptor;
@@ -142,7 +44,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NUM_INTERVALS_MEASURED_FIELD_NUMBER = 1;
-  private int numIntervalsMeasured_;
+  private int numIntervalsMeasured_ = 0;
   /**
    * <pre>
    * the total number of intervals measured
@@ -157,7 +59,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_CALLS_HISTORICAL_FIELD_NUMBER = 2;
-  private int totalCallsHistorical_;
+  private int totalCallsHistorical_ = 0;
   /**
    * <pre>
    * total number of actual historical calls
@@ -172,7 +74,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_CALLS_PREDICTED_FIELD_NUMBER = 3;
-  private int totalCallsPredicted_;
+  private int totalCallsPredicted_ = 0;
   /**
    * <pre>
    * total number of predicted calls
@@ -187,7 +89,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PERCENT_CALLS_OVER_UNDER_FIELD_NUMBER = 4;
-  private float percentCallsOverUnder_;
+  private float percentCallsOverUnder_ = 0F;
   /**
    * <pre>
    * percentage over predicted (+ve) or under predicted (-ve)
@@ -202,7 +104,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RMS_ERROR_CALLS_FIELD_NUMBER = 5;
-  private float rmsErrorCalls_;
+  private float rmsErrorCalls_ = 0F;
   /**
    * <pre>
    * root-mean-squared error between actual and predicted calls
@@ -217,7 +119,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RMS_ERROR_ATAB_FIELD_NUMBER = 6;
-  private float rmsErrorATAB_;
+  private float rmsErrorATAB_ = 0F;
   /**
    * <pre>
    * root-mean-squared error between actual and predicted atab
@@ -232,7 +134,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RMS_ERROR_ASA_FIELD_NUMBER = 7;
-  private float rmsErrorASA_;
+  private float rmsErrorASA_ = 0F;
   /**
    * <pre>
    * root-mean-squared error between actual and predicted asa
@@ -247,7 +149,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RMS_ERROR_ACW_FIELD_NUMBER = 8;
-  private float rmsErrorACW_;
+  private float rmsErrorACW_ = 0F;
   /**
    * <pre>
    * root-mean-squared error between actual and predicted acw
@@ -262,7 +164,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RMS_ERROR_AHT_FIELD_NUMBER = 9;
-  private float rmsErrorAHT_;
+  private float rmsErrorAHT_ = 0F;
   /**
    * <pre>
    * root-mean-squared error between actual and predicted aht
@@ -277,7 +179,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ARE_STATS_INVALID_FIELD_NUMBER = 10;
-  private boolean areStatsInvalid_;
+  private boolean areStatsInvalid_ = false;
   /**
    * <pre>
    * Indicates whether or not the stats generated were invalid
@@ -292,7 +194,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INVALID_REASON_FIELD_NUMBER = 11;
-  private volatile java.lang.Object invalidReason_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object invalidReason_ = "";
   /**
    * <pre>
    * Message explaining why the stats were invalid
@@ -360,31 +263,31 @@ private static final long serialVersionUID = 0L;
     if (totalCallsPredicted_ != 0) {
       output.writeInt32(3, totalCallsPredicted_);
     }
-    if (percentCallsOverUnder_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(percentCallsOverUnder_) != 0) {
       output.writeFloat(4, percentCallsOverUnder_);
     }
-    if (rmsErrorCalls_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(rmsErrorCalls_) != 0) {
       output.writeFloat(5, rmsErrorCalls_);
     }
-    if (rmsErrorATAB_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(rmsErrorATAB_) != 0) {
       output.writeFloat(6, rmsErrorATAB_);
     }
-    if (rmsErrorASA_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(rmsErrorASA_) != 0) {
       output.writeFloat(7, rmsErrorASA_);
     }
-    if (rmsErrorACW_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(rmsErrorACW_) != 0) {
       output.writeFloat(8, rmsErrorACW_);
     }
-    if (rmsErrorAHT_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(rmsErrorAHT_) != 0) {
       output.writeFloat(9, rmsErrorAHT_);
     }
     if (areStatsInvalid_ != false) {
       output.writeBool(10, areStatsInvalid_);
     }
-    if (!getInvalidReasonBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invalidReason_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, invalidReason_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -405,27 +308,27 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(3, totalCallsPredicted_);
     }
-    if (percentCallsOverUnder_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(percentCallsOverUnder_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(4, percentCallsOverUnder_);
     }
-    if (rmsErrorCalls_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(rmsErrorCalls_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(5, rmsErrorCalls_);
     }
-    if (rmsErrorATAB_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(rmsErrorATAB_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(6, rmsErrorATAB_);
     }
-    if (rmsErrorASA_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(rmsErrorASA_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(7, rmsErrorASA_);
     }
-    if (rmsErrorACW_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(rmsErrorACW_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(8, rmsErrorACW_);
     }
-    if (rmsErrorAHT_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(rmsErrorAHT_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(9, rmsErrorAHT_);
     }
@@ -433,10 +336,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(10, areStatsInvalid_);
     }
-    if (!getInvalidReasonBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invalidReason_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, invalidReason_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -479,7 +382,7 @@ private static final long serialVersionUID = 0L;
         != other.getAreStatsInvalid()) return false;
     if (!getInvalidReason()
         .equals(other.getInvalidReason())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -519,7 +422,7 @@ private static final long serialVersionUID = 0L;
         getAreStatsInvalid());
     hash = (37 * hash) + INVALID_REASON_FIELD_NUMBER;
     hash = (53 * hash) + getInvalidReason().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -568,11 +471,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastStatisticsRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastStatisticsRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -640,44 +545,29 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastStatisticsRes.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       numIntervalsMeasured_ = 0;
-
       totalCallsHistorical_ = 0;
-
       totalCallsPredicted_ = 0;
-
       percentCallsOverUnder_ = 0F;
-
       rmsErrorCalls_ = 0F;
-
       rmsErrorATAB_ = 0F;
-
       rmsErrorASA_ = 0F;
-
       rmsErrorACW_ = 0F;
-
       rmsErrorAHT_ = 0F;
-
       areStatsInvalid_ = false;
-
       invalidReason_ = "";
-
       return this;
     }
 
@@ -704,19 +594,46 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastStatisticsRes buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastStatisticsRes result = new com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastStatisticsRes(this);
-      result.numIntervalsMeasured_ = numIntervalsMeasured_;
-      result.totalCallsHistorical_ = totalCallsHistorical_;
-      result.totalCallsPredicted_ = totalCallsPredicted_;
-      result.percentCallsOverUnder_ = percentCallsOverUnder_;
-      result.rmsErrorCalls_ = rmsErrorCalls_;
-      result.rmsErrorATAB_ = rmsErrorATAB_;
-      result.rmsErrorASA_ = rmsErrorASA_;
-      result.rmsErrorACW_ = rmsErrorACW_;
-      result.rmsErrorAHT_ = rmsErrorAHT_;
-      result.areStatsInvalid_ = areStatsInvalid_;
-      result.invalidReason_ = invalidReason_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastStatisticsRes result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.numIntervalsMeasured_ = numIntervalsMeasured_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.totalCallsHistorical_ = totalCallsHistorical_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.totalCallsPredicted_ = totalCallsPredicted_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.percentCallsOverUnder_ = percentCallsOverUnder_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.rmsErrorCalls_ = rmsErrorCalls_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.rmsErrorATAB_ = rmsErrorATAB_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.rmsErrorASA_ = rmsErrorASA_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.rmsErrorACW_ = rmsErrorACW_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.rmsErrorAHT_ = rmsErrorAHT_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.areStatsInvalid_ = areStatsInvalid_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.invalidReason_ = invalidReason_;
+      }
     }
 
     @java.lang.Override
@@ -795,9 +712,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getInvalidReason().isEmpty()) {
         invalidReason_ = other.invalidReason_;
+        bitField0_ |= 0x00000400;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -812,19 +730,88 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastStatisticsRes parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              numIntervalsMeasured_ = input.readInt32();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              totalCallsHistorical_ = input.readInt32();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              totalCallsPredicted_ = input.readInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 37: {
+              percentCallsOverUnder_ = input.readFloat();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 37
+            case 45: {
+              rmsErrorCalls_ = input.readFloat();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 45
+            case 53: {
+              rmsErrorATAB_ = input.readFloat();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 53
+            case 61: {
+              rmsErrorASA_ = input.readFloat();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 61
+            case 69: {
+              rmsErrorACW_ = input.readFloat();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 69
+            case 77: {
+              rmsErrorAHT_ = input.readFloat();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 77
+            case 80: {
+              areStatsInvalid_ = input.readBool();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
+            case 90: {
+              invalidReason_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastStatisticsRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private int numIntervalsMeasured_ ;
     /**
@@ -849,8 +836,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNumIntervalsMeasured(int value) {
-      
+
       numIntervalsMeasured_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -863,7 +851,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNumIntervalsMeasured() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       numIntervalsMeasured_ = 0;
       onChanged();
       return this;
@@ -892,8 +880,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalCallsHistorical(int value) {
-      
+
       totalCallsHistorical_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -906,7 +895,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalCallsHistorical() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       totalCallsHistorical_ = 0;
       onChanged();
       return this;
@@ -935,8 +924,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalCallsPredicted(int value) {
-      
+
       totalCallsPredicted_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -949,7 +939,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalCallsPredicted() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       totalCallsPredicted_ = 0;
       onChanged();
       return this;
@@ -978,8 +968,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPercentCallsOverUnder(float value) {
-      
+
       percentCallsOverUnder_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -992,7 +983,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPercentCallsOverUnder() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       percentCallsOverUnder_ = 0F;
       onChanged();
       return this;
@@ -1021,8 +1012,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRmsErrorCalls(float value) {
-      
+
       rmsErrorCalls_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1035,7 +1027,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRmsErrorCalls() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       rmsErrorCalls_ = 0F;
       onChanged();
       return this;
@@ -1064,8 +1056,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRmsErrorATAB(float value) {
-      
+
       rmsErrorATAB_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1078,7 +1071,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRmsErrorATAB() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       rmsErrorATAB_ = 0F;
       onChanged();
       return this;
@@ -1107,8 +1100,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRmsErrorASA(float value) {
-      
+
       rmsErrorASA_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1121,7 +1115,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRmsErrorASA() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       rmsErrorASA_ = 0F;
       onChanged();
       return this;
@@ -1150,8 +1144,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRmsErrorACW(float value) {
-      
+
       rmsErrorACW_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1164,7 +1159,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRmsErrorACW() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       rmsErrorACW_ = 0F;
       onChanged();
       return this;
@@ -1193,8 +1188,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRmsErrorAHT(float value) {
-      
+
       rmsErrorAHT_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1207,7 +1203,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRmsErrorAHT() {
-      
+      bitField0_ = (bitField0_ & ~0x00000100);
       rmsErrorAHT_ = 0F;
       onChanged();
       return this;
@@ -1236,8 +1232,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAreStatsInvalid(boolean value) {
-      
+
       areStatsInvalid_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1250,7 +1247,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAreStatsInvalid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000200);
       areStatsInvalid_ = false;
       onChanged();
       return this;
@@ -1309,11 +1306,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setInvalidReason(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       invalidReason_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -1326,8 +1321,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInvalidReason() {
-      
       invalidReason_ = getDefaultInstance().getInvalidReason();
+      bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -1342,12 +1337,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setInvalidReasonBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       invalidReason_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -1384,7 +1377,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GetForecastStatisticsRes(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

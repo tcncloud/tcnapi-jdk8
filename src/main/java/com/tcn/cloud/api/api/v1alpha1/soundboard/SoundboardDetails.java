@@ -34,113 +34,6 @@ private static final long serialVersionUID = 0L;
     return new SoundboardDetails();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private SoundboardDetails(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            soundboardId_ = input.readInt64();
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            fileName_ = s;
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            fileType_ = rawValue;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            title_ = s;
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            description_ = s;
-            break;
-          }
-          case 50: {
-            com.google.protobuf.Timestamp.Builder subBuilder = null;
-            if (dateCreated_ != null) {
-              subBuilder = dateCreated_.toBuilder();
-            }
-            dateCreated_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dateCreated_);
-              dateCreated_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 58: {
-            com.google.protobuf.Timestamp.Builder subBuilder = null;
-            if (lastModified_ != null) {
-              subBuilder = lastModified_.toBuilder();
-            }
-            lastModified_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(lastModified_);
-              lastModified_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 64: {
-
-            fileSize_ = input.readInt64();
-            break;
-          }
-          case 72: {
-
-            recordingLength_ = input.readInt64();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.soundboard.EntitiesProto.internal_static_api_v1alpha1_soundboard_SoundboardDetails_descriptor;
@@ -155,7 +48,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SOUNDBOARD_ID_FIELD_NUMBER = 1;
-  private long soundboardId_;
+  private long soundboardId_ = 0L;
   /**
    * <pre>
    * ID of the soundboard, in the snowflake ID format.
@@ -170,7 +63,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FILE_NAME_FIELD_NUMBER = 2;
-  private volatile java.lang.Object fileName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object fileName_ = "";
   /**
    * <pre>
    * Name of audio file (does not include path), e.g. 'file.wav'.
@@ -216,7 +110,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FILE_TYPE_FIELD_NUMBER = 3;
-  private int fileType_;
+  private int fileType_ = 0;
   /**
    * <pre>
    * Audio file format of soundboard (.wav or .mp3).
@@ -237,13 +131,13 @@ private static final long serialVersionUID = 0L;
    * @return The fileType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.RecordingFileType getFileType() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.RecordingFileType result = com.tcn.cloud.api.api.commons.RecordingFileType.valueOf(fileType_);
+    com.tcn.cloud.api.api.commons.RecordingFileType result = com.tcn.cloud.api.api.commons.RecordingFileType.forNumber(fileType_);
     return result == null ? com.tcn.cloud.api.api.commons.RecordingFileType.UNRECOGNIZED : result;
   }
 
   public static final int TITLE_FIELD_NUMBER = 4;
-  private volatile java.lang.Object title_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object title_ = "";
   /**
    * <pre>
    * Soundboard title.
@@ -289,7 +183,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 5;
-  private volatile java.lang.Object description_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
   /**
    * <pre>
    * Soundboard description.
@@ -369,7 +264,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder() {
-    return getDateCreated();
+    return dateCreated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
   }
 
   public static final int LAST_MODIFIED_FIELD_NUMBER = 7;
@@ -407,11 +302,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getLastModifiedOrBuilder() {
-    return getLastModified();
+    return lastModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastModified_;
   }
 
   public static final int FILE_SIZE_FIELD_NUMBER = 8;
-  private long fileSize_;
+  private long fileSize_ = 0L;
   /**
    * <pre>
    * Soundboard audio file size as number of bytes, e.g. '3145728' = 3mb.
@@ -426,7 +321,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RECORDING_LENGTH_FIELD_NUMBER = 9;
-  private long recordingLength_;
+  private long recordingLength_ = 0L;
   /**
    * <pre>
    * Length of audio file in seconds, e.g. '192' = 3:12.
@@ -457,16 +352,16 @@ private static final long serialVersionUID = 0L;
     if (soundboardId_ != 0L) {
       output.writeInt64(1, soundboardId_);
     }
-    if (!getFileNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fileName_);
     }
     if (fileType_ != com.tcn.cloud.api.api.commons.RecordingFileType.RECORDING_FILE_TYPE_WAV.getNumber()) {
       output.writeEnum(3, fileType_);
     }
-    if (!getTitleBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, title_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
     }
     if (dateCreated_ != null) {
@@ -481,7 +376,7 @@ private static final long serialVersionUID = 0L;
     if (recordingLength_ != 0L) {
       output.writeInt64(9, recordingLength_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -494,17 +389,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, soundboardId_);
     }
-    if (!getFileNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fileName_);
     }
     if (fileType_ != com.tcn.cloud.api.api.commons.RecordingFileType.RECORDING_FILE_TYPE_WAV.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, fileType_);
     }
-    if (!getTitleBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, title_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
     }
     if (dateCreated_ != null) {
@@ -523,7 +418,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(9, recordingLength_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -561,7 +456,7 @@ private static final long serialVersionUID = 0L;
         != other.getFileSize()) return false;
     if (getRecordingLength()
         != other.getRecordingLength()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -597,7 +492,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + RECORDING_LENGTH_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getRecordingLength());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -646,11 +541,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.soundboard.SoundboardDetails parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.soundboard.SoundboardDetails parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -719,48 +616,35 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.soundboard.SoundboardDetails.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       soundboardId_ = 0L;
-
       fileName_ = "";
-
       fileType_ = 0;
-
       title_ = "";
-
       description_ = "";
-
-      if (dateCreatedBuilder_ == null) {
-        dateCreated_ = null;
-      } else {
-        dateCreated_ = null;
+      dateCreated_ = null;
+      if (dateCreatedBuilder_ != null) {
+        dateCreatedBuilder_.dispose();
         dateCreatedBuilder_ = null;
       }
-      if (lastModifiedBuilder_ == null) {
-        lastModified_ = null;
-      } else {
-        lastModified_ = null;
+      lastModified_ = null;
+      if (lastModifiedBuilder_ != null) {
+        lastModifiedBuilder_.dispose();
         lastModifiedBuilder_ = null;
       }
       fileSize_ = 0L;
-
       recordingLength_ = 0L;
-
       return this;
     }
 
@@ -787,25 +671,44 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.soundboard.SoundboardDetails buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.soundboard.SoundboardDetails result = new com.tcn.cloud.api.api.v1alpha1.soundboard.SoundboardDetails(this);
-      result.soundboardId_ = soundboardId_;
-      result.fileName_ = fileName_;
-      result.fileType_ = fileType_;
-      result.title_ = title_;
-      result.description_ = description_;
-      if (dateCreatedBuilder_ == null) {
-        result.dateCreated_ = dateCreated_;
-      } else {
-        result.dateCreated_ = dateCreatedBuilder_.build();
-      }
-      if (lastModifiedBuilder_ == null) {
-        result.lastModified_ = lastModified_;
-      } else {
-        result.lastModified_ = lastModifiedBuilder_.build();
-      }
-      result.fileSize_ = fileSize_;
-      result.recordingLength_ = recordingLength_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.soundboard.SoundboardDetails result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.soundboardId_ = soundboardId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.fileName_ = fileName_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.fileType_ = fileType_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.title_ = title_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.dateCreated_ = dateCreatedBuilder_ == null
+            ? dateCreated_
+            : dateCreatedBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.lastModified_ = lastModifiedBuilder_ == null
+            ? lastModified_
+            : lastModifiedBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.fileSize_ = fileSize_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.recordingLength_ = recordingLength_;
+      }
     }
 
     @java.lang.Override
@@ -857,6 +760,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getFileName().isEmpty()) {
         fileName_ = other.fileName_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.fileType_ != 0) {
@@ -864,10 +768,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getTitle().isEmpty()) {
         title_ = other.title_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.hasDateCreated()) {
@@ -882,7 +788,7 @@ private static final long serialVersionUID = 0L;
       if (other.getRecordingLength() != 0L) {
         setRecordingLength(other.getRecordingLength());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -897,19 +803,82 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.soundboard.SoundboardDetails parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              soundboardId_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              fileName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              fileType_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
+              title_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              description_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  getDateCreatedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  getLastModifiedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 64: {
+              fileSize_ = input.readInt64();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
+            case 72: {
+              recordingLength_ = input.readInt64();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.soundboard.SoundboardDetails) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private long soundboardId_ ;
     /**
@@ -934,8 +903,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSoundboardId(long value) {
-      
+
       soundboardId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -948,7 +918,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSoundboardId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       soundboardId_ = 0L;
       onChanged();
       return this;
@@ -1007,11 +977,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFileName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       fileName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1024,8 +992,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFileName() {
-      
       fileName_ = getDefaultInstance().getFileName();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1040,12 +1008,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFileNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       fileName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1072,8 +1038,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFileTypeValue(int value) {
-      
       fileType_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1087,8 +1053,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.RecordingFileType getFileType() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.RecordingFileType result = com.tcn.cloud.api.api.commons.RecordingFileType.valueOf(fileType_);
+      com.tcn.cloud.api.api.commons.RecordingFileType result = com.tcn.cloud.api.api.commons.RecordingFileType.forNumber(fileType_);
       return result == null ? com.tcn.cloud.api.api.commons.RecordingFileType.UNRECOGNIZED : result;
     }
     /**
@@ -1104,7 +1069,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       fileType_ = value.getNumber();
       onChanged();
       return this;
@@ -1118,7 +1083,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFileType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       fileType_ = 0;
       onChanged();
       return this;
@@ -1177,11 +1142,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTitle(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       title_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1194,8 +1157,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTitle() {
-      
       title_ = getDefaultInstance().getTitle();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1210,12 +1173,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTitleBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       title_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1273,11 +1234,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       description_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1290,8 +1249,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-      
       description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1306,12 +1265,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1328,7 +1285,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dateCreated field is set.
      */
     public boolean hasDateCreated() {
-      return dateCreatedBuilder_ != null || dateCreated_ != null;
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -1358,11 +1315,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dateCreated_ = value;
-        onChanged();
       } else {
         dateCreatedBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1376,11 +1333,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (dateCreatedBuilder_ == null) {
         dateCreated_ = builderForValue.build();
-        onChanged();
       } else {
         dateCreatedBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1392,17 +1349,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDateCreated(com.google.protobuf.Timestamp value) {
       if (dateCreatedBuilder_ == null) {
-        if (dateCreated_ != null) {
-          dateCreated_ =
-            com.google.protobuf.Timestamp.newBuilder(dateCreated_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000020) != 0) &&
+          dateCreated_ != null &&
+          dateCreated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getDateCreatedBuilder().mergeFrom(value);
         } else {
           dateCreated_ = value;
         }
-        onChanged();
       } else {
         dateCreatedBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1413,14 +1371,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated"];</code>
      */
     public Builder clearDateCreated() {
-      if (dateCreatedBuilder_ == null) {
-        dateCreated_ = null;
-        onChanged();
-      } else {
-        dateCreated_ = null;
+      bitField0_ = (bitField0_ & ~0x00000020);
+      dateCreated_ = null;
+      if (dateCreatedBuilder_ != null) {
+        dateCreatedBuilder_.dispose();
         dateCreatedBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1431,7 +1388,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp date_created = 6 [json_name = "dateCreated"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getDateCreatedBuilder() {
-      
+      bitField0_ |= 0x00000020;
       onChanged();
       return getDateCreatedFieldBuilder().getBuilder();
     }
@@ -1483,7 +1440,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the lastModified field is set.
      */
     public boolean hasLastModified() {
-      return lastModifiedBuilder_ != null || lastModified_ != null;
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -1513,11 +1470,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         lastModified_ = value;
-        onChanged();
       } else {
         lastModifiedBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -1531,11 +1488,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (lastModifiedBuilder_ == null) {
         lastModified_ = builderForValue.build();
-        onChanged();
       } else {
         lastModifiedBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -1547,17 +1504,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLastModified(com.google.protobuf.Timestamp value) {
       if (lastModifiedBuilder_ == null) {
-        if (lastModified_ != null) {
-          lastModified_ =
-            com.google.protobuf.Timestamp.newBuilder(lastModified_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000040) != 0) &&
+          lastModified_ != null &&
+          lastModified_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getLastModifiedBuilder().mergeFrom(value);
         } else {
           lastModified_ = value;
         }
-        onChanged();
       } else {
         lastModifiedBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -1568,14 +1526,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp last_modified = 7 [json_name = "lastModified"];</code>
      */
     public Builder clearLastModified() {
-      if (lastModifiedBuilder_ == null) {
-        lastModified_ = null;
-        onChanged();
-      } else {
-        lastModified_ = null;
+      bitField0_ = (bitField0_ & ~0x00000040);
+      lastModified_ = null;
+      if (lastModifiedBuilder_ != null) {
+        lastModifiedBuilder_.dispose();
         lastModifiedBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1586,7 +1543,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp last_modified = 7 [json_name = "lastModified"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getLastModifiedBuilder() {
-      
+      bitField0_ |= 0x00000040;
       onChanged();
       return getLastModifiedFieldBuilder().getBuilder();
     }
@@ -1649,8 +1606,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFileSize(long value) {
-      
+
       fileSize_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1663,7 +1621,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFileSize() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       fileSize_ = 0L;
       onChanged();
       return this;
@@ -1692,8 +1650,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRecordingLength(long value) {
-      
+
       recordingLength_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1706,7 +1665,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRecordingLength() {
-      
+      bitField0_ = (bitField0_ & ~0x00000100);
       recordingLength_ = 0L;
       onChanged();
       return this;
@@ -1744,7 +1703,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new SoundboardDetails(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

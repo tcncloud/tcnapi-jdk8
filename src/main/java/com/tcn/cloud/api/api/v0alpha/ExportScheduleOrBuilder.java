@@ -43,5 +43,5 @@ public interface ExportScheduleOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.EndOfDayScheduleOrBuilder getEndOfDayOrBuilder();
 
-  public com.tcn.cloud.api.api.v0alpha.ExportSchedule.ScheduleTypeCase getScheduleTypeCase();
+  com.tcn.cloud.api.api.v0alpha.ExportSchedule.ScheduleTypeCase getScheduleTypeCase();
 }

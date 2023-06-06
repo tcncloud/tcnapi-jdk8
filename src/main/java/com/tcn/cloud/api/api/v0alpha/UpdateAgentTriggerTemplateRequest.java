@@ -25,61 +25,6 @@ private static final long serialVersionUID = 0L;
     return new UpdateAgentTriggerTemplateRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private UpdateAgentTriggerTemplateRequest(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.tcn.cloud.api.api.v0alpha.AgentTriggerTemplate.Builder subBuilder = null;
-            if (agentTriggerTemplate_ != null) {
-              subBuilder = agentTriggerTemplate_.toBuilder();
-            }
-            agentTriggerTemplate_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.AgentTriggerTemplate.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(agentTriggerTemplate_);
-              agentTriggerTemplate_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateAgentTriggerTemplateRequest_descriptor;
@@ -116,7 +61,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.AgentTriggerTemplateOrBuilder getAgentTriggerTemplateOrBuilder() {
-    return getAgentTriggerTemplate();
+    return agentTriggerTemplate_ == null ? com.tcn.cloud.api.api.v0alpha.AgentTriggerTemplate.getDefaultInstance() : agentTriggerTemplate_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -136,7 +81,7 @@ private static final long serialVersionUID = 0L;
     if (agentTriggerTemplate_ != null) {
       output.writeMessage(1, getAgentTriggerTemplate());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -149,7 +94,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getAgentTriggerTemplate());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -169,7 +114,7 @@ private static final long serialVersionUID = 0L;
       if (!getAgentTriggerTemplate()
           .equals(other.getAgentTriggerTemplate())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -184,7 +129,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AGENT_TRIGGER_TEMPLATE_FIELD_NUMBER;
       hash = (53 * hash) + getAgentTriggerTemplate().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -233,11 +178,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -301,26 +248,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateRequest.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (agentTriggerTemplateBuilder_ == null) {
-        agentTriggerTemplate_ = null;
-      } else {
-        agentTriggerTemplate_ = null;
+      bitField0_ = 0;
+      agentTriggerTemplate_ = null;
+      if (agentTriggerTemplateBuilder_ != null) {
+        agentTriggerTemplateBuilder_.dispose();
         agentTriggerTemplateBuilder_ = null;
       }
       return this;
@@ -349,13 +291,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateRequest buildPartial() {
       com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateRequest result = new com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateRequest(this);
-      if (agentTriggerTemplateBuilder_ == null) {
-        result.agentTriggerTemplate_ = agentTriggerTemplate_;
-      } else {
-        result.agentTriggerTemplate_ = agentTriggerTemplateBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.agentTriggerTemplate_ = agentTriggerTemplateBuilder_ == null
+            ? agentTriggerTemplate_
+            : agentTriggerTemplateBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -405,7 +352,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasAgentTriggerTemplate()) {
         mergeAgentTriggerTemplate(other.getAgentTriggerTemplate());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -420,19 +367,40 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateRequest parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getAgentTriggerTemplateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.tcn.cloud.api.api.v0alpha.AgentTriggerTemplate agentTriggerTemplate_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -442,7 +410,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the agentTriggerTemplate field is set.
      */
     public boolean hasAgentTriggerTemplate() {
-      return agentTriggerTemplateBuilder_ != null || agentTriggerTemplate_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.api.v0alpha.AgentTriggerTemplate agent_trigger_template = 1 [json_name = "agentTriggerTemplate"];</code>
@@ -464,11 +432,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         agentTriggerTemplate_ = value;
-        onChanged();
       } else {
         agentTriggerTemplateBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -478,11 +446,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.AgentTriggerTemplate.Builder builderForValue) {
       if (agentTriggerTemplateBuilder_ == null) {
         agentTriggerTemplate_ = builderForValue.build();
-        onChanged();
       } else {
         agentTriggerTemplateBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -490,38 +458,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAgentTriggerTemplate(com.tcn.cloud.api.api.v0alpha.AgentTriggerTemplate value) {
       if (agentTriggerTemplateBuilder_ == null) {
-        if (agentTriggerTemplate_ != null) {
-          agentTriggerTemplate_ =
-            com.tcn.cloud.api.api.v0alpha.AgentTriggerTemplate.newBuilder(agentTriggerTemplate_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          agentTriggerTemplate_ != null &&
+          agentTriggerTemplate_ != com.tcn.cloud.api.api.v0alpha.AgentTriggerTemplate.getDefaultInstance()) {
+          getAgentTriggerTemplateBuilder().mergeFrom(value);
         } else {
           agentTriggerTemplate_ = value;
         }
-        onChanged();
       } else {
         agentTriggerTemplateBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v0alpha.AgentTriggerTemplate agent_trigger_template = 1 [json_name = "agentTriggerTemplate"];</code>
      */
     public Builder clearAgentTriggerTemplate() {
-      if (agentTriggerTemplateBuilder_ == null) {
-        agentTriggerTemplate_ = null;
-        onChanged();
-      } else {
-        agentTriggerTemplate_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      agentTriggerTemplate_ = null;
+      if (agentTriggerTemplateBuilder_ != null) {
+        agentTriggerTemplateBuilder_.dispose();
         agentTriggerTemplateBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v0alpha.AgentTriggerTemplate agent_trigger_template = 1 [json_name = "agentTriggerTemplate"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.AgentTriggerTemplate.Builder getAgentTriggerTemplateBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getAgentTriggerTemplateFieldBuilder().getBuilder();
     }
@@ -585,7 +553,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new UpdateAgentTriggerTemplateRequest(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

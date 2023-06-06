@@ -186,5 +186,5 @@ public interface ListConversationsReqOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.ListConversationsReq.ByAssignedUserOrBuilder getByAssignedUserOrBuilder();
 
-  public com.tcn.cloud.api.api.v0alpha.ListConversationsReq.FilterCase getFilterCase();
+  com.tcn.cloud.api.api.v0alpha.ListConversationsReq.FilterCase getFilterCase();
 }

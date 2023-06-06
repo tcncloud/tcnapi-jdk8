@@ -1,25 +1,13 @@
 package com.tcn.cloud.api.api.v1alpha1.idp;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.14.0)",
+    value = "by gRPC proto compiler (version 1.55.1)",
     comments = "Source: api/v1alpha1/idp/service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class IdentityProviderGrpc {
 
   private IdentityProviderGrpc() {}
@@ -31,7 +19,14 @@ public final class IdentityProviderGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static IdentityProviderStub newStub(io.grpc.Channel channel) {
-    return new IdentityProviderStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<IdentityProviderStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<IdentityProviderStub>() {
+        @java.lang.Override
+        public IdentityProviderStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new IdentityProviderStub(channel, callOptions);
+        }
+      };
+    return IdentityProviderStub.newStub(factory, channel);
   }
 
   /**
@@ -39,7 +34,14 @@ public final class IdentityProviderGrpc {
    */
   public static IdentityProviderBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new IdentityProviderBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<IdentityProviderBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<IdentityProviderBlockingStub>() {
+        @java.lang.Override
+        public IdentityProviderBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new IdentityProviderBlockingStub(channel, callOptions);
+        }
+      };
+    return IdentityProviderBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -47,72 +49,79 @@ public final class IdentityProviderGrpc {
    */
   public static IdentityProviderFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new IdentityProviderFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<IdentityProviderFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<IdentityProviderFutureStub>() {
+        @java.lang.Override
+        public IdentityProviderFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new IdentityProviderFutureStub(channel, callOptions);
+        }
+      };
+    return IdentityProviderFutureStub.newStub(factory, channel);
   }
 
   /**
    */
-  public static abstract class IdentityProviderImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
+  }
+
+  /**
+   * Base class for the server implementation of the service IdentityProvider.
+   */
+  public static abstract class IdentityProviderImplBase
+      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .build();
+      return IdentityProviderGrpc.bindService(this);
     }
   }
 
   /**
+   * A stub to allow clients to do asynchronous rpc calls to service IdentityProvider.
    */
-  public static final class IdentityProviderStub extends io.grpc.stub.AbstractStub<IdentityProviderStub> {
-    private IdentityProviderStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private IdentityProviderStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class IdentityProviderStub
+      extends io.grpc.stub.AbstractAsyncStub<IdentityProviderStub> {
+    private IdentityProviderStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected IdentityProviderStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected IdentityProviderStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new IdentityProviderStub(channel, callOptions);
     }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service IdentityProvider.
    */
-  public static final class IdentityProviderBlockingStub extends io.grpc.stub.AbstractStub<IdentityProviderBlockingStub> {
-    private IdentityProviderBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private IdentityProviderBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class IdentityProviderBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<IdentityProviderBlockingStub> {
+    private IdentityProviderBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected IdentityProviderBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected IdentityProviderBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new IdentityProviderBlockingStub(channel, callOptions);
     }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service IdentityProvider.
    */
-  public static final class IdentityProviderFutureStub extends io.grpc.stub.AbstractStub<IdentityProviderFutureStub> {
-    private IdentityProviderFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private IdentityProviderFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class IdentityProviderFutureStub
+      extends io.grpc.stub.AbstractFutureStub<IdentityProviderFutureStub> {
+    private IdentityProviderFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected IdentityProviderFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected IdentityProviderFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new IdentityProviderFutureStub(channel, callOptions);
     }
   }
@@ -123,10 +132,10 @@ public final class IdentityProviderGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final IdentityProviderImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(IdentityProviderImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -149,6 +158,11 @@ public final class IdentityProviderGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .build();
   }
 
   private static abstract class IdentityProviderBaseDescriptorSupplier
