@@ -4021,7 +4021,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
-     * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the given &#64;org_id.
+     * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
@@ -4722,7 +4722,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;agent_availability_pattern_sid or &#64;org_id have invalid values.
+     *   - grpc.Invalid: the &#64;agent_availability_pattern_sid has an invalid value.
      *   - grpc.NotFound: the &#64;agent_availability_pattern with the given sid doesn't exist.
      *   - grpc.Internal: error occurs when removing the agent availability pattern.
      * </pre>
@@ -4899,7 +4899,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;org_id, &#64;entity_type, or &#64;belongs_to_entity have invalid values.
+     *   - grpc.Invalid: the &#64;entity_type, or &#64;belongs_to_entity have invalid values.
      *   - grpc.Internal: error occurs when getting the config entities.
      * </pre>
      */
@@ -5975,7 +5975,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
-     * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the given &#64;org_id.
+     * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
@@ -6714,7 +6714,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;agent_availability_pattern_sid or &#64;org_id have invalid values.
+     *   - grpc.Invalid: the &#64;agent_availability_pattern_sid has an invalid value.
      *   - grpc.NotFound: the &#64;agent_availability_pattern with the given sid doesn't exist.
      *   - grpc.Internal: error occurs when removing the agent availability pattern.
      * </pre>
@@ -6900,7 +6900,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;org_id, &#64;entity_type, or &#64;belongs_to_entity have invalid values.
+     *   - grpc.Invalid: the &#64;entity_type, or &#64;belongs_to_entity have invalid values.
      *   - grpc.Internal: error occurs when getting the config entities.
      * </pre>
      */
@@ -7951,7 +7951,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
-     * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the given &#64;org_id.
+     * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
@@ -8652,7 +8652,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;agent_availability_pattern_sid or &#64;org_id have invalid values.
+     *   - grpc.Invalid: the &#64;agent_availability_pattern_sid has an invalid value.
      *   - grpc.NotFound: the &#64;agent_availability_pattern with the given sid doesn't exist.
      *   - grpc.Internal: error occurs when removing the agent availability pattern.
      * </pre>
@@ -8829,7 +8829,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;org_id, &#64;entity_type, or &#64;belongs_to_entity have invalid values.
+     *   - grpc.Invalid: the &#64;entity_type, or &#64;belongs_to_entity have invalid values.
      *   - grpc.Internal: error occurs when getting the config entities.
      * </pre>
      */
@@ -9795,7 +9795,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
-     * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the given &#64;org_id.
+     * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
@@ -10534,7 +10534,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;agent_availability_pattern_sid or &#64;org_id have invalid values.
+     *   - grpc.Invalid: the &#64;agent_availability_pattern_sid has an invalid value.
      *   - grpc.NotFound: the &#64;agent_availability_pattern with the given sid doesn't exist.
      *   - grpc.Internal: error occurs when removing the agent availability pattern.
      * </pre>
@@ -10720,7 +10720,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;org_id, &#64;entity_type, or &#64;belongs_to_entity have invalid values.
+     *   - grpc.Invalid: the &#64;entity_type, or &#64;belongs_to_entity have invalid values.
      *   - grpc.Internal: error occurs when getting the config entities.
      * </pre>
      */
