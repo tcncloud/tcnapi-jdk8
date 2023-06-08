@@ -58,19 +58,6 @@ private static final long serialVersionUID = 0L;
             verifiedEmailSid_ = input.readInt64();
             break;
           }
-          case 18: {
-            com.google.protobuf.StringValue.Builder subBuilder = null;
-            if (verificationKey_ != null) {
-              subBuilder = verificationKey_.toBuilder();
-            }
-            verificationKey_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(verificationKey_);
-              verificationKey_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
           case 26: {
             java.lang.String s = input.readStringRequireUtf8();
 
@@ -171,44 +158,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public long getVerifiedEmailSid() {
     return verifiedEmailSid_;
-  }
-
-  public static final int VERIFICATION_KEY_FIELD_NUMBER = 2;
-  private com.google.protobuf.StringValue verificationKey_;
-  /**
-   * <pre>
-   * verification key
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-   * @return Whether the verificationKey field is set.
-   */
-  @java.lang.Override
-  public boolean hasVerificationKey() {
-    return verificationKey_ != null;
-  }
-  /**
-   * <pre>
-   * verification key
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-   * @return The verificationKey.
-   */
-  @java.lang.Override
-  public com.google.protobuf.StringValue getVerificationKey() {
-    return verificationKey_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : verificationKey_;
-  }
-  /**
-   * <pre>
-   * verification key
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-   */
-  @java.lang.Override
-  public com.google.protobuf.StringValueOrBuilder getVerificationKeyOrBuilder() {
-    return getVerificationKey();
   }
 
   public static final int EMAIL_ADDRESS_FIELD_NUMBER = 3;
@@ -418,9 +367,6 @@ private static final long serialVersionUID = 0L;
     if (verifiedEmailSid_ != 0L) {
       output.writeInt64(1, verifiedEmailSid_);
     }
-    if (verificationKey_ != null) {
-      output.writeMessage(2, getVerificationKey());
-    }
     if (!getEmailAddressBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, emailAddress_);
     }
@@ -451,10 +397,6 @@ private static final long serialVersionUID = 0L;
     if (verifiedEmailSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, verifiedEmailSid_);
-    }
-    if (verificationKey_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getVerificationKey());
     }
     if (!getEmailAddressBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, emailAddress_);
@@ -496,11 +438,6 @@ private static final long serialVersionUID = 0L;
 
     if (getVerifiedEmailSid()
         != other.getVerifiedEmailSid()) return false;
-    if (hasVerificationKey() != other.hasVerificationKey()) return false;
-    if (hasVerificationKey()) {
-      if (!getVerificationKey()
-          .equals(other.getVerificationKey())) return false;
-    }
     if (!getEmailAddress()
         .equals(other.getEmailAddress())) return false;
     if (getVerified()
@@ -536,10 +473,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + VERIFIED_EMAIL_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getVerifiedEmailSid());
-    if (hasVerificationKey()) {
-      hash = (37 * hash) + VERIFICATION_KEY_FIELD_NUMBER;
-      hash = (53 * hash) + getVerificationKey().hashCode();
-    }
     hash = (37 * hash) + EMAIL_ADDRESS_FIELD_NUMBER;
     hash = (53 * hash) + getEmailAddress().hashCode();
     hash = (37 * hash) + VERIFIED_FIELD_NUMBER;
@@ -699,12 +632,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       verifiedEmailSid_ = 0L;
 
-      if (verificationKeyBuilder_ == null) {
-        verificationKey_ = null;
-      } else {
-        verificationKey_ = null;
-        verificationKeyBuilder_ = null;
-      }
       emailAddress_ = "";
 
       verified_ = false;
@@ -756,11 +683,6 @@ private static final long serialVersionUID = 0L;
     public com.tcn.cloud.api.api.commons.VerifiedEmail buildPartial() {
       com.tcn.cloud.api.api.commons.VerifiedEmail result = new com.tcn.cloud.api.api.commons.VerifiedEmail(this);
       result.verifiedEmailSid_ = verifiedEmailSid_;
-      if (verificationKeyBuilder_ == null) {
-        result.verificationKey_ = verificationKey_;
-      } else {
-        result.verificationKey_ = verificationKeyBuilder_.build();
-      }
       result.emailAddress_ = emailAddress_;
       result.verified_ = verified_;
       if (createdOnBuilder_ == null) {
@@ -829,9 +751,6 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.commons.VerifiedEmail.getDefaultInstance()) return this;
       if (other.getVerifiedEmailSid() != 0L) {
         setVerifiedEmailSid(other.getVerifiedEmailSid());
-      }
-      if (other.hasVerificationKey()) {
-        mergeVerificationKey(other.getVerificationKey());
       }
       if (!other.getEmailAddress().isEmpty()) {
         emailAddress_ = other.emailAddress_;
@@ -922,161 +841,6 @@ private static final long serialVersionUID = 0L;
       verifiedEmailSid_ = 0L;
       onChanged();
       return this;
-    }
-
-    private com.google.protobuf.StringValue verificationKey_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> verificationKeyBuilder_;
-    /**
-     * <pre>
-     * verification key
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-     * @return Whether the verificationKey field is set.
-     */
-    public boolean hasVerificationKey() {
-      return verificationKeyBuilder_ != null || verificationKey_ != null;
-    }
-    /**
-     * <pre>
-     * verification key
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-     * @return The verificationKey.
-     */
-    public com.google.protobuf.StringValue getVerificationKey() {
-      if (verificationKeyBuilder_ == null) {
-        return verificationKey_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : verificationKey_;
-      } else {
-        return verificationKeyBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * verification key
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-     */
-    public Builder setVerificationKey(com.google.protobuf.StringValue value) {
-      if (verificationKeyBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        verificationKey_ = value;
-        onChanged();
-      } else {
-        verificationKeyBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * verification key
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-     */
-    public Builder setVerificationKey(
-        com.google.protobuf.StringValue.Builder builderForValue) {
-      if (verificationKeyBuilder_ == null) {
-        verificationKey_ = builderForValue.build();
-        onChanged();
-      } else {
-        verificationKeyBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * verification key
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-     */
-    public Builder mergeVerificationKey(com.google.protobuf.StringValue value) {
-      if (verificationKeyBuilder_ == null) {
-        if (verificationKey_ != null) {
-          verificationKey_ =
-            com.google.protobuf.StringValue.newBuilder(verificationKey_).mergeFrom(value).buildPartial();
-        } else {
-          verificationKey_ = value;
-        }
-        onChanged();
-      } else {
-        verificationKeyBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * verification key
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-     */
-    public Builder clearVerificationKey() {
-      if (verificationKeyBuilder_ == null) {
-        verificationKey_ = null;
-        onChanged();
-      } else {
-        verificationKey_ = null;
-        verificationKeyBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * verification key
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-     */
-    public com.google.protobuf.StringValue.Builder getVerificationKeyBuilder() {
-      
-      onChanged();
-      return getVerificationKeyFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * verification key
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getVerificationKeyOrBuilder() {
-      if (verificationKeyBuilder_ != null) {
-        return verificationKeyBuilder_.getMessageOrBuilder();
-      } else {
-        return verificationKey_ == null ?
-            com.google.protobuf.StringValue.getDefaultInstance() : verificationKey_;
-      }
-    }
-    /**
-     * <pre>
-     * verification key
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-        getVerificationKeyFieldBuilder() {
-      if (verificationKeyBuilder_ == null) {
-        verificationKeyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                getVerificationKey(),
-                getParentForChildren(),
-                isClean());
-        verificationKey_ = null;
-      }
-      return verificationKeyBuilder_;
     }
 
     private java.lang.Object emailAddress_ = "";

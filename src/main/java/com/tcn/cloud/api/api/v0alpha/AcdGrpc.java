@@ -128,6 +128,38 @@ public final class AcdGrpc {
      return getAgentGetConnectedPartyMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyRequest,
+      com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyReply> getManagerAgentGetConnectedPartyMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ManagerAgentGetConnectedParty",
+      requestType = com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyReply.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyRequest,
+      com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyReply> getManagerAgentGetConnectedPartyMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyRequest, com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyReply> getManagerAgentGetConnectedPartyMethod;
+    if ((getManagerAgentGetConnectedPartyMethod = AcdGrpc.getManagerAgentGetConnectedPartyMethod) == null) {
+      synchronized (AcdGrpc.class) {
+        if ((getManagerAgentGetConnectedPartyMethod = AcdGrpc.getManagerAgentGetConnectedPartyMethod) == null) {
+          AcdGrpc.getManagerAgentGetConnectedPartyMethod = getManagerAgentGetConnectedPartyMethod = 
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyRequest, com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyReply>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Acd", "ManagerAgentGetConnectedParty"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyReply.getDefaultInstance()))
+                  .setSchemaDescriptor(new AcdMethodDescriptorSupplier("ManagerAgentGetConnectedParty"))
+                  .build();
+          }
+        }
+     }
+     return getManagerAgentGetConnectedPartyMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AgentIntercomRequest,
       com.tcn.cloud.api.api.v0alpha.AgentIntercomReply> getAgentIntercomMethod;
 
@@ -1719,6 +1751,13 @@ public final class AcdGrpc {
 
     /**
      */
+    public void managerAgentGetConnectedParty(com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyReply> responseObserver) {
+      asyncUnimplementedUnaryCall(getManagerAgentGetConnectedPartyMethod(), responseObserver);
+    }
+
+    /**
+     */
     public void agentIntercom(com.tcn.cloud.api.api.v0alpha.AgentIntercomRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentIntercomReply> responseObserver) {
       asyncUnimplementedUnaryCall(getAgentIntercomMethod(), responseObserver);
@@ -2110,6 +2149,13 @@ public final class AcdGrpc {
                 com.tcn.cloud.api.api.v0alpha.AgentGetConnectedPartyReply>(
                   this, METHODID_AGENT_GET_CONNECTED_PARTY)))
           .addMethod(
+            getManagerAgentGetConnectedPartyMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyRequest,
+                com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyReply>(
+                  this, METHODID_MANAGER_AGENT_GET_CONNECTED_PARTY)))
+          .addMethod(
             getAgentIntercomMethod(),
             asyncUnaryCall(
               new MethodHandlers<
@@ -2494,6 +2540,14 @@ public final class AcdGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentGetConnectedPartyReply> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getAgentGetConnectedPartyMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void managerAgentGetConnectedParty(com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyReply> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getManagerAgentGetConnectedPartyMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -2961,6 +3015,13 @@ public final class AcdGrpc {
 
     /**
      */
+    public com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyReply managerAgentGetConnectedParty(com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getManagerAgentGetConnectedPartyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public com.tcn.cloud.api.api.v0alpha.AgentIntercomReply agentIntercom(com.tcn.cloud.api.api.v0alpha.AgentIntercomRequest request) {
       return blockingUnaryCall(
           getChannel(), getAgentIntercomMethod(), getCallOptions(), request);
@@ -3366,6 +3427,14 @@ public final class AcdGrpc {
         com.tcn.cloud.api.api.v0alpha.AgentGetConnectedPartyRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getAgentGetConnectedPartyMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyReply> managerAgentGetConnectedParty(
+        com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getManagerAgentGetConnectedPartyMethod(), getCallOptions()), request);
     }
 
     /**
@@ -3789,54 +3858,55 @@ public final class AcdGrpc {
   private static final int METHODID_AGENT_GET_STATUS_STREAM = 0;
   private static final int METHODID_AGENT_GET_STATUS = 1;
   private static final int METHODID_AGENT_GET_CONNECTED_PARTY = 2;
-  private static final int METHODID_AGENT_INTERCOM = 3;
-  private static final int METHODID_AGENT_INTERCOM_ACCEPT = 4;
-  private static final int METHODID_AGENT_INTERCOM_REJECT = 5;
-  private static final int METHODID_AGENT_INTERCOM_CANCEL = 6;
-  private static final int METHODID_DIAL_MANUAL_PREPARE = 7;
-  private static final int METHODID_DIAL_MANUAL_CANCEL = 8;
-  private static final int METHODID_DIAL_PREVIEW_PREPARE = 9;
-  private static final int METHODID_AGENT_PAUSE = 10;
-  private static final int METHODID_AGENT_SET_READY = 11;
-  private static final int METHODID_AGENT_GUIBUSY = 12;
-  private static final int METHODID_REPORT_AGENT_SESSION_EVENT = 13;
-  private static final int METHODID_CALLER_REQUEUE = 14;
-  private static final int METHODID_AGENT_DISCONNECT = 15;
-  private static final int METHODID_TRANSFER_WARM_TO_OUTBOUND_CANCEL = 16;
-  private static final int METHODID_TRANSFER_WARM_TO_AGENT_CANCEL = 17;
-  private static final int METHODID_TRANSFER_WARM_TO_OUTBOUND_APPROVE = 18;
-  private static final int METHODID_TRANSFER_WARM_TO_AGENT_APPROVE = 19;
-  private static final int METHODID_CALLER_SEND_TO_VOICEMAIL = 20;
-  private static final int METHODID_AGENT_INVITE_TRANSFER_CALLER_TO_CONFERENCE = 21;
-  private static final int METHODID_AGENT_MONITOR_CALLS = 22;
-  private static final int METHODID_TRANSFER_COLD_TO_OUTBOUND = 23;
-  private static final int METHODID_TRANSFER_COLD_TO_AGENT = 24;
-  private static final int METHODID_TRANSFER_WARM_TO_OUTBOUND_START = 25;
-  private static final int METHODID_CREATE_WARM_OUTBOUND_TRANSFER_MEMBER = 26;
-  private static final int METHODID_REMOVE_TRANSFER_MEMBER = 27;
-  private static final int METHODID_TRANSFER_WARM_TO_AGENT_START = 28;
-  private static final int METHODID_AGENT_GET_CALL_FROM_HOLD = 29;
-  private static final int METHODID_AGENT_GET_SPECIFIC_CALL_FROM_HOLD = 30;
-  private static final int METHODID_ACDGET_ALL_AGENTS_STATUSES = 31;
-  private static final int METHODID_AGENT_PUT_CALL_ON_HOLD = 32;
-  private static final int METHODID_AGENT_RECEIVE_MESSAGE = 33;
-  private static final int METHODID_AGENT_PBXAPPROVE_CALL = 34;
-  private static final int METHODID_AGENT_PBXREJECT_CALL = 35;
-  private static final int METHODID_GET_CALLER_LOST_PEER = 36;
-  private static final int METHODID_CALLER_GET_RAW_EVENT = 37;
-  private static final int METHODID_PEER_AGENT_WITH_CALLER = 38;
-  private static final int METHODID_HOLD_TRANSFER_MEMBER = 39;
-  private static final int METHODID_UNHOLD_TRANSFER_MEMBER = 40;
-  private static final int METHODID_GET_AGENT_CALL_COUNTS = 41;
-  private static final int METHODID_WARM_CALLER_TRANSFER_START = 42;
-  private static final int METHODID_WARM_CALLER_TRANSFER_CANCEL = 43;
-  private static final int METHODID_WARM_CALLER_TRANSFER_APPROVE = 44;
-  private static final int METHODID_PLAY_SOUNDBOARD_ENTITY = 45;
-  private static final int METHODID_STOP_SOUNDBOARD_ENTITY = 46;
-  private static final int METHODID_UPDATE_AGENT_SKILLS = 47;
-  private static final int METHODID_PLAY_DTMF = 48;
-  private static final int METHODID_AGENT_MUTE = 49;
-  private static final int METHODID_AGENT_UNMUTE = 50;
+  private static final int METHODID_MANAGER_AGENT_GET_CONNECTED_PARTY = 3;
+  private static final int METHODID_AGENT_INTERCOM = 4;
+  private static final int METHODID_AGENT_INTERCOM_ACCEPT = 5;
+  private static final int METHODID_AGENT_INTERCOM_REJECT = 6;
+  private static final int METHODID_AGENT_INTERCOM_CANCEL = 7;
+  private static final int METHODID_DIAL_MANUAL_PREPARE = 8;
+  private static final int METHODID_DIAL_MANUAL_CANCEL = 9;
+  private static final int METHODID_DIAL_PREVIEW_PREPARE = 10;
+  private static final int METHODID_AGENT_PAUSE = 11;
+  private static final int METHODID_AGENT_SET_READY = 12;
+  private static final int METHODID_AGENT_GUIBUSY = 13;
+  private static final int METHODID_REPORT_AGENT_SESSION_EVENT = 14;
+  private static final int METHODID_CALLER_REQUEUE = 15;
+  private static final int METHODID_AGENT_DISCONNECT = 16;
+  private static final int METHODID_TRANSFER_WARM_TO_OUTBOUND_CANCEL = 17;
+  private static final int METHODID_TRANSFER_WARM_TO_AGENT_CANCEL = 18;
+  private static final int METHODID_TRANSFER_WARM_TO_OUTBOUND_APPROVE = 19;
+  private static final int METHODID_TRANSFER_WARM_TO_AGENT_APPROVE = 20;
+  private static final int METHODID_CALLER_SEND_TO_VOICEMAIL = 21;
+  private static final int METHODID_AGENT_INVITE_TRANSFER_CALLER_TO_CONFERENCE = 22;
+  private static final int METHODID_AGENT_MONITOR_CALLS = 23;
+  private static final int METHODID_TRANSFER_COLD_TO_OUTBOUND = 24;
+  private static final int METHODID_TRANSFER_COLD_TO_AGENT = 25;
+  private static final int METHODID_TRANSFER_WARM_TO_OUTBOUND_START = 26;
+  private static final int METHODID_CREATE_WARM_OUTBOUND_TRANSFER_MEMBER = 27;
+  private static final int METHODID_REMOVE_TRANSFER_MEMBER = 28;
+  private static final int METHODID_TRANSFER_WARM_TO_AGENT_START = 29;
+  private static final int METHODID_AGENT_GET_CALL_FROM_HOLD = 30;
+  private static final int METHODID_AGENT_GET_SPECIFIC_CALL_FROM_HOLD = 31;
+  private static final int METHODID_ACDGET_ALL_AGENTS_STATUSES = 32;
+  private static final int METHODID_AGENT_PUT_CALL_ON_HOLD = 33;
+  private static final int METHODID_AGENT_RECEIVE_MESSAGE = 34;
+  private static final int METHODID_AGENT_PBXAPPROVE_CALL = 35;
+  private static final int METHODID_AGENT_PBXREJECT_CALL = 36;
+  private static final int METHODID_GET_CALLER_LOST_PEER = 37;
+  private static final int METHODID_CALLER_GET_RAW_EVENT = 38;
+  private static final int METHODID_PEER_AGENT_WITH_CALLER = 39;
+  private static final int METHODID_HOLD_TRANSFER_MEMBER = 40;
+  private static final int METHODID_UNHOLD_TRANSFER_MEMBER = 41;
+  private static final int METHODID_GET_AGENT_CALL_COUNTS = 42;
+  private static final int METHODID_WARM_CALLER_TRANSFER_START = 43;
+  private static final int METHODID_WARM_CALLER_TRANSFER_CANCEL = 44;
+  private static final int METHODID_WARM_CALLER_TRANSFER_APPROVE = 45;
+  private static final int METHODID_PLAY_SOUNDBOARD_ENTITY = 46;
+  private static final int METHODID_STOP_SOUNDBOARD_ENTITY = 47;
+  private static final int METHODID_UPDATE_AGENT_SKILLS = 48;
+  private static final int METHODID_PLAY_DTMF = 49;
+  private static final int METHODID_AGENT_MUTE = 50;
+  private static final int METHODID_AGENT_UNMUTE = 51;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3866,6 +3936,10 @@ public final class AcdGrpc {
         case METHODID_AGENT_GET_CONNECTED_PARTY:
           serviceImpl.agentGetConnectedParty((com.tcn.cloud.api.api.v0alpha.AgentGetConnectedPartyRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentGetConnectedPartyReply>) responseObserver);
+          break;
+        case METHODID_MANAGER_AGENT_GET_CONNECTED_PARTY:
+          serviceImpl.managerAgentGetConnectedParty((com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ManagerAgentGetConnectedPartyReply>) responseObserver);
           break;
         case METHODID_AGENT_INTERCOM:
           serviceImpl.agentIntercom((com.tcn.cloud.api.api.v0alpha.AgentIntercomRequest) request,
@@ -4123,6 +4197,7 @@ public final class AcdGrpc {
               .addMethod(getAgentGetStatusStreamMethod())
               .addMethod(getAgentGetStatusMethod())
               .addMethod(getAgentGetConnectedPartyMethod())
+              .addMethod(getManagerAgentGetConnectedPartyMethod())
               .addMethod(getAgentIntercomMethod())
               .addMethod(getAgentIntercomAcceptMethod())
               .addMethod(getAgentIntercomRejectMethod())

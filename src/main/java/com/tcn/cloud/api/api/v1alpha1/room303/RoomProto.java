@@ -44,6 +44,36 @@ public final class RoomProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_room303_ArchiveRoomRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_room303_ListUsersByOrgIdRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_room303_ListUsersByOrgIdRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_room303_ListUsersByOrgIdResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_room303_ListUsersByOrgIdResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_room303_UserDetails_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_room303_UserDetails_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_room303_UserDetails_HuntGroup_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_room303_UserDetails_HuntGroup_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_room303_UserDetails_AgentProfileGroup_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_room303_UserDetails_AgentProfileGroup_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_room303_UserDetails_LoginInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_room303_UserDetails_LoginInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -54,25 +84,76 @@ public final class RoomProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\037api/v1alpha1/room303/room.proto\022\024api.v" +
-      "1alpha1.room303\032\031api/commons/room303.pro" +
-      "to\"l\n\021CreateRoomRequest\022\022\n\004name\030\001 \001(\tR\004n" +
-      "ame\022)\n\004type\030\002 \001(\0162\025.api.commons.RoomType" +
-      "R\004type\022\030\n\007members\030\003 \003(\tR\007members\")\n\016GetR" +
-      "oomRequest\022\027\n\007room_id\030\001 \001(\tR\006roomId\"\025\n\023L" +
-      "istAllRoomsRequest\"\033\n\031ListRoomsForMember" +
-      "Request\"<\n\021ListRoomsResponse\022\'\n\005rooms\030\001 " +
-      "\003(\0132\021.api.commons.RoomR\005rooms\"-\n\022Archive" +
-      "RoomRequest\022\027\n\007room_id\030\001 \001(\tR\006roomIdB\245\001\n" +
-      "&com.tcn.cloud.api.api.v1alpha1.room303B" +
-      "\tRoomProtoP\001\242\002\003AVR\252\002\024Api.V1alpha1.Room30" +
-      "3\312\002\024Api\\V1alpha1\\Room303\342\002 Api\\V1alpha1\\" +
-      "Room303\\GPBMetadata\352\002\026Api::V1alpha1::Roo" +
-      "m303b\006proto3"
+      "1alpha1.room303\032\025api/commons/org.proto\032)" +
+      "api/commons/org/agent_profile_group.prot" +
+      "o\032\034api/commons/org/labels.proto\032!api/com" +
+      "mons/org/permissions.proto\032\034api/commons/" +
+      "org/trusts.proto\032\032api/commons/org/user.p" +
+      "roto\032\031api/commons/room303.proto\032\026api/com" +
+      "mons/user.proto\032\037google/protobuf/timesta" +
+      "mp.proto\"l\n\021CreateRoomRequest\022\022\n\004name\030\001 " +
+      "\001(\tR\004name\022)\n\004type\030\002 \001(\0162\025.api.commons.Ro" +
+      "omTypeR\004type\022\030\n\007members\030\003 \003(\tR\007members\")" +
+      "\n\016GetRoomRequest\022\027\n\007room_id\030\001 \001(\tR\006roomI" +
+      "d\"\025\n\023ListAllRoomsRequest\"\033\n\031ListRoomsFor" +
+      "MemberRequest\"<\n\021ListRoomsResponse\022\'\n\005ro" +
+      "oms\030\001 \003(\0132\021.api.commons.RoomR\005rooms\"-\n\022A" +
+      "rchiveRoomRequest\022\027\n\007room_id\030\001 \001(\tR\006room" +
+      "Id\"\225\001\n\027ListUsersByOrgIdRequest\022\025\n\006org_id" +
+      "\030\001 \001(\tR\005orgId\022\024\n\005agent\030\002 \001(\010R\005agent\022M\n\017a" +
+      "rchived_filter\030\003 \001(\0162$.api.commons.UserA" +
+      "rchivedStateFilterR\016archivedFilter\"`\n\030Li" +
+      "stUsersByOrgIdResponse\022D\n\014user_details\030\001" +
+      " \003(\0132!.api.v1alpha1.room303.UserDetailsR" +
+      "\013userDetails\"\277\t\n\013UserDetails\022)\n\004user\030\001 \001" +
+      "(\0132\025.api.commons.org.UserR\004user\022\031\n\010org_n" +
+      "ame\030\002 \001(\tR\007orgName\022J\n\nhunt_group\030\003 \001(\0132+" +
+      ".api.v1alpha1.room303.UserDetails.HuntGr" +
+      "oupR\thuntGroup\022c\n\023agent_profile_group\030\004 " +
+      "\001(\01323.api.v1alpha1.room303.UserDetails.A" +
+      "gentProfileGroupR\021agentProfileGroup\022.\n\006s" +
+      "kills\030\005 \003(\0132\026.api.commons.org.SkillR\006ski" +
+      "lls\022M\n\021permission_groups\030\006 \003(\0132 .api.com" +
+      "mons.org.PermissionGroupR\020permissionGrou" +
+      "ps\022R\n\023p3_permission_group\030\007 \001(\0132\".api.co" +
+      "mmons.org.P3PermissionGroupR\021p3Permissio" +
+      "nGroup\022\034\n\tdelegated\030\010 \001(\010R\tdelegated\022.\n\006" +
+      "labels\030\t \003(\0132\026.api.commons.org.LabelR\006la" +
+      "bels\022J\n\nlogin_info\030\n \001(\0132+.api.v1alpha1." +
+      "room303.UserDetails.LoginInfoR\tloginInfo" +
+      "\022\035\n\nbilling_id\030\013 \001(\tR\tbillingId\022.\n\006trust" +
+      "s\030\014 \003(\0132\026.api.commons.org.TrustR\006trusts\032" +
+      "Y\n\tHuntGroup\022$\n\016hunt_group_sid\030\001 \001(\003R\014hu" +
+      "ntGroupSid\022&\n\017hunt_group_name\030\002 \001(\tR\rhun" +
+      "tGroupName\032\201\001\n\021AgentProfileGroup\0223\n\026agen" +
+      "t_profile_group_id\030\001 \001(\tR\023agentProfileGr" +
+      "oupId\0227\n\030agent_profile_group_name\030\002 \001(\tR" +
+      "\025agentProfileGroupName\032\235\002\n\tLoginInfo\022\027\n\007" +
+      "last_ip\030\001 \001(\tR\006lastIp\0229\n\nlast_login\030\002 \001(" +
+      "\0132\032.google.protobuf.TimestampR\tlastLogin" +
+      "\022J\n\023last_password_reset\030\003 \001(\0132\032.google.p" +
+      "rotobuf.TimestampR\021lastPasswordReset\022!\n\014" +
+      "logins_count\030\004 \001(\003R\013loginsCount\022&\n\017has_b" +
+      "locked_ips\030\005 \001(\010R\rhasBlockedIps\022%\n\016email" +
+      "_verified\030\006 \001(\010R\remailVerifiedB\245\001\n&com.t" +
+      "cn.cloud.api.api.v1alpha1.room303B\tRoomP" +
+      "rotoP\001\242\002\003AVR\252\002\024Api.V1alpha1.Room303\312\002\024Ap" +
+      "i\\V1alpha1\\Room303\342\002 Api\\V1alpha1\\Room30" +
+      "3\\GPBMetadata\352\002\026Api::V1alpha1::Room303b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.api.commons.OrgProto.getDescriptor(),
+          com.tcn.cloud.api.api.commons.org.AgentProfileGroupProto.getDescriptor(),
+          com.tcn.cloud.api.api.commons.org.LabelsProto.getDescriptor(),
+          com.tcn.cloud.api.api.commons.org.PermissionsProto.getDescriptor(),
+          com.tcn.cloud.api.api.commons.org.TrustsProto.getDescriptor(),
+          com.tcn.cloud.api.api.commons.org.UserProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.Room303Proto.getDescriptor(),
+          com.tcn.cloud.api.api.commons.UserProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_api_v1alpha1_room303_CreateRoomRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -110,7 +191,51 @@ public final class RoomProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_room303_ArchiveRoomRequest_descriptor,
         new java.lang.String[] { "RoomId", });
+    internal_static_api_v1alpha1_room303_ListUsersByOrgIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_api_v1alpha1_room303_ListUsersByOrgIdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_room303_ListUsersByOrgIdRequest_descriptor,
+        new java.lang.String[] { "OrgId", "Agent", "ArchivedFilter", });
+    internal_static_api_v1alpha1_room303_ListUsersByOrgIdResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_api_v1alpha1_room303_ListUsersByOrgIdResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_room303_ListUsersByOrgIdResponse_descriptor,
+        new java.lang.String[] { "UserDetails", });
+    internal_static_api_v1alpha1_room303_UserDetails_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_api_v1alpha1_room303_UserDetails_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_room303_UserDetails_descriptor,
+        new java.lang.String[] { "User", "OrgName", "HuntGroup", "AgentProfileGroup", "Skills", "PermissionGroups", "P3PermissionGroup", "Delegated", "Labels", "LoginInfo", "BillingId", "Trusts", });
+    internal_static_api_v1alpha1_room303_UserDetails_HuntGroup_descriptor =
+      internal_static_api_v1alpha1_room303_UserDetails_descriptor.getNestedTypes().get(0);
+    internal_static_api_v1alpha1_room303_UserDetails_HuntGroup_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_room303_UserDetails_HuntGroup_descriptor,
+        new java.lang.String[] { "HuntGroupSid", "HuntGroupName", });
+    internal_static_api_v1alpha1_room303_UserDetails_AgentProfileGroup_descriptor =
+      internal_static_api_v1alpha1_room303_UserDetails_descriptor.getNestedTypes().get(1);
+    internal_static_api_v1alpha1_room303_UserDetails_AgentProfileGroup_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_room303_UserDetails_AgentProfileGroup_descriptor,
+        new java.lang.String[] { "AgentProfileGroupId", "AgentProfileGroupName", });
+    internal_static_api_v1alpha1_room303_UserDetails_LoginInfo_descriptor =
+      internal_static_api_v1alpha1_room303_UserDetails_descriptor.getNestedTypes().get(2);
+    internal_static_api_v1alpha1_room303_UserDetails_LoginInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_room303_UserDetails_LoginInfo_descriptor,
+        new java.lang.String[] { "LastIp", "LastLogin", "LastPasswordReset", "LoginsCount", "HasBlockedIps", "EmailVerified", });
+    com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
+    com.tcn.cloud.api.api.commons.org.AgentProfileGroupProto.getDescriptor();
+    com.tcn.cloud.api.api.commons.org.LabelsProto.getDescriptor();
+    com.tcn.cloud.api.api.commons.org.PermissionsProto.getDescriptor();
+    com.tcn.cloud.api.api.commons.org.TrustsProto.getDescriptor();
+    com.tcn.cloud.api.api.commons.org.UserProto.getDescriptor();
     com.tcn.cloud.api.api.commons.Room303Proto.getDescriptor();
+    com.tcn.cloud.api.api.commons.UserProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
