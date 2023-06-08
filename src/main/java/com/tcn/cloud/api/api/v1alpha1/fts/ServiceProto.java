@@ -41,8 +41,8 @@ public final class ServiceProto {
       "\003 \001(\tR\002id2\233\001\n\006FtsApi\022\220\001\n\020GetUploadFileUr" +
       "l\022%.api.v1alpha1.fts.GetUploadFileUrlReq" +
       "\032%.api.v1alpha1.fts.GetUploadFileUrlRes\"" +
-      ".\272\270\221\002\002\030\001\202\323\344\223\002!:\001*\"\034/api/v1alpha1/fts/upl" +
-      "oad_urlB\224\001\n\"com.tcn.cloud.api.api.v1alph" +
+      ".\272\270\221\002\002\030\001\202\323\344\223\002!\"\034/api/v1alpha1/fts/upload" +
+      "_url:\001*B\224\001\n\"com.tcn.cloud.api.api.v1alph" +
       "a1.ftsB\014ServiceProtoP\001\242\002\003AVF\252\002\020Api.V1alp" +
       "ha1.Fts\312\002\020Api\\V1alpha1\\Fts\342\002\034Api\\V1alpha" +
       "1\\Fts\\GPBMetadata\352\002\022Api::V1alpha1::Ftsb\006" +

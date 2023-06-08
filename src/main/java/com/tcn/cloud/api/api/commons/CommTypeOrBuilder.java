@@ -9,6 +9,11 @@ public interface CommTypeOrBuilder extends
 
   /**
    * <code>.api.commons.CallType.Enum call_type = 1 [json_name = "callType"];</code>
+   * @return Whether the callType field is set.
+   */
+  boolean hasCallType();
+  /**
+   * <code>.api.commons.CallType.Enum call_type = 1 [json_name = "callType"];</code>
    * @return The enum numeric value on the wire for callType.
    */
   int getCallTypeValue();
@@ -18,6 +23,11 @@ public interface CommTypeOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.CallType.Enum getCallType();
 
+  /**
+   * <code>.api.commons.EmailType.Enum email_type = 2 [json_name = "emailType"];</code>
+   * @return Whether the emailType field is set.
+   */
+  boolean hasEmailType();
   /**
    * <code>.api.commons.EmailType.Enum email_type = 2 [json_name = "emailType"];</code>
    * @return The enum numeric value on the wire for emailType.
@@ -31,6 +41,11 @@ public interface CommTypeOrBuilder extends
 
   /**
    * <code>.api.commons.SmsType.Enum sms_type = 3 [json_name = "smsType"];</code>
+   * @return Whether the smsType field is set.
+   */
+  boolean hasSmsType();
+  /**
+   * <code>.api.commons.SmsType.Enum sms_type = 3 [json_name = "smsType"];</code>
    * @return The enum numeric value on the wire for smsType.
    */
   int getSmsTypeValue();
@@ -40,5 +55,5 @@ public interface CommTypeOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.SmsType.Enum getSmsType();
 
-  public com.tcn.cloud.api.api.commons.CommType.TypeCase getTypeCase();
+  com.tcn.cloud.api.api.commons.CommType.TypeCase getTypeCase();
 }

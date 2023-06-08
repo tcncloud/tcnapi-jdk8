@@ -26,74 +26,6 @@ private static final long serialVersionUID = 0L;
     return new DequeueScrubbedCallForPreviewRecordReq();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private DequeueScrubbedCallForPreviewRecordReq(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            huntGroupSid_ = input.readInt64();
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            phoneNumber_ = s;
-            break;
-          }
-          case 24: {
-
-            phoneNumIndex_ = input.readInt32();
-            break;
-          }
-          case 32: {
-
-            taskGroupSid_ = input.readInt64();
-            break;
-          }
-          case 40: {
-
-            taskSid_ = input.readInt64();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.CallqueueProto.internal_static_api_v0alpha_DequeueScrubbedCallForPreviewRecordReq_descriptor;
@@ -108,7 +40,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HUNT_GROUP_SID_FIELD_NUMBER = 1;
-  private long huntGroupSid_;
+  private long huntGroupSid_ = 0L;
   /**
    * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
    * @return The huntGroupSid.
@@ -119,7 +51,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PHONE_NUMBER_FIELD_NUMBER = 2;
-  private volatile java.lang.Object phoneNumber_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object phoneNumber_ = "";
   /**
    * <code>string phone_number = 2 [json_name = "phoneNumber"];</code>
    * @return The phoneNumber.
@@ -157,7 +90,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PHONE_NUM_INDEX_FIELD_NUMBER = 3;
-  private int phoneNumIndex_;
+  private int phoneNumIndex_ = 0;
   /**
    * <code>int32 phone_num_index = 3 [json_name = "phoneNumIndex"];</code>
    * @return The phoneNumIndex.
@@ -168,7 +101,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TASK_GROUP_SID_FIELD_NUMBER = 4;
-  private long taskGroupSid_;
+  private long taskGroupSid_ = 0L;
   /**
    * <code>int64 task_group_sid = 4 [json_name = "taskGroupSid"];</code>
    * @return The taskGroupSid.
@@ -179,7 +112,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TASK_SID_FIELD_NUMBER = 5;
-  private long taskSid_;
+  private long taskSid_ = 0L;
   /**
    * <code>int64 task_sid = 5 [json_name = "taskSid"];</code>
    * @return The taskSid.
@@ -206,7 +139,7 @@ private static final long serialVersionUID = 0L;
     if (huntGroupSid_ != 0L) {
       output.writeInt64(1, huntGroupSid_);
     }
-    if (!getPhoneNumberBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumber_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, phoneNumber_);
     }
     if (phoneNumIndex_ != 0) {
@@ -218,7 +151,7 @@ private static final long serialVersionUID = 0L;
     if (taskSid_ != 0L) {
       output.writeInt64(5, taskSid_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -231,7 +164,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, huntGroupSid_);
     }
-    if (!getPhoneNumberBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumber_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, phoneNumber_);
     }
     if (phoneNumIndex_ != 0) {
@@ -246,7 +179,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(5, taskSid_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -271,7 +204,7 @@ private static final long serialVersionUID = 0L;
         != other.getTaskGroupSid()) return false;
     if (getTaskSid()
         != other.getTaskSid()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -295,7 +228,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + TASK_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getTaskSid());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -344,11 +277,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.DequeueScrubbedCallForPreviewRecordReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.DequeueScrubbedCallForPreviewRecordReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -412,32 +347,23 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.DequeueScrubbedCallForPreviewRecordReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       huntGroupSid_ = 0L;
-
       phoneNumber_ = "";
-
       phoneNumIndex_ = 0;
-
       taskGroupSid_ = 0L;
-
       taskSid_ = 0L;
-
       return this;
     }
 
@@ -464,13 +390,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.DequeueScrubbedCallForPreviewRecordReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.DequeueScrubbedCallForPreviewRecordReq result = new com.tcn.cloud.api.api.v0alpha.DequeueScrubbedCallForPreviewRecordReq(this);
-      result.huntGroupSid_ = huntGroupSid_;
-      result.phoneNumber_ = phoneNumber_;
-      result.phoneNumIndex_ = phoneNumIndex_;
-      result.taskGroupSid_ = taskGroupSid_;
-      result.taskSid_ = taskSid_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.DequeueScrubbedCallForPreviewRecordReq result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.huntGroupSid_ = huntGroupSid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.phoneNumber_ = phoneNumber_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.phoneNumIndex_ = phoneNumIndex_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.taskGroupSid_ = taskGroupSid_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.taskSid_ = taskSid_;
+      }
     }
 
     @java.lang.Override
@@ -522,6 +463,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getPhoneNumber().isEmpty()) {
         phoneNumber_ = other.phoneNumber_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getPhoneNumIndex() != 0) {
@@ -533,7 +475,7 @@ private static final long serialVersionUID = 0L;
       if (other.getTaskSid() != 0L) {
         setTaskSid(other.getTaskSid());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -548,19 +490,58 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.DequeueScrubbedCallForPreviewRecordReq parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              huntGroupSid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              phoneNumber_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              phoneNumIndex_ = input.readInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              taskGroupSid_ = input.readInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              taskSid_ = input.readInt64();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.DequeueScrubbedCallForPreviewRecordReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private long huntGroupSid_ ;
     /**
@@ -577,8 +558,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHuntGroupSid(long value) {
-      
+
       huntGroupSid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -587,7 +569,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHuntGroupSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       huntGroupSid_ = 0L;
       onChanged();
       return this;
@@ -634,11 +616,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPhoneNumber(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       phoneNumber_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -647,8 +627,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPhoneNumber() {
-      
       phoneNumber_ = getDefaultInstance().getPhoneNumber();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -659,12 +639,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPhoneNumberBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       phoneNumber_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -684,8 +662,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPhoneNumIndex(int value) {
-      
+
       phoneNumIndex_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -694,7 +673,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPhoneNumIndex() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       phoneNumIndex_ = 0;
       onChanged();
       return this;
@@ -715,8 +694,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTaskGroupSid(long value) {
-      
+
       taskGroupSid_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -725,7 +705,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTaskGroupSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       taskGroupSid_ = 0L;
       onChanged();
       return this;
@@ -746,8 +726,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTaskSid(long value) {
-      
+
       taskSid_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -756,7 +737,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTaskSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       taskSid_ = 0L;
       onChanged();
       return this;
@@ -794,7 +775,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new DequeueScrubbedCallForPreviewRecordReq(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

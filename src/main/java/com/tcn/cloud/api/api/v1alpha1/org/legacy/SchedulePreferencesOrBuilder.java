@@ -135,10 +135,11 @@ public interface SchedulePreferencesOrBuilder extends
    *
    * <code>map&lt;string, string&gt; campaign_links = 9 [json_name = "campaignLinks"];</code>
    */
-
-  java.lang.String getCampaignLinksOrDefault(
+  /* nullable */
+java.lang.String getCampaignLinksOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue);
+      /* nullable */
+java.lang.String defaultValue);
   /**
    * <pre>
    * List of campaign links
@@ -146,7 +147,6 @@ public interface SchedulePreferencesOrBuilder extends
    *
    * <code>map&lt;string, string&gt; campaign_links = 9 [json_name = "campaignLinks"];</code>
    */
-
   java.lang.String getCampaignLinksOrThrow(
       java.lang.String key);
 

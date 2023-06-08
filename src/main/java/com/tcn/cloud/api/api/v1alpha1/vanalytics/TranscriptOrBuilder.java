@@ -268,14 +268,14 @@ public interface TranscriptOrBuilder extends
   /**
    * <code>map&lt;string, .api.v1alpha1.vanalytics.AgentResponse&gt; agent_response = 22 [json_name = "agentResponse"];</code>
    */
-
-  com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse getAgentResponseOrDefault(
+  /* nullable */
+com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse getAgentResponseOrDefault(
       java.lang.String key,
-      com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue);
+      /* nullable */
+com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue);
   /**
    * <code>map&lt;string, .api.v1alpha1.vanalytics.AgentResponse&gt; agent_response = 22 [json_name = "agentResponse"];</code>
    */
-
   com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse getAgentResponseOrThrow(
       java.lang.String key);
 }

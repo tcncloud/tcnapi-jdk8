@@ -158,5 +158,5 @@ public interface VerificationFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getVerificationFieldsOrBuilder(
       int index);
 
-  public com.tcn.cloud.api.api.commons.integrations.VerificationFlow.ValueCase getValueCase();
+  com.tcn.cloud.api.api.commons.integrations.VerificationFlow.ValueCase getValueCase();
 }

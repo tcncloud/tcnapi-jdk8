@@ -1,25 +1,13 @@
 package com.tcn.cloud.api.api.v1alpha1.integrations;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.14.0)",
+    value = "by gRPC proto compiler (version 1.55.1)",
     comments = "Source: api/v1alpha1/integrations/portals.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class PortalManagerApiGrpc {
 
   private PortalManagerApiGrpc() {}
@@ -41,22 +29,21 @@ public final class PortalManagerApiGrpc {
     if ((getUpsertPortalConfigMethod = PortalManagerApiGrpc.getUpsertPortalConfigMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getUpsertPortalConfigMethod = PortalManagerApiGrpc.getUpsertPortalConfigMethod) == null) {
-          PortalManagerApiGrpc.getUpsertPortalConfigMethod = getUpsertPortalConfigMethod = 
+          PortalManagerApiGrpc.getUpsertPortalConfigMethod = getUpsertPortalConfigMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalConfigReq, com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalConfigRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "UpsertPortalConfig"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpsertPortalConfig"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalConfigReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalConfigRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("UpsertPortalConfig"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("UpsertPortalConfig"))
+              .build();
         }
-     }
-     return getUpsertPortalConfigMethod;
+      }
+    }
+    return getUpsertPortalConfigMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsReq,
@@ -73,22 +60,21 @@ public final class PortalManagerApiGrpc {
     if ((getListPortalConfigsMethod = PortalManagerApiGrpc.getListPortalConfigsMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getListPortalConfigsMethod = PortalManagerApiGrpc.getListPortalConfigsMethod) == null) {
-          PortalManagerApiGrpc.getListPortalConfigsMethod = getListPortalConfigsMethod = 
+          PortalManagerApiGrpc.getListPortalConfigsMethod = getListPortalConfigsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsReq, com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "ListPortalConfigs"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPortalConfigs"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("ListPortalConfigs"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("ListPortalConfigs"))
+              .build();
         }
-     }
-     return getListPortalConfigsMethod;
+      }
+    }
+    return getListPortalConfigsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigReq,
@@ -105,22 +91,21 @@ public final class PortalManagerApiGrpc {
     if ((getGetPortalConfigMethod = PortalManagerApiGrpc.getGetPortalConfigMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getGetPortalConfigMethod = PortalManagerApiGrpc.getGetPortalConfigMethod) == null) {
-          PortalManagerApiGrpc.getGetPortalConfigMethod = getGetPortalConfigMethod = 
+          PortalManagerApiGrpc.getGetPortalConfigMethod = getGetPortalConfigMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigReq, com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "GetPortalConfig"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPortalConfig"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("GetPortalConfig"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("GetPortalConfig"))
+              .build();
         }
-     }
-     return getGetPortalConfigMethod;
+      }
+    }
+    return getGetPortalConfigMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigReq,
@@ -137,22 +122,21 @@ public final class PortalManagerApiGrpc {
     if ((getDeletePortalConfigMethod = PortalManagerApiGrpc.getDeletePortalConfigMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getDeletePortalConfigMethod = PortalManagerApiGrpc.getDeletePortalConfigMethod) == null) {
-          PortalManagerApiGrpc.getDeletePortalConfigMethod = getDeletePortalConfigMethod = 
+          PortalManagerApiGrpc.getDeletePortalConfigMethod = getDeletePortalConfigMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigReq, com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "DeletePortalConfig"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeletePortalConfig"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("DeletePortalConfig"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("DeletePortalConfig"))
+              .build();
         }
-     }
-     return getDeletePortalConfigMethod;
+      }
+    }
+    return getDeletePortalConfigMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalConfigLogoReq,
@@ -169,22 +153,21 @@ public final class PortalManagerApiGrpc {
     if ((getUpdatePortalConfigLogoMethod = PortalManagerApiGrpc.getUpdatePortalConfigLogoMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getUpdatePortalConfigLogoMethod = PortalManagerApiGrpc.getUpdatePortalConfigLogoMethod) == null) {
-          PortalManagerApiGrpc.getUpdatePortalConfigLogoMethod = getUpdatePortalConfigLogoMethod = 
+          PortalManagerApiGrpc.getUpdatePortalConfigLogoMethod = getUpdatePortalConfigLogoMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalConfigLogoReq, com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalConfigLogoRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "UpdatePortalConfigLogo"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdatePortalConfigLogo"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalConfigLogoReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalConfigLogoRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("UpdatePortalConfigLogo"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("UpdatePortalConfigLogo"))
+              .build();
         }
-     }
-     return getUpdatePortalConfigLogoMethod;
+      }
+    }
+    return getUpdatePortalConfigLogoMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigLogoReq,
@@ -201,22 +184,21 @@ public final class PortalManagerApiGrpc {
     if ((getGetPortalConfigLogoMethod = PortalManagerApiGrpc.getGetPortalConfigLogoMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getGetPortalConfigLogoMethod = PortalManagerApiGrpc.getGetPortalConfigLogoMethod) == null) {
-          PortalManagerApiGrpc.getGetPortalConfigLogoMethod = getGetPortalConfigLogoMethod = 
+          PortalManagerApiGrpc.getGetPortalConfigLogoMethod = getGetPortalConfigLogoMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigLogoReq, com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigLogoRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "GetPortalConfigLogo"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPortalConfigLogo"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigLogoReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigLogoRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("GetPortalConfigLogo"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("GetPortalConfigLogo"))
+              .build();
         }
-     }
-     return getGetPortalConfigLogoMethod;
+      }
+    }
+    return getGetPortalConfigLogoMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalLinksReq,
@@ -233,22 +215,21 @@ public final class PortalManagerApiGrpc {
     if ((getListPortalLinksMethod = PortalManagerApiGrpc.getListPortalLinksMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getListPortalLinksMethod = PortalManagerApiGrpc.getListPortalLinksMethod) == null) {
-          PortalManagerApiGrpc.getListPortalLinksMethod = getListPortalLinksMethod = 
+          PortalManagerApiGrpc.getListPortalLinksMethod = getListPortalLinksMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalLinksReq, com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalLinksRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "ListPortalLinks"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPortalLinks"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalLinksReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalLinksRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("ListPortalLinks"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("ListPortalLinks"))
+              .build();
         }
-     }
-     return getListPortalLinksMethod;
+      }
+    }
+    return getListPortalLinksMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinkReq,
@@ -265,22 +246,21 @@ public final class PortalManagerApiGrpc {
     if ((getGetPortalLinkMethod = PortalManagerApiGrpc.getGetPortalLinkMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getGetPortalLinkMethod = PortalManagerApiGrpc.getGetPortalLinkMethod) == null) {
-          PortalManagerApiGrpc.getGetPortalLinkMethod = getGetPortalLinkMethod = 
+          PortalManagerApiGrpc.getGetPortalLinkMethod = getGetPortalLinkMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinkReq, com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinkRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "GetPortalLink"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPortalLink"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinkReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinkRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("GetPortalLink"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("GetPortalLink"))
+              .build();
         }
-     }
-     return getGetPortalLinkMethod;
+      }
+    }
+    return getGetPortalLinkMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalLinkReq,
@@ -297,22 +277,21 @@ public final class PortalManagerApiGrpc {
     if ((getDeletePortalLinkMethod = PortalManagerApiGrpc.getDeletePortalLinkMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getDeletePortalLinkMethod = PortalManagerApiGrpc.getDeletePortalLinkMethod) == null) {
-          PortalManagerApiGrpc.getDeletePortalLinkMethod = getDeletePortalLinkMethod = 
+          PortalManagerApiGrpc.getDeletePortalLinkMethod = getDeletePortalLinkMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalLinkReq, com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalLinkRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "DeletePortalLink"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeletePortalLink"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalLinkReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalLinkRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("DeletePortalLink"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("DeletePortalLink"))
+              .build();
         }
-     }
-     return getDeletePortalLinkMethod;
+      }
+    }
+    return getDeletePortalLinkMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.CreatePortalLinksReq,
@@ -329,22 +308,21 @@ public final class PortalManagerApiGrpc {
     if ((getCreatePortalLinksMethod = PortalManagerApiGrpc.getCreatePortalLinksMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getCreatePortalLinksMethod = PortalManagerApiGrpc.getCreatePortalLinksMethod) == null) {
-          PortalManagerApiGrpc.getCreatePortalLinksMethod = getCreatePortalLinksMethod = 
+          PortalManagerApiGrpc.getCreatePortalLinksMethod = getCreatePortalLinksMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.CreatePortalLinksReq, com.tcn.cloud.api.api.v1alpha1.integrations.CreatePortalLinksRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "CreatePortalLinks"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreatePortalLinks"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.CreatePortalLinksReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.CreatePortalLinksRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("CreatePortalLinks"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("CreatePortalLinks"))
+              .build();
         }
-     }
-     return getCreatePortalLinksMethod;
+      }
+    }
+    return getCreatePortalLinksMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalReq,
@@ -361,22 +339,21 @@ public final class PortalManagerApiGrpc {
     if ((getUpsertPortalMethod = PortalManagerApiGrpc.getUpsertPortalMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getUpsertPortalMethod = PortalManagerApiGrpc.getUpsertPortalMethod) == null) {
-          PortalManagerApiGrpc.getUpsertPortalMethod = getUpsertPortalMethod = 
+          PortalManagerApiGrpc.getUpsertPortalMethod = getUpsertPortalMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalReq, com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "UpsertPortal"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpsertPortal"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("UpsertPortal"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("UpsertPortal"))
+              .build();
         }
-     }
-     return getUpsertPortalMethod;
+      }
+    }
+    return getUpsertPortalMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalReq,
@@ -393,22 +370,21 @@ public final class PortalManagerApiGrpc {
     if ((getGetPortalMethod = PortalManagerApiGrpc.getGetPortalMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getGetPortalMethod = PortalManagerApiGrpc.getGetPortalMethod) == null) {
-          PortalManagerApiGrpc.getGetPortalMethod = getGetPortalMethod = 
+          PortalManagerApiGrpc.getGetPortalMethod = getGetPortalMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalReq, com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "GetPortal"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPortal"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("GetPortal"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("GetPortal"))
+              .build();
         }
-     }
-     return getGetPortalMethod;
+      }
+    }
+    return getGetPortalMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalReq,
@@ -425,22 +401,21 @@ public final class PortalManagerApiGrpc {
     if ((getDeletePortalMethod = PortalManagerApiGrpc.getDeletePortalMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getDeletePortalMethod = PortalManagerApiGrpc.getDeletePortalMethod) == null) {
-          PortalManagerApiGrpc.getDeletePortalMethod = getDeletePortalMethod = 
+          PortalManagerApiGrpc.getDeletePortalMethod = getDeletePortalMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalReq, com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "DeletePortal"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeletePortal"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("DeletePortal"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("DeletePortal"))
+              .build();
         }
-     }
-     return getDeletePortalMethod;
+      }
+    }
+    return getDeletePortalMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalsReq,
@@ -457,22 +432,21 @@ public final class PortalManagerApiGrpc {
     if ((getListPortalsMethod = PortalManagerApiGrpc.getListPortalsMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getListPortalsMethod = PortalManagerApiGrpc.getListPortalsMethod) == null) {
-          PortalManagerApiGrpc.getListPortalsMethod = getListPortalsMethod = 
+          PortalManagerApiGrpc.getListPortalsMethod = getListPortalsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalsReq, com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "ListPortals"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPortals"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("ListPortals"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("ListPortals"))
+              .build();
         }
-     }
-     return getListPortalsMethod;
+      }
+    }
+    return getListPortalsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListDetailedPortalsReq,
@@ -489,22 +463,21 @@ public final class PortalManagerApiGrpc {
     if ((getListDetailedPortalsMethod = PortalManagerApiGrpc.getListDetailedPortalsMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getListDetailedPortalsMethod = PortalManagerApiGrpc.getListDetailedPortalsMethod) == null) {
-          PortalManagerApiGrpc.getListDetailedPortalsMethod = getListDetailedPortalsMethod = 
+          PortalManagerApiGrpc.getListDetailedPortalsMethod = getListDetailedPortalsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.ListDetailedPortalsReq, com.tcn.cloud.api.api.v1alpha1.integrations.ListDetailedPortalsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "ListDetailedPortals"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListDetailedPortals"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListDetailedPortalsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListDetailedPortalsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("ListDetailedPortals"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("ListDetailedPortals"))
+              .build();
         }
-     }
-     return getListDetailedPortalsMethod;
+      }
+    }
+    return getListDetailedPortalsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq,
@@ -521,22 +494,21 @@ public final class PortalManagerApiGrpc {
     if ((getGetDetailedPortalMethod = PortalManagerApiGrpc.getGetDetailedPortalMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getGetDetailedPortalMethod = PortalManagerApiGrpc.getGetDetailedPortalMethod) == null) {
-          PortalManagerApiGrpc.getGetDetailedPortalMethod = getGetDetailedPortalMethod = 
+          PortalManagerApiGrpc.getGetDetailedPortalMethod = getGetDetailedPortalMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq, com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "GetDetailedPortal"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDetailedPortal"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("GetDetailedPortal"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("GetDetailedPortal"))
+              .build();
         }
-     }
-     return getGetDetailedPortalMethod;
+      }
+    }
+    return getGetDetailedPortalMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPluginInstanceReq,
@@ -553,22 +525,21 @@ public final class PortalManagerApiGrpc {
     if ((getUpsertPluginInstanceMethod = PortalManagerApiGrpc.getUpsertPluginInstanceMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getUpsertPluginInstanceMethod = PortalManagerApiGrpc.getUpsertPluginInstanceMethod) == null) {
-          PortalManagerApiGrpc.getUpsertPluginInstanceMethod = getUpsertPluginInstanceMethod = 
+          PortalManagerApiGrpc.getUpsertPluginInstanceMethod = getUpsertPluginInstanceMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPluginInstanceReq, com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPluginInstanceRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "UpsertPluginInstance"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpsertPluginInstance"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPluginInstanceReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPluginInstanceRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("UpsertPluginInstance"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("UpsertPluginInstance"))
+              .build();
         }
-     }
-     return getUpsertPluginInstanceMethod;
+      }
+    }
+    return getUpsertPluginInstanceMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.GetPluginInstanceReq,
@@ -585,22 +556,21 @@ public final class PortalManagerApiGrpc {
     if ((getGetPluginInstanceMethod = PortalManagerApiGrpc.getGetPluginInstanceMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getGetPluginInstanceMethod = PortalManagerApiGrpc.getGetPluginInstanceMethod) == null) {
-          PortalManagerApiGrpc.getGetPluginInstanceMethod = getGetPluginInstanceMethod = 
+          PortalManagerApiGrpc.getGetPluginInstanceMethod = getGetPluginInstanceMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.GetPluginInstanceReq, com.tcn.cloud.api.api.v1alpha1.integrations.GetPluginInstanceRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "GetPluginInstance"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPluginInstance"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetPluginInstanceReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetPluginInstanceRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("GetPluginInstance"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("GetPluginInstance"))
+              .build();
         }
-     }
-     return getGetPluginInstanceMethod;
+      }
+    }
+    return getGetPluginInstanceMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceReq,
@@ -617,22 +587,21 @@ public final class PortalManagerApiGrpc {
     if ((getDeletePluginInstanceMethod = PortalManagerApiGrpc.getDeletePluginInstanceMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getDeletePluginInstanceMethod = PortalManagerApiGrpc.getDeletePluginInstanceMethod) == null) {
-          PortalManagerApiGrpc.getDeletePluginInstanceMethod = getDeletePluginInstanceMethod = 
+          PortalManagerApiGrpc.getDeletePluginInstanceMethod = getDeletePluginInstanceMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceReq, com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "DeletePluginInstance"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeletePluginInstance"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("DeletePluginInstance"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("DeletePluginInstance"))
+              .build();
         }
-     }
-     return getDeletePluginInstanceMethod;
+      }
+    }
+    return getDeletePluginInstanceMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceReq,
@@ -649,22 +618,21 @@ public final class PortalManagerApiGrpc {
     if ((getListPluginInstanceMethod = PortalManagerApiGrpc.getListPluginInstanceMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getListPluginInstanceMethod = PortalManagerApiGrpc.getListPluginInstanceMethod) == null) {
-          PortalManagerApiGrpc.getListPluginInstanceMethod = getListPluginInstanceMethod = 
+          PortalManagerApiGrpc.getListPluginInstanceMethod = getListPluginInstanceMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceReq, com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "ListPluginInstance"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPluginInstance"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("ListPluginInstance"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("ListPluginInstance"))
+              .build();
         }
-     }
-     return getListPluginInstanceMethod;
+      }
+    }
+    return getListPluginInstanceMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq,
@@ -681,22 +649,21 @@ public final class PortalManagerApiGrpc {
     if ((getListFlowFieldNamesMethod = PortalManagerApiGrpc.getListFlowFieldNamesMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getListFlowFieldNamesMethod = PortalManagerApiGrpc.getListFlowFieldNamesMethod) == null) {
-          PortalManagerApiGrpc.getListFlowFieldNamesMethod = getListFlowFieldNamesMethod = 
+          PortalManagerApiGrpc.getListFlowFieldNamesMethod = getListFlowFieldNamesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq, com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "ListFlowFieldNames"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListFlowFieldNames"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("ListFlowFieldNames"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("ListFlowFieldNames"))
+              .build();
         }
-     }
-     return getListFlowFieldNamesMethod;
+      }
+    }
+    return getListFlowFieldNamesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsReq,
@@ -713,22 +680,21 @@ public final class PortalManagerApiGrpc {
     if ((getListAvailableVerificationFieldsMethod = PortalManagerApiGrpc.getListAvailableVerificationFieldsMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getListAvailableVerificationFieldsMethod = PortalManagerApiGrpc.getListAvailableVerificationFieldsMethod) == null) {
-          PortalManagerApiGrpc.getListAvailableVerificationFieldsMethod = getListAvailableVerificationFieldsMethod = 
+          PortalManagerApiGrpc.getListAvailableVerificationFieldsMethod = getListAvailableVerificationFieldsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsReq, com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "ListAvailableVerificationFields"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAvailableVerificationFields"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("ListAvailableVerificationFields"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("ListAvailableVerificationFields"))
+              .build();
         }
-     }
-     return getListAvailableVerificationFieldsMethod;
+      }
+    }
+    return getListAvailableVerificationFieldsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsReq,
@@ -745,29 +711,35 @@ public final class PortalManagerApiGrpc {
     if ((getListAvailablePaymentFieldsMethod = PortalManagerApiGrpc.getListAvailablePaymentFieldsMethod) == null) {
       synchronized (PortalManagerApiGrpc.class) {
         if ((getListAvailablePaymentFieldsMethod = PortalManagerApiGrpc.getListAvailablePaymentFieldsMethod) == null) {
-          PortalManagerApiGrpc.getListAvailablePaymentFieldsMethod = getListAvailablePaymentFieldsMethod = 
+          PortalManagerApiGrpc.getListAvailablePaymentFieldsMethod = getListAvailablePaymentFieldsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsReq, com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.integrations.PortalManagerApi", "ListAvailablePaymentFields"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAvailablePaymentFields"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("ListAvailablePaymentFields"))
-                  .build();
-          }
+              .setSchemaDescriptor(new PortalManagerApiMethodDescriptorSupplier("ListAvailablePaymentFields"))
+              .build();
         }
-     }
-     return getListAvailablePaymentFieldsMethod;
+      }
+    }
+    return getListAvailablePaymentFieldsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static PortalManagerApiStub newStub(io.grpc.Channel channel) {
-    return new PortalManagerApiStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<PortalManagerApiStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PortalManagerApiStub>() {
+        @java.lang.Override
+        public PortalManagerApiStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PortalManagerApiStub(channel, callOptions);
+        }
+      };
+    return PortalManagerApiStub.newStub(factory, channel);
   }
 
   /**
@@ -775,7 +747,14 @@ public final class PortalManagerApiGrpc {
    */
   public static PortalManagerApiBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new PortalManagerApiBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<PortalManagerApiBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PortalManagerApiBlockingStub>() {
+        @java.lang.Override
+        public PortalManagerApiBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PortalManagerApiBlockingStub(channel, callOptions);
+        }
+      };
+    return PortalManagerApiBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -783,53 +762,60 @@ public final class PortalManagerApiGrpc {
    */
   public static PortalManagerApiFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new PortalManagerApiFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<PortalManagerApiFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PortalManagerApiFutureStub>() {
+        @java.lang.Override
+        public PortalManagerApiFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PortalManagerApiFutureStub(channel, callOptions);
+        }
+      };
+    return PortalManagerApiFutureStub.newStub(factory, channel);
   }
 
   /**
    */
-  public static abstract class PortalManagerApiImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void upsertPortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalConfigReq request,
+    default void upsertPortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalConfigRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpsertPortalConfigMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertPortalConfigMethod(), responseObserver);
     }
 
     /**
      */
-    public void listPortalConfigs(com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsReq request,
+    default void listPortalConfigs(com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListPortalConfigsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPortalConfigsMethod(), responseObserver);
     }
 
     /**
      */
-    public void getPortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigReq request,
+    default void getPortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetPortalConfigMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPortalConfigMethod(), responseObserver);
     }
 
     /**
      */
-    public void deletePortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigReq request,
+    default void deletePortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeletePortalConfigMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeletePortalConfigMethod(), responseObserver);
     }
 
     /**
      */
-    public void updatePortalConfigLogo(com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalConfigLogoReq request,
+    default void updatePortalConfigLogo(com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalConfigLogoReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalConfigLogoRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdatePortalConfigLogoMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdatePortalConfigLogoMethod(), responseObserver);
     }
 
     /**
      */
-    public void getPortalConfigLogo(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigLogoReq request,
+    default void getPortalConfigLogo(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigLogoReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigLogoRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetPortalConfigLogoMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPortalConfigLogoMethod(), responseObserver);
     }
 
     /**
@@ -837,30 +823,30 @@ public final class PortalManagerApiGrpc {
      * portal links
      * </pre>
      */
-    public void listPortalLinks(com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalLinksReq request,
+    default void listPortalLinks(com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalLinksReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalLinksRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListPortalLinksMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPortalLinksMethod(), responseObserver);
     }
 
     /**
      */
-    public void getPortalLink(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinkReq request,
+    default void getPortalLink(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinkReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinkRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetPortalLinkMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPortalLinkMethod(), responseObserver);
     }
 
     /**
      */
-    public void deletePortalLink(com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalLinkReq request,
+    default void deletePortalLink(com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalLinkReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalLinkRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeletePortalLinkMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeletePortalLinkMethod(), responseObserver);
     }
 
     /**
      */
-    public void createPortalLinks(com.tcn.cloud.api.api.v1alpha1.integrations.CreatePortalLinksReq request,
+    default void createPortalLinks(com.tcn.cloud.api.api.v1alpha1.integrations.CreatePortalLinksReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.CreatePortalLinksRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreatePortalLinksMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreatePortalLinksMethod(), responseObserver);
     }
 
     /**
@@ -868,44 +854,44 @@ public final class PortalManagerApiGrpc {
      * portals
      * </pre>
      */
-    public void upsertPortal(com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalReq request,
+    default void upsertPortal(com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpsertPortalMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertPortalMethod(), responseObserver);
     }
 
     /**
      */
-    public void getPortal(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalReq request,
+    default void getPortal(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetPortalMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPortalMethod(), responseObserver);
     }
 
     /**
      */
-    public void deletePortal(com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalReq request,
+    default void deletePortal(com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeletePortalMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeletePortalMethod(), responseObserver);
     }
 
     /**
      */
-    public void listPortals(com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalsReq request,
+    default void listPortals(com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListPortalsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPortalsMethod(), responseObserver);
     }
 
     /**
      */
-    public void listDetailedPortals(com.tcn.cloud.api.api.v1alpha1.integrations.ListDetailedPortalsReq request,
+    default void listDetailedPortals(com.tcn.cloud.api.api.v1alpha1.integrations.ListDetailedPortalsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListDetailedPortalsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListDetailedPortalsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListDetailedPortalsMethod(), responseObserver);
     }
 
     /**
      */
-    public void getDetailedPortal(com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq request,
+    default void getDetailedPortal(com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetDetailedPortalMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDetailedPortalMethod(), responseObserver);
     }
 
     /**
@@ -913,37 +899,37 @@ public final class PortalManagerApiGrpc {
      * PluginInstances
      * </pre>
      */
-    public void upsertPluginInstance(com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPluginInstanceReq request,
+    default void upsertPluginInstance(com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPluginInstanceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPluginInstanceRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpsertPluginInstanceMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertPluginInstanceMethod(), responseObserver);
     }
 
     /**
      */
-    public void getPluginInstance(com.tcn.cloud.api.api.v1alpha1.integrations.GetPluginInstanceReq request,
+    default void getPluginInstance(com.tcn.cloud.api.api.v1alpha1.integrations.GetPluginInstanceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GetPluginInstanceRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetPluginInstanceMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPluginInstanceMethod(), responseObserver);
     }
 
     /**
      */
-    public void deletePluginInstance(com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceReq request,
+    default void deletePluginInstance(com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeletePluginInstanceMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeletePluginInstanceMethod(), responseObserver);
     }
 
     /**
      */
-    public void listPluginInstance(com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceReq request,
+    default void listPluginInstance(com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListPluginInstanceMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPluginInstanceMethod(), responseObserver);
     }
 
     /**
      */
-    public void listFlowFieldNames(com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq request,
+    default void listFlowFieldNames(com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListFlowFieldNamesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListFlowFieldNamesMethod(), responseObserver);
     }
 
     /**
@@ -951,9 +937,9 @@ public final class PortalManagerApiGrpc {
      * returns the default form fields for verification flow
      * </pre>
      */
-    public void listAvailableVerificationFields(com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsReq request,
+    default void listAvailableVerificationFields(com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAvailableVerificationFieldsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAvailableVerificationFieldsMethod(), responseObserver);
     }
 
     /**
@@ -961,193 +947,36 @@ public final class PortalManagerApiGrpc {
      * returns the default form fields for payment flow
      * </pre>
      */
-    public void listAvailablePaymentFields(com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsReq request,
+    default void listAvailablePaymentFields(com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAvailablePaymentFieldsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getUpsertPortalConfigMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalConfigReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalConfigRes>(
-                  this, METHODID_UPSERT_PORTAL_CONFIG)))
-          .addMethod(
-            getListPortalConfigsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsRes>(
-                  this, METHODID_LIST_PORTAL_CONFIGS)))
-          .addMethod(
-            getGetPortalConfigMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigRes>(
-                  this, METHODID_GET_PORTAL_CONFIG)))
-          .addMethod(
-            getDeletePortalConfigMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigRes>(
-                  this, METHODID_DELETE_PORTAL_CONFIG)))
-          .addMethod(
-            getUpdatePortalConfigLogoMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalConfigLogoReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalConfigLogoRes>(
-                  this, METHODID_UPDATE_PORTAL_CONFIG_LOGO)))
-          .addMethod(
-            getGetPortalConfigLogoMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigLogoReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigLogoRes>(
-                  this, METHODID_GET_PORTAL_CONFIG_LOGO)))
-          .addMethod(
-            getListPortalLinksMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalLinksReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalLinksRes>(
-                  this, METHODID_LIST_PORTAL_LINKS)))
-          .addMethod(
-            getGetPortalLinkMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinkReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinkRes>(
-                  this, METHODID_GET_PORTAL_LINK)))
-          .addMethod(
-            getDeletePortalLinkMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalLinkReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalLinkRes>(
-                  this, METHODID_DELETE_PORTAL_LINK)))
-          .addMethod(
-            getCreatePortalLinksMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.CreatePortalLinksReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.CreatePortalLinksRes>(
-                  this, METHODID_CREATE_PORTAL_LINKS)))
-          .addMethod(
-            getUpsertPortalMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalRes>(
-                  this, METHODID_UPSERT_PORTAL)))
-          .addMethod(
-            getGetPortalMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalRes>(
-                  this, METHODID_GET_PORTAL)))
-          .addMethod(
-            getDeletePortalMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalRes>(
-                  this, METHODID_DELETE_PORTAL)))
-          .addMethod(
-            getListPortalsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalsReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalsRes>(
-                  this, METHODID_LIST_PORTALS)))
-          .addMethod(
-            getListDetailedPortalsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.ListDetailedPortalsReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.ListDetailedPortalsRes>(
-                  this, METHODID_LIST_DETAILED_PORTALS)))
-          .addMethod(
-            getGetDetailedPortalMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalRes>(
-                  this, METHODID_GET_DETAILED_PORTAL)))
-          .addMethod(
-            getUpsertPluginInstanceMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPluginInstanceReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPluginInstanceRes>(
-                  this, METHODID_UPSERT_PLUGIN_INSTANCE)))
-          .addMethod(
-            getGetPluginInstanceMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.GetPluginInstanceReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.GetPluginInstanceRes>(
-                  this, METHODID_GET_PLUGIN_INSTANCE)))
-          .addMethod(
-            getDeletePluginInstanceMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceRes>(
-                  this, METHODID_DELETE_PLUGIN_INSTANCE)))
-          .addMethod(
-            getListPluginInstanceMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceRes>(
-                  this, METHODID_LIST_PLUGIN_INSTANCE)))
-          .addMethod(
-            getListFlowFieldNamesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesRes>(
-                  this, METHODID_LIST_FLOW_FIELD_NAMES)))
-          .addMethod(
-            getListAvailableVerificationFieldsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsRes>(
-                  this, METHODID_LIST_AVAILABLE_VERIFICATION_FIELDS)))
-          .addMethod(
-            getListAvailablePaymentFieldsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsReq,
-                com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsRes>(
-                  this, METHODID_LIST_AVAILABLE_PAYMENT_FIELDS)))
-          .build();
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAvailablePaymentFieldsMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service PortalManagerApi.
    */
-  public static final class PortalManagerApiStub extends io.grpc.stub.AbstractStub<PortalManagerApiStub> {
-    private PortalManagerApiStub(io.grpc.Channel channel) {
-      super(channel);
-    }
+  public static abstract class PortalManagerApiImplBase
+      implements io.grpc.BindableService, AsyncService {
 
-    private PortalManagerApiStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return PortalManagerApiGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service PortalManagerApi.
+   */
+  public static final class PortalManagerApiStub
+      extends io.grpc.stub.AbstractAsyncStub<PortalManagerApiStub> {
+    private PortalManagerApiStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PortalManagerApiStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected PortalManagerApiStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new PortalManagerApiStub(channel, callOptions);
     }
 
@@ -1155,7 +984,7 @@ public final class PortalManagerApiGrpc {
      */
     public void upsertPortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalConfigRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpsertPortalConfigMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1163,7 +992,7 @@ public final class PortalManagerApiGrpc {
      */
     public void listPortalConfigs(com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListPortalConfigsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1171,7 +1000,7 @@ public final class PortalManagerApiGrpc {
      */
     public void getPortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetPortalConfigMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1179,7 +1008,7 @@ public final class PortalManagerApiGrpc {
      */
     public void deletePortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeletePortalConfigMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1187,7 +1016,7 @@ public final class PortalManagerApiGrpc {
      */
     public void updatePortalConfigLogo(com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalConfigLogoReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalConfigLogoRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdatePortalConfigLogoMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1195,7 +1024,7 @@ public final class PortalManagerApiGrpc {
      */
     public void getPortalConfigLogo(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigLogoReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigLogoRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetPortalConfigLogoMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1206,7 +1035,7 @@ public final class PortalManagerApiGrpc {
      */
     public void listPortalLinks(com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalLinksReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalLinksRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListPortalLinksMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1214,7 +1043,7 @@ public final class PortalManagerApiGrpc {
      */
     public void getPortalLink(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinkReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinkRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetPortalLinkMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1222,7 +1051,7 @@ public final class PortalManagerApiGrpc {
      */
     public void deletePortalLink(com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalLinkReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalLinkRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeletePortalLinkMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1230,7 +1059,7 @@ public final class PortalManagerApiGrpc {
      */
     public void createPortalLinks(com.tcn.cloud.api.api.v1alpha1.integrations.CreatePortalLinksReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.CreatePortalLinksRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreatePortalLinksMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1241,7 +1070,7 @@ public final class PortalManagerApiGrpc {
      */
     public void upsertPortal(com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpsertPortalMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1249,7 +1078,7 @@ public final class PortalManagerApiGrpc {
      */
     public void getPortal(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetPortalMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1257,7 +1086,7 @@ public final class PortalManagerApiGrpc {
      */
     public void deletePortal(com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeletePortalMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1265,7 +1094,7 @@ public final class PortalManagerApiGrpc {
      */
     public void listPortals(com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListPortalsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1273,7 +1102,7 @@ public final class PortalManagerApiGrpc {
      */
     public void listDetailedPortals(com.tcn.cloud.api.api.v1alpha1.integrations.ListDetailedPortalsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListDetailedPortalsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListDetailedPortalsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1281,7 +1110,7 @@ public final class PortalManagerApiGrpc {
      */
     public void getDetailedPortal(com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetDetailedPortalMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1292,7 +1121,7 @@ public final class PortalManagerApiGrpc {
      */
     public void upsertPluginInstance(com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPluginInstanceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPluginInstanceRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpsertPluginInstanceMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1300,7 +1129,7 @@ public final class PortalManagerApiGrpc {
      */
     public void getPluginInstance(com.tcn.cloud.api.api.v1alpha1.integrations.GetPluginInstanceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GetPluginInstanceRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetPluginInstanceMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1308,7 +1137,7 @@ public final class PortalManagerApiGrpc {
      */
     public void deletePluginInstance(com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeletePluginInstanceMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1316,7 +1145,7 @@ public final class PortalManagerApiGrpc {
      */
     public void listPluginInstance(com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListPluginInstanceMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1324,7 +1153,7 @@ public final class PortalManagerApiGrpc {
      */
     public void listFlowFieldNames(com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListFlowFieldNamesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1335,7 +1164,7 @@ public final class PortalManagerApiGrpc {
      */
     public void listAvailableVerificationFields(com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAvailableVerificationFieldsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1346,68 +1175,66 @@ public final class PortalManagerApiGrpc {
      */
     public void listAvailablePaymentFields(com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAvailablePaymentFieldsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service PortalManagerApi.
    */
-  public static final class PortalManagerApiBlockingStub extends io.grpc.stub.AbstractStub<PortalManagerApiBlockingStub> {
-    private PortalManagerApiBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private PortalManagerApiBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class PortalManagerApiBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<PortalManagerApiBlockingStub> {
+    private PortalManagerApiBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PortalManagerApiBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected PortalManagerApiBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new PortalManagerApiBlockingStub(channel, callOptions);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalConfigRes upsertPortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalConfigReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpsertPortalConfigMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsRes listPortalConfigs(com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListPortalConfigsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigRes getPortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPortalConfigMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigRes deletePortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeletePortalConfigMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalConfigLogoRes updatePortalConfigLogo(com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalConfigLogoReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdatePortalConfigLogoMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigLogoRes getPortalConfigLogo(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigLogoReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPortalConfigLogoMethod(), getCallOptions(), request);
     }
 
@@ -1417,28 +1244,28 @@ public final class PortalManagerApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalLinksRes listPortalLinks(com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalLinksReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListPortalLinksMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinkRes getPortalLink(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinkReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPortalLinkMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalLinkRes deletePortalLink(com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalLinkReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeletePortalLinkMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.CreatePortalLinksRes createPortalLinks(com.tcn.cloud.api.api.v1alpha1.integrations.CreatePortalLinksReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreatePortalLinksMethod(), getCallOptions(), request);
     }
 
@@ -1448,42 +1275,42 @@ public final class PortalManagerApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalRes upsertPortal(com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpsertPortalMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalRes getPortal(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPortalMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalRes deletePortal(com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeletePortalMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalsRes listPortals(com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListPortalsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.ListDetailedPortalsRes listDetailedPortals(com.tcn.cloud.api.api.v1alpha1.integrations.ListDetailedPortalsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListDetailedPortalsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalRes getDetailedPortal(com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetDetailedPortalMethod(), getCallOptions(), request);
     }
 
@@ -1493,35 +1320,35 @@ public final class PortalManagerApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPluginInstanceRes upsertPluginInstance(com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPluginInstanceReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpsertPluginInstanceMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.GetPluginInstanceRes getPluginInstance(com.tcn.cloud.api.api.v1alpha1.integrations.GetPluginInstanceReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPluginInstanceMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceRes deletePluginInstance(com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeletePluginInstanceMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceRes listPluginInstance(com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListPluginInstanceMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesRes listFlowFieldNames(com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListFlowFieldNamesMethod(), getCallOptions(), request);
     }
 
@@ -1531,7 +1358,7 @@ public final class PortalManagerApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsRes listAvailableVerificationFields(com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAvailableVerificationFieldsMethod(), getCallOptions(), request);
     }
 
@@ -1541,26 +1368,24 @@ public final class PortalManagerApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsRes listAvailablePaymentFields(com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAvailablePaymentFieldsMethod(), getCallOptions(), request);
     }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service PortalManagerApi.
    */
-  public static final class PortalManagerApiFutureStub extends io.grpc.stub.AbstractStub<PortalManagerApiFutureStub> {
-    private PortalManagerApiFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private PortalManagerApiFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class PortalManagerApiFutureStub
+      extends io.grpc.stub.AbstractFutureStub<PortalManagerApiFutureStub> {
+    private PortalManagerApiFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PortalManagerApiFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected PortalManagerApiFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new PortalManagerApiFutureStub(channel, callOptions);
     }
 
@@ -1568,7 +1393,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalConfigRes> upsertPortalConfig(
         com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalConfigReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpsertPortalConfigMethod(), getCallOptions()), request);
     }
 
@@ -1576,7 +1401,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsRes> listPortalConfigs(
         com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListPortalConfigsMethod(), getCallOptions()), request);
     }
 
@@ -1584,7 +1409,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigRes> getPortalConfig(
         com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetPortalConfigMethod(), getCallOptions()), request);
     }
 
@@ -1592,7 +1417,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigRes> deletePortalConfig(
         com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeletePortalConfigMethod(), getCallOptions()), request);
     }
 
@@ -1600,7 +1425,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalConfigLogoRes> updatePortalConfigLogo(
         com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalConfigLogoReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdatePortalConfigLogoMethod(), getCallOptions()), request);
     }
 
@@ -1608,7 +1433,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigLogoRes> getPortalConfigLogo(
         com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigLogoReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetPortalConfigLogoMethod(), getCallOptions()), request);
     }
 
@@ -1619,7 +1444,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalLinksRes> listPortalLinks(
         com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalLinksReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListPortalLinksMethod(), getCallOptions()), request);
     }
 
@@ -1627,7 +1452,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinkRes> getPortalLink(
         com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinkReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetPortalLinkMethod(), getCallOptions()), request);
     }
 
@@ -1635,7 +1460,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalLinkRes> deletePortalLink(
         com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalLinkReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeletePortalLinkMethod(), getCallOptions()), request);
     }
 
@@ -1643,7 +1468,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.CreatePortalLinksRes> createPortalLinks(
         com.tcn.cloud.api.api.v1alpha1.integrations.CreatePortalLinksReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreatePortalLinksMethod(), getCallOptions()), request);
     }
 
@@ -1654,7 +1479,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalRes> upsertPortal(
         com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpsertPortalMethod(), getCallOptions()), request);
     }
 
@@ -1662,7 +1487,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalRes> getPortal(
         com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetPortalMethod(), getCallOptions()), request);
     }
 
@@ -1670,7 +1495,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalRes> deletePortal(
         com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeletePortalMethod(), getCallOptions()), request);
     }
 
@@ -1678,7 +1503,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalsRes> listPortals(
         com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListPortalsMethod(), getCallOptions()), request);
     }
 
@@ -1686,7 +1511,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.ListDetailedPortalsRes> listDetailedPortals(
         com.tcn.cloud.api.api.v1alpha1.integrations.ListDetailedPortalsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListDetailedPortalsMethod(), getCallOptions()), request);
     }
 
@@ -1694,7 +1519,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalRes> getDetailedPortal(
         com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetDetailedPortalMethod(), getCallOptions()), request);
     }
 
@@ -1705,7 +1530,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPluginInstanceRes> upsertPluginInstance(
         com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPluginInstanceReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpsertPluginInstanceMethod(), getCallOptions()), request);
     }
 
@@ -1713,7 +1538,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.GetPluginInstanceRes> getPluginInstance(
         com.tcn.cloud.api.api.v1alpha1.integrations.GetPluginInstanceReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetPluginInstanceMethod(), getCallOptions()), request);
     }
 
@@ -1721,7 +1546,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceRes> deletePluginInstance(
         com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeletePluginInstanceMethod(), getCallOptions()), request);
     }
 
@@ -1729,7 +1554,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceRes> listPluginInstance(
         com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListPluginInstanceMethod(), getCallOptions()), request);
     }
 
@@ -1737,7 +1562,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesRes> listFlowFieldNames(
         com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListFlowFieldNamesMethod(), getCallOptions()), request);
     }
 
@@ -1748,7 +1573,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsRes> listAvailableVerificationFields(
         com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAvailableVerificationFieldsMethod(), getCallOptions()), request);
     }
 
@@ -1759,7 +1584,7 @@ public final class PortalManagerApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsRes> listAvailablePaymentFields(
         com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAvailablePaymentFieldsMethod(), getCallOptions()), request);
     }
   }
@@ -1793,10 +1618,10 @@ public final class PortalManagerApiGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final PortalManagerApiImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(PortalManagerApiImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -1911,6 +1736,172 @@ public final class PortalManagerApiGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getUpsertPortalConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalConfigReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalConfigRes>(
+                service, METHODID_UPSERT_PORTAL_CONFIG)))
+        .addMethod(
+          getListPortalConfigsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsRes>(
+                service, METHODID_LIST_PORTAL_CONFIGS)))
+        .addMethod(
+          getGetPortalConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigRes>(
+                service, METHODID_GET_PORTAL_CONFIG)))
+        .addMethod(
+          getDeletePortalConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigRes>(
+                service, METHODID_DELETE_PORTAL_CONFIG)))
+        .addMethod(
+          getUpdatePortalConfigLogoMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalConfigLogoReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalConfigLogoRes>(
+                service, METHODID_UPDATE_PORTAL_CONFIG_LOGO)))
+        .addMethod(
+          getGetPortalConfigLogoMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigLogoReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigLogoRes>(
+                service, METHODID_GET_PORTAL_CONFIG_LOGO)))
+        .addMethod(
+          getListPortalLinksMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalLinksReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalLinksRes>(
+                service, METHODID_LIST_PORTAL_LINKS)))
+        .addMethod(
+          getGetPortalLinkMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinkReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinkRes>(
+                service, METHODID_GET_PORTAL_LINK)))
+        .addMethod(
+          getDeletePortalLinkMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalLinkReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalLinkRes>(
+                service, METHODID_DELETE_PORTAL_LINK)))
+        .addMethod(
+          getCreatePortalLinksMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.CreatePortalLinksReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.CreatePortalLinksRes>(
+                service, METHODID_CREATE_PORTAL_LINKS)))
+        .addMethod(
+          getUpsertPortalMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPortalRes>(
+                service, METHODID_UPSERT_PORTAL)))
+        .addMethod(
+          getGetPortalMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalRes>(
+                service, METHODID_GET_PORTAL)))
+        .addMethod(
+          getDeletePortalMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalRes>(
+                service, METHODID_DELETE_PORTAL)))
+        .addMethod(
+          getListPortalsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalsReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalsRes>(
+                service, METHODID_LIST_PORTALS)))
+        .addMethod(
+          getListDetailedPortalsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.ListDetailedPortalsReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.ListDetailedPortalsRes>(
+                service, METHODID_LIST_DETAILED_PORTALS)))
+        .addMethod(
+          getGetDetailedPortalMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.GetDetailedPortalRes>(
+                service, METHODID_GET_DETAILED_PORTAL)))
+        .addMethod(
+          getUpsertPluginInstanceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPluginInstanceReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.UpsertPluginInstanceRes>(
+                service, METHODID_UPSERT_PLUGIN_INSTANCE)))
+        .addMethod(
+          getGetPluginInstanceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.GetPluginInstanceReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.GetPluginInstanceRes>(
+                service, METHODID_GET_PLUGIN_INSTANCE)))
+        .addMethod(
+          getDeletePluginInstanceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.DeletePluginInstanceRes>(
+                service, METHODID_DELETE_PLUGIN_INSTANCE)))
+        .addMethod(
+          getListPluginInstanceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.ListPluginInstanceRes>(
+                service, METHODID_LIST_PLUGIN_INSTANCE)))
+        .addMethod(
+          getListFlowFieldNamesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesRes>(
+                service, METHODID_LIST_FLOW_FIELD_NAMES)))
+        .addMethod(
+          getListAvailableVerificationFieldsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsRes>(
+                service, METHODID_LIST_AVAILABLE_VERIFICATION_FIELDS)))
+        .addMethod(
+          getListAvailablePaymentFieldsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsReq,
+              com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailablePaymentFieldsRes>(
+                service, METHODID_LIST_AVAILABLE_PAYMENT_FIELDS)))
+        .build();
   }
 
   private static abstract class PortalManagerApiBaseDescriptorSupplier

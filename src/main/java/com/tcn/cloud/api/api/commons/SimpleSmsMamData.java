@@ -32,122 +32,6 @@ private static final long serialVersionUID = 0L;
     return new SimpleSmsMamData();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private SimpleSmsMamData(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            src_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            dst_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            msg_ = s;
-            break;
-          }
-          case 32: {
-
-            smsGroupSid_ = input.readInt64();
-            break;
-          }
-          case 40: {
-
-            smsTaskSid_ = input.readInt64();
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            isTollFree_ = s;
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            isTimeZone_ = s;
-            break;
-          }
-          case 66: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            providerName_ = s;
-            break;
-          }
-          case 72: {
-
-            huntGroupSid_ = input.readInt64();
-            break;
-          }
-          case 80: {
-
-            clientSid_ = input.readInt64();
-            break;
-          }
-          case 90: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              simpleSmsMamMetaData_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.SimpleSmsMamKeyValue>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            simpleSmsMamMetaData_.add(
-                input.readMessage(com.tcn.cloud.api.api.commons.SimpleSmsMamKeyValue.parser(), extensionRegistry));
-            break;
-          }
-          case 96: {
-
-            dstCountryCode_ = input.readInt64();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        simpleSmsMamMetaData_ = java.util.Collections.unmodifiableList(simpleSmsMamMetaData_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.SmsProto.internal_static_api_commons_SimpleSmsMamData_descriptor;
@@ -162,7 +46,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SRC_FIELD_NUMBER = 1;
-  private volatile java.lang.Object src_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object src_ = "";
   /**
    * <code>string src = 1 [json_name = "src"];</code>
    * @return The src.
@@ -200,7 +85,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DST_FIELD_NUMBER = 2;
-  private volatile java.lang.Object dst_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object dst_ = "";
   /**
    * <code>string dst = 2 [json_name = "dst"];</code>
    * @return The dst.
@@ -238,7 +124,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MSG_FIELD_NUMBER = 3;
-  private volatile java.lang.Object msg_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object msg_ = "";
   /**
    * <code>string msg = 3 [json_name = "msg"];</code>
    * @return The msg.
@@ -276,7 +163,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SMS_GROUP_SID_FIELD_NUMBER = 4;
-  private long smsGroupSid_;
+  private long smsGroupSid_ = 0L;
   /**
    * <code>int64 sms_group_sid = 4 [json_name = "smsGroupSid"];</code>
    * @return The smsGroupSid.
@@ -287,7 +174,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SMS_TASK_SID_FIELD_NUMBER = 5;
-  private long smsTaskSid_;
+  private long smsTaskSid_ = 0L;
   /**
    * <code>int64 sms_task_sid = 5 [json_name = "smsTaskSid"];</code>
    * @return The smsTaskSid.
@@ -298,7 +185,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IS_TOLL_FREE_FIELD_NUMBER = 6;
-  private volatile java.lang.Object isTollFree_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object isTollFree_ = "";
   /**
    * <code>string is_toll_free = 6 [json_name = "isTollFree"];</code>
    * @return The isTollFree.
@@ -336,7 +224,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IS_TIME_ZONE_FIELD_NUMBER = 7;
-  private volatile java.lang.Object isTimeZone_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object isTimeZone_ = "";
   /**
    * <code>string is_time_zone = 7 [json_name = "isTimeZone"];</code>
    * @return The isTimeZone.
@@ -374,7 +263,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PROVIDER_NAME_FIELD_NUMBER = 8;
-  private volatile java.lang.Object providerName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object providerName_ = "";
   /**
    * <code>string provider_name = 8 [json_name = "providerName"];</code>
    * @return The providerName.
@@ -412,7 +302,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HUNT_GROUP_SID_FIELD_NUMBER = 9;
-  private long huntGroupSid_;
+  private long huntGroupSid_ = 0L;
   /**
    * <code>int64 hunt_group_sid = 9 [json_name = "huntGroupSid"];</code>
    * @return The huntGroupSid.
@@ -423,7 +313,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CLIENT_SID_FIELD_NUMBER = 10;
-  private long clientSid_;
+  private long clientSid_ = 0L;
   /**
    * <code>int64 client_sid = 10 [json_name = "clientSid"];</code>
    * @return The clientSid.
@@ -434,6 +324,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SIMPLE_SMS_MAM_META_DATA_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.SimpleSmsMamKeyValue> simpleSmsMamMetaData_;
   /**
    * <code>repeated .api.commons.SimpleSmsMamKeyValue simple_sms_mam_meta_data = 11 [json_name = "simpleSmsMamMetaData"];</code>
@@ -474,7 +365,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DST_COUNTRY_CODE_FIELD_NUMBER = 12;
-  private long dstCountryCode_;
+  private long dstCountryCode_ = 0L;
   /**
    * <code>int64 dst_country_code = 12 [json_name = "dstCountryCode"];</code>
    * @return The dstCountryCode.
@@ -498,13 +389,13 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getSrcBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(src_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, src_);
     }
-    if (!getDstBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dst_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, dst_);
     }
-    if (!getMsgBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(msg_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, msg_);
     }
     if (smsGroupSid_ != 0L) {
@@ -513,13 +404,13 @@ private static final long serialVersionUID = 0L;
     if (smsTaskSid_ != 0L) {
       output.writeInt64(5, smsTaskSid_);
     }
-    if (!getIsTollFreeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(isTollFree_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, isTollFree_);
     }
-    if (!getIsTimeZoneBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(isTimeZone_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, isTimeZone_);
     }
-    if (!getProviderNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(providerName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, providerName_);
     }
     if (huntGroupSid_ != 0L) {
@@ -534,7 +425,7 @@ private static final long serialVersionUID = 0L;
     if (dstCountryCode_ != 0L) {
       output.writeInt64(12, dstCountryCode_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -543,13 +434,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getSrcBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(src_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, src_);
     }
-    if (!getDstBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dst_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, dst_);
     }
-    if (!getMsgBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(msg_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, msg_);
     }
     if (smsGroupSid_ != 0L) {
@@ -560,13 +451,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(5, smsTaskSid_);
     }
-    if (!getIsTollFreeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(isTollFree_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, isTollFree_);
     }
-    if (!getIsTimeZoneBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(isTimeZone_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, isTimeZone_);
     }
-    if (!getProviderNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(providerName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, providerName_);
     }
     if (huntGroupSid_ != 0L) {
@@ -585,7 +476,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(12, dstCountryCode_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -624,7 +515,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getSimpleSmsMamMetaDataList())) return false;
     if (getDstCountryCode()
         != other.getDstCountryCode()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -666,7 +557,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + DST_COUNTRY_CODE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getDstCountryCode());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -715,11 +606,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.SimpleSmsMamData parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.SimpleSmsMamData parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -783,51 +676,36 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.SimpleSmsMamData.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getSimpleSmsMamMetaDataFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       src_ = "";
-
       dst_ = "";
-
       msg_ = "";
-
       smsGroupSid_ = 0L;
-
       smsTaskSid_ = 0L;
-
       isTollFree_ = "";
-
       isTimeZone_ = "";
-
       providerName_ = "";
-
       huntGroupSid_ = 0L;
-
       clientSid_ = 0L;
-
       if (simpleSmsMamMetaDataBuilder_ == null) {
         simpleSmsMamMetaData_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        simpleSmsMamMetaData_ = null;
         simpleSmsMamMetaDataBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000400);
       dstCountryCode_ = 0L;
-
       return this;
     }
 
@@ -854,29 +732,59 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.SimpleSmsMamData buildPartial() {
       com.tcn.cloud.api.api.commons.SimpleSmsMamData result = new com.tcn.cloud.api.api.commons.SimpleSmsMamData(this);
-      int from_bitField0_ = bitField0_;
-      result.src_ = src_;
-      result.dst_ = dst_;
-      result.msg_ = msg_;
-      result.smsGroupSid_ = smsGroupSid_;
-      result.smsTaskSid_ = smsTaskSid_;
-      result.isTollFree_ = isTollFree_;
-      result.isTimeZone_ = isTimeZone_;
-      result.providerName_ = providerName_;
-      result.huntGroupSid_ = huntGroupSid_;
-      result.clientSid_ = clientSid_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.SimpleSmsMamData result) {
       if (simpleSmsMamMetaDataBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000400) != 0)) {
           simpleSmsMamMetaData_ = java.util.Collections.unmodifiableList(simpleSmsMamMetaData_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000400);
         }
         result.simpleSmsMamMetaData_ = simpleSmsMamMetaData_;
       } else {
         result.simpleSmsMamMetaData_ = simpleSmsMamMetaDataBuilder_.build();
       }
-      result.dstCountryCode_ = dstCountryCode_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.SimpleSmsMamData result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.src_ = src_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.dst_ = dst_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.msg_ = msg_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.smsGroupSid_ = smsGroupSid_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.smsTaskSid_ = smsTaskSid_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.isTollFree_ = isTollFree_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.isTimeZone_ = isTimeZone_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.providerName_ = providerName_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.huntGroupSid_ = huntGroupSid_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.clientSid_ = clientSid_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.dstCountryCode_ = dstCountryCode_;
+      }
     }
 
     @java.lang.Override
@@ -925,14 +833,17 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.commons.SimpleSmsMamData.getDefaultInstance()) return this;
       if (!other.getSrc().isEmpty()) {
         src_ = other.src_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getDst().isEmpty()) {
         dst_ = other.dst_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getMsg().isEmpty()) {
         msg_ = other.msg_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.getSmsGroupSid() != 0L) {
@@ -943,14 +854,17 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getIsTollFree().isEmpty()) {
         isTollFree_ = other.isTollFree_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (!other.getIsTimeZone().isEmpty()) {
         isTimeZone_ = other.isTimeZone_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (!other.getProviderName().isEmpty()) {
         providerName_ = other.providerName_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (other.getHuntGroupSid() != 0L) {
@@ -963,7 +877,7 @@ private static final long serialVersionUID = 0L;
         if (!other.simpleSmsMamMetaData_.isEmpty()) {
           if (simpleSmsMamMetaData_.isEmpty()) {
             simpleSmsMamMetaData_ = other.simpleSmsMamMetaData_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000400);
           } else {
             ensureSimpleSmsMamMetaDataIsMutable();
             simpleSmsMamMetaData_.addAll(other.simpleSmsMamMetaData_);
@@ -976,7 +890,7 @@ private static final long serialVersionUID = 0L;
             simpleSmsMamMetaDataBuilder_.dispose();
             simpleSmsMamMetaDataBuilder_ = null;
             simpleSmsMamMetaData_ = other.simpleSmsMamMetaData_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000400);
             simpleSmsMamMetaDataBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getSimpleSmsMamMetaDataFieldBuilder() : null;
@@ -988,7 +902,7 @@ private static final long serialVersionUID = 0L;
       if (other.getDstCountryCode() != 0L) {
         setDstCountryCode(other.getDstCountryCode());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1003,17 +917,98 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.SimpleSmsMamData parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              src_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              dst_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              msg_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 32: {
+              smsGroupSid_ = input.readInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              smsTaskSid_ = input.readInt64();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 50: {
+              isTollFree_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
+              isTimeZone_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 66: {
+              providerName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            case 72: {
+              huntGroupSid_ = input.readInt64();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
+            case 80: {
+              clientSid_ = input.readInt64();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
+            case 90: {
+              com.tcn.cloud.api.api.commons.SimpleSmsMamKeyValue m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.SimpleSmsMamKeyValue.parser(),
+                      extensionRegistry);
+              if (simpleSmsMamMetaDataBuilder_ == null) {
+                ensureSimpleSmsMamMetaDataIsMutable();
+                simpleSmsMamMetaData_.add(m);
+              } else {
+                simpleSmsMamMetaDataBuilder_.addMessage(m);
+              }
+              break;
+            } // case 90
+            case 96: {
+              dstCountryCode_ = input.readInt64();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 96
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.SimpleSmsMamData) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -1059,11 +1054,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSrc(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       src_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1072,8 +1065,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSrc() {
-      
       src_ = getDefaultInstance().getSrc();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1084,12 +1077,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSrcBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       src_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1135,11 +1126,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDst(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       dst_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1148,8 +1137,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDst() {
-      
       dst_ = getDefaultInstance().getDst();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1160,12 +1149,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDstBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       dst_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1211,11 +1198,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMsg(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       msg_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1224,8 +1209,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMsg() {
-      
       msg_ = getDefaultInstance().getMsg();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1236,12 +1221,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMsgBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       msg_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1261,8 +1244,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSmsGroupSid(long value) {
-      
+
       smsGroupSid_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1271,7 +1255,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSmsGroupSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       smsGroupSid_ = 0L;
       onChanged();
       return this;
@@ -1292,8 +1276,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSmsTaskSid(long value) {
-      
+
       smsTaskSid_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1302,7 +1287,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSmsTaskSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       smsTaskSid_ = 0L;
       onChanged();
       return this;
@@ -1349,11 +1334,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIsTollFree(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       isTollFree_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1362,8 +1345,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsTollFree() {
-      
       isTollFree_ = getDefaultInstance().getIsTollFree();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1374,12 +1357,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIsTollFreeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       isTollFree_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1425,11 +1406,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIsTimeZone(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       isTimeZone_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1438,8 +1417,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsTimeZone() {
-      
       isTimeZone_ = getDefaultInstance().getIsTimeZone();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1450,12 +1429,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIsTimeZoneBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       isTimeZone_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1501,11 +1478,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProviderName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       providerName_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1514,8 +1489,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProviderName() {
-      
       providerName_ = getDefaultInstance().getProviderName();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1526,12 +1501,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProviderNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       providerName_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1551,8 +1524,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHuntGroupSid(long value) {
-      
+
       huntGroupSid_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1561,7 +1535,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHuntGroupSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000100);
       huntGroupSid_ = 0L;
       onChanged();
       return this;
@@ -1582,8 +1556,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setClientSid(long value) {
-      
+
       clientSid_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1592,7 +1567,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearClientSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000200);
       clientSid_ = 0L;
       onChanged();
       return this;
@@ -1601,9 +1576,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.commons.SimpleSmsMamKeyValue> simpleSmsMamMetaData_ =
       java.util.Collections.emptyList();
     private void ensureSimpleSmsMamMetaDataIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000400) != 0)) {
         simpleSmsMamMetaData_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.SimpleSmsMamKeyValue>(simpleSmsMamMetaData_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000400;
        }
     }
 
@@ -1753,7 +1728,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearSimpleSmsMamMetaData() {
       if (simpleSmsMamMetaDataBuilder_ == null) {
         simpleSmsMamMetaData_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
       } else {
         simpleSmsMamMetaDataBuilder_.clear();
@@ -1830,7 +1805,7 @@ private static final long serialVersionUID = 0L;
         simpleSmsMamMetaDataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.SimpleSmsMamKeyValue, com.tcn.cloud.api.api.commons.SimpleSmsMamKeyValue.Builder, com.tcn.cloud.api.api.commons.SimpleSmsMamKeyValueOrBuilder>(
                 simpleSmsMamMetaData_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000400) != 0),
                 getParentForChildren(),
                 isClean());
         simpleSmsMamMetaData_ = null;
@@ -1853,8 +1828,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDstCountryCode(long value) {
-      
+
       dstCountryCode_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -1863,7 +1839,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDstCountryCode() {
-      
+      bitField0_ = (bitField0_ & ~0x00000800);
       dstCountryCode_ = 0L;
       onChanged();
       return this;
@@ -1901,7 +1877,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new SimpleSmsMamData(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

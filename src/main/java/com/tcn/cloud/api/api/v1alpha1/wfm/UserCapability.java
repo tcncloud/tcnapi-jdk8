@@ -29,83 +29,6 @@ private static final long serialVersionUID = 0L;
     return new UserCapability();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private UserCapability(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            canDisplay_ = input.readBool();
-            break;
-          }
-          case 16: {
-
-            canEdit_ = input.readBool();
-            break;
-          }
-          case 24: {
-
-            isMoveTarget_ = input.readBool();
-            break;
-          }
-          case 32: {
-
-            canMove_ = input.readBool();
-            break;
-          }
-          case 40: {
-
-            canDelete_ = input.readBool();
-            break;
-          }
-          case 48: {
-
-            canUndelete_ = input.readBool();
-            break;
-          }
-          case 56: {
-
-            canAddChild_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_UserCapability_descriptor;
@@ -120,7 +43,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAN_DISPLAY_FIELD_NUMBER = 1;
-  private boolean canDisplay_;
+  private boolean canDisplay_ = false;
   /**
    * <pre>
    * UI can display element for this user
@@ -135,7 +58,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAN_EDIT_FIELD_NUMBER = 2;
-  private boolean canEdit_;
+  private boolean canEdit_ = false;
   /**
    * <pre>
    * UI can edit element
@@ -150,7 +73,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IS_MOVE_TARGET_FIELD_NUMBER = 3;
-  private boolean isMoveTarget_;
+  private boolean isMoveTarget_ = false;
   /**
    * <pre>
    * User can move a valid node B to this node A, making B a child of A
@@ -165,7 +88,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAN_MOVE_FIELD_NUMBER = 4;
-  private boolean canMove_;
+  private boolean canMove_ = false;
   /**
    * <pre>
    * User can move this node A to a valid node B, making A a child of B
@@ -181,7 +104,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAN_DELETE_FIELD_NUMBER = 5;
-  private boolean canDelete_;
+  private boolean canDelete_ = false;
   /**
    * <pre>
    * User can mark this element as deleted
@@ -196,7 +119,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAN_UNDELETE_FIELD_NUMBER = 6;
-  private boolean canUndelete_;
+  private boolean canUndelete_ = false;
   /**
    * <pre>
    * User can mark this element as undeleted
@@ -211,7 +134,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAN_ADD_CHILD_FIELD_NUMBER = 7;
-  private boolean canAddChild_;
+  private boolean canAddChild_ = false;
   /**
    * <pre>
    * User can add a valid child to this node
@@ -260,7 +183,7 @@ private static final long serialVersionUID = 0L;
     if (canAddChild_ != false) {
       output.writeBool(7, canAddChild_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -297,7 +220,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(7, canAddChild_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -326,7 +249,7 @@ private static final long serialVersionUID = 0L;
         != other.getCanUndelete()) return false;
     if (getCanAddChild()
         != other.getCanAddChild()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -358,7 +281,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + CAN_ADD_CHILD_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getCanAddChild());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -407,11 +330,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.UserCapability parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.UserCapability parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -479,36 +404,25 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.UserCapability.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       canDisplay_ = false;
-
       canEdit_ = false;
-
       isMoveTarget_ = false;
-
       canMove_ = false;
-
       canDelete_ = false;
-
       canUndelete_ = false;
-
       canAddChild_ = false;
-
       return this;
     }
 
@@ -535,15 +449,34 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.UserCapability buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.UserCapability result = new com.tcn.cloud.api.api.v1alpha1.wfm.UserCapability(this);
-      result.canDisplay_ = canDisplay_;
-      result.canEdit_ = canEdit_;
-      result.isMoveTarget_ = isMoveTarget_;
-      result.canMove_ = canMove_;
-      result.canDelete_ = canDelete_;
-      result.canUndelete_ = canUndelete_;
-      result.canAddChild_ = canAddChild_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.UserCapability result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.canDisplay_ = canDisplay_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.canEdit_ = canEdit_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.isMoveTarget_ = isMoveTarget_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.canMove_ = canMove_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.canDelete_ = canDelete_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.canUndelete_ = canUndelete_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.canAddChild_ = canAddChild_;
+      }
     }
 
     @java.lang.Override
@@ -611,7 +544,7 @@ private static final long serialVersionUID = 0L;
       if (other.getCanAddChild() != false) {
         setCanAddChild(other.getCanAddChild());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -626,19 +559,68 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.UserCapability parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              canDisplay_ = input.readBool();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              canEdit_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              isMoveTarget_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              canMove_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              canDelete_ = input.readBool();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 48: {
+              canUndelete_ = input.readBool();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 56: {
+              canAddChild_ = input.readBool();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.UserCapability) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private boolean canDisplay_ ;
     /**
@@ -663,8 +645,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCanDisplay(boolean value) {
-      
+
       canDisplay_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -677,7 +660,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCanDisplay() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       canDisplay_ = false;
       onChanged();
       return this;
@@ -706,8 +689,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCanEdit(boolean value) {
-      
+
       canEdit_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -720,7 +704,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCanEdit() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       canEdit_ = false;
       onChanged();
       return this;
@@ -749,8 +733,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIsMoveTarget(boolean value) {
-      
+
       isMoveTarget_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -763,7 +748,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsMoveTarget() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       isMoveTarget_ = false;
       onChanged();
       return this;
@@ -794,8 +779,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCanMove(boolean value) {
-      
+
       canMove_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -809,7 +795,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCanMove() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       canMove_ = false;
       onChanged();
       return this;
@@ -838,8 +824,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCanDelete(boolean value) {
-      
+
       canDelete_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -852,7 +839,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCanDelete() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       canDelete_ = false;
       onChanged();
       return this;
@@ -881,8 +868,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCanUndelete(boolean value) {
-      
+
       canUndelete_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -895,7 +883,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCanUndelete() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       canUndelete_ = false;
       onChanged();
       return this;
@@ -924,8 +912,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCanAddChild(boolean value) {
-      
+
       canAddChild_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -938,7 +927,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCanAddChild() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       canAddChild_ = false;
       onChanged();
       return this;
@@ -976,7 +965,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new UserCapability(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

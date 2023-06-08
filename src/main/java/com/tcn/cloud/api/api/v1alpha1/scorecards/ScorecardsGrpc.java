@@ -1,25 +1,13 @@
 package com.tcn.cloud.api.api.v1alpha1.scorecards;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.14.0)",
+    value = "by gRPC proto compiler (version 1.55.1)",
     comments = "Source: api/v1alpha1/scorecards/service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class ScorecardsGrpc {
 
   private ScorecardsGrpc() {}
@@ -41,22 +29,21 @@ public final class ScorecardsGrpc {
     if ((getCreateScorecardMethod = ScorecardsGrpc.getCreateScorecardMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getCreateScorecardMethod = ScorecardsGrpc.getCreateScorecardMethod) == null) {
-          ScorecardsGrpc.getCreateScorecardMethod = getCreateScorecardMethod = 
+          ScorecardsGrpc.getCreateScorecardMethod = getCreateScorecardMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "CreateScorecard"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateScorecard"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("CreateScorecard"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("CreateScorecard"))
+              .build();
         }
-     }
-     return getCreateScorecardMethod;
+      }
+    }
+    return getCreateScorecardMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest,
@@ -73,22 +60,21 @@ public final class ScorecardsGrpc {
     if ((getListScorecardsMethod = ScorecardsGrpc.getListScorecardsMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getListScorecardsMethod = ScorecardsGrpc.getListScorecardsMethod) == null) {
-          ScorecardsGrpc.getListScorecardsMethod = getListScorecardsMethod = 
+          ScorecardsGrpc.getListScorecardsMethod = getListScorecardsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "ListScorecards"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListScorecards"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("ListScorecards"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("ListScorecards"))
+              .build();
         }
-     }
-     return getListScorecardsMethod;
+      }
+    }
+    return getListScorecardsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardRequest,
@@ -105,22 +91,21 @@ public final class ScorecardsGrpc {
     if ((getUpdateScorecardMethod = ScorecardsGrpc.getUpdateScorecardMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getUpdateScorecardMethod = ScorecardsGrpc.getUpdateScorecardMethod) == null) {
-          ScorecardsGrpc.getUpdateScorecardMethod = getUpdateScorecardMethod = 
+          ScorecardsGrpc.getUpdateScorecardMethod = getUpdateScorecardMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "UpdateScorecard"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateScorecard"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("UpdateScorecard"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("UpdateScorecard"))
+              .build();
         }
-     }
-     return getUpdateScorecardMethod;
+      }
+    }
+    return getUpdateScorecardMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardRequest,
@@ -137,22 +122,21 @@ public final class ScorecardsGrpc {
     if ((getDeleteScorecardMethod = ScorecardsGrpc.getDeleteScorecardMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getDeleteScorecardMethod = ScorecardsGrpc.getDeleteScorecardMethod) == null) {
-          ScorecardsGrpc.getDeleteScorecardMethod = getDeleteScorecardMethod = 
+          ScorecardsGrpc.getDeleteScorecardMethod = getDeleteScorecardMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "DeleteScorecard"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteScorecard"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("DeleteScorecard"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("DeleteScorecard"))
+              .build();
         }
-     }
-     return getDeleteScorecardMethod;
+      }
+    }
+    return getDeleteScorecardMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardRequest,
@@ -169,22 +153,21 @@ public final class ScorecardsGrpc {
     if ((getGetScorecardMethod = ScorecardsGrpc.getGetScorecardMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getGetScorecardMethod = ScorecardsGrpc.getGetScorecardMethod) == null) {
-          ScorecardsGrpc.getGetScorecardMethod = getGetScorecardMethod = 
+          ScorecardsGrpc.getGetScorecardMethod = getGetScorecardMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "GetScorecard"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetScorecard"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("GetScorecard"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("GetScorecard"))
+              .build();
         }
-     }
-     return getGetScorecardMethod;
+      }
+    }
+    return getGetScorecardMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionRequest,
@@ -201,22 +184,21 @@ public final class ScorecardsGrpc {
     if ((getCreateQuestionMethod = ScorecardsGrpc.getCreateQuestionMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getCreateQuestionMethod = ScorecardsGrpc.getCreateQuestionMethod) == null) {
-          ScorecardsGrpc.getCreateQuestionMethod = getCreateQuestionMethod = 
+          ScorecardsGrpc.getCreateQuestionMethod = getCreateQuestionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "CreateQuestion"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateQuestion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("CreateQuestion"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("CreateQuestion"))
+              .build();
         }
-     }
-     return getCreateQuestionMethod;
+      }
+    }
+    return getCreateQuestionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsRequest,
@@ -233,22 +215,21 @@ public final class ScorecardsGrpc {
     if ((getListQuestionsMethod = ScorecardsGrpc.getListQuestionsMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getListQuestionsMethod = ScorecardsGrpc.getListQuestionsMethod) == null) {
-          ScorecardsGrpc.getListQuestionsMethod = getListQuestionsMethod = 
+          ScorecardsGrpc.getListQuestionsMethod = getListQuestionsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "ListQuestions"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListQuestions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("ListQuestions"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("ListQuestions"))
+              .build();
         }
-     }
-     return getListQuestionsMethod;
+      }
+    }
+    return getListQuestionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionRequest,
@@ -265,22 +246,21 @@ public final class ScorecardsGrpc {
     if ((getUpdateQuestionMethod = ScorecardsGrpc.getUpdateQuestionMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getUpdateQuestionMethod = ScorecardsGrpc.getUpdateQuestionMethod) == null) {
-          ScorecardsGrpc.getUpdateQuestionMethod = getUpdateQuestionMethod = 
+          ScorecardsGrpc.getUpdateQuestionMethod = getUpdateQuestionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "UpdateQuestion"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateQuestion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("UpdateQuestion"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("UpdateQuestion"))
+              .build();
         }
-     }
-     return getUpdateQuestionMethod;
+      }
+    }
+    return getUpdateQuestionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionRequest,
@@ -297,22 +277,21 @@ public final class ScorecardsGrpc {
     if ((getDeleteQuestionMethod = ScorecardsGrpc.getDeleteQuestionMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getDeleteQuestionMethod = ScorecardsGrpc.getDeleteQuestionMethod) == null) {
-          ScorecardsGrpc.getDeleteQuestionMethod = getDeleteQuestionMethod = 
+          ScorecardsGrpc.getDeleteQuestionMethod = getDeleteQuestionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "DeleteQuestion"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteQuestion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("DeleteQuestion"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("DeleteQuestion"))
+              .build();
         }
-     }
-     return getDeleteQuestionMethod;
+      }
+    }
+    return getDeleteQuestionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionRequest,
@@ -329,22 +308,21 @@ public final class ScorecardsGrpc {
     if ((getGetQuestionMethod = ScorecardsGrpc.getGetQuestionMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getGetQuestionMethod = ScorecardsGrpc.getGetQuestionMethod) == null) {
-          ScorecardsGrpc.getGetQuestionMethod = getGetQuestionMethod = 
+          ScorecardsGrpc.getGetQuestionMethod = getGetQuestionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "GetQuestion"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetQuestion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("GetQuestion"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("GetQuestion"))
+              .build();
         }
-     }
-     return getGetQuestionMethod;
+      }
+    }
+    return getGetQuestionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsRequest,
@@ -361,22 +339,21 @@ public final class ScorecardsGrpc {
     if ((getBulkCreateQuestionsMethod = ScorecardsGrpc.getBulkCreateQuestionsMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getBulkCreateQuestionsMethod = ScorecardsGrpc.getBulkCreateQuestionsMethod) == null) {
-          ScorecardsGrpc.getBulkCreateQuestionsMethod = getBulkCreateQuestionsMethod = 
+          ScorecardsGrpc.getBulkCreateQuestionsMethod = getBulkCreateQuestionsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "BulkCreateQuestions"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BulkCreateQuestions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("BulkCreateQuestions"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("BulkCreateQuestions"))
+              .build();
         }
-     }
-     return getBulkCreateQuestionsMethod;
+      }
+    }
+    return getBulkCreateQuestionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryRequest,
@@ -393,22 +370,21 @@ public final class ScorecardsGrpc {
     if ((getCreateCategoryMethod = ScorecardsGrpc.getCreateCategoryMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getCreateCategoryMethod = ScorecardsGrpc.getCreateCategoryMethod) == null) {
-          ScorecardsGrpc.getCreateCategoryMethod = getCreateCategoryMethod = 
+          ScorecardsGrpc.getCreateCategoryMethod = getCreateCategoryMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "CreateCategory"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateCategory"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("CreateCategory"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("CreateCategory"))
+              .build();
         }
-     }
-     return getCreateCategoryMethod;
+      }
+    }
+    return getCreateCategoryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesRequest,
@@ -425,22 +401,21 @@ public final class ScorecardsGrpc {
     if ((getListCategoriesMethod = ScorecardsGrpc.getListCategoriesMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getListCategoriesMethod = ScorecardsGrpc.getListCategoriesMethod) == null) {
-          ScorecardsGrpc.getListCategoriesMethod = getListCategoriesMethod = 
+          ScorecardsGrpc.getListCategoriesMethod = getListCategoriesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "ListCategories"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCategories"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("ListCategories"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("ListCategories"))
+              .build();
         }
-     }
-     return getListCategoriesMethod;
+      }
+    }
+    return getListCategoriesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryRequest,
@@ -457,22 +432,21 @@ public final class ScorecardsGrpc {
     if ((getUpdateCategoryMethod = ScorecardsGrpc.getUpdateCategoryMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getUpdateCategoryMethod = ScorecardsGrpc.getUpdateCategoryMethod) == null) {
-          ScorecardsGrpc.getUpdateCategoryMethod = getUpdateCategoryMethod = 
+          ScorecardsGrpc.getUpdateCategoryMethod = getUpdateCategoryMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "UpdateCategory"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateCategory"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("UpdateCategory"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("UpdateCategory"))
+              .build();
         }
-     }
-     return getUpdateCategoryMethod;
+      }
+    }
+    return getUpdateCategoryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryRequest,
@@ -489,22 +463,21 @@ public final class ScorecardsGrpc {
     if ((getDeleteCategoryMethod = ScorecardsGrpc.getDeleteCategoryMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getDeleteCategoryMethod = ScorecardsGrpc.getDeleteCategoryMethod) == null) {
-          ScorecardsGrpc.getDeleteCategoryMethod = getDeleteCategoryMethod = 
+          ScorecardsGrpc.getDeleteCategoryMethod = getDeleteCategoryMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "DeleteCategory"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteCategory"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("DeleteCategory"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("DeleteCategory"))
+              .build();
         }
-     }
-     return getDeleteCategoryMethod;
+      }
+    }
+    return getDeleteCategoryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryRequest,
@@ -521,22 +494,21 @@ public final class ScorecardsGrpc {
     if ((getGetCategoryMethod = ScorecardsGrpc.getGetCategoryMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getGetCategoryMethod = ScorecardsGrpc.getGetCategoryMethod) == null) {
-          ScorecardsGrpc.getGetCategoryMethod = getGetCategoryMethod = 
+          ScorecardsGrpc.getGetCategoryMethod = getGetCategoryMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "GetCategory"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCategory"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("GetCategory"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("GetCategory"))
+              .build();
         }
-     }
-     return getGetCategoryMethod;
+      }
+    }
+    return getGetCategoryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionRequest,
@@ -553,22 +525,21 @@ public final class ScorecardsGrpc {
     if ((getCreateScorecardQuestionMethod = ScorecardsGrpc.getCreateScorecardQuestionMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getCreateScorecardQuestionMethod = ScorecardsGrpc.getCreateScorecardQuestionMethod) == null) {
-          ScorecardsGrpc.getCreateScorecardQuestionMethod = getCreateScorecardQuestionMethod = 
+          ScorecardsGrpc.getCreateScorecardQuestionMethod = getCreateScorecardQuestionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "CreateScorecardQuestion"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateScorecardQuestion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("CreateScorecardQuestion"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("CreateScorecardQuestion"))
+              .build();
         }
-     }
-     return getCreateScorecardQuestionMethod;
+      }
+    }
+    return getCreateScorecardQuestionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionRequest,
@@ -585,22 +556,21 @@ public final class ScorecardsGrpc {
     if ((getUpdateScorecardQuestionMethod = ScorecardsGrpc.getUpdateScorecardQuestionMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getUpdateScorecardQuestionMethod = ScorecardsGrpc.getUpdateScorecardQuestionMethod) == null) {
-          ScorecardsGrpc.getUpdateScorecardQuestionMethod = getUpdateScorecardQuestionMethod = 
+          ScorecardsGrpc.getUpdateScorecardQuestionMethod = getUpdateScorecardQuestionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "UpdateScorecardQuestion"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateScorecardQuestion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("UpdateScorecardQuestion"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("UpdateScorecardQuestion"))
+              .build();
         }
-     }
-     return getUpdateScorecardQuestionMethod;
+      }
+    }
+    return getUpdateScorecardQuestionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionRequest,
@@ -617,22 +587,21 @@ public final class ScorecardsGrpc {
     if ((getDeleteScorecardQuestionMethod = ScorecardsGrpc.getDeleteScorecardQuestionMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getDeleteScorecardQuestionMethod = ScorecardsGrpc.getDeleteScorecardQuestionMethod) == null) {
-          ScorecardsGrpc.getDeleteScorecardQuestionMethod = getDeleteScorecardQuestionMethod = 
+          ScorecardsGrpc.getDeleteScorecardQuestionMethod = getDeleteScorecardQuestionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "DeleteScorecardQuestion"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteScorecardQuestion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("DeleteScorecardQuestion"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("DeleteScorecardQuestion"))
+              .build();
         }
-     }
-     return getDeleteScorecardQuestionMethod;
+      }
+    }
+    return getDeleteScorecardQuestionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionRequest,
@@ -649,22 +618,21 @@ public final class ScorecardsGrpc {
     if ((getGetScorecardQuestionMethod = ScorecardsGrpc.getGetScorecardQuestionMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getGetScorecardQuestionMethod = ScorecardsGrpc.getGetScorecardQuestionMethod) == null) {
-          ScorecardsGrpc.getGetScorecardQuestionMethod = getGetScorecardQuestionMethod = 
+          ScorecardsGrpc.getGetScorecardQuestionMethod = getGetScorecardQuestionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "GetScorecardQuestion"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetScorecardQuestion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("GetScorecardQuestion"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("GetScorecardQuestion"))
+              .build();
         }
-     }
-     return getGetScorecardQuestionMethod;
+      }
+    }
+    return getGetScorecardQuestionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionRequest,
@@ -681,22 +649,21 @@ public final class ScorecardsGrpc {
     if ((getCreateSectionMethod = ScorecardsGrpc.getCreateSectionMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getCreateSectionMethod = ScorecardsGrpc.getCreateSectionMethod) == null) {
-          ScorecardsGrpc.getCreateSectionMethod = getCreateSectionMethod = 
+          ScorecardsGrpc.getCreateSectionMethod = getCreateSectionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "CreateSection"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateSection"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("CreateSection"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("CreateSection"))
+              .build();
         }
-     }
-     return getCreateSectionMethod;
+      }
+    }
+    return getCreateSectionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsRequest,
@@ -713,22 +680,21 @@ public final class ScorecardsGrpc {
     if ((getListSectionsMethod = ScorecardsGrpc.getListSectionsMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getListSectionsMethod = ScorecardsGrpc.getListSectionsMethod) == null) {
-          ScorecardsGrpc.getListSectionsMethod = getListSectionsMethod = 
+          ScorecardsGrpc.getListSectionsMethod = getListSectionsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "ListSections"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSections"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("ListSections"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("ListSections"))
+              .build();
         }
-     }
-     return getListSectionsMethod;
+      }
+    }
+    return getListSectionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionRequest,
@@ -745,22 +711,21 @@ public final class ScorecardsGrpc {
     if ((getUpdateSectionMethod = ScorecardsGrpc.getUpdateSectionMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getUpdateSectionMethod = ScorecardsGrpc.getUpdateSectionMethod) == null) {
-          ScorecardsGrpc.getUpdateSectionMethod = getUpdateSectionMethod = 
+          ScorecardsGrpc.getUpdateSectionMethod = getUpdateSectionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "UpdateSection"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSection"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("UpdateSection"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("UpdateSection"))
+              .build();
         }
-     }
-     return getUpdateSectionMethod;
+      }
+    }
+    return getUpdateSectionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionRequest,
@@ -777,22 +742,21 @@ public final class ScorecardsGrpc {
     if ((getGetSectionMethod = ScorecardsGrpc.getGetSectionMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getGetSectionMethod = ScorecardsGrpc.getGetSectionMethod) == null) {
-          ScorecardsGrpc.getGetSectionMethod = getGetSectionMethod = 
+          ScorecardsGrpc.getGetSectionMethod = getGetSectionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "GetSection"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSection"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("GetSection"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("GetSection"))
+              .build();
         }
-     }
-     return getGetSectionMethod;
+      }
+    }
+    return getGetSectionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionRequest,
@@ -809,22 +773,21 @@ public final class ScorecardsGrpc {
     if ((getDeleteSectionMethod = ScorecardsGrpc.getDeleteSectionMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getDeleteSectionMethod = ScorecardsGrpc.getDeleteSectionMethod) == null) {
-          ScorecardsGrpc.getDeleteSectionMethod = getDeleteSectionMethod = 
+          ScorecardsGrpc.getDeleteSectionMethod = getDeleteSectionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "DeleteSection"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteSection"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("DeleteSection"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("DeleteSection"))
+              .build();
         }
-     }
-     return getDeleteSectionMethod;
+      }
+    }
+    return getDeleteSectionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryRequest,
@@ -841,22 +804,21 @@ public final class ScorecardsGrpc {
     if ((getCreateQuestionCategoryMethod = ScorecardsGrpc.getCreateQuestionCategoryMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getCreateQuestionCategoryMethod = ScorecardsGrpc.getCreateQuestionCategoryMethod) == null) {
-          ScorecardsGrpc.getCreateQuestionCategoryMethod = getCreateQuestionCategoryMethod = 
+          ScorecardsGrpc.getCreateQuestionCategoryMethod = getCreateQuestionCategoryMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "CreateQuestionCategory"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateQuestionCategory"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("CreateQuestionCategory"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("CreateQuestionCategory"))
+              .build();
         }
-     }
-     return getCreateQuestionCategoryMethod;
+      }
+    }
+    return getCreateQuestionCategoryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryRequest,
@@ -873,22 +835,21 @@ public final class ScorecardsGrpc {
     if ((getDeleteQuestionCategoryMethod = ScorecardsGrpc.getDeleteQuestionCategoryMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getDeleteQuestionCategoryMethod = ScorecardsGrpc.getDeleteQuestionCategoryMethod) == null) {
-          ScorecardsGrpc.getDeleteQuestionCategoryMethod = getDeleteQuestionCategoryMethod = 
+          ScorecardsGrpc.getDeleteQuestionCategoryMethod = getDeleteQuestionCategoryMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "DeleteQuestionCategory"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteQuestionCategory"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("DeleteQuestionCategory"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("DeleteQuestionCategory"))
+              .build();
         }
-     }
-     return getDeleteQuestionCategoryMethod;
+      }
+    }
+    return getDeleteQuestionCategoryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationRequest,
@@ -905,22 +866,21 @@ public final class ScorecardsGrpc {
     if ((getCreateEvaluationMethod = ScorecardsGrpc.getCreateEvaluationMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getCreateEvaluationMethod = ScorecardsGrpc.getCreateEvaluationMethod) == null) {
-          ScorecardsGrpc.getCreateEvaluationMethod = getCreateEvaluationMethod = 
+          ScorecardsGrpc.getCreateEvaluationMethod = getCreateEvaluationMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "CreateEvaluation"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateEvaluation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("CreateEvaluation"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("CreateEvaluation"))
+              .build();
         }
-     }
-     return getCreateEvaluationMethod;
+      }
+    }
+    return getCreateEvaluationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationRequest,
@@ -937,22 +897,21 @@ public final class ScorecardsGrpc {
     if ((getDeleteEvaluationMethod = ScorecardsGrpc.getDeleteEvaluationMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getDeleteEvaluationMethod = ScorecardsGrpc.getDeleteEvaluationMethod) == null) {
-          ScorecardsGrpc.getDeleteEvaluationMethod = getDeleteEvaluationMethod = 
+          ScorecardsGrpc.getDeleteEvaluationMethod = getDeleteEvaluationMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "DeleteEvaluation"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteEvaluation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("DeleteEvaluation"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("DeleteEvaluation"))
+              .build();
         }
-     }
-     return getDeleteEvaluationMethod;
+      }
+    }
+    return getDeleteEvaluationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationRequest,
@@ -969,22 +928,21 @@ public final class ScorecardsGrpc {
     if ((getScoreEvaluationMethod = ScorecardsGrpc.getScoreEvaluationMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getScoreEvaluationMethod = ScorecardsGrpc.getScoreEvaluationMethod) == null) {
-          ScorecardsGrpc.getScoreEvaluationMethod = getScoreEvaluationMethod = 
+          ScorecardsGrpc.getScoreEvaluationMethod = getScoreEvaluationMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "ScoreEvaluation"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ScoreEvaluation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("ScoreEvaluation"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("ScoreEvaluation"))
+              .build();
         }
-     }
-     return getScoreEvaluationMethod;
+      }
+    }
+    return getScoreEvaluationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest,
@@ -1001,22 +959,21 @@ public final class ScorecardsGrpc {
     if ((getUpdateEvaluationMethod = ScorecardsGrpc.getUpdateEvaluationMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getUpdateEvaluationMethod = ScorecardsGrpc.getUpdateEvaluationMethod) == null) {
-          ScorecardsGrpc.getUpdateEvaluationMethod = getUpdateEvaluationMethod = 
+          ScorecardsGrpc.getUpdateEvaluationMethod = getUpdateEvaluationMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "UpdateEvaluation"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateEvaluation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("UpdateEvaluation"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("UpdateEvaluation"))
+              .build();
         }
-     }
-     return getUpdateEvaluationMethod;
+      }
+    }
+    return getUpdateEvaluationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationRequest,
@@ -1033,22 +990,21 @@ public final class ScorecardsGrpc {
     if ((getGetEvaluationMethod = ScorecardsGrpc.getGetEvaluationMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getGetEvaluationMethod = ScorecardsGrpc.getGetEvaluationMethod) == null) {
-          ScorecardsGrpc.getGetEvaluationMethod = getGetEvaluationMethod = 
+          ScorecardsGrpc.getGetEvaluationMethod = getGetEvaluationMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "GetEvaluation"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetEvaluation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("GetEvaluation"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("GetEvaluation"))
+              .build();
         }
-     }
-     return getGetEvaluationMethod;
+      }
+    }
+    return getGetEvaluationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsRequest,
@@ -1065,22 +1021,21 @@ public final class ScorecardsGrpc {
     if ((getListEvaluationsMethod = ScorecardsGrpc.getListEvaluationsMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getListEvaluationsMethod = ScorecardsGrpc.getListEvaluationsMethod) == null) {
-          ScorecardsGrpc.getListEvaluationsMethod = getListEvaluationsMethod = 
+          ScorecardsGrpc.getListEvaluationsMethod = getListEvaluationsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "ListEvaluations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListEvaluations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("ListEvaluations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("ListEvaluations"))
+              .build();
         }
-     }
-     return getListEvaluationsMethod;
+      }
+    }
+    return getListEvaluationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionRequest,
@@ -1097,22 +1052,21 @@ public final class ScorecardsGrpc {
     if ((getCreateEvaluationQuestionMethod = ScorecardsGrpc.getCreateEvaluationQuestionMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getCreateEvaluationQuestionMethod = ScorecardsGrpc.getCreateEvaluationQuestionMethod) == null) {
-          ScorecardsGrpc.getCreateEvaluationQuestionMethod = getCreateEvaluationQuestionMethod = 
+          ScorecardsGrpc.getCreateEvaluationQuestionMethod = getCreateEvaluationQuestionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "CreateEvaluationQuestion"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateEvaluationQuestion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("CreateEvaluationQuestion"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("CreateEvaluationQuestion"))
+              .build();
         }
-     }
-     return getCreateEvaluationQuestionMethod;
+      }
+    }
+    return getCreateEvaluationQuestionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionRequest,
@@ -1129,22 +1083,21 @@ public final class ScorecardsGrpc {
     if ((getUpdateEvaluationQuestionMethod = ScorecardsGrpc.getUpdateEvaluationQuestionMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getUpdateEvaluationQuestionMethod = ScorecardsGrpc.getUpdateEvaluationQuestionMethod) == null) {
-          ScorecardsGrpc.getUpdateEvaluationQuestionMethod = getUpdateEvaluationQuestionMethod = 
+          ScorecardsGrpc.getUpdateEvaluationQuestionMethod = getUpdateEvaluationQuestionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "UpdateEvaluationQuestion"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateEvaluationQuestion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("UpdateEvaluationQuestion"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("UpdateEvaluationQuestion"))
+              .build();
         }
-     }
-     return getUpdateEvaluationQuestionMethod;
+      }
+    }
+    return getUpdateEvaluationQuestionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionRequest,
@@ -1161,22 +1114,21 @@ public final class ScorecardsGrpc {
     if ((getDeleteEvaluationQuestionMethod = ScorecardsGrpc.getDeleteEvaluationQuestionMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getDeleteEvaluationQuestionMethod = ScorecardsGrpc.getDeleteEvaluationQuestionMethod) == null) {
-          ScorecardsGrpc.getDeleteEvaluationQuestionMethod = getDeleteEvaluationQuestionMethod = 
+          ScorecardsGrpc.getDeleteEvaluationQuestionMethod = getDeleteEvaluationQuestionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "DeleteEvaluationQuestion"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteEvaluationQuestion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("DeleteEvaluationQuestion"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("DeleteEvaluationQuestion"))
+              .build();
         }
-     }
-     return getDeleteEvaluationQuestionMethod;
+      }
+    }
+    return getDeleteEvaluationQuestionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryRequest,
@@ -1193,22 +1145,21 @@ public final class ScorecardsGrpc {
     if ((getSampleCallsByCategoryMethod = ScorecardsGrpc.getSampleCallsByCategoryMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getSampleCallsByCategoryMethod = ScorecardsGrpc.getSampleCallsByCategoryMethod) == null) {
-          ScorecardsGrpc.getSampleCallsByCategoryMethod = getSampleCallsByCategoryMethod = 
+          ScorecardsGrpc.getSampleCallsByCategoryMethod = getSampleCallsByCategoryMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "SampleCallsByCategory"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SampleCallsByCategory"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("SampleCallsByCategory"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("SampleCallsByCategory"))
+              .build();
         }
-     }
-     return getSampleCallsByCategoryMethod;
+      }
+    }
+    return getSampleCallsByCategoryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionRequest,
@@ -1225,22 +1176,21 @@ public final class ScorecardsGrpc {
     if ((getCreateAutoQuestionMethod = ScorecardsGrpc.getCreateAutoQuestionMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getCreateAutoQuestionMethod = ScorecardsGrpc.getCreateAutoQuestionMethod) == null) {
-          ScorecardsGrpc.getCreateAutoQuestionMethod = getCreateAutoQuestionMethod = 
+          ScorecardsGrpc.getCreateAutoQuestionMethod = getCreateAutoQuestionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "CreateAutoQuestion"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAutoQuestion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("CreateAutoQuestion"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("CreateAutoQuestion"))
+              .build();
         }
-     }
-     return getCreateAutoQuestionMethod;
+      }
+    }
+    return getCreateAutoQuestionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionRequest,
@@ -1257,22 +1207,21 @@ public final class ScorecardsGrpc {
     if ((getUpdateAutoQuestionMethod = ScorecardsGrpc.getUpdateAutoQuestionMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getUpdateAutoQuestionMethod = ScorecardsGrpc.getUpdateAutoQuestionMethod) == null) {
-          ScorecardsGrpc.getUpdateAutoQuestionMethod = getUpdateAutoQuestionMethod = 
+          ScorecardsGrpc.getUpdateAutoQuestionMethod = getUpdateAutoQuestionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "UpdateAutoQuestion"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAutoQuestion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("UpdateAutoQuestion"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("UpdateAutoQuestion"))
+              .build();
         }
-     }
-     return getUpdateAutoQuestionMethod;
+      }
+    }
+    return getUpdateAutoQuestionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionRequest,
@@ -1289,22 +1238,21 @@ public final class ScorecardsGrpc {
     if ((getDeleteAutoQuestionMethod = ScorecardsGrpc.getDeleteAutoQuestionMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getDeleteAutoQuestionMethod = ScorecardsGrpc.getDeleteAutoQuestionMethod) == null) {
-          ScorecardsGrpc.getDeleteAutoQuestionMethod = getDeleteAutoQuestionMethod = 
+          ScorecardsGrpc.getDeleteAutoQuestionMethod = getDeleteAutoQuestionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "DeleteAutoQuestion"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteAutoQuestion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("DeleteAutoQuestion"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("DeleteAutoQuestion"))
+              .build();
         }
-     }
-     return getDeleteAutoQuestionMethod;
+      }
+    }
+    return getDeleteAutoQuestionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionRequest,
@@ -1321,22 +1269,21 @@ public final class ScorecardsGrpc {
     if ((getGetAutoQuestionMethod = ScorecardsGrpc.getGetAutoQuestionMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getGetAutoQuestionMethod = ScorecardsGrpc.getGetAutoQuestionMethod) == null) {
-          ScorecardsGrpc.getGetAutoQuestionMethod = getGetAutoQuestionMethod = 
+          ScorecardsGrpc.getGetAutoQuestionMethod = getGetAutoQuestionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "GetAutoQuestion"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAutoQuestion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("GetAutoQuestion"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("GetAutoQuestion"))
+              .build();
         }
-     }
-     return getGetAutoQuestionMethod;
+      }
+    }
+    return getGetAutoQuestionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationRequest,
@@ -1353,22 +1300,21 @@ public final class ScorecardsGrpc {
     if ((getGetAutoEvaluationMethod = ScorecardsGrpc.getGetAutoEvaluationMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getGetAutoEvaluationMethod = ScorecardsGrpc.getGetAutoEvaluationMethod) == null) {
-          ScorecardsGrpc.getGetAutoEvaluationMethod = getGetAutoEvaluationMethod = 
+          ScorecardsGrpc.getGetAutoEvaluationMethod = getGetAutoEvaluationMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "GetAutoEvaluation"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAutoEvaluation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("GetAutoEvaluation"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("GetAutoEvaluation"))
+              .build();
         }
-     }
-     return getGetAutoEvaluationMethod;
+      }
+    }
+    return getGetAutoEvaluationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest,
@@ -1385,22 +1331,21 @@ public final class ScorecardsGrpc {
     if ((getListAutoEvaluationsMethod = ScorecardsGrpc.getListAutoEvaluationsMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getListAutoEvaluationsMethod = ScorecardsGrpc.getListAutoEvaluationsMethod) == null) {
-          ScorecardsGrpc.getListAutoEvaluationsMethod = getListAutoEvaluationsMethod = 
+          ScorecardsGrpc.getListAutoEvaluationsMethod = getListAutoEvaluationsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "ListAutoEvaluations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAutoEvaluations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("ListAutoEvaluations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("ListAutoEvaluations"))
+              .build();
         }
-     }
-     return getListAutoEvaluationsMethod;
+      }
+    }
+    return getListAutoEvaluationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationRequest,
@@ -1417,29 +1362,35 @@ public final class ScorecardsGrpc {
     if ((getDeleteAutoEvaluationMethod = ScorecardsGrpc.getDeleteAutoEvaluationMethod) == null) {
       synchronized (ScorecardsGrpc.class) {
         if ((getDeleteAutoEvaluationMethod = ScorecardsGrpc.getDeleteAutoEvaluationMethod) == null) {
-          ScorecardsGrpc.getDeleteAutoEvaluationMethod = getDeleteAutoEvaluationMethod = 
+          ScorecardsGrpc.getDeleteAutoEvaluationMethod = getDeleteAutoEvaluationMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.scorecards.Scorecards", "DeleteAutoEvaluation"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteAutoEvaluation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("DeleteAutoEvaluation"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("DeleteAutoEvaluation"))
+              .build();
         }
-     }
-     return getDeleteAutoEvaluationMethod;
+      }
+    }
+    return getDeleteAutoEvaluationMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ScorecardsStub newStub(io.grpc.Channel channel) {
-    return new ScorecardsStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ScorecardsStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ScorecardsStub>() {
+        @java.lang.Override
+        public ScorecardsStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ScorecardsStub(channel, callOptions);
+        }
+      };
+    return ScorecardsStub.newStub(factory, channel);
   }
 
   /**
@@ -1447,7 +1398,14 @@ public final class ScorecardsGrpc {
    */
   public static ScorecardsBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ScorecardsBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ScorecardsBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ScorecardsBlockingStub>() {
+        @java.lang.Override
+        public ScorecardsBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ScorecardsBlockingStub(channel, callOptions);
+        }
+      };
+    return ScorecardsBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -1455,21 +1413,28 @@ public final class ScorecardsGrpc {
    */
   public static ScorecardsFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ScorecardsFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ScorecardsFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ScorecardsFutureStub>() {
+        @java.lang.Override
+        public ScorecardsFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ScorecardsFutureStub(channel, callOptions);
+        }
+      };
+    return ScorecardsFutureStub.newStub(factory, channel);
   }
 
   /**
    */
-  public static abstract class ScorecardsImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * CreateScorecard creates a new scorecard
      * </pre>
      */
-    public void createScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardRequest request,
+    default void createScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateScorecardMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateScorecardMethod(), responseObserver);
     }
 
     /**
@@ -1477,9 +1442,9 @@ public final class ScorecardsGrpc {
      * ListScorecards lists scorecards
      * </pre>
      */
-    public void listScorecards(com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest request,
+    default void listScorecards(com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListScorecardsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListScorecardsMethod(), responseObserver);
     }
 
     /**
@@ -1487,9 +1452,9 @@ public final class ScorecardsGrpc {
      * UpdateScorecard updates an existing scorecard
      * </pre>
      */
-    public void updateScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardRequest request,
+    default void updateScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateScorecardMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateScorecardMethod(), responseObserver);
     }
 
     /**
@@ -1497,9 +1462,9 @@ public final class ScorecardsGrpc {
      * DeleteScorecard deletes a scorecard
      * </pre>
      */
-    public void deleteScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardRequest request,
+    default void deleteScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteScorecardMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteScorecardMethod(), responseObserver);
     }
 
     /**
@@ -1507,9 +1472,9 @@ public final class ScorecardsGrpc {
      * GetScorecard gets a scorecard by ID
      * </pre>
      */
-    public void getScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardRequest request,
+    default void getScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetScorecardMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetScorecardMethod(), responseObserver);
     }
 
     /**
@@ -1517,9 +1482,9 @@ public final class ScorecardsGrpc {
      * CreateQuestion creates a new library question
      * </pre>
      */
-    public void createQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionRequest request,
+    default void createQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateQuestionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateQuestionMethod(), responseObserver);
     }
 
     /**
@@ -1527,9 +1492,9 @@ public final class ScorecardsGrpc {
      * ListQuestions lists library questions
      * </pre>
      */
-    public void listQuestions(com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsRequest request,
+    default void listQuestions(com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListQuestionsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListQuestionsMethod(), responseObserver);
     }
 
     /**
@@ -1537,9 +1502,9 @@ public final class ScorecardsGrpc {
      * UpdateQuestion updates a library question
      * </pre>
      */
-    public void updateQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionRequest request,
+    default void updateQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateQuestionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateQuestionMethod(), responseObserver);
     }
 
     /**
@@ -1547,9 +1512,9 @@ public final class ScorecardsGrpc {
      * DeleteQuestion deletes a library question
      * </pre>
      */
-    public void deleteQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionRequest request,
+    default void deleteQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteQuestionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteQuestionMethod(), responseObserver);
     }
 
     /**
@@ -1557,9 +1522,9 @@ public final class ScorecardsGrpc {
      * GetQuestion gets a library question
      * </pre>
      */
-    public void getQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionRequest request,
+    default void getQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetQuestionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetQuestionMethod(), responseObserver);
     }
 
     /**
@@ -1567,9 +1532,9 @@ public final class ScorecardsGrpc {
      * BulkCreateQuestions creates library questions by a scorecard id
      * </pre>
      */
-    public void bulkCreateQuestions(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsRequest request,
+    default void bulkCreateQuestions(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getBulkCreateQuestionsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBulkCreateQuestionsMethod(), responseObserver);
     }
 
     /**
@@ -1577,9 +1542,9 @@ public final class ScorecardsGrpc {
      * CreateCategory creates a new scorecards category
      * </pre>
      */
-    public void createCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryRequest request,
+    default void createCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateCategoryMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCategoryMethod(), responseObserver);
     }
 
     /**
@@ -1587,9 +1552,9 @@ public final class ScorecardsGrpc {
      * ListCategories lists scorecards categories
      * </pre>
      */
-    public void listCategories(com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesRequest request,
+    default void listCategories(com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListCategoriesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCategoriesMethod(), responseObserver);
     }
 
     /**
@@ -1597,9 +1562,9 @@ public final class ScorecardsGrpc {
      * UpdateCategory updates a scorecard category
      * </pre>
      */
-    public void updateCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryRequest request,
+    default void updateCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateCategoryMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCategoryMethod(), responseObserver);
     }
 
     /**
@@ -1607,9 +1572,9 @@ public final class ScorecardsGrpc {
      * DeleteCategory deletes a scorecard category
      * </pre>
      */
-    public void deleteCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryRequest request,
+    default void deleteCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteCategoryMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCategoryMethod(), responseObserver);
     }
 
     /**
@@ -1617,9 +1582,9 @@ public final class ScorecardsGrpc {
      * GetCategory gets a scorecard category
      * </pre>
      */
-    public void getCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryRequest request,
+    default void getCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCategoryMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCategoryMethod(), responseObserver);
     }
 
     /**
@@ -1627,9 +1592,9 @@ public final class ScorecardsGrpc {
      * CreateScorecardQuestion creates a scorecard scorecard question
      * </pre>
      */
-    public void createScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionRequest request,
+    default void createScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateScorecardQuestionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateScorecardQuestionMethod(), responseObserver);
     }
 
     /**
@@ -1637,9 +1602,9 @@ public final class ScorecardsGrpc {
      * UpdateScorecardQuestion updates a scorecard question
      * </pre>
      */
-    public void updateScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionRequest request,
+    default void updateScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateScorecardQuestionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateScorecardQuestionMethod(), responseObserver);
     }
 
     /**
@@ -1647,9 +1612,9 @@ public final class ScorecardsGrpc {
      * DeleteScorecardQuestion deletes a scorecard question
      * </pre>
      */
-    public void deleteScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionRequest request,
+    default void deleteScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteScorecardQuestionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteScorecardQuestionMethod(), responseObserver);
     }
 
     /**
@@ -1657,9 +1622,9 @@ public final class ScorecardsGrpc {
      * GetScorecardQuestion gets a scorecard question
      * </pre>
      */
-    public void getScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionRequest request,
+    default void getScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetScorecardQuestionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetScorecardQuestionMethod(), responseObserver);
     }
 
     /**
@@ -1667,9 +1632,9 @@ public final class ScorecardsGrpc {
      * CreateSection creates a new scorecards section
      * </pre>
      */
-    public void createSection(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionRequest request,
+    default void createSection(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateSectionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSectionMethod(), responseObserver);
     }
 
     /**
@@ -1677,9 +1642,9 @@ public final class ScorecardsGrpc {
      * ListSections lists scorecards sections
      * </pre>
      */
-    public void listSections(com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsRequest request,
+    default void listSections(com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListSectionsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSectionsMethod(), responseObserver);
     }
 
     /**
@@ -1687,9 +1652,9 @@ public final class ScorecardsGrpc {
      * UpdateSection updates a scorecard section
      * </pre>
      */
-    public void updateSection(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionRequest request,
+    default void updateSection(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateSectionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSectionMethod(), responseObserver);
     }
 
     /**
@@ -1697,9 +1662,9 @@ public final class ScorecardsGrpc {
      * GetSection gets a scorecard section
      * </pre>
      */
-    public void getSection(com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionRequest request,
+    default void getSection(com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetSectionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSectionMethod(), responseObserver);
     }
 
     /**
@@ -1707,9 +1672,9 @@ public final class ScorecardsGrpc {
      * DeleteSection deletes a scorecard section
      * </pre>
      */
-    public void deleteSection(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionRequest request,
+    default void deleteSection(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteSectionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSectionMethod(), responseObserver);
     }
 
     /**
@@ -1717,9 +1682,9 @@ public final class ScorecardsGrpc {
      * CreateQuestionCategory links a scorecard question and category
      * </pre>
      */
-    public void createQuestionCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryRequest request,
+    default void createQuestionCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateQuestionCategoryMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateQuestionCategoryMethod(), responseObserver);
     }
 
     /**
@@ -1727,9 +1692,9 @@ public final class ScorecardsGrpc {
      * DeleteQuestionCategory deletes link between a scorecard question and category
      * </pre>
      */
-    public void deleteQuestionCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryRequest request,
+    default void deleteQuestionCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteQuestionCategoryMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteQuestionCategoryMethod(), responseObserver);
     }
 
     /**
@@ -1737,9 +1702,9 @@ public final class ScorecardsGrpc {
      * CreateEvaluation creates a new evaluation
      * </pre>
      */
-    public void createEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationRequest request,
+    default void createEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateEvaluationMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateEvaluationMethod(), responseObserver);
     }
 
     /**
@@ -1747,9 +1712,9 @@ public final class ScorecardsGrpc {
      * DeleteEvaluation gets an evaluation
      * </pre>
      */
-    public void deleteEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationRequest request,
+    default void deleteEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteEvaluationMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteEvaluationMethod(), responseObserver);
     }
 
     /**
@@ -1757,9 +1722,9 @@ public final class ScorecardsGrpc {
      * GetEvaluation gets an evaluation
      * </pre>
      */
-    public void scoreEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationRequest request,
+    default void scoreEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getScoreEvaluationMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getScoreEvaluationMethod(), responseObserver);
     }
 
     /**
@@ -1767,9 +1732,9 @@ public final class ScorecardsGrpc {
      * UpdateEvaluation updates an evaluation
      * </pre>
      */
-    public void updateEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest request,
+    default void updateEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateEvaluationMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateEvaluationMethod(), responseObserver);
     }
 
     /**
@@ -1777,9 +1742,9 @@ public final class ScorecardsGrpc {
      * GetEvaluation gets an evaluation
      * </pre>
      */
-    public void getEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationRequest request,
+    default void getEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetEvaluationMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetEvaluationMethod(), responseObserver);
     }
 
     /**
@@ -1787,9 +1752,9 @@ public final class ScorecardsGrpc {
      * ListEvaluations gets a list of evaluations
      * </pre>
      */
-    public void listEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsRequest request,
+    default void listEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListEvaluationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListEvaluationsMethod(), responseObserver);
     }
 
     /**
@@ -1797,9 +1762,10 @@ public final class ScorecardsGrpc {
      * DEPRECATED. Use CreateEvaluation to create evaluation sub-entities.
      * </pre>
      */
-    public void createEvaluationQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionRequest request,
+    @java.lang.Deprecated
+    default void createEvaluationQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateEvaluationQuestionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateEvaluationQuestionMethod(), responseObserver);
     }
 
     /**
@@ -1807,9 +1773,9 @@ public final class ScorecardsGrpc {
      * UpdateEvaluationQuestion updates an existing evaluation question
      * </pre>
      */
-    public void updateEvaluationQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionRequest request,
+    default void updateEvaluationQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateEvaluationQuestionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateEvaluationQuestionMethod(), responseObserver);
     }
 
     /**
@@ -1817,9 +1783,9 @@ public final class ScorecardsGrpc {
      * DeleteEvaluationQuestion creates an evaluation question
      * </pre>
      */
-    public void deleteEvaluationQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionRequest request,
+    default void deleteEvaluationQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteEvaluationQuestionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteEvaluationQuestionMethod(), responseObserver);
     }
 
     /**
@@ -1827,9 +1793,9 @@ public final class ScorecardsGrpc {
      * SampleCallsByCategory
      * </pre>
      */
-    public void sampleCallsByCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryRequest request,
+    default void sampleCallsByCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getSampleCallsByCategoryMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSampleCallsByCategoryMethod(), responseObserver);
     }
 
     /**
@@ -1837,9 +1803,9 @@ public final class ScorecardsGrpc {
      * CreateAutoQuestion creates an auto question
      * </pre>
      */
-    public void createAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionRequest request,
+    default void createAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateAutoQuestionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAutoQuestionMethod(), responseObserver);
     }
 
     /**
@@ -1847,9 +1813,9 @@ public final class ScorecardsGrpc {
      * UpdateAutoQuestion updates an auto question
      * </pre>
      */
-    public void updateAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionRequest request,
+    default void updateAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateAutoQuestionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAutoQuestionMethod(), responseObserver);
     }
 
     /**
@@ -1857,9 +1823,9 @@ public final class ScorecardsGrpc {
      * DeleteAutoQuestion deletes an auto question
      * </pre>
      */
-    public void deleteAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionRequest request,
+    default void deleteAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteAutoQuestionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAutoQuestionMethod(), responseObserver);
     }
 
     /**
@@ -1867,9 +1833,9 @@ public final class ScorecardsGrpc {
      * GetAutoQuestion gets an auto question
      * </pre>
      */
-    public void getAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionRequest request,
+    default void getAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAutoQuestionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAutoQuestionMethod(), responseObserver);
     }
 
     /**
@@ -1877,9 +1843,9 @@ public final class ScorecardsGrpc {
      * GetAutoEvaluation gets an auto evaluation
      * </pre>
      */
-    public void getAutoEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationRequest request,
+    default void getAutoEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAutoEvaluationMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAutoEvaluationMethod(), responseObserver);
     }
 
     /**
@@ -1887,9 +1853,9 @@ public final class ScorecardsGrpc {
      * ListAutoEvaluations gets a list of auto evaluations
      * </pre>
      */
-    public void listAutoEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest request,
+    default void listAutoEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAutoEvaluationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAutoEvaluationsMethod(), responseObserver);
     }
 
     /**
@@ -1897,340 +1863,36 @@ public final class ScorecardsGrpc {
      * DeleteAutoEvaluation deletes an auto evaluations
      * </pre>
      */
-    public void deleteAutoEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationRequest request,
+    default void deleteAutoEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteAutoEvaluationMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getCreateScorecardMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardResponse>(
-                  this, METHODID_CREATE_SCORECARD)))
-          .addMethod(
-            getListScorecardsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsResponse>(
-                  this, METHODID_LIST_SCORECARDS)))
-          .addMethod(
-            getUpdateScorecardMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardResponse>(
-                  this, METHODID_UPDATE_SCORECARD)))
-          .addMethod(
-            getDeleteScorecardMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardResponse>(
-                  this, METHODID_DELETE_SCORECARD)))
-          .addMethod(
-            getGetScorecardMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardResponse>(
-                  this, METHODID_GET_SCORECARD)))
-          .addMethod(
-            getCreateQuestionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionResponse>(
-                  this, METHODID_CREATE_QUESTION)))
-          .addMethod(
-            getListQuestionsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsResponse>(
-                  this, METHODID_LIST_QUESTIONS)))
-          .addMethod(
-            getUpdateQuestionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionResponse>(
-                  this, METHODID_UPDATE_QUESTION)))
-          .addMethod(
-            getDeleteQuestionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionResponse>(
-                  this, METHODID_DELETE_QUESTION)))
-          .addMethod(
-            getGetQuestionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionResponse>(
-                  this, METHODID_GET_QUESTION)))
-          .addMethod(
-            getBulkCreateQuestionsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsResponse>(
-                  this, METHODID_BULK_CREATE_QUESTIONS)))
-          .addMethod(
-            getCreateCategoryMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryResponse>(
-                  this, METHODID_CREATE_CATEGORY)))
-          .addMethod(
-            getListCategoriesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse>(
-                  this, METHODID_LIST_CATEGORIES)))
-          .addMethod(
-            getUpdateCategoryMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryResponse>(
-                  this, METHODID_UPDATE_CATEGORY)))
-          .addMethod(
-            getDeleteCategoryMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryResponse>(
-                  this, METHODID_DELETE_CATEGORY)))
-          .addMethod(
-            getGetCategoryMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryResponse>(
-                  this, METHODID_GET_CATEGORY)))
-          .addMethod(
-            getCreateScorecardQuestionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionResponse>(
-                  this, METHODID_CREATE_SCORECARD_QUESTION)))
-          .addMethod(
-            getUpdateScorecardQuestionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionResponse>(
-                  this, METHODID_UPDATE_SCORECARD_QUESTION)))
-          .addMethod(
-            getDeleteScorecardQuestionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionResponse>(
-                  this, METHODID_DELETE_SCORECARD_QUESTION)))
-          .addMethod(
-            getGetScorecardQuestionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionResponse>(
-                  this, METHODID_GET_SCORECARD_QUESTION)))
-          .addMethod(
-            getCreateSectionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionResponse>(
-                  this, METHODID_CREATE_SECTION)))
-          .addMethod(
-            getListSectionsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsResponse>(
-                  this, METHODID_LIST_SECTIONS)))
-          .addMethod(
-            getUpdateSectionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionResponse>(
-                  this, METHODID_UPDATE_SECTION)))
-          .addMethod(
-            getGetSectionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionResponse>(
-                  this, METHODID_GET_SECTION)))
-          .addMethod(
-            getDeleteSectionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionResponse>(
-                  this, METHODID_DELETE_SECTION)))
-          .addMethod(
-            getCreateQuestionCategoryMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryResponse>(
-                  this, METHODID_CREATE_QUESTION_CATEGORY)))
-          .addMethod(
-            getDeleteQuestionCategoryMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryResponse>(
-                  this, METHODID_DELETE_QUESTION_CATEGORY)))
-          .addMethod(
-            getCreateEvaluationMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationResponse>(
-                  this, METHODID_CREATE_EVALUATION)))
-          .addMethod(
-            getDeleteEvaluationMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationResponse>(
-                  this, METHODID_DELETE_EVALUATION)))
-          .addMethod(
-            getScoreEvaluationMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse>(
-                  this, METHODID_SCORE_EVALUATION)))
-          .addMethod(
-            getUpdateEvaluationMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse>(
-                  this, METHODID_UPDATE_EVALUATION)))
-          .addMethod(
-            getGetEvaluationMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationResponse>(
-                  this, METHODID_GET_EVALUATION)))
-          .addMethod(
-            getListEvaluationsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsResponse>(
-                  this, METHODID_LIST_EVALUATIONS)))
-          .addMethod(
-            getCreateEvaluationQuestionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionResponse>(
-                  this, METHODID_CREATE_EVALUATION_QUESTION)))
-          .addMethod(
-            getUpdateEvaluationQuestionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionResponse>(
-                  this, METHODID_UPDATE_EVALUATION_QUESTION)))
-          .addMethod(
-            getDeleteEvaluationQuestionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionResponse>(
-                  this, METHODID_DELETE_EVALUATION_QUESTION)))
-          .addMethod(
-            getSampleCallsByCategoryMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryResponse>(
-                  this, METHODID_SAMPLE_CALLS_BY_CATEGORY)))
-          .addMethod(
-            getCreateAutoQuestionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionResponse>(
-                  this, METHODID_CREATE_AUTO_QUESTION)))
-          .addMethod(
-            getUpdateAutoQuestionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionResponse>(
-                  this, METHODID_UPDATE_AUTO_QUESTION)))
-          .addMethod(
-            getDeleteAutoQuestionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionResponse>(
-                  this, METHODID_DELETE_AUTO_QUESTION)))
-          .addMethod(
-            getGetAutoQuestionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionResponse>(
-                  this, METHODID_GET_AUTO_QUESTION)))
-          .addMethod(
-            getGetAutoEvaluationMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationResponse>(
-                  this, METHODID_GET_AUTO_EVALUATION)))
-          .addMethod(
-            getListAutoEvaluationsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsResponse>(
-                  this, METHODID_LIST_AUTO_EVALUATIONS)))
-          .addMethod(
-            getDeleteAutoEvaluationMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationRequest,
-                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationResponse>(
-                  this, METHODID_DELETE_AUTO_EVALUATION)))
-          .build();
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAutoEvaluationMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service Scorecards.
    */
-  public static final class ScorecardsStub extends io.grpc.stub.AbstractStub<ScorecardsStub> {
-    private ScorecardsStub(io.grpc.Channel channel) {
-      super(channel);
-    }
+  public static abstract class ScorecardsImplBase
+      implements io.grpc.BindableService, AsyncService {
 
-    private ScorecardsStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return ScorecardsGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Scorecards.
+   */
+  public static final class ScorecardsStub
+      extends io.grpc.stub.AbstractAsyncStub<ScorecardsStub> {
+    private ScorecardsStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ScorecardsStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ScorecardsStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ScorecardsStub(channel, callOptions);
     }
 
@@ -2241,7 +1903,7 @@ public final class ScorecardsGrpc {
      */
     public void createScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateScorecardMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2252,7 +1914,7 @@ public final class ScorecardsGrpc {
      */
     public void listScorecards(com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListScorecardsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2263,7 +1925,7 @@ public final class ScorecardsGrpc {
      */
     public void updateScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateScorecardMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2274,7 +1936,7 @@ public final class ScorecardsGrpc {
      */
     public void deleteScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteScorecardMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2285,7 +1947,7 @@ public final class ScorecardsGrpc {
      */
     public void getScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetScorecardMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2296,7 +1958,7 @@ public final class ScorecardsGrpc {
      */
     public void createQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateQuestionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2307,7 +1969,7 @@ public final class ScorecardsGrpc {
      */
     public void listQuestions(com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListQuestionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2318,7 +1980,7 @@ public final class ScorecardsGrpc {
      */
     public void updateQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateQuestionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2329,7 +1991,7 @@ public final class ScorecardsGrpc {
      */
     public void deleteQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteQuestionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2340,7 +2002,7 @@ public final class ScorecardsGrpc {
      */
     public void getQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetQuestionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2351,7 +2013,7 @@ public final class ScorecardsGrpc {
      */
     public void bulkCreateQuestions(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getBulkCreateQuestionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2362,7 +2024,7 @@ public final class ScorecardsGrpc {
      */
     public void createCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateCategoryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2373,7 +2035,7 @@ public final class ScorecardsGrpc {
      */
     public void listCategories(com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListCategoriesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2384,7 +2046,7 @@ public final class ScorecardsGrpc {
      */
     public void updateCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateCategoryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2395,7 +2057,7 @@ public final class ScorecardsGrpc {
      */
     public void deleteCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteCategoryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2406,7 +2068,7 @@ public final class ScorecardsGrpc {
      */
     public void getCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetCategoryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2417,7 +2079,7 @@ public final class ScorecardsGrpc {
      */
     public void createScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateScorecardQuestionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2428,7 +2090,7 @@ public final class ScorecardsGrpc {
      */
     public void updateScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateScorecardQuestionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2439,7 +2101,7 @@ public final class ScorecardsGrpc {
      */
     public void deleteScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteScorecardQuestionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2450,7 +2112,7 @@ public final class ScorecardsGrpc {
      */
     public void getScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetScorecardQuestionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2461,7 +2123,7 @@ public final class ScorecardsGrpc {
      */
     public void createSection(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateSectionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2472,7 +2134,7 @@ public final class ScorecardsGrpc {
      */
     public void listSections(com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSectionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2483,7 +2145,7 @@ public final class ScorecardsGrpc {
      */
     public void updateSection(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateSectionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2494,7 +2156,7 @@ public final class ScorecardsGrpc {
      */
     public void getSection(com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSectionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2505,7 +2167,7 @@ public final class ScorecardsGrpc {
      */
     public void deleteSection(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteSectionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2516,7 +2178,7 @@ public final class ScorecardsGrpc {
      */
     public void createQuestionCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateQuestionCategoryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2527,7 +2189,7 @@ public final class ScorecardsGrpc {
      */
     public void deleteQuestionCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteQuestionCategoryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2538,7 +2200,7 @@ public final class ScorecardsGrpc {
      */
     public void createEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateEvaluationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2549,7 +2211,7 @@ public final class ScorecardsGrpc {
      */
     public void deleteEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteEvaluationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2560,7 +2222,7 @@ public final class ScorecardsGrpc {
      */
     public void scoreEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getScoreEvaluationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2571,7 +2233,7 @@ public final class ScorecardsGrpc {
      */
     public void updateEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateEvaluationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2582,7 +2244,7 @@ public final class ScorecardsGrpc {
      */
     public void getEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetEvaluationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2593,7 +2255,7 @@ public final class ScorecardsGrpc {
      */
     public void listEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListEvaluationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2602,9 +2264,10 @@ public final class ScorecardsGrpc {
      * DEPRECATED. Use CreateEvaluation to create evaluation sub-entities.
      * </pre>
      */
+    @java.lang.Deprecated
     public void createEvaluationQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateEvaluationQuestionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2615,7 +2278,7 @@ public final class ScorecardsGrpc {
      */
     public void updateEvaluationQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateEvaluationQuestionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2626,7 +2289,7 @@ public final class ScorecardsGrpc {
      */
     public void deleteEvaluationQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteEvaluationQuestionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2637,7 +2300,7 @@ public final class ScorecardsGrpc {
      */
     public void sampleCallsByCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSampleCallsByCategoryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2648,7 +2311,7 @@ public final class ScorecardsGrpc {
      */
     public void createAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateAutoQuestionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2659,7 +2322,7 @@ public final class ScorecardsGrpc {
      */
     public void updateAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAutoQuestionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2670,7 +2333,7 @@ public final class ScorecardsGrpc {
      */
     public void deleteAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteAutoQuestionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2681,7 +2344,7 @@ public final class ScorecardsGrpc {
      */
     public void getAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAutoQuestionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2692,7 +2355,7 @@ public final class ScorecardsGrpc {
      */
     public void getAutoEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAutoEvaluationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2703,7 +2366,7 @@ public final class ScorecardsGrpc {
      */
     public void listAutoEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAutoEvaluationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2714,26 +2377,24 @@ public final class ScorecardsGrpc {
      */
     public void deleteAutoEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteAutoEvaluationMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Scorecards.
    */
-  public static final class ScorecardsBlockingStub extends io.grpc.stub.AbstractStub<ScorecardsBlockingStub> {
-    private ScorecardsBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ScorecardsBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ScorecardsBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ScorecardsBlockingStub> {
+    private ScorecardsBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ScorecardsBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ScorecardsBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ScorecardsBlockingStub(channel, callOptions);
     }
 
@@ -2743,7 +2404,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardResponse createScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateScorecardMethod(), getCallOptions(), request);
     }
 
@@ -2753,7 +2414,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsResponse listScorecards(com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListScorecardsMethod(), getCallOptions(), request);
     }
 
@@ -2763,7 +2424,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardResponse updateScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateScorecardMethod(), getCallOptions(), request);
     }
 
@@ -2773,7 +2434,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardResponse deleteScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteScorecardMethod(), getCallOptions(), request);
     }
 
@@ -2783,7 +2444,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardResponse getScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetScorecardMethod(), getCallOptions(), request);
     }
 
@@ -2793,7 +2454,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionResponse createQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateQuestionMethod(), getCallOptions(), request);
     }
 
@@ -2803,7 +2464,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsResponse listQuestions(com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListQuestionsMethod(), getCallOptions(), request);
     }
 
@@ -2813,7 +2474,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionResponse updateQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateQuestionMethod(), getCallOptions(), request);
     }
 
@@ -2823,7 +2484,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionResponse deleteQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteQuestionMethod(), getCallOptions(), request);
     }
 
@@ -2833,7 +2494,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionResponse getQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetQuestionMethod(), getCallOptions(), request);
     }
 
@@ -2843,7 +2504,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsResponse bulkCreateQuestions(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBulkCreateQuestionsMethod(), getCallOptions(), request);
     }
 
@@ -2853,7 +2514,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryResponse createCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateCategoryMethod(), getCallOptions(), request);
     }
 
@@ -2863,7 +2524,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse listCategories(com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListCategoriesMethod(), getCallOptions(), request);
     }
 
@@ -2873,7 +2534,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryResponse updateCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateCategoryMethod(), getCallOptions(), request);
     }
 
@@ -2883,7 +2544,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryResponse deleteCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteCategoryMethod(), getCallOptions(), request);
     }
 
@@ -2893,7 +2554,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryResponse getCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetCategoryMethod(), getCallOptions(), request);
     }
 
@@ -2903,7 +2564,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionResponse createScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateScorecardQuestionMethod(), getCallOptions(), request);
     }
 
@@ -2913,7 +2574,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionResponse updateScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateScorecardQuestionMethod(), getCallOptions(), request);
     }
 
@@ -2923,7 +2584,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionResponse deleteScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteScorecardQuestionMethod(), getCallOptions(), request);
     }
 
@@ -2933,7 +2594,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionResponse getScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetScorecardQuestionMethod(), getCallOptions(), request);
     }
 
@@ -2943,7 +2604,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionResponse createSection(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateSectionMethod(), getCallOptions(), request);
     }
 
@@ -2953,7 +2614,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsResponse listSections(com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSectionsMethod(), getCallOptions(), request);
     }
 
@@ -2963,7 +2624,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionResponse updateSection(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateSectionMethod(), getCallOptions(), request);
     }
 
@@ -2973,7 +2634,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionResponse getSection(com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSectionMethod(), getCallOptions(), request);
     }
 
@@ -2983,7 +2644,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionResponse deleteSection(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteSectionMethod(), getCallOptions(), request);
     }
 
@@ -2993,7 +2654,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryResponse createQuestionCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateQuestionCategoryMethod(), getCallOptions(), request);
     }
 
@@ -3003,7 +2664,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryResponse deleteQuestionCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteQuestionCategoryMethod(), getCallOptions(), request);
     }
 
@@ -3013,7 +2674,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationResponse createEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateEvaluationMethod(), getCallOptions(), request);
     }
 
@@ -3023,7 +2684,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationResponse deleteEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteEvaluationMethod(), getCallOptions(), request);
     }
 
@@ -3033,7 +2694,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse scoreEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getScoreEvaluationMethod(), getCallOptions(), request);
     }
 
@@ -3043,7 +2704,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse updateEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateEvaluationMethod(), getCallOptions(), request);
     }
 
@@ -3053,7 +2714,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationResponse getEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetEvaluationMethod(), getCallOptions(), request);
     }
 
@@ -3063,7 +2724,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsResponse listEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListEvaluationsMethod(), getCallOptions(), request);
     }
 
@@ -3072,8 +2733,9 @@ public final class ScorecardsGrpc {
      * DEPRECATED. Use CreateEvaluation to create evaluation sub-entities.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionResponse createEvaluationQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateEvaluationQuestionMethod(), getCallOptions(), request);
     }
 
@@ -3083,7 +2745,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionResponse updateEvaluationQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateEvaluationQuestionMethod(), getCallOptions(), request);
     }
 
@@ -3093,7 +2755,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionResponse deleteEvaluationQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteEvaluationQuestionMethod(), getCallOptions(), request);
     }
 
@@ -3103,7 +2765,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryResponse sampleCallsByCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSampleCallsByCategoryMethod(), getCallOptions(), request);
     }
 
@@ -3113,7 +2775,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionResponse createAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateAutoQuestionMethod(), getCallOptions(), request);
     }
 
@@ -3123,7 +2785,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionResponse updateAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAutoQuestionMethod(), getCallOptions(), request);
     }
 
@@ -3133,7 +2795,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionResponse deleteAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteAutoQuestionMethod(), getCallOptions(), request);
     }
 
@@ -3143,7 +2805,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionResponse getAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAutoQuestionMethod(), getCallOptions(), request);
     }
 
@@ -3153,7 +2815,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationResponse getAutoEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAutoEvaluationMethod(), getCallOptions(), request);
     }
 
@@ -3163,7 +2825,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsResponse listAutoEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAutoEvaluationsMethod(), getCallOptions(), request);
     }
 
@@ -3173,26 +2835,24 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationResponse deleteAutoEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteAutoEvaluationMethod(), getCallOptions(), request);
     }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Scorecards.
    */
-  public static final class ScorecardsFutureStub extends io.grpc.stub.AbstractStub<ScorecardsFutureStub> {
-    private ScorecardsFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ScorecardsFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ScorecardsFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ScorecardsFutureStub> {
+    private ScorecardsFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ScorecardsFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ScorecardsFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ScorecardsFutureStub(channel, callOptions);
     }
 
@@ -3203,7 +2863,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardResponse> createScorecard(
         com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateScorecardMethod(), getCallOptions()), request);
     }
 
@@ -3214,7 +2874,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsResponse> listScorecards(
         com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListScorecardsMethod(), getCallOptions()), request);
     }
 
@@ -3225,7 +2885,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardResponse> updateScorecard(
         com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateScorecardMethod(), getCallOptions()), request);
     }
 
@@ -3236,7 +2896,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardResponse> deleteScorecard(
         com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteScorecardMethod(), getCallOptions()), request);
     }
 
@@ -3247,7 +2907,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardResponse> getScorecard(
         com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetScorecardMethod(), getCallOptions()), request);
     }
 
@@ -3258,7 +2918,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionResponse> createQuestion(
         com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateQuestionMethod(), getCallOptions()), request);
     }
 
@@ -3269,7 +2929,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsResponse> listQuestions(
         com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListQuestionsMethod(), getCallOptions()), request);
     }
 
@@ -3280,7 +2940,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionResponse> updateQuestion(
         com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateQuestionMethod(), getCallOptions()), request);
     }
 
@@ -3291,7 +2951,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionResponse> deleteQuestion(
         com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteQuestionMethod(), getCallOptions()), request);
     }
 
@@ -3302,7 +2962,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionResponse> getQuestion(
         com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetQuestionMethod(), getCallOptions()), request);
     }
 
@@ -3313,7 +2973,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsResponse> bulkCreateQuestions(
         com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getBulkCreateQuestionsMethod(), getCallOptions()), request);
     }
 
@@ -3324,7 +2984,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryResponse> createCategory(
         com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateCategoryMethod(), getCallOptions()), request);
     }
 
@@ -3335,7 +2995,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse> listCategories(
         com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListCategoriesMethod(), getCallOptions()), request);
     }
 
@@ -3346,7 +3006,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryResponse> updateCategory(
         com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateCategoryMethod(), getCallOptions()), request);
     }
 
@@ -3357,7 +3017,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryResponse> deleteCategory(
         com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteCategoryMethod(), getCallOptions()), request);
     }
 
@@ -3368,7 +3028,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryResponse> getCategory(
         com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetCategoryMethod(), getCallOptions()), request);
     }
 
@@ -3379,7 +3039,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionResponse> createScorecardQuestion(
         com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateScorecardQuestionMethod(), getCallOptions()), request);
     }
 
@@ -3390,7 +3050,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionResponse> updateScorecardQuestion(
         com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateScorecardQuestionMethod(), getCallOptions()), request);
     }
 
@@ -3401,7 +3061,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionResponse> deleteScorecardQuestion(
         com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteScorecardQuestionMethod(), getCallOptions()), request);
     }
 
@@ -3412,7 +3072,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionResponse> getScorecardQuestion(
         com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetScorecardQuestionMethod(), getCallOptions()), request);
     }
 
@@ -3423,7 +3083,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionResponse> createSection(
         com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateSectionMethod(), getCallOptions()), request);
     }
 
@@ -3434,7 +3094,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsResponse> listSections(
         com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSectionsMethod(), getCallOptions()), request);
     }
 
@@ -3445,7 +3105,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionResponse> updateSection(
         com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateSectionMethod(), getCallOptions()), request);
     }
 
@@ -3456,7 +3116,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionResponse> getSection(
         com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetSectionMethod(), getCallOptions()), request);
     }
 
@@ -3467,7 +3127,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionResponse> deleteSection(
         com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteSectionMethod(), getCallOptions()), request);
     }
 
@@ -3478,7 +3138,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryResponse> createQuestionCategory(
         com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateQuestionCategoryMethod(), getCallOptions()), request);
     }
 
@@ -3489,7 +3149,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryResponse> deleteQuestionCategory(
         com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteQuestionCategoryMethod(), getCallOptions()), request);
     }
 
@@ -3500,7 +3160,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationResponse> createEvaluation(
         com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateEvaluationMethod(), getCallOptions()), request);
     }
 
@@ -3511,7 +3171,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationResponse> deleteEvaluation(
         com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteEvaluationMethod(), getCallOptions()), request);
     }
 
@@ -3522,7 +3182,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse> scoreEvaluation(
         com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getScoreEvaluationMethod(), getCallOptions()), request);
     }
 
@@ -3533,7 +3193,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse> updateEvaluation(
         com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateEvaluationMethod(), getCallOptions()), request);
     }
 
@@ -3544,7 +3204,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationResponse> getEvaluation(
         com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetEvaluationMethod(), getCallOptions()), request);
     }
 
@@ -3555,7 +3215,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsResponse> listEvaluations(
         com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListEvaluationsMethod(), getCallOptions()), request);
     }
 
@@ -3564,9 +3224,10 @@ public final class ScorecardsGrpc {
      * DEPRECATED. Use CreateEvaluation to create evaluation sub-entities.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionResponse> createEvaluationQuestion(
         com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateEvaluationQuestionMethod(), getCallOptions()), request);
     }
 
@@ -3577,7 +3238,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionResponse> updateEvaluationQuestion(
         com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateEvaluationQuestionMethod(), getCallOptions()), request);
     }
 
@@ -3588,7 +3249,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionResponse> deleteEvaluationQuestion(
         com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteEvaluationQuestionMethod(), getCallOptions()), request);
     }
 
@@ -3599,7 +3260,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryResponse> sampleCallsByCategory(
         com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSampleCallsByCategoryMethod(), getCallOptions()), request);
     }
 
@@ -3610,7 +3271,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionResponse> createAutoQuestion(
         com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateAutoQuestionMethod(), getCallOptions()), request);
     }
 
@@ -3621,7 +3282,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionResponse> updateAutoQuestion(
         com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAutoQuestionMethod(), getCallOptions()), request);
     }
 
@@ -3632,7 +3293,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionResponse> deleteAutoQuestion(
         com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteAutoQuestionMethod(), getCallOptions()), request);
     }
 
@@ -3643,7 +3304,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionResponse> getAutoQuestion(
         com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAutoQuestionMethod(), getCallOptions()), request);
     }
 
@@ -3654,7 +3315,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationResponse> getAutoEvaluation(
         com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAutoEvaluationMethod(), getCallOptions()), request);
     }
 
@@ -3665,7 +3326,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsResponse> listAutoEvaluations(
         com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAutoEvaluationsMethod(), getCallOptions()), request);
     }
 
@@ -3676,7 +3337,7 @@ public final class ScorecardsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationResponse> deleteAutoEvaluation(
         com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteAutoEvaluationMethod(), getCallOptions()), request);
     }
   }
@@ -3731,10 +3392,10 @@ public final class ScorecardsGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ScorecardsImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ScorecardsImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -3933,6 +3594,319 @@ public final class ScorecardsGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getCreateScorecardMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardResponse>(
+                service, METHODID_CREATE_SCORECARD)))
+        .addMethod(
+          getListScorecardsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsResponse>(
+                service, METHODID_LIST_SCORECARDS)))
+        .addMethod(
+          getUpdateScorecardMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardResponse>(
+                service, METHODID_UPDATE_SCORECARD)))
+        .addMethod(
+          getDeleteScorecardMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardResponse>(
+                service, METHODID_DELETE_SCORECARD)))
+        .addMethod(
+          getGetScorecardMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardResponse>(
+                service, METHODID_GET_SCORECARD)))
+        .addMethod(
+          getCreateQuestionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionResponse>(
+                service, METHODID_CREATE_QUESTION)))
+        .addMethod(
+          getListQuestionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsResponse>(
+                service, METHODID_LIST_QUESTIONS)))
+        .addMethod(
+          getUpdateQuestionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionResponse>(
+                service, METHODID_UPDATE_QUESTION)))
+        .addMethod(
+          getDeleteQuestionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionResponse>(
+                service, METHODID_DELETE_QUESTION)))
+        .addMethod(
+          getGetQuestionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionResponse>(
+                service, METHODID_GET_QUESTION)))
+        .addMethod(
+          getBulkCreateQuestionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsResponse>(
+                service, METHODID_BULK_CREATE_QUESTIONS)))
+        .addMethod(
+          getCreateCategoryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryResponse>(
+                service, METHODID_CREATE_CATEGORY)))
+        .addMethod(
+          getListCategoriesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse>(
+                service, METHODID_LIST_CATEGORIES)))
+        .addMethod(
+          getUpdateCategoryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryResponse>(
+                service, METHODID_UPDATE_CATEGORY)))
+        .addMethod(
+          getDeleteCategoryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryResponse>(
+                service, METHODID_DELETE_CATEGORY)))
+        .addMethod(
+          getGetCategoryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryResponse>(
+                service, METHODID_GET_CATEGORY)))
+        .addMethod(
+          getCreateScorecardQuestionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionResponse>(
+                service, METHODID_CREATE_SCORECARD_QUESTION)))
+        .addMethod(
+          getUpdateScorecardQuestionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionResponse>(
+                service, METHODID_UPDATE_SCORECARD_QUESTION)))
+        .addMethod(
+          getDeleteScorecardQuestionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionResponse>(
+                service, METHODID_DELETE_SCORECARD_QUESTION)))
+        .addMethod(
+          getGetScorecardQuestionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionResponse>(
+                service, METHODID_GET_SCORECARD_QUESTION)))
+        .addMethod(
+          getCreateSectionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionResponse>(
+                service, METHODID_CREATE_SECTION)))
+        .addMethod(
+          getListSectionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsResponse>(
+                service, METHODID_LIST_SECTIONS)))
+        .addMethod(
+          getUpdateSectionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionResponse>(
+                service, METHODID_UPDATE_SECTION)))
+        .addMethod(
+          getGetSectionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionResponse>(
+                service, METHODID_GET_SECTION)))
+        .addMethod(
+          getDeleteSectionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionResponse>(
+                service, METHODID_DELETE_SECTION)))
+        .addMethod(
+          getCreateQuestionCategoryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryResponse>(
+                service, METHODID_CREATE_QUESTION_CATEGORY)))
+        .addMethod(
+          getDeleteQuestionCategoryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryResponse>(
+                service, METHODID_DELETE_QUESTION_CATEGORY)))
+        .addMethod(
+          getCreateEvaluationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationResponse>(
+                service, METHODID_CREATE_EVALUATION)))
+        .addMethod(
+          getDeleteEvaluationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationResponse>(
+                service, METHODID_DELETE_EVALUATION)))
+        .addMethod(
+          getScoreEvaluationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse>(
+                service, METHODID_SCORE_EVALUATION)))
+        .addMethod(
+          getUpdateEvaluationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse>(
+                service, METHODID_UPDATE_EVALUATION)))
+        .addMethod(
+          getGetEvaluationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationResponse>(
+                service, METHODID_GET_EVALUATION)))
+        .addMethod(
+          getListEvaluationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsResponse>(
+                service, METHODID_LIST_EVALUATIONS)))
+        .addMethod(
+          getCreateEvaluationQuestionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionResponse>(
+                service, METHODID_CREATE_EVALUATION_QUESTION)))
+        .addMethod(
+          getUpdateEvaluationQuestionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionResponse>(
+                service, METHODID_UPDATE_EVALUATION_QUESTION)))
+        .addMethod(
+          getDeleteEvaluationQuestionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionResponse>(
+                service, METHODID_DELETE_EVALUATION_QUESTION)))
+        .addMethod(
+          getSampleCallsByCategoryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryResponse>(
+                service, METHODID_SAMPLE_CALLS_BY_CATEGORY)))
+        .addMethod(
+          getCreateAutoQuestionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionResponse>(
+                service, METHODID_CREATE_AUTO_QUESTION)))
+        .addMethod(
+          getUpdateAutoQuestionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionResponse>(
+                service, METHODID_UPDATE_AUTO_QUESTION)))
+        .addMethod(
+          getDeleteAutoQuestionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionResponse>(
+                service, METHODID_DELETE_AUTO_QUESTION)))
+        .addMethod(
+          getGetAutoQuestionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionResponse>(
+                service, METHODID_GET_AUTO_QUESTION)))
+        .addMethod(
+          getGetAutoEvaluationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationResponse>(
+                service, METHODID_GET_AUTO_EVALUATION)))
+        .addMethod(
+          getListAutoEvaluationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsResponse>(
+                service, METHODID_LIST_AUTO_EVALUATIONS)))
+        .addMethod(
+          getDeleteAutoEvaluationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationResponse>(
+                service, METHODID_DELETE_AUTO_EVALUATION)))
+        .build();
   }
 
   private static abstract class ScorecardsBaseDescriptorSupplier

@@ -25,66 +25,6 @@ private static final long serialVersionUID = 0L;
     return new ConditionalNavigation();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private ConditionalNavigation(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpressionList.Builder subBuilder = null;
-            if (complexBooleanExpressionList_ != null) {
-              subBuilder = complexBooleanExpressionList_.toBuilder();
-            }
-            complexBooleanExpressionList_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpressionList.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(complexBooleanExpressionList_);
-              complexBooleanExpressionList_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 16: {
-
-            targetActIndex_ = input.readInt64();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_ConditionalNavigation_descriptor;
@@ -121,11 +61,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpressionListOrBuilder getComplexBooleanExpressionListOrBuilder() {
-    return getComplexBooleanExpressionList();
+    return complexBooleanExpressionList_ == null ? com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpressionList.getDefaultInstance() : complexBooleanExpressionList_;
   }
 
   public static final int TARGET_ACT_INDEX_FIELD_NUMBER = 2;
-  private long targetActIndex_;
+  private long targetActIndex_ = 0L;
   /**
    * <code>int64 target_act_index = 2 [json_name = "targetActIndex"];</code>
    * @return The targetActIndex.
@@ -155,7 +95,7 @@ private static final long serialVersionUID = 0L;
     if (targetActIndex_ != 0L) {
       output.writeInt64(2, targetActIndex_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -172,7 +112,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, targetActIndex_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -194,7 +134,7 @@ private static final long serialVersionUID = 0L;
     }
     if (getTargetActIndex()
         != other.getTargetActIndex()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -212,7 +152,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + TARGET_ACT_INDEX_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getTargetActIndex());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -261,11 +201,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.ConditionalNavigation parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.ConditionalNavigation parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -329,30 +271,24 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ConditionalNavigation.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (complexBooleanExpressionListBuilder_ == null) {
-        complexBooleanExpressionList_ = null;
-      } else {
-        complexBooleanExpressionList_ = null;
+      bitField0_ = 0;
+      complexBooleanExpressionList_ = null;
+      if (complexBooleanExpressionListBuilder_ != null) {
+        complexBooleanExpressionListBuilder_.dispose();
         complexBooleanExpressionListBuilder_ = null;
       }
       targetActIndex_ = 0L;
-
       return this;
     }
 
@@ -379,14 +315,21 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ConditionalNavigation buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ConditionalNavigation result = new com.tcn.cloud.api.api.v0alpha.ConditionalNavigation(this);
-      if (complexBooleanExpressionListBuilder_ == null) {
-        result.complexBooleanExpressionList_ = complexBooleanExpressionList_;
-      } else {
-        result.complexBooleanExpressionList_ = complexBooleanExpressionListBuilder_.build();
-      }
-      result.targetActIndex_ = targetActIndex_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ConditionalNavigation result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.complexBooleanExpressionList_ = complexBooleanExpressionListBuilder_ == null
+            ? complexBooleanExpressionList_
+            : complexBooleanExpressionListBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.targetActIndex_ = targetActIndex_;
+      }
     }
 
     @java.lang.Override
@@ -439,7 +382,7 @@ private static final long serialVersionUID = 0L;
       if (other.getTargetActIndex() != 0L) {
         setTargetActIndex(other.getTargetActIndex());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -454,19 +397,45 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.ConditionalNavigation parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getComplexBooleanExpressionListFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 16: {
+              targetActIndex_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ConditionalNavigation) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpressionList complexBooleanExpressionList_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -476,7 +445,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the complexBooleanExpressionList field is set.
      */
     public boolean hasComplexBooleanExpressionList() {
-      return complexBooleanExpressionListBuilder_ != null || complexBooleanExpressionList_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.api.v0alpha.ComplexBooleanExpressionList complex_boolean_expression_list = 1 [json_name = "complexBooleanExpressionList"];</code>
@@ -498,11 +467,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         complexBooleanExpressionList_ = value;
-        onChanged();
       } else {
         complexBooleanExpressionListBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -512,11 +481,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpressionList.Builder builderForValue) {
       if (complexBooleanExpressionListBuilder_ == null) {
         complexBooleanExpressionList_ = builderForValue.build();
-        onChanged();
       } else {
         complexBooleanExpressionListBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -524,38 +493,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeComplexBooleanExpressionList(com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpressionList value) {
       if (complexBooleanExpressionListBuilder_ == null) {
-        if (complexBooleanExpressionList_ != null) {
-          complexBooleanExpressionList_ =
-            com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpressionList.newBuilder(complexBooleanExpressionList_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          complexBooleanExpressionList_ != null &&
+          complexBooleanExpressionList_ != com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpressionList.getDefaultInstance()) {
+          getComplexBooleanExpressionListBuilder().mergeFrom(value);
         } else {
           complexBooleanExpressionList_ = value;
         }
-        onChanged();
       } else {
         complexBooleanExpressionListBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v0alpha.ComplexBooleanExpressionList complex_boolean_expression_list = 1 [json_name = "complexBooleanExpressionList"];</code>
      */
     public Builder clearComplexBooleanExpressionList() {
-      if (complexBooleanExpressionListBuilder_ == null) {
-        complexBooleanExpressionList_ = null;
-        onChanged();
-      } else {
-        complexBooleanExpressionList_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      complexBooleanExpressionList_ = null;
+      if (complexBooleanExpressionListBuilder_ != null) {
+        complexBooleanExpressionListBuilder_.dispose();
         complexBooleanExpressionListBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v0alpha.ComplexBooleanExpressionList complex_boolean_expression_list = 1 [json_name = "complexBooleanExpressionList"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.ComplexBooleanExpressionList.Builder getComplexBooleanExpressionListBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getComplexBooleanExpressionListFieldBuilder().getBuilder();
     }
@@ -602,8 +571,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTargetActIndex(long value) {
-      
+
       targetActIndex_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -612,7 +582,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTargetActIndex() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       targetActIndex_ = 0L;
       onChanged();
       return this;
@@ -650,7 +620,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ConditionalNavigation(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -30,77 +30,6 @@ private static final long serialVersionUID = 0L;
     return new UpsertNonSkillActivityAssociationReq();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private UpsertNonSkillActivityAssociationReq(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            nonSkillActivitySid_ = input.readInt64();
-            break;
-          }
-          case 18: {
-            com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder subBuilder = null;
-            if (node_ != null) {
-              subBuilder = node_.toBuilder();
-            }
-            node_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(node_);
-              node_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            associationType_ = rawValue;
-            break;
-          }
-          case 32: {
-
-            scheduleScenarioSid_ = input.readInt64();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_UpsertNonSkillActivityAssociationReq_descriptor;
@@ -115,7 +44,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NON_SKILL_ACTIVITY_SID_FIELD_NUMBER = 1;
-  private long nonSkillActivitySid_;
+  private long nonSkillActivitySid_ = 0L;
   /**
    * <pre>
    * ID of the non skill activity to upsert the association of.
@@ -164,11 +93,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntityOrBuilder getNodeOrBuilder() {
-    return getNode();
+    return node_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.getDefaultInstance() : node_;
   }
 
   public static final int ASSOCIATION_TYPE_FIELD_NUMBER = 3;
-  private int associationType_;
+  private int associationType_ = 0;
   /**
    * <pre>
    * Type of association that the non skill activity will have with the &#64;node.
@@ -189,13 +118,12 @@ private static final long serialVersionUID = 0L;
    * @return The associationType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.ConfigRelationshipType getAssociationType() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.ConfigRelationshipType result = com.tcn.cloud.api.api.commons.ConfigRelationshipType.valueOf(associationType_);
+    com.tcn.cloud.api.api.commons.ConfigRelationshipType result = com.tcn.cloud.api.api.commons.ConfigRelationshipType.forNumber(associationType_);
     return result == null ? com.tcn.cloud.api.api.commons.ConfigRelationshipType.UNRECOGNIZED : result;
   }
 
   public static final int SCHEDULE_SCENARIO_SID_FIELD_NUMBER = 4;
-  private long scheduleScenarioSid_;
+  private long scheduleScenarioSid_ = 0L;
   /**
    * <pre>
    * ID of the schedule scenario that this non skill activity belongs to.
@@ -235,7 +163,7 @@ private static final long serialVersionUID = 0L;
     if (scheduleScenarioSid_ != 0L) {
       output.writeInt64(4, scheduleScenarioSid_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -260,7 +188,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(4, scheduleScenarioSid_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -285,7 +213,7 @@ private static final long serialVersionUID = 0L;
     if (associationType_ != other.associationType_) return false;
     if (getScheduleScenarioSid()
         != other.getScheduleScenarioSid()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -308,7 +236,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + SCHEDULE_SCENARIO_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getScheduleScenarioSid());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -357,11 +285,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -429,34 +359,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       nonSkillActivitySid_ = 0L;
-
-      if (nodeBuilder_ == null) {
-        node_ = null;
-      } else {
-        node_ = null;
+      node_ = null;
+      if (nodeBuilder_ != null) {
+        nodeBuilder_.dispose();
         nodeBuilder_ = null;
       }
       associationType_ = 0;
-
       scheduleScenarioSid_ = 0L;
-
       return this;
     }
 
@@ -483,16 +405,27 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq(this);
-      result.nonSkillActivitySid_ = nonSkillActivitySid_;
-      if (nodeBuilder_ == null) {
-        result.node_ = node_;
-      } else {
-        result.node_ = nodeBuilder_.build();
-      }
-      result.associationType_ = associationType_;
-      result.scheduleScenarioSid_ = scheduleScenarioSid_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.nonSkillActivitySid_ = nonSkillActivitySid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.node_ = nodeBuilder_ == null
+            ? node_
+            : nodeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.associationType_ = associationType_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.scheduleScenarioSid_ = scheduleScenarioSid_;
+      }
     }
 
     @java.lang.Override
@@ -551,7 +484,7 @@ private static final long serialVersionUID = 0L;
       if (other.getScheduleScenarioSid() != 0L) {
         setScheduleScenarioSid(other.getScheduleScenarioSid());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -566,19 +499,55 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              nonSkillActivitySid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              input.readMessage(
+                  getNodeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              associationType_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              scheduleScenarioSid_ = input.readInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private long nonSkillActivitySid_ ;
     /**
@@ -603,8 +572,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNonSkillActivitySid(long value) {
-      
+
       nonSkillActivitySid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -617,7 +587,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNonSkillActivitySid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       nonSkillActivitySid_ = 0L;
       onChanged();
       return this;
@@ -635,7 +605,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the node field is set.
      */
     public boolean hasNode() {
-      return nodeBuilder_ != null || node_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -665,11 +635,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         node_ = value;
-        onChanged();
       } else {
         nodeBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -683,11 +653,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder builderForValue) {
       if (nodeBuilder_ == null) {
         node_ = builderForValue.build();
-        onChanged();
       } else {
         nodeBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -699,17 +669,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeNode(com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity value) {
       if (nodeBuilder_ == null) {
-        if (node_ != null) {
-          node_ =
-            com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.newBuilder(node_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          node_ != null &&
+          node_ != com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.getDefaultInstance()) {
+          getNodeBuilder().mergeFrom(value);
         } else {
           node_ = value;
         }
-        onChanged();
       } else {
         nodeBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -720,14 +691,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.ParentEntity node = 2 [json_name = "node"];</code>
      */
     public Builder clearNode() {
-      if (nodeBuilder_ == null) {
-        node_ = null;
-        onChanged();
-      } else {
-        node_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      node_ = null;
+      if (nodeBuilder_ != null) {
+        nodeBuilder_.dispose();
         nodeBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -738,7 +708,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.ParentEntity node = 2 [json_name = "node"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder getNodeBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getNodeFieldBuilder().getBuilder();
     }
@@ -800,8 +770,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAssociationTypeValue(int value) {
-      
       associationType_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -815,8 +785,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ConfigRelationshipType getAssociationType() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.ConfigRelationshipType result = com.tcn.cloud.api.api.commons.ConfigRelationshipType.valueOf(associationType_);
+      com.tcn.cloud.api.api.commons.ConfigRelationshipType result = com.tcn.cloud.api.api.commons.ConfigRelationshipType.forNumber(associationType_);
       return result == null ? com.tcn.cloud.api.api.commons.ConfigRelationshipType.UNRECOGNIZED : result;
     }
     /**
@@ -832,7 +801,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       associationType_ = value.getNumber();
       onChanged();
       return this;
@@ -846,7 +815,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAssociationType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       associationType_ = 0;
       onChanged();
       return this;
@@ -875,8 +844,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setScheduleScenarioSid(long value) {
-      
+
       scheduleScenarioSid_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -889,7 +859,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearScheduleScenarioSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       scheduleScenarioSid_ = 0L;
       onChanged();
       return this;
@@ -927,7 +897,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new UpsertNonSkillActivityAssociationReq(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

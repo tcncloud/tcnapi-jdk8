@@ -52,5 +52,5 @@ public interface DashPageOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.DashPageChartOrBuilder getChartOrBuilder();
 
-  public com.tcn.cloud.api.api.v0alpha.DashPage.DashPageTypeCase getDashPageTypeCase();
+  com.tcn.cloud.api.api.v0alpha.DashPage.DashPageTypeCase getDashPageTypeCase();
 }

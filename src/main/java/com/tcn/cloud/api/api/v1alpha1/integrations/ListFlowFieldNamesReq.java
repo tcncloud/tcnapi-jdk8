@@ -31,61 +31,6 @@ private static final long serialVersionUID = 0L;
     return new ListFlowFieldNamesReq();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private ListFlowFieldNamesReq(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 42: {
-            com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity.Builder subBuilder = null;
-            if (entity_ != null) {
-              subBuilder = entity_.toBuilder();
-            }
-            entity_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(entity_);
-              entity_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.integrations.PortalsProto.internal_static_api_v1alpha1_integrations_ListFlowFieldNamesReq_descriptor;
@@ -172,67 +117,6 @@ private static final long serialVersionUID = 0L;
       return new Entity();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Entity(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 26: {
-              com.tcn.cloud.api.api.commons.integrations.Flow.Builder subBuilder = null;
-              if (flow_ != null) {
-                subBuilder = flow_.toBuilder();
-              }
-              flow_ = input.readMessage(com.tcn.cloud.api.api.commons.integrations.Flow.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(flow_);
-                flow_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 32: {
-              int rawValue = input.readEnum();
-
-              loc_ = rawValue;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.v1alpha1.integrations.PortalsProto.internal_static_api_v1alpha1_integrations_ListFlowFieldNamesReq_Entity_descriptor;
@@ -281,11 +165,11 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.integrations.FlowOrBuilder getFlowOrBuilder() {
-      return getFlow();
+      return flow_ == null ? com.tcn.cloud.api.api.commons.integrations.Flow.getDefaultInstance() : flow_;
     }
 
     public static final int LOC_FIELD_NUMBER = 4;
-    private int loc_;
+    private int loc_ = 0;
     /**
      * <pre>
      * the location the flow will check for fields
@@ -306,8 +190,7 @@ private static final long serialVersionUID = 0L;
      * @return The loc.
      */
     @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc getLoc() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc result = com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc.valueOf(loc_);
+      com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc result = com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc.forNumber(loc_);
       return result == null ? com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc.UNRECOGNIZED : result;
     }
 
@@ -331,7 +214,7 @@ private static final long serialVersionUID = 0L;
       if (loc_ != com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc.FFL_ANY.getNumber()) {
         output.writeEnum(4, loc_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -348,7 +231,7 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, loc_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -369,7 +252,7 @@ private static final long serialVersionUID = 0L;
             .equals(other.getFlow())) return false;
       }
       if (loc_ != other.loc_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -386,7 +269,7 @@ private static final long serialVersionUID = 0L;
       }
       hash = (37 * hash) + LOC_FIELD_NUMBER;
       hash = (53 * hash) + loc_;
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -435,11 +318,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -503,30 +388,24 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (flowBuilder_ == null) {
-          flow_ = null;
-        } else {
-          flow_ = null;
+        bitField0_ = 0;
+        flow_ = null;
+        if (flowBuilder_ != null) {
+          flowBuilder_.dispose();
           flowBuilder_ = null;
         }
         loc_ = 0;
-
         return this;
       }
 
@@ -553,14 +432,21 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity buildPartial() {
         com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity result = new com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity(this);
-        if (flowBuilder_ == null) {
-          result.flow_ = flow_;
-        } else {
-          result.flow_ = flowBuilder_.build();
-        }
-        result.loc_ = loc_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.flow_ = flowBuilder_ == null
+              ? flow_
+              : flowBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.loc_ = loc_;
+        }
       }
 
       @java.lang.Override
@@ -613,7 +499,7 @@ private static final long serialVersionUID = 0L;
         if (other.loc_ != 0) {
           setLocValue(other.getLocValue());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -628,19 +514,45 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 26: {
+                input.readMessage(
+                    getFlowFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 26
+              case 32: {
+                loc_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.tcn.cloud.api.api.commons.integrations.Flow flow_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -654,7 +566,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the flow field is set.
        */
       public boolean hasFlow() {
-        return flowBuilder_ != null || flow_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -684,11 +596,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           flow_ = value;
-          onChanged();
         } else {
           flowBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -702,11 +614,11 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.commons.integrations.Flow.Builder builderForValue) {
         if (flowBuilder_ == null) {
           flow_ = builderForValue.build();
-          onChanged();
         } else {
           flowBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -718,17 +630,18 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeFlow(com.tcn.cloud.api.api.commons.integrations.Flow value) {
         if (flowBuilder_ == null) {
-          if (flow_ != null) {
-            flow_ =
-              com.tcn.cloud.api.api.commons.integrations.Flow.newBuilder(flow_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            flow_ != null &&
+            flow_ != com.tcn.cloud.api.api.commons.integrations.Flow.getDefaultInstance()) {
+            getFlowBuilder().mergeFrom(value);
           } else {
             flow_ = value;
           }
-          onChanged();
         } else {
           flowBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -739,14 +652,13 @@ private static final long serialVersionUID = 0L;
        * <code>.api.commons.integrations.Flow flow = 3 [json_name = "flow"];</code>
        */
       public Builder clearFlow() {
-        if (flowBuilder_ == null) {
-          flow_ = null;
-          onChanged();
-        } else {
-          flow_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        flow_ = null;
+        if (flowBuilder_ != null) {
+          flowBuilder_.dispose();
           flowBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -757,7 +669,7 @@ private static final long serialVersionUID = 0L;
        * <code>.api.commons.integrations.Flow flow = 3 [json_name = "flow"];</code>
        */
       public com.tcn.cloud.api.api.commons.integrations.Flow.Builder getFlowBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getFlowFieldBuilder().getBuilder();
       }
@@ -819,8 +731,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setLocValue(int value) {
-        
         loc_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -834,8 +746,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc getLoc() {
-        @SuppressWarnings("deprecation")
-        com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc result = com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc.valueOf(loc_);
+        com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc result = com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc.forNumber(loc_);
         return result == null ? com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc.UNRECOGNIZED : result;
       }
       /**
@@ -851,7 +762,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000002;
         loc_ = value.getNumber();
         onChanged();
         return this;
@@ -865,7 +776,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearLoc() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         loc_ = 0;
         onChanged();
         return this;
@@ -903,7 +814,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Entity(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -946,7 +868,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.EntityOrBuilder getEntityOrBuilder() {
-    return getEntity();
+    return entity_ == null ? com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity.getDefaultInstance() : entity_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -966,7 +888,7 @@ private static final long serialVersionUID = 0L;
     if (entity_ != null) {
       output.writeMessage(5, getEntity());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -979,7 +901,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getEntity());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -999,7 +921,7 @@ private static final long serialVersionUID = 0L;
       if (!getEntity()
           .equals(other.getEntity())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1014,7 +936,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ENTITY_FIELD_NUMBER;
       hash = (53 * hash) + getEntity().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1063,11 +985,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1137,26 +1061,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (entityBuilder_ == null) {
-        entity_ = null;
-      } else {
-        entity_ = null;
+      bitField0_ = 0;
+      entity_ = null;
+      if (entityBuilder_ != null) {
+        entityBuilder_.dispose();
         entityBuilder_ = null;
       }
       return this;
@@ -1185,13 +1104,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq result = new com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq(this);
-      if (entityBuilder_ == null) {
-        result.entity_ = entity_;
-      } else {
-        result.entity_ = entityBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.entity_ = entityBuilder_ == null
+            ? entity_
+            : entityBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1241,7 +1165,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasEntity()) {
         mergeEntity(other.getEntity());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1256,19 +1180,40 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 42: {
+              input.readMessage(
+                  getEntityFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 42
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity entity_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1278,7 +1223,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the entity field is set.
      */
     public boolean hasEntity() {
-      return entityBuilder_ != null || entity_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity entity = 5 [json_name = "entity"];</code>
@@ -1300,11 +1245,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         entity_ = value;
-        onChanged();
       } else {
         entityBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -1314,11 +1259,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity.Builder builderForValue) {
       if (entityBuilder_ == null) {
         entity_ = builderForValue.build();
-        onChanged();
       } else {
         entityBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -1326,38 +1271,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeEntity(com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity value) {
       if (entityBuilder_ == null) {
-        if (entity_ != null) {
-          entity_ =
-            com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity.newBuilder(entity_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          entity_ != null &&
+          entity_ != com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity.getDefaultInstance()) {
+          getEntityBuilder().mergeFrom(value);
         } else {
           entity_ = value;
         }
-        onChanged();
       } else {
         entityBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity entity = 5 [json_name = "entity"];</code>
      */
     public Builder clearEntity() {
-      if (entityBuilder_ == null) {
-        entity_ = null;
-        onChanged();
-      } else {
-        entity_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      entity_ = null;
+      if (entityBuilder_ != null) {
+        entityBuilder_.dispose();
         entityBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity entity = 5 [json_name = "entity"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity.Builder getEntityBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getEntityFieldBuilder().getBuilder();
     }
@@ -1421,7 +1366,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ListFlowFieldNamesReq(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

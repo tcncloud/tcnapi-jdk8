@@ -13,6 +13,15 @@ public interface GetFlagRequestOrBuilder extends
    * </pre>
    *
    * <code>string name = 2 [json_name = "name"];</code>
+   * @return Whether the name field is set.
+   */
+  boolean hasName();
+  /**
+   * <pre>
+   * The name of the flag.
+   * </pre>
+   *
+   * <code>string name = 2 [json_name = "name"];</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -33,9 +42,18 @@ public interface GetFlagRequestOrBuilder extends
    * </pre>
    *
    * <code>int64 flag_sid = 3 [json_name = "flagSid"];</code>
+   * @return Whether the flagSid field is set.
+   */
+  boolean hasFlagSid();
+  /**
+   * <pre>
+   * The unique id of the flag.
+   * </pre>
+   *
+   * <code>int64 flag_sid = 3 [json_name = "flagSid"];</code>
    * @return The flagSid.
    */
   long getFlagSid();
 
-  public com.tcn.cloud.api.api.v1alpha1.vanalytics.GetFlagRequest.WhereCase getWhereCase();
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.GetFlagRequest.WhereCase getWhereCase();
 }

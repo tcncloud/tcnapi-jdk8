@@ -33,96 +33,6 @@ private static final long serialVersionUID = 0L;
     return new BubbleChart();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private BubbleChart(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            groupingDataPointId_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            groupingLabel_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            xDataPointId_ = s;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            xLabel_ = s;
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            yDataPointId_ = s;
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            yLabel_ = s;
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            zDataPointId_ = s;
-            break;
-          }
-          case 66: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            zLabel_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.AnaProto.internal_static_api_v0alpha_BubbleChart_descriptor;
@@ -137,7 +47,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GROUPING_DATA_POINT_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object groupingDataPointId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object groupingDataPointId_ = "";
   /**
    * <code>string grouping_data_point_id = 1 [json_name = "groupingDataPointId"];</code>
    * @return The groupingDataPointId.
@@ -175,7 +86,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GROUPING_LABEL_FIELD_NUMBER = 2;
-  private volatile java.lang.Object groupingLabel_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object groupingLabel_ = "";
   /**
    * <code>string grouping_label = 2 [json_name = "groupingLabel"];</code>
    * @return The groupingLabel.
@@ -213,7 +125,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int X_DATA_POINT_ID_FIELD_NUMBER = 3;
-  private volatile java.lang.Object xDataPointId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object xDataPointId_ = "";
   /**
    * <code>string x_data_point_id = 3 [json_name = "xDataPointId"];</code>
    * @return The xDataPointId.
@@ -251,7 +164,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int X_LABEL_FIELD_NUMBER = 4;
-  private volatile java.lang.Object xLabel_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object xLabel_ = "";
   /**
    * <code>string x_label = 4 [json_name = "xLabel"];</code>
    * @return The xLabel.
@@ -289,7 +203,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int Y_DATA_POINT_ID_FIELD_NUMBER = 5;
-  private volatile java.lang.Object yDataPointId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object yDataPointId_ = "";
   /**
    * <code>string y_data_point_id = 5 [json_name = "yDataPointId"];</code>
    * @return The yDataPointId.
@@ -327,7 +242,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int Y_LABEL_FIELD_NUMBER = 6;
-  private volatile java.lang.Object yLabel_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object yLabel_ = "";
   /**
    * <code>string y_label = 6 [json_name = "yLabel"];</code>
    * @return The yLabel.
@@ -365,7 +281,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int Z_DATA_POINT_ID_FIELD_NUMBER = 7;
-  private volatile java.lang.Object zDataPointId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object zDataPointId_ = "";
   /**
    * <code>string z_data_point_id = 7 [json_name = "zDataPointId"];</code>
    * @return The zDataPointId.
@@ -403,7 +320,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int Z_LABEL_FIELD_NUMBER = 8;
-  private volatile java.lang.Object zLabel_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object zLabel_ = "";
   /**
    * <code>string z_label = 8 [json_name = "zLabel"];</code>
    * @return The zLabel.
@@ -454,31 +372,31 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getGroupingDataPointIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupingDataPointId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, groupingDataPointId_);
     }
-    if (!getGroupingLabelBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupingLabel_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, groupingLabel_);
     }
-    if (!getXDataPointIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(xDataPointId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, xDataPointId_);
     }
-    if (!getXLabelBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(xLabel_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, xLabel_);
     }
-    if (!getYDataPointIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(yDataPointId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, yDataPointId_);
     }
-    if (!getYLabelBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(yLabel_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, yLabel_);
     }
-    if (!getZDataPointIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zDataPointId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, zDataPointId_);
     }
-    if (!getZLabelBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zLabel_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, zLabel_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -487,31 +405,31 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getGroupingDataPointIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupingDataPointId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, groupingDataPointId_);
     }
-    if (!getGroupingLabelBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupingLabel_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, groupingLabel_);
     }
-    if (!getXDataPointIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(xDataPointId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, xDataPointId_);
     }
-    if (!getXLabelBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(xLabel_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, xLabel_);
     }
-    if (!getYDataPointIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(yDataPointId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, yDataPointId_);
     }
-    if (!getYLabelBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(yLabel_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, yLabel_);
     }
-    if (!getZDataPointIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zDataPointId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, zDataPointId_);
     }
-    if (!getZLabelBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zLabel_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, zLabel_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -542,7 +460,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getZDataPointId())) return false;
     if (!getZLabel()
         .equals(other.getZLabel())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -569,7 +487,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getZDataPointId().hashCode();
     hash = (37 * hash) + Z_LABEL_FIELD_NUMBER;
     hash = (53 * hash) + getZLabel().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -618,11 +536,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.BubbleChart parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.BubbleChart parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -686,38 +606,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.BubbleChart.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       groupingDataPointId_ = "";
-
       groupingLabel_ = "";
-
       xDataPointId_ = "";
-
       xLabel_ = "";
-
       yDataPointId_ = "";
-
       yLabel_ = "";
-
       zDataPointId_ = "";
-
       zLabel_ = "";
-
       return this;
     }
 
@@ -744,16 +652,37 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.BubbleChart buildPartial() {
       com.tcn.cloud.api.api.v0alpha.BubbleChart result = new com.tcn.cloud.api.api.v0alpha.BubbleChart(this);
-      result.groupingDataPointId_ = groupingDataPointId_;
-      result.groupingLabel_ = groupingLabel_;
-      result.xDataPointId_ = xDataPointId_;
-      result.xLabel_ = xLabel_;
-      result.yDataPointId_ = yDataPointId_;
-      result.yLabel_ = yLabel_;
-      result.zDataPointId_ = zDataPointId_;
-      result.zLabel_ = zLabel_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.BubbleChart result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.groupingDataPointId_ = groupingDataPointId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.groupingLabel_ = groupingLabel_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.xDataPointId_ = xDataPointId_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.xLabel_ = xLabel_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.yDataPointId_ = yDataPointId_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.yLabel_ = yLabel_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.zDataPointId_ = zDataPointId_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.zLabel_ = zLabel_;
+      }
     }
 
     @java.lang.Override
@@ -802,37 +731,45 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.BubbleChart.getDefaultInstance()) return this;
       if (!other.getGroupingDataPointId().isEmpty()) {
         groupingDataPointId_ = other.groupingDataPointId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getGroupingLabel().isEmpty()) {
         groupingLabel_ = other.groupingLabel_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getXDataPointId().isEmpty()) {
         xDataPointId_ = other.xDataPointId_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getXLabel().isEmpty()) {
         xLabel_ = other.xLabel_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getYDataPointId().isEmpty()) {
         yDataPointId_ = other.yDataPointId_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.getYLabel().isEmpty()) {
         yLabel_ = other.yLabel_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (!other.getZDataPointId().isEmpty()) {
         zDataPointId_ = other.zDataPointId_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (!other.getZLabel().isEmpty()) {
         zLabel_ = other.zLabel_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -847,19 +784,73 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.BubbleChart parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              groupingDataPointId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              groupingLabel_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              xDataPointId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              xLabel_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              yDataPointId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              yLabel_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
+              zDataPointId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            case 66: {
+              zLabel_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.BubbleChart) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object groupingDataPointId_ = "";
     /**
@@ -902,11 +893,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGroupingDataPointId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       groupingDataPointId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -915,8 +904,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGroupingDataPointId() {
-      
       groupingDataPointId_ = getDefaultInstance().getGroupingDataPointId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -927,12 +916,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGroupingDataPointIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       groupingDataPointId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -978,11 +965,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGroupingLabel(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       groupingLabel_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -991,8 +976,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGroupingLabel() {
-      
       groupingLabel_ = getDefaultInstance().getGroupingLabel();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1003,12 +988,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGroupingLabelBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       groupingLabel_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1054,11 +1037,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setXDataPointId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       xDataPointId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1067,8 +1048,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearXDataPointId() {
-      
       xDataPointId_ = getDefaultInstance().getXDataPointId();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1079,12 +1060,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setXDataPointIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       xDataPointId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1130,11 +1109,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setXLabel(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       xLabel_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1143,8 +1120,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearXLabel() {
-      
       xLabel_ = getDefaultInstance().getXLabel();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1155,12 +1132,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setXLabelBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       xLabel_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1206,11 +1181,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setYDataPointId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       yDataPointId_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1219,8 +1192,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearYDataPointId() {
-      
       yDataPointId_ = getDefaultInstance().getYDataPointId();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1231,12 +1204,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setYDataPointIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       yDataPointId_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1282,11 +1253,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setYLabel(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       yLabel_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1295,8 +1264,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearYLabel() {
-      
       yLabel_ = getDefaultInstance().getYLabel();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1307,12 +1276,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setYLabelBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       yLabel_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1358,11 +1325,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setZDataPointId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       zDataPointId_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1371,8 +1336,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearZDataPointId() {
-      
       zDataPointId_ = getDefaultInstance().getZDataPointId();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1383,12 +1348,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setZDataPointIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       zDataPointId_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1434,11 +1397,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setZLabel(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       zLabel_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1447,8 +1408,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearZLabel() {
-      
       zLabel_ = getDefaultInstance().getZLabel();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1459,12 +1420,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setZLabelBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       zLabel_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1501,7 +1460,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new BubbleChart(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

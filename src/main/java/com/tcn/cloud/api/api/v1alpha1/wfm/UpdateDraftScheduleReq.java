@@ -31,93 +31,6 @@ private static final long serialVersionUID = 0L;
     return new UpdateDraftScheduleReq();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private UpdateDraftScheduleReq(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            draftScheduleSid_ = input.readInt64();
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            name_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            description_ = s;
-            break;
-          }
-          case 34: {
-            com.tcn.cloud.api.api.commons.DatetimeRange.Builder subBuilder = null;
-            if (datetimeRange_ != null) {
-              subBuilder = datetimeRange_.toBuilder();
-            }
-            datetimeRange_ = input.readMessage(com.tcn.cloud.api.api.commons.DatetimeRange.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(datetimeRange_);
-              datetimeRange_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 40: {
-
-            deleteShiftsNotInRange_ = input.readBool();
-            break;
-          }
-          case 48: {
-
-            copyShiftsIntoNewRange_ = input.readBool();
-            break;
-          }
-          case 56: {
-
-            getUpdatedShifts_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_UpdateDraftScheduleReq_descriptor;
@@ -132,7 +45,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DRAFT_SCHEDULE_SID_FIELD_NUMBER = 1;
-  private long draftScheduleSid_;
+  private long draftScheduleSid_ = 0L;
   /**
    * <pre>
    * ID of the draft schedule to be updated.
@@ -147,7 +60,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 2;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * Name of the draft schedule.
@@ -193,7 +107,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 3;
-  private volatile java.lang.Object description_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
   /**
    * <pre>
    * Description of the draft schedule.
@@ -273,11 +188,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getDatetimeRangeOrBuilder() {
-    return getDatetimeRange();
+    return datetimeRange_ == null ? com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : datetimeRange_;
   }
 
   public static final int DELETE_SHIFTS_NOT_IN_RANGE_FIELD_NUMBER = 5;
-  private boolean deleteShiftsNotInRange_;
+  private boolean deleteShiftsNotInRange_ = false;
   /**
    * <pre>
    * Set to true to delete any shift instances belonging to the draft schedule, which are outside of the new &#64;datetime_range.
@@ -293,7 +208,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COPY_SHIFTS_INTO_NEW_RANGE_FIELD_NUMBER = 6;
-  private boolean copyShiftsIntoNewRange_;
+  private boolean copyShiftsIntoNewRange_ = false;
   /**
    * <pre>
    * Set to true to copy shift instances from the published schedule into regions of the schedule with no shift instances.
@@ -308,7 +223,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GET_UPDATED_SHIFTS_FIELD_NUMBER = 7;
-  private boolean getUpdatedShifts_;
+  private boolean getUpdatedShifts_ = false;
   /**
    * <pre>
    * Set to true to get the draft schedule with the updated schedule range, shift instances, and shift segments
@@ -339,10 +254,10 @@ private static final long serialVersionUID = 0L;
     if (draftScheduleSid_ != 0L) {
       output.writeInt64(1, draftScheduleSid_);
     }
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
     }
     if (datetimeRange_ != null) {
@@ -357,7 +272,7 @@ private static final long serialVersionUID = 0L;
     if (getUpdatedShifts_ != false) {
       output.writeBool(7, getUpdatedShifts_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -370,10 +285,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, draftScheduleSid_);
     }
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
     }
     if (datetimeRange_ != null) {
@@ -392,7 +307,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(7, getUpdatedShifts_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -424,7 +339,7 @@ private static final long serialVersionUID = 0L;
         != other.getCopyShiftsIntoNewRange()) return false;
     if (getGetUpdatedShifts()
         != other.getGetUpdatedShifts()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -455,7 +370,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + GET_UPDATED_SHIFTS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getGetUpdatedShifts());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -504,11 +419,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -576,40 +493,29 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       draftScheduleSid_ = 0L;
-
       name_ = "";
-
       description_ = "";
-
-      if (datetimeRangeBuilder_ == null) {
-        datetimeRange_ = null;
-      } else {
-        datetimeRange_ = null;
+      datetimeRange_ = null;
+      if (datetimeRangeBuilder_ != null) {
+        datetimeRangeBuilder_.dispose();
         datetimeRangeBuilder_ = null;
       }
       deleteShiftsNotInRange_ = false;
-
       copyShiftsIntoNewRange_ = false;
-
       getUpdatedShifts_ = false;
-
       return this;
     }
 
@@ -636,19 +542,36 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq(this);
-      result.draftScheduleSid_ = draftScheduleSid_;
-      result.name_ = name_;
-      result.description_ = description_;
-      if (datetimeRangeBuilder_ == null) {
-        result.datetimeRange_ = datetimeRange_;
-      } else {
-        result.datetimeRange_ = datetimeRangeBuilder_.build();
-      }
-      result.deleteShiftsNotInRange_ = deleteShiftsNotInRange_;
-      result.copyShiftsIntoNewRange_ = copyShiftsIntoNewRange_;
-      result.getUpdatedShifts_ = getUpdatedShifts_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.draftScheduleSid_ = draftScheduleSid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.datetimeRange_ = datetimeRangeBuilder_ == null
+            ? datetimeRange_
+            : datetimeRangeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.deleteShiftsNotInRange_ = deleteShiftsNotInRange_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.copyShiftsIntoNewRange_ = copyShiftsIntoNewRange_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.getUpdatedShifts_ = getUpdatedShifts_;
+      }
     }
 
     @java.lang.Override
@@ -700,10 +623,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasDatetimeRange()) {
@@ -718,7 +643,7 @@ private static final long serialVersionUID = 0L;
       if (other.getGetUpdatedShifts() != false) {
         setGetUpdatedShifts(other.getGetUpdatedShifts());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -733,19 +658,70 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              draftScheduleSid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              name_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              description_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getDatetimeRangeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 40: {
+              deleteShiftsNotInRange_ = input.readBool();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 48: {
+              copyShiftsIntoNewRange_ = input.readBool();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 56: {
+              getUpdatedShifts_ = input.readBool();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private long draftScheduleSid_ ;
     /**
@@ -770,8 +746,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDraftScheduleSid(long value) {
-      
+
       draftScheduleSid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -784,7 +761,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDraftScheduleSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       draftScheduleSid_ = 0L;
       onChanged();
       return this;
@@ -843,11 +820,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -860,8 +835,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -876,12 +851,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -939,11 +912,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       description_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -956,8 +927,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-      
       description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -972,12 +943,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -994,7 +963,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the datetimeRange field is set.
      */
     public boolean hasDatetimeRange() {
-      return datetimeRangeBuilder_ != null || datetimeRange_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1024,11 +993,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         datetimeRange_ = value;
-        onChanged();
       } else {
         datetimeRangeBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1042,11 +1011,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.DatetimeRange.Builder builderForValue) {
       if (datetimeRangeBuilder_ == null) {
         datetimeRange_ = builderForValue.build();
-        onChanged();
       } else {
         datetimeRangeBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1058,17 +1027,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDatetimeRange(com.tcn.cloud.api.api.commons.DatetimeRange value) {
       if (datetimeRangeBuilder_ == null) {
-        if (datetimeRange_ != null) {
-          datetimeRange_ =
-            com.tcn.cloud.api.api.commons.DatetimeRange.newBuilder(datetimeRange_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000008) != 0) &&
+          datetimeRange_ != null &&
+          datetimeRange_ != com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance()) {
+          getDatetimeRangeBuilder().mergeFrom(value);
         } else {
           datetimeRange_ = value;
         }
-        onChanged();
       } else {
         datetimeRangeBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1079,14 +1049,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.DatetimeRange datetime_range = 4 [json_name = "datetimeRange"];</code>
      */
     public Builder clearDatetimeRange() {
-      if (datetimeRangeBuilder_ == null) {
-        datetimeRange_ = null;
-        onChanged();
-      } else {
-        datetimeRange_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      datetimeRange_ = null;
+      if (datetimeRangeBuilder_ != null) {
+        datetimeRangeBuilder_.dispose();
         datetimeRangeBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1097,7 +1066,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.DatetimeRange datetime_range = 4 [json_name = "datetimeRange"];</code>
      */
     public com.tcn.cloud.api.api.commons.DatetimeRange.Builder getDatetimeRangeBuilder() {
-      
+      bitField0_ |= 0x00000008;
       onChanged();
       return getDatetimeRangeFieldBuilder().getBuilder();
     }
@@ -1162,8 +1131,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDeleteShiftsNotInRange(boolean value) {
-      
+
       deleteShiftsNotInRange_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1177,7 +1147,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDeleteShiftsNotInRange() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       deleteShiftsNotInRange_ = false;
       onChanged();
       return this;
@@ -1206,8 +1176,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCopyShiftsIntoNewRange(boolean value) {
-      
+
       copyShiftsIntoNewRange_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1220,7 +1191,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCopyShiftsIntoNewRange() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       copyShiftsIntoNewRange_ = false;
       onChanged();
       return this;
@@ -1249,8 +1220,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setGetUpdatedShifts(boolean value) {
-      
+
       getUpdatedShifts_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1263,7 +1235,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGetUpdatedShifts() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       getUpdatedShifts_ = false;
       onChanged();
       return this;
@@ -1301,7 +1273,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new UpdateDraftScheduleReq(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

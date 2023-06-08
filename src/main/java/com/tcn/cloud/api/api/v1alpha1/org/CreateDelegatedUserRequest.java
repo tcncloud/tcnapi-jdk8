@@ -26,7 +26,8 @@ private static final long serialVersionUID = 0L;
     username_ = "";
     firstName_ = "";
     lastName_ = "";
-    groups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    groups_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     connectionId_ = "";
   }
 
@@ -37,103 +38,6 @@ private static final long serialVersionUID = 0L;
     return new CreateDelegatedUserRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private CreateDelegatedUserRequest(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            authUserId_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            orgId_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            email_ = s;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            username_ = s;
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            firstName_ = s;
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            lastName_ = s;
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              groups_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            groups_.add(s);
-            break;
-          }
-          case 66: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            connectionId_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        groups_ = groups_.getUnmodifiableView();
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_CreateDelegatedUserRequest_descriptor;
@@ -148,7 +52,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AUTH_USER_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object authUserId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object authUserId_ = "";
   /**
    * <pre>
    * the user id provided by the auth (idp) connection.
@@ -194,7 +99,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ORG_ID_FIELD_NUMBER = 2;
-  private volatile java.lang.Object orgId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object orgId_ = "";
   /**
    * <pre>
    * org_id for which the user will be created for.
@@ -248,7 +154,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EMAIL_FIELD_NUMBER = 3;
-  private volatile java.lang.Object email_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object email_ = "";
   /**
    * <pre>
    * the user's email provided by the auth connection.
@@ -294,7 +201,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USERNAME_FIELD_NUMBER = 4;
-  private volatile java.lang.Object username_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object username_ = "";
   /**
    * <pre>
    * the username provided by the auth connection.
@@ -340,7 +248,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FIRST_NAME_FIELD_NUMBER = 5;
-  private volatile java.lang.Object firstName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object firstName_ = "";
   /**
    * <pre>
    * the user's first name.
@@ -386,7 +295,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LAST_NAME_FIELD_NUMBER = 6;
-  private volatile java.lang.Object lastName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object lastName_ = "";
   /**
    * <pre>
    * the user's last name.
@@ -432,7 +342,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GROUPS_FIELD_NUMBER = 7;
-  private com.google.protobuf.LazyStringList groups_;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList groups_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * the user's groups provided by the auth connection.
@@ -483,7 +395,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONNECTION_ID_FIELD_NUMBER = 8;
-  private volatile java.lang.Object connectionId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object connectionId_ = "";
   /**
    * <pre>
    * the id of the auth connection the user is coming from.
@@ -542,31 +455,31 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getAuthUserIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authUserId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, authUserId_);
     }
-    if (!getOrgIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orgId_);
     }
-    if (!getEmailBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, email_);
     }
-    if (!getUsernameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, username_);
     }
-    if (!getFirstNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(firstName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, firstName_);
     }
-    if (!getLastNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, lastName_);
     }
     for (int i = 0; i < groups_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, groups_.getRaw(i));
     }
-    if (!getConnectionIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, connectionId_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -575,22 +488,22 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getAuthUserIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authUserId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, authUserId_);
     }
-    if (!getOrgIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orgId_);
     }
-    if (!getEmailBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, email_);
     }
-    if (!getUsernameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, username_);
     }
-    if (!getFirstNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(firstName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, firstName_);
     }
-    if (!getLastNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, lastName_);
     }
     {
@@ -601,10 +514,10 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getGroupsList().size();
     }
-    if (!getConnectionIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, connectionId_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -635,7 +548,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getGroupsList())) return false;
     if (!getConnectionId()
         .equals(other.getConnectionId())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -664,7 +577,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
     hash = (53 * hash) + getConnectionId().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -713,11 +626,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.CreateDelegatedUserRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.CreateDelegatedUserRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -785,38 +700,27 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.CreateDelegatedUserRequest.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       authUserId_ = "";
-
       orgId_ = "";
-
       email_ = "";
-
       username_ = "";
-
       firstName_ = "";
-
       lastName_ = "";
-
-      groups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      groups_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       connectionId_ = "";
-
       return this;
     }
 
@@ -843,21 +747,38 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.CreateDelegatedUserRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.CreateDelegatedUserRequest result = new com.tcn.cloud.api.api.v1alpha1.org.CreateDelegatedUserRequest(this);
-      int from_bitField0_ = bitField0_;
-      result.authUserId_ = authUserId_;
-      result.orgId_ = orgId_;
-      result.email_ = email_;
-      result.username_ = username_;
-      result.firstName_ = firstName_;
-      result.lastName_ = lastName_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        groups_ = groups_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.groups_ = groups_;
-      result.connectionId_ = connectionId_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.CreateDelegatedUserRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.authUserId_ = authUserId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.orgId_ = orgId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.email_ = email_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.username_ = username_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.firstName_ = firstName_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.lastName_ = lastName_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        groups_.makeImmutable();
+        result.groups_ = groups_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.connectionId_ = connectionId_;
+      }
     }
 
     @java.lang.Override
@@ -906,32 +827,38 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v1alpha1.org.CreateDelegatedUserRequest.getDefaultInstance()) return this;
       if (!other.getAuthUserId().isEmpty()) {
         authUserId_ = other.authUserId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getOrgId().isEmpty()) {
         orgId_ = other.orgId_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getEmail().isEmpty()) {
         email_ = other.email_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getUsername().isEmpty()) {
         username_ = other.username_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getFirstName().isEmpty()) {
         firstName_ = other.firstName_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.getLastName().isEmpty()) {
         lastName_ = other.lastName_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (!other.groups_.isEmpty()) {
         if (groups_.isEmpty()) {
           groups_ = other.groups_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000040;
         } else {
           ensureGroupsIsMutable();
           groups_.addAll(other.groups_);
@@ -940,9 +867,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getConnectionId().isEmpty()) {
         connectionId_ = other.connectionId_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -957,17 +885,71 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.org.CreateDelegatedUserRequest parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              authUserId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              orgId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              email_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              username_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              firstName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              lastName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureGroupsIsMutable();
+              groups_.add(s);
+              break;
+            } // case 58
+            case 66: {
+              connectionId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.CreateDelegatedUserRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -1025,11 +1007,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAuthUserId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       authUserId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1042,8 +1022,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAuthUserId() {
-      
       authUserId_ = getDefaultInstance().getAuthUserId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1058,12 +1038,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAuthUserIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       authUserId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1133,11 +1111,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrgId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       orgId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1154,8 +1130,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOrgId() {
-      
       orgId_ = getDefaultInstance().getOrgId();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1174,12 +1150,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrgIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       orgId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1237,11 +1211,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmail(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       email_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1254,8 +1226,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEmail() {
-      
       email_ = getDefaultInstance().getEmail();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1270,12 +1242,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmailBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       email_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1333,11 +1303,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUsername(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       username_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1350,8 +1318,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUsername() {
-      
       username_ = getDefaultInstance().getUsername();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1366,12 +1334,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUsernameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       username_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1429,11 +1395,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFirstName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       firstName_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1446,8 +1410,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFirstName() {
-      
       firstName_ = getDefaultInstance().getFirstName();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1462,12 +1426,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFirstNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       firstName_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1525,11 +1487,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLastName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       lastName_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1542,8 +1502,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLastName() {
-      
       lastName_ = getDefaultInstance().getLastName();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1558,22 +1518,21 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLastNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       lastName_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList groups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList groups_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureGroupsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!groups_.isModifiable()) {
         groups_ = new com.google.protobuf.LazyStringArrayList(groups_);
-        bitField0_ |= 0x00000001;
-       }
+      }
+      bitField0_ |= 0x00000040;
     }
     /**
      * <pre>
@@ -1585,7 +1544,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getGroupsList() {
-      return groups_.getUnmodifiableView();
+      groups_.makeImmutable();
+      return groups_;
     }
     /**
      * <pre>
@@ -1635,11 +1595,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGroups(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureGroupsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureGroupsIsMutable();
       groups_.set(index, value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1654,11 +1613,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addGroups(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureGroupsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureGroupsIsMutable();
       groups_.add(value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1676,6 +1634,7 @@ private static final long serialVersionUID = 0L;
       ensureGroupsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, groups_);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1688,8 +1647,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGroups() {
-      groups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      groups_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000040);;
       onChanged();
       return this;
     }
@@ -1704,12 +1664,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addGroupsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureGroupsIsMutable();
       groups_.add(value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1767,11 +1726,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConnectionId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       connectionId_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1784,8 +1741,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConnectionId() {
-      
       connectionId_ = getDefaultInstance().getConnectionId();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1800,12 +1757,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConnectionIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       connectionId_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1842,7 +1797,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new CreateDelegatedUserRequest(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -13,17 +13,23 @@ public interface FileFormatParamsOrBuilder extends
    * </pre>
    *
    * <code>int32 skip_first_no_lines = 10 [json_name = "skipFirstNoLines", deprecated = true];</code>
+   * @deprecated api.v0alpha.FileFormatParams.skip_first_no_lines is deprecated.
+   *     See api/v0alpha/lms.proto;l=1703
    * @return The skipFirstNoLines.
    */
   @java.lang.Deprecated int getSkipFirstNoLines();
 
   /**
    * <code>string skip_lines_match_regex = 11 [json_name = "skipLinesMatchRegex", deprecated = true];</code>
+   * @deprecated api.v0alpha.FileFormatParams.skip_lines_match_regex is deprecated.
+   *     See api/v0alpha/lms.proto;l=1704
    * @return The skipLinesMatchRegex.
    */
   @java.lang.Deprecated java.lang.String getSkipLinesMatchRegex();
   /**
    * <code>string skip_lines_match_regex = 11 [json_name = "skipLinesMatchRegex", deprecated = true];</code>
+   * @deprecated api.v0alpha.FileFormatParams.skip_lines_match_regex is deprecated.
+   *     See api/v0alpha/lms.proto;l=1704
    * @return The bytes for skipLinesMatchRegex.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString

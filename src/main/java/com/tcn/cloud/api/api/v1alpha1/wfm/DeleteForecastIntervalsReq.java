@@ -30,73 +30,6 @@ private static final long serialVersionUID = 0L;
     return new DeleteForecastIntervalsReq();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private DeleteForecastIntervalsReq(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-            deleteParamCase_ = 1;
-            deleteParam_ = input.readInt64();
-            break;
-          }
-          case 18: {
-            com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids.Builder subBuilder = null;
-            if (deleteParamCase_ == 2) {
-              subBuilder = ((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids) deleteParam_).toBuilder();
-            }
-            deleteParam_ =
-                input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids) deleteParam_);
-              deleteParam_ = subBuilder.buildPartial();
-            }
-            deleteParamCase_ = 2;
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            forecastIntervalDeleteType_ = rawValue;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_DeleteForecastIntervalsReq_descriptor;
@@ -282,73 +215,6 @@ private static final long serialVersionUID = 0L;
       return new IntervalSids();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private IntervalSids(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                sids_ = newLongList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              sids_.addLong(input.readInt64());
-              break;
-            }
-            case 10: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                sids_ = newLongList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                sids_.addLong(input.readInt64());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          sids_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_DeleteForecastIntervalsReq_IntervalSids_descriptor;
@@ -363,6 +229,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int SIDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.LongList sids_;
     /**
      * <pre>
@@ -424,7 +291,7 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < sids_.size(); i++) {
         output.writeInt64NoTag(sids_.getLong(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -447,7 +314,7 @@ private static final long serialVersionUID = 0L;
         }
         sidsMemoizedSerializedSize = dataSize;
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -464,7 +331,7 @@ private static final long serialVersionUID = 0L;
 
       if (!getSidsList()
           .equals(other.getSidsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -479,7 +346,7 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + SIDS_FIELD_NUMBER;
         hash = (53 * hash) + getSidsList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -528,11 +395,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -600,24 +469,19 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         sids_ = emptyLongList();
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -644,14 +508,22 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids buildPartial() {
         com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids result = new com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids result) {
         if (((bitField0_ & 0x00000001) != 0)) {
           sids_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.sids_ = sids_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -708,7 +580,7 @@ private static final long serialVersionUID = 0L;
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -723,17 +595,46 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                long v = input.readInt64();
+                ensureSidsIsMutable();
+                sids_.addLong(v);
+                break;
+              } // case 8
+              case 10: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureSidsIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  sids_.addLong(input.readInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -743,7 +644,7 @@ private static final long serialVersionUID = 0L;
         if (!((bitField0_ & 0x00000001) != 0)) {
           sids_ = mutableCopy(sids_);
           bitField0_ |= 0x00000001;
-         }
+        }
       }
       /**
        * <pre>
@@ -793,6 +694,7 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setSids(
           int index, long value) {
+
         ensureSidsIsMutable();
         sids_.setLong(index, value);
         onChanged();
@@ -808,6 +710,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder addSids(long value) {
+
         ensureSidsIsMutable();
         sids_.addLong(value);
         onChanged();
@@ -877,7 +780,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new IntervalSids(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -898,6 +812,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int deleteParamCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object deleteParam_;
   public enum DeleteParamCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -939,6 +854,18 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SKILL_PROFILE_SID_FIELD_NUMBER = 1;
+  /**
+   * <pre>
+   * ID of the skill profile of which to delete the intervas/deltas.
+   * </pre>
+   *
+   * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid"];</code>
+   * @return Whether the skillProfileSid field is set.
+   */
+  @java.lang.Override
+  public boolean hasSkillProfileSid() {
+    return deleteParamCase_ == 1;
+  }
   /**
    * <pre>
    * ID of the skill profile of which to delete the intervas/deltas.
@@ -999,7 +926,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FORECAST_INTERVAL_DELETE_TYPE_FIELD_NUMBER = 3;
-  private int forecastIntervalDeleteType_;
+  private int forecastIntervalDeleteType_ = 0;
   /**
    * <pre>
    * Type of interval to delete
@@ -1020,8 +947,7 @@ private static final long serialVersionUID = 0L;
    * @return The forecastIntervalDeleteType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.ForecastIntervalDeleteType getForecastIntervalDeleteType() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.ForecastIntervalDeleteType result = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.ForecastIntervalDeleteType.valueOf(forecastIntervalDeleteType_);
+    com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.ForecastIntervalDeleteType result = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.ForecastIntervalDeleteType.forNumber(forecastIntervalDeleteType_);
     return result == null ? com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.ForecastIntervalDeleteType.UNRECOGNIZED : result;
   }
 
@@ -1049,7 +975,7 @@ private static final long serialVersionUID = 0L;
     if (forecastIntervalDeleteType_ != com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.ForecastIntervalDeleteType.INTERVALS_AND_DELTAS.getNumber()) {
       output.writeEnum(3, forecastIntervalDeleteType_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -1071,7 +997,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, forecastIntervalDeleteType_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1100,7 +1026,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1126,7 +1052,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1175,11 +1101,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1247,24 +1175,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      if (forecastIntervalSidsBuilder_ != null) {
+        forecastIntervalSidsBuilder_.clear();
+      }
       forecastIntervalDeleteType_ = 0;
-
       deleteParamCase_ = 0;
       deleteParam_ = null;
       return this;
@@ -1293,20 +1219,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq(this);
-      if (deleteParamCase_ == 1) {
-        result.deleteParam_ = deleteParam_;
-      }
-      if (deleteParamCase_ == 2) {
-        if (forecastIntervalSidsBuilder_ == null) {
-          result.deleteParam_ = deleteParam_;
-        } else {
-          result.deleteParam_ = forecastIntervalSidsBuilder_.build();
-        }
-      }
-      result.forecastIntervalDeleteType_ = forecastIntervalDeleteType_;
-      result.deleteParamCase_ = deleteParamCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.forecastIntervalDeleteType_ = forecastIntervalDeleteType_;
+      }
+    }
+
+    private void buildPartialOneofs(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq result) {
+      result.deleteParamCase_ = deleteParamCase_;
+      result.deleteParam_ = this.deleteParam_;
+      if (deleteParamCase_ == 2 &&
+          forecastIntervalSidsBuilder_ != null) {
+        result.deleteParam_ = forecastIntervalSidsBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1369,7 +1301,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1384,17 +1316,47 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              deleteParam_ = input.readInt64();
+              deleteParamCase_ = 1;
+              break;
+            } // case 8
+            case 18: {
+              input.readMessage(
+                  getForecastIntervalSidsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              deleteParamCase_ = 2;
+              break;
+            } // case 18
+            case 24: {
+              forecastIntervalDeleteType_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int deleteParamCase_ = 0;
@@ -1412,7 +1374,19 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
+    /**
+     * <pre>
+     * ID of the skill profile of which to delete the intervas/deltas.
+     * </pre>
+     *
+     * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid"];</code>
+     * @return Whether the skillProfileSid field is set.
+     */
+    public boolean hasSkillProfileSid() {
+      return deleteParamCase_ == 1;
+    }
     /**
      * <pre>
      * ID of the skill profile of which to delete the intervas/deltas.
@@ -1437,6 +1411,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSkillProfileSid(long value) {
+
       deleteParamCase_ = 1;
       deleteParam_ = value;
       onChanged();
@@ -1553,8 +1528,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (deleteParamCase_ == 2) {
           forecastIntervalSidsBuilder_.mergeFrom(value);
+        } else {
+          forecastIntervalSidsBuilder_.setMessage(value);
         }
-        forecastIntervalSidsBuilder_.setMessage(value);
       }
       deleteParamCase_ = 2;
       return this;
@@ -1632,7 +1608,7 @@ private static final long serialVersionUID = 0L;
         deleteParam_ = null;
       }
       deleteParamCase_ = 2;
-      onChanged();;
+      onChanged();
       return forecastIntervalSidsBuilder_;
     }
 
@@ -1658,8 +1634,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setForecastIntervalDeleteTypeValue(int value) {
-      
       forecastIntervalDeleteType_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1673,8 +1649,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.ForecastIntervalDeleteType getForecastIntervalDeleteType() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.ForecastIntervalDeleteType result = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.ForecastIntervalDeleteType.valueOf(forecastIntervalDeleteType_);
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.ForecastIntervalDeleteType result = com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.ForecastIntervalDeleteType.forNumber(forecastIntervalDeleteType_);
       return result == null ? com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.ForecastIntervalDeleteType.UNRECOGNIZED : result;
     }
     /**
@@ -1690,7 +1665,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       forecastIntervalDeleteType_ = value.getNumber();
       onChanged();
       return this;
@@ -1704,7 +1679,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearForecastIntervalDeleteType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       forecastIntervalDeleteType_ = 0;
       onChanged();
       return this;
@@ -1742,7 +1717,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new DeleteForecastIntervalsReq(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

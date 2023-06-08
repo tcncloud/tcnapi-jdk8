@@ -56,7 +56,6 @@ public interface UpdateAgentSkillsRequestOrBuilder extends
    *
    * <code>map&lt;string, int64&gt; skills = 2 [json_name = "skills"];</code>
    */
-
   long getSkillsOrDefault(
       java.lang.String key,
       long defaultValue);
@@ -67,7 +66,6 @@ public interface UpdateAgentSkillsRequestOrBuilder extends
    *
    * <code>map&lt;string, int64&gt; skills = 2 [json_name = "skills"];</code>
    */
-
   long getSkillsOrThrow(
       java.lang.String key);
 

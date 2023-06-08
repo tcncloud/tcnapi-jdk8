@@ -26,73 +26,6 @@ private static final long serialVersionUID = 0L;
     return new UpdateAgentResponseDataReq();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private UpdateAgentResponseDataReq(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 16: {
-
-            callSid_ = input.readInt64();
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            callType_ = rawValue;
-            break;
-          }
-          case 34: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              responses_ = com.google.protobuf.MapField.newMapField(
-                  ResponsesDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000001;
-            }
-            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-            responses__ = input.readMessage(
-                ResponsesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            responses_.getMutableMap().put(
-                responses__.getKey(), responses__.getValue());
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.SdsProto.internal_static_api_v0alpha_UpdateAgentResponseDataReq_descriptor;
@@ -119,7 +52,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_SID_FIELD_NUMBER = 2;
-  private long callSid_;
+  private long callSid_ = 0L;
   /**
    * <code>int64 call_sid = 2 [json_name = "callSid"];</code>
    * @return The callSid.
@@ -130,7 +63,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_TYPE_FIELD_NUMBER = 3;
-  private int callType_;
+  private int callType_ = 0;
   /**
    * <code>.api.commons.CallType.Enum call_type = 3 [json_name = "callType"];</code>
    * @return The enum numeric value on the wire for callType.
@@ -143,8 +76,7 @@ private static final long serialVersionUID = 0L;
    * @return The callType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.valueOf(callType_);
+    com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callType_);
     return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
   }
 
@@ -160,6 +92,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.String> responses_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -170,18 +103,16 @@ private static final long serialVersionUID = 0L;
     }
     return responses_;
   }
-
   public int getResponsesCount() {
     return internalGetResponses().getMap().size();
   }
   /**
    * <code>map&lt;string, string&gt; responses = 4 [json_name = "responses"];</code>
    */
-
   @java.lang.Override
   public boolean containsResponses(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     return internalGetResponses().getMap().containsKey(key);
   }
   /**
@@ -196,7 +127,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; responses = 4 [json_name = "responses"];</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.String, java.lang.String> getResponsesMap() {
     return internalGetResponses().getMap();
   }
@@ -204,11 +134,12 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; responses = 4 [json_name = "responses"];</code>
    */
   @java.lang.Override
-
-  public java.lang.String getResponsesOrDefault(
+  public /* nullable */
+java.lang.String getResponsesOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+      /* nullable */
+java.lang.String defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetResponses().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -217,10 +148,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; responses = 4 [json_name = "responses"];</code>
    */
   @java.lang.Override
-
   public java.lang.String getResponsesOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetResponses().getMap();
     if (!map.containsKey(key)) {
@@ -255,7 +185,7 @@ private static final long serialVersionUID = 0L;
         internalGetResponses(),
         ResponsesDefaultEntryHolder.defaultEntry,
         4);
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -282,7 +212,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, responses__);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -302,7 +232,7 @@ private static final long serialVersionUID = 0L;
     if (callType_ != other.callType_) return false;
     if (!internalGetResponses().equals(
         other.internalGetResponses())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -322,7 +252,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + RESPONSES_FIELD_NUMBER;
       hash = (53 * hash) + internalGetResponses().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -371,11 +301,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -461,26 +393,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       callSid_ = 0L;
-
       callType_ = 0;
-
       internalGetMutableResponses().clear();
       return this;
     }
@@ -508,13 +434,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataReq result = new com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataReq(this);
-      int from_bitField0_ = bitField0_;
-      result.callSid_ = callSid_;
-      result.callType_ = callType_;
-      result.responses_ = internalGetResponses();
-      result.responses_.makeImmutable();
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataReq result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.callSid_ = callSid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.callType_ = callType_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.responses_ = internalGetResponses();
+        result.responses_.makeImmutable();
+      }
     }
 
     @java.lang.Override
@@ -569,7 +505,8 @@ private static final long serialVersionUID = 0L;
       }
       internalGetMutableResponses().mergeFrom(
           other.internalGetResponses());
-      this.mergeUnknownFields(other.unknownFields);
+      bitField0_ |= 0x00000004;
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -584,17 +521,49 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataReq parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+              callSid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 16
+            case 24: {
+              callType_ = input.readEnum();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 24
+            case 34: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              responses__ = input.readMessage(
+                  ResponsesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableResponses().getMutableMap().put(
+                  responses__.getKey(), responses__.getValue());
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 34
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -614,8 +583,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCallSid(long value) {
-      
+
       callSid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -624,7 +594,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       callSid_ = 0L;
       onChanged();
       return this;
@@ -644,8 +614,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCallTypeValue(int value) {
-      
       callType_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -655,8 +625,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.valueOf(callType_);
+      com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callType_);
       return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
     }
     /**
@@ -668,7 +637,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       callType_ = value.getNumber();
       onChanged();
       return this;
@@ -678,7 +647,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       callType_ = 0;
       onChanged();
       return this;
@@ -687,7 +656,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> responses_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetResponses() {
+        internalGetResponses() {
       if (responses_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             ResponsesDefaultEntryHolder.defaultEntry);
@@ -695,8 +664,7 @@ private static final long serialVersionUID = 0L;
       return responses_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetMutableResponses() {
-      onChanged();;
+        internalGetMutableResponses() {
       if (responses_ == null) {
         responses_ = com.google.protobuf.MapField.newMapField(
             ResponsesDefaultEntryHolder.defaultEntry);
@@ -704,20 +672,20 @@ private static final long serialVersionUID = 0L;
       if (!responses_.isMutable()) {
         responses_ = responses_.copy();
       }
+      bitField0_ |= 0x00000004;
+      onChanged();
       return responses_;
     }
-
     public int getResponsesCount() {
       return internalGetResponses().getMap().size();
     }
     /**
      * <code>map&lt;string, string&gt; responses = 4 [json_name = "responses"];</code>
      */
-
     @java.lang.Override
     public boolean containsResponses(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetResponses().getMap().containsKey(key);
     }
     /**
@@ -732,7 +700,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; responses = 4 [json_name = "responses"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getResponsesMap() {
       return internalGetResponses().getMap();
     }
@@ -740,11 +707,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; responses = 4 [json_name = "responses"];</code>
      */
     @java.lang.Override
-
-    public java.lang.String getResponsesOrDefault(
+    public /* nullable */
+java.lang.String getResponsesOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+        /* nullable */
+java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetResponses().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -753,10 +721,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; responses = 4 [json_name = "responses"];</code>
      */
     @java.lang.Override
-
     public java.lang.String getResponsesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetResponses().getMap();
       if (!map.containsKey(key)) {
@@ -764,8 +731,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearResponses() {
+      bitField0_ = (bitField0_ & ~0x00000004);
       internalGetMutableResponses().getMutableMap()
           .clear();
       return this;
@@ -773,10 +740,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>map&lt;string, string&gt; responses = 4 [json_name = "responses"];</code>
      */
-
     public Builder removeResponses(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       internalGetMutableResponses().getMutableMap()
           .remove(key);
       return this;
@@ -786,7 +752,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
-    getMutableResponses() {
+        getMutableResponses() {
+      bitField0_ |= 0x00000004;
       return internalGetMutableResponses().getMutableMap();
     }
     /**
@@ -795,20 +762,21 @@ private static final long serialVersionUID = 0L;
     public Builder putResponses(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      if (value == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableResponses().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000004;
       return this;
     }
     /**
      * <code>map&lt;string, string&gt; responses = 4 [json_name = "responses"];</code>
      */
-
     public Builder putAllResponses(
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableResponses().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000004;
       return this;
     }
     @java.lang.Override
@@ -844,7 +812,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new UpdateAgentResponseDataReq(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -13,6 +13,8 @@ public interface ListPermissionGroupsRequestOrBuilder extends
    * </pre>
    *
    * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListPermissionGroupsRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=3597
    * @return The orgId.
    */
   @java.lang.Deprecated java.lang.String getOrgId();
@@ -22,6 +24,8 @@ public interface ListPermissionGroupsRequestOrBuilder extends
    * </pre>
    *
    * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListPermissionGroupsRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=3597
    * @return The bytes for orgId.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString

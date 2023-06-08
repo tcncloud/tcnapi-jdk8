@@ -32,120 +32,6 @@ private static final long serialVersionUID = 0L;
     return new GetPermissionsResponse();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private GetPermissionsResponse(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-            int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              permissions_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            permissions_.add(rawValue);
-            break;
-          }
-          case 10: {
-            int length = input.readRawVarint32();
-            int oldLimit = input.pushLimit(length);
-            while(input.getBytesUntilLimit() > 0) {
-              int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                permissions_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              permissions_.add(rawValue);
-            }
-            input.popLimit(oldLimit);
-            break;
-          }
-          case 16: {
-            int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              p3Permissions_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            p3Permissions_.add(rawValue);
-            break;
-          }
-          case 18: {
-            int length = input.readRawVarint32();
-            int oldLimit = input.pushLimit(length);
-            while(input.getBytesUntilLimit() > 0) {
-              int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                p3Permissions_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              p3Permissions_.add(rawValue);
-            }
-            input.popLimit(oldLimit);
-            break;
-          }
-          case 26: {
-            com.tcn.cloud.api.api.commons.org.User.Builder subBuilder = null;
-            if (user_ != null) {
-              subBuilder = user_.toBuilder();
-            }
-            user_ = input.readMessage(com.tcn.cloud.api.api.commons.org.User.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(user_);
-              user_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 32: {
-            int rawValue = input.readEnum();
-
-            defaultApp_ = rawValue;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        permissions_ = java.util.Collections.unmodifiableList(permissions_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        p3Permissions_ = java.util.Collections.unmodifiableList(p3Permissions_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.PermissionsProto.internal_static_api_v1alpha1_org_GetPermissionsResponse_descriptor;
@@ -160,14 +46,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PERMISSIONS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> permissions_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.auth.Permission> permissions_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.auth.Permission>() {
             public com.tcn.cloud.api.api.commons.auth.Permission convert(java.lang.Integer from) {
-              @SuppressWarnings("deprecation")
-              com.tcn.cloud.api.api.commons.auth.Permission result = com.tcn.cloud.api.api.commons.auth.Permission.valueOf(from);
+              com.tcn.cloud.api.api.commons.auth.Permission result = com.tcn.cloud.api.api.commons.auth.Permission.forNumber(from);
               return result == null ? com.tcn.cloud.api.api.commons.auth.Permission.UNRECOGNIZED : result;
             }
           };
@@ -238,14 +124,14 @@ private static final long serialVersionUID = 0L;
   private int permissionsMemoizedSerializedSize;
 
   public static final int P3_PERMISSIONS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> p3Permissions_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.Permission> p3Permissions_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.Permission>() {
             public com.tcn.cloud.api.api.commons.Permission convert(java.lang.Integer from) {
-              @SuppressWarnings("deprecation")
-              com.tcn.cloud.api.api.commons.Permission result = com.tcn.cloud.api.api.commons.Permission.valueOf(from);
+              com.tcn.cloud.api.api.commons.Permission result = com.tcn.cloud.api.api.commons.Permission.forNumber(from);
               return result == null ? com.tcn.cloud.api.api.commons.Permission.UNRECOGNIZED : result;
             }
           };
@@ -350,11 +236,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.UserOrBuilder getUserOrBuilder() {
-    return getUser();
+    return user_ == null ? com.tcn.cloud.api.api.commons.org.User.getDefaultInstance() : user_;
   }
 
   public static final int DEFAULT_APP_FIELD_NUMBER = 4;
-  private int defaultApp_;
+  private int defaultApp_ = 0;
   /**
    * <pre>
    * Default operator application for user.
@@ -375,8 +261,7 @@ private static final long serialVersionUID = 0L;
    * @return The defaultApp.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.OperatorApplications getDefaultApp() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.OperatorApplications result = com.tcn.cloud.api.api.commons.OperatorApplications.valueOf(defaultApp_);
+    com.tcn.cloud.api.api.commons.OperatorApplications result = com.tcn.cloud.api.api.commons.OperatorApplications.forNumber(defaultApp_);
     return result == null ? com.tcn.cloud.api.api.commons.OperatorApplications.UNRECOGNIZED : result;
   }
 
@@ -415,7 +300,7 @@ private static final long serialVersionUID = 0L;
     if (defaultApp_ != com.tcn.cloud.api.api.commons.OperatorApplications.AGENT_APP.getNumber()) {
       output.writeEnum(4, defaultApp_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -456,7 +341,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, defaultApp_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -479,7 +364,7 @@ private static final long serialVersionUID = 0L;
           .equals(other.getUser())) return false;
     }
     if (defaultApp_ != other.defaultApp_) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -504,7 +389,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + DEFAULT_APP_FIELD_NUMBER;
     hash = (53 * hash) + defaultApp_;
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -553,11 +438,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.GetPermissionsResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.GetPermissionsResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -625,34 +512,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.GetPermissionsResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       permissions_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);
       p3Permissions_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000002);
-      if (userBuilder_ == null) {
-        user_ = null;
-      } else {
-        user_ = null;
+      user_ = null;
+      if (userBuilder_ != null) {
+        userBuilder_.dispose();
         userBuilder_ = null;
       }
       defaultApp_ = 0;
-
       return this;
     }
 
@@ -679,7 +560,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.GetPermissionsResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.GetPermissionsResponse result = new com.tcn.cloud.api.api.v1alpha1.org.GetPermissionsResponse(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.org.GetPermissionsResponse result) {
       if (((bitField0_ & 0x00000001) != 0)) {
         permissions_ = java.util.Collections.unmodifiableList(permissions_);
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -690,14 +577,18 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000002);
       }
       result.p3Permissions_ = p3Permissions_;
-      if (userBuilder_ == null) {
-        result.user_ = user_;
-      } else {
-        result.user_ = userBuilder_.build();
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.GetPermissionsResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.user_ = userBuilder_ == null
+            ? user_
+            : userBuilder_.build();
       }
-      result.defaultApp_ = defaultApp_;
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.defaultApp_ = defaultApp_;
+      }
     }
 
     @java.lang.Override
@@ -770,7 +661,7 @@ private static final long serialVersionUID = 0L;
       if (other.defaultApp_ != 0) {
         setDefaultAppValue(other.getDefaultAppValue());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -785,17 +676,76 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.org.GetPermissionsResponse parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int tmpRaw = input.readEnum();
+              ensurePermissionsIsMutable();
+              permissions_.add(tmpRaw);
+              break;
+            } // case 8
+            case 10: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensurePermissionsIsMutable();
+                permissions_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 10
+            case 16: {
+              int tmpRaw = input.readEnum();
+              ensureP3PermissionsIsMutable();
+              p3Permissions_.add(tmpRaw);
+              break;
+            } // case 16
+            case 18: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureP3PermissionsIsMutable();
+                p3Permissions_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getUserFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 32: {
+              defaultApp_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.GetPermissionsResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -943,8 +893,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .api.commons.auth.Permission permissions = 1 [json_name = "permissions"];</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of permissions at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for permissions to set.
      * @return This builder for chaining.
      */
     public Builder setPermissionsValue(
@@ -1131,8 +1081,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .api.commons.Permission p3_permissions = 2 [json_name = "p3Permissions"];</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of p3Permissions at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for p3Permissions to set.
      * @return This builder for chaining.
      */
     public Builder setP3PermissionsValue(
@@ -1188,7 +1138,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the user field is set.
      */
     public boolean hasUser() {
-      return userBuilder_ != null || user_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1218,11 +1168,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         user_ = value;
-        onChanged();
       } else {
         userBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1236,11 +1186,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.User.Builder builderForValue) {
       if (userBuilder_ == null) {
         user_ = builderForValue.build();
-        onChanged();
       } else {
         userBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1252,17 +1202,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeUser(com.tcn.cloud.api.api.commons.org.User value) {
       if (userBuilder_ == null) {
-        if (user_ != null) {
-          user_ =
-            com.tcn.cloud.api.api.commons.org.User.newBuilder(user_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          user_ != null &&
+          user_ != com.tcn.cloud.api.api.commons.org.User.getDefaultInstance()) {
+          getUserBuilder().mergeFrom(value);
         } else {
           user_ = value;
         }
-        onChanged();
       } else {
         userBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1273,14 +1224,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.User user = 3 [json_name = "user"];</code>
      */
     public Builder clearUser() {
-      if (userBuilder_ == null) {
-        user_ = null;
-        onChanged();
-      } else {
-        user_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      user_ = null;
+      if (userBuilder_ != null) {
+        userBuilder_.dispose();
         userBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1291,7 +1241,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.User user = 3 [json_name = "user"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.User.Builder getUserBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getUserFieldBuilder().getBuilder();
     }
@@ -1353,8 +1303,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDefaultAppValue(int value) {
-      
       defaultApp_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1368,8 +1318,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.OperatorApplications getDefaultApp() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.OperatorApplications result = com.tcn.cloud.api.api.commons.OperatorApplications.valueOf(defaultApp_);
+      com.tcn.cloud.api.api.commons.OperatorApplications result = com.tcn.cloud.api.api.commons.OperatorApplications.forNumber(defaultApp_);
       return result == null ? com.tcn.cloud.api.api.commons.OperatorApplications.UNRECOGNIZED : result;
     }
     /**
@@ -1385,7 +1334,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       defaultApp_ = value.getNumber();
       onChanged();
       return this;
@@ -1399,7 +1348,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultApp() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       defaultApp_ = 0;
       onChanged();
       return this;
@@ -1437,7 +1386,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GetPermissionsResponse(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -31,80 +31,6 @@ private static final long serialVersionUID = 0L;
     return new DashboardEmailConversationResEntry();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private DashboardEmailConversationResEntry(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.tcn.cloud.api.api.v0alpha.EmailConversation.Builder subBuilder = null;
-            if (emailConversation_ != null) {
-              subBuilder = emailConversation_.toBuilder();
-            }
-            emailConversation_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.EmailConversation.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(emailConversation_);
-              emailConversation_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              emailConversationAssignedUsers_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.EmailConversationAssignedUser>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            emailConversationAssignedUsers_.add(
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.EmailConversationAssignedUser.parser(), extensionRegistry));
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            name_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        emailConversationAssignedUsers_ = java.util.Collections.unmodifiableList(emailConversationAssignedUsers_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.EmailapiProto.internal_static_api_v0alpha_DashboardEmailConversationResEntry_descriptor;
@@ -153,10 +79,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.EmailConversationOrBuilder getEmailConversationOrBuilder() {
-    return getEmailConversation();
+    return emailConversation_ == null ? com.tcn.cloud.api.api.v0alpha.EmailConversation.getDefaultInstance() : emailConversation_;
   }
 
   public static final int EMAIL_CONVERSATION_ASSIGNED_USERS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.EmailConversationAssignedUser> emailConversationAssignedUsers_;
   /**
    * <pre>
@@ -217,7 +144,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 3;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * associated campaign name
@@ -282,10 +210,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < emailConversationAssignedUsers_.size(); i++) {
       output.writeMessage(2, emailConversationAssignedUsers_.get(i));
     }
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -302,10 +230,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, emailConversationAssignedUsers_.get(i));
     }
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -329,7 +257,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getEmailConversationAssignedUsersList())) return false;
     if (!getName()
         .equals(other.getName())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -350,7 +278,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -399,11 +327,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationResEntry parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationResEntry parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -471,37 +401,31 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationResEntry.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getEmailConversationAssignedUsersFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (emailConversationBuilder_ == null) {
-        emailConversation_ = null;
-      } else {
-        emailConversation_ = null;
+      bitField0_ = 0;
+      emailConversation_ = null;
+      if (emailConversationBuilder_ != null) {
+        emailConversationBuilder_.dispose();
         emailConversationBuilder_ = null;
       }
       if (emailConversationAssignedUsersBuilder_ == null) {
         emailConversationAssignedUsers_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        emailConversationAssignedUsers_ = null;
         emailConversationAssignedUsersBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000002);
       name_ = "";
-
       return this;
     }
 
@@ -528,24 +452,34 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationResEntry buildPartial() {
       com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationResEntry result = new com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationResEntry(this);
-      int from_bitField0_ = bitField0_;
-      if (emailConversationBuilder_ == null) {
-        result.emailConversation_ = emailConversation_;
-      } else {
-        result.emailConversation_ = emailConversationBuilder_.build();
-      }
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationResEntry result) {
       if (emailConversationAssignedUsersBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           emailConversationAssignedUsers_ = java.util.Collections.unmodifiableList(emailConversationAssignedUsers_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.emailConversationAssignedUsers_ = emailConversationAssignedUsers_;
       } else {
         result.emailConversationAssignedUsers_ = emailConversationAssignedUsersBuilder_.build();
       }
-      result.name_ = name_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationResEntry result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.emailConversation_ = emailConversationBuilder_ == null
+            ? emailConversation_
+            : emailConversationBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.name_ = name_;
+      }
     }
 
     @java.lang.Override
@@ -599,7 +533,7 @@ private static final long serialVersionUID = 0L;
         if (!other.emailConversationAssignedUsers_.isEmpty()) {
           if (emailConversationAssignedUsers_.isEmpty()) {
             emailConversationAssignedUsers_ = other.emailConversationAssignedUsers_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureEmailConversationAssignedUsersIsMutable();
             emailConversationAssignedUsers_.addAll(other.emailConversationAssignedUsers_);
@@ -612,7 +546,7 @@ private static final long serialVersionUID = 0L;
             emailConversationAssignedUsersBuilder_.dispose();
             emailConversationAssignedUsersBuilder_ = null;
             emailConversationAssignedUsers_ = other.emailConversationAssignedUsers_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             emailConversationAssignedUsersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getEmailConversationAssignedUsersFieldBuilder() : null;
@@ -623,9 +557,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -640,17 +575,55 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationResEntry parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getEmailConversationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              com.tcn.cloud.api.api.v0alpha.EmailConversationAssignedUser m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v0alpha.EmailConversationAssignedUser.parser(),
+                      extensionRegistry);
+              if (emailConversationAssignedUsersBuilder_ == null) {
+                ensureEmailConversationAssignedUsersIsMutable();
+                emailConversationAssignedUsers_.add(m);
+              } else {
+                emailConversationAssignedUsersBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
+            case 26: {
+              name_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationResEntry) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -667,7 +640,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the emailConversation field is set.
      */
     public boolean hasEmailConversation() {
-      return emailConversationBuilder_ != null || emailConversation_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -697,11 +670,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         emailConversation_ = value;
-        onChanged();
       } else {
         emailConversationBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -715,11 +688,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.EmailConversation.Builder builderForValue) {
       if (emailConversationBuilder_ == null) {
         emailConversation_ = builderForValue.build();
-        onChanged();
       } else {
         emailConversationBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -731,17 +704,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeEmailConversation(com.tcn.cloud.api.api.v0alpha.EmailConversation value) {
       if (emailConversationBuilder_ == null) {
-        if (emailConversation_ != null) {
-          emailConversation_ =
-            com.tcn.cloud.api.api.v0alpha.EmailConversation.newBuilder(emailConversation_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          emailConversation_ != null &&
+          emailConversation_ != com.tcn.cloud.api.api.v0alpha.EmailConversation.getDefaultInstance()) {
+          getEmailConversationBuilder().mergeFrom(value);
         } else {
           emailConversation_ = value;
         }
-        onChanged();
       } else {
         emailConversationBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -752,14 +726,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.EmailConversation email_conversation = 1 [json_name = "emailConversation"];</code>
      */
     public Builder clearEmailConversation() {
-      if (emailConversationBuilder_ == null) {
-        emailConversation_ = null;
-        onChanged();
-      } else {
-        emailConversation_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      emailConversation_ = null;
+      if (emailConversationBuilder_ != null) {
+        emailConversationBuilder_.dispose();
         emailConversationBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -770,7 +743,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.EmailConversation email_conversation = 1 [json_name = "emailConversation"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.EmailConversation.Builder getEmailConversationBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getEmailConversationFieldBuilder().getBuilder();
     }
@@ -813,9 +786,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v0alpha.EmailConversationAssignedUser> emailConversationAssignedUsers_ =
       java.util.Collections.emptyList();
     private void ensureEmailConversationAssignedUsersIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         emailConversationAssignedUsers_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.EmailConversationAssignedUser>(emailConversationAssignedUsers_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -1009,7 +982,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearEmailConversationAssignedUsers() {
       if (emailConversationAssignedUsersBuilder_ == null) {
         emailConversationAssignedUsers_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         emailConversationAssignedUsersBuilder_.clear();
@@ -1114,7 +1087,7 @@ private static final long serialVersionUID = 0L;
         emailConversationAssignedUsersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v0alpha.EmailConversationAssignedUser, com.tcn.cloud.api.api.v0alpha.EmailConversationAssignedUser.Builder, com.tcn.cloud.api.api.v0alpha.EmailConversationAssignedUserOrBuilder>(
                 emailConversationAssignedUsers_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         emailConversationAssignedUsers_ = null;
@@ -1175,11 +1148,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1192,8 +1163,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1208,12 +1179,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1250,7 +1219,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new DashboardEmailConversationResEntry(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

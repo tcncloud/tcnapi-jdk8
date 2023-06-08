@@ -29,61 +29,6 @@ private static final long serialVersionUID = 0L;
     return new ScoreEvaluationResponse();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private ScoreEvaluationResponse(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.tcn.cloud.api.api.commons.Evaluation.Builder subBuilder = null;
-            if (evaluation_ != null) {
-              subBuilder = evaluation_.toBuilder();
-            }
-            evaluation_ = input.readMessage(com.tcn.cloud.api.api.commons.Evaluation.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(evaluation_);
-              evaluation_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.scorecards.EvaluationProto.internal_static_api_v1alpha1_scorecards_ScoreEvaluationResponse_descriptor;
@@ -120,7 +65,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.EvaluationOrBuilder getEvaluationOrBuilder() {
-    return getEvaluation();
+    return evaluation_ == null ? com.tcn.cloud.api.api.commons.Evaluation.getDefaultInstance() : evaluation_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -140,7 +85,7 @@ private static final long serialVersionUID = 0L;
     if (evaluation_ != null) {
       output.writeMessage(1, getEvaluation());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -153,7 +98,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getEvaluation());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -173,7 +118,7 @@ private static final long serialVersionUID = 0L;
       if (!getEvaluation()
           .equals(other.getEvaluation())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -188,7 +133,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + EVALUATION_FIELD_NUMBER;
       hash = (53 * hash) + getEvaluation().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -237,11 +182,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -309,26 +256,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (evaluationBuilder_ == null) {
-        evaluation_ = null;
-      } else {
-        evaluation_ = null;
+      bitField0_ = 0;
+      evaluation_ = null;
+      if (evaluationBuilder_ != null) {
+        evaluationBuilder_.dispose();
         evaluationBuilder_ = null;
       }
       return this;
@@ -357,13 +299,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse result = new com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse(this);
-      if (evaluationBuilder_ == null) {
-        result.evaluation_ = evaluation_;
-      } else {
-        result.evaluation_ = evaluationBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.evaluation_ = evaluationBuilder_ == null
+            ? evaluation_
+            : evaluationBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -413,7 +360,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasEvaluation()) {
         mergeEvaluation(other.getEvaluation());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -428,19 +375,40 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getEvaluationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.tcn.cloud.api.api.commons.Evaluation evaluation_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -450,7 +418,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the evaluation field is set.
      */
     public boolean hasEvaluation() {
-      return evaluationBuilder_ != null || evaluation_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.api.commons.Evaluation evaluation = 1 [json_name = "evaluation"];</code>
@@ -472,11 +440,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         evaluation_ = value;
-        onChanged();
       } else {
         evaluationBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -486,11 +454,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.Evaluation.Builder builderForValue) {
       if (evaluationBuilder_ == null) {
         evaluation_ = builderForValue.build();
-        onChanged();
       } else {
         evaluationBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -498,38 +466,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeEvaluation(com.tcn.cloud.api.api.commons.Evaluation value) {
       if (evaluationBuilder_ == null) {
-        if (evaluation_ != null) {
-          evaluation_ =
-            com.tcn.cloud.api.api.commons.Evaluation.newBuilder(evaluation_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          evaluation_ != null &&
+          evaluation_ != com.tcn.cloud.api.api.commons.Evaluation.getDefaultInstance()) {
+          getEvaluationBuilder().mergeFrom(value);
         } else {
           evaluation_ = value;
         }
-        onChanged();
       } else {
         evaluationBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.commons.Evaluation evaluation = 1 [json_name = "evaluation"];</code>
      */
     public Builder clearEvaluation() {
-      if (evaluationBuilder_ == null) {
-        evaluation_ = null;
-        onChanged();
-      } else {
-        evaluation_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      evaluation_ = null;
+      if (evaluationBuilder_ != null) {
+        evaluationBuilder_.dispose();
         evaluationBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.commons.Evaluation evaluation = 1 [json_name = "evaluation"];</code>
      */
     public com.tcn.cloud.api.api.commons.Evaluation.Builder getEvaluationBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getEvaluationFieldBuilder().getBuilder();
     }
@@ -593,7 +561,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ScoreEvaluationResponse(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -1,25 +1,13 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.14.0)",
+    value = "by gRPC proto compiler (version 1.55.1)",
     comments = "Source: api/v0alpha/compliance.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class ComplianceGrpc {
 
   private ComplianceGrpc() {}
@@ -41,22 +29,21 @@ public final class ComplianceGrpc {
     if ((getRuleAutoCompleteMethod = ComplianceGrpc.getRuleAutoCompleteMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getRuleAutoCompleteMethod = ComplianceGrpc.getRuleAutoCompleteMethod) == null) {
-          ComplianceGrpc.getRuleAutoCompleteMethod = getRuleAutoCompleteMethod = 
+          ComplianceGrpc.getRuleAutoCompleteMethod = getRuleAutoCompleteMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteReq, com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "RuleAutoComplete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RuleAutoComplete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("RuleAutoComplete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("RuleAutoComplete"))
+              .build();
         }
-     }
-     return getRuleAutoCompleteMethod;
+      }
+    }
+    return getRuleAutoCompleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CheckRuleSetReq,
@@ -73,22 +60,21 @@ public final class ComplianceGrpc {
     if ((getCheckRuleSetMethod = ComplianceGrpc.getCheckRuleSetMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getCheckRuleSetMethod = ComplianceGrpc.getCheckRuleSetMethod) == null) {
-          ComplianceGrpc.getCheckRuleSetMethod = getCheckRuleSetMethod = 
+          ComplianceGrpc.getCheckRuleSetMethod = getCheckRuleSetMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CheckRuleSetReq, com.tcn.cloud.api.api.v0alpha.CheckRuleSetRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "CheckRuleSet"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CheckRuleSet"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CheckRuleSetReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CheckRuleSetRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("CheckRuleSet"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("CheckRuleSet"))
+              .build();
         }
-     }
-     return getCheckRuleSetMethod;
+      }
+    }
+    return getCheckRuleSetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq,
@@ -105,22 +91,21 @@ public final class ComplianceGrpc {
     if ((getAssignRuleSetMethod = ComplianceGrpc.getAssignRuleSetMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getAssignRuleSetMethod = ComplianceGrpc.getAssignRuleSetMethod) == null) {
-          ComplianceGrpc.getAssignRuleSetMethod = getAssignRuleSetMethod = 
+          ComplianceGrpc.getAssignRuleSetMethod = getAssignRuleSetMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq, com.tcn.cloud.api.api.v0alpha.AssignRuleSetRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "AssignRuleSet"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AssignRuleSet"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AssignRuleSetRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("AssignRuleSet"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("AssignRuleSet"))
+              .build();
         }
-     }
-     return getAssignRuleSetMethod;
+      }
+    }
+    return getAssignRuleSetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListRuleSetsReq,
@@ -137,22 +122,21 @@ public final class ComplianceGrpc {
     if ((getListRuleSetsMethod = ComplianceGrpc.getListRuleSetsMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getListRuleSetsMethod = ComplianceGrpc.getListRuleSetsMethod) == null) {
-          ComplianceGrpc.getListRuleSetsMethod = getListRuleSetsMethod = 
+          ComplianceGrpc.getListRuleSetsMethod = getListRuleSetsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListRuleSetsReq, com.tcn.cloud.api.api.v0alpha.ListRuleSetsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "ListRuleSets"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListRuleSets"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListRuleSetsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListRuleSetsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ListRuleSets"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ListRuleSets"))
+              .build();
         }
-     }
-     return getListRuleSetsMethod;
+      }
+    }
+    return getListRuleSetsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetRuleSetReq,
@@ -169,22 +153,21 @@ public final class ComplianceGrpc {
     if ((getGetRuleSetMethod = ComplianceGrpc.getGetRuleSetMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getGetRuleSetMethod = ComplianceGrpc.getGetRuleSetMethod) == null) {
-          ComplianceGrpc.getGetRuleSetMethod = getGetRuleSetMethod = 
+          ComplianceGrpc.getGetRuleSetMethod = getGetRuleSetMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetRuleSetReq, com.tcn.cloud.api.api.v0alpha.RuleSet>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "GetRuleSet"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRuleSet"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetRuleSetReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RuleSet.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetRuleSet"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetRuleSet"))
+              .build();
         }
-     }
-     return getGetRuleSetMethod;
+      }
+    }
+    return getGetRuleSetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetRuleSetByNameReq,
@@ -201,22 +184,21 @@ public final class ComplianceGrpc {
     if ((getGetRuleSetByNameMethod = ComplianceGrpc.getGetRuleSetByNameMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getGetRuleSetByNameMethod = ComplianceGrpc.getGetRuleSetByNameMethod) == null) {
-          ComplianceGrpc.getGetRuleSetByNameMethod = getGetRuleSetByNameMethod = 
+          ComplianceGrpc.getGetRuleSetByNameMethod = getGetRuleSetByNameMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetRuleSetByNameReq, com.tcn.cloud.api.api.v0alpha.RuleSet>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "GetRuleSetByName"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRuleSetByName"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetRuleSetByNameReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RuleSet.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetRuleSetByName"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetRuleSetByName"))
+              .build();
         }
-     }
-     return getGetRuleSetByNameMethod;
+      }
+    }
+    return getGetRuleSetByNameMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateRuleSetReq,
@@ -233,22 +215,21 @@ public final class ComplianceGrpc {
     if ((getCreateRuleSetMethod = ComplianceGrpc.getCreateRuleSetMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getCreateRuleSetMethod = ComplianceGrpc.getCreateRuleSetMethod) == null) {
-          ComplianceGrpc.getCreateRuleSetMethod = getCreateRuleSetMethod = 
+          ComplianceGrpc.getCreateRuleSetMethod = getCreateRuleSetMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateRuleSetReq, com.tcn.cloud.api.api.v0alpha.RuleSet>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "CreateRuleSet"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateRuleSet"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateRuleSetReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RuleSet.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("CreateRuleSet"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("CreateRuleSet"))
+              .build();
         }
-     }
-     return getCreateRuleSetMethod;
+      }
+    }
+    return getCreateRuleSetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RenameRuleSetReq,
@@ -265,22 +246,21 @@ public final class ComplianceGrpc {
     if ((getRenameRuleSetMethod = ComplianceGrpc.getRenameRuleSetMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getRenameRuleSetMethod = ComplianceGrpc.getRenameRuleSetMethod) == null) {
-          ComplianceGrpc.getRenameRuleSetMethod = getRenameRuleSetMethod = 
+          ComplianceGrpc.getRenameRuleSetMethod = getRenameRuleSetMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RenameRuleSetReq, com.tcn.cloud.api.api.v0alpha.RenameRuleSetRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "RenameRuleSet"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RenameRuleSet"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RenameRuleSetReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RenameRuleSetRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("RenameRuleSet"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("RenameRuleSet"))
+              .build();
         }
-     }
-     return getRenameRuleSetMethod;
+      }
+    }
+    return getRenameRuleSetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.EnableRuleSetReq,
@@ -297,22 +277,21 @@ public final class ComplianceGrpc {
     if ((getEnableRuleSetMethod = ComplianceGrpc.getEnableRuleSetMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getEnableRuleSetMethod = ComplianceGrpc.getEnableRuleSetMethod) == null) {
-          ComplianceGrpc.getEnableRuleSetMethod = getEnableRuleSetMethod = 
+          ComplianceGrpc.getEnableRuleSetMethod = getEnableRuleSetMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.EnableRuleSetReq, com.tcn.cloud.api.api.v0alpha.EnableRuleSetRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "EnableRuleSet"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EnableRuleSet"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.EnableRuleSetReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.EnableRuleSetRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("EnableRuleSet"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("EnableRuleSet"))
+              .build();
         }
-     }
-     return getEnableRuleSetMethod;
+      }
+    }
+    return getEnableRuleSetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DisableRuleSetReq,
@@ -329,22 +308,21 @@ public final class ComplianceGrpc {
     if ((getDisableRuleSetMethod = ComplianceGrpc.getDisableRuleSetMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getDisableRuleSetMethod = ComplianceGrpc.getDisableRuleSetMethod) == null) {
-          ComplianceGrpc.getDisableRuleSetMethod = getDisableRuleSetMethod = 
+          ComplianceGrpc.getDisableRuleSetMethod = getDisableRuleSetMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DisableRuleSetReq, com.tcn.cloud.api.api.v0alpha.DisableRuleSetRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "DisableRuleSet"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DisableRuleSet"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DisableRuleSetReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DisableRuleSetRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("DisableRuleSet"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("DisableRuleSet"))
+              .build();
         }
-     }
-     return getDisableRuleSetMethod;
+      }
+    }
+    return getDisableRuleSetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateScrubListReq,
@@ -361,22 +339,21 @@ public final class ComplianceGrpc {
     if ((getCreateScrubListMethod = ComplianceGrpc.getCreateScrubListMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getCreateScrubListMethod = ComplianceGrpc.getCreateScrubListMethod) == null) {
-          ComplianceGrpc.getCreateScrubListMethod = getCreateScrubListMethod = 
+          ComplianceGrpc.getCreateScrubListMethod = getCreateScrubListMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateScrubListReq, com.tcn.cloud.api.api.v0alpha.ScrubListRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "CreateScrubList"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateScrubList"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateScrubListReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ScrubListRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("CreateScrubList"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("CreateScrubList"))
+              .build();
         }
-     }
-     return getCreateScrubListMethod;
+      }
+    }
+    return getCreateScrubListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AddScrubListEntriesReq,
@@ -393,22 +370,21 @@ public final class ComplianceGrpc {
     if ((getAddScrubListEntriesMethod = ComplianceGrpc.getAddScrubListEntriesMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getAddScrubListEntriesMethod = ComplianceGrpc.getAddScrubListEntriesMethod) == null) {
-          ComplianceGrpc.getAddScrubListEntriesMethod = getAddScrubListEntriesMethod = 
+          ComplianceGrpc.getAddScrubListEntriesMethod = getAddScrubListEntriesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AddScrubListEntriesReq, com.tcn.cloud.api.api.v0alpha.ScrubListRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "AddScrubListEntries"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddScrubListEntries"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AddScrubListEntriesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ScrubListRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("AddScrubListEntries"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("AddScrubListEntries"))
+              .build();
         }
-     }
-     return getAddScrubListEntriesMethod;
+      }
+    }
+    return getAddScrubListEntriesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryReq,
@@ -425,22 +401,21 @@ public final class ComplianceGrpc {
     if ((getUpdateScrubEntryMethod = ComplianceGrpc.getUpdateScrubEntryMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getUpdateScrubEntryMethod = ComplianceGrpc.getUpdateScrubEntryMethod) == null) {
-          ComplianceGrpc.getUpdateScrubEntryMethod = getUpdateScrubEntryMethod = 
+          ComplianceGrpc.getUpdateScrubEntryMethod = getUpdateScrubEntryMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryReq, com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "UpdateScrubEntry"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateScrubEntry"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("UpdateScrubEntry"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("UpdateScrubEntry"))
+              .build();
         }
-     }
-     return getUpdateScrubEntryMethod;
+      }
+    }
+    return getUpdateScrubEntryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteScrubListEntriesReq,
@@ -457,22 +432,21 @@ public final class ComplianceGrpc {
     if ((getDeleteScrubListEntriesMethod = ComplianceGrpc.getDeleteScrubListEntriesMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getDeleteScrubListEntriesMethod = ComplianceGrpc.getDeleteScrubListEntriesMethod) == null) {
-          ComplianceGrpc.getDeleteScrubListEntriesMethod = getDeleteScrubListEntriesMethod = 
+          ComplianceGrpc.getDeleteScrubListEntriesMethod = getDeleteScrubListEntriesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteScrubListEntriesReq, com.tcn.cloud.api.api.v0alpha.ScrubListRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "DeleteScrubListEntries"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteScrubListEntries"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteScrubListEntriesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ScrubListRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("DeleteScrubListEntries"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("DeleteScrubListEntries"))
+              .build();
         }
-     }
-     return getDeleteScrubListEntriesMethod;
+      }
+    }
+    return getDeleteScrubListEntriesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetScrubListReq,
@@ -489,22 +463,21 @@ public final class ComplianceGrpc {
     if ((getGetScrubListMethod = ComplianceGrpc.getGetScrubListMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getGetScrubListMethod = ComplianceGrpc.getGetScrubListMethod) == null) {
-          ComplianceGrpc.getGetScrubListMethod = getGetScrubListMethod = 
+          ComplianceGrpc.getGetScrubListMethod = getGetScrubListMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetScrubListReq, com.tcn.cloud.api.api.v0alpha.ScrubListRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "GetScrubList"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetScrubList"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetScrubListReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ScrubListRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetScrubList"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetScrubList"))
+              .build();
         }
-     }
-     return getGetScrubListMethod;
+      }
+    }
+    return getGetScrubListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteScrubListReq,
@@ -521,22 +494,21 @@ public final class ComplianceGrpc {
     if ((getDeleteScrubListMethod = ComplianceGrpc.getDeleteScrubListMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getDeleteScrubListMethod = ComplianceGrpc.getDeleteScrubListMethod) == null) {
-          ComplianceGrpc.getDeleteScrubListMethod = getDeleteScrubListMethod = 
+          ComplianceGrpc.getDeleteScrubListMethod = getDeleteScrubListMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteScrubListReq, com.tcn.cloud.api.api.v0alpha.ScrubListRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "DeleteScrubList"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteScrubList"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteScrubListReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ScrubListRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("DeleteScrubList"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("DeleteScrubList"))
+              .build();
         }
-     }
-     return getDeleteScrubListMethod;
+      }
+    }
+    return getDeleteScrubListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetDefaultRulesReq,
@@ -553,22 +525,21 @@ public final class ComplianceGrpc {
     if ((getGetDefaultRulesMethod = ComplianceGrpc.getGetDefaultRulesMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getGetDefaultRulesMethod = ComplianceGrpc.getGetDefaultRulesMethod) == null) {
-          ComplianceGrpc.getGetDefaultRulesMethod = getGetDefaultRulesMethod = 
+          ComplianceGrpc.getGetDefaultRulesMethod = getGetDefaultRulesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetDefaultRulesReq, com.tcn.cloud.api.api.v0alpha.GetDefaultRulesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "GetDefaultRules"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDefaultRules"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetDefaultRulesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetDefaultRulesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetDefaultRules"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetDefaultRules"))
+              .build();
         }
-     }
-     return getGetDefaultRulesMethod;
+      }
+    }
+    return getGetDefaultRulesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetScrubListsReq,
@@ -585,22 +556,21 @@ public final class ComplianceGrpc {
     if ((getGetScrubListsMethod = ComplianceGrpc.getGetScrubListsMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getGetScrubListsMethod = ComplianceGrpc.getGetScrubListsMethod) == null) {
-          ComplianceGrpc.getGetScrubListsMethod = getGetScrubListsMethod = 
+          ComplianceGrpc.getGetScrubListsMethod = getGetScrubListsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetScrubListsReq, com.tcn.cloud.api.api.v0alpha.ScrubListsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "GetScrubLists"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetScrubLists"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetScrubListsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ScrubListsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetScrubLists"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetScrubLists"))
+              .build();
         }
-     }
-     return getGetScrubListsMethod;
+      }
+    }
+    return getGetScrubListsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SearchScrubListReq,
@@ -617,22 +587,21 @@ public final class ComplianceGrpc {
     if ((getSearchScrubListMethod = ComplianceGrpc.getSearchScrubListMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getSearchScrubListMethod = ComplianceGrpc.getSearchScrubListMethod) == null) {
-          ComplianceGrpc.getSearchScrubListMethod = getSearchScrubListMethod = 
+          ComplianceGrpc.getSearchScrubListMethod = getSearchScrubListMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SearchScrubListReq, com.tcn.cloud.api.api.v0alpha.ScrubList>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "SearchScrubList"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SearchScrubList"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SearchScrubListReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ScrubList.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("SearchScrubList"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("SearchScrubList"))
+              .build();
         }
-     }
-     return getSearchScrubListMethod;
+      }
+    }
+    return getSearchScrubListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlReq,
@@ -649,22 +618,21 @@ public final class ComplianceGrpc {
     if ((getGetScrubListUploadUrlMethod = ComplianceGrpc.getGetScrubListUploadUrlMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getGetScrubListUploadUrlMethod = ComplianceGrpc.getGetScrubListUploadUrlMethod) == null) {
-          ComplianceGrpc.getGetScrubListUploadUrlMethod = getGetScrubListUploadUrlMethod = 
+          ComplianceGrpc.getGetScrubListUploadUrlMethod = getGetScrubListUploadUrlMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlReq, com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "GetScrubListUploadUrl"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetScrubListUploadUrl"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetScrubListUploadUrl"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetScrubListUploadUrl"))
+              .build();
         }
-     }
-     return getGetScrubListUploadUrlMethod;
+      }
+    }
+    return getGetScrubListUploadUrlMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ProcessScrubListUploadReq,
@@ -681,22 +649,21 @@ public final class ComplianceGrpc {
     if ((getProcessScrubListUploadMethod = ComplianceGrpc.getProcessScrubListUploadMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getProcessScrubListUploadMethod = ComplianceGrpc.getProcessScrubListUploadMethod) == null) {
-          ComplianceGrpc.getProcessScrubListUploadMethod = getProcessScrubListUploadMethod = 
+          ComplianceGrpc.getProcessScrubListUploadMethod = getProcessScrubListUploadMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ProcessScrubListUploadReq, com.google.longrunning.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "ProcessScrubListUpload"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ProcessScrubListUpload"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ProcessScrubListUploadReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.longrunning.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ProcessScrubListUpload"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ProcessScrubListUpload"))
+              .build();
         }
-     }
-     return getProcessScrubListUploadMethod;
+      }
+    }
+    return getProcessScrubListUploadMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ProcessScrubListDeleteUploadReq,
@@ -713,22 +680,21 @@ public final class ComplianceGrpc {
     if ((getProcessScrubListDeleteUploadMethod = ComplianceGrpc.getProcessScrubListDeleteUploadMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getProcessScrubListDeleteUploadMethod = ComplianceGrpc.getProcessScrubListDeleteUploadMethod) == null) {
-          ComplianceGrpc.getProcessScrubListDeleteUploadMethod = getProcessScrubListDeleteUploadMethod = 
+          ComplianceGrpc.getProcessScrubListDeleteUploadMethod = getProcessScrubListDeleteUploadMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ProcessScrubListDeleteUploadReq, com.google.longrunning.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "ProcessScrubListDeleteUpload"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ProcessScrubListDeleteUpload"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ProcessScrubListDeleteUploadReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.longrunning.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ProcessScrubListDeleteUpload"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ProcessScrubListDeleteUpload"))
+              .build();
         }
-     }
-     return getProcessScrubListDeleteUploadMethod;
+      }
+    }
+    return getProcessScrubListDeleteUploadMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ExportScrubListReq,
@@ -745,22 +711,21 @@ public final class ComplianceGrpc {
     if ((getExportScrubListMethod = ComplianceGrpc.getExportScrubListMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getExportScrubListMethod = ComplianceGrpc.getExportScrubListMethod) == null) {
-          ComplianceGrpc.getExportScrubListMethod = getExportScrubListMethod = 
+          ComplianceGrpc.getExportScrubListMethod = getExportScrubListMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ExportScrubListReq, com.tcn.cloud.api.api.v0alpha.ExportScrubListRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "ExportScrubList"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ExportScrubList"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ExportScrubListReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ExportScrubListRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ExportScrubList"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ExportScrubList"))
+              .build();
         }
-     }
-     return getExportScrubListMethod;
+      }
+    }
+    return getExportScrubListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.PurgeScrubListReq,
@@ -777,22 +742,21 @@ public final class ComplianceGrpc {
     if ((getPurgeScrubListMethod = ComplianceGrpc.getPurgeScrubListMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getPurgeScrubListMethod = ComplianceGrpc.getPurgeScrubListMethod) == null) {
-          ComplianceGrpc.getPurgeScrubListMethod = getPurgeScrubListMethod = 
+          ComplianceGrpc.getPurgeScrubListMethod = getPurgeScrubListMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.PurgeScrubListReq, com.tcn.cloud.api.api.v0alpha.PurgeScrubListRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "PurgeScrubList"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PurgeScrubList"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.PurgeScrubListReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.PurgeScrubListRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("PurgeScrubList"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("PurgeScrubList"))
+              .build();
         }
-     }
-     return getPurgeScrubListMethod;
+      }
+    }
+    return getPurgeScrubListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateScenarioReq,
@@ -809,22 +773,21 @@ public final class ComplianceGrpc {
     if ((getCreateScenarioMethod = ComplianceGrpc.getCreateScenarioMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getCreateScenarioMethod = ComplianceGrpc.getCreateScenarioMethod) == null) {
-          ComplianceGrpc.getCreateScenarioMethod = getCreateScenarioMethod = 
+          ComplianceGrpc.getCreateScenarioMethod = getCreateScenarioMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateScenarioReq, com.tcn.cloud.api.api.v0alpha.CreateScenarioRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "CreateScenario"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateScenario"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateScenarioReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateScenarioRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("CreateScenario"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("CreateScenario"))
+              .build();
         }
-     }
-     return getCreateScenarioMethod;
+      }
+    }
+    return getCreateScenarioMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetScenarioReq,
@@ -841,22 +804,21 @@ public final class ComplianceGrpc {
     if ((getGetScenarioMethod = ComplianceGrpc.getGetScenarioMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getGetScenarioMethod = ComplianceGrpc.getGetScenarioMethod) == null) {
-          ComplianceGrpc.getGetScenarioMethod = getGetScenarioMethod = 
+          ComplianceGrpc.getGetScenarioMethod = getGetScenarioMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetScenarioReq, com.tcn.cloud.api.api.v0alpha.GetScenarioRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "GetScenario"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetScenario"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetScenarioReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetScenarioRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetScenario"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetScenario"))
+              .build();
         }
-     }
-     return getGetScenarioMethod;
+      }
+    }
+    return getGetScenarioMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateScenarioReq,
@@ -873,22 +835,21 @@ public final class ComplianceGrpc {
     if ((getUpdateScenarioMethod = ComplianceGrpc.getUpdateScenarioMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getUpdateScenarioMethod = ComplianceGrpc.getUpdateScenarioMethod) == null) {
-          ComplianceGrpc.getUpdateScenarioMethod = getUpdateScenarioMethod = 
+          ComplianceGrpc.getUpdateScenarioMethod = getUpdateScenarioMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateScenarioReq, com.tcn.cloud.api.api.v0alpha.UpdateScenarioRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "UpdateScenario"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateScenario"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateScenarioReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateScenarioRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("UpdateScenario"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("UpdateScenario"))
+              .build();
         }
-     }
-     return getUpdateScenarioMethod;
+      }
+    }
+    return getUpdateScenarioMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteScenarioReq,
@@ -905,22 +866,21 @@ public final class ComplianceGrpc {
     if ((getDeleteScenarioMethod = ComplianceGrpc.getDeleteScenarioMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getDeleteScenarioMethod = ComplianceGrpc.getDeleteScenarioMethod) == null) {
-          ComplianceGrpc.getDeleteScenarioMethod = getDeleteScenarioMethod = 
+          ComplianceGrpc.getDeleteScenarioMethod = getDeleteScenarioMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteScenarioReq, com.tcn.cloud.api.api.v0alpha.DeleteScenarioRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "DeleteScenario"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteScenario"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteScenarioReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteScenarioRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("DeleteScenario"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("DeleteScenario"))
+              .build();
         }
-     }
-     return getDeleteScenarioMethod;
+      }
+    }
+    return getDeleteScenarioMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosReq,
@@ -937,22 +897,21 @@ public final class ComplianceGrpc {
     if ((getRunAssignedScenariosMethod = ComplianceGrpc.getRunAssignedScenariosMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getRunAssignedScenariosMethod = ComplianceGrpc.getRunAssignedScenariosMethod) == null) {
-          ComplianceGrpc.getRunAssignedScenariosMethod = getRunAssignedScenariosMethod = 
+          ComplianceGrpc.getRunAssignedScenariosMethod = getRunAssignedScenariosMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosReq, com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "RunAssignedScenarios"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RunAssignedScenarios"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("RunAssignedScenarios"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("RunAssignedScenarios"))
+              .build();
         }
-     }
-     return getRunAssignedScenariosMethod;
+      }
+    }
+    return getRunAssignedScenariosMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAllScenariosReq,
@@ -969,22 +928,21 @@ public final class ComplianceGrpc {
     if ((getListAllScenariosMethod = ComplianceGrpc.getListAllScenariosMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getListAllScenariosMethod = ComplianceGrpc.getListAllScenariosMethod) == null) {
-          ComplianceGrpc.getListAllScenariosMethod = getListAllScenariosMethod = 
+          ComplianceGrpc.getListAllScenariosMethod = getListAllScenariosMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListAllScenariosReq, com.tcn.cloud.api.api.v0alpha.ListAllScenariosRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "ListAllScenarios"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAllScenarios"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAllScenariosReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAllScenariosRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ListAllScenarios"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ListAllScenarios"))
+              .build();
         }
-     }
-     return getListAllScenariosMethod;
+      }
+    }
+    return getListAllScenariosMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosReq,
@@ -1001,22 +959,21 @@ public final class ComplianceGrpc {
     if ((getListUnassignedScenariosMethod = ComplianceGrpc.getListUnassignedScenariosMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getListUnassignedScenariosMethod = ComplianceGrpc.getListUnassignedScenariosMethod) == null) {
-          ComplianceGrpc.getListUnassignedScenariosMethod = getListUnassignedScenariosMethod = 
+          ComplianceGrpc.getListUnassignedScenariosMethod = getListUnassignedScenariosMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosReq, com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "ListUnassignedScenarios"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListUnassignedScenarios"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ListUnassignedScenarios"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ListUnassignedScenarios"))
+              .build();
         }
-     }
-     return getListUnassignedScenariosMethod;
+      }
+    }
+    return getListUnassignedScenariosMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsReq,
@@ -1033,22 +990,21 @@ public final class ComplianceGrpc {
     if ((getListAssignedRuleSetsMethod = ComplianceGrpc.getListAssignedRuleSetsMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getListAssignedRuleSetsMethod = ComplianceGrpc.getListAssignedRuleSetsMethod) == null) {
-          ComplianceGrpc.getListAssignedRuleSetsMethod = getListAssignedRuleSetsMethod = 
+          ComplianceGrpc.getListAssignedRuleSetsMethod = getListAssignedRuleSetsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsReq, com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "ListAssignedRuleSets"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAssignedRuleSets"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ListAssignedRuleSets"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ListAssignedRuleSets"))
+              .build();
         }
-     }
-     return getListAssignedRuleSetsMethod;
+      }
+    }
+    return getListAssignedRuleSetsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosReq,
@@ -1065,22 +1021,21 @@ public final class ComplianceGrpc {
     if ((getListAssignedScenariosMethod = ComplianceGrpc.getListAssignedScenariosMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getListAssignedScenariosMethod = ComplianceGrpc.getListAssignedScenariosMethod) == null) {
-          ComplianceGrpc.getListAssignedScenariosMethod = getListAssignedScenariosMethod = 
+          ComplianceGrpc.getListAssignedScenariosMethod = getListAssignedScenariosMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosReq, com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "ListAssignedScenarios"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAssignedScenarios"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ListAssignedScenarios"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ListAssignedScenarios"))
+              .build();
         }
-     }
-     return getListAssignedScenariosMethod;
+      }
+    }
+    return getListAssignedScenariosMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AssignScenarioReq,
@@ -1097,22 +1052,21 @@ public final class ComplianceGrpc {
     if ((getAssignScenarioMethod = ComplianceGrpc.getAssignScenarioMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getAssignScenarioMethod = ComplianceGrpc.getAssignScenarioMethod) == null) {
-          ComplianceGrpc.getAssignScenarioMethod = getAssignScenarioMethod = 
+          ComplianceGrpc.getAssignScenarioMethod = getAssignScenarioMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AssignScenarioReq, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "AssignScenario"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AssignScenario"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AssignScenarioReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("AssignScenario"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("AssignScenario"))
+              .build();
         }
-     }
-     return getAssignScenarioMethod;
+      }
+    }
+    return getAssignScenarioMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UnassignScenarioReq,
@@ -1129,22 +1083,21 @@ public final class ComplianceGrpc {
     if ((getUnassignScenarioMethod = ComplianceGrpc.getUnassignScenarioMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getUnassignScenarioMethod = ComplianceGrpc.getUnassignScenarioMethod) == null) {
-          ComplianceGrpc.getUnassignScenarioMethod = getUnassignScenarioMethod = 
+          ComplianceGrpc.getUnassignScenarioMethod = getUnassignScenarioMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UnassignScenarioReq, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "UnassignScenario"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UnassignScenario"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UnassignScenarioReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("UnassignScenario"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("UnassignScenario"))
+              .build();
         }
-     }
-     return getUnassignScenarioMethod;
+      }
+    }
+    return getUnassignScenarioMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.EnableScenarioReq,
@@ -1161,22 +1114,21 @@ public final class ComplianceGrpc {
     if ((getEnableScenarioMethod = ComplianceGrpc.getEnableScenarioMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getEnableScenarioMethod = ComplianceGrpc.getEnableScenarioMethod) == null) {
-          ComplianceGrpc.getEnableScenarioMethod = getEnableScenarioMethod = 
+          ComplianceGrpc.getEnableScenarioMethod = getEnableScenarioMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.EnableScenarioReq, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "EnableScenario"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EnableScenario"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.EnableScenarioReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("EnableScenario"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("EnableScenario"))
+              .build();
         }
-     }
-     return getEnableScenarioMethod;
+      }
+    }
+    return getEnableScenarioMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DisableScenarioReq,
@@ -1193,22 +1145,21 @@ public final class ComplianceGrpc {
     if ((getDisableScenarioMethod = ComplianceGrpc.getDisableScenarioMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getDisableScenarioMethod = ComplianceGrpc.getDisableScenarioMethod) == null) {
-          ComplianceGrpc.getDisableScenarioMethod = getDisableScenarioMethod = 
+          ComplianceGrpc.getDisableScenarioMethod = getDisableScenarioMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DisableScenarioReq, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "DisableScenario"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DisableScenario"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DisableScenarioReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("DisableScenario"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("DisableScenario"))
+              .build();
         }
-     }
-     return getDisableScenarioMethod;
+      }
+    }
+    return getDisableScenarioMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetFieldNamesReq,
@@ -1225,22 +1176,21 @@ public final class ComplianceGrpc {
     if ((getGetFieldNamesMethod = ComplianceGrpc.getGetFieldNamesMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getGetFieldNamesMethod = ComplianceGrpc.getGetFieldNamesMethod) == null) {
-          ComplianceGrpc.getGetFieldNamesMethod = getGetFieldNamesMethod = 
+          ComplianceGrpc.getGetFieldNamesMethod = getGetFieldNamesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetFieldNamesReq, com.tcn.cloud.api.api.v0alpha.FieldNames>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "GetFieldNames"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetFieldNames"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetFieldNamesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.FieldNames.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetFieldNames"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetFieldNames"))
+              .build();
         }
-     }
-     return getGetFieldNamesMethod;
+      }
+    }
+    return getGetFieldNamesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetResultDescriptionsReq,
@@ -1257,22 +1207,21 @@ public final class ComplianceGrpc {
     if ((getGetResultDescriptionsMethod = ComplianceGrpc.getGetResultDescriptionsMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getGetResultDescriptionsMethod = ComplianceGrpc.getGetResultDescriptionsMethod) == null) {
-          ComplianceGrpc.getGetResultDescriptionsMethod = getGetResultDescriptionsMethod = 
+          ComplianceGrpc.getGetResultDescriptionsMethod = getGetResultDescriptionsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetResultDescriptionsReq, com.tcn.cloud.api.api.v0alpha.FieldNames>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "GetResultDescriptions"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetResultDescriptions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetResultDescriptionsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.FieldNames.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetResultDescriptions"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetResultDescriptions"))
+              .build();
         }
-     }
-     return getGetResultDescriptionsMethod;
+      }
+    }
+    return getGetResultDescriptionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateConsentProfileReq,
@@ -1289,22 +1238,21 @@ public final class ComplianceGrpc {
     if ((getCreateConsentProfileMethod = ComplianceGrpc.getCreateConsentProfileMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getCreateConsentProfileMethod = ComplianceGrpc.getCreateConsentProfileMethod) == null) {
-          ComplianceGrpc.getCreateConsentProfileMethod = getCreateConsentProfileMethod = 
+          ComplianceGrpc.getCreateConsentProfileMethod = getCreateConsentProfileMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateConsentProfileReq, com.tcn.cloud.api.api.v0alpha.CreateConsentProfileRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "CreateConsentProfile"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateConsentProfile"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateConsentProfileReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateConsentProfileRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("CreateConsentProfile"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("CreateConsentProfile"))
+              .build();
         }
-     }
-     return getCreateConsentProfileMethod;
+      }
+    }
+    return getCreateConsentProfileMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateConsentReq,
@@ -1321,22 +1269,21 @@ public final class ComplianceGrpc {
     if ((getCreateConsentMethod = ComplianceGrpc.getCreateConsentMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getCreateConsentMethod = ComplianceGrpc.getCreateConsentMethod) == null) {
-          ComplianceGrpc.getCreateConsentMethod = getCreateConsentMethod = 
+          ComplianceGrpc.getCreateConsentMethod = getCreateConsentMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateConsentReq, com.tcn.cloud.api.api.v0alpha.CreateConsentRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "CreateConsent"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateConsent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateConsentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateConsentRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("CreateConsent"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("CreateConsent"))
+              .build();
         }
-     }
-     return getCreateConsentMethod;
+      }
+    }
+    return getCreateConsentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetConsentProfileReq,
@@ -1353,22 +1300,21 @@ public final class ComplianceGrpc {
     if ((getGetConsentProfileMethod = ComplianceGrpc.getGetConsentProfileMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getGetConsentProfileMethod = ComplianceGrpc.getGetConsentProfileMethod) == null) {
-          ComplianceGrpc.getGetConsentProfileMethod = getGetConsentProfileMethod = 
+          ComplianceGrpc.getGetConsentProfileMethod = getGetConsentProfileMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetConsentProfileReq, com.tcn.cloud.api.api.v0alpha.ConsentProfile>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "GetConsentProfile"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetConsentProfile"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetConsentProfileReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ConsentProfile.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetConsentProfile"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetConsentProfile"))
+              .build();
         }
-     }
-     return getGetConsentProfileMethod;
+      }
+    }
+    return getGetConsentProfileMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetConsentReq,
@@ -1385,22 +1331,21 @@ public final class ComplianceGrpc {
     if ((getGetConsentMethod = ComplianceGrpc.getGetConsentMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getGetConsentMethod = ComplianceGrpc.getGetConsentMethod) == null) {
-          ComplianceGrpc.getGetConsentMethod = getGetConsentMethod = 
+          ComplianceGrpc.getGetConsentMethod = getGetConsentMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetConsentReq, com.tcn.cloud.api.api.v0alpha.Consent>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "GetConsent"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetConsent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetConsentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Consent.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetConsent"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetConsent"))
+              .build();
         }
-     }
-     return getGetConsentMethod;
+      }
+    }
+    return getGetConsentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentReq,
@@ -1417,22 +1362,21 @@ public final class ComplianceGrpc {
     if ((getGetConsentByProfileAndContentMethod = ComplianceGrpc.getGetConsentByProfileAndContentMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getGetConsentByProfileAndContentMethod = ComplianceGrpc.getGetConsentByProfileAndContentMethod) == null) {
-          ComplianceGrpc.getGetConsentByProfileAndContentMethod = getGetConsentByProfileAndContentMethod = 
+          ComplianceGrpc.getGetConsentByProfileAndContentMethod = getGetConsentByProfileAndContentMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentReq, com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "GetConsentByProfileAndContent"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetConsentByProfileAndContent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetConsentByProfileAndContent"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetConsentByProfileAndContent"))
+              .build();
         }
-     }
-     return getGetConsentByProfileAndContentMethod;
+      }
+    }
+    return getGetConsentByProfileAndContentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetConsentByContentReq,
@@ -1449,22 +1393,21 @@ public final class ComplianceGrpc {
     if ((getGetConsentByContentMethod = ComplianceGrpc.getGetConsentByContentMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getGetConsentByContentMethod = ComplianceGrpc.getGetConsentByContentMethod) == null) {
-          ComplianceGrpc.getGetConsentByContentMethod = getGetConsentByContentMethod = 
+          ComplianceGrpc.getGetConsentByContentMethod = getGetConsentByContentMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetConsentByContentReq, com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "GetConsentByContent"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetConsentByContent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetConsentByContentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetConsentByContent"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetConsentByContent"))
+              .build();
         }
-     }
-     return getGetConsentByContentMethod;
+      }
+    }
+    return getGetConsentByContentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SearchConsentByContentReq,
@@ -1481,22 +1424,21 @@ public final class ComplianceGrpc {
     if ((getSearchConsentByContentMethod = ComplianceGrpc.getSearchConsentByContentMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getSearchConsentByContentMethod = ComplianceGrpc.getSearchConsentByContentMethod) == null) {
-          ComplianceGrpc.getSearchConsentByContentMethod = getSearchConsentByContentMethod = 
+          ComplianceGrpc.getSearchConsentByContentMethod = getSearchConsentByContentMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SearchConsentByContentReq, com.tcn.cloud.api.api.v0alpha.SearchConsentByContentRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "SearchConsentByContent"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SearchConsentByContent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SearchConsentByContentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SearchConsentByContentRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("SearchConsentByContent"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("SearchConsentByContent"))
+              .build();
         }
-     }
-     return getSearchConsentByContentMethod;
+      }
+    }
+    return getSearchConsentByContentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateConsentReq,
@@ -1513,22 +1455,21 @@ public final class ComplianceGrpc {
     if ((getUpdateConsentMethod = ComplianceGrpc.getUpdateConsentMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getUpdateConsentMethod = ComplianceGrpc.getUpdateConsentMethod) == null) {
-          ComplianceGrpc.getUpdateConsentMethod = getUpdateConsentMethod = 
+          ComplianceGrpc.getUpdateConsentMethod = getUpdateConsentMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateConsentReq, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "UpdateConsent"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateConsent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateConsentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("UpdateConsent"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("UpdateConsent"))
+              .build();
         }
-     }
-     return getUpdateConsentMethod;
+      }
+    }
+    return getUpdateConsentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ExpireConsentReq,
@@ -1545,22 +1486,21 @@ public final class ComplianceGrpc {
     if ((getExpireConsentMethod = ComplianceGrpc.getExpireConsentMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getExpireConsentMethod = ComplianceGrpc.getExpireConsentMethod) == null) {
-          ComplianceGrpc.getExpireConsentMethod = getExpireConsentMethod = 
+          ComplianceGrpc.getExpireConsentMethod = getExpireConsentMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ExpireConsentReq, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "ExpireConsent"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ExpireConsent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ExpireConsentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ExpireConsent"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ExpireConsent"))
+              .build();
         }
-     }
-     return getExpireConsentMethod;
+      }
+    }
+    return getExpireConsentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RevokeConsentReq,
@@ -1577,22 +1517,21 @@ public final class ComplianceGrpc {
     if ((getRevokeConsentMethod = ComplianceGrpc.getRevokeConsentMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getRevokeConsentMethod = ComplianceGrpc.getRevokeConsentMethod) == null) {
-          ComplianceGrpc.getRevokeConsentMethod = getRevokeConsentMethod = 
+          ComplianceGrpc.getRevokeConsentMethod = getRevokeConsentMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RevokeConsentReq, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "RevokeConsent"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RevokeConsent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RevokeConsentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("RevokeConsent"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("RevokeConsent"))
+              .build();
         }
-     }
-     return getRevokeConsentMethod;
+      }
+    }
+    return getRevokeConsentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteConsentReq,
@@ -1609,22 +1548,21 @@ public final class ComplianceGrpc {
     if ((getDeleteConsentMethod = ComplianceGrpc.getDeleteConsentMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getDeleteConsentMethod = ComplianceGrpc.getDeleteConsentMethod) == null) {
-          ComplianceGrpc.getDeleteConsentMethod = getDeleteConsentMethod = 
+          ComplianceGrpc.getDeleteConsentMethod = getDeleteConsentMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteConsentReq, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "DeleteConsent"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteConsent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteConsentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("DeleteConsent"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("DeleteConsent"))
+              .build();
         }
-     }
-     return getDeleteConsentMethod;
+      }
+    }
+    return getDeleteConsentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ProcessConsentListDeleteUploadReq,
@@ -1641,22 +1579,21 @@ public final class ComplianceGrpc {
     if ((getProcessConsentListDeleteUploadMethod = ComplianceGrpc.getProcessConsentListDeleteUploadMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getProcessConsentListDeleteUploadMethod = ComplianceGrpc.getProcessConsentListDeleteUploadMethod) == null) {
-          ComplianceGrpc.getProcessConsentListDeleteUploadMethod = getProcessConsentListDeleteUploadMethod = 
+          ComplianceGrpc.getProcessConsentListDeleteUploadMethod = getProcessConsentListDeleteUploadMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ProcessConsentListDeleteUploadReq, com.google.longrunning.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "ProcessConsentListDeleteUpload"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ProcessConsentListDeleteUpload"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ProcessConsentListDeleteUploadReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.longrunning.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ProcessConsentListDeleteUpload"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ProcessConsentListDeleteUpload"))
+              .build();
         }
-     }
-     return getProcessConsentListDeleteUploadMethod;
+      }
+    }
+    return getProcessConsentListDeleteUploadMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.EnableConsentProfileReq,
@@ -1673,22 +1610,21 @@ public final class ComplianceGrpc {
     if ((getEnableConsentProfileMethod = ComplianceGrpc.getEnableConsentProfileMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getEnableConsentProfileMethod = ComplianceGrpc.getEnableConsentProfileMethod) == null) {
-          ComplianceGrpc.getEnableConsentProfileMethod = getEnableConsentProfileMethod = 
+          ComplianceGrpc.getEnableConsentProfileMethod = getEnableConsentProfileMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.EnableConsentProfileReq, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "EnableConsentProfile"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EnableConsentProfile"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.EnableConsentProfileReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("EnableConsentProfile"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("EnableConsentProfile"))
+              .build();
         }
-     }
-     return getEnableConsentProfileMethod;
+      }
+    }
+    return getEnableConsentProfileMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DisableConsentProfileReq,
@@ -1705,22 +1641,21 @@ public final class ComplianceGrpc {
     if ((getDisableConsentProfileMethod = ComplianceGrpc.getDisableConsentProfileMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getDisableConsentProfileMethod = ComplianceGrpc.getDisableConsentProfileMethod) == null) {
-          ComplianceGrpc.getDisableConsentProfileMethod = getDisableConsentProfileMethod = 
+          ComplianceGrpc.getDisableConsentProfileMethod = getDisableConsentProfileMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DisableConsentProfileReq, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "DisableConsentProfile"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DisableConsentProfile"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DisableConsentProfileReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("DisableConsentProfile"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("DisableConsentProfile"))
+              .build();
         }
-     }
-     return getDisableConsentProfileMethod;
+      }
+    }
+    return getDisableConsentProfileMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListConsentProfilesReq,
@@ -1737,22 +1672,21 @@ public final class ComplianceGrpc {
     if ((getListConsentProfilesMethod = ComplianceGrpc.getListConsentProfilesMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getListConsentProfilesMethod = ComplianceGrpc.getListConsentProfilesMethod) == null) {
-          ComplianceGrpc.getListConsentProfilesMethod = getListConsentProfilesMethod = 
+          ComplianceGrpc.getListConsentProfilesMethod = getListConsentProfilesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListConsentProfilesReq, com.tcn.cloud.api.api.v0alpha.ListConsentProfilesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "ListConsentProfiles"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListConsentProfiles"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListConsentProfilesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListConsentProfilesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ListConsentProfiles"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ListConsentProfiles"))
+              .build();
         }
-     }
-     return getListConsentProfilesMethod;
+      }
+    }
+    return getListConsentProfilesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlReq,
@@ -1769,22 +1703,21 @@ public final class ComplianceGrpc {
     if ((getGetConsentUploadUrlMethod = ComplianceGrpc.getGetConsentUploadUrlMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getGetConsentUploadUrlMethod = ComplianceGrpc.getGetConsentUploadUrlMethod) == null) {
-          ComplianceGrpc.getGetConsentUploadUrlMethod = getGetConsentUploadUrlMethod = 
+          ComplianceGrpc.getGetConsentUploadUrlMethod = getGetConsentUploadUrlMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlReq, com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "GetConsentUploadUrl"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetConsentUploadUrl"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetConsentUploadUrl"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetConsentUploadUrl"))
+              .build();
         }
-     }
-     return getGetConsentUploadUrlMethod;
+      }
+    }
+    return getGetConsentUploadUrlMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ProcessConsentUploadReq,
@@ -1801,22 +1734,21 @@ public final class ComplianceGrpc {
     if ((getProcessConsentUploadMethod = ComplianceGrpc.getProcessConsentUploadMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getProcessConsentUploadMethod = ComplianceGrpc.getProcessConsentUploadMethod) == null) {
-          ComplianceGrpc.getProcessConsentUploadMethod = getProcessConsentUploadMethod = 
+          ComplianceGrpc.getProcessConsentUploadMethod = getProcessConsentUploadMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ProcessConsentUploadReq, com.google.longrunning.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "ProcessConsentUpload"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ProcessConsentUpload"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ProcessConsentUploadReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.longrunning.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ProcessConsentUpload"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ProcessConsentUpload"))
+              .build();
         }
-     }
-     return getProcessConsentUploadMethod;
+      }
+    }
+    return getProcessConsentUploadMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListConsentTopicsReq,
@@ -1833,22 +1765,21 @@ public final class ComplianceGrpc {
     if ((getListConsentTopicsMethod = ComplianceGrpc.getListConsentTopicsMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getListConsentTopicsMethod = ComplianceGrpc.getListConsentTopicsMethod) == null) {
-          ComplianceGrpc.getListConsentTopicsMethod = getListConsentTopicsMethod = 
+          ComplianceGrpc.getListConsentTopicsMethod = getListConsentTopicsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListConsentTopicsReq, com.tcn.cloud.api.api.v0alpha.ListConsentTopicsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "ListConsentTopics"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListConsentTopics"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListConsentTopicsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListConsentTopicsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ListConsentTopics"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ListConsentTopics"))
+              .build();
         }
-     }
-     return getListConsentTopicsMethod;
+      }
+    }
+    return getListConsentTopicsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetConsentTopicReq,
@@ -1865,22 +1796,21 @@ public final class ComplianceGrpc {
     if ((getGetConsentTopicMethod = ComplianceGrpc.getGetConsentTopicMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getGetConsentTopicMethod = ComplianceGrpc.getGetConsentTopicMethod) == null) {
-          ComplianceGrpc.getGetConsentTopicMethod = getGetConsentTopicMethod = 
+          ComplianceGrpc.getGetConsentTopicMethod = getGetConsentTopicMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetConsentTopicReq, com.tcn.cloud.api.api.v0alpha.ConsentTopic>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "GetConsentTopic"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetConsentTopic"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetConsentTopicReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ConsentTopic.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetConsentTopic"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("GetConsentTopic"))
+              .build();
         }
-     }
-     return getGetConsentTopicMethod;
+      }
+    }
+    return getGetConsentTopicMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ConsentTopic,
@@ -1897,22 +1827,21 @@ public final class ComplianceGrpc {
     if ((getCreateConsentTopicMethod = ComplianceGrpc.getCreateConsentTopicMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getCreateConsentTopicMethod = ComplianceGrpc.getCreateConsentTopicMethod) == null) {
-          ComplianceGrpc.getCreateConsentTopicMethod = getCreateConsentTopicMethod = 
+          ComplianceGrpc.getCreateConsentTopicMethod = getCreateConsentTopicMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ConsentTopic, com.tcn.cloud.api.api.v0alpha.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "CreateConsentTopic"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateConsentTopic"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ConsentTopic.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("CreateConsentTopic"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("CreateConsentTopic"))
+              .build();
         }
-     }
-     return getCreateConsentTopicMethod;
+      }
+    }
+    return getCreateConsentTopicMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ConsentTopic,
@@ -1929,22 +1858,21 @@ public final class ComplianceGrpc {
     if ((getDeleteConsentTopicMethod = ComplianceGrpc.getDeleteConsentTopicMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getDeleteConsentTopicMethod = ComplianceGrpc.getDeleteConsentTopicMethod) == null) {
-          ComplianceGrpc.getDeleteConsentTopicMethod = getDeleteConsentTopicMethod = 
+          ComplianceGrpc.getDeleteConsentTopicMethod = getDeleteConsentTopicMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ConsentTopic, com.tcn.cloud.api.api.v0alpha.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "DeleteConsentTopic"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteConsentTopic"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ConsentTopic.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("DeleteConsentTopic"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("DeleteConsentTopic"))
+              .build();
         }
-     }
-     return getDeleteConsentTopicMethod;
+      }
+    }
+    return getDeleteConsentTopicMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateConsentTopicReq,
@@ -1961,22 +1889,21 @@ public final class ComplianceGrpc {
     if ((getUpdateConsentTopicMethod = ComplianceGrpc.getUpdateConsentTopicMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getUpdateConsentTopicMethod = ComplianceGrpc.getUpdateConsentTopicMethod) == null) {
-          ComplianceGrpc.getUpdateConsentTopicMethod = getUpdateConsentTopicMethod = 
+          ComplianceGrpc.getUpdateConsentTopicMethod = getUpdateConsentTopicMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateConsentTopicReq, com.tcn.cloud.api.api.v0alpha.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "UpdateConsentTopic"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateConsentTopic"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateConsentTopicReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("UpdateConsentTopic"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("UpdateConsentTopic"))
+              .build();
         }
-     }
-     return getUpdateConsentTopicMethod;
+      }
+    }
+    return getUpdateConsentTopicMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ProcessOutboundCallReq,
@@ -1993,29 +1920,35 @@ public final class ComplianceGrpc {
     if ((getProcessOutboundCallMethod = ComplianceGrpc.getProcessOutboundCallMethod) == null) {
       synchronized (ComplianceGrpc.class) {
         if ((getProcessOutboundCallMethod = ComplianceGrpc.getProcessOutboundCallMethod) == null) {
-          ComplianceGrpc.getProcessOutboundCallMethod = getProcessOutboundCallMethod = 
+          ComplianceGrpc.getProcessOutboundCallMethod = getProcessOutboundCallMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ProcessOutboundCallReq, com.tcn.cloud.api.api.v0alpha.ProcessRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.Compliance", "ProcessOutboundCall"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ProcessOutboundCall"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ProcessOutboundCallReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ProcessRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ProcessOutboundCall"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ComplianceMethodDescriptorSupplier("ProcessOutboundCall"))
+              .build();
         }
-     }
-     return getProcessOutboundCallMethod;
+      }
+    }
+    return getProcessOutboundCallMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ComplianceStub newStub(io.grpc.Channel channel) {
-    return new ComplianceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ComplianceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ComplianceStub>() {
+        @java.lang.Override
+        public ComplianceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ComplianceStub(channel, callOptions);
+        }
+      };
+    return ComplianceStub.newStub(factory, channel);
   }
 
   /**
@@ -2023,7 +1956,14 @@ public final class ComplianceGrpc {
    */
   public static ComplianceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ComplianceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ComplianceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ComplianceBlockingStub>() {
+        @java.lang.Override
+        public ComplianceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ComplianceBlockingStub(channel, callOptions);
+        }
+      };
+    return ComplianceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -2031,88 +1971,95 @@ public final class ComplianceGrpc {
    */
   public static ComplianceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ComplianceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ComplianceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ComplianceFutureStub>() {
+        @java.lang.Override
+        public ComplianceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ComplianceFutureStub(channel, callOptions);
+        }
+      };
+    return ComplianceFutureStub.newStub(factory, channel);
   }
 
   /**
    */
-  public static abstract class ComplianceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void ruleAutoComplete(com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteReq request,
+    default void ruleAutoComplete(com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getRuleAutoCompleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRuleAutoCompleteMethod(), responseObserver);
     }
 
     /**
      */
-    public void checkRuleSet(com.tcn.cloud.api.api.v0alpha.CheckRuleSetReq request,
+    default void checkRuleSet(com.tcn.cloud.api.api.v0alpha.CheckRuleSetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CheckRuleSetRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCheckRuleSetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCheckRuleSetMethod(), responseObserver);
     }
 
     /**
      */
-    public void assignRuleSet(com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq request,
+    default void assignRuleSet(com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AssignRuleSetRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getAssignRuleSetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignRuleSetMethod(), responseObserver);
     }
 
     /**
      */
-    public void listRuleSets(com.tcn.cloud.api.api.v0alpha.ListRuleSetsReq request,
+    default void listRuleSets(com.tcn.cloud.api.api.v0alpha.ListRuleSetsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListRuleSetsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListRuleSetsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRuleSetsMethod(), responseObserver);
     }
 
     /**
      */
-    public void getRuleSet(com.tcn.cloud.api.api.v0alpha.GetRuleSetReq request,
+    default void getRuleSet(com.tcn.cloud.api.api.v0alpha.GetRuleSetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RuleSet> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetRuleSetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRuleSetMethod(), responseObserver);
     }
 
     /**
      */
-    public void getRuleSetByName(com.tcn.cloud.api.api.v0alpha.GetRuleSetByNameReq request,
+    default void getRuleSetByName(com.tcn.cloud.api.api.v0alpha.GetRuleSetByNameReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RuleSet> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetRuleSetByNameMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRuleSetByNameMethod(), responseObserver);
     }
 
     /**
      */
-    public void createRuleSet(com.tcn.cloud.api.api.v0alpha.CreateRuleSetReq request,
+    default void createRuleSet(com.tcn.cloud.api.api.v0alpha.CreateRuleSetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RuleSet> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateRuleSetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateRuleSetMethod(), responseObserver);
     }
 
     /**
      */
-    public void renameRuleSet(com.tcn.cloud.api.api.v0alpha.RenameRuleSetReq request,
+    default void renameRuleSet(com.tcn.cloud.api.api.v0alpha.RenameRuleSetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RenameRuleSetRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getRenameRuleSetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRenameRuleSetMethod(), responseObserver);
     }
 
     /**
      */
-    public void enableRuleSet(com.tcn.cloud.api.api.v0alpha.EnableRuleSetReq request,
+    default void enableRuleSet(com.tcn.cloud.api.api.v0alpha.EnableRuleSetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EnableRuleSetRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getEnableRuleSetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnableRuleSetMethod(), responseObserver);
     }
 
     /**
      */
-    public void disableRuleSet(com.tcn.cloud.api.api.v0alpha.DisableRuleSetReq request,
+    default void disableRuleSet(com.tcn.cloud.api.api.v0alpha.DisableRuleSetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DisableRuleSetRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDisableRuleSetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisableRuleSetMethod(), responseObserver);
     }
 
     /**
      */
-    public void createScrubList(com.tcn.cloud.api.api.v0alpha.CreateScrubListReq request,
+    default void createScrubList(com.tcn.cloud.api.api.v0alpha.CreateScrubListReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubListRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateScrubListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateScrubListMethod(), responseObserver);
     }
 
     /**
@@ -2124,9 +2071,9 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    public void addScrubListEntries(com.tcn.cloud.api.api.v0alpha.AddScrubListEntriesReq request,
+    default void addScrubListEntries(com.tcn.cloud.api.api.v0alpha.AddScrubListEntriesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubListRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getAddScrubListEntriesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddScrubListEntriesMethod(), responseObserver);
     }
 
     /**
@@ -2137,79 +2084,79 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    public void updateScrubEntry(com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryReq request,
+    default void updateScrubEntry(com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateScrubEntryMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateScrubEntryMethod(), responseObserver);
     }
 
     /**
      */
-    public void deleteScrubListEntries(com.tcn.cloud.api.api.v0alpha.DeleteScrubListEntriesReq request,
+    default void deleteScrubListEntries(com.tcn.cloud.api.api.v0alpha.DeleteScrubListEntriesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubListRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteScrubListEntriesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteScrubListEntriesMethod(), responseObserver);
     }
 
     /**
      */
-    public void getScrubList(com.tcn.cloud.api.api.v0alpha.GetScrubListReq request,
+    default void getScrubList(com.tcn.cloud.api.api.v0alpha.GetScrubListReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubListRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetScrubListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetScrubListMethod(), responseObserver);
     }
 
     /**
      */
-    public void deleteScrubList(com.tcn.cloud.api.api.v0alpha.DeleteScrubListReq request,
+    default void deleteScrubList(com.tcn.cloud.api.api.v0alpha.DeleteScrubListReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubListRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteScrubListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteScrubListMethod(), responseObserver);
     }
 
     /**
      */
-    public void getDefaultRules(com.tcn.cloud.api.api.v0alpha.GetDefaultRulesReq request,
+    default void getDefaultRules(com.tcn.cloud.api.api.v0alpha.GetDefaultRulesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetDefaultRulesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetDefaultRulesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDefaultRulesMethod(), responseObserver);
     }
 
     /**
      */
-    public void getScrubLists(com.tcn.cloud.api.api.v0alpha.GetScrubListsReq request,
+    default void getScrubLists(com.tcn.cloud.api.api.v0alpha.GetScrubListsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubListsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetScrubListsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetScrubListsMethod(), responseObserver);
     }
 
     /**
      */
-    public void searchScrubList(com.tcn.cloud.api.api.v0alpha.SearchScrubListReq request,
+    default void searchScrubList(com.tcn.cloud.api.api.v0alpha.SearchScrubListReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubList> responseObserver) {
-      asyncUnimplementedUnaryCall(getSearchScrubListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchScrubListMethod(), responseObserver);
     }
 
     /**
      */
-    public void getScrubListUploadUrl(com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlReq request,
+    default void getScrubListUploadUrl(com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetScrubListUploadUrlMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetScrubListUploadUrlMethod(), responseObserver);
     }
 
     /**
      */
-    public void processScrubListUpload(com.tcn.cloud.api.api.v0alpha.ProcessScrubListUploadReq request,
+    default void processScrubListUpload(com.tcn.cloud.api.api.v0alpha.ProcessScrubListUploadReq request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getProcessScrubListUploadMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcessScrubListUploadMethod(), responseObserver);
     }
 
     /**
      */
-    public void processScrubListDeleteUpload(com.tcn.cloud.api.api.v0alpha.ProcessScrubListDeleteUploadReq request,
+    default void processScrubListDeleteUpload(com.tcn.cloud.api.api.v0alpha.ProcessScrubListDeleteUploadReq request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getProcessScrubListDeleteUploadMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcessScrubListDeleteUploadMethod(), responseObserver);
     }
 
     /**
      */
-    public void exportScrubList(com.tcn.cloud.api.api.v0alpha.ExportScrubListReq request,
+    default void exportScrubList(com.tcn.cloud.api.api.v0alpha.ExportScrubListReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExportScrubListRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getExportScrubListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExportScrubListMethod(), responseObserver);
     }
 
     /**
@@ -2219,9 +2166,9 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    public void purgeScrubList(com.tcn.cloud.api.api.v0alpha.PurgeScrubListReq request,
+    default void purgeScrubList(com.tcn.cloud.api.api.v0alpha.PurgeScrubListReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PurgeScrubListRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getPurgeScrubListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPurgeScrubListMethod(), responseObserver);
     }
 
     /**
@@ -2229,9 +2176,9 @@ public final class ComplianceGrpc {
      * Creates a new Scenario
      * </pre>
      */
-    public void createScenario(com.tcn.cloud.api.api.v0alpha.CreateScenarioReq request,
+    default void createScenario(com.tcn.cloud.api.api.v0alpha.CreateScenarioReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateScenarioRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateScenarioMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateScenarioMethod(), responseObserver);
     }
 
     /**
@@ -2239,9 +2186,9 @@ public final class ComplianceGrpc {
      * Gets one Scenario
      * </pre>
      */
-    public void getScenario(com.tcn.cloud.api.api.v0alpha.GetScenarioReq request,
+    default void getScenario(com.tcn.cloud.api.api.v0alpha.GetScenarioReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetScenarioRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetScenarioMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetScenarioMethod(), responseObserver);
     }
 
     /**
@@ -2249,9 +2196,9 @@ public final class ComplianceGrpc {
      * Updates a Scenario
      * </pre>
      */
-    public void updateScenario(com.tcn.cloud.api.api.v0alpha.UpdateScenarioReq request,
+    default void updateScenario(com.tcn.cloud.api.api.v0alpha.UpdateScenarioReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScenarioRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateScenarioMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateScenarioMethod(), responseObserver);
     }
 
     /**
@@ -2259,9 +2206,9 @@ public final class ComplianceGrpc {
      * Deletes a Scenario
      * </pre>
      */
-    public void deleteScenario(com.tcn.cloud.api.api.v0alpha.DeleteScenarioReq request,
+    default void deleteScenario(com.tcn.cloud.api.api.v0alpha.DeleteScenarioReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteScenarioRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteScenarioMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteScenarioMethod(), responseObserver);
     }
 
     /**
@@ -2269,9 +2216,9 @@ public final class ComplianceGrpc {
      * Run scenarios against ruleset
      * </pre>
      */
-    public void runAssignedScenarios(com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosReq request,
+    default void runAssignedScenarios(com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getRunAssignedScenariosMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRunAssignedScenariosMethod(), responseObserver);
     }
 
     /**
@@ -2279,9 +2226,9 @@ public final class ComplianceGrpc {
      * Lists all scenarios
      * </pre>
      */
-    public void listAllScenarios(com.tcn.cloud.api.api.v0alpha.ListAllScenariosReq request,
+    default void listAllScenarios(com.tcn.cloud.api.api.v0alpha.ListAllScenariosReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAllScenariosRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAllScenariosMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAllScenariosMethod(), responseObserver);
     }
 
     /**
@@ -2289,9 +2236,9 @@ public final class ComplianceGrpc {
      * List currently unassigned scenarios available to be assigned to a given ruleset
      * </pre>
      */
-    public void listUnassignedScenarios(com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosReq request,
+    default void listUnassignedScenarios(com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListUnassignedScenariosMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUnassignedScenariosMethod(), responseObserver);
     }
 
     /**
@@ -2299,9 +2246,9 @@ public final class ComplianceGrpc {
      * List rule sets currently assigned to a given scenario
      * </pre>
      */
-    public void listAssignedRuleSets(com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsReq request,
+    default void listAssignedRuleSets(com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAssignedRuleSetsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAssignedRuleSetsMethod(), responseObserver);
     }
 
     /**
@@ -2309,9 +2256,9 @@ public final class ComplianceGrpc {
      * List scenarios currently assigned to a given ruleset
      * </pre>
      */
-    public void listAssignedScenarios(com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosReq request,
+    default void listAssignedScenarios(com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAssignedScenariosMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAssignedScenariosMethod(), responseObserver);
     }
 
     /**
@@ -2319,9 +2266,9 @@ public final class ComplianceGrpc {
      * Assign a scenario to a given ruleset
      * </pre>
      */
-    public void assignScenario(com.tcn.cloud.api.api.v0alpha.AssignScenarioReq request,
+    default void assignScenario(com.tcn.cloud.api.api.v0alpha.AssignScenarioReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getAssignScenarioMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignScenarioMethod(), responseObserver);
     }
 
     /**
@@ -2329,9 +2276,9 @@ public final class ComplianceGrpc {
      * Unassign a scenario from a given ruleset
      * </pre>
      */
-    public void unassignScenario(com.tcn.cloud.api.api.v0alpha.UnassignScenarioReq request,
+    default void unassignScenario(com.tcn.cloud.api.api.v0alpha.UnassignScenarioReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getUnassignScenarioMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUnassignScenarioMethod(), responseObserver);
     }
 
     /**
@@ -2339,9 +2286,9 @@ public final class ComplianceGrpc {
      * Enable an scenario
      * </pre>
      */
-    public void enableScenario(com.tcn.cloud.api.api.v0alpha.EnableScenarioReq request,
+    default void enableScenario(com.tcn.cloud.api.api.v0alpha.EnableScenarioReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getEnableScenarioMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnableScenarioMethod(), responseObserver);
     }
 
     /**
@@ -2349,9 +2296,9 @@ public final class ComplianceGrpc {
      * Disable an scenario
      * </pre>
      */
-    public void disableScenario(com.tcn.cloud.api.api.v0alpha.DisableScenarioReq request,
+    default void disableScenario(com.tcn.cloud.api.api.v0alpha.DisableScenarioReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDisableScenarioMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisableScenarioMethod(), responseObserver);
     }
 
     /**
@@ -2360,9 +2307,9 @@ public final class ComplianceGrpc {
      * This will get all available Meta Fields
      * </pre>
      */
-    public void getFieldNames(com.tcn.cloud.api.api.v0alpha.GetFieldNamesReq request,
+    default void getFieldNames(com.tcn.cloud.api.api.v0alpha.GetFieldNamesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FieldNames> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetFieldNamesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetFieldNamesMethod(), responseObserver);
     }
 
     /**
@@ -2370,9 +2317,9 @@ public final class ComplianceGrpc {
      * This will get all possible results (Answered, Answered Machine, Busy, etc.)
      * </pre>
      */
-    public void getResultDescriptions(com.tcn.cloud.api.api.v0alpha.GetResultDescriptionsReq request,
+    default void getResultDescriptions(com.tcn.cloud.api.api.v0alpha.GetResultDescriptionsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FieldNames> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetResultDescriptionsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetResultDescriptionsMethod(), responseObserver);
     }
 
     /**
@@ -2384,9 +2331,9 @@ public final class ComplianceGrpc {
      *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
-    public void createConsentProfile(com.tcn.cloud.api.api.v0alpha.CreateConsentProfileReq request,
+    default void createConsentProfile(com.tcn.cloud.api.api.v0alpha.CreateConsentProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateConsentProfileRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateConsentProfileMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateConsentProfileMethod(), responseObserver);
     }
 
     /**
@@ -2398,9 +2345,9 @@ public final class ComplianceGrpc {
      *      none
      * </pre>
      */
-    public void createConsent(com.tcn.cloud.api.api.v0alpha.CreateConsentReq request,
+    default void createConsent(com.tcn.cloud.api.api.v0alpha.CreateConsentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateConsentRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateConsentMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateConsentMethod(), responseObserver);
     }
 
     /**
@@ -2412,9 +2359,9 @@ public final class ComplianceGrpc {
      *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
-    public void getConsentProfile(com.tcn.cloud.api.api.v0alpha.GetConsentProfileReq request,
+    default void getConsentProfile(com.tcn.cloud.api.api.v0alpha.GetConsentProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ConsentProfile> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetConsentProfileMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetConsentProfileMethod(), responseObserver);
     }
 
     /**
@@ -2426,9 +2373,9 @@ public final class ComplianceGrpc {
      *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
-    public void getConsent(com.tcn.cloud.api.api.v0alpha.GetConsentReq request,
+    default void getConsent(com.tcn.cloud.api.api.v0alpha.GetConsentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Consent> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetConsentMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetConsentMethod(), responseObserver);
     }
 
     /**
@@ -2440,9 +2387,9 @@ public final class ComplianceGrpc {
      *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
-    public void getConsentByProfileAndContent(com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentReq request,
+    default void getConsentByProfileAndContent(com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetConsentByProfileAndContentMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetConsentByProfileAndContentMethod(), responseObserver);
     }
 
     /**
@@ -2454,9 +2401,9 @@ public final class ComplianceGrpc {
      *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
-    public void getConsentByContent(com.tcn.cloud.api.api.v0alpha.GetConsentByContentReq request,
+    default void getConsentByContent(com.tcn.cloud.api.api.v0alpha.GetConsentByContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetConsentByContentMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetConsentByContentMethod(), responseObserver);
     }
 
     /**
@@ -2468,9 +2415,9 @@ public final class ComplianceGrpc {
      *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
-    public void searchConsentByContent(com.tcn.cloud.api.api.v0alpha.SearchConsentByContentReq request,
+    default void searchConsentByContent(com.tcn.cloud.api.api.v0alpha.SearchConsentByContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchConsentByContentRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getSearchConsentByContentMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchConsentByContentMethod(), responseObserver);
     }
 
     /**
@@ -2488,9 +2435,9 @@ public final class ComplianceGrpc {
      *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
-    public void updateConsent(com.tcn.cloud.api.api.v0alpha.UpdateConsentReq request,
+    default void updateConsent(com.tcn.cloud.api.api.v0alpha.UpdateConsentReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateConsentMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateConsentMethod(), responseObserver);
     }
 
     /**
@@ -2502,9 +2449,9 @@ public final class ComplianceGrpc {
      *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
-    public void expireConsent(com.tcn.cloud.api.api.v0alpha.ExpireConsentReq request,
+    default void expireConsent(com.tcn.cloud.api.api.v0alpha.ExpireConsentReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getExpireConsentMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExpireConsentMethod(), responseObserver);
     }
 
     /**
@@ -2517,9 +2464,9 @@ public final class ComplianceGrpc {
      *      none
      * </pre>
      */
-    public void revokeConsent(com.tcn.cloud.api.api.v0alpha.RevokeConsentReq request,
+    default void revokeConsent(com.tcn.cloud.api.api.v0alpha.RevokeConsentReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getRevokeConsentMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRevokeConsentMethod(), responseObserver);
     }
 
     /**
@@ -2530,9 +2477,9 @@ public final class ComplianceGrpc {
      *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
-    public void deleteConsent(com.tcn.cloud.api.api.v0alpha.DeleteConsentReq request,
+    default void deleteConsent(com.tcn.cloud.api.api.v0alpha.DeleteConsentReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteConsentMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteConsentMethod(), responseObserver);
     }
 
     /**
@@ -2543,9 +2490,9 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    public void processConsentListDeleteUpload(com.tcn.cloud.api.api.v0alpha.ProcessConsentListDeleteUploadReq request,
+    default void processConsentListDeleteUpload(com.tcn.cloud.api.api.v0alpha.ProcessConsentListDeleteUploadReq request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getProcessConsentListDeleteUploadMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcessConsentListDeleteUploadMethod(), responseObserver);
     }
 
     /**
@@ -2558,9 +2505,9 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    public void enableConsentProfile(com.tcn.cloud.api.api.v0alpha.EnableConsentProfileReq request,
+    default void enableConsentProfile(com.tcn.cloud.api.api.v0alpha.EnableConsentProfileReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getEnableConsentProfileMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnableConsentProfileMethod(), responseObserver);
     }
 
     /**
@@ -2573,9 +2520,9 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    public void disableConsentProfile(com.tcn.cloud.api.api.v0alpha.DisableConsentProfileReq request,
+    default void disableConsentProfile(com.tcn.cloud.api.api.v0alpha.DisableConsentProfileReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDisableConsentProfileMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisableConsentProfileMethod(), responseObserver);
     }
 
     /**
@@ -2589,9 +2536,9 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    public void listConsentProfiles(com.tcn.cloud.api.api.v0alpha.ListConsentProfilesReq request,
+    default void listConsentProfiles(com.tcn.cloud.api.api.v0alpha.ListConsentProfilesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListConsentProfilesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListConsentProfilesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListConsentProfilesMethod(), responseObserver);
     }
 
     /**
@@ -2603,9 +2550,9 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    public void getConsentUploadUrl(com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlReq request,
+    default void getConsentUploadUrl(com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetConsentUploadUrlMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetConsentUploadUrlMethod(), responseObserver);
     }
 
     /**
@@ -2616,9 +2563,9 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    public void processConsentUpload(com.tcn.cloud.api.api.v0alpha.ProcessConsentUploadReq request,
+    default void processConsentUpload(com.tcn.cloud.api.api.v0alpha.ProcessConsentUploadReq request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getProcessConsentUploadMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcessConsentUploadMethod(), responseObserver);
     }
 
     /**
@@ -2631,9 +2578,9 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    public void listConsentTopics(com.tcn.cloud.api.api.v0alpha.ListConsentTopicsReq request,
+    default void listConsentTopics(com.tcn.cloud.api.api.v0alpha.ListConsentTopicsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListConsentTopicsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListConsentTopicsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListConsentTopicsMethod(), responseObserver);
     }
 
     /**
@@ -2645,9 +2592,9 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    public void getConsentTopic(com.tcn.cloud.api.api.v0alpha.GetConsentTopicReq request,
+    default void getConsentTopic(com.tcn.cloud.api.api.v0alpha.GetConsentTopicReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ConsentTopic> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetConsentTopicMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetConsentTopicMethod(), responseObserver);
     }
 
     /**
@@ -2658,9 +2605,9 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    public void createConsentTopic(com.tcn.cloud.api.api.v0alpha.ConsentTopic request,
+    default void createConsentTopic(com.tcn.cloud.api.api.v0alpha.ConsentTopic request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateConsentTopicMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateConsentTopicMethod(), responseObserver);
     }
 
     /**
@@ -2671,9 +2618,9 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    public void deleteConsentTopic(com.tcn.cloud.api.api.v0alpha.ConsentTopic request,
+    default void deleteConsentTopic(com.tcn.cloud.api.api.v0alpha.ConsentTopic request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteConsentTopicMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteConsentTopicMethod(), responseObserver);
     }
 
     /**
@@ -2684,9 +2631,9 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    public void updateConsentTopic(com.tcn.cloud.api.api.v0alpha.UpdateConsentTopicReq request,
+    default void updateConsentTopic(com.tcn.cloud.api.api.v0alpha.UpdateConsentTopicReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateConsentTopicMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateConsentTopicMethod(), responseObserver);
     }
 
     /**
@@ -2699,466 +2646,36 @@ public final class ComplianceGrpc {
      *      AGENT
      * </pre>
      */
-    public void processOutboundCall(com.tcn.cloud.api.api.v0alpha.ProcessOutboundCallReq request,
+    default void processOutboundCall(com.tcn.cloud.api.api.v0alpha.ProcessOutboundCallReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ProcessRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getProcessOutboundCallMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getRuleAutoCompleteMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteReq,
-                com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteRes>(
-                  this, METHODID_RULE_AUTO_COMPLETE)))
-          .addMethod(
-            getCheckRuleSetMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.CheckRuleSetReq,
-                com.tcn.cloud.api.api.v0alpha.CheckRuleSetRes>(
-                  this, METHODID_CHECK_RULE_SET)))
-          .addMethod(
-            getAssignRuleSetMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq,
-                com.tcn.cloud.api.api.v0alpha.AssignRuleSetRes>(
-                  this, METHODID_ASSIGN_RULE_SET)))
-          .addMethod(
-            getListRuleSetsMethod(),
-            asyncServerStreamingCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListRuleSetsReq,
-                com.tcn.cloud.api.api.v0alpha.ListRuleSetsRes>(
-                  this, METHODID_LIST_RULE_SETS)))
-          .addMethod(
-            getGetRuleSetMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetRuleSetReq,
-                com.tcn.cloud.api.api.v0alpha.RuleSet>(
-                  this, METHODID_GET_RULE_SET)))
-          .addMethod(
-            getGetRuleSetByNameMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetRuleSetByNameReq,
-                com.tcn.cloud.api.api.v0alpha.RuleSet>(
-                  this, METHODID_GET_RULE_SET_BY_NAME)))
-          .addMethod(
-            getCreateRuleSetMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.CreateRuleSetReq,
-                com.tcn.cloud.api.api.v0alpha.RuleSet>(
-                  this, METHODID_CREATE_RULE_SET)))
-          .addMethod(
-            getRenameRuleSetMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.RenameRuleSetReq,
-                com.tcn.cloud.api.api.v0alpha.RenameRuleSetRes>(
-                  this, METHODID_RENAME_RULE_SET)))
-          .addMethod(
-            getEnableRuleSetMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.EnableRuleSetReq,
-                com.tcn.cloud.api.api.v0alpha.EnableRuleSetRes>(
-                  this, METHODID_ENABLE_RULE_SET)))
-          .addMethod(
-            getDisableRuleSetMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.DisableRuleSetReq,
-                com.tcn.cloud.api.api.v0alpha.DisableRuleSetRes>(
-                  this, METHODID_DISABLE_RULE_SET)))
-          .addMethod(
-            getCreateScrubListMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.CreateScrubListReq,
-                com.tcn.cloud.api.api.v0alpha.ScrubListRes>(
-                  this, METHODID_CREATE_SCRUB_LIST)))
-          .addMethod(
-            getAddScrubListEntriesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.AddScrubListEntriesReq,
-                com.tcn.cloud.api.api.v0alpha.ScrubListRes>(
-                  this, METHODID_ADD_SCRUB_LIST_ENTRIES)))
-          .addMethod(
-            getUpdateScrubEntryMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryReq,
-                com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryRes>(
-                  this, METHODID_UPDATE_SCRUB_ENTRY)))
-          .addMethod(
-            getDeleteScrubListEntriesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.DeleteScrubListEntriesReq,
-                com.tcn.cloud.api.api.v0alpha.ScrubListRes>(
-                  this, METHODID_DELETE_SCRUB_LIST_ENTRIES)))
-          .addMethod(
-            getGetScrubListMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetScrubListReq,
-                com.tcn.cloud.api.api.v0alpha.ScrubListRes>(
-                  this, METHODID_GET_SCRUB_LIST)))
-          .addMethod(
-            getDeleteScrubListMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.DeleteScrubListReq,
-                com.tcn.cloud.api.api.v0alpha.ScrubListRes>(
-                  this, METHODID_DELETE_SCRUB_LIST)))
-          .addMethod(
-            getGetDefaultRulesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetDefaultRulesReq,
-                com.tcn.cloud.api.api.v0alpha.GetDefaultRulesRes>(
-                  this, METHODID_GET_DEFAULT_RULES)))
-          .addMethod(
-            getGetScrubListsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetScrubListsReq,
-                com.tcn.cloud.api.api.v0alpha.ScrubListsRes>(
-                  this, METHODID_GET_SCRUB_LISTS)))
-          .addMethod(
-            getSearchScrubListMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.SearchScrubListReq,
-                com.tcn.cloud.api.api.v0alpha.ScrubList>(
-                  this, METHODID_SEARCH_SCRUB_LIST)))
-          .addMethod(
-            getGetScrubListUploadUrlMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlReq,
-                com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlRes>(
-                  this, METHODID_GET_SCRUB_LIST_UPLOAD_URL)))
-          .addMethod(
-            getProcessScrubListUploadMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ProcessScrubListUploadReq,
-                com.google.longrunning.Operation>(
-                  this, METHODID_PROCESS_SCRUB_LIST_UPLOAD)))
-          .addMethod(
-            getProcessScrubListDeleteUploadMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ProcessScrubListDeleteUploadReq,
-                com.google.longrunning.Operation>(
-                  this, METHODID_PROCESS_SCRUB_LIST_DELETE_UPLOAD)))
-          .addMethod(
-            getExportScrubListMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ExportScrubListReq,
-                com.tcn.cloud.api.api.v0alpha.ExportScrubListRes>(
-                  this, METHODID_EXPORT_SCRUB_LIST)))
-          .addMethod(
-            getPurgeScrubListMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.PurgeScrubListReq,
-                com.tcn.cloud.api.api.v0alpha.PurgeScrubListRes>(
-                  this, METHODID_PURGE_SCRUB_LIST)))
-          .addMethod(
-            getCreateScenarioMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.CreateScenarioReq,
-                com.tcn.cloud.api.api.v0alpha.CreateScenarioRes>(
-                  this, METHODID_CREATE_SCENARIO)))
-          .addMethod(
-            getGetScenarioMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetScenarioReq,
-                com.tcn.cloud.api.api.v0alpha.GetScenarioRes>(
-                  this, METHODID_GET_SCENARIO)))
-          .addMethod(
-            getUpdateScenarioMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.UpdateScenarioReq,
-                com.tcn.cloud.api.api.v0alpha.UpdateScenarioRes>(
-                  this, METHODID_UPDATE_SCENARIO)))
-          .addMethod(
-            getDeleteScenarioMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.DeleteScenarioReq,
-                com.tcn.cloud.api.api.v0alpha.DeleteScenarioRes>(
-                  this, METHODID_DELETE_SCENARIO)))
-          .addMethod(
-            getRunAssignedScenariosMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosReq,
-                com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosRes>(
-                  this, METHODID_RUN_ASSIGNED_SCENARIOS)))
-          .addMethod(
-            getListAllScenariosMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListAllScenariosReq,
-                com.tcn.cloud.api.api.v0alpha.ListAllScenariosRes>(
-                  this, METHODID_LIST_ALL_SCENARIOS)))
-          .addMethod(
-            getListUnassignedScenariosMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosReq,
-                com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosRes>(
-                  this, METHODID_LIST_UNASSIGNED_SCENARIOS)))
-          .addMethod(
-            getListAssignedRuleSetsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsReq,
-                com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsRes>(
-                  this, METHODID_LIST_ASSIGNED_RULE_SETS)))
-          .addMethod(
-            getListAssignedScenariosMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosReq,
-                com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosRes>(
-                  this, METHODID_LIST_ASSIGNED_SCENARIOS)))
-          .addMethod(
-            getAssignScenarioMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.AssignScenarioReq,
-                com.google.protobuf.Empty>(
-                  this, METHODID_ASSIGN_SCENARIO)))
-          .addMethod(
-            getUnassignScenarioMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.UnassignScenarioReq,
-                com.google.protobuf.Empty>(
-                  this, METHODID_UNASSIGN_SCENARIO)))
-          .addMethod(
-            getEnableScenarioMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.EnableScenarioReq,
-                com.google.protobuf.Empty>(
-                  this, METHODID_ENABLE_SCENARIO)))
-          .addMethod(
-            getDisableScenarioMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.DisableScenarioReq,
-                com.google.protobuf.Empty>(
-                  this, METHODID_DISABLE_SCENARIO)))
-          .addMethod(
-            getGetFieldNamesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetFieldNamesReq,
-                com.tcn.cloud.api.api.v0alpha.FieldNames>(
-                  this, METHODID_GET_FIELD_NAMES)))
-          .addMethod(
-            getGetResultDescriptionsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetResultDescriptionsReq,
-                com.tcn.cloud.api.api.v0alpha.FieldNames>(
-                  this, METHODID_GET_RESULT_DESCRIPTIONS)))
-          .addMethod(
-            getCreateConsentProfileMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.CreateConsentProfileReq,
-                com.tcn.cloud.api.api.v0alpha.CreateConsentProfileRes>(
-                  this, METHODID_CREATE_CONSENT_PROFILE)))
-          .addMethod(
-            getCreateConsentMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.CreateConsentReq,
-                com.tcn.cloud.api.api.v0alpha.CreateConsentRes>(
-                  this, METHODID_CREATE_CONSENT)))
-          .addMethod(
-            getGetConsentProfileMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetConsentProfileReq,
-                com.tcn.cloud.api.api.v0alpha.ConsentProfile>(
-                  this, METHODID_GET_CONSENT_PROFILE)))
-          .addMethod(
-            getGetConsentMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetConsentReq,
-                com.tcn.cloud.api.api.v0alpha.Consent>(
-                  this, METHODID_GET_CONSENT)))
-          .addMethod(
-            getGetConsentByProfileAndContentMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentReq,
-                com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentRes>(
-                  this, METHODID_GET_CONSENT_BY_PROFILE_AND_CONTENT)))
-          .addMethod(
-            getGetConsentByContentMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetConsentByContentReq,
-                com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes>(
-                  this, METHODID_GET_CONSENT_BY_CONTENT)))
-          .addMethod(
-            getSearchConsentByContentMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.SearchConsentByContentReq,
-                com.tcn.cloud.api.api.v0alpha.SearchConsentByContentRes>(
-                  this, METHODID_SEARCH_CONSENT_BY_CONTENT)))
-          .addMethod(
-            getUpdateConsentMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.UpdateConsentReq,
-                com.google.protobuf.Empty>(
-                  this, METHODID_UPDATE_CONSENT)))
-          .addMethod(
-            getExpireConsentMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ExpireConsentReq,
-                com.google.protobuf.Empty>(
-                  this, METHODID_EXPIRE_CONSENT)))
-          .addMethod(
-            getRevokeConsentMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.RevokeConsentReq,
-                com.google.protobuf.Empty>(
-                  this, METHODID_REVOKE_CONSENT)))
-          .addMethod(
-            getDeleteConsentMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.DeleteConsentReq,
-                com.google.protobuf.Empty>(
-                  this, METHODID_DELETE_CONSENT)))
-          .addMethod(
-            getProcessConsentListDeleteUploadMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ProcessConsentListDeleteUploadReq,
-                com.google.longrunning.Operation>(
-                  this, METHODID_PROCESS_CONSENT_LIST_DELETE_UPLOAD)))
-          .addMethod(
-            getEnableConsentProfileMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.EnableConsentProfileReq,
-                com.google.protobuf.Empty>(
-                  this, METHODID_ENABLE_CONSENT_PROFILE)))
-          .addMethod(
-            getDisableConsentProfileMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.DisableConsentProfileReq,
-                com.google.protobuf.Empty>(
-                  this, METHODID_DISABLE_CONSENT_PROFILE)))
-          .addMethod(
-            getListConsentProfilesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListConsentProfilesReq,
-                com.tcn.cloud.api.api.v0alpha.ListConsentProfilesRes>(
-                  this, METHODID_LIST_CONSENT_PROFILES)))
-          .addMethod(
-            getGetConsentUploadUrlMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlReq,
-                com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlRes>(
-                  this, METHODID_GET_CONSENT_UPLOAD_URL)))
-          .addMethod(
-            getProcessConsentUploadMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ProcessConsentUploadReq,
-                com.google.longrunning.Operation>(
-                  this, METHODID_PROCESS_CONSENT_UPLOAD)))
-          .addMethod(
-            getListConsentTopicsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListConsentTopicsReq,
-                com.tcn.cloud.api.api.v0alpha.ListConsentTopicsRes>(
-                  this, METHODID_LIST_CONSENT_TOPICS)))
-          .addMethod(
-            getGetConsentTopicMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetConsentTopicReq,
-                com.tcn.cloud.api.api.v0alpha.ConsentTopic>(
-                  this, METHODID_GET_CONSENT_TOPIC)))
-          .addMethod(
-            getCreateConsentTopicMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ConsentTopic,
-                com.tcn.cloud.api.api.v0alpha.Empty>(
-                  this, METHODID_CREATE_CONSENT_TOPIC)))
-          .addMethod(
-            getDeleteConsentTopicMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ConsentTopic,
-                com.tcn.cloud.api.api.v0alpha.Empty>(
-                  this, METHODID_DELETE_CONSENT_TOPIC)))
-          .addMethod(
-            getUpdateConsentTopicMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.UpdateConsentTopicReq,
-                com.tcn.cloud.api.api.v0alpha.Empty>(
-                  this, METHODID_UPDATE_CONSENT_TOPIC)))
-          .addMethod(
-            getProcessOutboundCallMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ProcessOutboundCallReq,
-                com.tcn.cloud.api.api.v0alpha.ProcessRes>(
-                  this, METHODID_PROCESS_OUTBOUND_CALL)))
-          .build();
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcessOutboundCallMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service Compliance.
    */
-  public static final class ComplianceStub extends io.grpc.stub.AbstractStub<ComplianceStub> {
-    private ComplianceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
+  public static abstract class ComplianceImplBase
+      implements io.grpc.BindableService, AsyncService {
 
-    private ComplianceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return ComplianceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Compliance.
+   */
+  public static final class ComplianceStub
+      extends io.grpc.stub.AbstractAsyncStub<ComplianceStub> {
+    private ComplianceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ComplianceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ComplianceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ComplianceStub(channel, callOptions);
     }
 
@@ -3166,7 +2683,7 @@ public final class ComplianceGrpc {
      */
     public void ruleAutoComplete(com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRuleAutoCompleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3174,7 +2691,7 @@ public final class ComplianceGrpc {
      */
     public void checkRuleSet(com.tcn.cloud.api.api.v0alpha.CheckRuleSetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CheckRuleSetRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCheckRuleSetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3182,7 +2699,7 @@ public final class ComplianceGrpc {
      */
     public void assignRuleSet(com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AssignRuleSetRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAssignRuleSetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3190,7 +2707,7 @@ public final class ComplianceGrpc {
      */
     public void listRuleSets(com.tcn.cloud.api.api.v0alpha.ListRuleSetsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListRuleSetsRes> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListRuleSetsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3198,7 +2715,7 @@ public final class ComplianceGrpc {
      */
     public void getRuleSet(com.tcn.cloud.api.api.v0alpha.GetRuleSetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RuleSet> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetRuleSetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3206,7 +2723,7 @@ public final class ComplianceGrpc {
      */
     public void getRuleSetByName(com.tcn.cloud.api.api.v0alpha.GetRuleSetByNameReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RuleSet> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetRuleSetByNameMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3214,7 +2731,7 @@ public final class ComplianceGrpc {
      */
     public void createRuleSet(com.tcn.cloud.api.api.v0alpha.CreateRuleSetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RuleSet> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateRuleSetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3222,7 +2739,7 @@ public final class ComplianceGrpc {
      */
     public void renameRuleSet(com.tcn.cloud.api.api.v0alpha.RenameRuleSetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RenameRuleSetRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRenameRuleSetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3230,7 +2747,7 @@ public final class ComplianceGrpc {
      */
     public void enableRuleSet(com.tcn.cloud.api.api.v0alpha.EnableRuleSetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EnableRuleSetRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getEnableRuleSetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3238,7 +2755,7 @@ public final class ComplianceGrpc {
      */
     public void disableRuleSet(com.tcn.cloud.api.api.v0alpha.DisableRuleSetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DisableRuleSetRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDisableRuleSetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3246,7 +2763,7 @@ public final class ComplianceGrpc {
      */
     public void createScrubList(com.tcn.cloud.api.api.v0alpha.CreateScrubListReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubListRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateScrubListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3261,7 +2778,7 @@ public final class ComplianceGrpc {
      */
     public void addScrubListEntries(com.tcn.cloud.api.api.v0alpha.AddScrubListEntriesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubListRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddScrubListEntriesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3275,7 +2792,7 @@ public final class ComplianceGrpc {
      */
     public void updateScrubEntry(com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateScrubEntryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3283,7 +2800,7 @@ public final class ComplianceGrpc {
      */
     public void deleteScrubListEntries(com.tcn.cloud.api.api.v0alpha.DeleteScrubListEntriesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubListRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteScrubListEntriesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3291,7 +2808,7 @@ public final class ComplianceGrpc {
      */
     public void getScrubList(com.tcn.cloud.api.api.v0alpha.GetScrubListReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubListRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetScrubListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3299,7 +2816,7 @@ public final class ComplianceGrpc {
      */
     public void deleteScrubList(com.tcn.cloud.api.api.v0alpha.DeleteScrubListReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubListRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteScrubListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3307,7 +2824,7 @@ public final class ComplianceGrpc {
      */
     public void getDefaultRules(com.tcn.cloud.api.api.v0alpha.GetDefaultRulesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetDefaultRulesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetDefaultRulesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3315,7 +2832,7 @@ public final class ComplianceGrpc {
      */
     public void getScrubLists(com.tcn.cloud.api.api.v0alpha.GetScrubListsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubListsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetScrubListsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3323,7 +2840,7 @@ public final class ComplianceGrpc {
      */
     public void searchScrubList(com.tcn.cloud.api.api.v0alpha.SearchScrubListReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubList> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSearchScrubListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3331,7 +2848,7 @@ public final class ComplianceGrpc {
      */
     public void getScrubListUploadUrl(com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetScrubListUploadUrlMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3339,7 +2856,7 @@ public final class ComplianceGrpc {
      */
     public void processScrubListUpload(com.tcn.cloud.api.api.v0alpha.ProcessScrubListUploadReq request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getProcessScrubListUploadMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3347,7 +2864,7 @@ public final class ComplianceGrpc {
      */
     public void processScrubListDeleteUpload(com.tcn.cloud.api.api.v0alpha.ProcessScrubListDeleteUploadReq request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getProcessScrubListDeleteUploadMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3355,7 +2872,7 @@ public final class ComplianceGrpc {
      */
     public void exportScrubList(com.tcn.cloud.api.api.v0alpha.ExportScrubListReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExportScrubListRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getExportScrubListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3368,7 +2885,7 @@ public final class ComplianceGrpc {
      */
     public void purgeScrubList(com.tcn.cloud.api.api.v0alpha.PurgeScrubListReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PurgeScrubListRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getPurgeScrubListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3379,7 +2896,7 @@ public final class ComplianceGrpc {
      */
     public void createScenario(com.tcn.cloud.api.api.v0alpha.CreateScenarioReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateScenarioRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateScenarioMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3390,7 +2907,7 @@ public final class ComplianceGrpc {
      */
     public void getScenario(com.tcn.cloud.api.api.v0alpha.GetScenarioReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetScenarioRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetScenarioMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3401,7 +2918,7 @@ public final class ComplianceGrpc {
      */
     public void updateScenario(com.tcn.cloud.api.api.v0alpha.UpdateScenarioReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScenarioRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateScenarioMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3412,7 +2929,7 @@ public final class ComplianceGrpc {
      */
     public void deleteScenario(com.tcn.cloud.api.api.v0alpha.DeleteScenarioReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteScenarioRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteScenarioMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3423,7 +2940,7 @@ public final class ComplianceGrpc {
      */
     public void runAssignedScenarios(com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRunAssignedScenariosMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3434,7 +2951,7 @@ public final class ComplianceGrpc {
      */
     public void listAllScenarios(com.tcn.cloud.api.api.v0alpha.ListAllScenariosReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAllScenariosRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAllScenariosMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3445,7 +2962,7 @@ public final class ComplianceGrpc {
      */
     public void listUnassignedScenarios(com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListUnassignedScenariosMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3456,7 +2973,7 @@ public final class ComplianceGrpc {
      */
     public void listAssignedRuleSets(com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAssignedRuleSetsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3467,7 +2984,7 @@ public final class ComplianceGrpc {
      */
     public void listAssignedScenarios(com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAssignedScenariosMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3478,7 +2995,7 @@ public final class ComplianceGrpc {
      */
     public void assignScenario(com.tcn.cloud.api.api.v0alpha.AssignScenarioReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAssignScenarioMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3489,7 +3006,7 @@ public final class ComplianceGrpc {
      */
     public void unassignScenario(com.tcn.cloud.api.api.v0alpha.UnassignScenarioReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUnassignScenarioMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3500,7 +3017,7 @@ public final class ComplianceGrpc {
      */
     public void enableScenario(com.tcn.cloud.api.api.v0alpha.EnableScenarioReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getEnableScenarioMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3511,7 +3028,7 @@ public final class ComplianceGrpc {
      */
     public void disableScenario(com.tcn.cloud.api.api.v0alpha.DisableScenarioReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDisableScenarioMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3523,7 +3040,7 @@ public final class ComplianceGrpc {
      */
     public void getFieldNames(com.tcn.cloud.api.api.v0alpha.GetFieldNamesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FieldNames> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetFieldNamesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3534,7 +3051,7 @@ public final class ComplianceGrpc {
      */
     public void getResultDescriptions(com.tcn.cloud.api.api.v0alpha.GetResultDescriptionsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FieldNames> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetResultDescriptionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3549,7 +3066,7 @@ public final class ComplianceGrpc {
      */
     public void createConsentProfile(com.tcn.cloud.api.api.v0alpha.CreateConsentProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateConsentProfileRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateConsentProfileMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3564,7 +3081,7 @@ public final class ComplianceGrpc {
      */
     public void createConsent(com.tcn.cloud.api.api.v0alpha.CreateConsentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateConsentRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateConsentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3579,7 +3096,7 @@ public final class ComplianceGrpc {
      */
     public void getConsentProfile(com.tcn.cloud.api.api.v0alpha.GetConsentProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ConsentProfile> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetConsentProfileMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3594,7 +3111,7 @@ public final class ComplianceGrpc {
      */
     public void getConsent(com.tcn.cloud.api.api.v0alpha.GetConsentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Consent> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetConsentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3609,7 +3126,7 @@ public final class ComplianceGrpc {
      */
     public void getConsentByProfileAndContent(com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetConsentByProfileAndContentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3624,7 +3141,7 @@ public final class ComplianceGrpc {
      */
     public void getConsentByContent(com.tcn.cloud.api.api.v0alpha.GetConsentByContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetConsentByContentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3639,7 +3156,7 @@ public final class ComplianceGrpc {
      */
     public void searchConsentByContent(com.tcn.cloud.api.api.v0alpha.SearchConsentByContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchConsentByContentRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSearchConsentByContentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3660,7 +3177,7 @@ public final class ComplianceGrpc {
      */
     public void updateConsent(com.tcn.cloud.api.api.v0alpha.UpdateConsentReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateConsentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3675,7 +3192,7 @@ public final class ComplianceGrpc {
      */
     public void expireConsent(com.tcn.cloud.api.api.v0alpha.ExpireConsentReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getExpireConsentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3691,7 +3208,7 @@ public final class ComplianceGrpc {
      */
     public void revokeConsent(com.tcn.cloud.api.api.v0alpha.RevokeConsentReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRevokeConsentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3705,7 +3222,7 @@ public final class ComplianceGrpc {
      */
     public void deleteConsent(com.tcn.cloud.api.api.v0alpha.DeleteConsentReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteConsentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3719,7 +3236,7 @@ public final class ComplianceGrpc {
      */
     public void processConsentListDeleteUpload(com.tcn.cloud.api.api.v0alpha.ProcessConsentListDeleteUploadReq request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getProcessConsentListDeleteUploadMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3735,7 +3252,7 @@ public final class ComplianceGrpc {
      */
     public void enableConsentProfile(com.tcn.cloud.api.api.v0alpha.EnableConsentProfileReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getEnableConsentProfileMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3751,7 +3268,7 @@ public final class ComplianceGrpc {
      */
     public void disableConsentProfile(com.tcn.cloud.api.api.v0alpha.DisableConsentProfileReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDisableConsentProfileMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3768,7 +3285,7 @@ public final class ComplianceGrpc {
      */
     public void listConsentProfiles(com.tcn.cloud.api.api.v0alpha.ListConsentProfilesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListConsentProfilesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListConsentProfilesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3783,7 +3300,7 @@ public final class ComplianceGrpc {
      */
     public void getConsentUploadUrl(com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetConsentUploadUrlMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3797,7 +3314,7 @@ public final class ComplianceGrpc {
      */
     public void processConsentUpload(com.tcn.cloud.api.api.v0alpha.ProcessConsentUploadReq request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getProcessConsentUploadMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3813,7 +3330,7 @@ public final class ComplianceGrpc {
      */
     public void listConsentTopics(com.tcn.cloud.api.api.v0alpha.ListConsentTopicsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListConsentTopicsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListConsentTopicsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3828,7 +3345,7 @@ public final class ComplianceGrpc {
      */
     public void getConsentTopic(com.tcn.cloud.api.api.v0alpha.GetConsentTopicReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ConsentTopic> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetConsentTopicMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3842,7 +3359,7 @@ public final class ComplianceGrpc {
      */
     public void createConsentTopic(com.tcn.cloud.api.api.v0alpha.ConsentTopic request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateConsentTopicMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3856,7 +3373,7 @@ public final class ComplianceGrpc {
      */
     public void deleteConsentTopic(com.tcn.cloud.api.api.v0alpha.ConsentTopic request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteConsentTopicMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3870,7 +3387,7 @@ public final class ComplianceGrpc {
      */
     public void updateConsentTopic(com.tcn.cloud.api.api.v0alpha.UpdateConsentTopicReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateConsentTopicMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3886,47 +3403,45 @@ public final class ComplianceGrpc {
      */
     public void processOutboundCall(com.tcn.cloud.api.api.v0alpha.ProcessOutboundCallReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ProcessRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getProcessOutboundCallMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Compliance.
    */
-  public static final class ComplianceBlockingStub extends io.grpc.stub.AbstractStub<ComplianceBlockingStub> {
-    private ComplianceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ComplianceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ComplianceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ComplianceBlockingStub> {
+    private ComplianceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ComplianceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ComplianceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ComplianceBlockingStub(channel, callOptions);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteRes ruleAutoComplete(com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRuleAutoCompleteMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.CheckRuleSetRes checkRuleSet(com.tcn.cloud.api.api.v0alpha.CheckRuleSetReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCheckRuleSetMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.AssignRuleSetRes assignRuleSet(com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAssignRuleSetMethod(), getCallOptions(), request);
     }
 
@@ -3934,56 +3449,56 @@ public final class ComplianceGrpc {
      */
     public java.util.Iterator<com.tcn.cloud.api.api.v0alpha.ListRuleSetsRes> listRuleSets(
         com.tcn.cloud.api.api.v0alpha.ListRuleSetsReq request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListRuleSetsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.RuleSet getRuleSet(com.tcn.cloud.api.api.v0alpha.GetRuleSetReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetRuleSetMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.RuleSet getRuleSetByName(com.tcn.cloud.api.api.v0alpha.GetRuleSetByNameReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetRuleSetByNameMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.RuleSet createRuleSet(com.tcn.cloud.api.api.v0alpha.CreateRuleSetReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateRuleSetMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.RenameRuleSetRes renameRuleSet(com.tcn.cloud.api.api.v0alpha.RenameRuleSetReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRenameRuleSetMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.EnableRuleSetRes enableRuleSet(com.tcn.cloud.api.api.v0alpha.EnableRuleSetReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getEnableRuleSetMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.DisableRuleSetRes disableRuleSet(com.tcn.cloud.api.api.v0alpha.DisableRuleSetReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDisableRuleSetMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ScrubListRes createScrubList(com.tcn.cloud.api.api.v0alpha.CreateScrubListReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateScrubListMethod(), getCallOptions(), request);
     }
 
@@ -3997,7 +3512,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ScrubListRes addScrubListEntries(com.tcn.cloud.api.api.v0alpha.AddScrubListEntriesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddScrubListEntriesMethod(), getCallOptions(), request);
     }
 
@@ -4010,77 +3525,77 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryRes updateScrubEntry(com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateScrubEntryMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ScrubListRes deleteScrubListEntries(com.tcn.cloud.api.api.v0alpha.DeleteScrubListEntriesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteScrubListEntriesMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ScrubListRes getScrubList(com.tcn.cloud.api.api.v0alpha.GetScrubListReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetScrubListMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ScrubListRes deleteScrubList(com.tcn.cloud.api.api.v0alpha.DeleteScrubListReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteScrubListMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.GetDefaultRulesRes getDefaultRules(com.tcn.cloud.api.api.v0alpha.GetDefaultRulesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetDefaultRulesMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ScrubListsRes getScrubLists(com.tcn.cloud.api.api.v0alpha.GetScrubListsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetScrubListsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ScrubList searchScrubList(com.tcn.cloud.api.api.v0alpha.SearchScrubListReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSearchScrubListMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlRes getScrubListUploadUrl(com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetScrubListUploadUrlMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.longrunning.Operation processScrubListUpload(com.tcn.cloud.api.api.v0alpha.ProcessScrubListUploadReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getProcessScrubListUploadMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.longrunning.Operation processScrubListDeleteUpload(com.tcn.cloud.api.api.v0alpha.ProcessScrubListDeleteUploadReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getProcessScrubListDeleteUploadMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ExportScrubListRes exportScrubList(com.tcn.cloud.api.api.v0alpha.ExportScrubListReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getExportScrubListMethod(), getCallOptions(), request);
     }
 
@@ -4092,7 +3607,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.PurgeScrubListRes purgeScrubList(com.tcn.cloud.api.api.v0alpha.PurgeScrubListReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getPurgeScrubListMethod(), getCallOptions(), request);
     }
 
@@ -4102,7 +3617,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateScenarioRes createScenario(com.tcn.cloud.api.api.v0alpha.CreateScenarioReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateScenarioMethod(), getCallOptions(), request);
     }
 
@@ -4112,7 +3627,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetScenarioRes getScenario(com.tcn.cloud.api.api.v0alpha.GetScenarioReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetScenarioMethod(), getCallOptions(), request);
     }
 
@@ -4122,7 +3637,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateScenarioRes updateScenario(com.tcn.cloud.api.api.v0alpha.UpdateScenarioReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateScenarioMethod(), getCallOptions(), request);
     }
 
@@ -4132,7 +3647,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteScenarioRes deleteScenario(com.tcn.cloud.api.api.v0alpha.DeleteScenarioReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteScenarioMethod(), getCallOptions(), request);
     }
 
@@ -4142,7 +3657,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosRes runAssignedScenarios(com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRunAssignedScenariosMethod(), getCallOptions(), request);
     }
 
@@ -4152,7 +3667,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListAllScenariosRes listAllScenarios(com.tcn.cloud.api.api.v0alpha.ListAllScenariosReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAllScenariosMethod(), getCallOptions(), request);
     }
 
@@ -4162,7 +3677,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosRes listUnassignedScenarios(com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListUnassignedScenariosMethod(), getCallOptions(), request);
     }
 
@@ -4172,7 +3687,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsRes listAssignedRuleSets(com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAssignedRuleSetsMethod(), getCallOptions(), request);
     }
 
@@ -4182,7 +3697,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosRes listAssignedScenarios(com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAssignedScenariosMethod(), getCallOptions(), request);
     }
 
@@ -4192,7 +3707,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty assignScenario(com.tcn.cloud.api.api.v0alpha.AssignScenarioReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAssignScenarioMethod(), getCallOptions(), request);
     }
 
@@ -4202,7 +3717,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty unassignScenario(com.tcn.cloud.api.api.v0alpha.UnassignScenarioReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUnassignScenarioMethod(), getCallOptions(), request);
     }
 
@@ -4212,7 +3727,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty enableScenario(com.tcn.cloud.api.api.v0alpha.EnableScenarioReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getEnableScenarioMethod(), getCallOptions(), request);
     }
 
@@ -4222,7 +3737,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty disableScenario(com.tcn.cloud.api.api.v0alpha.DisableScenarioReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDisableScenarioMethod(), getCallOptions(), request);
     }
 
@@ -4233,7 +3748,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.FieldNames getFieldNames(com.tcn.cloud.api.api.v0alpha.GetFieldNamesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetFieldNamesMethod(), getCallOptions(), request);
     }
 
@@ -4243,7 +3758,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.FieldNames getResultDescriptions(com.tcn.cloud.api.api.v0alpha.GetResultDescriptionsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetResultDescriptionsMethod(), getCallOptions(), request);
     }
 
@@ -4257,7 +3772,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateConsentProfileRes createConsentProfile(com.tcn.cloud.api.api.v0alpha.CreateConsentProfileReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateConsentProfileMethod(), getCallOptions(), request);
     }
 
@@ -4271,7 +3786,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateConsentRes createConsent(com.tcn.cloud.api.api.v0alpha.CreateConsentReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateConsentMethod(), getCallOptions(), request);
     }
 
@@ -4285,7 +3800,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ConsentProfile getConsentProfile(com.tcn.cloud.api.api.v0alpha.GetConsentProfileReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetConsentProfileMethod(), getCallOptions(), request);
     }
 
@@ -4299,7 +3814,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.Consent getConsent(com.tcn.cloud.api.api.v0alpha.GetConsentReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetConsentMethod(), getCallOptions(), request);
     }
 
@@ -4313,7 +3828,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentRes getConsentByProfileAndContent(com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetConsentByProfileAndContentMethod(), getCallOptions(), request);
     }
 
@@ -4327,7 +3842,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes getConsentByContent(com.tcn.cloud.api.api.v0alpha.GetConsentByContentReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetConsentByContentMethod(), getCallOptions(), request);
     }
 
@@ -4341,7 +3856,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SearchConsentByContentRes searchConsentByContent(com.tcn.cloud.api.api.v0alpha.SearchConsentByContentReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSearchConsentByContentMethod(), getCallOptions(), request);
     }
 
@@ -4361,7 +3876,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty updateConsent(com.tcn.cloud.api.api.v0alpha.UpdateConsentReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateConsentMethod(), getCallOptions(), request);
     }
 
@@ -4375,7 +3890,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty expireConsent(com.tcn.cloud.api.api.v0alpha.ExpireConsentReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getExpireConsentMethod(), getCallOptions(), request);
     }
 
@@ -4390,7 +3905,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty revokeConsent(com.tcn.cloud.api.api.v0alpha.RevokeConsentReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRevokeConsentMethod(), getCallOptions(), request);
     }
 
@@ -4403,7 +3918,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty deleteConsent(com.tcn.cloud.api.api.v0alpha.DeleteConsentReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteConsentMethod(), getCallOptions(), request);
     }
 
@@ -4416,7 +3931,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.google.longrunning.Operation processConsentListDeleteUpload(com.tcn.cloud.api.api.v0alpha.ProcessConsentListDeleteUploadReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getProcessConsentListDeleteUploadMethod(), getCallOptions(), request);
     }
 
@@ -4431,7 +3946,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty enableConsentProfile(com.tcn.cloud.api.api.v0alpha.EnableConsentProfileReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getEnableConsentProfileMethod(), getCallOptions(), request);
     }
 
@@ -4446,7 +3961,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty disableConsentProfile(com.tcn.cloud.api.api.v0alpha.DisableConsentProfileReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDisableConsentProfileMethod(), getCallOptions(), request);
     }
 
@@ -4462,7 +3977,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListConsentProfilesRes listConsentProfiles(com.tcn.cloud.api.api.v0alpha.ListConsentProfilesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListConsentProfilesMethod(), getCallOptions(), request);
     }
 
@@ -4476,7 +3991,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlRes getConsentUploadUrl(com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetConsentUploadUrlMethod(), getCallOptions(), request);
     }
 
@@ -4489,7 +4004,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.google.longrunning.Operation processConsentUpload(com.tcn.cloud.api.api.v0alpha.ProcessConsentUploadReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getProcessConsentUploadMethod(), getCallOptions(), request);
     }
 
@@ -4504,7 +4019,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListConsentTopicsRes listConsentTopics(com.tcn.cloud.api.api.v0alpha.ListConsentTopicsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListConsentTopicsMethod(), getCallOptions(), request);
     }
 
@@ -4518,7 +4033,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ConsentTopic getConsentTopic(com.tcn.cloud.api.api.v0alpha.GetConsentTopicReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetConsentTopicMethod(), getCallOptions(), request);
     }
 
@@ -4531,7 +4046,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.Empty createConsentTopic(com.tcn.cloud.api.api.v0alpha.ConsentTopic request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateConsentTopicMethod(), getCallOptions(), request);
     }
 
@@ -4544,7 +4059,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.Empty deleteConsentTopic(com.tcn.cloud.api.api.v0alpha.ConsentTopic request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteConsentTopicMethod(), getCallOptions(), request);
     }
 
@@ -4557,7 +4072,7 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.Empty updateConsentTopic(com.tcn.cloud.api.api.v0alpha.UpdateConsentTopicReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateConsentTopicMethod(), getCallOptions(), request);
     }
 
@@ -4572,26 +4087,24 @@ public final class ComplianceGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ProcessRes processOutboundCall(com.tcn.cloud.api.api.v0alpha.ProcessOutboundCallReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getProcessOutboundCallMethod(), getCallOptions(), request);
     }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Compliance.
    */
-  public static final class ComplianceFutureStub extends io.grpc.stub.AbstractStub<ComplianceFutureStub> {
-    private ComplianceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ComplianceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ComplianceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ComplianceFutureStub> {
+    private ComplianceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ComplianceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ComplianceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ComplianceFutureStub(channel, callOptions);
     }
 
@@ -4599,7 +4112,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteRes> ruleAutoComplete(
         com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRuleAutoCompleteMethod(), getCallOptions()), request);
     }
 
@@ -4607,7 +4120,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CheckRuleSetRes> checkRuleSet(
         com.tcn.cloud.api.api.v0alpha.CheckRuleSetReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCheckRuleSetMethod(), getCallOptions()), request);
     }
 
@@ -4615,7 +4128,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AssignRuleSetRes> assignRuleSet(
         com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAssignRuleSetMethod(), getCallOptions()), request);
     }
 
@@ -4623,7 +4136,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RuleSet> getRuleSet(
         com.tcn.cloud.api.api.v0alpha.GetRuleSetReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetRuleSetMethod(), getCallOptions()), request);
     }
 
@@ -4631,7 +4144,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RuleSet> getRuleSetByName(
         com.tcn.cloud.api.api.v0alpha.GetRuleSetByNameReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetRuleSetByNameMethod(), getCallOptions()), request);
     }
 
@@ -4639,7 +4152,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RuleSet> createRuleSet(
         com.tcn.cloud.api.api.v0alpha.CreateRuleSetReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateRuleSetMethod(), getCallOptions()), request);
     }
 
@@ -4647,7 +4160,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RenameRuleSetRes> renameRuleSet(
         com.tcn.cloud.api.api.v0alpha.RenameRuleSetReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRenameRuleSetMethod(), getCallOptions()), request);
     }
 
@@ -4655,7 +4168,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.EnableRuleSetRes> enableRuleSet(
         com.tcn.cloud.api.api.v0alpha.EnableRuleSetReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getEnableRuleSetMethod(), getCallOptions()), request);
     }
 
@@ -4663,7 +4176,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DisableRuleSetRes> disableRuleSet(
         com.tcn.cloud.api.api.v0alpha.DisableRuleSetReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDisableRuleSetMethod(), getCallOptions()), request);
     }
 
@@ -4671,7 +4184,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ScrubListRes> createScrubList(
         com.tcn.cloud.api.api.v0alpha.CreateScrubListReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateScrubListMethod(), getCallOptions()), request);
     }
 
@@ -4686,7 +4199,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ScrubListRes> addScrubListEntries(
         com.tcn.cloud.api.api.v0alpha.AddScrubListEntriesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddScrubListEntriesMethod(), getCallOptions()), request);
     }
 
@@ -4700,7 +4213,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryRes> updateScrubEntry(
         com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateScrubEntryMethod(), getCallOptions()), request);
     }
 
@@ -4708,7 +4221,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ScrubListRes> deleteScrubListEntries(
         com.tcn.cloud.api.api.v0alpha.DeleteScrubListEntriesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteScrubListEntriesMethod(), getCallOptions()), request);
     }
 
@@ -4716,7 +4229,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ScrubListRes> getScrubList(
         com.tcn.cloud.api.api.v0alpha.GetScrubListReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetScrubListMethod(), getCallOptions()), request);
     }
 
@@ -4724,7 +4237,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ScrubListRes> deleteScrubList(
         com.tcn.cloud.api.api.v0alpha.DeleteScrubListReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteScrubListMethod(), getCallOptions()), request);
     }
 
@@ -4732,7 +4245,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetDefaultRulesRes> getDefaultRules(
         com.tcn.cloud.api.api.v0alpha.GetDefaultRulesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetDefaultRulesMethod(), getCallOptions()), request);
     }
 
@@ -4740,7 +4253,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ScrubListsRes> getScrubLists(
         com.tcn.cloud.api.api.v0alpha.GetScrubListsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetScrubListsMethod(), getCallOptions()), request);
     }
 
@@ -4748,7 +4261,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ScrubList> searchScrubList(
         com.tcn.cloud.api.api.v0alpha.SearchScrubListReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSearchScrubListMethod(), getCallOptions()), request);
     }
 
@@ -4756,7 +4269,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlRes> getScrubListUploadUrl(
         com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetScrubListUploadUrlMethod(), getCallOptions()), request);
     }
 
@@ -4764,7 +4277,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> processScrubListUpload(
         com.tcn.cloud.api.api.v0alpha.ProcessScrubListUploadReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getProcessScrubListUploadMethod(), getCallOptions()), request);
     }
 
@@ -4772,7 +4285,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> processScrubListDeleteUpload(
         com.tcn.cloud.api.api.v0alpha.ProcessScrubListDeleteUploadReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getProcessScrubListDeleteUploadMethod(), getCallOptions()), request);
     }
 
@@ -4780,7 +4293,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ExportScrubListRes> exportScrubList(
         com.tcn.cloud.api.api.v0alpha.ExportScrubListReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getExportScrubListMethod(), getCallOptions()), request);
     }
 
@@ -4793,7 +4306,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.PurgeScrubListRes> purgeScrubList(
         com.tcn.cloud.api.api.v0alpha.PurgeScrubListReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getPurgeScrubListMethod(), getCallOptions()), request);
     }
 
@@ -4804,7 +4317,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateScenarioRes> createScenario(
         com.tcn.cloud.api.api.v0alpha.CreateScenarioReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateScenarioMethod(), getCallOptions()), request);
     }
 
@@ -4815,7 +4328,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetScenarioRes> getScenario(
         com.tcn.cloud.api.api.v0alpha.GetScenarioReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetScenarioMethod(), getCallOptions()), request);
     }
 
@@ -4826,7 +4339,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateScenarioRes> updateScenario(
         com.tcn.cloud.api.api.v0alpha.UpdateScenarioReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateScenarioMethod(), getCallOptions()), request);
     }
 
@@ -4837,7 +4350,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteScenarioRes> deleteScenario(
         com.tcn.cloud.api.api.v0alpha.DeleteScenarioReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteScenarioMethod(), getCallOptions()), request);
     }
 
@@ -4848,7 +4361,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosRes> runAssignedScenarios(
         com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRunAssignedScenariosMethod(), getCallOptions()), request);
     }
 
@@ -4859,7 +4372,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListAllScenariosRes> listAllScenarios(
         com.tcn.cloud.api.api.v0alpha.ListAllScenariosReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAllScenariosMethod(), getCallOptions()), request);
     }
 
@@ -4870,7 +4383,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosRes> listUnassignedScenarios(
         com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListUnassignedScenariosMethod(), getCallOptions()), request);
     }
 
@@ -4881,7 +4394,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsRes> listAssignedRuleSets(
         com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAssignedRuleSetsMethod(), getCallOptions()), request);
     }
 
@@ -4892,7 +4405,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosRes> listAssignedScenarios(
         com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAssignedScenariosMethod(), getCallOptions()), request);
     }
 
@@ -4903,7 +4416,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> assignScenario(
         com.tcn.cloud.api.api.v0alpha.AssignScenarioReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAssignScenarioMethod(), getCallOptions()), request);
     }
 
@@ -4914,7 +4427,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> unassignScenario(
         com.tcn.cloud.api.api.v0alpha.UnassignScenarioReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUnassignScenarioMethod(), getCallOptions()), request);
     }
 
@@ -4925,7 +4438,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> enableScenario(
         com.tcn.cloud.api.api.v0alpha.EnableScenarioReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getEnableScenarioMethod(), getCallOptions()), request);
     }
 
@@ -4936,7 +4449,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> disableScenario(
         com.tcn.cloud.api.api.v0alpha.DisableScenarioReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDisableScenarioMethod(), getCallOptions()), request);
     }
 
@@ -4948,7 +4461,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.FieldNames> getFieldNames(
         com.tcn.cloud.api.api.v0alpha.GetFieldNamesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetFieldNamesMethod(), getCallOptions()), request);
     }
 
@@ -4959,7 +4472,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.FieldNames> getResultDescriptions(
         com.tcn.cloud.api.api.v0alpha.GetResultDescriptionsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetResultDescriptionsMethod(), getCallOptions()), request);
     }
 
@@ -4974,7 +4487,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateConsentProfileRes> createConsentProfile(
         com.tcn.cloud.api.api.v0alpha.CreateConsentProfileReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateConsentProfileMethod(), getCallOptions()), request);
     }
 
@@ -4989,7 +4502,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateConsentRes> createConsent(
         com.tcn.cloud.api.api.v0alpha.CreateConsentReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateConsentMethod(), getCallOptions()), request);
     }
 
@@ -5004,7 +4517,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ConsentProfile> getConsentProfile(
         com.tcn.cloud.api.api.v0alpha.GetConsentProfileReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetConsentProfileMethod(), getCallOptions()), request);
     }
 
@@ -5019,7 +4532,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Consent> getConsent(
         com.tcn.cloud.api.api.v0alpha.GetConsentReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetConsentMethod(), getCallOptions()), request);
     }
 
@@ -5034,7 +4547,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentRes> getConsentByProfileAndContent(
         com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetConsentByProfileAndContentMethod(), getCallOptions()), request);
     }
 
@@ -5049,7 +4562,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes> getConsentByContent(
         com.tcn.cloud.api.api.v0alpha.GetConsentByContentReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetConsentByContentMethod(), getCallOptions()), request);
     }
 
@@ -5064,7 +4577,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SearchConsentByContentRes> searchConsentByContent(
         com.tcn.cloud.api.api.v0alpha.SearchConsentByContentReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSearchConsentByContentMethod(), getCallOptions()), request);
     }
 
@@ -5085,7 +4598,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> updateConsent(
         com.tcn.cloud.api.api.v0alpha.UpdateConsentReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateConsentMethod(), getCallOptions()), request);
     }
 
@@ -5100,7 +4613,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> expireConsent(
         com.tcn.cloud.api.api.v0alpha.ExpireConsentReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getExpireConsentMethod(), getCallOptions()), request);
     }
 
@@ -5116,7 +4629,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> revokeConsent(
         com.tcn.cloud.api.api.v0alpha.RevokeConsentReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRevokeConsentMethod(), getCallOptions()), request);
     }
 
@@ -5130,7 +4643,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteConsent(
         com.tcn.cloud.api.api.v0alpha.DeleteConsentReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteConsentMethod(), getCallOptions()), request);
     }
 
@@ -5144,7 +4657,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> processConsentListDeleteUpload(
         com.tcn.cloud.api.api.v0alpha.ProcessConsentListDeleteUploadReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getProcessConsentListDeleteUploadMethod(), getCallOptions()), request);
     }
 
@@ -5160,7 +4673,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> enableConsentProfile(
         com.tcn.cloud.api.api.v0alpha.EnableConsentProfileReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getEnableConsentProfileMethod(), getCallOptions()), request);
     }
 
@@ -5176,7 +4689,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> disableConsentProfile(
         com.tcn.cloud.api.api.v0alpha.DisableConsentProfileReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDisableConsentProfileMethod(), getCallOptions()), request);
     }
 
@@ -5193,7 +4706,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListConsentProfilesRes> listConsentProfiles(
         com.tcn.cloud.api.api.v0alpha.ListConsentProfilesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListConsentProfilesMethod(), getCallOptions()), request);
     }
 
@@ -5208,7 +4721,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlRes> getConsentUploadUrl(
         com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetConsentUploadUrlMethod(), getCallOptions()), request);
     }
 
@@ -5222,7 +4735,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> processConsentUpload(
         com.tcn.cloud.api.api.v0alpha.ProcessConsentUploadReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getProcessConsentUploadMethod(), getCallOptions()), request);
     }
 
@@ -5238,7 +4751,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListConsentTopicsRes> listConsentTopics(
         com.tcn.cloud.api.api.v0alpha.ListConsentTopicsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListConsentTopicsMethod(), getCallOptions()), request);
     }
 
@@ -5253,7 +4766,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ConsentTopic> getConsentTopic(
         com.tcn.cloud.api.api.v0alpha.GetConsentTopicReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetConsentTopicMethod(), getCallOptions()), request);
     }
 
@@ -5267,7 +4780,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Empty> createConsentTopic(
         com.tcn.cloud.api.api.v0alpha.ConsentTopic request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateConsentTopicMethod(), getCallOptions()), request);
     }
 
@@ -5281,7 +4794,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Empty> deleteConsentTopic(
         com.tcn.cloud.api.api.v0alpha.ConsentTopic request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteConsentTopicMethod(), getCallOptions()), request);
     }
 
@@ -5295,7 +4808,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Empty> updateConsentTopic(
         com.tcn.cloud.api.api.v0alpha.UpdateConsentTopicReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateConsentTopicMethod(), getCallOptions()), request);
     }
 
@@ -5311,7 +4824,7 @@ public final class ComplianceGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ProcessRes> processOutboundCall(
         com.tcn.cloud.api.api.v0alpha.ProcessOutboundCallReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getProcessOutboundCallMethod(), getCallOptions()), request);
     }
   }
@@ -5384,10 +4897,10 @@ public final class ComplianceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ComplianceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ComplianceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -5658,6 +5171,445 @@ public final class ComplianceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getRuleAutoCompleteMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteReq,
+              com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteRes>(
+                service, METHODID_RULE_AUTO_COMPLETE)))
+        .addMethod(
+          getCheckRuleSetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CheckRuleSetReq,
+              com.tcn.cloud.api.api.v0alpha.CheckRuleSetRes>(
+                service, METHODID_CHECK_RULE_SET)))
+        .addMethod(
+          getAssignRuleSetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq,
+              com.tcn.cloud.api.api.v0alpha.AssignRuleSetRes>(
+                service, METHODID_ASSIGN_RULE_SET)))
+        .addMethod(
+          getListRuleSetsMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListRuleSetsReq,
+              com.tcn.cloud.api.api.v0alpha.ListRuleSetsRes>(
+                service, METHODID_LIST_RULE_SETS)))
+        .addMethod(
+          getGetRuleSetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetRuleSetReq,
+              com.tcn.cloud.api.api.v0alpha.RuleSet>(
+                service, METHODID_GET_RULE_SET)))
+        .addMethod(
+          getGetRuleSetByNameMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetRuleSetByNameReq,
+              com.tcn.cloud.api.api.v0alpha.RuleSet>(
+                service, METHODID_GET_RULE_SET_BY_NAME)))
+        .addMethod(
+          getCreateRuleSetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CreateRuleSetReq,
+              com.tcn.cloud.api.api.v0alpha.RuleSet>(
+                service, METHODID_CREATE_RULE_SET)))
+        .addMethod(
+          getRenameRuleSetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.RenameRuleSetReq,
+              com.tcn.cloud.api.api.v0alpha.RenameRuleSetRes>(
+                service, METHODID_RENAME_RULE_SET)))
+        .addMethod(
+          getEnableRuleSetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.EnableRuleSetReq,
+              com.tcn.cloud.api.api.v0alpha.EnableRuleSetRes>(
+                service, METHODID_ENABLE_RULE_SET)))
+        .addMethod(
+          getDisableRuleSetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DisableRuleSetReq,
+              com.tcn.cloud.api.api.v0alpha.DisableRuleSetRes>(
+                service, METHODID_DISABLE_RULE_SET)))
+        .addMethod(
+          getCreateScrubListMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CreateScrubListReq,
+              com.tcn.cloud.api.api.v0alpha.ScrubListRes>(
+                service, METHODID_CREATE_SCRUB_LIST)))
+        .addMethod(
+          getAddScrubListEntriesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.AddScrubListEntriesReq,
+              com.tcn.cloud.api.api.v0alpha.ScrubListRes>(
+                service, METHODID_ADD_SCRUB_LIST_ENTRIES)))
+        .addMethod(
+          getUpdateScrubEntryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryReq,
+              com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryRes>(
+                service, METHODID_UPDATE_SCRUB_ENTRY)))
+        .addMethod(
+          getDeleteScrubListEntriesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DeleteScrubListEntriesReq,
+              com.tcn.cloud.api.api.v0alpha.ScrubListRes>(
+                service, METHODID_DELETE_SCRUB_LIST_ENTRIES)))
+        .addMethod(
+          getGetScrubListMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetScrubListReq,
+              com.tcn.cloud.api.api.v0alpha.ScrubListRes>(
+                service, METHODID_GET_SCRUB_LIST)))
+        .addMethod(
+          getDeleteScrubListMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DeleteScrubListReq,
+              com.tcn.cloud.api.api.v0alpha.ScrubListRes>(
+                service, METHODID_DELETE_SCRUB_LIST)))
+        .addMethod(
+          getGetDefaultRulesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetDefaultRulesReq,
+              com.tcn.cloud.api.api.v0alpha.GetDefaultRulesRes>(
+                service, METHODID_GET_DEFAULT_RULES)))
+        .addMethod(
+          getGetScrubListsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetScrubListsReq,
+              com.tcn.cloud.api.api.v0alpha.ScrubListsRes>(
+                service, METHODID_GET_SCRUB_LISTS)))
+        .addMethod(
+          getSearchScrubListMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SearchScrubListReq,
+              com.tcn.cloud.api.api.v0alpha.ScrubList>(
+                service, METHODID_SEARCH_SCRUB_LIST)))
+        .addMethod(
+          getGetScrubListUploadUrlMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlReq,
+              com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlRes>(
+                service, METHODID_GET_SCRUB_LIST_UPLOAD_URL)))
+        .addMethod(
+          getProcessScrubListUploadMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ProcessScrubListUploadReq,
+              com.google.longrunning.Operation>(
+                service, METHODID_PROCESS_SCRUB_LIST_UPLOAD)))
+        .addMethod(
+          getProcessScrubListDeleteUploadMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ProcessScrubListDeleteUploadReq,
+              com.google.longrunning.Operation>(
+                service, METHODID_PROCESS_SCRUB_LIST_DELETE_UPLOAD)))
+        .addMethod(
+          getExportScrubListMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ExportScrubListReq,
+              com.tcn.cloud.api.api.v0alpha.ExportScrubListRes>(
+                service, METHODID_EXPORT_SCRUB_LIST)))
+        .addMethod(
+          getPurgeScrubListMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.PurgeScrubListReq,
+              com.tcn.cloud.api.api.v0alpha.PurgeScrubListRes>(
+                service, METHODID_PURGE_SCRUB_LIST)))
+        .addMethod(
+          getCreateScenarioMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CreateScenarioReq,
+              com.tcn.cloud.api.api.v0alpha.CreateScenarioRes>(
+                service, METHODID_CREATE_SCENARIO)))
+        .addMethod(
+          getGetScenarioMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetScenarioReq,
+              com.tcn.cloud.api.api.v0alpha.GetScenarioRes>(
+                service, METHODID_GET_SCENARIO)))
+        .addMethod(
+          getUpdateScenarioMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdateScenarioReq,
+              com.tcn.cloud.api.api.v0alpha.UpdateScenarioRes>(
+                service, METHODID_UPDATE_SCENARIO)))
+        .addMethod(
+          getDeleteScenarioMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DeleteScenarioReq,
+              com.tcn.cloud.api.api.v0alpha.DeleteScenarioRes>(
+                service, METHODID_DELETE_SCENARIO)))
+        .addMethod(
+          getRunAssignedScenariosMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosReq,
+              com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosRes>(
+                service, METHODID_RUN_ASSIGNED_SCENARIOS)))
+        .addMethod(
+          getListAllScenariosMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListAllScenariosReq,
+              com.tcn.cloud.api.api.v0alpha.ListAllScenariosRes>(
+                service, METHODID_LIST_ALL_SCENARIOS)))
+        .addMethod(
+          getListUnassignedScenariosMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosReq,
+              com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosRes>(
+                service, METHODID_LIST_UNASSIGNED_SCENARIOS)))
+        .addMethod(
+          getListAssignedRuleSetsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsReq,
+              com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsRes>(
+                service, METHODID_LIST_ASSIGNED_RULE_SETS)))
+        .addMethod(
+          getListAssignedScenariosMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosReq,
+              com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosRes>(
+                service, METHODID_LIST_ASSIGNED_SCENARIOS)))
+        .addMethod(
+          getAssignScenarioMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.AssignScenarioReq,
+              com.google.protobuf.Empty>(
+                service, METHODID_ASSIGN_SCENARIO)))
+        .addMethod(
+          getUnassignScenarioMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UnassignScenarioReq,
+              com.google.protobuf.Empty>(
+                service, METHODID_UNASSIGN_SCENARIO)))
+        .addMethod(
+          getEnableScenarioMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.EnableScenarioReq,
+              com.google.protobuf.Empty>(
+                service, METHODID_ENABLE_SCENARIO)))
+        .addMethod(
+          getDisableScenarioMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DisableScenarioReq,
+              com.google.protobuf.Empty>(
+                service, METHODID_DISABLE_SCENARIO)))
+        .addMethod(
+          getGetFieldNamesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetFieldNamesReq,
+              com.tcn.cloud.api.api.v0alpha.FieldNames>(
+                service, METHODID_GET_FIELD_NAMES)))
+        .addMethod(
+          getGetResultDescriptionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetResultDescriptionsReq,
+              com.tcn.cloud.api.api.v0alpha.FieldNames>(
+                service, METHODID_GET_RESULT_DESCRIPTIONS)))
+        .addMethod(
+          getCreateConsentProfileMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CreateConsentProfileReq,
+              com.tcn.cloud.api.api.v0alpha.CreateConsentProfileRes>(
+                service, METHODID_CREATE_CONSENT_PROFILE)))
+        .addMethod(
+          getCreateConsentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CreateConsentReq,
+              com.tcn.cloud.api.api.v0alpha.CreateConsentRes>(
+                service, METHODID_CREATE_CONSENT)))
+        .addMethod(
+          getGetConsentProfileMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetConsentProfileReq,
+              com.tcn.cloud.api.api.v0alpha.ConsentProfile>(
+                service, METHODID_GET_CONSENT_PROFILE)))
+        .addMethod(
+          getGetConsentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetConsentReq,
+              com.tcn.cloud.api.api.v0alpha.Consent>(
+                service, METHODID_GET_CONSENT)))
+        .addMethod(
+          getGetConsentByProfileAndContentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentReq,
+              com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentRes>(
+                service, METHODID_GET_CONSENT_BY_PROFILE_AND_CONTENT)))
+        .addMethod(
+          getGetConsentByContentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetConsentByContentReq,
+              com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes>(
+                service, METHODID_GET_CONSENT_BY_CONTENT)))
+        .addMethod(
+          getSearchConsentByContentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SearchConsentByContentReq,
+              com.tcn.cloud.api.api.v0alpha.SearchConsentByContentRes>(
+                service, METHODID_SEARCH_CONSENT_BY_CONTENT)))
+        .addMethod(
+          getUpdateConsentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdateConsentReq,
+              com.google.protobuf.Empty>(
+                service, METHODID_UPDATE_CONSENT)))
+        .addMethod(
+          getExpireConsentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ExpireConsentReq,
+              com.google.protobuf.Empty>(
+                service, METHODID_EXPIRE_CONSENT)))
+        .addMethod(
+          getRevokeConsentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.RevokeConsentReq,
+              com.google.protobuf.Empty>(
+                service, METHODID_REVOKE_CONSENT)))
+        .addMethod(
+          getDeleteConsentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DeleteConsentReq,
+              com.google.protobuf.Empty>(
+                service, METHODID_DELETE_CONSENT)))
+        .addMethod(
+          getProcessConsentListDeleteUploadMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ProcessConsentListDeleteUploadReq,
+              com.google.longrunning.Operation>(
+                service, METHODID_PROCESS_CONSENT_LIST_DELETE_UPLOAD)))
+        .addMethod(
+          getEnableConsentProfileMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.EnableConsentProfileReq,
+              com.google.protobuf.Empty>(
+                service, METHODID_ENABLE_CONSENT_PROFILE)))
+        .addMethod(
+          getDisableConsentProfileMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DisableConsentProfileReq,
+              com.google.protobuf.Empty>(
+                service, METHODID_DISABLE_CONSENT_PROFILE)))
+        .addMethod(
+          getListConsentProfilesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListConsentProfilesReq,
+              com.tcn.cloud.api.api.v0alpha.ListConsentProfilesRes>(
+                service, METHODID_LIST_CONSENT_PROFILES)))
+        .addMethod(
+          getGetConsentUploadUrlMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlReq,
+              com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlRes>(
+                service, METHODID_GET_CONSENT_UPLOAD_URL)))
+        .addMethod(
+          getProcessConsentUploadMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ProcessConsentUploadReq,
+              com.google.longrunning.Operation>(
+                service, METHODID_PROCESS_CONSENT_UPLOAD)))
+        .addMethod(
+          getListConsentTopicsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListConsentTopicsReq,
+              com.tcn.cloud.api.api.v0alpha.ListConsentTopicsRes>(
+                service, METHODID_LIST_CONSENT_TOPICS)))
+        .addMethod(
+          getGetConsentTopicMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetConsentTopicReq,
+              com.tcn.cloud.api.api.v0alpha.ConsentTopic>(
+                service, METHODID_GET_CONSENT_TOPIC)))
+        .addMethod(
+          getCreateConsentTopicMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ConsentTopic,
+              com.tcn.cloud.api.api.v0alpha.Empty>(
+                service, METHODID_CREATE_CONSENT_TOPIC)))
+        .addMethod(
+          getDeleteConsentTopicMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ConsentTopic,
+              com.tcn.cloud.api.api.v0alpha.Empty>(
+                service, METHODID_DELETE_CONSENT_TOPIC)))
+        .addMethod(
+          getUpdateConsentTopicMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdateConsentTopicReq,
+              com.tcn.cloud.api.api.v0alpha.Empty>(
+                service, METHODID_UPDATE_CONSENT_TOPIC)))
+        .addMethod(
+          getProcessOutboundCallMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ProcessOutboundCallReq,
+              com.tcn.cloud.api.api.v0alpha.ProcessRes>(
+                service, METHODID_PROCESS_OUTBOUND_CALL)))
+        .build();
   }
 
   private static abstract class ComplianceBaseDescriptorSupplier

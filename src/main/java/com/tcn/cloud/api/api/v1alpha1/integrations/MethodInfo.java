@@ -31,110 +31,6 @@ private static final long serialVersionUID = 0L;
     return new MethodInfo();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private MethodInfo(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            name_ = s;
-            break;
-          }
-          case 16: {
-            int rawValue = input.readEnum();
-
-            methodId_ = rawValue;
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            txType_ = rawValue;
-            break;
-          }
-          case 34: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              params_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.Parameter>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            params_.add(
-                input.readMessage(com.tcn.cloud.api.api.v1alpha1.integrations.Parameter.parser(), extensionRegistry));
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            url_ = s;
-            break;
-          }
-          case 50: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              response_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.Parameter>();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            response_.add(
-                input.readMessage(com.tcn.cloud.api.api.v1alpha1.integrations.Parameter.parser(), extensionRegistry));
-            break;
-          }
-          case 58: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-              runtimeParams_ = com.google.protobuf.MapField.newMapField(
-                  RuntimeParamsDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000004;
-            }
-            com.google.protobuf.MapEntry<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.integrations.Parameter>
-            runtimeParams__ = input.readMessage(
-                RuntimeParamsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            runtimeParams_.getMutableMap().put(
-                runtimeParams__.getKey(), runtimeParams__.getValue());
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        params_ = java.util.Collections.unmodifiableList(params_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        response_ = java.util.Collections.unmodifiableList(response_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_MethodInfo_descriptor;
@@ -161,7 +57,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * the pretty name of the method
@@ -207,7 +104,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int METHOD_ID_FIELD_NUMBER = 2;
-  private int methodId_;
+  private int methodId_ = 0;
   /**
    * <pre>
    * identifies which method this is
@@ -228,13 +125,12 @@ private static final long serialVersionUID = 0L;
    * @return The methodId.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.valueOf(methodId_);
+    com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(methodId_);
     return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
   }
 
   public static final int TX_TYPE_FIELD_NUMBER = 3;
-  private int txType_;
+  private int txType_ = 0;
   /**
    * <pre>
    * what type of method call this is: PAYMENT, INQUIRY, or VERIFY
@@ -255,12 +151,12 @@ private static final long serialVersionUID = 0L;
    * @return The txType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.TransactionType getTxType() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.integrations.TransactionType result = com.tcn.cloud.api.api.commons.integrations.TransactionType.valueOf(txType_);
+    com.tcn.cloud.api.api.commons.integrations.TransactionType result = com.tcn.cloud.api.api.commons.integrations.TransactionType.forNumber(txType_);
     return result == null ? com.tcn.cloud.api.api.commons.integrations.TransactionType.UNRECOGNIZED : result;
   }
 
   public static final int PARAMS_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Parameter> params_;
   /**
    * <pre>
@@ -321,7 +217,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int URL_FIELD_NUMBER = 5;
-  private volatile java.lang.Object url_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object url_ = "";
   /**
    * <pre>
    * the url we contact
@@ -367,6 +264,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESPONSE_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Parameter> response_;
   /**
    * <pre>
@@ -443,6 +341,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
                 com.tcn.cloud.api.api.v1alpha1.integrations.Parameter.getDefaultInstance());
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.integrations.Parameter> runtimeParams_;
   private com.google.protobuf.MapField<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.integrations.Parameter>
@@ -453,7 +352,6 @@ private static final long serialVersionUID = 0L;
     }
     return runtimeParams_;
   }
-
   public int getRuntimeParamsCount() {
     return internalGetRuntimeParams().getMap().size();
   }
@@ -466,11 +364,10 @@ private static final long serialVersionUID = 0L;
    *
    * <code>map&lt;int32, .api.v1alpha1.integrations.Parameter&gt; runtime_params = 7 [json_name = "runtimeParams"];</code>
    */
-
   @java.lang.Override
   public boolean containsRuntimeParams(
       int key) {
-    
+
     return internalGetRuntimeParams().getMap().containsKey(key);
   }
   /**
@@ -491,7 +388,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int32, .api.v1alpha1.integrations.Parameter&gt; runtime_params = 7 [json_name = "runtimeParams"];</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.integrations.Parameter> getRuntimeParamsMap() {
     return internalGetRuntimeParams().getMap();
   }
@@ -505,11 +401,12 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int32, .api.v1alpha1.integrations.Parameter&gt; runtime_params = 7 [json_name = "runtimeParams"];</code>
    */
   @java.lang.Override
-
-  public com.tcn.cloud.api.api.v1alpha1.integrations.Parameter getRuntimeParamsOrDefault(
+  public /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrations.Parameter getRuntimeParamsOrDefault(
       int key,
-      com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
-    
+      /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
+
     java.util.Map<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.integrations.Parameter> map =
         internalGetRuntimeParams().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -524,10 +421,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int32, .api.v1alpha1.integrations.Parameter&gt; runtime_params = 7 [json_name = "runtimeParams"];</code>
    */
   @java.lang.Override
-
   public com.tcn.cloud.api.api.v1alpha1.integrations.Parameter getRuntimeParamsOrThrow(
       int key) {
-    
+
     java.util.Map<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.integrations.Parameter> map =
         internalGetRuntimeParams().getMap();
     if (!map.containsKey(key)) {
@@ -550,7 +446,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
     if (methodId_ != com.tcn.cloud.api.api.commons.integrations.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
@@ -562,7 +458,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < params_.size(); i++) {
       output.writeMessage(4, params_.get(i));
     }
-    if (!getUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, url_);
     }
     for (int i = 0; i < response_.size(); i++) {
@@ -574,7 +470,7 @@ private static final long serialVersionUID = 0L;
         internalGetRuntimeParams(),
         RuntimeParamsDefaultEntryHolder.defaultEntry,
         7);
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -583,7 +479,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
     }
     if (methodId_ != com.tcn.cloud.api.api.commons.integrations.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
@@ -598,7 +494,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, params_.get(i));
     }
-    if (!getUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, url_);
     }
     for (int i = 0; i < response_.size(); i++) {
@@ -615,7 +511,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, runtimeParams__);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -642,7 +538,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getResponseList())) return false;
     if (!internalGetRuntimeParams().equals(
         other.internalGetRuntimeParams())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -673,7 +569,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + RUNTIME_PARAMS_FIELD_NUMBER;
       hash = (53 * hash) + internalGetRuntimeParams().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -722,11 +618,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.integrations.MethodInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.integrations.MethodInfo parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -812,44 +710,36 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.MethodInfo.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getParamsFieldBuilder();
-        getResponseFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       name_ = "";
-
       methodId_ = 0;
-
       txType_ = 0;
-
       if (paramsBuilder_ == null) {
         params_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        params_ = null;
         paramsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000008);
       url_ = "";
-
       if (responseBuilder_ == null) {
         response_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
+        response_ = null;
         responseBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000020);
       internalGetMutableRuntimeParams().clear();
       return this;
     }
@@ -877,33 +767,51 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrations.MethodInfo buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrations.MethodInfo result = new com.tcn.cloud.api.api.v1alpha1.integrations.MethodInfo(this);
-      int from_bitField0_ = bitField0_;
-      result.name_ = name_;
-      result.methodId_ = methodId_;
-      result.txType_ = txType_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.integrations.MethodInfo result) {
       if (paramsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           params_ = java.util.Collections.unmodifiableList(params_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.params_ = params_;
       } else {
         result.params_ = paramsBuilder_.build();
       }
-      result.url_ = url_;
       if (responseBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           response_ = java.util.Collections.unmodifiableList(response_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.response_ = response_;
       } else {
         result.response_ = responseBuilder_.build();
       }
-      result.runtimeParams_ = internalGetRuntimeParams();
-      result.runtimeParams_.makeImmutable();
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.MethodInfo result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.methodId_ = methodId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.txType_ = txType_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.url_ = url_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.runtimeParams_ = internalGetRuntimeParams();
+        result.runtimeParams_.makeImmutable();
+      }
     }
 
     @java.lang.Override
@@ -952,6 +860,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v1alpha1.integrations.MethodInfo.getDefaultInstance()) return this;
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.methodId_ != 0) {
@@ -964,7 +873,7 @@ private static final long serialVersionUID = 0L;
         if (!other.params_.isEmpty()) {
           if (params_.isEmpty()) {
             params_ = other.params_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureParamsIsMutable();
             params_.addAll(other.params_);
@@ -977,7 +886,7 @@ private static final long serialVersionUID = 0L;
             paramsBuilder_.dispose();
             paramsBuilder_ = null;
             params_ = other.params_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000008);
             paramsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getParamsFieldBuilder() : null;
@@ -988,13 +897,14 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getUrl().isEmpty()) {
         url_ = other.url_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (responseBuilder_ == null) {
         if (!other.response_.isEmpty()) {
           if (response_.isEmpty()) {
             response_ = other.response_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureResponseIsMutable();
             response_.addAll(other.response_);
@@ -1007,7 +917,7 @@ private static final long serialVersionUID = 0L;
             responseBuilder_.dispose();
             responseBuilder_ = null;
             response_ = other.response_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000020);
             responseBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getResponseFieldBuilder() : null;
@@ -1018,7 +928,8 @@ private static final long serialVersionUID = 0L;
       }
       internalGetMutableRuntimeParams().mergeFrom(
           other.internalGetRuntimeParams());
-      this.mergeUnknownFields(other.unknownFields);
+      bitField0_ |= 0x00000040;
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1033,17 +944,85 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.integrations.MethodInfo parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              name_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 16: {
+              methodId_ = input.readEnum();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              txType_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
+              com.tcn.cloud.api.api.v1alpha1.integrations.Parameter m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.integrations.Parameter.parser(),
+                      extensionRegistry);
+              if (paramsBuilder_ == null) {
+                ensureParamsIsMutable();
+                params_.add(m);
+              } else {
+                paramsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 34
+            case 42: {
+              url_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              com.tcn.cloud.api.api.v1alpha1.integrations.Parameter m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.integrations.Parameter.parser(),
+                      extensionRegistry);
+              if (responseBuilder_ == null) {
+                ensureResponseIsMutable();
+                response_.add(m);
+              } else {
+                responseBuilder_.addMessage(m);
+              }
+              break;
+            } // case 50
+            case 58: {
+              com.google.protobuf.MapEntry<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.integrations.Parameter>
+              runtimeParams__ = input.readMessage(
+                  RuntimeParamsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableRuntimeParams().getMutableMap().put(
+                  runtimeParams__.getKey(), runtimeParams__.getValue());
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.integrations.MethodInfo) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -1101,11 +1080,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1118,8 +1095,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1134,12 +1111,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1166,8 +1141,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMethodIdValue(int value) {
-      
       methodId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1181,8 +1156,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.valueOf(methodId_);
+      com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(methodId_);
       return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
     }
     /**
@@ -1198,7 +1172,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       methodId_ = value.getNumber();
       onChanged();
       return this;
@@ -1212,7 +1186,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMethodId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       methodId_ = 0;
       onChanged();
       return this;
@@ -1240,8 +1214,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTxTypeValue(int value) {
-      
       txType_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1255,8 +1229,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.integrations.TransactionType getTxType() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.integrations.TransactionType result = com.tcn.cloud.api.api.commons.integrations.TransactionType.valueOf(txType_);
+      com.tcn.cloud.api.api.commons.integrations.TransactionType result = com.tcn.cloud.api.api.commons.integrations.TransactionType.forNumber(txType_);
       return result == null ? com.tcn.cloud.api.api.commons.integrations.TransactionType.UNRECOGNIZED : result;
     }
     /**
@@ -1272,7 +1245,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       txType_ = value.getNumber();
       onChanged();
       return this;
@@ -1286,7 +1259,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTxType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       txType_ = 0;
       onChanged();
       return this;
@@ -1295,9 +1268,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Parameter> params_ =
       java.util.Collections.emptyList();
     private void ensureParamsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         params_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.Parameter>(params_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -1491,7 +1464,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearParams() {
       if (paramsBuilder_ == null) {
         params_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         paramsBuilder_.clear();
@@ -1596,7 +1569,7 @@ private static final long serialVersionUID = 0L;
         paramsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.integrations.Parameter, com.tcn.cloud.api.api.v1alpha1.integrations.Parameter.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.ParameterOrBuilder>(
                 params_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         params_ = null;
@@ -1657,11 +1630,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       url_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1674,8 +1645,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUrl() {
-      
       url_ = getDefaultInstance().getUrl();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1690,12 +1661,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       url_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1703,9 +1672,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.integrations.Parameter> response_ =
       java.util.Collections.emptyList();
     private void ensureResponseIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000020) != 0)) {
         response_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.integrations.Parameter>(response_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000020;
        }
     }
 
@@ -1910,7 +1879,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearResponse() {
       if (responseBuilder_ == null) {
         response_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
       } else {
         responseBuilder_.clear();
@@ -2022,7 +1991,7 @@ private static final long serialVersionUID = 0L;
         responseBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.integrations.Parameter, com.tcn.cloud.api.api.v1alpha1.integrations.Parameter.Builder, com.tcn.cloud.api.api.v1alpha1.integrations.ParameterOrBuilder>(
                 response_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
         response_ = null;
@@ -2033,7 +2002,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.integrations.Parameter> runtimeParams_;
     private com.google.protobuf.MapField<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.integrations.Parameter>
-    internalGetRuntimeParams() {
+        internalGetRuntimeParams() {
       if (runtimeParams_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             RuntimeParamsDefaultEntryHolder.defaultEntry);
@@ -2041,8 +2010,7 @@ private static final long serialVersionUID = 0L;
       return runtimeParams_;
     }
     private com.google.protobuf.MapField<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.integrations.Parameter>
-    internalGetMutableRuntimeParams() {
-      onChanged();;
+        internalGetMutableRuntimeParams() {
       if (runtimeParams_ == null) {
         runtimeParams_ = com.google.protobuf.MapField.newMapField(
             RuntimeParamsDefaultEntryHolder.defaultEntry);
@@ -2050,9 +2018,10 @@ private static final long serialVersionUID = 0L;
       if (!runtimeParams_.isMutable()) {
         runtimeParams_ = runtimeParams_.copy();
       }
+      bitField0_ |= 0x00000040;
+      onChanged();
       return runtimeParams_;
     }
-
     public int getRuntimeParamsCount() {
       return internalGetRuntimeParams().getMap().size();
     }
@@ -2065,11 +2034,10 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;int32, .api.v1alpha1.integrations.Parameter&gt; runtime_params = 7 [json_name = "runtimeParams"];</code>
      */
-
     @java.lang.Override
     public boolean containsRuntimeParams(
         int key) {
-      
+
       return internalGetRuntimeParams().getMap().containsKey(key);
     }
     /**
@@ -2090,7 +2058,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int32, .api.v1alpha1.integrations.Parameter&gt; runtime_params = 7 [json_name = "runtimeParams"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.integrations.Parameter> getRuntimeParamsMap() {
       return internalGetRuntimeParams().getMap();
     }
@@ -2104,11 +2071,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int32, .api.v1alpha1.integrations.Parameter&gt; runtime_params = 7 [json_name = "runtimeParams"];</code>
      */
     @java.lang.Override
-
-    public com.tcn.cloud.api.api.v1alpha1.integrations.Parameter getRuntimeParamsOrDefault(
+    public /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrations.Parameter getRuntimeParamsOrDefault(
         int key,
-        com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
-      
+        /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
+
       java.util.Map<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.integrations.Parameter> map =
           internalGetRuntimeParams().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2123,10 +2091,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;int32, .api.v1alpha1.integrations.Parameter&gt; runtime_params = 7 [json_name = "runtimeParams"];</code>
      */
     @java.lang.Override
-
     public com.tcn.cloud.api.api.v1alpha1.integrations.Parameter getRuntimeParamsOrThrow(
         int key) {
-      
+
       java.util.Map<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.integrations.Parameter> map =
           internalGetRuntimeParams().getMap();
       if (!map.containsKey(key)) {
@@ -2134,8 +2101,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearRuntimeParams() {
+      bitField0_ = (bitField0_ & ~0x00000040);
       internalGetMutableRuntimeParams().getMutableMap()
           .clear();
       return this;
@@ -2149,10 +2116,9 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;int32, .api.v1alpha1.integrations.Parameter&gt; runtime_params = 7 [json_name = "runtimeParams"];</code>
      */
-
     public Builder removeRuntimeParams(
         int key) {
-      
+
       internalGetMutableRuntimeParams().getMutableMap()
           .remove(key);
       return this;
@@ -2162,7 +2128,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.integrations.Parameter>
-    getMutableRuntimeParams() {
+        getMutableRuntimeParams() {
+      bitField0_ |= 0x00000040;
       return internalGetMutableRuntimeParams().getMutableMap();
     }
     /**
@@ -2177,10 +2144,11 @@ private static final long serialVersionUID = 0L;
     public Builder putRuntimeParams(
         int key,
         com.tcn.cloud.api.api.v1alpha1.integrations.Parameter value) {
-      
-      if (value == null) { throw new java.lang.NullPointerException(); }
+
+      if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableRuntimeParams().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000040;
       return this;
     }
     /**
@@ -2192,11 +2160,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;int32, .api.v1alpha1.integrations.Parameter&gt; runtime_params = 7 [json_name = "runtimeParams"];</code>
      */
-
     public Builder putAllRuntimeParams(
         java.util.Map<java.lang.Integer, com.tcn.cloud.api.api.v1alpha1.integrations.Parameter> values) {
       internalGetMutableRuntimeParams().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000040;
       return this;
     }
     @java.lang.Override
@@ -2232,7 +2200,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new MethodInfo(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

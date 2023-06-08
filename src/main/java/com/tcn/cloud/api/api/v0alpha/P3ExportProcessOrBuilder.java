@@ -237,6 +237,8 @@ public interface P3ExportProcessOrBuilder extends
    * </pre>
    *
    * <code>.api.commons.FilePattern file_pattern = 13 [json_name = "filePattern", deprecated = true];</code>
+   * @deprecated api.v0alpha.P3ExportProcess.file_pattern is deprecated.
+   *     See api/v0alpha/lms.proto;l=1266
    * @return Whether the filePattern field is set.
    */
   @java.lang.Deprecated boolean hasFilePattern();
@@ -250,6 +252,8 @@ public interface P3ExportProcessOrBuilder extends
    * </pre>
    *
    * <code>.api.commons.FilePattern file_pattern = 13 [json_name = "filePattern", deprecated = true];</code>
+   * @deprecated api.v0alpha.P3ExportProcess.file_pattern is deprecated.
+   *     See api/v0alpha/lms.proto;l=1266
    * @return The filePattern.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.FilePattern getFilePattern();

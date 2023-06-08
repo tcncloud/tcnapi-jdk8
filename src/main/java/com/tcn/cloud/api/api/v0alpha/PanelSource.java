@@ -29,60 +29,6 @@ private static final long serialVersionUID = 0L;
     return new PanelSource();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private PanelSource(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-            panelTypeCase_ = 1;
-            panelType_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-            panelTypeCase_ = 2;
-            panelType_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_PanelSource_descriptor;
@@ -97,6 +43,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int panelTypeCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object panelType_;
   public enum PanelTypeCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -138,6 +85,17 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INSIGHT_ID_FIELD_NUMBER = 1;
+  /**
+   * <pre>
+   * Used for new BI insights in operator
+   * </pre>
+   *
+   * <code>string insight_id = 1 [json_name = "insightId"];</code>
+   * @return Whether the insightId field is set.
+   */
+  public boolean hasInsightId() {
+    return panelTypeCase_ == 1;
+  }
   /**
    * <pre>
    * Used for new BI insights in operator
@@ -191,6 +149,17 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LEGACY_INSIGHT_ID_FIELD_NUMBER = 2;
+  /**
+   * <pre>
+   * Used for old insights in BI
+   * </pre>
+   *
+   * <code>string legacy_insight_id = 2 [json_name = "legacyInsightId"];</code>
+   * @return Whether the legacyInsightId field is set.
+   */
+  public boolean hasLegacyInsightId() {
+    return panelTypeCase_ == 2;
+  }
   /**
    * <pre>
    * Used for old insights in BI
@@ -263,7 +232,7 @@ private static final long serialVersionUID = 0L;
     if (panelTypeCase_ == 2) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, panelType_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -278,7 +247,7 @@ private static final long serialVersionUID = 0L;
     if (panelTypeCase_ == 2) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, panelType_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -306,7 +275,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -329,7 +298,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -378,11 +347,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.PanelSource parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.PanelSource parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -450,22 +421,18 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.PanelSource.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       panelTypeCase_ = 0;
       panelType_ = null;
       return this;
@@ -494,15 +461,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.PanelSource buildPartial() {
       com.tcn.cloud.api.api.v0alpha.PanelSource result = new com.tcn.cloud.api.api.v0alpha.PanelSource(this);
-      if (panelTypeCase_ == 1) {
-        result.panelType_ = panelType_;
-      }
-      if (panelTypeCase_ == 2) {
-        result.panelType_ = panelType_;
-      }
-      result.panelTypeCase_ = panelTypeCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.PanelSource result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.tcn.cloud.api.api.v0alpha.PanelSource result) {
+      result.panelTypeCase_ = panelTypeCase_;
+      result.panelType_ = this.panelType_;
     }
 
     @java.lang.Override
@@ -566,7 +537,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -581,17 +552,42 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.PanelSource parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              panelTypeCase_ = 1;
+              panelType_ = s;
+              break;
+            } // case 10
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              panelTypeCase_ = 2;
+              panelType_ = s;
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.PanelSource) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int panelTypeCase_ = 0;
@@ -609,7 +605,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
+    /**
+     * <pre>
+     * Used for new BI insights in operator
+     * </pre>
+     *
+     * <code>string insight_id = 1 [json_name = "insightId"];</code>
+     * @return Whether the insightId field is set.
+     */
+    @java.lang.Override
+    public boolean hasInsightId() {
+      return panelTypeCase_ == 1;
+    }
     /**
      * <pre>
      * Used for new BI insights in operator
@@ -674,10 +683,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setInsightId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  panelTypeCase_ = 1;
+      if (value == null) { throw new NullPointerException(); }
+      panelTypeCase_ = 1;
       panelType_ = value;
       onChanged();
       return this;
@@ -709,16 +716,26 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setInsightIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       panelTypeCase_ = 1;
       panelType_ = value;
       onChanged();
       return this;
     }
 
+    /**
+     * <pre>
+     * Used for old insights in BI
+     * </pre>
+     *
+     * <code>string legacy_insight_id = 2 [json_name = "legacyInsightId"];</code>
+     * @return Whether the legacyInsightId field is set.
+     */
+    @java.lang.Override
+    public boolean hasLegacyInsightId() {
+      return panelTypeCase_ == 2;
+    }
     /**
      * <pre>
      * Used for old insights in BI
@@ -783,10 +800,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLegacyInsightId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  panelTypeCase_ = 2;
+      if (value == null) { throw new NullPointerException(); }
+      panelTypeCase_ = 2;
       panelType_ = value;
       onChanged();
       return this;
@@ -818,10 +833,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLegacyInsightIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       panelTypeCase_ = 2;
       panelType_ = value;
       onChanged();
@@ -860,7 +873,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new PanelSource(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

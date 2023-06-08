@@ -52,5 +52,5 @@ public interface FilterCheckOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.FilterCheck.ListComparisonOrBuilder getListCompOrBuilder();
 
-  public com.tcn.cloud.api.api.v0alpha.FilterCheck.CheckCase getCheckCase();
+  com.tcn.cloud.api.api.v0alpha.FilterCheck.CheckCase getCheckCase();
 }

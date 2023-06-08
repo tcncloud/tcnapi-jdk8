@@ -28,85 +28,6 @@ private static final long serialVersionUID = 0L;
     return new ProcessRes();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private ProcessRes(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            result_ = input.readBool();
-            break;
-          }
-          case 18: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              data_ = com.google.protobuf.MapField.newMapField(
-                  DataDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000001;
-            }
-            com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
-            data__ = input.readMessage(
-                DataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            data_.getMutableMap().put(
-                data__.getKey(), data__.getValue());
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            integration_ = s;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            method_ = s;
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            transactionId_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_ProcessRes_descriptor;
@@ -133,7 +54,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESULT_FIELD_NUMBER = 1;
-  private boolean result_;
+  private boolean result_ = false;
   /**
    * <pre>
    * whether we were successful or the bool result the operation returned.
@@ -159,6 +80,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
                 com.tcn.cloud.api.api.v1alpha1.integrations.Value.getDefaultInstance());
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> data_;
   private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
@@ -169,7 +91,6 @@ private static final long serialVersionUID = 0L;
     }
     return data_;
   }
-
   public int getDataCount() {
     return internalGetData().getMap().size();
   }
@@ -181,11 +102,10 @@ private static final long serialVersionUID = 0L;
    *
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 2 [json_name = "data"];</code>
    */
-
   @java.lang.Override
   public boolean containsData(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     return internalGetData().getMap().containsKey(key);
   }
   /**
@@ -205,7 +125,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 2 [json_name = "data"];</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> getDataMap() {
     return internalGetData().getMap();
   }
@@ -218,11 +137,12 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 2 [json_name = "data"];</code>
    */
   @java.lang.Override
-
-  public com.tcn.cloud.api.api.v1alpha1.integrations.Value getDataOrDefault(
+  public /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrations.Value getDataOrDefault(
       java.lang.String key,
-      com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+      /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> map =
         internalGetData().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -236,10 +156,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 2 [json_name = "data"];</code>
    */
   @java.lang.Override
-
   public com.tcn.cloud.api.api.v1alpha1.integrations.Value getDataOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> map =
         internalGetData().getMap();
     if (!map.containsKey(key)) {
@@ -249,7 +168,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INTEGRATION_FIELD_NUMBER = 3;
-  private volatile java.lang.Object integration_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object integration_ = "";
   /**
    * <pre>
    * integration name that was called
@@ -295,7 +215,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int METHOD_FIELD_NUMBER = 4;
-  private volatile java.lang.Object method_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object method_ = "";
   /**
    * <pre>
    * method that was called
@@ -341,7 +262,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TRANSACTION_ID_FIELD_NUMBER = 5;
-  private volatile java.lang.Object transactionId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object transactionId_ = "";
   /**
    * <pre>
    * ID of thing we inserted into the db
@@ -415,16 +337,16 @@ private static final long serialVersionUID = 0L;
         internalGetData(),
         DataDefaultEntryHolder.defaultEntry,
         2);
-    if (!getIntegrationBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(integration_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, integration_);
     }
-    if (!getMethodBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(method_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, method_);
     }
-    if (!getTransactionIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transactionId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, transactionId_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -447,16 +369,16 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, data__);
     }
-    if (!getIntegrationBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(integration_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, integration_);
     }
-    if (!getMethodBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(method_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, method_);
     }
-    if (!getTransactionIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transactionId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, transactionId_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -481,7 +403,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getMethod())) return false;
     if (!getTransactionId()
         .equals(other.getTransactionId())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -505,7 +427,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getMethod().hashCode();
     hash = (37 * hash) + TRANSACTION_ID_FIELD_NUMBER;
     hash = (53 * hash) + getTransactionId().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -554,11 +476,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.integrations.ProcessRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.integrations.ProcessRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -644,31 +568,23 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.ProcessRes.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       result_ = false;
-
       internalGetMutableData().clear();
       integration_ = "";
-
       method_ = "";
-
       transactionId_ = "";
-
       return this;
     }
 
@@ -695,15 +611,29 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrations.ProcessRes buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrations.ProcessRes result = new com.tcn.cloud.api.api.v1alpha1.integrations.ProcessRes(this);
-      int from_bitField0_ = bitField0_;
-      result.result_ = result_;
-      result.data_ = internalGetData();
-      result.data_.makeImmutable();
-      result.integration_ = integration_;
-      result.method_ = method_;
-      result.transactionId_ = transactionId_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.ProcessRes result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.result_ = result_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.data_ = internalGetData();
+        result.data_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.integration_ = integration_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.method_ = method_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.transactionId_ = transactionId_;
+      }
     }
 
     @java.lang.Override
@@ -755,19 +685,23 @@ private static final long serialVersionUID = 0L;
       }
       internalGetMutableData().mergeFrom(
           other.internalGetData());
+      bitField0_ |= 0x00000002;
       if (!other.getIntegration().isEmpty()) {
         integration_ = other.integration_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getMethod().isEmpty()) {
         method_ = other.method_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getTransactionId().isEmpty()) {
         transactionId_ = other.transactionId_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -782,17 +716,59 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.integrations.ProcessRes parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              result_ = input.readBool();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
+              data__ = input.readMessage(
+                  DataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableData().getMutableMap().put(
+                  data__.getKey(), data__.getValue());
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              integration_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              method_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              transactionId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.integrations.ProcessRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -820,8 +796,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setResult(boolean value) {
-      
+
       result_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -834,7 +811,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResult() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       result_ = false;
       onChanged();
       return this;
@@ -843,7 +820,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> data_;
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
-    internalGetData() {
+        internalGetData() {
       if (data_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             DataDefaultEntryHolder.defaultEntry);
@@ -851,8 +828,7 @@ private static final long serialVersionUID = 0L;
       return data_;
     }
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
-    internalGetMutableData() {
-      onChanged();;
+        internalGetMutableData() {
       if (data_ == null) {
         data_ = com.google.protobuf.MapField.newMapField(
             DataDefaultEntryHolder.defaultEntry);
@@ -860,9 +836,10 @@ private static final long serialVersionUID = 0L;
       if (!data_.isMutable()) {
         data_ = data_.copy();
       }
+      bitField0_ |= 0x00000002;
+      onChanged();
       return data_;
     }
-
     public int getDataCount() {
       return internalGetData().getMap().size();
     }
@@ -874,11 +851,10 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 2 [json_name = "data"];</code>
      */
-
     @java.lang.Override
     public boolean containsData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetData().getMap().containsKey(key);
     }
     /**
@@ -898,7 +874,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 2 [json_name = "data"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> getDataMap() {
       return internalGetData().getMap();
     }
@@ -911,11 +886,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 2 [json_name = "data"];</code>
      */
     @java.lang.Override
-
-    public com.tcn.cloud.api.api.v1alpha1.integrations.Value getDataOrDefault(
+    public /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrations.Value getDataOrDefault(
         java.lang.String key,
-        com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+        /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> map =
           internalGetData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -929,10 +905,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 2 [json_name = "data"];</code>
      */
     @java.lang.Override
-
     public com.tcn.cloud.api.api.v1alpha1.integrations.Value getDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> map =
           internalGetData().getMap();
       if (!map.containsKey(key)) {
@@ -940,8 +915,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearData() {
+      bitField0_ = (bitField0_ & ~0x00000002);
       internalGetMutableData().getMutableMap()
           .clear();
       return this;
@@ -954,10 +929,9 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 2 [json_name = "data"];</code>
      */
-
     public Builder removeData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       internalGetMutableData().getMutableMap()
           .remove(key);
       return this;
@@ -967,7 +941,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
-    getMutableData() {
+        getMutableData() {
+      bitField0_ |= 0x00000002;
       return internalGetMutableData().getMutableMap();
     }
     /**
@@ -981,10 +956,11 @@ private static final long serialVersionUID = 0L;
     public Builder putData(
         java.lang.String key,
         com.tcn.cloud.api.api.v1alpha1.integrations.Value value) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      if (value == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableData().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000002;
       return this;
     }
     /**
@@ -995,11 +971,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 2 [json_name = "data"];</code>
      */
-
     public Builder putAllData(
         java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> values) {
       internalGetMutableData().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000002;
       return this;
     }
 
@@ -1056,11 +1032,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIntegration(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       integration_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1073,8 +1047,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIntegration() {
-      
       integration_ = getDefaultInstance().getIntegration();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1089,12 +1063,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIntegrationBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       integration_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1152,11 +1124,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMethod(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       method_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1169,8 +1139,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMethod() {
-      
       method_ = getDefaultInstance().getMethod();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1185,12 +1155,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMethodBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       method_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1257,11 +1225,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTransactionId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       transactionId_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1277,8 +1243,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTransactionId() {
-      
       transactionId_ = getDefaultInstance().getTransactionId();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1296,12 +1262,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTransactionIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       transactionId_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1338,7 +1302,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ProcessRes(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

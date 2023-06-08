@@ -30,74 +30,6 @@ private static final long serialVersionUID = 0L;
     return new GetSkillProfileRes();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private GetSkillProfileRes(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.Builder subBuilder = null;
-            if (skillProfile_ != null) {
-              subBuilder = skillProfile_.toBuilder();
-            }
-            skillProfile_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(skillProfile_);
-              skillProfile_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              mappings_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes.Mapping>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            mappings_.add(
-                input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes.Mapping.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        mappings_ = java.util.Collections.unmodifiableList(mappings_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_GetSkillProfileRes_descriptor;
@@ -168,59 +100,6 @@ private static final long serialVersionUID = 0L;
       return new Mapping();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Mapping(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              skillProfileSid_ = input.readInt64();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_GetSkillProfileRes_Mapping_descriptor;
@@ -235,7 +114,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int SKILL_PROFILE_SID_FIELD_NUMBER = 1;
-    private long skillProfileSid_;
+    private long skillProfileSid_ = 0L;
     /**
      * <pre>
      * ID of the skill profile mapped to the requested skill profile.
@@ -250,7 +129,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      * Name of the skill profile mapped to the requested skill profile.
@@ -312,10 +192,10 @@ private static final long serialVersionUID = 0L;
       if (skillProfileSid_ != 0L) {
         output.writeInt64(1, skillProfileSid_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -328,10 +208,10 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, skillProfileSid_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -350,7 +230,7 @@ private static final long serialVersionUID = 0L;
           != other.getSkillProfileSid()) return false;
       if (!getName()
           .equals(other.getName())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -366,7 +246,7 @@ private static final long serialVersionUID = 0L;
           getSkillProfileSid());
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -415,11 +295,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes.Mapping parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes.Mapping parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -483,26 +365,20 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes.Mapping.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         skillProfileSid_ = 0L;
-
         name_ = "";
-
         return this;
       }
 
@@ -529,10 +405,19 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes.Mapping buildPartial() {
         com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes.Mapping result = new com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes.Mapping(this);
-        result.skillProfileSid_ = skillProfileSid_;
-        result.name_ = name_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes.Mapping result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.skillProfileSid_ = skillProfileSid_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
       }
 
       @java.lang.Override
@@ -584,9 +469,10 @@ private static final long serialVersionUID = 0L;
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -601,19 +487,43 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes.Mapping parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                skillProfileSid_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes.Mapping) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private long skillProfileSid_ ;
       /**
@@ -638,8 +548,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setSkillProfileSid(long value) {
-        
+
         skillProfileSid_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -652,7 +563,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearSkillProfileSid() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         skillProfileSid_ = 0L;
         onChanged();
         return this;
@@ -711,11 +622,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -728,8 +637,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -744,12 +653,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -786,7 +693,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Mapping(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -829,10 +747,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfileOrBuilder getSkillProfileOrBuilder() {
-    return getSkillProfile();
+    return skillProfile_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.getDefaultInstance() : skillProfile_;
   }
 
   public static final int MAPPINGS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes.Mapping> mappings_;
   /**
    * <pre>
@@ -922,7 +841,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < mappings_.size(); i++) {
       output.writeMessage(2, mappings_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -939,7 +858,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, mappings_.get(i));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -961,7 +880,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getMappingsList()
         .equals(other.getMappingsList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -980,7 +899,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + MAPPINGS_FIELD_NUMBER;
       hash = (53 * hash) + getMappingsList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1029,11 +948,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1101,35 +1022,30 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getMappingsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (skillProfileBuilder_ == null) {
-        skillProfile_ = null;
-      } else {
-        skillProfile_ = null;
+      bitField0_ = 0;
+      skillProfile_ = null;
+      if (skillProfileBuilder_ != null) {
+        skillProfileBuilder_.dispose();
         skillProfileBuilder_ = null;
       }
       if (mappingsBuilder_ == null) {
         mappings_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        mappings_ = null;
         mappingsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -1156,23 +1072,31 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes result = new com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes(this);
-      int from_bitField0_ = bitField0_;
-      if (skillProfileBuilder_ == null) {
-        result.skillProfile_ = skillProfile_;
-      } else {
-        result.skillProfile_ = skillProfileBuilder_.build();
-      }
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes result) {
       if (mappingsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           mappings_ = java.util.Collections.unmodifiableList(mappings_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.mappings_ = mappings_;
       } else {
         result.mappings_ = mappingsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.skillProfile_ = skillProfileBuilder_ == null
+            ? skillProfile_
+            : skillProfileBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1226,7 +1150,7 @@ private static final long serialVersionUID = 0L;
         if (!other.mappings_.isEmpty()) {
           if (mappings_.isEmpty()) {
             mappings_ = other.mappings_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureMappingsIsMutable();
             mappings_.addAll(other.mappings_);
@@ -1239,7 +1163,7 @@ private static final long serialVersionUID = 0L;
             mappingsBuilder_.dispose();
             mappingsBuilder_ = null;
             mappings_ = other.mappings_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             mappingsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getMappingsFieldBuilder() : null;
@@ -1248,7 +1172,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1263,17 +1187,50 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getSkillProfileFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes.Mapping m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes.Mapping.parser(),
+                      extensionRegistry);
+              if (mappingsBuilder_ == null) {
+                ensureMappingsIsMutable();
+                mappings_.add(m);
+              } else {
+                mappingsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -1286,7 +1243,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the skillProfile field is set.
      */
     public boolean hasSkillProfile() {
-      return skillProfileBuilder_ != null || skillProfile_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.api.v1alpha1.wfm.SkillProfile skill_profile = 1 [json_name = "skillProfile"];</code>
@@ -1308,11 +1265,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         skillProfile_ = value;
-        onChanged();
       } else {
         skillProfileBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -1322,11 +1279,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.Builder builderForValue) {
       if (skillProfileBuilder_ == null) {
         skillProfile_ = builderForValue.build();
-        onChanged();
       } else {
         skillProfileBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -1334,38 +1291,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile value) {
       if (skillProfileBuilder_ == null) {
-        if (skillProfile_ != null) {
-          skillProfile_ =
-            com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.newBuilder(skillProfile_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          skillProfile_ != null &&
+          skillProfile_ != com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.getDefaultInstance()) {
+          getSkillProfileBuilder().mergeFrom(value);
         } else {
           skillProfile_ = value;
         }
-        onChanged();
       } else {
         skillProfileBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v1alpha1.wfm.SkillProfile skill_profile = 1 [json_name = "skillProfile"];</code>
      */
     public Builder clearSkillProfile() {
-      if (skillProfileBuilder_ == null) {
-        skillProfile_ = null;
-        onChanged();
-      } else {
-        skillProfile_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      skillProfile_ = null;
+      if (skillProfileBuilder_ != null) {
+        skillProfileBuilder_.dispose();
         skillProfileBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v1alpha1.wfm.SkillProfile skill_profile = 1 [json_name = "skillProfile"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.SkillProfile.Builder getSkillProfileBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getSkillProfileFieldBuilder().getBuilder();
     }
@@ -1400,9 +1357,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes.Mapping> mappings_ =
       java.util.Collections.emptyList();
     private void ensureMappingsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         mappings_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes.Mapping>(mappings_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -1618,7 +1575,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearMappings() {
       if (mappingsBuilder_ == null) {
         mappings_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         mappingsBuilder_.clear();
@@ -1737,7 +1694,7 @@ private static final long serialVersionUID = 0L;
         mappingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes.Mapping, com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes.Mapping.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes.MappingOrBuilder>(
                 mappings_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         mappings_ = null;
@@ -1777,7 +1734,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GetSkillProfileRes(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

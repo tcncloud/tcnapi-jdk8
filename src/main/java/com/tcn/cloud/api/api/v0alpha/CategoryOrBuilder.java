@@ -9,6 +9,11 @@ public interface CategoryOrBuilder extends
 
   /**
    * <code>string string_value = 1 [json_name = "stringValue"];</code>
+   * @return Whether the stringValue field is set.
+   */
+  boolean hasStringValue();
+  /**
+   * <code>string string_value = 1 [json_name = "stringValue"];</code>
    * @return The stringValue.
    */
   java.lang.String getStringValue();
@@ -34,5 +39,5 @@ public interface CategoryOrBuilder extends
    */
   com.google.protobuf.TimestampOrBuilder getTimestampValueOrBuilder();
 
-  public com.tcn.cloud.api.api.v0alpha.Category.DataTypeCase getDataTypeCase();
+  com.tcn.cloud.api.api.v0alpha.Category.DataTypeCase getDataTypeCase();
 }

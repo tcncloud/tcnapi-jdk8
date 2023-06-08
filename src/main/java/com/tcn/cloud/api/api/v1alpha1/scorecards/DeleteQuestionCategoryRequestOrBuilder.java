@@ -13,6 +13,15 @@ public interface DeleteQuestionCategoryRequestOrBuilder extends
    * </pre>
    *
    * <code>int64 question_category_id = 2 [json_name = "questionCategoryId"];</code>
+   * @return Whether the questionCategoryId field is set.
+   */
+  boolean hasQuestionCategoryId();
+  /**
+   * <pre>
+   * Required if not BothIds
+   * </pre>
+   *
+   * <code>int64 question_category_id = 2 [json_name = "questionCategoryId"];</code>
    * @return The questionCategoryId.
    */
   long getQuestionCategoryId();
@@ -44,5 +53,5 @@ public interface DeleteQuestionCategoryRequestOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryRequest.BothIdsOrBuilder getBothIdsOrBuilder();
 
-  public com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryRequest.WhereCase getWhereCase();
+  com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryRequest.WhereCase getWhereCase();
 }

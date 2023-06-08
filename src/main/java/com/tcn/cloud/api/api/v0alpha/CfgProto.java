@@ -73,8 +73,8 @@ public final class CfgProto {
       "Server\022\020\n\003sip\030\001 \001(\tR\003sip\022\026\n\006webrtc\030\002 \001(\t" +
       "R\006webrtc2\202\001\n\003Cfg\022{\n\021GetWebAgentConfig\022\031." +
       "api.v0alpha.GetConfigReq\032\025.api.v0alpha.W" +
-      "ebAgent\"4\272\270\221\002\002\030\001\202\323\344\223\002\':\001*\"\"/api/v0alpha/" +
-      "cfg/getwebagentconfigBv\n\035com.tcn.cloud.a" +
+      "ebAgent\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/v0alpha/cfg" +
+      "/getwebagentconfig:\001*Bv\n\035com.tcn.cloud.a" +
       "pi.api.v0alphaB\010CfgProtoP\001\242\002\003AVX\252\002\013Api.V" +
       "0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\GPBMe" +
       "tadata\352\002\014Api::V0alphab\006proto3"

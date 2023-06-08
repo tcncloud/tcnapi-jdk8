@@ -16,7 +16,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListAgentQueueAndOnHoldCallDataReq() {
-    agentSkills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    agentSkills_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -26,66 +27,6 @@ private static final long serialVersionUID = 0L;
     return new ListAgentQueueAndOnHoldCallDataReq();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private ListAgentQueueAndOnHoldCallDataReq(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 24: {
-
-            agentSessionSid_ = input.readInt64();
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              agentSkills_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            agentSkills_.add(s);
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        agentSkills_ = agentSkills_.getUnmodifiableView();
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_ListAgentQueueAndOnHoldCallDataReq_descriptor;
@@ -100,7 +41,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENT_SESSION_SID_FIELD_NUMBER = 3;
-  private long agentSessionSid_;
+  private long agentSessionSid_ = 0L;
   /**
    * <pre>
    * current session id of the requesting agent.
@@ -115,7 +56,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENT_SKILLS_FIELD_NUMBER = 4;
-  private com.google.protobuf.LazyStringList agentSkills_;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList agentSkills_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * list of skills (skill names) to use for matching queued calls, only calls that require a matching subset of agent_skills will be returned.
@@ -185,7 +128,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < agentSkills_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, agentSkills_.getRaw(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -206,7 +149,7 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getAgentSkillsList().size();
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -225,7 +168,7 @@ private static final long serialVersionUID = 0L;
         != other.getAgentSessionSid()) return false;
     if (!getAgentSkillsList()
         .equals(other.getAgentSkillsList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -243,7 +186,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AGENT_SKILLS_FIELD_NUMBER;
       hash = (53 * hash) + getAgentSkillsList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -292,11 +235,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -360,26 +305,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       agentSessionSid_ = 0L;
-
-      agentSkills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      agentSkills_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -406,15 +346,20 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataReq result = new com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataReq(this);
-      int from_bitField0_ = bitField0_;
-      result.agentSessionSid_ = agentSessionSid_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        agentSkills_ = agentSkills_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.agentSkills_ = agentSkills_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataReq result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.agentSessionSid_ = agentSessionSid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        agentSkills_.makeImmutable();
+        result.agentSkills_ = agentSkills_;
+      }
     }
 
     @java.lang.Override
@@ -467,14 +412,14 @@ private static final long serialVersionUID = 0L;
       if (!other.agentSkills_.isEmpty()) {
         if (agentSkills_.isEmpty()) {
           agentSkills_ = other.agentSkills_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000002;
         } else {
           ensureAgentSkillsIsMutable();
           agentSkills_.addAll(other.agentSkills_);
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -489,17 +434,41 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataReq parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 24: {
+              agentSessionSid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 24
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureAgentSkillsIsMutable();
+              agentSkills_.add(s);
+              break;
+            } // case 34
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -527,8 +496,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAgentSessionSid(long value) {
-      
+
       agentSessionSid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -541,18 +511,19 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAgentSessionSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       agentSessionSid_ = 0L;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList agentSkills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList agentSkills_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureAgentSkillsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!agentSkills_.isModifiable()) {
         agentSkills_ = new com.google.protobuf.LazyStringArrayList(agentSkills_);
-        bitField0_ |= 0x00000001;
-       }
+      }
+      bitField0_ |= 0x00000002;
     }
     /**
      * <pre>
@@ -564,7 +535,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getAgentSkillsList() {
-      return agentSkills_.getUnmodifiableView();
+      agentSkills_.makeImmutable();
+      return agentSkills_;
     }
     /**
      * <pre>
@@ -614,11 +586,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAgentSkills(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAgentSkillsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureAgentSkillsIsMutable();
       agentSkills_.set(index, value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -633,11 +604,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAgentSkills(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAgentSkillsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureAgentSkillsIsMutable();
       agentSkills_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -655,6 +625,7 @@ private static final long serialVersionUID = 0L;
       ensureAgentSkillsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, agentSkills_);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -667,8 +638,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAgentSkills() {
-      agentSkills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      agentSkills_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000002);;
       onChanged();
       return this;
     }
@@ -683,12 +655,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAgentSkillsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureAgentSkillsIsMutable();
       agentSkills_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -725,7 +696,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ListAgentQueueAndOnHoldCallDataReq(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

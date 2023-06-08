@@ -29,59 +29,6 @@ private static final long serialVersionUID = 0L;
     return new FollowAgentReq();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private FollowAgentReq(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-            idCase_ = 1;
-            id_ = s;
-            break;
-          }
-          case 16: {
-            idCase_ = 2;
-            id_ = input.readInt64();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.agentsmith.ServiceProto.internal_static_api_v1alpha1_agentsmith_FollowAgentReq_descriptor;
@@ -96,6 +43,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int idCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object id_;
   public enum IdCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -137,6 +85,17 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USER_ID_FIELD_NUMBER = 1;
+  /**
+   * <pre>
+   * user_id of the given agent that can be obtain from ...
+   * </pre>
+   *
+   * <code>string user_id = 1 [json_name = "userId"];</code>
+   * @return Whether the userId field is set.
+   */
+  public boolean hasUserId() {
+    return idCase_ == 1;
+  }
   /**
    * <pre>
    * user_id of the given agent that can be obtain from ...
@@ -196,6 +155,18 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 asm_session_sid = 2 [json_name = "asmSessionSid"];</code>
+   * @return Whether the asmSessionSid field is set.
+   */
+  @java.lang.Override
+  public boolean hasAsmSessionSid() {
+    return idCase_ == 2;
+  }
+  /**
+   * <pre>
+   * asm_session_sid of the given agent that can be obtain from ...
+   * </pre>
+   *
+   * <code>int64 asm_session_sid = 2 [json_name = "asmSessionSid"];</code>
    * @return The asmSessionSid.
    */
   @java.lang.Override
@@ -227,7 +198,7 @@ private static final long serialVersionUID = 0L;
       output.writeInt64(
           2, (long)((java.lang.Long) id_));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -244,7 +215,7 @@ private static final long serialVersionUID = 0L;
         .computeInt64Size(
             2, (long)((java.lang.Long) id_));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -272,7 +243,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -296,7 +267,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -345,11 +316,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -417,22 +390,18 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       idCase_ = 0;
       id_ = null;
       return this;
@@ -461,15 +430,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq result = new com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq(this);
-      if (idCase_ == 1) {
-        result.id_ = id_;
-      }
-      if (idCase_ == 2) {
-        result.id_ = id_;
-      }
-      result.idCase_ = idCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq result) {
+      result.idCase_ = idCase_;
+      result.id_ = this.id_;
     }
 
     @java.lang.Override
@@ -531,7 +504,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -546,17 +519,41 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              idCase_ = 1;
+              id_ = s;
+              break;
+            } // case 10
+            case 16: {
+              id_ = input.readInt64();
+              idCase_ = 2;
+              break;
+            } // case 16
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int idCase_ = 0;
@@ -574,7 +571,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
+    /**
+     * <pre>
+     * user_id of the given agent that can be obtain from ...
+     * </pre>
+     *
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return Whether the userId field is set.
+     */
+    @java.lang.Override
+    public boolean hasUserId() {
+      return idCase_ == 1;
+    }
     /**
      * <pre>
      * user_id of the given agent that can be obtain from ...
@@ -639,10 +649,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  idCase_ = 1;
+      if (value == null) { throw new NullPointerException(); }
+      idCase_ = 1;
       id_ = value;
       onChanged();
       return this;
@@ -674,16 +682,25 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       idCase_ = 1;
       id_ = value;
       onChanged();
       return this;
     }
 
+    /**
+     * <pre>
+     * asm_session_sid of the given agent that can be obtain from ...
+     * </pre>
+     *
+     * <code>int64 asm_session_sid = 2 [json_name = "asmSessionSid"];</code>
+     * @return Whether the asmSessionSid field is set.
+     */
+    public boolean hasAsmSessionSid() {
+      return idCase_ == 2;
+    }
     /**
      * <pre>
      * asm_session_sid of the given agent that can be obtain from ...
@@ -708,6 +725,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAsmSessionSid(long value) {
+
       idCase_ = 2;
       id_ = value;
       onChanged();
@@ -762,7 +780,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new FollowAgentReq(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

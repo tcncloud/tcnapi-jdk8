@@ -27,151 +27,6 @@ private static final long serialVersionUID = 0L;
     return new VerificationFlow();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private VerificationFlow(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            pluginInstanceId_ = s;
-            break;
-          }
-          case 18: {
-            com.tcn.cloud.api.api.commons.integrations.VerificationExperianQueryBalance.Builder subBuilder = null;
-            if (valueCase_ == 2) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.integrations.VerificationExperianQueryBalance) value_).toBuilder();
-            }
-            value_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.integrations.VerificationExperianQueryBalance.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.integrations.VerificationExperianQueryBalance) value_);
-              value_ = subBuilder.buildPartial();
-            }
-            valueCase_ = 2;
-            break;
-          }
-          case 26: {
-            com.tcn.cloud.api.api.commons.integrations.VerificationExperianLinkData.Builder subBuilder = null;
-            if (valueCase_ == 3) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.integrations.VerificationExperianLinkData) value_).toBuilder();
-            }
-            value_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.integrations.VerificationExperianLinkData.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.integrations.VerificationExperianLinkData) value_);
-              value_ = subBuilder.buildPartial();
-            }
-            valueCase_ = 3;
-            break;
-          }
-          case 34: {
-            com.tcn.cloud.api.api.commons.integrations.VerificationExperianZipDob.Builder subBuilder = null;
-            if (valueCase_ == 4) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.integrations.VerificationExperianZipDob) value_).toBuilder();
-            }
-            value_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.integrations.VerificationExperianZipDob.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.integrations.VerificationExperianZipDob) value_);
-              value_ = subBuilder.buildPartial();
-            }
-            valueCase_ = 4;
-            break;
-          }
-          case 50: {
-            com.tcn.cloud.api.api.commons.integrations.VerificationAuthorizeNetCustomerProfile.Builder subBuilder = null;
-            if (valueCase_ == 6) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.integrations.VerificationAuthorizeNetCustomerProfile) value_).toBuilder();
-            }
-            value_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.integrations.VerificationAuthorizeNetCustomerProfile.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.integrations.VerificationAuthorizeNetCustomerProfile) value_);
-              value_ = subBuilder.buildPartial();
-            }
-            valueCase_ = 6;
-            break;
-          }
-          case 58: {
-            com.tcn.cloud.api.api.commons.integrations.VerificationAuthorizeNetLinkData.Builder subBuilder = null;
-            if (valueCase_ == 7) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.integrations.VerificationAuthorizeNetLinkData) value_).toBuilder();
-            }
-            value_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.integrations.VerificationAuthorizeNetLinkData.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.integrations.VerificationAuthorizeNetLinkData) value_);
-              value_ = subBuilder.buildPartial();
-            }
-            valueCase_ = 7;
-            break;
-          }
-          case 98: {
-            com.tcn.cloud.api.api.commons.integrations.VerificationJourney.Builder subBuilder = null;
-            if (valueCase_ == 12) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.integrations.VerificationJourney) value_).toBuilder();
-            }
-            value_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.integrations.VerificationJourney.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.integrations.VerificationJourney) value_);
-              value_ = subBuilder.buildPartial();
-            }
-            valueCase_ = 12;
-            break;
-          }
-          case 162: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              verificationFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.integrations.FieldDefinition>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            verificationFields_.add(
-                input.readMessage(com.tcn.cloud.api.api.commons.integrations.FieldDefinition.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        verificationFields_ = java.util.Collections.unmodifiableList(verificationFields_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_VerificationFlow_descriptor;
@@ -186,6 +41,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int valueCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object value_;
   public enum ValueCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -235,7 +91,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PLUGIN_INSTANCE_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object pluginInstanceId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object pluginInstanceId_ = "";
   /**
    * <code>string plugin_instance_id = 1 [json_name = "pluginInstanceId"];</code>
    * @return The pluginInstanceId.
@@ -459,6 +316,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VERIFICATION_FIELDS_FIELD_NUMBER = 20;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> verificationFields_;
   /**
    * <pre>
@@ -537,7 +395,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getPluginInstanceIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pluginInstanceId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pluginInstanceId_);
     }
     if (valueCase_ == 2) {
@@ -561,7 +419,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < verificationFields_.size(); i++) {
       output.writeMessage(20, verificationFields_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -570,7 +428,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getPluginInstanceIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pluginInstanceId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pluginInstanceId_);
     }
     if (valueCase_ == 2) {
@@ -601,7 +459,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(20, verificationFields_.get(i));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -649,7 +507,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -694,7 +552,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -743,11 +601,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.integrations.VerificationFlow parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.integrations.VerificationFlow parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -811,31 +671,44 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.integrations.VerificationFlow.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getVerificationFieldsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       pluginInstanceId_ = "";
-
+      if (experianQueryBalanceBuilder_ != null) {
+        experianQueryBalanceBuilder_.clear();
+      }
+      if (experianLinkDataBuilder_ != null) {
+        experianLinkDataBuilder_.clear();
+      }
+      if (experianZipDobBuilder_ != null) {
+        experianZipDobBuilder_.clear();
+      }
+      if (authorizeNetCustomerProfileBuilder_ != null) {
+        authorizeNetCustomerProfileBuilder_.clear();
+      }
+      if (authorizeNetLinkDataBuilder_ != null) {
+        authorizeNetLinkDataBuilder_.clear();
+      }
+      if (journeyBuilder_ != null) {
+        journeyBuilder_.clear();
+      }
       if (verificationFieldsBuilder_ == null) {
         verificationFields_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        verificationFields_ = null;
         verificationFieldsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000080);
       valueCase_ = 0;
       value_ = null;
       return this;
@@ -864,62 +737,59 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.integrations.VerificationFlow buildPartial() {
       com.tcn.cloud.api.api.commons.integrations.VerificationFlow result = new com.tcn.cloud.api.api.commons.integrations.VerificationFlow(this);
-      int from_bitField0_ = bitField0_;
-      result.pluginInstanceId_ = pluginInstanceId_;
-      if (valueCase_ == 2) {
-        if (experianQueryBalanceBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = experianQueryBalanceBuilder_.build();
-        }
-      }
-      if (valueCase_ == 3) {
-        if (experianLinkDataBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = experianLinkDataBuilder_.build();
-        }
-      }
-      if (valueCase_ == 4) {
-        if (experianZipDobBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = experianZipDobBuilder_.build();
-        }
-      }
-      if (valueCase_ == 6) {
-        if (authorizeNetCustomerProfileBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = authorizeNetCustomerProfileBuilder_.build();
-        }
-      }
-      if (valueCase_ == 7) {
-        if (authorizeNetLinkDataBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = authorizeNetLinkDataBuilder_.build();
-        }
-      }
-      if (valueCase_ == 12) {
-        if (journeyBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = journeyBuilder_.build();
-        }
-      }
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.integrations.VerificationFlow result) {
       if (verificationFieldsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000080) != 0)) {
           verificationFields_ = java.util.Collections.unmodifiableList(verificationFields_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000080);
         }
         result.verificationFields_ = verificationFields_;
       } else {
         result.verificationFields_ = verificationFieldsBuilder_.build();
       }
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.integrations.VerificationFlow result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.pluginInstanceId_ = pluginInstanceId_;
+      }
+    }
+
+    private void buildPartialOneofs(com.tcn.cloud.api.api.commons.integrations.VerificationFlow result) {
       result.valueCase_ = valueCase_;
-      onBuilt();
-      return result;
+      result.value_ = this.value_;
+      if (valueCase_ == 2 &&
+          experianQueryBalanceBuilder_ != null) {
+        result.value_ = experianQueryBalanceBuilder_.build();
+      }
+      if (valueCase_ == 3 &&
+          experianLinkDataBuilder_ != null) {
+        result.value_ = experianLinkDataBuilder_.build();
+      }
+      if (valueCase_ == 4 &&
+          experianZipDobBuilder_ != null) {
+        result.value_ = experianZipDobBuilder_.build();
+      }
+      if (valueCase_ == 6 &&
+          authorizeNetCustomerProfileBuilder_ != null) {
+        result.value_ = authorizeNetCustomerProfileBuilder_.build();
+      }
+      if (valueCase_ == 7 &&
+          authorizeNetLinkDataBuilder_ != null) {
+        result.value_ = authorizeNetLinkDataBuilder_.build();
+      }
+      if (valueCase_ == 12 &&
+          journeyBuilder_ != null) {
+        result.value_ = journeyBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -968,13 +838,14 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.commons.integrations.VerificationFlow.getDefaultInstance()) return this;
       if (!other.getPluginInstanceId().isEmpty()) {
         pluginInstanceId_ = other.pluginInstanceId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (verificationFieldsBuilder_ == null) {
         if (!other.verificationFields_.isEmpty()) {
           if (verificationFields_.isEmpty()) {
             verificationFields_ = other.verificationFields_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000080);
           } else {
             ensureVerificationFieldsIsMutable();
             verificationFields_.addAll(other.verificationFields_);
@@ -987,7 +858,7 @@ private static final long serialVersionUID = 0L;
             verificationFieldsBuilder_.dispose();
             verificationFieldsBuilder_ = null;
             verificationFields_ = other.verificationFields_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000080);
             verificationFieldsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getVerificationFieldsFieldBuilder() : null;
@@ -1025,7 +896,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1040,17 +911,90 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.integrations.VerificationFlow parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              pluginInstanceId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  getExperianQueryBalanceFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 2;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getExperianLinkDataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getExperianZipDobFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 4;
+              break;
+            } // case 34
+            case 50: {
+              input.readMessage(
+                  getAuthorizeNetCustomerProfileFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 6;
+              break;
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  getAuthorizeNetLinkDataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 7;
+              break;
+            } // case 58
+            case 98: {
+              input.readMessage(
+                  getJourneyFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 12;
+              break;
+            } // case 98
+            case 162: {
+              com.tcn.cloud.api.api.commons.integrations.FieldDefinition m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.integrations.FieldDefinition.parser(),
+                      extensionRegistry);
+              if (verificationFieldsBuilder_ == null) {
+                ensureVerificationFieldsIsMutable();
+                verificationFields_.add(m);
+              } else {
+                verificationFieldsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 162
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.integrations.VerificationFlow) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int valueCase_ = 0;
@@ -1111,11 +1055,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPluginInstanceId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       pluginInstanceId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1124,8 +1066,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPluginInstanceId() {
-      
       pluginInstanceId_ = getDefaultInstance().getPluginInstanceId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1136,12 +1078,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPluginInstanceIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       pluginInstanceId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1220,8 +1160,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (valueCase_ == 2) {
           experianQueryBalanceBuilder_.mergeFrom(value);
+        } else {
+          experianQueryBalanceBuilder_.setMessage(value);
         }
-        experianQueryBalanceBuilder_.setMessage(value);
       }
       valueCase_ = 2;
       return this;
@@ -1283,7 +1224,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 2;
-      onChanged();;
+      onChanged();
       return experianQueryBalanceBuilder_;
     }
 
@@ -1361,8 +1302,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (valueCase_ == 3) {
           experianLinkDataBuilder_.mergeFrom(value);
+        } else {
+          experianLinkDataBuilder_.setMessage(value);
         }
-        experianLinkDataBuilder_.setMessage(value);
       }
       valueCase_ = 3;
       return this;
@@ -1424,7 +1366,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 3;
-      onChanged();;
+      onChanged();
       return experianLinkDataBuilder_;
     }
 
@@ -1502,8 +1444,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (valueCase_ == 4) {
           experianZipDobBuilder_.mergeFrom(value);
+        } else {
+          experianZipDobBuilder_.setMessage(value);
         }
-        experianZipDobBuilder_.setMessage(value);
       }
       valueCase_ = 4;
       return this;
@@ -1565,7 +1508,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 4;
-      onChanged();;
+      onChanged();
       return experianZipDobBuilder_;
     }
 
@@ -1643,8 +1586,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (valueCase_ == 6) {
           authorizeNetCustomerProfileBuilder_.mergeFrom(value);
+        } else {
+          authorizeNetCustomerProfileBuilder_.setMessage(value);
         }
-        authorizeNetCustomerProfileBuilder_.setMessage(value);
       }
       valueCase_ = 6;
       return this;
@@ -1706,7 +1650,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 6;
-      onChanged();;
+      onChanged();
       return authorizeNetCustomerProfileBuilder_;
     }
 
@@ -1784,8 +1728,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (valueCase_ == 7) {
           authorizeNetLinkDataBuilder_.mergeFrom(value);
+        } else {
+          authorizeNetLinkDataBuilder_.setMessage(value);
         }
-        authorizeNetLinkDataBuilder_.setMessage(value);
       }
       valueCase_ = 7;
       return this;
@@ -1847,7 +1792,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 7;
-      onChanged();;
+      onChanged();
       return authorizeNetLinkDataBuilder_;
     }
 
@@ -1925,8 +1870,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (valueCase_ == 12) {
           journeyBuilder_.mergeFrom(value);
+        } else {
+          journeyBuilder_.setMessage(value);
         }
-        journeyBuilder_.setMessage(value);
       }
       valueCase_ = 12;
       return this;
@@ -1988,16 +1934,16 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 12;
-      onChanged();;
+      onChanged();
       return journeyBuilder_;
     }
 
     private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> verificationFields_ =
       java.util.Collections.emptyList();
     private void ensureVerificationFieldsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000080) != 0)) {
         verificationFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.integrations.FieldDefinition>(verificationFields_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000080;
        }
     }
 
@@ -2202,7 +2148,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearVerificationFields() {
       if (verificationFieldsBuilder_ == null) {
         verificationFields_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
       } else {
         verificationFieldsBuilder_.clear();
@@ -2314,7 +2260,7 @@ private static final long serialVersionUID = 0L;
         verificationFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder>(
                 verificationFields_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000080) != 0),
                 getParentForChildren(),
                 isClean());
         verificationFields_ = null;
@@ -2354,7 +2300,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new VerificationFlow(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -1,25 +1,13 @@
 package com.tcn.cloud.api.api.v1alpha1.ghostnotifier;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.14.0)",
+    value = "by gRPC proto compiler (version 1.55.1)",
     comments = "Source: api/v1alpha1/ghostnotifier/service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class GhostNotifierApiGrpc {
 
   private GhostNotifierApiGrpc() {}
@@ -41,29 +29,35 @@ public final class GhostNotifierApiGrpc {
     if ((getListNotificationsMethod = GhostNotifierApiGrpc.getListNotificationsMethod) == null) {
       synchronized (GhostNotifierApiGrpc.class) {
         if ((getListNotificationsMethod = GhostNotifierApiGrpc.getListNotificationsMethod) == null) {
-          GhostNotifierApiGrpc.getListNotificationsMethod = getListNotificationsMethod = 
+          GhostNotifierApiGrpc.getListNotificationsMethod = getListNotificationsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.ghostnotifier.ListNotificationsReq, com.tcn.cloud.api.api.commons.GhostNotification>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.ghostnotifier.GhostNotifierApi", "ListNotifications"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListNotifications"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.ghostnotifier.ListNotificationsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.GhostNotification.getDefaultInstance()))
-                  .setSchemaDescriptor(new GhostNotifierApiMethodDescriptorSupplier("ListNotifications"))
-                  .build();
-          }
+              .setSchemaDescriptor(new GhostNotifierApiMethodDescriptorSupplier("ListNotifications"))
+              .build();
         }
-     }
-     return getListNotificationsMethod;
+      }
+    }
+    return getListNotificationsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static GhostNotifierApiStub newStub(io.grpc.Channel channel) {
-    return new GhostNotifierApiStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<GhostNotifierApiStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GhostNotifierApiStub>() {
+        @java.lang.Override
+        public GhostNotifierApiStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GhostNotifierApiStub(channel, callOptions);
+        }
+      };
+    return GhostNotifierApiStub.newStub(factory, channel);
   }
 
   /**
@@ -71,7 +65,14 @@ public final class GhostNotifierApiGrpc {
    */
   public static GhostNotifierApiBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new GhostNotifierApiBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<GhostNotifierApiBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GhostNotifierApiBlockingStub>() {
+        @java.lang.Override
+        public GhostNotifierApiBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GhostNotifierApiBlockingStub(channel, callOptions);
+        }
+      };
+    return GhostNotifierApiBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -79,51 +80,55 @@ public final class GhostNotifierApiGrpc {
    */
   public static GhostNotifierApiFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new GhostNotifierApiFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<GhostNotifierApiFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GhostNotifierApiFutureStub>() {
+        @java.lang.Override
+        public GhostNotifierApiFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GhostNotifierApiFutureStub(channel, callOptions);
+        }
+      };
+    return GhostNotifierApiFutureStub.newStub(factory, channel);
   }
 
   /**
    */
-  public static abstract class GhostNotifierApiImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * Opens a server side stream that will forward and ghost notifications to the client for the given user
      * </pre>
      */
-    public void listNotifications(com.tcn.cloud.api.api.v1alpha1.ghostnotifier.ListNotificationsReq request,
+    default void listNotifications(com.tcn.cloud.api.api.v1alpha1.ghostnotifier.ListNotificationsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.GhostNotification> responseObserver) {
-      asyncUnimplementedUnaryCall(getListNotificationsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getListNotificationsMethod(),
-            asyncServerStreamingCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.ghostnotifier.ListNotificationsReq,
-                com.tcn.cloud.api.api.commons.GhostNotification>(
-                  this, METHODID_LIST_NOTIFICATIONS)))
-          .build();
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListNotificationsMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service GhostNotifierApi.
    */
-  public static final class GhostNotifierApiStub extends io.grpc.stub.AbstractStub<GhostNotifierApiStub> {
-    private GhostNotifierApiStub(io.grpc.Channel channel) {
-      super(channel);
-    }
+  public static abstract class GhostNotifierApiImplBase
+      implements io.grpc.BindableService, AsyncService {
 
-    private GhostNotifierApiStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return GhostNotifierApiGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service GhostNotifierApi.
+   */
+  public static final class GhostNotifierApiStub
+      extends io.grpc.stub.AbstractAsyncStub<GhostNotifierApiStub> {
+    private GhostNotifierApiStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GhostNotifierApiStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected GhostNotifierApiStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GhostNotifierApiStub(channel, callOptions);
     }
 
@@ -134,26 +139,24 @@ public final class GhostNotifierApiGrpc {
      */
     public void listNotifications(com.tcn.cloud.api.api.v1alpha1.ghostnotifier.ListNotificationsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.GhostNotification> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListNotificationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service GhostNotifierApi.
    */
-  public static final class GhostNotifierApiBlockingStub extends io.grpc.stub.AbstractStub<GhostNotifierApiBlockingStub> {
-    private GhostNotifierApiBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private GhostNotifierApiBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class GhostNotifierApiBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<GhostNotifierApiBlockingStub> {
+    private GhostNotifierApiBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GhostNotifierApiBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected GhostNotifierApiBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GhostNotifierApiBlockingStub(channel, callOptions);
     }
 
@@ -164,26 +167,24 @@ public final class GhostNotifierApiGrpc {
      */
     public java.util.Iterator<com.tcn.cloud.api.api.commons.GhostNotification> listNotifications(
         com.tcn.cloud.api.api.v1alpha1.ghostnotifier.ListNotificationsReq request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListNotificationsMethod(), getCallOptions(), request);
     }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service GhostNotifierApi.
    */
-  public static final class GhostNotifierApiFutureStub extends io.grpc.stub.AbstractStub<GhostNotifierApiFutureStub> {
-    private GhostNotifierApiFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private GhostNotifierApiFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class GhostNotifierApiFutureStub
+      extends io.grpc.stub.AbstractFutureStub<GhostNotifierApiFutureStub> {
+    private GhostNotifierApiFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GhostNotifierApiFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected GhostNotifierApiFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GhostNotifierApiFutureStub(channel, callOptions);
     }
   }
@@ -195,10 +196,10 @@ public final class GhostNotifierApiGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final GhostNotifierApiImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(GhostNotifierApiImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -225,6 +226,18 @@ public final class GhostNotifierApiGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getListNotificationsMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.ghostnotifier.ListNotificationsReq,
+              com.tcn.cloud.api.api.commons.GhostNotification>(
+                service, METHODID_LIST_NOTIFICATIONS)))
+        .build();
   }
 
   private static abstract class GhostNotifierApiBaseDescriptorSupplier

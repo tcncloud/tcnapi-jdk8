@@ -67,14 +67,14 @@ public interface InvoiceDynamicJourneyOrBuilder extends
   /**
    * <code>map&lt;string, .api.commons.integrations.ListOfStrings&gt; journey_fields = 3 [json_name = "journeyFields"];</code>
    */
-
-  com.tcn.cloud.api.api.commons.integrations.ListOfStrings getJourneyFieldsOrDefault(
+  /* nullable */
+com.tcn.cloud.api.api.commons.integrations.ListOfStrings getJourneyFieldsOrDefault(
       java.lang.String key,
-      com.tcn.cloud.api.api.commons.integrations.ListOfStrings defaultValue);
+      /* nullable */
+com.tcn.cloud.api.api.commons.integrations.ListOfStrings defaultValue);
   /**
    * <code>map&lt;string, .api.commons.integrations.ListOfStrings&gt; journey_fields = 3 [json_name = "journeyFields"];</code>
    */
-
   com.tcn.cloud.api.api.commons.integrations.ListOfStrings getJourneyFieldsOrThrow(
       java.lang.String key);
 }

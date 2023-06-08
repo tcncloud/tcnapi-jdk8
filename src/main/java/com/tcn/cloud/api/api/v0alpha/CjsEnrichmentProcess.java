@@ -31,89 +31,6 @@ private static final long serialVersionUID = 0L;
     return new CjsEnrichmentProcess();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private CjsEnrichmentProcess(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            cjsCollectionId_ = s;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            keyField_ = s;
-            break;
-          }
-          case 40: {
-            int rawValue = input.readEnum();
-
-            enrichType_ = rawValue;
-            break;
-          }
-          case 48: {
-            int rawValue = input.readEnum();
-
-            primarySource_ = rawValue;
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            cjsKeyFieldName_ = s;
-            break;
-          }
-          case 64: {
-
-            columnOverwrite_ = input.readBool();
-            break;
-          }
-          case 72: {
-            int rawValue = input.readEnum();
-
-            dedupKeyPolicy_ = rawValue;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_CjsEnrichmentProcess_descriptor;
@@ -128,7 +45,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CJS_COLLECTION_ID_FIELD_NUMBER = 3;
-  private volatile java.lang.Object cjsCollectionId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object cjsCollectionId_ = "";
   /**
    * <pre>
    * Specifies the Journey collection to be used
@@ -178,7 +96,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int KEY_FIELD_FIELD_NUMBER = 4;
-  private volatile java.lang.Object keyField_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object keyField_ = "";
   /**
    * <pre>
    * Specifies the LMS list field
@@ -228,7 +147,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENRICH_TYPE_FIELD_NUMBER = 5;
-  private int enrichType_;
+  private int enrichType_ = 0;
   /**
    * <pre>
    * Specifies how to enrich the LMS list
@@ -259,13 +178,12 @@ private static final long serialVersionUID = 0L;
    * @return The enrichType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.EnrichmentType getEnrichType() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.EnrichmentType result = com.tcn.cloud.api.api.commons.EnrichmentType.valueOf(enrichType_);
+    com.tcn.cloud.api.api.commons.EnrichmentType result = com.tcn.cloud.api.api.commons.EnrichmentType.forNumber(enrichType_);
     return result == null ? com.tcn.cloud.api.api.commons.EnrichmentType.UNRECOGNIZED : result;
   }
 
   public static final int PRIMARY_SOURCE_FIELD_NUMBER = 6;
-  private int primarySource_;
+  private int primarySource_ = 0;
   /**
    * <pre>
    * Specifies the primary list (LMS or CJS)
@@ -292,13 +210,13 @@ private static final long serialVersionUID = 0L;
    * @return The primarySource.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.PrimarySource getPrimarySource() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.PrimarySource result = com.tcn.cloud.api.api.commons.PrimarySource.valueOf(primarySource_);
+    com.tcn.cloud.api.api.commons.PrimarySource result = com.tcn.cloud.api.api.commons.PrimarySource.forNumber(primarySource_);
     return result == null ? com.tcn.cloud.api.api.commons.PrimarySource.UNRECOGNIZED : result;
   }
 
   public static final int CJS_KEY_FIELD_NAME_FIELD_NUMBER = 7;
-  private volatile java.lang.Object cjsKeyFieldName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object cjsKeyFieldName_ = "";
   /**
    * <pre>
    * Specifies the Journey collection field
@@ -350,7 +268,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COLUMN_OVERWRITE_FIELD_NUMBER = 8;
-  private boolean columnOverwrite_;
+  private boolean columnOverwrite_ = false;
   /**
    * <pre>
    * Specifies if the primary list columns
@@ -367,7 +285,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEDUP_KEY_POLICY_FIELD_NUMBER = 9;
-  private int dedupKeyPolicy_;
+  private int dedupKeyPolicy_ = 0;
   /**
    * <pre>
    * Specifies what to do when there
@@ -390,8 +308,7 @@ private static final long serialVersionUID = 0L;
    * @return The dedupKeyPolicy.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.DedupKeyPolicy getDedupKeyPolicy() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.DedupKeyPolicy result = com.tcn.cloud.api.api.commons.DedupKeyPolicy.valueOf(dedupKeyPolicy_);
+    com.tcn.cloud.api.api.commons.DedupKeyPolicy result = com.tcn.cloud.api.api.commons.DedupKeyPolicy.forNumber(dedupKeyPolicy_);
     return result == null ? com.tcn.cloud.api.api.commons.DedupKeyPolicy.UNRECOGNIZED : result;
   }
 
@@ -409,10 +326,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getCjsCollectionIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cjsCollectionId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, cjsCollectionId_);
     }
-    if (!getKeyFieldBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyField_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, keyField_);
     }
     if (enrichType_ != com.tcn.cloud.api.api.commons.EnrichmentType.ENRICHMENT_TYPE_OR.getNumber()) {
@@ -421,7 +338,7 @@ private static final long serialVersionUID = 0L;
     if (primarySource_ != com.tcn.cloud.api.api.commons.PrimarySource.PRIMARY_SOURCE_LMS.getNumber()) {
       output.writeEnum(6, primarySource_);
     }
-    if (!getCjsKeyFieldNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cjsKeyFieldName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, cjsKeyFieldName_);
     }
     if (columnOverwrite_ != false) {
@@ -430,7 +347,7 @@ private static final long serialVersionUID = 0L;
     if (dedupKeyPolicy_ != com.tcn.cloud.api.api.commons.DedupKeyPolicy.KEEP_FIRST.getNumber()) {
       output.writeEnum(9, dedupKeyPolicy_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -439,10 +356,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getCjsCollectionIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cjsCollectionId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, cjsCollectionId_);
     }
-    if (!getKeyFieldBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyField_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, keyField_);
     }
     if (enrichType_ != com.tcn.cloud.api.api.commons.EnrichmentType.ENRICHMENT_TYPE_OR.getNumber()) {
@@ -453,7 +370,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(6, primarySource_);
     }
-    if (!getCjsKeyFieldNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cjsKeyFieldName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, cjsKeyFieldName_);
     }
     if (columnOverwrite_ != false) {
@@ -464,7 +381,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(9, dedupKeyPolicy_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -490,7 +407,7 @@ private static final long serialVersionUID = 0L;
     if (getColumnOverwrite()
         != other.getColumnOverwrite()) return false;
     if (dedupKeyPolicy_ != other.dedupKeyPolicy_) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -516,7 +433,7 @@ private static final long serialVersionUID = 0L;
         getColumnOverwrite());
     hash = (37 * hash) + DEDUP_KEY_POLICY_FIELD_NUMBER;
     hash = (53 * hash) + dedupKeyPolicy_;
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -565,11 +482,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.CjsEnrichmentProcess parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.CjsEnrichmentProcess parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -633,36 +552,25 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CjsEnrichmentProcess.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       cjsCollectionId_ = "";
-
       keyField_ = "";
-
       enrichType_ = 0;
-
       primarySource_ = 0;
-
       cjsKeyFieldName_ = "";
-
       columnOverwrite_ = false;
-
       dedupKeyPolicy_ = 0;
-
       return this;
     }
 
@@ -689,15 +597,34 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.CjsEnrichmentProcess buildPartial() {
       com.tcn.cloud.api.api.v0alpha.CjsEnrichmentProcess result = new com.tcn.cloud.api.api.v0alpha.CjsEnrichmentProcess(this);
-      result.cjsCollectionId_ = cjsCollectionId_;
-      result.keyField_ = keyField_;
-      result.enrichType_ = enrichType_;
-      result.primarySource_ = primarySource_;
-      result.cjsKeyFieldName_ = cjsKeyFieldName_;
-      result.columnOverwrite_ = columnOverwrite_;
-      result.dedupKeyPolicy_ = dedupKeyPolicy_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.CjsEnrichmentProcess result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.cjsCollectionId_ = cjsCollectionId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.keyField_ = keyField_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.enrichType_ = enrichType_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.primarySource_ = primarySource_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.cjsKeyFieldName_ = cjsKeyFieldName_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.columnOverwrite_ = columnOverwrite_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.dedupKeyPolicy_ = dedupKeyPolicy_;
+      }
     }
 
     @java.lang.Override
@@ -746,10 +673,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.CjsEnrichmentProcess.getDefaultInstance()) return this;
       if (!other.getCjsCollectionId().isEmpty()) {
         cjsCollectionId_ = other.cjsCollectionId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getKeyField().isEmpty()) {
         keyField_ = other.keyField_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.enrichType_ != 0) {
@@ -760,6 +689,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCjsKeyFieldName().isEmpty()) {
         cjsKeyFieldName_ = other.cjsKeyFieldName_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.getColumnOverwrite() != false) {
@@ -768,7 +698,7 @@ private static final long serialVersionUID = 0L;
       if (other.dedupKeyPolicy_ != 0) {
         setDedupKeyPolicyValue(other.getDedupKeyPolicyValue());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -783,19 +713,68 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.CjsEnrichmentProcess parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 26: {
+              cjsCollectionId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 26
+            case 34: {
+              keyField_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 34
+            case 40: {
+              enrichType_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 40
+            case 48: {
+              primarySource_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 48
+            case 58: {
+              cjsKeyFieldName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 58
+            case 64: {
+              columnOverwrite_ = input.readBool();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 64
+            case 72: {
+              dedupKeyPolicy_ = input.readEnum();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 72
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.CjsEnrichmentProcess) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object cjsCollectionId_ = "";
     /**
@@ -856,11 +835,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCjsCollectionId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       cjsCollectionId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -875,8 +852,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCjsCollectionId() {
-      
       cjsCollectionId_ = getDefaultInstance().getCjsCollectionId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -893,12 +870,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCjsCollectionIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       cjsCollectionId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -962,11 +937,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeyField(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       keyField_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -981,8 +954,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearKeyField() {
-      
       keyField_ = getDefaultInstance().getKeyField();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -999,12 +972,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeyFieldBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       keyField_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1041,8 +1012,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnrichTypeValue(int value) {
-      
       enrichType_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1061,8 +1032,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.EnrichmentType getEnrichType() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.EnrichmentType result = com.tcn.cloud.api.api.commons.EnrichmentType.valueOf(enrichType_);
+      com.tcn.cloud.api.api.commons.EnrichmentType result = com.tcn.cloud.api.api.commons.EnrichmentType.forNumber(enrichType_);
       return result == null ? com.tcn.cloud.api.api.commons.EnrichmentType.UNRECOGNIZED : result;
     }
     /**
@@ -1083,7 +1053,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       enrichType_ = value.getNumber();
       onChanged();
       return this;
@@ -1102,7 +1072,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnrichType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       enrichType_ = 0;
       onChanged();
       return this;
@@ -1136,8 +1106,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPrimarySourceValue(int value) {
-      
       primarySource_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1154,8 +1124,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.PrimarySource getPrimarySource() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.PrimarySource result = com.tcn.cloud.api.api.commons.PrimarySource.valueOf(primarySource_);
+      com.tcn.cloud.api.api.commons.PrimarySource result = com.tcn.cloud.api.api.commons.PrimarySource.forNumber(primarySource_);
       return result == null ? com.tcn.cloud.api.api.commons.PrimarySource.UNRECOGNIZED : result;
     }
     /**
@@ -1174,7 +1143,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       primarySource_ = value.getNumber();
       onChanged();
       return this;
@@ -1191,7 +1160,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPrimarySource() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       primarySource_ = 0;
       onChanged();
       return this;
@@ -1259,11 +1228,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCjsKeyFieldName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       cjsKeyFieldName_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1279,8 +1246,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCjsKeyFieldName() {
-      
       cjsKeyFieldName_ = getDefaultInstance().getCjsKeyFieldName();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1298,12 +1265,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCjsKeyFieldNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       cjsKeyFieldName_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1335,8 +1300,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setColumnOverwrite(boolean value) {
-      
+
       columnOverwrite_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1351,7 +1317,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearColumnOverwrite() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       columnOverwrite_ = false;
       onChanged();
       return this;
@@ -1381,8 +1347,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDedupKeyPolicyValue(int value) {
-      
       dedupKeyPolicy_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1397,8 +1363,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.DedupKeyPolicy getDedupKeyPolicy() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.DedupKeyPolicy result = com.tcn.cloud.api.api.commons.DedupKeyPolicy.valueOf(dedupKeyPolicy_);
+      com.tcn.cloud.api.api.commons.DedupKeyPolicy result = com.tcn.cloud.api.api.commons.DedupKeyPolicy.forNumber(dedupKeyPolicy_);
       return result == null ? com.tcn.cloud.api.api.commons.DedupKeyPolicy.UNRECOGNIZED : result;
     }
     /**
@@ -1415,7 +1380,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000040;
       dedupKeyPolicy_ = value.getNumber();
       onChanged();
       return this;
@@ -1430,7 +1395,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDedupKeyPolicy() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       dedupKeyPolicy_ = 0;
       onChanged();
       return this;
@@ -1468,7 +1433,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new CjsEnrichmentProcess(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

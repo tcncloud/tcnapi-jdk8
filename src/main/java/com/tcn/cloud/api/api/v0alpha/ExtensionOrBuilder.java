@@ -124,5 +124,5 @@ public interface ExtensionOrBuilder extends
    */
   int getTotalMessages();
 
-  public com.tcn.cloud.api.api.v0alpha.Extension.ExtensionTypeCase getExtensionTypeCase();
+  com.tcn.cloud.api.api.v0alpha.Extension.ExtensionTypeCase getExtensionTypeCase();
 }

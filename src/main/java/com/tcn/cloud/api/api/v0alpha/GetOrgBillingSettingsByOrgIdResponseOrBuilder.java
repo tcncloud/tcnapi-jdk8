@@ -73,10 +73,11 @@ public interface GetOrgBillingSettingsByOrgIdResponseOrBuilder extends
    *
    * <code>map&lt;int32, .api.v0alpha.BillingRegionMap&gt; country_default_regions = 3 [json_name = "countryDefaultRegions"];</code>
    */
-
-  com.tcn.cloud.api.api.v0alpha.BillingRegionMap getCountryDefaultRegionsOrDefault(
+  /* nullable */
+com.tcn.cloud.api.api.v0alpha.BillingRegionMap getCountryDefaultRegionsOrDefault(
       int key,
-      com.tcn.cloud.api.api.v0alpha.BillingRegionMap defaultValue);
+      /* nullable */
+com.tcn.cloud.api.api.v0alpha.BillingRegionMap defaultValue);
   /**
    * <pre>
    * country_default_regions contains the billing data for regions
@@ -87,7 +88,6 @@ public interface GetOrgBillingSettingsByOrgIdResponseOrBuilder extends
    *
    * <code>map&lt;int32, .api.v0alpha.BillingRegionMap&gt; country_default_regions = 3 [json_name = "countryDefaultRegions"];</code>
    */
-
   com.tcn.cloud.api.api.v0alpha.BillingRegionMap getCountryDefaultRegionsOrThrow(
       int key);
 }

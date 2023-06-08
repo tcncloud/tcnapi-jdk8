@@ -82,5 +82,5 @@ public interface CredentialDataOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.delivery.AESPasswordOrBuilder getAesPasswordOrBuilder();
 
-  public com.tcn.cloud.api.api.v1alpha1.delivery.CredentialData.DataCase getDataCase();
+  com.tcn.cloud.api.api.v1alpha1.delivery.CredentialData.DataCase getDataCase();
 }

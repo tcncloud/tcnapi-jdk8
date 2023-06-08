@@ -30,594 +30,6 @@ private static final long serialVersionUID = 0L;
     return new DetailConfig();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private DetailConfig(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 18: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 2) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 2;
-            break;
-          }
-          case 802: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 100) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 100;
-            break;
-          }
-          case 810: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 101) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 101;
-            break;
-          }
-          case 818: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder subBuilder = null;
-            if (configCase_ == 102) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 102;
-            break;
-          }
-          case 826: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 103) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 103;
-            break;
-          }
-          case 834: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 104) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 104;
-            break;
-          }
-          case 842: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder subBuilder = null;
-            if (configCase_ == 105) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 105;
-            break;
-          }
-          case 850: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 106) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 106;
-            break;
-          }
-          case 858: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 107) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 107;
-            break;
-          }
-          case 866: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 108) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 108;
-            break;
-          }
-          case 874: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 109) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 109;
-            break;
-          }
-          case 882: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder subBuilder = null;
-            if (configCase_ == 110) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 110;
-            break;
-          }
-          case 890: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 111) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 111;
-            break;
-          }
-          case 898: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 112) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 112;
-            break;
-          }
-          case 906: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 113) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 113;
-            break;
-          }
-          case 914: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder subBuilder = null;
-            if (configCase_ == 114) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 114;
-            break;
-          }
-          case 922: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 115) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 115;
-            break;
-          }
-          case 930: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder subBuilder = null;
-            if (configCase_ == 116) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 116;
-            break;
-          }
-          case 938: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder subBuilder = null;
-            if (configCase_ == 117) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 117;
-            break;
-          }
-          case 946: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder subBuilder = null;
-            if (configCase_ == 118) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 118;
-            break;
-          }
-          case 954: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 119) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 119;
-            break;
-          }
-          case 962: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder subBuilder = null;
-            if (configCase_ == 120) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 120;
-            break;
-          }
-          case 970: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder subBuilder = null;
-            if (configCase_ == 121) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 121;
-            break;
-          }
-          case 978: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder subBuilder = null;
-            if (configCase_ == 122) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 122;
-            break;
-          }
-          case 986: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.Builder subBuilder = null;
-            if (configCase_ == 123) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicAmountConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 123;
-            break;
-          }
-          case 994: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 124) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 124;
-            break;
-          }
-          case 1002: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 125) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 125;
-            break;
-          }
-          case 1010: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 126) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 126;
-            break;
-          }
-          case 1018: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 127) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 127;
-            break;
-          }
-          case 1026: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 128) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 128;
-            break;
-          }
-          case 1034: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 129) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 129;
-            break;
-          }
-          case 1042: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 130) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 130;
-            break;
-          }
-          case 1050: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 131) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 131;
-            break;
-          }
-          case 1058: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 132) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 132;
-            break;
-          }
-          case 1066: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 133) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 133;
-            break;
-          }
-          case 1074: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 134) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 134;
-            break;
-          }
-          case 1082: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 135) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 135;
-            break;
-          }
-          case 1602: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 200) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 200;
-            break;
-          }
-          case 1610: {
-            com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder subBuilder = null;
-            if (configCase_ == 201) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_).toBuilder();
-            }
-            config_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
-              config_ = subBuilder.buildPartial();
-            }
-            configCase_ = 201;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.billing.DetailProto.internal_static_api_commons_billing_DetailConfig_descriptor;
@@ -632,6 +44,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int configCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object config_;
   public enum ConfigCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -2110,7 +1523,7 @@ private static final long serialVersionUID = 0L;
     if (configCase_ == 201) {
       output.writeMessage(201, (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -2275,7 +1688,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(201, (com.tcn.cloud.api.api.commons.billing.modules.BasicConfig) config_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -2451,7 +1864,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -2622,7 +2035,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -2671,11 +2084,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.billing.DetailConfig parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.billing.DetailConfig parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2744,22 +2159,136 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.billing.DetailConfig.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      bitField1_ = 0;
+      if (agentSeatsConfigBuilder_ != null) {
+        agentSeatsConfigBuilder_.clear();
+      }
+      if (agentTextMessageChatConfigBuilder_ != null) {
+        agentTextMessageChatConfigBuilder_.clear();
+      }
+      if (agentTextMessageEmailMessageConfigBuilder_ != null) {
+        agentTextMessageEmailMessageConfigBuilder_.clear();
+      }
+      if (agentTextMessageEmailSizeConfigBuilder_ != null) {
+        agentTextMessageEmailSizeConfigBuilder_.clear();
+      }
+      if (agentTextMessageSmsConfigBuilder_ != null) {
+        agentTextMessageSmsConfigBuilder_.clear();
+      }
+      if (taskMessageSentEmailMessageConfigBuilder_ != null) {
+        taskMessageSentEmailMessageConfigBuilder_.clear();
+      }
+      if (taskMessageSentEmailSizeConfigBuilder_ != null) {
+        taskMessageSentEmailSizeConfigBuilder_.clear();
+      }
+      if (taskMessageSentSmsConfigBuilder_ != null) {
+        taskMessageSentSmsConfigBuilder_.clear();
+      }
+      if (connectedInboxPollConfigBuilder_ != null) {
+        connectedInboxPollConfigBuilder_.clear();
+      }
+      if (managerTextMessageChatConfigBuilder_ != null) {
+        managerTextMessageChatConfigBuilder_.clear();
+      }
+      if (managerTextMessageEmailMessageConfigBuilder_ != null) {
+        managerTextMessageEmailMessageConfigBuilder_.clear();
+      }
+      if (managerTextMessageEmailSizeConfigBuilder_ != null) {
+        managerTextMessageEmailSizeConfigBuilder_.clear();
+      }
+      if (managerTextMessageSmsConfigBuilder_ != null) {
+        managerTextMessageSmsConfigBuilder_.clear();
+      }
+      if (customerTextMessageChatConfigBuilder_ != null) {
+        customerTextMessageChatConfigBuilder_.clear();
+      }
+      if (customerTextMessageEmailMessageConfigBuilder_ != null) {
+        customerTextMessageEmailMessageConfigBuilder_.clear();
+      }
+      if (customerTextMessageEmailSizeConfigBuilder_ != null) {
+        customerTextMessageEmailSizeConfigBuilder_.clear();
+      }
+      if (customerTextMessageSmsConfigBuilder_ != null) {
+        customerTextMessageSmsConfigBuilder_.clear();
+      }
+      if (agentTextMessageChatSizeConfigBuilder_ != null) {
+        agentTextMessageChatSizeConfigBuilder_.clear();
+      }
+      if (managerTextMessageChatSizeConfigBuilder_ != null) {
+        managerTextMessageChatSizeConfigBuilder_.clear();
+      }
+      if (customerTextMessageChatSizeConfigBuilder_ != null) {
+        customerTextMessageChatSizeConfigBuilder_.clear();
+      }
+      if (connectedInboxCreatedConfigBuilder_ != null) {
+        connectedInboxCreatedConfigBuilder_.clear();
+      }
+      if (agentTextMessageSmsSizeConfigBuilder_ != null) {
+        agentTextMessageSmsSizeConfigBuilder_.clear();
+      }
+      if (managerTextMessageSmsSizeConfigBuilder_ != null) {
+        managerTextMessageSmsSizeConfigBuilder_.clear();
+      }
+      if (customerTextMessageSmsSizeConfigBuilder_ != null) {
+        customerTextMessageSmsSizeConfigBuilder_.clear();
+      }
+      if (taskMessageSentSmsSizeConfigBuilder_ != null) {
+        taskMessageSentSmsSizeConfigBuilder_.clear();
+      }
+      if (agentChatMessageUnitsConfigBuilder_ != null) {
+        agentChatMessageUnitsConfigBuilder_.clear();
+      }
+      if (agentEmailMessageUnitsConfigBuilder_ != null) {
+        agentEmailMessageUnitsConfigBuilder_.clear();
+      }
+      if (agentSmsMessageUnitsConfigBuilder_ != null) {
+        agentSmsMessageUnitsConfigBuilder_.clear();
+      }
+      if (managerChatMessageUnitsConfigBuilder_ != null) {
+        managerChatMessageUnitsConfigBuilder_.clear();
+      }
+      if (managerEmailMessageUnitsConfigBuilder_ != null) {
+        managerEmailMessageUnitsConfigBuilder_.clear();
+      }
+      if (managerSmsMessageUnitsConfigBuilder_ != null) {
+        managerSmsMessageUnitsConfigBuilder_.clear();
+      }
+      if (customerChatMessageUnitsConfigBuilder_ != null) {
+        customerChatMessageUnitsConfigBuilder_.clear();
+      }
+      if (customerEmailMessageUnitsConfigBuilder_ != null) {
+        customerEmailMessageUnitsConfigBuilder_.clear();
+      }
+      if (customerSmsMessageUnitsConfigBuilder_ != null) {
+        customerSmsMessageUnitsConfigBuilder_.clear();
+      }
+      if (systemChatMessageUnitsConfigBuilder_ != null) {
+        systemChatMessageUnitsConfigBuilder_.clear();
+      }
+      if (systemEmailMessageUnitsConfigBuilder_ != null) {
+        systemEmailMessageUnitsConfigBuilder_.clear();
+      }
+      if (systemSmsMessageUnitsConfigBuilder_ != null) {
+        systemSmsMessageUnitsConfigBuilder_.clear();
+      }
+      if (complianceRndQueryConfigBuilder_ != null) {
+        complianceRndQueryConfigBuilder_.clear();
+      }
+      if (complianceRndQueryCachedConfigBuilder_ != null) {
+        complianceRndQueryCachedConfigBuilder_.clear();
+      }
       configCase_ = 0;
       config_ = null;
       return this;
@@ -2788,282 +2317,180 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.billing.DetailConfig buildPartial() {
       com.tcn.cloud.api.api.commons.billing.DetailConfig result = new com.tcn.cloud.api.api.commons.billing.DetailConfig(this);
-      if (configCase_ == 2) {
-        if (agentSeatsConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = agentSeatsConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 100) {
-        if (agentTextMessageChatConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = agentTextMessageChatConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 101) {
-        if (agentTextMessageEmailMessageConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = agentTextMessageEmailMessageConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 102) {
-        if (agentTextMessageEmailSizeConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = agentTextMessageEmailSizeConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 103) {
-        if (agentTextMessageSmsConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = agentTextMessageSmsConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 104) {
-        if (taskMessageSentEmailMessageConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = taskMessageSentEmailMessageConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 105) {
-        if (taskMessageSentEmailSizeConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = taskMessageSentEmailSizeConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 106) {
-        if (taskMessageSentSmsConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = taskMessageSentSmsConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 107) {
-        if (connectedInboxPollConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = connectedInboxPollConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 108) {
-        if (managerTextMessageChatConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = managerTextMessageChatConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 109) {
-        if (managerTextMessageEmailMessageConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = managerTextMessageEmailMessageConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 110) {
-        if (managerTextMessageEmailSizeConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = managerTextMessageEmailSizeConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 111) {
-        if (managerTextMessageSmsConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = managerTextMessageSmsConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 112) {
-        if (customerTextMessageChatConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = customerTextMessageChatConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 113) {
-        if (customerTextMessageEmailMessageConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = customerTextMessageEmailMessageConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 114) {
-        if (customerTextMessageEmailSizeConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = customerTextMessageEmailSizeConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 115) {
-        if (customerTextMessageSmsConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = customerTextMessageSmsConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 116) {
-        if (agentTextMessageChatSizeConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = agentTextMessageChatSizeConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 117) {
-        if (managerTextMessageChatSizeConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = managerTextMessageChatSizeConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 118) {
-        if (customerTextMessageChatSizeConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = customerTextMessageChatSizeConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 119) {
-        if (connectedInboxCreatedConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = connectedInboxCreatedConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 120) {
-        if (agentTextMessageSmsSizeConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = agentTextMessageSmsSizeConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 121) {
-        if (managerTextMessageSmsSizeConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = managerTextMessageSmsSizeConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 122) {
-        if (customerTextMessageSmsSizeConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = customerTextMessageSmsSizeConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 123) {
-        if (taskMessageSentSmsSizeConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = taskMessageSentSmsSizeConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 124) {
-        if (agentChatMessageUnitsConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = agentChatMessageUnitsConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 125) {
-        if (agentEmailMessageUnitsConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = agentEmailMessageUnitsConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 126) {
-        if (agentSmsMessageUnitsConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = agentSmsMessageUnitsConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 127) {
-        if (managerChatMessageUnitsConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = managerChatMessageUnitsConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 128) {
-        if (managerEmailMessageUnitsConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = managerEmailMessageUnitsConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 129) {
-        if (managerSmsMessageUnitsConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = managerSmsMessageUnitsConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 130) {
-        if (customerChatMessageUnitsConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = customerChatMessageUnitsConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 131) {
-        if (customerEmailMessageUnitsConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = customerEmailMessageUnitsConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 132) {
-        if (customerSmsMessageUnitsConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = customerSmsMessageUnitsConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 133) {
-        if (systemChatMessageUnitsConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = systemChatMessageUnitsConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 134) {
-        if (systemEmailMessageUnitsConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = systemEmailMessageUnitsConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 135) {
-        if (systemSmsMessageUnitsConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = systemSmsMessageUnitsConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 200) {
-        if (complianceRndQueryConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = complianceRndQueryConfigBuilder_.build();
-        }
-      }
-      if (configCase_ == 201) {
-        if (complianceRndQueryCachedConfigBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = complianceRndQueryCachedConfigBuilder_.build();
-        }
-      }
-      result.configCase_ = configCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      if (bitField1_ != 0) { buildPartial1(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.billing.DetailConfig result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartial1(com.tcn.cloud.api.api.commons.billing.DetailConfig result) {
+      int from_bitField1_ = bitField1_;
+    }
+
+    private void buildPartialOneofs(com.tcn.cloud.api.api.commons.billing.DetailConfig result) {
+      result.configCase_ = configCase_;
+      result.config_ = this.config_;
+      if (configCase_ == 2 &&
+          agentSeatsConfigBuilder_ != null) {
+        result.config_ = agentSeatsConfigBuilder_.build();
+      }
+      if (configCase_ == 100 &&
+          agentTextMessageChatConfigBuilder_ != null) {
+        result.config_ = agentTextMessageChatConfigBuilder_.build();
+      }
+      if (configCase_ == 101 &&
+          agentTextMessageEmailMessageConfigBuilder_ != null) {
+        result.config_ = agentTextMessageEmailMessageConfigBuilder_.build();
+      }
+      if (configCase_ == 102 &&
+          agentTextMessageEmailSizeConfigBuilder_ != null) {
+        result.config_ = agentTextMessageEmailSizeConfigBuilder_.build();
+      }
+      if (configCase_ == 103 &&
+          agentTextMessageSmsConfigBuilder_ != null) {
+        result.config_ = agentTextMessageSmsConfigBuilder_.build();
+      }
+      if (configCase_ == 104 &&
+          taskMessageSentEmailMessageConfigBuilder_ != null) {
+        result.config_ = taskMessageSentEmailMessageConfigBuilder_.build();
+      }
+      if (configCase_ == 105 &&
+          taskMessageSentEmailSizeConfigBuilder_ != null) {
+        result.config_ = taskMessageSentEmailSizeConfigBuilder_.build();
+      }
+      if (configCase_ == 106 &&
+          taskMessageSentSmsConfigBuilder_ != null) {
+        result.config_ = taskMessageSentSmsConfigBuilder_.build();
+      }
+      if (configCase_ == 107 &&
+          connectedInboxPollConfigBuilder_ != null) {
+        result.config_ = connectedInboxPollConfigBuilder_.build();
+      }
+      if (configCase_ == 108 &&
+          managerTextMessageChatConfigBuilder_ != null) {
+        result.config_ = managerTextMessageChatConfigBuilder_.build();
+      }
+      if (configCase_ == 109 &&
+          managerTextMessageEmailMessageConfigBuilder_ != null) {
+        result.config_ = managerTextMessageEmailMessageConfigBuilder_.build();
+      }
+      if (configCase_ == 110 &&
+          managerTextMessageEmailSizeConfigBuilder_ != null) {
+        result.config_ = managerTextMessageEmailSizeConfigBuilder_.build();
+      }
+      if (configCase_ == 111 &&
+          managerTextMessageSmsConfigBuilder_ != null) {
+        result.config_ = managerTextMessageSmsConfigBuilder_.build();
+      }
+      if (configCase_ == 112 &&
+          customerTextMessageChatConfigBuilder_ != null) {
+        result.config_ = customerTextMessageChatConfigBuilder_.build();
+      }
+      if (configCase_ == 113 &&
+          customerTextMessageEmailMessageConfigBuilder_ != null) {
+        result.config_ = customerTextMessageEmailMessageConfigBuilder_.build();
+      }
+      if (configCase_ == 114 &&
+          customerTextMessageEmailSizeConfigBuilder_ != null) {
+        result.config_ = customerTextMessageEmailSizeConfigBuilder_.build();
+      }
+      if (configCase_ == 115 &&
+          customerTextMessageSmsConfigBuilder_ != null) {
+        result.config_ = customerTextMessageSmsConfigBuilder_.build();
+      }
+      if (configCase_ == 116 &&
+          agentTextMessageChatSizeConfigBuilder_ != null) {
+        result.config_ = agentTextMessageChatSizeConfigBuilder_.build();
+      }
+      if (configCase_ == 117 &&
+          managerTextMessageChatSizeConfigBuilder_ != null) {
+        result.config_ = managerTextMessageChatSizeConfigBuilder_.build();
+      }
+      if (configCase_ == 118 &&
+          customerTextMessageChatSizeConfigBuilder_ != null) {
+        result.config_ = customerTextMessageChatSizeConfigBuilder_.build();
+      }
+      if (configCase_ == 119 &&
+          connectedInboxCreatedConfigBuilder_ != null) {
+        result.config_ = connectedInboxCreatedConfigBuilder_.build();
+      }
+      if (configCase_ == 120 &&
+          agentTextMessageSmsSizeConfigBuilder_ != null) {
+        result.config_ = agentTextMessageSmsSizeConfigBuilder_.build();
+      }
+      if (configCase_ == 121 &&
+          managerTextMessageSmsSizeConfigBuilder_ != null) {
+        result.config_ = managerTextMessageSmsSizeConfigBuilder_.build();
+      }
+      if (configCase_ == 122 &&
+          customerTextMessageSmsSizeConfigBuilder_ != null) {
+        result.config_ = customerTextMessageSmsSizeConfigBuilder_.build();
+      }
+      if (configCase_ == 123 &&
+          taskMessageSentSmsSizeConfigBuilder_ != null) {
+        result.config_ = taskMessageSentSmsSizeConfigBuilder_.build();
+      }
+      if (configCase_ == 124 &&
+          agentChatMessageUnitsConfigBuilder_ != null) {
+        result.config_ = agentChatMessageUnitsConfigBuilder_.build();
+      }
+      if (configCase_ == 125 &&
+          agentEmailMessageUnitsConfigBuilder_ != null) {
+        result.config_ = agentEmailMessageUnitsConfigBuilder_.build();
+      }
+      if (configCase_ == 126 &&
+          agentSmsMessageUnitsConfigBuilder_ != null) {
+        result.config_ = agentSmsMessageUnitsConfigBuilder_.build();
+      }
+      if (configCase_ == 127 &&
+          managerChatMessageUnitsConfigBuilder_ != null) {
+        result.config_ = managerChatMessageUnitsConfigBuilder_.build();
+      }
+      if (configCase_ == 128 &&
+          managerEmailMessageUnitsConfigBuilder_ != null) {
+        result.config_ = managerEmailMessageUnitsConfigBuilder_.build();
+      }
+      if (configCase_ == 129 &&
+          managerSmsMessageUnitsConfigBuilder_ != null) {
+        result.config_ = managerSmsMessageUnitsConfigBuilder_.build();
+      }
+      if (configCase_ == 130 &&
+          customerChatMessageUnitsConfigBuilder_ != null) {
+        result.config_ = customerChatMessageUnitsConfigBuilder_.build();
+      }
+      if (configCase_ == 131 &&
+          customerEmailMessageUnitsConfigBuilder_ != null) {
+        result.config_ = customerEmailMessageUnitsConfigBuilder_.build();
+      }
+      if (configCase_ == 132 &&
+          customerSmsMessageUnitsConfigBuilder_ != null) {
+        result.config_ = customerSmsMessageUnitsConfigBuilder_.build();
+      }
+      if (configCase_ == 133 &&
+          systemChatMessageUnitsConfigBuilder_ != null) {
+        result.config_ = systemChatMessageUnitsConfigBuilder_.build();
+      }
+      if (configCase_ == 134 &&
+          systemEmailMessageUnitsConfigBuilder_ != null) {
+        result.config_ = systemEmailMessageUnitsConfigBuilder_.build();
+      }
+      if (configCase_ == 135 &&
+          systemSmsMessageUnitsConfigBuilder_ != null) {
+        result.config_ = systemSmsMessageUnitsConfigBuilder_.build();
+      }
+      if (configCase_ == 200 &&
+          complianceRndQueryConfigBuilder_ != null) {
+        result.config_ = complianceRndQueryConfigBuilder_.build();
+      }
+      if (configCase_ == 201 &&
+          complianceRndQueryCachedConfigBuilder_ != null) {
+        result.config_ = complianceRndQueryCachedConfigBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -3271,7 +2698,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -3286,17 +2713,303 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.billing.DetailConfig parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              input.readMessage(
+                  getAgentSeatsConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 2;
+              break;
+            } // case 18
+            case 802: {
+              input.readMessage(
+                  getAgentTextMessageChatConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 100;
+              break;
+            } // case 802
+            case 810: {
+              input.readMessage(
+                  getAgentTextMessageEmailMessageConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 101;
+              break;
+            } // case 810
+            case 818: {
+              input.readMessage(
+                  getAgentTextMessageEmailSizeConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 102;
+              break;
+            } // case 818
+            case 826: {
+              input.readMessage(
+                  getAgentTextMessageSmsConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 103;
+              break;
+            } // case 826
+            case 834: {
+              input.readMessage(
+                  getTaskMessageSentEmailMessageConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 104;
+              break;
+            } // case 834
+            case 842: {
+              input.readMessage(
+                  getTaskMessageSentEmailSizeConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 105;
+              break;
+            } // case 842
+            case 850: {
+              input.readMessage(
+                  getTaskMessageSentSmsConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 106;
+              break;
+            } // case 850
+            case 858: {
+              input.readMessage(
+                  getConnectedInboxPollConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 107;
+              break;
+            } // case 858
+            case 866: {
+              input.readMessage(
+                  getManagerTextMessageChatConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 108;
+              break;
+            } // case 866
+            case 874: {
+              input.readMessage(
+                  getManagerTextMessageEmailMessageConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 109;
+              break;
+            } // case 874
+            case 882: {
+              input.readMessage(
+                  getManagerTextMessageEmailSizeConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 110;
+              break;
+            } // case 882
+            case 890: {
+              input.readMessage(
+                  getManagerTextMessageSmsConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 111;
+              break;
+            } // case 890
+            case 898: {
+              input.readMessage(
+                  getCustomerTextMessageChatConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 112;
+              break;
+            } // case 898
+            case 906: {
+              input.readMessage(
+                  getCustomerTextMessageEmailMessageConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 113;
+              break;
+            } // case 906
+            case 914: {
+              input.readMessage(
+                  getCustomerTextMessageEmailSizeConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 114;
+              break;
+            } // case 914
+            case 922: {
+              input.readMessage(
+                  getCustomerTextMessageSmsConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 115;
+              break;
+            } // case 922
+            case 930: {
+              input.readMessage(
+                  getAgentTextMessageChatSizeConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 116;
+              break;
+            } // case 930
+            case 938: {
+              input.readMessage(
+                  getManagerTextMessageChatSizeConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 117;
+              break;
+            } // case 938
+            case 946: {
+              input.readMessage(
+                  getCustomerTextMessageChatSizeConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 118;
+              break;
+            } // case 946
+            case 954: {
+              input.readMessage(
+                  getConnectedInboxCreatedConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 119;
+              break;
+            } // case 954
+            case 962: {
+              input.readMessage(
+                  getAgentTextMessageSmsSizeConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 120;
+              break;
+            } // case 962
+            case 970: {
+              input.readMessage(
+                  getManagerTextMessageSmsSizeConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 121;
+              break;
+            } // case 970
+            case 978: {
+              input.readMessage(
+                  getCustomerTextMessageSmsSizeConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 122;
+              break;
+            } // case 978
+            case 986: {
+              input.readMessage(
+                  getTaskMessageSentSmsSizeConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 123;
+              break;
+            } // case 986
+            case 994: {
+              input.readMessage(
+                  getAgentChatMessageUnitsConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 124;
+              break;
+            } // case 994
+            case 1002: {
+              input.readMessage(
+                  getAgentEmailMessageUnitsConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 125;
+              break;
+            } // case 1002
+            case 1010: {
+              input.readMessage(
+                  getAgentSmsMessageUnitsConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 126;
+              break;
+            } // case 1010
+            case 1018: {
+              input.readMessage(
+                  getManagerChatMessageUnitsConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 127;
+              break;
+            } // case 1018
+            case 1026: {
+              input.readMessage(
+                  getManagerEmailMessageUnitsConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 128;
+              break;
+            } // case 1026
+            case 1034: {
+              input.readMessage(
+                  getManagerSmsMessageUnitsConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 129;
+              break;
+            } // case 1034
+            case 1042: {
+              input.readMessage(
+                  getCustomerChatMessageUnitsConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 130;
+              break;
+            } // case 1042
+            case 1050: {
+              input.readMessage(
+                  getCustomerEmailMessageUnitsConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 131;
+              break;
+            } // case 1050
+            case 1058: {
+              input.readMessage(
+                  getCustomerSmsMessageUnitsConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 132;
+              break;
+            } // case 1058
+            case 1066: {
+              input.readMessage(
+                  getSystemChatMessageUnitsConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 133;
+              break;
+            } // case 1066
+            case 1074: {
+              input.readMessage(
+                  getSystemEmailMessageUnitsConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 134;
+              break;
+            } // case 1074
+            case 1082: {
+              input.readMessage(
+                  getSystemSmsMessageUnitsConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 135;
+              break;
+            } // case 1082
+            case 1602: {
+              input.readMessage(
+                  getComplianceRndQueryConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 200;
+              break;
+            } // case 1602
+            case 1610: {
+              input.readMessage(
+                  getComplianceRndQueryCachedConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              configCase_ = 201;
+              break;
+            } // case 1610
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.billing.DetailConfig) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int configCase_ = 0;
@@ -3314,6 +3027,8 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
+    private int bitField1_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.billing.modules.BasicConfig, com.tcn.cloud.api.api.commons.billing.modules.BasicConfig.Builder, com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder> agentSeatsConfigBuilder_;
@@ -3389,8 +3104,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 2) {
           agentSeatsConfigBuilder_.mergeFrom(value);
+        } else {
+          agentSeatsConfigBuilder_.setMessage(value);
         }
-        agentSeatsConfigBuilder_.setMessage(value);
       }
       configCase_ = 2;
       return this;
@@ -3452,7 +3168,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 2;
-      onChanged();;
+      onChanged();
       return agentSeatsConfigBuilder_;
     }
 
@@ -3550,8 +3266,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 100) {
           agentTextMessageChatConfigBuilder_.mergeFrom(value);
+        } else {
+          agentTextMessageChatConfigBuilder_.setMessage(value);
         }
-        agentTextMessageChatConfigBuilder_.setMessage(value);
       }
       configCase_ = 100;
       return this;
@@ -3629,7 +3346,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 100;
-      onChanged();;
+      onChanged();
       return agentTextMessageChatConfigBuilder_;
     }
 
@@ -3707,8 +3424,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 101) {
           agentTextMessageEmailMessageConfigBuilder_.mergeFrom(value);
+        } else {
+          agentTextMessageEmailMessageConfigBuilder_.setMessage(value);
         }
-        agentTextMessageEmailMessageConfigBuilder_.setMessage(value);
       }
       configCase_ = 101;
       return this;
@@ -3770,7 +3488,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 101;
-      onChanged();;
+      onChanged();
       return agentTextMessageEmailMessageConfigBuilder_;
     }
 
@@ -3848,8 +3566,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 102) {
           agentTextMessageEmailSizeConfigBuilder_.mergeFrom(value);
+        } else {
+          agentTextMessageEmailSizeConfigBuilder_.setMessage(value);
         }
-        agentTextMessageEmailSizeConfigBuilder_.setMessage(value);
       }
       configCase_ = 102;
       return this;
@@ -3911,7 +3630,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 102;
-      onChanged();;
+      onChanged();
       return agentTextMessageEmailSizeConfigBuilder_;
     }
 
@@ -3989,8 +3708,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 103) {
           agentTextMessageSmsConfigBuilder_.mergeFrom(value);
+        } else {
+          agentTextMessageSmsConfigBuilder_.setMessage(value);
         }
-        agentTextMessageSmsConfigBuilder_.setMessage(value);
       }
       configCase_ = 103;
       return this;
@@ -4052,7 +3772,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 103;
-      onChanged();;
+      onChanged();
       return agentTextMessageSmsConfigBuilder_;
     }
 
@@ -4130,8 +3850,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 104) {
           taskMessageSentEmailMessageConfigBuilder_.mergeFrom(value);
+        } else {
+          taskMessageSentEmailMessageConfigBuilder_.setMessage(value);
         }
-        taskMessageSentEmailMessageConfigBuilder_.setMessage(value);
       }
       configCase_ = 104;
       return this;
@@ -4193,7 +3914,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 104;
-      onChanged();;
+      onChanged();
       return taskMessageSentEmailMessageConfigBuilder_;
     }
 
@@ -4271,8 +3992,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 105) {
           taskMessageSentEmailSizeConfigBuilder_.mergeFrom(value);
+        } else {
+          taskMessageSentEmailSizeConfigBuilder_.setMessage(value);
         }
-        taskMessageSentEmailSizeConfigBuilder_.setMessage(value);
       }
       configCase_ = 105;
       return this;
@@ -4334,7 +4056,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 105;
-      onChanged();;
+      onChanged();
       return taskMessageSentEmailSizeConfigBuilder_;
     }
 
@@ -4412,8 +4134,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 106) {
           taskMessageSentSmsConfigBuilder_.mergeFrom(value);
+        } else {
+          taskMessageSentSmsConfigBuilder_.setMessage(value);
         }
-        taskMessageSentSmsConfigBuilder_.setMessage(value);
       }
       configCase_ = 106;
       return this;
@@ -4475,7 +4198,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 106;
-      onChanged();;
+      onChanged();
       return taskMessageSentSmsConfigBuilder_;
     }
 
@@ -4553,8 +4276,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 107) {
           connectedInboxPollConfigBuilder_.mergeFrom(value);
+        } else {
+          connectedInboxPollConfigBuilder_.setMessage(value);
         }
-        connectedInboxPollConfigBuilder_.setMessage(value);
       }
       configCase_ = 107;
       return this;
@@ -4616,7 +4340,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 107;
-      onChanged();;
+      onChanged();
       return connectedInboxPollConfigBuilder_;
     }
 
@@ -4694,8 +4418,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 108) {
           managerTextMessageChatConfigBuilder_.mergeFrom(value);
+        } else {
+          managerTextMessageChatConfigBuilder_.setMessage(value);
         }
-        managerTextMessageChatConfigBuilder_.setMessage(value);
       }
       configCase_ = 108;
       return this;
@@ -4757,7 +4482,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 108;
-      onChanged();;
+      onChanged();
       return managerTextMessageChatConfigBuilder_;
     }
 
@@ -4835,8 +4560,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 109) {
           managerTextMessageEmailMessageConfigBuilder_.mergeFrom(value);
+        } else {
+          managerTextMessageEmailMessageConfigBuilder_.setMessage(value);
         }
-        managerTextMessageEmailMessageConfigBuilder_.setMessage(value);
       }
       configCase_ = 109;
       return this;
@@ -4898,7 +4624,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 109;
-      onChanged();;
+      onChanged();
       return managerTextMessageEmailMessageConfigBuilder_;
     }
 
@@ -4976,8 +4702,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 110) {
           managerTextMessageEmailSizeConfigBuilder_.mergeFrom(value);
+        } else {
+          managerTextMessageEmailSizeConfigBuilder_.setMessage(value);
         }
-        managerTextMessageEmailSizeConfigBuilder_.setMessage(value);
       }
       configCase_ = 110;
       return this;
@@ -5039,7 +4766,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 110;
-      onChanged();;
+      onChanged();
       return managerTextMessageEmailSizeConfigBuilder_;
     }
 
@@ -5117,8 +4844,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 111) {
           managerTextMessageSmsConfigBuilder_.mergeFrom(value);
+        } else {
+          managerTextMessageSmsConfigBuilder_.setMessage(value);
         }
-        managerTextMessageSmsConfigBuilder_.setMessage(value);
       }
       configCase_ = 111;
       return this;
@@ -5180,7 +4908,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 111;
-      onChanged();;
+      onChanged();
       return managerTextMessageSmsConfigBuilder_;
     }
 
@@ -5258,8 +4986,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 112) {
           customerTextMessageChatConfigBuilder_.mergeFrom(value);
+        } else {
+          customerTextMessageChatConfigBuilder_.setMessage(value);
         }
-        customerTextMessageChatConfigBuilder_.setMessage(value);
       }
       configCase_ = 112;
       return this;
@@ -5321,7 +5050,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 112;
-      onChanged();;
+      onChanged();
       return customerTextMessageChatConfigBuilder_;
     }
 
@@ -5399,8 +5128,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 113) {
           customerTextMessageEmailMessageConfigBuilder_.mergeFrom(value);
+        } else {
+          customerTextMessageEmailMessageConfigBuilder_.setMessage(value);
         }
-        customerTextMessageEmailMessageConfigBuilder_.setMessage(value);
       }
       configCase_ = 113;
       return this;
@@ -5462,7 +5192,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 113;
-      onChanged();;
+      onChanged();
       return customerTextMessageEmailMessageConfigBuilder_;
     }
 
@@ -5540,8 +5270,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 114) {
           customerTextMessageEmailSizeConfigBuilder_.mergeFrom(value);
+        } else {
+          customerTextMessageEmailSizeConfigBuilder_.setMessage(value);
         }
-        customerTextMessageEmailSizeConfigBuilder_.setMessage(value);
       }
       configCase_ = 114;
       return this;
@@ -5603,7 +5334,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 114;
-      onChanged();;
+      onChanged();
       return customerTextMessageEmailSizeConfigBuilder_;
     }
 
@@ -5681,8 +5412,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 115) {
           customerTextMessageSmsConfigBuilder_.mergeFrom(value);
+        } else {
+          customerTextMessageSmsConfigBuilder_.setMessage(value);
         }
-        customerTextMessageSmsConfigBuilder_.setMessage(value);
       }
       configCase_ = 115;
       return this;
@@ -5744,7 +5476,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 115;
-      onChanged();;
+      onChanged();
       return customerTextMessageSmsConfigBuilder_;
     }
 
@@ -5822,8 +5554,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 116) {
           agentTextMessageChatSizeConfigBuilder_.mergeFrom(value);
+        } else {
+          agentTextMessageChatSizeConfigBuilder_.setMessage(value);
         }
-        agentTextMessageChatSizeConfigBuilder_.setMessage(value);
       }
       configCase_ = 116;
       return this;
@@ -5885,7 +5618,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 116;
-      onChanged();;
+      onChanged();
       return agentTextMessageChatSizeConfigBuilder_;
     }
 
@@ -5963,8 +5696,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 117) {
           managerTextMessageChatSizeConfigBuilder_.mergeFrom(value);
+        } else {
+          managerTextMessageChatSizeConfigBuilder_.setMessage(value);
         }
-        managerTextMessageChatSizeConfigBuilder_.setMessage(value);
       }
       configCase_ = 117;
       return this;
@@ -6026,7 +5760,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 117;
-      onChanged();;
+      onChanged();
       return managerTextMessageChatSizeConfigBuilder_;
     }
 
@@ -6104,8 +5838,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 118) {
           customerTextMessageChatSizeConfigBuilder_.mergeFrom(value);
+        } else {
+          customerTextMessageChatSizeConfigBuilder_.setMessage(value);
         }
-        customerTextMessageChatSizeConfigBuilder_.setMessage(value);
       }
       configCase_ = 118;
       return this;
@@ -6167,7 +5902,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 118;
-      onChanged();;
+      onChanged();
       return customerTextMessageChatSizeConfigBuilder_;
     }
 
@@ -6245,8 +5980,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 119) {
           connectedInboxCreatedConfigBuilder_.mergeFrom(value);
+        } else {
+          connectedInboxCreatedConfigBuilder_.setMessage(value);
         }
-        connectedInboxCreatedConfigBuilder_.setMessage(value);
       }
       configCase_ = 119;
       return this;
@@ -6308,7 +6044,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 119;
-      onChanged();;
+      onChanged();
       return connectedInboxCreatedConfigBuilder_;
     }
 
@@ -6386,8 +6122,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 120) {
           agentTextMessageSmsSizeConfigBuilder_.mergeFrom(value);
+        } else {
+          agentTextMessageSmsSizeConfigBuilder_.setMessage(value);
         }
-        agentTextMessageSmsSizeConfigBuilder_.setMessage(value);
       }
       configCase_ = 120;
       return this;
@@ -6449,7 +6186,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 120;
-      onChanged();;
+      onChanged();
       return agentTextMessageSmsSizeConfigBuilder_;
     }
 
@@ -6527,8 +6264,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 121) {
           managerTextMessageSmsSizeConfigBuilder_.mergeFrom(value);
+        } else {
+          managerTextMessageSmsSizeConfigBuilder_.setMessage(value);
         }
-        managerTextMessageSmsSizeConfigBuilder_.setMessage(value);
       }
       configCase_ = 121;
       return this;
@@ -6590,7 +6328,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 121;
-      onChanged();;
+      onChanged();
       return managerTextMessageSmsSizeConfigBuilder_;
     }
 
@@ -6668,8 +6406,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 122) {
           customerTextMessageSmsSizeConfigBuilder_.mergeFrom(value);
+        } else {
+          customerTextMessageSmsSizeConfigBuilder_.setMessage(value);
         }
-        customerTextMessageSmsSizeConfigBuilder_.setMessage(value);
       }
       configCase_ = 122;
       return this;
@@ -6731,7 +6470,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 122;
-      onChanged();;
+      onChanged();
       return customerTextMessageSmsSizeConfigBuilder_;
     }
 
@@ -6809,8 +6548,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 123) {
           taskMessageSentSmsSizeConfigBuilder_.mergeFrom(value);
+        } else {
+          taskMessageSentSmsSizeConfigBuilder_.setMessage(value);
         }
-        taskMessageSentSmsSizeConfigBuilder_.setMessage(value);
       }
       configCase_ = 123;
       return this;
@@ -6872,7 +6612,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 123;
-      onChanged();;
+      onChanged();
       return taskMessageSentSmsSizeConfigBuilder_;
     }
 
@@ -6950,8 +6690,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 124) {
           agentChatMessageUnitsConfigBuilder_.mergeFrom(value);
+        } else {
+          agentChatMessageUnitsConfigBuilder_.setMessage(value);
         }
-        agentChatMessageUnitsConfigBuilder_.setMessage(value);
       }
       configCase_ = 124;
       return this;
@@ -7013,7 +6754,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 124;
-      onChanged();;
+      onChanged();
       return agentChatMessageUnitsConfigBuilder_;
     }
 
@@ -7091,8 +6832,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 125) {
           agentEmailMessageUnitsConfigBuilder_.mergeFrom(value);
+        } else {
+          agentEmailMessageUnitsConfigBuilder_.setMessage(value);
         }
-        agentEmailMessageUnitsConfigBuilder_.setMessage(value);
       }
       configCase_ = 125;
       return this;
@@ -7154,7 +6896,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 125;
-      onChanged();;
+      onChanged();
       return agentEmailMessageUnitsConfigBuilder_;
     }
 
@@ -7232,8 +6974,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 126) {
           agentSmsMessageUnitsConfigBuilder_.mergeFrom(value);
+        } else {
+          agentSmsMessageUnitsConfigBuilder_.setMessage(value);
         }
-        agentSmsMessageUnitsConfigBuilder_.setMessage(value);
       }
       configCase_ = 126;
       return this;
@@ -7295,7 +7038,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 126;
-      onChanged();;
+      onChanged();
       return agentSmsMessageUnitsConfigBuilder_;
     }
 
@@ -7373,8 +7116,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 127) {
           managerChatMessageUnitsConfigBuilder_.mergeFrom(value);
+        } else {
+          managerChatMessageUnitsConfigBuilder_.setMessage(value);
         }
-        managerChatMessageUnitsConfigBuilder_.setMessage(value);
       }
       configCase_ = 127;
       return this;
@@ -7436,7 +7180,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 127;
-      onChanged();;
+      onChanged();
       return managerChatMessageUnitsConfigBuilder_;
     }
 
@@ -7514,8 +7258,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 128) {
           managerEmailMessageUnitsConfigBuilder_.mergeFrom(value);
+        } else {
+          managerEmailMessageUnitsConfigBuilder_.setMessage(value);
         }
-        managerEmailMessageUnitsConfigBuilder_.setMessage(value);
       }
       configCase_ = 128;
       return this;
@@ -7577,7 +7322,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 128;
-      onChanged();;
+      onChanged();
       return managerEmailMessageUnitsConfigBuilder_;
     }
 
@@ -7655,8 +7400,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 129) {
           managerSmsMessageUnitsConfigBuilder_.mergeFrom(value);
+        } else {
+          managerSmsMessageUnitsConfigBuilder_.setMessage(value);
         }
-        managerSmsMessageUnitsConfigBuilder_.setMessage(value);
       }
       configCase_ = 129;
       return this;
@@ -7718,7 +7464,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 129;
-      onChanged();;
+      onChanged();
       return managerSmsMessageUnitsConfigBuilder_;
     }
 
@@ -7796,8 +7542,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 130) {
           customerChatMessageUnitsConfigBuilder_.mergeFrom(value);
+        } else {
+          customerChatMessageUnitsConfigBuilder_.setMessage(value);
         }
-        customerChatMessageUnitsConfigBuilder_.setMessage(value);
       }
       configCase_ = 130;
       return this;
@@ -7859,7 +7606,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 130;
-      onChanged();;
+      onChanged();
       return customerChatMessageUnitsConfigBuilder_;
     }
 
@@ -7937,8 +7684,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 131) {
           customerEmailMessageUnitsConfigBuilder_.mergeFrom(value);
+        } else {
+          customerEmailMessageUnitsConfigBuilder_.setMessage(value);
         }
-        customerEmailMessageUnitsConfigBuilder_.setMessage(value);
       }
       configCase_ = 131;
       return this;
@@ -8000,7 +7748,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 131;
-      onChanged();;
+      onChanged();
       return customerEmailMessageUnitsConfigBuilder_;
     }
 
@@ -8078,8 +7826,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 132) {
           customerSmsMessageUnitsConfigBuilder_.mergeFrom(value);
+        } else {
+          customerSmsMessageUnitsConfigBuilder_.setMessage(value);
         }
-        customerSmsMessageUnitsConfigBuilder_.setMessage(value);
       }
       configCase_ = 132;
       return this;
@@ -8141,7 +7890,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 132;
-      onChanged();;
+      onChanged();
       return customerSmsMessageUnitsConfigBuilder_;
     }
 
@@ -8219,8 +7968,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 133) {
           systemChatMessageUnitsConfigBuilder_.mergeFrom(value);
+        } else {
+          systemChatMessageUnitsConfigBuilder_.setMessage(value);
         }
-        systemChatMessageUnitsConfigBuilder_.setMessage(value);
       }
       configCase_ = 133;
       return this;
@@ -8282,7 +8032,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 133;
-      onChanged();;
+      onChanged();
       return systemChatMessageUnitsConfigBuilder_;
     }
 
@@ -8360,8 +8110,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 134) {
           systemEmailMessageUnitsConfigBuilder_.mergeFrom(value);
+        } else {
+          systemEmailMessageUnitsConfigBuilder_.setMessage(value);
         }
-        systemEmailMessageUnitsConfigBuilder_.setMessage(value);
       }
       configCase_ = 134;
       return this;
@@ -8423,7 +8174,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 134;
-      onChanged();;
+      onChanged();
       return systemEmailMessageUnitsConfigBuilder_;
     }
 
@@ -8501,8 +8252,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 135) {
           systemSmsMessageUnitsConfigBuilder_.mergeFrom(value);
+        } else {
+          systemSmsMessageUnitsConfigBuilder_.setMessage(value);
         }
-        systemSmsMessageUnitsConfigBuilder_.setMessage(value);
       }
       configCase_ = 135;
       return this;
@@ -8564,7 +8316,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 135;
-      onChanged();;
+      onChanged();
       return systemSmsMessageUnitsConfigBuilder_;
     }
 
@@ -8662,8 +8414,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 200) {
           complianceRndQueryConfigBuilder_.mergeFrom(value);
+        } else {
+          complianceRndQueryConfigBuilder_.setMessage(value);
         }
-        complianceRndQueryConfigBuilder_.setMessage(value);
       }
       configCase_ = 200;
       return this;
@@ -8741,7 +8494,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 200;
-      onChanged();;
+      onChanged();
       return complianceRndQueryConfigBuilder_;
     }
 
@@ -8819,8 +8572,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (configCase_ == 201) {
           complianceRndQueryCachedConfigBuilder_.mergeFrom(value);
+        } else {
+          complianceRndQueryCachedConfigBuilder_.setMessage(value);
         }
-        complianceRndQueryCachedConfigBuilder_.setMessage(value);
       }
       configCase_ = 201;
       return this;
@@ -8882,7 +8636,7 @@ private static final long serialVersionUID = 0L;
         config_ = null;
       }
       configCase_ = 201;
-      onChanged();;
+      onChanged();
       return complianceRndQueryCachedConfigBuilder_;
     }
     @java.lang.Override
@@ -8918,7 +8672,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new DetailConfig(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

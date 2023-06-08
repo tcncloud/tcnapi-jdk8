@@ -272,6 +272,8 @@ public interface ConsentExportProcessOrBuilder extends
    * </pre>
    *
    * <code>string expire = 16 [json_name = "expire", deprecated = true];</code>
+   * @deprecated api.v0alpha.ConsentExportProcess.expire is deprecated.
+   *     See api/v0alpha/lms.proto;l=732
    * @return The expire.
    */
   @java.lang.Deprecated java.lang.String getExpire();
@@ -282,6 +284,8 @@ public interface ConsentExportProcessOrBuilder extends
    * </pre>
    *
    * <code>string expire = 16 [json_name = "expire", deprecated = true];</code>
+   * @deprecated api.v0alpha.ConsentExportProcess.expire is deprecated.
+   *     See api/v0alpha/lms.proto;l=732
    * @return The bytes for expire.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -329,6 +333,11 @@ public interface ConsentExportProcessOrBuilder extends
 
   /**
    * <code>.api.commons.ContentType content_type_val = 27 [json_name = "contentTypeVal"];</code>
+   * @return Whether the contentTypeVal field is set.
+   */
+  boolean hasContentTypeVal();
+  /**
+   * <code>.api.commons.ContentType content_type_val = 27 [json_name = "contentTypeVal"];</code>
    * @return The enum numeric value on the wire for contentTypeVal.
    */
   int getContentTypeValValue();
@@ -338,6 +347,11 @@ public interface ConsentExportProcessOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.ContentType getContentTypeVal();
 
+  /**
+   * <code>string content_type_field_name = 28 [json_name = "contentTypeFieldName"];</code>
+   * @return Whether the contentTypeFieldName field is set.
+   */
+  boolean hasContentTypeFieldName();
   /**
    * <code>string content_type_field_name = 28 [json_name = "contentTypeFieldName"];</code>
    * @return The contentTypeFieldName.
@@ -352,6 +366,11 @@ public interface ConsentExportProcessOrBuilder extends
 
   /**
    * <code>.api.commons.Channel channel_type_val = 29 [json_name = "channelTypeVal"];</code>
+   * @return Whether the channelTypeVal field is set.
+   */
+  boolean hasChannelTypeVal();
+  /**
+   * <code>.api.commons.Channel channel_type_val = 29 [json_name = "channelTypeVal"];</code>
    * @return The enum numeric value on the wire for channelTypeVal.
    */
   int getChannelTypeValValue();
@@ -361,6 +380,11 @@ public interface ConsentExportProcessOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.Channel getChannelTypeVal();
 
+  /**
+   * <code>string channel_type_field_name = 30 [json_name = "channelTypeFieldName"];</code>
+   * @return Whether the channelTypeFieldName field is set.
+   */
+  boolean hasChannelTypeFieldName();
   /**
    * <code>string channel_type_field_name = 30 [json_name = "channelTypeFieldName"];</code>
    * @return The channelTypeFieldName.
@@ -400,6 +424,15 @@ public interface ConsentExportProcessOrBuilder extends
    */
   com.google.protobuf.TimestampOrBuilder getExpirationDateOrBuilder();
 
+  /**
+   * <pre>
+   * the field name that holds info about the static time consent will expire at
+   * </pre>
+   *
+   * <code>string expiration_field_name = 32 [json_name = "expirationFieldName"];</code>
+   * @return Whether the expirationFieldName field is set.
+   */
+  boolean hasExpirationFieldName();
   /**
    * <pre>
    * the field name that holds info about the static time consent will expire at
@@ -447,9 +480,9 @@ public interface ConsentExportProcessOrBuilder extends
    */
   com.google.protobuf.DurationOrBuilder getExpirationAfterDurationOrBuilder();
 
-  public com.tcn.cloud.api.api.v0alpha.ConsentExportProcess.ContentTypeCase getContentTypeCase();
+  com.tcn.cloud.api.api.v0alpha.ConsentExportProcess.ContentTypeCase getContentTypeCase();
 
-  public com.tcn.cloud.api.api.v0alpha.ConsentExportProcess.ChannelTypeCase getChannelTypeCase();
+  com.tcn.cloud.api.api.v0alpha.ConsentExportProcess.ChannelTypeCase getChannelTypeCase();
 
-  public com.tcn.cloud.api.api.v0alpha.ConsentExportProcess.ExpirationCase getExpirationCase();
+  com.tcn.cloud.api.api.v0alpha.ConsentExportProcess.ExpirationCase getExpirationCase();
 }

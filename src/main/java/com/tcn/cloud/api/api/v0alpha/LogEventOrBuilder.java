@@ -121,14 +121,14 @@ public interface LogEventOrBuilder extends
   /**
    * <code>map&lt;string, string&gt; metadata = 9 [json_name = "metadata"];</code>
    */
-
-  java.lang.String getMetadataOrDefault(
+  /* nullable */
+java.lang.String getMetadataOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue);
+      /* nullable */
+java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; metadata = 9 [json_name = "metadata"];</code>
    */
-
   java.lang.String getMetadataOrThrow(
       java.lang.String key);
 

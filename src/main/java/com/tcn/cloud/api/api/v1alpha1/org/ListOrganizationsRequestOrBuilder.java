@@ -13,10 +13,28 @@ public interface ListOrganizationsRequestOrBuilder extends
    * </pre>
    *
    * <code>bool global = 1 [json_name = "global"];</code>
+   * @return Whether the global field is set.
+   */
+  boolean hasGlobal();
+  /**
+   * <pre>
+   * No filter (get all global organizations).
+   * </pre>
+   *
+   * <code>bool global = 1 [json_name = "global"];</code>
    * @return The global.
    */
   boolean getGlobal();
 
+  /**
+   * <pre>
+   * Filter by region.
+   * </pre>
+   *
+   * <code>string region_id = 2 [json_name = "regionId"];</code>
+   * @return Whether the regionId field is set.
+   */
+  boolean hasRegionId();
   /**
    * <pre>
    * Filter by region.
@@ -47,5 +65,5 @@ public interface ListOrganizationsRequestOrBuilder extends
    */
   boolean getArchived();
 
-  public com.tcn.cloud.api.api.v1alpha1.org.ListOrganizationsRequest.IdentifierCase getIdentifierCase();
+  com.tcn.cloud.api.api.v1alpha1.org.ListOrganizationsRequest.IdentifierCase getIdentifierCase();
 }

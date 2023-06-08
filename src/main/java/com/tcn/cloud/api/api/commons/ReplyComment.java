@@ -31,83 +31,6 @@ private static final long serialVersionUID = 0L;
     return new ReplyComment();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private ReplyComment(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            commentSid_ = input.readInt64();
-            break;
-          }
-          case 16: {
-
-            ticketSid_ = input.readInt64();
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            reply_ = s;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            createdById_ = s;
-            break;
-          }
-          case 42: {
-            com.google.protobuf.Timestamp.Builder subBuilder = null;
-            if (createdByDate_ != null) {
-              subBuilder = createdByDate_.toBuilder();
-            }
-            createdByDate_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(createdByDate_);
-              createdByDate_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.TicketsProto.internal_static_api_commons_ReplyComment_descriptor;
@@ -122,7 +45,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COMMENT_SID_FIELD_NUMBER = 1;
-  private long commentSid_;
+  private long commentSid_ = 0L;
   /**
    * <pre>
    * The snowflake id of a comment row in ticket_comment.
@@ -137,7 +60,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TICKET_SID_FIELD_NUMBER = 2;
-  private long ticketSid_;
+  private long ticketSid_ = 0L;
   /**
    * <pre>
    * The ticket reference where the comment was added.
@@ -152,7 +75,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REPLY_FIELD_NUMBER = 3;
-  private volatile java.lang.Object reply_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object reply_ = "";
   /**
    * <pre>
    * The comment text
@@ -198,7 +122,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CREATED_BY_ID_FIELD_NUMBER = 4;
-  private volatile java.lang.Object createdById_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object createdById_ = "";
   /**
    * <pre>
    * commenter by id
@@ -266,7 +191,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getCreatedByDateOrBuilder() {
-    return getCreatedByDate();
+    return createdByDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdByDate_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -289,16 +214,16 @@ private static final long serialVersionUID = 0L;
     if (ticketSid_ != 0L) {
       output.writeInt64(2, ticketSid_);
     }
-    if (!getReplyBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reply_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, reply_);
     }
-    if (!getCreatedByIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdById_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, createdById_);
     }
     if (createdByDate_ != null) {
       output.writeMessage(5, getCreatedByDate());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -315,17 +240,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, ticketSid_);
     }
-    if (!getReplyBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reply_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, reply_);
     }
-    if (!getCreatedByIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdById_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, createdById_);
     }
     if (createdByDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getCreatedByDate());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -353,7 +278,7 @@ private static final long serialVersionUID = 0L;
       if (!getCreatedByDate()
           .equals(other.getCreatedByDate())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -378,7 +303,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CREATED_BY_DATE_FIELD_NUMBER;
       hash = (53 * hash) + getCreatedByDate().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -427,11 +352,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.ReplyComment parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.ReplyComment parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -499,34 +426,25 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.ReplyComment.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       commentSid_ = 0L;
-
       ticketSid_ = 0L;
-
       reply_ = "";
-
       createdById_ = "";
-
-      if (createdByDateBuilder_ == null) {
-        createdByDate_ = null;
-      } else {
-        createdByDate_ = null;
+      createdByDate_ = null;
+      if (createdByDateBuilder_ != null) {
+        createdByDateBuilder_.dispose();
         createdByDateBuilder_ = null;
       }
       return this;
@@ -555,17 +473,30 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ReplyComment buildPartial() {
       com.tcn.cloud.api.api.commons.ReplyComment result = new com.tcn.cloud.api.api.commons.ReplyComment(this);
-      result.commentSid_ = commentSid_;
-      result.ticketSid_ = ticketSid_;
-      result.reply_ = reply_;
-      result.createdById_ = createdById_;
-      if (createdByDateBuilder_ == null) {
-        result.createdByDate_ = createdByDate_;
-      } else {
-        result.createdByDate_ = createdByDateBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.ReplyComment result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.commentSid_ = commentSid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.ticketSid_ = ticketSid_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.reply_ = reply_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.createdById_ = createdById_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.createdByDate_ = createdByDateBuilder_ == null
+            ? createdByDate_
+            : createdByDateBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -620,16 +551,18 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getReply().isEmpty()) {
         reply_ = other.reply_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getCreatedById().isEmpty()) {
         createdById_ = other.createdById_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasCreatedByDate()) {
         mergeCreatedByDate(other.getCreatedByDate());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -644,19 +577,60 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.ReplyComment parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              commentSid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              ticketSid_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 26: {
+              reply_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              createdById_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getCreatedByDateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.ReplyComment) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private long commentSid_ ;
     /**
@@ -681,8 +655,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCommentSid(long value) {
-      
+
       commentSid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -695,7 +670,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCommentSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       commentSid_ = 0L;
       onChanged();
       return this;
@@ -724,8 +699,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTicketSid(long value) {
-      
+
       ticketSid_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -738,7 +714,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTicketSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       ticketSid_ = 0L;
       onChanged();
       return this;
@@ -797,11 +773,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReply(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       reply_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -814,8 +788,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearReply() {
-      
       reply_ = getDefaultInstance().getReply();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -830,12 +804,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReplyBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       reply_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -893,11 +865,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCreatedById(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       createdById_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -910,8 +880,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCreatedById() {
-      
       createdById_ = getDefaultInstance().getCreatedById();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -926,12 +896,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCreatedByIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       createdById_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -944,7 +912,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the createdByDate field is set.
      */
     public boolean hasCreatedByDate() {
-      return createdByDateBuilder_ != null || createdByDate_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp created_by_date = 5 [json_name = "createdByDate"];</code>
@@ -966,11 +934,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         createdByDate_ = value;
-        onChanged();
       } else {
         createdByDateBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -980,11 +948,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (createdByDateBuilder_ == null) {
         createdByDate_ = builderForValue.build();
-        onChanged();
       } else {
         createdByDateBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -992,38 +960,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCreatedByDate(com.google.protobuf.Timestamp value) {
       if (createdByDateBuilder_ == null) {
-        if (createdByDate_ != null) {
-          createdByDate_ =
-            com.google.protobuf.Timestamp.newBuilder(createdByDate_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000010) != 0) &&
+          createdByDate_ != null &&
+          createdByDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getCreatedByDateBuilder().mergeFrom(value);
         } else {
           createdByDate_ = value;
         }
-        onChanged();
       } else {
         createdByDateBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp created_by_date = 5 [json_name = "createdByDate"];</code>
      */
     public Builder clearCreatedByDate() {
-      if (createdByDateBuilder_ == null) {
-        createdByDate_ = null;
-        onChanged();
-      } else {
-        createdByDate_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      createdByDate_ = null;
+      if (createdByDateBuilder_ != null) {
+        createdByDateBuilder_.dispose();
         createdByDateBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp created_by_date = 5 [json_name = "createdByDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreatedByDateBuilder() {
-      
+      bitField0_ |= 0x00000010;
       onChanged();
       return getCreatedByDateFieldBuilder().getBuilder();
     }
@@ -1087,7 +1055,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ReplyComment(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -5,6 +5,7 @@ package com.tcn.cloud.api.api.commons;
 
 /**
  * <pre>
+ *
  *Description = 1
  *Skills = 2
  *Status = 3
@@ -36,70 +37,6 @@ private static final long serialVersionUID = 0L;
     return new EditAttribute();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private EditAttribute(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            colDesc_ = input.readInt64();
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            fromVal_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            toVal_ = s;
-            break;
-          }
-          case 32: {
-
-            isEdited_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.TicketsProto.internal_static_api_commons_EditAttribute_descriptor;
@@ -114,7 +51,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COL_DESC_FIELD_NUMBER = 1;
-  private long colDesc_;
+  private long colDesc_ = 0L;
   /**
    * <pre>
    * Column Descripter
@@ -129,7 +66,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FROM_VAL_FIELD_NUMBER = 2;
-  private volatile java.lang.Object fromVal_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object fromVal_ = "";
   /**
    * <code>string from_val = 2 [json_name = "fromVal"];</code>
    * @return The fromVal.
@@ -167,7 +105,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TO_VAL_FIELD_NUMBER = 3;
-  private volatile java.lang.Object toVal_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object toVal_ = "";
   /**
    * <code>string to_val = 3 [json_name = "toVal"];</code>
    * @return The toVal.
@@ -205,7 +144,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IS_EDITED_FIELD_NUMBER = 4;
-  private boolean isEdited_;
+  private boolean isEdited_ = false;
   /**
    * <code>bool is_edited = 4 [json_name = "isEdited"];</code>
    * @return The isEdited.
@@ -232,16 +171,16 @@ private static final long serialVersionUID = 0L;
     if (colDesc_ != 0L) {
       output.writeInt64(1, colDesc_);
     }
-    if (!getFromValBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromVal_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fromVal_);
     }
-    if (!getToValBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toVal_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, toVal_);
     }
     if (isEdited_ != false) {
       output.writeBool(4, isEdited_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -254,17 +193,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, colDesc_);
     }
-    if (!getFromValBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromVal_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fromVal_);
     }
-    if (!getToValBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toVal_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, toVal_);
     }
     if (isEdited_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, isEdited_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -287,7 +226,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getToVal())) return false;
     if (getIsEdited()
         != other.getIsEdited()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -308,7 +247,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + IS_EDITED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsEdited());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -357,11 +296,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.EditAttribute parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.EditAttribute parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -405,6 +346,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
+   *
    *Description = 1
    *Skills = 2
    *Status = 3
@@ -434,30 +376,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.EditAttribute.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       colDesc_ = 0L;
-
       fromVal_ = "";
-
       toVal_ = "";
-
       isEdited_ = false;
-
       return this;
     }
 
@@ -484,12 +418,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.EditAttribute buildPartial() {
       com.tcn.cloud.api.api.commons.EditAttribute result = new com.tcn.cloud.api.api.commons.EditAttribute(this);
-      result.colDesc_ = colDesc_;
-      result.fromVal_ = fromVal_;
-      result.toVal_ = toVal_;
-      result.isEdited_ = isEdited_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.EditAttribute result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.colDesc_ = colDesc_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.fromVal_ = fromVal_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.toVal_ = toVal_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.isEdited_ = isEdited_;
+      }
     }
 
     @java.lang.Override
@@ -541,16 +488,18 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getFromVal().isEmpty()) {
         fromVal_ = other.fromVal_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getToVal().isEmpty()) {
         toVal_ = other.toVal_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.getIsEdited() != false) {
         setIsEdited(other.getIsEdited());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -565,19 +514,53 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.EditAttribute parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              colDesc_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              fromVal_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              toVal_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 32: {
+              isEdited_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.EditAttribute) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private long colDesc_ ;
     /**
@@ -602,8 +585,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setColDesc(long value) {
-      
+
       colDesc_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -616,7 +600,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearColDesc() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       colDesc_ = 0L;
       onChanged();
       return this;
@@ -663,11 +647,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFromVal(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       fromVal_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -676,8 +658,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFromVal() {
-      
       fromVal_ = getDefaultInstance().getFromVal();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -688,12 +670,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFromValBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       fromVal_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -739,11 +719,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setToVal(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       toVal_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -752,8 +730,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearToVal() {
-      
       toVal_ = getDefaultInstance().getToVal();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -764,12 +742,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setToValBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       toVal_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -789,8 +765,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIsEdited(boolean value) {
-      
+
       isEdited_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -799,7 +776,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsEdited() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       isEdited_ = false;
       onChanged();
       return this;
@@ -837,7 +814,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new EditAttribute(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

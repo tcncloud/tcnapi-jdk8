@@ -29,63 +29,6 @@ private static final long serialVersionUID = 0L;
     return new TimeOfDay();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private TimeOfDay(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 24: {
-
-            hour_ = input.readInt32();
-            break;
-          }
-          case 32: {
-
-            minute_ = input.readInt32();
-            break;
-          }
-          case 40: {
-
-            second_ = input.readInt32();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_TimeOfDay_descriptor;
@@ -100,7 +43,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HOUR_FIELD_NUMBER = 3;
-  private int hour_;
+  private int hour_ = 0;
   /**
    * <code>int32 hour = 3 [json_name = "hour"];</code>
    * @return The hour.
@@ -111,7 +54,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MINUTE_FIELD_NUMBER = 4;
-  private int minute_;
+  private int minute_ = 0;
   /**
    * <code>int32 minute = 4 [json_name = "minute"];</code>
    * @return The minute.
@@ -122,7 +65,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SECOND_FIELD_NUMBER = 5;
-  private int second_;
+  private int second_ = 0;
   /**
    * <code>int32 second = 5 [json_name = "second"];</code>
    * @return The second.
@@ -155,7 +98,7 @@ private static final long serialVersionUID = 0L;
     if (second_ != 0) {
       output.writeInt32(5, second_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -176,7 +119,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(5, second_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -197,7 +140,7 @@ private static final long serialVersionUID = 0L;
         != other.getMinute()) return false;
     if (getSecond()
         != other.getSecond()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -214,7 +157,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getMinute();
     hash = (37 * hash) + SECOND_FIELD_NUMBER;
     hash = (53 * hash) + getSecond();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -263,11 +206,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.TimeOfDay parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.TimeOfDay parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -335,28 +280,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.TimeOfDay.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       hour_ = 0;
-
       minute_ = 0;
-
       second_ = 0;
-
       return this;
     }
 
@@ -383,11 +321,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.TimeOfDay buildPartial() {
       com.tcn.cloud.api.api.v0alpha.TimeOfDay result = new com.tcn.cloud.api.api.v0alpha.TimeOfDay(this);
-      result.hour_ = hour_;
-      result.minute_ = minute_;
-      result.second_ = second_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.TimeOfDay result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.hour_ = hour_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.minute_ = minute_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.second_ = second_;
+      }
     }
 
     @java.lang.Override
@@ -443,7 +392,7 @@ private static final long serialVersionUID = 0L;
       if (other.getSecond() != 0) {
         setSecond(other.getSecond());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -458,19 +407,48 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.TimeOfDay parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 24: {
+              hour_ = input.readInt32();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 24
+            case 32: {
+              minute_ = input.readInt32();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 32
+            case 40: {
+              second_ = input.readInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 40
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.TimeOfDay) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private int hour_ ;
     /**
@@ -487,8 +465,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHour(int value) {
-      
+
       hour_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -497,7 +476,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHour() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       hour_ = 0;
       onChanged();
       return this;
@@ -518,8 +497,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMinute(int value) {
-      
+
       minute_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -528,7 +508,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMinute() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       minute_ = 0;
       onChanged();
       return this;
@@ -549,8 +529,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSecond(int value) {
-      
+
       second_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -559,7 +540,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSecond() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       second_ = 0;
       onChanged();
       return this;
@@ -597,7 +578,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new TimeOfDay(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

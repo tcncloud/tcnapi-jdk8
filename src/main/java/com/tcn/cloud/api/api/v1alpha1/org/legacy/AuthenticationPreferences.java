@@ -20,7 +20,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private AuthenticationPreferences() {
-    allowedIps_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    allowedIps_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     agentApiKey_ = "";
   }
 
@@ -31,72 +32,6 @@ private static final long serialVersionUID = 0L;
     return new AuthenticationPreferences();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private AuthenticationPreferences(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 80: {
-
-            authorizationViaIp_ = input.readBool();
-            break;
-          }
-          case 90: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              allowedIps_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            allowedIps_.add(s);
-            break;
-          }
-          case 98: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            agentApiKey_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        allowedIps_ = allowedIps_.getUnmodifiableView();
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.legacy.EntitiesProto.internal_static_api_v1alpha1_org_legacy_AuthenticationPreferences_descriptor;
@@ -111,7 +46,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AUTHORIZATION_VIA_IP_FIELD_NUMBER = 10;
-  private boolean authorizationViaIp_;
+  private boolean authorizationViaIp_ = false;
   /**
    * <pre>
    * Use IP based authentication
@@ -126,7 +61,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ALLOWED_IPS_FIELD_NUMBER = 11;
-  private com.google.protobuf.LazyStringList allowedIps_;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList allowedIps_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * String array of allowed IP addresses
@@ -177,7 +114,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENT_API_KEY_FIELD_NUMBER = 12;
-  private volatile java.lang.Object agentApiKey_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object agentApiKey_ = "";
   /**
    * <pre>
    * Agent's API key (as UUID)
@@ -242,10 +180,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < allowedIps_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, allowedIps_.getRaw(i));
     }
-    if (!getAgentApiKeyBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentApiKey_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, agentApiKey_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -266,10 +204,10 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getAllowedIpsList().size();
     }
-    if (!getAgentApiKeyBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentApiKey_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, agentApiKey_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -290,7 +228,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getAllowedIpsList())) return false;
     if (!getAgentApiKey()
         .equals(other.getAgentApiKey())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -310,7 +248,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + AGENT_API_KEY_FIELD_NUMBER;
     hash = (53 * hash) + getAgentApiKey().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -359,11 +297,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.AuthenticationPreferences parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.AuthenticationPreferences parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -431,28 +371,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.AuthenticationPreferences.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       authorizationViaIp_ = false;
-
-      allowedIps_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      allowedIps_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       agentApiKey_ = "";
-
       return this;
     }
 
@@ -479,16 +413,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.AuthenticationPreferences buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.legacy.AuthenticationPreferences result = new com.tcn.cloud.api.api.v1alpha1.org.legacy.AuthenticationPreferences(this);
-      int from_bitField0_ = bitField0_;
-      result.authorizationViaIp_ = authorizationViaIp_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        allowedIps_ = allowedIps_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.allowedIps_ = allowedIps_;
-      result.agentApiKey_ = agentApiKey_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.AuthenticationPreferences result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.authorizationViaIp_ = authorizationViaIp_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        allowedIps_.makeImmutable();
+        result.allowedIps_ = allowedIps_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.agentApiKey_ = agentApiKey_;
+      }
     }
 
     @java.lang.Override
@@ -541,7 +482,7 @@ private static final long serialVersionUID = 0L;
       if (!other.allowedIps_.isEmpty()) {
         if (allowedIps_.isEmpty()) {
           allowedIps_ = other.allowedIps_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000002;
         } else {
           ensureAllowedIpsIsMutable();
           allowedIps_.addAll(other.allowedIps_);
@@ -550,9 +491,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getAgentApiKey().isEmpty()) {
         agentApiKey_ = other.agentApiKey_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -567,17 +509,46 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.org.legacy.AuthenticationPreferences parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 80: {
+              authorizationViaIp_ = input.readBool();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 80
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureAllowedIpsIsMutable();
+              allowedIps_.add(s);
+              break;
+            } // case 90
+            case 98: {
+              agentApiKey_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 98
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.legacy.AuthenticationPreferences) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -605,8 +576,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAuthorizationViaIp(boolean value) {
-      
+
       authorizationViaIp_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -619,18 +591,19 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAuthorizationViaIp() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       authorizationViaIp_ = false;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList allowedIps_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList allowedIps_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureAllowedIpsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!allowedIps_.isModifiable()) {
         allowedIps_ = new com.google.protobuf.LazyStringArrayList(allowedIps_);
-        bitField0_ |= 0x00000001;
-       }
+      }
+      bitField0_ |= 0x00000002;
     }
     /**
      * <pre>
@@ -642,7 +615,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getAllowedIpsList() {
-      return allowedIps_.getUnmodifiableView();
+      allowedIps_.makeImmutable();
+      return allowedIps_;
     }
     /**
      * <pre>
@@ -692,11 +666,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAllowedIps(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAllowedIpsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureAllowedIpsIsMutable();
       allowedIps_.set(index, value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -711,11 +684,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAllowedIps(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAllowedIpsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureAllowedIpsIsMutable();
       allowedIps_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -733,6 +705,7 @@ private static final long serialVersionUID = 0L;
       ensureAllowedIpsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, allowedIps_);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -745,8 +718,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllowedIps() {
-      allowedIps_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      allowedIps_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000002);;
       onChanged();
       return this;
     }
@@ -761,12 +735,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAllowedIpsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureAllowedIpsIsMutable();
       allowedIps_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -824,11 +797,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAgentApiKey(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       agentApiKey_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -841,8 +812,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAgentApiKey() {
-      
       agentApiKey_ = getDefaultInstance().getAgentApiKey();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -857,12 +828,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAgentApiKeyBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       agentApiKey_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -899,7 +868,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AuthenticationPreferences(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

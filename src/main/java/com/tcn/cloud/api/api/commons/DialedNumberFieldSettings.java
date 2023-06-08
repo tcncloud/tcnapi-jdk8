@@ -29,84 +29,6 @@ private static final long serialVersionUID = 0L;
     return new DialedNumberFieldSettings();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private DialedNumberFieldSettings(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            shouldDisplay_ = input.readBool();
-            break;
-          }
-          case 18: {
-            com.tcn.cloud.api.api.commons.RGBColor.Builder subBuilder = null;
-            if (color_ != null) {
-              subBuilder = color_.toBuilder();
-            }
-            color_ = input.readMessage(com.tcn.cloud.api.api.commons.RGBColor.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(color_);
-              color_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 26: {
-            com.tcn.cloud.api.api.commons.RGBColor.Builder subBuilder = null;
-            if (bgColor_ != null) {
-              subBuilder = bgColor_.toBuilder();
-            }
-            bgColor_ = input.readMessage(com.tcn.cloud.api.api.commons.RGBColor.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(bgColor_);
-              bgColor_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 32: {
-
-            allowAgentCopy_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.P3apiProto.internal_static_api_commons_DialedNumberFieldSettings_descriptor;
@@ -121,7 +43,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SHOULD_DISPLAY_FIELD_NUMBER = 1;
-  private boolean shouldDisplay_;
+  private boolean shouldDisplay_ = false;
   /**
    * <pre>
    * Should the dialed number be displayed?
@@ -170,7 +92,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.RGBColorOrBuilder getColorOrBuilder() {
-    return getColor();
+    return color_ == null ? com.tcn.cloud.api.api.commons.RGBColor.getDefaultInstance() : color_;
   }
 
   public static final int BG_COLOR_FIELD_NUMBER = 3;
@@ -208,11 +130,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.RGBColorOrBuilder getBgColorOrBuilder() {
-    return getBgColor();
+    return bgColor_ == null ? com.tcn.cloud.api.api.commons.RGBColor.getDefaultInstance() : bgColor_;
   }
 
   public static final int ALLOW_AGENT_COPY_FIELD_NUMBER = 4;
-  private boolean allowAgentCopy_;
+  private boolean allowAgentCopy_ = false;
   /**
    * <pre>
    * Shows a copy button in the row that copies the field value to your clipboard
@@ -252,7 +174,7 @@ private static final long serialVersionUID = 0L;
     if (allowAgentCopy_ != false) {
       output.writeBool(4, allowAgentCopy_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -277,7 +199,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, allowAgentCopy_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -306,7 +228,7 @@ private static final long serialVersionUID = 0L;
     }
     if (getAllowAgentCopy()
         != other.getAllowAgentCopy()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -331,7 +253,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ALLOW_AGENT_COPY_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getAllowAgentCopy());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -380,11 +302,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.DialedNumberFieldSettings parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.DialedNumberFieldSettings parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -452,38 +376,30 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.DialedNumberFieldSettings.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       shouldDisplay_ = false;
-
-      if (colorBuilder_ == null) {
-        color_ = null;
-      } else {
-        color_ = null;
+      color_ = null;
+      if (colorBuilder_ != null) {
+        colorBuilder_.dispose();
         colorBuilder_ = null;
       }
-      if (bgColorBuilder_ == null) {
-        bgColor_ = null;
-      } else {
-        bgColor_ = null;
+      bgColor_ = null;
+      if (bgColorBuilder_ != null) {
+        bgColorBuilder_.dispose();
         bgColorBuilder_ = null;
       }
       allowAgentCopy_ = false;
-
       return this;
     }
 
@@ -510,20 +426,29 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.DialedNumberFieldSettings buildPartial() {
       com.tcn.cloud.api.api.commons.DialedNumberFieldSettings result = new com.tcn.cloud.api.api.commons.DialedNumberFieldSettings(this);
-      result.shouldDisplay_ = shouldDisplay_;
-      if (colorBuilder_ == null) {
-        result.color_ = color_;
-      } else {
-        result.color_ = colorBuilder_.build();
-      }
-      if (bgColorBuilder_ == null) {
-        result.bgColor_ = bgColor_;
-      } else {
-        result.bgColor_ = bgColorBuilder_.build();
-      }
-      result.allowAgentCopy_ = allowAgentCopy_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.DialedNumberFieldSettings result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.shouldDisplay_ = shouldDisplay_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.color_ = colorBuilder_ == null
+            ? color_
+            : colorBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.bgColor_ = bgColorBuilder_ == null
+            ? bgColor_
+            : bgColorBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.allowAgentCopy_ = allowAgentCopy_;
+      }
     }
 
     @java.lang.Override
@@ -582,7 +507,7 @@ private static final long serialVersionUID = 0L;
       if (other.getAllowAgentCopy() != false) {
         setAllowAgentCopy(other.getAllowAgentCopy());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -597,19 +522,57 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.DialedNumberFieldSettings parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              shouldDisplay_ = input.readBool();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              input.readMessage(
+                  getColorFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getBgColorFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 32: {
+              allowAgentCopy_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.DialedNumberFieldSettings) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private boolean shouldDisplay_ ;
     /**
@@ -634,8 +597,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setShouldDisplay(boolean value) {
-      
+
       shouldDisplay_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -648,7 +612,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearShouldDisplay() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       shouldDisplay_ = false;
       onChanged();
       return this;
@@ -666,7 +630,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the color field is set.
      */
     public boolean hasColor() {
-      return colorBuilder_ != null || color_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -696,11 +660,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         color_ = value;
-        onChanged();
       } else {
         colorBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -714,11 +678,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.RGBColor.Builder builderForValue) {
       if (colorBuilder_ == null) {
         color_ = builderForValue.build();
-        onChanged();
       } else {
         colorBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -730,17 +694,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeColor(com.tcn.cloud.api.api.commons.RGBColor value) {
       if (colorBuilder_ == null) {
-        if (color_ != null) {
-          color_ =
-            com.tcn.cloud.api.api.commons.RGBColor.newBuilder(color_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          color_ != null &&
+          color_ != com.tcn.cloud.api.api.commons.RGBColor.getDefaultInstance()) {
+          getColorBuilder().mergeFrom(value);
         } else {
           color_ = value;
         }
-        onChanged();
       } else {
         colorBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -751,14 +716,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.RGBColor color = 2 [json_name = "color"];</code>
      */
     public Builder clearColor() {
-      if (colorBuilder_ == null) {
-        color_ = null;
-        onChanged();
-      } else {
-        color_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      color_ = null;
+      if (colorBuilder_ != null) {
+        colorBuilder_.dispose();
         colorBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -769,7 +733,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.RGBColor color = 2 [json_name = "color"];</code>
      */
     public com.tcn.cloud.api.api.commons.RGBColor.Builder getColorBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getColorFieldBuilder().getBuilder();
     }
@@ -821,7 +785,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the bgColor field is set.
      */
     public boolean hasBgColor() {
-      return bgColorBuilder_ != null || bgColor_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -851,11 +815,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         bgColor_ = value;
-        onChanged();
       } else {
         bgColorBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -869,11 +833,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.RGBColor.Builder builderForValue) {
       if (bgColorBuilder_ == null) {
         bgColor_ = builderForValue.build();
-        onChanged();
       } else {
         bgColorBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -885,17 +849,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeBgColor(com.tcn.cloud.api.api.commons.RGBColor value) {
       if (bgColorBuilder_ == null) {
-        if (bgColor_ != null) {
-          bgColor_ =
-            com.tcn.cloud.api.api.commons.RGBColor.newBuilder(bgColor_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          bgColor_ != null &&
+          bgColor_ != com.tcn.cloud.api.api.commons.RGBColor.getDefaultInstance()) {
+          getBgColorBuilder().mergeFrom(value);
         } else {
           bgColor_ = value;
         }
-        onChanged();
       } else {
         bgColorBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -906,14 +871,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.RGBColor bg_color = 3 [json_name = "bgColor"];</code>
      */
     public Builder clearBgColor() {
-      if (bgColorBuilder_ == null) {
-        bgColor_ = null;
-        onChanged();
-      } else {
-        bgColor_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      bgColor_ = null;
+      if (bgColorBuilder_ != null) {
+        bgColorBuilder_.dispose();
         bgColorBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -924,7 +888,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.RGBColor bg_color = 3 [json_name = "bgColor"];</code>
      */
     public com.tcn.cloud.api.api.commons.RGBColor.Builder getBgColorBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getBgColorFieldBuilder().getBuilder();
     }
@@ -987,8 +951,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllowAgentCopy(boolean value) {
-      
+
       allowAgentCopy_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1001,7 +966,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllowAgentCopy() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       allowAgentCopy_ = false;
       onChanged();
       return this;
@@ -1039,7 +1004,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new DialedNumberFieldSettings(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

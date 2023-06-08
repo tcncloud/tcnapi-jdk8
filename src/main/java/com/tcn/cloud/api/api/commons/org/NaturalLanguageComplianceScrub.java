@@ -31,60 +31,6 @@ private static final long serialVersionUID = 0L;
     return new NaturalLanguageComplianceScrub();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private NaturalLanguageComplianceScrub(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-            int rawValue = input.readEnum();
-
-            complianceScrub_ = rawValue;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            ruleSetId_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_NaturalLanguageComplianceScrub_descriptor;
@@ -99,7 +45,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COMPLIANCE_SCRUB_FIELD_NUMBER = 1;
-  private int complianceScrub_;
+  private int complianceScrub_ = 0;
   /**
    * <pre>
    * Org default or enabled or disabled.
@@ -120,13 +66,13 @@ private static final long serialVersionUID = 0L;
    * @return The complianceScrub.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom getComplianceScrub() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom result = com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.valueOf(complianceScrub_);
+    com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom result = com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.forNumber(complianceScrub_);
     return result == null ? com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.UNRECOGNIZED : result;
   }
 
   public static final int RULE_SET_ID_FIELD_NUMBER = 2;
-  private volatile java.lang.Object ruleSetId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object ruleSetId_ = "";
   /**
    * <pre>
    * The ID of the Natural Language Compliance rule set.
@@ -188,10 +134,10 @@ private static final long serialVersionUID = 0L;
     if (complianceScrub_ != com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.HUNT_GROUP_USE_ORG_DEFAULT.getNumber()) {
       output.writeEnum(1, complianceScrub_);
     }
-    if (!getRuleSetIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ruleSetId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ruleSetId_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -204,10 +150,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, complianceScrub_);
     }
-    if (!getRuleSetIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ruleSetId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, ruleSetId_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -225,7 +171,7 @@ private static final long serialVersionUID = 0L;
     if (complianceScrub_ != other.complianceScrub_) return false;
     if (!getRuleSetId()
         .equals(other.getRuleSetId())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -240,7 +186,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + complianceScrub_;
     hash = (37 * hash) + RULE_SET_ID_FIELD_NUMBER;
     hash = (53 * hash) + getRuleSetId().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -289,11 +235,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceScrub parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceScrub parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -361,26 +309,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceScrub.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       complianceScrub_ = 0;
-
       ruleSetId_ = "";
-
       return this;
     }
 
@@ -407,10 +349,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceScrub buildPartial() {
       com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceScrub result = new com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceScrub(this);
-      result.complianceScrub_ = complianceScrub_;
-      result.ruleSetId_ = ruleSetId_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceScrub result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.complianceScrub_ = complianceScrub_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.ruleSetId_ = ruleSetId_;
+      }
     }
 
     @java.lang.Override
@@ -462,9 +413,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getRuleSetId().isEmpty()) {
         ruleSetId_ = other.ruleSetId_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -479,19 +431,43 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceScrub parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              complianceScrub_ = input.readEnum();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              ruleSetId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceScrub) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private int complianceScrub_ = 0;
     /**
@@ -515,8 +491,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setComplianceScrubValue(int value) {
-      
       complianceScrub_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -530,8 +506,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom getComplianceScrub() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom result = com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.valueOf(complianceScrub_);
+      com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom result = com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.forNumber(complianceScrub_);
       return result == null ? com.tcn.cloud.api.api.commons.HuntGroupOrgDefaultCustom.UNRECOGNIZED : result;
     }
     /**
@@ -547,7 +522,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       complianceScrub_ = value.getNumber();
       onChanged();
       return this;
@@ -561,7 +536,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearComplianceScrub() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       complianceScrub_ = 0;
       onChanged();
       return this;
@@ -620,11 +595,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRuleSetId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       ruleSetId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -637,8 +610,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRuleSetId() {
-      
       ruleSetId_ = getDefaultInstance().getRuleSetId();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -653,12 +626,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRuleSetIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ruleSetId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -695,7 +666,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new NaturalLanguageComplianceScrub(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

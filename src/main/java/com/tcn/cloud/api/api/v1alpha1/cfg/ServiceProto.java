@@ -74,8 +74,8 @@ public final class ServiceProto {
       "ver\022\020\n\003sip\030\001 \001(\tR\003sip\022\026\n\006webrtc\030\002 \001(\tR\006w" +
       "ebrtc2\226\001\n\003Cfg\022\216\001\n\021GetWebAgentConfig\022&.ap" +
       "i.v1alpha1.cfg.GetWebAgentConfigReq\032\032.ap" +
-      "i.v1alpha1.cfg.WebAgent\"5\272\270\221\002\002\030\001\202\323\344\223\002(:\001" +
-      "*\"#/api/v1alpha1/cfg/getwebagentconfigB\224" +
+      "i.v1alpha1.cfg.WebAgent\"5\272\270\221\002\002\030\001\202\323\344\223\002(\"#" +
+      "/api/v1alpha1/cfg/getwebagentconfig:\001*B\224" +
       "\001\n\"com.tcn.cloud.api.api.v1alpha1.cfgB\014S" +
       "erviceProtoP\001\242\002\003AVC\252\002\020Api.V1alpha1.Cfg\312\002" +
       "\020Api\\V1alpha1\\Cfg\342\002\034Api\\V1alpha1\\Cfg\\GPB" +

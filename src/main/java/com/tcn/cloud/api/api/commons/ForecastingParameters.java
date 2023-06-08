@@ -29,120 +29,6 @@ private static final long serialVersionUID = 0L;
     return new ForecastingParameters();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private ForecastingParameters(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            intervalWidthInMinutes_ = input.readInt32();
-            break;
-          }
-          case 48: {
-            historicalDataRangeCase_ = 6;
-            historicalDataRange_ = input.readInt32();
-            break;
-          }
-          case 58: {
-            com.google.protobuf.Timestamp.Builder subBuilder = null;
-            if (historicalDataRangeCase_ == 7) {
-              subBuilder = ((com.google.protobuf.Timestamp) historicalDataRange_).toBuilder();
-            }
-            historicalDataRange_ =
-                input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.protobuf.Timestamp) historicalDataRange_);
-              historicalDataRange_ = subBuilder.buildPartial();
-            }
-            historicalDataRangeCase_ = 7;
-            break;
-          }
-          case 64: {
-
-            forecastTestRangeInWeeks_ = input.readInt32();
-            break;
-          }
-          case 72: {
-            forecastRangeCase_ = 9;
-            forecastRange_ = input.readInt32();
-            break;
-          }
-          case 82: {
-            com.tcn.cloud.api.api.commons.DatetimeRange.Builder subBuilder = null;
-            if (forecastRangeCase_ == 10) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.DatetimeRange) forecastRange_).toBuilder();
-            }
-            forecastRange_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.DatetimeRange.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.DatetimeRange) forecastRange_);
-              forecastRange_ = subBuilder.buildPartial();
-            }
-            forecastRangeCase_ = 10;
-            break;
-          }
-          case 88: {
-            trainingDataRangeCase_ = 11;
-            trainingDataRange_ = input.readInt32();
-            break;
-          }
-          case 98: {
-            com.tcn.cloud.api.api.commons.DatetimeRange.Builder subBuilder = null;
-            if (trainingDataRangeCase_ == 12) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.DatetimeRange) trainingDataRange_).toBuilder();
-            }
-            trainingDataRange_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.DatetimeRange.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.DatetimeRange) trainingDataRange_);
-              trainingDataRange_ = subBuilder.buildPartial();
-            }
-            trainingDataRangeCase_ = 12;
-            break;
-          }
-          case 104: {
-
-            averagesCalculationRangeInMonths_ = input.readInt32();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_ForecastingParameters_descriptor;
@@ -157,6 +43,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int historicalDataRangeCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object historicalDataRange_;
   public enum HistoricalDataRangeCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -198,6 +85,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int forecastRangeCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object forecastRange_;
   public enum ForecastRangeCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -239,6 +127,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int trainingDataRangeCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object trainingDataRange_;
   public enum TrainingDataRangeCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -280,7 +169,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INTERVAL_WIDTH_IN_MINUTES_FIELD_NUMBER = 1;
-  private int intervalWidthInMinutes_;
+  private int intervalWidthInMinutes_ = 0;
   /**
    * <pre>
    * number of minutes in which calls will be grouped together during for the duration of a forecast, must be a multiple of 5 ranging from 5 to 60.
@@ -295,6 +184,18 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HISTORICAL_DATA_RANGE_IN_MONTHS_FIELD_NUMBER = 6;
+  /**
+   * <pre>
+   * number of months back from the current datetime to look up history.
+   * </pre>
+   *
+   * <code>int32 historical_data_range_in_months = 6 [json_name = "historicalDataRangeInMonths"];</code>
+   * @return Whether the historicalDataRangeInMonths field is set.
+   */
+  @java.lang.Override
+  public boolean hasHistoricalDataRangeInMonths() {
+    return historicalDataRangeCase_ == 6;
+  }
   /**
    * <pre>
    * number of months back from the current datetime to look up history.
@@ -355,7 +256,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FORECAST_TEST_RANGE_IN_WEEKS_FIELD_NUMBER = 8;
-  private int forecastTestRangeInWeeks_;
+  private int forecastTestRangeInWeeks_ = 0;
   /**
    * <pre>
    * number of weeks of the training data from the current datetime to use as a forecast test range.
@@ -370,6 +271,18 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FORECAST_RANGE_IN_WEEKS_FIELD_NUMBER = 9;
+  /**
+   * <pre>
+   * number of weeks from the current datetime that forecast will be made.
+   * </pre>
+   *
+   * <code>int32 forecast_range_in_weeks = 9 [json_name = "forecastRangeInWeeks"];</code>
+   * @return Whether the forecastRangeInWeeks field is set.
+   */
+  @java.lang.Override
+  public boolean hasForecastRangeInWeeks() {
+    return forecastRangeCase_ == 9;
+  }
   /**
    * <pre>
    * number of weeks from the current datetime that forecast will be made.
@@ -436,6 +349,18 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int32 training_data_range_in_months = 11 [json_name = "trainingDataRangeInMonths"];</code>
+   * @return Whether the trainingDataRangeInMonths field is set.
+   */
+  @java.lang.Override
+  public boolean hasTrainingDataRangeInMonths() {
+    return trainingDataRangeCase_ == 11;
+  }
+  /**
+   * <pre>
+   * number of months in the past from the current datetime that the training data will be generated from.
+   * </pre>
+   *
+   * <code>int32 training_data_range_in_months = 11 [json_name = "trainingDataRangeInMonths"];</code>
    * @return The trainingDataRangeInMonths.
    */
   @java.lang.Override
@@ -490,7 +415,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGES_CALCULATION_RANGE_IN_MONTHS_FIELD_NUMBER = 13;
-  private int averagesCalculationRangeInMonths_;
+  private int averagesCalculationRangeInMonths_ = 0;
   /**
    * <pre>
    * Number of months of training data to use when calculating averages.
@@ -551,7 +476,7 @@ private static final long serialVersionUID = 0L;
     if (averagesCalculationRangeInMonths_ != 0) {
       output.writeInt32(13, averagesCalculationRangeInMonths_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -599,7 +524,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(13, averagesCalculationRangeInMonths_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -659,7 +584,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -712,7 +637,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -761,11 +686,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.ForecastingParameters parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.ForecastingParameters parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -833,28 +760,30 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.ForecastingParameters.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       intervalWidthInMinutes_ = 0;
-
+      if (historicalDataRangeStartDatetimeBuilder_ != null) {
+        historicalDataRangeStartDatetimeBuilder_.clear();
+      }
       forecastTestRangeInWeeks_ = 0;
-
+      if (forecastDatetimeRangeBuilder_ != null) {
+        forecastDatetimeRangeBuilder_.clear();
+      }
+      if (trainingDataDatetimeRangeBuilder_ != null) {
+        trainingDataDatetimeRangeBuilder_.clear();
+      }
       averagesCalculationRangeInMonths_ = 0;
-
       historicalDataRangeCase_ = 0;
       historicalDataRange_ = null;
       forecastRangeCase_ = 0;
@@ -887,44 +816,44 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ForecastingParameters buildPartial() {
       com.tcn.cloud.api.api.commons.ForecastingParameters result = new com.tcn.cloud.api.api.commons.ForecastingParameters(this);
-      result.intervalWidthInMinutes_ = intervalWidthInMinutes_;
-      if (historicalDataRangeCase_ == 6) {
-        result.historicalDataRange_ = historicalDataRange_;
-      }
-      if (historicalDataRangeCase_ == 7) {
-        if (historicalDataRangeStartDatetimeBuilder_ == null) {
-          result.historicalDataRange_ = historicalDataRange_;
-        } else {
-          result.historicalDataRange_ = historicalDataRangeStartDatetimeBuilder_.build();
-        }
-      }
-      result.forecastTestRangeInWeeks_ = forecastTestRangeInWeeks_;
-      if (forecastRangeCase_ == 9) {
-        result.forecastRange_ = forecastRange_;
-      }
-      if (forecastRangeCase_ == 10) {
-        if (forecastDatetimeRangeBuilder_ == null) {
-          result.forecastRange_ = forecastRange_;
-        } else {
-          result.forecastRange_ = forecastDatetimeRangeBuilder_.build();
-        }
-      }
-      if (trainingDataRangeCase_ == 11) {
-        result.trainingDataRange_ = trainingDataRange_;
-      }
-      if (trainingDataRangeCase_ == 12) {
-        if (trainingDataDatetimeRangeBuilder_ == null) {
-          result.trainingDataRange_ = trainingDataRange_;
-        } else {
-          result.trainingDataRange_ = trainingDataDatetimeRangeBuilder_.build();
-        }
-      }
-      result.averagesCalculationRangeInMonths_ = averagesCalculationRangeInMonths_;
-      result.historicalDataRangeCase_ = historicalDataRangeCase_;
-      result.forecastRangeCase_ = forecastRangeCase_;
-      result.trainingDataRangeCase_ = trainingDataRangeCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.ForecastingParameters result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.intervalWidthInMinutes_ = intervalWidthInMinutes_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.forecastTestRangeInWeeks_ = forecastTestRangeInWeeks_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.averagesCalculationRangeInMonths_ = averagesCalculationRangeInMonths_;
+      }
+    }
+
+    private void buildPartialOneofs(com.tcn.cloud.api.api.commons.ForecastingParameters result) {
+      result.historicalDataRangeCase_ = historicalDataRangeCase_;
+      result.historicalDataRange_ = this.historicalDataRange_;
+      if (historicalDataRangeCase_ == 7 &&
+          historicalDataRangeStartDatetimeBuilder_ != null) {
+        result.historicalDataRange_ = historicalDataRangeStartDatetimeBuilder_.build();
+      }
+      result.forecastRangeCase_ = forecastRangeCase_;
+      result.forecastRange_ = this.forecastRange_;
+      if (forecastRangeCase_ == 10 &&
+          forecastDatetimeRangeBuilder_ != null) {
+        result.forecastRange_ = forecastDatetimeRangeBuilder_.build();
+      }
+      result.trainingDataRangeCase_ = trainingDataRangeCase_;
+      result.trainingDataRange_ = this.trainingDataRange_;
+      if (trainingDataRangeCase_ == 12 &&
+          trainingDataDatetimeRangeBuilder_ != null) {
+        result.trainingDataRange_ = trainingDataDatetimeRangeBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1019,7 +948,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1034,17 +963,81 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.ForecastingParameters parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              intervalWidthInMinutes_ = input.readInt32();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 48: {
+              historicalDataRange_ = input.readInt32();
+              historicalDataRangeCase_ = 6;
+              break;
+            } // case 48
+            case 58: {
+              input.readMessage(
+                  getHistoricalDataRangeStartDatetimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              historicalDataRangeCase_ = 7;
+              break;
+            } // case 58
+            case 64: {
+              forecastTestRangeInWeeks_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 64
+            case 72: {
+              forecastRange_ = input.readInt32();
+              forecastRangeCase_ = 9;
+              break;
+            } // case 72
+            case 82: {
+              input.readMessage(
+                  getForecastDatetimeRangeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              forecastRangeCase_ = 10;
+              break;
+            } // case 82
+            case 88: {
+              trainingDataRange_ = input.readInt32();
+              trainingDataRangeCase_ = 11;
+              break;
+            } // case 88
+            case 98: {
+              input.readMessage(
+                  getTrainingDataDatetimeRangeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              trainingDataRangeCase_ = 12;
+              break;
+            } // case 98
+            case 104: {
+              averagesCalculationRangeInMonths_ = input.readInt32();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 104
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.ForecastingParameters) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int historicalDataRangeCase_ = 0;
@@ -1092,6 +1085,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private int intervalWidthInMinutes_ ;
     /**
@@ -1116,8 +1110,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIntervalWidthInMinutes(int value) {
-      
+
       intervalWidthInMinutes_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1130,12 +1125,23 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIntervalWidthInMinutes() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       intervalWidthInMinutes_ = 0;
       onChanged();
       return this;
     }
 
+    /**
+     * <pre>
+     * number of months back from the current datetime to look up history.
+     * </pre>
+     *
+     * <code>int32 historical_data_range_in_months = 6 [json_name = "historicalDataRangeInMonths"];</code>
+     * @return Whether the historicalDataRangeInMonths field is set.
+     */
+    public boolean hasHistoricalDataRangeInMonths() {
+      return historicalDataRangeCase_ == 6;
+    }
     /**
      * <pre>
      * number of months back from the current datetime to look up history.
@@ -1160,6 +1166,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHistoricalDataRangeInMonths(int value) {
+
       historicalDataRangeCase_ = 6;
       historicalDataRange_ = value;
       onChanged();
@@ -1276,8 +1283,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (historicalDataRangeCase_ == 7) {
           historicalDataRangeStartDatetimeBuilder_.mergeFrom(value);
+        } else {
+          historicalDataRangeStartDatetimeBuilder_.setMessage(value);
         }
-        historicalDataRangeStartDatetimeBuilder_.setMessage(value);
       }
       historicalDataRangeCase_ = 7;
       return this;
@@ -1355,7 +1363,7 @@ private static final long serialVersionUID = 0L;
         historicalDataRange_ = null;
       }
       historicalDataRangeCase_ = 7;
-      onChanged();;
+      onChanged();
       return historicalDataRangeStartDatetimeBuilder_;
     }
 
@@ -1382,8 +1390,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setForecastTestRangeInWeeks(int value) {
-      
+
       forecastTestRangeInWeeks_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1396,12 +1405,23 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearForecastTestRangeInWeeks() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       forecastTestRangeInWeeks_ = 0;
       onChanged();
       return this;
     }
 
+    /**
+     * <pre>
+     * number of weeks from the current datetime that forecast will be made.
+     * </pre>
+     *
+     * <code>int32 forecast_range_in_weeks = 9 [json_name = "forecastRangeInWeeks"];</code>
+     * @return Whether the forecastRangeInWeeks field is set.
+     */
+    public boolean hasForecastRangeInWeeks() {
+      return forecastRangeCase_ == 9;
+    }
     /**
      * <pre>
      * number of weeks from the current datetime that forecast will be made.
@@ -1426,6 +1446,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setForecastRangeInWeeks(int value) {
+
       forecastRangeCase_ = 9;
       forecastRange_ = value;
       onChanged();
@@ -1542,8 +1563,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (forecastRangeCase_ == 10) {
           forecastDatetimeRangeBuilder_.mergeFrom(value);
+        } else {
+          forecastDatetimeRangeBuilder_.setMessage(value);
         }
-        forecastDatetimeRangeBuilder_.setMessage(value);
       }
       forecastRangeCase_ = 10;
       return this;
@@ -1621,10 +1643,21 @@ private static final long serialVersionUID = 0L;
         forecastRange_ = null;
       }
       forecastRangeCase_ = 10;
-      onChanged();;
+      onChanged();
       return forecastDatetimeRangeBuilder_;
     }
 
+    /**
+     * <pre>
+     * number of months in the past from the current datetime that the training data will be generated from.
+     * </pre>
+     *
+     * <code>int32 training_data_range_in_months = 11 [json_name = "trainingDataRangeInMonths"];</code>
+     * @return Whether the trainingDataRangeInMonths field is set.
+     */
+    public boolean hasTrainingDataRangeInMonths() {
+      return trainingDataRangeCase_ == 11;
+    }
     /**
      * <pre>
      * number of months in the past from the current datetime that the training data will be generated from.
@@ -1649,6 +1682,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTrainingDataRangeInMonths(int value) {
+
       trainingDataRangeCase_ = 11;
       trainingDataRange_ = value;
       onChanged();
@@ -1765,8 +1799,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (trainingDataRangeCase_ == 12) {
           trainingDataDatetimeRangeBuilder_.mergeFrom(value);
+        } else {
+          trainingDataDatetimeRangeBuilder_.setMessage(value);
         }
-        trainingDataDatetimeRangeBuilder_.setMessage(value);
       }
       trainingDataRangeCase_ = 12;
       return this;
@@ -1844,7 +1879,7 @@ private static final long serialVersionUID = 0L;
         trainingDataRange_ = null;
       }
       trainingDataRangeCase_ = 12;
-      onChanged();;
+      onChanged();
       return trainingDataDatetimeRangeBuilder_;
     }
 
@@ -1877,8 +1912,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAveragesCalculationRangeInMonths(int value) {
-      
+
       averagesCalculationRangeInMonths_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1894,7 +1930,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAveragesCalculationRangeInMonths() {
-      
+      bitField0_ = (bitField0_ & ~0x00000100);
       averagesCalculationRangeInMonths_ = 0;
       onChanged();
       return this;
@@ -1932,7 +1968,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ForecastingParameters(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

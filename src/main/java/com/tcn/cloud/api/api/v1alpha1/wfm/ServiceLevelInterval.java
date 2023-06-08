@@ -29,66 +29,6 @@ private static final long serialVersionUID = 0L;
     return new ServiceLevelInterval();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private ServiceLevelInterval(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.google.protobuf.Timestamp.Builder subBuilder = null;
-            if (startDatetime_ != null) {
-              subBuilder = startDatetime_.toBuilder();
-            }
-            startDatetime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(startDatetime_);
-              startDatetime_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 21: {
-
-            serviceLevelAchieved_ = input.readFloat();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ServiceLevelInterval_descriptor;
@@ -137,11 +77,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getStartDatetimeOrBuilder() {
-    return getStartDatetime();
+    return startDatetime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDatetime_;
   }
 
   public static final int SERVICE_LEVEL_ACHIEVED_FIELD_NUMBER = 2;
-  private float serviceLevelAchieved_;
+  private float serviceLevelAchieved_ = 0F;
   /**
    * <pre>
    * The service level achieved as a percent value, ranging from 0.0 to 1.0
@@ -172,10 +112,10 @@ private static final long serialVersionUID = 0L;
     if (startDatetime_ != null) {
       output.writeMessage(1, getStartDatetime());
     }
-    if (serviceLevelAchieved_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(serviceLevelAchieved_) != 0) {
       output.writeFloat(2, serviceLevelAchieved_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -188,11 +128,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getStartDatetime());
     }
-    if (serviceLevelAchieved_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(serviceLevelAchieved_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(2, serviceLevelAchieved_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -215,7 +155,7 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Float.floatToIntBits(getServiceLevelAchieved())
         != java.lang.Float.floatToIntBits(
             other.getServiceLevelAchieved())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -233,7 +173,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + SERVICE_LEVEL_ACHIEVED_FIELD_NUMBER;
     hash = (53 * hash) + java.lang.Float.floatToIntBits(
         getServiceLevelAchieved());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -282,11 +222,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -354,30 +296,24 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (startDatetimeBuilder_ == null) {
-        startDatetime_ = null;
-      } else {
-        startDatetime_ = null;
+      bitField0_ = 0;
+      startDatetime_ = null;
+      if (startDatetimeBuilder_ != null) {
+        startDatetimeBuilder_.dispose();
         startDatetimeBuilder_ = null;
       }
       serviceLevelAchieved_ = 0F;
-
       return this;
     }
 
@@ -404,14 +340,21 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval result = new com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval(this);
-      if (startDatetimeBuilder_ == null) {
-        result.startDatetime_ = startDatetime_;
-      } else {
-        result.startDatetime_ = startDatetimeBuilder_.build();
-      }
-      result.serviceLevelAchieved_ = serviceLevelAchieved_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.startDatetime_ = startDatetimeBuilder_ == null
+            ? startDatetime_
+            : startDatetimeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.serviceLevelAchieved_ = serviceLevelAchieved_;
+      }
     }
 
     @java.lang.Override
@@ -464,7 +407,7 @@ private static final long serialVersionUID = 0L;
       if (other.getServiceLevelAchieved() != 0F) {
         setServiceLevelAchieved(other.getServiceLevelAchieved());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -479,19 +422,45 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getStartDatetimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 21: {
+              serviceLevelAchieved_ = input.readFloat();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 21
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.ServiceLevelInterval) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.google.protobuf.Timestamp startDatetime_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -505,7 +474,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the startDatetime field is set.
      */
     public boolean hasStartDatetime() {
-      return startDatetimeBuilder_ != null || startDatetime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -535,11 +504,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         startDatetime_ = value;
-        onChanged();
       } else {
         startDatetimeBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -553,11 +522,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (startDatetimeBuilder_ == null) {
         startDatetime_ = builderForValue.build();
-        onChanged();
       } else {
         startDatetimeBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -569,17 +538,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeStartDatetime(com.google.protobuf.Timestamp value) {
       if (startDatetimeBuilder_ == null) {
-        if (startDatetime_ != null) {
-          startDatetime_ =
-            com.google.protobuf.Timestamp.newBuilder(startDatetime_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          startDatetime_ != null &&
+          startDatetime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getStartDatetimeBuilder().mergeFrom(value);
         } else {
           startDatetime_ = value;
         }
-        onChanged();
       } else {
         startDatetimeBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -590,14 +560,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp start_datetime = 1 [json_name = "startDatetime"];</code>
      */
     public Builder clearStartDatetime() {
-      if (startDatetimeBuilder_ == null) {
-        startDatetime_ = null;
-        onChanged();
-      } else {
-        startDatetime_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      startDatetime_ = null;
+      if (startDatetimeBuilder_ != null) {
+        startDatetimeBuilder_.dispose();
         startDatetimeBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -608,7 +577,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp start_datetime = 1 [json_name = "startDatetime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getStartDatetimeBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getStartDatetimeFieldBuilder().getBuilder();
     }
@@ -671,8 +640,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setServiceLevelAchieved(float value) {
-      
+
       serviceLevelAchieved_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -685,7 +655,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearServiceLevelAchieved() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       serviceLevelAchieved_ = 0F;
       onChanged();
       return this;
@@ -723,7 +693,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ServiceLevelInterval(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

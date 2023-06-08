@@ -36,11 +36,15 @@ public interface ScenarioDataOrBuilder extends
 
   /**
    * <code>string country_code = 3 [json_name = "countryCode", deprecated = true];</code>
+   * @deprecated api.commons.ScenarioData.country_code is deprecated.
+   *     See api/commons/compliance.proto;l=231
    * @return The countryCode.
    */
   @java.lang.Deprecated java.lang.String getCountryCode();
   /**
    * <code>string country_code = 3 [json_name = "countryCode", deprecated = true];</code>
+   * @deprecated api.commons.ScenarioData.country_code is deprecated.
+   *     See api/commons/compliance.proto;l=231
    * @return The bytes for countryCode.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -81,14 +85,14 @@ public interface ScenarioDataOrBuilder extends
   /**
    * <code>map&lt;string, string&gt; call_metadata = 5 [json_name = "callMetadata"];</code>
    */
-
-  java.lang.String getCallMetadataOrDefault(
+  /* nullable */
+java.lang.String getCallMetadataOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue);
+      /* nullable */
+java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; call_metadata = 5 [json_name = "callMetadata"];</code>
    */
-
   java.lang.String getCallMetadataOrThrow(
       java.lang.String key);
 

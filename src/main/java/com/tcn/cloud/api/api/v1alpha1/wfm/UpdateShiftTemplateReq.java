@@ -29,61 +29,6 @@ private static final long serialVersionUID = 0L;
     return new UpdateShiftTemplateReq();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private UpdateShiftTemplateReq(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.tcn.cloud.api.api.v1alpha1.wfm.ShiftTemplate.Builder subBuilder = null;
-            if (shiftTemplate_ != null) {
-              subBuilder = shiftTemplate_.toBuilder();
-            }
-            shiftTemplate_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.ShiftTemplate.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(shiftTemplate_);
-              shiftTemplate_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_UpdateShiftTemplateReq_descriptor;
@@ -132,7 +77,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftTemplateOrBuilder getShiftTemplateOrBuilder() {
-    return getShiftTemplate();
+    return shiftTemplate_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.ShiftTemplate.getDefaultInstance() : shiftTemplate_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -152,7 +97,7 @@ private static final long serialVersionUID = 0L;
     if (shiftTemplate_ != null) {
       output.writeMessage(1, getShiftTemplate());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -165,7 +110,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getShiftTemplate());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -185,7 +130,7 @@ private static final long serialVersionUID = 0L;
       if (!getShiftTemplate()
           .equals(other.getShiftTemplate())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -200,7 +145,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SHIFT_TEMPLATE_FIELD_NUMBER;
       hash = (53 * hash) + getShiftTemplate().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -249,11 +194,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -321,26 +268,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (shiftTemplateBuilder_ == null) {
-        shiftTemplate_ = null;
-      } else {
-        shiftTemplate_ = null;
+      bitField0_ = 0;
+      shiftTemplate_ = null;
+      if (shiftTemplateBuilder_ != null) {
+        shiftTemplateBuilder_.dispose();
         shiftTemplateBuilder_ = null;
       }
       return this;
@@ -369,13 +311,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq(this);
-      if (shiftTemplateBuilder_ == null) {
-        result.shiftTemplate_ = shiftTemplate_;
-      } else {
-        result.shiftTemplate_ = shiftTemplateBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.shiftTemplate_ = shiftTemplateBuilder_ == null
+            ? shiftTemplate_
+            : shiftTemplateBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -425,7 +372,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasShiftTemplate()) {
         mergeShiftTemplate(other.getShiftTemplate());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -440,19 +387,40 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getShiftTemplateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.tcn.cloud.api.api.v1alpha1.wfm.ShiftTemplate shiftTemplate_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -466,7 +434,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the shiftTemplate field is set.
      */
     public boolean hasShiftTemplate() {
-      return shiftTemplateBuilder_ != null || shiftTemplate_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -496,11 +464,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         shiftTemplate_ = value;
-        onChanged();
       } else {
         shiftTemplateBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -514,11 +482,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.ShiftTemplate.Builder builderForValue) {
       if (shiftTemplateBuilder_ == null) {
         shiftTemplate_ = builderForValue.build();
-        onChanged();
       } else {
         shiftTemplateBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -530,17 +498,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeShiftTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.ShiftTemplate value) {
       if (shiftTemplateBuilder_ == null) {
-        if (shiftTemplate_ != null) {
-          shiftTemplate_ =
-            com.tcn.cloud.api.api.v1alpha1.wfm.ShiftTemplate.newBuilder(shiftTemplate_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          shiftTemplate_ != null &&
+          shiftTemplate_ != com.tcn.cloud.api.api.v1alpha1.wfm.ShiftTemplate.getDefaultInstance()) {
+          getShiftTemplateBuilder().mergeFrom(value);
         } else {
           shiftTemplate_ = value;
         }
-        onChanged();
       } else {
         shiftTemplateBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -551,14 +520,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.ShiftTemplate shift_template = 1 [json_name = "shiftTemplate"];</code>
      */
     public Builder clearShiftTemplate() {
-      if (shiftTemplateBuilder_ == null) {
-        shiftTemplate_ = null;
-        onChanged();
-      } else {
-        shiftTemplate_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      shiftTemplate_ = null;
+      if (shiftTemplateBuilder_ != null) {
+        shiftTemplateBuilder_.dispose();
         shiftTemplateBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -569,7 +537,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.ShiftTemplate shift_template = 1 [json_name = "shiftTemplate"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftTemplate.Builder getShiftTemplateBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getShiftTemplateFieldBuilder().getBuilder();
     }
@@ -641,7 +609,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new UpdateShiftTemplateReq(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

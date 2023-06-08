@@ -67,5 +67,5 @@ public interface FlowOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.integrations.ExecuteFlowOrBuilder getExecuteFlowOrBuilder();
 
-  public com.tcn.cloud.api.api.commons.integrations.Flow.ValueCase getValueCase();
+  com.tcn.cloud.api.api.commons.integrations.Flow.ValueCase getValueCase();
 }

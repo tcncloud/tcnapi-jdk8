@@ -26,80 +26,6 @@ private static final long serialVersionUID = 0L;
     return new CreateScenarioReq();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private CreateScenarioReq(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 18: {
-            com.tcn.cloud.api.api.commons.ScenarioData.Builder subBuilder = null;
-            if (shouldAllow_ != null) {
-              subBuilder = shouldAllow_.toBuilder();
-            }
-            shouldAllow_ = input.readMessage(com.tcn.cloud.api.api.commons.ScenarioData.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(shouldAllow_);
-              shouldAllow_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 26: {
-            com.tcn.cloud.api.api.commons.ScenarioData.Builder subBuilder = null;
-            if (shouldDeny_ != null) {
-              subBuilder = shouldDeny_.toBuilder();
-            }
-            shouldDeny_ = input.readMessage(com.tcn.cloud.api.api.commons.ScenarioData.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(shouldDeny_);
-              shouldDeny_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            name_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.ComplianceProto.internal_static_api_v0alpha_CreateScenarioReq_descriptor;
@@ -136,7 +62,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.ScenarioDataOrBuilder getShouldAllowOrBuilder() {
-    return getShouldAllow();
+    return shouldAllow_ == null ? com.tcn.cloud.api.api.commons.ScenarioData.getDefaultInstance() : shouldAllow_;
   }
 
   public static final int SHOULD_DENY_FIELD_NUMBER = 3;
@@ -162,11 +88,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.ScenarioDataOrBuilder getShouldDenyOrBuilder() {
-    return getShouldDeny();
+    return shouldDeny_ == null ? com.tcn.cloud.api.api.commons.ScenarioData.getDefaultInstance() : shouldDeny_;
   }
 
   public static final int NAME_FIELD_NUMBER = 4;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <code>string name = 4 [json_name = "name"];</code>
    * @return The name.
@@ -223,10 +150,10 @@ private static final long serialVersionUID = 0L;
     if (shouldDeny_ != null) {
       output.writeMessage(3, getShouldDeny());
     }
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -243,10 +170,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getShouldDeny());
     }
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -273,7 +200,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getName()
         .equals(other.getName())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -294,7 +221,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -343,11 +270,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.CreateScenarioReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.CreateScenarioReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -411,36 +340,29 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CreateScenarioReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (shouldAllowBuilder_ == null) {
-        shouldAllow_ = null;
-      } else {
-        shouldAllow_ = null;
+      bitField0_ = 0;
+      shouldAllow_ = null;
+      if (shouldAllowBuilder_ != null) {
+        shouldAllowBuilder_.dispose();
         shouldAllowBuilder_ = null;
       }
-      if (shouldDenyBuilder_ == null) {
-        shouldDeny_ = null;
-      } else {
-        shouldDeny_ = null;
+      shouldDeny_ = null;
+      if (shouldDenyBuilder_ != null) {
+        shouldDenyBuilder_.dispose();
         shouldDenyBuilder_ = null;
       }
       name_ = "";
-
       return this;
     }
 
@@ -467,19 +389,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.CreateScenarioReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.CreateScenarioReq result = new com.tcn.cloud.api.api.v0alpha.CreateScenarioReq(this);
-      if (shouldAllowBuilder_ == null) {
-        result.shouldAllow_ = shouldAllow_;
-      } else {
-        result.shouldAllow_ = shouldAllowBuilder_.build();
-      }
-      if (shouldDenyBuilder_ == null) {
-        result.shouldDeny_ = shouldDeny_;
-      } else {
-        result.shouldDeny_ = shouldDenyBuilder_.build();
-      }
-      result.name_ = name_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.CreateScenarioReq result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.shouldAllow_ = shouldAllowBuilder_ == null
+            ? shouldAllow_
+            : shouldAllowBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.shouldDeny_ = shouldDenyBuilder_ == null
+            ? shouldDeny_
+            : shouldDenyBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.name_ = name_;
+      }
     }
 
     @java.lang.Override
@@ -534,9 +463,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -551,19 +481,52 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.CreateScenarioReq parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              input.readMessage(
+                  getShouldAllowFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getShouldDenyFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 26
+            case 34: {
+              name_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 34
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.CreateScenarioReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.tcn.cloud.api.api.commons.ScenarioData shouldAllow_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -573,7 +536,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the shouldAllow field is set.
      */
     public boolean hasShouldAllow() {
-      return shouldAllowBuilder_ != null || shouldAllow_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.api.commons.ScenarioData should_allow = 2 [json_name = "shouldAllow"];</code>
@@ -595,11 +558,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         shouldAllow_ = value;
-        onChanged();
       } else {
         shouldAllowBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -609,11 +572,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.ScenarioData.Builder builderForValue) {
       if (shouldAllowBuilder_ == null) {
         shouldAllow_ = builderForValue.build();
-        onChanged();
       } else {
         shouldAllowBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -621,38 +584,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeShouldAllow(com.tcn.cloud.api.api.commons.ScenarioData value) {
       if (shouldAllowBuilder_ == null) {
-        if (shouldAllow_ != null) {
-          shouldAllow_ =
-            com.tcn.cloud.api.api.commons.ScenarioData.newBuilder(shouldAllow_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          shouldAllow_ != null &&
+          shouldAllow_ != com.tcn.cloud.api.api.commons.ScenarioData.getDefaultInstance()) {
+          getShouldAllowBuilder().mergeFrom(value);
         } else {
           shouldAllow_ = value;
         }
-        onChanged();
       } else {
         shouldAllowBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.commons.ScenarioData should_allow = 2 [json_name = "shouldAllow"];</code>
      */
     public Builder clearShouldAllow() {
-      if (shouldAllowBuilder_ == null) {
-        shouldAllow_ = null;
-        onChanged();
-      } else {
-        shouldAllow_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      shouldAllow_ = null;
+      if (shouldAllowBuilder_ != null) {
+        shouldAllowBuilder_.dispose();
         shouldAllowBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.commons.ScenarioData should_allow = 2 [json_name = "shouldAllow"];</code>
      */
     public com.tcn.cloud.api.api.commons.ScenarioData.Builder getShouldAllowBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getShouldAllowFieldBuilder().getBuilder();
     }
@@ -692,7 +655,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the shouldDeny field is set.
      */
     public boolean hasShouldDeny() {
-      return shouldDenyBuilder_ != null || shouldDeny_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.api.commons.ScenarioData should_deny = 3 [json_name = "shouldDeny"];</code>
@@ -714,11 +677,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         shouldDeny_ = value;
-        onChanged();
       } else {
         shouldDenyBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -728,11 +691,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.ScenarioData.Builder builderForValue) {
       if (shouldDenyBuilder_ == null) {
         shouldDeny_ = builderForValue.build();
-        onChanged();
       } else {
         shouldDenyBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -740,38 +703,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeShouldDeny(com.tcn.cloud.api.api.commons.ScenarioData value) {
       if (shouldDenyBuilder_ == null) {
-        if (shouldDeny_ != null) {
-          shouldDeny_ =
-            com.tcn.cloud.api.api.commons.ScenarioData.newBuilder(shouldDeny_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          shouldDeny_ != null &&
+          shouldDeny_ != com.tcn.cloud.api.api.commons.ScenarioData.getDefaultInstance()) {
+          getShouldDenyBuilder().mergeFrom(value);
         } else {
           shouldDeny_ = value;
         }
-        onChanged();
       } else {
         shouldDenyBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.commons.ScenarioData should_deny = 3 [json_name = "shouldDeny"];</code>
      */
     public Builder clearShouldDeny() {
-      if (shouldDenyBuilder_ == null) {
-        shouldDeny_ = null;
-        onChanged();
-      } else {
-        shouldDeny_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      shouldDeny_ = null;
+      if (shouldDenyBuilder_ != null) {
+        shouldDenyBuilder_.dispose();
         shouldDenyBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.commons.ScenarioData should_deny = 3 [json_name = "shouldDeny"];</code>
      */
     public com.tcn.cloud.api.api.commons.ScenarioData.Builder getShouldDenyBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getShouldDenyFieldBuilder().getBuilder();
     }
@@ -844,11 +807,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -857,8 +818,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -869,12 +830,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -911,7 +870,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new CreateScenarioReq(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -30,154 +30,6 @@ private static final long serialVersionUID = 0L;
     return new ConstraintRule();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private ConstraintRule(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            constraintRuleSid_ = input.readInt64();
-            break;
-          }
-          case 18: {
-            com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder subBuilder = null;
-            if (parentEntity_ != null) {
-              subBuilder = parentEntity_.toBuilder();
-            }
-            parentEntity_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(parentEntity_);
-              parentEntity_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            name_ = s;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            description_ = s;
-            break;
-          }
-          case 40: {
-
-            valCount_ = input.readInt32();
-            break;
-          }
-          case 48: {
-            int rawValue = input.readEnum();
-
-            valUnit_ = rawValue;
-            break;
-          }
-          case 56: {
-
-            perCount_ = input.readInt32();
-            break;
-          }
-          case 64: {
-            int rawValue = input.readEnum();
-
-            perUnit_ = rawValue;
-            break;
-          }
-          case 72: {
-
-            priority_ = input.readInt32();
-            break;
-          }
-          case 80: {
-
-            isPriorityInfinite_ = input.readBool();
-            break;
-          }
-          case 88: {
-            int rawValue = input.readEnum();
-
-            ruleType_ = rawValue;
-            break;
-          }
-          case 96: {
-
-            targetSid_ = input.readInt64();
-            break;
-          }
-          case 104: {
-
-            scheduleScenarioSid_ = input.readInt64();
-            break;
-          }
-          case 114: {
-            com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity.Builder subBuilder = null;
-            if (memberTargetEntityCase_ == 14) {
-              subBuilder = ((com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity) memberTargetEntity_).toBuilder();
-            }
-            memberTargetEntity_ =
-                input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity) memberTargetEntity_);
-              memberTargetEntity_ = subBuilder.buildPartial();
-            }
-            memberTargetEntityCase_ = 14;
-            break;
-          }
-          case 122: {
-            com.tcn.cloud.api.api.v1alpha1.wfm.SkillProficiency.Builder subBuilder = null;
-            if (memberTargetEntityCase_ == 15) {
-              subBuilder = ((com.tcn.cloud.api.api.v1alpha1.wfm.SkillProficiency) memberTargetEntity_).toBuilder();
-            }
-            memberTargetEntity_ =
-                input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.SkillProficiency.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.SkillProficiency) memberTargetEntity_);
-              memberTargetEntity_ = subBuilder.buildPartial();
-            }
-            memberTargetEntityCase_ = 15;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ConstraintRule_descriptor;
@@ -192,6 +44,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int memberTargetEntityCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object memberTargetEntity_;
   public enum MemberTargetEntityCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -233,7 +86,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONSTRAINT_RULE_SID_FIELD_NUMBER = 1;
-  private long constraintRuleSid_;
+  private long constraintRuleSid_ = 0L;
   /**
    * <pre>
    * ID of this constraint rule
@@ -282,11 +135,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntityOrBuilder getParentEntityOrBuilder() {
-    return getParentEntity();
+    return parentEntity_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.getDefaultInstance() : parentEntity_;
   }
 
   public static final int NAME_FIELD_NUMBER = 3;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * Name of the constraint rule
@@ -332,7 +186,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 4;
-  private volatile java.lang.Object description_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
   /**
    * <pre>
    * Description of the constraint rule.
@@ -378,7 +233,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VAL_COUNT_FIELD_NUMBER = 5;
-  private int valCount_;
+  private int valCount_ = 0;
   /**
    * <pre>
    * Ammount of time that the rule will be applied for.
@@ -393,7 +248,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VAL_UNIT_FIELD_NUMBER = 6;
-  private int valUnit_;
+  private int valUnit_ = 0;
   /**
    * <pre>
    * Measuring unit to be used by &#64;val_count.
@@ -414,13 +269,12 @@ private static final long serialVersionUID = 0L;
    * @return The valUnit.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.ConstraintTimeUnit getValUnit() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.ConstraintTimeUnit result = com.tcn.cloud.api.api.commons.ConstraintTimeUnit.valueOf(valUnit_);
+    com.tcn.cloud.api.api.commons.ConstraintTimeUnit result = com.tcn.cloud.api.api.commons.ConstraintTimeUnit.forNumber(valUnit_);
     return result == null ? com.tcn.cloud.api.api.commons.ConstraintTimeUnit.UNRECOGNIZED : result;
   }
 
   public static final int PER_COUNT_FIELD_NUMBER = 7;
-  private int perCount_;
+  private int perCount_ = 0;
   /**
    * <pre>
    * Specifies often &#64;val_count will be repeated.
@@ -435,7 +289,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PER_UNIT_FIELD_NUMBER = 8;
-  private int perUnit_;
+  private int perUnit_ = 0;
   /**
    * <pre>
    * Measuring unit to be used by &#64;per_count.
@@ -456,13 +310,12 @@ private static final long serialVersionUID = 0L;
    * @return The perUnit.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.ConstraintTimeUnit getPerUnit() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.ConstraintTimeUnit result = com.tcn.cloud.api.api.commons.ConstraintTimeUnit.valueOf(perUnit_);
+    com.tcn.cloud.api.api.commons.ConstraintTimeUnit result = com.tcn.cloud.api.api.commons.ConstraintTimeUnit.forNumber(perUnit_);
     return result == null ? com.tcn.cloud.api.api.commons.ConstraintTimeUnit.UNRECOGNIZED : result;
   }
 
   public static final int PRIORITY_FIELD_NUMBER = 9;
-  private int priority_;
+  private int priority_ = 0;
   /**
    * <pre>
    * Priority value, higher value means higher priority.
@@ -477,7 +330,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IS_PRIORITY_INFINITE_FIELD_NUMBER = 10;
-  private boolean isPriorityInfinite_;
+  private boolean isPriorityInfinite_ = false;
   /**
    * <pre>
    * Whether or not the rule has infinite priority
@@ -492,7 +345,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RULE_TYPE_FIELD_NUMBER = 11;
-  private int ruleType_;
+  private int ruleType_ = 0;
   /**
    * <pre>
    * The type that this rule whill be.
@@ -513,13 +366,12 @@ private static final long serialVersionUID = 0L;
    * @return The ruleType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.ConstraintRuleType getRuleType() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.ConstraintRuleType result = com.tcn.cloud.api.api.commons.ConstraintRuleType.valueOf(ruleType_);
+    com.tcn.cloud.api.api.commons.ConstraintRuleType result = com.tcn.cloud.api.api.commons.ConstraintRuleType.forNumber(ruleType_);
     return result == null ? com.tcn.cloud.api.api.commons.ConstraintRuleType.UNRECOGNIZED : result;
   }
 
   public static final int TARGET_SID_FIELD_NUMBER = 12;
-  private long targetSid_;
+  private long targetSid_ = 0L;
   /**
    * <pre>
    * Refers to a skill_proficiency_sid if &#64;rule_type is MIN_SKILL_LEVEL, and otherwise refers to a scheduling_activity.
@@ -534,7 +386,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SCHEDULE_SCENARIO_SID_FIELD_NUMBER = 13;
-  private long scheduleScenarioSid_;
+  private long scheduleScenarioSid_ = 0L;
   /**
    * <pre>
    * ID of the schedule scenario that the constraint rule belongs to.
@@ -654,10 +506,10 @@ private static final long serialVersionUID = 0L;
     if (parentEntity_ != null) {
       output.writeMessage(2, getParentEntity());
     }
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
     }
     if (valCount_ != 0) {
@@ -693,7 +545,7 @@ private static final long serialVersionUID = 0L;
     if (memberTargetEntityCase_ == 15) {
       output.writeMessage(15, (com.tcn.cloud.api.api.v1alpha1.wfm.SkillProficiency) memberTargetEntity_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -710,10 +562,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getParentEntity());
     }
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
     }
     if (valCount_ != 0) {
@@ -760,7 +612,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, (com.tcn.cloud.api.api.v1alpha1.wfm.SkillProficiency) memberTargetEntity_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -814,7 +666,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -869,7 +721,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -918,11 +770,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.ConstraintRule parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.ConstraintRule parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -986,52 +840,41 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.ConstraintRule.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       constraintRuleSid_ = 0L;
-
-      if (parentEntityBuilder_ == null) {
-        parentEntity_ = null;
-      } else {
-        parentEntity_ = null;
+      parentEntity_ = null;
+      if (parentEntityBuilder_ != null) {
+        parentEntityBuilder_.dispose();
         parentEntityBuilder_ = null;
       }
       name_ = "";
-
       description_ = "";
-
       valCount_ = 0;
-
       valUnit_ = 0;
-
       perCount_ = 0;
-
       perUnit_ = 0;
-
       priority_ = 0;
-
       isPriorityInfinite_ = false;
-
       ruleType_ = 0;
-
       targetSid_ = 0L;
-
       scheduleScenarioSid_ = 0L;
-
+      if (schedulingActivityBuilder_ != null) {
+        schedulingActivityBuilder_.clear();
+      }
+      if (skillProficiencyBuilder_ != null) {
+        skillProficiencyBuilder_.clear();
+      }
       memberTargetEntityCase_ = 0;
       memberTargetEntity_ = null;
       return this;
@@ -1060,40 +903,68 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.ConstraintRule buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.ConstraintRule result = new com.tcn.cloud.api.api.v1alpha1.wfm.ConstraintRule(this);
-      result.constraintRuleSid_ = constraintRuleSid_;
-      if (parentEntityBuilder_ == null) {
-        result.parentEntity_ = parentEntity_;
-      } else {
-        result.parentEntity_ = parentEntityBuilder_.build();
-      }
-      result.name_ = name_;
-      result.description_ = description_;
-      result.valCount_ = valCount_;
-      result.valUnit_ = valUnit_;
-      result.perCount_ = perCount_;
-      result.perUnit_ = perUnit_;
-      result.priority_ = priority_;
-      result.isPriorityInfinite_ = isPriorityInfinite_;
-      result.ruleType_ = ruleType_;
-      result.targetSid_ = targetSid_;
-      result.scheduleScenarioSid_ = scheduleScenarioSid_;
-      if (memberTargetEntityCase_ == 14) {
-        if (schedulingActivityBuilder_ == null) {
-          result.memberTargetEntity_ = memberTargetEntity_;
-        } else {
-          result.memberTargetEntity_ = schedulingActivityBuilder_.build();
-        }
-      }
-      if (memberTargetEntityCase_ == 15) {
-        if (skillProficiencyBuilder_ == null) {
-          result.memberTargetEntity_ = memberTargetEntity_;
-        } else {
-          result.memberTargetEntity_ = skillProficiencyBuilder_.build();
-        }
-      }
-      result.memberTargetEntityCase_ = memberTargetEntityCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.ConstraintRule result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.constraintRuleSid_ = constraintRuleSid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.parentEntity_ = parentEntityBuilder_ == null
+            ? parentEntity_
+            : parentEntityBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.valCount_ = valCount_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.valUnit_ = valUnit_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.perCount_ = perCount_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.perUnit_ = perUnit_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.priority_ = priority_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.isPriorityInfinite_ = isPriorityInfinite_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.ruleType_ = ruleType_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.targetSid_ = targetSid_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.scheduleScenarioSid_ = scheduleScenarioSid_;
+      }
+    }
+
+    private void buildPartialOneofs(com.tcn.cloud.api.api.v1alpha1.wfm.ConstraintRule result) {
+      result.memberTargetEntityCase_ = memberTargetEntityCase_;
+      result.memberTargetEntity_ = this.memberTargetEntity_;
+      if (memberTargetEntityCase_ == 14 &&
+          schedulingActivityBuilder_ != null) {
+        result.memberTargetEntity_ = schedulingActivityBuilder_.build();
+      }
+      if (memberTargetEntityCase_ == 15 &&
+          skillProficiencyBuilder_ != null) {
+        result.memberTargetEntity_ = skillProficiencyBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1148,10 +1019,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.getValCount() != 0) {
@@ -1194,7 +1067,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1209,17 +1082,111 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.ConstraintRule parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              constraintRuleSid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              input.readMessage(
+                  getParentEntityFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              name_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              description_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 40: {
+              valCount_ = input.readInt32();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 48: {
+              valUnit_ = input.readEnum();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 56: {
+              perCount_ = input.readInt32();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            case 64: {
+              perUnit_ = input.readEnum();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
+            case 72: {
+              priority_ = input.readInt32();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
+            case 80: {
+              isPriorityInfinite_ = input.readBool();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
+            case 88: {
+              ruleType_ = input.readEnum();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 88
+            case 96: {
+              targetSid_ = input.readInt64();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 96
+            case 104: {
+              scheduleScenarioSid_ = input.readInt64();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 104
+            case 114: {
+              input.readMessage(
+                  getSchedulingActivityFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              memberTargetEntityCase_ = 14;
+              break;
+            } // case 114
+            case 122: {
+              input.readMessage(
+                  getSkillProficiencyFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              memberTargetEntityCase_ = 15;
+              break;
+            } // case 122
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.ConstraintRule) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int memberTargetEntityCase_ = 0;
@@ -1237,6 +1204,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private long constraintRuleSid_ ;
     /**
@@ -1261,8 +1229,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConstraintRuleSid(long value) {
-      
+
       constraintRuleSid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1275,7 +1244,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConstraintRuleSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       constraintRuleSid_ = 0L;
       onChanged();
       return this;
@@ -1293,7 +1262,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the parentEntity field is set.
      */
     public boolean hasParentEntity() {
-      return parentEntityBuilder_ != null || parentEntity_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1323,11 +1292,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         parentEntity_ = value;
-        onChanged();
       } else {
         parentEntityBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1341,11 +1310,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder builderForValue) {
       if (parentEntityBuilder_ == null) {
         parentEntity_ = builderForValue.build();
-        onChanged();
       } else {
         parentEntityBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1357,17 +1326,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeParentEntity(com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity value) {
       if (parentEntityBuilder_ == null) {
-        if (parentEntity_ != null) {
-          parentEntity_ =
-            com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.newBuilder(parentEntity_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          parentEntity_ != null &&
+          parentEntity_ != com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.getDefaultInstance()) {
+          getParentEntityBuilder().mergeFrom(value);
         } else {
           parentEntity_ = value;
         }
-        onChanged();
       } else {
         parentEntityBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1378,14 +1348,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.ParentEntity parent_entity = 2 [json_name = "parentEntity"];</code>
      */
     public Builder clearParentEntity() {
-      if (parentEntityBuilder_ == null) {
-        parentEntity_ = null;
-        onChanged();
-      } else {
-        parentEntity_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      parentEntity_ = null;
+      if (parentEntityBuilder_ != null) {
+        parentEntityBuilder_.dispose();
         parentEntityBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1396,7 +1365,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.ParentEntity parent_entity = 2 [json_name = "parentEntity"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder getParentEntityBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getParentEntityFieldBuilder().getBuilder();
     }
@@ -1489,11 +1458,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1506,8 +1473,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1522,12 +1489,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1585,11 +1550,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       description_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1602,8 +1565,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-      
       description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1618,12 +1581,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1651,8 +1612,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setValCount(int value) {
-      
+
       valCount_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1665,7 +1627,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValCount() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       valCount_ = 0;
       onChanged();
       return this;
@@ -1693,8 +1655,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setValUnitValue(int value) {
-      
       valUnit_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1708,8 +1670,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ConstraintTimeUnit getValUnit() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.ConstraintTimeUnit result = com.tcn.cloud.api.api.commons.ConstraintTimeUnit.valueOf(valUnit_);
+      com.tcn.cloud.api.api.commons.ConstraintTimeUnit result = com.tcn.cloud.api.api.commons.ConstraintTimeUnit.forNumber(valUnit_);
       return result == null ? com.tcn.cloud.api.api.commons.ConstraintTimeUnit.UNRECOGNIZED : result;
     }
     /**
@@ -1725,7 +1686,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000020;
       valUnit_ = value.getNumber();
       onChanged();
       return this;
@@ -1739,7 +1700,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValUnit() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       valUnit_ = 0;
       onChanged();
       return this;
@@ -1768,8 +1729,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPerCount(int value) {
-      
+
       perCount_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1782,7 +1744,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPerCount() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       perCount_ = 0;
       onChanged();
       return this;
@@ -1810,8 +1772,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPerUnitValue(int value) {
-      
       perUnit_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1825,8 +1787,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ConstraintTimeUnit getPerUnit() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.ConstraintTimeUnit result = com.tcn.cloud.api.api.commons.ConstraintTimeUnit.valueOf(perUnit_);
+      com.tcn.cloud.api.api.commons.ConstraintTimeUnit result = com.tcn.cloud.api.api.commons.ConstraintTimeUnit.forNumber(perUnit_);
       return result == null ? com.tcn.cloud.api.api.commons.ConstraintTimeUnit.UNRECOGNIZED : result;
     }
     /**
@@ -1842,7 +1803,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000080;
       perUnit_ = value.getNumber();
       onChanged();
       return this;
@@ -1856,7 +1817,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPerUnit() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       perUnit_ = 0;
       onChanged();
       return this;
@@ -1885,8 +1846,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPriority(int value) {
-      
+
       priority_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1899,7 +1861,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPriority() {
-      
+      bitField0_ = (bitField0_ & ~0x00000100);
       priority_ = 0;
       onChanged();
       return this;
@@ -1928,8 +1890,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIsPriorityInfinite(boolean value) {
-      
+
       isPriorityInfinite_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1942,7 +1905,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsPriorityInfinite() {
-      
+      bitField0_ = (bitField0_ & ~0x00000200);
       isPriorityInfinite_ = false;
       onChanged();
       return this;
@@ -1970,8 +1933,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRuleTypeValue(int value) {
-      
       ruleType_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -1985,8 +1948,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ConstraintRuleType getRuleType() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.ConstraintRuleType result = com.tcn.cloud.api.api.commons.ConstraintRuleType.valueOf(ruleType_);
+      com.tcn.cloud.api.api.commons.ConstraintRuleType result = com.tcn.cloud.api.api.commons.ConstraintRuleType.forNumber(ruleType_);
       return result == null ? com.tcn.cloud.api.api.commons.ConstraintRuleType.UNRECOGNIZED : result;
     }
     /**
@@ -2002,7 +1964,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000400;
       ruleType_ = value.getNumber();
       onChanged();
       return this;
@@ -2016,7 +1978,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRuleType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000400);
       ruleType_ = 0;
       onChanged();
       return this;
@@ -2045,8 +2007,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTargetSid(long value) {
-      
+
       targetSid_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2059,7 +2022,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTargetSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000800);
       targetSid_ = 0L;
       onChanged();
       return this;
@@ -2088,8 +2051,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setScheduleScenarioSid(long value) {
-      
+
       scheduleScenarioSid_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2102,7 +2066,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearScheduleScenarioSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00001000);
       scheduleScenarioSid_ = 0L;
       onChanged();
       return this;
@@ -2202,8 +2166,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (memberTargetEntityCase_ == 14) {
           schedulingActivityBuilder_.mergeFrom(value);
+        } else {
+          schedulingActivityBuilder_.setMessage(value);
         }
-        schedulingActivityBuilder_.setMessage(value);
       }
       memberTargetEntityCase_ = 14;
       return this;
@@ -2281,7 +2246,7 @@ private static final long serialVersionUID = 0L;
         memberTargetEntity_ = null;
       }
       memberTargetEntityCase_ = 14;
-      onChanged();;
+      onChanged();
       return schedulingActivityBuilder_;
     }
 
@@ -2379,8 +2344,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (memberTargetEntityCase_ == 15) {
           skillProficiencyBuilder_.mergeFrom(value);
+        } else {
+          skillProficiencyBuilder_.setMessage(value);
         }
-        skillProficiencyBuilder_.setMessage(value);
       }
       memberTargetEntityCase_ = 15;
       return this;
@@ -2458,7 +2424,7 @@ private static final long serialVersionUID = 0L;
         memberTargetEntity_ = null;
       }
       memberTargetEntityCase_ = 15;
-      onChanged();;
+      onChanged();
       return skillProficiencyBuilder_;
     }
     @java.lang.Override
@@ -2494,7 +2460,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ConstraintRule(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

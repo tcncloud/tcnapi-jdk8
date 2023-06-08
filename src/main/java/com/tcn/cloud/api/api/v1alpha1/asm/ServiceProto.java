@@ -430,42 +430,42 @@ public final class ServiceProto {
       "value\030\002 \001(\003R\005value:\0028\001\"\021\n\017DisableVoiceRe" +
       "s2\344\013\n\006AsmApi\022\212\001\n\rCreateSession\022\".api.v1a" +
       "lpha1.asm.CreateSessionReq\032\".api.v1alpha" +
-      "1.asm.CreateSessionRes\"1\202\323\344\223\002+:\001*\"&/api/" +
-      "v1alpha1/asm/asmapi/createsession\022z\n\tGet" +
+      "1.asm.CreateSessionRes\"1\202\323\344\223\002+\"&/api/v1a" +
+      "lpha1/asm/asmapi/createsession:\001*\022z\n\tGet" +
       "Status\022\036.api.v1alpha1.asm.GetStatusReq\032\036" +
-      ".api.v1alpha1.asm.GetStatusRes\"-\202\323\344\223\002\':\001" +
-      "*\"\"/api/v1alpha1/asm/asmapi/getstatus\022~\n" +
+      ".api.v1alpha1.asm.GetStatusRes\"-\202\323\344\223\002\'\"\"" +
+      "/api/v1alpha1/asm/asmapi/getstatus:\001*\022~\n" +
       "\nEndSession\022\037.api.v1alpha1.asm.EndSessio" +
       "nReq\032\037.api.v1alpha1.asm.EndSessionRes\".\202" +
-      "\323\344\223\002(:\001*\"#/api/v1alpha1/asm/asmapi/endse" +
-      "ssion\022\220\001\n\021GetCurrentSession\022&.api.v1alph" +
+      "\323\344\223\002(\"#/api/v1alpha1/asm/asmapi/endsessi" +
+      "on:\001*\022\220\001\n\021GetCurrentSession\022&.api.v1alph" +
       "a1.asm.GetCurrentSessionReq\032\034.api.v1alph" +
-      "a1.asm.AsmSession\"5\202\323\344\223\002/:\001*\"*/api/v1alp" +
-      "ha1/asm/asmapi/getcurrentsession\022\226\001\n\020Swi" +
+      "a1.asm.AsmSession\"5\202\323\344\223\002/\"*/api/v1alpha1" +
+      "/asm/asmapi/getcurrentsession:\001*\022\226\001\n\020Swi" +
       "tchSubsession\022%.api.v1alpha1.asm.SwitchS" +
       "ubsessionReq\032%.api.v1alpha1.asm.SwitchSu" +
-      "bsessionRes\"4\202\323\344\223\002.:\001*\")/api/v1alpha1/as" +
-      "m/asmapi/switchsubsession\022\232\001\n\021ListConver" +
+      "bsessionRes\"4\202\323\344\223\002.\")/api/v1alpha1/asm/a" +
+      "smapi/switchsubsession:\001*\022\232\001\n\021ListConver" +
       "sations\022&.api.v1alpha1.asm.ListConversat" +
       "ionsReq\032&.api.v1alpha1.asm.ListConversat" +
-      "ionsRes\"5\202\323\344\223\002/:\001*\"*/api/v1alpha1/asm/as" +
-      "mapi/listconversations\022\252\001\n\025AssignNewConv" +
+      "ionsRes\"5\202\323\344\223\002/\"*/api/v1alpha1/asm/asmap" +
+      "i/listconversations:\001*\022\252\001\n\025AssignNewConv" +
       "ersation\022*.api.v1alpha1.asm.AssignNewCon" +
       "versationReq\032*.api.v1alpha1.asm.AssignNe" +
-      "wConversationRes\"9\202\323\344\223\0023:\001*\"./api/v1alph" +
-      "a1/asm/asmapi/assignnewconversation\022~\n\nL" +
+      "wConversationRes\"9\202\323\344\223\0023\"./api/v1alpha1/" +
+      "asm/asmapi/assignnewconversation:\001*\022~\n\nL" +
       "istAgents\022\037.api.v1alpha1.asm.ListAgentsR" +
       "eq\032\037.api.v1alpha1.asm.ListAgentsRes\".\202\323\344" +
-      "\223\002(:\001*\"#/api/v1alpha1/asm/asmapi/listage" +
-      "nts\022\306\001\n\034SetConversationCollectedData\0221.a" +
+      "\223\002(\"#/api/v1alpha1/asm/asmapi/listagents" +
+      ":\001*\022\306\001\n\034SetConversationCollectedData\0221.a" +
       "pi.v1alpha1.asm.SetConversationCollected" +
       "DataReq\0321.api.v1alpha1.asm.SetConversati" +
-      "onCollectedDataRes\"@\202\323\344\223\002::\001*\"5/api/v1al" +
-      "pha1/asm/asmapi/setconversationcollected" +
-      "data\022\221\001\n\020GetQueuesDetails\022%.api.v1alpha1" +
+      "onCollectedDataRes\"@\202\323\344\223\002:\"5/api/v1alpha" +
+      "1/asm/asmapi/setconversationcollecteddat" +
+      "a:\001*\022\221\001\n\020GetQueuesDetails\022%.api.v1alpha1" +
       ".asm.GetQueuesDetailsReq\032 .api.commons.G" +
-      "etQueuesDetailsRes\"4\202\323\344\223\002.:\001*\")/api/v1al" +
-      "pha1/asm/asmapi/getqueuesdetailsB\224\001\n\"com" +
+      "etQueuesDetailsRes\"4\202\323\344\223\002.\")/api/v1alpha" +
+      "1/asm/asmapi/getqueuesdetails:\001*B\224\001\n\"com" +
       ".tcn.cloud.api.api.v1alpha1.asmB\014Service" +
       "ProtoP\001\242\002\003AVA\252\002\020Api.V1alpha1.Asm\312\002\020Api\\V" +
       "1alpha1\\Asm\342\002\034Api\\V1alpha1\\Asm\\GPBMetada" +

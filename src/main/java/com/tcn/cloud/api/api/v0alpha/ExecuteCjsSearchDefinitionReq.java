@@ -27,67 +27,6 @@ private static final long serialVersionUID = 0L;
     return new ExecuteCjsSearchDefinitionReq();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private ExecuteCjsSearchDefinitionReq(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            searchDefinitionId_ = s;
-            break;
-          }
-          case 34: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              searchFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.CjsExecuteSearchField>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            searchFields_.add(
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.CjsExecuteSearchField.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        searchFields_ = java.util.Collections.unmodifiableList(searchFields_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_ExecuteCjsSearchDefinitionReq_descriptor;
@@ -102,7 +41,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SEARCH_DEFINITION_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object searchDefinitionId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object searchDefinitionId_ = "";
   /**
    * <code>string search_definition_id = 1 [json_name = "searchDefinitionId"];</code>
    * @return The searchDefinitionId.
@@ -140,6 +80,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SEARCH_FIELDS_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.CjsExecuteSearchField> searchFields_;
   /**
    * <code>repeated .api.v0alpha.CjsExecuteSearchField search_fields = 4 [json_name = "searchFields"];</code>
@@ -193,13 +134,13 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getSearchDefinitionIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(searchDefinitionId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, searchDefinitionId_);
     }
     for (int i = 0; i < searchFields_.size(); i++) {
       output.writeMessage(4, searchFields_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -208,14 +149,14 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getSearchDefinitionIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(searchDefinitionId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, searchDefinitionId_);
     }
     for (int i = 0; i < searchFields_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, searchFields_.get(i));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -234,7 +175,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getSearchDefinitionId())) return false;
     if (!getSearchFieldsList()
         .equals(other.getSearchFieldsList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -251,7 +192,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SEARCH_FIELDS_FIELD_NUMBER;
       hash = (53 * hash) + getSearchFieldsList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -300,11 +241,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -368,31 +311,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getSearchFieldsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       searchDefinitionId_ = "";
-
       if (searchFieldsBuilder_ == null) {
         searchFields_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        searchFields_ = null;
         searchFieldsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -419,19 +357,29 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionReq result = new com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionReq(this);
-      int from_bitField0_ = bitField0_;
-      result.searchDefinitionId_ = searchDefinitionId_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionReq result) {
       if (searchFieldsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           searchFields_ = java.util.Collections.unmodifiableList(searchFields_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.searchFields_ = searchFields_;
       } else {
         result.searchFields_ = searchFieldsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionReq result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.searchDefinitionId_ = searchDefinitionId_;
+      }
     }
 
     @java.lang.Override
@@ -480,13 +428,14 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionReq.getDefaultInstance()) return this;
       if (!other.getSearchDefinitionId().isEmpty()) {
         searchDefinitionId_ = other.searchDefinitionId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (searchFieldsBuilder_ == null) {
         if (!other.searchFields_.isEmpty()) {
           if (searchFields_.isEmpty()) {
             searchFields_ = other.searchFields_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureSearchFieldsIsMutable();
             searchFields_.addAll(other.searchFields_);
@@ -499,7 +448,7 @@ private static final long serialVersionUID = 0L;
             searchFieldsBuilder_.dispose();
             searchFieldsBuilder_ = null;
             searchFields_ = other.searchFields_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             searchFieldsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getSearchFieldsFieldBuilder() : null;
@@ -508,7 +457,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -523,17 +472,48 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionReq parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              searchDefinitionId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 34: {
+              com.tcn.cloud.api.api.v0alpha.CjsExecuteSearchField m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v0alpha.CjsExecuteSearchField.parser(),
+                      extensionRegistry);
+              if (searchFieldsBuilder_ == null) {
+                ensureSearchFieldsIsMutable();
+                searchFields_.add(m);
+              } else {
+                searchFieldsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 34
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -579,11 +559,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSearchDefinitionId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       searchDefinitionId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -592,8 +570,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSearchDefinitionId() {
-      
       searchDefinitionId_ = getDefaultInstance().getSearchDefinitionId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -604,12 +582,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSearchDefinitionIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       searchDefinitionId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -617,9 +593,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v0alpha.CjsExecuteSearchField> searchFields_ =
       java.util.Collections.emptyList();
     private void ensureSearchFieldsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         searchFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.CjsExecuteSearchField>(searchFields_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -769,7 +745,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearSearchFields() {
       if (searchFieldsBuilder_ == null) {
         searchFields_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         searchFieldsBuilder_.clear();
@@ -846,7 +822,7 @@ private static final long serialVersionUID = 0L;
         searchFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v0alpha.CjsExecuteSearchField, com.tcn.cloud.api.api.v0alpha.CjsExecuteSearchField.Builder, com.tcn.cloud.api.api.v0alpha.CjsExecuteSearchFieldOrBuilder>(
                 searchFields_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         searchFields_ = null;
@@ -886,7 +862,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ExecuteCjsSearchDefinitionReq(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

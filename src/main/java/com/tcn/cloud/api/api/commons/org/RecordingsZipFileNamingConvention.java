@@ -29,105 +29,6 @@ private static final long serialVersionUID = 0L;
     return new RecordingsZipFileNamingConvention();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private RecordingsZipFileNamingConvention(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            xmlClientPropertySid_ = input.readInt64();
-            break;
-          }
-          case 18: {
-            com.tcn.cloud.api.api.commons.org.FileNamingConvention.Builder subBuilder = null;
-            if (inbound_ != null) {
-              subBuilder = inbound_.toBuilder();
-            }
-            inbound_ = input.readMessage(com.tcn.cloud.api.api.commons.org.FileNamingConvention.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(inbound_);
-              inbound_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 26: {
-            com.tcn.cloud.api.api.commons.org.FileNamingConvention.Builder subBuilder = null;
-            if (manual_ != null) {
-              subBuilder = manual_.toBuilder();
-            }
-            manual_ = input.readMessage(com.tcn.cloud.api.api.commons.org.FileNamingConvention.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(manual_);
-              manual_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 34: {
-            com.tcn.cloud.api.api.commons.org.FileNamingConvention.Builder subBuilder = null;
-            if (outbound_ != null) {
-              subBuilder = outbound_.toBuilder();
-            }
-            outbound_ = input.readMessage(com.tcn.cloud.api.api.commons.org.FileNamingConvention.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(outbound_);
-              outbound_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 42: {
-            com.tcn.cloud.api.api.commons.org.FileNamingConvention.Builder subBuilder = null;
-            if (combined_ != null) {
-              subBuilder = combined_.toBuilder();
-            }
-            combined_ = input.readMessage(com.tcn.cloud.api.api.commons.org.FileNamingConvention.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(combined_);
-              combined_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_RecordingsZipFileNamingConvention_descriptor;
@@ -142,7 +43,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int XML_CLIENT_PROPERTY_SID_FIELD_NUMBER = 1;
-  private long xmlClientPropertySid_;
+  private long xmlClientPropertySid_ = 0L;
   /**
    * <pre>
    * XML client property SID.
@@ -191,7 +92,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.FileNamingConventionOrBuilder getInboundOrBuilder() {
-    return getInbound();
+    return inbound_ == null ? com.tcn.cloud.api.api.commons.org.FileNamingConvention.getDefaultInstance() : inbound_;
   }
 
   public static final int MANUAL_FIELD_NUMBER = 3;
@@ -229,7 +130,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.FileNamingConventionOrBuilder getManualOrBuilder() {
-    return getManual();
+    return manual_ == null ? com.tcn.cloud.api.api.commons.org.FileNamingConvention.getDefaultInstance() : manual_;
   }
 
   public static final int OUTBOUND_FIELD_NUMBER = 4;
@@ -267,7 +168,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.FileNamingConventionOrBuilder getOutboundOrBuilder() {
-    return getOutbound();
+    return outbound_ == null ? com.tcn.cloud.api.api.commons.org.FileNamingConvention.getDefaultInstance() : outbound_;
   }
 
   public static final int COMBINED_FIELD_NUMBER = 5;
@@ -305,7 +206,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.FileNamingConventionOrBuilder getCombinedOrBuilder() {
-    return getCombined();
+    return combined_ == null ? com.tcn.cloud.api.api.commons.org.FileNamingConvention.getDefaultInstance() : combined_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -337,7 +238,7 @@ private static final long serialVersionUID = 0L;
     if (combined_ != null) {
       output.writeMessage(5, getCombined());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -366,7 +267,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getCombined());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -403,7 +304,7 @@ private static final long serialVersionUID = 0L;
       if (!getCombined()
           .equals(other.getCombined())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -433,7 +334,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + COMBINED_FIELD_NUMBER;
       hash = (53 * hash) + getCombined().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -482,11 +383,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.org.RecordingsZipFileNamingConvention parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.org.RecordingsZipFileNamingConvention parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -554,46 +457,37 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.org.RecordingsZipFileNamingConvention.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       xmlClientPropertySid_ = 0L;
-
-      if (inboundBuilder_ == null) {
-        inbound_ = null;
-      } else {
-        inbound_ = null;
+      inbound_ = null;
+      if (inboundBuilder_ != null) {
+        inboundBuilder_.dispose();
         inboundBuilder_ = null;
       }
-      if (manualBuilder_ == null) {
-        manual_ = null;
-      } else {
-        manual_ = null;
+      manual_ = null;
+      if (manualBuilder_ != null) {
+        manualBuilder_.dispose();
         manualBuilder_ = null;
       }
-      if (outboundBuilder_ == null) {
-        outbound_ = null;
-      } else {
-        outbound_ = null;
+      outbound_ = null;
+      if (outboundBuilder_ != null) {
+        outboundBuilder_.dispose();
         outboundBuilder_ = null;
       }
-      if (combinedBuilder_ == null) {
-        combined_ = null;
-      } else {
-        combined_ = null;
+      combined_ = null;
+      if (combinedBuilder_ != null) {
+        combinedBuilder_.dispose();
         combinedBuilder_ = null;
       }
       return this;
@@ -622,29 +516,36 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.org.RecordingsZipFileNamingConvention buildPartial() {
       com.tcn.cloud.api.api.commons.org.RecordingsZipFileNamingConvention result = new com.tcn.cloud.api.api.commons.org.RecordingsZipFileNamingConvention(this);
-      result.xmlClientPropertySid_ = xmlClientPropertySid_;
-      if (inboundBuilder_ == null) {
-        result.inbound_ = inbound_;
-      } else {
-        result.inbound_ = inboundBuilder_.build();
-      }
-      if (manualBuilder_ == null) {
-        result.manual_ = manual_;
-      } else {
-        result.manual_ = manualBuilder_.build();
-      }
-      if (outboundBuilder_ == null) {
-        result.outbound_ = outbound_;
-      } else {
-        result.outbound_ = outboundBuilder_.build();
-      }
-      if (combinedBuilder_ == null) {
-        result.combined_ = combined_;
-      } else {
-        result.combined_ = combinedBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.org.RecordingsZipFileNamingConvention result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.xmlClientPropertySid_ = xmlClientPropertySid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.inbound_ = inboundBuilder_ == null
+            ? inbound_
+            : inboundBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.manual_ = manualBuilder_ == null
+            ? manual_
+            : manualBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.outbound_ = outboundBuilder_ == null
+            ? outbound_
+            : outboundBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.combined_ = combinedBuilder_ == null
+            ? combined_
+            : combinedBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -706,7 +607,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasCombined()) {
         mergeCombined(other.getCombined());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -721,19 +622,66 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.org.RecordingsZipFileNamingConvention parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              xmlClientPropertySid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              input.readMessage(
+                  getInboundFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getManualFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getOutboundFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getCombinedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.org.RecordingsZipFileNamingConvention) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private long xmlClientPropertySid_ ;
     /**
@@ -758,8 +706,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setXmlClientPropertySid(long value) {
-      
+
       xmlClientPropertySid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -772,7 +721,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearXmlClientPropertySid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       xmlClientPropertySid_ = 0L;
       onChanged();
       return this;
@@ -790,7 +739,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the inbound field is set.
      */
     public boolean hasInbound() {
-      return inboundBuilder_ != null || inbound_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -820,11 +769,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         inbound_ = value;
-        onChanged();
       } else {
         inboundBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -838,11 +787,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.FileNamingConvention.Builder builderForValue) {
       if (inboundBuilder_ == null) {
         inbound_ = builderForValue.build();
-        onChanged();
       } else {
         inboundBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -854,17 +803,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeInbound(com.tcn.cloud.api.api.commons.org.FileNamingConvention value) {
       if (inboundBuilder_ == null) {
-        if (inbound_ != null) {
-          inbound_ =
-            com.tcn.cloud.api.api.commons.org.FileNamingConvention.newBuilder(inbound_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          inbound_ != null &&
+          inbound_ != com.tcn.cloud.api.api.commons.org.FileNamingConvention.getDefaultInstance()) {
+          getInboundBuilder().mergeFrom(value);
         } else {
           inbound_ = value;
         }
-        onChanged();
       } else {
         inboundBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -875,14 +825,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.FileNamingConvention inbound = 2 [json_name = "inbound"];</code>
      */
     public Builder clearInbound() {
-      if (inboundBuilder_ == null) {
-        inbound_ = null;
-        onChanged();
-      } else {
-        inbound_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      inbound_ = null;
+      if (inboundBuilder_ != null) {
+        inboundBuilder_.dispose();
         inboundBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -893,7 +842,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.FileNamingConvention inbound = 2 [json_name = "inbound"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.FileNamingConvention.Builder getInboundBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getInboundFieldBuilder().getBuilder();
     }
@@ -945,7 +894,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the manual field is set.
      */
     public boolean hasManual() {
-      return manualBuilder_ != null || manual_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -975,11 +924,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         manual_ = value;
-        onChanged();
       } else {
         manualBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -993,11 +942,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.FileNamingConvention.Builder builderForValue) {
       if (manualBuilder_ == null) {
         manual_ = builderForValue.build();
-        onChanged();
       } else {
         manualBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1009,17 +958,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeManual(com.tcn.cloud.api.api.commons.org.FileNamingConvention value) {
       if (manualBuilder_ == null) {
-        if (manual_ != null) {
-          manual_ =
-            com.tcn.cloud.api.api.commons.org.FileNamingConvention.newBuilder(manual_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          manual_ != null &&
+          manual_ != com.tcn.cloud.api.api.commons.org.FileNamingConvention.getDefaultInstance()) {
+          getManualBuilder().mergeFrom(value);
         } else {
           manual_ = value;
         }
-        onChanged();
       } else {
         manualBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1030,14 +980,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.FileNamingConvention manual = 3 [json_name = "manual"];</code>
      */
     public Builder clearManual() {
-      if (manualBuilder_ == null) {
-        manual_ = null;
-        onChanged();
-      } else {
-        manual_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      manual_ = null;
+      if (manualBuilder_ != null) {
+        manualBuilder_.dispose();
         manualBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1048,7 +997,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.FileNamingConvention manual = 3 [json_name = "manual"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.FileNamingConvention.Builder getManualBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getManualFieldBuilder().getBuilder();
     }
@@ -1100,7 +1049,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the outbound field is set.
      */
     public boolean hasOutbound() {
-      return outboundBuilder_ != null || outbound_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1130,11 +1079,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         outbound_ = value;
-        onChanged();
       } else {
         outboundBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1148,11 +1097,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.FileNamingConvention.Builder builderForValue) {
       if (outboundBuilder_ == null) {
         outbound_ = builderForValue.build();
-        onChanged();
       } else {
         outboundBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1164,17 +1113,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeOutbound(com.tcn.cloud.api.api.commons.org.FileNamingConvention value) {
       if (outboundBuilder_ == null) {
-        if (outbound_ != null) {
-          outbound_ =
-            com.tcn.cloud.api.api.commons.org.FileNamingConvention.newBuilder(outbound_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000008) != 0) &&
+          outbound_ != null &&
+          outbound_ != com.tcn.cloud.api.api.commons.org.FileNamingConvention.getDefaultInstance()) {
+          getOutboundBuilder().mergeFrom(value);
         } else {
           outbound_ = value;
         }
-        onChanged();
       } else {
         outboundBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1185,14 +1135,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.FileNamingConvention outbound = 4 [json_name = "outbound"];</code>
      */
     public Builder clearOutbound() {
-      if (outboundBuilder_ == null) {
-        outbound_ = null;
-        onChanged();
-      } else {
-        outbound_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      outbound_ = null;
+      if (outboundBuilder_ != null) {
+        outboundBuilder_.dispose();
         outboundBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1203,7 +1152,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.FileNamingConvention outbound = 4 [json_name = "outbound"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.FileNamingConvention.Builder getOutboundBuilder() {
-      
+      bitField0_ |= 0x00000008;
       onChanged();
       return getOutboundFieldBuilder().getBuilder();
     }
@@ -1255,7 +1204,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the combined field is set.
      */
     public boolean hasCombined() {
-      return combinedBuilder_ != null || combined_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1285,11 +1234,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         combined_ = value;
-        onChanged();
       } else {
         combinedBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1303,11 +1252,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.FileNamingConvention.Builder builderForValue) {
       if (combinedBuilder_ == null) {
         combined_ = builderForValue.build();
-        onChanged();
       } else {
         combinedBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1319,17 +1268,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCombined(com.tcn.cloud.api.api.commons.org.FileNamingConvention value) {
       if (combinedBuilder_ == null) {
-        if (combined_ != null) {
-          combined_ =
-            com.tcn.cloud.api.api.commons.org.FileNamingConvention.newBuilder(combined_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000010) != 0) &&
+          combined_ != null &&
+          combined_ != com.tcn.cloud.api.api.commons.org.FileNamingConvention.getDefaultInstance()) {
+          getCombinedBuilder().mergeFrom(value);
         } else {
           combined_ = value;
         }
-        onChanged();
       } else {
         combinedBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1340,14 +1290,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.FileNamingConvention combined = 5 [json_name = "combined"];</code>
      */
     public Builder clearCombined() {
-      if (combinedBuilder_ == null) {
-        combined_ = null;
-        onChanged();
-      } else {
-        combined_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      combined_ = null;
+      if (combinedBuilder_ != null) {
+        combinedBuilder_.dispose();
         combinedBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1358,7 +1307,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.FileNamingConvention combined = 5 [json_name = "combined"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.FileNamingConvention.Builder getCombinedBuilder() {
-      
+      bitField0_ |= 0x00000010;
       onChanged();
       return getCombinedFieldBuilder().getBuilder();
     }
@@ -1430,7 +1379,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new RecordingsZipFileNamingConvention(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

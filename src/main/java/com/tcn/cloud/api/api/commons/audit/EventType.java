@@ -7,10 +7,13 @@ package com.tcn.cloud.api.api.commons.audit;
  * <pre>
  * This enum will hold all application classes and sub-classes
  * Classes are encoded as hundreds (100, 200...) and sub-classes are the class ID + 0..99.
+ *
  * EventType is the source for typing subscriptions, notifications, and any future
  * event use cases such auditing, billing, logging, etc. (anything triggered by audit).
+ *
  * Follow the pattern of (product + event description), separated by underscores.
  *   - e.g. PRODUCT_EVENT_DESCRIPTION
+ *
  * EventTypes that trigger notifications should read nicely as a system message header.
  *   - e.g Product Event Description
  * </pre>

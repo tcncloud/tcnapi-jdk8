@@ -29,96 +29,6 @@ private static final long serialVersionUID = 0L;
     return new PlacementRule();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private PlacementRule(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            placementRuleSid_ = input.readInt64();
-            break;
-          }
-          case 16: {
-
-            shiftTemplateSid_ = input.readInt64();
-            break;
-          }
-          case 24: {
-
-            activityOrder_ = input.readInt32();
-            break;
-          }
-          case 32: {
-
-            minDurationMinutes_ = input.readInt32();
-            break;
-          }
-          case 40: {
-
-            maxDurationMinutes_ = input.readInt32();
-            break;
-          }
-          case 48: {
-
-            schedulingActivitySid_ = input.readInt64();
-            break;
-          }
-          case 56: {
-
-            scheduleScenarioSid_ = input.readInt64();
-            break;
-          }
-          case 66: {
-            com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity.Builder subBuilder = null;
-            if (memberSchedulingActivity_ != null) {
-              subBuilder = memberSchedulingActivity_.toBuilder();
-            }
-            memberSchedulingActivity_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(memberSchedulingActivity_);
-              memberSchedulingActivity_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_PlacementRule_descriptor;
@@ -133,7 +43,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PLACEMENT_RULE_SID_FIELD_NUMBER = 1;
-  private long placementRuleSid_;
+  private long placementRuleSid_ = 0L;
   /**
    * <pre>
    * ID of this placement rule
@@ -148,7 +58,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SHIFT_TEMPLATE_SID_FIELD_NUMBER = 2;
-  private long shiftTemplateSid_;
+  private long shiftTemplateSid_ = 0L;
   /**
    * <pre>
    * ID of the parent shift this rule is associated with
@@ -163,7 +73,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ACTIVITY_ORDER_FIELD_NUMBER = 3;
-  private int activityOrder_;
+  private int activityOrder_ = 0;
   /**
    * <pre>
    * Ordinal that indicates order of rule within ShiftTemplate (1 = first, 2 = second, etc.)
@@ -178,7 +88,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MIN_DURATION_MINUTES_FIELD_NUMBER = 4;
-  private int minDurationMinutes_;
+  private int minDurationMinutes_ = 0;
   /**
    * <pre>
    * Minimum activity length in minutes
@@ -193,7 +103,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MAX_DURATION_MINUTES_FIELD_NUMBER = 5;
-  private int maxDurationMinutes_;
+  private int maxDurationMinutes_ = 0;
   /**
    * <pre>
    * Maximum activity length in minutes
@@ -208,7 +118,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SCHEDULING_ACTIVITY_SID_FIELD_NUMBER = 6;
-  private long schedulingActivitySid_;
+  private long schedulingActivitySid_ = 0L;
   /**
    * <pre>
    * ID of the scheduling activity this rule is associated with
@@ -223,7 +133,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SCHEDULE_SCENARIO_SID_FIELD_NUMBER = 7;
-  private long scheduleScenarioSid_;
+  private long scheduleScenarioSid_ = 0L;
   /**
    * <pre>
    * ID of the schedule scenario that the placement rule belongs to.
@@ -272,7 +182,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivityOrBuilder getMemberSchedulingActivityOrBuilder() {
-    return getMemberSchedulingActivity();
+    return memberSchedulingActivity_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity.getDefaultInstance() : memberSchedulingActivity_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -313,7 +223,7 @@ private static final long serialVersionUID = 0L;
     if (memberSchedulingActivity_ != null) {
       output.writeMessage(8, getMemberSchedulingActivity());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -354,7 +264,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getMemberSchedulingActivity());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -388,7 +298,7 @@ private static final long serialVersionUID = 0L;
       if (!getMemberSchedulingActivity()
           .equals(other.getMemberSchedulingActivity())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -421,7 +331,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + MEMBER_SCHEDULING_ACTIVITY_FIELD_NUMBER;
       hash = (53 * hash) + getMemberSchedulingActivity().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -470,11 +380,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.PlacementRule parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.PlacementRule parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -542,40 +454,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.PlacementRule.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       placementRuleSid_ = 0L;
-
       shiftTemplateSid_ = 0L;
-
       activityOrder_ = 0;
-
       minDurationMinutes_ = 0;
-
       maxDurationMinutes_ = 0;
-
       schedulingActivitySid_ = 0L;
-
       scheduleScenarioSid_ = 0L;
-
-      if (memberSchedulingActivityBuilder_ == null) {
-        memberSchedulingActivity_ = null;
-      } else {
-        memberSchedulingActivity_ = null;
+      memberSchedulingActivity_ = null;
+      if (memberSchedulingActivityBuilder_ != null) {
+        memberSchedulingActivityBuilder_.dispose();
         memberSchedulingActivityBuilder_ = null;
       }
       return this;
@@ -604,20 +504,39 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.PlacementRule buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.PlacementRule result = new com.tcn.cloud.api.api.v1alpha1.wfm.PlacementRule(this);
-      result.placementRuleSid_ = placementRuleSid_;
-      result.shiftTemplateSid_ = shiftTemplateSid_;
-      result.activityOrder_ = activityOrder_;
-      result.minDurationMinutes_ = minDurationMinutes_;
-      result.maxDurationMinutes_ = maxDurationMinutes_;
-      result.schedulingActivitySid_ = schedulingActivitySid_;
-      result.scheduleScenarioSid_ = scheduleScenarioSid_;
-      if (memberSchedulingActivityBuilder_ == null) {
-        result.memberSchedulingActivity_ = memberSchedulingActivity_;
-      } else {
-        result.memberSchedulingActivity_ = memberSchedulingActivityBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.PlacementRule result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.placementRuleSid_ = placementRuleSid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.shiftTemplateSid_ = shiftTemplateSid_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.activityOrder_ = activityOrder_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.minDurationMinutes_ = minDurationMinutes_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.maxDurationMinutes_ = maxDurationMinutes_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.schedulingActivitySid_ = schedulingActivitySid_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.scheduleScenarioSid_ = scheduleScenarioSid_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.memberSchedulingActivity_ = memberSchedulingActivityBuilder_ == null
+            ? memberSchedulingActivity_
+            : memberSchedulingActivityBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -688,7 +607,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasMemberSchedulingActivity()) {
         mergeMemberSchedulingActivity(other.getMemberSchedulingActivity());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -703,19 +622,75 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.PlacementRule parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              placementRuleSid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              shiftTemplateSid_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              activityOrder_ = input.readInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              minDurationMinutes_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              maxDurationMinutes_ = input.readInt32();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 48: {
+              schedulingActivitySid_ = input.readInt64();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 56: {
+              scheduleScenarioSid_ = input.readInt64();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            case 66: {
+              input.readMessage(
+                  getMemberSchedulingActivityFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.PlacementRule) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private long placementRuleSid_ ;
     /**
@@ -740,8 +715,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPlacementRuleSid(long value) {
-      
+
       placementRuleSid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -754,7 +730,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlacementRuleSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       placementRuleSid_ = 0L;
       onChanged();
       return this;
@@ -783,8 +759,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setShiftTemplateSid(long value) {
-      
+
       shiftTemplateSid_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -797,7 +774,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearShiftTemplateSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       shiftTemplateSid_ = 0L;
       onChanged();
       return this;
@@ -826,8 +803,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setActivityOrder(int value) {
-      
+
       activityOrder_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -840,7 +818,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActivityOrder() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       activityOrder_ = 0;
       onChanged();
       return this;
@@ -869,8 +847,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMinDurationMinutes(int value) {
-      
+
       minDurationMinutes_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -883,7 +862,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMinDurationMinutes() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       minDurationMinutes_ = 0;
       onChanged();
       return this;
@@ -912,8 +891,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMaxDurationMinutes(int value) {
-      
+
       maxDurationMinutes_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -926,7 +906,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMaxDurationMinutes() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       maxDurationMinutes_ = 0;
       onChanged();
       return this;
@@ -955,8 +935,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSchedulingActivitySid(long value) {
-      
+
       schedulingActivitySid_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -969,7 +950,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSchedulingActivitySid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       schedulingActivitySid_ = 0L;
       onChanged();
       return this;
@@ -998,8 +979,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setScheduleScenarioSid(long value) {
-      
+
       scheduleScenarioSid_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1012,7 +994,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearScheduleScenarioSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       scheduleScenarioSid_ = 0L;
       onChanged();
       return this;
@@ -1030,7 +1012,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the memberSchedulingActivity field is set.
      */
     public boolean hasMemberSchedulingActivity() {
-      return memberSchedulingActivityBuilder_ != null || memberSchedulingActivity_ != null;
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -1060,11 +1042,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         memberSchedulingActivity_ = value;
-        onChanged();
       } else {
         memberSchedulingActivityBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -1078,11 +1060,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity.Builder builderForValue) {
       if (memberSchedulingActivityBuilder_ == null) {
         memberSchedulingActivity_ = builderForValue.build();
-        onChanged();
       } else {
         memberSchedulingActivityBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -1094,17 +1076,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeMemberSchedulingActivity(com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity value) {
       if (memberSchedulingActivityBuilder_ == null) {
-        if (memberSchedulingActivity_ != null) {
-          memberSchedulingActivity_ =
-            com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity.newBuilder(memberSchedulingActivity_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000080) != 0) &&
+          memberSchedulingActivity_ != null &&
+          memberSchedulingActivity_ != com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity.getDefaultInstance()) {
+          getMemberSchedulingActivityBuilder().mergeFrom(value);
         } else {
           memberSchedulingActivity_ = value;
         }
-        onChanged();
       } else {
         memberSchedulingActivityBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -1115,14 +1098,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.SchedulingActivity member_scheduling_activity = 8 [json_name = "memberSchedulingActivity"];</code>
      */
     public Builder clearMemberSchedulingActivity() {
-      if (memberSchedulingActivityBuilder_ == null) {
-        memberSchedulingActivity_ = null;
-        onChanged();
-      } else {
-        memberSchedulingActivity_ = null;
+      bitField0_ = (bitField0_ & ~0x00000080);
+      memberSchedulingActivity_ = null;
+      if (memberSchedulingActivityBuilder_ != null) {
+        memberSchedulingActivityBuilder_.dispose();
         memberSchedulingActivityBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1133,7 +1115,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.SchedulingActivity member_scheduling_activity = 8 [json_name = "memberSchedulingActivity"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity.Builder getMemberSchedulingActivityBuilder() {
-      
+      bitField0_ |= 0x00000080;
       onChanged();
       return getMemberSchedulingActivityFieldBuilder().getBuilder();
     }
@@ -1205,7 +1187,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new PlacementRule(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

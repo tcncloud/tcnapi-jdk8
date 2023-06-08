@@ -255,5 +255,5 @@ public interface ConstraintRuleOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.SkillProficiencyOrBuilder getSkillProficiencyOrBuilder();
 
-  public com.tcn.cloud.api.api.v1alpha1.wfm.ConstraintRule.MemberTargetEntityCase getMemberTargetEntityCase();
+  com.tcn.cloud.api.api.v1alpha1.wfm.ConstraintRule.MemberTargetEntityCase getMemberTargetEntityCase();
 }

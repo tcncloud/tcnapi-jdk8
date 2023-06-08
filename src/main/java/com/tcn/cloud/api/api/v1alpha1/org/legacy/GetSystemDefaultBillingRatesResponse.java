@@ -29,79 +29,6 @@ private static final long serialVersionUID = 0L;
     return new GetSystemDefaultBillingRatesResponse();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private GetSystemDefaultBillingRatesResponse(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 13: {
-
-            emailPricePerMessage_ = input.readFloat();
-            break;
-          }
-          case 18: {
-            com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates.Builder subBuilder = null;
-            if (phoneRates_ != null) {
-              subBuilder = phoneRates_.toBuilder();
-            }
-            phoneRates_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(phoneRates_);
-              phoneRates_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 26: {
-            com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentBillingRates.Builder subBuilder = null;
-            if (agentRates_ != null) {
-              subBuilder = agentRates_.toBuilder();
-            }
-            agentRates_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentBillingRates.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(agentRates_);
-              agentRates_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.legacy.EntitiesProto.internal_static_api_v1alpha1_org_legacy_GetSystemDefaultBillingRatesResponse_descriptor;
@@ -116,7 +43,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EMAIL_PRICE_PER_MESSAGE_FIELD_NUMBER = 1;
-  private float emailPricePerMessage_;
+  private float emailPricePerMessage_ = 0F;
   /**
    * <pre>
    * default email rate
@@ -165,7 +92,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRatesOrBuilder getPhoneRatesOrBuilder() {
-    return getPhoneRates();
+    return phoneRates_ == null ? com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates.getDefaultInstance() : phoneRates_;
   }
 
   public static final int AGENT_RATES_FIELD_NUMBER = 3;
@@ -203,7 +130,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentBillingRatesOrBuilder getAgentRatesOrBuilder() {
-    return getAgentRates();
+    return agentRates_ == null ? com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentBillingRates.getDefaultInstance() : agentRates_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -220,7 +147,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (emailPricePerMessage_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(emailPricePerMessage_) != 0) {
       output.writeFloat(1, emailPricePerMessage_);
     }
     if (phoneRates_ != null) {
@@ -229,7 +156,7 @@ private static final long serialVersionUID = 0L;
     if (agentRates_ != null) {
       output.writeMessage(3, getAgentRates());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -238,7 +165,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (emailPricePerMessage_ != 0F) {
+    if (java.lang.Float.floatToRawIntBits(emailPricePerMessage_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(1, emailPricePerMessage_);
     }
@@ -250,7 +177,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getAgentRates());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -278,7 +205,7 @@ private static final long serialVersionUID = 0L;
       if (!getAgentRates()
           .equals(other.getAgentRates())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -300,7 +227,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AGENT_RATES_FIELD_NUMBER;
       hash = (53 * hash) + getAgentRates().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -349,11 +276,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.GetSystemDefaultBillingRatesResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.GetSystemDefaultBillingRatesResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -421,34 +350,27 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.GetSystemDefaultBillingRatesResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       emailPricePerMessage_ = 0F;
-
-      if (phoneRatesBuilder_ == null) {
-        phoneRates_ = null;
-      } else {
-        phoneRates_ = null;
+      phoneRates_ = null;
+      if (phoneRatesBuilder_ != null) {
+        phoneRatesBuilder_.dispose();
         phoneRatesBuilder_ = null;
       }
-      if (agentRatesBuilder_ == null) {
-        agentRates_ = null;
-      } else {
-        agentRates_ = null;
+      agentRates_ = null;
+      if (agentRatesBuilder_ != null) {
+        agentRatesBuilder_.dispose();
         agentRatesBuilder_ = null;
       }
       return this;
@@ -477,19 +399,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.GetSystemDefaultBillingRatesResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.legacy.GetSystemDefaultBillingRatesResponse result = new com.tcn.cloud.api.api.v1alpha1.org.legacy.GetSystemDefaultBillingRatesResponse(this);
-      result.emailPricePerMessage_ = emailPricePerMessage_;
-      if (phoneRatesBuilder_ == null) {
-        result.phoneRates_ = phoneRates_;
-      } else {
-        result.phoneRates_ = phoneRatesBuilder_.build();
-      }
-      if (agentRatesBuilder_ == null) {
-        result.agentRates_ = agentRates_;
-      } else {
-        result.agentRates_ = agentRatesBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.GetSystemDefaultBillingRatesResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.emailPricePerMessage_ = emailPricePerMessage_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.phoneRates_ = phoneRatesBuilder_ == null
+            ? phoneRates_
+            : phoneRatesBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.agentRates_ = agentRatesBuilder_ == null
+            ? agentRates_
+            : agentRatesBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -545,7 +474,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasAgentRates()) {
         mergeAgentRates(other.getAgentRates());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -560,19 +489,52 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.org.legacy.GetSystemDefaultBillingRatesResponse parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 13: {
+              emailPricePerMessage_ = input.readFloat();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 13
+            case 18: {
+              input.readMessage(
+                  getPhoneRatesFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getAgentRatesFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.legacy.GetSystemDefaultBillingRatesResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private float emailPricePerMessage_ ;
     /**
@@ -597,8 +559,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEmailPricePerMessage(float value) {
-      
+
       emailPricePerMessage_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -611,7 +574,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEmailPricePerMessage() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       emailPricePerMessage_ = 0F;
       onChanged();
       return this;
@@ -629,7 +592,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the phoneRates field is set.
      */
     public boolean hasPhoneRates() {
-      return phoneRatesBuilder_ != null || phoneRates_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -659,11 +622,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         phoneRates_ = value;
-        onChanged();
       } else {
         phoneRatesBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -677,11 +640,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates.Builder builderForValue) {
       if (phoneRatesBuilder_ == null) {
         phoneRates_ = builderForValue.build();
-        onChanged();
       } else {
         phoneRatesBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -693,17 +656,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePhoneRates(com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates value) {
       if (phoneRatesBuilder_ == null) {
-        if (phoneRates_ != null) {
-          phoneRates_ =
-            com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates.newBuilder(phoneRates_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          phoneRates_ != null &&
+          phoneRates_ != com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates.getDefaultInstance()) {
+          getPhoneRatesBuilder().mergeFrom(value);
         } else {
           phoneRates_ = value;
         }
-        onChanged();
       } else {
         phoneRatesBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -714,14 +678,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.org.legacy.PhoneBillingRates phone_rates = 2 [json_name = "phoneRates"];</code>
      */
     public Builder clearPhoneRates() {
-      if (phoneRatesBuilder_ == null) {
-        phoneRates_ = null;
-        onChanged();
-      } else {
-        phoneRates_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      phoneRates_ = null;
+      if (phoneRatesBuilder_ != null) {
+        phoneRatesBuilder_.dispose();
         phoneRatesBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -732,7 +695,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.org.legacy.PhoneBillingRates phone_rates = 2 [json_name = "phoneRates"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates.Builder getPhoneRatesBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getPhoneRatesFieldBuilder().getBuilder();
     }
@@ -784,7 +747,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the agentRates field is set.
      */
     public boolean hasAgentRates() {
-      return agentRatesBuilder_ != null || agentRates_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -814,11 +777,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         agentRates_ = value;
-        onChanged();
       } else {
         agentRatesBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -832,11 +795,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentBillingRates.Builder builderForValue) {
       if (agentRatesBuilder_ == null) {
         agentRates_ = builderForValue.build();
-        onChanged();
       } else {
         agentRatesBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -848,17 +811,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAgentRates(com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentBillingRates value) {
       if (agentRatesBuilder_ == null) {
-        if (agentRates_ != null) {
-          agentRates_ =
-            com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentBillingRates.newBuilder(agentRates_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          agentRates_ != null &&
+          agentRates_ != com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentBillingRates.getDefaultInstance()) {
+          getAgentRatesBuilder().mergeFrom(value);
         } else {
           agentRates_ = value;
         }
-        onChanged();
       } else {
         agentRatesBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -869,14 +833,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.org.legacy.AgentBillingRates agent_rates = 3 [json_name = "agentRates"];</code>
      */
     public Builder clearAgentRates() {
-      if (agentRatesBuilder_ == null) {
-        agentRates_ = null;
-        onChanged();
-      } else {
-        agentRates_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      agentRates_ = null;
+      if (agentRatesBuilder_ != null) {
+        agentRatesBuilder_.dispose();
         agentRatesBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -887,7 +850,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.org.legacy.AgentBillingRates agent_rates = 3 [json_name = "agentRates"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentBillingRates.Builder getAgentRatesBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getAgentRatesFieldBuilder().getBuilder();
     }
@@ -959,7 +922,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GetSystemDefaultBillingRatesResponse(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

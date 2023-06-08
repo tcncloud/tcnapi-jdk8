@@ -32,133 +32,6 @@ private static final long serialVersionUID = 0L;
     return new HoursOfOperation();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private HoursOfOperation(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              monday_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.HoursOfOperationRange>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            monday_.add(
-                input.readMessage(com.tcn.cloud.api.api.commons.HoursOfOperationRange.parser(), extensionRegistry));
-            break;
-          }
-          case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              tuesday_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.HoursOfOperationRange>();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            tuesday_.add(
-                input.readMessage(com.tcn.cloud.api.api.commons.HoursOfOperationRange.parser(), extensionRegistry));
-            break;
-          }
-          case 26: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-              wednesday_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.HoursOfOperationRange>();
-              mutable_bitField0_ |= 0x00000004;
-            }
-            wednesday_.add(
-                input.readMessage(com.tcn.cloud.api.api.commons.HoursOfOperationRange.parser(), extensionRegistry));
-            break;
-          }
-          case 34: {
-            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-              thursday_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.HoursOfOperationRange>();
-              mutable_bitField0_ |= 0x00000008;
-            }
-            thursday_.add(
-                input.readMessage(com.tcn.cloud.api.api.commons.HoursOfOperationRange.parser(), extensionRegistry));
-            break;
-          }
-          case 42: {
-            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-              friday_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.HoursOfOperationRange>();
-              mutable_bitField0_ |= 0x00000010;
-            }
-            friday_.add(
-                input.readMessage(com.tcn.cloud.api.api.commons.HoursOfOperationRange.parser(), extensionRegistry));
-            break;
-          }
-          case 50: {
-            if (!((mutable_bitField0_ & 0x00000020) != 0)) {
-              saturday_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.HoursOfOperationRange>();
-              mutable_bitField0_ |= 0x00000020;
-            }
-            saturday_.add(
-                input.readMessage(com.tcn.cloud.api.api.commons.HoursOfOperationRange.parser(), extensionRegistry));
-            break;
-          }
-          case 58: {
-            if (!((mutable_bitField0_ & 0x00000040) != 0)) {
-              sunday_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.HoursOfOperationRange>();
-              mutable_bitField0_ |= 0x00000040;
-            }
-            sunday_.add(
-                input.readMessage(com.tcn.cloud.api.api.commons.HoursOfOperationRange.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        monday_ = java.util.Collections.unmodifiableList(monday_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        tuesday_ = java.util.Collections.unmodifiableList(tuesday_);
-      }
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
-        wednesday_ = java.util.Collections.unmodifiableList(wednesday_);
-      }
-      if (((mutable_bitField0_ & 0x00000008) != 0)) {
-        thursday_ = java.util.Collections.unmodifiableList(thursday_);
-      }
-      if (((mutable_bitField0_ & 0x00000010) != 0)) {
-        friday_ = java.util.Collections.unmodifiableList(friday_);
-      }
-      if (((mutable_bitField0_ & 0x00000020) != 0)) {
-        saturday_ = java.util.Collections.unmodifiableList(saturday_);
-      }
-      if (((mutable_bitField0_ & 0x00000040) != 0)) {
-        sunday_ = java.util.Collections.unmodifiableList(sunday_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.ChatProto.internal_static_api_commons_HoursOfOperation_descriptor;
@@ -173,6 +46,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MONDAY_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.HoursOfOperationRange> monday_;
   /**
    * <code>repeated .api.commons.HoursOfOperationRange monday = 1 [json_name = "monday"];</code>
@@ -213,6 +87,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TUESDAY_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.HoursOfOperationRange> tuesday_;
   /**
    * <code>repeated .api.commons.HoursOfOperationRange tuesday = 2 [json_name = "tuesday"];</code>
@@ -253,6 +128,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WEDNESDAY_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.HoursOfOperationRange> wednesday_;
   /**
    * <code>repeated .api.commons.HoursOfOperationRange wednesday = 3 [json_name = "wednesday"];</code>
@@ -293,6 +169,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int THURSDAY_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.HoursOfOperationRange> thursday_;
   /**
    * <code>repeated .api.commons.HoursOfOperationRange thursday = 4 [json_name = "thursday"];</code>
@@ -333,6 +210,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FRIDAY_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.HoursOfOperationRange> friday_;
   /**
    * <code>repeated .api.commons.HoursOfOperationRange friday = 5 [json_name = "friday"];</code>
@@ -373,6 +251,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SATURDAY_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.HoursOfOperationRange> saturday_;
   /**
    * <code>repeated .api.commons.HoursOfOperationRange saturday = 6 [json_name = "saturday"];</code>
@@ -413,6 +292,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SUNDAY_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.HoursOfOperationRange> sunday_;
   /**
    * <code>repeated .api.commons.HoursOfOperationRange sunday = 7 [json_name = "sunday"];</code>
@@ -487,7 +367,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < sunday_.size(); i++) {
       output.writeMessage(7, sunday_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -524,7 +404,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, sunday_.get(i));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -553,7 +433,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getSaturdayList())) return false;
     if (!getSundayList()
         .equals(other.getSundayList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -592,7 +472,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SUNDAY_FIELD_NUMBER;
       hash = (53 * hash) + getSundayList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -641,11 +521,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.HoursOfOperation parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.HoursOfOperation parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -709,71 +591,67 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.HoursOfOperation.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getMondayFieldBuilder();
-        getTuesdayFieldBuilder();
-        getWednesdayFieldBuilder();
-        getThursdayFieldBuilder();
-        getFridayFieldBuilder();
-        getSaturdayFieldBuilder();
-        getSundayFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (mondayBuilder_ == null) {
         monday_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        monday_ = null;
         mondayBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000001);
       if (tuesdayBuilder_ == null) {
         tuesday_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
+        tuesday_ = null;
         tuesdayBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000002);
       if (wednesdayBuilder_ == null) {
         wednesday_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
+        wednesday_ = null;
         wednesdayBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000004);
       if (thursdayBuilder_ == null) {
         thursday_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
       } else {
+        thursday_ = null;
         thursdayBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000008);
       if (fridayBuilder_ == null) {
         friday_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
       } else {
+        friday_ = null;
         fridayBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000010);
       if (saturdayBuilder_ == null) {
         saturday_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
       } else {
+        saturday_ = null;
         saturdayBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000020);
       if (sundayBuilder_ == null) {
         sunday_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
       } else {
+        sunday_ = null;
         sundayBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000040);
       return this;
     }
 
@@ -800,7 +678,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.HoursOfOperation buildPartial() {
       com.tcn.cloud.api.api.commons.HoursOfOperation result = new com.tcn.cloud.api.api.commons.HoursOfOperation(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.HoursOfOperation result) {
       if (mondayBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           monday_ = java.util.Collections.unmodifiableList(monday_);
@@ -864,8 +748,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.sunday_ = sundayBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.HoursOfOperation result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override
@@ -1094,7 +980,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1109,17 +995,121 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.HoursOfOperation parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.tcn.cloud.api.api.commons.HoursOfOperationRange m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.HoursOfOperationRange.parser(),
+                      extensionRegistry);
+              if (mondayBuilder_ == null) {
+                ensureMondayIsMutable();
+                monday_.add(m);
+              } else {
+                mondayBuilder_.addMessage(m);
+              }
+              break;
+            } // case 10
+            case 18: {
+              com.tcn.cloud.api.api.commons.HoursOfOperationRange m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.HoursOfOperationRange.parser(),
+                      extensionRegistry);
+              if (tuesdayBuilder_ == null) {
+                ensureTuesdayIsMutable();
+                tuesday_.add(m);
+              } else {
+                tuesdayBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
+            case 26: {
+              com.tcn.cloud.api.api.commons.HoursOfOperationRange m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.HoursOfOperationRange.parser(),
+                      extensionRegistry);
+              if (wednesdayBuilder_ == null) {
+                ensureWednesdayIsMutable();
+                wednesday_.add(m);
+              } else {
+                wednesdayBuilder_.addMessage(m);
+              }
+              break;
+            } // case 26
+            case 34: {
+              com.tcn.cloud.api.api.commons.HoursOfOperationRange m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.HoursOfOperationRange.parser(),
+                      extensionRegistry);
+              if (thursdayBuilder_ == null) {
+                ensureThursdayIsMutable();
+                thursday_.add(m);
+              } else {
+                thursdayBuilder_.addMessage(m);
+              }
+              break;
+            } // case 34
+            case 42: {
+              com.tcn.cloud.api.api.commons.HoursOfOperationRange m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.HoursOfOperationRange.parser(),
+                      extensionRegistry);
+              if (fridayBuilder_ == null) {
+                ensureFridayIsMutable();
+                friday_.add(m);
+              } else {
+                fridayBuilder_.addMessage(m);
+              }
+              break;
+            } // case 42
+            case 50: {
+              com.tcn.cloud.api.api.commons.HoursOfOperationRange m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.HoursOfOperationRange.parser(),
+                      extensionRegistry);
+              if (saturdayBuilder_ == null) {
+                ensureSaturdayIsMutable();
+                saturday_.add(m);
+              } else {
+                saturdayBuilder_.addMessage(m);
+              }
+              break;
+            } // case 50
+            case 58: {
+              com.tcn.cloud.api.api.commons.HoursOfOperationRange m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.HoursOfOperationRange.parser(),
+                      extensionRegistry);
+              if (sundayBuilder_ == null) {
+                ensureSundayIsMutable();
+                sunday_.add(m);
+              } else {
+                sundayBuilder_.addMessage(m);
+              }
+              break;
+            } // case 58
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.HoursOfOperation) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -2836,7 +2826,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new HoursOfOperation(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

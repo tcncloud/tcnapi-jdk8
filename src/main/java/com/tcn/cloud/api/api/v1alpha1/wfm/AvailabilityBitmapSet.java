@@ -32,140 +32,6 @@ private static final long serialVersionUID = 0L;
     return new AvailabilityBitmapSet();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private AvailabilityBitmapSet(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-            int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              ownBitmap_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            ownBitmap_.add(rawValue);
-            break;
-          }
-          case 10: {
-            int length = input.readRawVarint32();
-            int oldLimit = input.pushLimit(length);
-            while(input.getBytesUntilLimit() > 0) {
-              int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                ownBitmap_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              ownBitmap_.add(rawValue);
-            }
-            input.popLimit(oldLimit);
-            break;
-          }
-          case 16: {
-            int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              inheritedBitmap_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            inheritedBitmap_.add(rawValue);
-            break;
-          }
-          case 18: {
-            int length = input.readRawVarint32();
-            int oldLimit = input.pushLimit(length);
-            while(input.getBytesUntilLimit() > 0) {
-              int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                inheritedBitmap_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              inheritedBitmap_.add(rawValue);
-            }
-            input.popLimit(oldLimit);
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-              resultingBitmap_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField0_ |= 0x00000004;
-            }
-            resultingBitmap_.add(rawValue);
-            break;
-          }
-          case 26: {
-            int length = input.readRawVarint32();
-            int oldLimit = input.pushLimit(length);
-            while(input.getBytesUntilLimit() > 0) {
-              int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                resultingBitmap_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              resultingBitmap_.add(rawValue);
-            }
-            input.popLimit(oldLimit);
-            break;
-          }
-          case 34: {
-            com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder subBuilder = null;
-            if (parentEntity_ != null) {
-              subBuilder = parentEntity_.toBuilder();
-            }
-            parentEntity_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(parentEntity_);
-              parentEntity_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        ownBitmap_ = java.util.Collections.unmodifiableList(ownBitmap_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        inheritedBitmap_ = java.util.Collections.unmodifiableList(inheritedBitmap_);
-      }
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
-        resultingBitmap_ = java.util.Collections.unmodifiableList(resultingBitmap_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_AvailabilityBitmapSet_descriptor;
@@ -180,14 +46,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OWN_BITMAP_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> ownBitmap_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.AvailabilityOption> ownBitmap_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.AvailabilityOption>() {
             public com.tcn.cloud.api.api.commons.AvailabilityOption convert(java.lang.Integer from) {
-              @SuppressWarnings("deprecation")
-              com.tcn.cloud.api.api.commons.AvailabilityOption result = com.tcn.cloud.api.api.commons.AvailabilityOption.valueOf(from);
+              com.tcn.cloud.api.api.commons.AvailabilityOption result = com.tcn.cloud.api.api.commons.AvailabilityOption.forNumber(from);
               return result == null ? com.tcn.cloud.api.api.commons.AvailabilityOption.UNRECOGNIZED : result;
             }
           };
@@ -258,14 +124,14 @@ private static final long serialVersionUID = 0L;
   private int ownBitmapMemoizedSerializedSize;
 
   public static final int INHERITED_BITMAP_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> inheritedBitmap_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.AvailabilityOption> inheritedBitmap_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.AvailabilityOption>() {
             public com.tcn.cloud.api.api.commons.AvailabilityOption convert(java.lang.Integer from) {
-              @SuppressWarnings("deprecation")
-              com.tcn.cloud.api.api.commons.AvailabilityOption result = com.tcn.cloud.api.api.commons.AvailabilityOption.valueOf(from);
+              com.tcn.cloud.api.api.commons.AvailabilityOption result = com.tcn.cloud.api.api.commons.AvailabilityOption.forNumber(from);
               return result == null ? com.tcn.cloud.api.api.commons.AvailabilityOption.UNRECOGNIZED : result;
             }
           };
@@ -336,14 +202,14 @@ private static final long serialVersionUID = 0L;
   private int inheritedBitmapMemoizedSerializedSize;
 
   public static final int RESULTING_BITMAP_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> resultingBitmap_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.AvailabilityOption> resultingBitmap_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.AvailabilityOption>() {
             public com.tcn.cloud.api.api.commons.AvailabilityOption convert(java.lang.Integer from) {
-              @SuppressWarnings("deprecation")
-              com.tcn.cloud.api.api.commons.AvailabilityOption result = com.tcn.cloud.api.api.commons.AvailabilityOption.valueOf(from);
+              com.tcn.cloud.api.api.commons.AvailabilityOption result = com.tcn.cloud.api.api.commons.AvailabilityOption.forNumber(from);
               return result == null ? com.tcn.cloud.api.api.commons.AvailabilityOption.UNRECOGNIZED : result;
             }
           };
@@ -448,7 +314,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntityOrBuilder getParentEntityOrBuilder() {
-    return getParentEntity();
+    return parentEntity_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.getDefaultInstance() : parentEntity_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -490,7 +356,7 @@ private static final long serialVersionUID = 0L;
     if (parentEntity_ != null) {
       output.writeMessage(4, getParentEntity());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -539,7 +405,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getParentEntity());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -562,7 +428,7 @@ private static final long serialVersionUID = 0L;
       if (!getParentEntity()
           .equals(other.getParentEntity())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -589,7 +455,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PARENT_ENTITY_FIELD_NUMBER;
       hash = (53 * hash) + getParentEntity().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -638,11 +504,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.AvailabilityBitmapSet parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.AvailabilityBitmapSet parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -710,32 +578,27 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.AvailabilityBitmapSet.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       ownBitmap_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);
       inheritedBitmap_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000002);
       resultingBitmap_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000004);
-      if (parentEntityBuilder_ == null) {
-        parentEntity_ = null;
-      } else {
-        parentEntity_ = null;
+      parentEntity_ = null;
+      if (parentEntityBuilder_ != null) {
+        parentEntityBuilder_.dispose();
         parentEntityBuilder_ = null;
       }
       return this;
@@ -764,7 +627,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.AvailabilityBitmapSet buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.AvailabilityBitmapSet result = new com.tcn.cloud.api.api.v1alpha1.wfm.AvailabilityBitmapSet(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.AvailabilityBitmapSet result) {
       if (((bitField0_ & 0x00000001) != 0)) {
         ownBitmap_ = java.util.Collections.unmodifiableList(ownBitmap_);
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -780,13 +649,15 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000004);
       }
       result.resultingBitmap_ = resultingBitmap_;
-      if (parentEntityBuilder_ == null) {
-        result.parentEntity_ = parentEntity_;
-      } else {
-        result.parentEntity_ = parentEntityBuilder_.build();
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.AvailabilityBitmapSet result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.parentEntity_ = parentEntityBuilder_ == null
+            ? parentEntity_
+            : parentEntityBuilder_.build();
       }
-      onBuilt();
-      return result;
     }
 
     @java.lang.Override
@@ -866,7 +737,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasParentEntity()) {
         mergeParentEntity(other.getParentEntity());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -881,17 +752,88 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.AvailabilityBitmapSet parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int tmpRaw = input.readEnum();
+              ensureOwnBitmapIsMutable();
+              ownBitmap_.add(tmpRaw);
+              break;
+            } // case 8
+            case 10: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureOwnBitmapIsMutable();
+                ownBitmap_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 10
+            case 16: {
+              int tmpRaw = input.readEnum();
+              ensureInheritedBitmapIsMutable();
+              inheritedBitmap_.add(tmpRaw);
+              break;
+            } // case 16
+            case 18: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureInheritedBitmapIsMutable();
+                inheritedBitmap_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 18
+            case 24: {
+              int tmpRaw = input.readEnum();
+              ensureResultingBitmapIsMutable();
+              resultingBitmap_.add(tmpRaw);
+              break;
+            } // case 24
+            case 26: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureResultingBitmapIsMutable();
+                resultingBitmap_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getParentEntityFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.AvailabilityBitmapSet) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -1039,8 +981,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .api.commons.AvailabilityOption own_bitmap = 1 [json_name = "ownBitmap"];</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of ownBitmap at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for ownBitmap to set.
      * @return This builder for chaining.
      */
     public Builder setOwnBitmapValue(
@@ -1227,8 +1169,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .api.commons.AvailabilityOption inherited_bitmap = 2 [json_name = "inheritedBitmap"];</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of inheritedBitmap at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for inheritedBitmap to set.
      * @return This builder for chaining.
      */
     public Builder setInheritedBitmapValue(
@@ -1415,8 +1357,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .api.commons.AvailabilityOption resulting_bitmap = 3 [json_name = "resultingBitmap"];</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of resultingBitmap at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for resultingBitmap to set.
      * @return This builder for chaining.
      */
     public Builder setResultingBitmapValue(
@@ -1472,7 +1414,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the parentEntity field is set.
      */
     public boolean hasParentEntity() {
-      return parentEntityBuilder_ != null || parentEntity_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1502,11 +1444,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         parentEntity_ = value;
-        onChanged();
       } else {
         parentEntityBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1520,11 +1462,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder builderForValue) {
       if (parentEntityBuilder_ == null) {
         parentEntity_ = builderForValue.build();
-        onChanged();
       } else {
         parentEntityBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1536,17 +1478,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeParentEntity(com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity value) {
       if (parentEntityBuilder_ == null) {
-        if (parentEntity_ != null) {
-          parentEntity_ =
-            com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.newBuilder(parentEntity_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000008) != 0) &&
+          parentEntity_ != null &&
+          parentEntity_ != com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.getDefaultInstance()) {
+          getParentEntityBuilder().mergeFrom(value);
         } else {
           parentEntity_ = value;
         }
-        onChanged();
       } else {
         parentEntityBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1557,14 +1500,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.ParentEntity parent_entity = 4 [json_name = "parentEntity"];</code>
      */
     public Builder clearParentEntity() {
-      if (parentEntityBuilder_ == null) {
-        parentEntity_ = null;
-        onChanged();
-      } else {
-        parentEntity_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      parentEntity_ = null;
+      if (parentEntityBuilder_ != null) {
+        parentEntityBuilder_.dispose();
         parentEntityBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1575,7 +1517,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.ParentEntity parent_entity = 4 [json_name = "parentEntity"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder getParentEntityBuilder() {
-      
+      bitField0_ |= 0x00000008;
       onChanged();
       return getParentEntityFieldBuilder().getBuilder();
     }
@@ -1647,7 +1589,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AvailabilityBitmapSet(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

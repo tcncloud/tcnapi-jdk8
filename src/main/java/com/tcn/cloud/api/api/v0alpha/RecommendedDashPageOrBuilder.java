@@ -52,5 +52,5 @@ public interface RecommendedDashPageOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.RecommendedChartOrBuilder getChartOrBuilder();
 
-  public com.tcn.cloud.api.api.v0alpha.RecommendedDashPage.DashPageTypeCase getDashPageTypeCase();
+  com.tcn.cloud.api.api.v0alpha.RecommendedDashPage.DashPageTypeCase getDashPageTypeCase();
 }

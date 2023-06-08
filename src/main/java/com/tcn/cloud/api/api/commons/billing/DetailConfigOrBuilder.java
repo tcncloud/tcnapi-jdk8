@@ -616,5 +616,5 @@ public interface DetailConfigOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.billing.modules.BasicConfigOrBuilder getComplianceRndQueryCachedConfigOrBuilder();
 
-  public com.tcn.cloud.api.api.commons.billing.DetailConfig.ConfigCase getConfigCase();
+  com.tcn.cloud.api.api.commons.billing.DetailConfig.ConfigCase getConfigCase();
 }

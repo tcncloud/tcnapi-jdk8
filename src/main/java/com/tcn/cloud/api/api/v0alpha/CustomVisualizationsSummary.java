@@ -26,64 +26,6 @@ private static final long serialVersionUID = 0L;
     return new CustomVisualizationsSummary();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private CustomVisualizationsSummary(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            visualizationsCurrent_ = input.readInt64();
-            break;
-          }
-          case 16: {
-
-            visualizationsPeak_ = input.readInt64();
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            customVisualizationsEditor_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.AnaProto.internal_static_api_v0alpha_CustomVisualizationsSummary_descriptor;
@@ -98,7 +40,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VISUALIZATIONS_CURRENT_FIELD_NUMBER = 1;
-  private long visualizationsCurrent_;
+  private long visualizationsCurrent_ = 0L;
   /**
    * <code>int64 visualizations_current = 1 [json_name = "visualizationsCurrent"];</code>
    * @return The visualizationsCurrent.
@@ -109,7 +51,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VISUALIZATIONS_PEAK_FIELD_NUMBER = 2;
-  private long visualizationsPeak_;
+  private long visualizationsPeak_ = 0L;
   /**
    * <code>int64 visualizations_peak = 2 [json_name = "visualizationsPeak"];</code>
    * @return The visualizationsPeak.
@@ -120,7 +62,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOM_VISUALIZATIONS_EDITOR_FIELD_NUMBER = 3;
-  private volatile java.lang.Object customVisualizationsEditor_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customVisualizationsEditor_ = "";
   /**
    * <code>string custom_visualizations_editor = 3 [json_name = "customVisualizationsEditor"];</code>
    * @return The customVisualizationsEditor.
@@ -177,10 +120,10 @@ private static final long serialVersionUID = 0L;
     if (visualizationsPeak_ != 0L) {
       output.writeInt64(2, visualizationsPeak_);
     }
-    if (!getCustomVisualizationsEditorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customVisualizationsEditor_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, customVisualizationsEditor_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -197,10 +140,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, visualizationsPeak_);
     }
-    if (!getCustomVisualizationsEditorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customVisualizationsEditor_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, customVisualizationsEditor_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -221,7 +164,7 @@ private static final long serialVersionUID = 0L;
         != other.getVisualizationsPeak()) return false;
     if (!getCustomVisualizationsEditor()
         .equals(other.getCustomVisualizationsEditor())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -240,7 +183,7 @@ private static final long serialVersionUID = 0L;
         getVisualizationsPeak());
     hash = (37 * hash) + CUSTOM_VISUALIZATIONS_EDITOR_FIELD_NUMBER;
     hash = (53 * hash) + getCustomVisualizationsEditor().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -289,11 +232,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.CustomVisualizationsSummary parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.CustomVisualizationsSummary parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -357,28 +302,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CustomVisualizationsSummary.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       visualizationsCurrent_ = 0L;
-
       visualizationsPeak_ = 0L;
-
       customVisualizationsEditor_ = "";
-
       return this;
     }
 
@@ -405,11 +343,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.CustomVisualizationsSummary buildPartial() {
       com.tcn.cloud.api.api.v0alpha.CustomVisualizationsSummary result = new com.tcn.cloud.api.api.v0alpha.CustomVisualizationsSummary(this);
-      result.visualizationsCurrent_ = visualizationsCurrent_;
-      result.visualizationsPeak_ = visualizationsPeak_;
-      result.customVisualizationsEditor_ = customVisualizationsEditor_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.CustomVisualizationsSummary result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.visualizationsCurrent_ = visualizationsCurrent_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.visualizationsPeak_ = visualizationsPeak_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.customVisualizationsEditor_ = customVisualizationsEditor_;
+      }
     }
 
     @java.lang.Override
@@ -464,9 +413,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCustomVisualizationsEditor().isEmpty()) {
         customVisualizationsEditor_ = other.customVisualizationsEditor_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -481,19 +431,48 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.CustomVisualizationsSummary parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              visualizationsCurrent_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              visualizationsPeak_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 26: {
+              customVisualizationsEditor_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.CustomVisualizationsSummary) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private long visualizationsCurrent_ ;
     /**
@@ -510,8 +489,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setVisualizationsCurrent(long value) {
-      
+
       visualizationsCurrent_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -520,7 +500,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVisualizationsCurrent() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       visualizationsCurrent_ = 0L;
       onChanged();
       return this;
@@ -541,8 +521,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setVisualizationsPeak(long value) {
-      
+
       visualizationsPeak_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -551,7 +532,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVisualizationsPeak() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       visualizationsPeak_ = 0L;
       onChanged();
       return this;
@@ -598,11 +579,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomVisualizationsEditor(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customVisualizationsEditor_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -611,8 +590,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomVisualizationsEditor() {
-      
       customVisualizationsEditor_ = getDefaultInstance().getCustomVisualizationsEditor();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -623,12 +602,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomVisualizationsEditorBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customVisualizationsEditor_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -665,7 +642,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new CustomVisualizationsSummary(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

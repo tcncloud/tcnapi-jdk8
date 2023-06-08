@@ -229,57 +229,57 @@ public final class VmdsProto {
       "(\tR\010filename\022\022\n\004size\030\002 \001(\003R\004size2\271\020\n\004Vmd" +
       "s\022\227\001\n\024GetVoicemailMetadata\022$.api.v0alpha" +
       ".GetVoicemailMetadataReq\032$.api.v0alpha.G" +
-      "etVoicemailMetadataRes\"1\202\323\344\223\002+:\001*\"&/api/" +
-      "v0alpha/vmds/getvoicemailmetadata0\001\022\227\001\n\030" +
+      "etVoicemailMetadataRes\"1\202\323\344\223\002+\"&/api/v0a" +
+      "lpha/vmds/getvoicemailmetadata:\001*0\001\022\227\001\n\030" +
       "GetVoicemailMessageCount\022!.api.v0alpha.G" +
       "etVoicemailCountReq\032!.api.v0alpha.GetVoi" +
-      "cemailCountRes\"5\202\323\344\223\002/:\001*\"*/api/v0alpha/" +
-      "vmds/getvoicemailmessagecount\022\201\001\n\017Delete" +
+      "cemailCountRes\"5\202\323\344\223\002/\"*/api/v0alpha/vmd" +
+      "s/getvoicemailmessagecount:\001*\022\201\001\n\017Delete" +
       "Voicemail\022\037.api.v0alpha.DeleteVoicemailR" +
       "eq\032\037.api.v0alpha.DeleteVoicemailRes\",\202\323\344" +
-      "\223\002&:\001*\"!/api/v0alpha/vmds/deletevoicemai" +
-      "l\022}\n\016DeleteGreeting\022\036.api.v0alpha.Delete" +
+      "\223\002&\"!/api/v0alpha/vmds/deletevoicemail:\001" +
+      "*\022}\n\016DeleteGreeting\022\036.api.v0alpha.Delete" +
       "GreetingReq\032\036.api.v0alpha.DeleteGreeting" +
-      "Res\"+\202\323\344\223\002%:\001*\" /api/v0alpha/vmds/delete" +
-      "greeting\022\205\001\n\020UpdateUploadName\022 .api.v0al" +
+      "Res\"+\202\323\344\223\002%\" /api/v0alpha/vmds/deletegre" +
+      "eting:\001*\022\205\001\n\020UpdateUploadName\022 .api.v0al" +
       "pha.UpdateUploadNameReq\032 .api.v0alpha.Up" +
-      "dateUploadNameRes\"-\202\323\344\223\002\':\001*\"\"/api/v0alp" +
-      "ha/vmds/updateuploadname\022\241\001\n\027UpdateVoice" +
+      "dateUploadNameRes\"-\202\323\344\223\002\'\"\"/api/v0alpha/" +
+      "vmds/updateuploadname:\001*\022\241\001\n\027UpdateVoice" +
       "mailFlagRead\022\'.api.v0alpha.UpdateVoicema" +
       "ilFlagReadReq\032\'.api.v0alpha.UpdateVoicem" +
-      "ailFlagReadRes\"4\202\323\344\223\002.:\001*\")/api/v0alpha/" +
-      "vmds/updatevoicemailflagread\022\201\001\n\017Downloa" +
+      "ailFlagReadRes\"4\202\323\344\223\002.\")/api/v0alpha/vmd" +
+      "s/updatevoicemailflagread:\001*\022\201\001\n\017Downloa" +
       "dMessage\022\037.api.v0alpha.DownloadMessageRe" +
       "q\032\037.api.v0alpha.DownloadMessageRes\",\202\323\344\223" +
-      "\002&:\001*\"!/api/v0alpha/vmds/downloadmessage" +
+      "\002&\"!/api/v0alpha/vmds/downloadmessage:\001*" +
       "\022\205\001\n\020DownloadMessages\022 .api.v0alpha.Down" +
       "loadMessagesReq\032 .api.v0alpha.DownloadMe" +
-      "ssagesRes\"-\202\323\344\223\002\':\001*\"\"/api/v0alpha/vmds/" +
-      "downloadmessages\022\265\001\n\034DownloadGreetingFor" +
+      "ssagesRes\"-\202\323\344\223\002\'\"\"/api/v0alpha/vmds/dow" +
+      "nloadmessages:\001*\022\265\001\n\034DownloadGreetingFor" +
       "Extension\022,.api.v0alpha.DownloadGreeting" +
       "ForExtensionReq\032,.api.v0alpha.DownloadGr" +
-      "eetingForExtensionRes\"9\202\323\344\223\0023:\001*\"./api/v" +
-      "0alpha/vmds/downloadgreetingforextension" +
+      "eetingForExtensionRes\"9\202\323\344\223\0023\"./api/v0al" +
+      "pha/vmds/downloadgreetingforextension:\001*" +
       "\022\205\001\n\020DownloadGreeting\022 .api.v0alpha.Down" +
       "loadGreetingReq\032 .api.v0alpha.DownloadGr" +
-      "eetingRes\"-\202\323\344\223\002\':\001*\"\"/api/v0alpha/vmds/" +
-      "downloadgreeting\022\225\001\n\024GetUploadGreetingUr" +
+      "eetingRes\"-\202\323\344\223\002\'\"\"/api/v0alpha/vmds/dow" +
+      "nloadgreeting:\001*\022\225\001\n\024GetUploadGreetingUr" +
       "l\022$.api.v0alpha.GetUploadGreetingUrlReq\032" +
       "$.api.v0alpha.GetUploadGreetingUrlRes\"1\202" +
-      "\323\344\223\002+:\001*\"&/api/v0alpha/vmds/getuploadgre" +
-      "etingurl\022\231\001\n\025ProcessGreetingUpload\022%.api" +
+      "\323\344\223\002+\"&/api/v0alpha/vmds/getuploadgreeti" +
+      "ngurl:\001*\022\231\001\n\025ProcessGreetingUpload\022%.api" +
       ".v0alpha.ProcessGreetingUploadReq\032%.api." +
       "v0alpha.ProcessGreetingUploadRes\"2\202\323\344\223\002," +
-      ":\001*\"\'/api/v0alpha/vmds/processgreetingup" +
-      "load\022\255\001\n\032UpdateGreetingForExtension\022*.ap" +
+      "\"\'/api/v0alpha/vmds/processgreetinguploa" +
+      "d:\001*\022\255\001\n\032UpdateGreetingForExtension\022*.ap" +
       "i.v0alpha.UpdateGreetingForExtensionReq\032" +
       "*.api.v0alpha.UpdateGreetingForExtension" +
-      "Res\"7\202\323\344\223\0021:\001*\",/api/v0alpha/vmds/update" +
-      "greetingforextension\022\235\001\n\026ListAvailableGr" +
+      "Res\"7\202\323\344\223\0021\",/api/v0alpha/vmds/updategre" +
+      "etingforextension:\001*\022\235\001\n\026ListAvailableGr" +
       "eetings\022&.api.v0alpha.ListAvailableGreet" +
       "ingsReq\032&.api.v0alpha.ListAvailableGreet" +
-      "ingsRes\"3\202\323\344\223\002-:\001*\"(/api/v0alpha/vmds/li" +
-      "stavailablegreetingsBw\n\035com.tcn.cloud.ap" +
+      "ingsRes\"3\202\323\344\223\002-\"(/api/v0alpha/vmds/lista" +
+      "vailablegreetings:\001*Bw\n\035com.tcn.cloud.ap" +
       "i.api.v0alphaB\tVmdsProtoP\001\242\002\003AVX\252\002\013Api.V" +
       "0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\GPBMe" +
       "tadata\352\002\014Api::V0alphab\006proto3"

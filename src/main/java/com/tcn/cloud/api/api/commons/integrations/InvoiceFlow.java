@@ -26,137 +26,6 @@ private static final long serialVersionUID = 0L;
     return new InvoiceFlow();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private InvoiceFlow(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            pluginInstanceId_ = s;
-            break;
-          }
-          case 18: {
-            com.tcn.cloud.api.api.commons.integrations.InvoiceExperianQueryBalance.Builder subBuilder = null;
-            if (valueCase_ == 2) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.integrations.InvoiceExperianQueryBalance) value_).toBuilder();
-            }
-            value_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.integrations.InvoiceExperianQueryBalance.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.integrations.InvoiceExperianQueryBalance) value_);
-              value_ = subBuilder.buildPartial();
-            }
-            valueCase_ = 2;
-            break;
-          }
-          case 26: {
-            com.tcn.cloud.api.api.commons.integrations.InvoiceTemplate.Builder subBuilder = null;
-            if (invoiceTemplate_ != null) {
-              subBuilder = invoiceTemplate_.toBuilder();
-            }
-            invoiceTemplate_ = input.readMessage(com.tcn.cloud.api.api.commons.integrations.InvoiceTemplate.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(invoiceTemplate_);
-              invoiceTemplate_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 82: {
-            com.tcn.cloud.api.api.commons.integrations.InvoiceAuthorizeNetLinkData.Builder subBuilder = null;
-            if (valueCase_ == 10) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.integrations.InvoiceAuthorizeNetLinkData) value_).toBuilder();
-            }
-            value_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.integrations.InvoiceAuthorizeNetLinkData.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.integrations.InvoiceAuthorizeNetLinkData) value_);
-              value_ = subBuilder.buildPartial();
-            }
-            valueCase_ = 10;
-            break;
-          }
-          case 90: {
-            com.tcn.cloud.api.api.commons.integrations.InvoiceAuthorizeNetCustomHttp.Builder subBuilder = null;
-            if (valueCase_ == 11) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.integrations.InvoiceAuthorizeNetCustomHttp) value_).toBuilder();
-            }
-            value_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.integrations.InvoiceAuthorizeNetCustomHttp.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.integrations.InvoiceAuthorizeNetCustomHttp) value_);
-              value_ = subBuilder.buildPartial();
-            }
-            valueCase_ = 11;
-            break;
-          }
-          case 98: {
-            com.tcn.cloud.api.api.commons.integrations.InvoiceJourney.Builder subBuilder = null;
-            if (valueCase_ == 12) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.integrations.InvoiceJourney) value_).toBuilder();
-            }
-            value_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.integrations.InvoiceJourney.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.integrations.InvoiceJourney) value_);
-              value_ = subBuilder.buildPartial();
-            }
-            valueCase_ = 12;
-            break;
-          }
-          case 106: {
-            com.tcn.cloud.api.api.commons.integrations.InvoiceDynamicJourney.Builder subBuilder = null;
-            if (valueCase_ == 13) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.integrations.InvoiceDynamicJourney) value_).toBuilder();
-            }
-            value_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.integrations.InvoiceDynamicJourney.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.integrations.InvoiceDynamicJourney) value_);
-              value_ = subBuilder.buildPartial();
-            }
-            valueCase_ = 13;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.internal_static_api_commons_integrations_InvoiceFlow_descriptor;
@@ -171,6 +40,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int valueCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object value_;
   public enum ValueCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -218,7 +88,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PLUGIN_INSTANCE_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object pluginInstanceId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object pluginInstanceId_ = "";
   /**
    * <code>string plugin_instance_id = 1 [json_name = "pluginInstanceId"];</code>
    * @return The pluginInstanceId.
@@ -457,7 +328,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.integrations.InvoiceTemplateOrBuilder getInvoiceTemplateOrBuilder() {
-    return getInvoiceTemplate();
+    return invoiceTemplate_ == null ? com.tcn.cloud.api.api.commons.integrations.InvoiceTemplate.getDefaultInstance() : invoiceTemplate_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -474,7 +345,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getPluginInstanceIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pluginInstanceId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pluginInstanceId_);
     }
     if (valueCase_ == 2) {
@@ -495,7 +366,7 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 13) {
       output.writeMessage(13, (com.tcn.cloud.api.api.commons.integrations.InvoiceDynamicJourney) value_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -504,7 +375,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getPluginInstanceIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pluginInstanceId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pluginInstanceId_);
     }
     if (valueCase_ == 2) {
@@ -531,7 +402,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, (com.tcn.cloud.api.api.commons.integrations.InvoiceDynamicJourney) value_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -578,7 +449,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -619,7 +490,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -668,11 +539,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.integrations.InvoiceFlow parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.integrations.InvoiceFlow parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -736,28 +609,37 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.integrations.InvoiceFlow.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       pluginInstanceId_ = "";
-
-      if (invoiceTemplateBuilder_ == null) {
-        invoiceTemplate_ = null;
-      } else {
-        invoiceTemplate_ = null;
+      if (experianQueryBalanceBuilder_ != null) {
+        experianQueryBalanceBuilder_.clear();
+      }
+      if (authorizeNetLinkDataBuilder_ != null) {
+        authorizeNetLinkDataBuilder_.clear();
+      }
+      if (authorizeNetCustomHttpBuilder_ != null) {
+        authorizeNetCustomHttpBuilder_.clear();
+      }
+      if (journeyBuilder_ != null) {
+        journeyBuilder_.clear();
+      }
+      if (dynamicJourneyBuilder_ != null) {
+        dynamicJourneyBuilder_.clear();
+      }
+      invoiceTemplate_ = null;
+      if (invoiceTemplateBuilder_ != null) {
+        invoiceTemplateBuilder_.dispose();
         invoiceTemplateBuilder_ = null;
       }
       valueCase_ = 0;
@@ -788,50 +670,47 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.integrations.InvoiceFlow buildPartial() {
       com.tcn.cloud.api.api.commons.integrations.InvoiceFlow result = new com.tcn.cloud.api.api.commons.integrations.InvoiceFlow(this);
-      result.pluginInstanceId_ = pluginInstanceId_;
-      if (valueCase_ == 2) {
-        if (experianQueryBalanceBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = experianQueryBalanceBuilder_.build();
-        }
-      }
-      if (valueCase_ == 10) {
-        if (authorizeNetLinkDataBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = authorizeNetLinkDataBuilder_.build();
-        }
-      }
-      if (valueCase_ == 11) {
-        if (authorizeNetCustomHttpBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = authorizeNetCustomHttpBuilder_.build();
-        }
-      }
-      if (valueCase_ == 12) {
-        if (journeyBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = journeyBuilder_.build();
-        }
-      }
-      if (valueCase_ == 13) {
-        if (dynamicJourneyBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = dynamicJourneyBuilder_.build();
-        }
-      }
-      if (invoiceTemplateBuilder_ == null) {
-        result.invoiceTemplate_ = invoiceTemplate_;
-      } else {
-        result.invoiceTemplate_ = invoiceTemplateBuilder_.build();
-      }
-      result.valueCase_ = valueCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.integrations.InvoiceFlow result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.pluginInstanceId_ = pluginInstanceId_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.invoiceTemplate_ = invoiceTemplateBuilder_ == null
+            ? invoiceTemplate_
+            : invoiceTemplateBuilder_.build();
+      }
+    }
+
+    private void buildPartialOneofs(com.tcn.cloud.api.api.commons.integrations.InvoiceFlow result) {
+      result.valueCase_ = valueCase_;
+      result.value_ = this.value_;
+      if (valueCase_ == 2 &&
+          experianQueryBalanceBuilder_ != null) {
+        result.value_ = experianQueryBalanceBuilder_.build();
+      }
+      if (valueCase_ == 10 &&
+          authorizeNetLinkDataBuilder_ != null) {
+        result.value_ = authorizeNetLinkDataBuilder_.build();
+      }
+      if (valueCase_ == 11 &&
+          authorizeNetCustomHttpBuilder_ != null) {
+        result.value_ = authorizeNetCustomHttpBuilder_.build();
+      }
+      if (valueCase_ == 12 &&
+          journeyBuilder_ != null) {
+        result.value_ = journeyBuilder_.build();
+      }
+      if (valueCase_ == 13 &&
+          dynamicJourneyBuilder_ != null) {
+        result.value_ = dynamicJourneyBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -880,6 +759,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.commons.integrations.InvoiceFlow.getDefaultInstance()) return this;
       if (!other.getPluginInstanceId().isEmpty()) {
         pluginInstanceId_ = other.pluginInstanceId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasInvoiceTemplate()) {
@@ -910,7 +790,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -925,17 +805,77 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.integrations.InvoiceFlow parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              pluginInstanceId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  getExperianQueryBalanceFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 2;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getInvoiceTemplateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 26
+            case 82: {
+              input.readMessage(
+                  getAuthorizeNetLinkDataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 10;
+              break;
+            } // case 82
+            case 90: {
+              input.readMessage(
+                  getAuthorizeNetCustomHttpFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 11;
+              break;
+            } // case 90
+            case 98: {
+              input.readMessage(
+                  getJourneyFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 12;
+              break;
+            } // case 98
+            case 106: {
+              input.readMessage(
+                  getDynamicJourneyFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 13;
+              break;
+            } // case 106
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.integrations.InvoiceFlow) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int valueCase_ = 0;
@@ -953,6 +893,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private java.lang.Object pluginInstanceId_ = "";
     /**
@@ -995,11 +936,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPluginInstanceId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       pluginInstanceId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1008,8 +947,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPluginInstanceId() {
-      
       pluginInstanceId_ = getDefaultInstance().getPluginInstanceId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1020,12 +959,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPluginInstanceIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       pluginInstanceId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1104,8 +1041,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (valueCase_ == 2) {
           experianQueryBalanceBuilder_.mergeFrom(value);
+        } else {
+          experianQueryBalanceBuilder_.setMessage(value);
         }
-        experianQueryBalanceBuilder_.setMessage(value);
       }
       valueCase_ = 2;
       return this;
@@ -1167,7 +1105,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 2;
-      onChanged();;
+      onChanged();
       return experianQueryBalanceBuilder_;
     }
 
@@ -1265,8 +1203,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (valueCase_ == 10) {
           authorizeNetLinkDataBuilder_.mergeFrom(value);
+        } else {
+          authorizeNetLinkDataBuilder_.setMessage(value);
         }
-        authorizeNetLinkDataBuilder_.setMessage(value);
       }
       valueCase_ = 10;
       return this;
@@ -1344,7 +1283,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 10;
-      onChanged();;
+      onChanged();
       return authorizeNetLinkDataBuilder_;
     }
 
@@ -1422,8 +1361,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (valueCase_ == 11) {
           authorizeNetCustomHttpBuilder_.mergeFrom(value);
+        } else {
+          authorizeNetCustomHttpBuilder_.setMessage(value);
         }
-        authorizeNetCustomHttpBuilder_.setMessage(value);
       }
       valueCase_ = 11;
       return this;
@@ -1485,7 +1425,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 11;
-      onChanged();;
+      onChanged();
       return authorizeNetCustomHttpBuilder_;
     }
 
@@ -1563,8 +1503,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (valueCase_ == 12) {
           journeyBuilder_.mergeFrom(value);
+        } else {
+          journeyBuilder_.setMessage(value);
         }
-        journeyBuilder_.setMessage(value);
       }
       valueCase_ = 12;
       return this;
@@ -1626,7 +1567,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 12;
-      onChanged();;
+      onChanged();
       return journeyBuilder_;
     }
 
@@ -1704,8 +1645,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (valueCase_ == 13) {
           dynamicJourneyBuilder_.mergeFrom(value);
+        } else {
+          dynamicJourneyBuilder_.setMessage(value);
         }
-        dynamicJourneyBuilder_.setMessage(value);
       }
       valueCase_ = 13;
       return this;
@@ -1767,7 +1709,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 13;
-      onChanged();;
+      onChanged();
       return dynamicJourneyBuilder_;
     }
 
@@ -1783,7 +1725,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the invoiceTemplate field is set.
      */
     public boolean hasInvoiceTemplate() {
-      return invoiceTemplateBuilder_ != null || invoiceTemplate_ != null;
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -1813,11 +1755,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         invoiceTemplate_ = value;
-        onChanged();
       } else {
         invoiceTemplateBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -1831,11 +1773,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.integrations.InvoiceTemplate.Builder builderForValue) {
       if (invoiceTemplateBuilder_ == null) {
         invoiceTemplate_ = builderForValue.build();
-        onChanged();
       } else {
         invoiceTemplateBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -1847,17 +1789,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeInvoiceTemplate(com.tcn.cloud.api.api.commons.integrations.InvoiceTemplate value) {
       if (invoiceTemplateBuilder_ == null) {
-        if (invoiceTemplate_ != null) {
-          invoiceTemplate_ =
-            com.tcn.cloud.api.api.commons.integrations.InvoiceTemplate.newBuilder(invoiceTemplate_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000040) != 0) &&
+          invoiceTemplate_ != null &&
+          invoiceTemplate_ != com.tcn.cloud.api.api.commons.integrations.InvoiceTemplate.getDefaultInstance()) {
+          getInvoiceTemplateBuilder().mergeFrom(value);
         } else {
           invoiceTemplate_ = value;
         }
-        onChanged();
       } else {
         invoiceTemplateBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -1868,14 +1811,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.integrations.InvoiceTemplate invoice_template = 3 [json_name = "invoiceTemplate"];</code>
      */
     public Builder clearInvoiceTemplate() {
-      if (invoiceTemplateBuilder_ == null) {
-        invoiceTemplate_ = null;
-        onChanged();
-      } else {
-        invoiceTemplate_ = null;
+      bitField0_ = (bitField0_ & ~0x00000040);
+      invoiceTemplate_ = null;
+      if (invoiceTemplateBuilder_ != null) {
+        invoiceTemplateBuilder_.dispose();
         invoiceTemplateBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1886,7 +1828,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.integrations.InvoiceTemplate invoice_template = 3 [json_name = "invoiceTemplate"];</code>
      */
     public com.tcn.cloud.api.api.commons.integrations.InvoiceTemplate.Builder getInvoiceTemplateBuilder() {
-      
+      bitField0_ |= 0x00000040;
       onChanged();
       return getInvoiceTemplateFieldBuilder().getBuilder();
     }
@@ -1958,7 +1900,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new InvoiceFlow(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -25,272 +25,6 @@ private static final long serialVersionUID = 0L;
     return new OmniMessagePayload();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private OmniMessagePayload(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 802: {
-            com.tcn.cloud.api.api.commons.OmniTextMessage.Builder subBuilder = null;
-            if (payloadCase_ == 100) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.OmniTextMessage) payload_).toBuilder();
-            }
-            payload_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.OmniTextMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.OmniTextMessage) payload_);
-              payload_ = subBuilder.buildPartial();
-            }
-            payloadCase_ = 100;
-            break;
-          }
-          case 810: {
-            com.tcn.cloud.api.api.commons.OmniTypingNotification.Builder subBuilder = null;
-            if (payloadCase_ == 101) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.OmniTypingNotification) payload_).toBuilder();
-            }
-            payload_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.OmniTypingNotification.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.OmniTypingNotification) payload_);
-              payload_ = subBuilder.buildPartial();
-            }
-            payloadCase_ = 101;
-            break;
-          }
-          case 818: {
-            com.tcn.cloud.api.api.commons.OmniReassignmentNotification.Builder subBuilder = null;
-            if (payloadCase_ == 102) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.OmniReassignmentNotification) payload_).toBuilder();
-            }
-            payload_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.OmniReassignmentNotification.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.OmniReassignmentNotification) payload_);
-              payload_ = subBuilder.buildPartial();
-            }
-            payloadCase_ = 102;
-            break;
-          }
-          case 826: {
-            com.tcn.cloud.api.api.commons.OmniRequestAttachmentUploadURL.Builder subBuilder = null;
-            if (payloadCase_ == 103) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.OmniRequestAttachmentUploadURL) payload_).toBuilder();
-            }
-            payload_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.OmniRequestAttachmentUploadURL.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.OmniRequestAttachmentUploadURL) payload_);
-              payload_ = subBuilder.buildPartial();
-            }
-            payloadCase_ = 103;
-            break;
-          }
-          case 834: {
-            com.tcn.cloud.api.api.commons.OmniAttachmentUploadURL.Builder subBuilder = null;
-            if (payloadCase_ == 104) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.OmniAttachmentUploadURL) payload_).toBuilder();
-            }
-            payload_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.OmniAttachmentUploadURL.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.OmniAttachmentUploadURL) payload_);
-              payload_ = subBuilder.buildPartial();
-            }
-            payloadCase_ = 104;
-            break;
-          }
-          case 842: {
-            com.tcn.cloud.api.api.commons.OmniAttachment.Builder subBuilder = null;
-            if (payloadCase_ == 105) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.OmniAttachment) payload_).toBuilder();
-            }
-            payload_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.OmniAttachment.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.OmniAttachment) payload_);
-              payload_ = subBuilder.buildPartial();
-            }
-            payloadCase_ = 105;
-            break;
-          }
-          case 850: {
-            com.tcn.cloud.api.api.commons.OmniCloseConversation.Builder subBuilder = null;
-            if (payloadCase_ == 106) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.OmniCloseConversation) payload_).toBuilder();
-            }
-            payload_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.OmniCloseConversation.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.OmniCloseConversation) payload_);
-              payload_ = subBuilder.buildPartial();
-            }
-            payloadCase_ = 106;
-            break;
-          }
-          case 858: {
-            com.tcn.cloud.api.api.commons.OmniAssignConversation.Builder subBuilder = null;
-            if (payloadCase_ == 107) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.OmniAssignConversation) payload_).toBuilder();
-            }
-            payload_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.OmniAssignConversation.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.OmniAssignConversation) payload_);
-              payload_ = subBuilder.buildPartial();
-            }
-            payloadCase_ = 107;
-            break;
-          }
-          case 866: {
-            com.tcn.cloud.api.api.commons.OmniUnassignConversation.Builder subBuilder = null;
-            if (payloadCase_ == 108) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.OmniUnassignConversation) payload_).toBuilder();
-            }
-            payload_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.OmniUnassignConversation.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.OmniUnassignConversation) payload_);
-              payload_ = subBuilder.buildPartial();
-            }
-            payloadCase_ = 108;
-            break;
-          }
-          case 874: {
-            com.tcn.cloud.api.api.commons.OmniFinishWrapUp.Builder subBuilder = null;
-            if (payloadCase_ == 109) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.OmniFinishWrapUp) payload_).toBuilder();
-            }
-            payload_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.OmniFinishWrapUp.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.OmniFinishWrapUp) payload_);
-              payload_ = subBuilder.buildPartial();
-            }
-            payloadCase_ = 109;
-            break;
-          }
-          case 882: {
-            com.tcn.cloud.api.api.commons.OmniSuspend.Builder subBuilder = null;
-            if (payloadCase_ == 110) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.OmniSuspend) payload_).toBuilder();
-            }
-            payload_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.OmniSuspend.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.OmniSuspend) payload_);
-              payload_ = subBuilder.buildPartial();
-            }
-            payloadCase_ = 110;
-            break;
-          }
-          case 890: {
-            com.tcn.cloud.api.api.commons.OmniStartWrapUp.Builder subBuilder = null;
-            if (payloadCase_ == 111) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.OmniStartWrapUp) payload_).toBuilder();
-            }
-            payload_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.OmniStartWrapUp.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.OmniStartWrapUp) payload_);
-              payload_ = subBuilder.buildPartial();
-            }
-            payloadCase_ = 111;
-            break;
-          }
-          case 898: {
-            com.tcn.cloud.api.api.commons.OmniQueueInformation.Builder subBuilder = null;
-            if (payloadCase_ == 112) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.OmniQueueInformation) payload_).toBuilder();
-            }
-            payload_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.OmniQueueInformation.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.OmniQueueInformation) payload_);
-              payload_ = subBuilder.buildPartial();
-            }
-            payloadCase_ = 112;
-            break;
-          }
-          case 906: {
-            com.tcn.cloud.api.api.commons.OmniRequestQueueInformation.Builder subBuilder = null;
-            if (payloadCase_ == 113) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.OmniRequestQueueInformation) payload_).toBuilder();
-            }
-            payload_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.OmniRequestQueueInformation.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.OmniRequestQueueInformation) payload_);
-              payload_ = subBuilder.buildPartial();
-            }
-            payloadCase_ = 113;
-            break;
-          }
-          case 914: {
-            com.tcn.cloud.api.api.commons.OmniOffLoadedTextMessage.Builder subBuilder = null;
-            if (payloadCase_ == 114) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.OmniOffLoadedTextMessage) payload_).toBuilder();
-            }
-            payload_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.OmniOffLoadedTextMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.OmniOffLoadedTextMessage) payload_);
-              payload_ = subBuilder.buildPartial();
-            }
-            payloadCase_ = 114;
-            break;
-          }
-          case 922: {
-            com.tcn.cloud.api.api.commons.OmniCannedMessage.Builder subBuilder = null;
-            if (payloadCase_ == 115) {
-              subBuilder = ((com.tcn.cloud.api.api.commons.OmniCannedMessage) payload_).toBuilder();
-            }
-            payload_ =
-                input.readMessage(com.tcn.cloud.api.api.commons.OmniCannedMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.OmniCannedMessage) payload_);
-              payload_ = subBuilder.buildPartial();
-            }
-            payloadCase_ = 115;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.OmnichannelProto.internal_static_api_commons_OmniMessagePayload_descriptor;
@@ -305,6 +39,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int payloadCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object payload_;
   public enum PayloadCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -1123,7 +858,7 @@ private static final long serialVersionUID = 0L;
     if (payloadCase_ == 115) {
       output.writeMessage(115, (com.tcn.cloud.api.api.commons.OmniCannedMessage) payload_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -1196,7 +931,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(115, (com.tcn.cloud.api.api.commons.OmniCannedMessage) payload_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1280,7 +1015,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1359,7 +1094,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1408,11 +1143,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.OmniMessagePayload parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.OmniMessagePayload parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1476,22 +1213,66 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.OmniMessagePayload.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      if (textMessageBuilder_ != null) {
+        textMessageBuilder_.clear();
+      }
+      if (typingNotificationBuilder_ != null) {
+        typingNotificationBuilder_.clear();
+      }
+      if (reassignmentBuilder_ != null) {
+        reassignmentBuilder_.clear();
+      }
+      if (requestAttachmentUploadUrlBuilder_ != null) {
+        requestAttachmentUploadUrlBuilder_.clear();
+      }
+      if (attachmentUploadUrlBuilder_ != null) {
+        attachmentUploadUrlBuilder_.clear();
+      }
+      if (attachmentBuilder_ != null) {
+        attachmentBuilder_.clear();
+      }
+      if (closeConversationBuilder_ != null) {
+        closeConversationBuilder_.clear();
+      }
+      if (assignConversationBuilder_ != null) {
+        assignConversationBuilder_.clear();
+      }
+      if (unassignConversationBuilder_ != null) {
+        unassignConversationBuilder_.clear();
+      }
+      if (finishWrapUpBuilder_ != null) {
+        finishWrapUpBuilder_.clear();
+      }
+      if (suspendBuilder_ != null) {
+        suspendBuilder_.clear();
+      }
+      if (startWrapUpBuilder_ != null) {
+        startWrapUpBuilder_.clear();
+      }
+      if (queueInformationBuilder_ != null) {
+        queueInformationBuilder_.clear();
+      }
+      if (requestQueueInformationBuilder_ != null) {
+        requestQueueInformationBuilder_.clear();
+      }
+      if (offLoadedTextMessageBuilder_ != null) {
+        offLoadedTextMessageBuilder_.clear();
+      }
+      if (cannedMessageBuilder_ != null) {
+        cannedMessageBuilder_.clear();
+      }
       payloadCase_ = 0;
       payload_ = null;
       return this;
@@ -1520,121 +1301,83 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.OmniMessagePayload buildPartial() {
       com.tcn.cloud.api.api.commons.OmniMessagePayload result = new com.tcn.cloud.api.api.commons.OmniMessagePayload(this);
-      if (payloadCase_ == 100) {
-        if (textMessageBuilder_ == null) {
-          result.payload_ = payload_;
-        } else {
-          result.payload_ = textMessageBuilder_.build();
-        }
-      }
-      if (payloadCase_ == 101) {
-        if (typingNotificationBuilder_ == null) {
-          result.payload_ = payload_;
-        } else {
-          result.payload_ = typingNotificationBuilder_.build();
-        }
-      }
-      if (payloadCase_ == 102) {
-        if (reassignmentBuilder_ == null) {
-          result.payload_ = payload_;
-        } else {
-          result.payload_ = reassignmentBuilder_.build();
-        }
-      }
-      if (payloadCase_ == 103) {
-        if (requestAttachmentUploadUrlBuilder_ == null) {
-          result.payload_ = payload_;
-        } else {
-          result.payload_ = requestAttachmentUploadUrlBuilder_.build();
-        }
-      }
-      if (payloadCase_ == 104) {
-        if (attachmentUploadUrlBuilder_ == null) {
-          result.payload_ = payload_;
-        } else {
-          result.payload_ = attachmentUploadUrlBuilder_.build();
-        }
-      }
-      if (payloadCase_ == 105) {
-        if (attachmentBuilder_ == null) {
-          result.payload_ = payload_;
-        } else {
-          result.payload_ = attachmentBuilder_.build();
-        }
-      }
-      if (payloadCase_ == 106) {
-        if (closeConversationBuilder_ == null) {
-          result.payload_ = payload_;
-        } else {
-          result.payload_ = closeConversationBuilder_.build();
-        }
-      }
-      if (payloadCase_ == 107) {
-        if (assignConversationBuilder_ == null) {
-          result.payload_ = payload_;
-        } else {
-          result.payload_ = assignConversationBuilder_.build();
-        }
-      }
-      if (payloadCase_ == 108) {
-        if (unassignConversationBuilder_ == null) {
-          result.payload_ = payload_;
-        } else {
-          result.payload_ = unassignConversationBuilder_.build();
-        }
-      }
-      if (payloadCase_ == 109) {
-        if (finishWrapUpBuilder_ == null) {
-          result.payload_ = payload_;
-        } else {
-          result.payload_ = finishWrapUpBuilder_.build();
-        }
-      }
-      if (payloadCase_ == 110) {
-        if (suspendBuilder_ == null) {
-          result.payload_ = payload_;
-        } else {
-          result.payload_ = suspendBuilder_.build();
-        }
-      }
-      if (payloadCase_ == 111) {
-        if (startWrapUpBuilder_ == null) {
-          result.payload_ = payload_;
-        } else {
-          result.payload_ = startWrapUpBuilder_.build();
-        }
-      }
-      if (payloadCase_ == 112) {
-        if (queueInformationBuilder_ == null) {
-          result.payload_ = payload_;
-        } else {
-          result.payload_ = queueInformationBuilder_.build();
-        }
-      }
-      if (payloadCase_ == 113) {
-        if (requestQueueInformationBuilder_ == null) {
-          result.payload_ = payload_;
-        } else {
-          result.payload_ = requestQueueInformationBuilder_.build();
-        }
-      }
-      if (payloadCase_ == 114) {
-        if (offLoadedTextMessageBuilder_ == null) {
-          result.payload_ = payload_;
-        } else {
-          result.payload_ = offLoadedTextMessageBuilder_.build();
-        }
-      }
-      if (payloadCase_ == 115) {
-        if (cannedMessageBuilder_ == null) {
-          result.payload_ = payload_;
-        } else {
-          result.payload_ = cannedMessageBuilder_.build();
-        }
-      }
-      result.payloadCase_ = payloadCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.OmniMessagePayload result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.tcn.cloud.api.api.commons.OmniMessagePayload result) {
+      result.payloadCase_ = payloadCase_;
+      result.payload_ = this.payload_;
+      if (payloadCase_ == 100 &&
+          textMessageBuilder_ != null) {
+        result.payload_ = textMessageBuilder_.build();
+      }
+      if (payloadCase_ == 101 &&
+          typingNotificationBuilder_ != null) {
+        result.payload_ = typingNotificationBuilder_.build();
+      }
+      if (payloadCase_ == 102 &&
+          reassignmentBuilder_ != null) {
+        result.payload_ = reassignmentBuilder_.build();
+      }
+      if (payloadCase_ == 103 &&
+          requestAttachmentUploadUrlBuilder_ != null) {
+        result.payload_ = requestAttachmentUploadUrlBuilder_.build();
+      }
+      if (payloadCase_ == 104 &&
+          attachmentUploadUrlBuilder_ != null) {
+        result.payload_ = attachmentUploadUrlBuilder_.build();
+      }
+      if (payloadCase_ == 105 &&
+          attachmentBuilder_ != null) {
+        result.payload_ = attachmentBuilder_.build();
+      }
+      if (payloadCase_ == 106 &&
+          closeConversationBuilder_ != null) {
+        result.payload_ = closeConversationBuilder_.build();
+      }
+      if (payloadCase_ == 107 &&
+          assignConversationBuilder_ != null) {
+        result.payload_ = assignConversationBuilder_.build();
+      }
+      if (payloadCase_ == 108 &&
+          unassignConversationBuilder_ != null) {
+        result.payload_ = unassignConversationBuilder_.build();
+      }
+      if (payloadCase_ == 109 &&
+          finishWrapUpBuilder_ != null) {
+        result.payload_ = finishWrapUpBuilder_.build();
+      }
+      if (payloadCase_ == 110 &&
+          suspendBuilder_ != null) {
+        result.payload_ = suspendBuilder_.build();
+      }
+      if (payloadCase_ == 111 &&
+          startWrapUpBuilder_ != null) {
+        result.payload_ = startWrapUpBuilder_.build();
+      }
+      if (payloadCase_ == 112 &&
+          queueInformationBuilder_ != null) {
+        result.payload_ = queueInformationBuilder_.build();
+      }
+      if (payloadCase_ == 113 &&
+          requestQueueInformationBuilder_ != null) {
+        result.payload_ = requestQueueInformationBuilder_.build();
+      }
+      if (payloadCase_ == 114 &&
+          offLoadedTextMessageBuilder_ != null) {
+        result.payload_ = offLoadedTextMessageBuilder_.build();
+      }
+      if (payloadCase_ == 115 &&
+          cannedMessageBuilder_ != null) {
+        result.payload_ = cannedMessageBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1750,7 +1493,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1765,17 +1508,142 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.OmniMessagePayload parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 802: {
+              input.readMessage(
+                  getTextMessageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 100;
+              break;
+            } // case 802
+            case 810: {
+              input.readMessage(
+                  getTypingNotificationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 101;
+              break;
+            } // case 810
+            case 818: {
+              input.readMessage(
+                  getReassignmentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 102;
+              break;
+            } // case 818
+            case 826: {
+              input.readMessage(
+                  getRequestAttachmentUploadUrlFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 103;
+              break;
+            } // case 826
+            case 834: {
+              input.readMessage(
+                  getAttachmentUploadUrlFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 104;
+              break;
+            } // case 834
+            case 842: {
+              input.readMessage(
+                  getAttachmentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 105;
+              break;
+            } // case 842
+            case 850: {
+              input.readMessage(
+                  getCloseConversationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 106;
+              break;
+            } // case 850
+            case 858: {
+              input.readMessage(
+                  getAssignConversationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 107;
+              break;
+            } // case 858
+            case 866: {
+              input.readMessage(
+                  getUnassignConversationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 108;
+              break;
+            } // case 866
+            case 874: {
+              input.readMessage(
+                  getFinishWrapUpFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 109;
+              break;
+            } // case 874
+            case 882: {
+              input.readMessage(
+                  getSuspendFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 110;
+              break;
+            } // case 882
+            case 890: {
+              input.readMessage(
+                  getStartWrapUpFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 111;
+              break;
+            } // case 890
+            case 898: {
+              input.readMessage(
+                  getQueueInformationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 112;
+              break;
+            } // case 898
+            case 906: {
+              input.readMessage(
+                  getRequestQueueInformationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 113;
+              break;
+            } // case 906
+            case 914: {
+              input.readMessage(
+                  getOffLoadedTextMessageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 114;
+              break;
+            } // case 914
+            case 922: {
+              input.readMessage(
+                  getCannedMessageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              payloadCase_ = 115;
+              break;
+            } // case 922
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.OmniMessagePayload) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int payloadCase_ = 0;
@@ -1793,6 +1661,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.OmniTextMessage, com.tcn.cloud.api.api.commons.OmniTextMessage.Builder, com.tcn.cloud.api.api.commons.OmniTextMessageOrBuilder> textMessageBuilder_;
@@ -1888,8 +1757,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 100) {
           textMessageBuilder_.mergeFrom(value);
+        } else {
+          textMessageBuilder_.setMessage(value);
         }
-        textMessageBuilder_.setMessage(value);
       }
       payloadCase_ = 100;
       return this;
@@ -1967,7 +1837,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 100;
-      onChanged();;
+      onChanged();
       return textMessageBuilder_;
     }
 
@@ -2065,8 +1935,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 101) {
           typingNotificationBuilder_.mergeFrom(value);
+        } else {
+          typingNotificationBuilder_.setMessage(value);
         }
-        typingNotificationBuilder_.setMessage(value);
       }
       payloadCase_ = 101;
       return this;
@@ -2144,7 +2015,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 101;
-      onChanged();;
+      onChanged();
       return typingNotificationBuilder_;
     }
 
@@ -2242,8 +2113,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 102) {
           reassignmentBuilder_.mergeFrom(value);
+        } else {
+          reassignmentBuilder_.setMessage(value);
         }
-        reassignmentBuilder_.setMessage(value);
       }
       payloadCase_ = 102;
       return this;
@@ -2321,7 +2193,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 102;
-      onChanged();;
+      onChanged();
       return reassignmentBuilder_;
     }
 
@@ -2419,8 +2291,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 103) {
           requestAttachmentUploadUrlBuilder_.mergeFrom(value);
+        } else {
+          requestAttachmentUploadUrlBuilder_.setMessage(value);
         }
-        requestAttachmentUploadUrlBuilder_.setMessage(value);
       }
       payloadCase_ = 103;
       return this;
@@ -2498,7 +2371,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 103;
-      onChanged();;
+      onChanged();
       return requestAttachmentUploadUrlBuilder_;
     }
 
@@ -2596,8 +2469,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 104) {
           attachmentUploadUrlBuilder_.mergeFrom(value);
+        } else {
+          attachmentUploadUrlBuilder_.setMessage(value);
         }
-        attachmentUploadUrlBuilder_.setMessage(value);
       }
       payloadCase_ = 104;
       return this;
@@ -2675,7 +2549,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 104;
-      onChanged();;
+      onChanged();
       return attachmentUploadUrlBuilder_;
     }
 
@@ -2773,8 +2647,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 105) {
           attachmentBuilder_.mergeFrom(value);
+        } else {
+          attachmentBuilder_.setMessage(value);
         }
-        attachmentBuilder_.setMessage(value);
       }
       payloadCase_ = 105;
       return this;
@@ -2852,7 +2727,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 105;
-      onChanged();;
+      onChanged();
       return attachmentBuilder_;
     }
 
@@ -2950,8 +2825,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 106) {
           closeConversationBuilder_.mergeFrom(value);
+        } else {
+          closeConversationBuilder_.setMessage(value);
         }
-        closeConversationBuilder_.setMessage(value);
       }
       payloadCase_ = 106;
       return this;
@@ -3029,7 +2905,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 106;
-      onChanged();;
+      onChanged();
       return closeConversationBuilder_;
     }
 
@@ -3127,8 +3003,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 107) {
           assignConversationBuilder_.mergeFrom(value);
+        } else {
+          assignConversationBuilder_.setMessage(value);
         }
-        assignConversationBuilder_.setMessage(value);
       }
       payloadCase_ = 107;
       return this;
@@ -3206,7 +3083,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 107;
-      onChanged();;
+      onChanged();
       return assignConversationBuilder_;
     }
 
@@ -3304,8 +3181,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 108) {
           unassignConversationBuilder_.mergeFrom(value);
+        } else {
+          unassignConversationBuilder_.setMessage(value);
         }
-        unassignConversationBuilder_.setMessage(value);
       }
       payloadCase_ = 108;
       return this;
@@ -3383,7 +3261,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 108;
-      onChanged();;
+      onChanged();
       return unassignConversationBuilder_;
     }
 
@@ -3481,8 +3359,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 109) {
           finishWrapUpBuilder_.mergeFrom(value);
+        } else {
+          finishWrapUpBuilder_.setMessage(value);
         }
-        finishWrapUpBuilder_.setMessage(value);
       }
       payloadCase_ = 109;
       return this;
@@ -3560,7 +3439,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 109;
-      onChanged();;
+      onChanged();
       return finishWrapUpBuilder_;
     }
 
@@ -3658,8 +3537,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 110) {
           suspendBuilder_.mergeFrom(value);
+        } else {
+          suspendBuilder_.setMessage(value);
         }
-        suspendBuilder_.setMessage(value);
       }
       payloadCase_ = 110;
       return this;
@@ -3737,7 +3617,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 110;
-      onChanged();;
+      onChanged();
       return suspendBuilder_;
     }
 
@@ -3835,8 +3715,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 111) {
           startWrapUpBuilder_.mergeFrom(value);
+        } else {
+          startWrapUpBuilder_.setMessage(value);
         }
-        startWrapUpBuilder_.setMessage(value);
       }
       payloadCase_ = 111;
       return this;
@@ -3914,7 +3795,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 111;
-      onChanged();;
+      onChanged();
       return startWrapUpBuilder_;
     }
 
@@ -4012,8 +3893,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 112) {
           queueInformationBuilder_.mergeFrom(value);
+        } else {
+          queueInformationBuilder_.setMessage(value);
         }
-        queueInformationBuilder_.setMessage(value);
       }
       payloadCase_ = 112;
       return this;
@@ -4091,7 +3973,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 112;
-      onChanged();;
+      onChanged();
       return queueInformationBuilder_;
     }
 
@@ -4189,8 +4071,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 113) {
           requestQueueInformationBuilder_.mergeFrom(value);
+        } else {
+          requestQueueInformationBuilder_.setMessage(value);
         }
-        requestQueueInformationBuilder_.setMessage(value);
       }
       payloadCase_ = 113;
       return this;
@@ -4268,7 +4151,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 113;
-      onChanged();;
+      onChanged();
       return requestQueueInformationBuilder_;
     }
 
@@ -4366,8 +4249,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 114) {
           offLoadedTextMessageBuilder_.mergeFrom(value);
+        } else {
+          offLoadedTextMessageBuilder_.setMessage(value);
         }
-        offLoadedTextMessageBuilder_.setMessage(value);
       }
       payloadCase_ = 114;
       return this;
@@ -4445,7 +4329,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 114;
-      onChanged();;
+      onChanged();
       return offLoadedTextMessageBuilder_;
     }
 
@@ -4543,8 +4427,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 115) {
           cannedMessageBuilder_.mergeFrom(value);
+        } else {
+          cannedMessageBuilder_.setMessage(value);
         }
-        cannedMessageBuilder_.setMessage(value);
       }
       payloadCase_ = 115;
       return this;
@@ -4622,7 +4507,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 115;
-      onChanged();;
+      onChanged();
       return cannedMessageBuilder_;
     }
     @java.lang.Override
@@ -4658,7 +4543,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new OmniMessagePayload(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

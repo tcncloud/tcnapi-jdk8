@@ -88,5 +88,5 @@ public interface UpdatePhoneBookEntryReqOrBuilder extends
    */
   boolean getPhoneNumberHidden();
 
-  public com.tcn.cloud.api.api.v0alpha.UpdatePhoneBookEntryReq.PhoneBookEntryCase getPhoneBookEntryCase();
+  com.tcn.cloud.api.api.v0alpha.UpdatePhoneBookEntryReq.PhoneBookEntryCase getPhoneBookEntryCase();
 }

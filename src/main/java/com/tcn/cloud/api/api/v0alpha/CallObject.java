@@ -23,7 +23,8 @@ private static final long serialVersionUID = 0L;
     dstNumber_ = "";
     callerIdName_ = "";
     agentWorker_ = "";
-    events_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    events_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     callData_ = "";
     disconnectReason_ = "";
     voicemailBox_ = "";
@@ -39,208 +40,6 @@ private static final long serialVersionUID = 0L;
     return new CallObject();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private CallObject(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            oid_ = s;
-            break;
-          }
-          case 16: {
-
-            callSid_ = input.readInt64();
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            callType_ = rawValue;
-            break;
-          }
-          case 80: {
-
-            updated_ = input.readInt64();
-            break;
-          }
-          case 90: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              skills_ = com.google.protobuf.MapField.newMapField(
-                  SkillsDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000001;
-            }
-            com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
-            skills__ = input.readMessage(
-                SkillsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            skills_.getMutableMap().put(
-                skills__.getKey(), skills__.getValue());
-            break;
-          }
-          case 98: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            recordingFile_ = s;
-            break;
-          }
-          case 106: {
-            com.google.protobuf.Timestamp.Builder subBuilder = null;
-            if (updatedDate_ != null) {
-              subBuilder = updatedDate_.toBuilder();
-            }
-            updatedDate_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(updatedDate_);
-              updatedDate_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 114: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            srcNumber_ = s;
-            break;
-          }
-          case 122: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            dstNumber_ = s;
-            break;
-          }
-          case 130: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            callerIdName_ = s;
-            break;
-          }
-          case 138: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            agentWorker_ = s;
-            break;
-          }
-          case 146: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              events_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            events_.add(s);
-            break;
-          }
-          case 154: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            callData_ = s;
-            break;
-          }
-          case 162: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-              agentResponseData_ = com.google.protobuf.MapField.newMapField(
-                  AgentResponseDataDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000004;
-            }
-            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-            agentResponseData__ = input.readMessage(
-                AgentResponseDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            agentResponseData_.getMutableMap().put(
-                agentResponseData__.getKey(), agentResponseData__.getValue());
-            break;
-          }
-          case 168: {
-
-            recorded_ = input.readBool();
-            break;
-          }
-          case 176: {
-
-            connected_ = input.readBool();
-            break;
-          }
-          case 184: {
-
-            suspended_ = input.readBool();
-            break;
-          }
-          case 194: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            disconnectReason_ = s;
-            break;
-          }
-          case 200: {
-
-            voicemailed_ = input.readBool();
-            break;
-          }
-          case 210: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            voicemailBox_ = s;
-            break;
-          }
-          case 218: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            originated_ = s;
-            break;
-          }
-          case 226: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            folder_ = s;
-            break;
-          }
-          case 234: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            rtpInfo_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        events_ = events_.getUnmodifiableView();
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.SdsProto.internal_static_api_v0alpha_CallObject_descriptor;
@@ -269,7 +68,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object oid_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object oid_ = "";
   /**
    * <code>string oid = 1 [json_name = "oid"];</code>
    * @return The oid.
@@ -307,7 +107,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_SID_FIELD_NUMBER = 2;
-  private long callSid_;
+  private long callSid_ = 0L;
   /**
    * <code>int64 call_sid = 2 [json_name = "callSid"];</code>
    * @return The callSid.
@@ -318,7 +118,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_TYPE_FIELD_NUMBER = 3;
-  private int callType_;
+  private int callType_ = 0;
   /**
    * <code>.api.commons.CallType.Enum call_type = 3 [json_name = "callType"];</code>
    * @return The enum numeric value on the wire for callType.
@@ -331,13 +131,12 @@ private static final long serialVersionUID = 0L;
    * @return The callType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.valueOf(callType_);
+    com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callType_);
     return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
   }
 
   public static final int UPDATED_FIELD_NUMBER = 10;
-  private long updated_;
+  private long updated_ = 0L;
   /**
    * <code>int64 updated = 10 [json_name = "updated"];</code>
    * @return The updated.
@@ -359,6 +158,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.BOOL,
                 false);
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.Boolean> skills_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
@@ -369,18 +169,16 @@ private static final long serialVersionUID = 0L;
     }
     return skills_;
   }
-
   public int getSkillsCount() {
     return internalGetSkills().getMap().size();
   }
   /**
    * <code>map&lt;string, bool&gt; skills = 11 [json_name = "skills"];</code>
    */
-
   @java.lang.Override
   public boolean containsSkills(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     return internalGetSkills().getMap().containsKey(key);
   }
   /**
@@ -395,7 +193,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, bool&gt; skills = 11 [json_name = "skills"];</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.String, java.lang.Boolean> getSkillsMap() {
     return internalGetSkills().getMap();
   }
@@ -403,11 +200,10 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, bool&gt; skills = 11 [json_name = "skills"];</code>
    */
   @java.lang.Override
-
   public boolean getSkillsOrDefault(
       java.lang.String key,
       boolean defaultValue) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.Boolean> map =
         internalGetSkills().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -416,10 +212,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, bool&gt; skills = 11 [json_name = "skills"];</code>
    */
   @java.lang.Override
-
   public boolean getSkillsOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.Boolean> map =
         internalGetSkills().getMap();
     if (!map.containsKey(key)) {
@@ -429,7 +224,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RECORDING_FILE_FIELD_NUMBER = 12;
-  private volatile java.lang.Object recordingFile_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object recordingFile_ = "";
   /**
    * <code>string recording_file = 12 [json_name = "recordingFile"];</code>
    * @return The recordingFile.
@@ -489,11 +285,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getUpdatedDateOrBuilder() {
-    return getUpdatedDate();
+    return updatedDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedDate_;
   }
 
   public static final int SRC_NUMBER_FIELD_NUMBER = 14;
-  private volatile java.lang.Object srcNumber_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object srcNumber_ = "";
   /**
    * <code>string src_number = 14 [json_name = "srcNumber"];</code>
    * @return The srcNumber.
@@ -531,7 +328,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DST_NUMBER_FIELD_NUMBER = 15;
-  private volatile java.lang.Object dstNumber_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object dstNumber_ = "";
   /**
    * <code>string dst_number = 15 [json_name = "dstNumber"];</code>
    * @return The dstNumber.
@@ -569,7 +367,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALLER_ID_NAME_FIELD_NUMBER = 16;
-  private volatile java.lang.Object callerIdName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object callerIdName_ = "";
   /**
    * <code>string caller_id_name = 16 [json_name = "callerIdName"];</code>
    * @return The callerIdName.
@@ -607,7 +406,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENT_WORKER_FIELD_NUMBER = 17;
-  private volatile java.lang.Object agentWorker_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object agentWorker_ = "";
   /**
    * <code>string agent_worker = 17 [json_name = "agentWorker"];</code>
    * @return The agentWorker.
@@ -645,7 +445,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EVENTS_FIELD_NUMBER = 18;
-  private com.google.protobuf.LazyStringList events_;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList events_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <code>repeated string events = 18 [json_name = "events"];</code>
    * @return A list containing the events.
@@ -680,7 +482,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_DATA_FIELD_NUMBER = 19;
-  private volatile java.lang.Object callData_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object callData_ = "";
   /**
    * <code>string call_data = 19 [json_name = "callData"];</code>
    * @return The callData.
@@ -729,6 +532,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.String> agentResponseData_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -739,18 +543,16 @@ private static final long serialVersionUID = 0L;
     }
     return agentResponseData_;
   }
-
   public int getAgentResponseDataCount() {
     return internalGetAgentResponseData().getMap().size();
   }
   /**
    * <code>map&lt;string, string&gt; agent_response_data = 20 [json_name = "agentResponseData"];</code>
    */
-
   @java.lang.Override
   public boolean containsAgentResponseData(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     return internalGetAgentResponseData().getMap().containsKey(key);
   }
   /**
@@ -765,7 +567,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; agent_response_data = 20 [json_name = "agentResponseData"];</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.String, java.lang.String> getAgentResponseDataMap() {
     return internalGetAgentResponseData().getMap();
   }
@@ -773,11 +574,12 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; agent_response_data = 20 [json_name = "agentResponseData"];</code>
    */
   @java.lang.Override
-
-  public java.lang.String getAgentResponseDataOrDefault(
+  public /* nullable */
+java.lang.String getAgentResponseDataOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+      /* nullable */
+java.lang.String defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetAgentResponseData().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -786,10 +588,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; agent_response_data = 20 [json_name = "agentResponseData"];</code>
    */
   @java.lang.Override
-
   public java.lang.String getAgentResponseDataOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetAgentResponseData().getMap();
     if (!map.containsKey(key)) {
@@ -799,7 +600,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RECORDED_FIELD_NUMBER = 21;
-  private boolean recorded_;
+  private boolean recorded_ = false;
   /**
    * <code>bool recorded = 21 [json_name = "recorded"];</code>
    * @return The recorded.
@@ -810,7 +611,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONNECTED_FIELD_NUMBER = 22;
-  private boolean connected_;
+  private boolean connected_ = false;
   /**
    * <code>bool connected = 22 [json_name = "connected"];</code>
    * @return The connected.
@@ -821,7 +622,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SUSPENDED_FIELD_NUMBER = 23;
-  private boolean suspended_;
+  private boolean suspended_ = false;
   /**
    * <code>bool suspended = 23 [json_name = "suspended"];</code>
    * @return The suspended.
@@ -832,7 +633,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISCONNECT_REASON_FIELD_NUMBER = 24;
-  private volatile java.lang.Object disconnectReason_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object disconnectReason_ = "";
   /**
    * <code>string disconnect_reason = 24 [json_name = "disconnectReason"];</code>
    * @return The disconnectReason.
@@ -870,7 +672,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VOICEMAILED_FIELD_NUMBER = 25;
-  private boolean voicemailed_;
+  private boolean voicemailed_ = false;
   /**
    * <code>bool voicemailed = 25 [json_name = "voicemailed"];</code>
    * @return The voicemailed.
@@ -881,7 +683,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VOICEMAIL_BOX_FIELD_NUMBER = 26;
-  private volatile java.lang.Object voicemailBox_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object voicemailBox_ = "";
   /**
    * <code>string voicemail_box = 26 [json_name = "voicemailBox"];</code>
    * @return The voicemailBox.
@@ -919,7 +722,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ORIGINATED_FIELD_NUMBER = 27;
-  private volatile java.lang.Object originated_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object originated_ = "";
   /**
    * <code>string originated = 27 [json_name = "originated"];</code>
    * @return The originated.
@@ -957,7 +761,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FOLDER_FIELD_NUMBER = 28;
-  private volatile java.lang.Object folder_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object folder_ = "";
   /**
    * <code>string folder = 28 [json_name = "folder"];</code>
    * @return The folder.
@@ -995,7 +800,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RTP_INFO_FIELD_NUMBER = 29;
-  private volatile java.lang.Object rtpInfo_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object rtpInfo_ = "";
   /**
    * <code>string rtp_info = 29 [json_name = "rtpInfo"];</code>
    * @return The rtpInfo.
@@ -1046,7 +852,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getOidBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oid_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, oid_);
     }
     if (callSid_ != 0L) {
@@ -1064,28 +870,28 @@ private static final long serialVersionUID = 0L;
         internalGetSkills(),
         SkillsDefaultEntryHolder.defaultEntry,
         11);
-    if (!getRecordingFileBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordingFile_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, recordingFile_);
     }
     if (updatedDate_ != null) {
       output.writeMessage(13, getUpdatedDate());
     }
-    if (!getSrcNumberBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(srcNumber_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 14, srcNumber_);
     }
-    if (!getDstNumberBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dstNumber_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 15, dstNumber_);
     }
-    if (!getCallerIdNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerIdName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 16, callerIdName_);
     }
-    if (!getAgentWorkerBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentWorker_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 17, agentWorker_);
     }
     for (int i = 0; i < events_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 18, events_.getRaw(i));
     }
-    if (!getCallDataBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callData_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 19, callData_);
     }
     com.google.protobuf.GeneratedMessageV3
@@ -1103,25 +909,25 @@ private static final long serialVersionUID = 0L;
     if (suspended_ != false) {
       output.writeBool(23, suspended_);
     }
-    if (!getDisconnectReasonBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(disconnectReason_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 24, disconnectReason_);
     }
     if (voicemailed_ != false) {
       output.writeBool(25, voicemailed_);
     }
-    if (!getVoicemailBoxBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voicemailBox_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 26, voicemailBox_);
     }
-    if (!getOriginatedBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(originated_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 27, originated_);
     }
-    if (!getFolderBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folder_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 28, folder_);
     }
-    if (!getRtpInfoBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rtpInfo_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 29, rtpInfo_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -1130,7 +936,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getOidBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oid_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, oid_);
     }
     if (callSid_ != 0L) {
@@ -1155,23 +961,23 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, skills__);
     }
-    if (!getRecordingFileBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordingFile_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, recordingFile_);
     }
     if (updatedDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getUpdatedDate());
     }
-    if (!getSrcNumberBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(srcNumber_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, srcNumber_);
     }
-    if (!getDstNumberBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dstNumber_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, dstNumber_);
     }
-    if (!getCallerIdNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerIdName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, callerIdName_);
     }
-    if (!getAgentWorkerBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentWorker_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, agentWorker_);
     }
     {
@@ -1182,7 +988,7 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 2 * getEventsList().size();
     }
-    if (!getCallDataBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callData_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, callData_);
     }
     for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -1207,26 +1013,26 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(23, suspended_);
     }
-    if (!getDisconnectReasonBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(disconnectReason_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(24, disconnectReason_);
     }
     if (voicemailed_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(25, voicemailed_);
     }
-    if (!getVoicemailBoxBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voicemailBox_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(26, voicemailBox_);
     }
-    if (!getOriginatedBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(originated_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, originated_);
     }
-    if (!getFolderBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folder_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(28, folder_);
     }
-    if (!getRtpInfoBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rtpInfo_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(29, rtpInfo_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1289,7 +1095,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getFolder())) return false;
     if (!getRtpInfo()
         .equals(other.getRtpInfo())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1360,7 +1166,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getFolder().hashCode();
     hash = (37 * hash) + RTP_INFO_FIELD_NUMBER;
     hash = (53 * hash) + getRtpInfo().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1409,11 +1215,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.CallObject parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.CallObject parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1503,70 +1311,46 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CallObject.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       oid_ = "";
-
       callSid_ = 0L;
-
       callType_ = 0;
-
       updated_ = 0L;
-
       internalGetMutableSkills().clear();
       recordingFile_ = "";
-
-      if (updatedDateBuilder_ == null) {
-        updatedDate_ = null;
-      } else {
-        updatedDate_ = null;
+      updatedDate_ = null;
+      if (updatedDateBuilder_ != null) {
+        updatedDateBuilder_.dispose();
         updatedDateBuilder_ = null;
       }
       srcNumber_ = "";
-
       dstNumber_ = "";
-
       callerIdName_ = "";
-
       agentWorker_ = "";
-
-      events_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      events_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       callData_ = "";
-
       internalGetMutableAgentResponseData().clear();
       recorded_ = false;
-
       connected_ = false;
-
       suspended_ = false;
-
       disconnectReason_ = "";
-
       voicemailed_ = false;
-
       voicemailBox_ = "";
-
       originated_ = "";
-
       folder_ = "";
-
       rtpInfo_ = "";
-
       return this;
     }
 
@@ -1593,42 +1377,87 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.CallObject buildPartial() {
       com.tcn.cloud.api.api.v0alpha.CallObject result = new com.tcn.cloud.api.api.v0alpha.CallObject(this);
-      int from_bitField0_ = bitField0_;
-      result.oid_ = oid_;
-      result.callSid_ = callSid_;
-      result.callType_ = callType_;
-      result.updated_ = updated_;
-      result.skills_ = internalGetSkills();
-      result.skills_.makeImmutable();
-      result.recordingFile_ = recordingFile_;
-      if (updatedDateBuilder_ == null) {
-        result.updatedDate_ = updatedDate_;
-      } else {
-        result.updatedDate_ = updatedDateBuilder_.build();
-      }
-      result.srcNumber_ = srcNumber_;
-      result.dstNumber_ = dstNumber_;
-      result.callerIdName_ = callerIdName_;
-      result.agentWorker_ = agentWorker_;
-      if (((bitField0_ & 0x00000002) != 0)) {
-        events_ = events_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.events_ = events_;
-      result.callData_ = callData_;
-      result.agentResponseData_ = internalGetAgentResponseData();
-      result.agentResponseData_.makeImmutable();
-      result.recorded_ = recorded_;
-      result.connected_ = connected_;
-      result.suspended_ = suspended_;
-      result.disconnectReason_ = disconnectReason_;
-      result.voicemailed_ = voicemailed_;
-      result.voicemailBox_ = voicemailBox_;
-      result.originated_ = originated_;
-      result.folder_ = folder_;
-      result.rtpInfo_ = rtpInfo_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.CallObject result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.oid_ = oid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.callSid_ = callSid_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.callType_ = callType_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.updated_ = updated_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.skills_ = internalGetSkills();
+        result.skills_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.recordingFile_ = recordingFile_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.updatedDate_ = updatedDateBuilder_ == null
+            ? updatedDate_
+            : updatedDateBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.srcNumber_ = srcNumber_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.dstNumber_ = dstNumber_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.callerIdName_ = callerIdName_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.agentWorker_ = agentWorker_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        events_.makeImmutable();
+        result.events_ = events_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.callData_ = callData_;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.agentResponseData_ = internalGetAgentResponseData();
+        result.agentResponseData_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.recorded_ = recorded_;
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.connected_ = connected_;
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.suspended_ = suspended_;
+      }
+      if (((from_bitField0_ & 0x00020000) != 0)) {
+        result.disconnectReason_ = disconnectReason_;
+      }
+      if (((from_bitField0_ & 0x00040000) != 0)) {
+        result.voicemailed_ = voicemailed_;
+      }
+      if (((from_bitField0_ & 0x00080000) != 0)) {
+        result.voicemailBox_ = voicemailBox_;
+      }
+      if (((from_bitField0_ & 0x00100000) != 0)) {
+        result.originated_ = originated_;
+      }
+      if (((from_bitField0_ & 0x00200000) != 0)) {
+        result.folder_ = folder_;
+      }
+      if (((from_bitField0_ & 0x00400000) != 0)) {
+        result.rtpInfo_ = rtpInfo_;
+      }
     }
 
     @java.lang.Override
@@ -1677,6 +1506,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.CallObject.getDefaultInstance()) return this;
       if (!other.getOid().isEmpty()) {
         oid_ = other.oid_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.getCallSid() != 0L) {
@@ -1690,8 +1520,10 @@ private static final long serialVersionUID = 0L;
       }
       internalGetMutableSkills().mergeFrom(
           other.internalGetSkills());
+      bitField0_ |= 0x00000010;
       if (!other.getRecordingFile().isEmpty()) {
         recordingFile_ = other.recordingFile_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.hasUpdatedDate()) {
@@ -1699,24 +1531,28 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getSrcNumber().isEmpty()) {
         srcNumber_ = other.srcNumber_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (!other.getDstNumber().isEmpty()) {
         dstNumber_ = other.dstNumber_;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       if (!other.getCallerIdName().isEmpty()) {
         callerIdName_ = other.callerIdName_;
+        bitField0_ |= 0x00000200;
         onChanged();
       }
       if (!other.getAgentWorker().isEmpty()) {
         agentWorker_ = other.agentWorker_;
+        bitField0_ |= 0x00000400;
         onChanged();
       }
       if (!other.events_.isEmpty()) {
         if (events_.isEmpty()) {
           events_ = other.events_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ |= 0x00000800;
         } else {
           ensureEventsIsMutable();
           events_.addAll(other.events_);
@@ -1725,10 +1561,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCallData().isEmpty()) {
         callData_ = other.callData_;
+        bitField0_ |= 0x00001000;
         onChanged();
       }
       internalGetMutableAgentResponseData().mergeFrom(
           other.internalGetAgentResponseData());
+      bitField0_ |= 0x00002000;
       if (other.getRecorded() != false) {
         setRecorded(other.getRecorded());
       }
@@ -1740,6 +1578,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getDisconnectReason().isEmpty()) {
         disconnectReason_ = other.disconnectReason_;
+        bitField0_ |= 0x00020000;
         onChanged();
       }
       if (other.getVoicemailed() != false) {
@@ -1747,21 +1586,25 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getVoicemailBox().isEmpty()) {
         voicemailBox_ = other.voicemailBox_;
+        bitField0_ |= 0x00080000;
         onChanged();
       }
       if (!other.getOriginated().isEmpty()) {
         originated_ = other.originated_;
+        bitField0_ |= 0x00100000;
         onChanged();
       }
       if (!other.getFolder().isEmpty()) {
         folder_ = other.folder_;
+        bitField0_ |= 0x00200000;
         onChanged();
       }
       if (!other.getRtpInfo().isEmpty()) {
         rtpInfo_ = other.rtpInfo_;
+        bitField0_ |= 0x00400000;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1776,17 +1619,156 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.CallObject parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              oid_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 16: {
+              callSid_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              callType_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 80: {
+              updated_ = input.readInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 80
+            case 90: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+              skills__ = input.readMessage(
+                  SkillsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableSkills().getMutableMap().put(
+                  skills__.getKey(), skills__.getValue());
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 90
+            case 98: {
+              recordingFile_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 98
+            case 106: {
+              input.readMessage(
+                  getUpdatedDateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 106
+            case 114: {
+              srcNumber_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 114
+            case 122: {
+              dstNumber_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 122
+            case 130: {
+              callerIdName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 130
+            case 138: {
+              agentWorker_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 138
+            case 146: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureEventsIsMutable();
+              events_.add(s);
+              break;
+            } // case 146
+            case 154: {
+              callData_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 154
+            case 162: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              agentResponseData__ = input.readMessage(
+                  AgentResponseDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableAgentResponseData().getMutableMap().put(
+                  agentResponseData__.getKey(), agentResponseData__.getValue());
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 162
+            case 168: {
+              recorded_ = input.readBool();
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 168
+            case 176: {
+              connected_ = input.readBool();
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 176
+            case 184: {
+              suspended_ = input.readBool();
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 184
+            case 194: {
+              disconnectReason_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00020000;
+              break;
+            } // case 194
+            case 200: {
+              voicemailed_ = input.readBool();
+              bitField0_ |= 0x00040000;
+              break;
+            } // case 200
+            case 210: {
+              voicemailBox_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00080000;
+              break;
+            } // case 210
+            case 218: {
+              originated_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00100000;
+              break;
+            } // case 218
+            case 226: {
+              folder_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00200000;
+              break;
+            } // case 226
+            case 234: {
+              rtpInfo_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00400000;
+              break;
+            } // case 234
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.CallObject) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -1832,11 +1814,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOid(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       oid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1845,8 +1825,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOid() {
-      
       oid_ = getDefaultInstance().getOid();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1857,12 +1837,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOidBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       oid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1882,8 +1860,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCallSid(long value) {
-      
+
       callSid_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1892,7 +1871,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       callSid_ = 0L;
       onChanged();
       return this;
@@ -1912,8 +1891,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCallTypeValue(int value) {
-      
       callType_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1923,8 +1902,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.valueOf(callType_);
+      com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callType_);
       return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
     }
     /**
@@ -1936,7 +1914,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       callType_ = value.getNumber();
       onChanged();
       return this;
@@ -1946,7 +1924,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       callType_ = 0;
       onChanged();
       return this;
@@ -1967,8 +1945,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setUpdated(long value) {
-      
+
       updated_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1977,7 +1956,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUpdated() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       updated_ = 0L;
       onChanged();
       return this;
@@ -1986,7 +1965,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.Boolean> skills_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
-    internalGetSkills() {
+        internalGetSkills() {
       if (skills_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             SkillsDefaultEntryHolder.defaultEntry);
@@ -1994,8 +1973,7 @@ private static final long serialVersionUID = 0L;
       return skills_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
-    internalGetMutableSkills() {
-      onChanged();;
+        internalGetMutableSkills() {
       if (skills_ == null) {
         skills_ = com.google.protobuf.MapField.newMapField(
             SkillsDefaultEntryHolder.defaultEntry);
@@ -2003,20 +1981,20 @@ private static final long serialVersionUID = 0L;
       if (!skills_.isMutable()) {
         skills_ = skills_.copy();
       }
+      bitField0_ |= 0x00000010;
+      onChanged();
       return skills_;
     }
-
     public int getSkillsCount() {
       return internalGetSkills().getMap().size();
     }
     /**
      * <code>map&lt;string, bool&gt; skills = 11 [json_name = "skills"];</code>
      */
-
     @java.lang.Override
     public boolean containsSkills(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetSkills().getMap().containsKey(key);
     }
     /**
@@ -2031,7 +2009,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, bool&gt; skills = 11 [json_name = "skills"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.Boolean> getSkillsMap() {
       return internalGetSkills().getMap();
     }
@@ -2039,11 +2016,10 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, bool&gt; skills = 11 [json_name = "skills"];</code>
      */
     @java.lang.Override
-
     public boolean getSkillsOrDefault(
         java.lang.String key,
         boolean defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.Boolean> map =
           internalGetSkills().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2052,10 +2028,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, bool&gt; skills = 11 [json_name = "skills"];</code>
      */
     @java.lang.Override
-
     public boolean getSkillsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.Boolean> map =
           internalGetSkills().getMap();
       if (!map.containsKey(key)) {
@@ -2063,8 +2038,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearSkills() {
+      bitField0_ = (bitField0_ & ~0x00000010);
       internalGetMutableSkills().getMutableMap()
           .clear();
       return this;
@@ -2072,10 +2047,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>map&lt;string, bool&gt; skills = 11 [json_name = "skills"];</code>
      */
-
     public Builder removeSkills(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       internalGetMutableSkills().getMutableMap()
           .remove(key);
       return this;
@@ -2085,7 +2059,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.Boolean>
-    getMutableSkills() {
+        getMutableSkills() {
+      bitField0_ |= 0x00000010;
       return internalGetMutableSkills().getMutableMap();
     }
     /**
@@ -2094,20 +2069,21 @@ private static final long serialVersionUID = 0L;
     public Builder putSkills(
         java.lang.String key,
         boolean value) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      
+      if (key == null) { throw new NullPointerException("map key"); }
+
       internalGetMutableSkills().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000010;
       return this;
     }
     /**
      * <code>map&lt;string, bool&gt; skills = 11 [json_name = "skills"];</code>
      */
-
     public Builder putAllSkills(
         java.util.Map<java.lang.String, java.lang.Boolean> values) {
       internalGetMutableSkills().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000010;
       return this;
     }
 
@@ -2152,11 +2128,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRecordingFile(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       recordingFile_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2165,8 +2139,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRecordingFile() {
-      
       recordingFile_ = getDefaultInstance().getRecordingFile();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -2177,12 +2151,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRecordingFileBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       recordingFile_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2195,7 +2167,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the updatedDate field is set.
      */
     public boolean hasUpdatedDate() {
-      return updatedDateBuilder_ != null || updatedDate_ != null;
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp updated_date = 13 [json_name = "updatedDate"];</code>
@@ -2217,11 +2189,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         updatedDate_ = value;
-        onChanged();
       } else {
         updatedDateBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -2231,11 +2203,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (updatedDateBuilder_ == null) {
         updatedDate_ = builderForValue.build();
-        onChanged();
       } else {
         updatedDateBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -2243,38 +2215,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeUpdatedDate(com.google.protobuf.Timestamp value) {
       if (updatedDateBuilder_ == null) {
-        if (updatedDate_ != null) {
-          updatedDate_ =
-            com.google.protobuf.Timestamp.newBuilder(updatedDate_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000040) != 0) &&
+          updatedDate_ != null &&
+          updatedDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getUpdatedDateBuilder().mergeFrom(value);
         } else {
           updatedDate_ = value;
         }
-        onChanged();
       } else {
         updatedDateBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp updated_date = 13 [json_name = "updatedDate"];</code>
      */
     public Builder clearUpdatedDate() {
-      if (updatedDateBuilder_ == null) {
-        updatedDate_ = null;
-        onChanged();
-      } else {
-        updatedDate_ = null;
+      bitField0_ = (bitField0_ & ~0x00000040);
+      updatedDate_ = null;
+      if (updatedDateBuilder_ != null) {
+        updatedDateBuilder_.dispose();
         updatedDateBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp updated_date = 13 [json_name = "updatedDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getUpdatedDateBuilder() {
-      
+      bitField0_ |= 0x00000040;
       onChanged();
       return getUpdatedDateFieldBuilder().getBuilder();
     }
@@ -2347,11 +2319,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSrcNumber(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       srcNumber_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2360,8 +2330,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSrcNumber() {
-      
       srcNumber_ = getDefaultInstance().getSrcNumber();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -2372,12 +2342,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSrcNumberBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       srcNumber_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2423,11 +2391,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDstNumber(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       dstNumber_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2436,8 +2402,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDstNumber() {
-      
       dstNumber_ = getDefaultInstance().getDstNumber();
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -2448,12 +2414,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDstNumberBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       dstNumber_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2499,11 +2463,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallerIdName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       callerIdName_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2512,8 +2474,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallerIdName() {
-      
       callerIdName_ = getDefaultInstance().getCallerIdName();
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -2524,12 +2486,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallerIdNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       callerIdName_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2575,11 +2535,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAgentWorker(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       agentWorker_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2588,8 +2546,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAgentWorker() {
-      
       agentWorker_ = getDefaultInstance().getAgentWorker();
+      bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -2600,22 +2558,21 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAgentWorkerBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       agentWorker_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList events_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList events_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureEventsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!events_.isModifiable()) {
         events_ = new com.google.protobuf.LazyStringArrayList(events_);
-        bitField0_ |= 0x00000002;
-       }
+      }
+      bitField0_ |= 0x00000800;
     }
     /**
      * <code>repeated string events = 18 [json_name = "events"];</code>
@@ -2623,7 +2580,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getEventsList() {
-      return events_.getUnmodifiableView();
+      events_.makeImmutable();
+      return events_;
     }
     /**
      * <code>repeated string events = 18 [json_name = "events"];</code>
@@ -2657,11 +2615,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEvents(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureEventsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureEventsIsMutable();
       events_.set(index, value);
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2672,11 +2629,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addEvents(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureEventsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureEventsIsMutable();
       events_.add(value);
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2690,6 +2646,7 @@ private static final long serialVersionUID = 0L;
       ensureEventsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, events_);
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2698,8 +2655,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEvents() {
-      events_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      events_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000800);;
       onChanged();
       return this;
     }
@@ -2710,12 +2668,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addEventsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureEventsIsMutable();
       events_.add(value);
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2761,11 +2718,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallData(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       callData_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2774,8 +2729,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallData() {
-      
       callData_ = getDefaultInstance().getCallData();
+      bitField0_ = (bitField0_ & ~0x00001000);
       onChanged();
       return this;
     }
@@ -2786,12 +2741,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallDataBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       callData_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2799,7 +2752,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> agentResponseData_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetAgentResponseData() {
+        internalGetAgentResponseData() {
       if (agentResponseData_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             AgentResponseDataDefaultEntryHolder.defaultEntry);
@@ -2807,8 +2760,7 @@ private static final long serialVersionUID = 0L;
       return agentResponseData_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetMutableAgentResponseData() {
-      onChanged();;
+        internalGetMutableAgentResponseData() {
       if (agentResponseData_ == null) {
         agentResponseData_ = com.google.protobuf.MapField.newMapField(
             AgentResponseDataDefaultEntryHolder.defaultEntry);
@@ -2816,20 +2768,20 @@ private static final long serialVersionUID = 0L;
       if (!agentResponseData_.isMutable()) {
         agentResponseData_ = agentResponseData_.copy();
       }
+      bitField0_ |= 0x00002000;
+      onChanged();
       return agentResponseData_;
     }
-
     public int getAgentResponseDataCount() {
       return internalGetAgentResponseData().getMap().size();
     }
     /**
      * <code>map&lt;string, string&gt; agent_response_data = 20 [json_name = "agentResponseData"];</code>
      */
-
     @java.lang.Override
     public boolean containsAgentResponseData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetAgentResponseData().getMap().containsKey(key);
     }
     /**
@@ -2844,7 +2796,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; agent_response_data = 20 [json_name = "agentResponseData"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getAgentResponseDataMap() {
       return internalGetAgentResponseData().getMap();
     }
@@ -2852,11 +2803,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; agent_response_data = 20 [json_name = "agentResponseData"];</code>
      */
     @java.lang.Override
-
-    public java.lang.String getAgentResponseDataOrDefault(
+    public /* nullable */
+java.lang.String getAgentResponseDataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+        /* nullable */
+java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetAgentResponseData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2865,10 +2817,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, string&gt; agent_response_data = 20 [json_name = "agentResponseData"];</code>
      */
     @java.lang.Override
-
     public java.lang.String getAgentResponseDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetAgentResponseData().getMap();
       if (!map.containsKey(key)) {
@@ -2876,8 +2827,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearAgentResponseData() {
+      bitField0_ = (bitField0_ & ~0x00002000);
       internalGetMutableAgentResponseData().getMutableMap()
           .clear();
       return this;
@@ -2885,10 +2836,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>map&lt;string, string&gt; agent_response_data = 20 [json_name = "agentResponseData"];</code>
      */
-
     public Builder removeAgentResponseData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       internalGetMutableAgentResponseData().getMutableMap()
           .remove(key);
       return this;
@@ -2898,7 +2848,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
-    getMutableAgentResponseData() {
+        getMutableAgentResponseData() {
+      bitField0_ |= 0x00002000;
       return internalGetMutableAgentResponseData().getMutableMap();
     }
     /**
@@ -2907,20 +2858,21 @@ private static final long serialVersionUID = 0L;
     public Builder putAgentResponseData(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      if (value == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableAgentResponseData().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00002000;
       return this;
     }
     /**
      * <code>map&lt;string, string&gt; agent_response_data = 20 [json_name = "agentResponseData"];</code>
      */
-
     public Builder putAllAgentResponseData(
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableAgentResponseData().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00002000;
       return this;
     }
 
@@ -2939,8 +2891,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRecorded(boolean value) {
-      
+
       recorded_ = value;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -2949,7 +2902,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRecorded() {
-      
+      bitField0_ = (bitField0_ & ~0x00004000);
       recorded_ = false;
       onChanged();
       return this;
@@ -2970,8 +2923,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConnected(boolean value) {
-      
+
       connected_ = value;
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -2980,7 +2934,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConnected() {
-      
+      bitField0_ = (bitField0_ & ~0x00008000);
       connected_ = false;
       onChanged();
       return this;
@@ -3001,8 +2955,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSuspended(boolean value) {
-      
+
       suspended_ = value;
+      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -3011,7 +2966,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSuspended() {
-      
+      bitField0_ = (bitField0_ & ~0x00010000);
       suspended_ = false;
       onChanged();
       return this;
@@ -3058,11 +3013,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisconnectReason(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       disconnectReason_ = value;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -3071,8 +3024,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisconnectReason() {
-      
       disconnectReason_ = getDefaultInstance().getDisconnectReason();
+      bitField0_ = (bitField0_ & ~0x00020000);
       onChanged();
       return this;
     }
@@ -3083,12 +3036,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisconnectReasonBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       disconnectReason_ = value;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -3108,8 +3059,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setVoicemailed(boolean value) {
-      
+
       voicemailed_ = value;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -3118,7 +3070,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVoicemailed() {
-      
+      bitField0_ = (bitField0_ & ~0x00040000);
       voicemailed_ = false;
       onChanged();
       return this;
@@ -3165,11 +3117,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setVoicemailBox(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       voicemailBox_ = value;
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -3178,8 +3128,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVoicemailBox() {
-      
       voicemailBox_ = getDefaultInstance().getVoicemailBox();
+      bitField0_ = (bitField0_ & ~0x00080000);
       onChanged();
       return this;
     }
@@ -3190,12 +3140,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setVoicemailBoxBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       voicemailBox_ = value;
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -3241,11 +3189,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOriginated(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       originated_ = value;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -3254,8 +3200,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOriginated() {
-      
       originated_ = getDefaultInstance().getOriginated();
+      bitField0_ = (bitField0_ & ~0x00100000);
       onChanged();
       return this;
     }
@@ -3266,12 +3212,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOriginatedBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       originated_ = value;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -3317,11 +3261,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFolder(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       folder_ = value;
+      bitField0_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -3330,8 +3272,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFolder() {
-      
       folder_ = getDefaultInstance().getFolder();
+      bitField0_ = (bitField0_ & ~0x00200000);
       onChanged();
       return this;
     }
@@ -3342,12 +3284,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFolderBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       folder_ = value;
+      bitField0_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -3393,11 +3333,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRtpInfo(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       rtpInfo_ = value;
+      bitField0_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -3406,8 +3344,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRtpInfo() {
-      
       rtpInfo_ = getDefaultInstance().getRtpInfo();
+      bitField0_ = (bitField0_ & ~0x00400000);
       onChanged();
       return this;
     }
@@ -3418,12 +3356,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRtpInfoBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       rtpInfo_ = value;
+      bitField0_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -3460,7 +3396,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new CallObject(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

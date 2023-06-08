@@ -29,61 +29,6 @@ private static final long serialVersionUID = 0L;
     return new EditAgentQuickViewPreferencesRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private EditAgentQuickViewPreferencesRequest(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.Builder subBuilder = null;
-            if (agentStatusDisplayTemplate_ != null) {
-              subBuilder = agentStatusDisplayTemplate_.toBuilder();
-            }
-            agentStatusDisplayTemplate_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(agentStatusDisplayTemplate_);
-              agentStatusDisplayTemplate_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.legacy.EntitiesProto.internal_static_api_v1alpha1_org_legacy_EditAgentQuickViewPreferencesRequest_descriptor;
@@ -120,7 +65,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplateOrBuilder getAgentStatusDisplayTemplateOrBuilder() {
-    return getAgentStatusDisplayTemplate();
+    return agentStatusDisplayTemplate_ == null ? com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.getDefaultInstance() : agentStatusDisplayTemplate_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -140,7 +85,7 @@ private static final long serialVersionUID = 0L;
     if (agentStatusDisplayTemplate_ != null) {
       output.writeMessage(1, getAgentStatusDisplayTemplate());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -153,7 +98,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getAgentStatusDisplayTemplate());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -173,7 +118,7 @@ private static final long serialVersionUID = 0L;
       if (!getAgentStatusDisplayTemplate()
           .equals(other.getAgentStatusDisplayTemplate())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -188,7 +133,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AGENT_STATUS_DISPLAY_TEMPLATE_FIELD_NUMBER;
       hash = (53 * hash) + getAgentStatusDisplayTemplate().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -237,11 +182,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.EditAgentQuickViewPreferencesRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.EditAgentQuickViewPreferencesRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -309,26 +256,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.EditAgentQuickViewPreferencesRequest.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (agentStatusDisplayTemplateBuilder_ == null) {
-        agentStatusDisplayTemplate_ = null;
-      } else {
-        agentStatusDisplayTemplate_ = null;
+      bitField0_ = 0;
+      agentStatusDisplayTemplate_ = null;
+      if (agentStatusDisplayTemplateBuilder_ != null) {
+        agentStatusDisplayTemplateBuilder_.dispose();
         agentStatusDisplayTemplateBuilder_ = null;
       }
       return this;
@@ -357,13 +299,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.EditAgentQuickViewPreferencesRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.legacy.EditAgentQuickViewPreferencesRequest result = new com.tcn.cloud.api.api.v1alpha1.org.legacy.EditAgentQuickViewPreferencesRequest(this);
-      if (agentStatusDisplayTemplateBuilder_ == null) {
-        result.agentStatusDisplayTemplate_ = agentStatusDisplayTemplate_;
-      } else {
-        result.agentStatusDisplayTemplate_ = agentStatusDisplayTemplateBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.EditAgentQuickViewPreferencesRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.agentStatusDisplayTemplate_ = agentStatusDisplayTemplateBuilder_ == null
+            ? agentStatusDisplayTemplate_
+            : agentStatusDisplayTemplateBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -413,7 +360,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasAgentStatusDisplayTemplate()) {
         mergeAgentStatusDisplayTemplate(other.getAgentStatusDisplayTemplate());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -428,19 +375,40 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.org.legacy.EditAgentQuickViewPreferencesRequest parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getAgentStatusDisplayTemplateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.legacy.EditAgentQuickViewPreferencesRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate agentStatusDisplayTemplate_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -450,7 +418,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the agentStatusDisplayTemplate field is set.
      */
     public boolean hasAgentStatusDisplayTemplate() {
-      return agentStatusDisplayTemplateBuilder_ != null || agentStatusDisplayTemplate_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate agent_status_display_template = 1 [json_name = "agentStatusDisplayTemplate"];</code>
@@ -472,11 +440,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         agentStatusDisplayTemplate_ = value;
-        onChanged();
       } else {
         agentStatusDisplayTemplateBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -486,11 +454,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.Builder builderForValue) {
       if (agentStatusDisplayTemplateBuilder_ == null) {
         agentStatusDisplayTemplate_ = builderForValue.build();
-        onChanged();
       } else {
         agentStatusDisplayTemplateBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -498,38 +466,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAgentStatusDisplayTemplate(com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate value) {
       if (agentStatusDisplayTemplateBuilder_ == null) {
-        if (agentStatusDisplayTemplate_ != null) {
-          agentStatusDisplayTemplate_ =
-            com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.newBuilder(agentStatusDisplayTemplate_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          agentStatusDisplayTemplate_ != null &&
+          agentStatusDisplayTemplate_ != com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.getDefaultInstance()) {
+          getAgentStatusDisplayTemplateBuilder().mergeFrom(value);
         } else {
           agentStatusDisplayTemplate_ = value;
         }
-        onChanged();
       } else {
         agentStatusDisplayTemplateBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate agent_status_display_template = 1 [json_name = "agentStatusDisplayTemplate"];</code>
      */
     public Builder clearAgentStatusDisplayTemplate() {
-      if (agentStatusDisplayTemplateBuilder_ == null) {
-        agentStatusDisplayTemplate_ = null;
-        onChanged();
-      } else {
-        agentStatusDisplayTemplate_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      agentStatusDisplayTemplate_ = null;
+      if (agentStatusDisplayTemplateBuilder_ != null) {
+        agentStatusDisplayTemplateBuilder_.dispose();
         agentStatusDisplayTemplateBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate agent_status_display_template = 1 [json_name = "agentStatusDisplayTemplate"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.Builder getAgentStatusDisplayTemplateBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getAgentStatusDisplayTemplateFieldBuilder().getBuilder();
     }
@@ -593,7 +561,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new EditAgentQuickViewPreferencesRequest(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

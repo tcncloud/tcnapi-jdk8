@@ -34,124 +34,6 @@ private static final long serialVersionUID = 0L;
     return new PaginatedHttpRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private PaginatedHttpRequest(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.tcn.cloud.api.api.v0alpha.HttpReq.Builder subBuilder = null;
-            if (iterationRequest_ != null) {
-              subBuilder = iterationRequest_.toBuilder();
-            }
-            iterationRequest_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.HttpReq.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(iterationRequest_);
-              iterationRequest_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 16: {
-
-            startIndex_ = input.readInt64();
-            break;
-          }
-          case 26: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              endForAny_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.PaginationTerminator>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            endForAny_.add(
-                input.readMessage(com.tcn.cloud.api.api.commons.PaginationTerminator.parser(), extensionRegistry));
-            break;
-          }
-          case 34: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              endForAll_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.PaginationTerminator>();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            endForAll_.add(
-                input.readMessage(com.tcn.cloud.api.api.commons.PaginationTerminator.parser(), extensionRegistry));
-            break;
-          }
-          case 42: {
-            com.tcn.cloud.api.api.commons.PaginationTerminator.Builder subBuilder = null;
-            if (requestNotReady_ != null) {
-              subBuilder = requestNotReady_.toBuilder();
-            }
-            requestNotReady_ = input.readMessage(com.tcn.cloud.api.api.commons.PaginationTerminator.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(requestNotReady_);
-              requestNotReady_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 48: {
-
-            notReadyWaitSeconds_ = input.readInt64();
-            break;
-          }
-          case 56: {
-
-            notReadyRedoPreliminary_ = input.readBool();
-            break;
-          }
-          case 64: {
-
-            notReadySkipIteration_ = input.readBool();
-            break;
-          }
-          case 72: {
-
-            processStopPage_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        endForAny_ = java.util.Collections.unmodifiableList(endForAny_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        endForAll_ = java.util.Collections.unmodifiableList(endForAll_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_PaginatedHttpRequest_descriptor;
@@ -206,11 +88,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.HttpReqOrBuilder getIterationRequestOrBuilder() {
-    return getIterationRequest();
+    return iterationRequest_ == null ? com.tcn.cloud.api.api.v0alpha.HttpReq.getDefaultInstance() : iterationRequest_;
   }
 
   public static final int START_INDEX_FIELD_NUMBER = 2;
-  private long startIndex_;
+  private long startIndex_ = 0L;
   /**
    * <pre>
    * the starting value of i.
@@ -225,6 +107,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int END_FOR_ANY_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.PaginationTerminator> endForAny_;
   /**
    * <pre>
@@ -285,6 +168,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int END_FOR_ALL_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.PaginationTerminator> endForAll_;
   /**
    * <pre>
@@ -388,11 +272,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.PaginationTerminatorOrBuilder getRequestNotReadyOrBuilder() {
-    return getRequestNotReady();
+    return requestNotReady_ == null ? com.tcn.cloud.api.api.commons.PaginationTerminator.getDefaultInstance() : requestNotReady_;
   }
 
   public static final int NOT_READY_WAIT_SECONDS_FIELD_NUMBER = 6;
-  private long notReadyWaitSeconds_;
+  private long notReadyWaitSeconds_ = 0L;
   /**
    * <pre>
    * how many seconds we will wait before retrying if request_not_ready returns true
@@ -407,7 +291,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NOT_READY_REDO_PRELIMINARY_FIELD_NUMBER = 7;
-  private boolean notReadyRedoPreliminary_;
+  private boolean notReadyRedoPreliminary_ = false;
   /**
    * <pre>
    * whether to retry the preliminary when we get a not ready state
@@ -422,7 +306,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NOT_READY_SKIP_ITERATION_FIELD_NUMBER = 8;
-  private boolean notReadySkipIteration_;
+  private boolean notReadySkipIteration_ = false;
   /**
    * <pre>
    * if set we do not advance {{$i}} to the next value if request_not_ready returns true
@@ -437,7 +321,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PROCESS_STOP_PAGE_FIELD_NUMBER = 9;
-  private boolean processStopPage_;
+  private boolean processStopPage_ = false;
   /**
    * <pre>
    * whether the end page has records on it
@@ -492,7 +376,7 @@ private static final long serialVersionUID = 0L;
     if (processStopPage_ != false) {
       output.writeBool(9, processStopPage_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -537,7 +421,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(9, processStopPage_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -576,7 +460,7 @@ private static final long serialVersionUID = 0L;
         != other.getNotReadySkipIteration()) return false;
     if (getProcessStopPage()
         != other.getProcessStopPage()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -618,7 +502,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + PROCESS_STOP_PAGE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getProcessStopPage());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -667,11 +551,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.PaginatedHttpRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.PaginatedHttpRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -742,58 +628,47 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.PaginatedHttpRequest.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getEndForAnyFieldBuilder();
-        getEndForAllFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (iterationRequestBuilder_ == null) {
-        iterationRequest_ = null;
-      } else {
-        iterationRequest_ = null;
+      bitField0_ = 0;
+      iterationRequest_ = null;
+      if (iterationRequestBuilder_ != null) {
+        iterationRequestBuilder_.dispose();
         iterationRequestBuilder_ = null;
       }
       startIndex_ = 0L;
-
       if (endForAnyBuilder_ == null) {
         endForAny_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        endForAny_ = null;
         endForAnyBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000004);
       if (endForAllBuilder_ == null) {
         endForAll_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
+        endForAll_ = null;
         endForAllBuilder_.clear();
       }
-      if (requestNotReadyBuilder_ == null) {
-        requestNotReady_ = null;
-      } else {
-        requestNotReady_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      requestNotReady_ = null;
+      if (requestNotReadyBuilder_ != null) {
+        requestNotReadyBuilder_.dispose();
         requestNotReadyBuilder_ = null;
       }
       notReadyWaitSeconds_ = 0L;
-
       notReadyRedoPreliminary_ = false;
-
       notReadySkipIteration_ = false;
-
       processStopPage_ = false;
-
       return this;
     }
 
@@ -820,42 +695,60 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.PaginatedHttpRequest buildPartial() {
       com.tcn.cloud.api.api.v0alpha.PaginatedHttpRequest result = new com.tcn.cloud.api.api.v0alpha.PaginatedHttpRequest(this);
-      int from_bitField0_ = bitField0_;
-      if (iterationRequestBuilder_ == null) {
-        result.iterationRequest_ = iterationRequest_;
-      } else {
-        result.iterationRequest_ = iterationRequestBuilder_.build();
-      }
-      result.startIndex_ = startIndex_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.PaginatedHttpRequest result) {
       if (endForAnyBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           endForAny_ = java.util.Collections.unmodifiableList(endForAny_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.endForAny_ = endForAny_;
       } else {
         result.endForAny_ = endForAnyBuilder_.build();
       }
       if (endForAllBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           endForAll_ = java.util.Collections.unmodifiableList(endForAll_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.endForAll_ = endForAll_;
       } else {
         result.endForAll_ = endForAllBuilder_.build();
       }
-      if (requestNotReadyBuilder_ == null) {
-        result.requestNotReady_ = requestNotReady_;
-      } else {
-        result.requestNotReady_ = requestNotReadyBuilder_.build();
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.PaginatedHttpRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.iterationRequest_ = iterationRequestBuilder_ == null
+            ? iterationRequest_
+            : iterationRequestBuilder_.build();
       }
-      result.notReadyWaitSeconds_ = notReadyWaitSeconds_;
-      result.notReadyRedoPreliminary_ = notReadyRedoPreliminary_;
-      result.notReadySkipIteration_ = notReadySkipIteration_;
-      result.processStopPage_ = processStopPage_;
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.startIndex_ = startIndex_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.requestNotReady_ = requestNotReadyBuilder_ == null
+            ? requestNotReady_
+            : requestNotReadyBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.notReadyWaitSeconds_ = notReadyWaitSeconds_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.notReadyRedoPreliminary_ = notReadyRedoPreliminary_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.notReadySkipIteration_ = notReadySkipIteration_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.processStopPage_ = processStopPage_;
+      }
     }
 
     @java.lang.Override
@@ -912,7 +805,7 @@ private static final long serialVersionUID = 0L;
         if (!other.endForAny_.isEmpty()) {
           if (endForAny_.isEmpty()) {
             endForAny_ = other.endForAny_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureEndForAnyIsMutable();
             endForAny_.addAll(other.endForAny_);
@@ -925,7 +818,7 @@ private static final long serialVersionUID = 0L;
             endForAnyBuilder_.dispose();
             endForAnyBuilder_ = null;
             endForAny_ = other.endForAny_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
             endForAnyBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getEndForAnyFieldBuilder() : null;
@@ -938,7 +831,7 @@ private static final long serialVersionUID = 0L;
         if (!other.endForAll_.isEmpty()) {
           if (endForAll_.isEmpty()) {
             endForAll_ = other.endForAll_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureEndForAllIsMutable();
             endForAll_.addAll(other.endForAll_);
@@ -951,7 +844,7 @@ private static final long serialVersionUID = 0L;
             endForAllBuilder_.dispose();
             endForAllBuilder_ = null;
             endForAll_ = other.endForAll_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000008);
             endForAllBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getEndForAllFieldBuilder() : null;
@@ -975,7 +868,7 @@ private static final long serialVersionUID = 0L;
       if (other.getProcessStopPage() != false) {
         setProcessStopPage(other.getProcessStopPage());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -990,17 +883,95 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.PaginatedHttpRequest parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getIterationRequestFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 16: {
+              startIndex_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 26: {
+              com.tcn.cloud.api.api.commons.PaginationTerminator m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.PaginationTerminator.parser(),
+                      extensionRegistry);
+              if (endForAnyBuilder_ == null) {
+                ensureEndForAnyIsMutable();
+                endForAny_.add(m);
+              } else {
+                endForAnyBuilder_.addMessage(m);
+              }
+              break;
+            } // case 26
+            case 34: {
+              com.tcn.cloud.api.api.commons.PaginationTerminator m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.PaginationTerminator.parser(),
+                      extensionRegistry);
+              if (endForAllBuilder_ == null) {
+                ensureEndForAllIsMutable();
+                endForAll_.add(m);
+              } else {
+                endForAllBuilder_.addMessage(m);
+              }
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getRequestNotReadyFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 48: {
+              notReadyWaitSeconds_ = input.readInt64();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 56: {
+              notReadyRedoPreliminary_ = input.readBool();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 56
+            case 64: {
+              notReadySkipIteration_ = input.readBool();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
+            case 72: {
+              processStopPage_ = input.readBool();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 72
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.PaginatedHttpRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -1019,7 +990,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the iterationRequest field is set.
      */
     public boolean hasIterationRequest() {
-      return iterationRequestBuilder_ != null || iterationRequest_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1053,11 +1024,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         iterationRequest_ = value;
-        onChanged();
       } else {
         iterationRequestBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -1073,11 +1044,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.HttpReq.Builder builderForValue) {
       if (iterationRequestBuilder_ == null) {
         iterationRequest_ = builderForValue.build();
-        onChanged();
       } else {
         iterationRequestBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -1091,17 +1062,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeIterationRequest(com.tcn.cloud.api.api.v0alpha.HttpReq value) {
       if (iterationRequestBuilder_ == null) {
-        if (iterationRequest_ != null) {
-          iterationRequest_ =
-            com.tcn.cloud.api.api.v0alpha.HttpReq.newBuilder(iterationRequest_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          iterationRequest_ != null &&
+          iterationRequest_ != com.tcn.cloud.api.api.v0alpha.HttpReq.getDefaultInstance()) {
+          getIterationRequestBuilder().mergeFrom(value);
         } else {
           iterationRequest_ = value;
         }
-        onChanged();
       } else {
         iterationRequestBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -1114,14 +1086,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.HttpReq iteration_request = 1 [json_name = "iterationRequest"];</code>
      */
     public Builder clearIterationRequest() {
-      if (iterationRequestBuilder_ == null) {
-        iterationRequest_ = null;
-        onChanged();
-      } else {
-        iterationRequest_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      iterationRequest_ = null;
+      if (iterationRequestBuilder_ != null) {
+        iterationRequestBuilder_.dispose();
         iterationRequestBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1134,7 +1105,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.HttpReq iteration_request = 1 [json_name = "iterationRequest"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.HttpReq.Builder getIterationRequestBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getIterationRequestFieldBuilder().getBuilder();
     }
@@ -1201,8 +1172,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStartIndex(long value) {
-      
+
       startIndex_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1215,7 +1187,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStartIndex() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       startIndex_ = 0L;
       onChanged();
       return this;
@@ -1224,9 +1196,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.commons.PaginationTerminator> endForAny_ =
       java.util.Collections.emptyList();
     private void ensureEndForAnyIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         endForAny_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.PaginationTerminator>(endForAny_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -1420,7 +1392,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearEndForAny() {
       if (endForAnyBuilder_ == null) {
         endForAny_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         endForAnyBuilder_.clear();
@@ -1525,7 +1497,7 @@ private static final long serialVersionUID = 0L;
         endForAnyBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.PaginationTerminator, com.tcn.cloud.api.api.commons.PaginationTerminator.Builder, com.tcn.cloud.api.api.commons.PaginationTerminatorOrBuilder>(
                 endForAny_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         endForAny_ = null;
@@ -1536,9 +1508,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.commons.PaginationTerminator> endForAll_ =
       java.util.Collections.emptyList();
     private void ensureEndForAllIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         endForAll_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.PaginationTerminator>(endForAll_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -1732,7 +1704,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearEndForAll() {
       if (endForAllBuilder_ == null) {
         endForAll_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         endForAllBuilder_.clear();
@@ -1837,7 +1809,7 @@ private static final long serialVersionUID = 0L;
         endForAllBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.PaginationTerminator, com.tcn.cloud.api.api.commons.PaginationTerminator.Builder, com.tcn.cloud.api.api.commons.PaginationTerminatorOrBuilder>(
                 endForAll_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         endForAll_ = null;
@@ -1860,7 +1832,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the requestNotReady field is set.
      */
     public boolean hasRequestNotReady() {
-      return requestNotReadyBuilder_ != null || requestNotReady_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1896,11 +1868,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         requestNotReady_ = value;
-        onChanged();
       } else {
         requestNotReadyBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1917,11 +1889,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.PaginationTerminator.Builder builderForValue) {
       if (requestNotReadyBuilder_ == null) {
         requestNotReady_ = builderForValue.build();
-        onChanged();
       } else {
         requestNotReadyBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1936,17 +1908,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeRequestNotReady(com.tcn.cloud.api.api.commons.PaginationTerminator value) {
       if (requestNotReadyBuilder_ == null) {
-        if (requestNotReady_ != null) {
-          requestNotReady_ =
-            com.tcn.cloud.api.api.commons.PaginationTerminator.newBuilder(requestNotReady_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000010) != 0) &&
+          requestNotReady_ != null &&
+          requestNotReady_ != com.tcn.cloud.api.api.commons.PaginationTerminator.getDefaultInstance()) {
+          getRequestNotReadyBuilder().mergeFrom(value);
         } else {
           requestNotReady_ = value;
         }
-        onChanged();
       } else {
         requestNotReadyBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1960,14 +1933,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.PaginationTerminator request_not_ready = 5 [json_name = "requestNotReady"];</code>
      */
     public Builder clearRequestNotReady() {
-      if (requestNotReadyBuilder_ == null) {
-        requestNotReady_ = null;
-        onChanged();
-      } else {
-        requestNotReady_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      requestNotReady_ = null;
+      if (requestNotReadyBuilder_ != null) {
+        requestNotReadyBuilder_.dispose();
         requestNotReadyBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1981,7 +1953,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.PaginationTerminator request_not_ready = 5 [json_name = "requestNotReady"];</code>
      */
     public com.tcn.cloud.api.api.commons.PaginationTerminator.Builder getRequestNotReadyBuilder() {
-      
+      bitField0_ |= 0x00000010;
       onChanged();
       return getRequestNotReadyFieldBuilder().getBuilder();
     }
@@ -2050,8 +2022,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNotReadyWaitSeconds(long value) {
-      
+
       notReadyWaitSeconds_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2064,7 +2037,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNotReadyWaitSeconds() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       notReadyWaitSeconds_ = 0L;
       onChanged();
       return this;
@@ -2093,8 +2066,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNotReadyRedoPreliminary(boolean value) {
-      
+
       notReadyRedoPreliminary_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2107,7 +2081,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNotReadyRedoPreliminary() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       notReadyRedoPreliminary_ = false;
       onChanged();
       return this;
@@ -2136,8 +2110,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNotReadySkipIteration(boolean value) {
-      
+
       notReadySkipIteration_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2150,7 +2125,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNotReadySkipIteration() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       notReadySkipIteration_ = false;
       onChanged();
       return this;
@@ -2179,8 +2154,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setProcessStopPage(boolean value) {
-      
+
       processStopPage_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2193,7 +2169,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProcessStopPage() {
-      
+      bitField0_ = (bitField0_ & ~0x00000100);
       processStopPage_ = false;
       onChanged();
       return this;
@@ -2231,7 +2207,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new PaginatedHttpRequest(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

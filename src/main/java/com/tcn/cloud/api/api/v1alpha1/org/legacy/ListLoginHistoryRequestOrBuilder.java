@@ -9,6 +9,11 @@ public interface ListLoginHistoryRequestOrBuilder extends
 
   /**
    * <code>string user_id = 1 [json_name = "userId"];</code>
+   * @return Whether the userId field is set.
+   */
+  boolean hasUserId();
+  /**
+   * <code>string user_id = 1 [json_name = "userId"];</code>
    * @return The userId.
    */
   java.lang.String getUserId();
@@ -19,6 +24,11 @@ public interface ListLoginHistoryRequestOrBuilder extends
   com.google.protobuf.ByteString
       getUserIdBytes();
 
+  /**
+   * <code>string origination_ip = 2 [json_name = "originationIp"];</code>
+   * @return Whether the originationIp field is set.
+   */
+  boolean hasOriginationIp();
   /**
    * <code>string origination_ip = 2 [json_name = "originationIp"];</code>
    * @return The originationIp.
@@ -47,5 +57,5 @@ public interface ListLoginHistoryRequestOrBuilder extends
    */
   boolean getStrikesOnly();
 
-  public com.tcn.cloud.api.api.v1alpha1.org.legacy.ListLoginHistoryRequest.FilterTypeCase getFilterTypeCase();
+  com.tcn.cloud.api.api.v1alpha1.org.legacy.ListLoginHistoryRequest.FilterTypeCase getFilterTypeCase();
 }

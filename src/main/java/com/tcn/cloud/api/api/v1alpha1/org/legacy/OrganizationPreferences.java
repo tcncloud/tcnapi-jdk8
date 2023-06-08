@@ -33,93 +33,6 @@ private static final long serialVersionUID = 0L;
     return new OrganizationPreferences();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private OrganizationPreferences(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 80: {
-            int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              allowedCountries_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            allowedCountries_.add(rawValue);
-            break;
-          }
-          case 82: {
-            int length = input.readRawVarint32();
-            int oldLimit = input.pushLimit(length);
-            while(input.getBytesUntilLimit() > 0) {
-              int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                allowedCountries_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              allowedCountries_.add(rawValue);
-            }
-            input.popLimit(oldLimit);
-            break;
-          }
-          case 88: {
-            int rawValue = input.readEnum();
-
-            defaultCountry_ = rawValue;
-            break;
-          }
-          case 96: {
-            int rawValue = input.readEnum();
-
-            timeZone_ = rawValue;
-            break;
-          }
-          case 104: {
-            int rawValue = input.readEnum();
-
-            displayLanguage_ = rawValue;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        allowedCountries_ = java.util.Collections.unmodifiableList(allowedCountries_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.legacy.EntitiesProto.internal_static_api_v1alpha1_org_legacy_OrganizationPreferences_descriptor;
@@ -134,14 +47,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ALLOWED_COUNTRIES_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> allowedCountries_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.Country> allowedCountries_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.Country>() {
             public com.tcn.cloud.api.api.commons.Country convert(java.lang.Integer from) {
-              @SuppressWarnings("deprecation")
-              com.tcn.cloud.api.api.commons.Country result = com.tcn.cloud.api.api.commons.Country.valueOf(from);
+              com.tcn.cloud.api.api.commons.Country result = com.tcn.cloud.api.api.commons.Country.forNumber(from);
               return result == null ? com.tcn.cloud.api.api.commons.Country.UNRECOGNIZED : result;
             }
           };
@@ -212,7 +125,7 @@ private static final long serialVersionUID = 0L;
   private int allowedCountriesMemoizedSerializedSize;
 
   public static final int DEFAULT_COUNTRY_FIELD_NUMBER = 11;
-  private int defaultCountry_;
+  private int defaultCountry_ = 0;
   /**
    * <pre>
    * Default country for organization
@@ -233,13 +146,12 @@ private static final long serialVersionUID = 0L;
    * @return The defaultCountry.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.Country getDefaultCountry() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.Country result = com.tcn.cloud.api.api.commons.Country.valueOf(defaultCountry_);
+    com.tcn.cloud.api.api.commons.Country result = com.tcn.cloud.api.api.commons.Country.forNumber(defaultCountry_);
     return result == null ? com.tcn.cloud.api.api.commons.Country.UNRECOGNIZED : result;
   }
 
   public static final int TIME_ZONE_FIELD_NUMBER = 12;
-  private int timeZone_;
+  private int timeZone_ = 0;
   /**
    * <pre>
    * Organization's time zone
@@ -260,13 +172,12 @@ private static final long serialVersionUID = 0L;
    * @return The timeZone.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.TimeZone getTimeZone() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.valueOf(timeZone_);
+    com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.forNumber(timeZone_);
     return result == null ? com.tcn.cloud.api.api.commons.TimeZone.UNRECOGNIZED : result;
   }
 
   public static final int DISPLAY_LANGUAGE_FIELD_NUMBER = 13;
-  private int displayLanguage_;
+  private int displayLanguage_ = 0;
   /**
    * <pre>
    * Default organization display language
@@ -287,8 +198,7 @@ private static final long serialVersionUID = 0L;
    * @return The displayLanguage.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.DisplayLanguage getDisplayLanguage() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.DisplayLanguage result = com.tcn.cloud.api.api.commons.DisplayLanguage.valueOf(displayLanguage_);
+    com.tcn.cloud.api.api.commons.DisplayLanguage result = com.tcn.cloud.api.api.commons.DisplayLanguage.forNumber(displayLanguage_);
     return result == null ? com.tcn.cloud.api.api.commons.DisplayLanguage.UNRECOGNIZED : result;
   }
 
@@ -323,7 +233,7 @@ private static final long serialVersionUID = 0L;
     if (displayLanguage_ != com.tcn.cloud.api.api.commons.DisplayLanguage.DISPLAY_LANGUAGE_SPANISH.getNumber()) {
       output.writeEnum(13, displayLanguage_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -356,7 +266,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(13, displayLanguage_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -375,7 +285,7 @@ private static final long serialVersionUID = 0L;
     if (defaultCountry_ != other.defaultCountry_) return false;
     if (timeZone_ != other.timeZone_) return false;
     if (displayLanguage_ != other.displayLanguage_) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -396,7 +306,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + timeZone_;
     hash = (37 * hash) + DISPLAY_LANGUAGE_FIELD_NUMBER;
     hash = (53 * hash) + displayLanguage_;
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -445,11 +355,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.OrganizationPreferences parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.OrganizationPreferences parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -517,30 +429,23 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.OrganizationPreferences.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       allowedCountries_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);
       defaultCountry_ = 0;
-
       timeZone_ = 0;
-
       displayLanguage_ = 0;
-
       return this;
     }
 
@@ -567,17 +472,31 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.OrganizationPreferences buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.legacy.OrganizationPreferences result = new com.tcn.cloud.api.api.v1alpha1.org.legacy.OrganizationPreferences(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.org.legacy.OrganizationPreferences result) {
       if (((bitField0_ & 0x00000001) != 0)) {
         allowedCountries_ = java.util.Collections.unmodifiableList(allowedCountries_);
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.allowedCountries_ = allowedCountries_;
-      result.defaultCountry_ = defaultCountry_;
-      result.timeZone_ = timeZone_;
-      result.displayLanguage_ = displayLanguage_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.OrganizationPreferences result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.defaultCountry_ = defaultCountry_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.timeZone_ = timeZone_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.displayLanguage_ = displayLanguage_;
+      }
     }
 
     @java.lang.Override
@@ -643,7 +562,7 @@ private static final long serialVersionUID = 0L;
       if (other.displayLanguage_ != 0) {
         setDisplayLanguageValue(other.getDisplayLanguageValue());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -658,17 +577,62 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.org.legacy.OrganizationPreferences parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 80: {
+              int tmpRaw = input.readEnum();
+              ensureAllowedCountriesIsMutable();
+              allowedCountries_.add(tmpRaw);
+              break;
+            } // case 80
+            case 82: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureAllowedCountriesIsMutable();
+                allowedCountries_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 82
+            case 88: {
+              defaultCountry_ = input.readEnum();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 88
+            case 96: {
+              timeZone_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 96
+            case 104: {
+              displayLanguage_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 104
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.legacy.OrganizationPreferences) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -816,8 +780,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .api.commons.Country allowed_countries = 10 [json_name = "allowedCountries"];</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of allowedCountries at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for allowedCountries to set.
      * @return This builder for chaining.
      */
     public Builder setAllowedCountriesValue(
@@ -883,8 +847,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDefaultCountryValue(int value) {
-      
       defaultCountry_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -898,8 +862,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.Country getDefaultCountry() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.Country result = com.tcn.cloud.api.api.commons.Country.valueOf(defaultCountry_);
+      com.tcn.cloud.api.api.commons.Country result = com.tcn.cloud.api.api.commons.Country.forNumber(defaultCountry_);
       return result == null ? com.tcn.cloud.api.api.commons.Country.UNRECOGNIZED : result;
     }
     /**
@@ -915,7 +878,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       defaultCountry_ = value.getNumber();
       onChanged();
       return this;
@@ -929,7 +892,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultCountry() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       defaultCountry_ = 0;
       onChanged();
       return this;
@@ -957,8 +920,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTimeZoneValue(int value) {
-      
       timeZone_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -972,8 +935,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.TimeZone getTimeZone() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.valueOf(timeZone_);
+      com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.forNumber(timeZone_);
       return result == null ? com.tcn.cloud.api.api.commons.TimeZone.UNRECOGNIZED : result;
     }
     /**
@@ -989,7 +951,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       timeZone_ = value.getNumber();
       onChanged();
       return this;
@@ -1003,7 +965,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTimeZone() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       timeZone_ = 0;
       onChanged();
       return this;
@@ -1031,8 +993,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisplayLanguageValue(int value) {
-      
       displayLanguage_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1046,8 +1008,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.DisplayLanguage getDisplayLanguage() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.DisplayLanguage result = com.tcn.cloud.api.api.commons.DisplayLanguage.valueOf(displayLanguage_);
+      com.tcn.cloud.api.api.commons.DisplayLanguage result = com.tcn.cloud.api.api.commons.DisplayLanguage.forNumber(displayLanguage_);
       return result == null ? com.tcn.cloud.api.api.commons.DisplayLanguage.UNRECOGNIZED : result;
     }
     /**
@@ -1063,7 +1024,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       displayLanguage_ = value.getNumber();
       onChanged();
       return this;
@@ -1077,7 +1038,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayLanguage() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       displayLanguage_ = 0;
       onChanged();
       return this;
@@ -1115,7 +1076,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new OrganizationPreferences(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

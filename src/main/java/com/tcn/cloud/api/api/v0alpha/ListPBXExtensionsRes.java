@@ -27,73 +27,6 @@ private static final long serialVersionUID = 0L;
     return new ListPBXExtensionsRes();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private ListPBXExtensionsRes(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              agentExtensions_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.AgentExtension>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            agentExtensions_.add(
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.AgentExtension.parser(), extensionRegistry));
-            break;
-          }
-          case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              huntGroupExtensions_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.HuntGroupExtension>();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            huntGroupExtensions_.add(
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.HuntGroupExtension.parser(), extensionRegistry));
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        agentExtensions_ = java.util.Collections.unmodifiableList(agentExtensions_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        huntGroupExtensions_ = java.util.Collections.unmodifiableList(huntGroupExtensions_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_ListPBXExtensionsRes_descriptor;
@@ -193,84 +126,6 @@ private static final long serialVersionUID = 0L;
       return new AgentExtension();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private AgentExtension(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              pbxExtension_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              greetingLocation_ = s;
-              break;
-            }
-            case 26: {
-              com.tcn.cloud.api.api.v0alpha.EmailResponse.Builder subBuilder = null;
-              if (email_ != null) {
-                subBuilder = email_.toBuilder();
-              }
-              email_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.EmailResponse.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(email_);
-                email_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              agentName_ = s;
-              break;
-            }
-            case 40: {
-
-              hasGreeting_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_ListPBXExtensionsRes_AgentExtension_descriptor;
@@ -285,7 +140,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int PBX_EXTENSION_FIELD_NUMBER = 1;
-    private volatile java.lang.Object pbxExtension_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object pbxExtension_ = "";
     /**
      * <code>string pbx_extension = 1 [json_name = "pbxExtension"];</code>
      * @return The pbxExtension.
@@ -323,7 +179,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int GREETING_LOCATION_FIELD_NUMBER = 2;
-    private volatile java.lang.Object greetingLocation_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object greetingLocation_ = "";
     /**
      * <code>string greeting_location = 2 [json_name = "greetingLocation"];</code>
      * @return The greetingLocation.
@@ -383,11 +240,12 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.EmailResponseOrBuilder getEmailOrBuilder() {
-      return getEmail();
+      return email_ == null ? com.tcn.cloud.api.api.v0alpha.EmailResponse.getDefaultInstance() : email_;
     }
 
     public static final int AGENT_NAME_FIELD_NUMBER = 4;
-    private volatile java.lang.Object agentName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object agentName_ = "";
     /**
      * <code>string agent_name = 4 [json_name = "agentName"];</code>
      * @return The agentName.
@@ -425,7 +283,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int HAS_GREETING_FIELD_NUMBER = 5;
-    private boolean hasGreeting_;
+    private boolean hasGreeting_ = false;
     /**
      * <code>bool has_greeting = 5 [json_name = "hasGreeting"];</code>
      * @return The hasGreeting.
@@ -449,22 +307,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPbxExtensionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pbxExtension_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pbxExtension_);
       }
-      if (!getGreetingLocationBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(greetingLocation_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, greetingLocation_);
       }
       if (email_ != null) {
         output.writeMessage(3, getEmail());
       }
-      if (!getAgentNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, agentName_);
       }
       if (hasGreeting_ != false) {
         output.writeBool(5, hasGreeting_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -473,24 +331,24 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (!getPbxExtensionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pbxExtension_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pbxExtension_);
       }
-      if (!getGreetingLocationBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(greetingLocation_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, greetingLocation_);
       }
       if (email_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getEmail());
       }
-      if (!getAgentNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, agentName_);
       }
       if (hasGreeting_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, hasGreeting_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -518,7 +376,7 @@ private static final long serialVersionUID = 0L;
           .equals(other.getAgentName())) return false;
       if (getHasGreeting()
           != other.getHasGreeting()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -542,7 +400,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + HAS_GREETING_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getHasGreeting());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -591,11 +449,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.AgentExtension parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.AgentExtension parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -659,36 +519,27 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.AgentExtension.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         pbxExtension_ = "";
-
         greetingLocation_ = "";
-
-        if (emailBuilder_ == null) {
-          email_ = null;
-        } else {
-          email_ = null;
+        email_ = null;
+        if (emailBuilder_ != null) {
+          emailBuilder_.dispose();
           emailBuilder_ = null;
         }
         agentName_ = "";
-
         hasGreeting_ = false;
-
         return this;
       }
 
@@ -715,17 +566,30 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.AgentExtension buildPartial() {
         com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.AgentExtension result = new com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.AgentExtension(this);
-        result.pbxExtension_ = pbxExtension_;
-        result.greetingLocation_ = greetingLocation_;
-        if (emailBuilder_ == null) {
-          result.email_ = email_;
-        } else {
-          result.email_ = emailBuilder_.build();
-        }
-        result.agentName_ = agentName_;
-        result.hasGreeting_ = hasGreeting_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.AgentExtension result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pbxExtension_ = pbxExtension_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.greetingLocation_ = greetingLocation_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.email_ = emailBuilder_ == null
+              ? email_
+              : emailBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.agentName_ = agentName_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.hasGreeting_ = hasGreeting_;
+        }
       }
 
       @java.lang.Override
@@ -774,10 +638,12 @@ private static final long serialVersionUID = 0L;
         if (other == com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.AgentExtension.getDefaultInstance()) return this;
         if (!other.getPbxExtension().isEmpty()) {
           pbxExtension_ = other.pbxExtension_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getGreetingLocation().isEmpty()) {
           greetingLocation_ = other.greetingLocation_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.hasEmail()) {
@@ -785,12 +651,13 @@ private static final long serialVersionUID = 0L;
         }
         if (!other.getAgentName().isEmpty()) {
           agentName_ = other.agentName_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.getHasGreeting() != false) {
           setHasGreeting(other.getHasGreeting());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -805,19 +672,60 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.AgentExtension parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                pbxExtension_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                greetingLocation_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getEmailFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                agentName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                hasGreeting_ = input.readBool();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.AgentExtension) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object pbxExtension_ = "";
       /**
@@ -860,11 +768,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setPbxExtension(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         pbxExtension_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -873,8 +779,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearPbxExtension() {
-        
         pbxExtension_ = getDefaultInstance().getPbxExtension();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -885,12 +791,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setPbxExtensionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         pbxExtension_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -936,11 +840,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setGreetingLocation(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         greetingLocation_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -949,8 +851,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearGreetingLocation() {
-        
         greetingLocation_ = getDefaultInstance().getGreetingLocation();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -961,12 +863,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setGreetingLocationBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         greetingLocation_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -979,7 +879,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the email field is set.
        */
       public boolean hasEmail() {
-        return emailBuilder_ != null || email_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <code>.api.v0alpha.EmailResponse email = 3 [json_name = "email"];</code>
@@ -1001,11 +901,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           email_ = value;
-          onChanged();
         } else {
           emailBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1015,11 +915,11 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.v0alpha.EmailResponse.Builder builderForValue) {
         if (emailBuilder_ == null) {
           email_ = builderForValue.build();
-          onChanged();
         } else {
           emailBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1027,38 +927,38 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeEmail(com.tcn.cloud.api.api.v0alpha.EmailResponse value) {
         if (emailBuilder_ == null) {
-          if (email_ != null) {
-            email_ =
-              com.tcn.cloud.api.api.v0alpha.EmailResponse.newBuilder(email_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            email_ != null &&
+            email_ != com.tcn.cloud.api.api.v0alpha.EmailResponse.getDefaultInstance()) {
+            getEmailBuilder().mergeFrom(value);
           } else {
             email_ = value;
           }
-          onChanged();
         } else {
           emailBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
        * <code>.api.v0alpha.EmailResponse email = 3 [json_name = "email"];</code>
        */
       public Builder clearEmail() {
-        if (emailBuilder_ == null) {
-          email_ = null;
-          onChanged();
-        } else {
-          email_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        email_ = null;
+        if (emailBuilder_ != null) {
+          emailBuilder_.dispose();
           emailBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.api.v0alpha.EmailResponse email = 3 [json_name = "email"];</code>
        */
       public com.tcn.cloud.api.api.v0alpha.EmailResponse.Builder getEmailBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getEmailFieldBuilder().getBuilder();
       }
@@ -1131,11 +1031,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setAgentName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         agentName_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1144,8 +1042,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearAgentName() {
-        
         agentName_ = getDefaultInstance().getAgentName();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -1156,12 +1054,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setAgentNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         agentName_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1181,8 +1077,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setHasGreeting(boolean value) {
-        
+
         hasGreeting_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1191,7 +1088,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearHasGreeting() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         hasGreeting_ = false;
         onChanged();
         return this;
@@ -1229,7 +1126,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AgentExtension(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1335,84 +1243,6 @@ private static final long serialVersionUID = 0L;
       return new HuntGroupExtension();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private HuntGroupExtension(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              pbxExtension_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              greetingLocation_ = s;
-              break;
-            }
-            case 26: {
-              com.tcn.cloud.api.api.v0alpha.EmailResponse.Builder subBuilder = null;
-              if (email_ != null) {
-                subBuilder = email_.toBuilder();
-              }
-              email_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.EmailResponse.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(email_);
-                email_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              huntGroupName_ = s;
-              break;
-            }
-            case 40: {
-
-              hasGreeting_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_ListPBXExtensionsRes_HuntGroupExtension_descriptor;
@@ -1427,7 +1257,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int PBX_EXTENSION_FIELD_NUMBER = 1;
-    private volatile java.lang.Object pbxExtension_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object pbxExtension_ = "";
     /**
      * <code>string pbx_extension = 1 [json_name = "pbxExtension"];</code>
      * @return The pbxExtension.
@@ -1465,7 +1296,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int GREETING_LOCATION_FIELD_NUMBER = 2;
-    private volatile java.lang.Object greetingLocation_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object greetingLocation_ = "";
     /**
      * <code>string greeting_location = 2 [json_name = "greetingLocation"];</code>
      * @return The greetingLocation.
@@ -1525,11 +1357,12 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.EmailResponseOrBuilder getEmailOrBuilder() {
-      return getEmail();
+      return email_ == null ? com.tcn.cloud.api.api.v0alpha.EmailResponse.getDefaultInstance() : email_;
     }
 
     public static final int HUNT_GROUP_NAME_FIELD_NUMBER = 4;
-    private volatile java.lang.Object huntGroupName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object huntGroupName_ = "";
     /**
      * <code>string hunt_group_name = 4 [json_name = "huntGroupName"];</code>
      * @return The huntGroupName.
@@ -1567,7 +1400,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int HAS_GREETING_FIELD_NUMBER = 5;
-    private boolean hasGreeting_;
+    private boolean hasGreeting_ = false;
     /**
      * <code>bool has_greeting = 5 [json_name = "hasGreeting"];</code>
      * @return The hasGreeting.
@@ -1591,22 +1424,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPbxExtensionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pbxExtension_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pbxExtension_);
       }
-      if (!getGreetingLocationBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(greetingLocation_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, greetingLocation_);
       }
       if (email_ != null) {
         output.writeMessage(3, getEmail());
       }
-      if (!getHuntGroupNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(huntGroupName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, huntGroupName_);
       }
       if (hasGreeting_ != false) {
         output.writeBool(5, hasGreeting_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1615,24 +1448,24 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (!getPbxExtensionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pbxExtension_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pbxExtension_);
       }
-      if (!getGreetingLocationBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(greetingLocation_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, greetingLocation_);
       }
       if (email_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getEmail());
       }
-      if (!getHuntGroupNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(huntGroupName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, huntGroupName_);
       }
       if (hasGreeting_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, hasGreeting_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1660,7 +1493,7 @@ private static final long serialVersionUID = 0L;
           .equals(other.getHuntGroupName())) return false;
       if (getHasGreeting()
           != other.getHasGreeting()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1684,7 +1517,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + HAS_GREETING_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getHasGreeting());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1733,11 +1566,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.HuntGroupExtension parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.HuntGroupExtension parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1801,36 +1636,27 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.HuntGroupExtension.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         pbxExtension_ = "";
-
         greetingLocation_ = "";
-
-        if (emailBuilder_ == null) {
-          email_ = null;
-        } else {
-          email_ = null;
+        email_ = null;
+        if (emailBuilder_ != null) {
+          emailBuilder_.dispose();
           emailBuilder_ = null;
         }
         huntGroupName_ = "";
-
         hasGreeting_ = false;
-
         return this;
       }
 
@@ -1857,17 +1683,30 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.HuntGroupExtension buildPartial() {
         com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.HuntGroupExtension result = new com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.HuntGroupExtension(this);
-        result.pbxExtension_ = pbxExtension_;
-        result.greetingLocation_ = greetingLocation_;
-        if (emailBuilder_ == null) {
-          result.email_ = email_;
-        } else {
-          result.email_ = emailBuilder_.build();
-        }
-        result.huntGroupName_ = huntGroupName_;
-        result.hasGreeting_ = hasGreeting_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.HuntGroupExtension result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pbxExtension_ = pbxExtension_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.greetingLocation_ = greetingLocation_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.email_ = emailBuilder_ == null
+              ? email_
+              : emailBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.huntGroupName_ = huntGroupName_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.hasGreeting_ = hasGreeting_;
+        }
       }
 
       @java.lang.Override
@@ -1916,10 +1755,12 @@ private static final long serialVersionUID = 0L;
         if (other == com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.HuntGroupExtension.getDefaultInstance()) return this;
         if (!other.getPbxExtension().isEmpty()) {
           pbxExtension_ = other.pbxExtension_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getGreetingLocation().isEmpty()) {
           greetingLocation_ = other.greetingLocation_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.hasEmail()) {
@@ -1927,12 +1768,13 @@ private static final long serialVersionUID = 0L;
         }
         if (!other.getHuntGroupName().isEmpty()) {
           huntGroupName_ = other.huntGroupName_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.getHasGreeting() != false) {
           setHasGreeting(other.getHasGreeting());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1947,19 +1789,60 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.HuntGroupExtension parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                pbxExtension_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                greetingLocation_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getEmailFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                huntGroupName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                hasGreeting_ = input.readBool();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.HuntGroupExtension) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object pbxExtension_ = "";
       /**
@@ -2002,11 +1885,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setPbxExtension(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         pbxExtension_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2015,8 +1896,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearPbxExtension() {
-        
         pbxExtension_ = getDefaultInstance().getPbxExtension();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2027,12 +1908,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setPbxExtensionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         pbxExtension_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2078,11 +1957,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setGreetingLocation(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         greetingLocation_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2091,8 +1968,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearGreetingLocation() {
-        
         greetingLocation_ = getDefaultInstance().getGreetingLocation();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -2103,12 +1980,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setGreetingLocationBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         greetingLocation_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2121,7 +1996,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the email field is set.
        */
       public boolean hasEmail() {
-        return emailBuilder_ != null || email_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <code>.api.v0alpha.EmailResponse email = 3 [json_name = "email"];</code>
@@ -2143,11 +2018,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           email_ = value;
-          onChanged();
         } else {
           emailBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -2157,11 +2032,11 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.v0alpha.EmailResponse.Builder builderForValue) {
         if (emailBuilder_ == null) {
           email_ = builderForValue.build();
-          onChanged();
         } else {
           emailBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -2169,38 +2044,38 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeEmail(com.tcn.cloud.api.api.v0alpha.EmailResponse value) {
         if (emailBuilder_ == null) {
-          if (email_ != null) {
-            email_ =
-              com.tcn.cloud.api.api.v0alpha.EmailResponse.newBuilder(email_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            email_ != null &&
+            email_ != com.tcn.cloud.api.api.v0alpha.EmailResponse.getDefaultInstance()) {
+            getEmailBuilder().mergeFrom(value);
           } else {
             email_ = value;
           }
-          onChanged();
         } else {
           emailBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
        * <code>.api.v0alpha.EmailResponse email = 3 [json_name = "email"];</code>
        */
       public Builder clearEmail() {
-        if (emailBuilder_ == null) {
-          email_ = null;
-          onChanged();
-        } else {
-          email_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        email_ = null;
+        if (emailBuilder_ != null) {
+          emailBuilder_.dispose();
           emailBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.api.v0alpha.EmailResponse email = 3 [json_name = "email"];</code>
        */
       public com.tcn.cloud.api.api.v0alpha.EmailResponse.Builder getEmailBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getEmailFieldBuilder().getBuilder();
       }
@@ -2273,11 +2148,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setHuntGroupName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         huntGroupName_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2286,8 +2159,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearHuntGroupName() {
-        
         huntGroupName_ = getDefaultInstance().getHuntGroupName();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -2298,12 +2171,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setHuntGroupNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         huntGroupName_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2323,8 +2194,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setHasGreeting(boolean value) {
-        
+
         hasGreeting_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2333,7 +2205,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearHasGreeting() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         hasGreeting_ = false;
         onChanged();
         return this;
@@ -2371,7 +2243,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new HuntGroupExtension(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2392,6 +2275,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENT_EXTENSIONS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.AgentExtension> agentExtensions_;
   /**
    * <code>repeated .api.v0alpha.ListPBXExtensionsRes.AgentExtension agent_extensions = 1 [json_name = "agentExtensions"];</code>
@@ -2432,6 +2316,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HUNT_GROUP_EXTENSIONS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.HuntGroupExtension> huntGroupExtensions_;
   /**
    * <code>repeated .api.v0alpha.ListPBXExtensionsRes.HuntGroupExtension hunt_group_extensions = 2 [json_name = "huntGroupExtensions"];</code>
@@ -2491,7 +2376,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < huntGroupExtensions_.size(); i++) {
       output.writeMessage(2, huntGroupExtensions_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -2508,7 +2393,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, huntGroupExtensions_.get(i));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -2527,7 +2412,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getAgentExtensionsList())) return false;
     if (!getHuntGroupExtensionsList()
         .equals(other.getHuntGroupExtensionsList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -2546,7 +2431,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + HUNT_GROUP_EXTENSIONS_FIELD_NUMBER;
       hash = (53 * hash) + getHuntGroupExtensionsList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -2595,11 +2480,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2663,36 +2550,32 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getAgentExtensionsFieldBuilder();
-        getHuntGroupExtensionsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (agentExtensionsBuilder_ == null) {
         agentExtensions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        agentExtensions_ = null;
         agentExtensionsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000001);
       if (huntGroupExtensionsBuilder_ == null) {
         huntGroupExtensions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
+        huntGroupExtensions_ = null;
         huntGroupExtensionsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -2719,7 +2602,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes result = new com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes result) {
       if (agentExtensionsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           agentExtensions_ = java.util.Collections.unmodifiableList(agentExtensions_);
@@ -2738,8 +2627,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.huntGroupExtensions_ = huntGroupExtensionsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override
@@ -2838,7 +2729,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -2853,17 +2744,56 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.AgentExtension m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.AgentExtension.parser(),
+                      extensionRegistry);
+              if (agentExtensionsBuilder_ == null) {
+                ensureAgentExtensionsIsMutable();
+                agentExtensions_.add(m);
+              } else {
+                agentExtensionsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 10
+            case 18: {
+              com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.HuntGroupExtension m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.HuntGroupExtension.parser(),
+                      extensionRegistry);
+              if (huntGroupExtensionsBuilder_ == null) {
+                ensureHuntGroupExtensionsIsMutable();
+                huntGroupExtensions_.add(m);
+              } else {
+                huntGroupExtensionsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -3380,7 +3310,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ListPBXExtensionsRes(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

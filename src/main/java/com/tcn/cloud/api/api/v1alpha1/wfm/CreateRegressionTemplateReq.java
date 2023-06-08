@@ -29,61 +29,6 @@ private static final long serialVersionUID = 0L;
     return new CreateRegressionTemplateReq();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private CreateRegressionTemplateReq(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate.Builder subBuilder = null;
-            if (regressionTemplate_ != null) {
-              subBuilder = regressionTemplate_.toBuilder();
-            }
-            regressionTemplate_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(regressionTemplate_);
-              regressionTemplate_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_CreateRegressionTemplateReq_descriptor;
@@ -132,7 +77,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplateOrBuilder getRegressionTemplateOrBuilder() {
-    return getRegressionTemplate();
+    return regressionTemplate_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate.getDefaultInstance() : regressionTemplate_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -152,7 +97,7 @@ private static final long serialVersionUID = 0L;
     if (regressionTemplate_ != null) {
       output.writeMessage(1, getRegressionTemplate());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -165,7 +110,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getRegressionTemplate());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -185,7 +130,7 @@ private static final long serialVersionUID = 0L;
       if (!getRegressionTemplate()
           .equals(other.getRegressionTemplate())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -200,7 +145,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + REGRESSION_TEMPLATE_FIELD_NUMBER;
       hash = (53 * hash) + getRegressionTemplate().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -249,11 +194,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -321,26 +268,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (regressionTemplateBuilder_ == null) {
-        regressionTemplate_ = null;
-      } else {
-        regressionTemplate_ = null;
+      bitField0_ = 0;
+      regressionTemplate_ = null;
+      if (regressionTemplateBuilder_ != null) {
+        regressionTemplateBuilder_.dispose();
         regressionTemplateBuilder_ = null;
       }
       return this;
@@ -369,13 +311,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq(this);
-      if (regressionTemplateBuilder_ == null) {
-        result.regressionTemplate_ = regressionTemplate_;
-      } else {
-        result.regressionTemplate_ = regressionTemplateBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.regressionTemplate_ = regressionTemplateBuilder_ == null
+            ? regressionTemplate_
+            : regressionTemplateBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -425,7 +372,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasRegressionTemplate()) {
         mergeRegressionTemplate(other.getRegressionTemplate());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -440,19 +387,40 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getRegressionTemplateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate regressionTemplate_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -466,7 +434,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the regressionTemplate field is set.
      */
     public boolean hasRegressionTemplate() {
-      return regressionTemplateBuilder_ != null || regressionTemplate_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -496,11 +464,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         regressionTemplate_ = value;
-        onChanged();
       } else {
         regressionTemplateBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -514,11 +482,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate.Builder builderForValue) {
       if (regressionTemplateBuilder_ == null) {
         regressionTemplate_ = builderForValue.build();
-        onChanged();
       } else {
         regressionTemplateBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -530,17 +498,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeRegressionTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate value) {
       if (regressionTemplateBuilder_ == null) {
-        if (regressionTemplate_ != null) {
-          regressionTemplate_ =
-            com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate.newBuilder(regressionTemplate_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          regressionTemplate_ != null &&
+          regressionTemplate_ != com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate.getDefaultInstance()) {
+          getRegressionTemplateBuilder().mergeFrom(value);
         } else {
           regressionTemplate_ = value;
         }
-        onChanged();
       } else {
         regressionTemplateBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -551,14 +520,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.RegressionTemplate regression_template = 1 [json_name = "regressionTemplate"];</code>
      */
     public Builder clearRegressionTemplate() {
-      if (regressionTemplateBuilder_ == null) {
-        regressionTemplate_ = null;
-        onChanged();
-      } else {
-        regressionTemplate_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      regressionTemplate_ = null;
+      if (regressionTemplateBuilder_ != null) {
+        regressionTemplateBuilder_.dispose();
         regressionTemplateBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -569,7 +537,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.RegressionTemplate regression_template = 1 [json_name = "regressionTemplate"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate.Builder getRegressionTemplateBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getRegressionTemplateFieldBuilder().getBuilder();
     }
@@ -641,7 +609,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new CreateRegressionTemplateReq(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -9,6 +9,11 @@ public interface FieldOrStrOrBuilder extends
 
   /**
    * <code>string field = 1 [json_name = "field"];</code>
+   * @return Whether the field field is set.
+   */
+  boolean hasField();
+  /**
+   * <code>string field = 1 [json_name = "field"];</code>
    * @return The field.
    */
   java.lang.String getField();
@@ -21,6 +26,11 @@ public interface FieldOrStrOrBuilder extends
 
   /**
    * <code>string str_val = 2 [json_name = "strVal"];</code>
+   * @return Whether the strVal field is set.
+   */
+  boolean hasStrVal();
+  /**
+   * <code>string str_val = 2 [json_name = "strVal"];</code>
    * @return The strVal.
    */
   java.lang.String getStrVal();
@@ -31,5 +41,5 @@ public interface FieldOrStrOrBuilder extends
   com.google.protobuf.ByteString
       getStrValBytes();
 
-  public com.tcn.cloud.api.api.v1alpha1.integrations.FieldOrStr.ValCase getValCase();
+  com.tcn.cloud.api.api.v1alpha1.integrations.FieldOrStr.ValCase getValCase();
 }

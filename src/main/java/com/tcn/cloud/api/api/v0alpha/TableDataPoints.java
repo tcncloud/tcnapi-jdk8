@@ -22,8 +22,10 @@ private static final long serialVersionUID = 0L;
   private TableDataPoints() {
     title_ = "";
     dataValues_ = java.util.Collections.emptyList();
-    groupingDataPointIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    orderBy_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    groupingDataPointIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    orderBy_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -33,91 +35,6 @@ private static final long serialVersionUID = 0L;
     return new TableDataPoints();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private TableDataPoints(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            title_ = s;
-            break;
-          }
-          case 18: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              dataValues_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.ExporterTableDataValue>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            dataValues_.add(
-                input.readMessage(com.tcn.cloud.api.api.v0alpha.ExporterTableDataValue.parser(), extensionRegistry));
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              groupingDataPointIds_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            groupingDataPointIds_.add(s);
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-              orderBy_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000004;
-            }
-            orderBy_.add(s);
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        dataValues_ = java.util.Collections.unmodifiableList(dataValues_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        groupingDataPointIds_ = groupingDataPointIds_.getUnmodifiableView();
-      }
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
-        orderBy_ = orderBy_.getUnmodifiableView();
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.AnaProto.internal_static_api_v0alpha_TableDataPoints_descriptor;
@@ -132,7 +49,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TITLE_FIELD_NUMBER = 1;
-  private volatile java.lang.Object title_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object title_ = "";
   /**
    * <code>string title = 1 [json_name = "title"];</code>
    * @return The title.
@@ -170,6 +88,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DATA_VALUES_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.ExporterTableDataValue> dataValues_;
   /**
    * <code>repeated .api.v0alpha.ExporterTableDataValue data_values = 2 [json_name = "dataValues"];</code>
@@ -210,7 +129,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GROUPING_DATA_POINT_IDS_FIELD_NUMBER = 3;
-  private com.google.protobuf.LazyStringList groupingDataPointIds_;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList groupingDataPointIds_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <code>repeated string grouping_data_point_ids = 3 [json_name = "groupingDataPointIds"];</code>
    * @return A list containing the groupingDataPointIds.
@@ -245,7 +166,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ORDER_BY_FIELD_NUMBER = 4;
-  private com.google.protobuf.LazyStringList orderBy_;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList orderBy_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <code>repeated string order_by = 4 [json_name = "orderBy"];</code>
    * @return A list containing the orderBy.
@@ -293,7 +216,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getTitleBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
     }
     for (int i = 0; i < dataValues_.size(); i++) {
@@ -305,7 +228,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < orderBy_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, orderBy_.getRaw(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -314,7 +237,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getTitleBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
     }
     for (int i = 0; i < dataValues_.size(); i++) {
@@ -337,7 +260,7 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getOrderByList().size();
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -360,7 +283,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getGroupingDataPointIdsList())) return false;
     if (!getOrderByList()
         .equals(other.getOrderByList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -385,7 +308,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ORDER_BY_FIELD_NUMBER;
       hash = (53 * hash) + getOrderByList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -434,11 +357,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.TableDataPoints parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.TableDataPoints parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -506,35 +431,30 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.TableDataPoints.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDataValuesFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       title_ = "";
-
       if (dataValuesBuilder_ == null) {
         dataValues_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        dataValues_ = null;
         dataValuesBuilder_.clear();
       }
-      groupingDataPointIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000002);
-      orderBy_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000004);
+      groupingDataPointIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      orderBy_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -561,29 +481,37 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.TableDataPoints buildPartial() {
       com.tcn.cloud.api.api.v0alpha.TableDataPoints result = new com.tcn.cloud.api.api.v0alpha.TableDataPoints(this);
-      int from_bitField0_ = bitField0_;
-      result.title_ = title_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.TableDataPoints result) {
       if (dataValuesBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           dataValues_ = java.util.Collections.unmodifiableList(dataValues_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.dataValues_ = dataValues_;
       } else {
         result.dataValues_ = dataValuesBuilder_.build();
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        groupingDataPointIds_ = groupingDataPointIds_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.TableDataPoints result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.title_ = title_;
       }
-      result.groupingDataPointIds_ = groupingDataPointIds_;
-      if (((bitField0_ & 0x00000004) != 0)) {
-        orderBy_ = orderBy_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000004);
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        groupingDataPointIds_.makeImmutable();
+        result.groupingDataPointIds_ = groupingDataPointIds_;
       }
-      result.orderBy_ = orderBy_;
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        orderBy_.makeImmutable();
+        result.orderBy_ = orderBy_;
+      }
     }
 
     @java.lang.Override
@@ -632,13 +560,14 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.TableDataPoints.getDefaultInstance()) return this;
       if (!other.getTitle().isEmpty()) {
         title_ = other.title_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (dataValuesBuilder_ == null) {
         if (!other.dataValues_.isEmpty()) {
           if (dataValues_.isEmpty()) {
             dataValues_ = other.dataValues_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureDataValuesIsMutable();
             dataValues_.addAll(other.dataValues_);
@@ -651,7 +580,7 @@ private static final long serialVersionUID = 0L;
             dataValuesBuilder_.dispose();
             dataValuesBuilder_ = null;
             dataValues_ = other.dataValues_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             dataValuesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getDataValuesFieldBuilder() : null;
@@ -663,7 +592,7 @@ private static final long serialVersionUID = 0L;
       if (!other.groupingDataPointIds_.isEmpty()) {
         if (groupingDataPointIds_.isEmpty()) {
           groupingDataPointIds_ = other.groupingDataPointIds_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ |= 0x00000004;
         } else {
           ensureGroupingDataPointIdsIsMutable();
           groupingDataPointIds_.addAll(other.groupingDataPointIds_);
@@ -673,14 +602,14 @@ private static final long serialVersionUID = 0L;
       if (!other.orderBy_.isEmpty()) {
         if (orderBy_.isEmpty()) {
           orderBy_ = other.orderBy_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ |= 0x00000008;
         } else {
           ensureOrderByIsMutable();
           orderBy_.addAll(other.orderBy_);
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -695,17 +624,60 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.TableDataPoints parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              title_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              com.tcn.cloud.api.api.v0alpha.ExporterTableDataValue m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v0alpha.ExporterTableDataValue.parser(),
+                      extensionRegistry);
+              if (dataValuesBuilder_ == null) {
+                ensureDataValuesIsMutable();
+                dataValues_.add(m);
+              } else {
+                dataValuesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureGroupingDataPointIdsIsMutable();
+              groupingDataPointIds_.add(s);
+              break;
+            } // case 26
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureOrderByIsMutable();
+              orderBy_.add(s);
+              break;
+            } // case 34
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.TableDataPoints) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -751,11 +723,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTitle(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       title_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -764,8 +734,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTitle() {
-      
       title_ = getDefaultInstance().getTitle();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -776,12 +746,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTitleBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       title_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -789,9 +757,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v0alpha.ExporterTableDataValue> dataValues_ =
       java.util.Collections.emptyList();
     private void ensureDataValuesIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         dataValues_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.ExporterTableDataValue>(dataValues_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -941,7 +909,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearDataValues() {
       if (dataValuesBuilder_ == null) {
         dataValues_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         dataValuesBuilder_.clear();
@@ -1018,7 +986,7 @@ private static final long serialVersionUID = 0L;
         dataValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v0alpha.ExporterTableDataValue, com.tcn.cloud.api.api.v0alpha.ExporterTableDataValue.Builder, com.tcn.cloud.api.api.v0alpha.ExporterTableDataValueOrBuilder>(
                 dataValues_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         dataValues_ = null;
@@ -1026,12 +994,13 @@ private static final long serialVersionUID = 0L;
       return dataValuesBuilder_;
     }
 
-    private com.google.protobuf.LazyStringList groupingDataPointIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList groupingDataPointIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureGroupingDataPointIdsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!groupingDataPointIds_.isModifiable()) {
         groupingDataPointIds_ = new com.google.protobuf.LazyStringArrayList(groupingDataPointIds_);
-        bitField0_ |= 0x00000002;
-       }
+      }
+      bitField0_ |= 0x00000004;
     }
     /**
      * <code>repeated string grouping_data_point_ids = 3 [json_name = "groupingDataPointIds"];</code>
@@ -1039,7 +1008,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getGroupingDataPointIdsList() {
-      return groupingDataPointIds_.getUnmodifiableView();
+      groupingDataPointIds_.makeImmutable();
+      return groupingDataPointIds_;
     }
     /**
      * <code>repeated string grouping_data_point_ids = 3 [json_name = "groupingDataPointIds"];</code>
@@ -1073,11 +1043,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGroupingDataPointIds(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureGroupingDataPointIdsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureGroupingDataPointIdsIsMutable();
       groupingDataPointIds_.set(index, value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1088,11 +1057,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addGroupingDataPointIds(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureGroupingDataPointIdsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureGroupingDataPointIdsIsMutable();
       groupingDataPointIds_.add(value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1106,6 +1074,7 @@ private static final long serialVersionUID = 0L;
       ensureGroupingDataPointIdsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, groupingDataPointIds_);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1114,8 +1083,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGroupingDataPointIds() {
-      groupingDataPointIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      groupingDataPointIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);;
       onChanged();
       return this;
     }
@@ -1126,22 +1096,22 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addGroupingDataPointIdsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureGroupingDataPointIdsIsMutable();
       groupingDataPointIds_.add(value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList orderBy_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList orderBy_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureOrderByIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!orderBy_.isModifiable()) {
         orderBy_ = new com.google.protobuf.LazyStringArrayList(orderBy_);
-        bitField0_ |= 0x00000004;
-       }
+      }
+      bitField0_ |= 0x00000008;
     }
     /**
      * <code>repeated string order_by = 4 [json_name = "orderBy"];</code>
@@ -1149,7 +1119,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getOrderByList() {
-      return orderBy_.getUnmodifiableView();
+      orderBy_.makeImmutable();
+      return orderBy_;
     }
     /**
      * <code>repeated string order_by = 4 [json_name = "orderBy"];</code>
@@ -1183,11 +1154,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrderBy(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureOrderByIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureOrderByIsMutable();
       orderBy_.set(index, value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1198,11 +1168,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addOrderBy(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureOrderByIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureOrderByIsMutable();
       orderBy_.add(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1216,6 +1185,7 @@ private static final long serialVersionUID = 0L;
       ensureOrderByIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, orderBy_);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1224,8 +1194,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOrderBy() {
-      orderBy_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000004);
+      orderBy_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000008);;
       onChanged();
       return this;
     }
@@ -1236,12 +1207,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addOrderByBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureOrderByIsMutable();
       orderBy_.add(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1278,7 +1248,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new TableDataPoints(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -26,69 +26,6 @@ private static final long serialVersionUID = 0L;
     return new CustomReportsEnabledSummary();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private CustomReportsEnabledSummary(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            customReportsEnabledCurrent_ = input.readBool();
-            break;
-          }
-          case 16: {
-
-            customReportsEnabledPeak_ = input.readBool();
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            customReportsEnabledEditor_ = s;
-            break;
-          }
-          case 32: {
-
-            proStatus_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.AnaProto.internal_static_api_v0alpha_CustomReportsEnabledSummary_descriptor;
@@ -103,7 +40,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOM_REPORTS_ENABLED_CURRENT_FIELD_NUMBER = 1;
-  private boolean customReportsEnabledCurrent_;
+  private boolean customReportsEnabledCurrent_ = false;
   /**
    * <code>bool custom_reports_enabled_current = 1 [json_name = "customReportsEnabledCurrent"];</code>
    * @return The customReportsEnabledCurrent.
@@ -114,7 +51,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOM_REPORTS_ENABLED_PEAK_FIELD_NUMBER = 2;
-  private boolean customReportsEnabledPeak_;
+  private boolean customReportsEnabledPeak_ = false;
   /**
    * <code>bool custom_reports_enabled_peak = 2 [json_name = "customReportsEnabledPeak"];</code>
    * @return The customReportsEnabledPeak.
@@ -125,7 +62,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOM_REPORTS_ENABLED_EDITOR_FIELD_NUMBER = 3;
-  private volatile java.lang.Object customReportsEnabledEditor_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customReportsEnabledEditor_ = "";
   /**
    * <code>string custom_reports_enabled_editor = 3 [json_name = "customReportsEnabledEditor"];</code>
    * @return The customReportsEnabledEditor.
@@ -163,7 +101,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PRO_STATUS_FIELD_NUMBER = 4;
-  private boolean proStatus_;
+  private boolean proStatus_ = false;
   /**
    * <code>bool pro_status = 4 [json_name = "proStatus"];</code>
    * @return The proStatus.
@@ -193,13 +131,13 @@ private static final long serialVersionUID = 0L;
     if (customReportsEnabledPeak_ != false) {
       output.writeBool(2, customReportsEnabledPeak_);
     }
-    if (!getCustomReportsEnabledEditorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customReportsEnabledEditor_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, customReportsEnabledEditor_);
     }
     if (proStatus_ != false) {
       output.writeBool(4, proStatus_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -216,14 +154,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(2, customReportsEnabledPeak_);
     }
-    if (!getCustomReportsEnabledEditorBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customReportsEnabledEditor_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, customReportsEnabledEditor_);
     }
     if (proStatus_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, proStatus_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -246,7 +184,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCustomReportsEnabledEditor())) return false;
     if (getProStatus()
         != other.getProStatus()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -268,7 +206,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + PRO_STATUS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getProStatus());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -317,11 +255,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.CustomReportsEnabledSummary parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.CustomReportsEnabledSummary parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -385,30 +325,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CustomReportsEnabledSummary.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       customReportsEnabledCurrent_ = false;
-
       customReportsEnabledPeak_ = false;
-
       customReportsEnabledEditor_ = "";
-
       proStatus_ = false;
-
       return this;
     }
 
@@ -435,12 +367,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.CustomReportsEnabledSummary buildPartial() {
       com.tcn.cloud.api.api.v0alpha.CustomReportsEnabledSummary result = new com.tcn.cloud.api.api.v0alpha.CustomReportsEnabledSummary(this);
-      result.customReportsEnabledCurrent_ = customReportsEnabledCurrent_;
-      result.customReportsEnabledPeak_ = customReportsEnabledPeak_;
-      result.customReportsEnabledEditor_ = customReportsEnabledEditor_;
-      result.proStatus_ = proStatus_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.CustomReportsEnabledSummary result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.customReportsEnabledCurrent_ = customReportsEnabledCurrent_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.customReportsEnabledPeak_ = customReportsEnabledPeak_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.customReportsEnabledEditor_ = customReportsEnabledEditor_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.proStatus_ = proStatus_;
+      }
     }
 
     @java.lang.Override
@@ -495,12 +440,13 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCustomReportsEnabledEditor().isEmpty()) {
         customReportsEnabledEditor_ = other.customReportsEnabledEditor_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.getProStatus() != false) {
         setProStatus(other.getProStatus());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -515,19 +461,53 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.CustomReportsEnabledSummary parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              customReportsEnabledCurrent_ = input.readBool();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              customReportsEnabledPeak_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 26: {
+              customReportsEnabledEditor_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 32: {
+              proStatus_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.CustomReportsEnabledSummary) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private boolean customReportsEnabledCurrent_ ;
     /**
@@ -544,8 +524,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCustomReportsEnabledCurrent(boolean value) {
-      
+
       customReportsEnabledCurrent_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -554,7 +535,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomReportsEnabledCurrent() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       customReportsEnabledCurrent_ = false;
       onChanged();
       return this;
@@ -575,8 +556,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCustomReportsEnabledPeak(boolean value) {
-      
+
       customReportsEnabledPeak_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -585,7 +567,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomReportsEnabledPeak() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       customReportsEnabledPeak_ = false;
       onChanged();
       return this;
@@ -632,11 +614,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomReportsEnabledEditor(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customReportsEnabledEditor_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -645,8 +625,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomReportsEnabledEditor() {
-      
       customReportsEnabledEditor_ = getDefaultInstance().getCustomReportsEnabledEditor();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -657,12 +637,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomReportsEnabledEditorBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customReportsEnabledEditor_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -682,8 +660,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setProStatus(boolean value) {
-      
+
       proStatus_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -692,7 +671,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       proStatus_ = false;
       onChanged();
       return this;
@@ -730,7 +709,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new CustomReportsEnabledSummary(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

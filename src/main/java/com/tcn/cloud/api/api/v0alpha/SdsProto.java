@@ -137,18 +137,18 @@ public final class SdsProto {
       "gentResponseDataRes2\260\004\n\003Sds\022\224\001\n\024GetAgent" +
       "ResponseData\022$.api.v0alpha.GetAgentRespo" +
       "nseDataReq\032$.api.v0alpha.GetAgentRespons" +
-      "eDataRes\"0\202\323\344\223\002*:\001*\"%/api/v0alpha/sds/ge" +
-      "tagentresponsedata\022`\n\007GetCall\022\027.api.v0al" +
+      "eDataRes\"0\202\323\344\223\002*\"%/api/v0alpha/sds/getag" +
+      "entresponsedata:\001*\022`\n\007GetCall\022\027.api.v0al" +
       "pha.GetCallReq\032\027.api.v0alpha.CallObject\"" +
-      "#\202\323\344\223\002\035:\001*\"\030/api/v0alpha/sds/getcall\022\240\001\n" +
+      "#\202\323\344\223\002\035\"\030/api/v0alpha/sds/getcall:\001*\022\240\001\n" +
       "\027UpdateAgentResponseData\022\'.api.v0alpha.U" +
       "pdateAgentResponseDataReq\032\'.api.v0alpha." +
-      "UpdateAgentResponseDataRes\"3\202\323\344\223\002-:\001*\"(/" +
-      "api/v0alpha/sds/updateagentresponsedata\022" +
+      "UpdateAgentResponseDataRes\"3\202\323\344\223\002-\"(/api" +
+      "/v0alpha/sds/updateagentresponsedata:\001*\022" +
       "\214\001\n\022UpdateVoicemailBox\022\".api.v0alpha.Upd" +
       "ateVoicemailBoxReq\032\".api.v0alpha.UpdateV" +
-      "oicemailBoxRes\".\202\323\344\223\002(:\001*\"#/api/v0alpha/" +
-      "sds/updatevoicemailboxBv\n\035com.tcn.cloud." +
+      "oicemailBoxRes\".\202\323\344\223\002(\"#/api/v0alpha/sds" +
+      "/updatevoicemailbox:\001*Bv\n\035com.tcn.cloud." +
       "api.api.v0alphaB\010SdsProtoP\001\242\002\003AVX\252\002\013Api." +
       "V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\GPBM" +
       "etadata\352\002\014Api::V0alphab\006proto3"

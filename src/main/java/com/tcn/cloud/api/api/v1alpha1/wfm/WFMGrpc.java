@@ -1,19 +1,6 @@
 package com.tcn.cloud.api.api.v1alpha1.wfm;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -21,8 +8,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.14.0)",
+    value = "by gRPC proto compiler (version 1.55.1)",
     comments = "Source: api/v1alpha1/wfm/wfm.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class WFMGrpc {
 
   private WFMGrpc() {}
@@ -44,22 +32,21 @@ public final class WFMGrpc {
     if ((getListSkillProfilesMethod = WFMGrpc.getListSkillProfilesMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getListSkillProfilesMethod = WFMGrpc.getListSkillProfilesMethod) == null) {
-          WFMGrpc.getListSkillProfilesMethod = getListSkillProfilesMethod = 
+          WFMGrpc.getListSkillProfilesMethod = getListSkillProfilesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "ListSkillProfiles"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSkillProfiles"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListSkillProfiles"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListSkillProfiles"))
+              .build();
         }
-     }
-     return getListSkillProfilesMethod;
+      }
+    }
+    return getListSkillProfilesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq,
@@ -76,22 +63,21 @@ public final class WFMGrpc {
     if ((getUpdateSkillProfileMethod = WFMGrpc.getUpdateSkillProfileMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpdateSkillProfileMethod = WFMGrpc.getUpdateSkillProfileMethod) == null) {
-          WFMGrpc.getUpdateSkillProfileMethod = getUpdateSkillProfileMethod = 
+          WFMGrpc.getUpdateSkillProfileMethod = getUpdateSkillProfileMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpdateSkillProfile"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSkillProfile"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateSkillProfile"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateSkillProfile"))
+              .build();
         }
-     }
-     return getUpdateSkillProfileMethod;
+      }
+    }
+    return getUpdateSkillProfileMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq,
@@ -108,22 +94,21 @@ public final class WFMGrpc {
     if ((getUpdateSkillProfileProficienciesMethod = WFMGrpc.getUpdateSkillProfileProficienciesMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpdateSkillProfileProficienciesMethod = WFMGrpc.getUpdateSkillProfileProficienciesMethod) == null) {
-          WFMGrpc.getUpdateSkillProfileProficienciesMethod = getUpdateSkillProfileProficienciesMethod = 
+          WFMGrpc.getUpdateSkillProfileProficienciesMethod = getUpdateSkillProfileProficienciesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpdateSkillProfileProficiencies"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSkillProfileProficiencies"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateSkillProfileProficiencies"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateSkillProfileProficiencies"))
+              .build();
         }
-     }
-     return getUpdateSkillProfileProficienciesMethod;
+      }
+    }
+    return getUpdateSkillProfileProficienciesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileReq,
@@ -140,22 +125,21 @@ public final class WFMGrpc {
     if ((getGetSkillProfileMethod = WFMGrpc.getGetSkillProfileMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getGetSkillProfileMethod = WFMGrpc.getGetSkillProfileMethod) == null) {
-          WFMGrpc.getGetSkillProfileMethod = getGetSkillProfileMethod = 
+          WFMGrpc.getGetSkillProfileMethod = getGetSkillProfileMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "GetSkillProfile"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSkillProfile"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetSkillProfile"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetSkillProfile"))
+              .build();
         }
-     }
-     return getGetSkillProfileMethod;
+      }
+    }
+    return getGetSkillProfileMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesReq,
@@ -172,22 +156,21 @@ public final class WFMGrpc {
     if ((getResyncSkillProfilesMethod = WFMGrpc.getResyncSkillProfilesMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getResyncSkillProfilesMethod = WFMGrpc.getResyncSkillProfilesMethod) == null) {
-          WFMGrpc.getResyncSkillProfilesMethod = getResyncSkillProfilesMethod = 
+          WFMGrpc.getResyncSkillProfilesMethod = getResyncSkillProfilesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesReq, com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "ResyncSkillProfiles"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ResyncSkillProfiles"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ResyncSkillProfiles"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ResyncSkillProfiles"))
+              .build();
         }
-     }
-     return getResyncSkillProfilesMethod;
+      }
+    }
+    return getResyncSkillProfilesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateReq,
@@ -204,22 +187,21 @@ public final class WFMGrpc {
     if ((getGetLastSkillProfileResyncDateMethod = WFMGrpc.getGetLastSkillProfileResyncDateMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getGetLastSkillProfileResyncDateMethod = WFMGrpc.getGetLastSkillProfileResyncDateMethod) == null) {
-          WFMGrpc.getGetLastSkillProfileResyncDateMethod = getGetLastSkillProfileResyncDateMethod = 
+          WFMGrpc.getGetLastSkillProfileResyncDateMethod = getGetLastSkillProfileResyncDateMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "GetLastSkillProfileResyncDate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetLastSkillProfileResyncDate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetLastSkillProfileResyncDate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetLastSkillProfileResyncDate"))
+              .build();
         }
-     }
-     return getGetLastSkillProfileResyncDateMethod;
+      }
+    }
+    return getGetLastSkillProfileResyncDateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersReq,
@@ -236,22 +218,21 @@ public final class WFMGrpc {
     if ((getUpsertForecastingParametersMethod = WFMGrpc.getUpsertForecastingParametersMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpsertForecastingParametersMethod = WFMGrpc.getUpsertForecastingParametersMethod) == null) {
-          WFMGrpc.getUpsertForecastingParametersMethod = getUpsertForecastingParametersMethod = 
+          WFMGrpc.getUpsertForecastingParametersMethod = getUpsertForecastingParametersMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpsertForecastingParameters"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpsertForecastingParameters"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpsertForecastingParameters"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpsertForecastingParameters"))
+              .build();
         }
-     }
-     return getUpsertForecastingParametersMethod;
+      }
+    }
+    return getUpsertForecastingParametersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersReq,
@@ -268,22 +249,21 @@ public final class WFMGrpc {
     if ((getGetForecastingParametersMethod = WFMGrpc.getGetForecastingParametersMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getGetForecastingParametersMethod = WFMGrpc.getGetForecastingParametersMethod) == null) {
-          WFMGrpc.getGetForecastingParametersMethod = getGetForecastingParametersMethod = 
+          WFMGrpc.getGetForecastingParametersMethod = getGetForecastingParametersMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "GetForecastingParameters"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetForecastingParameters"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetForecastingParameters"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetForecastingParameters"))
+              .build();
         }
-     }
-     return getGetForecastingParametersMethod;
+      }
+    }
+    return getGetForecastingParametersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq,
@@ -300,22 +280,21 @@ public final class WFMGrpc {
     if ((getListHistoricalDataMethod = WFMGrpc.getListHistoricalDataMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getListHistoricalDataMethod = WFMGrpc.getListHistoricalDataMethod) == null) {
-          WFMGrpc.getListHistoricalDataMethod = getListHistoricalDataMethod = 
+          WFMGrpc.getListHistoricalDataMethod = getListHistoricalDataMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "ListHistoricalData"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListHistoricalData"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListHistoricalData"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListHistoricalData"))
+              .build();
         }
-     }
-     return getListHistoricalDataMethod;
+      }
+    }
+    return getListHistoricalDataMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaReq,
@@ -332,22 +311,21 @@ public final class WFMGrpc {
     if ((getUpsertHistoricalDataDeltaMethod = WFMGrpc.getUpsertHistoricalDataDeltaMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpsertHistoricalDataDeltaMethod = WFMGrpc.getUpsertHistoricalDataDeltaMethod) == null) {
-          WFMGrpc.getUpsertHistoricalDataDeltaMethod = getUpsertHistoricalDataDeltaMethod = 
+          WFMGrpc.getUpsertHistoricalDataDeltaMethod = getUpsertHistoricalDataDeltaMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpsertHistoricalDataDelta"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpsertHistoricalDataDelta"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpsertHistoricalDataDelta"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpsertHistoricalDataDelta"))
+              .build();
         }
-     }
-     return getUpsertHistoricalDataDeltaMethod;
+      }
+    }
+    return getUpsertHistoricalDataDeltaMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasReq,
@@ -364,22 +342,21 @@ public final class WFMGrpc {
     if ((getUpsertHistoricalDataDeltasMethod = WFMGrpc.getUpsertHistoricalDataDeltasMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpsertHistoricalDataDeltasMethod = WFMGrpc.getUpsertHistoricalDataDeltasMethod) == null) {
-          WFMGrpc.getUpsertHistoricalDataDeltasMethod = getUpsertHistoricalDataDeltasMethod = 
+          WFMGrpc.getUpsertHistoricalDataDeltasMethod = getUpsertHistoricalDataDeltasMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpsertHistoricalDataDeltas"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpsertHistoricalDataDeltas"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpsertHistoricalDataDeltas"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpsertHistoricalDataDeltas"))
+              .build();
         }
-     }
-     return getUpsertHistoricalDataDeltasMethod;
+      }
+    }
+    return getUpsertHistoricalDataDeltasMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsReq,
@@ -396,22 +373,21 @@ public final class WFMGrpc {
     if ((getListSkillsMethod = WFMGrpc.getListSkillsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getListSkillsMethod = WFMGrpc.getListSkillsMethod) == null) {
-          WFMGrpc.getListSkillsMethod = getListSkillsMethod = 
+          WFMGrpc.getListSkillsMethod = getListSkillsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "ListSkills"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSkills"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListSkills"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListSkills"))
+              .build();
         }
-     }
-     return getListSkillsMethod;
+      }
+    }
+    return getListSkillsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq,
@@ -428,22 +404,21 @@ public final class WFMGrpc {
     if ((getBuildCallProfileTemplateForSkillProfileMethod = WFMGrpc.getBuildCallProfileTemplateForSkillProfileMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getBuildCallProfileTemplateForSkillProfileMethod = WFMGrpc.getBuildCallProfileTemplateForSkillProfileMethod) == null) {
-          WFMGrpc.getBuildCallProfileTemplateForSkillProfileMethod = getBuildCallProfileTemplateForSkillProfileMethod = 
+          WFMGrpc.getBuildCallProfileTemplateForSkillProfileMethod = getBuildCallProfileTemplateForSkillProfileMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq, com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "BuildCallProfileTemplateForSkillProfile"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BuildCallProfileTemplateForSkillProfile"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildCallProfileTemplateForSkillProfile"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildCallProfileTemplateForSkillProfile"))
+              .build();
         }
-     }
-     return getBuildCallProfileTemplateForSkillProfileMethod;
+      }
+    }
+    return getBuildCallProfileTemplateForSkillProfileMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq,
@@ -460,22 +435,21 @@ public final class WFMGrpc {
     if ((getCreateInactiveSkillProfileMappingMethod = WFMGrpc.getCreateInactiveSkillProfileMappingMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getCreateInactiveSkillProfileMappingMethod = WFMGrpc.getCreateInactiveSkillProfileMappingMethod) == null) {
-          WFMGrpc.getCreateInactiveSkillProfileMappingMethod = getCreateInactiveSkillProfileMappingMethod = 
+          WFMGrpc.getCreateInactiveSkillProfileMappingMethod = getCreateInactiveSkillProfileMappingMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "CreateInactiveSkillProfileMapping"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateInactiveSkillProfileMapping"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateInactiveSkillProfileMapping"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateInactiveSkillProfileMapping"))
+              .build();
         }
-     }
-     return getCreateInactiveSkillProfileMappingMethod;
+      }
+    }
+    return getCreateInactiveSkillProfileMappingMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesReq,
@@ -492,22 +466,21 @@ public final class WFMGrpc {
     if ((getGetAvailableRegressionForecasterModelTypesMethod = WFMGrpc.getGetAvailableRegressionForecasterModelTypesMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getGetAvailableRegressionForecasterModelTypesMethod = WFMGrpc.getGetAvailableRegressionForecasterModelTypesMethod) == null) {
-          WFMGrpc.getGetAvailableRegressionForecasterModelTypesMethod = getGetAvailableRegressionForecasterModelTypesMethod = 
+          WFMGrpc.getGetAvailableRegressionForecasterModelTypesMethod = getGetAvailableRegressionForecasterModelTypesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "GetAvailableRegressionForecasterModelTypes"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAvailableRegressionForecasterModelTypes"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetAvailableRegressionForecasterModelTypes"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetAvailableRegressionForecasterModelTypes"))
+              .build();
         }
-     }
-     return getGetAvailableRegressionForecasterModelTypesMethod;
+      }
+    }
+    return getGetAvailableRegressionForecasterModelTypesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq,
@@ -524,22 +497,21 @@ public final class WFMGrpc {
     if ((getDisconnectInactiveSkillProfileMappingMethod = WFMGrpc.getDisconnectInactiveSkillProfileMappingMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getDisconnectInactiveSkillProfileMappingMethod = WFMGrpc.getDisconnectInactiveSkillProfileMappingMethod) == null) {
-          WFMGrpc.getDisconnectInactiveSkillProfileMappingMethod = getDisconnectInactiveSkillProfileMappingMethod = 
+          WFMGrpc.getDisconnectInactiveSkillProfileMappingMethod = getDisconnectInactiveSkillProfileMappingMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq, com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "DisconnectInactiveSkillProfileMapping"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DisconnectInactiveSkillProfileMapping"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DisconnectInactiveSkillProfileMapping"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DisconnectInactiveSkillProfileMapping"))
+              .build();
         }
-     }
-     return getDisconnectInactiveSkillProfileMappingMethod;
+      }
+    }
+    return getDisconnectInactiveSkillProfileMappingMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasReq,
@@ -556,22 +528,21 @@ public final class WFMGrpc {
     if ((getDeleteHistoricalDataDeltasMethod = WFMGrpc.getDeleteHistoricalDataDeltasMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getDeleteHistoricalDataDeltasMethod = WFMGrpc.getDeleteHistoricalDataDeltasMethod) == null) {
-          WFMGrpc.getDeleteHistoricalDataDeltasMethod = getDeleteHistoricalDataDeltasMethod = 
+          WFMGrpc.getDeleteHistoricalDataDeltasMethod = getDeleteHistoricalDataDeltasMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "DeleteHistoricalDataDeltas"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteHistoricalDataDeltas"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteHistoricalDataDeltas"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteHistoricalDataDeltas"))
+              .build();
         }
-     }
-     return getDeleteHistoricalDataDeltasMethod;
+      }
+    }
+    return getDeleteHistoricalDataDeltasMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesReq,
@@ -588,22 +559,21 @@ public final class WFMGrpc {
     if ((getListTopSkillProfilesMethod = WFMGrpc.getListTopSkillProfilesMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getListTopSkillProfilesMethod = WFMGrpc.getListTopSkillProfilesMethod) == null) {
-          WFMGrpc.getListTopSkillProfilesMethod = getListTopSkillProfilesMethod = 
+          WFMGrpc.getListTopSkillProfilesMethod = getListTopSkillProfilesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "ListTopSkillProfiles"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListTopSkillProfiles"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListTopSkillProfiles"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListTopSkillProfiles"))
+              .build();
         }
-     }
-     return getListTopSkillProfilesMethod;
+      }
+    }
+    return getListTopSkillProfilesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountReq,
@@ -620,22 +590,21 @@ public final class WFMGrpc {
     if ((getGetSkillProfilesCountMethod = WFMGrpc.getGetSkillProfilesCountMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getGetSkillProfilesCountMethod = WFMGrpc.getGetSkillProfilesCountMethod) == null) {
-          WFMGrpc.getGetSkillProfilesCountMethod = getGetSkillProfilesCountMethod = 
+          WFMGrpc.getGetSkillProfilesCountMethod = getGetSkillProfilesCountMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "GetSkillProfilesCount"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSkillProfilesCount"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetSkillProfilesCount"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetSkillProfilesCount"))
+              .build();
         }
-     }
-     return getGetSkillProfilesCountMethod;
+      }
+    }
+    return getGetSkillProfilesCountMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalReq,
@@ -652,22 +621,21 @@ public final class WFMGrpc {
     if ((getBuildProfileForecastByIntervalMethod = WFMGrpc.getBuildProfileForecastByIntervalMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getBuildProfileForecastByIntervalMethod = WFMGrpc.getBuildProfileForecastByIntervalMethod) == null) {
-          WFMGrpc.getBuildProfileForecastByIntervalMethod = getBuildProfileForecastByIntervalMethod = 
+          WFMGrpc.getBuildProfileForecastByIntervalMethod = getBuildProfileForecastByIntervalMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalReq, com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "BuildProfileForecastByInterval"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BuildProfileForecastByInterval"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildProfileForecastByInterval"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildProfileForecastByInterval"))
+              .build();
         }
-     }
-     return getBuildProfileForecastByIntervalMethod;
+      }
+    }
+    return getBuildProfileForecastByIntervalMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsReq,
@@ -684,22 +652,21 @@ public final class WFMGrpc {
     if ((getBuildProfileForecastByIntervalWithStatsMethod = WFMGrpc.getBuildProfileForecastByIntervalWithStatsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getBuildProfileForecastByIntervalWithStatsMethod = WFMGrpc.getBuildProfileForecastByIntervalWithStatsMethod) == null) {
-          WFMGrpc.getBuildProfileForecastByIntervalWithStatsMethod = getBuildProfileForecastByIntervalWithStatsMethod = 
+          WFMGrpc.getBuildProfileForecastByIntervalWithStatsMethod = getBuildProfileForecastByIntervalWithStatsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsReq, com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "BuildProfileForecastByIntervalWithStats"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BuildProfileForecastByIntervalWithStats"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildProfileForecastByIntervalWithStats"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildProfileForecastByIntervalWithStats"))
+              .build();
         }
-     }
-     return getBuildProfileForecastByIntervalWithStatsMethod;
+      }
+    }
+    return getBuildProfileForecastByIntervalWithStatsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastReq,
@@ -716,22 +683,21 @@ public final class WFMGrpc {
     if ((getUpsertProfileForecastMethod = WFMGrpc.getUpsertProfileForecastMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpsertProfileForecastMethod = WFMGrpc.getUpsertProfileForecastMethod) == null) {
-          WFMGrpc.getUpsertProfileForecastMethod = getUpsertProfileForecastMethod = 
+          WFMGrpc.getUpsertProfileForecastMethod = getUpsertProfileForecastMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpsertProfileForecast"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpsertProfileForecast"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpsertProfileForecast"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpsertProfileForecast"))
+              .build();
         }
-     }
-     return getUpsertProfileForecastMethod;
+      }
+    }
+    return getUpsertProfileForecastMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateReq,
@@ -748,22 +714,21 @@ public final class WFMGrpc {
     if ((getCreateCallProfileTemplateMethod = WFMGrpc.getCreateCallProfileTemplateMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getCreateCallProfileTemplateMethod = WFMGrpc.getCreateCallProfileTemplateMethod) == null) {
-          WFMGrpc.getCreateCallProfileTemplateMethod = getCreateCallProfileTemplateMethod = 
+          WFMGrpc.getCreateCallProfileTemplateMethod = getCreateCallProfileTemplateMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "CreateCallProfileTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateCallProfileTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateCallProfileTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateCallProfileTemplate"))
+              .build();
         }
-     }
-     return getCreateCallProfileTemplateMethod;
+      }
+    }
+    return getCreateCallProfileTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateReq,
@@ -780,22 +745,21 @@ public final class WFMGrpc {
     if ((getDeleteCallProfileTemplateMethod = WFMGrpc.getDeleteCallProfileTemplateMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getDeleteCallProfileTemplateMethod = WFMGrpc.getDeleteCallProfileTemplateMethod) == null) {
-          WFMGrpc.getDeleteCallProfileTemplateMethod = getDeleteCallProfileTemplateMethod = 
+          WFMGrpc.getDeleteCallProfileTemplateMethod = getDeleteCallProfileTemplateMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "DeleteCallProfileTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteCallProfileTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteCallProfileTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteCallProfileTemplate"))
+              .build();
         }
-     }
-     return getDeleteCallProfileTemplateMethod;
+      }
+    }
+    return getDeleteCallProfileTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq,
@@ -812,22 +776,21 @@ public final class WFMGrpc {
     if ((getCreateRegressionTemplateMethod = WFMGrpc.getCreateRegressionTemplateMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getCreateRegressionTemplateMethod = WFMGrpc.getCreateRegressionTemplateMethod) == null) {
-          WFMGrpc.getCreateRegressionTemplateMethod = getCreateRegressionTemplateMethod = 
+          WFMGrpc.getCreateRegressionTemplateMethod = getCreateRegressionTemplateMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "CreateRegressionTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateRegressionTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateRegressionTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateRegressionTemplate"))
+              .build();
         }
-     }
-     return getCreateRegressionTemplateMethod;
+      }
+    }
+    return getCreateRegressionTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateReq,
@@ -844,22 +807,21 @@ public final class WFMGrpc {
     if ((getDeleteRegressionTemplateMethod = WFMGrpc.getDeleteRegressionTemplateMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getDeleteRegressionTemplateMethod = WFMGrpc.getDeleteRegressionTemplateMethod) == null) {
-          WFMGrpc.getDeleteRegressionTemplateMethod = getDeleteRegressionTemplateMethod = 
+          WFMGrpc.getDeleteRegressionTemplateMethod = getDeleteRegressionTemplateMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "DeleteRegressionTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteRegressionTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteRegressionTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteRegressionTemplate"))
+              .build();
         }
-     }
-     return getDeleteRegressionTemplateMethod;
+      }
+    }
+    return getDeleteRegressionTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesReq,
@@ -876,22 +838,21 @@ public final class WFMGrpc {
     if ((getListRegressionTemplatesMethod = WFMGrpc.getListRegressionTemplatesMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getListRegressionTemplatesMethod = WFMGrpc.getListRegressionTemplatesMethod) == null) {
-          WFMGrpc.getListRegressionTemplatesMethod = getListRegressionTemplatesMethod = 
+          WFMGrpc.getListRegressionTemplatesMethod = getListRegressionTemplatesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "ListRegressionTemplates"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListRegressionTemplates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListRegressionTemplates"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListRegressionTemplates"))
+              .build();
         }
-     }
-     return getListRegressionTemplatesMethod;
+      }
+    }
+    return getListRegressionTemplatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq,
@@ -908,22 +869,21 @@ public final class WFMGrpc {
     if ((getListForecastIntervalsForSkillProfileMethod = WFMGrpc.getListForecastIntervalsForSkillProfileMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getListForecastIntervalsForSkillProfileMethod = WFMGrpc.getListForecastIntervalsForSkillProfileMethod) == null) {
-          WFMGrpc.getListForecastIntervalsForSkillProfileMethod = getListForecastIntervalsForSkillProfileMethod = 
+          WFMGrpc.getListForecastIntervalsForSkillProfileMethod = getListForecastIntervalsForSkillProfileMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq, com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "ListForecastIntervalsForSkillProfile"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListForecastIntervalsForSkillProfile"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListForecastIntervalsForSkillProfile"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListForecastIntervalsForSkillProfile"))
+              .build();
         }
-     }
-     return getListForecastIntervalsForSkillProfileMethod;
+      }
+    }
+    return getListForecastIntervalsForSkillProfileMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalReq,
@@ -940,22 +900,21 @@ public final class WFMGrpc {
     if ((getBuildRegressionForecastByIntervalMethod = WFMGrpc.getBuildRegressionForecastByIntervalMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getBuildRegressionForecastByIntervalMethod = WFMGrpc.getBuildRegressionForecastByIntervalMethod) == null) {
-          WFMGrpc.getBuildRegressionForecastByIntervalMethod = getBuildRegressionForecastByIntervalMethod = 
+          WFMGrpc.getBuildRegressionForecastByIntervalMethod = getBuildRegressionForecastByIntervalMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalReq, com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "BuildRegressionForecastByInterval"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BuildRegressionForecastByInterval"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildRegressionForecastByInterval"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildRegressionForecastByInterval"))
+              .build();
         }
-     }
-     return getBuildRegressionForecastByIntervalMethod;
+      }
+    }
+    return getBuildRegressionForecastByIntervalMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq,
@@ -972,22 +931,21 @@ public final class WFMGrpc {
     if ((getBuildRegressionForecastByIntervalWithStatsMethod = WFMGrpc.getBuildRegressionForecastByIntervalWithStatsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getBuildRegressionForecastByIntervalWithStatsMethod = WFMGrpc.getBuildRegressionForecastByIntervalWithStatsMethod) == null) {
-          WFMGrpc.getBuildRegressionForecastByIntervalWithStatsMethod = getBuildRegressionForecastByIntervalWithStatsMethod = 
+          WFMGrpc.getBuildRegressionForecastByIntervalWithStatsMethod = getBuildRegressionForecastByIntervalWithStatsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq, com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "BuildRegressionForecastByIntervalWithStats"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BuildRegressionForecastByIntervalWithStats"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildRegressionForecastByIntervalWithStats"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildRegressionForecastByIntervalWithStats"))
+              .build();
         }
-     }
-     return getBuildRegressionForecastByIntervalWithStatsMethod;
+      }
+    }
+    return getBuildRegressionForecastByIntervalWithStatsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesReq,
@@ -1004,22 +962,21 @@ public final class WFMGrpc {
     if ((getListCallProfileTemplatesMethod = WFMGrpc.getListCallProfileTemplatesMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getListCallProfileTemplatesMethod = WFMGrpc.getListCallProfileTemplatesMethod) == null) {
-          WFMGrpc.getListCallProfileTemplatesMethod = getListCallProfileTemplatesMethod = 
+          WFMGrpc.getListCallProfileTemplatesMethod = getListCallProfileTemplatesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "ListCallProfileTemplates"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCallProfileTemplates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListCallProfileTemplates"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListCallProfileTemplates"))
+              .build();
         }
-     }
-     return getListCallProfileTemplatesMethod;
+      }
+    }
+    return getListCallProfileTemplatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastReq,
@@ -1036,22 +993,21 @@ public final class WFMGrpc {
     if ((getUpsertRegressionForecastMethod = WFMGrpc.getUpsertRegressionForecastMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpsertRegressionForecastMethod = WFMGrpc.getUpsertRegressionForecastMethod) == null) {
-          WFMGrpc.getUpsertRegressionForecastMethod = getUpsertRegressionForecastMethod = 
+          WFMGrpc.getUpsertRegressionForecastMethod = getUpsertRegressionForecastMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpsertRegressionForecast"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpsertRegressionForecast"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpsertRegressionForecast"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpsertRegressionForecast"))
+              .build();
         }
-     }
-     return getUpsertRegressionForecastMethod;
+      }
+    }
+    return getUpsertRegressionForecastMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaReq,
@@ -1068,22 +1024,21 @@ public final class WFMGrpc {
     if ((getUpsertForecastDataDeltaMethod = WFMGrpc.getUpsertForecastDataDeltaMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpsertForecastDataDeltaMethod = WFMGrpc.getUpsertForecastDataDeltaMethod) == null) {
-          WFMGrpc.getUpsertForecastDataDeltaMethod = getUpsertForecastDataDeltaMethod = 
+          WFMGrpc.getUpsertForecastDataDeltaMethod = getUpsertForecastDataDeltaMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpsertForecastDataDelta"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpsertForecastDataDelta"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpsertForecastDataDelta"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpsertForecastDataDelta"))
+              .build();
         }
-     }
-     return getUpsertForecastDataDeltaMethod;
+      }
+    }
+    return getUpsertForecastDataDeltaMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasReq,
@@ -1100,22 +1055,21 @@ public final class WFMGrpc {
     if ((getUpsertForecastDataDeltasMethod = WFMGrpc.getUpsertForecastDataDeltasMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpsertForecastDataDeltasMethod = WFMGrpc.getUpsertForecastDataDeltasMethod) == null) {
-          WFMGrpc.getUpsertForecastDataDeltasMethod = getUpsertForecastDataDeltasMethod = 
+          WFMGrpc.getUpsertForecastDataDeltasMethod = getUpsertForecastDataDeltasMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpsertForecastDataDeltas"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpsertForecastDataDeltas"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpsertForecastDataDeltas"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpsertForecastDataDeltas"))
+              .build();
         }
-     }
-     return getUpsertForecastDataDeltasMethod;
+      }
+    }
+    return getUpsertForecastDataDeltasMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq,
@@ -1132,22 +1086,21 @@ public final class WFMGrpc {
     if ((getDeleteForecastIntervalsMethod = WFMGrpc.getDeleteForecastIntervalsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getDeleteForecastIntervalsMethod = WFMGrpc.getDeleteForecastIntervalsMethod) == null) {
-          WFMGrpc.getDeleteForecastIntervalsMethod = getDeleteForecastIntervalsMethod = 
+          WFMGrpc.getDeleteForecastIntervalsMethod = getDeleteForecastIntervalsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "DeleteForecastIntervals"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteForecastIntervals"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteForecastIntervals"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteForecastIntervals"))
+              .build();
         }
-     }
-     return getDeleteForecastIntervalsMethod;
+      }
+    }
+    return getDeleteForecastIntervalsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesReq,
@@ -1164,22 +1117,21 @@ public final class WFMGrpc {
     if ((getListHistoricalDataForAllSkillProfilesMethod = WFMGrpc.getListHistoricalDataForAllSkillProfilesMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getListHistoricalDataForAllSkillProfilesMethod = WFMGrpc.getListHistoricalDataForAllSkillProfilesMethod) == null) {
-          WFMGrpc.getListHistoricalDataForAllSkillProfilesMethod = getListHistoricalDataForAllSkillProfilesMethod = 
+          WFMGrpc.getListHistoricalDataForAllSkillProfilesMethod = getListHistoricalDataForAllSkillProfilesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "ListHistoricalDataForAllSkillProfiles"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListHistoricalDataForAllSkillProfiles"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListHistoricalDataForAllSkillProfiles"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListHistoricalDataForAllSkillProfiles"))
+              .build();
         }
-     }
-     return getListHistoricalDataForAllSkillProfilesMethod;
+      }
+    }
+    return getListHistoricalDataForAllSkillProfilesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq,
@@ -1196,22 +1148,21 @@ public final class WFMGrpc {
     if ((getBuildDOWAndMOYProfilesMethod = WFMGrpc.getBuildDOWAndMOYProfilesMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getBuildDOWAndMOYProfilesMethod = WFMGrpc.getBuildDOWAndMOYProfilesMethod) == null) {
-          WFMGrpc.getBuildDOWAndMOYProfilesMethod = getBuildDOWAndMOYProfilesMethod = 
+          WFMGrpc.getBuildDOWAndMOYProfilesMethod = getBuildDOWAndMOYProfilesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq, com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "BuildDOWAndMOYProfiles"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BuildDOWAndMOYProfiles"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildDOWAndMOYProfiles"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildDOWAndMOYProfiles"))
+              .build();
         }
-     }
-     return getBuildDOWAndMOYProfilesMethod;
+      }
+    }
+    return getBuildDOWAndMOYProfilesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileReq,
@@ -1228,22 +1179,21 @@ public final class WFMGrpc {
     if ((getCalculateTrainingDataAveragesForSkillProfileMethod = WFMGrpc.getCalculateTrainingDataAveragesForSkillProfileMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getCalculateTrainingDataAveragesForSkillProfileMethod = WFMGrpc.getCalculateTrainingDataAveragesForSkillProfileMethod) == null) {
-          WFMGrpc.getCalculateTrainingDataAveragesForSkillProfileMethod = getCalculateTrainingDataAveragesForSkillProfileMethod = 
+          WFMGrpc.getCalculateTrainingDataAveragesForSkillProfileMethod = getCalculateTrainingDataAveragesForSkillProfileMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileReq, com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "CalculateTrainingDataAveragesForSkillProfile"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CalculateTrainingDataAveragesForSkillProfile"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CalculateTrainingDataAveragesForSkillProfile"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CalculateTrainingDataAveragesForSkillProfile"))
+              .build();
         }
-     }
-     return getCalculateTrainingDataAveragesForSkillProfileMethod;
+      }
+    }
+    return getCalculateTrainingDataAveragesForSkillProfileMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq,
@@ -1260,22 +1210,21 @@ public final class WFMGrpc {
     if ((getUpdateSkillProfileAveragesUsingHistoricalDataMethod = WFMGrpc.getUpdateSkillProfileAveragesUsingHistoricalDataMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpdateSkillProfileAveragesUsingHistoricalDataMethod = WFMGrpc.getUpdateSkillProfileAveragesUsingHistoricalDataMethod) == null) {
-          WFMGrpc.getUpdateSkillProfileAveragesUsingHistoricalDataMethod = getUpdateSkillProfileAveragesUsingHistoricalDataMethod = 
+          WFMGrpc.getUpdateSkillProfileAveragesUsingHistoricalDataMethod = getUpdateSkillProfileAveragesUsingHistoricalDataMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpdateSkillProfileAveragesUsingHistoricalData"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSkillProfileAveragesUsingHistoricalData"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateSkillProfileAveragesUsingHistoricalData"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateSkillProfileAveragesUsingHistoricalData"))
+              .build();
         }
-     }
-     return getUpdateSkillProfileAveragesUsingHistoricalDataMethod;
+      }
+    }
+    return getUpdateSkillProfileAveragesUsingHistoricalDataMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeReq,
@@ -1292,22 +1241,21 @@ public final class WFMGrpc {
     if ((getUpdateCallCenterNodeMethod = WFMGrpc.getUpdateCallCenterNodeMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpdateCallCenterNodeMethod = WFMGrpc.getUpdateCallCenterNodeMethod) == null) {
-          WFMGrpc.getUpdateCallCenterNodeMethod = getUpdateCallCenterNodeMethod = 
+          WFMGrpc.getUpdateCallCenterNodeMethod = getUpdateCallCenterNodeMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpdateCallCenterNode"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateCallCenterNode"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateCallCenterNode"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateCallCenterNode"))
+              .build();
         }
-     }
-     return getUpdateCallCenterNodeMethod;
+      }
+    }
+    return getUpdateCallCenterNodeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeReq,
@@ -1324,22 +1272,21 @@ public final class WFMGrpc {
     if ((getCreateClientNodeMethod = WFMGrpc.getCreateClientNodeMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getCreateClientNodeMethod = WFMGrpc.getCreateClientNodeMethod) == null) {
-          WFMGrpc.getCreateClientNodeMethod = getCreateClientNodeMethod = 
+          WFMGrpc.getCreateClientNodeMethod = getCreateClientNodeMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "CreateClientNode"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateClientNode"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateClientNode"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateClientNode"))
+              .build();
         }
-     }
-     return getCreateClientNodeMethod;
+      }
+    }
+    return getCreateClientNodeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeReq,
@@ -1356,22 +1303,21 @@ public final class WFMGrpc {
     if ((getUpdateClientNodeMethod = WFMGrpc.getUpdateClientNodeMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpdateClientNodeMethod = WFMGrpc.getUpdateClientNodeMethod) == null) {
-          WFMGrpc.getUpdateClientNodeMethod = getUpdateClientNodeMethod = 
+          WFMGrpc.getUpdateClientNodeMethod = getUpdateClientNodeMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpdateClientNode"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateClientNode"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateClientNode"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateClientNode"))
+              .build();
         }
-     }
-     return getUpdateClientNodeMethod;
+      }
+    }
+    return getUpdateClientNodeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeReq,
@@ -1388,22 +1334,21 @@ public final class WFMGrpc {
     if ((getCreateLocationNodeMethod = WFMGrpc.getCreateLocationNodeMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getCreateLocationNodeMethod = WFMGrpc.getCreateLocationNodeMethod) == null) {
-          WFMGrpc.getCreateLocationNodeMethod = getCreateLocationNodeMethod = 
+          WFMGrpc.getCreateLocationNodeMethod = getCreateLocationNodeMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "CreateLocationNode"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateLocationNode"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateLocationNode"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateLocationNode"))
+              .build();
         }
-     }
-     return getCreateLocationNodeMethod;
+      }
+    }
+    return getCreateLocationNodeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq,
@@ -1420,22 +1365,21 @@ public final class WFMGrpc {
     if ((getUpdateLocationNodeMethod = WFMGrpc.getUpdateLocationNodeMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpdateLocationNodeMethod = WFMGrpc.getUpdateLocationNodeMethod) == null) {
-          WFMGrpc.getUpdateLocationNodeMethod = getUpdateLocationNodeMethod = 
+          WFMGrpc.getUpdateLocationNodeMethod = getUpdateLocationNodeMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpdateLocationNode"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateLocationNode"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateLocationNode"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateLocationNode"))
+              .build();
         }
-     }
-     return getUpdateLocationNodeMethod;
+      }
+    }
+    return getUpdateLocationNodeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeReq,
@@ -1452,22 +1396,21 @@ public final class WFMGrpc {
     if ((getCreateProgramNodeMethod = WFMGrpc.getCreateProgramNodeMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getCreateProgramNodeMethod = WFMGrpc.getCreateProgramNodeMethod) == null) {
-          WFMGrpc.getCreateProgramNodeMethod = getCreateProgramNodeMethod = 
+          WFMGrpc.getCreateProgramNodeMethod = getCreateProgramNodeMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "CreateProgramNode"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateProgramNode"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateProgramNode"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateProgramNode"))
+              .build();
         }
-     }
-     return getCreateProgramNodeMethod;
+      }
+    }
+    return getCreateProgramNodeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq,
@@ -1484,22 +1427,21 @@ public final class WFMGrpc {
     if ((getUpdateProgramNodeMethod = WFMGrpc.getUpdateProgramNodeMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpdateProgramNodeMethod = WFMGrpc.getUpdateProgramNodeMethod) == null) {
-          WFMGrpc.getUpdateProgramNodeMethod = getUpdateProgramNodeMethod = 
+          WFMGrpc.getUpdateProgramNodeMethod = getUpdateProgramNodeMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpdateProgramNode"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateProgramNode"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateProgramNode"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateProgramNode"))
+              .build();
         }
-     }
-     return getUpdateProgramNodeMethod;
+      }
+    }
+    return getUpdateProgramNodeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleReq,
@@ -1516,22 +1458,21 @@ public final class WFMGrpc {
     if ((getCreateConstraintRuleMethod = WFMGrpc.getCreateConstraintRuleMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getCreateConstraintRuleMethod = WFMGrpc.getCreateConstraintRuleMethod) == null) {
-          WFMGrpc.getCreateConstraintRuleMethod = getCreateConstraintRuleMethod = 
+          WFMGrpc.getCreateConstraintRuleMethod = getCreateConstraintRuleMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "CreateConstraintRule"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateConstraintRule"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateConstraintRule"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateConstraintRule"))
+              .build();
         }
-     }
-     return getCreateConstraintRuleMethod;
+      }
+    }
+    return getCreateConstraintRuleMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleReq,
@@ -1548,22 +1489,21 @@ public final class WFMGrpc {
     if ((getUpdateConstraintRuleMethod = WFMGrpc.getUpdateConstraintRuleMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpdateConstraintRuleMethod = WFMGrpc.getUpdateConstraintRuleMethod) == null) {
-          WFMGrpc.getUpdateConstraintRuleMethod = getUpdateConstraintRuleMethod = 
+          WFMGrpc.getUpdateConstraintRuleMethod = getUpdateConstraintRuleMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpdateConstraintRule"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateConstraintRule"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateConstraintRule"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateConstraintRule"))
+              .build();
         }
-     }
-     return getUpdateConstraintRuleMethod;
+      }
+    }
+    return getUpdateConstraintRuleMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleReq,
@@ -1580,22 +1520,21 @@ public final class WFMGrpc {
     if ((getDeleteConstraintRuleMethod = WFMGrpc.getDeleteConstraintRuleMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getDeleteConstraintRuleMethod = WFMGrpc.getDeleteConstraintRuleMethod) == null) {
-          WFMGrpc.getDeleteConstraintRuleMethod = getDeleteConstraintRuleMethod = 
+          WFMGrpc.getDeleteConstraintRuleMethod = getDeleteConstraintRuleMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "DeleteConstraintRule"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteConstraintRule"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteConstraintRule"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteConstraintRule"))
+              .build();
         }
-     }
-     return getDeleteConstraintRuleMethod;
+      }
+    }
+    return getDeleteConstraintRuleMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityReq,
@@ -1612,22 +1551,21 @@ public final class WFMGrpc {
     if ((getCreateNonSkillActivityMethod = WFMGrpc.getCreateNonSkillActivityMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getCreateNonSkillActivityMethod = WFMGrpc.getCreateNonSkillActivityMethod) == null) {
-          WFMGrpc.getCreateNonSkillActivityMethod = getCreateNonSkillActivityMethod = 
+          WFMGrpc.getCreateNonSkillActivityMethod = getCreateNonSkillActivityMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "CreateNonSkillActivity"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateNonSkillActivity"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateNonSkillActivity"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateNonSkillActivity"))
+              .build();
         }
-     }
-     return getCreateNonSkillActivityMethod;
+      }
+    }
+    return getCreateNonSkillActivityMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityReq,
@@ -1644,22 +1582,21 @@ public final class WFMGrpc {
     if ((getUpdateNonSkillActivityMethod = WFMGrpc.getUpdateNonSkillActivityMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpdateNonSkillActivityMethod = WFMGrpc.getUpdateNonSkillActivityMethod) == null) {
-          WFMGrpc.getUpdateNonSkillActivityMethod = getUpdateNonSkillActivityMethod = 
+          WFMGrpc.getUpdateNonSkillActivityMethod = getUpdateNonSkillActivityMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpdateNonSkillActivity"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateNonSkillActivity"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateNonSkillActivity"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateNonSkillActivity"))
+              .build();
         }
-     }
-     return getUpdateNonSkillActivityMethod;
+      }
+    }
+    return getUpdateNonSkillActivityMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsReq,
@@ -1676,22 +1613,21 @@ public final class WFMGrpc {
     if ((getListNonSkillActivityAssociationsMethod = WFMGrpc.getListNonSkillActivityAssociationsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getListNonSkillActivityAssociationsMethod = WFMGrpc.getListNonSkillActivityAssociationsMethod) == null) {
-          WFMGrpc.getListNonSkillActivityAssociationsMethod = getListNonSkillActivityAssociationsMethod = 
+          WFMGrpc.getListNonSkillActivityAssociationsMethod = getListNonSkillActivityAssociationsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "ListNonSkillActivityAssociations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListNonSkillActivityAssociations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListNonSkillActivityAssociations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListNonSkillActivityAssociations"))
+              .build();
         }
-     }
-     return getListNonSkillActivityAssociationsMethod;
+      }
+    }
+    return getListNonSkillActivityAssociationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq,
@@ -1708,22 +1644,21 @@ public final class WFMGrpc {
     if ((getListCandidateSchedulingActivitiesMethod = WFMGrpc.getListCandidateSchedulingActivitiesMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getListCandidateSchedulingActivitiesMethod = WFMGrpc.getListCandidateSchedulingActivitiesMethod) == null) {
-          WFMGrpc.getListCandidateSchedulingActivitiesMethod = getListCandidateSchedulingActivitiesMethod = 
+          WFMGrpc.getListCandidateSchedulingActivitiesMethod = getListCandidateSchedulingActivitiesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "ListCandidateSchedulingActivities"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCandidateSchedulingActivities"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListCandidateSchedulingActivities"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListCandidateSchedulingActivities"))
+              .build();
         }
-     }
-     return getListCandidateSchedulingActivitiesMethod;
+      }
+    }
+    return getListCandidateSchedulingActivitiesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupReq,
@@ -1740,22 +1675,21 @@ public final class WFMGrpc {
     if ((getCreateAgentGroupMethod = WFMGrpc.getCreateAgentGroupMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getCreateAgentGroupMethod = WFMGrpc.getCreateAgentGroupMethod) == null) {
-          WFMGrpc.getCreateAgentGroupMethod = getCreateAgentGroupMethod = 
+          WFMGrpc.getCreateAgentGroupMethod = getCreateAgentGroupMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "CreateAgentGroup"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAgentGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateAgentGroup"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateAgentGroup"))
+              .build();
         }
-     }
-     return getCreateAgentGroupMethod;
+      }
+    }
+    return getCreateAgentGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupReq,
@@ -1772,22 +1706,21 @@ public final class WFMGrpc {
     if ((getUpdateAgentGroupMethod = WFMGrpc.getUpdateAgentGroupMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpdateAgentGroupMethod = WFMGrpc.getUpdateAgentGroupMethod) == null) {
-          WFMGrpc.getUpdateAgentGroupMethod = getUpdateAgentGroupMethod = 
+          WFMGrpc.getUpdateAgentGroupMethod = getUpdateAgentGroupMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpdateAgentGroup"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAgentGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateAgentGroup"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateAgentGroup"))
+              .build();
         }
-     }
-     return getUpdateAgentGroupMethod;
+      }
+    }
+    return getUpdateAgentGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentReq,
@@ -1804,22 +1737,21 @@ public final class WFMGrpc {
     if ((getUpdateWFMAgentMethod = WFMGrpc.getUpdateWFMAgentMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpdateWFMAgentMethod = WFMGrpc.getUpdateWFMAgentMethod) == null) {
-          WFMGrpc.getUpdateWFMAgentMethod = getUpdateWFMAgentMethod = 
+          WFMGrpc.getUpdateWFMAgentMethod = getUpdateWFMAgentMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpdateWFMAgent"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateWFMAgent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateWFMAgent"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateWFMAgent"))
+              .build();
         }
-     }
-     return getUpdateWFMAgentMethod;
+      }
+    }
+    return getUpdateWFMAgentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsReq,
@@ -1836,22 +1768,21 @@ public final class WFMGrpc {
     if ((getListAllWFMAgentsMethod = WFMGrpc.getListAllWFMAgentsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getListAllWFMAgentsMethod = WFMGrpc.getListAllWFMAgentsMethod) == null) {
-          WFMGrpc.getListAllWFMAgentsMethod = getListAllWFMAgentsMethod = 
+          WFMGrpc.getListAllWFMAgentsMethod = getListAllWFMAgentsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "ListAllWFMAgents"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAllWFMAgents"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListAllWFMAgents"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListAllWFMAgents"))
+              .build();
         }
-     }
-     return getListAllWFMAgentsMethod;
+      }
+    }
+    return getListAllWFMAgentsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsReq,
@@ -1868,22 +1799,21 @@ public final class WFMGrpc {
     if ((getListCandidateWFMAgentsMethod = WFMGrpc.getListCandidateWFMAgentsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getListCandidateWFMAgentsMethod = WFMGrpc.getListCandidateWFMAgentsMethod) == null) {
-          WFMGrpc.getListCandidateWFMAgentsMethod = getListCandidateWFMAgentsMethod = 
+          WFMGrpc.getListCandidateWFMAgentsMethod = getListCandidateWFMAgentsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "ListCandidateWFMAgents"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCandidateWFMAgents"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListCandidateWFMAgents"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListCandidateWFMAgents"))
+              .build();
         }
-     }
-     return getListCandidateWFMAgentsMethod;
+      }
+    }
+    return getListCandidateWFMAgentsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq,
@@ -1900,22 +1830,21 @@ public final class WFMGrpc {
     if ((getListUngroupedWFMAgentsMethod = WFMGrpc.getListUngroupedWFMAgentsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getListUngroupedWFMAgentsMethod = WFMGrpc.getListUngroupedWFMAgentsMethod) == null) {
-          WFMGrpc.getListUngroupedWFMAgentsMethod = getListUngroupedWFMAgentsMethod = 
+          WFMGrpc.getListUngroupedWFMAgentsMethod = getListUngroupedWFMAgentsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "ListUngroupedWFMAgents"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListUngroupedWFMAgents"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListUngroupedWFMAgents"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListUngroupedWFMAgents"))
+              .build();
         }
-     }
-     return getListUngroupedWFMAgentsMethod;
+      }
+    }
+    return getListUngroupedWFMAgentsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupReq,
@@ -1932,22 +1861,21 @@ public final class WFMGrpc {
     if ((getListWFMAgentsAssociatedWithAgentGroupMethod = WFMGrpc.getListWFMAgentsAssociatedWithAgentGroupMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getListWFMAgentsAssociatedWithAgentGroupMethod = WFMGrpc.getListWFMAgentsAssociatedWithAgentGroupMethod) == null) {
-          WFMGrpc.getListWFMAgentsAssociatedWithAgentGroupMethod = getListWFMAgentsAssociatedWithAgentGroupMethod = 
+          WFMGrpc.getListWFMAgentsAssociatedWithAgentGroupMethod = getListWFMAgentsAssociatedWithAgentGroupMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "ListWFMAgentsAssociatedWithAgentGroup"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListWFMAgentsAssociatedWithAgentGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListWFMAgentsAssociatedWithAgentGroup"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListWFMAgentsAssociatedWithAgentGroup"))
+              .build();
         }
-     }
-     return getListWFMAgentsAssociatedWithAgentGroupMethod;
+      }
+    }
+    return getListWFMAgentsAssociatedWithAgentGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsReq,
@@ -1964,22 +1892,21 @@ public final class WFMGrpc {
     if ((getCreateWFMAgentMembershipsMethod = WFMGrpc.getCreateWFMAgentMembershipsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getCreateWFMAgentMembershipsMethod = WFMGrpc.getCreateWFMAgentMembershipsMethod) == null) {
-          WFMGrpc.getCreateWFMAgentMembershipsMethod = getCreateWFMAgentMembershipsMethod = 
+          WFMGrpc.getCreateWFMAgentMembershipsMethod = getCreateWFMAgentMembershipsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "CreateWFMAgentMemberships"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateWFMAgentMemberships"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateWFMAgentMemberships"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateWFMAgentMemberships"))
+              .build();
         }
-     }
-     return getCreateWFMAgentMembershipsMethod;
+      }
+    }
+    return getCreateWFMAgentMembershipsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq,
@@ -1996,22 +1923,21 @@ public final class WFMGrpc {
     if ((getDeleteWFMAgentMembershipsMethod = WFMGrpc.getDeleteWFMAgentMembershipsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getDeleteWFMAgentMembershipsMethod = WFMGrpc.getDeleteWFMAgentMembershipsMethod) == null) {
-          WFMGrpc.getDeleteWFMAgentMembershipsMethod = getDeleteWFMAgentMembershipsMethod = 
+          WFMGrpc.getDeleteWFMAgentMembershipsMethod = getDeleteWFMAgentMembershipsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "DeleteWFMAgentMemberships"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteWFMAgentMemberships"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteWFMAgentMemberships"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteWFMAgentMemberships"))
+              .build();
         }
-     }
-     return getDeleteWFMAgentMembershipsMethod;
+      }
+    }
+    return getDeleteWFMAgentMembershipsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsReq,
@@ -2028,22 +1954,21 @@ public final class WFMGrpc {
     if ((getBuildAgentDiagnosticsMethod = WFMGrpc.getBuildAgentDiagnosticsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getBuildAgentDiagnosticsMethod = WFMGrpc.getBuildAgentDiagnosticsMethod) == null) {
-          WFMGrpc.getBuildAgentDiagnosticsMethod = getBuildAgentDiagnosticsMethod = 
+          WFMGrpc.getBuildAgentDiagnosticsMethod = getBuildAgentDiagnosticsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsReq, com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "BuildAgentDiagnostics"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BuildAgentDiagnostics"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildAgentDiagnostics"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildAgentDiagnostics"))
+              .build();
         }
-     }
-     return getBuildAgentDiagnosticsMethod;
+      }
+    }
+    return getBuildAgentDiagnosticsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateReq,
@@ -2060,22 +1985,21 @@ public final class WFMGrpc {
     if ((getCreateShiftTemplateMethod = WFMGrpc.getCreateShiftTemplateMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getCreateShiftTemplateMethod = WFMGrpc.getCreateShiftTemplateMethod) == null) {
-          WFMGrpc.getCreateShiftTemplateMethod = getCreateShiftTemplateMethod = 
+          WFMGrpc.getCreateShiftTemplateMethod = getCreateShiftTemplateMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "CreateShiftTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateShiftTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateShiftTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateShiftTemplate"))
+              .build();
         }
-     }
-     return getCreateShiftTemplateMethod;
+      }
+    }
+    return getCreateShiftTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq,
@@ -2092,22 +2016,21 @@ public final class WFMGrpc {
     if ((getUpdateShiftTemplateMethod = WFMGrpc.getUpdateShiftTemplateMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpdateShiftTemplateMethod = WFMGrpc.getUpdateShiftTemplateMethod) == null) {
-          WFMGrpc.getUpdateShiftTemplateMethod = getUpdateShiftTemplateMethod = 
+          WFMGrpc.getUpdateShiftTemplateMethod = getUpdateShiftTemplateMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpdateShiftTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateShiftTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateShiftTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateShiftTemplate"))
+              .build();
         }
-     }
-     return getUpdateShiftTemplateMethod;
+      }
+    }
+    return getUpdateShiftTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsReq,
@@ -2124,22 +2047,21 @@ public final class WFMGrpc {
     if ((getListShiftTemplatesBySidsMethod = WFMGrpc.getListShiftTemplatesBySidsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getListShiftTemplatesBySidsMethod = WFMGrpc.getListShiftTemplatesBySidsMethod) == null) {
-          WFMGrpc.getListShiftTemplatesBySidsMethod = getListShiftTemplatesBySidsMethod = 
+          WFMGrpc.getListShiftTemplatesBySidsMethod = getListShiftTemplatesBySidsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "ListShiftTemplatesBySids"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListShiftTemplatesBySids"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListShiftTemplatesBySids"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListShiftTemplatesBySids"))
+              .build();
         }
-     }
-     return getListShiftTemplatesBySidsMethod;
+      }
+    }
+    return getListShiftTemplatesBySidsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsReq,
@@ -2156,22 +2078,21 @@ public final class WFMGrpc {
     if ((getBuildShiftTemplateDiagnosticsMethod = WFMGrpc.getBuildShiftTemplateDiagnosticsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getBuildShiftTemplateDiagnosticsMethod = WFMGrpc.getBuildShiftTemplateDiagnosticsMethod) == null) {
-          WFMGrpc.getBuildShiftTemplateDiagnosticsMethod = getBuildShiftTemplateDiagnosticsMethod = 
+          WFMGrpc.getBuildShiftTemplateDiagnosticsMethod = getBuildShiftTemplateDiagnosticsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsReq, com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "BuildShiftTemplateDiagnostics"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BuildShiftTemplateDiagnostics"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildShiftTemplateDiagnostics"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildShiftTemplateDiagnostics"))
+              .build();
         }
-     }
-     return getBuildShiftTemplateDiagnosticsMethod;
+      }
+    }
+    return getBuildShiftTemplateDiagnosticsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleReq,
@@ -2188,22 +2109,21 @@ public final class WFMGrpc {
     if ((getCreatePlacementRuleMethod = WFMGrpc.getCreatePlacementRuleMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getCreatePlacementRuleMethod = WFMGrpc.getCreatePlacementRuleMethod) == null) {
-          WFMGrpc.getCreatePlacementRuleMethod = getCreatePlacementRuleMethod = 
+          WFMGrpc.getCreatePlacementRuleMethod = getCreatePlacementRuleMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "CreatePlacementRule"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreatePlacementRule"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreatePlacementRule"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreatePlacementRule"))
+              .build();
         }
-     }
-     return getCreatePlacementRuleMethod;
+      }
+    }
+    return getCreatePlacementRuleMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleReq,
@@ -2220,22 +2140,21 @@ public final class WFMGrpc {
     if ((getUpdatePlacementRuleMethod = WFMGrpc.getUpdatePlacementRuleMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpdatePlacementRuleMethod = WFMGrpc.getUpdatePlacementRuleMethod) == null) {
-          WFMGrpc.getUpdatePlacementRuleMethod = getUpdatePlacementRuleMethod = 
+          WFMGrpc.getUpdatePlacementRuleMethod = getUpdatePlacementRuleMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpdatePlacementRule"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdatePlacementRule"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdatePlacementRule"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdatePlacementRule"))
+              .build();
         }
-     }
-     return getUpdatePlacementRuleMethod;
+      }
+    }
+    return getUpdatePlacementRuleMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleReq,
@@ -2252,22 +2171,21 @@ public final class WFMGrpc {
     if ((getDeletePlacementRuleMethod = WFMGrpc.getDeletePlacementRuleMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getDeletePlacementRuleMethod = WFMGrpc.getDeletePlacementRuleMethod) == null) {
-          WFMGrpc.getDeletePlacementRuleMethod = getDeletePlacementRuleMethod = 
+          WFMGrpc.getDeletePlacementRuleMethod = getDeletePlacementRuleMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "DeletePlacementRule"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeletePlacementRule"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeletePlacementRule"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeletePlacementRule"))
+              .build();
         }
-     }
-     return getDeletePlacementRuleMethod;
+      }
+    }
+    return getDeletePlacementRuleMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternReq,
@@ -2284,22 +2202,21 @@ public final class WFMGrpc {
     if ((getCreateOpenTimesPatternMethod = WFMGrpc.getCreateOpenTimesPatternMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getCreateOpenTimesPatternMethod = WFMGrpc.getCreateOpenTimesPatternMethod) == null) {
-          WFMGrpc.getCreateOpenTimesPatternMethod = getCreateOpenTimesPatternMethod = 
+          WFMGrpc.getCreateOpenTimesPatternMethod = getCreateOpenTimesPatternMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "CreateOpenTimesPattern"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateOpenTimesPattern"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateOpenTimesPattern"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateOpenTimesPattern"))
+              .build();
         }
-     }
-     return getCreateOpenTimesPatternMethod;
+      }
+    }
+    return getCreateOpenTimesPatternMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternReq,
@@ -2316,22 +2233,21 @@ public final class WFMGrpc {
     if ((getUpdateOpenTimesPatternMethod = WFMGrpc.getUpdateOpenTimesPatternMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpdateOpenTimesPatternMethod = WFMGrpc.getUpdateOpenTimesPatternMethod) == null) {
-          WFMGrpc.getUpdateOpenTimesPatternMethod = getUpdateOpenTimesPatternMethod = 
+          WFMGrpc.getUpdateOpenTimesPatternMethod = getUpdateOpenTimesPatternMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpdateOpenTimesPattern"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateOpenTimesPattern"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateOpenTimesPattern"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateOpenTimesPattern"))
+              .build();
         }
-     }
-     return getUpdateOpenTimesPatternMethod;
+      }
+    }
+    return getUpdateOpenTimesPatternMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternReq,
@@ -2348,22 +2264,21 @@ public final class WFMGrpc {
     if ((getDeleteOpenTimesPatternMethod = WFMGrpc.getDeleteOpenTimesPatternMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getDeleteOpenTimesPatternMethod = WFMGrpc.getDeleteOpenTimesPatternMethod) == null) {
-          WFMGrpc.getDeleteOpenTimesPatternMethod = getDeleteOpenTimesPatternMethod = 
+          WFMGrpc.getDeleteOpenTimesPatternMethod = getDeleteOpenTimesPatternMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "DeleteOpenTimesPattern"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteOpenTimesPattern"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteOpenTimesPattern"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteOpenTimesPattern"))
+              .build();
         }
-     }
-     return getDeleteOpenTimesPatternMethod;
+      }
+    }
+    return getDeleteOpenTimesPatternMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsReq,
@@ -2380,22 +2295,21 @@ public final class WFMGrpc {
     if ((getGetOpenTimesBitmapsMethod = WFMGrpc.getGetOpenTimesBitmapsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getGetOpenTimesBitmapsMethod = WFMGrpc.getGetOpenTimesBitmapsMethod) == null) {
-          WFMGrpc.getGetOpenTimesBitmapsMethod = getGetOpenTimesBitmapsMethod = 
+          WFMGrpc.getGetOpenTimesBitmapsMethod = getGetOpenTimesBitmapsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "GetOpenTimesBitmaps"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOpenTimesBitmaps"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetOpenTimesBitmaps"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetOpenTimesBitmaps"))
+              .build();
         }
-     }
-     return getGetOpenTimesBitmapsMethod;
+      }
+    }
+    return getGetOpenTimesBitmapsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternReq,
@@ -2412,22 +2326,21 @@ public final class WFMGrpc {
     if ((getCreateAgentAvailabilityPatternMethod = WFMGrpc.getCreateAgentAvailabilityPatternMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getCreateAgentAvailabilityPatternMethod = WFMGrpc.getCreateAgentAvailabilityPatternMethod) == null) {
-          WFMGrpc.getCreateAgentAvailabilityPatternMethod = getCreateAgentAvailabilityPatternMethod = 
+          WFMGrpc.getCreateAgentAvailabilityPatternMethod = getCreateAgentAvailabilityPatternMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "CreateAgentAvailabilityPattern"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAgentAvailabilityPattern"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateAgentAvailabilityPattern"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateAgentAvailabilityPattern"))
+              .build();
         }
-     }
-     return getCreateAgentAvailabilityPatternMethod;
+      }
+    }
+    return getCreateAgentAvailabilityPatternMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternReq,
@@ -2444,22 +2357,21 @@ public final class WFMGrpc {
     if ((getUpdateAgentAvailabilityPatternMethod = WFMGrpc.getUpdateAgentAvailabilityPatternMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpdateAgentAvailabilityPatternMethod = WFMGrpc.getUpdateAgentAvailabilityPatternMethod) == null) {
-          WFMGrpc.getUpdateAgentAvailabilityPatternMethod = getUpdateAgentAvailabilityPatternMethod = 
+          WFMGrpc.getUpdateAgentAvailabilityPatternMethod = getUpdateAgentAvailabilityPatternMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpdateAgentAvailabilityPattern"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAgentAvailabilityPattern"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateAgentAvailabilityPattern"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateAgentAvailabilityPattern"))
+              .build();
         }
-     }
-     return getUpdateAgentAvailabilityPatternMethod;
+      }
+    }
+    return getUpdateAgentAvailabilityPatternMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternReq,
@@ -2476,22 +2388,21 @@ public final class WFMGrpc {
     if ((getDeleteAgentAvailabilityPatternMethod = WFMGrpc.getDeleteAgentAvailabilityPatternMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getDeleteAgentAvailabilityPatternMethod = WFMGrpc.getDeleteAgentAvailabilityPatternMethod) == null) {
-          WFMGrpc.getDeleteAgentAvailabilityPatternMethod = getDeleteAgentAvailabilityPatternMethod = 
+          WFMGrpc.getDeleteAgentAvailabilityPatternMethod = getDeleteAgentAvailabilityPatternMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "DeleteAgentAvailabilityPattern"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteAgentAvailabilityPattern"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteAgentAvailabilityPattern"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteAgentAvailabilityPattern"))
+              .build();
         }
-     }
-     return getDeleteAgentAvailabilityPatternMethod;
+      }
+    }
+    return getDeleteAgentAvailabilityPatternMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsReq,
@@ -2508,22 +2419,21 @@ public final class WFMGrpc {
     if ((getGetAvailabilityBitmapsMethod = WFMGrpc.getGetAvailabilityBitmapsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getGetAvailabilityBitmapsMethod = WFMGrpc.getGetAvailabilityBitmapsMethod) == null) {
-          WFMGrpc.getGetAvailabilityBitmapsMethod = getGetAvailabilityBitmapsMethod = 
+          WFMGrpc.getGetAvailabilityBitmapsMethod = getGetAvailabilityBitmapsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "GetAvailabilityBitmaps"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAvailabilityBitmaps"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetAvailabilityBitmaps"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetAvailabilityBitmaps"))
+              .build();
         }
-     }
-     return getGetAvailabilityBitmapsMethod;
+      }
+    }
+    return getGetAvailabilityBitmapsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq,
@@ -2540,22 +2450,21 @@ public final class WFMGrpc {
     if ((getUpsertNonSkillActivityAssociationMethod = WFMGrpc.getUpsertNonSkillActivityAssociationMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpsertNonSkillActivityAssociationMethod = WFMGrpc.getUpsertNonSkillActivityAssociationMethod) == null) {
-          WFMGrpc.getUpsertNonSkillActivityAssociationMethod = getUpsertNonSkillActivityAssociationMethod = 
+          WFMGrpc.getUpsertNonSkillActivityAssociationMethod = getUpsertNonSkillActivityAssociationMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpsertNonSkillActivityAssociation"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpsertNonSkillActivityAssociation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpsertNonSkillActivityAssociation"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpsertNonSkillActivityAssociation"))
+              .build();
         }
-     }
-     return getUpsertNonSkillActivityAssociationMethod;
+      }
+    }
+    return getUpsertNonSkillActivityAssociationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesReq,
@@ -2572,22 +2481,21 @@ public final class WFMGrpc {
     if ((getCreateSkillProficienciesMethod = WFMGrpc.getCreateSkillProficienciesMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getCreateSkillProficienciesMethod = WFMGrpc.getCreateSkillProficienciesMethod) == null) {
-          WFMGrpc.getCreateSkillProficienciesMethod = getCreateSkillProficienciesMethod = 
+          WFMGrpc.getCreateSkillProficienciesMethod = getCreateSkillProficienciesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "CreateSkillProficiencies"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateSkillProficiencies"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateSkillProficiencies"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateSkillProficiencies"))
+              .build();
         }
-     }
-     return getCreateSkillProficienciesMethod;
+      }
+    }
+    return getCreateSkillProficienciesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesReq,
@@ -2604,22 +2512,21 @@ public final class WFMGrpc {
     if ((getUpdateSkillProficienciesMethod = WFMGrpc.getUpdateSkillProficienciesMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpdateSkillProficienciesMethod = WFMGrpc.getUpdateSkillProficienciesMethod) == null) {
-          WFMGrpc.getUpdateSkillProficienciesMethod = getUpdateSkillProficienciesMethod = 
+          WFMGrpc.getUpdateSkillProficienciesMethod = getUpdateSkillProficienciesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpdateSkillProficiencies"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSkillProficiencies"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateSkillProficiencies"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateSkillProficiencies"))
+              .build();
         }
-     }
-     return getUpdateSkillProficienciesMethod;
+      }
+    }
+    return getUpdateSkillProficienciesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyReq,
@@ -2636,22 +2543,21 @@ public final class WFMGrpc {
     if ((getDeleteSkillProficiencyMethod = WFMGrpc.getDeleteSkillProficiencyMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getDeleteSkillProficiencyMethod = WFMGrpc.getDeleteSkillProficiencyMethod) == null) {
-          WFMGrpc.getDeleteSkillProficiencyMethod = getDeleteSkillProficiencyMethod = 
+          WFMGrpc.getDeleteSkillProficiencyMethod = getDeleteSkillProficiencyMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "DeleteSkillProficiency"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteSkillProficiency"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteSkillProficiency"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteSkillProficiency"))
+              .build();
         }
-     }
-     return getDeleteSkillProficiencyMethod;
+      }
+    }
+    return getDeleteSkillProficiencyMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioReq,
@@ -2668,22 +2574,21 @@ public final class WFMGrpc {
     if ((getCopyScenarioMethod = WFMGrpc.getCopyScenarioMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getCopyScenarioMethod = WFMGrpc.getCopyScenarioMethod) == null) {
-          WFMGrpc.getCopyScenarioMethod = getCopyScenarioMethod = 
+          WFMGrpc.getCopyScenarioMethod = getCopyScenarioMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioReq, com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "CopyScenario"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CopyScenario"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CopyScenario"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CopyScenario"))
+              .build();
         }
-     }
-     return getCopyScenarioMethod;
+      }
+    }
+    return getCopyScenarioMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq,
@@ -2700,22 +2605,21 @@ public final class WFMGrpc {
     if ((getCreateScheduleScenarioWithNodesMethod = WFMGrpc.getCreateScheduleScenarioWithNodesMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getCreateScheduleScenarioWithNodesMethod = WFMGrpc.getCreateScheduleScenarioWithNodesMethod) == null) {
-          WFMGrpc.getCreateScheduleScenarioWithNodesMethod = getCreateScheduleScenarioWithNodesMethod = 
+          WFMGrpc.getCreateScheduleScenarioWithNodesMethod = getCreateScheduleScenarioWithNodesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "CreateScheduleScenarioWithNodes"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateScheduleScenarioWithNodes"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateScheduleScenarioWithNodes"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateScheduleScenarioWithNodes"))
+              .build();
         }
-     }
-     return getCreateScheduleScenarioWithNodesMethod;
+      }
+    }
+    return getCreateScheduleScenarioWithNodesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioReq,
@@ -2732,22 +2636,21 @@ public final class WFMGrpc {
     if ((getUpdateScheduleScenarioMethod = WFMGrpc.getUpdateScheduleScenarioMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpdateScheduleScenarioMethod = WFMGrpc.getUpdateScheduleScenarioMethod) == null) {
-          WFMGrpc.getUpdateScheduleScenarioMethod = getUpdateScheduleScenarioMethod = 
+          WFMGrpc.getUpdateScheduleScenarioMethod = getUpdateScheduleScenarioMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpdateScheduleScenario"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateScheduleScenario"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateScheduleScenario"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateScheduleScenario"))
+              .build();
         }
-     }
-     return getUpdateScheduleScenarioMethod;
+      }
+    }
+    return getUpdateScheduleScenarioMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesReq,
@@ -2764,22 +2667,21 @@ public final class WFMGrpc {
     if ((getListConfigEntitiesMethod = WFMGrpc.getListConfigEntitiesMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getListConfigEntitiesMethod = WFMGrpc.getListConfigEntitiesMethod) == null) {
-          WFMGrpc.getListConfigEntitiesMethod = getListConfigEntitiesMethod = 
+          WFMGrpc.getListConfigEntitiesMethod = getListConfigEntitiesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "ListConfigEntities"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListConfigEntities"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListConfigEntities"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListConfigEntities"))
+              .build();
         }
-     }
-     return getListConfigEntitiesMethod;
+      }
+    }
+    return getListConfigEntitiesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesReq,
@@ -2796,22 +2698,21 @@ public final class WFMGrpc {
     if ((getDeleteShiftInstancesMethod = WFMGrpc.getDeleteShiftInstancesMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getDeleteShiftInstancesMethod = WFMGrpc.getDeleteShiftInstancesMethod) == null) {
-          WFMGrpc.getDeleteShiftInstancesMethod = getDeleteShiftInstancesMethod = 
+          WFMGrpc.getDeleteShiftInstancesMethod = getDeleteShiftInstancesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "DeleteShiftInstances"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteShiftInstances"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteShiftInstances"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteShiftInstances"))
+              .build();
         }
-     }
-     return getDeleteShiftInstancesMethod;
+      }
+    }
+    return getDeleteShiftInstancesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsReq,
@@ -2828,22 +2729,21 @@ public final class WFMGrpc {
     if ((getBuildNodeDiagnosticsMethod = WFMGrpc.getBuildNodeDiagnosticsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getBuildNodeDiagnosticsMethod = WFMGrpc.getBuildNodeDiagnosticsMethod) == null) {
-          WFMGrpc.getBuildNodeDiagnosticsMethod = getBuildNodeDiagnosticsMethod = 
+          WFMGrpc.getBuildNodeDiagnosticsMethod = getBuildNodeDiagnosticsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsReq, com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "BuildNodeDiagnostics"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BuildNodeDiagnostics"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildNodeDiagnostics"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildNodeDiagnostics"))
+              .build();
         }
-     }
-     return getBuildNodeDiagnosticsMethod;
+      }
+    }
+    return getBuildNodeDiagnosticsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsReq,
@@ -2860,22 +2760,21 @@ public final class WFMGrpc {
     if ((getBuildGlobalDiagnosticsMethod = WFMGrpc.getBuildGlobalDiagnosticsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getBuildGlobalDiagnosticsMethod = WFMGrpc.getBuildGlobalDiagnosticsMethod) == null) {
-          WFMGrpc.getBuildGlobalDiagnosticsMethod = getBuildGlobalDiagnosticsMethod = 
+          WFMGrpc.getBuildGlobalDiagnosticsMethod = getBuildGlobalDiagnosticsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsReq, com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "BuildGlobalDiagnostics"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BuildGlobalDiagnostics"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildGlobalDiagnostics"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildGlobalDiagnostics"))
+              .build();
         }
-     }
-     return getBuildGlobalDiagnosticsMethod;
+      }
+    }
+    return getBuildGlobalDiagnosticsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleReq,
@@ -2892,22 +2791,21 @@ public final class WFMGrpc {
     if ((getGetPublishedScheduleMethod = WFMGrpc.getGetPublishedScheduleMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getGetPublishedScheduleMethod = WFMGrpc.getGetPublishedScheduleMethod) == null) {
-          WFMGrpc.getGetPublishedScheduleMethod = getGetPublishedScheduleMethod = 
+          WFMGrpc.getGetPublishedScheduleMethod = getGetPublishedScheduleMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "GetPublishedSchedule"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPublishedSchedule"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetPublishedSchedule"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetPublishedSchedule"))
+              .build();
         }
-     }
-     return getGetPublishedScheduleMethod;
+      }
+    }
+    return getGetPublishedScheduleMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsReq,
@@ -2924,22 +2822,21 @@ public final class WFMGrpc {
     if ((getGetPublishedScheduleRequiredCallsMethod = WFMGrpc.getGetPublishedScheduleRequiredCallsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getGetPublishedScheduleRequiredCallsMethod = WFMGrpc.getGetPublishedScheduleRequiredCallsMethod) == null) {
-          WFMGrpc.getGetPublishedScheduleRequiredCallsMethod = getGetPublishedScheduleRequiredCallsMethod = 
+          WFMGrpc.getGetPublishedScheduleRequiredCallsMethod = getGetPublishedScheduleRequiredCallsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "GetPublishedScheduleRequiredCalls"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPublishedScheduleRequiredCalls"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetPublishedScheduleRequiredCalls"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetPublishedScheduleRequiredCalls"))
+              .build();
         }
-     }
-     return getGetPublishedScheduleRequiredCallsMethod;
+      }
+    }
+    return getGetPublishedScheduleRequiredCallsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsReq,
@@ -2956,22 +2853,21 @@ public final class WFMGrpc {
     if ((getGetDraftScheduleRequiredCallsMethod = WFMGrpc.getGetDraftScheduleRequiredCallsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getGetDraftScheduleRequiredCallsMethod = WFMGrpc.getGetDraftScheduleRequiredCallsMethod) == null) {
-          WFMGrpc.getGetDraftScheduleRequiredCallsMethod = getGetDraftScheduleRequiredCallsMethod = 
+          WFMGrpc.getGetDraftScheduleRequiredCallsMethod = getGetDraftScheduleRequiredCallsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "GetDraftScheduleRequiredCalls"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDraftScheduleRequiredCalls"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetDraftScheduleRequiredCalls"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetDraftScheduleRequiredCalls"))
+              .build();
         }
-     }
-     return getGetDraftScheduleRequiredCallsMethod;
+      }
+    }
+    return getGetDraftScheduleRequiredCallsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleReq,
@@ -2988,22 +2884,21 @@ public final class WFMGrpc {
     if ((getCreateDraftScheduleMethod = WFMGrpc.getCreateDraftScheduleMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getCreateDraftScheduleMethod = WFMGrpc.getCreateDraftScheduleMethod) == null) {
-          WFMGrpc.getCreateDraftScheduleMethod = getCreateDraftScheduleMethod = 
+          WFMGrpc.getCreateDraftScheduleMethod = getCreateDraftScheduleMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "CreateDraftSchedule"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateDraftSchedule"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateDraftSchedule"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateDraftSchedule"))
+              .build();
         }
-     }
-     return getCreateDraftScheduleMethod;
+      }
+    }
+    return getCreateDraftScheduleMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq,
@@ -3020,22 +2915,21 @@ public final class WFMGrpc {
     if ((getUpdateDraftScheduleMethod = WFMGrpc.getUpdateDraftScheduleMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpdateDraftScheduleMethod = WFMGrpc.getUpdateDraftScheduleMethod) == null) {
-          WFMGrpc.getUpdateDraftScheduleMethod = getUpdateDraftScheduleMethod = 
+          WFMGrpc.getUpdateDraftScheduleMethod = getUpdateDraftScheduleMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpdateDraftSchedule"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateDraftSchedule"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateDraftSchedule"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateDraftSchedule"))
+              .build();
         }
-     }
-     return getUpdateDraftScheduleMethod;
+      }
+    }
+    return getUpdateDraftScheduleMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleReq,
@@ -3052,22 +2946,21 @@ public final class WFMGrpc {
     if ((getBuildDraftScheduleMethod = WFMGrpc.getBuildDraftScheduleMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getBuildDraftScheduleMethod = WFMGrpc.getBuildDraftScheduleMethod) == null) {
-          WFMGrpc.getBuildDraftScheduleMethod = getBuildDraftScheduleMethod = 
+          WFMGrpc.getBuildDraftScheduleMethod = getBuildDraftScheduleMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleReq, com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "BuildDraftSchedule"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BuildDraftSchedule"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildDraftSchedule"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("BuildDraftSchedule"))
+              .build();
         }
-     }
-     return getBuildDraftScheduleMethod;
+      }
+    }
+    return getBuildDraftScheduleMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleReq,
@@ -3084,22 +2977,21 @@ public final class WFMGrpc {
     if ((getPublishDraftScheduleMethod = WFMGrpc.getPublishDraftScheduleMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getPublishDraftScheduleMethod = WFMGrpc.getPublishDraftScheduleMethod) == null) {
-          WFMGrpc.getPublishDraftScheduleMethod = getPublishDraftScheduleMethod = 
+          WFMGrpc.getPublishDraftScheduleMethod = getPublishDraftScheduleMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleReq, com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "PublishDraftSchedule"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PublishDraftSchedule"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("PublishDraftSchedule"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("PublishDraftSchedule"))
+              .build();
         }
-     }
-     return getPublishDraftScheduleMethod;
+      }
+    }
+    return getPublishDraftScheduleMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleReq,
@@ -3116,22 +3008,21 @@ public final class WFMGrpc {
     if ((getGetDraftScheduleMethod = WFMGrpc.getGetDraftScheduleMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getGetDraftScheduleMethod = WFMGrpc.getGetDraftScheduleMethod) == null) {
-          WFMGrpc.getGetDraftScheduleMethod = getGetDraftScheduleMethod = 
+          WFMGrpc.getGetDraftScheduleMethod = getGetDraftScheduleMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "GetDraftSchedule"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDraftSchedule"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetDraftSchedule"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetDraftSchedule"))
+              .build();
         }
-     }
-     return getGetDraftScheduleMethod;
+      }
+    }
+    return getGetDraftScheduleMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesReq,
@@ -3148,22 +3039,21 @@ public final class WFMGrpc {
     if ((getListDraftSchedulesMethod = WFMGrpc.getListDraftSchedulesMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getListDraftSchedulesMethod = WFMGrpc.getListDraftSchedulesMethod) == null) {
-          WFMGrpc.getListDraftSchedulesMethod = getListDraftSchedulesMethod = 
+          WFMGrpc.getListDraftSchedulesMethod = getListDraftSchedulesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "ListDraftSchedules"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListDraftSchedules"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListDraftSchedules"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListDraftSchedules"))
+              .build();
         }
-     }
-     return getListDraftSchedulesMethod;
+      }
+    }
+    return getListDraftSchedulesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq,
@@ -3180,22 +3070,21 @@ public final class WFMGrpc {
     if ((getDeleteDraftScheduleMethod = WFMGrpc.getDeleteDraftScheduleMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getDeleteDraftScheduleMethod = WFMGrpc.getDeleteDraftScheduleMethod) == null) {
-          WFMGrpc.getDeleteDraftScheduleMethod = getDeleteDraftScheduleMethod = 
+          WFMGrpc.getDeleteDraftScheduleMethod = getDeleteDraftScheduleMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "DeleteDraftSchedule"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteDraftSchedule"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteDraftSchedule"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteDraftSchedule"))
+              .build();
         }
-     }
-     return getDeleteDraftScheduleMethod;
+      }
+    }
+    return getDeleteDraftScheduleMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq,
@@ -3212,22 +3101,21 @@ public final class WFMGrpc {
     if ((getCreateShiftInstanceMethod = WFMGrpc.getCreateShiftInstanceMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getCreateShiftInstanceMethod = WFMGrpc.getCreateShiftInstanceMethod) == null) {
-          WFMGrpc.getCreateShiftInstanceMethod = getCreateShiftInstanceMethod = 
+          WFMGrpc.getCreateShiftInstanceMethod = getCreateShiftInstanceMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq, com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "CreateShiftInstance"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateShiftInstance"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateShiftInstance"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateShiftInstance"))
+              .build();
         }
-     }
-     return getCreateShiftInstanceMethod;
+      }
+    }
+    return getCreateShiftInstanceMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq,
@@ -3244,22 +3132,21 @@ public final class WFMGrpc {
     if ((getSwapShiftInstancesMethod = WFMGrpc.getSwapShiftInstancesMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getSwapShiftInstancesMethod = WFMGrpc.getSwapShiftInstancesMethod) == null) {
-          WFMGrpc.getSwapShiftInstancesMethod = getSwapShiftInstancesMethod = 
+          WFMGrpc.getSwapShiftInstancesMethod = getSwapShiftInstancesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq, com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "SwapShiftInstances"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SwapShiftInstances"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("SwapShiftInstances"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("SwapShiftInstances"))
+              .build();
         }
-     }
-     return getSwapShiftInstancesMethod;
+      }
+    }
+    return getSwapShiftInstancesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceReq,
@@ -3276,22 +3163,21 @@ public final class WFMGrpc {
     if ((getUpdateShiftInstanceMethod = WFMGrpc.getUpdateShiftInstanceMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getUpdateShiftInstanceMethod = WFMGrpc.getUpdateShiftInstanceMethod) == null) {
-          WFMGrpc.getUpdateShiftInstanceMethod = getUpdateShiftInstanceMethod = 
+          WFMGrpc.getUpdateShiftInstanceMethod = getUpdateShiftInstanceMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "UpdateShiftInstance"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateShiftInstance"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateShiftInstance"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateShiftInstance"))
+              .build();
         }
-     }
-     return getUpdateShiftInstanceMethod;
+      }
+    }
+    return getUpdateShiftInstanceMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsReq,
@@ -3308,22 +3194,21 @@ public final class WFMGrpc {
     if ((getListShiftSegmentsByShiftInstanceSidsMethod = WFMGrpc.getListShiftSegmentsByShiftInstanceSidsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getListShiftSegmentsByShiftInstanceSidsMethod = WFMGrpc.getListShiftSegmentsByShiftInstanceSidsMethod) == null) {
-          WFMGrpc.getListShiftSegmentsByShiftInstanceSidsMethod = getListShiftSegmentsByShiftInstanceSidsMethod = 
+          WFMGrpc.getListShiftSegmentsByShiftInstanceSidsMethod = getListShiftSegmentsByShiftInstanceSidsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "ListShiftSegmentsByShiftInstanceSids"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListShiftSegmentsByShiftInstanceSids"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListShiftSegmentsByShiftInstanceSids"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListShiftSegmentsByShiftInstanceSids"))
+              .build();
         }
-     }
-     return getListShiftSegmentsByShiftInstanceSidsMethod;
+      }
+    }
+    return getListShiftSegmentsByShiftInstanceSidsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetReq,
@@ -3340,22 +3225,21 @@ public final class WFMGrpc {
     if ((getSetSchedulingTargetMethod = WFMGrpc.getSetSchedulingTargetMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getSetSchedulingTargetMethod = WFMGrpc.getSetSchedulingTargetMethod) == null) {
-          WFMGrpc.getSetSchedulingTargetMethod = getSetSchedulingTargetMethod = 
+          WFMGrpc.getSetSchedulingTargetMethod = getSetSchedulingTargetMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetReq, com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "SetSchedulingTarget"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetSchedulingTarget"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("SetSchedulingTarget"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("SetSchedulingTarget"))
+              .build();
         }
-     }
-     return getSetSchedulingTargetMethod;
+      }
+    }
+    return getSetSchedulingTargetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetReq,
@@ -3372,22 +3256,21 @@ public final class WFMGrpc {
     if ((getGetSchedulingTargetMethod = WFMGrpc.getGetSchedulingTargetMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getGetSchedulingTargetMethod = WFMGrpc.getGetSchedulingTargetMethod) == null) {
-          WFMGrpc.getGetSchedulingTargetMethod = getGetSchedulingTargetMethod = 
+          WFMGrpc.getGetSchedulingTargetMethod = getGetSchedulingTargetMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "GetSchedulingTarget"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSchedulingTarget"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetSchedulingTarget"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetSchedulingTarget"))
+              .build();
         }
-     }
-     return getGetSchedulingTargetMethod;
+      }
+    }
+    return getGetSchedulingTargetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetReq,
@@ -3404,22 +3287,21 @@ public final class WFMGrpc {
     if ((getDeleteSchedulingTargetMethod = WFMGrpc.getDeleteSchedulingTargetMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getDeleteSchedulingTargetMethod = WFMGrpc.getDeleteSchedulingTargetMethod) == null) {
-          WFMGrpc.getDeleteSchedulingTargetMethod = getDeleteSchedulingTargetMethod = 
+          WFMGrpc.getDeleteSchedulingTargetMethod = getDeleteSchedulingTargetMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetReq, com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "DeleteSchedulingTarget"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteSchedulingTarget"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteSchedulingTarget"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("DeleteSchedulingTarget"))
+              .build();
         }
-     }
-     return getDeleteSchedulingTargetMethod;
+      }
+    }
+    return getDeleteSchedulingTargetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq,
@@ -3436,22 +3318,21 @@ public final class WFMGrpc {
     if ((getGetPerformanceMetricsMethod = WFMGrpc.getGetPerformanceMetricsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getGetPerformanceMetricsMethod = WFMGrpc.getGetPerformanceMetricsMethod) == null) {
-          WFMGrpc.getGetPerformanceMetricsMethod = getGetPerformanceMetricsMethod = 
+          WFMGrpc.getGetPerformanceMetricsMethod = getGetPerformanceMetricsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq, com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "GetPerformanceMetrics"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPerformanceMetrics"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetPerformanceMetrics"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("GetPerformanceMetrics"))
+              .build();
         }
-     }
-     return getGetPerformanceMetricsMethod;
+      }
+    }
+    return getGetPerformanceMetricsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsReq,
@@ -3468,29 +3349,35 @@ public final class WFMGrpc {
     if ((getListRequiredCallsIntervalsMethod = WFMGrpc.getListRequiredCallsIntervalsMethod) == null) {
       synchronized (WFMGrpc.class) {
         if ((getListRequiredCallsIntervalsMethod = WFMGrpc.getListRequiredCallsIntervalsMethod) == null) {
-          WFMGrpc.getListRequiredCallsIntervalsMethod = getListRequiredCallsIntervalsMethod = 
+          WFMGrpc.getListRequiredCallsIntervalsMethod = getListRequiredCallsIntervalsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.wfm.WFM", "ListRequiredCallsIntervals"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListRequiredCallsIntervals"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListRequiredCallsIntervals"))
-                  .build();
-          }
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListRequiredCallsIntervals"))
+              .build();
         }
-     }
-     return getListRequiredCallsIntervalsMethod;
+      }
+    }
+    return getListRequiredCallsIntervalsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static WFMStub newStub(io.grpc.Channel channel) {
-    return new WFMStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<WFMStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<WFMStub>() {
+        @java.lang.Override
+        public WFMStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new WFMStub(channel, callOptions);
+        }
+      };
+    return WFMStub.newStub(factory, channel);
   }
 
   /**
@@ -3498,7 +3385,14 @@ public final class WFMGrpc {
    */
   public static WFMBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new WFMBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<WFMBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<WFMBlockingStub>() {
+        @java.lang.Override
+        public WFMBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new WFMBlockingStub(channel, callOptions);
+        }
+      };
+    return WFMBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -3506,7 +3400,14 @@ public final class WFMGrpc {
    */
   public static WFMFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new WFMFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<WFMFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<WFMFutureStub>() {
+        @java.lang.Override
+        public WFMFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new WFMFutureStub(channel, callOptions);
+        }
+      };
+    return WFMFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -3514,7 +3415,7 @@ public final class WFMGrpc {
    * WFM is responsible for call prediction and call volume calculations based on call skills and other parameters.
    * </pre>
    */
-  public static abstract class WFMImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -3525,9 +3426,9 @@ public final class WFMGrpc {
      * Errors:
      * </pre>
      */
-    public void listSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesReq request,
+    default void listSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListSkillProfilesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSkillProfilesMethod(), responseObserver);
     }
 
     /**
@@ -3542,9 +3443,9 @@ public final class WFMGrpc {
      *   - grpc.NotFound: entry to be updated doesn't exist.
      * </pre>
      */
-    public void updateSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq request,
+    default void updateSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateSkillProfileMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSkillProfileMethod(), responseObserver);
     }
 
     /**
@@ -3557,9 +3458,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when updating the skill profiles proficiencies.
      * </pre>
      */
-    public void updateSkillProfileProficiencies(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq request,
+    default void updateSkillProfileProficiencies(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateSkillProfileProficienciesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSkillProfileProficienciesMethod(), responseObserver);
     }
 
     /**
@@ -3576,9 +3477,9 @@ public final class WFMGrpc {
      *   - grpc.NotFound: skill profile doesn't exist.
      * </pre>
      */
-    public void getSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileReq request,
+    default void getSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetSkillProfileMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSkillProfileMethod(), responseObserver);
     }
 
     /**
@@ -3591,9 +3492,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the new skills and skill profiles.
      * </pre>
      */
-    public void resyncSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesReq request,
+    default void resyncSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getResyncSkillProfilesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResyncSkillProfilesMethod(), responseObserver);
     }
 
     /**
@@ -3606,9 +3507,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the resync date.
      * </pre>
      */
-    public void getLastSkillProfileResyncDate(com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateReq request,
+    default void getLastSkillProfileResyncDate(com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetLastSkillProfileResyncDateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetLastSkillProfileResyncDateMethod(), responseObserver);
     }
 
     /**
@@ -3622,9 +3523,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when upserting the parameters.
      * </pre>
      */
-    public void upsertForecastingParameters(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersReq request,
+    default void upsertForecastingParameters(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpsertForecastingParametersMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertForecastingParametersMethod(), responseObserver);
     }
 
     /**
@@ -3637,9 +3538,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the parameters.
      * </pre>
      */
-    public void getForecastingParameters(com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersReq request,
+    default void getForecastingParameters(com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetForecastingParametersMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetForecastingParametersMethod(), responseObserver);
     }
 
     /**
@@ -3658,9 +3559,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the historical data.
      * </pre>
      */
-    public void listHistoricalData(com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq request,
+    default void listHistoricalData(com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListHistoricalDataMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListHistoricalDataMethod(), responseObserver);
     }
 
     /**
@@ -3674,9 +3575,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when upserting the historical data interval.
      * </pre>
      */
-    public void upsertHistoricalDataDelta(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaReq request,
+    default void upsertHistoricalDataDelta(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpsertHistoricalDataDeltaMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertHistoricalDataDeltaMethod(), responseObserver);
     }
 
     /**
@@ -3691,9 +3592,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when upserting the historical data deltas.
      * </pre>
      */
-    public void upsertHistoricalDataDeltas(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasReq request,
+    default void upsertHistoricalDataDeltas(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpsertHistoricalDataDeltasMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertHistoricalDataDeltasMethod(), responseObserver);
     }
 
     /**
@@ -3706,9 +3607,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the skills.
      * </pre>
      */
-    public void listSkills(com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsReq request,
+    default void listSkills(com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListSkillsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSkillsMethod(), responseObserver);
     }
 
     /**
@@ -3727,9 +3628,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when building the call profile template.
      * </pre>
      */
-    public void buildCallProfileTemplateForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq request,
+    default void buildCallProfileTemplateForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getBuildCallProfileTemplateForSkillProfileMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildCallProfileTemplateForSkillProfileMethod(), responseObserver);
     }
 
     /**
@@ -3744,9 +3645,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the inactive skill profile mapping.
      * </pre>
      */
-    public void createInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request,
+    default void createInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateInactiveSkillProfileMappingMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateInactiveSkillProfileMappingMethod(), responseObserver);
     }
 
     /**
@@ -3758,9 +3659,9 @@ public final class WFMGrpc {
      *  -grpc.Internal: error occurs when contacting the forecaster to get the available forecaster types.
      * </pre>
      */
-    public void getAvailableRegressionForecasterModelTypes(com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesReq request,
+    default void getAvailableRegressionForecasterModelTypes(com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAvailableRegressionForecasterModelTypesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAvailableRegressionForecasterModelTypesMethod(), responseObserver);
     }
 
     /**
@@ -3775,9 +3676,9 @@ public final class WFMGrpc {
      *				            the given &#64;inactive_skill_profile_sid is of an active skill profile.
      * </pre>
      */
-    public void disconnectInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request,
+    default void disconnectInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDisconnectInactiveSkillProfileMappingMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisconnectInactiveSkillProfileMappingMethod(), responseObserver);
     }
 
     /**
@@ -3792,9 +3693,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs during the deletion of the historical data interval.
      * </pre>
      */
-    public void deleteHistoricalDataDeltas(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasReq request,
+    default void deleteHistoricalDataDeltas(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteHistoricalDataDeltasMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteHistoricalDataDeltasMethod(), responseObserver);
     }
 
     /**
@@ -3809,9 +3710,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the skill profiles.
      * </pre>
      */
-    public void listTopSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesReq request,
+    default void listTopSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListTopSkillProfilesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTopSkillProfilesMethod(), responseObserver);
     }
 
     /**
@@ -3823,9 +3724,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the skill profiles count.
      * </pre>
      */
-    public void getSkillProfilesCount(com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountReq request,
+    default void getSkillProfilesCount(com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetSkillProfilesCountMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSkillProfilesCountMethod(), responseObserver);
     }
 
     /**
@@ -3842,9 +3743,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs during the building of the profile forecast.
      * </pre>
      */
-    public void buildProfileForecastByInterval(com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalReq request,
+    default void buildProfileForecastByInterval(com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> responseObserver) {
-      asyncUnimplementedUnaryCall(getBuildProfileForecastByIntervalMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildProfileForecastByIntervalMethod(), responseObserver);
     }
 
     /**
@@ -3862,9 +3763,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs during the building of the profile forecast.
      * </pre>
      */
-    public void buildProfileForecastByIntervalWithStats(com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsReq request,
+    default void buildProfileForecastByIntervalWithStats(com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getBuildProfileForecastByIntervalWithStatsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildProfileForecastByIntervalWithStatsMethod(), responseObserver);
     }
 
     /**
@@ -3883,9 +3784,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when upserting the profile forecast.
      * </pre>
      */
-    public void upsertProfileForecast(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastReq request,
+    default void upsertProfileForecast(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpsertProfileForecastMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertProfileForecastMethod(), responseObserver);
     }
 
     /**
@@ -3898,9 +3799,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs during the creation of the call profile.
      * </pre>
      */
-    public void createCallProfileTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateReq request,
+    default void createCallProfileTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateCallProfileTemplateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCallProfileTemplateMethod(), responseObserver);
     }
 
     /**
@@ -3913,9 +3814,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs during the deletion of the call profile.
      * </pre>
      */
-    public void deleteCallProfileTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateReq request,
+    default void deleteCallProfileTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteCallProfileTemplateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCallProfileTemplateMethod(), responseObserver);
     }
 
     /**
@@ -3928,9 +3829,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the regression template.
      * </pre>
      */
-    public void createRegressionTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq request,
+    default void createRegressionTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateRegressionTemplateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateRegressionTemplateMethod(), responseObserver);
     }
 
     /**
@@ -3943,9 +3844,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs during the deletion of the regression template.
      * </pre>
      */
-    public void deleteRegressionTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateReq request,
+    default void deleteRegressionTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteRegressionTemplateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteRegressionTemplateMethod(), responseObserver);
     }
 
     /**
@@ -3957,9 +3858,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the regression templates.
      * </pre>
      */
-    public void listRegressionTemplates(com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesReq request,
+    default void listRegressionTemplates(com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListRegressionTemplatesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRegressionTemplatesMethod(), responseObserver);
     }
 
     /**
@@ -3972,9 +3873,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the forecast data intervals.
      * </pre>
      */
-    public void listForecastIntervalsForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq request,
+    default void listForecastIntervalsForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> responseObserver) {
-      asyncUnimplementedUnaryCall(getListForecastIntervalsForSkillProfileMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListForecastIntervalsForSkillProfileMethod(), responseObserver);
     }
 
     /**
@@ -3991,9 +3892,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs during the building of the regression forecast.
      * </pre>
      */
-    public void buildRegressionForecastByInterval(com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalReq request,
+    default void buildRegressionForecastByInterval(com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> responseObserver) {
-      asyncUnimplementedUnaryCall(getBuildRegressionForecastByIntervalMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildRegressionForecastByIntervalMethod(), responseObserver);
     }
 
     /**
@@ -4009,9 +3910,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs either during the when building the forecast or calculating the stats.
      * </pre>
      */
-    public void buildRegressionForecastByIntervalWithStats(com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq request,
+    default void buildRegressionForecastByIntervalWithStats(com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getBuildRegressionForecastByIntervalWithStatsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildRegressionForecastByIntervalWithStatsMethod(), responseObserver);
     }
 
     /**
@@ -4023,9 +3924,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the templates.
      * </pre>
      */
-    public void listCallProfileTemplates(com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesReq request,
+    default void listCallProfileTemplates(com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListCallProfileTemplatesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCallProfileTemplatesMethod(), responseObserver);
     }
 
     /**
@@ -4041,9 +3942,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when upserting the regression forecast.
      * </pre>
      */
-    public void upsertRegressionForecast(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastReq request,
+    default void upsertRegressionForecast(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpsertRegressionForecastMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertRegressionForecastMethod(), responseObserver);
     }
 
     /**
@@ -4057,9 +3958,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when upserting the forecast data delta.
      * </pre>
      */
-    public void upsertForecastDataDelta(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaReq request,
+    default void upsertForecastDataDelta(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpsertForecastDataDeltaMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertForecastDataDeltaMethod(), responseObserver);
     }
 
     /**
@@ -4073,9 +3974,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when upserting the forecast data deltas.
      * </pre>
      */
-    public void upsertForecastDataDeltas(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasReq request,
+    default void upsertForecastDataDeltas(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpsertForecastDataDeltasMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertForecastDataDeltasMethod(), responseObserver);
     }
 
     /**
@@ -4093,9 +3994,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs during the deletion of the forecast data intervals/deltas.
      * </pre>
      */
-    public void deleteForecastIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq request,
+    default void deleteForecastIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteForecastIntervalsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteForecastIntervalsMethod(), responseObserver);
     }
 
     /**
@@ -4110,9 +4011,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when retriving the history.
      * </pre>
      */
-    public void listHistoricalDataForAllSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesReq request,
+    default void listHistoricalDataForAllSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListHistoricalDataForAllSkillProfilesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListHistoricalDataForAllSkillProfilesMethod(), responseObserver);
     }
 
     /**
@@ -4125,9 +4026,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when building the ProfileDOW or ProfileMOY.
      * </pre>
      */
-    public void buildDOWAndMOYProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq request,
+    default void buildDOWAndMOYProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getBuildDOWAndMOYProfilesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildDOWAndMOYProfilesMethod(), responseObserver);
     }
 
     /**
@@ -4143,9 +4044,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when calculating the averages from the training data.
      * </pre>
      */
-    public void calculateTrainingDataAveragesForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileReq request,
+    default void calculateTrainingDataAveragesForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCalculateTrainingDataAveragesForSkillProfileMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCalculateTrainingDataAveragesForSkillProfileMethod(), responseObserver);
     }
 
     /**
@@ -4162,9 +4063,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when calculating the averages from the historical data.
      * </pre>
      */
-    public void updateSkillProfileAveragesUsingHistoricalData(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq request,
+    default void updateSkillProfileAveragesUsingHistoricalData(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateSkillProfileAveragesUsingHistoricalDataMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSkillProfileAveragesUsingHistoricalDataMethod(), responseObserver);
     }
 
     /**
@@ -4181,9 +4082,9 @@ public final class WFMGrpc {
      *   - grpc.NotFound: entry to be updated doesn't exist.
      * </pre>
      */
-    public void updateCallCenterNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeReq request,
+    default void updateCallCenterNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateCallCenterNodeMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCallCenterNodeMethod(), responseObserver);
     }
 
     /**
@@ -4201,9 +4102,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the client node.
      * </pre>
      */
-    public void createClientNode(com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeReq request,
+    default void createClientNode(com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateClientNodeMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateClientNodeMethod(), responseObserver);
     }
 
     /**
@@ -4220,9 +4121,9 @@ public final class WFMGrpc {
      *   - grpc.NotFound: entry to be updated doesn't exist, or the given &#64;parent_sid (call_center_node_sid) belongs to a different scenario than this &#64;node.
      * </pre>
      */
-    public void updateClientNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeReq request,
+    default void updateClientNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateClientNodeMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateClientNodeMethod(), responseObserver);
     }
 
     /**
@@ -4240,9 +4141,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the location node.
      * </pre>
      */
-    public void createLocationNode(com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeReq request,
+    default void createLocationNode(com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateLocationNodeMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateLocationNodeMethod(), responseObserver);
     }
 
     /**
@@ -4259,9 +4160,9 @@ public final class WFMGrpc {
      *   - grpc.NotFound: entry to be updated doesn't exist, or the given parent &#64;client_node_sid belongs to a different scenario than the node to update.
      * </pre>
      */
-    public void updateLocationNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq request,
+    default void updateLocationNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateLocationNodeMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateLocationNodeMethod(), responseObserver);
     }
 
     /**
@@ -4279,9 +4180,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the program node.
      * </pre>
      */
-    public void createProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeReq request,
+    default void createProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateProgramNodeMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateProgramNodeMethod(), responseObserver);
     }
 
     /**
@@ -4298,9 +4199,9 @@ public final class WFMGrpc {
      *   - grpc.NotFound: entry to be updated doesn't exist, or the given parent &#64;location_node_sid belongs to a different scenario than the program node to update.
      * </pre>
      */
-    public void updateProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq request,
+    default void updateProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateProgramNodeMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateProgramNodeMethod(), responseObserver);
     }
 
     /**
@@ -4320,9 +4221,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the constraint rule.
      * </pre>
      */
-    public void createConstraintRule(com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleReq request,
+    default void createConstraintRule(com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateConstraintRuleMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateConstraintRuleMethod(), responseObserver);
     }
 
     /**
@@ -4344,9 +4245,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when updating the constraint rule.
      * </pre>
      */
-    public void updateConstraintRule(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleReq request,
+    default void updateConstraintRule(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateConstraintRuleMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateConstraintRuleMethod(), responseObserver);
     }
 
     /**
@@ -4361,9 +4262,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when removing the constraint rule.
      * </pre>
      */
-    public void deleteConstraintRule(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleReq request,
+    default void deleteConstraintRule(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteConstraintRuleMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteConstraintRuleMethod(), responseObserver);
     }
 
     /**
@@ -4379,9 +4280,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the non skill activity or scheduling activity.
      * </pre>
      */
-    public void createNonSkillActivity(com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityReq request,
+    default void createNonSkillActivity(com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateNonSkillActivityMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateNonSkillActivityMethod(), responseObserver);
     }
 
     /**
@@ -4395,9 +4296,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when updating the non skill activity.
      * </pre>
      */
-    public void updateNonSkillActivity(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityReq request,
+    default void updateNonSkillActivity(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateNonSkillActivityMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateNonSkillActivityMethod(), responseObserver);
     }
 
     /**
@@ -4410,9 +4311,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when listing the associations.
      * </pre>
      */
-    public void listNonSkillActivityAssociations(com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsReq request,
+    default void listNonSkillActivityAssociations(com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListNonSkillActivityAssociationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListNonSkillActivityAssociationsMethod(), responseObserver);
     }
 
     /**
@@ -4430,9 +4331,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when applying inheritance or getting the nodes from &#64;parent_of_rule.
      * </pre>
      */
-    public void listCandidateSchedulingActivities(com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq request,
+    default void listCandidateSchedulingActivities(com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListCandidateSchedulingActivitiesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCandidateSchedulingActivitiesMethod(), responseObserver);
     }
 
     /**
@@ -4449,9 +4350,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the agent group.
      * </pre>
      */
-    public void createAgentGroup(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupReq request,
+    default void createAgentGroup(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateAgentGroupMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAgentGroupMethod(), responseObserver);
     }
 
     /**
@@ -4469,9 +4370,9 @@ public final class WFMGrpc {
      *   - grpc.NotFound: entry to be updated doesn't exist, or the &#64;parent_entity has a different &#64;schedule_scenario_sid than the agent group.
      * </pre>
      */
-    public void updateAgentGroup(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupReq request,
+    default void updateAgentGroup(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateAgentGroupMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAgentGroupMethod(), responseObserver);
     }
 
     /**
@@ -4488,9 +4389,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when updating the wfm agent.
      * </pre>
      */
-    public void updateWFMAgent(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentReq request,
+    default void updateWFMAgent(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateWFMAgentMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateWFMAgentMethod(), responseObserver);
     }
 
     /**
@@ -4506,9 +4407,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the wfm agents.
      * </pre>
      */
-    public void listAllWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsReq request,
+    default void listAllWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAllWFMAgentsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAllWFMAgentsMethod(), responseObserver);
     }
 
     /**
@@ -4523,9 +4424,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the wfm agents.
      * </pre>
      */
-    public void listCandidateWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsReq request,
+    default void listCandidateWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListCandidateWFMAgentsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCandidateWFMAgentsMethod(), responseObserver);
     }
 
     /**
@@ -4541,9 +4442,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the wfm agents.
      * </pre>
      */
-    public void listUngroupedWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq request,
+    default void listUngroupedWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListUngroupedWFMAgentsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUngroupedWFMAgentsMethod(), responseObserver);
     }
 
     /**
@@ -4556,9 +4457,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when listing the wfm agents.
      * </pre>
      */
-    public void listWFMAgentsAssociatedWithAgentGroup(com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupReq request,
+    default void listWFMAgentsAssociatedWithAgentGroup(com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListWFMAgentsAssociatedWithAgentGroupMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListWFMAgentsAssociatedWithAgentGroupMethod(), responseObserver);
     }
 
     /**
@@ -4573,9 +4474,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the association.
      * </pre>
      */
-    public void createWFMAgentMemberships(com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsReq request,
+    default void createWFMAgentMemberships(com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateWFMAgentMembershipsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateWFMAgentMembershipsMethod(), responseObserver);
     }
 
     /**
@@ -4589,9 +4490,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when deleting the association.
      * </pre>
      */
-    public void deleteWFMAgentMemberships(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq request,
+    default void deleteWFMAgentMemberships(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteWFMAgentMembershipsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteWFMAgentMembershipsMethod(), responseObserver);
     }
 
     /**
@@ -4607,9 +4508,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs building the diagnostics.
      * </pre>
      */
-    public void buildAgentDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsReq request,
+    default void buildAgentDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getBuildAgentDiagnosticsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildAgentDiagnosticsMethod(), responseObserver);
     }
 
     /**
@@ -4627,9 +4528,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the shift template.
      * </pre>
      */
-    public void createShiftTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateReq request,
+    default void createShiftTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateShiftTemplateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateShiftTemplateMethod(), responseObserver);
     }
 
     /**
@@ -4647,9 +4548,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when updating the shift template.
      * </pre>
      */
-    public void updateShiftTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq request,
+    default void updateShiftTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateShiftTemplateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateShiftTemplateMethod(), responseObserver);
     }
 
     /**
@@ -4662,9 +4563,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the data.
      * </pre>
      */
-    public void listShiftTemplatesBySids(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsReq request,
+    default void listShiftTemplatesBySids(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListShiftTemplatesBySidsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListShiftTemplatesBySidsMethod(), responseObserver);
     }
 
     /**
@@ -4677,9 +4578,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occours building the diagnostics for the shift template.
      * </pre>
      */
-    public void buildShiftTemplateDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsReq request,
+    default void buildShiftTemplateDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getBuildShiftTemplateDiagnosticsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildShiftTemplateDiagnosticsMethod(), responseObserver);
     }
 
     /**
@@ -4697,9 +4598,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the placement rule.
      * </pre>
      */
-    public void createPlacementRule(com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleReq request,
+    default void createPlacementRule(com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreatePlacementRuleMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreatePlacementRuleMethod(), responseObserver);
     }
 
     /**
@@ -4717,9 +4618,9 @@ public final class WFMGrpc {
      *                  : the parent shift template or related scheduling activity don't exist or belong to a different scenario than the placement rule to update.
      * </pre>
      */
-    public void updatePlacementRule(com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleReq request,
+    default void updatePlacementRule(com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdatePlacementRuleMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdatePlacementRuleMethod(), responseObserver);
     }
 
     /**
@@ -4734,9 +4635,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when removing the placement rule.
      * </pre>
      */
-    public void deletePlacementRule(com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleReq request,
+    default void deletePlacementRule(com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeletePlacementRuleMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeletePlacementRuleMethod(), responseObserver);
     }
 
     /**
@@ -4752,9 +4653,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the open times pattern.
      * </pre>
      */
-    public void createOpenTimesPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternReq request,
+    default void createOpenTimesPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateOpenTimesPatternMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateOpenTimesPatternMethod(), responseObserver);
     }
 
     /**
@@ -4770,9 +4671,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when updating the open times pattern.
      * </pre>
      */
-    public void updateOpenTimesPattern(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternReq request,
+    default void updateOpenTimesPattern(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateOpenTimesPatternMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateOpenTimesPatternMethod(), responseObserver);
     }
 
     /**
@@ -4786,9 +4687,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when removing the open times pattern.
      * </pre>
      */
-    public void deleteOpenTimesPattern(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternReq request,
+    default void deleteOpenTimesPattern(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteOpenTimesPatternMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteOpenTimesPatternMethod(), responseObserver);
     }
 
     /**
@@ -4805,9 +4706,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the open times pattern bitmaps.
      * </pre>
      */
-    public void getOpenTimesBitmaps(com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsReq request,
+    default void getOpenTimesBitmaps(com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetOpenTimesBitmapsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOpenTimesBitmapsMethod(), responseObserver);
     }
 
     /**
@@ -4823,9 +4724,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the agent availability pattern.
      * </pre>
      */
-    public void createAgentAvailabilityPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternReq request,
+    default void createAgentAvailabilityPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateAgentAvailabilityPatternMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAgentAvailabilityPatternMethod(), responseObserver);
     }
 
     /**
@@ -4841,9 +4742,9 @@ public final class WFMGrpc {
      *   - grpc.NotFound: entry to be updated doesn't exist, or the &#64;parent_entity has a different &#64;schedule_scenario_sid than the agent availability pattern.
      * </pre>
      */
-    public void updateAgentAvailabilityPattern(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternReq request,
+    default void updateAgentAvailabilityPattern(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateAgentAvailabilityPatternMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAgentAvailabilityPatternMethod(), responseObserver);
     }
 
     /**
@@ -4857,9 +4758,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when removing the agent availability pattern.
      * </pre>
      */
-    public void deleteAgentAvailabilityPattern(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternReq request,
+    default void deleteAgentAvailabilityPattern(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteAgentAvailabilityPatternMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAgentAvailabilityPatternMethod(), responseObserver);
     }
 
     /**
@@ -4878,9 +4779,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the agent availability pattern bitmaps.
      * </pre>
      */
-    public void getAvailabilityBitmaps(com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsReq request,
+    default void getAvailabilityBitmaps(com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAvailabilityBitmapsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAvailabilityBitmapsMethod(), responseObserver);
     }
 
     /**
@@ -4900,9 +4801,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when upserting the association.
      * </pre>
      */
-    public void upsertNonSkillActivityAssociation(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq request,
+    default void upsertNonSkillActivityAssociation(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpsertNonSkillActivityAssociationMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertNonSkillActivityAssociationMethod(), responseObserver);
     }
 
     /**
@@ -4921,9 +4822,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the skill proficiencies.
      * </pre>
      */
-    public void createSkillProficiencies(com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesReq request,
+    default void createSkillProficiencies(com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateSkillProficienciesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSkillProficienciesMethod(), responseObserver);
     }
 
     /**
@@ -4942,9 +4843,9 @@ public final class WFMGrpc {
      *   - grpc.AlreadyExists: a skill proficiency with the given &#64;skill_sid and &#64;parent_entity already exists.
      * </pre>
      */
-    public void updateSkillProficiencies(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesReq request,
+    default void updateSkillProficiencies(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateSkillProficienciesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSkillProficienciesMethod(), responseObserver);
     }
 
     /**
@@ -4958,9 +4859,9 @@ public final class WFMGrpc {
      *   -grpc.Internal: error occurs when removing the skill proficiency.
      * </pre>
      */
-    public void deleteSkillProficiency(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyReq request,
+    default void deleteSkillProficiency(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteSkillProficiencyMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSkillProficiencyMethod(), responseObserver);
     }
 
     /**
@@ -4976,9 +4877,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating/coping the new scenario.
      * </pre>
      */
-    public void copyScenario(com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioReq request,
+    default void copyScenario(com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCopyScenarioMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyScenarioMethod(), responseObserver);
     }
 
     /**
@@ -4996,9 +4897,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the new scenario, or any of the node entities.
      * </pre>
      */
-    public void createScheduleScenarioWithNodes(com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq request,
+    default void createScheduleScenarioWithNodes(com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateScheduleScenarioWithNodesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateScheduleScenarioWithNodesMethod(), responseObserver);
     }
 
     /**
@@ -5015,9 +4916,9 @@ public final class WFMGrpc {
      *   -grpc.Internal: error occurs when updating the scenario.
      * </pre>
      */
-    public void updateScheduleScenario(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioReq request,
+    default void updateScheduleScenario(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateScheduleScenarioMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateScheduleScenarioMethod(), responseObserver);
     }
 
     /**
@@ -5033,9 +4934,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the config entities.
      * </pre>
      */
-    public void listConfigEntities(com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesReq request,
+    default void listConfigEntities(com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListConfigEntitiesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListConfigEntitiesMethod(), responseObserver);
     }
 
     /**
@@ -5049,9 +4950,9 @@ public final class WFMGrpc {
      *   -grpc.Internal: error occurs when removing the shift instances.
      * </pre>
      */
-    public void deleteShiftInstances(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesReq request,
+    default void deleteShiftInstances(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteShiftInstancesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteShiftInstancesMethod(), responseObserver);
     }
 
     /**
@@ -5066,9 +4967,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when building the diagnostics.
      * </pre>
      */
-    public void buildNodeDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsReq request,
+    default void buildNodeDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getBuildNodeDiagnosticsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildNodeDiagnosticsMethod(), responseObserver);
     }
 
     /**
@@ -5082,9 +4983,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when building the diagnostics.
      * </pre>
      */
-    public void buildGlobalDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsReq request,
+    default void buildGlobalDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getBuildGlobalDiagnosticsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildGlobalDiagnosticsMethod(), responseObserver);
     }
 
     /**
@@ -5105,9 +5006,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the published schedule.
      * </pre>
      */
-    public void getPublishedSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleReq request,
+    default void getPublishedSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetPublishedScheduleMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPublishedScheduleMethod(), responseObserver);
     }
 
     /**
@@ -5121,9 +5022,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the data.
      * </pre>
      */
-    public void getPublishedScheduleRequiredCalls(com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsReq request,
+    default void getPublishedScheduleRequiredCalls(com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetPublishedScheduleRequiredCallsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPublishedScheduleRequiredCallsMethod(), responseObserver);
     }
 
     /**
@@ -5137,9 +5038,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the data.
      * </pre>
      */
-    public void getDraftScheduleRequiredCalls(com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsReq request,
+    default void getDraftScheduleRequiredCalls(com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetDraftScheduleRequiredCallsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDraftScheduleRequiredCallsMethod(), responseObserver);
     }
 
     /**
@@ -5155,9 +5056,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the draft schedule.
      * </pre>
      */
-    public void createDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleReq request,
+    default void createDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateDraftScheduleMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateDraftScheduleMethod(), responseObserver);
     }
 
     /**
@@ -5173,9 +5074,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when updating the schedule or its instances.
      * </pre>
      */
-    public void updateDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq request,
+    default void updateDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateDraftScheduleMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateDraftScheduleMethod(), responseObserver);
     }
 
     /**
@@ -5186,9 +5087,9 @@ public final class WFMGrpc {
      * Will return diagnostics for the newly built schedule, or just diagnostics if the schedule cannot be built successfully due to diagnostic error.
      * </pre>
      */
-    public void buildDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleReq request,
+    default void buildDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getBuildDraftScheduleMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildDraftScheduleMethod(), responseObserver);
     }
 
     /**
@@ -5206,9 +5107,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when publishing the draft schedule.
      * </pre>
      */
-    public void publishDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleReq request,
+    default void publishDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getPublishDraftScheduleMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPublishDraftScheduleMethod(), responseObserver);
     }
 
     /**
@@ -5229,9 +5130,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the draft schedule.
      * </pre>
      */
-    public void getDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleReq request,
+    default void getDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetDraftScheduleMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDraftScheduleMethod(), responseObserver);
     }
 
     /**
@@ -5245,9 +5146,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when listing the draft schedules.
      * </pre>
      */
-    public void listDraftSchedules(com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesReq request,
+    default void listDraftSchedules(com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListDraftSchedulesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListDraftSchedulesMethod(), responseObserver);
     }
 
     /**
@@ -5262,9 +5163,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when removing the draft schedule.
      * </pre>
      */
-    public void deleteDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq request,
+    default void deleteDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteDraftScheduleMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteDraftScheduleMethod(), responseObserver);
     }
 
     /**
@@ -5277,9 +5178,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the shift instance.
      * </pre>
      */
-    public void createShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq request,
+    default void createShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateShiftInstanceMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateShiftInstanceMethod(), responseObserver);
     }
 
     /**
@@ -5292,9 +5193,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
-    public void swapShiftInstances(com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq request,
+    default void swapShiftInstances(com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getSwapShiftInstancesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSwapShiftInstancesMethod(), responseObserver);
     }
 
     /**
@@ -5307,9 +5208,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when updating the shift instance.
      * </pre>
      */
-    public void updateShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceReq request,
+    default void updateShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateShiftInstanceMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateShiftInstanceMethod(), responseObserver);
     }
 
     /**
@@ -5325,9 +5226,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the data.
      * </pre>
      */
-    public void listShiftSegmentsByShiftInstanceSids(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsReq request,
+    default void listShiftSegmentsByShiftInstanceSids(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListShiftSegmentsByShiftInstanceSidsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListShiftSegmentsByShiftInstanceSidsMethod(), responseObserver);
     }
 
     /**
@@ -5343,9 +5244,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occours when setting the scheduling target.
      * </pre>
      */
-    public void setSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetReq request,
+    default void setSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetSchedulingTargetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetSchedulingTargetMethod(), responseObserver);
     }
 
     /**
@@ -5359,9 +5260,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occours when getting the scheduling target.
      * </pre>
      */
-    public void getSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetReq request,
+    default void getSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetSchedulingTargetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSchedulingTargetMethod(), responseObserver);
     }
 
     /**
@@ -5375,9 +5276,9 @@ public final class WFMGrpc {
      *   -grpc.Internal: error occurs when removing the scheduling target.
      * </pre>
      */
-    public void deleteSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetReq request,
+    default void deleteSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteSchedulingTargetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSchedulingTargetMethod(), responseObserver);
     }
 
     /**
@@ -5393,9 +5294,9 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the data.
      * </pre>
      */
-    public void getPerformanceMetrics(com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq request,
+    default void getPerformanceMetrics(com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetPerformanceMetricsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPerformanceMetricsMethod(), responseObserver);
     }
 
     /**
@@ -5409,791 +5310,42 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the data.
      * </pre>
      */
-    public void listRequiredCallsIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsReq request,
+    default void listRequiredCallsIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListRequiredCallsIntervalsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getListSkillProfilesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesRes>(
-                  this, METHODID_LIST_SKILL_PROFILES)))
-          .addMethod(
-            getUpdateSkillProfileMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileRes>(
-                  this, METHODID_UPDATE_SKILL_PROFILE)))
-          .addMethod(
-            getUpdateSkillProfileProficienciesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesRes>(
-                  this, METHODID_UPDATE_SKILL_PROFILE_PROFICIENCIES)))
-          .addMethod(
-            getGetSkillProfileMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes>(
-                  this, METHODID_GET_SKILL_PROFILE)))
-          .addMethod(
-            getResyncSkillProfilesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesRes>(
-                  this, METHODID_RESYNC_SKILL_PROFILES)))
-          .addMethod(
-            getGetLastSkillProfileResyncDateMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateRes>(
-                  this, METHODID_GET_LAST_SKILL_PROFILE_RESYNC_DATE)))
-          .addMethod(
-            getUpsertForecastingParametersMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersRes>(
-                  this, METHODID_UPSERT_FORECASTING_PARAMETERS)))
-          .addMethod(
-            getGetForecastingParametersMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersRes>(
-                  this, METHODID_GET_FORECASTING_PARAMETERS)))
-          .addMethod(
-            getListHistoricalDataMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataRes>(
-                  this, METHODID_LIST_HISTORICAL_DATA)))
-          .addMethod(
-            getUpsertHistoricalDataDeltaMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaRes>(
-                  this, METHODID_UPSERT_HISTORICAL_DATA_DELTA)))
-          .addMethod(
-            getUpsertHistoricalDataDeltasMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasRes>(
-                  this, METHODID_UPSERT_HISTORICAL_DATA_DELTAS)))
-          .addMethod(
-            getListSkillsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsRes>(
-                  this, METHODID_LIST_SKILLS)))
-          .addMethod(
-            getBuildCallProfileTemplateForSkillProfileMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes>(
-                  this, METHODID_BUILD_CALL_PROFILE_TEMPLATE_FOR_SKILL_PROFILE)))
-          .addMethod(
-            getCreateInactiveSkillProfileMappingMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes>(
-                  this, METHODID_CREATE_INACTIVE_SKILL_PROFILE_MAPPING)))
-          .addMethod(
-            getGetAvailableRegressionForecasterModelTypesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes>(
-                  this, METHODID_GET_AVAILABLE_REGRESSION_FORECASTER_MODEL_TYPES)))
-          .addMethod(
-            getDisconnectInactiveSkillProfileMappingMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes>(
-                  this, METHODID_DISCONNECT_INACTIVE_SKILL_PROFILE_MAPPING)))
-          .addMethod(
-            getDeleteHistoricalDataDeltasMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasRes>(
-                  this, METHODID_DELETE_HISTORICAL_DATA_DELTAS)))
-          .addMethod(
-            getListTopSkillProfilesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesRes>(
-                  this, METHODID_LIST_TOP_SKILL_PROFILES)))
-          .addMethod(
-            getGetSkillProfilesCountMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountRes>(
-                  this, METHODID_GET_SKILL_PROFILES_COUNT)))
-          .addMethod(
-            getBuildProfileForecastByIntervalMethod(),
-            asyncServerStreamingCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>(
-                  this, METHODID_BUILD_PROFILE_FORECAST_BY_INTERVAL)))
-          .addMethod(
-            getBuildProfileForecastByIntervalWithStatsMethod(),
-            asyncServerStreamingCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsRes>(
-                  this, METHODID_BUILD_PROFILE_FORECAST_BY_INTERVAL_WITH_STATS)))
-          .addMethod(
-            getUpsertProfileForecastMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastRes>(
-                  this, METHODID_UPSERT_PROFILE_FORECAST)))
-          .addMethod(
-            getCreateCallProfileTemplateMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateRes>(
-                  this, METHODID_CREATE_CALL_PROFILE_TEMPLATE)))
-          .addMethod(
-            getDeleteCallProfileTemplateMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateRes>(
-                  this, METHODID_DELETE_CALL_PROFILE_TEMPLATE)))
-          .addMethod(
-            getCreateRegressionTemplateMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateRes>(
-                  this, METHODID_CREATE_REGRESSION_TEMPLATE)))
-          .addMethod(
-            getDeleteRegressionTemplateMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateRes>(
-                  this, METHODID_DELETE_REGRESSION_TEMPLATE)))
-          .addMethod(
-            getListRegressionTemplatesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesRes>(
-                  this, METHODID_LIST_REGRESSION_TEMPLATES)))
-          .addMethod(
-            getListForecastIntervalsForSkillProfileMethod(),
-            asyncServerStreamingCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>(
-                  this, METHODID_LIST_FORECAST_INTERVALS_FOR_SKILL_PROFILE)))
-          .addMethod(
-            getBuildRegressionForecastByIntervalMethod(),
-            asyncServerStreamingCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>(
-                  this, METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL)))
-          .addMethod(
-            getBuildRegressionForecastByIntervalWithStatsMethod(),
-            asyncServerStreamingCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsRes>(
-                  this, METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL_WITH_STATS)))
-          .addMethod(
-            getListCallProfileTemplatesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesRes>(
-                  this, METHODID_LIST_CALL_PROFILE_TEMPLATES)))
-          .addMethod(
-            getUpsertRegressionForecastMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastRes>(
-                  this, METHODID_UPSERT_REGRESSION_FORECAST)))
-          .addMethod(
-            getUpsertForecastDataDeltaMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaRes>(
-                  this, METHODID_UPSERT_FORECAST_DATA_DELTA)))
-          .addMethod(
-            getUpsertForecastDataDeltasMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasRes>(
-                  this, METHODID_UPSERT_FORECAST_DATA_DELTAS)))
-          .addMethod(
-            getDeleteForecastIntervalsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsRes>(
-                  this, METHODID_DELETE_FORECAST_INTERVALS)))
-          .addMethod(
-            getListHistoricalDataForAllSkillProfilesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesRes>(
-                  this, METHODID_LIST_HISTORICAL_DATA_FOR_ALL_SKILL_PROFILES)))
-          .addMethod(
-            getBuildDOWAndMOYProfilesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesRes>(
-                  this, METHODID_BUILD_DOWAND_MOYPROFILES)))
-          .addMethod(
-            getCalculateTrainingDataAveragesForSkillProfileMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileRes>(
-                  this, METHODID_CALCULATE_TRAINING_DATA_AVERAGES_FOR_SKILL_PROFILE)))
-          .addMethod(
-            getUpdateSkillProfileAveragesUsingHistoricalDataMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataRes>(
-                  this, METHODID_UPDATE_SKILL_PROFILE_AVERAGES_USING_HISTORICAL_DATA)))
-          .addMethod(
-            getUpdateCallCenterNodeMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeRes>(
-                  this, METHODID_UPDATE_CALL_CENTER_NODE)))
-          .addMethod(
-            getCreateClientNodeMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeRes>(
-                  this, METHODID_CREATE_CLIENT_NODE)))
-          .addMethod(
-            getUpdateClientNodeMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeRes>(
-                  this, METHODID_UPDATE_CLIENT_NODE)))
-          .addMethod(
-            getCreateLocationNodeMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeRes>(
-                  this, METHODID_CREATE_LOCATION_NODE)))
-          .addMethod(
-            getUpdateLocationNodeMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeRes>(
-                  this, METHODID_UPDATE_LOCATION_NODE)))
-          .addMethod(
-            getCreateProgramNodeMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeRes>(
-                  this, METHODID_CREATE_PROGRAM_NODE)))
-          .addMethod(
-            getUpdateProgramNodeMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes>(
-                  this, METHODID_UPDATE_PROGRAM_NODE)))
-          .addMethod(
-            getCreateConstraintRuleMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleRes>(
-                  this, METHODID_CREATE_CONSTRAINT_RULE)))
-          .addMethod(
-            getUpdateConstraintRuleMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleRes>(
-                  this, METHODID_UPDATE_CONSTRAINT_RULE)))
-          .addMethod(
-            getDeleteConstraintRuleMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleRes>(
-                  this, METHODID_DELETE_CONSTRAINT_RULE)))
-          .addMethod(
-            getCreateNonSkillActivityMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityRes>(
-                  this, METHODID_CREATE_NON_SKILL_ACTIVITY)))
-          .addMethod(
-            getUpdateNonSkillActivityMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityRes>(
-                  this, METHODID_UPDATE_NON_SKILL_ACTIVITY)))
-          .addMethod(
-            getListNonSkillActivityAssociationsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsRes>(
-                  this, METHODID_LIST_NON_SKILL_ACTIVITY_ASSOCIATIONS)))
-          .addMethod(
-            getListCandidateSchedulingActivitiesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesRes>(
-                  this, METHODID_LIST_CANDIDATE_SCHEDULING_ACTIVITIES)))
-          .addMethod(
-            getCreateAgentGroupMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupRes>(
-                  this, METHODID_CREATE_AGENT_GROUP)))
-          .addMethod(
-            getUpdateAgentGroupMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupRes>(
-                  this, METHODID_UPDATE_AGENT_GROUP)))
-          .addMethod(
-            getUpdateWFMAgentMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentRes>(
-                  this, METHODID_UPDATE_WFMAGENT)))
-          .addMethod(
-            getListAllWFMAgentsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsRes>(
-                  this, METHODID_LIST_ALL_WFMAGENTS)))
-          .addMethod(
-            getListCandidateWFMAgentsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsRes>(
-                  this, METHODID_LIST_CANDIDATE_WFMAGENTS)))
-          .addMethod(
-            getListUngroupedWFMAgentsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes>(
-                  this, METHODID_LIST_UNGROUPED_WFMAGENTS)))
-          .addMethod(
-            getListWFMAgentsAssociatedWithAgentGroupMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupRes>(
-                  this, METHODID_LIST_WFMAGENTS_ASSOCIATED_WITH_AGENT_GROUP)))
-          .addMethod(
-            getCreateWFMAgentMembershipsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsRes>(
-                  this, METHODID_CREATE_WFMAGENT_MEMBERSHIPS)))
-          .addMethod(
-            getDeleteWFMAgentMembershipsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsRes>(
-                  this, METHODID_DELETE_WFMAGENT_MEMBERSHIPS)))
-          .addMethod(
-            getBuildAgentDiagnosticsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsRes>(
-                  this, METHODID_BUILD_AGENT_DIAGNOSTICS)))
-          .addMethod(
-            getCreateShiftTemplateMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateRes>(
-                  this, METHODID_CREATE_SHIFT_TEMPLATE)))
-          .addMethod(
-            getUpdateShiftTemplateMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateRes>(
-                  this, METHODID_UPDATE_SHIFT_TEMPLATE)))
-          .addMethod(
-            getListShiftTemplatesBySidsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsRes>(
-                  this, METHODID_LIST_SHIFT_TEMPLATES_BY_SIDS)))
-          .addMethod(
-            getBuildShiftTemplateDiagnosticsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsRes>(
-                  this, METHODID_BUILD_SHIFT_TEMPLATE_DIAGNOSTICS)))
-          .addMethod(
-            getCreatePlacementRuleMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleRes>(
-                  this, METHODID_CREATE_PLACEMENT_RULE)))
-          .addMethod(
-            getUpdatePlacementRuleMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleRes>(
-                  this, METHODID_UPDATE_PLACEMENT_RULE)))
-          .addMethod(
-            getDeletePlacementRuleMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleRes>(
-                  this, METHODID_DELETE_PLACEMENT_RULE)))
-          .addMethod(
-            getCreateOpenTimesPatternMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternRes>(
-                  this, METHODID_CREATE_OPEN_TIMES_PATTERN)))
-          .addMethod(
-            getUpdateOpenTimesPatternMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternRes>(
-                  this, METHODID_UPDATE_OPEN_TIMES_PATTERN)))
-          .addMethod(
-            getDeleteOpenTimesPatternMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternRes>(
-                  this, METHODID_DELETE_OPEN_TIMES_PATTERN)))
-          .addMethod(
-            getGetOpenTimesBitmapsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes>(
-                  this, METHODID_GET_OPEN_TIMES_BITMAPS)))
-          .addMethod(
-            getCreateAgentAvailabilityPatternMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternRes>(
-                  this, METHODID_CREATE_AGENT_AVAILABILITY_PATTERN)))
-          .addMethod(
-            getUpdateAgentAvailabilityPatternMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternRes>(
-                  this, METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN)))
-          .addMethod(
-            getDeleteAgentAvailabilityPatternMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternRes>(
-                  this, METHODID_DELETE_AGENT_AVAILABILITY_PATTERN)))
-          .addMethod(
-            getGetAvailabilityBitmapsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsRes>(
-                  this, METHODID_GET_AVAILABILITY_BITMAPS)))
-          .addMethod(
-            getUpsertNonSkillActivityAssociationMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationRes>(
-                  this, METHODID_UPSERT_NON_SKILL_ACTIVITY_ASSOCIATION)))
-          .addMethod(
-            getCreateSkillProficienciesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesRes>(
-                  this, METHODID_CREATE_SKILL_PROFICIENCIES)))
-          .addMethod(
-            getUpdateSkillProficienciesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesRes>(
-                  this, METHODID_UPDATE_SKILL_PROFICIENCIES)))
-          .addMethod(
-            getDeleteSkillProficiencyMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyRes>(
-                  this, METHODID_DELETE_SKILL_PROFICIENCY)))
-          .addMethod(
-            getCopyScenarioMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioRes>(
-                  this, METHODID_COPY_SCENARIO)))
-          .addMethod(
-            getCreateScheduleScenarioWithNodesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesRes>(
-                  this, METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES)))
-          .addMethod(
-            getUpdateScheduleScenarioMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioRes>(
-                  this, METHODID_UPDATE_SCHEDULE_SCENARIO)))
-          .addMethod(
-            getListConfigEntitiesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesRes>(
-                  this, METHODID_LIST_CONFIG_ENTITIES)))
-          .addMethod(
-            getDeleteShiftInstancesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesRes>(
-                  this, METHODID_DELETE_SHIFT_INSTANCES)))
-          .addMethod(
-            getBuildNodeDiagnosticsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsRes>(
-                  this, METHODID_BUILD_NODE_DIAGNOSTICS)))
-          .addMethod(
-            getBuildGlobalDiagnosticsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsRes>(
-                  this, METHODID_BUILD_GLOBAL_DIAGNOSTICS)))
-          .addMethod(
-            getGetPublishedScheduleMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRes>(
-                  this, METHODID_GET_PUBLISHED_SCHEDULE)))
-          .addMethod(
-            getGetPublishedScheduleRequiredCallsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsRes>(
-                  this, METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS)))
-          .addMethod(
-            getGetDraftScheduleRequiredCallsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsRes>(
-                  this, METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS)))
-          .addMethod(
-            getCreateDraftScheduleMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleRes>(
-                  this, METHODID_CREATE_DRAFT_SCHEDULE)))
-          .addMethod(
-            getUpdateDraftScheduleMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleRes>(
-                  this, METHODID_UPDATE_DRAFT_SCHEDULE)))
-          .addMethod(
-            getBuildDraftScheduleMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes>(
-                  this, METHODID_BUILD_DRAFT_SCHEDULE)))
-          .addMethod(
-            getPublishDraftScheduleMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleRes>(
-                  this, METHODID_PUBLISH_DRAFT_SCHEDULE)))
-          .addMethod(
-            getGetDraftScheduleMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRes>(
-                  this, METHODID_GET_DRAFT_SCHEDULE)))
-          .addMethod(
-            getListDraftSchedulesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesRes>(
-                  this, METHODID_LIST_DRAFT_SCHEDULES)))
-          .addMethod(
-            getDeleteDraftScheduleMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes>(
-                  this, METHODID_DELETE_DRAFT_SCHEDULE)))
-          .addMethod(
-            getCreateShiftInstanceMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes>(
-                  this, METHODID_CREATE_SHIFT_INSTANCE)))
-          .addMethod(
-            getSwapShiftInstancesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesRes>(
-                  this, METHODID_SWAP_SHIFT_INSTANCES)))
-          .addMethod(
-            getUpdateShiftInstanceMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes>(
-                  this, METHODID_UPDATE_SHIFT_INSTANCE)))
-          .addMethod(
-            getListShiftSegmentsByShiftInstanceSidsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsRes>(
-                  this, METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS)))
-          .addMethod(
-            getSetSchedulingTargetMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetRes>(
-                  this, METHODID_SET_SCHEDULING_TARGET)))
-          .addMethod(
-            getGetSchedulingTargetMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetRes>(
-                  this, METHODID_GET_SCHEDULING_TARGET)))
-          .addMethod(
-            getDeleteSchedulingTargetMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes>(
-                  this, METHODID_DELETE_SCHEDULING_TARGET)))
-          .addMethod(
-            getGetPerformanceMetricsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsRes>(
-                  this, METHODID_GET_PERFORMANCE_METRICS)))
-          .addMethod(
-            getListRequiredCallsIntervalsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsReq,
-                com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsRes>(
-                  this, METHODID_LIST_REQUIRED_CALLS_INTERVALS)))
-          .build();
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRequiredCallsIntervalsMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service WFM.
    * <pre>
    * WFM is responsible for call prediction and call volume calculations based on call skills and other parameters.
    * </pre>
    */
-  public static final class WFMStub extends io.grpc.stub.AbstractStub<WFMStub> {
-    private WFMStub(io.grpc.Channel channel) {
-      super(channel);
-    }
+  public static abstract class WFMImplBase
+      implements io.grpc.BindableService, AsyncService {
 
-    private WFMStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return WFMGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service WFM.
+   * <pre>
+   * WFM is responsible for call prediction and call volume calculations based on call skills and other parameters.
+   * </pre>
+   */
+  public static final class WFMStub
+      extends io.grpc.stub.AbstractAsyncStub<WFMStub> {
+    private WFMStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected WFMStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected WFMStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new WFMStub(channel, callOptions);
     }
 
@@ -6208,7 +5360,7 @@ public final class WFMGrpc {
      */
     public void listSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSkillProfilesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6226,7 +5378,7 @@ public final class WFMGrpc {
      */
     public void updateSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateSkillProfileMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6242,7 +5394,7 @@ public final class WFMGrpc {
      */
     public void updateSkillProfileProficiencies(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateSkillProfileProficienciesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6262,7 +5414,7 @@ public final class WFMGrpc {
      */
     public void getSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSkillProfileMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6278,7 +5430,7 @@ public final class WFMGrpc {
      */
     public void resyncSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getResyncSkillProfilesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6294,7 +5446,7 @@ public final class WFMGrpc {
      */
     public void getLastSkillProfileResyncDate(com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetLastSkillProfileResyncDateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6311,7 +5463,7 @@ public final class WFMGrpc {
      */
     public void upsertForecastingParameters(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpsertForecastingParametersMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6327,7 +5479,7 @@ public final class WFMGrpc {
      */
     public void getForecastingParameters(com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetForecastingParametersMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6349,7 +5501,7 @@ public final class WFMGrpc {
      */
     public void listHistoricalData(com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListHistoricalDataMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6366,7 +5518,7 @@ public final class WFMGrpc {
      */
     public void upsertHistoricalDataDelta(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpsertHistoricalDataDeltaMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6384,7 +5536,7 @@ public final class WFMGrpc {
      */
     public void upsertHistoricalDataDeltas(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpsertHistoricalDataDeltasMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6400,7 +5552,7 @@ public final class WFMGrpc {
      */
     public void listSkills(com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSkillsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6422,7 +5574,7 @@ public final class WFMGrpc {
      */
     public void buildCallProfileTemplateForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getBuildCallProfileTemplateForSkillProfileMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6440,7 +5592,7 @@ public final class WFMGrpc {
      */
     public void createInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateInactiveSkillProfileMappingMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6455,7 +5607,7 @@ public final class WFMGrpc {
      */
     public void getAvailableRegressionForecasterModelTypes(com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAvailableRegressionForecasterModelTypesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6473,7 +5625,7 @@ public final class WFMGrpc {
      */
     public void disconnectInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDisconnectInactiveSkillProfileMappingMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6491,7 +5643,7 @@ public final class WFMGrpc {
      */
     public void deleteHistoricalDataDeltas(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteHistoricalDataDeltasMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6509,7 +5661,7 @@ public final class WFMGrpc {
      */
     public void listTopSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListTopSkillProfilesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6524,7 +5676,7 @@ public final class WFMGrpc {
      */
     public void getSkillProfilesCount(com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSkillProfilesCountMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6544,7 +5696,7 @@ public final class WFMGrpc {
      */
     public void buildProfileForecastByInterval(com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getBuildProfileForecastByIntervalMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6565,7 +5717,7 @@ public final class WFMGrpc {
      */
     public void buildProfileForecastByIntervalWithStats(com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsRes> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getBuildProfileForecastByIntervalWithStatsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6587,7 +5739,7 @@ public final class WFMGrpc {
      */
     public void upsertProfileForecast(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpsertProfileForecastMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6603,7 +5755,7 @@ public final class WFMGrpc {
      */
     public void createCallProfileTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateCallProfileTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6619,7 +5771,7 @@ public final class WFMGrpc {
      */
     public void deleteCallProfileTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteCallProfileTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6635,7 +5787,7 @@ public final class WFMGrpc {
      */
     public void createRegressionTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateRegressionTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6651,7 +5803,7 @@ public final class WFMGrpc {
      */
     public void deleteRegressionTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteRegressionTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6666,7 +5818,7 @@ public final class WFMGrpc {
      */
     public void listRegressionTemplates(com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListRegressionTemplatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6682,7 +5834,7 @@ public final class WFMGrpc {
      */
     public void listForecastIntervalsForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListForecastIntervalsForSkillProfileMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6702,7 +5854,7 @@ public final class WFMGrpc {
      */
     public void buildRegressionForecastByInterval(com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getBuildRegressionForecastByIntervalMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6721,7 +5873,7 @@ public final class WFMGrpc {
      */
     public void buildRegressionForecastByIntervalWithStats(com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsRes> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getBuildRegressionForecastByIntervalWithStatsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6736,7 +5888,7 @@ public final class WFMGrpc {
      */
     public void listCallProfileTemplates(com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListCallProfileTemplatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6755,7 +5907,7 @@ public final class WFMGrpc {
      */
     public void upsertRegressionForecast(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpsertRegressionForecastMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6772,7 +5924,7 @@ public final class WFMGrpc {
      */
     public void upsertForecastDataDelta(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpsertForecastDataDeltaMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6789,7 +5941,7 @@ public final class WFMGrpc {
      */
     public void upsertForecastDataDeltas(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpsertForecastDataDeltasMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6810,7 +5962,7 @@ public final class WFMGrpc {
      */
     public void deleteForecastIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteForecastIntervalsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6828,7 +5980,7 @@ public final class WFMGrpc {
      */
     public void listHistoricalDataForAllSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListHistoricalDataForAllSkillProfilesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6844,7 +5996,7 @@ public final class WFMGrpc {
      */
     public void buildDOWAndMOYProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getBuildDOWAndMOYProfilesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6863,7 +6015,7 @@ public final class WFMGrpc {
      */
     public void calculateTrainingDataAveragesForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCalculateTrainingDataAveragesForSkillProfileMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6883,7 +6035,7 @@ public final class WFMGrpc {
      */
     public void updateSkillProfileAveragesUsingHistoricalData(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateSkillProfileAveragesUsingHistoricalDataMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6903,7 +6055,7 @@ public final class WFMGrpc {
      */
     public void updateCallCenterNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateCallCenterNodeMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6924,7 +6076,7 @@ public final class WFMGrpc {
      */
     public void createClientNode(com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateClientNodeMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6944,7 +6096,7 @@ public final class WFMGrpc {
      */
     public void updateClientNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateClientNodeMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6965,7 +6117,7 @@ public final class WFMGrpc {
      */
     public void createLocationNode(com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateLocationNodeMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -6985,7 +6137,7 @@ public final class WFMGrpc {
      */
     public void updateLocationNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateLocationNodeMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7006,7 +6158,7 @@ public final class WFMGrpc {
      */
     public void createProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateProgramNodeMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7026,7 +6178,7 @@ public final class WFMGrpc {
      */
     public void updateProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateProgramNodeMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7049,7 +6201,7 @@ public final class WFMGrpc {
      */
     public void createConstraintRule(com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateConstraintRuleMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7074,7 +6226,7 @@ public final class WFMGrpc {
      */
     public void updateConstraintRule(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateConstraintRuleMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7092,7 +6244,7 @@ public final class WFMGrpc {
      */
     public void deleteConstraintRule(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteConstraintRuleMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7111,7 +6263,7 @@ public final class WFMGrpc {
      */
     public void createNonSkillActivity(com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateNonSkillActivityMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7128,7 +6280,7 @@ public final class WFMGrpc {
      */
     public void updateNonSkillActivity(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateNonSkillActivityMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7144,7 +6296,7 @@ public final class WFMGrpc {
      */
     public void listNonSkillActivityAssociations(com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListNonSkillActivityAssociationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7165,7 +6317,7 @@ public final class WFMGrpc {
      */
     public void listCandidateSchedulingActivities(com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListCandidateSchedulingActivitiesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7185,7 +6337,7 @@ public final class WFMGrpc {
      */
     public void createAgentGroup(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateAgentGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7206,7 +6358,7 @@ public final class WFMGrpc {
      */
     public void updateAgentGroup(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAgentGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7226,7 +6378,7 @@ public final class WFMGrpc {
      */
     public void updateWFMAgent(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateWFMAgentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7245,7 +6397,7 @@ public final class WFMGrpc {
      */
     public void listAllWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAllWFMAgentsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7263,7 +6415,7 @@ public final class WFMGrpc {
      */
     public void listCandidateWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListCandidateWFMAgentsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7282,7 +6434,7 @@ public final class WFMGrpc {
      */
     public void listUngroupedWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListUngroupedWFMAgentsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7298,7 +6450,7 @@ public final class WFMGrpc {
      */
     public void listWFMAgentsAssociatedWithAgentGroup(com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListWFMAgentsAssociatedWithAgentGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7316,7 +6468,7 @@ public final class WFMGrpc {
      */
     public void createWFMAgentMemberships(com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateWFMAgentMembershipsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7333,7 +6485,7 @@ public final class WFMGrpc {
      */
     public void deleteWFMAgentMemberships(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteWFMAgentMembershipsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7352,7 +6504,7 @@ public final class WFMGrpc {
      */
     public void buildAgentDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getBuildAgentDiagnosticsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7373,7 +6525,7 @@ public final class WFMGrpc {
      */
     public void createShiftTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateShiftTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7394,7 +6546,7 @@ public final class WFMGrpc {
      */
     public void updateShiftTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateShiftTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7410,7 +6562,7 @@ public final class WFMGrpc {
      */
     public void listShiftTemplatesBySids(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListShiftTemplatesBySidsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7426,7 +6578,7 @@ public final class WFMGrpc {
      */
     public void buildShiftTemplateDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getBuildShiftTemplateDiagnosticsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7447,7 +6599,7 @@ public final class WFMGrpc {
      */
     public void createPlacementRule(com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreatePlacementRuleMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7468,7 +6620,7 @@ public final class WFMGrpc {
      */
     public void updatePlacementRule(com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdatePlacementRuleMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7486,7 +6638,7 @@ public final class WFMGrpc {
      */
     public void deletePlacementRule(com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeletePlacementRuleMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7505,7 +6657,7 @@ public final class WFMGrpc {
      */
     public void createOpenTimesPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateOpenTimesPatternMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7524,7 +6676,7 @@ public final class WFMGrpc {
      */
     public void updateOpenTimesPattern(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateOpenTimesPatternMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7541,7 +6693,7 @@ public final class WFMGrpc {
      */
     public void deleteOpenTimesPattern(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteOpenTimesPatternMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7561,7 +6713,7 @@ public final class WFMGrpc {
      */
     public void getOpenTimesBitmaps(com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetOpenTimesBitmapsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7580,7 +6732,7 @@ public final class WFMGrpc {
      */
     public void createAgentAvailabilityPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateAgentAvailabilityPatternMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7599,7 +6751,7 @@ public final class WFMGrpc {
      */
     public void updateAgentAvailabilityPattern(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAgentAvailabilityPatternMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7616,7 +6768,7 @@ public final class WFMGrpc {
      */
     public void deleteAgentAvailabilityPattern(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteAgentAvailabilityPatternMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7638,7 +6790,7 @@ public final class WFMGrpc {
      */
     public void getAvailabilityBitmaps(com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAvailabilityBitmapsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7661,7 +6813,7 @@ public final class WFMGrpc {
      */
     public void upsertNonSkillActivityAssociation(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpsertNonSkillActivityAssociationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7683,7 +6835,7 @@ public final class WFMGrpc {
      */
     public void createSkillProficiencies(com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateSkillProficienciesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7705,7 +6857,7 @@ public final class WFMGrpc {
      */
     public void updateSkillProficiencies(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateSkillProficienciesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7722,7 +6874,7 @@ public final class WFMGrpc {
      */
     public void deleteSkillProficiency(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteSkillProficiencyMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7741,7 +6893,7 @@ public final class WFMGrpc {
      */
     public void copyScenario(com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCopyScenarioMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7762,7 +6914,7 @@ public final class WFMGrpc {
      */
     public void createScheduleScenarioWithNodes(com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateScheduleScenarioWithNodesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7782,7 +6934,7 @@ public final class WFMGrpc {
      */
     public void updateScheduleScenario(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateScheduleScenarioMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7801,7 +6953,7 @@ public final class WFMGrpc {
      */
     public void listConfigEntities(com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListConfigEntitiesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7818,7 +6970,7 @@ public final class WFMGrpc {
      */
     public void deleteShiftInstances(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteShiftInstancesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7836,7 +6988,7 @@ public final class WFMGrpc {
      */
     public void buildNodeDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getBuildNodeDiagnosticsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7853,7 +7005,7 @@ public final class WFMGrpc {
      */
     public void buildGlobalDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getBuildGlobalDiagnosticsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7877,7 +7029,7 @@ public final class WFMGrpc {
      */
     public void getPublishedSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetPublishedScheduleMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7894,7 +7046,7 @@ public final class WFMGrpc {
      */
     public void getPublishedScheduleRequiredCalls(com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetPublishedScheduleRequiredCallsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7911,7 +7063,7 @@ public final class WFMGrpc {
      */
     public void getDraftScheduleRequiredCalls(com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetDraftScheduleRequiredCallsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7930,7 +7082,7 @@ public final class WFMGrpc {
      */
     public void createDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateDraftScheduleMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7949,7 +7101,7 @@ public final class WFMGrpc {
      */
     public void updateDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateDraftScheduleMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7963,7 +7115,7 @@ public final class WFMGrpc {
      */
     public void buildDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getBuildDraftScheduleMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -7984,7 +7136,7 @@ public final class WFMGrpc {
      */
     public void publishDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getPublishDraftScheduleMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -8008,7 +7160,7 @@ public final class WFMGrpc {
      */
     public void getDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetDraftScheduleMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -8025,7 +7177,7 @@ public final class WFMGrpc {
      */
     public void listDraftSchedules(com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListDraftSchedulesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -8043,7 +7195,7 @@ public final class WFMGrpc {
      */
     public void deleteDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteDraftScheduleMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -8059,7 +7211,7 @@ public final class WFMGrpc {
      */
     public void createShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateShiftInstanceMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -8075,7 +7227,7 @@ public final class WFMGrpc {
      */
     public void swapShiftInstances(com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSwapShiftInstancesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -8091,7 +7243,7 @@ public final class WFMGrpc {
      */
     public void updateShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateShiftInstanceMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -8110,7 +7262,7 @@ public final class WFMGrpc {
      */
     public void listShiftSegmentsByShiftInstanceSids(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListShiftSegmentsByShiftInstanceSidsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -8129,7 +7281,7 @@ public final class WFMGrpc {
      */
     public void setSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSetSchedulingTargetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -8146,7 +7298,7 @@ public final class WFMGrpc {
      */
     public void getSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSchedulingTargetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -8163,7 +7315,7 @@ public final class WFMGrpc {
      */
     public void deleteSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteSchedulingTargetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -8182,7 +7334,7 @@ public final class WFMGrpc {
      */
     public void getPerformanceMetrics(com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetPerformanceMetricsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -8199,29 +7351,27 @@ public final class WFMGrpc {
      */
     public void listRequiredCallsIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListRequiredCallsIntervalsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service WFM.
    * <pre>
    * WFM is responsible for call prediction and call volume calculations based on call skills and other parameters.
    * </pre>
    */
-  public static final class WFMBlockingStub extends io.grpc.stub.AbstractStub<WFMBlockingStub> {
-    private WFMBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private WFMBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class WFMBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<WFMBlockingStub> {
+    private WFMBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected WFMBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected WFMBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new WFMBlockingStub(channel, callOptions);
     }
 
@@ -8235,7 +7385,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesRes listSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSkillProfilesMethod(), getCallOptions(), request);
     }
 
@@ -8252,7 +7402,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileRes updateSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateSkillProfileMethod(), getCallOptions(), request);
     }
 
@@ -8267,7 +7417,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesRes updateSkillProfileProficiencies(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateSkillProfileProficienciesMethod(), getCallOptions(), request);
     }
 
@@ -8286,7 +7436,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes getSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSkillProfileMethod(), getCallOptions(), request);
     }
 
@@ -8301,7 +7451,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesRes resyncSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getResyncSkillProfilesMethod(), getCallOptions(), request);
     }
 
@@ -8316,7 +7466,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateRes getLastSkillProfileResyncDate(com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetLastSkillProfileResyncDateMethod(), getCallOptions(), request);
     }
 
@@ -8332,7 +7482,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersRes upsertForecastingParameters(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpsertForecastingParametersMethod(), getCallOptions(), request);
     }
 
@@ -8347,7 +7497,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersRes getForecastingParameters(com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetForecastingParametersMethod(), getCallOptions(), request);
     }
 
@@ -8368,7 +7518,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataRes listHistoricalData(com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListHistoricalDataMethod(), getCallOptions(), request);
     }
 
@@ -8384,7 +7534,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaRes upsertHistoricalDataDelta(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpsertHistoricalDataDeltaMethod(), getCallOptions(), request);
     }
 
@@ -8401,7 +7551,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasRes upsertHistoricalDataDeltas(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpsertHistoricalDataDeltasMethod(), getCallOptions(), request);
     }
 
@@ -8416,7 +7566,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsRes listSkills(com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSkillsMethod(), getCallOptions(), request);
     }
 
@@ -8437,7 +7587,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes buildCallProfileTemplateForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBuildCallProfileTemplateForSkillProfileMethod(), getCallOptions(), request);
     }
 
@@ -8454,7 +7604,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes createInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateInactiveSkillProfileMappingMethod(), getCallOptions(), request);
     }
 
@@ -8468,7 +7618,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes getAvailableRegressionForecasterModelTypes(com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAvailableRegressionForecasterModelTypesMethod(), getCallOptions(), request);
     }
 
@@ -8485,7 +7635,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes disconnectInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDisconnectInactiveSkillProfileMappingMethod(), getCallOptions(), request);
     }
 
@@ -8502,7 +7652,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasRes deleteHistoricalDataDeltas(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteHistoricalDataDeltasMethod(), getCallOptions(), request);
     }
 
@@ -8519,7 +7669,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesRes listTopSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListTopSkillProfilesMethod(), getCallOptions(), request);
     }
 
@@ -8533,7 +7683,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountRes getSkillProfilesCount(com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSkillProfilesCountMethod(), getCallOptions(), request);
     }
 
@@ -8553,7 +7703,7 @@ public final class WFMGrpc {
      */
     public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> buildProfileForecastByInterval(
         com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalReq request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getBuildProfileForecastByIntervalMethod(), getCallOptions(), request);
     }
 
@@ -8574,7 +7724,7 @@ public final class WFMGrpc {
      */
     public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsRes> buildProfileForecastByIntervalWithStats(
         com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsReq request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getBuildProfileForecastByIntervalWithStatsMethod(), getCallOptions(), request);
     }
 
@@ -8595,7 +7745,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastRes upsertProfileForecast(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpsertProfileForecastMethod(), getCallOptions(), request);
     }
 
@@ -8610,7 +7760,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateRes createCallProfileTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateCallProfileTemplateMethod(), getCallOptions(), request);
     }
 
@@ -8625,7 +7775,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateRes deleteCallProfileTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteCallProfileTemplateMethod(), getCallOptions(), request);
     }
 
@@ -8640,7 +7790,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateRes createRegressionTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateRegressionTemplateMethod(), getCallOptions(), request);
     }
 
@@ -8655,7 +7805,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateRes deleteRegressionTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteRegressionTemplateMethod(), getCallOptions(), request);
     }
 
@@ -8669,7 +7819,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesRes listRegressionTemplates(com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListRegressionTemplatesMethod(), getCallOptions(), request);
     }
 
@@ -8685,7 +7835,7 @@ public final class WFMGrpc {
      */
     public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> listForecastIntervalsForSkillProfile(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListForecastIntervalsForSkillProfileMethod(), getCallOptions(), request);
     }
 
@@ -8705,7 +7855,7 @@ public final class WFMGrpc {
      */
     public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> buildRegressionForecastByInterval(
         com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalReq request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getBuildRegressionForecastByIntervalMethod(), getCallOptions(), request);
     }
 
@@ -8724,7 +7874,7 @@ public final class WFMGrpc {
      */
     public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsRes> buildRegressionForecastByIntervalWithStats(
         com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getBuildRegressionForecastByIntervalWithStatsMethod(), getCallOptions(), request);
     }
 
@@ -8738,7 +7888,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesRes listCallProfileTemplates(com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListCallProfileTemplatesMethod(), getCallOptions(), request);
     }
 
@@ -8756,7 +7906,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastRes upsertRegressionForecast(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpsertRegressionForecastMethod(), getCallOptions(), request);
     }
 
@@ -8772,7 +7922,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaRes upsertForecastDataDelta(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpsertForecastDataDeltaMethod(), getCallOptions(), request);
     }
 
@@ -8788,7 +7938,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasRes upsertForecastDataDeltas(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpsertForecastDataDeltasMethod(), getCallOptions(), request);
     }
 
@@ -8808,7 +7958,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsRes deleteForecastIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteForecastIntervalsMethod(), getCallOptions(), request);
     }
 
@@ -8825,7 +7975,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesRes listHistoricalDataForAllSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListHistoricalDataForAllSkillProfilesMethod(), getCallOptions(), request);
     }
 
@@ -8840,7 +7990,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesRes buildDOWAndMOYProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBuildDOWAndMOYProfilesMethod(), getCallOptions(), request);
     }
 
@@ -8858,7 +8008,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileRes calculateTrainingDataAveragesForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCalculateTrainingDataAveragesForSkillProfileMethod(), getCallOptions(), request);
     }
 
@@ -8877,7 +8027,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataRes updateSkillProfileAveragesUsingHistoricalData(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateSkillProfileAveragesUsingHistoricalDataMethod(), getCallOptions(), request);
     }
 
@@ -8896,7 +8046,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeRes updateCallCenterNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateCallCenterNodeMethod(), getCallOptions(), request);
     }
 
@@ -8916,7 +8066,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeRes createClientNode(com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateClientNodeMethod(), getCallOptions(), request);
     }
 
@@ -8935,7 +8085,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeRes updateClientNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateClientNodeMethod(), getCallOptions(), request);
     }
 
@@ -8955,7 +8105,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeRes createLocationNode(com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateLocationNodeMethod(), getCallOptions(), request);
     }
 
@@ -8974,7 +8124,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeRes updateLocationNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateLocationNodeMethod(), getCallOptions(), request);
     }
 
@@ -8994,7 +8144,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeRes createProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateProgramNodeMethod(), getCallOptions(), request);
     }
 
@@ -9013,7 +8163,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes updateProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateProgramNodeMethod(), getCallOptions(), request);
     }
 
@@ -9035,7 +8185,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleRes createConstraintRule(com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateConstraintRuleMethod(), getCallOptions(), request);
     }
 
@@ -9059,7 +8209,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleRes updateConstraintRule(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateConstraintRuleMethod(), getCallOptions(), request);
     }
 
@@ -9076,7 +8226,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleRes deleteConstraintRule(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteConstraintRuleMethod(), getCallOptions(), request);
     }
 
@@ -9094,7 +8244,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityRes createNonSkillActivity(com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateNonSkillActivityMethod(), getCallOptions(), request);
     }
 
@@ -9110,7 +8260,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityRes updateNonSkillActivity(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateNonSkillActivityMethod(), getCallOptions(), request);
     }
 
@@ -9125,7 +8275,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsRes listNonSkillActivityAssociations(com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListNonSkillActivityAssociationsMethod(), getCallOptions(), request);
     }
 
@@ -9145,7 +8295,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesRes listCandidateSchedulingActivities(com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListCandidateSchedulingActivitiesMethod(), getCallOptions(), request);
     }
 
@@ -9164,7 +8314,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupRes createAgentGroup(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateAgentGroupMethod(), getCallOptions(), request);
     }
 
@@ -9184,7 +8334,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupRes updateAgentGroup(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAgentGroupMethod(), getCallOptions(), request);
     }
 
@@ -9203,7 +8353,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentRes updateWFMAgent(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateWFMAgentMethod(), getCallOptions(), request);
     }
 
@@ -9221,7 +8371,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsRes listAllWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAllWFMAgentsMethod(), getCallOptions(), request);
     }
 
@@ -9238,7 +8388,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsRes listCandidateWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListCandidateWFMAgentsMethod(), getCallOptions(), request);
     }
 
@@ -9256,7 +8406,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes listUngroupedWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListUngroupedWFMAgentsMethod(), getCallOptions(), request);
     }
 
@@ -9271,7 +8421,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupRes listWFMAgentsAssociatedWithAgentGroup(com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListWFMAgentsAssociatedWithAgentGroupMethod(), getCallOptions(), request);
     }
 
@@ -9288,7 +8438,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsRes createWFMAgentMemberships(com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateWFMAgentMembershipsMethod(), getCallOptions(), request);
     }
 
@@ -9304,7 +8454,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsRes deleteWFMAgentMemberships(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteWFMAgentMembershipsMethod(), getCallOptions(), request);
     }
 
@@ -9322,7 +8472,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsRes buildAgentDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBuildAgentDiagnosticsMethod(), getCallOptions(), request);
     }
 
@@ -9342,7 +8492,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateRes createShiftTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateShiftTemplateMethod(), getCallOptions(), request);
     }
 
@@ -9362,7 +8512,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateRes updateShiftTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateShiftTemplateMethod(), getCallOptions(), request);
     }
 
@@ -9377,7 +8527,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsRes listShiftTemplatesBySids(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListShiftTemplatesBySidsMethod(), getCallOptions(), request);
     }
 
@@ -9392,7 +8542,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsRes buildShiftTemplateDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBuildShiftTemplateDiagnosticsMethod(), getCallOptions(), request);
     }
 
@@ -9412,7 +8562,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleRes createPlacementRule(com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreatePlacementRuleMethod(), getCallOptions(), request);
     }
 
@@ -9432,7 +8582,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleRes updatePlacementRule(com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdatePlacementRuleMethod(), getCallOptions(), request);
     }
 
@@ -9449,7 +8599,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleRes deletePlacementRule(com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeletePlacementRuleMethod(), getCallOptions(), request);
     }
 
@@ -9467,7 +8617,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternRes createOpenTimesPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateOpenTimesPatternMethod(), getCallOptions(), request);
     }
 
@@ -9485,7 +8635,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternRes updateOpenTimesPattern(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateOpenTimesPatternMethod(), getCallOptions(), request);
     }
 
@@ -9501,7 +8651,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternRes deleteOpenTimesPattern(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteOpenTimesPatternMethod(), getCallOptions(), request);
     }
 
@@ -9520,7 +8670,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes getOpenTimesBitmaps(com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetOpenTimesBitmapsMethod(), getCallOptions(), request);
     }
 
@@ -9538,7 +8688,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternRes createAgentAvailabilityPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateAgentAvailabilityPatternMethod(), getCallOptions(), request);
     }
 
@@ -9556,7 +8706,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternRes updateAgentAvailabilityPattern(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAgentAvailabilityPatternMethod(), getCallOptions(), request);
     }
 
@@ -9572,7 +8722,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternRes deleteAgentAvailabilityPattern(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteAgentAvailabilityPatternMethod(), getCallOptions(), request);
     }
 
@@ -9593,7 +8743,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsRes getAvailabilityBitmaps(com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAvailabilityBitmapsMethod(), getCallOptions(), request);
     }
 
@@ -9615,7 +8765,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationRes upsertNonSkillActivityAssociation(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpsertNonSkillActivityAssociationMethod(), getCallOptions(), request);
     }
 
@@ -9636,7 +8786,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesRes createSkillProficiencies(com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateSkillProficienciesMethod(), getCallOptions(), request);
     }
 
@@ -9657,7 +8807,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesRes updateSkillProficiencies(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateSkillProficienciesMethod(), getCallOptions(), request);
     }
 
@@ -9673,7 +8823,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyRes deleteSkillProficiency(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteSkillProficiencyMethod(), getCallOptions(), request);
     }
 
@@ -9691,7 +8841,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioRes copyScenario(com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCopyScenarioMethod(), getCallOptions(), request);
     }
 
@@ -9711,7 +8861,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesRes createScheduleScenarioWithNodes(com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateScheduleScenarioWithNodesMethod(), getCallOptions(), request);
     }
 
@@ -9730,7 +8880,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioRes updateScheduleScenario(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateScheduleScenarioMethod(), getCallOptions(), request);
     }
 
@@ -9748,7 +8898,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesRes listConfigEntities(com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListConfigEntitiesMethod(), getCallOptions(), request);
     }
 
@@ -9764,7 +8914,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesRes deleteShiftInstances(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteShiftInstancesMethod(), getCallOptions(), request);
     }
 
@@ -9781,7 +8931,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsRes buildNodeDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBuildNodeDiagnosticsMethod(), getCallOptions(), request);
     }
 
@@ -9797,7 +8947,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsRes buildGlobalDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBuildGlobalDiagnosticsMethod(), getCallOptions(), request);
     }
 
@@ -9820,7 +8970,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRes getPublishedSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPublishedScheduleMethod(), getCallOptions(), request);
     }
 
@@ -9836,7 +8986,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsRes getPublishedScheduleRequiredCalls(com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPublishedScheduleRequiredCallsMethod(), getCallOptions(), request);
     }
 
@@ -9852,7 +9002,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsRes getDraftScheduleRequiredCalls(com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetDraftScheduleRequiredCallsMethod(), getCallOptions(), request);
     }
 
@@ -9870,7 +9020,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleRes createDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateDraftScheduleMethod(), getCallOptions(), request);
     }
 
@@ -9888,7 +9038,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleRes updateDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateDraftScheduleMethod(), getCallOptions(), request);
     }
 
@@ -9901,7 +9051,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes buildDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBuildDraftScheduleMethod(), getCallOptions(), request);
     }
 
@@ -9921,7 +9071,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleRes publishDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getPublishDraftScheduleMethod(), getCallOptions(), request);
     }
 
@@ -9944,7 +9094,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRes getDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetDraftScheduleMethod(), getCallOptions(), request);
     }
 
@@ -9960,7 +9110,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesRes listDraftSchedules(com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListDraftSchedulesMethod(), getCallOptions(), request);
     }
 
@@ -9977,7 +9127,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes deleteDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteDraftScheduleMethod(), getCallOptions(), request);
     }
 
@@ -9992,7 +9142,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes createShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateShiftInstanceMethod(), getCallOptions(), request);
     }
 
@@ -10007,7 +9157,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesRes swapShiftInstances(com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSwapShiftInstancesMethod(), getCallOptions(), request);
     }
 
@@ -10022,7 +9172,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes updateShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateShiftInstanceMethod(), getCallOptions(), request);
     }
 
@@ -10040,7 +9190,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsRes listShiftSegmentsByShiftInstanceSids(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListShiftSegmentsByShiftInstanceSidsMethod(), getCallOptions(), request);
     }
 
@@ -10058,7 +9208,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetRes setSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetSchedulingTargetMethod(), getCallOptions(), request);
     }
 
@@ -10074,7 +9224,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetRes getSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSchedulingTargetMethod(), getCallOptions(), request);
     }
 
@@ -10090,7 +9240,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes deleteSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteSchedulingTargetMethod(), getCallOptions(), request);
     }
 
@@ -10108,7 +9258,7 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsRes getPerformanceMetrics(com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPerformanceMetricsMethod(), getCallOptions(), request);
     }
 
@@ -10124,29 +9274,27 @@ public final class WFMGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsRes listRequiredCallsIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListRequiredCallsIntervalsMethod(), getCallOptions(), request);
     }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service WFM.
    * <pre>
    * WFM is responsible for call prediction and call volume calculations based on call skills and other parameters.
    * </pre>
    */
-  public static final class WFMFutureStub extends io.grpc.stub.AbstractStub<WFMFutureStub> {
-    private WFMFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private WFMFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class WFMFutureStub
+      extends io.grpc.stub.AbstractFutureStub<WFMFutureStub> {
+    private WFMFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected WFMFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected WFMFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new WFMFutureStub(channel, callOptions);
     }
 
@@ -10161,7 +9309,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesRes> listSkillProfiles(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSkillProfilesMethod(), getCallOptions()), request);
     }
 
@@ -10179,7 +9327,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileRes> updateSkillProfile(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateSkillProfileMethod(), getCallOptions()), request);
     }
 
@@ -10195,7 +9343,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesRes> updateSkillProfileProficiencies(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateSkillProfileProficienciesMethod(), getCallOptions()), request);
     }
 
@@ -10215,7 +9363,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes> getSkillProfile(
         com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetSkillProfileMethod(), getCallOptions()), request);
     }
 
@@ -10231,7 +9379,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesRes> resyncSkillProfiles(
         com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getResyncSkillProfilesMethod(), getCallOptions()), request);
     }
 
@@ -10247,7 +9395,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateRes> getLastSkillProfileResyncDate(
         com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetLastSkillProfileResyncDateMethod(), getCallOptions()), request);
     }
 
@@ -10264,7 +9412,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersRes> upsertForecastingParameters(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpsertForecastingParametersMethod(), getCallOptions()), request);
     }
 
@@ -10280,7 +9428,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersRes> getForecastingParameters(
         com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetForecastingParametersMethod(), getCallOptions()), request);
     }
 
@@ -10302,7 +9450,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataRes> listHistoricalData(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListHistoricalDataMethod(), getCallOptions()), request);
     }
 
@@ -10319,7 +9467,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaRes> upsertHistoricalDataDelta(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpsertHistoricalDataDeltaMethod(), getCallOptions()), request);
     }
 
@@ -10337,7 +9485,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasRes> upsertHistoricalDataDeltas(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpsertHistoricalDataDeltasMethod(), getCallOptions()), request);
     }
 
@@ -10353,7 +9501,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsRes> listSkills(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSkillsMethod(), getCallOptions()), request);
     }
 
@@ -10375,7 +9523,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes> buildCallProfileTemplateForSkillProfile(
         com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getBuildCallProfileTemplateForSkillProfileMethod(), getCallOptions()), request);
     }
 
@@ -10393,7 +9541,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes> createInactiveSkillProfileMapping(
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateInactiveSkillProfileMappingMethod(), getCallOptions()), request);
     }
 
@@ -10408,7 +9556,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes> getAvailableRegressionForecasterModelTypes(
         com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAvailableRegressionForecasterModelTypesMethod(), getCallOptions()), request);
     }
 
@@ -10426,7 +9574,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes> disconnectInactiveSkillProfileMapping(
         com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDisconnectInactiveSkillProfileMappingMethod(), getCallOptions()), request);
     }
 
@@ -10444,7 +9592,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasRes> deleteHistoricalDataDeltas(
         com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteHistoricalDataDeltasMethod(), getCallOptions()), request);
     }
 
@@ -10462,7 +9610,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesRes> listTopSkillProfiles(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListTopSkillProfilesMethod(), getCallOptions()), request);
     }
 
@@ -10477,7 +9625,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountRes> getSkillProfilesCount(
         com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetSkillProfilesCountMethod(), getCallOptions()), request);
     }
 
@@ -10499,7 +9647,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastRes> upsertProfileForecast(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpsertProfileForecastMethod(), getCallOptions()), request);
     }
 
@@ -10515,7 +9663,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateRes> createCallProfileTemplate(
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateCallProfileTemplateMethod(), getCallOptions()), request);
     }
 
@@ -10531,7 +9679,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateRes> deleteCallProfileTemplate(
         com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteCallProfileTemplateMethod(), getCallOptions()), request);
     }
 
@@ -10547,7 +9695,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateRes> createRegressionTemplate(
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateRegressionTemplateMethod(), getCallOptions()), request);
     }
 
@@ -10563,7 +9711,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateRes> deleteRegressionTemplate(
         com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteRegressionTemplateMethod(), getCallOptions()), request);
     }
 
@@ -10578,7 +9726,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesRes> listRegressionTemplates(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListRegressionTemplatesMethod(), getCallOptions()), request);
     }
 
@@ -10593,7 +9741,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesRes> listCallProfileTemplates(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListCallProfileTemplatesMethod(), getCallOptions()), request);
     }
 
@@ -10612,7 +9760,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastRes> upsertRegressionForecast(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpsertRegressionForecastMethod(), getCallOptions()), request);
     }
 
@@ -10629,7 +9777,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaRes> upsertForecastDataDelta(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpsertForecastDataDeltaMethod(), getCallOptions()), request);
     }
 
@@ -10646,7 +9794,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasRes> upsertForecastDataDeltas(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpsertForecastDataDeltasMethod(), getCallOptions()), request);
     }
 
@@ -10667,7 +9815,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsRes> deleteForecastIntervals(
         com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteForecastIntervalsMethod(), getCallOptions()), request);
     }
 
@@ -10685,7 +9833,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesRes> listHistoricalDataForAllSkillProfiles(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListHistoricalDataForAllSkillProfilesMethod(), getCallOptions()), request);
     }
 
@@ -10701,7 +9849,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesRes> buildDOWAndMOYProfiles(
         com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getBuildDOWAndMOYProfilesMethod(), getCallOptions()), request);
     }
 
@@ -10720,7 +9868,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileRes> calculateTrainingDataAveragesForSkillProfile(
         com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCalculateTrainingDataAveragesForSkillProfileMethod(), getCallOptions()), request);
     }
 
@@ -10740,7 +9888,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataRes> updateSkillProfileAveragesUsingHistoricalData(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateSkillProfileAveragesUsingHistoricalDataMethod(), getCallOptions()), request);
     }
 
@@ -10760,7 +9908,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeRes> updateCallCenterNode(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateCallCenterNodeMethod(), getCallOptions()), request);
     }
 
@@ -10781,7 +9929,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeRes> createClientNode(
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateClientNodeMethod(), getCallOptions()), request);
     }
 
@@ -10801,7 +9949,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeRes> updateClientNode(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateClientNodeMethod(), getCallOptions()), request);
     }
 
@@ -10822,7 +9970,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeRes> createLocationNode(
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateLocationNodeMethod(), getCallOptions()), request);
     }
 
@@ -10842,7 +9990,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeRes> updateLocationNode(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateLocationNodeMethod(), getCallOptions()), request);
     }
 
@@ -10863,7 +10011,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeRes> createProgramNode(
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateProgramNodeMethod(), getCallOptions()), request);
     }
 
@@ -10883,7 +10031,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes> updateProgramNode(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateProgramNodeMethod(), getCallOptions()), request);
     }
 
@@ -10906,7 +10054,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleRes> createConstraintRule(
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateConstraintRuleMethod(), getCallOptions()), request);
     }
 
@@ -10931,7 +10079,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleRes> updateConstraintRule(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateConstraintRuleMethod(), getCallOptions()), request);
     }
 
@@ -10949,7 +10097,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleRes> deleteConstraintRule(
         com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteConstraintRuleMethod(), getCallOptions()), request);
     }
 
@@ -10968,7 +10116,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityRes> createNonSkillActivity(
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateNonSkillActivityMethod(), getCallOptions()), request);
     }
 
@@ -10985,7 +10133,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityRes> updateNonSkillActivity(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateNonSkillActivityMethod(), getCallOptions()), request);
     }
 
@@ -11001,7 +10149,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsRes> listNonSkillActivityAssociations(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListNonSkillActivityAssociationsMethod(), getCallOptions()), request);
     }
 
@@ -11022,7 +10170,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesRes> listCandidateSchedulingActivities(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListCandidateSchedulingActivitiesMethod(), getCallOptions()), request);
     }
 
@@ -11042,7 +10190,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupRes> createAgentGroup(
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateAgentGroupMethod(), getCallOptions()), request);
     }
 
@@ -11063,7 +10211,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupRes> updateAgentGroup(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAgentGroupMethod(), getCallOptions()), request);
     }
 
@@ -11083,7 +10231,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentRes> updateWFMAgent(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateWFMAgentMethod(), getCallOptions()), request);
     }
 
@@ -11102,7 +10250,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsRes> listAllWFMAgents(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAllWFMAgentsMethod(), getCallOptions()), request);
     }
 
@@ -11120,7 +10268,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsRes> listCandidateWFMAgents(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListCandidateWFMAgentsMethod(), getCallOptions()), request);
     }
 
@@ -11139,7 +10287,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes> listUngroupedWFMAgents(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListUngroupedWFMAgentsMethod(), getCallOptions()), request);
     }
 
@@ -11155,7 +10303,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupRes> listWFMAgentsAssociatedWithAgentGroup(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListWFMAgentsAssociatedWithAgentGroupMethod(), getCallOptions()), request);
     }
 
@@ -11173,7 +10321,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsRes> createWFMAgentMemberships(
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateWFMAgentMembershipsMethod(), getCallOptions()), request);
     }
 
@@ -11190,7 +10338,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsRes> deleteWFMAgentMemberships(
         com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteWFMAgentMembershipsMethod(), getCallOptions()), request);
     }
 
@@ -11209,7 +10357,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsRes> buildAgentDiagnostics(
         com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getBuildAgentDiagnosticsMethod(), getCallOptions()), request);
     }
 
@@ -11230,7 +10378,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateRes> createShiftTemplate(
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateShiftTemplateMethod(), getCallOptions()), request);
     }
 
@@ -11251,7 +10399,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateRes> updateShiftTemplate(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateShiftTemplateMethod(), getCallOptions()), request);
     }
 
@@ -11267,7 +10415,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsRes> listShiftTemplatesBySids(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListShiftTemplatesBySidsMethod(), getCallOptions()), request);
     }
 
@@ -11283,7 +10431,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsRes> buildShiftTemplateDiagnostics(
         com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getBuildShiftTemplateDiagnosticsMethod(), getCallOptions()), request);
     }
 
@@ -11304,7 +10452,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleRes> createPlacementRule(
         com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreatePlacementRuleMethod(), getCallOptions()), request);
     }
 
@@ -11325,7 +10473,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleRes> updatePlacementRule(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdatePlacementRuleMethod(), getCallOptions()), request);
     }
 
@@ -11343,7 +10491,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleRes> deletePlacementRule(
         com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeletePlacementRuleMethod(), getCallOptions()), request);
     }
 
@@ -11362,7 +10510,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternRes> createOpenTimesPattern(
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateOpenTimesPatternMethod(), getCallOptions()), request);
     }
 
@@ -11381,7 +10529,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternRes> updateOpenTimesPattern(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateOpenTimesPatternMethod(), getCallOptions()), request);
     }
 
@@ -11398,7 +10546,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternRes> deleteOpenTimesPattern(
         com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteOpenTimesPatternMethod(), getCallOptions()), request);
     }
 
@@ -11418,7 +10566,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes> getOpenTimesBitmaps(
         com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetOpenTimesBitmapsMethod(), getCallOptions()), request);
     }
 
@@ -11437,7 +10585,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternRes> createAgentAvailabilityPattern(
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateAgentAvailabilityPatternMethod(), getCallOptions()), request);
     }
 
@@ -11456,7 +10604,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternRes> updateAgentAvailabilityPattern(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAgentAvailabilityPatternMethod(), getCallOptions()), request);
     }
 
@@ -11473,7 +10621,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternRes> deleteAgentAvailabilityPattern(
         com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteAgentAvailabilityPatternMethod(), getCallOptions()), request);
     }
 
@@ -11495,7 +10643,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsRes> getAvailabilityBitmaps(
         com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAvailabilityBitmapsMethod(), getCallOptions()), request);
     }
 
@@ -11518,7 +10666,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationRes> upsertNonSkillActivityAssociation(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpsertNonSkillActivityAssociationMethod(), getCallOptions()), request);
     }
 
@@ -11540,7 +10688,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesRes> createSkillProficiencies(
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateSkillProficienciesMethod(), getCallOptions()), request);
     }
 
@@ -11562,7 +10710,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesRes> updateSkillProficiencies(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateSkillProficienciesMethod(), getCallOptions()), request);
     }
 
@@ -11579,7 +10727,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyRes> deleteSkillProficiency(
         com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteSkillProficiencyMethod(), getCallOptions()), request);
     }
 
@@ -11598,7 +10746,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioRes> copyScenario(
         com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCopyScenarioMethod(), getCallOptions()), request);
     }
 
@@ -11619,7 +10767,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesRes> createScheduleScenarioWithNodes(
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateScheduleScenarioWithNodesMethod(), getCallOptions()), request);
     }
 
@@ -11639,7 +10787,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioRes> updateScheduleScenario(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateScheduleScenarioMethod(), getCallOptions()), request);
     }
 
@@ -11658,7 +10806,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesRes> listConfigEntities(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListConfigEntitiesMethod(), getCallOptions()), request);
     }
 
@@ -11675,7 +10823,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesRes> deleteShiftInstances(
         com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteShiftInstancesMethod(), getCallOptions()), request);
     }
 
@@ -11693,7 +10841,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsRes> buildNodeDiagnostics(
         com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getBuildNodeDiagnosticsMethod(), getCallOptions()), request);
     }
 
@@ -11710,7 +10858,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsRes> buildGlobalDiagnostics(
         com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getBuildGlobalDiagnosticsMethod(), getCallOptions()), request);
     }
 
@@ -11734,7 +10882,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRes> getPublishedSchedule(
         com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetPublishedScheduleMethod(), getCallOptions()), request);
     }
 
@@ -11751,7 +10899,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsRes> getPublishedScheduleRequiredCalls(
         com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetPublishedScheduleRequiredCallsMethod(), getCallOptions()), request);
     }
 
@@ -11768,7 +10916,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsRes> getDraftScheduleRequiredCalls(
         com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetDraftScheduleRequiredCallsMethod(), getCallOptions()), request);
     }
 
@@ -11787,7 +10935,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleRes> createDraftSchedule(
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateDraftScheduleMethod(), getCallOptions()), request);
     }
 
@@ -11806,7 +10954,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleRes> updateDraftSchedule(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateDraftScheduleMethod(), getCallOptions()), request);
     }
 
@@ -11820,7 +10968,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes> buildDraftSchedule(
         com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getBuildDraftScheduleMethod(), getCallOptions()), request);
     }
 
@@ -11841,7 +10989,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleRes> publishDraftSchedule(
         com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getPublishDraftScheduleMethod(), getCallOptions()), request);
     }
 
@@ -11865,7 +11013,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRes> getDraftSchedule(
         com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetDraftScheduleMethod(), getCallOptions()), request);
     }
 
@@ -11882,7 +11030,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesRes> listDraftSchedules(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListDraftSchedulesMethod(), getCallOptions()), request);
     }
 
@@ -11900,7 +11048,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes> deleteDraftSchedule(
         com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteDraftScheduleMethod(), getCallOptions()), request);
     }
 
@@ -11916,7 +11064,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes> createShiftInstance(
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateShiftInstanceMethod(), getCallOptions()), request);
     }
 
@@ -11932,7 +11080,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesRes> swapShiftInstances(
         com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSwapShiftInstancesMethod(), getCallOptions()), request);
     }
 
@@ -11948,7 +11096,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes> updateShiftInstance(
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateShiftInstanceMethod(), getCallOptions()), request);
     }
 
@@ -11967,7 +11115,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsRes> listShiftSegmentsByShiftInstanceSids(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListShiftSegmentsByShiftInstanceSidsMethod(), getCallOptions()), request);
     }
 
@@ -11986,7 +11134,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetRes> setSchedulingTarget(
         com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSetSchedulingTargetMethod(), getCallOptions()), request);
     }
 
@@ -12003,7 +11151,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetRes> getSchedulingTarget(
         com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetSchedulingTargetMethod(), getCallOptions()), request);
     }
 
@@ -12020,7 +11168,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes> deleteSchedulingTarget(
         com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteSchedulingTargetMethod(), getCallOptions()), request);
     }
 
@@ -12039,7 +11187,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsRes> getPerformanceMetrics(
         com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetPerformanceMetricsMethod(), getCallOptions()), request);
     }
 
@@ -12056,7 +11204,7 @@ public final class WFMGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsRes> listRequiredCallsIntervals(
         com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListRequiredCallsIntervalsMethod(), getCallOptions()), request);
     }
   }
@@ -12175,10 +11323,10 @@ public final class WFMGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final WFMImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(WFMImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -12633,6 +11781,767 @@ public final class WFMGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getListSkillProfilesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesRes>(
+                service, METHODID_LIST_SKILL_PROFILES)))
+        .addMethod(
+          getUpdateSkillProfileMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileRes>(
+                service, METHODID_UPDATE_SKILL_PROFILE)))
+        .addMethod(
+          getUpdateSkillProfileProficienciesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesRes>(
+                service, METHODID_UPDATE_SKILL_PROFILE_PROFICIENCIES)))
+        .addMethod(
+          getGetSkillProfileMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes>(
+                service, METHODID_GET_SKILL_PROFILE)))
+        .addMethod(
+          getResyncSkillProfilesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesRes>(
+                service, METHODID_RESYNC_SKILL_PROFILES)))
+        .addMethod(
+          getGetLastSkillProfileResyncDateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateRes>(
+                service, METHODID_GET_LAST_SKILL_PROFILE_RESYNC_DATE)))
+        .addMethod(
+          getUpsertForecastingParametersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersRes>(
+                service, METHODID_UPSERT_FORECASTING_PARAMETERS)))
+        .addMethod(
+          getGetForecastingParametersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersRes>(
+                service, METHODID_GET_FORECASTING_PARAMETERS)))
+        .addMethod(
+          getListHistoricalDataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataRes>(
+                service, METHODID_LIST_HISTORICAL_DATA)))
+        .addMethod(
+          getUpsertHistoricalDataDeltaMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaRes>(
+                service, METHODID_UPSERT_HISTORICAL_DATA_DELTA)))
+        .addMethod(
+          getUpsertHistoricalDataDeltasMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasRes>(
+                service, METHODID_UPSERT_HISTORICAL_DATA_DELTAS)))
+        .addMethod(
+          getListSkillsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsRes>(
+                service, METHODID_LIST_SKILLS)))
+        .addMethod(
+          getBuildCallProfileTemplateForSkillProfileMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes>(
+                service, METHODID_BUILD_CALL_PROFILE_TEMPLATE_FOR_SKILL_PROFILE)))
+        .addMethod(
+          getCreateInactiveSkillProfileMappingMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes>(
+                service, METHODID_CREATE_INACTIVE_SKILL_PROFILE_MAPPING)))
+        .addMethod(
+          getGetAvailableRegressionForecasterModelTypesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes>(
+                service, METHODID_GET_AVAILABLE_REGRESSION_FORECASTER_MODEL_TYPES)))
+        .addMethod(
+          getDisconnectInactiveSkillProfileMappingMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes>(
+                service, METHODID_DISCONNECT_INACTIVE_SKILL_PROFILE_MAPPING)))
+        .addMethod(
+          getDeleteHistoricalDataDeltasMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasRes>(
+                service, METHODID_DELETE_HISTORICAL_DATA_DELTAS)))
+        .addMethod(
+          getListTopSkillProfilesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesRes>(
+                service, METHODID_LIST_TOP_SKILL_PROFILES)))
+        .addMethod(
+          getGetSkillProfilesCountMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountRes>(
+                service, METHODID_GET_SKILL_PROFILES_COUNT)))
+        .addMethod(
+          getBuildProfileForecastByIntervalMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>(
+                service, METHODID_BUILD_PROFILE_FORECAST_BY_INTERVAL)))
+        .addMethod(
+          getBuildProfileForecastByIntervalWithStatsMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsRes>(
+                service, METHODID_BUILD_PROFILE_FORECAST_BY_INTERVAL_WITH_STATS)))
+        .addMethod(
+          getUpsertProfileForecastMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastRes>(
+                service, METHODID_UPSERT_PROFILE_FORECAST)))
+        .addMethod(
+          getCreateCallProfileTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateRes>(
+                service, METHODID_CREATE_CALL_PROFILE_TEMPLATE)))
+        .addMethod(
+          getDeleteCallProfileTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateRes>(
+                service, METHODID_DELETE_CALL_PROFILE_TEMPLATE)))
+        .addMethod(
+          getCreateRegressionTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateRes>(
+                service, METHODID_CREATE_REGRESSION_TEMPLATE)))
+        .addMethod(
+          getDeleteRegressionTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateRes>(
+                service, METHODID_DELETE_REGRESSION_TEMPLATE)))
+        .addMethod(
+          getListRegressionTemplatesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesRes>(
+                service, METHODID_LIST_REGRESSION_TEMPLATES)))
+        .addMethod(
+          getListForecastIntervalsForSkillProfileMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>(
+                service, METHODID_LIST_FORECAST_INTERVALS_FOR_SKILL_PROFILE)))
+        .addMethod(
+          getBuildRegressionForecastByIntervalMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>(
+                service, METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL)))
+        .addMethod(
+          getBuildRegressionForecastByIntervalWithStatsMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsRes>(
+                service, METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL_WITH_STATS)))
+        .addMethod(
+          getListCallProfileTemplatesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesRes>(
+                service, METHODID_LIST_CALL_PROFILE_TEMPLATES)))
+        .addMethod(
+          getUpsertRegressionForecastMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastRes>(
+                service, METHODID_UPSERT_REGRESSION_FORECAST)))
+        .addMethod(
+          getUpsertForecastDataDeltaMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaRes>(
+                service, METHODID_UPSERT_FORECAST_DATA_DELTA)))
+        .addMethod(
+          getUpsertForecastDataDeltasMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasRes>(
+                service, METHODID_UPSERT_FORECAST_DATA_DELTAS)))
+        .addMethod(
+          getDeleteForecastIntervalsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsRes>(
+                service, METHODID_DELETE_FORECAST_INTERVALS)))
+        .addMethod(
+          getListHistoricalDataForAllSkillProfilesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesRes>(
+                service, METHODID_LIST_HISTORICAL_DATA_FOR_ALL_SKILL_PROFILES)))
+        .addMethod(
+          getBuildDOWAndMOYProfilesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesRes>(
+                service, METHODID_BUILD_DOWAND_MOYPROFILES)))
+        .addMethod(
+          getCalculateTrainingDataAveragesForSkillProfileMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileRes>(
+                service, METHODID_CALCULATE_TRAINING_DATA_AVERAGES_FOR_SKILL_PROFILE)))
+        .addMethod(
+          getUpdateSkillProfileAveragesUsingHistoricalDataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataRes>(
+                service, METHODID_UPDATE_SKILL_PROFILE_AVERAGES_USING_HISTORICAL_DATA)))
+        .addMethod(
+          getUpdateCallCenterNodeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeRes>(
+                service, METHODID_UPDATE_CALL_CENTER_NODE)))
+        .addMethod(
+          getCreateClientNodeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeRes>(
+                service, METHODID_CREATE_CLIENT_NODE)))
+        .addMethod(
+          getUpdateClientNodeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeRes>(
+                service, METHODID_UPDATE_CLIENT_NODE)))
+        .addMethod(
+          getCreateLocationNodeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeRes>(
+                service, METHODID_CREATE_LOCATION_NODE)))
+        .addMethod(
+          getUpdateLocationNodeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeRes>(
+                service, METHODID_UPDATE_LOCATION_NODE)))
+        .addMethod(
+          getCreateProgramNodeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeRes>(
+                service, METHODID_CREATE_PROGRAM_NODE)))
+        .addMethod(
+          getUpdateProgramNodeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes>(
+                service, METHODID_UPDATE_PROGRAM_NODE)))
+        .addMethod(
+          getCreateConstraintRuleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleRes>(
+                service, METHODID_CREATE_CONSTRAINT_RULE)))
+        .addMethod(
+          getUpdateConstraintRuleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleRes>(
+                service, METHODID_UPDATE_CONSTRAINT_RULE)))
+        .addMethod(
+          getDeleteConstraintRuleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleRes>(
+                service, METHODID_DELETE_CONSTRAINT_RULE)))
+        .addMethod(
+          getCreateNonSkillActivityMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityRes>(
+                service, METHODID_CREATE_NON_SKILL_ACTIVITY)))
+        .addMethod(
+          getUpdateNonSkillActivityMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityRes>(
+                service, METHODID_UPDATE_NON_SKILL_ACTIVITY)))
+        .addMethod(
+          getListNonSkillActivityAssociationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsRes>(
+                service, METHODID_LIST_NON_SKILL_ACTIVITY_ASSOCIATIONS)))
+        .addMethod(
+          getListCandidateSchedulingActivitiesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesRes>(
+                service, METHODID_LIST_CANDIDATE_SCHEDULING_ACTIVITIES)))
+        .addMethod(
+          getCreateAgentGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupRes>(
+                service, METHODID_CREATE_AGENT_GROUP)))
+        .addMethod(
+          getUpdateAgentGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupRes>(
+                service, METHODID_UPDATE_AGENT_GROUP)))
+        .addMethod(
+          getUpdateWFMAgentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentRes>(
+                service, METHODID_UPDATE_WFMAGENT)))
+        .addMethod(
+          getListAllWFMAgentsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsRes>(
+                service, METHODID_LIST_ALL_WFMAGENTS)))
+        .addMethod(
+          getListCandidateWFMAgentsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsRes>(
+                service, METHODID_LIST_CANDIDATE_WFMAGENTS)))
+        .addMethod(
+          getListUngroupedWFMAgentsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes>(
+                service, METHODID_LIST_UNGROUPED_WFMAGENTS)))
+        .addMethod(
+          getListWFMAgentsAssociatedWithAgentGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupRes>(
+                service, METHODID_LIST_WFMAGENTS_ASSOCIATED_WITH_AGENT_GROUP)))
+        .addMethod(
+          getCreateWFMAgentMembershipsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsRes>(
+                service, METHODID_CREATE_WFMAGENT_MEMBERSHIPS)))
+        .addMethod(
+          getDeleteWFMAgentMembershipsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsRes>(
+                service, METHODID_DELETE_WFMAGENT_MEMBERSHIPS)))
+        .addMethod(
+          getBuildAgentDiagnosticsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsRes>(
+                service, METHODID_BUILD_AGENT_DIAGNOSTICS)))
+        .addMethod(
+          getCreateShiftTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateRes>(
+                service, METHODID_CREATE_SHIFT_TEMPLATE)))
+        .addMethod(
+          getUpdateShiftTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateRes>(
+                service, METHODID_UPDATE_SHIFT_TEMPLATE)))
+        .addMethod(
+          getListShiftTemplatesBySidsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsRes>(
+                service, METHODID_LIST_SHIFT_TEMPLATES_BY_SIDS)))
+        .addMethod(
+          getBuildShiftTemplateDiagnosticsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsRes>(
+                service, METHODID_BUILD_SHIFT_TEMPLATE_DIAGNOSTICS)))
+        .addMethod(
+          getCreatePlacementRuleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleRes>(
+                service, METHODID_CREATE_PLACEMENT_RULE)))
+        .addMethod(
+          getUpdatePlacementRuleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleRes>(
+                service, METHODID_UPDATE_PLACEMENT_RULE)))
+        .addMethod(
+          getDeletePlacementRuleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleRes>(
+                service, METHODID_DELETE_PLACEMENT_RULE)))
+        .addMethod(
+          getCreateOpenTimesPatternMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternRes>(
+                service, METHODID_CREATE_OPEN_TIMES_PATTERN)))
+        .addMethod(
+          getUpdateOpenTimesPatternMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternRes>(
+                service, METHODID_UPDATE_OPEN_TIMES_PATTERN)))
+        .addMethod(
+          getDeleteOpenTimesPatternMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternRes>(
+                service, METHODID_DELETE_OPEN_TIMES_PATTERN)))
+        .addMethod(
+          getGetOpenTimesBitmapsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes>(
+                service, METHODID_GET_OPEN_TIMES_BITMAPS)))
+        .addMethod(
+          getCreateAgentAvailabilityPatternMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternRes>(
+                service, METHODID_CREATE_AGENT_AVAILABILITY_PATTERN)))
+        .addMethod(
+          getUpdateAgentAvailabilityPatternMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternRes>(
+                service, METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN)))
+        .addMethod(
+          getDeleteAgentAvailabilityPatternMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternRes>(
+                service, METHODID_DELETE_AGENT_AVAILABILITY_PATTERN)))
+        .addMethod(
+          getGetAvailabilityBitmapsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsRes>(
+                service, METHODID_GET_AVAILABILITY_BITMAPS)))
+        .addMethod(
+          getUpsertNonSkillActivityAssociationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationRes>(
+                service, METHODID_UPSERT_NON_SKILL_ACTIVITY_ASSOCIATION)))
+        .addMethod(
+          getCreateSkillProficienciesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesRes>(
+                service, METHODID_CREATE_SKILL_PROFICIENCIES)))
+        .addMethod(
+          getUpdateSkillProficienciesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesRes>(
+                service, METHODID_UPDATE_SKILL_PROFICIENCIES)))
+        .addMethod(
+          getDeleteSkillProficiencyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyRes>(
+                service, METHODID_DELETE_SKILL_PROFICIENCY)))
+        .addMethod(
+          getCopyScenarioMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioRes>(
+                service, METHODID_COPY_SCENARIO)))
+        .addMethod(
+          getCreateScheduleScenarioWithNodesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesRes>(
+                service, METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES)))
+        .addMethod(
+          getUpdateScheduleScenarioMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioRes>(
+                service, METHODID_UPDATE_SCHEDULE_SCENARIO)))
+        .addMethod(
+          getListConfigEntitiesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesRes>(
+                service, METHODID_LIST_CONFIG_ENTITIES)))
+        .addMethod(
+          getDeleteShiftInstancesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesRes>(
+                service, METHODID_DELETE_SHIFT_INSTANCES)))
+        .addMethod(
+          getBuildNodeDiagnosticsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsRes>(
+                service, METHODID_BUILD_NODE_DIAGNOSTICS)))
+        .addMethod(
+          getBuildGlobalDiagnosticsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsRes>(
+                service, METHODID_BUILD_GLOBAL_DIAGNOSTICS)))
+        .addMethod(
+          getGetPublishedScheduleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRes>(
+                service, METHODID_GET_PUBLISHED_SCHEDULE)))
+        .addMethod(
+          getGetPublishedScheduleRequiredCallsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsRes>(
+                service, METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS)))
+        .addMethod(
+          getGetDraftScheduleRequiredCallsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsRes>(
+                service, METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS)))
+        .addMethod(
+          getCreateDraftScheduleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleRes>(
+                service, METHODID_CREATE_DRAFT_SCHEDULE)))
+        .addMethod(
+          getUpdateDraftScheduleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleRes>(
+                service, METHODID_UPDATE_DRAFT_SCHEDULE)))
+        .addMethod(
+          getBuildDraftScheduleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes>(
+                service, METHODID_BUILD_DRAFT_SCHEDULE)))
+        .addMethod(
+          getPublishDraftScheduleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleRes>(
+                service, METHODID_PUBLISH_DRAFT_SCHEDULE)))
+        .addMethod(
+          getGetDraftScheduleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRes>(
+                service, METHODID_GET_DRAFT_SCHEDULE)))
+        .addMethod(
+          getListDraftSchedulesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesRes>(
+                service, METHODID_LIST_DRAFT_SCHEDULES)))
+        .addMethod(
+          getDeleteDraftScheduleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes>(
+                service, METHODID_DELETE_DRAFT_SCHEDULE)))
+        .addMethod(
+          getCreateShiftInstanceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes>(
+                service, METHODID_CREATE_SHIFT_INSTANCE)))
+        .addMethod(
+          getSwapShiftInstancesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesRes>(
+                service, METHODID_SWAP_SHIFT_INSTANCES)))
+        .addMethod(
+          getUpdateShiftInstanceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes>(
+                service, METHODID_UPDATE_SHIFT_INSTANCE)))
+        .addMethod(
+          getListShiftSegmentsByShiftInstanceSidsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsRes>(
+                service, METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS)))
+        .addMethod(
+          getSetSchedulingTargetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetRes>(
+                service, METHODID_SET_SCHEDULING_TARGET)))
+        .addMethod(
+          getGetSchedulingTargetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetRes>(
+                service, METHODID_GET_SCHEDULING_TARGET)))
+        .addMethod(
+          getDeleteSchedulingTargetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes>(
+                service, METHODID_DELETE_SCHEDULING_TARGET)))
+        .addMethod(
+          getGetPerformanceMetricsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsRes>(
+                service, METHODID_GET_PERFORMANCE_METRICS)))
+        .addMethod(
+          getListRequiredCallsIntervalsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsRes>(
+                service, METHODID_LIST_REQUIRED_CALLS_INTERVALS)))
+        .build();
   }
 
   private static abstract class WFMBaseDescriptorSupplier

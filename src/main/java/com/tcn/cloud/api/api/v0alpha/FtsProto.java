@@ -40,8 +40,8 @@ public final class FtsProto {
       "s\022\020\n\003url\030\001 \001(\tR\003url\022\016\n\002id\030\003 \001(\tR\002id2\215\001\n\003" +
       "FTS\022\205\001\n\020GetUploadFileUrl\022 .api.v0alpha.G" +
       "etUploadFileUrlReq\032 .api.v0alpha.GetUplo" +
-      "adFileUrlRes\"-\272\270\221\002\002\030\001\202\323\344\223\002 :\001*\"\033/api/v0a" +
-      "lpha/fts/upload_urlBv\n\035com.tcn.cloud.api" +
+      "adFileUrlRes\"-\272\270\221\002\002\030\001\202\323\344\223\002 \"\033/api/v0alph" +
+      "a/fts/upload_url:\001*Bv\n\035com.tcn.cloud.api" +
       ".api.v0alphaB\010FtsProtoP\001\242\002\003AVX\252\002\013Api.V0a" +
       "lpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\GPBMeta" +
       "data\352\002\014Api::V0alphab\006proto3"

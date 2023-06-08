@@ -101,10 +101,11 @@ public interface PortalLinkTransactionRowOrBuilder extends
    *
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; link_data = 8 [json_name = "linkData"];</code>
    */
-
-  com.tcn.cloud.api.api.v1alpha1.integrations.Value getLinkDataOrDefault(
+  /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrations.Value getLinkDataOrDefault(
       java.lang.String key,
-      com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
+      /* nullable */
+com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
   /**
    * <pre>
    * from PortalLink.Data map
@@ -112,7 +113,6 @@ public interface PortalLinkTransactionRowOrBuilder extends
    *
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; link_data = 8 [json_name = "linkData"];</code>
    */
-
   com.tcn.cloud.api.api.v1alpha1.integrations.Value getLinkDataOrThrow(
       java.lang.String key);
 }

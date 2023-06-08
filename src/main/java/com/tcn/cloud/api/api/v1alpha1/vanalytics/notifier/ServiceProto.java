@@ -47,8 +47,8 @@ public final class ServiceProto {
       "ime2\301\001\n\010Notifier\022\264\001\n\tGetNotify\0222.api.v1a" +
       "lpha1.vanalytics.notifier.GetNotifyReque" +
       "st\032(.api.v1alpha1.vanalytics.notifier.No" +
-      "tify\"I\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0029:\001*\"4/api/v1alpha1" +
-      "/vanalytics/notifier/notifier/getnotifyB" +
+      "tify\"I\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0029\"4/api/v1alpha1/va" +
+      "nalytics/notifier/notifier/getnotify:\001*B" +
       "\346\001\n2com.tcn.cloud.api.api.v1alpha1.vanal" +
       "ytics.notifierB\014ServiceProtoP\001\242\002\004AVVN\252\002 " +
       "Api.V1alpha1.Vanalytics.Notifier\312\002 Api\\V" +

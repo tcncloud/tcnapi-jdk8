@@ -458,68 +458,68 @@ public final class ServiceProto {
       "\013DeliveryApi\022\270\001\n\024CreateTransferConfig\022.." +
       "api.v1alpha1.delivery.CreateTransferConf" +
       "igReq\032..api.v1alpha1.delivery.CreateTran" +
-      "sferConfigRes\"@\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0020:\001*\"+/api" +
-      "/v1alpha1/delivery/createtransferconfig\022" +
+      "sferConfigRes\"@\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0020\"+/api/v1" +
+      "alpha1/delivery/createtransferconfig:\001*\022" +
       "\264\001\n\023ListTransferConfigs\022-.api.v1alpha1.d" +
       "elivery.ListTransferConfigsReq\032-.api.v1a" +
       "lpha1.delivery.ListTransferConfigsRes\"?\272" +
-      "\270\221\002\005\n\003\010\320\017\202\323\344\223\002/:\001*\"*/api/v1alpha1/delive" +
-      "ry/listtransferconfigs\022\354\001\n!ListTransferC" +
+      "\270\221\002\005\n\003\010\320\017\202\323\344\223\002/\"*/api/v1alpha1/delivery/" +
+      "listtransferconfigs:\001*\022\354\001\n!ListTransferC" +
       "onfigsByCredentialID\022;.api.v1alpha1.deli" +
       "very.ListTransferConfigsByCredentialIDRe" +
       "q\032;.api.v1alpha1.delivery.ListTransferCo" +
       "nfigsByCredentialIDRes\"M\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002=" +
-      ":\001*\"8/api/v1alpha1/delivery/listtransfer" +
-      "configsbycredentialid\022\270\001\n\024UpdateTransfer" +
+      "\"8/api/v1alpha1/delivery/listtransfercon" +
+      "figsbycredentialid:\001*\022\270\001\n\024UpdateTransfer" +
       "Config\022..api.v1alpha1.delivery.UpdateTra" +
       "nsferConfigReq\032..api.v1alpha1.delivery.U" +
       "pdateTransferConfigRes\"@\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0020" +
-      ":\001*\"+/api/v1alpha1/delivery/updatetransf" +
-      "erconfig\022\270\001\n\024DeleteTransferConfig\022..api." +
+      "\"+/api/v1alpha1/delivery/updatetransferc" +
+      "onfig:\001*\022\270\001\n\024DeleteTransferConfig\022..api." +
       "v1alpha1.delivery.DeleteTransferConfigRe" +
       "q\032..api.v1alpha1.delivery.DeleteTransfer" +
-      "ConfigRes\"@\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0020:\001*\"+/api/v1a" +
-      "lpha1/delivery/deletetransferconfig\022\254\001\n\021" +
+      "ConfigRes\"@\272\270\221\002\005\n\003\010\321\017\202\323\344\223\0020\"+/api/v1alph" +
+      "a1/delivery/deletetransferconfig:\001*\022\254\001\n\021" +
       "GetTransferConfig\022+.api.v1alpha1.deliver" +
       "y.GetTransferConfigReq\032+.api.v1alpha1.de" +
       "livery.GetTransferConfigRes\"=\272\270\221\002\005\n\003\010\320\017\202" +
-      "\323\344\223\002-:\001*\"(/api/v1alpha1/delivery/gettran" +
-      "sferconfig\022\304\001\n\027GetTransferConfigByName\0221" +
+      "\323\344\223\002-\"(/api/v1alpha1/delivery/gettransfe" +
+      "rconfig:\001*\022\304\001\n\027GetTransferConfigByName\0221" +
       ".api.v1alpha1.delivery.GetTransferConfig" +
       "ByNameReq\0321.api.v1alpha1.delivery.GetTra" +
-      "nsferConfigByNameRes\"C\272\270\221\002\005\n\003\010\320\017\202\323\344\223\0023:\001" +
-      "*\"./api/v1alpha1/delivery/gettransfercon" +
-      "figbyname\022\224\001\n\013ListHistory\022%.api.v1alpha1" +
+      "nsferConfigByNameRes\"C\272\270\221\002\005\n\003\010\320\017\202\323\344\223\0023\"." +
+      "/api/v1alpha1/delivery/gettransferconfig" +
+      "byname:\001*\022\224\001\n\013ListHistory\022%.api.v1alpha1" +
       ".delivery.ListHistoryReq\032%.api.v1alpha1." +
       "delivery.ListHistoryRes\"7\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002" +
-      "\':\001*\"\"/api/v1alpha1/delivery/listhistory" +
+      "\'\"\"/api/v1alpha1/delivery/listhistory:\001*" +
       "\022\324\001\n\033ListHistoryByTransferConfig\0225.api.v" +
       "1alpha1.delivery.ListHistoryByTransferCo" +
       "nfigReq\0325.api.v1alpha1.delivery.ListHist" +
       "oryByTransferConfigRes\"G\272\270\221\002\005\n\003\010\320\017\202\323\344\223\0027" +
-      ":\001*\"2/api/v1alpha1/delivery/listhistoryb" +
-      "ytransferconfig\022\243\001\n\017ListCredentials\022).ap" +
+      "\"2/api/v1alpha1/delivery/listhistorybytr" +
+      "ansferconfig:\001*\022\243\001\n\017ListCredentials\022).ap" +
       "i.v1alpha1.delivery.ListCredentialsReq\032)" +
       ".api.v1alpha1.delivery.ListCredentialsRe" +
-      "s\":\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002*:\001*\"%/api/v1alpha1/de" +
-      "livery/listcredential\022\234\001\n\rGetCredential\022" +
+      "s\":\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002*\"%/api/v1alpha1/deliv" +
+      "ery/listcredential:\001*\022\234\001\n\rGetCredential\022" +
       "\'.api.v1alpha1.delivery.GetCredentialReq" +
       "\032\'.api.v1alpha1.delivery.GetCredentialRe" +
-      "s\"9\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002):\001*\"$/api/v1alpha1/de" +
-      "livery/getcredential\022\250\001\n\020CreateCredentia" +
+      "s\"9\272\270\221\002\005\n\003\010\320\017\202\323\344\223\002)\"$/api/v1alpha1/deliv" +
+      "ery/getcredential:\001*\022\250\001\n\020CreateCredentia" +
       "l\022*.api.v1alpha1.delivery.CreateCredenti" +
       "alReq\032*.api.v1alpha1.delivery.CreateCred" +
-      "entialRes\"<\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002,:\001*\"\'/api/v1a" +
-      "lpha1/delivery/createcredential\022\250\001\n\020Dele" +
+      "entialRes\"<\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002,\"\'/api/v1alph" +
+      "a1/delivery/createcredential:\001*\022\250\001\n\020Dele" +
       "teCredential\022*.api.v1alpha1.delivery.Del" +
       "eteCredentialReq\032*.api.v1alpha1.delivery" +
-      ".DeleteCredentialRes\"<\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002,:\001" +
-      "*\"\'/api/v1alpha1/delivery/deletecredenti" +
-      "al\022\250\001\n\020UpdateCredential\022*.api.v1alpha1.d" +
+      ".DeleteCredentialRes\"<\272\270\221\002\005\n\003\010\321\017\202\323\344\223\002,\"\'" +
+      "/api/v1alpha1/delivery/deletecredential:" +
+      "\001*\022\250\001\n\020UpdateCredential\022*.api.v1alpha1.d" +
       "elivery.UpdateCredentialReq\032*.api.v1alph" +
       "a1.delivery.UpdateCredentialRes\"<\272\270\221\002\005\n\003" +
-      "\010\321\017\202\323\344\223\002,:\001*\"\'/api/v1alpha1/delivery/upd" +
-      "atecredentialB\255\001\n\'com.tcn.cloud.api.api." +
+      "\010\321\017\202\323\344\223\002,\"\'/api/v1alpha1/delivery/update" +
+      "credential:\001*B\255\001\n\'com.tcn.cloud.api.api." +
       "v1alpha1.deliveryB\014ServiceProtoP\001\242\002\003AVD\252" +
       "\002\025Api.V1alpha1.Delivery\312\002\025Api\\V1alpha1\\D" +
       "elivery\342\002!Api\\V1alpha1\\Delivery\\GPBMetad" +

@@ -20,7 +20,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private GetAggregatedMetadataRes() {
-    fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    fields_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -30,91 +31,6 @@ private static final long serialVersionUID = 0L;
     return new GetAggregatedMetadataRes();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private GetAggregatedMetadataRes(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            views_ = input.readInt32();
-            break;
-          }
-          case 16: {
-
-            verifyAttempts_ = input.readInt32();
-            break;
-          }
-          case 24: {
-
-            verifySuccesses_ = input.readInt32();
-            break;
-          }
-          case 32: {
-
-            paymentAttempts_ = input.readInt32();
-            break;
-          }
-          case 40: {
-
-            paymentSuccesses_ = input.readInt32();
-            break;
-          }
-          case 49: {
-
-            paymentAmount_ = input.readDouble();
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              fields_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            fields_.add(s);
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        fields_ = fields_.getUnmodifiableView();
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_GetAggregatedMetadataRes_descriptor;
@@ -129,7 +45,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VIEWS_FIELD_NUMBER = 1;
-  private int views_;
+  private int views_ = 0;
   /**
    * <code>int32 views = 1 [json_name = "views"];</code>
    * @return The views.
@@ -140,7 +56,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VERIFY_ATTEMPTS_FIELD_NUMBER = 2;
-  private int verifyAttempts_;
+  private int verifyAttempts_ = 0;
   /**
    * <code>int32 verify_attempts = 2 [json_name = "verifyAttempts"];</code>
    * @return The verifyAttempts.
@@ -151,7 +67,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VERIFY_SUCCESSES_FIELD_NUMBER = 3;
-  private int verifySuccesses_;
+  private int verifySuccesses_ = 0;
   /**
    * <code>int32 verify_successes = 3 [json_name = "verifySuccesses"];</code>
    * @return The verifySuccesses.
@@ -162,7 +78,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAYMENT_ATTEMPTS_FIELD_NUMBER = 4;
-  private int paymentAttempts_;
+  private int paymentAttempts_ = 0;
   /**
    * <code>int32 payment_attempts = 4 [json_name = "paymentAttempts"];</code>
    * @return The paymentAttempts.
@@ -173,7 +89,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAYMENT_SUCCESSES_FIELD_NUMBER = 5;
-  private int paymentSuccesses_;
+  private int paymentSuccesses_ = 0;
   /**
    * <code>int32 payment_successes = 5 [json_name = "paymentSuccesses"];</code>
    * @return The paymentSuccesses.
@@ -184,7 +100,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAYMENT_AMOUNT_FIELD_NUMBER = 6;
-  private double paymentAmount_;
+  private double paymentAmount_ = 0D;
   /**
    * <code>double payment_amount = 6 [json_name = "paymentAmount"];</code>
    * @return The paymentAmount.
@@ -195,7 +111,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FIELDS_FIELD_NUMBER = 7;
-  private com.google.protobuf.LazyStringList fields_;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList fields_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <code>repeated string fields = 7 [json_name = "fields"];</code>
    * @return A list containing the fields.
@@ -258,13 +176,13 @@ private static final long serialVersionUID = 0L;
     if (paymentSuccesses_ != 0) {
       output.writeInt32(5, paymentSuccesses_);
     }
-    if (paymentAmount_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(paymentAmount_) != 0) {
       output.writeDouble(6, paymentAmount_);
     }
     for (int i = 0; i < fields_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, fields_.getRaw(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -293,7 +211,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(5, paymentSuccesses_);
     }
-    if (paymentAmount_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(paymentAmount_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(6, paymentAmount_);
     }
@@ -305,7 +223,7 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getFieldsList().size();
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -335,7 +253,7 @@ private static final long serialVersionUID = 0L;
             other.getPaymentAmount())) return false;
     if (!getFieldsList()
         .equals(other.getFieldsList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -363,7 +281,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FIELDS_FIELD_NUMBER;
       hash = (53 * hash) + getFieldsList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -412,11 +330,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -484,36 +404,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataRes.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       views_ = 0;
-
       verifyAttempts_ = 0;
-
       verifySuccesses_ = 0;
-
       paymentAttempts_ = 0;
-
       paymentSuccesses_ = 0;
-
       paymentAmount_ = 0D;
-
-      fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      fields_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -540,20 +450,35 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataRes buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataRes result = new com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataRes(this);
-      int from_bitField0_ = bitField0_;
-      result.views_ = views_;
-      result.verifyAttempts_ = verifyAttempts_;
-      result.verifySuccesses_ = verifySuccesses_;
-      result.paymentAttempts_ = paymentAttempts_;
-      result.paymentSuccesses_ = paymentSuccesses_;
-      result.paymentAmount_ = paymentAmount_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        fields_ = fields_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.fields_ = fields_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataRes result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.views_ = views_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.verifyAttempts_ = verifyAttempts_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.verifySuccesses_ = verifySuccesses_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.paymentAttempts_ = paymentAttempts_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.paymentSuccesses_ = paymentSuccesses_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.paymentAmount_ = paymentAmount_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        fields_.makeImmutable();
+        result.fields_ = fields_;
+      }
     }
 
     @java.lang.Override
@@ -621,14 +546,14 @@ private static final long serialVersionUID = 0L;
       if (!other.fields_.isEmpty()) {
         if (fields_.isEmpty()) {
           fields_ = other.fields_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000040;
         } else {
           ensureFieldsIsMutable();
           fields_.addAll(other.fields_);
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -643,17 +568,66 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataRes parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              views_ = input.readInt32();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              verifyAttempts_ = input.readInt32();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              verifySuccesses_ = input.readInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              paymentAttempts_ = input.readInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              paymentSuccesses_ = input.readInt32();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 49: {
+              paymentAmount_ = input.readDouble();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 49
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureFieldsIsMutable();
+              fields_.add(s);
+              break;
+            } // case 58
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -673,8 +647,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setViews(int value) {
-      
+
       views_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -683,7 +658,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearViews() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       views_ = 0;
       onChanged();
       return this;
@@ -704,8 +679,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setVerifyAttempts(int value) {
-      
+
       verifyAttempts_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -714,7 +690,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVerifyAttempts() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       verifyAttempts_ = 0;
       onChanged();
       return this;
@@ -735,8 +711,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setVerifySuccesses(int value) {
-      
+
       verifySuccesses_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -745,7 +722,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVerifySuccesses() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       verifySuccesses_ = 0;
       onChanged();
       return this;
@@ -766,8 +743,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPaymentAttempts(int value) {
-      
+
       paymentAttempts_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -776,7 +754,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPaymentAttempts() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       paymentAttempts_ = 0;
       onChanged();
       return this;
@@ -797,8 +775,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPaymentSuccesses(int value) {
-      
+
       paymentSuccesses_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -807,7 +786,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPaymentSuccesses() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       paymentSuccesses_ = 0;
       onChanged();
       return this;
@@ -828,8 +807,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPaymentAmount(double value) {
-      
+
       paymentAmount_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -838,18 +818,19 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPaymentAmount() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       paymentAmount_ = 0D;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList fields_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureFieldsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!fields_.isModifiable()) {
         fields_ = new com.google.protobuf.LazyStringArrayList(fields_);
-        bitField0_ |= 0x00000001;
-       }
+      }
+      bitField0_ |= 0x00000040;
     }
     /**
      * <code>repeated string fields = 7 [json_name = "fields"];</code>
@@ -857,7 +838,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getFieldsList() {
-      return fields_.getUnmodifiableView();
+      fields_.makeImmutable();
+      return fields_;
     }
     /**
      * <code>repeated string fields = 7 [json_name = "fields"];</code>
@@ -891,11 +873,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFields(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFieldsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureFieldsIsMutable();
       fields_.set(index, value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -906,11 +887,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addFields(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFieldsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureFieldsIsMutable();
       fields_.add(value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -924,6 +904,7 @@ private static final long serialVersionUID = 0L;
       ensureFieldsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, fields_);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -932,8 +913,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFields() {
-      fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      fields_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000040);;
       onChanged();
       return this;
     }
@@ -944,12 +926,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addFieldsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureFieldsIsMutable();
       fields_.add(value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -986,7 +967,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GetAggregatedMetadataRes(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

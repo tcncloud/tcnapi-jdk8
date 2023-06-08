@@ -407,107 +407,107 @@ public final class PortalsProto {
       "ields2\263 \n\020PortalManagerApi\022\263\001\n\022UpsertPor" +
       "talConfig\0220.api.v1alpha1.integrations.Up" +
       "sertPortalConfigReq\0320.api.v1alpha1.integ" +
-      "rations.UpsertPortalConfigRes\"9\202\323\344\223\0023:\001*" +
-      "\"./api/v1alpha1/portalmanager/upsertport" +
-      "alconfig\022\257\001\n\021ListPortalConfigs\022/.api.v1a" +
+      "rations.UpsertPortalConfigRes\"9\202\323\344\223\0023\"./" +
+      "api/v1alpha1/portalmanager/upsertportalc" +
+      "onfig:\001*\022\257\001\n\021ListPortalConfigs\022/.api.v1a" +
       "lpha1.integrations.ListPortalConfigsReq\032" +
       "/.api.v1alpha1.integrations.ListPortalCo" +
-      "nfigsRes\"8\202\323\344\223\0022:\001*\"-/api/v1alpha1/porta" +
-      "lmanager/listportalconfigs\022\247\001\n\017GetPortal" +
+      "nfigsRes\"8\202\323\344\223\0022\"-/api/v1alpha1/portalma" +
+      "nager/listportalconfigs:\001*\022\247\001\n\017GetPortal" +
       "Config\022-.api.v1alpha1.integrations.GetPo" +
       "rtalConfigReq\032-.api.v1alpha1.integration" +
-      "s.GetPortalConfigRes\"6\202\323\344\223\0020:\001*\"+/api/v1" +
-      "alpha1/portalmanager/getportalconfig\022\263\001\n" +
+      "s.GetPortalConfigRes\"6\202\323\344\223\0020\"+/api/v1alp" +
+      "ha1/portalmanager/getportalconfig:\001*\022\263\001\n" +
       "\022DeletePortalConfig\0220.api.v1alpha1.integ" +
       "rations.DeletePortalConfigReq\0320.api.v1al" +
       "pha1.integrations.DeletePortalConfigRes\"" +
-      "9\202\323\344\223\0023:\001*\"./api/v1alpha1/portalmanager/" +
-      "deleteportalconfig\022\303\001\n\026UpdatePortalConfi" +
+      "9\202\323\344\223\0023\"./api/v1alpha1/portalmanager/del" +
+      "eteportalconfig:\001*\022\303\001\n\026UpdatePortalConfi" +
       "gLogo\0224.api.v1alpha1.integrations.Update" +
       "PortalConfigLogoReq\0324.api.v1alpha1.integ" +
       "rations.UpdatePortalConfigLogoRes\"=\202\323\344\223\002" +
-      "7:\001*\"2/api/v1alpha1/portalmanager/update" +
-      "portalconfiglogo\022\267\001\n\023GetPortalConfigLogo" +
+      "7\"2/api/v1alpha1/portalmanager/updatepor" +
+      "talconfiglogo:\001*\022\267\001\n\023GetPortalConfigLogo" +
       "\0221.api.v1alpha1.integrations.GetPortalCo" +
       "nfigLogoReq\0321.api.v1alpha1.integrations." +
-      "GetPortalConfigLogoRes\":\202\323\344\223\0024:\001*\"//api/" +
-      "v1alpha1/portalmanager/getportalconfiglo" +
-      "go\022\247\001\n\017ListPortalLinks\022-.api.v1alpha1.in" +
+      "GetPortalConfigLogoRes\":\202\323\344\223\0024\"//api/v1a" +
+      "lpha1/portalmanager/getportalconfiglogo:" +
+      "\001*\022\247\001\n\017ListPortalLinks\022-.api.v1alpha1.in" +
       "tegrations.ListPortalLinksReq\032-.api.v1al" +
       "pha1.integrations.ListPortalLinksRes\"6\202\323" +
-      "\344\223\0020:\001*\"+/api/v1alpha1/portalmanager/lis" +
-      "tportallinks\022\237\001\n\rGetPortalLink\022+.api.v1a" +
+      "\344\223\0020\"+/api/v1alpha1/portalmanager/listpo" +
+      "rtallinks:\001*\022\237\001\n\rGetPortalLink\022+.api.v1a" +
       "lpha1.integrations.GetPortalLinkReq\032+.ap" +
       "i.v1alpha1.integrations.GetPortalLinkRes" +
-      "\"4\202\323\344\223\002.:\001*\")/api/v1alpha1/portalmanager" +
-      "/getportallink\022\253\001\n\020DeletePortalLink\022..ap" +
+      "\"4\202\323\344\223\002.\")/api/v1alpha1/portalmanager/ge" +
+      "tportallink:\001*\022\253\001\n\020DeletePortalLink\022..ap" +
       "i.v1alpha1.integrations.DeletePortalLink" +
       "Req\032..api.v1alpha1.integrations.DeletePo" +
-      "rtalLinkRes\"7\202\323\344\223\0021:\001*\",/api/v1alpha1/po" +
-      "rtalmanager/deleteportallink\022\257\001\n\021CreateP" +
+      "rtalLinkRes\"7\202\323\344\223\0021\",/api/v1alpha1/porta" +
+      "lmanager/deleteportallink:\001*\022\257\001\n\021CreateP" +
       "ortalLinks\022/.api.v1alpha1.integrations.C" +
       "reatePortalLinksReq\032/.api.v1alpha1.integ" +
-      "rations.CreatePortalLinksRes\"8\202\323\344\223\0022:\001*\"" +
-      "-/api/v1alpha1/portalmanager/createporta" +
-      "llinks\022\233\001\n\014UpsertPortal\022*.api.v1alpha1.i" +
+      "rations.CreatePortalLinksRes\"8\202\323\344\223\0022\"-/a" +
+      "pi/v1alpha1/portalmanager/createportalli" +
+      "nks:\001*\022\233\001\n\014UpsertPortal\022*.api.v1alpha1.i" +
       "ntegrations.UpsertPortalReq\032*.api.v1alph" +
-      "a1.integrations.UpsertPortalRes\"3\202\323\344\223\002-:" +
-      "\001*\"(/api/v1alpha1/portalmanager/upsertpo" +
-      "rtal\022\217\001\n\tGetPortal\022\'.api.v1alpha1.integr" +
+      "a1.integrations.UpsertPortalRes\"3\202\323\344\223\002-\"" +
+      "(/api/v1alpha1/portalmanager/upsertporta" +
+      "l:\001*\022\217\001\n\tGetPortal\022\'.api.v1alpha1.integr" +
       "ations.GetPortalReq\032\'.api.v1alpha1.integ" +
-      "rations.GetPortalRes\"0\202\323\344\223\002*:\001*\"%/api/v1" +
-      "alpha1/portalmanager/getportal\022\233\001\n\014Delet" +
+      "rations.GetPortalRes\"0\202\323\344\223\002*\"%/api/v1alp" +
+      "ha1/portalmanager/getportal:\001*\022\233\001\n\014Delet" +
       "ePortal\022*.api.v1alpha1.integrations.Dele" +
       "tePortalReq\032*.api.v1alpha1.integrations." +
-      "DeletePortalRes\"3\202\323\344\223\002-:\001*\"(/api/v1alpha" +
-      "1/portalmanager/deleteportal\022\227\001\n\013ListPor" +
+      "DeletePortalRes\"3\202\323\344\223\002-\"(/api/v1alpha1/p" +
+      "ortalmanager/deleteportal:\001*\022\227\001\n\013ListPor" +
       "tals\022).api.v1alpha1.integrations.ListPor" +
       "talsReq\032).api.v1alpha1.integrations.List" +
-      "PortalsRes\"2\202\323\344\223\002,:\001*\"\'/api/v1alpha1/por" +
-      "talmanager/listportals\022\267\001\n\023ListDetailedP" +
+      "PortalsRes\"2\202\323\344\223\002,\"\'/api/v1alpha1/portal" +
+      "manager/listportals:\001*\022\267\001\n\023ListDetailedP" +
       "ortals\0221.api.v1alpha1.integrations.ListD" +
       "etailedPortalsReq\0321.api.v1alpha1.integra" +
-      "tions.ListDetailedPortalsRes\":\202\323\344\223\0024:\001*\"" +
-      "//api/v1alpha1/portalmanager/listdetaile" +
-      "dportals\022\257\001\n\021GetDetailedPortal\022/.api.v1a" +
+      "tions.ListDetailedPortalsRes\":\202\323\344\223\0024\"//a" +
+      "pi/v1alpha1/portalmanager/listdetailedpo" +
+      "rtals:\001*\022\257\001\n\021GetDetailedPortal\022/.api.v1a" +
       "lpha1.integrations.GetDetailedPortalReq\032" +
       "/.api.v1alpha1.integrations.GetDetailedP" +
-      "ortalRes\"8\202\323\344\223\0022:\001*\"-/api/v1alpha1/porta" +
-      "lmanager/getdetailedportal\022\273\001\n\024UpsertPlu" +
+      "ortalRes\"8\202\323\344\223\0022\"-/api/v1alpha1/portalma" +
+      "nager/getdetailedportal:\001*\022\273\001\n\024UpsertPlu" +
       "ginInstance\0222.api.v1alpha1.integrations." +
       "UpsertPluginInstanceReq\0322.api.v1alpha1.i" +
       "ntegrations.UpsertPluginInstanceRes\";\202\323\344" +
-      "\223\0025:\001*\"0/api/v1alpha1/portalmanager/upse" +
-      "rtplugininstance\022\257\001\n\021GetPluginInstance\022/" +
+      "\223\0025\"0/api/v1alpha1/portalmanager/upsertp" +
+      "lugininstance:\001*\022\257\001\n\021GetPluginInstance\022/" +
       ".api.v1alpha1.integrations.GetPluginInst" +
       "anceReq\032/.api.v1alpha1.integrations.GetP" +
-      "luginInstanceRes\"8\202\323\344\223\0022:\001*\"-/api/v1alph" +
-      "a1/portalmanager/getplugininstance\022\273\001\n\024D" +
+      "luginInstanceRes\"8\202\323\344\223\0022\"-/api/v1alpha1/" +
+      "portalmanager/getplugininstance:\001*\022\273\001\n\024D" +
       "eletePluginInstance\0222.api.v1alpha1.integ" +
       "rations.DeletePluginInstanceReq\0322.api.v1" +
       "alpha1.integrations.DeletePluginInstance" +
-      "Res\";\202\323\344\223\0025:\001*\"0/api/v1alpha1/portalmana" +
-      "ger/deleteplugininstance\022\264\001\n\022ListPluginI" +
+      "Res\";\202\323\344\223\0025\"0/api/v1alpha1/portalmanager" +
+      "/deleteplugininstance:\001*\022\264\001\n\022ListPluginI" +
       "nstance\0220.api.v1alpha1.integrations.List" +
       "PluginInstanceReq\0320.api.v1alpha1.integra" +
-      "tions.ListPluginInstanceRes\":\202\323\344\223\0024:\001*\"/" +
-      "/api/v1alpha1/portalmanager/listpluginin" +
-      "stances\022\263\001\n\022ListFlowFieldNames\0220.api.v1a" +
+      "tions.ListPluginInstanceRes\":\202\323\344\223\0024\"//ap" +
+      "i/v1alpha1/portalmanager/listplugininsta" +
+      "nces:\001*\022\263\001\n\022ListFlowFieldNames\0220.api.v1a" +
       "lpha1.integrations.ListFlowFieldNamesReq" +
       "\0320.api.v1alpha1.integrations.ListFlowFie" +
-      "ldNamesRes\"9\202\323\344\223\0023:\001*\"./api/v1alpha1/por" +
-      "talmanager/listflowfieldnames\022\346\001\n\037ListAv" +
+      "ldNamesRes\"9\202\323\344\223\0023\"./api/v1alpha1/portal" +
+      "manager/listflowfieldnames:\001*\022\346\001\n\037ListAv" +
       "ailableVerificationFields\022=.api.v1alpha1" +
       ".integrations.ListAvailableVerificationF" +
       "ieldsReq\032=.api.v1alpha1.integrations.Lis" +
-      "tAvailableVerificationFieldsRes\"E\202\323\344\223\002?:" +
-      "\001*\":/api/v1alpha1/integrations/listavail" +
-      "ableverificationfields\022\322\001\n\032ListAvailable" +
+      "tAvailableVerificationFieldsRes\"E\202\323\344\223\002?\"" +
+      ":/api/v1alpha1/integrations/listavailabl" +
+      "everificationfields:\001*\022\322\001\n\032ListAvailable" +
       "PaymentFields\0228.api.v1alpha1.integration" +
       "s.ListAvailablePaymentFieldsReq\0328.api.v1" +
       "alpha1.integrations.ListAvailablePayment" +
-      "FieldsRes\"@\202\323\344\223\002::\001*\"5/api/v1alpha1/inte" +
-      "grations/listavailablePaymentfieldsB\301\001\n+" +
+      "FieldsRes\"@\202\323\344\223\002:\"5/api/v1alpha1/integra" +
+      "tions/listavailablePaymentfields:\001*B\301\001\n+" +
       "com.tcn.cloud.api.api.v1alpha1.integrati" +
       "onsB\014PortalsProtoP\001\242\002\003AVI\252\002\031Api.V1alpha1" +
       ".Integrations\312\002\031Api\\V1alpha1\\Integration" +

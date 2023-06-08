@@ -29,61 +29,6 @@ private static final long serialVersionUID = 0L;
     return new GetWebhookPreferencesResponse();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private GetWebhookPreferencesResponse(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 82: {
-            com.tcn.cloud.api.api.v0alpha.WebhookPreferences.Builder subBuilder = null;
-            if (webhookPreferences_ != null) {
-              subBuilder = webhookPreferences_.toBuilder();
-            }
-            webhookPreferences_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.WebhookPreferences.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(webhookPreferences_);
-              webhookPreferences_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetWebhookPreferencesResponse_descriptor;
@@ -132,7 +77,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.WebhookPreferencesOrBuilder getWebhookPreferencesOrBuilder() {
-    return getWebhookPreferences();
+    return webhookPreferences_ == null ? com.tcn.cloud.api.api.v0alpha.WebhookPreferences.getDefaultInstance() : webhookPreferences_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -152,7 +97,7 @@ private static final long serialVersionUID = 0L;
     if (webhookPreferences_ != null) {
       output.writeMessage(10, getWebhookPreferences());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -165,7 +110,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getWebhookPreferences());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -185,7 +130,7 @@ private static final long serialVersionUID = 0L;
       if (!getWebhookPreferences()
           .equals(other.getWebhookPreferences())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -200,7 +145,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + WEBHOOK_PREFERENCES_FIELD_NUMBER;
       hash = (53 * hash) + getWebhookPreferences().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -249,11 +194,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -321,26 +268,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (webhookPreferencesBuilder_ == null) {
-        webhookPreferences_ = null;
-      } else {
-        webhookPreferences_ = null;
+      bitField0_ = 0;
+      webhookPreferences_ = null;
+      if (webhookPreferencesBuilder_ != null) {
+        webhookPreferencesBuilder_.dispose();
         webhookPreferencesBuilder_ = null;
       }
       return this;
@@ -369,13 +311,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesResponse buildPartial() {
       com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesResponse result = new com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesResponse(this);
-      if (webhookPreferencesBuilder_ == null) {
-        result.webhookPreferences_ = webhookPreferences_;
-      } else {
-        result.webhookPreferences_ = webhookPreferencesBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.webhookPreferences_ = webhookPreferencesBuilder_ == null
+            ? webhookPreferences_
+            : webhookPreferencesBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -425,7 +372,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasWebhookPreferences()) {
         mergeWebhookPreferences(other.getWebhookPreferences());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -440,19 +387,40 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesResponse parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 82: {
+              input.readMessage(
+                  getWebhookPreferencesFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 82
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.tcn.cloud.api.api.v0alpha.WebhookPreferences webhookPreferences_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -466,7 +434,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the webhookPreferences field is set.
      */
     public boolean hasWebhookPreferences() {
-      return webhookPreferencesBuilder_ != null || webhookPreferences_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -496,11 +464,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         webhookPreferences_ = value;
-        onChanged();
       } else {
         webhookPreferencesBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -514,11 +482,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.WebhookPreferences.Builder builderForValue) {
       if (webhookPreferencesBuilder_ == null) {
         webhookPreferences_ = builderForValue.build();
-        onChanged();
       } else {
         webhookPreferencesBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -530,17 +498,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeWebhookPreferences(com.tcn.cloud.api.api.v0alpha.WebhookPreferences value) {
       if (webhookPreferencesBuilder_ == null) {
-        if (webhookPreferences_ != null) {
-          webhookPreferences_ =
-            com.tcn.cloud.api.api.v0alpha.WebhookPreferences.newBuilder(webhookPreferences_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          webhookPreferences_ != null &&
+          webhookPreferences_ != com.tcn.cloud.api.api.v0alpha.WebhookPreferences.getDefaultInstance()) {
+          getWebhookPreferencesBuilder().mergeFrom(value);
         } else {
           webhookPreferences_ = value;
         }
-        onChanged();
       } else {
         webhookPreferencesBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -551,14 +520,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.WebhookPreferences webhook_preferences = 10 [json_name = "webhookPreferences"];</code>
      */
     public Builder clearWebhookPreferences() {
-      if (webhookPreferencesBuilder_ == null) {
-        webhookPreferences_ = null;
-        onChanged();
-      } else {
-        webhookPreferences_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      webhookPreferences_ = null;
+      if (webhookPreferencesBuilder_ != null) {
+        webhookPreferencesBuilder_.dispose();
         webhookPreferencesBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -569,7 +537,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.WebhookPreferences webhook_preferences = 10 [json_name = "webhookPreferences"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.WebhookPreferences.Builder getWebhookPreferencesBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getWebhookPreferencesFieldBuilder().getBuilder();
     }
@@ -641,7 +609,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GetWebhookPreferencesResponse(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

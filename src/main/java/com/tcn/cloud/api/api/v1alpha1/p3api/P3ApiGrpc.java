@@ -1,25 +1,13 @@
 package com.tcn.cloud.api.api.v1alpha1.p3api;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.14.0)",
+    value = "by gRPC proto compiler (version 1.55.1)",
     comments = "Source: api/v1alpha1/p3api/service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class P3ApiGrpc {
 
   private P3ApiGrpc() {}
@@ -41,22 +29,21 @@ public final class P3ApiGrpc {
     if ((getGetAgentHuntGroupMethod = P3ApiGrpc.getGetAgentHuntGroupMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetAgentHuntGroupMethod = P3ApiGrpc.getGetAgentHuntGroupMethod) == null) {
-          P3ApiGrpc.getGetAgentHuntGroupMethod = getGetAgentHuntGroupMethod = 
+          P3ApiGrpc.getGetAgentHuntGroupMethod = getGetAgentHuntGroupMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetAgentHuntGroupReq, com.tcn.cloud.api.api.v0alpha.HuntGroup>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetAgentHuntGroup"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAgentHuntGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAgentHuntGroupReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.HuntGroup.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetAgentHuntGroup"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetAgentHuntGroup"))
+              .build();
         }
-     }
-     return getGetAgentHuntGroupMethod;
+      }
+    }
+    return getGetAgentHuntGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetAgentSessionReq,
@@ -73,22 +60,21 @@ public final class P3ApiGrpc {
     if ((getGetAgentSessionMethod = P3ApiGrpc.getGetAgentSessionMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetAgentSessionMethod = P3ApiGrpc.getGetAgentSessionMethod) == null) {
-          P3ApiGrpc.getGetAgentSessionMethod = getGetAgentSessionMethod = 
+          P3ApiGrpc.getGetAgentSessionMethod = getGetAgentSessionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetAgentSessionReq, com.tcn.cloud.api.api.v0alpha.AgentSession>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetAgentSession"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAgentSession"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAgentSessionReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AgentSession.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetAgentSession"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetAgentSession"))
+              .build();
         }
-     }
-     return getGetAgentSessionMethod;
+      }
+    }
+    return getGetAgentSessionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetAgentSkillsReq,
@@ -105,22 +91,21 @@ public final class P3ApiGrpc {
     if ((getGetAgentSkillsMethod = P3ApiGrpc.getGetAgentSkillsMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetAgentSkillsMethod = P3ApiGrpc.getGetAgentSkillsMethod) == null) {
-          P3ApiGrpc.getGetAgentSkillsMethod = getGetAgentSkillsMethod = 
+          P3ApiGrpc.getGetAgentSkillsMethod = getGetAgentSkillsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetAgentSkillsReq, com.tcn.cloud.api.api.v0alpha.GetAgentSkillsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetAgentSkills"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAgentSkills"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAgentSkillsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAgentSkillsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetAgentSkills"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetAgentSkills"))
+              .build();
         }
-     }
-     return getGetAgentSkillsMethod;
+      }
+    }
+    return getGetAgentSkillsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateAgentSkillReq,
@@ -137,22 +122,21 @@ public final class P3ApiGrpc {
     if ((getCreateAgentSkillMethod = P3ApiGrpc.getCreateAgentSkillMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getCreateAgentSkillMethod = P3ApiGrpc.getCreateAgentSkillMethod) == null) {
-          P3ApiGrpc.getCreateAgentSkillMethod = getCreateAgentSkillMethod = 
+          P3ApiGrpc.getCreateAgentSkillMethod = getCreateAgentSkillMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateAgentSkillReq, com.tcn.cloud.api.api.v0alpha.CreateAgentSkillRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "CreateAgentSkill"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAgentSkill"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateAgentSkillReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateAgentSkillRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("CreateAgentSkill"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("CreateAgentSkill"))
+              .build();
         }
-     }
-     return getCreateAgentSkillMethod;
+      }
+    }
+    return getCreateAgentSkillMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillReq,
@@ -169,22 +153,21 @@ public final class P3ApiGrpc {
     if ((getUpdateAgentSkillMethod = P3ApiGrpc.getUpdateAgentSkillMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getUpdateAgentSkillMethod = P3ApiGrpc.getUpdateAgentSkillMethod) == null) {
-          P3ApiGrpc.getUpdateAgentSkillMethod = getUpdateAgentSkillMethod = 
+          P3ApiGrpc.getUpdateAgentSkillMethod = getUpdateAgentSkillMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillReq, com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "UpdateAgentSkill"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAgentSkill"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdateAgentSkill"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdateAgentSkill"))
+              .build();
         }
-     }
-     return getUpdateAgentSkillMethod;
+      }
+    }
+    return getUpdateAgentSkillMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteAgentSkillReq,
@@ -201,22 +184,21 @@ public final class P3ApiGrpc {
     if ((getDeleteAgentSkillMethod = P3ApiGrpc.getDeleteAgentSkillMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getDeleteAgentSkillMethod = P3ApiGrpc.getDeleteAgentSkillMethod) == null) {
-          P3ApiGrpc.getDeleteAgentSkillMethod = getDeleteAgentSkillMethod = 
+          P3ApiGrpc.getDeleteAgentSkillMethod = getDeleteAgentSkillMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteAgentSkillReq, com.tcn.cloud.api.api.v0alpha.DeleteAgentSkillRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "DeleteAgentSkill"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteAgentSkill"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteAgentSkillReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteAgentSkillRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("DeleteAgentSkill"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("DeleteAgentSkill"))
+              .build();
         }
-     }
-     return getDeleteAgentSkillMethod;
+      }
+    }
+    return getDeleteAgentSkillMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListSkillsForCurrentAgentReq,
@@ -233,22 +215,21 @@ public final class P3ApiGrpc {
     if ((getListSkillsForCurrentAgentMethod = P3ApiGrpc.getListSkillsForCurrentAgentMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListSkillsForCurrentAgentMethod = P3ApiGrpc.getListSkillsForCurrentAgentMethod) == null) {
-          P3ApiGrpc.getListSkillsForCurrentAgentMethod = getListSkillsForCurrentAgentMethod = 
+          P3ApiGrpc.getListSkillsForCurrentAgentMethod = getListSkillsForCurrentAgentMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListSkillsForCurrentAgentReq, com.tcn.cloud.api.api.v0alpha.ListSkillsForCurrentAgentRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListSkillsForCurrentAgent"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSkillsForCurrentAgent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSkillsForCurrentAgentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSkillsForCurrentAgentRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListSkillsForCurrentAgent"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListSkillsForCurrentAgent"))
+              .build();
         }
-     }
-     return getListSkillsForCurrentAgentMethod;
+      }
+    }
+    return getListSkillsForCurrentAgentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListSkillsReq,
@@ -265,22 +246,21 @@ public final class P3ApiGrpc {
     if ((getListSkillsMethod = P3ApiGrpc.getListSkillsMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListSkillsMethod = P3ApiGrpc.getListSkillsMethod) == null) {
-          P3ApiGrpc.getListSkillsMethod = getListSkillsMethod = 
+          P3ApiGrpc.getListSkillsMethod = getListSkillsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListSkillsReq, com.tcn.cloud.api.api.v0alpha.ListSkillsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListSkills"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSkills"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSkillsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSkillsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListSkills"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListSkills"))
+              .build();
         }
-     }
-     return getListSkillsMethod;
+      }
+    }
+    return getListSkillsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsReq,
@@ -297,22 +277,21 @@ public final class P3ApiGrpc {
     if ((getUpdateAgentSkillsMethod = P3ApiGrpc.getUpdateAgentSkillsMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getUpdateAgentSkillsMethod = P3ApiGrpc.getUpdateAgentSkillsMethod) == null) {
-          P3ApiGrpc.getUpdateAgentSkillsMethod = getUpdateAgentSkillsMethod = 
+          P3ApiGrpc.getUpdateAgentSkillsMethod = getUpdateAgentSkillsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsReq, com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "UpdateAgentSkills"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAgentSkills"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdateAgentSkills"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdateAgentSkills"))
+              .build();
         }
-     }
-     return getUpdateAgentSkillsMethod;
+      }
+    }
+    return getUpdateAgentSkillsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetCurrentAgentReq,
@@ -329,22 +308,21 @@ public final class P3ApiGrpc {
     if ((getGetCurrentAgentMethod = P3ApiGrpc.getGetCurrentAgentMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetCurrentAgentMethod = P3ApiGrpc.getGetCurrentAgentMethod) == null) {
-          P3ApiGrpc.getGetCurrentAgentMethod = getGetCurrentAgentMethod = 
+          P3ApiGrpc.getGetCurrentAgentMethod = getGetCurrentAgentMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetCurrentAgentReq, com.tcn.cloud.api.api.v0alpha.Agent>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetCurrentAgent"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCurrentAgent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetCurrentAgentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Agent.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetCurrentAgent"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetCurrentAgent"))
+              .build();
         }
-     }
-     return getGetCurrentAgentMethod;
+      }
+    }
+    return getGetCurrentAgentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetClientInfoDataReq,
@@ -361,22 +339,21 @@ public final class P3ApiGrpc {
     if ((getGetClientInfoDataMethod = P3ApiGrpc.getGetClientInfoDataMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetClientInfoDataMethod = P3ApiGrpc.getGetClientInfoDataMethod) == null) {
-          P3ApiGrpc.getGetClientInfoDataMethod = getGetClientInfoDataMethod = 
+          P3ApiGrpc.getGetClientInfoDataMethod = getGetClientInfoDataMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetClientInfoDataReq, com.tcn.cloud.api.api.v0alpha.GetClientInfoDataRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetClientInfoData"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetClientInfoData"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetClientInfoDataReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetClientInfoDataRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetClientInfoData"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetClientInfoData"))
+              .build();
         }
-     }
-     return getGetClientInfoDataMethod;
+      }
+    }
+    return getGetClientInfoDataMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateReq,
@@ -393,22 +370,21 @@ public final class P3ApiGrpc {
     if ((getGetClientInfoDisplayTemplateMethod = P3ApiGrpc.getGetClientInfoDisplayTemplateMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetClientInfoDisplayTemplateMethod = P3ApiGrpc.getGetClientInfoDisplayTemplateMethod) == null) {
-          P3ApiGrpc.getGetClientInfoDisplayTemplateMethod = getGetClientInfoDisplayTemplateMethod = 
+          P3ApiGrpc.getGetClientInfoDisplayTemplateMethod = getGetClientInfoDisplayTemplateMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateReq, com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetClientInfoDisplayTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetClientInfoDisplayTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetClientInfoDisplayTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetClientInfoDisplayTemplate"))
+              .build();
         }
-     }
-     return getGetClientInfoDisplayTemplateMethod;
+      }
+    }
+    return getGetClientInfoDisplayTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsDataReq,
@@ -425,22 +401,21 @@ public final class P3ApiGrpc {
     if ((getListAgentStatisticsDataMethod = P3ApiGrpc.getListAgentStatisticsDataMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListAgentStatisticsDataMethod = P3ApiGrpc.getListAgentStatisticsDataMethod) == null) {
-          P3ApiGrpc.getListAgentStatisticsDataMethod = getListAgentStatisticsDataMethod = 
+          P3ApiGrpc.getListAgentStatisticsDataMethod = getListAgentStatisticsDataMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsDataReq, com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsDataRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListAgentStatisticsData"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentStatisticsData"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsDataReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsDataRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListAgentStatisticsData"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListAgentStatisticsData"))
+              .build();
         }
-     }
-     return getListAgentStatisticsDataMethod;
+      }
+    }
+    return getListAgentStatisticsDataMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsReq,
@@ -457,22 +432,21 @@ public final class P3ApiGrpc {
     if ((getListPBXExtensionsMethod = P3ApiGrpc.getListPBXExtensionsMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListPBXExtensionsMethod = P3ApiGrpc.getListPBXExtensionsMethod) == null) {
-          P3ApiGrpc.getListPBXExtensionsMethod = getListPBXExtensionsMethod = 
+          P3ApiGrpc.getListPBXExtensionsMethod = getListPBXExtensionsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsReq, com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListPBXExtensions"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPBXExtensions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListPBXExtensions"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListPBXExtensions"))
+              .build();
         }
-     }
-     return getListPBXExtensionsMethod;
+      }
+    }
+    return getListPBXExtensionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAgentExtensionsReq,
@@ -489,22 +463,21 @@ public final class P3ApiGrpc {
     if ((getListAgentExtensionsMethod = P3ApiGrpc.getListAgentExtensionsMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListAgentExtensionsMethod = P3ApiGrpc.getListAgentExtensionsMethod) == null) {
-          P3ApiGrpc.getListAgentExtensionsMethod = getListAgentExtensionsMethod = 
+          P3ApiGrpc.getListAgentExtensionsMethod = getListAgentExtensionsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListAgentExtensionsReq, com.tcn.cloud.api.api.v0alpha.ListAgentExtensionsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListAgentExtensions"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentExtensions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentExtensionsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentExtensionsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListAgentExtensions"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListAgentExtensions"))
+              .build();
         }
-     }
-     return getListAgentExtensionsMethod;
+      }
+    }
+    return getListAgentExtensionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListHuntGroupExtensionsReq,
@@ -521,22 +494,21 @@ public final class P3ApiGrpc {
     if ((getListHuntGroupExtensionsMethod = P3ApiGrpc.getListHuntGroupExtensionsMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListHuntGroupExtensionsMethod = P3ApiGrpc.getListHuntGroupExtensionsMethod) == null) {
-          P3ApiGrpc.getListHuntGroupExtensionsMethod = getListHuntGroupExtensionsMethod = 
+          P3ApiGrpc.getListHuntGroupExtensionsMethod = getListHuntGroupExtensionsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListHuntGroupExtensionsReq, com.tcn.cloud.api.api.v0alpha.ListHuntGroupExtensionsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListHuntGroupExtensions"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListHuntGroupExtensions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListHuntGroupExtensionsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListHuntGroupExtensionsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListHuntGroupExtensions"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListHuntGroupExtensions"))
+              .build();
         }
-     }
-     return getListHuntGroupExtensionsMethod;
+      }
+    }
+    return getListHuntGroupExtensionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateExtensionReq,
@@ -553,22 +525,21 @@ public final class P3ApiGrpc {
     if ((getCreateExtensionMethod = P3ApiGrpc.getCreateExtensionMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getCreateExtensionMethod = P3ApiGrpc.getCreateExtensionMethod) == null) {
-          P3ApiGrpc.getCreateExtensionMethod = getCreateExtensionMethod = 
+          P3ApiGrpc.getCreateExtensionMethod = getCreateExtensionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateExtensionReq, com.tcn.cloud.api.api.v0alpha.CreateExtensionRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "CreateExtension"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateExtension"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateExtensionReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateExtensionRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("CreateExtension"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("CreateExtension"))
+              .build();
         }
-     }
-     return getCreateExtensionMethod;
+      }
+    }
+    return getCreateExtensionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteExtensionReq,
@@ -585,22 +556,21 @@ public final class P3ApiGrpc {
     if ((getDeleteExtensionMethod = P3ApiGrpc.getDeleteExtensionMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getDeleteExtensionMethod = P3ApiGrpc.getDeleteExtensionMethod) == null) {
-          P3ApiGrpc.getDeleteExtensionMethod = getDeleteExtensionMethod = 
+          P3ApiGrpc.getDeleteExtensionMethod = getDeleteExtensionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteExtensionReq, com.tcn.cloud.api.api.v0alpha.DeleteExtensionRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "DeleteExtension"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteExtension"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteExtensionReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteExtensionRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("DeleteExtension"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("DeleteExtension"))
+              .build();
         }
-     }
-     return getDeleteExtensionMethod;
+      }
+    }
+    return getDeleteExtensionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateExtensionReq,
@@ -617,22 +587,21 @@ public final class P3ApiGrpc {
     if ((getUpdateExtensionMethod = P3ApiGrpc.getUpdateExtensionMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getUpdateExtensionMethod = P3ApiGrpc.getUpdateExtensionMethod) == null) {
-          P3ApiGrpc.getUpdateExtensionMethod = getUpdateExtensionMethod = 
+          P3ApiGrpc.getUpdateExtensionMethod = getUpdateExtensionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateExtensionReq, com.tcn.cloud.api.api.v0alpha.UpdateExtensionRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "UpdateExtension"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateExtension"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateExtensionReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateExtensionRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdateExtension"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdateExtension"))
+              .build();
         }
-     }
-     return getUpdateExtensionMethod;
+      }
+    }
+    return getUpdateExtensionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdatePBXExtensionReq,
@@ -649,22 +618,21 @@ public final class P3ApiGrpc {
     if ((getUpdatePBXExtensionMethod = P3ApiGrpc.getUpdatePBXExtensionMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getUpdatePBXExtensionMethod = P3ApiGrpc.getUpdatePBXExtensionMethod) == null) {
-          P3ApiGrpc.getUpdatePBXExtensionMethod = getUpdatePBXExtensionMethod = 
+          P3ApiGrpc.getUpdatePBXExtensionMethod = getUpdatePBXExtensionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdatePBXExtensionReq, com.tcn.cloud.api.api.v0alpha.UpdatePBXExtensionRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "UpdatePBXExtension"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdatePBXExtension"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdatePBXExtensionReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdatePBXExtensionRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdatePBXExtension"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdatePBXExtension"))
+              .build();
         }
-     }
-     return getUpdatePBXExtensionMethod;
+      }
+    }
+    return getUpdatePBXExtensionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateDNCLNumbersReq,
@@ -681,22 +649,21 @@ public final class P3ApiGrpc {
     if ((getCreateDNCLNumbersMethod = P3ApiGrpc.getCreateDNCLNumbersMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getCreateDNCLNumbersMethod = P3ApiGrpc.getCreateDNCLNumbersMethod) == null) {
-          P3ApiGrpc.getCreateDNCLNumbersMethod = getCreateDNCLNumbersMethod = 
+          P3ApiGrpc.getCreateDNCLNumbersMethod = getCreateDNCLNumbersMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateDNCLNumbersReq, com.tcn.cloud.api.api.v0alpha.CreateDNCLNumbersRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "CreateDNCLNumbers"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateDNCLNumbers"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateDNCLNumbersReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateDNCLNumbersRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("CreateDNCLNumbers"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("CreateDNCLNumbers"))
+              .build();
         }
-     }
-     return getCreateDNCLNumbersMethod;
+      }
+    }
+    return getCreateDNCLNumbersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetScriptOrResponsesReq,
@@ -713,22 +680,21 @@ public final class P3ApiGrpc {
     if ((getGetScriptOrResponsesMethod = P3ApiGrpc.getGetScriptOrResponsesMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetScriptOrResponsesMethod = P3ApiGrpc.getGetScriptOrResponsesMethod) == null) {
-          P3ApiGrpc.getGetScriptOrResponsesMethod = getGetScriptOrResponsesMethod = 
+          P3ApiGrpc.getGetScriptOrResponsesMethod = getGetScriptOrResponsesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetScriptOrResponsesReq, com.tcn.cloud.api.api.v0alpha.GetScriptOrResponsesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetScriptOrResponses"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetScriptOrResponses"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetScriptOrResponsesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetScriptOrResponsesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetScriptOrResponses"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetScriptOrResponses"))
+              .build();
         }
-     }
-     return getGetScriptOrResponsesMethod;
+      }
+    }
+    return getGetScriptOrResponsesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetHuntGroupAgentSettingsReq,
@@ -745,22 +711,21 @@ public final class P3ApiGrpc {
     if ((getGetHuntGroupAgentSettingsMethod = P3ApiGrpc.getGetHuntGroupAgentSettingsMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetHuntGroupAgentSettingsMethod = P3ApiGrpc.getGetHuntGroupAgentSettingsMethod) == null) {
-          P3ApiGrpc.getGetHuntGroupAgentSettingsMethod = getGetHuntGroupAgentSettingsMethod = 
+          P3ApiGrpc.getGetHuntGroupAgentSettingsMethod = getGetHuntGroupAgentSettingsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetHuntGroupAgentSettingsReq, com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetHuntGroupAgentSettings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetHuntGroupAgentSettings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetHuntGroupAgentSettingsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetHuntGroupAgentSettings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetHuntGroupAgentSettings"))
+              .build();
         }
-     }
-     return getGetHuntGroupAgentSettingsMethod;
+      }
+    }
+    return getGetHuntGroupAgentSettingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksReq,
@@ -777,22 +742,21 @@ public final class P3ApiGrpc {
     if ((getListHuntGroupWebLinksMethod = P3ApiGrpc.getListHuntGroupWebLinksMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListHuntGroupWebLinksMethod = P3ApiGrpc.getListHuntGroupWebLinksMethod) == null) {
-          P3ApiGrpc.getListHuntGroupWebLinksMethod = getListHuntGroupWebLinksMethod = 
+          P3ApiGrpc.getListHuntGroupWebLinksMethod = getListHuntGroupWebLinksMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksReq, com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListHuntGroupWebLinks"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListHuntGroupWebLinks"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListHuntGroupWebLinks"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListHuntGroupWebLinks"))
+              .build();
         }
-     }
-     return getListHuntGroupWebLinksMethod;
+      }
+    }
+    return getListHuntGroupWebLinksMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetHuntGroupPauseCodesReq,
@@ -809,22 +773,21 @@ public final class P3ApiGrpc {
     if ((getGetHuntGroupPauseCodesMethod = P3ApiGrpc.getGetHuntGroupPauseCodesMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetHuntGroupPauseCodesMethod = P3ApiGrpc.getGetHuntGroupPauseCodesMethod) == null) {
-          P3ApiGrpc.getGetHuntGroupPauseCodesMethod = getGetHuntGroupPauseCodesMethod = 
+          P3ApiGrpc.getGetHuntGroupPauseCodesMethod = getGetHuntGroupPauseCodesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetHuntGroupPauseCodesReq, com.tcn.cloud.api.api.v0alpha.GetHuntGroupPauseCodesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetHuntGroupPauseCodes"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetHuntGroupPauseCodes"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetHuntGroupPauseCodesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetHuntGroupPauseCodesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetHuntGroupPauseCodes"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetHuntGroupPauseCodes"))
+              .build();
         }
-     }
-     return getGetHuntGroupPauseCodesMethod;
+      }
+    }
+    return getGetHuntGroupPauseCodesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAgentCallHistoryReq,
@@ -841,22 +804,21 @@ public final class P3ApiGrpc {
     if ((getListAgentCallHistoryMethod = P3ApiGrpc.getListAgentCallHistoryMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListAgentCallHistoryMethod = P3ApiGrpc.getListAgentCallHistoryMethod) == null) {
-          P3ApiGrpc.getListAgentCallHistoryMethod = getListAgentCallHistoryMethod = 
+          P3ApiGrpc.getListAgentCallHistoryMethod = getListAgentCallHistoryMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListAgentCallHistoryReq, com.tcn.cloud.api.api.v0alpha.ListAgentCallHistoryRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListAgentCallHistory"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentCallHistory"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentCallHistoryReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentCallHistoryRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListAgentCallHistory"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListAgentCallHistory"))
+              .build();
         }
-     }
-     return getListAgentCallHistoryMethod;
+      }
+    }
+    return getListAgentCallHistoryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListClientPhoneBookEntriesReq,
@@ -873,22 +835,21 @@ public final class P3ApiGrpc {
     if ((getListClientPhoneBookEntriesMethod = P3ApiGrpc.getListClientPhoneBookEntriesMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListClientPhoneBookEntriesMethod = P3ApiGrpc.getListClientPhoneBookEntriesMethod) == null) {
-          P3ApiGrpc.getListClientPhoneBookEntriesMethod = getListClientPhoneBookEntriesMethod = 
+          P3ApiGrpc.getListClientPhoneBookEntriesMethod = getListClientPhoneBookEntriesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListClientPhoneBookEntriesReq, com.tcn.cloud.api.api.v0alpha.ListClientPhoneBookEntriesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListClientPhoneBookEntries"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListClientPhoneBookEntries"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListClientPhoneBookEntriesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListClientPhoneBookEntriesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListClientPhoneBookEntries"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListClientPhoneBookEntries"))
+              .build();
         }
-     }
-     return getListClientPhoneBookEntriesMethod;
+      }
+    }
+    return getListClientPhoneBookEntriesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListHuntGroupPhoneBookEntriesReq,
@@ -905,22 +866,21 @@ public final class P3ApiGrpc {
     if ((getListHuntGroupPhoneBookEntriesMethod = P3ApiGrpc.getListHuntGroupPhoneBookEntriesMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListHuntGroupPhoneBookEntriesMethod = P3ApiGrpc.getListHuntGroupPhoneBookEntriesMethod) == null) {
-          P3ApiGrpc.getListHuntGroupPhoneBookEntriesMethod = getListHuntGroupPhoneBookEntriesMethod = 
+          P3ApiGrpc.getListHuntGroupPhoneBookEntriesMethod = getListHuntGroupPhoneBookEntriesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListHuntGroupPhoneBookEntriesReq, com.tcn.cloud.api.api.v0alpha.ListHuntGroupPhoneBookEntriesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListHuntGroupPhoneBookEntries"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListHuntGroupPhoneBookEntries"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListHuntGroupPhoneBookEntriesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListHuntGroupPhoneBookEntriesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListHuntGroupPhoneBookEntries"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListHuntGroupPhoneBookEntries"))
+              .build();
         }
-     }
-     return getListHuntGroupPhoneBookEntriesMethod;
+      }
+    }
+    return getListHuntGroupPhoneBookEntriesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreatePhoneBookEntryReq,
@@ -937,22 +897,21 @@ public final class P3ApiGrpc {
     if ((getCreatePhoneBookEntryMethod = P3ApiGrpc.getCreatePhoneBookEntryMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getCreatePhoneBookEntryMethod = P3ApiGrpc.getCreatePhoneBookEntryMethod) == null) {
-          P3ApiGrpc.getCreatePhoneBookEntryMethod = getCreatePhoneBookEntryMethod = 
+          P3ApiGrpc.getCreatePhoneBookEntryMethod = getCreatePhoneBookEntryMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreatePhoneBookEntryReq, com.tcn.cloud.api.api.v0alpha.CreatePhoneBookEntryRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "CreatePhoneBookEntry"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreatePhoneBookEntry"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreatePhoneBookEntryReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreatePhoneBookEntryRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("CreatePhoneBookEntry"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("CreatePhoneBookEntry"))
+              .build();
         }
-     }
-     return getCreatePhoneBookEntryMethod;
+      }
+    }
+    return getCreatePhoneBookEntryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdatePhoneBookEntryReq,
@@ -969,22 +928,21 @@ public final class P3ApiGrpc {
     if ((getUpdatePhoneBookEntryMethod = P3ApiGrpc.getUpdatePhoneBookEntryMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getUpdatePhoneBookEntryMethod = P3ApiGrpc.getUpdatePhoneBookEntryMethod) == null) {
-          P3ApiGrpc.getUpdatePhoneBookEntryMethod = getUpdatePhoneBookEntryMethod = 
+          P3ApiGrpc.getUpdatePhoneBookEntryMethod = getUpdatePhoneBookEntryMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdatePhoneBookEntryReq, com.tcn.cloud.api.api.v0alpha.UpdatePhoneBookEntryRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "UpdatePhoneBookEntry"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdatePhoneBookEntry"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdatePhoneBookEntryReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdatePhoneBookEntryRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdatePhoneBookEntry"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdatePhoneBookEntry"))
+              .build();
         }
-     }
-     return getUpdatePhoneBookEntryMethod;
+      }
+    }
+    return getUpdatePhoneBookEntryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeletePhoneBookEntryReq,
@@ -1001,22 +959,21 @@ public final class P3ApiGrpc {
     if ((getDeletePhoneBookEntryMethod = P3ApiGrpc.getDeletePhoneBookEntryMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getDeletePhoneBookEntryMethod = P3ApiGrpc.getDeletePhoneBookEntryMethod) == null) {
-          P3ApiGrpc.getDeletePhoneBookEntryMethod = getDeletePhoneBookEntryMethod = 
+          P3ApiGrpc.getDeletePhoneBookEntryMethod = getDeletePhoneBookEntryMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeletePhoneBookEntryReq, com.tcn.cloud.api.api.v0alpha.DeletePhoneBookEntryRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "DeletePhoneBookEntry"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeletePhoneBookEntry"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeletePhoneBookEntryReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeletePhoneBookEntryRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("DeletePhoneBookEntry"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("DeletePhoneBookEntry"))
+              .build();
         }
-     }
-     return getDeletePhoneBookEntryMethod;
+      }
+    }
+    return getDeletePhoneBookEntryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListPhoneBooksReq,
@@ -1033,22 +990,21 @@ public final class P3ApiGrpc {
     if ((getListPhoneBooksMethod = P3ApiGrpc.getListPhoneBooksMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListPhoneBooksMethod = P3ApiGrpc.getListPhoneBooksMethod) == null) {
-          P3ApiGrpc.getListPhoneBooksMethod = getListPhoneBooksMethod = 
+          P3ApiGrpc.getListPhoneBooksMethod = getListPhoneBooksMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListPhoneBooksReq, com.tcn.cloud.api.api.v0alpha.ListPhoneBooksRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListPhoneBooks"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPhoneBooks"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListPhoneBooksReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListPhoneBooksRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListPhoneBooks"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListPhoneBooks"))
+              .build();
         }
-     }
-     return getListPhoneBooksMethod;
+      }
+    }
+    return getListPhoneBooksMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAgentTriggersReq,
@@ -1065,22 +1021,21 @@ public final class P3ApiGrpc {
     if ((getListAgentTriggersMethod = P3ApiGrpc.getListAgentTriggersMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListAgentTriggersMethod = P3ApiGrpc.getListAgentTriggersMethod) == null) {
-          P3ApiGrpc.getListAgentTriggersMethod = getListAgentTriggersMethod = 
+          P3ApiGrpc.getListAgentTriggersMethod = getListAgentTriggersMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListAgentTriggersReq, com.tcn.cloud.api.api.v0alpha.ListAgentTriggersRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListAgentTriggers"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentTriggers"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentTriggersReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentTriggersRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListAgentTriggers"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListAgentTriggers"))
+              .build();
         }
-     }
-     return getListAgentTriggersMethod;
+      }
+    }
+    return getListAgentTriggersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusReq,
@@ -1097,22 +1052,21 @@ public final class P3ApiGrpc {
     if ((getGetCampaignCompletionStatusMethod = P3ApiGrpc.getGetCampaignCompletionStatusMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetCampaignCompletionStatusMethod = P3ApiGrpc.getGetCampaignCompletionStatusMethod) == null) {
-          P3ApiGrpc.getGetCampaignCompletionStatusMethod = getGetCampaignCompletionStatusMethod = 
+          P3ApiGrpc.getGetCampaignCompletionStatusMethod = getGetCampaignCompletionStatusMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusReq, com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetCampaignCompletionStatus"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCampaignCompletionStatus"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetCampaignCompletionStatus"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetCampaignCompletionStatus"))
+              .build();
         }
-     }
-     return getGetCampaignCompletionStatusMethod;
+      }
+    }
+    return getGetCampaignCompletionStatusMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoReq,
@@ -1129,22 +1083,21 @@ public final class P3ApiGrpc {
     if ((getGetLostPeerInfoMethod = P3ApiGrpc.getGetLostPeerInfoMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetLostPeerInfoMethod = P3ApiGrpc.getGetLostPeerInfoMethod) == null) {
-          P3ApiGrpc.getGetLostPeerInfoMethod = getGetLostPeerInfoMethod = 
+          P3ApiGrpc.getGetLostPeerInfoMethod = getGetLostPeerInfoMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoReq, com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetLostPeerInfo"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetLostPeerInfo"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetLostPeerInfo"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetLostPeerInfo"))
+              .build();
         }
-     }
-     return getGetLostPeerInfoMethod;
+      }
+    }
+    return getGetLostPeerInfoMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetDispositionKeysReq,
@@ -1161,22 +1114,21 @@ public final class P3ApiGrpc {
     if ((getGetDispositionKeysMethod = P3ApiGrpc.getGetDispositionKeysMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetDispositionKeysMethod = P3ApiGrpc.getGetDispositionKeysMethod) == null) {
-          P3ApiGrpc.getGetDispositionKeysMethod = getGetDispositionKeysMethod = 
+          P3ApiGrpc.getGetDispositionKeysMethod = getGetDispositionKeysMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetDispositionKeysReq, com.tcn.cloud.api.api.v0alpha.GetDispositionKeysRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetDispositionKeys"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDispositionKeys"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetDispositionKeysReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetDispositionKeysRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetDispositionKeys"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetDispositionKeys"))
+              .build();
         }
-     }
-     return getGetDispositionKeysMethod;
+      }
+    }
+    return getGetDispositionKeysMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetReadyAgentsReq,
@@ -1193,22 +1145,21 @@ public final class P3ApiGrpc {
     if ((getGetReadyAgentsMethod = P3ApiGrpc.getGetReadyAgentsMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetReadyAgentsMethod = P3ApiGrpc.getGetReadyAgentsMethod) == null) {
-          P3ApiGrpc.getGetReadyAgentsMethod = getGetReadyAgentsMethod = 
+          P3ApiGrpc.getGetReadyAgentsMethod = getGetReadyAgentsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetReadyAgentsReq, com.tcn.cloud.api.api.v0alpha.GetReadyAgentsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetReadyAgents"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetReadyAgents"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetReadyAgentsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetReadyAgentsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetReadyAgents"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetReadyAgents"))
+              .build();
         }
-     }
-     return getGetReadyAgentsMethod;
+      }
+    }
+    return getGetReadyAgentsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataReq,
@@ -1225,22 +1176,21 @@ public final class P3ApiGrpc {
     if ((getListAgentQueueAndOnHoldCallDataMethod = P3ApiGrpc.getListAgentQueueAndOnHoldCallDataMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListAgentQueueAndOnHoldCallDataMethod = P3ApiGrpc.getListAgentQueueAndOnHoldCallDataMethod) == null) {
-          P3ApiGrpc.getListAgentQueueAndOnHoldCallDataMethod = getListAgentQueueAndOnHoldCallDataMethod = 
+          P3ApiGrpc.getListAgentQueueAndOnHoldCallDataMethod = getListAgentQueueAndOnHoldCallDataMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataReq, com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListAgentQueueAndOnHoldCallData"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentQueueAndOnHoldCallData"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListAgentQueueAndOnHoldCallData"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListAgentQueueAndOnHoldCallData"))
+              .build();
         }
-     }
-     return getListAgentQueueAndOnHoldCallDataMethod;
+      }
+    }
+    return getListAgentQueueAndOnHoldCallDataMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SaveAgentCallResponsesReq,
@@ -1257,22 +1207,21 @@ public final class P3ApiGrpc {
     if ((getSaveAgentCallResponsesMethod = P3ApiGrpc.getSaveAgentCallResponsesMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getSaveAgentCallResponsesMethod = P3ApiGrpc.getSaveAgentCallResponsesMethod) == null) {
-          P3ApiGrpc.getSaveAgentCallResponsesMethod = getSaveAgentCallResponsesMethod = 
+          P3ApiGrpc.getSaveAgentCallResponsesMethod = getSaveAgentCallResponsesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SaveAgentCallResponsesReq, com.tcn.cloud.api.api.v0alpha.SaveAgentCallResponsesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "SaveAgentCallResponses"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SaveAgentCallResponses"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SaveAgentCallResponsesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SaveAgentCallResponsesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("SaveAgentCallResponses"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("SaveAgentCallResponses"))
+              .build();
         }
-     }
-     return getSaveAgentCallResponsesMethod;
+      }
+    }
+    return getSaveAgentCallResponsesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAgentTransferOptionsReq,
@@ -1289,22 +1238,21 @@ public final class P3ApiGrpc {
     if ((getListAgentTransferOptionsMethod = P3ApiGrpc.getListAgentTransferOptionsMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListAgentTransferOptionsMethod = P3ApiGrpc.getListAgentTransferOptionsMethod) == null) {
-          P3ApiGrpc.getListAgentTransferOptionsMethod = getListAgentTransferOptionsMethod = 
+          P3ApiGrpc.getListAgentTransferOptionsMethod = getListAgentTransferOptionsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListAgentTransferOptionsReq, com.tcn.cloud.api.api.v0alpha.ListAgentTransferOptionsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListAgentTransferOptions"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentTransferOptions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentTransferOptionsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentTransferOptionsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListAgentTransferOptions"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListAgentTransferOptions"))
+              .build();
         }
-     }
-     return getListAgentTransferOptionsMethod;
+      }
+    }
+    return getListAgentTransferOptionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateAgentCallResponseValueReq,
@@ -1321,22 +1269,21 @@ public final class P3ApiGrpc {
     if ((getUpdateAgentCallResponseValueMethod = P3ApiGrpc.getUpdateAgentCallResponseValueMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getUpdateAgentCallResponseValueMethod = P3ApiGrpc.getUpdateAgentCallResponseValueMethod) == null) {
-          P3ApiGrpc.getUpdateAgentCallResponseValueMethod = getUpdateAgentCallResponseValueMethod = 
+          P3ApiGrpc.getUpdateAgentCallResponseValueMethod = getUpdateAgentCallResponseValueMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateAgentCallResponseValueReq, com.tcn.cloud.api.api.v0alpha.UpdateAgentCallResponseValueRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "UpdateAgentCallResponseValue"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAgentCallResponseValue"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAgentCallResponseValueReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAgentCallResponseValueRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdateAgentCallResponseValue"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdateAgentCallResponseValue"))
+              .build();
         }
-     }
-     return getUpdateAgentCallResponseValueMethod;
+      }
+    }
+    return getUpdateAgentCallResponseValueMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetIntercomPeerInfoReq,
@@ -1353,22 +1300,21 @@ public final class P3ApiGrpc {
     if ((getGetIntercomPeerInfoMethod = P3ApiGrpc.getGetIntercomPeerInfoMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetIntercomPeerInfoMethod = P3ApiGrpc.getGetIntercomPeerInfoMethod) == null) {
-          P3ApiGrpc.getGetIntercomPeerInfoMethod = getGetIntercomPeerInfoMethod = 
+          P3ApiGrpc.getGetIntercomPeerInfoMethod = getGetIntercomPeerInfoMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetIntercomPeerInfoReq, com.tcn.cloud.api.api.v0alpha.GetIntercomPeerInfoRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetIntercomPeerInfo"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetIntercomPeerInfo"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetIntercomPeerInfoReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetIntercomPeerInfoRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetIntercomPeerInfo"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetIntercomPeerInfo"))
+              .build();
         }
-     }
-     return getGetIntercomPeerInfoMethod;
+      }
+    }
+    return getGetIntercomPeerInfoMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListOrgResponseEvaluatorsReq,
@@ -1385,22 +1331,21 @@ public final class P3ApiGrpc {
     if ((getListOrgResponseEvaluatorsMethod = P3ApiGrpc.getListOrgResponseEvaluatorsMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListOrgResponseEvaluatorsMethod = P3ApiGrpc.getListOrgResponseEvaluatorsMethod) == null) {
-          P3ApiGrpc.getListOrgResponseEvaluatorsMethod = getListOrgResponseEvaluatorsMethod = 
+          P3ApiGrpc.getListOrgResponseEvaluatorsMethod = getListOrgResponseEvaluatorsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListOrgResponseEvaluatorsReq, com.tcn.cloud.api.api.v0alpha.ListOrgResponseEvaluatorsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListOrgResponseEvaluators"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOrgResponseEvaluators"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListOrgResponseEvaluatorsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListOrgResponseEvaluatorsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListOrgResponseEvaluators"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListOrgResponseEvaluators"))
+              .build();
         }
-     }
-     return getListOrgResponseEvaluatorsMethod;
+      }
+    }
+    return getListOrgResponseEvaluatorsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetQueueConfigurationOptionsArrayReq,
@@ -1417,22 +1362,21 @@ public final class P3ApiGrpc {
     if ((getGetQueueConfigurationOptionsArrayMethod = P3ApiGrpc.getGetQueueConfigurationOptionsArrayMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetQueueConfigurationOptionsArrayMethod = P3ApiGrpc.getGetQueueConfigurationOptionsArrayMethod) == null) {
-          P3ApiGrpc.getGetQueueConfigurationOptionsArrayMethod = getGetQueueConfigurationOptionsArrayMethod = 
+          P3ApiGrpc.getGetQueueConfigurationOptionsArrayMethod = getGetQueueConfigurationOptionsArrayMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetQueueConfigurationOptionsArrayReq, com.tcn.cloud.api.api.v0alpha.GetQueueConfigurationOptionsArrayRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetQueueConfigurationOptionsArray"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetQueueConfigurationOptionsArray"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetQueueConfigurationOptionsArrayReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetQueueConfigurationOptionsArrayRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetQueueConfigurationOptionsArray"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetQueueConfigurationOptionsArray"))
+              .build();
         }
-     }
-     return getGetQueueConfigurationOptionsArrayMethod;
+      }
+    }
+    return getGetQueueConfigurationOptionsArrayMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetConditionalDNCLRulesReq,
@@ -1449,22 +1393,21 @@ public final class P3ApiGrpc {
     if ((getGetConditionalDNCLRulesMethod = P3ApiGrpc.getGetConditionalDNCLRulesMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetConditionalDNCLRulesMethod = P3ApiGrpc.getGetConditionalDNCLRulesMethod) == null) {
-          P3ApiGrpc.getGetConditionalDNCLRulesMethod = getGetConditionalDNCLRulesMethod = 
+          P3ApiGrpc.getGetConditionalDNCLRulesMethod = getGetConditionalDNCLRulesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetConditionalDNCLRulesReq, com.tcn.cloud.api.api.v0alpha.GetConditionalDNCLRulesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetConditionalDNCLRules"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetConditionalDNCLRules"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetConditionalDNCLRulesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetConditionalDNCLRulesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetConditionalDNCLRules"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetConditionalDNCLRules"))
+              .build();
         }
-     }
-     return getGetConditionalDNCLRulesMethod;
+      }
+    }
+    return getGetConditionalDNCLRulesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ManualDialStartReq,
@@ -1481,22 +1424,21 @@ public final class P3ApiGrpc {
     if ((getManualDialStartMethod = P3ApiGrpc.getManualDialStartMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getManualDialStartMethod = P3ApiGrpc.getManualDialStartMethod) == null) {
-          P3ApiGrpc.getManualDialStartMethod = getManualDialStartMethod = 
+          P3ApiGrpc.getManualDialStartMethod = getManualDialStartMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ManualDialStartReq, com.tcn.cloud.api.api.v0alpha.ManualDialStartRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ManualDialStart"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ManualDialStart"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ManualDialStartReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ManualDialStartRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ManualDialStart"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ManualDialStart"))
+              .build();
         }
-     }
-     return getManualDialStartMethod;
+      }
+    }
+    return getManualDialStartMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryReq,
@@ -1513,22 +1455,21 @@ public final class P3ApiGrpc {
     if ((getGetExtendedCallHistoriesMethod = P3ApiGrpc.getGetExtendedCallHistoriesMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetExtendedCallHistoriesMethod = P3ApiGrpc.getGetExtendedCallHistoriesMethod) == null) {
-          P3ApiGrpc.getGetExtendedCallHistoriesMethod = getGetExtendedCallHistoriesMethod = 
+          P3ApiGrpc.getGetExtendedCallHistoriesMethod = getGetExtendedCallHistoriesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryReq, com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetExtendedCallHistories"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetExtendedCallHistories"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetExtendedCallHistories"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetExtendedCallHistories"))
+              .build();
         }
-     }
-     return getGetExtendedCallHistoriesMethod;
+      }
+    }
+    return getGetExtendedCallHistoriesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListWhiteListPhoneBooksReq,
@@ -1545,22 +1486,21 @@ public final class P3ApiGrpc {
     if ((getListWhiteListPhoneBooksMethod = P3ApiGrpc.getListWhiteListPhoneBooksMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListWhiteListPhoneBooksMethod = P3ApiGrpc.getListWhiteListPhoneBooksMethod) == null) {
-          P3ApiGrpc.getListWhiteListPhoneBooksMethod = getListWhiteListPhoneBooksMethod = 
+          P3ApiGrpc.getListWhiteListPhoneBooksMethod = getListWhiteListPhoneBooksMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListWhiteListPhoneBooksReq, com.tcn.cloud.api.api.v0alpha.ListWhiteListPhoneBooksRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListWhiteListPhoneBooks"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListWhiteListPhoneBooks"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListWhiteListPhoneBooksReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListWhiteListPhoneBooksRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListWhiteListPhoneBooks"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListWhiteListPhoneBooks"))
+              .build();
         }
-     }
-     return getListWhiteListPhoneBooksMethod;
+      }
+    }
+    return getListWhiteListPhoneBooksMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DownloadCallRecordingReq,
@@ -1577,22 +1517,21 @@ public final class P3ApiGrpc {
     if ((getDownloadCallRecordingMethod = P3ApiGrpc.getDownloadCallRecordingMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getDownloadCallRecordingMethod = P3ApiGrpc.getDownloadCallRecordingMethod) == null) {
-          P3ApiGrpc.getDownloadCallRecordingMethod = getDownloadCallRecordingMethod = 
+          P3ApiGrpc.getDownloadCallRecordingMethod = getDownloadCallRecordingMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DownloadCallRecordingReq, com.tcn.cloud.api.api.v0alpha.DownloadRecordingRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "DownloadCallRecording"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DownloadCallRecording"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DownloadCallRecordingReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DownloadRecordingRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("DownloadCallRecording"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("DownloadCallRecording"))
+              .build();
         }
-     }
-     return getDownloadCallRecordingMethod;
+      }
+    }
+    return getDownloadCallRecordingMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DownloadCallRecordingsReq,
@@ -1609,22 +1548,21 @@ public final class P3ApiGrpc {
     if ((getDownloadCallRecordingsMethod = P3ApiGrpc.getDownloadCallRecordingsMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getDownloadCallRecordingsMethod = P3ApiGrpc.getDownloadCallRecordingsMethod) == null) {
-          P3ApiGrpc.getDownloadCallRecordingsMethod = getDownloadCallRecordingsMethod = 
+          P3ApiGrpc.getDownloadCallRecordingsMethod = getDownloadCallRecordingsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DownloadCallRecordingsReq, com.tcn.cloud.api.api.v0alpha.DownloadRecordingRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "DownloadCallRecordings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DownloadCallRecordings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DownloadCallRecordingsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DownloadRecordingRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("DownloadCallRecordings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("DownloadCallRecordings"))
+              .build();
         }
-     }
-     return getDownloadCallRecordingsMethod;
+      }
+    }
+    return getDownloadCallRecordingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.PlacePreviewDialCallReq,
@@ -1641,22 +1579,21 @@ public final class P3ApiGrpc {
     if ((getPlacePreviewDialCallMethod = P3ApiGrpc.getPlacePreviewDialCallMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getPlacePreviewDialCallMethod = P3ApiGrpc.getPlacePreviewDialCallMethod) == null) {
-          P3ApiGrpc.getPlacePreviewDialCallMethod = getPlacePreviewDialCallMethod = 
+          P3ApiGrpc.getPlacePreviewDialCallMethod = getPlacePreviewDialCallMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.PlacePreviewDialCallReq, com.tcn.cloud.api.api.v0alpha.PlacePreviewDialCallRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "PlacePreviewDialCall"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PlacePreviewDialCall"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.PlacePreviewDialCallReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.PlacePreviewDialCallRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("PlacePreviewDialCall"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("PlacePreviewDialCall"))
+              .build();
         }
-     }
-     return getPlacePreviewDialCallMethod;
+      }
+    }
+    return getPlacePreviewDialCallMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CancelPreviewDialCallReq,
@@ -1673,22 +1610,21 @@ public final class P3ApiGrpc {
     if ((getCancelPreviewDialCallMethod = P3ApiGrpc.getCancelPreviewDialCallMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getCancelPreviewDialCallMethod = P3ApiGrpc.getCancelPreviewDialCallMethod) == null) {
-          P3ApiGrpc.getCancelPreviewDialCallMethod = getCancelPreviewDialCallMethod = 
+          P3ApiGrpc.getCancelPreviewDialCallMethod = getCancelPreviewDialCallMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CancelPreviewDialCallReq, com.tcn.cloud.api.api.v0alpha.CancelPreviewDialCallRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "CancelPreviewDialCall"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CancelPreviewDialCall"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CancelPreviewDialCallReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CancelPreviewDialCallRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("CancelPreviewDialCall"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("CancelPreviewDialCall"))
+              .build();
         }
-     }
-     return getCancelPreviewDialCallMethod;
+      }
+    }
+    return getCancelPreviewDialCallMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateTaskStatusReq,
@@ -1705,22 +1641,21 @@ public final class P3ApiGrpc {
     if ((getUpdateTaskStatusMethod = P3ApiGrpc.getUpdateTaskStatusMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getUpdateTaskStatusMethod = P3ApiGrpc.getUpdateTaskStatusMethod) == null) {
-          P3ApiGrpc.getUpdateTaskStatusMethod = getUpdateTaskStatusMethod = 
+          P3ApiGrpc.getUpdateTaskStatusMethod = getUpdateTaskStatusMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateTaskStatusReq, com.tcn.cloud.api.api.v0alpha.Nil>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "UpdateTaskStatus"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateTaskStatus"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateTaskStatusReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Nil.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdateTaskStatus"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdateTaskStatus"))
+              .build();
         }
-     }
-     return getUpdateTaskStatusMethod;
+      }
+    }
+    return getUpdateTaskStatusMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingAgentsReq,
@@ -1737,22 +1672,21 @@ public final class P3ApiGrpc {
     if ((getListCallbackRoutingAgentsMethod = P3ApiGrpc.getListCallbackRoutingAgentsMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListCallbackRoutingAgentsMethod = P3ApiGrpc.getListCallbackRoutingAgentsMethod) == null) {
-          P3ApiGrpc.getListCallbackRoutingAgentsMethod = getListCallbackRoutingAgentsMethod = 
+          P3ApiGrpc.getListCallbackRoutingAgentsMethod = getListCallbackRoutingAgentsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingAgentsReq, com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingAgentsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListCallbackRoutingAgents"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCallbackRoutingAgents"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingAgentsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingAgentsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListCallbackRoutingAgents"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListCallbackRoutingAgents"))
+              .build();
         }
-     }
-     return getListCallbackRoutingAgentsMethod;
+      }
+    }
+    return getListCallbackRoutingAgentsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingSkillsReq,
@@ -1769,22 +1703,21 @@ public final class P3ApiGrpc {
     if ((getListCallbackRoutingSkillsMethod = P3ApiGrpc.getListCallbackRoutingSkillsMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListCallbackRoutingSkillsMethod = P3ApiGrpc.getListCallbackRoutingSkillsMethod) == null) {
-          P3ApiGrpc.getListCallbackRoutingSkillsMethod = getListCallbackRoutingSkillsMethod = 
+          P3ApiGrpc.getListCallbackRoutingSkillsMethod = getListCallbackRoutingSkillsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingSkillsReq, com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingSkillsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListCallbackRoutingSkills"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCallbackRoutingSkills"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingSkillsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingSkillsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListCallbackRoutingSkills"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListCallbackRoutingSkills"))
+              .build();
         }
-     }
-     return getListCallbackRoutingSkillsMethod;
+      }
+    }
+    return getListCallbackRoutingSkillsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.HandleRecordingDelayReq,
@@ -1801,22 +1734,21 @@ public final class P3ApiGrpc {
     if ((getHandleRecordingDelayMethod = P3ApiGrpc.getHandleRecordingDelayMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getHandleRecordingDelayMethod = P3ApiGrpc.getHandleRecordingDelayMethod) == null) {
-          P3ApiGrpc.getHandleRecordingDelayMethod = getHandleRecordingDelayMethod = 
+          P3ApiGrpc.getHandleRecordingDelayMethod = getHandleRecordingDelayMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.HandleRecordingDelayReq, com.tcn.cloud.api.api.v0alpha.HandleRecordingDelayRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "HandleRecordingDelay"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "HandleRecordingDelay"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.HandleRecordingDelayReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.HandleRecordingDelayRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("HandleRecordingDelay"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("HandleRecordingDelay"))
+              .build();
         }
-     }
-     return getHandleRecordingDelayMethod;
+      }
+    }
+    return getHandleRecordingDelayMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateAgentAssignedHuntGroupReq,
@@ -1833,22 +1765,21 @@ public final class P3ApiGrpc {
     if ((getUpdateAgentAssignedHuntGroupMethod = P3ApiGrpc.getUpdateAgentAssignedHuntGroupMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getUpdateAgentAssignedHuntGroupMethod = P3ApiGrpc.getUpdateAgentAssignedHuntGroupMethod) == null) {
-          P3ApiGrpc.getUpdateAgentAssignedHuntGroupMethod = getUpdateAgentAssignedHuntGroupMethod = 
+          P3ApiGrpc.getUpdateAgentAssignedHuntGroupMethod = getUpdateAgentAssignedHuntGroupMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateAgentAssignedHuntGroupReq, com.tcn.cloud.api.api.v0alpha.UpdateAgentAssignedHuntGroupRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "UpdateAgentAssignedHuntGroup"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAgentAssignedHuntGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAgentAssignedHuntGroupReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAgentAssignedHuntGroupRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdateAgentAssignedHuntGroup"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdateAgentAssignedHuntGroup"))
+              .build();
         }
-     }
-     return getUpdateAgentAssignedHuntGroupMethod;
+      }
+    }
+    return getUpdateAgentAssignedHuntGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetCallDataReq,
@@ -1865,22 +1796,21 @@ public final class P3ApiGrpc {
     if ((getGetCallDataMethod = P3ApiGrpc.getGetCallDataMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetCallDataMethod = P3ApiGrpc.getGetCallDataMethod) == null) {
-          P3ApiGrpc.getGetCallDataMethod = getGetCallDataMethod = 
+          P3ApiGrpc.getGetCallDataMethod = getGetCallDataMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetCallDataReq, com.tcn.cloud.api.api.v0alpha.GetCallDataRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetCallData"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCallData"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetCallDataReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetCallDataRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetCallData"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetCallData"))
+              .build();
         }
-     }
-     return getGetCallDataMethod;
+      }
+    }
+    return getGetCallDataMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListHuntGroupsReq,
@@ -1897,22 +1827,21 @@ public final class P3ApiGrpc {
     if ((getListHuntGroupsMethod = P3ApiGrpc.getListHuntGroupsMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListHuntGroupsMethod = P3ApiGrpc.getListHuntGroupsMethod) == null) {
-          P3ApiGrpc.getListHuntGroupsMethod = getListHuntGroupsMethod = 
+          P3ApiGrpc.getListHuntGroupsMethod = getListHuntGroupsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListHuntGroupsReq, com.tcn.cloud.api.api.v0alpha.ListHuntGroupsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListHuntGroups"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListHuntGroups"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListHuntGroupsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListHuntGroupsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListHuntGroups"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListHuntGroups"))
+              .build();
         }
-     }
-     return getListHuntGroupsMethod;
+      }
+    }
+    return getListHuntGroupsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListReassignmentHuntGroupsReq,
@@ -1929,22 +1858,21 @@ public final class P3ApiGrpc {
     if ((getListReassignmentHuntGroupsMethod = P3ApiGrpc.getListReassignmentHuntGroupsMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListReassignmentHuntGroupsMethod = P3ApiGrpc.getListReassignmentHuntGroupsMethod) == null) {
-          P3ApiGrpc.getListReassignmentHuntGroupsMethod = getListReassignmentHuntGroupsMethod = 
+          P3ApiGrpc.getListReassignmentHuntGroupsMethod = getListReassignmentHuntGroupsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListReassignmentHuntGroupsReq, com.tcn.cloud.api.api.v0alpha.ListReassignmentHuntGroupsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListReassignmentHuntGroups"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListReassignmentHuntGroups"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListReassignmentHuntGroupsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListReassignmentHuntGroupsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListReassignmentHuntGroups"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListReassignmentHuntGroups"))
+              .build();
         }
-     }
-     return getListReassignmentHuntGroupsMethod;
+      }
+    }
+    return getListReassignmentHuntGroupsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetOrgAgentSettingsReq,
@@ -1961,22 +1889,21 @@ public final class P3ApiGrpc {
     if ((getGetOrgAgentSettingsMethod = P3ApiGrpc.getGetOrgAgentSettingsMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetOrgAgentSettingsMethod = P3ApiGrpc.getGetOrgAgentSettingsMethod) == null) {
-          P3ApiGrpc.getGetOrgAgentSettingsMethod = getGetOrgAgentSettingsMethod = 
+          P3ApiGrpc.getGetOrgAgentSettingsMethod = getGetOrgAgentSettingsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetOrgAgentSettingsReq, com.tcn.cloud.api.api.v0alpha.GetOrgAgentSettingsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetOrgAgentSettings"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOrgAgentSettings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetOrgAgentSettingsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetOrgAgentSettingsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetOrgAgentSettings"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetOrgAgentSettings"))
+              .build();
         }
-     }
-     return getGetOrgAgentSettingsMethod;
+      }
+    }
+    return getGetOrgAgentSettingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListCallerIdsFromBucketReq,
@@ -1993,22 +1920,21 @@ public final class P3ApiGrpc {
     if ((getListCallerIdsFromBucketMethod = P3ApiGrpc.getListCallerIdsFromBucketMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListCallerIdsFromBucketMethod = P3ApiGrpc.getListCallerIdsFromBucketMethod) == null) {
-          P3ApiGrpc.getListCallerIdsFromBucketMethod = getListCallerIdsFromBucketMethod = 
+          P3ApiGrpc.getListCallerIdsFromBucketMethod = getListCallerIdsFromBucketMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListCallerIdsFromBucketReq, com.tcn.cloud.api.api.v0alpha.ListCallerIdsFromBucketRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListCallerIdsFromBucket"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCallerIdsFromBucket"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCallerIdsFromBucketReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCallerIdsFromBucketRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListCallerIdsFromBucket"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListCallerIdsFromBucket"))
+              .build();
         }
-     }
-     return getListCallerIdsFromBucketMethod;
+      }
+    }
+    return getListCallerIdsFromBucketMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SaveLastCallResponseReq,
@@ -2025,22 +1951,21 @@ public final class P3ApiGrpc {
     if ((getSaveLastCallResponseMethod = P3ApiGrpc.getSaveLastCallResponseMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getSaveLastCallResponseMethod = P3ApiGrpc.getSaveLastCallResponseMethod) == null) {
-          P3ApiGrpc.getSaveLastCallResponseMethod = getSaveLastCallResponseMethod = 
+          P3ApiGrpc.getSaveLastCallResponseMethod = getSaveLastCallResponseMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SaveLastCallResponseReq, com.tcn.cloud.api.api.v0alpha.SaveLastCallResponseRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "SaveLastCallResponse"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SaveLastCallResponse"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SaveLastCallResponseReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SaveLastCallResponseRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("SaveLastCallResponse"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("SaveLastCallResponse"))
+              .build();
         }
-     }
-     return getSaveLastCallResponseMethod;
+      }
+    }
+    return getSaveLastCallResponseMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAgentCallLogsByCallSidAndTypeReq,
@@ -2057,22 +1982,21 @@ public final class P3ApiGrpc {
     if ((getListAgentCallLogsByCallSidAndTypeMethod = P3ApiGrpc.getListAgentCallLogsByCallSidAndTypeMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListAgentCallLogsByCallSidAndTypeMethod = P3ApiGrpc.getListAgentCallLogsByCallSidAndTypeMethod) == null) {
-          P3ApiGrpc.getListAgentCallLogsByCallSidAndTypeMethod = getListAgentCallLogsByCallSidAndTypeMethod = 
+          P3ApiGrpc.getListAgentCallLogsByCallSidAndTypeMethod = getListAgentCallLogsByCallSidAndTypeMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListAgentCallLogsByCallSidAndTypeReq, com.tcn.cloud.api.api.v0alpha.ListAgentCallLogsByCallSidAndTypeRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListAgentCallLogsByCallSidAndType"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentCallLogsByCallSidAndType"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentCallLogsByCallSidAndTypeReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentCallLogsByCallSidAndTypeRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListAgentCallLogsByCallSidAndType"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListAgentCallLogsByCallSidAndType"))
+              .build();
         }
-     }
-     return getListAgentCallLogsByCallSidAndTypeMethod;
+      }
+    }
+    return getListAgentCallLogsByCallSidAndTypeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAgentCallResponseValuesReq,
@@ -2089,22 +2013,21 @@ public final class P3ApiGrpc {
     if ((getListAgentCallResponseValuesMethod = P3ApiGrpc.getListAgentCallResponseValuesMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListAgentCallResponseValuesMethod = P3ApiGrpc.getListAgentCallResponseValuesMethod) == null) {
-          P3ApiGrpc.getListAgentCallResponseValuesMethod = getListAgentCallResponseValuesMethod = 
+          P3ApiGrpc.getListAgentCallResponseValuesMethod = getListAgentCallResponseValuesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListAgentCallResponseValuesReq, com.tcn.cloud.api.api.v0alpha.ListAgentCallResponseValuesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListAgentCallResponseValues"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentCallResponseValues"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentCallResponseValuesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentCallResponseValuesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListAgentCallResponseValues"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListAgentCallResponseValues"))
+              .build();
         }
-     }
-     return getListAgentCallResponseValuesMethod;
+      }
+    }
+    return getListAgentCallResponseValuesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetContactSchemaByContactGroupReq,
@@ -2121,22 +2044,21 @@ public final class P3ApiGrpc {
     if ((getGetContactSchemaByContactGroupMethod = P3ApiGrpc.getGetContactSchemaByContactGroupMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetContactSchemaByContactGroupMethod = P3ApiGrpc.getGetContactSchemaByContactGroupMethod) == null) {
-          P3ApiGrpc.getGetContactSchemaByContactGroupMethod = getGetContactSchemaByContactGroupMethod = 
+          P3ApiGrpc.getGetContactSchemaByContactGroupMethod = getGetContactSchemaByContactGroupMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetContactSchemaByContactGroupReq, com.tcn.cloud.api.api.v0alpha.ContactSchema>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetContactSchemaByContactGroup"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetContactSchemaByContactGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetContactSchemaByContactGroupReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ContactSchema.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetContactSchemaByContactGroup"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetContactSchemaByContactGroup"))
+              .build();
         }
-     }
-     return getGetContactSchemaByContactGroupMethod;
+      }
+    }
+    return getGetContactSchemaByContactGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListContactGroupDetailsByClientSidReq,
@@ -2153,22 +2075,21 @@ public final class P3ApiGrpc {
     if ((getListContactGroupDetailsByClientSidMethod = P3ApiGrpc.getListContactGroupDetailsByClientSidMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListContactGroupDetailsByClientSidMethod = P3ApiGrpc.getListContactGroupDetailsByClientSidMethod) == null) {
-          P3ApiGrpc.getListContactGroupDetailsByClientSidMethod = getListContactGroupDetailsByClientSidMethod = 
+          P3ApiGrpc.getListContactGroupDetailsByClientSidMethod = getListContactGroupDetailsByClientSidMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListContactGroupDetailsByClientSidReq, com.tcn.cloud.api.api.v0alpha.ListContactGroupDetailsByClientSidRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListContactGroupDetailsByClientSid"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListContactGroupDetailsByClientSid"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListContactGroupDetailsByClientSidReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListContactGroupDetailsByClientSidRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListContactGroupDetailsByClientSid"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListContactGroupDetailsByClientSid"))
+              .build();
         }
-     }
-     return getListContactGroupDetailsByClientSidMethod;
+      }
+    }
+    return getListContactGroupDetailsByClientSidMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetContactGroupReq,
@@ -2185,22 +2106,21 @@ public final class P3ApiGrpc {
     if ((getGetContactGroupDetailsMethod = P3ApiGrpc.getGetContactGroupDetailsMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetContactGroupDetailsMethod = P3ApiGrpc.getGetContactGroupDetailsMethod) == null) {
-          P3ApiGrpc.getGetContactGroupDetailsMethod = getGetContactGroupDetailsMethod = 
+          P3ApiGrpc.getGetContactGroupDetailsMethod = getGetContactGroupDetailsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetContactGroupReq, com.tcn.cloud.api.api.v0alpha.ContactGroup>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetContactGroupDetails"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetContactGroupDetails"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetContactGroupReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ContactGroup.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetContactGroupDetails"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetContactGroupDetails"))
+              .build();
         }
-     }
-     return getGetContactGroupDetailsMethod;
+      }
+    }
+    return getGetContactGroupDetailsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetContactGroupReq,
@@ -2217,22 +2137,21 @@ public final class P3ApiGrpc {
     if ((getGetContactGroupSizeMethod = P3ApiGrpc.getGetContactGroupSizeMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetContactGroupSizeMethod = P3ApiGrpc.getGetContactGroupSizeMethod) == null) {
-          P3ApiGrpc.getGetContactGroupSizeMethod = getGetContactGroupSizeMethod = 
+          P3ApiGrpc.getGetContactGroupSizeMethod = getGetContactGroupSizeMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetContactGroupReq, com.tcn.cloud.api.api.v0alpha.GetContactGroupSizeRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetContactGroupSize"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetContactGroupSize"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetContactGroupReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetContactGroupSizeRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetContactGroupSize"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetContactGroupSize"))
+              .build();
         }
-     }
-     return getGetContactGroupSizeMethod;
+      }
+    }
+    return getGetContactGroupSizeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionReq,
@@ -2249,22 +2168,21 @@ public final class P3ApiGrpc {
     if ((getCreateContactFieldDescriptionMethod = P3ApiGrpc.getCreateContactFieldDescriptionMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getCreateContactFieldDescriptionMethod = P3ApiGrpc.getCreateContactFieldDescriptionMethod) == null) {
-          P3ApiGrpc.getCreateContactFieldDescriptionMethod = getCreateContactFieldDescriptionMethod = 
+          P3ApiGrpc.getCreateContactFieldDescriptionMethod = getCreateContactFieldDescriptionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionReq, com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "CreateContactFieldDescription"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateContactFieldDescription"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("CreateContactFieldDescription"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("CreateContactFieldDescription"))
+              .build();
         }
-     }
-     return getCreateContactFieldDescriptionMethod;
+      }
+    }
+    return getCreateContactFieldDescriptionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteContactFieldDescriptionReq,
@@ -2281,22 +2199,21 @@ public final class P3ApiGrpc {
     if ((getDeleteContactFieldDescriptionMethod = P3ApiGrpc.getDeleteContactFieldDescriptionMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getDeleteContactFieldDescriptionMethod = P3ApiGrpc.getDeleteContactFieldDescriptionMethod) == null) {
-          P3ApiGrpc.getDeleteContactFieldDescriptionMethod = getDeleteContactFieldDescriptionMethod = 
+          P3ApiGrpc.getDeleteContactFieldDescriptionMethod = getDeleteContactFieldDescriptionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteContactFieldDescriptionReq, com.tcn.cloud.api.api.v0alpha.DeleteContactFieldDescriptionRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "DeleteContactFieldDescription"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteContactFieldDescription"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteContactFieldDescriptionReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteContactFieldDescriptionRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("DeleteContactFieldDescription"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("DeleteContactFieldDescription"))
+              .build();
         }
-     }
-     return getDeleteContactFieldDescriptionMethod;
+      }
+    }
+    return getDeleteContactFieldDescriptionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsReq,
@@ -2313,22 +2230,21 @@ public final class P3ApiGrpc {
     if ((getListContactFieldDescriptionsMethod = P3ApiGrpc.getListContactFieldDescriptionsMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListContactFieldDescriptionsMethod = P3ApiGrpc.getListContactFieldDescriptionsMethod) == null) {
-          P3ApiGrpc.getListContactFieldDescriptionsMethod = getListContactFieldDescriptionsMethod = 
+          P3ApiGrpc.getListContactFieldDescriptionsMethod = getListContactFieldDescriptionsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsReq, com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListContactFieldDescriptions"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListContactFieldDescriptions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListContactFieldDescriptions"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListContactFieldDescriptions"))
+              .build();
         }
-     }
-     return getListContactFieldDescriptionsMethod;
+      }
+    }
+    return getListContactFieldDescriptionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsByCGSidReq,
@@ -2345,22 +2261,21 @@ public final class P3ApiGrpc {
     if ((getListContactFieldDescriptionsByCGSidMethod = P3ApiGrpc.getListContactFieldDescriptionsByCGSidMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListContactFieldDescriptionsByCGSidMethod = P3ApiGrpc.getListContactFieldDescriptionsByCGSidMethod) == null) {
-          P3ApiGrpc.getListContactFieldDescriptionsByCGSidMethod = getListContactFieldDescriptionsByCGSidMethod = 
+          P3ApiGrpc.getListContactFieldDescriptionsByCGSidMethod = getListContactFieldDescriptionsByCGSidMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsByCGSidReq, com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsByCGSidRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListContactFieldDescriptionsByCGSid"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListContactFieldDescriptionsByCGSid"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsByCGSidReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsByCGSidRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListContactFieldDescriptionsByCGSid"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListContactFieldDescriptionsByCGSid"))
+              .build();
         }
-     }
-     return getListContactFieldDescriptionsByCGSidMethod;
+      }
+    }
+    return getListContactFieldDescriptionsByCGSidMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListContactImportTemplatesReq,
@@ -2377,22 +2292,21 @@ public final class P3ApiGrpc {
     if ((getListContactImportTemplatesMethod = P3ApiGrpc.getListContactImportTemplatesMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListContactImportTemplatesMethod = P3ApiGrpc.getListContactImportTemplatesMethod) == null) {
-          P3ApiGrpc.getListContactImportTemplatesMethod = getListContactImportTemplatesMethod = 
+          P3ApiGrpc.getListContactImportTemplatesMethod = getListContactImportTemplatesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListContactImportTemplatesReq, com.tcn.cloud.api.api.v0alpha.ListContactImportTemplatesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListContactImportTemplates"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListContactImportTemplates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListContactImportTemplatesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListContactImportTemplatesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListContactImportTemplates"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListContactImportTemplates"))
+              .build();
         }
-     }
-     return getListContactImportTemplatesMethod;
+      }
+    }
+    return getListContactImportTemplatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdatePreviewRecordToFinishedReq,
@@ -2409,22 +2323,21 @@ public final class P3ApiGrpc {
     if ((getUpdatePreviewRecordToFinishedMethod = P3ApiGrpc.getUpdatePreviewRecordToFinishedMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getUpdatePreviewRecordToFinishedMethod = P3ApiGrpc.getUpdatePreviewRecordToFinishedMethod) == null) {
-          P3ApiGrpc.getUpdatePreviewRecordToFinishedMethod = getUpdatePreviewRecordToFinishedMethod = 
+          P3ApiGrpc.getUpdatePreviewRecordToFinishedMethod = getUpdatePreviewRecordToFinishedMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdatePreviewRecordToFinishedReq, com.tcn.cloud.api.api.v0alpha.UpdatePreviewRecordToFinishedRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "UpdatePreviewRecordToFinished"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdatePreviewRecordToFinished"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdatePreviewRecordToFinishedReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdatePreviewRecordToFinishedRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdatePreviewRecordToFinished"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdatePreviewRecordToFinished"))
+              .build();
         }
-     }
-     return getUpdatePreviewRecordToFinishedMethod;
+      }
+    }
+    return getUpdatePreviewRecordToFinishedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateAgentHuntGroupReq,
@@ -2441,22 +2354,21 @@ public final class P3ApiGrpc {
     if ((getUpdateAgentHuntGroupMethod = P3ApiGrpc.getUpdateAgentHuntGroupMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getUpdateAgentHuntGroupMethod = P3ApiGrpc.getUpdateAgentHuntGroupMethod) == null) {
-          P3ApiGrpc.getUpdateAgentHuntGroupMethod = getUpdateAgentHuntGroupMethod = 
+          P3ApiGrpc.getUpdateAgentHuntGroupMethod = getUpdateAgentHuntGroupMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateAgentHuntGroupReq, com.tcn.cloud.api.api.v0alpha.UpdateAgentHuntGroupRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "UpdateAgentHuntGroup"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAgentHuntGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAgentHuntGroupReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAgentHuntGroupRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdateAgentHuntGroup"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdateAgentHuntGroup"))
+              .build();
         }
-     }
-     return getUpdateAgentHuntGroupMethod;
+      }
+    }
+    return getUpdateAgentHuntGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.MultiAgentHuntGroupAssignmentReq,
@@ -2473,22 +2385,21 @@ public final class P3ApiGrpc {
     if ((getMultiAgentHuntGroupAssignmentMethod = P3ApiGrpc.getMultiAgentHuntGroupAssignmentMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getMultiAgentHuntGroupAssignmentMethod = P3ApiGrpc.getMultiAgentHuntGroupAssignmentMethod) == null) {
-          P3ApiGrpc.getMultiAgentHuntGroupAssignmentMethod = getMultiAgentHuntGroupAssignmentMethod = 
+          P3ApiGrpc.getMultiAgentHuntGroupAssignmentMethod = getMultiAgentHuntGroupAssignmentMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.MultiAgentHuntGroupAssignmentReq, com.tcn.cloud.api.api.v0alpha.MultiAgentHuntGroupAssignmentRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "MultiAgentHuntGroupAssignment"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MultiAgentHuntGroupAssignment"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.MultiAgentHuntGroupAssignmentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.MultiAgentHuntGroupAssignmentRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("MultiAgentHuntGroupAssignment"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("MultiAgentHuntGroupAssignment"))
+              .build();
         }
-     }
-     return getMultiAgentHuntGroupAssignmentMethod;
+      }
+    }
+    return getMultiAgentHuntGroupAssignmentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetAgentProfileReq,
@@ -2505,22 +2416,21 @@ public final class P3ApiGrpc {
     if ((getGetAgentProfileMethod = P3ApiGrpc.getGetAgentProfileMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetAgentProfileMethod = P3ApiGrpc.getGetAgentProfileMethod) == null) {
-          P3ApiGrpc.getGetAgentProfileMethod = getGetAgentProfileMethod = 
+          P3ApiGrpc.getGetAgentProfileMethod = getGetAgentProfileMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetAgentProfileReq, com.tcn.cloud.api.api.v0alpha.AgentProfile>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetAgentProfile"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAgentProfile"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAgentProfileReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AgentProfile.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetAgentProfile"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetAgentProfile"))
+              .build();
         }
-     }
-     return getGetAgentProfileMethod;
+      }
+    }
+    return getGetAgentProfileMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RecalculateBillingReq,
@@ -2537,22 +2447,21 @@ public final class P3ApiGrpc {
     if ((getRecalculateBillingMethod = P3ApiGrpc.getRecalculateBillingMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getRecalculateBillingMethod = P3ApiGrpc.getRecalculateBillingMethod) == null) {
-          P3ApiGrpc.getRecalculateBillingMethod = getRecalculateBillingMethod = 
+          P3ApiGrpc.getRecalculateBillingMethod = getRecalculateBillingMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RecalculateBillingReq, com.tcn.cloud.api.api.v0alpha.RecalculateBillingRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "RecalculateBilling"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RecalculateBilling"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RecalculateBillingReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RecalculateBillingRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("RecalculateBilling"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("RecalculateBilling"))
+              .build();
         }
-     }
-     return getRecalculateBillingMethod;
+      }
+    }
+    return getRecalculateBillingMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListOutboundBroadcastTemplateDataReq,
@@ -2569,22 +2478,21 @@ public final class P3ApiGrpc {
     if ((getListOutboundBroadcastTemplateDataMethod = P3ApiGrpc.getListOutboundBroadcastTemplateDataMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListOutboundBroadcastTemplateDataMethod = P3ApiGrpc.getListOutboundBroadcastTemplateDataMethod) == null) {
-          P3ApiGrpc.getListOutboundBroadcastTemplateDataMethod = getListOutboundBroadcastTemplateDataMethod = 
+          P3ApiGrpc.getListOutboundBroadcastTemplateDataMethod = getListOutboundBroadcastTemplateDataMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListOutboundBroadcastTemplateDataReq, com.tcn.cloud.api.api.v0alpha.ListOutboundBroadcastTemplateDataRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListOutboundBroadcastTemplateData"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOutboundBroadcastTemplateData"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListOutboundBroadcastTemplateDataReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListOutboundBroadcastTemplateDataRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListOutboundBroadcastTemplateData"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListOutboundBroadcastTemplateData"))
+              .build();
         }
-     }
-     return getListOutboundBroadcastTemplateDataMethod;
+      }
+    }
+    return getListOutboundBroadcastTemplateDataMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.MultiAgentSkillAssignmentReq,
@@ -2601,22 +2509,21 @@ public final class P3ApiGrpc {
     if ((getMultiAgentSkillAssignmentMethod = P3ApiGrpc.getMultiAgentSkillAssignmentMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getMultiAgentSkillAssignmentMethod = P3ApiGrpc.getMultiAgentSkillAssignmentMethod) == null) {
-          P3ApiGrpc.getMultiAgentSkillAssignmentMethod = getMultiAgentSkillAssignmentMethod = 
+          P3ApiGrpc.getMultiAgentSkillAssignmentMethod = getMultiAgentSkillAssignmentMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.MultiAgentSkillAssignmentReq, com.tcn.cloud.api.api.v0alpha.MultiAgentSkillAssignmentRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "MultiAgentSkillAssignment"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MultiAgentSkillAssignment"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.MultiAgentSkillAssignmentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.MultiAgentSkillAssignmentRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("MultiAgentSkillAssignment"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("MultiAgentSkillAssignment"))
+              .build();
         }
-     }
-     return getMultiAgentSkillAssignmentMethod;
+      }
+    }
+    return getMultiAgentSkillAssignmentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentReq,
@@ -2633,22 +2540,21 @@ public final class P3ApiGrpc {
     if ((getMultiAgentSkillUnassignmentMethod = P3ApiGrpc.getMultiAgentSkillUnassignmentMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getMultiAgentSkillUnassignmentMethod = P3ApiGrpc.getMultiAgentSkillUnassignmentMethod) == null) {
-          P3ApiGrpc.getMultiAgentSkillUnassignmentMethod = getMultiAgentSkillUnassignmentMethod = 
+          P3ApiGrpc.getMultiAgentSkillUnassignmentMethod = getMultiAgentSkillUnassignmentMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentReq, com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "MultiAgentSkillUnassignment"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MultiAgentSkillUnassignment"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("MultiAgentSkillUnassignment"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("MultiAgentSkillUnassignment"))
+              .build();
         }
-     }
-     return getMultiAgentSkillUnassignmentMethod;
+      }
+    }
+    return getMultiAgentSkillUnassignmentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListMAMAgentHuntGroupsByClientSidReq,
@@ -2665,22 +2571,21 @@ public final class P3ApiGrpc {
     if ((getListMAMAgentHuntGroupsByClientSidMethod = P3ApiGrpc.getListMAMAgentHuntGroupsByClientSidMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListMAMAgentHuntGroupsByClientSidMethod = P3ApiGrpc.getListMAMAgentHuntGroupsByClientSidMethod) == null) {
-          P3ApiGrpc.getListMAMAgentHuntGroupsByClientSidMethod = getListMAMAgentHuntGroupsByClientSidMethod = 
+          P3ApiGrpc.getListMAMAgentHuntGroupsByClientSidMethod = getListMAMAgentHuntGroupsByClientSidMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListMAMAgentHuntGroupsByClientSidReq, com.tcn.cloud.api.api.v0alpha.ListMAMAgentHuntGroupsByClientSidRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListMAMAgentHuntGroupsByClientSid"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListMAMAgentHuntGroupsByClientSid"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListMAMAgentHuntGroupsByClientSidReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListMAMAgentHuntGroupsByClientSidRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListMAMAgentHuntGroupsByClientSid"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListMAMAgentHuntGroupsByClientSid"))
+              .build();
         }
-     }
-     return getListMAMAgentHuntGroupsByClientSidMethod;
+      }
+    }
+    return getListMAMAgentHuntGroupsByClientSidMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListTtsVoicesReq,
@@ -2697,22 +2602,21 @@ public final class P3ApiGrpc {
     if ((getListTtsVoicesMethod = P3ApiGrpc.getListTtsVoicesMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListTtsVoicesMethod = P3ApiGrpc.getListTtsVoicesMethod) == null) {
-          P3ApiGrpc.getListTtsVoicesMethod = getListTtsVoicesMethod = 
+          P3ApiGrpc.getListTtsVoicesMethod = getListTtsVoicesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListTtsVoicesReq, com.tcn.cloud.api.api.v0alpha.ListTtsVoicesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListTtsVoices"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListTtsVoices"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListTtsVoicesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListTtsVoicesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListTtsVoices"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListTtsVoices"))
+              .build();
         }
-     }
-     return getListTtsVoicesMethod;
+      }
+    }
+    return getListTtsVoicesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateTtsVoiceReq,
@@ -2729,22 +2633,21 @@ public final class P3ApiGrpc {
     if ((getCreateTtsVoiceMethod = P3ApiGrpc.getCreateTtsVoiceMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getCreateTtsVoiceMethod = P3ApiGrpc.getCreateTtsVoiceMethod) == null) {
-          P3ApiGrpc.getCreateTtsVoiceMethod = getCreateTtsVoiceMethod = 
+          P3ApiGrpc.getCreateTtsVoiceMethod = getCreateTtsVoiceMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateTtsVoiceReq, com.tcn.cloud.api.api.v0alpha.CreateTtsVoiceRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "CreateTtsVoice"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateTtsVoice"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateTtsVoiceReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateTtsVoiceRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("CreateTtsVoice"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("CreateTtsVoice"))
+              .build();
         }
-     }
-     return getCreateTtsVoiceMethod;
+      }
+    }
+    return getCreateTtsVoiceMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteTtsVoiceReq,
@@ -2761,22 +2664,21 @@ public final class P3ApiGrpc {
     if ((getDeleteTtsVoiceMethod = P3ApiGrpc.getDeleteTtsVoiceMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getDeleteTtsVoiceMethod = P3ApiGrpc.getDeleteTtsVoiceMethod) == null) {
-          P3ApiGrpc.getDeleteTtsVoiceMethod = getDeleteTtsVoiceMethod = 
+          P3ApiGrpc.getDeleteTtsVoiceMethod = getDeleteTtsVoiceMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteTtsVoiceReq, com.tcn.cloud.api.api.v0alpha.DeleteTtsVoiceRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "DeleteTtsVoice"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteTtsVoice"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteTtsVoiceReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteTtsVoiceRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("DeleteTtsVoice"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("DeleteTtsVoice"))
+              .build();
         }
-     }
-     return getDeleteTtsVoiceMethod;
+      }
+    }
+    return getDeleteTtsVoiceMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListCustomDataKeysReq,
@@ -2793,22 +2695,21 @@ public final class P3ApiGrpc {
     if ((getListCustomDataKeysMethod = P3ApiGrpc.getListCustomDataKeysMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListCustomDataKeysMethod = P3ApiGrpc.getListCustomDataKeysMethod) == null) {
-          P3ApiGrpc.getListCustomDataKeysMethod = getListCustomDataKeysMethod = 
+          P3ApiGrpc.getListCustomDataKeysMethod = getListCustomDataKeysMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListCustomDataKeysReq, com.tcn.cloud.api.api.v0alpha.ListCustomDataKeysRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListCustomDataKeys"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCustomDataKeys"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCustomDataKeysReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCustomDataKeysRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListCustomDataKeys"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListCustomDataKeys"))
+              .build();
         }
-     }
-     return getListCustomDataKeysMethod;
+      }
+    }
+    return getListCustomDataKeysMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateCustomDataKeyReq,
@@ -2825,22 +2726,21 @@ public final class P3ApiGrpc {
     if ((getCreateCustomDataKeyMethod = P3ApiGrpc.getCreateCustomDataKeyMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getCreateCustomDataKeyMethod = P3ApiGrpc.getCreateCustomDataKeyMethod) == null) {
-          P3ApiGrpc.getCreateCustomDataKeyMethod = getCreateCustomDataKeyMethod = 
+          P3ApiGrpc.getCreateCustomDataKeyMethod = getCreateCustomDataKeyMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateCustomDataKeyReq, com.tcn.cloud.api.api.v0alpha.CreateCustomDataKeyRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "CreateCustomDataKey"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateCustomDataKey"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateCustomDataKeyReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateCustomDataKeyRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("CreateCustomDataKey"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("CreateCustomDataKey"))
+              .build();
         }
-     }
-     return getCreateCustomDataKeyMethod;
+      }
+    }
+    return getCreateCustomDataKeyMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteCustomDataKeyReq,
@@ -2857,22 +2757,21 @@ public final class P3ApiGrpc {
     if ((getDeleteCustomDataKeyMethod = P3ApiGrpc.getDeleteCustomDataKeyMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getDeleteCustomDataKeyMethod = P3ApiGrpc.getDeleteCustomDataKeyMethod) == null) {
-          P3ApiGrpc.getDeleteCustomDataKeyMethod = getDeleteCustomDataKeyMethod = 
+          P3ApiGrpc.getDeleteCustomDataKeyMethod = getDeleteCustomDataKeyMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteCustomDataKeyReq, com.tcn.cloud.api.api.v0alpha.DeleteCustomDataKeyRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "DeleteCustomDataKey"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteCustomDataKey"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteCustomDataKeyReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteCustomDataKeyRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("DeleteCustomDataKey"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("DeleteCustomDataKey"))
+              .build();
         }
-     }
-     return getDeleteCustomDataKeyMethod;
+      }
+    }
+    return getDeleteCustomDataKeyMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateCustomDataKeyReq,
@@ -2889,22 +2788,21 @@ public final class P3ApiGrpc {
     if ((getUpdateCustomDataKeyMethod = P3ApiGrpc.getUpdateCustomDataKeyMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getUpdateCustomDataKeyMethod = P3ApiGrpc.getUpdateCustomDataKeyMethod) == null) {
-          P3ApiGrpc.getUpdateCustomDataKeyMethod = getUpdateCustomDataKeyMethod = 
+          P3ApiGrpc.getUpdateCustomDataKeyMethod = getUpdateCustomDataKeyMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateCustomDataKeyReq, com.tcn.cloud.api.api.v0alpha.UpdateCustomDataKeyRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "UpdateCustomDataKey"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateCustomDataKey"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateCustomDataKeyReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateCustomDataKeyRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdateCustomDataKey"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("UpdateCustomDataKey"))
+              .build();
         }
-     }
-     return getUpdateCustomDataKeyMethod;
+      }
+    }
+    return getUpdateCustomDataKeyMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetActivityLogHistoryReq,
@@ -2921,22 +2819,21 @@ public final class P3ApiGrpc {
     if ((getGetActivityLogHistoriesMethod = P3ApiGrpc.getGetActivityLogHistoriesMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getGetActivityLogHistoriesMethod = P3ApiGrpc.getGetActivityLogHistoriesMethod) == null) {
-          P3ApiGrpc.getGetActivityLogHistoriesMethod = getGetActivityLogHistoriesMethod = 
+          P3ApiGrpc.getGetActivityLogHistoriesMethod = getGetActivityLogHistoriesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetActivityLogHistoryReq, com.tcn.cloud.api.api.v0alpha.GetActivityLogHistoryRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "GetActivityLogHistories"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetActivityLogHistories"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetActivityLogHistoryReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetActivityLogHistoryRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetActivityLogHistories"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("GetActivityLogHistories"))
+              .build();
         }
-     }
-     return getGetActivityLogHistoriesMethod;
+      }
+    }
+    return getGetActivityLogHistoriesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListTableTemplatePropertiesReq,
@@ -2953,22 +2850,21 @@ public final class P3ApiGrpc {
     if ((getListTableTemplatePropertiesMethod = P3ApiGrpc.getListTableTemplatePropertiesMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListTableTemplatePropertiesMethod = P3ApiGrpc.getListTableTemplatePropertiesMethod) == null) {
-          P3ApiGrpc.getListTableTemplatePropertiesMethod = getListTableTemplatePropertiesMethod = 
+          P3ApiGrpc.getListTableTemplatePropertiesMethod = getListTableTemplatePropertiesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListTableTemplatePropertiesReq, com.tcn.cloud.api.api.v0alpha.ListTableTemplatePropertiesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListTableTemplateProperties"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListTableTemplateProperties"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListTableTemplatePropertiesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListTableTemplatePropertiesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListTableTemplateProperties"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListTableTemplateProperties"))
+              .build();
         }
-     }
-     return getListTableTemplatePropertiesMethod;
+      }
+    }
+    return getListTableTemplatePropertiesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAgentSkillsFiltersReq,
@@ -2985,22 +2881,21 @@ public final class P3ApiGrpc {
     if ((getListAgentSkillsFiltersMethod = P3ApiGrpc.getListAgentSkillsFiltersMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListAgentSkillsFiltersMethod = P3ApiGrpc.getListAgentSkillsFiltersMethod) == null) {
-          P3ApiGrpc.getListAgentSkillsFiltersMethod = getListAgentSkillsFiltersMethod = 
+          P3ApiGrpc.getListAgentSkillsFiltersMethod = getListAgentSkillsFiltersMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListAgentSkillsFiltersReq, com.tcn.cloud.api.api.v0alpha.ListAgentSkillsFiltersRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListAgentSkillsFilters"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentSkillsFilters"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentSkillsFiltersReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentSkillsFiltersRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListAgentSkillsFilters"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListAgentSkillsFilters"))
+              .build();
         }
-     }
-     return getListAgentSkillsFiltersMethod;
+      }
+    }
+    return getListAgentSkillsFiltersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListScheduleRulesRequest,
@@ -3017,22 +2912,21 @@ public final class P3ApiGrpc {
     if ((getListScheduleRulesMethod = P3ApiGrpc.getListScheduleRulesMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListScheduleRulesMethod = P3ApiGrpc.getListScheduleRulesMethod) == null) {
-          P3ApiGrpc.getListScheduleRulesMethod = getListScheduleRulesMethod = 
+          P3ApiGrpc.getListScheduleRulesMethod = getListScheduleRulesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListScheduleRulesRequest, com.tcn.cloud.api.api.v0alpha.ListScheduleRulesResult>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListScheduleRules"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListScheduleRules"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListScheduleRulesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListScheduleRulesResult.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListScheduleRules"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListScheduleRules"))
+              .build();
         }
-     }
-     return getListScheduleRulesMethod;
+      }
+    }
+    return getListScheduleRulesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersReq,
@@ -3049,22 +2943,21 @@ public final class P3ApiGrpc {
     if ((getListCustomReportFiltersMethod = P3ApiGrpc.getListCustomReportFiltersMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListCustomReportFiltersMethod = P3ApiGrpc.getListCustomReportFiltersMethod) == null) {
-          P3ApiGrpc.getListCustomReportFiltersMethod = getListCustomReportFiltersMethod = 
+          P3ApiGrpc.getListCustomReportFiltersMethod = getListCustomReportFiltersMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersReq, com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListCustomReportFilters"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCustomReportFilters"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListCustomReportFilters"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListCustomReportFilters"))
+              .build();
         }
-     }
-     return getListCustomReportFiltersMethod;
+      }
+    }
+    return getListCustomReportFiltersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListSmsNumbersReq,
@@ -3081,29 +2974,35 @@ public final class P3ApiGrpc {
     if ((getListSmsNumbersMethod = P3ApiGrpc.getListSmsNumbersMethod) == null) {
       synchronized (P3ApiGrpc.class) {
         if ((getListSmsNumbersMethod = P3ApiGrpc.getListSmsNumbersMethod) == null) {
-          P3ApiGrpc.getListSmsNumbersMethod = getListSmsNumbersMethod = 
+          P3ApiGrpc.getListSmsNumbersMethod = getListSmsNumbersMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListSmsNumbersReq, com.tcn.cloud.api.api.v0alpha.ListSmsNumbersRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v1alpha1.p3api.P3Api", "ListSmsNumbers"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSmsNumbers"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsNumbersReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsNumbersRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListSmsNumbers"))
-                  .build();
-          }
+              .setSchemaDescriptor(new P3ApiMethodDescriptorSupplier("ListSmsNumbers"))
+              .build();
         }
-     }
-     return getListSmsNumbersMethod;
+      }
+    }
+    return getListSmsNumbersMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static P3ApiStub newStub(io.grpc.Channel channel) {
-    return new P3ApiStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<P3ApiStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<P3ApiStub>() {
+        @java.lang.Override
+        public P3ApiStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new P3ApiStub(channel, callOptions);
+        }
+      };
+    return P3ApiStub.newStub(factory, channel);
   }
 
   /**
@@ -3111,7 +3010,14 @@ public final class P3ApiGrpc {
    */
   public static P3ApiBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new P3ApiBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<P3ApiBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<P3ApiBlockingStub>() {
+        @java.lang.Override
+        public P3ApiBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new P3ApiBlockingStub(channel, callOptions);
+        }
+      };
+    return P3ApiBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -3119,25 +3025,32 @@ public final class P3ApiGrpc {
    */
   public static P3ApiFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new P3ApiFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<P3ApiFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<P3ApiFutureStub>() {
+        @java.lang.Override
+        public P3ApiFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new P3ApiFutureStub(channel, callOptions);
+        }
+      };
+    return P3ApiFutureStub.newStub(factory, channel);
   }
 
   /**
    */
-  public static abstract class P3ApiImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void getAgentHuntGroup(com.tcn.cloud.api.api.v0alpha.GetAgentHuntGroupReq request,
+    default void getAgentHuntGroup(com.tcn.cloud.api.api.v0alpha.GetAgentHuntGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.HuntGroup> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAgentHuntGroupMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAgentHuntGroupMethod(), responseObserver);
     }
 
     /**
      */
-    public void getAgentSession(com.tcn.cloud.api.api.v0alpha.GetAgentSessionReq request,
+    default void getAgentSession(com.tcn.cloud.api.api.v0alpha.GetAgentSessionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentSession> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAgentSessionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAgentSessionMethod(), responseObserver);
     }
 
     /**
@@ -3153,9 +3066,9 @@ public final class P3ApiGrpc {
      *   - grpc.Invalid: the hunt_group_sid in the request in invalid.
      * </pre>
      */
-    public void getAgentSkills(com.tcn.cloud.api.api.v0alpha.GetAgentSkillsReq request,
+    default void getAgentSkills(com.tcn.cloud.api.api.v0alpha.GetAgentSkillsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAgentSkillsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAgentSkillsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAgentSkillsMethod(), responseObserver);
     }
 
     /**
@@ -3165,9 +3078,9 @@ public final class P3ApiGrpc {
      *    - grpc.InvalidArgument: the client_sid or name in the request is invalid.
      * </pre>
      */
-    public void createAgentSkill(com.tcn.cloud.api.api.v0alpha.CreateAgentSkillReq request,
+    default void createAgentSkill(com.tcn.cloud.api.api.v0alpha.CreateAgentSkillReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateAgentSkillRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateAgentSkillMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAgentSkillMethod(), responseObserver);
     }
 
     /**
@@ -3177,9 +3090,9 @@ public final class P3ApiGrpc {
      *    - grpc.InvalidArgument: the agent_skill_sid or name in the request is invalid.
      * </pre>
      */
-    public void updateAgentSkill(com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillReq request,
+    default void updateAgentSkill(com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateAgentSkillMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAgentSkillMethod(), responseObserver);
     }
 
     /**
@@ -3189,9 +3102,9 @@ public final class P3ApiGrpc {
      *    - grpc.InvalidArgument: the agent_skill_sid in the request is invalid.
      * </pre>
      */
-    public void deleteAgentSkill(com.tcn.cloud.api.api.v0alpha.DeleteAgentSkillReq request,
+    default void deleteAgentSkill(com.tcn.cloud.api.api.v0alpha.DeleteAgentSkillReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteAgentSkillRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteAgentSkillMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAgentSkillMethod(), responseObserver);
     }
 
     /**
@@ -3199,9 +3112,9 @@ public final class P3ApiGrpc {
      * Returns a list of skills for the current agent.
      * </pre>
      */
-    public void listSkillsForCurrentAgent(com.tcn.cloud.api.api.v0alpha.ListSkillsForCurrentAgentReq request,
+    default void listSkillsForCurrentAgent(com.tcn.cloud.api.api.v0alpha.ListSkillsForCurrentAgentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSkillsForCurrentAgentRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListSkillsForCurrentAgentMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSkillsForCurrentAgentMethod(), responseObserver);
     }
 
     /**
@@ -3211,9 +3124,9 @@ public final class P3ApiGrpc {
      * field empty will return all types of skills.
      * </pre>
      */
-    public void listSkills(com.tcn.cloud.api.api.v0alpha.ListSkillsReq request,
+    default void listSkills(com.tcn.cloud.api.api.v0alpha.ListSkillsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSkillsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListSkillsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSkillsMethod(), responseObserver);
     }
 
     /**
@@ -3224,37 +3137,37 @@ public final class P3ApiGrpc {
      *    - grpc.InvalidArgument: the user_id on the request is invalid.
      * </pre>
      */
-    public void updateAgentSkills(com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsReq request,
+    default void updateAgentSkills(com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateAgentSkillsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAgentSkillsMethod(), responseObserver);
     }
 
     /**
      */
-    public void getCurrentAgent(com.tcn.cloud.api.api.v0alpha.GetCurrentAgentReq request,
+    default void getCurrentAgent(com.tcn.cloud.api.api.v0alpha.GetCurrentAgentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Agent> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCurrentAgentMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCurrentAgentMethod(), responseObserver);
     }
 
     /**
      */
-    public void getClientInfoData(com.tcn.cloud.api.api.v0alpha.GetClientInfoDataReq request,
+    default void getClientInfoData(com.tcn.cloud.api.api.v0alpha.GetClientInfoDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetClientInfoDataRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetClientInfoDataMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetClientInfoDataMethod(), responseObserver);
     }
 
     /**
      */
-    public void getClientInfoDisplayTemplate(com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateReq request,
+    default void getClientInfoDisplayTemplate(com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetClientInfoDisplayTemplateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetClientInfoDisplayTemplateMethod(), responseObserver);
     }
 
     /**
      */
-    public void listAgentStatisticsData(com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsDataReq request,
+    default void listAgentStatisticsData(com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsDataRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAgentStatisticsDataMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentStatisticsDataMethod(), responseObserver);
     }
 
     /**
@@ -3262,9 +3175,9 @@ public final class P3ApiGrpc {
      * Lists all agent and hunt group PBX extensions that the requested agent has.
      * </pre>
      */
-    public void listPBXExtensions(com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsReq request,
+    default void listPBXExtensions(com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListPBXExtensionsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPBXExtensionsMethod(), responseObserver);
     }
 
     /**
@@ -3276,9 +3189,9 @@ public final class P3ApiGrpc {
      *    - grpc.Internal: unexpected error getting pbx_extensions
      * </pre>
      */
-    public void listAgentExtensions(com.tcn.cloud.api.api.v0alpha.ListAgentExtensionsReq request,
+    default void listAgentExtensions(com.tcn.cloud.api.api.v0alpha.ListAgentExtensionsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentExtensionsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAgentExtensionsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentExtensionsMethod(), responseObserver);
     }
 
     /**
@@ -3290,9 +3203,9 @@ public final class P3ApiGrpc {
      *    - grpc.Internal: unexpected error getting pbx_extensions
      * </pre>
      */
-    public void listHuntGroupExtensions(com.tcn.cloud.api.api.v0alpha.ListHuntGroupExtensionsReq request,
+    default void listHuntGroupExtensions(com.tcn.cloud.api.api.v0alpha.ListHuntGroupExtensionsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListHuntGroupExtensionsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListHuntGroupExtensionsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListHuntGroupExtensionsMethod(), responseObserver);
     }
 
     /**
@@ -3305,9 +3218,9 @@ public final class P3ApiGrpc {
      *    - grpc.Internal: An unexpected error occurred while saving the extension.
      * </pre>
      */
-    public void createExtension(com.tcn.cloud.api.api.v0alpha.CreateExtensionReq request,
+    default void createExtension(com.tcn.cloud.api.api.v0alpha.CreateExtensionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateExtensionRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateExtensionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateExtensionMethod(), responseObserver);
     }
 
     /**
@@ -3319,9 +3232,9 @@ public final class P3ApiGrpc {
      *    - grpc.InvalidArgument: The request had invalid or missing fields.
      * </pre>
      */
-    public void deleteExtension(com.tcn.cloud.api.api.v0alpha.DeleteExtensionReq request,
+    default void deleteExtension(com.tcn.cloud.api.api.v0alpha.DeleteExtensionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteExtensionRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteExtensionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteExtensionMethod(), responseObserver);
     }
 
     /**
@@ -3334,23 +3247,23 @@ public final class P3ApiGrpc {
      *    - grpc.Internal: An unexpected error occurred updating the extension.
      * </pre>
      */
-    public void updateExtension(com.tcn.cloud.api.api.v0alpha.UpdateExtensionReq request,
+    default void updateExtension(com.tcn.cloud.api.api.v0alpha.UpdateExtensionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateExtensionRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateExtensionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateExtensionMethod(), responseObserver);
     }
 
     /**
      */
-    public void updatePBXExtension(com.tcn.cloud.api.api.v0alpha.UpdatePBXExtensionReq request,
+    default void updatePBXExtension(com.tcn.cloud.api.api.v0alpha.UpdatePBXExtensionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdatePBXExtensionRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdatePBXExtensionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdatePBXExtensionMethod(), responseObserver);
     }
 
     /**
      */
-    public void createDNCLNumbers(com.tcn.cloud.api.api.v0alpha.CreateDNCLNumbersReq request,
+    default void createDNCLNumbers(com.tcn.cloud.api.api.v0alpha.CreateDNCLNumbersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateDNCLNumbersRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateDNCLNumbersMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateDNCLNumbersMethod(), responseObserver);
     }
 
     /**
@@ -3361,16 +3274,16 @@ public final class P3ApiGrpc {
      * or responses (if able).
      * </pre>
      */
-    public void getScriptOrResponses(com.tcn.cloud.api.api.v0alpha.GetScriptOrResponsesReq request,
+    default void getScriptOrResponses(com.tcn.cloud.api.api.v0alpha.GetScriptOrResponsesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetScriptOrResponsesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetScriptOrResponsesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetScriptOrResponsesMethod(), responseObserver);
     }
 
     /**
      */
-    public void getHuntGroupAgentSettings(com.tcn.cloud.api.api.v0alpha.GetHuntGroupAgentSettingsReq request,
+    default void getHuntGroupAgentSettings(com.tcn.cloud.api.api.v0alpha.GetHuntGroupAgentSettingsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetHuntGroupAgentSettingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetHuntGroupAgentSettingsMethod(), responseObserver);
     }
 
     /**
@@ -3379,16 +3292,16 @@ public final class P3ApiGrpc {
      * It replaces any parameters of a given weblink with the call data of the call sid and type from the request message or with the callback details (if a scheduled_callback_id is given).
      * </pre>
      */
-    public void listHuntGroupWebLinks(com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksReq request,
+    default void listHuntGroupWebLinks(com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListHuntGroupWebLinksMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListHuntGroupWebLinksMethod(), responseObserver);
     }
 
     /**
      */
-    public void getHuntGroupPauseCodes(com.tcn.cloud.api.api.v0alpha.GetHuntGroupPauseCodesReq request,
+    default void getHuntGroupPauseCodes(com.tcn.cloud.api.api.v0alpha.GetHuntGroupPauseCodesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetHuntGroupPauseCodesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetHuntGroupPauseCodesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetHuntGroupPauseCodesMethod(), responseObserver);
     }
 
     /**
@@ -3397,9 +3310,9 @@ public final class P3ApiGrpc {
      * session_sid, depending on the filter parameter.
      * </pre>
      */
-    public void listAgentCallHistory(com.tcn.cloud.api.api.v0alpha.ListAgentCallHistoryReq request,
+    default void listAgentCallHistory(com.tcn.cloud.api.api.v0alpha.ListAgentCallHistoryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentCallHistoryRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAgentCallHistoryMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentCallHistoryMethod(), responseObserver);
     }
 
     /**
@@ -3409,9 +3322,9 @@ public final class P3ApiGrpc {
      *  AGENT_MANAGER
      * </pre>
      */
-    public void listClientPhoneBookEntries(com.tcn.cloud.api.api.v0alpha.ListClientPhoneBookEntriesReq request,
+    default void listClientPhoneBookEntries(com.tcn.cloud.api.api.v0alpha.ListClientPhoneBookEntriesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListClientPhoneBookEntriesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListClientPhoneBookEntriesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListClientPhoneBookEntriesMethod(), responseObserver);
     }
 
     /**
@@ -3421,9 +3334,9 @@ public final class P3ApiGrpc {
      *  AGENT_MANAGER
      * </pre>
      */
-    public void listHuntGroupPhoneBookEntries(com.tcn.cloud.api.api.v0alpha.ListHuntGroupPhoneBookEntriesReq request,
+    default void listHuntGroupPhoneBookEntries(com.tcn.cloud.api.api.v0alpha.ListHuntGroupPhoneBookEntriesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListHuntGroupPhoneBookEntriesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListHuntGroupPhoneBookEntriesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListHuntGroupPhoneBookEntriesMethod(), responseObserver);
     }
 
     /**
@@ -3436,9 +3349,9 @@ public final class P3ApiGrpc {
      *    - grpc.Internal: unexpected error occurred when saving the phone book.
      * </pre>
      */
-    public void createPhoneBookEntry(com.tcn.cloud.api.api.v0alpha.CreatePhoneBookEntryReq request,
+    default void createPhoneBookEntry(com.tcn.cloud.api.api.v0alpha.CreatePhoneBookEntryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreatePhoneBookEntryRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreatePhoneBookEntryMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreatePhoneBookEntryMethod(), responseObserver);
     }
 
     /**
@@ -3451,9 +3364,9 @@ public final class P3ApiGrpc {
      *    - grpc.Internal: unexpected error occurred when saving the phone book.
      * </pre>
      */
-    public void updatePhoneBookEntry(com.tcn.cloud.api.api.v0alpha.UpdatePhoneBookEntryReq request,
+    default void updatePhoneBookEntry(com.tcn.cloud.api.api.v0alpha.UpdatePhoneBookEntryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdatePhoneBookEntryRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdatePhoneBookEntryMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdatePhoneBookEntryMethod(), responseObserver);
     }
 
     /**
@@ -3463,9 +3376,9 @@ public final class P3ApiGrpc {
      *    AGENT_MANAGER
      * </pre>
      */
-    public void deletePhoneBookEntry(com.tcn.cloud.api.api.v0alpha.DeletePhoneBookEntryReq request,
+    default void deletePhoneBookEntry(com.tcn.cloud.api.api.v0alpha.DeletePhoneBookEntryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeletePhoneBookEntryRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeletePhoneBookEntryMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeletePhoneBookEntryMethod(), responseObserver);
     }
 
     /**
@@ -3479,16 +3392,16 @@ public final class P3ApiGrpc {
      *   - grpc.Internal: unexpected error occurred when retrieving the phone books.
      * </pre>
      */
-    public void listPhoneBooks(com.tcn.cloud.api.api.v0alpha.ListPhoneBooksReq request,
+    default void listPhoneBooks(com.tcn.cloud.api.api.v0alpha.ListPhoneBooksReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListPhoneBooksRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListPhoneBooksMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPhoneBooksMethod(), responseObserver);
     }
 
     /**
      */
-    public void listAgentTriggers(com.tcn.cloud.api.api.v0alpha.ListAgentTriggersReq request,
+    default void listAgentTriggers(com.tcn.cloud.api.api.v0alpha.ListAgentTriggersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentTriggersRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAgentTriggersMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentTriggersMethod(), responseObserver);
     }
 
     /**
@@ -3502,9 +3415,9 @@ public final class P3ApiGrpc {
      *   - grpc.Invalid: the hunt_group_sid in the request is invalid.
      * </pre>
      */
-    public void getCampaignCompletionStatus(com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusReq request,
+    default void getCampaignCompletionStatus(com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCampaignCompletionStatusMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCampaignCompletionStatusMethod(), responseObserver);
     }
 
     /**
@@ -3518,9 +3431,9 @@ public final class P3ApiGrpc {
      *   - grpc.NotFound: the call sid provided wasn't previously connected to any agent.
      * </pre>
      */
-    public void getLostPeerInfo(com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoReq request,
+    default void getLostPeerInfo(com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetLostPeerInfoMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetLostPeerInfoMethod(), responseObserver);
     }
 
     /**
@@ -3530,16 +3443,16 @@ public final class P3ApiGrpc {
      *   NONE
      * </pre>
      */
-    public void getDispositionKeys(com.tcn.cloud.api.api.v0alpha.GetDispositionKeysReq request,
+    default void getDispositionKeys(com.tcn.cloud.api.api.v0alpha.GetDispositionKeysReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetDispositionKeysRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetDispositionKeysMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDispositionKeysMethod(), responseObserver);
     }
 
     /**
      */
-    public void getReadyAgents(com.tcn.cloud.api.api.v0alpha.GetReadyAgentsReq request,
+    default void getReadyAgents(com.tcn.cloud.api.api.v0alpha.GetReadyAgentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetReadyAgentsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetReadyAgentsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetReadyAgentsMethod(), responseObserver);
     }
 
     /**
@@ -3554,37 +3467,37 @@ public final class P3ApiGrpc {
      *   - grpc.Invalid: the agent_session_sid provided in the request is invalid.
      * </pre>
      */
-    public void listAgentQueueAndOnHoldCallData(com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataReq request,
+    default void listAgentQueueAndOnHoldCallData(com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAgentQueueAndOnHoldCallDataMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentQueueAndOnHoldCallDataMethod(), responseObserver);
     }
 
     /**
      */
-    public void saveAgentCallResponses(com.tcn.cloud.api.api.v0alpha.SaveAgentCallResponsesReq request,
+    default void saveAgentCallResponses(com.tcn.cloud.api.api.v0alpha.SaveAgentCallResponsesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SaveAgentCallResponsesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getSaveAgentCallResponsesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSaveAgentCallResponsesMethod(), responseObserver);
     }
 
     /**
      */
-    public void listAgentTransferOptions(com.tcn.cloud.api.api.v0alpha.ListAgentTransferOptionsReq request,
+    default void listAgentTransferOptions(com.tcn.cloud.api.api.v0alpha.ListAgentTransferOptionsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentTransferOptionsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAgentTransferOptionsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentTransferOptionsMethod(), responseObserver);
     }
 
     /**
      */
-    public void updateAgentCallResponseValue(com.tcn.cloud.api.api.v0alpha.UpdateAgentCallResponseValueReq request,
+    default void updateAgentCallResponseValue(com.tcn.cloud.api.api.v0alpha.UpdateAgentCallResponseValueReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentCallResponseValueRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateAgentCallResponseValueMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAgentCallResponseValueMethod(), responseObserver);
     }
 
     /**
      */
-    public void getIntercomPeerInfo(com.tcn.cloud.api.api.v0alpha.GetIntercomPeerInfoReq request,
+    default void getIntercomPeerInfo(com.tcn.cloud.api.api.v0alpha.GetIntercomPeerInfoReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetIntercomPeerInfoRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetIntercomPeerInfoMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetIntercomPeerInfoMethod(), responseObserver);
     }
 
     /**
@@ -3592,16 +3505,16 @@ public final class P3ApiGrpc {
      * Lists the requesting user's org response evaluators.
      * </pre>
      */
-    public void listOrgResponseEvaluators(com.tcn.cloud.api.api.v0alpha.ListOrgResponseEvaluatorsReq request,
+    default void listOrgResponseEvaluators(com.tcn.cloud.api.api.v0alpha.ListOrgResponseEvaluatorsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListOrgResponseEvaluatorsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOrgResponseEvaluatorsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOrgResponseEvaluatorsMethod(), responseObserver);
     }
 
     /**
      */
-    public void getQueueConfigurationOptionsArray(com.tcn.cloud.api.api.v0alpha.GetQueueConfigurationOptionsArrayReq request,
+    default void getQueueConfigurationOptionsArray(com.tcn.cloud.api.api.v0alpha.GetQueueConfigurationOptionsArrayReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetQueueConfigurationOptionsArrayRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetQueueConfigurationOptionsArrayMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetQueueConfigurationOptionsArrayMethod(), responseObserver);
     }
 
     /**
@@ -3610,65 +3523,65 @@ public final class P3ApiGrpc {
      * responses or scripts
      * </pre>
      */
-    public void getConditionalDNCLRules(com.tcn.cloud.api.api.v0alpha.GetConditionalDNCLRulesReq request,
+    default void getConditionalDNCLRules(com.tcn.cloud.api.api.v0alpha.GetConditionalDNCLRulesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetConditionalDNCLRulesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetConditionalDNCLRulesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetConditionalDNCLRulesMethod(), responseObserver);
     }
 
     /**
      */
-    public void manualDialStart(com.tcn.cloud.api.api.v0alpha.ManualDialStartReq request,
+    default void manualDialStart(com.tcn.cloud.api.api.v0alpha.ManualDialStartReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ManualDialStartRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getManualDialStartMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getManualDialStartMethod(), responseObserver);
     }
 
     /**
      */
-    public void getExtendedCallHistories(com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryReq request,
+    default void getExtendedCallHistories(com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetExtendedCallHistoriesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetExtendedCallHistoriesMethod(), responseObserver);
     }
 
     /**
      */
-    public void listWhiteListPhoneBooks(com.tcn.cloud.api.api.v0alpha.ListWhiteListPhoneBooksReq request,
+    default void listWhiteListPhoneBooks(com.tcn.cloud.api.api.v0alpha.ListWhiteListPhoneBooksReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListWhiteListPhoneBooksRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListWhiteListPhoneBooksMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListWhiteListPhoneBooksMethod(), responseObserver);
     }
 
     /**
      */
-    public void downloadCallRecording(com.tcn.cloud.api.api.v0alpha.DownloadCallRecordingReq request,
+    default void downloadCallRecording(com.tcn.cloud.api.api.v0alpha.DownloadCallRecordingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadRecordingRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDownloadCallRecordingMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDownloadCallRecordingMethod(), responseObserver);
     }
 
     /**
      */
-    public void downloadCallRecordings(com.tcn.cloud.api.api.v0alpha.DownloadCallRecordingsReq request,
+    default void downloadCallRecordings(com.tcn.cloud.api.api.v0alpha.DownloadCallRecordingsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadRecordingRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDownloadCallRecordingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDownloadCallRecordingsMethod(), responseObserver);
     }
 
     /**
      */
-    public void placePreviewDialCall(com.tcn.cloud.api.api.v0alpha.PlacePreviewDialCallReq request,
+    default void placePreviewDialCall(com.tcn.cloud.api.api.v0alpha.PlacePreviewDialCallReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PlacePreviewDialCallRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getPlacePreviewDialCallMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPlacePreviewDialCallMethod(), responseObserver);
     }
 
     /**
      */
-    public void cancelPreviewDialCall(com.tcn.cloud.api.api.v0alpha.CancelPreviewDialCallReq request,
+    default void cancelPreviewDialCall(com.tcn.cloud.api.api.v0alpha.CancelPreviewDialCallReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CancelPreviewDialCallRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCancelPreviewDialCallMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCancelPreviewDialCallMethod(), responseObserver);
     }
 
     /**
      */
-    public void updateTaskStatus(com.tcn.cloud.api.api.v0alpha.UpdateTaskStatusReq request,
+    default void updateTaskStatus(com.tcn.cloud.api.api.v0alpha.UpdateTaskStatusReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Nil> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateTaskStatusMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateTaskStatusMethod(), responseObserver);
     }
 
     /**
@@ -3676,44 +3589,44 @@ public final class P3ApiGrpc {
      * ListCallbackRoutingAgents returns a list of agents that are allowed to make a callback.
      * </pre>
      */
-    public void listCallbackRoutingAgents(com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingAgentsReq request,
+    default void listCallbackRoutingAgents(com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingAgentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingAgentsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListCallbackRoutingAgentsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCallbackRoutingAgentsMethod(), responseObserver);
     }
 
     /**
      */
-    public void listCallbackRoutingSkills(com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingSkillsReq request,
+    default void listCallbackRoutingSkills(com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingSkillsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingSkillsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListCallbackRoutingSkillsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCallbackRoutingSkillsMethod(), responseObserver);
     }
 
     /**
      */
-    public void handleRecordingDelay(com.tcn.cloud.api.api.v0alpha.HandleRecordingDelayReq request,
+    default void handleRecordingDelay(com.tcn.cloud.api.api.v0alpha.HandleRecordingDelayReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.HandleRecordingDelayRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getHandleRecordingDelayMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getHandleRecordingDelayMethod(), responseObserver);
     }
 
     /**
      */
-    public void updateAgentAssignedHuntGroup(com.tcn.cloud.api.api.v0alpha.UpdateAgentAssignedHuntGroupReq request,
+    default void updateAgentAssignedHuntGroup(com.tcn.cloud.api.api.v0alpha.UpdateAgentAssignedHuntGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentAssignedHuntGroupRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateAgentAssignedHuntGroupMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAgentAssignedHuntGroupMethod(), responseObserver);
     }
 
     /**
      */
-    public void getCallData(com.tcn.cloud.api.api.v0alpha.GetCallDataReq request,
+    default void getCallData(com.tcn.cloud.api.api.v0alpha.GetCallDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetCallDataRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCallDataMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCallDataMethod(), responseObserver);
     }
 
     /**
      */
-    public void listHuntGroups(com.tcn.cloud.api.api.v0alpha.ListHuntGroupsReq request,
+    default void listHuntGroups(com.tcn.cloud.api.api.v0alpha.ListHuntGroupsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListHuntGroupsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListHuntGroupsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListHuntGroupsMethod(), responseObserver);
     }
 
     /**
@@ -3724,16 +3637,16 @@ public final class P3ApiGrpc {
      * returned list will be empty.
      * </pre>
      */
-    public void listReassignmentHuntGroups(com.tcn.cloud.api.api.v0alpha.ListReassignmentHuntGroupsReq request,
+    default void listReassignmentHuntGroups(com.tcn.cloud.api.api.v0alpha.ListReassignmentHuntGroupsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListReassignmentHuntGroupsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListReassignmentHuntGroupsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListReassignmentHuntGroupsMethod(), responseObserver);
     }
 
     /**
      */
-    public void getOrgAgentSettings(com.tcn.cloud.api.api.v0alpha.GetOrgAgentSettingsReq request,
+    default void getOrgAgentSettings(com.tcn.cloud.api.api.v0alpha.GetOrgAgentSettingsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetOrgAgentSettingsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetOrgAgentSettingsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOrgAgentSettingsMethod(), responseObserver);
     }
 
     /**
@@ -3742,23 +3655,23 @@ public final class P3ApiGrpc {
      * bucket
      * </pre>
      */
-    public void listCallerIdsFromBucket(com.tcn.cloud.api.api.v0alpha.ListCallerIdsFromBucketReq request,
+    default void listCallerIdsFromBucket(com.tcn.cloud.api.api.v0alpha.ListCallerIdsFromBucketReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCallerIdsFromBucketRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListCallerIdsFromBucketMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCallerIdsFromBucketMethod(), responseObserver);
     }
 
     /**
      */
-    public void saveLastCallResponse(com.tcn.cloud.api.api.v0alpha.SaveLastCallResponseReq request,
+    default void saveLastCallResponse(com.tcn.cloud.api.api.v0alpha.SaveLastCallResponseReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SaveLastCallResponseRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getSaveLastCallResponseMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSaveLastCallResponseMethod(), responseObserver);
     }
 
     /**
      */
-    public void listAgentCallLogsByCallSidAndType(com.tcn.cloud.api.api.v0alpha.ListAgentCallLogsByCallSidAndTypeReq request,
+    default void listAgentCallLogsByCallSidAndType(com.tcn.cloud.api.api.v0alpha.ListAgentCallLogsByCallSidAndTypeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentCallLogsByCallSidAndTypeRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAgentCallLogsByCallSidAndTypeMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentCallLogsByCallSidAndTypeMethod(), responseObserver);
     }
 
     /**
@@ -3767,9 +3680,9 @@ public final class P3ApiGrpc {
      * call_type and agent_sid
      * </pre>
      */
-    public void listAgentCallResponseValues(com.tcn.cloud.api.api.v0alpha.ListAgentCallResponseValuesReq request,
+    default void listAgentCallResponseValues(com.tcn.cloud.api.api.v0alpha.ListAgentCallResponseValuesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentCallResponseValuesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAgentCallResponseValuesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentCallResponseValuesMethod(), responseObserver);
     }
 
     /**
@@ -3777,9 +3690,9 @@ public final class P3ApiGrpc {
      * Get contact schema details based on contact group sid
      * </pre>
      */
-    public void getContactSchemaByContactGroup(com.tcn.cloud.api.api.v0alpha.GetContactSchemaByContactGroupReq request,
+    default void getContactSchemaByContactGroup(com.tcn.cloud.api.api.v0alpha.GetContactSchemaByContactGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ContactSchema> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetContactSchemaByContactGroupMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetContactSchemaByContactGroupMethod(), responseObserver);
     }
 
     /**
@@ -3787,9 +3700,9 @@ public final class P3ApiGrpc {
      * List contact group details based on client sid from contact_group table
      * </pre>
      */
-    public void listContactGroupDetailsByClientSid(com.tcn.cloud.api.api.v0alpha.ListContactGroupDetailsByClientSidReq request,
+    default void listContactGroupDetailsByClientSid(com.tcn.cloud.api.api.v0alpha.ListContactGroupDetailsByClientSidReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListContactGroupDetailsByClientSidRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListContactGroupDetailsByClientSidMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListContactGroupDetailsByClientSidMethod(), responseObserver);
     }
 
     /**
@@ -3798,9 +3711,9 @@ public final class P3ApiGrpc {
      * table
      * </pre>
      */
-    public void getContactGroupDetails(com.tcn.cloud.api.api.v0alpha.GetContactGroupReq request,
+    default void getContactGroupDetails(com.tcn.cloud.api.api.v0alpha.GetContactGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ContactGroup> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetContactGroupDetailsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetContactGroupDetailsMethod(), responseObserver);
     }
 
     /**
@@ -3808,9 +3721,9 @@ public final class P3ApiGrpc {
      * Get contact group size based on contacts size
      * </pre>
      */
-    public void getContactGroupSize(com.tcn.cloud.api.api.v0alpha.GetContactGroupReq request,
+    default void getContactGroupSize(com.tcn.cloud.api.api.v0alpha.GetContactGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetContactGroupSizeRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetContactGroupSizeMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetContactGroupSizeMethod(), responseObserver);
     }
 
     /**
@@ -3818,9 +3731,9 @@ public final class P3ApiGrpc {
      * Create contact field description details
      * </pre>
      */
-    public void createContactFieldDescription(com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionReq request,
+    default void createContactFieldDescription(com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateContactFieldDescriptionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateContactFieldDescriptionMethod(), responseObserver);
     }
 
     /**
@@ -3828,9 +3741,9 @@ public final class P3ApiGrpc {
      * Delete contact field description details
      * </pre>
      */
-    public void deleteContactFieldDescription(com.tcn.cloud.api.api.v0alpha.DeleteContactFieldDescriptionReq request,
+    default void deleteContactFieldDescription(com.tcn.cloud.api.api.v0alpha.DeleteContactFieldDescriptionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteContactFieldDescriptionRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteContactFieldDescriptionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteContactFieldDescriptionMethod(), responseObserver);
     }
 
     /**
@@ -3838,9 +3751,9 @@ public final class P3ApiGrpc {
      * List contact field desc details from contact_field_description table
      * </pre>
      */
-    public void listContactFieldDescriptions(com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsReq request,
+    default void listContactFieldDescriptions(com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListContactFieldDescriptionsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListContactFieldDescriptionsMethod(), responseObserver);
     }
 
     /**
@@ -3848,9 +3761,9 @@ public final class P3ApiGrpc {
      * List contact field description details based on contact group sid
      * </pre>
      */
-    public void listContactFieldDescriptionsByCGSid(com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsByCGSidReq request,
+    default void listContactFieldDescriptionsByCGSid(com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsByCGSidReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsByCGSidRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListContactFieldDescriptionsByCGSidMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListContactFieldDescriptionsByCGSidMethod(), responseObserver);
     }
 
     /**
@@ -3859,9 +3772,9 @@ public final class P3ApiGrpc {
      * contact_import_template table
      * </pre>
      */
-    public void listContactImportTemplates(com.tcn.cloud.api.api.v0alpha.ListContactImportTemplatesReq request,
+    default void listContactImportTemplates(com.tcn.cloud.api.api.v0alpha.ListContactImportTemplatesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListContactImportTemplatesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListContactImportTemplatesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListContactImportTemplatesMethod(), responseObserver);
     }
 
     /**
@@ -3870,9 +3783,9 @@ public final class P3ApiGrpc {
      * session event
      * </pre>
      */
-    public void updatePreviewRecordToFinished(com.tcn.cloud.api.api.v0alpha.UpdatePreviewRecordToFinishedReq request,
+    default void updatePreviewRecordToFinished(com.tcn.cloud.api.api.v0alpha.UpdatePreviewRecordToFinishedReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdatePreviewRecordToFinishedRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdatePreviewRecordToFinishedMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdatePreviewRecordToFinishedMethod(), responseObserver);
     }
 
     /**
@@ -3880,9 +3793,9 @@ public final class P3ApiGrpc {
      * Updates the requesting agent's hunt_group_sid.
      * </pre>
      */
-    public void updateAgentHuntGroup(com.tcn.cloud.api.api.v0alpha.UpdateAgentHuntGroupReq request,
+    default void updateAgentHuntGroup(com.tcn.cloud.api.api.v0alpha.UpdateAgentHuntGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentHuntGroupRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateAgentHuntGroupMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAgentHuntGroupMethod(), responseObserver);
     }
 
     /**
@@ -3895,9 +3808,9 @@ public final class P3ApiGrpc {
      *    - grpc.InvalidArgument: the hunt_group_sid or the user id list is empty or contains an invalid value.
      * </pre>
      */
-    public void multiAgentHuntGroupAssignment(com.tcn.cloud.api.api.v0alpha.MultiAgentHuntGroupAssignmentReq request,
+    default void multiAgentHuntGroupAssignment(com.tcn.cloud.api.api.v0alpha.MultiAgentHuntGroupAssignmentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.MultiAgentHuntGroupAssignmentRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getMultiAgentHuntGroupAssignmentMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiAgentHuntGroupAssignmentMethod(), responseObserver);
     }
 
     /**
@@ -3905,9 +3818,9 @@ public final class P3ApiGrpc {
      * GetAgentProfile returns an agent profile.
      * </pre>
      */
-    public void getAgentProfile(com.tcn.cloud.api.api.v0alpha.GetAgentProfileReq request,
+    default void getAgentProfile(com.tcn.cloud.api.api.v0alpha.GetAgentProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentProfile> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAgentProfileMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAgentProfileMethod(), responseObserver);
     }
 
     /**
@@ -3920,9 +3833,9 @@ public final class P3ApiGrpc {
      *  EDIT_BILLING
      * </pre>
      */
-    public void recalculateBilling(com.tcn.cloud.api.api.v0alpha.RecalculateBillingReq request,
+    default void recalculateBilling(com.tcn.cloud.api.api.v0alpha.RecalculateBillingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RecalculateBillingRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getRecalculateBillingMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRecalculateBillingMethod(), responseObserver);
     }
 
     /**
@@ -3935,9 +3848,9 @@ public final class P3ApiGrpc {
      *   NONE
      * </pre>
      */
-    public void listOutboundBroadcastTemplateData(com.tcn.cloud.api.api.v0alpha.ListOutboundBroadcastTemplateDataReq request,
+    default void listOutboundBroadcastTemplateData(com.tcn.cloud.api.api.v0alpha.ListOutboundBroadcastTemplateDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListOutboundBroadcastTemplateDataRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListOutboundBroadcastTemplateDataMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOutboundBroadcastTemplateDataMethod(), responseObserver);
     }
 
     /**
@@ -3947,9 +3860,9 @@ public final class P3ApiGrpc {
      *    - grpc.Invalid: the aptitude field is invalid.
      * </pre>
      */
-    public void multiAgentSkillAssignment(com.tcn.cloud.api.api.v0alpha.MultiAgentSkillAssignmentReq request,
+    default void multiAgentSkillAssignment(com.tcn.cloud.api.api.v0alpha.MultiAgentSkillAssignmentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.MultiAgentSkillAssignmentRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getMultiAgentSkillAssignmentMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiAgentSkillAssignmentMethod(), responseObserver);
     }
 
     /**
@@ -3962,9 +3875,9 @@ public final class P3ApiGrpc {
      *    - grpc.Internal: an error occurred while deleting the skill assignments.
      * </pre>
      */
-    public void multiAgentSkillUnassignment(com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentReq request,
+    default void multiAgentSkillUnassignment(com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getMultiAgentSkillUnassignmentMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMultiAgentSkillUnassignmentMethod(), responseObserver);
     }
 
     /**
@@ -3973,9 +3886,9 @@ public final class P3ApiGrpc {
      * that have manually approved messages enabled
      * </pre>
      */
-    public void listMAMAgentHuntGroupsByClientSid(com.tcn.cloud.api.api.v0alpha.ListMAMAgentHuntGroupsByClientSidReq request,
+    default void listMAMAgentHuntGroupsByClientSid(com.tcn.cloud.api.api.v0alpha.ListMAMAgentHuntGroupsByClientSidReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListMAMAgentHuntGroupsByClientSidRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMAMAgentHuntGroupsByClientSidMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMAMAgentHuntGroupsByClientSidMethod(), responseObserver);
     }
 
     /**
@@ -3987,9 +3900,9 @@ public final class P3ApiGrpc {
      *    - grpc.Internal: an error was returned while trying to retrieve the entity
      * </pre>
      */
-    public void listTtsVoices(com.tcn.cloud.api.api.v0alpha.ListTtsVoicesReq request,
+    default void listTtsVoices(com.tcn.cloud.api.api.v0alpha.ListTtsVoicesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListTtsVoicesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListTtsVoicesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTtsVoicesMethod(), responseObserver);
     }
 
     /**
@@ -4002,9 +3915,9 @@ public final class P3ApiGrpc {
      *    - grpc.Internal: an error was returned while trying to insert the new tts voice.
      * </pre>
      */
-    public void createTtsVoice(com.tcn.cloud.api.api.v0alpha.CreateTtsVoiceReq request,
+    default void createTtsVoice(com.tcn.cloud.api.api.v0alpha.CreateTtsVoiceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateTtsVoiceRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateTtsVoiceMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateTtsVoiceMethod(), responseObserver);
     }
 
     /**
@@ -4017,9 +3930,9 @@ public final class P3ApiGrpc {
      *    - grpc.Internal: an error was returned while trying to remove the tts voice.
      * </pre>
      */
-    public void deleteTtsVoice(com.tcn.cloud.api.api.v0alpha.DeleteTtsVoiceReq request,
+    default void deleteTtsVoice(com.tcn.cloud.api.api.v0alpha.DeleteTtsVoiceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteTtsVoiceRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteTtsVoiceMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTtsVoiceMethod(), responseObserver);
     }
 
     /**
@@ -4031,9 +3944,9 @@ public final class P3ApiGrpc {
      *    - grpc.Internal: an error was returned while trying to retrieve the entity
      * </pre>
      */
-    public void listCustomDataKeys(com.tcn.cloud.api.api.v0alpha.ListCustomDataKeysReq request,
+    default void listCustomDataKeys(com.tcn.cloud.api.api.v0alpha.ListCustomDataKeysReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCustomDataKeysRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListCustomDataKeysMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCustomDataKeysMethod(), responseObserver);
     }
 
     /**
@@ -4047,9 +3960,9 @@ public final class P3ApiGrpc {
      *    - grpc.Internal: error creating custom data key
      * </pre>
      */
-    public void createCustomDataKey(com.tcn.cloud.api.api.v0alpha.CreateCustomDataKeyReq request,
+    default void createCustomDataKey(com.tcn.cloud.api.api.v0alpha.CreateCustomDataKeyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateCustomDataKeyRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateCustomDataKeyMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCustomDataKeyMethod(), responseObserver);
     }
 
     /**
@@ -4063,9 +3976,9 @@ public final class P3ApiGrpc {
      *    - grpc.Internal: an error occurred while trying to remove the custom data key.
      * </pre>
      */
-    public void deleteCustomDataKey(com.tcn.cloud.api.api.v0alpha.DeleteCustomDataKeyReq request,
+    default void deleteCustomDataKey(com.tcn.cloud.api.api.v0alpha.DeleteCustomDataKeyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteCustomDataKeyRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteCustomDataKeyMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCustomDataKeyMethod(), responseObserver);
     }
 
     /**
@@ -4080,9 +3993,9 @@ public final class P3ApiGrpc {
      *    - grpc.NotFound: no matching custom data key found
      * </pre>
      */
-    public void updateCustomDataKey(com.tcn.cloud.api.api.v0alpha.UpdateCustomDataKeyReq request,
+    default void updateCustomDataKey(com.tcn.cloud.api.api.v0alpha.UpdateCustomDataKeyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateCustomDataKeyRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateCustomDataKeyMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCustomDataKeyMethod(), responseObserver);
     }
 
     /**
@@ -4092,9 +4005,9 @@ public final class P3ApiGrpc {
      *   CUSTOMER_SUPPORT
      * </pre>
      */
-    public void getActivityLogHistories(com.tcn.cloud.api.api.v0alpha.GetActivityLogHistoryReq request,
+    default void getActivityLogHistories(com.tcn.cloud.api.api.v0alpha.GetActivityLogHistoryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetActivityLogHistoryRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetActivityLogHistoriesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetActivityLogHistoriesMethod(), responseObserver);
     }
 
     /**
@@ -4102,9 +4015,9 @@ public final class P3ApiGrpc {
      * List agent and queue table template properties by client sid
      * </pre>
      */
-    public void listTableTemplateProperties(com.tcn.cloud.api.api.v0alpha.ListTableTemplatePropertiesReq request,
+    default void listTableTemplateProperties(com.tcn.cloud.api.api.v0alpha.ListTableTemplatePropertiesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListTableTemplatePropertiesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListTableTemplatePropertiesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTableTemplatePropertiesMethod(), responseObserver);
     }
 
     /**
@@ -4112,9 +4025,9 @@ public final class P3ApiGrpc {
      * List agent skills filters by client sid
      * </pre>
      */
-    public void listAgentSkillsFilters(com.tcn.cloud.api.api.v0alpha.ListAgentSkillsFiltersReq request,
+    default void listAgentSkillsFilters(com.tcn.cloud.api.api.v0alpha.ListAgentSkillsFiltersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentSkillsFiltersRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAgentSkillsFiltersMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentSkillsFiltersMethod(), responseObserver);
     }
 
     /**
@@ -4122,9 +4035,9 @@ public final class P3ApiGrpc {
      * List Schedule Rules
      * </pre>
      */
-    public void listScheduleRules(com.tcn.cloud.api.api.v0alpha.ListScheduleRulesRequest request,
+    default void listScheduleRules(com.tcn.cloud.api.api.v0alpha.ListScheduleRulesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListScheduleRulesResult> responseObserver) {
-      asyncUnimplementedUnaryCall(getListScheduleRulesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListScheduleRulesMethod(), responseObserver);
     }
 
     /**
@@ -4132,9 +4045,9 @@ public final class P3ApiGrpc {
      * List custom report filters by client sid
      * </pre>
      */
-    public void listCustomReportFilters(com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersReq request,
+    default void listCustomReportFilters(com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListCustomReportFiltersMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCustomReportFiltersMethod(), responseObserver);
     }
 
     /**
@@ -4142,704 +4055,36 @@ public final class P3ApiGrpc {
      * List sms numbers by client sid
      * </pre>
      */
-    public void listSmsNumbers(com.tcn.cloud.api.api.v0alpha.ListSmsNumbersReq request,
+    default void listSmsNumbers(com.tcn.cloud.api.api.v0alpha.ListSmsNumbersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsNumbersRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListSmsNumbersMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getGetAgentHuntGroupMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetAgentHuntGroupReq,
-                com.tcn.cloud.api.api.v0alpha.HuntGroup>(
-                  this, METHODID_GET_AGENT_HUNT_GROUP)))
-          .addMethod(
-            getGetAgentSessionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetAgentSessionReq,
-                com.tcn.cloud.api.api.v0alpha.AgentSession>(
-                  this, METHODID_GET_AGENT_SESSION)))
-          .addMethod(
-            getGetAgentSkillsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetAgentSkillsReq,
-                com.tcn.cloud.api.api.v0alpha.GetAgentSkillsRes>(
-                  this, METHODID_GET_AGENT_SKILLS)))
-          .addMethod(
-            getCreateAgentSkillMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.CreateAgentSkillReq,
-                com.tcn.cloud.api.api.v0alpha.CreateAgentSkillRes>(
-                  this, METHODID_CREATE_AGENT_SKILL)))
-          .addMethod(
-            getUpdateAgentSkillMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillReq,
-                com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillRes>(
-                  this, METHODID_UPDATE_AGENT_SKILL)))
-          .addMethod(
-            getDeleteAgentSkillMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.DeleteAgentSkillReq,
-                com.tcn.cloud.api.api.v0alpha.DeleteAgentSkillRes>(
-                  this, METHODID_DELETE_AGENT_SKILL)))
-          .addMethod(
-            getListSkillsForCurrentAgentMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListSkillsForCurrentAgentReq,
-                com.tcn.cloud.api.api.v0alpha.ListSkillsForCurrentAgentRes>(
-                  this, METHODID_LIST_SKILLS_FOR_CURRENT_AGENT)))
-          .addMethod(
-            getListSkillsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListSkillsReq,
-                com.tcn.cloud.api.api.v0alpha.ListSkillsRes>(
-                  this, METHODID_LIST_SKILLS)))
-          .addMethod(
-            getUpdateAgentSkillsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsReq,
-                com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsRes>(
-                  this, METHODID_UPDATE_AGENT_SKILLS)))
-          .addMethod(
-            getGetCurrentAgentMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetCurrentAgentReq,
-                com.tcn.cloud.api.api.v0alpha.Agent>(
-                  this, METHODID_GET_CURRENT_AGENT)))
-          .addMethod(
-            getGetClientInfoDataMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetClientInfoDataReq,
-                com.tcn.cloud.api.api.v0alpha.GetClientInfoDataRes>(
-                  this, METHODID_GET_CLIENT_INFO_DATA)))
-          .addMethod(
-            getGetClientInfoDisplayTemplateMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateReq,
-                com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateRes>(
-                  this, METHODID_GET_CLIENT_INFO_DISPLAY_TEMPLATE)))
-          .addMethod(
-            getListAgentStatisticsDataMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsDataReq,
-                com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsDataRes>(
-                  this, METHODID_LIST_AGENT_STATISTICS_DATA)))
-          .addMethod(
-            getListPBXExtensionsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsReq,
-                com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes>(
-                  this, METHODID_LIST_PBXEXTENSIONS)))
-          .addMethod(
-            getListAgentExtensionsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListAgentExtensionsReq,
-                com.tcn.cloud.api.api.v0alpha.ListAgentExtensionsRes>(
-                  this, METHODID_LIST_AGENT_EXTENSIONS)))
-          .addMethod(
-            getListHuntGroupExtensionsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListHuntGroupExtensionsReq,
-                com.tcn.cloud.api.api.v0alpha.ListHuntGroupExtensionsRes>(
-                  this, METHODID_LIST_HUNT_GROUP_EXTENSIONS)))
-          .addMethod(
-            getCreateExtensionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.CreateExtensionReq,
-                com.tcn.cloud.api.api.v0alpha.CreateExtensionRes>(
-                  this, METHODID_CREATE_EXTENSION)))
-          .addMethod(
-            getDeleteExtensionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.DeleteExtensionReq,
-                com.tcn.cloud.api.api.v0alpha.DeleteExtensionRes>(
-                  this, METHODID_DELETE_EXTENSION)))
-          .addMethod(
-            getUpdateExtensionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.UpdateExtensionReq,
-                com.tcn.cloud.api.api.v0alpha.UpdateExtensionRes>(
-                  this, METHODID_UPDATE_EXTENSION)))
-          .addMethod(
-            getUpdatePBXExtensionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.UpdatePBXExtensionReq,
-                com.tcn.cloud.api.api.v0alpha.UpdatePBXExtensionRes>(
-                  this, METHODID_UPDATE_PBXEXTENSION)))
-          .addMethod(
-            getCreateDNCLNumbersMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.CreateDNCLNumbersReq,
-                com.tcn.cloud.api.api.v0alpha.CreateDNCLNumbersRes>(
-                  this, METHODID_CREATE_DNCLNUMBERS)))
-          .addMethod(
-            getGetScriptOrResponsesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetScriptOrResponsesReq,
-                com.tcn.cloud.api.api.v0alpha.GetScriptOrResponsesRes>(
-                  this, METHODID_GET_SCRIPT_OR_RESPONSES)))
-          .addMethod(
-            getGetHuntGroupAgentSettingsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetHuntGroupAgentSettingsReq,
-                com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings>(
-                  this, METHODID_GET_HUNT_GROUP_AGENT_SETTINGS)))
-          .addMethod(
-            getListHuntGroupWebLinksMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksReq,
-                com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksRes>(
-                  this, METHODID_LIST_HUNT_GROUP_WEB_LINKS)))
-          .addMethod(
-            getGetHuntGroupPauseCodesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetHuntGroupPauseCodesReq,
-                com.tcn.cloud.api.api.v0alpha.GetHuntGroupPauseCodesRes>(
-                  this, METHODID_GET_HUNT_GROUP_PAUSE_CODES)))
-          .addMethod(
-            getListAgentCallHistoryMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListAgentCallHistoryReq,
-                com.tcn.cloud.api.api.v0alpha.ListAgentCallHistoryRes>(
-                  this, METHODID_LIST_AGENT_CALL_HISTORY)))
-          .addMethod(
-            getListClientPhoneBookEntriesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListClientPhoneBookEntriesReq,
-                com.tcn.cloud.api.api.v0alpha.ListClientPhoneBookEntriesRes>(
-                  this, METHODID_LIST_CLIENT_PHONE_BOOK_ENTRIES)))
-          .addMethod(
-            getListHuntGroupPhoneBookEntriesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListHuntGroupPhoneBookEntriesReq,
-                com.tcn.cloud.api.api.v0alpha.ListHuntGroupPhoneBookEntriesRes>(
-                  this, METHODID_LIST_HUNT_GROUP_PHONE_BOOK_ENTRIES)))
-          .addMethod(
-            getCreatePhoneBookEntryMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.CreatePhoneBookEntryReq,
-                com.tcn.cloud.api.api.v0alpha.CreatePhoneBookEntryRes>(
-                  this, METHODID_CREATE_PHONE_BOOK_ENTRY)))
-          .addMethod(
-            getUpdatePhoneBookEntryMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.UpdatePhoneBookEntryReq,
-                com.tcn.cloud.api.api.v0alpha.UpdatePhoneBookEntryRes>(
-                  this, METHODID_UPDATE_PHONE_BOOK_ENTRY)))
-          .addMethod(
-            getDeletePhoneBookEntryMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.DeletePhoneBookEntryReq,
-                com.tcn.cloud.api.api.v0alpha.DeletePhoneBookEntryRes>(
-                  this, METHODID_DELETE_PHONE_BOOK_ENTRY)))
-          .addMethod(
-            getListPhoneBooksMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListPhoneBooksReq,
-                com.tcn.cloud.api.api.v0alpha.ListPhoneBooksRes>(
-                  this, METHODID_LIST_PHONE_BOOKS)))
-          .addMethod(
-            getListAgentTriggersMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListAgentTriggersReq,
-                com.tcn.cloud.api.api.v0alpha.ListAgentTriggersRes>(
-                  this, METHODID_LIST_AGENT_TRIGGERS)))
-          .addMethod(
-            getGetCampaignCompletionStatusMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusReq,
-                com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes>(
-                  this, METHODID_GET_CAMPAIGN_COMPLETION_STATUS)))
-          .addMethod(
-            getGetLostPeerInfoMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoReq,
-                com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoRes>(
-                  this, METHODID_GET_LOST_PEER_INFO)))
-          .addMethod(
-            getGetDispositionKeysMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetDispositionKeysReq,
-                com.tcn.cloud.api.api.v0alpha.GetDispositionKeysRes>(
-                  this, METHODID_GET_DISPOSITION_KEYS)))
-          .addMethod(
-            getGetReadyAgentsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetReadyAgentsReq,
-                com.tcn.cloud.api.api.v0alpha.GetReadyAgentsRes>(
-                  this, METHODID_GET_READY_AGENTS)))
-          .addMethod(
-            getListAgentQueueAndOnHoldCallDataMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataReq,
-                com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataRes>(
-                  this, METHODID_LIST_AGENT_QUEUE_AND_ON_HOLD_CALL_DATA)))
-          .addMethod(
-            getSaveAgentCallResponsesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.SaveAgentCallResponsesReq,
-                com.tcn.cloud.api.api.v0alpha.SaveAgentCallResponsesRes>(
-                  this, METHODID_SAVE_AGENT_CALL_RESPONSES)))
-          .addMethod(
-            getListAgentTransferOptionsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListAgentTransferOptionsReq,
-                com.tcn.cloud.api.api.v0alpha.ListAgentTransferOptionsRes>(
-                  this, METHODID_LIST_AGENT_TRANSFER_OPTIONS)))
-          .addMethod(
-            getUpdateAgentCallResponseValueMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.UpdateAgentCallResponseValueReq,
-                com.tcn.cloud.api.api.v0alpha.UpdateAgentCallResponseValueRes>(
-                  this, METHODID_UPDATE_AGENT_CALL_RESPONSE_VALUE)))
-          .addMethod(
-            getGetIntercomPeerInfoMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetIntercomPeerInfoReq,
-                com.tcn.cloud.api.api.v0alpha.GetIntercomPeerInfoRes>(
-                  this, METHODID_GET_INTERCOM_PEER_INFO)))
-          .addMethod(
-            getListOrgResponseEvaluatorsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListOrgResponseEvaluatorsReq,
-                com.tcn.cloud.api.api.v0alpha.ListOrgResponseEvaluatorsRes>(
-                  this, METHODID_LIST_ORG_RESPONSE_EVALUATORS)))
-          .addMethod(
-            getGetQueueConfigurationOptionsArrayMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetQueueConfigurationOptionsArrayReq,
-                com.tcn.cloud.api.api.v0alpha.GetQueueConfigurationOptionsArrayRes>(
-                  this, METHODID_GET_QUEUE_CONFIGURATION_OPTIONS_ARRAY)))
-          .addMethod(
-            getGetConditionalDNCLRulesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetConditionalDNCLRulesReq,
-                com.tcn.cloud.api.api.v0alpha.GetConditionalDNCLRulesRes>(
-                  this, METHODID_GET_CONDITIONAL_DNCLRULES)))
-          .addMethod(
-            getManualDialStartMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ManualDialStartReq,
-                com.tcn.cloud.api.api.v0alpha.ManualDialStartRes>(
-                  this, METHODID_MANUAL_DIAL_START)))
-          .addMethod(
-            getGetExtendedCallHistoriesMethod(),
-            asyncServerStreamingCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryReq,
-                com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryRes>(
-                  this, METHODID_GET_EXTENDED_CALL_HISTORIES)))
-          .addMethod(
-            getListWhiteListPhoneBooksMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListWhiteListPhoneBooksReq,
-                com.tcn.cloud.api.api.v0alpha.ListWhiteListPhoneBooksRes>(
-                  this, METHODID_LIST_WHITE_LIST_PHONE_BOOKS)))
-          .addMethod(
-            getDownloadCallRecordingMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.DownloadCallRecordingReq,
-                com.tcn.cloud.api.api.v0alpha.DownloadRecordingRes>(
-                  this, METHODID_DOWNLOAD_CALL_RECORDING)))
-          .addMethod(
-            getDownloadCallRecordingsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.DownloadCallRecordingsReq,
-                com.tcn.cloud.api.api.v0alpha.DownloadRecordingRes>(
-                  this, METHODID_DOWNLOAD_CALL_RECORDINGS)))
-          .addMethod(
-            getPlacePreviewDialCallMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.PlacePreviewDialCallReq,
-                com.tcn.cloud.api.api.v0alpha.PlacePreviewDialCallRes>(
-                  this, METHODID_PLACE_PREVIEW_DIAL_CALL)))
-          .addMethod(
-            getCancelPreviewDialCallMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.CancelPreviewDialCallReq,
-                com.tcn.cloud.api.api.v0alpha.CancelPreviewDialCallRes>(
-                  this, METHODID_CANCEL_PREVIEW_DIAL_CALL)))
-          .addMethod(
-            getUpdateTaskStatusMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.UpdateTaskStatusReq,
-                com.tcn.cloud.api.api.v0alpha.Nil>(
-                  this, METHODID_UPDATE_TASK_STATUS)))
-          .addMethod(
-            getListCallbackRoutingAgentsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingAgentsReq,
-                com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingAgentsRes>(
-                  this, METHODID_LIST_CALLBACK_ROUTING_AGENTS)))
-          .addMethod(
-            getListCallbackRoutingSkillsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingSkillsReq,
-                com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingSkillsRes>(
-                  this, METHODID_LIST_CALLBACK_ROUTING_SKILLS)))
-          .addMethod(
-            getHandleRecordingDelayMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.HandleRecordingDelayReq,
-                com.tcn.cloud.api.api.v0alpha.HandleRecordingDelayRes>(
-                  this, METHODID_HANDLE_RECORDING_DELAY)))
-          .addMethod(
-            getUpdateAgentAssignedHuntGroupMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.UpdateAgentAssignedHuntGroupReq,
-                com.tcn.cloud.api.api.v0alpha.UpdateAgentAssignedHuntGroupRes>(
-                  this, METHODID_UPDATE_AGENT_ASSIGNED_HUNT_GROUP)))
-          .addMethod(
-            getGetCallDataMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetCallDataReq,
-                com.tcn.cloud.api.api.v0alpha.GetCallDataRes>(
-                  this, METHODID_GET_CALL_DATA)))
-          .addMethod(
-            getListHuntGroupsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListHuntGroupsReq,
-                com.tcn.cloud.api.api.v0alpha.ListHuntGroupsRes>(
-                  this, METHODID_LIST_HUNT_GROUPS)))
-          .addMethod(
-            getListReassignmentHuntGroupsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListReassignmentHuntGroupsReq,
-                com.tcn.cloud.api.api.v0alpha.ListReassignmentHuntGroupsRes>(
-                  this, METHODID_LIST_REASSIGNMENT_HUNT_GROUPS)))
-          .addMethod(
-            getGetOrgAgentSettingsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetOrgAgentSettingsReq,
-                com.tcn.cloud.api.api.v0alpha.GetOrgAgentSettingsRes>(
-                  this, METHODID_GET_ORG_AGENT_SETTINGS)))
-          .addMethod(
-            getListCallerIdsFromBucketMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListCallerIdsFromBucketReq,
-                com.tcn.cloud.api.api.v0alpha.ListCallerIdsFromBucketRes>(
-                  this, METHODID_LIST_CALLER_IDS_FROM_BUCKET)))
-          .addMethod(
-            getSaveLastCallResponseMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.SaveLastCallResponseReq,
-                com.tcn.cloud.api.api.v0alpha.SaveLastCallResponseRes>(
-                  this, METHODID_SAVE_LAST_CALL_RESPONSE)))
-          .addMethod(
-            getListAgentCallLogsByCallSidAndTypeMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListAgentCallLogsByCallSidAndTypeReq,
-                com.tcn.cloud.api.api.v0alpha.ListAgentCallLogsByCallSidAndTypeRes>(
-                  this, METHODID_LIST_AGENT_CALL_LOGS_BY_CALL_SID_AND_TYPE)))
-          .addMethod(
-            getListAgentCallResponseValuesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListAgentCallResponseValuesReq,
-                com.tcn.cloud.api.api.v0alpha.ListAgentCallResponseValuesRes>(
-                  this, METHODID_LIST_AGENT_CALL_RESPONSE_VALUES)))
-          .addMethod(
-            getGetContactSchemaByContactGroupMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetContactSchemaByContactGroupReq,
-                com.tcn.cloud.api.api.v0alpha.ContactSchema>(
-                  this, METHODID_GET_CONTACT_SCHEMA_BY_CONTACT_GROUP)))
-          .addMethod(
-            getListContactGroupDetailsByClientSidMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListContactGroupDetailsByClientSidReq,
-                com.tcn.cloud.api.api.v0alpha.ListContactGroupDetailsByClientSidRes>(
-                  this, METHODID_LIST_CONTACT_GROUP_DETAILS_BY_CLIENT_SID)))
-          .addMethod(
-            getGetContactGroupDetailsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetContactGroupReq,
-                com.tcn.cloud.api.api.v0alpha.ContactGroup>(
-                  this, METHODID_GET_CONTACT_GROUP_DETAILS)))
-          .addMethod(
-            getGetContactGroupSizeMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetContactGroupReq,
-                com.tcn.cloud.api.api.v0alpha.GetContactGroupSizeRes>(
-                  this, METHODID_GET_CONTACT_GROUP_SIZE)))
-          .addMethod(
-            getCreateContactFieldDescriptionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionReq,
-                com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionRes>(
-                  this, METHODID_CREATE_CONTACT_FIELD_DESCRIPTION)))
-          .addMethod(
-            getDeleteContactFieldDescriptionMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.DeleteContactFieldDescriptionReq,
-                com.tcn.cloud.api.api.v0alpha.DeleteContactFieldDescriptionRes>(
-                  this, METHODID_DELETE_CONTACT_FIELD_DESCRIPTION)))
-          .addMethod(
-            getListContactFieldDescriptionsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsReq,
-                com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsRes>(
-                  this, METHODID_LIST_CONTACT_FIELD_DESCRIPTIONS)))
-          .addMethod(
-            getListContactFieldDescriptionsByCGSidMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsByCGSidReq,
-                com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsByCGSidRes>(
-                  this, METHODID_LIST_CONTACT_FIELD_DESCRIPTIONS_BY_CGSID)))
-          .addMethod(
-            getListContactImportTemplatesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListContactImportTemplatesReq,
-                com.tcn.cloud.api.api.v0alpha.ListContactImportTemplatesRes>(
-                  this, METHODID_LIST_CONTACT_IMPORT_TEMPLATES)))
-          .addMethod(
-            getUpdatePreviewRecordToFinishedMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.UpdatePreviewRecordToFinishedReq,
-                com.tcn.cloud.api.api.v0alpha.UpdatePreviewRecordToFinishedRes>(
-                  this, METHODID_UPDATE_PREVIEW_RECORD_TO_FINISHED)))
-          .addMethod(
-            getUpdateAgentHuntGroupMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.UpdateAgentHuntGroupReq,
-                com.tcn.cloud.api.api.v0alpha.UpdateAgentHuntGroupRes>(
-                  this, METHODID_UPDATE_AGENT_HUNT_GROUP)))
-          .addMethod(
-            getMultiAgentHuntGroupAssignmentMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.MultiAgentHuntGroupAssignmentReq,
-                com.tcn.cloud.api.api.v0alpha.MultiAgentHuntGroupAssignmentRes>(
-                  this, METHODID_MULTI_AGENT_HUNT_GROUP_ASSIGNMENT)))
-          .addMethod(
-            getGetAgentProfileMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetAgentProfileReq,
-                com.tcn.cloud.api.api.v0alpha.AgentProfile>(
-                  this, METHODID_GET_AGENT_PROFILE)))
-          .addMethod(
-            getRecalculateBillingMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.RecalculateBillingReq,
-                com.tcn.cloud.api.api.v0alpha.RecalculateBillingRes>(
-                  this, METHODID_RECALCULATE_BILLING)))
-          .addMethod(
-            getListOutboundBroadcastTemplateDataMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListOutboundBroadcastTemplateDataReq,
-                com.tcn.cloud.api.api.v0alpha.ListOutboundBroadcastTemplateDataRes>(
-                  this, METHODID_LIST_OUTBOUND_BROADCAST_TEMPLATE_DATA)))
-          .addMethod(
-            getMultiAgentSkillAssignmentMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.MultiAgentSkillAssignmentReq,
-                com.tcn.cloud.api.api.v0alpha.MultiAgentSkillAssignmentRes>(
-                  this, METHODID_MULTI_AGENT_SKILL_ASSIGNMENT)))
-          .addMethod(
-            getMultiAgentSkillUnassignmentMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentReq,
-                com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentRes>(
-                  this, METHODID_MULTI_AGENT_SKILL_UNASSIGNMENT)))
-          .addMethod(
-            getListMAMAgentHuntGroupsByClientSidMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListMAMAgentHuntGroupsByClientSidReq,
-                com.tcn.cloud.api.api.v0alpha.ListMAMAgentHuntGroupsByClientSidRes>(
-                  this, METHODID_LIST_MAMAGENT_HUNT_GROUPS_BY_CLIENT_SID)))
-          .addMethod(
-            getListTtsVoicesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListTtsVoicesReq,
-                com.tcn.cloud.api.api.v0alpha.ListTtsVoicesRes>(
-                  this, METHODID_LIST_TTS_VOICES)))
-          .addMethod(
-            getCreateTtsVoiceMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.CreateTtsVoiceReq,
-                com.tcn.cloud.api.api.v0alpha.CreateTtsVoiceRes>(
-                  this, METHODID_CREATE_TTS_VOICE)))
-          .addMethod(
-            getDeleteTtsVoiceMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.DeleteTtsVoiceReq,
-                com.tcn.cloud.api.api.v0alpha.DeleteTtsVoiceRes>(
-                  this, METHODID_DELETE_TTS_VOICE)))
-          .addMethod(
-            getListCustomDataKeysMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListCustomDataKeysReq,
-                com.tcn.cloud.api.api.v0alpha.ListCustomDataKeysRes>(
-                  this, METHODID_LIST_CUSTOM_DATA_KEYS)))
-          .addMethod(
-            getCreateCustomDataKeyMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.CreateCustomDataKeyReq,
-                com.tcn.cloud.api.api.v0alpha.CreateCustomDataKeyRes>(
-                  this, METHODID_CREATE_CUSTOM_DATA_KEY)))
-          .addMethod(
-            getDeleteCustomDataKeyMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.DeleteCustomDataKeyReq,
-                com.tcn.cloud.api.api.v0alpha.DeleteCustomDataKeyRes>(
-                  this, METHODID_DELETE_CUSTOM_DATA_KEY)))
-          .addMethod(
-            getUpdateCustomDataKeyMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.UpdateCustomDataKeyReq,
-                com.tcn.cloud.api.api.v0alpha.UpdateCustomDataKeyRes>(
-                  this, METHODID_UPDATE_CUSTOM_DATA_KEY)))
-          .addMethod(
-            getGetActivityLogHistoriesMethod(),
-            asyncServerStreamingCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetActivityLogHistoryReq,
-                com.tcn.cloud.api.api.v0alpha.GetActivityLogHistoryRes>(
-                  this, METHODID_GET_ACTIVITY_LOG_HISTORIES)))
-          .addMethod(
-            getListTableTemplatePropertiesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListTableTemplatePropertiesReq,
-                com.tcn.cloud.api.api.v0alpha.ListTableTemplatePropertiesRes>(
-                  this, METHODID_LIST_TABLE_TEMPLATE_PROPERTIES)))
-          .addMethod(
-            getListAgentSkillsFiltersMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListAgentSkillsFiltersReq,
-                com.tcn.cloud.api.api.v0alpha.ListAgentSkillsFiltersRes>(
-                  this, METHODID_LIST_AGENT_SKILLS_FILTERS)))
-          .addMethod(
-            getListScheduleRulesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListScheduleRulesRequest,
-                com.tcn.cloud.api.api.v0alpha.ListScheduleRulesResult>(
-                  this, METHODID_LIST_SCHEDULE_RULES)))
-          .addMethod(
-            getListCustomReportFiltersMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersReq,
-                com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersRes>(
-                  this, METHODID_LIST_CUSTOM_REPORT_FILTERS)))
-          .addMethod(
-            getListSmsNumbersMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListSmsNumbersReq,
-                com.tcn.cloud.api.api.v0alpha.ListSmsNumbersRes>(
-                  this, METHODID_LIST_SMS_NUMBERS)))
-          .build();
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSmsNumbersMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service P3Api.
    */
-  public static final class P3ApiStub extends io.grpc.stub.AbstractStub<P3ApiStub> {
-    private P3ApiStub(io.grpc.Channel channel) {
-      super(channel);
-    }
+  public static abstract class P3ApiImplBase
+      implements io.grpc.BindableService, AsyncService {
 
-    private P3ApiStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return P3ApiGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service P3Api.
+   */
+  public static final class P3ApiStub
+      extends io.grpc.stub.AbstractAsyncStub<P3ApiStub> {
+    private P3ApiStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected P3ApiStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected P3ApiStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new P3ApiStub(channel, callOptions);
     }
 
@@ -4847,7 +4092,7 @@ public final class P3ApiGrpc {
      */
     public void getAgentHuntGroup(com.tcn.cloud.api.api.v0alpha.GetAgentHuntGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.HuntGroup> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAgentHuntGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4855,7 +4100,7 @@ public final class P3ApiGrpc {
      */
     public void getAgentSession(com.tcn.cloud.api.api.v0alpha.GetAgentSessionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentSession> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAgentSessionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4874,7 +4119,7 @@ public final class P3ApiGrpc {
      */
     public void getAgentSkills(com.tcn.cloud.api.api.v0alpha.GetAgentSkillsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAgentSkillsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAgentSkillsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4887,7 +4132,7 @@ public final class P3ApiGrpc {
      */
     public void createAgentSkill(com.tcn.cloud.api.api.v0alpha.CreateAgentSkillReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateAgentSkillRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateAgentSkillMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4900,7 +4145,7 @@ public final class P3ApiGrpc {
      */
     public void updateAgentSkill(com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAgentSkillMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4913,7 +4158,7 @@ public final class P3ApiGrpc {
      */
     public void deleteAgentSkill(com.tcn.cloud.api.api.v0alpha.DeleteAgentSkillReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteAgentSkillRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteAgentSkillMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4924,7 +4169,7 @@ public final class P3ApiGrpc {
      */
     public void listSkillsForCurrentAgent(com.tcn.cloud.api.api.v0alpha.ListSkillsForCurrentAgentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSkillsForCurrentAgentRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSkillsForCurrentAgentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4937,7 +4182,7 @@ public final class P3ApiGrpc {
      */
     public void listSkills(com.tcn.cloud.api.api.v0alpha.ListSkillsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSkillsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSkillsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4951,7 +4196,7 @@ public final class P3ApiGrpc {
      */
     public void updateAgentSkills(com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAgentSkillsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4959,7 +4204,7 @@ public final class P3ApiGrpc {
      */
     public void getCurrentAgent(com.tcn.cloud.api.api.v0alpha.GetCurrentAgentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Agent> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetCurrentAgentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4967,7 +4212,7 @@ public final class P3ApiGrpc {
      */
     public void getClientInfoData(com.tcn.cloud.api.api.v0alpha.GetClientInfoDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetClientInfoDataRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetClientInfoDataMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4975,7 +4220,7 @@ public final class P3ApiGrpc {
      */
     public void getClientInfoDisplayTemplate(com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetClientInfoDisplayTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4983,7 +4228,7 @@ public final class P3ApiGrpc {
      */
     public void listAgentStatisticsData(com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsDataRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAgentStatisticsDataMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4994,7 +4239,7 @@ public final class P3ApiGrpc {
      */
     public void listPBXExtensions(com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListPBXExtensionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5009,7 +4254,7 @@ public final class P3ApiGrpc {
      */
     public void listAgentExtensions(com.tcn.cloud.api.api.v0alpha.ListAgentExtensionsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentExtensionsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAgentExtensionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5024,7 +4269,7 @@ public final class P3ApiGrpc {
      */
     public void listHuntGroupExtensions(com.tcn.cloud.api.api.v0alpha.ListHuntGroupExtensionsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListHuntGroupExtensionsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListHuntGroupExtensionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5040,7 +4285,7 @@ public final class P3ApiGrpc {
      */
     public void createExtension(com.tcn.cloud.api.api.v0alpha.CreateExtensionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateExtensionRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateExtensionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5055,7 +4300,7 @@ public final class P3ApiGrpc {
      */
     public void deleteExtension(com.tcn.cloud.api.api.v0alpha.DeleteExtensionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteExtensionRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteExtensionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5071,7 +4316,7 @@ public final class P3ApiGrpc {
      */
     public void updateExtension(com.tcn.cloud.api.api.v0alpha.UpdateExtensionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateExtensionRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateExtensionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5079,7 +4324,7 @@ public final class P3ApiGrpc {
      */
     public void updatePBXExtension(com.tcn.cloud.api.api.v0alpha.UpdatePBXExtensionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdatePBXExtensionRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdatePBXExtensionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5087,7 +4332,7 @@ public final class P3ApiGrpc {
      */
     public void createDNCLNumbers(com.tcn.cloud.api.api.v0alpha.CreateDNCLNumbersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateDNCLNumbersRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateDNCLNumbersMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5101,7 +4346,7 @@ public final class P3ApiGrpc {
      */
     public void getScriptOrResponses(com.tcn.cloud.api.api.v0alpha.GetScriptOrResponsesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetScriptOrResponsesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetScriptOrResponsesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5109,7 +4354,7 @@ public final class P3ApiGrpc {
      */
     public void getHuntGroupAgentSettings(com.tcn.cloud.api.api.v0alpha.GetHuntGroupAgentSettingsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetHuntGroupAgentSettingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5121,7 +4366,7 @@ public final class P3ApiGrpc {
      */
     public void listHuntGroupWebLinks(com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListHuntGroupWebLinksMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5129,7 +4374,7 @@ public final class P3ApiGrpc {
      */
     public void getHuntGroupPauseCodes(com.tcn.cloud.api.api.v0alpha.GetHuntGroupPauseCodesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetHuntGroupPauseCodesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetHuntGroupPauseCodesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5141,7 +4386,7 @@ public final class P3ApiGrpc {
      */
     public void listAgentCallHistory(com.tcn.cloud.api.api.v0alpha.ListAgentCallHistoryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentCallHistoryRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAgentCallHistoryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5154,7 +4399,7 @@ public final class P3ApiGrpc {
      */
     public void listClientPhoneBookEntries(com.tcn.cloud.api.api.v0alpha.ListClientPhoneBookEntriesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListClientPhoneBookEntriesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListClientPhoneBookEntriesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5167,7 +4412,7 @@ public final class P3ApiGrpc {
      */
     public void listHuntGroupPhoneBookEntries(com.tcn.cloud.api.api.v0alpha.ListHuntGroupPhoneBookEntriesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListHuntGroupPhoneBookEntriesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListHuntGroupPhoneBookEntriesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5183,7 +4428,7 @@ public final class P3ApiGrpc {
      */
     public void createPhoneBookEntry(com.tcn.cloud.api.api.v0alpha.CreatePhoneBookEntryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreatePhoneBookEntryRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreatePhoneBookEntryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5199,7 +4444,7 @@ public final class P3ApiGrpc {
      */
     public void updatePhoneBookEntry(com.tcn.cloud.api.api.v0alpha.UpdatePhoneBookEntryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdatePhoneBookEntryRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdatePhoneBookEntryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5212,7 +4457,7 @@ public final class P3ApiGrpc {
      */
     public void deletePhoneBookEntry(com.tcn.cloud.api.api.v0alpha.DeletePhoneBookEntryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeletePhoneBookEntryRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeletePhoneBookEntryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5229,7 +4474,7 @@ public final class P3ApiGrpc {
      */
     public void listPhoneBooks(com.tcn.cloud.api.api.v0alpha.ListPhoneBooksReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListPhoneBooksRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListPhoneBooksMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5237,7 +4482,7 @@ public final class P3ApiGrpc {
      */
     public void listAgentTriggers(com.tcn.cloud.api.api.v0alpha.ListAgentTriggersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentTriggersRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAgentTriggersMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5254,7 +4499,7 @@ public final class P3ApiGrpc {
      */
     public void getCampaignCompletionStatus(com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetCampaignCompletionStatusMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5271,7 +4516,7 @@ public final class P3ApiGrpc {
      */
     public void getLostPeerInfo(com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetLostPeerInfoMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5284,7 +4529,7 @@ public final class P3ApiGrpc {
      */
     public void getDispositionKeys(com.tcn.cloud.api.api.v0alpha.GetDispositionKeysReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetDispositionKeysRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetDispositionKeysMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5292,7 +4537,7 @@ public final class P3ApiGrpc {
      */
     public void getReadyAgents(com.tcn.cloud.api.api.v0alpha.GetReadyAgentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetReadyAgentsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetReadyAgentsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5310,7 +4555,7 @@ public final class P3ApiGrpc {
      */
     public void listAgentQueueAndOnHoldCallData(com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAgentQueueAndOnHoldCallDataMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5318,7 +4563,7 @@ public final class P3ApiGrpc {
      */
     public void saveAgentCallResponses(com.tcn.cloud.api.api.v0alpha.SaveAgentCallResponsesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SaveAgentCallResponsesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSaveAgentCallResponsesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5326,7 +4571,7 @@ public final class P3ApiGrpc {
      */
     public void listAgentTransferOptions(com.tcn.cloud.api.api.v0alpha.ListAgentTransferOptionsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentTransferOptionsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAgentTransferOptionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5334,7 +4579,7 @@ public final class P3ApiGrpc {
      */
     public void updateAgentCallResponseValue(com.tcn.cloud.api.api.v0alpha.UpdateAgentCallResponseValueReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentCallResponseValueRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAgentCallResponseValueMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5342,7 +4587,7 @@ public final class P3ApiGrpc {
      */
     public void getIntercomPeerInfo(com.tcn.cloud.api.api.v0alpha.GetIntercomPeerInfoReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetIntercomPeerInfoRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetIntercomPeerInfoMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5353,7 +4598,7 @@ public final class P3ApiGrpc {
      */
     public void listOrgResponseEvaluators(com.tcn.cloud.api.api.v0alpha.ListOrgResponseEvaluatorsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListOrgResponseEvaluatorsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOrgResponseEvaluatorsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5361,7 +4606,7 @@ public final class P3ApiGrpc {
      */
     public void getQueueConfigurationOptionsArray(com.tcn.cloud.api.api.v0alpha.GetQueueConfigurationOptionsArrayReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetQueueConfigurationOptionsArrayRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetQueueConfigurationOptionsArrayMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5373,7 +4618,7 @@ public final class P3ApiGrpc {
      */
     public void getConditionalDNCLRules(com.tcn.cloud.api.api.v0alpha.GetConditionalDNCLRulesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetConditionalDNCLRulesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetConditionalDNCLRulesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5381,7 +4626,7 @@ public final class P3ApiGrpc {
      */
     public void manualDialStart(com.tcn.cloud.api.api.v0alpha.ManualDialStartReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ManualDialStartRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getManualDialStartMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5389,7 +4634,7 @@ public final class P3ApiGrpc {
      */
     public void getExtendedCallHistories(com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryRes> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getGetExtendedCallHistoriesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5397,7 +4642,7 @@ public final class P3ApiGrpc {
      */
     public void listWhiteListPhoneBooks(com.tcn.cloud.api.api.v0alpha.ListWhiteListPhoneBooksReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListWhiteListPhoneBooksRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListWhiteListPhoneBooksMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5405,7 +4650,7 @@ public final class P3ApiGrpc {
      */
     public void downloadCallRecording(com.tcn.cloud.api.api.v0alpha.DownloadCallRecordingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadRecordingRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDownloadCallRecordingMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5413,7 +4658,7 @@ public final class P3ApiGrpc {
      */
     public void downloadCallRecordings(com.tcn.cloud.api.api.v0alpha.DownloadCallRecordingsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadRecordingRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDownloadCallRecordingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5421,7 +4666,7 @@ public final class P3ApiGrpc {
      */
     public void placePreviewDialCall(com.tcn.cloud.api.api.v0alpha.PlacePreviewDialCallReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PlacePreviewDialCallRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getPlacePreviewDialCallMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5429,7 +4674,7 @@ public final class P3ApiGrpc {
      */
     public void cancelPreviewDialCall(com.tcn.cloud.api.api.v0alpha.CancelPreviewDialCallReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CancelPreviewDialCallRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCancelPreviewDialCallMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5437,7 +4682,7 @@ public final class P3ApiGrpc {
      */
     public void updateTaskStatus(com.tcn.cloud.api.api.v0alpha.UpdateTaskStatusReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Nil> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateTaskStatusMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5448,7 +4693,7 @@ public final class P3ApiGrpc {
      */
     public void listCallbackRoutingAgents(com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingAgentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingAgentsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListCallbackRoutingAgentsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5456,7 +4701,7 @@ public final class P3ApiGrpc {
      */
     public void listCallbackRoutingSkills(com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingSkillsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingSkillsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListCallbackRoutingSkillsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5464,7 +4709,7 @@ public final class P3ApiGrpc {
      */
     public void handleRecordingDelay(com.tcn.cloud.api.api.v0alpha.HandleRecordingDelayReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.HandleRecordingDelayRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getHandleRecordingDelayMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5472,7 +4717,7 @@ public final class P3ApiGrpc {
      */
     public void updateAgentAssignedHuntGroup(com.tcn.cloud.api.api.v0alpha.UpdateAgentAssignedHuntGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentAssignedHuntGroupRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAgentAssignedHuntGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5480,7 +4725,7 @@ public final class P3ApiGrpc {
      */
     public void getCallData(com.tcn.cloud.api.api.v0alpha.GetCallDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetCallDataRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetCallDataMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5488,7 +4733,7 @@ public final class P3ApiGrpc {
      */
     public void listHuntGroups(com.tcn.cloud.api.api.v0alpha.ListHuntGroupsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListHuntGroupsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListHuntGroupsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5502,7 +4747,7 @@ public final class P3ApiGrpc {
      */
     public void listReassignmentHuntGroups(com.tcn.cloud.api.api.v0alpha.ListReassignmentHuntGroupsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListReassignmentHuntGroupsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListReassignmentHuntGroupsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5510,7 +4755,7 @@ public final class P3ApiGrpc {
      */
     public void getOrgAgentSettings(com.tcn.cloud.api.api.v0alpha.GetOrgAgentSettingsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetOrgAgentSettingsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetOrgAgentSettingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5522,7 +4767,7 @@ public final class P3ApiGrpc {
      */
     public void listCallerIdsFromBucket(com.tcn.cloud.api.api.v0alpha.ListCallerIdsFromBucketReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCallerIdsFromBucketRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListCallerIdsFromBucketMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5530,7 +4775,7 @@ public final class P3ApiGrpc {
      */
     public void saveLastCallResponse(com.tcn.cloud.api.api.v0alpha.SaveLastCallResponseReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SaveLastCallResponseRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSaveLastCallResponseMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5538,7 +4783,7 @@ public final class P3ApiGrpc {
      */
     public void listAgentCallLogsByCallSidAndType(com.tcn.cloud.api.api.v0alpha.ListAgentCallLogsByCallSidAndTypeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentCallLogsByCallSidAndTypeRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAgentCallLogsByCallSidAndTypeMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5550,7 +4795,7 @@ public final class P3ApiGrpc {
      */
     public void listAgentCallResponseValues(com.tcn.cloud.api.api.v0alpha.ListAgentCallResponseValuesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentCallResponseValuesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAgentCallResponseValuesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5561,7 +4806,7 @@ public final class P3ApiGrpc {
      */
     public void getContactSchemaByContactGroup(com.tcn.cloud.api.api.v0alpha.GetContactSchemaByContactGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ContactSchema> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetContactSchemaByContactGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5572,7 +4817,7 @@ public final class P3ApiGrpc {
      */
     public void listContactGroupDetailsByClientSid(com.tcn.cloud.api.api.v0alpha.ListContactGroupDetailsByClientSidReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListContactGroupDetailsByClientSidRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListContactGroupDetailsByClientSidMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5584,7 +4829,7 @@ public final class P3ApiGrpc {
      */
     public void getContactGroupDetails(com.tcn.cloud.api.api.v0alpha.GetContactGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ContactGroup> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetContactGroupDetailsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5595,7 +4840,7 @@ public final class P3ApiGrpc {
      */
     public void getContactGroupSize(com.tcn.cloud.api.api.v0alpha.GetContactGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetContactGroupSizeRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetContactGroupSizeMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5606,7 +4851,7 @@ public final class P3ApiGrpc {
      */
     public void createContactFieldDescription(com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateContactFieldDescriptionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5617,7 +4862,7 @@ public final class P3ApiGrpc {
      */
     public void deleteContactFieldDescription(com.tcn.cloud.api.api.v0alpha.DeleteContactFieldDescriptionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteContactFieldDescriptionRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteContactFieldDescriptionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5628,7 +4873,7 @@ public final class P3ApiGrpc {
      */
     public void listContactFieldDescriptions(com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListContactFieldDescriptionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5639,7 +4884,7 @@ public final class P3ApiGrpc {
      */
     public void listContactFieldDescriptionsByCGSid(com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsByCGSidReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsByCGSidRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListContactFieldDescriptionsByCGSidMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5651,7 +4896,7 @@ public final class P3ApiGrpc {
      */
     public void listContactImportTemplates(com.tcn.cloud.api.api.v0alpha.ListContactImportTemplatesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListContactImportTemplatesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListContactImportTemplatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5663,7 +4908,7 @@ public final class P3ApiGrpc {
      */
     public void updatePreviewRecordToFinished(com.tcn.cloud.api.api.v0alpha.UpdatePreviewRecordToFinishedReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdatePreviewRecordToFinishedRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdatePreviewRecordToFinishedMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5674,7 +4919,7 @@ public final class P3ApiGrpc {
      */
     public void updateAgentHuntGroup(com.tcn.cloud.api.api.v0alpha.UpdateAgentHuntGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentHuntGroupRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAgentHuntGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5690,7 +4935,7 @@ public final class P3ApiGrpc {
      */
     public void multiAgentHuntGroupAssignment(com.tcn.cloud.api.api.v0alpha.MultiAgentHuntGroupAssignmentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.MultiAgentHuntGroupAssignmentRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMultiAgentHuntGroupAssignmentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5701,7 +4946,7 @@ public final class P3ApiGrpc {
      */
     public void getAgentProfile(com.tcn.cloud.api.api.v0alpha.GetAgentProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentProfile> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAgentProfileMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5717,7 +4962,7 @@ public final class P3ApiGrpc {
      */
     public void recalculateBilling(com.tcn.cloud.api.api.v0alpha.RecalculateBillingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RecalculateBillingRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRecalculateBillingMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5733,7 +4978,7 @@ public final class P3ApiGrpc {
      */
     public void listOutboundBroadcastTemplateData(com.tcn.cloud.api.api.v0alpha.ListOutboundBroadcastTemplateDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListOutboundBroadcastTemplateDataRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOutboundBroadcastTemplateDataMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5746,7 +4991,7 @@ public final class P3ApiGrpc {
      */
     public void multiAgentSkillAssignment(com.tcn.cloud.api.api.v0alpha.MultiAgentSkillAssignmentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.MultiAgentSkillAssignmentRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMultiAgentSkillAssignmentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5762,7 +5007,7 @@ public final class P3ApiGrpc {
      */
     public void multiAgentSkillUnassignment(com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMultiAgentSkillUnassignmentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5774,7 +5019,7 @@ public final class P3ApiGrpc {
      */
     public void listMAMAgentHuntGroupsByClientSid(com.tcn.cloud.api.api.v0alpha.ListMAMAgentHuntGroupsByClientSidReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListMAMAgentHuntGroupsByClientSidRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMAMAgentHuntGroupsByClientSidMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5789,7 +5034,7 @@ public final class P3ApiGrpc {
      */
     public void listTtsVoices(com.tcn.cloud.api.api.v0alpha.ListTtsVoicesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListTtsVoicesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListTtsVoicesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5805,7 +5050,7 @@ public final class P3ApiGrpc {
      */
     public void createTtsVoice(com.tcn.cloud.api.api.v0alpha.CreateTtsVoiceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateTtsVoiceRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateTtsVoiceMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5821,7 +5066,7 @@ public final class P3ApiGrpc {
      */
     public void deleteTtsVoice(com.tcn.cloud.api.api.v0alpha.DeleteTtsVoiceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteTtsVoiceRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteTtsVoiceMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5836,7 +5081,7 @@ public final class P3ApiGrpc {
      */
     public void listCustomDataKeys(com.tcn.cloud.api.api.v0alpha.ListCustomDataKeysReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCustomDataKeysRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListCustomDataKeysMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5853,7 +5098,7 @@ public final class P3ApiGrpc {
      */
     public void createCustomDataKey(com.tcn.cloud.api.api.v0alpha.CreateCustomDataKeyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateCustomDataKeyRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateCustomDataKeyMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5870,7 +5115,7 @@ public final class P3ApiGrpc {
      */
     public void deleteCustomDataKey(com.tcn.cloud.api.api.v0alpha.DeleteCustomDataKeyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteCustomDataKeyRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteCustomDataKeyMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5888,7 +5133,7 @@ public final class P3ApiGrpc {
      */
     public void updateCustomDataKey(com.tcn.cloud.api.api.v0alpha.UpdateCustomDataKeyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateCustomDataKeyRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateCustomDataKeyMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5901,7 +5146,7 @@ public final class P3ApiGrpc {
      */
     public void getActivityLogHistories(com.tcn.cloud.api.api.v0alpha.GetActivityLogHistoryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetActivityLogHistoryRes> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getGetActivityLogHistoriesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5912,7 +5157,7 @@ public final class P3ApiGrpc {
      */
     public void listTableTemplateProperties(com.tcn.cloud.api.api.v0alpha.ListTableTemplatePropertiesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListTableTemplatePropertiesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListTableTemplatePropertiesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5923,7 +5168,7 @@ public final class P3ApiGrpc {
      */
     public void listAgentSkillsFilters(com.tcn.cloud.api.api.v0alpha.ListAgentSkillsFiltersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentSkillsFiltersRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAgentSkillsFiltersMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5934,7 +5179,7 @@ public final class P3ApiGrpc {
      */
     public void listScheduleRules(com.tcn.cloud.api.api.v0alpha.ListScheduleRulesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListScheduleRulesResult> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListScheduleRulesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5945,7 +5190,7 @@ public final class P3ApiGrpc {
      */
     public void listCustomReportFilters(com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListCustomReportFiltersMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -5956,40 +5201,38 @@ public final class P3ApiGrpc {
      */
     public void listSmsNumbers(com.tcn.cloud.api.api.v0alpha.ListSmsNumbersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsNumbersRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSmsNumbersMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service P3Api.
    */
-  public static final class P3ApiBlockingStub extends io.grpc.stub.AbstractStub<P3ApiBlockingStub> {
-    private P3ApiBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private P3ApiBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class P3ApiBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<P3ApiBlockingStub> {
+    private P3ApiBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected P3ApiBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected P3ApiBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new P3ApiBlockingStub(channel, callOptions);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.HuntGroup getAgentHuntGroup(com.tcn.cloud.api.api.v0alpha.GetAgentHuntGroupReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAgentHuntGroupMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.AgentSession getAgentSession(com.tcn.cloud.api.api.v0alpha.GetAgentSessionReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAgentSessionMethod(), getCallOptions(), request);
     }
 
@@ -6007,7 +5250,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetAgentSkillsRes getAgentSkills(com.tcn.cloud.api.api.v0alpha.GetAgentSkillsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAgentSkillsMethod(), getCallOptions(), request);
     }
 
@@ -6019,7 +5262,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateAgentSkillRes createAgentSkill(com.tcn.cloud.api.api.v0alpha.CreateAgentSkillReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateAgentSkillMethod(), getCallOptions(), request);
     }
 
@@ -6031,7 +5274,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillRes updateAgentSkill(com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAgentSkillMethod(), getCallOptions(), request);
     }
 
@@ -6043,7 +5286,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteAgentSkillRes deleteAgentSkill(com.tcn.cloud.api.api.v0alpha.DeleteAgentSkillReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteAgentSkillMethod(), getCallOptions(), request);
     }
 
@@ -6053,7 +5296,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListSkillsForCurrentAgentRes listSkillsForCurrentAgent(com.tcn.cloud.api.api.v0alpha.ListSkillsForCurrentAgentReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSkillsForCurrentAgentMethod(), getCallOptions(), request);
     }
 
@@ -6065,7 +5308,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListSkillsRes listSkills(com.tcn.cloud.api.api.v0alpha.ListSkillsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSkillsMethod(), getCallOptions(), request);
     }
 
@@ -6078,35 +5321,35 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsRes updateAgentSkills(com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAgentSkillsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.Agent getCurrentAgent(com.tcn.cloud.api.api.v0alpha.GetCurrentAgentReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetCurrentAgentMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.GetClientInfoDataRes getClientInfoData(com.tcn.cloud.api.api.v0alpha.GetClientInfoDataReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetClientInfoDataMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateRes getClientInfoDisplayTemplate(com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetClientInfoDisplayTemplateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsDataRes listAgentStatisticsData(com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsDataReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAgentStatisticsDataMethod(), getCallOptions(), request);
     }
 
@@ -6116,7 +5359,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes listPBXExtensions(com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListPBXExtensionsMethod(), getCallOptions(), request);
     }
 
@@ -6130,7 +5373,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListAgentExtensionsRes listAgentExtensions(com.tcn.cloud.api.api.v0alpha.ListAgentExtensionsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAgentExtensionsMethod(), getCallOptions(), request);
     }
 
@@ -6144,7 +5387,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListHuntGroupExtensionsRes listHuntGroupExtensions(com.tcn.cloud.api.api.v0alpha.ListHuntGroupExtensionsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListHuntGroupExtensionsMethod(), getCallOptions(), request);
     }
 
@@ -6159,7 +5402,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateExtensionRes createExtension(com.tcn.cloud.api.api.v0alpha.CreateExtensionReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateExtensionMethod(), getCallOptions(), request);
     }
 
@@ -6173,7 +5416,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteExtensionRes deleteExtension(com.tcn.cloud.api.api.v0alpha.DeleteExtensionReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteExtensionMethod(), getCallOptions(), request);
     }
 
@@ -6188,21 +5431,21 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateExtensionRes updateExtension(com.tcn.cloud.api.api.v0alpha.UpdateExtensionReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateExtensionMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.UpdatePBXExtensionRes updatePBXExtension(com.tcn.cloud.api.api.v0alpha.UpdatePBXExtensionReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdatePBXExtensionMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.CreateDNCLNumbersRes createDNCLNumbers(com.tcn.cloud.api.api.v0alpha.CreateDNCLNumbersReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateDNCLNumbersMethod(), getCallOptions(), request);
     }
 
@@ -6215,14 +5458,14 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetScriptOrResponsesRes getScriptOrResponses(com.tcn.cloud.api.api.v0alpha.GetScriptOrResponsesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetScriptOrResponsesMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings getHuntGroupAgentSettings(com.tcn.cloud.api.api.v0alpha.GetHuntGroupAgentSettingsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetHuntGroupAgentSettingsMethod(), getCallOptions(), request);
     }
 
@@ -6233,14 +5476,14 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksRes listHuntGroupWebLinks(com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListHuntGroupWebLinksMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.GetHuntGroupPauseCodesRes getHuntGroupPauseCodes(com.tcn.cloud.api.api.v0alpha.GetHuntGroupPauseCodesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetHuntGroupPauseCodesMethod(), getCallOptions(), request);
     }
 
@@ -6251,7 +5494,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListAgentCallHistoryRes listAgentCallHistory(com.tcn.cloud.api.api.v0alpha.ListAgentCallHistoryReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAgentCallHistoryMethod(), getCallOptions(), request);
     }
 
@@ -6263,7 +5506,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListClientPhoneBookEntriesRes listClientPhoneBookEntries(com.tcn.cloud.api.api.v0alpha.ListClientPhoneBookEntriesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListClientPhoneBookEntriesMethod(), getCallOptions(), request);
     }
 
@@ -6275,7 +5518,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListHuntGroupPhoneBookEntriesRes listHuntGroupPhoneBookEntries(com.tcn.cloud.api.api.v0alpha.ListHuntGroupPhoneBookEntriesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListHuntGroupPhoneBookEntriesMethod(), getCallOptions(), request);
     }
 
@@ -6290,7 +5533,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreatePhoneBookEntryRes createPhoneBookEntry(com.tcn.cloud.api.api.v0alpha.CreatePhoneBookEntryReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreatePhoneBookEntryMethod(), getCallOptions(), request);
     }
 
@@ -6305,7 +5548,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdatePhoneBookEntryRes updatePhoneBookEntry(com.tcn.cloud.api.api.v0alpha.UpdatePhoneBookEntryReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdatePhoneBookEntryMethod(), getCallOptions(), request);
     }
 
@@ -6317,7 +5560,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeletePhoneBookEntryRes deletePhoneBookEntry(com.tcn.cloud.api.api.v0alpha.DeletePhoneBookEntryReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeletePhoneBookEntryMethod(), getCallOptions(), request);
     }
 
@@ -6333,14 +5576,14 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListPhoneBooksRes listPhoneBooks(com.tcn.cloud.api.api.v0alpha.ListPhoneBooksReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListPhoneBooksMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ListAgentTriggersRes listAgentTriggers(com.tcn.cloud.api.api.v0alpha.ListAgentTriggersReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAgentTriggersMethod(), getCallOptions(), request);
     }
 
@@ -6356,7 +5599,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes getCampaignCompletionStatus(com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetCampaignCompletionStatusMethod(), getCallOptions(), request);
     }
 
@@ -6372,7 +5615,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoRes getLostPeerInfo(com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetLostPeerInfoMethod(), getCallOptions(), request);
     }
 
@@ -6384,14 +5627,14 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetDispositionKeysRes getDispositionKeys(com.tcn.cloud.api.api.v0alpha.GetDispositionKeysReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetDispositionKeysMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.GetReadyAgentsRes getReadyAgents(com.tcn.cloud.api.api.v0alpha.GetReadyAgentsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetReadyAgentsMethod(), getCallOptions(), request);
     }
 
@@ -6408,35 +5651,35 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataRes listAgentQueueAndOnHoldCallData(com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAgentQueueAndOnHoldCallDataMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.SaveAgentCallResponsesRes saveAgentCallResponses(com.tcn.cloud.api.api.v0alpha.SaveAgentCallResponsesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSaveAgentCallResponsesMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ListAgentTransferOptionsRes listAgentTransferOptions(com.tcn.cloud.api.api.v0alpha.ListAgentTransferOptionsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAgentTransferOptionsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateAgentCallResponseValueRes updateAgentCallResponseValue(com.tcn.cloud.api.api.v0alpha.UpdateAgentCallResponseValueReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAgentCallResponseValueMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.GetIntercomPeerInfoRes getIntercomPeerInfo(com.tcn.cloud.api.api.v0alpha.GetIntercomPeerInfoReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetIntercomPeerInfoMethod(), getCallOptions(), request);
     }
 
@@ -6446,14 +5689,14 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListOrgResponseEvaluatorsRes listOrgResponseEvaluators(com.tcn.cloud.api.api.v0alpha.ListOrgResponseEvaluatorsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOrgResponseEvaluatorsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.GetQueueConfigurationOptionsArrayRes getQueueConfigurationOptionsArray(com.tcn.cloud.api.api.v0alpha.GetQueueConfigurationOptionsArrayReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetQueueConfigurationOptionsArrayMethod(), getCallOptions(), request);
     }
 
@@ -6464,14 +5707,14 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetConditionalDNCLRulesRes getConditionalDNCLRules(com.tcn.cloud.api.api.v0alpha.GetConditionalDNCLRulesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetConditionalDNCLRulesMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ManualDialStartRes manualDialStart(com.tcn.cloud.api.api.v0alpha.ManualDialStartReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getManualDialStartMethod(), getCallOptions(), request);
     }
 
@@ -6479,49 +5722,49 @@ public final class P3ApiGrpc {
      */
     public java.util.Iterator<com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryRes> getExtendedCallHistories(
         com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryReq request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getGetExtendedCallHistoriesMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ListWhiteListPhoneBooksRes listWhiteListPhoneBooks(com.tcn.cloud.api.api.v0alpha.ListWhiteListPhoneBooksReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListWhiteListPhoneBooksMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.DownloadRecordingRes downloadCallRecording(com.tcn.cloud.api.api.v0alpha.DownloadCallRecordingReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDownloadCallRecordingMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.DownloadRecordingRes downloadCallRecordings(com.tcn.cloud.api.api.v0alpha.DownloadCallRecordingsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDownloadCallRecordingsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.PlacePreviewDialCallRes placePreviewDialCall(com.tcn.cloud.api.api.v0alpha.PlacePreviewDialCallReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getPlacePreviewDialCallMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.CancelPreviewDialCallRes cancelPreviewDialCall(com.tcn.cloud.api.api.v0alpha.CancelPreviewDialCallReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCancelPreviewDialCallMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.Nil updateTaskStatus(com.tcn.cloud.api.api.v0alpha.UpdateTaskStatusReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateTaskStatusMethod(), getCallOptions(), request);
     }
 
@@ -6531,42 +5774,42 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingAgentsRes listCallbackRoutingAgents(com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingAgentsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListCallbackRoutingAgentsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingSkillsRes listCallbackRoutingSkills(com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingSkillsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListCallbackRoutingSkillsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.HandleRecordingDelayRes handleRecordingDelay(com.tcn.cloud.api.api.v0alpha.HandleRecordingDelayReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getHandleRecordingDelayMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateAgentAssignedHuntGroupRes updateAgentAssignedHuntGroup(com.tcn.cloud.api.api.v0alpha.UpdateAgentAssignedHuntGroupReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAgentAssignedHuntGroupMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.GetCallDataRes getCallData(com.tcn.cloud.api.api.v0alpha.GetCallDataReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetCallDataMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ListHuntGroupsRes listHuntGroups(com.tcn.cloud.api.api.v0alpha.ListHuntGroupsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListHuntGroupsMethod(), getCallOptions(), request);
     }
 
@@ -6579,14 +5822,14 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListReassignmentHuntGroupsRes listReassignmentHuntGroups(com.tcn.cloud.api.api.v0alpha.ListReassignmentHuntGroupsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListReassignmentHuntGroupsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.GetOrgAgentSettingsRes getOrgAgentSettings(com.tcn.cloud.api.api.v0alpha.GetOrgAgentSettingsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetOrgAgentSettingsMethod(), getCallOptions(), request);
     }
 
@@ -6597,21 +5840,21 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListCallerIdsFromBucketRes listCallerIdsFromBucket(com.tcn.cloud.api.api.v0alpha.ListCallerIdsFromBucketReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListCallerIdsFromBucketMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.SaveLastCallResponseRes saveLastCallResponse(com.tcn.cloud.api.api.v0alpha.SaveLastCallResponseReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSaveLastCallResponseMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ListAgentCallLogsByCallSidAndTypeRes listAgentCallLogsByCallSidAndType(com.tcn.cloud.api.api.v0alpha.ListAgentCallLogsByCallSidAndTypeReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAgentCallLogsByCallSidAndTypeMethod(), getCallOptions(), request);
     }
 
@@ -6622,7 +5865,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListAgentCallResponseValuesRes listAgentCallResponseValues(com.tcn.cloud.api.api.v0alpha.ListAgentCallResponseValuesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAgentCallResponseValuesMethod(), getCallOptions(), request);
     }
 
@@ -6632,7 +5875,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ContactSchema getContactSchemaByContactGroup(com.tcn.cloud.api.api.v0alpha.GetContactSchemaByContactGroupReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetContactSchemaByContactGroupMethod(), getCallOptions(), request);
     }
 
@@ -6642,7 +5885,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListContactGroupDetailsByClientSidRes listContactGroupDetailsByClientSid(com.tcn.cloud.api.api.v0alpha.ListContactGroupDetailsByClientSidReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListContactGroupDetailsByClientSidMethod(), getCallOptions(), request);
     }
 
@@ -6653,7 +5896,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ContactGroup getContactGroupDetails(com.tcn.cloud.api.api.v0alpha.GetContactGroupReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetContactGroupDetailsMethod(), getCallOptions(), request);
     }
 
@@ -6663,7 +5906,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetContactGroupSizeRes getContactGroupSize(com.tcn.cloud.api.api.v0alpha.GetContactGroupReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetContactGroupSizeMethod(), getCallOptions(), request);
     }
 
@@ -6673,7 +5916,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionRes createContactFieldDescription(com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateContactFieldDescriptionMethod(), getCallOptions(), request);
     }
 
@@ -6683,7 +5926,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteContactFieldDescriptionRes deleteContactFieldDescription(com.tcn.cloud.api.api.v0alpha.DeleteContactFieldDescriptionReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteContactFieldDescriptionMethod(), getCallOptions(), request);
     }
 
@@ -6693,7 +5936,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsRes listContactFieldDescriptions(com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListContactFieldDescriptionsMethod(), getCallOptions(), request);
     }
 
@@ -6703,7 +5946,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsByCGSidRes listContactFieldDescriptionsByCGSid(com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsByCGSidReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListContactFieldDescriptionsByCGSidMethod(), getCallOptions(), request);
     }
 
@@ -6714,7 +5957,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListContactImportTemplatesRes listContactImportTemplates(com.tcn.cloud.api.api.v0alpha.ListContactImportTemplatesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListContactImportTemplatesMethod(), getCallOptions(), request);
     }
 
@@ -6725,7 +5968,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdatePreviewRecordToFinishedRes updatePreviewRecordToFinished(com.tcn.cloud.api.api.v0alpha.UpdatePreviewRecordToFinishedReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdatePreviewRecordToFinishedMethod(), getCallOptions(), request);
     }
 
@@ -6735,7 +5978,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateAgentHuntGroupRes updateAgentHuntGroup(com.tcn.cloud.api.api.v0alpha.UpdateAgentHuntGroupReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAgentHuntGroupMethod(), getCallOptions(), request);
     }
 
@@ -6750,7 +5993,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.MultiAgentHuntGroupAssignmentRes multiAgentHuntGroupAssignment(com.tcn.cloud.api.api.v0alpha.MultiAgentHuntGroupAssignmentReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMultiAgentHuntGroupAssignmentMethod(), getCallOptions(), request);
     }
 
@@ -6760,7 +6003,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.AgentProfile getAgentProfile(com.tcn.cloud.api.api.v0alpha.GetAgentProfileReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAgentProfileMethod(), getCallOptions(), request);
     }
 
@@ -6775,7 +6018,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.RecalculateBillingRes recalculateBilling(com.tcn.cloud.api.api.v0alpha.RecalculateBillingReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRecalculateBillingMethod(), getCallOptions(), request);
     }
 
@@ -6790,7 +6033,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListOutboundBroadcastTemplateDataRes listOutboundBroadcastTemplateData(com.tcn.cloud.api.api.v0alpha.ListOutboundBroadcastTemplateDataReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOutboundBroadcastTemplateDataMethod(), getCallOptions(), request);
     }
 
@@ -6802,7 +6045,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.MultiAgentSkillAssignmentRes multiAgentSkillAssignment(com.tcn.cloud.api.api.v0alpha.MultiAgentSkillAssignmentReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMultiAgentSkillAssignmentMethod(), getCallOptions(), request);
     }
 
@@ -6817,7 +6060,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentRes multiAgentSkillUnassignment(com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMultiAgentSkillUnassignmentMethod(), getCallOptions(), request);
     }
 
@@ -6828,7 +6071,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListMAMAgentHuntGroupsByClientSidRes listMAMAgentHuntGroupsByClientSid(com.tcn.cloud.api.api.v0alpha.ListMAMAgentHuntGroupsByClientSidReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMAMAgentHuntGroupsByClientSidMethod(), getCallOptions(), request);
     }
 
@@ -6842,7 +6085,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListTtsVoicesRes listTtsVoices(com.tcn.cloud.api.api.v0alpha.ListTtsVoicesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListTtsVoicesMethod(), getCallOptions(), request);
     }
 
@@ -6857,7 +6100,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateTtsVoiceRes createTtsVoice(com.tcn.cloud.api.api.v0alpha.CreateTtsVoiceReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateTtsVoiceMethod(), getCallOptions(), request);
     }
 
@@ -6872,7 +6115,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteTtsVoiceRes deleteTtsVoice(com.tcn.cloud.api.api.v0alpha.DeleteTtsVoiceReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteTtsVoiceMethod(), getCallOptions(), request);
     }
 
@@ -6886,7 +6129,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListCustomDataKeysRes listCustomDataKeys(com.tcn.cloud.api.api.v0alpha.ListCustomDataKeysReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListCustomDataKeysMethod(), getCallOptions(), request);
     }
 
@@ -6902,7 +6145,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateCustomDataKeyRes createCustomDataKey(com.tcn.cloud.api.api.v0alpha.CreateCustomDataKeyReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateCustomDataKeyMethod(), getCallOptions(), request);
     }
 
@@ -6918,7 +6161,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteCustomDataKeyRes deleteCustomDataKey(com.tcn.cloud.api.api.v0alpha.DeleteCustomDataKeyReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteCustomDataKeyMethod(), getCallOptions(), request);
     }
 
@@ -6935,7 +6178,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateCustomDataKeyRes updateCustomDataKey(com.tcn.cloud.api.api.v0alpha.UpdateCustomDataKeyReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateCustomDataKeyMethod(), getCallOptions(), request);
     }
 
@@ -6948,7 +6191,7 @@ public final class P3ApiGrpc {
      */
     public java.util.Iterator<com.tcn.cloud.api.api.v0alpha.GetActivityLogHistoryRes> getActivityLogHistories(
         com.tcn.cloud.api.api.v0alpha.GetActivityLogHistoryReq request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getGetActivityLogHistoriesMethod(), getCallOptions(), request);
     }
 
@@ -6958,7 +6201,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListTableTemplatePropertiesRes listTableTemplateProperties(com.tcn.cloud.api.api.v0alpha.ListTableTemplatePropertiesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListTableTemplatePropertiesMethod(), getCallOptions(), request);
     }
 
@@ -6968,7 +6211,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListAgentSkillsFiltersRes listAgentSkillsFilters(com.tcn.cloud.api.api.v0alpha.ListAgentSkillsFiltersReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAgentSkillsFiltersMethod(), getCallOptions(), request);
     }
 
@@ -6978,7 +6221,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListScheduleRulesResult listScheduleRules(com.tcn.cloud.api.api.v0alpha.ListScheduleRulesRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListScheduleRulesMethod(), getCallOptions(), request);
     }
 
@@ -6988,7 +6231,7 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersRes listCustomReportFilters(com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListCustomReportFiltersMethod(), getCallOptions(), request);
     }
 
@@ -6998,26 +6241,24 @@ public final class P3ApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListSmsNumbersRes listSmsNumbers(com.tcn.cloud.api.api.v0alpha.ListSmsNumbersReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSmsNumbersMethod(), getCallOptions(), request);
     }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service P3Api.
    */
-  public static final class P3ApiFutureStub extends io.grpc.stub.AbstractStub<P3ApiFutureStub> {
-    private P3ApiFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private P3ApiFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class P3ApiFutureStub
+      extends io.grpc.stub.AbstractFutureStub<P3ApiFutureStub> {
+    private P3ApiFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected P3ApiFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected P3ApiFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new P3ApiFutureStub(channel, callOptions);
     }
 
@@ -7025,7 +6266,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.HuntGroup> getAgentHuntGroup(
         com.tcn.cloud.api.api.v0alpha.GetAgentHuntGroupReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAgentHuntGroupMethod(), getCallOptions()), request);
     }
 
@@ -7033,7 +6274,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AgentSession> getAgentSession(
         com.tcn.cloud.api.api.v0alpha.GetAgentSessionReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAgentSessionMethod(), getCallOptions()), request);
     }
 
@@ -7052,7 +6293,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetAgentSkillsRes> getAgentSkills(
         com.tcn.cloud.api.api.v0alpha.GetAgentSkillsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAgentSkillsMethod(), getCallOptions()), request);
     }
 
@@ -7065,7 +6306,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateAgentSkillRes> createAgentSkill(
         com.tcn.cloud.api.api.v0alpha.CreateAgentSkillReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateAgentSkillMethod(), getCallOptions()), request);
     }
 
@@ -7078,7 +6319,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillRes> updateAgentSkill(
         com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAgentSkillMethod(), getCallOptions()), request);
     }
 
@@ -7091,7 +6332,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteAgentSkillRes> deleteAgentSkill(
         com.tcn.cloud.api.api.v0alpha.DeleteAgentSkillReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteAgentSkillMethod(), getCallOptions()), request);
     }
 
@@ -7102,7 +6343,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListSkillsForCurrentAgentRes> listSkillsForCurrentAgent(
         com.tcn.cloud.api.api.v0alpha.ListSkillsForCurrentAgentReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSkillsForCurrentAgentMethod(), getCallOptions()), request);
     }
 
@@ -7115,7 +6356,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListSkillsRes> listSkills(
         com.tcn.cloud.api.api.v0alpha.ListSkillsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSkillsMethod(), getCallOptions()), request);
     }
 
@@ -7129,7 +6370,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsRes> updateAgentSkills(
         com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAgentSkillsMethod(), getCallOptions()), request);
     }
 
@@ -7137,7 +6378,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Agent> getCurrentAgent(
         com.tcn.cloud.api.api.v0alpha.GetCurrentAgentReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetCurrentAgentMethod(), getCallOptions()), request);
     }
 
@@ -7145,7 +6386,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetClientInfoDataRes> getClientInfoData(
         com.tcn.cloud.api.api.v0alpha.GetClientInfoDataReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetClientInfoDataMethod(), getCallOptions()), request);
     }
 
@@ -7153,7 +6394,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateRes> getClientInfoDisplayTemplate(
         com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetClientInfoDisplayTemplateMethod(), getCallOptions()), request);
     }
 
@@ -7161,7 +6402,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsDataRes> listAgentStatisticsData(
         com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsDataReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAgentStatisticsDataMethod(), getCallOptions()), request);
     }
 
@@ -7172,7 +6413,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes> listPBXExtensions(
         com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListPBXExtensionsMethod(), getCallOptions()), request);
     }
 
@@ -7187,7 +6428,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListAgentExtensionsRes> listAgentExtensions(
         com.tcn.cloud.api.api.v0alpha.ListAgentExtensionsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAgentExtensionsMethod(), getCallOptions()), request);
     }
 
@@ -7202,7 +6443,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListHuntGroupExtensionsRes> listHuntGroupExtensions(
         com.tcn.cloud.api.api.v0alpha.ListHuntGroupExtensionsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListHuntGroupExtensionsMethod(), getCallOptions()), request);
     }
 
@@ -7218,7 +6459,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateExtensionRes> createExtension(
         com.tcn.cloud.api.api.v0alpha.CreateExtensionReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateExtensionMethod(), getCallOptions()), request);
     }
 
@@ -7233,7 +6474,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteExtensionRes> deleteExtension(
         com.tcn.cloud.api.api.v0alpha.DeleteExtensionReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteExtensionMethod(), getCallOptions()), request);
     }
 
@@ -7249,7 +6490,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateExtensionRes> updateExtension(
         com.tcn.cloud.api.api.v0alpha.UpdateExtensionReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateExtensionMethod(), getCallOptions()), request);
     }
 
@@ -7257,7 +6498,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdatePBXExtensionRes> updatePBXExtension(
         com.tcn.cloud.api.api.v0alpha.UpdatePBXExtensionReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdatePBXExtensionMethod(), getCallOptions()), request);
     }
 
@@ -7265,7 +6506,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateDNCLNumbersRes> createDNCLNumbers(
         com.tcn.cloud.api.api.v0alpha.CreateDNCLNumbersReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateDNCLNumbersMethod(), getCallOptions()), request);
     }
 
@@ -7279,7 +6520,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetScriptOrResponsesRes> getScriptOrResponses(
         com.tcn.cloud.api.api.v0alpha.GetScriptOrResponsesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetScriptOrResponsesMethod(), getCallOptions()), request);
     }
 
@@ -7287,7 +6528,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings> getHuntGroupAgentSettings(
         com.tcn.cloud.api.api.v0alpha.GetHuntGroupAgentSettingsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetHuntGroupAgentSettingsMethod(), getCallOptions()), request);
     }
 
@@ -7299,7 +6540,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksRes> listHuntGroupWebLinks(
         com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListHuntGroupWebLinksMethod(), getCallOptions()), request);
     }
 
@@ -7307,7 +6548,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetHuntGroupPauseCodesRes> getHuntGroupPauseCodes(
         com.tcn.cloud.api.api.v0alpha.GetHuntGroupPauseCodesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetHuntGroupPauseCodesMethod(), getCallOptions()), request);
     }
 
@@ -7319,7 +6560,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListAgentCallHistoryRes> listAgentCallHistory(
         com.tcn.cloud.api.api.v0alpha.ListAgentCallHistoryReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAgentCallHistoryMethod(), getCallOptions()), request);
     }
 
@@ -7332,7 +6573,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListClientPhoneBookEntriesRes> listClientPhoneBookEntries(
         com.tcn.cloud.api.api.v0alpha.ListClientPhoneBookEntriesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListClientPhoneBookEntriesMethod(), getCallOptions()), request);
     }
 
@@ -7345,7 +6586,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListHuntGroupPhoneBookEntriesRes> listHuntGroupPhoneBookEntries(
         com.tcn.cloud.api.api.v0alpha.ListHuntGroupPhoneBookEntriesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListHuntGroupPhoneBookEntriesMethod(), getCallOptions()), request);
     }
 
@@ -7361,7 +6602,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreatePhoneBookEntryRes> createPhoneBookEntry(
         com.tcn.cloud.api.api.v0alpha.CreatePhoneBookEntryReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreatePhoneBookEntryMethod(), getCallOptions()), request);
     }
 
@@ -7377,7 +6618,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdatePhoneBookEntryRes> updatePhoneBookEntry(
         com.tcn.cloud.api.api.v0alpha.UpdatePhoneBookEntryReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdatePhoneBookEntryMethod(), getCallOptions()), request);
     }
 
@@ -7390,7 +6631,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeletePhoneBookEntryRes> deletePhoneBookEntry(
         com.tcn.cloud.api.api.v0alpha.DeletePhoneBookEntryReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeletePhoneBookEntryMethod(), getCallOptions()), request);
     }
 
@@ -7407,7 +6648,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListPhoneBooksRes> listPhoneBooks(
         com.tcn.cloud.api.api.v0alpha.ListPhoneBooksReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListPhoneBooksMethod(), getCallOptions()), request);
     }
 
@@ -7415,7 +6656,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListAgentTriggersRes> listAgentTriggers(
         com.tcn.cloud.api.api.v0alpha.ListAgentTriggersReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAgentTriggersMethod(), getCallOptions()), request);
     }
 
@@ -7432,7 +6673,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes> getCampaignCompletionStatus(
         com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetCampaignCompletionStatusMethod(), getCallOptions()), request);
     }
 
@@ -7449,7 +6690,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoRes> getLostPeerInfo(
         com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetLostPeerInfoMethod(), getCallOptions()), request);
     }
 
@@ -7462,7 +6703,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetDispositionKeysRes> getDispositionKeys(
         com.tcn.cloud.api.api.v0alpha.GetDispositionKeysReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetDispositionKeysMethod(), getCallOptions()), request);
     }
 
@@ -7470,7 +6711,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetReadyAgentsRes> getReadyAgents(
         com.tcn.cloud.api.api.v0alpha.GetReadyAgentsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetReadyAgentsMethod(), getCallOptions()), request);
     }
 
@@ -7488,7 +6729,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataRes> listAgentQueueAndOnHoldCallData(
         com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAgentQueueAndOnHoldCallDataMethod(), getCallOptions()), request);
     }
 
@@ -7496,7 +6737,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SaveAgentCallResponsesRes> saveAgentCallResponses(
         com.tcn.cloud.api.api.v0alpha.SaveAgentCallResponsesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSaveAgentCallResponsesMethod(), getCallOptions()), request);
     }
 
@@ -7504,7 +6745,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListAgentTransferOptionsRes> listAgentTransferOptions(
         com.tcn.cloud.api.api.v0alpha.ListAgentTransferOptionsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAgentTransferOptionsMethod(), getCallOptions()), request);
     }
 
@@ -7512,7 +6753,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateAgentCallResponseValueRes> updateAgentCallResponseValue(
         com.tcn.cloud.api.api.v0alpha.UpdateAgentCallResponseValueReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAgentCallResponseValueMethod(), getCallOptions()), request);
     }
 
@@ -7520,7 +6761,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetIntercomPeerInfoRes> getIntercomPeerInfo(
         com.tcn.cloud.api.api.v0alpha.GetIntercomPeerInfoReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetIntercomPeerInfoMethod(), getCallOptions()), request);
     }
 
@@ -7531,7 +6772,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListOrgResponseEvaluatorsRes> listOrgResponseEvaluators(
         com.tcn.cloud.api.api.v0alpha.ListOrgResponseEvaluatorsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOrgResponseEvaluatorsMethod(), getCallOptions()), request);
     }
 
@@ -7539,7 +6780,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetQueueConfigurationOptionsArrayRes> getQueueConfigurationOptionsArray(
         com.tcn.cloud.api.api.v0alpha.GetQueueConfigurationOptionsArrayReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetQueueConfigurationOptionsArrayMethod(), getCallOptions()), request);
     }
 
@@ -7551,7 +6792,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetConditionalDNCLRulesRes> getConditionalDNCLRules(
         com.tcn.cloud.api.api.v0alpha.GetConditionalDNCLRulesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetConditionalDNCLRulesMethod(), getCallOptions()), request);
     }
 
@@ -7559,7 +6800,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ManualDialStartRes> manualDialStart(
         com.tcn.cloud.api.api.v0alpha.ManualDialStartReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getManualDialStartMethod(), getCallOptions()), request);
     }
 
@@ -7567,7 +6808,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListWhiteListPhoneBooksRes> listWhiteListPhoneBooks(
         com.tcn.cloud.api.api.v0alpha.ListWhiteListPhoneBooksReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListWhiteListPhoneBooksMethod(), getCallOptions()), request);
     }
 
@@ -7575,7 +6816,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DownloadRecordingRes> downloadCallRecording(
         com.tcn.cloud.api.api.v0alpha.DownloadCallRecordingReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDownloadCallRecordingMethod(), getCallOptions()), request);
     }
 
@@ -7583,7 +6824,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DownloadRecordingRes> downloadCallRecordings(
         com.tcn.cloud.api.api.v0alpha.DownloadCallRecordingsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDownloadCallRecordingsMethod(), getCallOptions()), request);
     }
 
@@ -7591,7 +6832,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.PlacePreviewDialCallRes> placePreviewDialCall(
         com.tcn.cloud.api.api.v0alpha.PlacePreviewDialCallReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getPlacePreviewDialCallMethod(), getCallOptions()), request);
     }
 
@@ -7599,7 +6840,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CancelPreviewDialCallRes> cancelPreviewDialCall(
         com.tcn.cloud.api.api.v0alpha.CancelPreviewDialCallReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCancelPreviewDialCallMethod(), getCallOptions()), request);
     }
 
@@ -7607,7 +6848,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Nil> updateTaskStatus(
         com.tcn.cloud.api.api.v0alpha.UpdateTaskStatusReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateTaskStatusMethod(), getCallOptions()), request);
     }
 
@@ -7618,7 +6859,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingAgentsRes> listCallbackRoutingAgents(
         com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingAgentsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListCallbackRoutingAgentsMethod(), getCallOptions()), request);
     }
 
@@ -7626,7 +6867,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingSkillsRes> listCallbackRoutingSkills(
         com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingSkillsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListCallbackRoutingSkillsMethod(), getCallOptions()), request);
     }
 
@@ -7634,7 +6875,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.HandleRecordingDelayRes> handleRecordingDelay(
         com.tcn.cloud.api.api.v0alpha.HandleRecordingDelayReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getHandleRecordingDelayMethod(), getCallOptions()), request);
     }
 
@@ -7642,7 +6883,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateAgentAssignedHuntGroupRes> updateAgentAssignedHuntGroup(
         com.tcn.cloud.api.api.v0alpha.UpdateAgentAssignedHuntGroupReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAgentAssignedHuntGroupMethod(), getCallOptions()), request);
     }
 
@@ -7650,7 +6891,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetCallDataRes> getCallData(
         com.tcn.cloud.api.api.v0alpha.GetCallDataReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetCallDataMethod(), getCallOptions()), request);
     }
 
@@ -7658,7 +6899,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListHuntGroupsRes> listHuntGroups(
         com.tcn.cloud.api.api.v0alpha.ListHuntGroupsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListHuntGroupsMethod(), getCallOptions()), request);
     }
 
@@ -7672,7 +6913,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListReassignmentHuntGroupsRes> listReassignmentHuntGroups(
         com.tcn.cloud.api.api.v0alpha.ListReassignmentHuntGroupsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListReassignmentHuntGroupsMethod(), getCallOptions()), request);
     }
 
@@ -7680,7 +6921,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetOrgAgentSettingsRes> getOrgAgentSettings(
         com.tcn.cloud.api.api.v0alpha.GetOrgAgentSettingsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetOrgAgentSettingsMethod(), getCallOptions()), request);
     }
 
@@ -7692,7 +6933,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListCallerIdsFromBucketRes> listCallerIdsFromBucket(
         com.tcn.cloud.api.api.v0alpha.ListCallerIdsFromBucketReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListCallerIdsFromBucketMethod(), getCallOptions()), request);
     }
 
@@ -7700,7 +6941,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SaveLastCallResponseRes> saveLastCallResponse(
         com.tcn.cloud.api.api.v0alpha.SaveLastCallResponseReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSaveLastCallResponseMethod(), getCallOptions()), request);
     }
 
@@ -7708,7 +6949,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListAgentCallLogsByCallSidAndTypeRes> listAgentCallLogsByCallSidAndType(
         com.tcn.cloud.api.api.v0alpha.ListAgentCallLogsByCallSidAndTypeReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAgentCallLogsByCallSidAndTypeMethod(), getCallOptions()), request);
     }
 
@@ -7720,7 +6961,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListAgentCallResponseValuesRes> listAgentCallResponseValues(
         com.tcn.cloud.api.api.v0alpha.ListAgentCallResponseValuesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAgentCallResponseValuesMethod(), getCallOptions()), request);
     }
 
@@ -7731,7 +6972,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ContactSchema> getContactSchemaByContactGroup(
         com.tcn.cloud.api.api.v0alpha.GetContactSchemaByContactGroupReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetContactSchemaByContactGroupMethod(), getCallOptions()), request);
     }
 
@@ -7742,7 +6983,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListContactGroupDetailsByClientSidRes> listContactGroupDetailsByClientSid(
         com.tcn.cloud.api.api.v0alpha.ListContactGroupDetailsByClientSidReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListContactGroupDetailsByClientSidMethod(), getCallOptions()), request);
     }
 
@@ -7754,7 +6995,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ContactGroup> getContactGroupDetails(
         com.tcn.cloud.api.api.v0alpha.GetContactGroupReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetContactGroupDetailsMethod(), getCallOptions()), request);
     }
 
@@ -7765,7 +7006,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetContactGroupSizeRes> getContactGroupSize(
         com.tcn.cloud.api.api.v0alpha.GetContactGroupReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetContactGroupSizeMethod(), getCallOptions()), request);
     }
 
@@ -7776,7 +7017,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionRes> createContactFieldDescription(
         com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateContactFieldDescriptionMethod(), getCallOptions()), request);
     }
 
@@ -7787,7 +7028,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteContactFieldDescriptionRes> deleteContactFieldDescription(
         com.tcn.cloud.api.api.v0alpha.DeleteContactFieldDescriptionReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteContactFieldDescriptionMethod(), getCallOptions()), request);
     }
 
@@ -7798,7 +7039,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsRes> listContactFieldDescriptions(
         com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListContactFieldDescriptionsMethod(), getCallOptions()), request);
     }
 
@@ -7809,7 +7050,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsByCGSidRes> listContactFieldDescriptionsByCGSid(
         com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsByCGSidReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListContactFieldDescriptionsByCGSidMethod(), getCallOptions()), request);
     }
 
@@ -7821,7 +7062,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListContactImportTemplatesRes> listContactImportTemplates(
         com.tcn.cloud.api.api.v0alpha.ListContactImportTemplatesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListContactImportTemplatesMethod(), getCallOptions()), request);
     }
 
@@ -7833,7 +7074,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdatePreviewRecordToFinishedRes> updatePreviewRecordToFinished(
         com.tcn.cloud.api.api.v0alpha.UpdatePreviewRecordToFinishedReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdatePreviewRecordToFinishedMethod(), getCallOptions()), request);
     }
 
@@ -7844,7 +7085,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateAgentHuntGroupRes> updateAgentHuntGroup(
         com.tcn.cloud.api.api.v0alpha.UpdateAgentHuntGroupReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAgentHuntGroupMethod(), getCallOptions()), request);
     }
 
@@ -7860,7 +7101,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.MultiAgentHuntGroupAssignmentRes> multiAgentHuntGroupAssignment(
         com.tcn.cloud.api.api.v0alpha.MultiAgentHuntGroupAssignmentReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMultiAgentHuntGroupAssignmentMethod(), getCallOptions()), request);
     }
 
@@ -7871,7 +7112,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AgentProfile> getAgentProfile(
         com.tcn.cloud.api.api.v0alpha.GetAgentProfileReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAgentProfileMethod(), getCallOptions()), request);
     }
 
@@ -7887,7 +7128,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RecalculateBillingRes> recalculateBilling(
         com.tcn.cloud.api.api.v0alpha.RecalculateBillingReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRecalculateBillingMethod(), getCallOptions()), request);
     }
 
@@ -7903,7 +7144,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListOutboundBroadcastTemplateDataRes> listOutboundBroadcastTemplateData(
         com.tcn.cloud.api.api.v0alpha.ListOutboundBroadcastTemplateDataReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOutboundBroadcastTemplateDataMethod(), getCallOptions()), request);
     }
 
@@ -7916,7 +7157,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.MultiAgentSkillAssignmentRes> multiAgentSkillAssignment(
         com.tcn.cloud.api.api.v0alpha.MultiAgentSkillAssignmentReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMultiAgentSkillAssignmentMethod(), getCallOptions()), request);
     }
 
@@ -7932,7 +7173,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentRes> multiAgentSkillUnassignment(
         com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMultiAgentSkillUnassignmentMethod(), getCallOptions()), request);
     }
 
@@ -7944,7 +7185,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListMAMAgentHuntGroupsByClientSidRes> listMAMAgentHuntGroupsByClientSid(
         com.tcn.cloud.api.api.v0alpha.ListMAMAgentHuntGroupsByClientSidReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMAMAgentHuntGroupsByClientSidMethod(), getCallOptions()), request);
     }
 
@@ -7959,7 +7200,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListTtsVoicesRes> listTtsVoices(
         com.tcn.cloud.api.api.v0alpha.ListTtsVoicesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListTtsVoicesMethod(), getCallOptions()), request);
     }
 
@@ -7975,7 +7216,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateTtsVoiceRes> createTtsVoice(
         com.tcn.cloud.api.api.v0alpha.CreateTtsVoiceReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateTtsVoiceMethod(), getCallOptions()), request);
     }
 
@@ -7991,7 +7232,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteTtsVoiceRes> deleteTtsVoice(
         com.tcn.cloud.api.api.v0alpha.DeleteTtsVoiceReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteTtsVoiceMethod(), getCallOptions()), request);
     }
 
@@ -8006,7 +7247,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListCustomDataKeysRes> listCustomDataKeys(
         com.tcn.cloud.api.api.v0alpha.ListCustomDataKeysReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListCustomDataKeysMethod(), getCallOptions()), request);
     }
 
@@ -8023,7 +7264,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateCustomDataKeyRes> createCustomDataKey(
         com.tcn.cloud.api.api.v0alpha.CreateCustomDataKeyReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateCustomDataKeyMethod(), getCallOptions()), request);
     }
 
@@ -8040,7 +7281,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteCustomDataKeyRes> deleteCustomDataKey(
         com.tcn.cloud.api.api.v0alpha.DeleteCustomDataKeyReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteCustomDataKeyMethod(), getCallOptions()), request);
     }
 
@@ -8058,7 +7299,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateCustomDataKeyRes> updateCustomDataKey(
         com.tcn.cloud.api.api.v0alpha.UpdateCustomDataKeyReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateCustomDataKeyMethod(), getCallOptions()), request);
     }
 
@@ -8069,7 +7310,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListTableTemplatePropertiesRes> listTableTemplateProperties(
         com.tcn.cloud.api.api.v0alpha.ListTableTemplatePropertiesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListTableTemplatePropertiesMethod(), getCallOptions()), request);
     }
 
@@ -8080,7 +7321,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListAgentSkillsFiltersRes> listAgentSkillsFilters(
         com.tcn.cloud.api.api.v0alpha.ListAgentSkillsFiltersReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAgentSkillsFiltersMethod(), getCallOptions()), request);
     }
 
@@ -8091,7 +7332,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListScheduleRulesResult> listScheduleRules(
         com.tcn.cloud.api.api.v0alpha.ListScheduleRulesRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListScheduleRulesMethod(), getCallOptions()), request);
     }
 
@@ -8102,7 +7343,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersRes> listCustomReportFilters(
         com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListCustomReportFiltersMethod(), getCallOptions()), request);
     }
 
@@ -8113,7 +7354,7 @@ public final class P3ApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListSmsNumbersRes> listSmsNumbers(
         com.tcn.cloud.api.api.v0alpha.ListSmsNumbersReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSmsNumbersMethod(), getCallOptions()), request);
     }
   }
@@ -8220,10 +7461,10 @@ public final class P3ApiGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final P3ApiImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(P3ApiImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -8630,6 +7871,683 @@ public final class P3ApiGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getGetAgentHuntGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetAgentHuntGroupReq,
+              com.tcn.cloud.api.api.v0alpha.HuntGroup>(
+                service, METHODID_GET_AGENT_HUNT_GROUP)))
+        .addMethod(
+          getGetAgentSessionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetAgentSessionReq,
+              com.tcn.cloud.api.api.v0alpha.AgentSession>(
+                service, METHODID_GET_AGENT_SESSION)))
+        .addMethod(
+          getGetAgentSkillsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetAgentSkillsReq,
+              com.tcn.cloud.api.api.v0alpha.GetAgentSkillsRes>(
+                service, METHODID_GET_AGENT_SKILLS)))
+        .addMethod(
+          getCreateAgentSkillMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CreateAgentSkillReq,
+              com.tcn.cloud.api.api.v0alpha.CreateAgentSkillRes>(
+                service, METHODID_CREATE_AGENT_SKILL)))
+        .addMethod(
+          getUpdateAgentSkillMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillReq,
+              com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillRes>(
+                service, METHODID_UPDATE_AGENT_SKILL)))
+        .addMethod(
+          getDeleteAgentSkillMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DeleteAgentSkillReq,
+              com.tcn.cloud.api.api.v0alpha.DeleteAgentSkillRes>(
+                service, METHODID_DELETE_AGENT_SKILL)))
+        .addMethod(
+          getListSkillsForCurrentAgentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListSkillsForCurrentAgentReq,
+              com.tcn.cloud.api.api.v0alpha.ListSkillsForCurrentAgentRes>(
+                service, METHODID_LIST_SKILLS_FOR_CURRENT_AGENT)))
+        .addMethod(
+          getListSkillsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListSkillsReq,
+              com.tcn.cloud.api.api.v0alpha.ListSkillsRes>(
+                service, METHODID_LIST_SKILLS)))
+        .addMethod(
+          getUpdateAgentSkillsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsReq,
+              com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsRes>(
+                service, METHODID_UPDATE_AGENT_SKILLS)))
+        .addMethod(
+          getGetCurrentAgentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetCurrentAgentReq,
+              com.tcn.cloud.api.api.v0alpha.Agent>(
+                service, METHODID_GET_CURRENT_AGENT)))
+        .addMethod(
+          getGetClientInfoDataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetClientInfoDataReq,
+              com.tcn.cloud.api.api.v0alpha.GetClientInfoDataRes>(
+                service, METHODID_GET_CLIENT_INFO_DATA)))
+        .addMethod(
+          getGetClientInfoDisplayTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateReq,
+              com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateRes>(
+                service, METHODID_GET_CLIENT_INFO_DISPLAY_TEMPLATE)))
+        .addMethod(
+          getListAgentStatisticsDataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsDataReq,
+              com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsDataRes>(
+                service, METHODID_LIST_AGENT_STATISTICS_DATA)))
+        .addMethod(
+          getListPBXExtensionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsReq,
+              com.tcn.cloud.api.api.v0alpha.ListPBXExtensionsRes>(
+                service, METHODID_LIST_PBXEXTENSIONS)))
+        .addMethod(
+          getListAgentExtensionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListAgentExtensionsReq,
+              com.tcn.cloud.api.api.v0alpha.ListAgentExtensionsRes>(
+                service, METHODID_LIST_AGENT_EXTENSIONS)))
+        .addMethod(
+          getListHuntGroupExtensionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListHuntGroupExtensionsReq,
+              com.tcn.cloud.api.api.v0alpha.ListHuntGroupExtensionsRes>(
+                service, METHODID_LIST_HUNT_GROUP_EXTENSIONS)))
+        .addMethod(
+          getCreateExtensionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CreateExtensionReq,
+              com.tcn.cloud.api.api.v0alpha.CreateExtensionRes>(
+                service, METHODID_CREATE_EXTENSION)))
+        .addMethod(
+          getDeleteExtensionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DeleteExtensionReq,
+              com.tcn.cloud.api.api.v0alpha.DeleteExtensionRes>(
+                service, METHODID_DELETE_EXTENSION)))
+        .addMethod(
+          getUpdateExtensionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdateExtensionReq,
+              com.tcn.cloud.api.api.v0alpha.UpdateExtensionRes>(
+                service, METHODID_UPDATE_EXTENSION)))
+        .addMethod(
+          getUpdatePBXExtensionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdatePBXExtensionReq,
+              com.tcn.cloud.api.api.v0alpha.UpdatePBXExtensionRes>(
+                service, METHODID_UPDATE_PBXEXTENSION)))
+        .addMethod(
+          getCreateDNCLNumbersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CreateDNCLNumbersReq,
+              com.tcn.cloud.api.api.v0alpha.CreateDNCLNumbersRes>(
+                service, METHODID_CREATE_DNCLNUMBERS)))
+        .addMethod(
+          getGetScriptOrResponsesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetScriptOrResponsesReq,
+              com.tcn.cloud.api.api.v0alpha.GetScriptOrResponsesRes>(
+                service, METHODID_GET_SCRIPT_OR_RESPONSES)))
+        .addMethod(
+          getGetHuntGroupAgentSettingsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetHuntGroupAgentSettingsReq,
+              com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings>(
+                service, METHODID_GET_HUNT_GROUP_AGENT_SETTINGS)))
+        .addMethod(
+          getListHuntGroupWebLinksMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksReq,
+              com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksRes>(
+                service, METHODID_LIST_HUNT_GROUP_WEB_LINKS)))
+        .addMethod(
+          getGetHuntGroupPauseCodesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetHuntGroupPauseCodesReq,
+              com.tcn.cloud.api.api.v0alpha.GetHuntGroupPauseCodesRes>(
+                service, METHODID_GET_HUNT_GROUP_PAUSE_CODES)))
+        .addMethod(
+          getListAgentCallHistoryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListAgentCallHistoryReq,
+              com.tcn.cloud.api.api.v0alpha.ListAgentCallHistoryRes>(
+                service, METHODID_LIST_AGENT_CALL_HISTORY)))
+        .addMethod(
+          getListClientPhoneBookEntriesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListClientPhoneBookEntriesReq,
+              com.tcn.cloud.api.api.v0alpha.ListClientPhoneBookEntriesRes>(
+                service, METHODID_LIST_CLIENT_PHONE_BOOK_ENTRIES)))
+        .addMethod(
+          getListHuntGroupPhoneBookEntriesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListHuntGroupPhoneBookEntriesReq,
+              com.tcn.cloud.api.api.v0alpha.ListHuntGroupPhoneBookEntriesRes>(
+                service, METHODID_LIST_HUNT_GROUP_PHONE_BOOK_ENTRIES)))
+        .addMethod(
+          getCreatePhoneBookEntryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CreatePhoneBookEntryReq,
+              com.tcn.cloud.api.api.v0alpha.CreatePhoneBookEntryRes>(
+                service, METHODID_CREATE_PHONE_BOOK_ENTRY)))
+        .addMethod(
+          getUpdatePhoneBookEntryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdatePhoneBookEntryReq,
+              com.tcn.cloud.api.api.v0alpha.UpdatePhoneBookEntryRes>(
+                service, METHODID_UPDATE_PHONE_BOOK_ENTRY)))
+        .addMethod(
+          getDeletePhoneBookEntryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DeletePhoneBookEntryReq,
+              com.tcn.cloud.api.api.v0alpha.DeletePhoneBookEntryRes>(
+                service, METHODID_DELETE_PHONE_BOOK_ENTRY)))
+        .addMethod(
+          getListPhoneBooksMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListPhoneBooksReq,
+              com.tcn.cloud.api.api.v0alpha.ListPhoneBooksRes>(
+                service, METHODID_LIST_PHONE_BOOKS)))
+        .addMethod(
+          getListAgentTriggersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListAgentTriggersReq,
+              com.tcn.cloud.api.api.v0alpha.ListAgentTriggersRes>(
+                service, METHODID_LIST_AGENT_TRIGGERS)))
+        .addMethod(
+          getGetCampaignCompletionStatusMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusReq,
+              com.tcn.cloud.api.api.v0alpha.GetCampaignCompletionStatusRes>(
+                service, METHODID_GET_CAMPAIGN_COMPLETION_STATUS)))
+        .addMethod(
+          getGetLostPeerInfoMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoReq,
+              com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoRes>(
+                service, METHODID_GET_LOST_PEER_INFO)))
+        .addMethod(
+          getGetDispositionKeysMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetDispositionKeysReq,
+              com.tcn.cloud.api.api.v0alpha.GetDispositionKeysRes>(
+                service, METHODID_GET_DISPOSITION_KEYS)))
+        .addMethod(
+          getGetReadyAgentsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetReadyAgentsReq,
+              com.tcn.cloud.api.api.v0alpha.GetReadyAgentsRes>(
+                service, METHODID_GET_READY_AGENTS)))
+        .addMethod(
+          getListAgentQueueAndOnHoldCallDataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataReq,
+              com.tcn.cloud.api.api.v0alpha.ListAgentQueueAndOnHoldCallDataRes>(
+                service, METHODID_LIST_AGENT_QUEUE_AND_ON_HOLD_CALL_DATA)))
+        .addMethod(
+          getSaveAgentCallResponsesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SaveAgentCallResponsesReq,
+              com.tcn.cloud.api.api.v0alpha.SaveAgentCallResponsesRes>(
+                service, METHODID_SAVE_AGENT_CALL_RESPONSES)))
+        .addMethod(
+          getListAgentTransferOptionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListAgentTransferOptionsReq,
+              com.tcn.cloud.api.api.v0alpha.ListAgentTransferOptionsRes>(
+                service, METHODID_LIST_AGENT_TRANSFER_OPTIONS)))
+        .addMethod(
+          getUpdateAgentCallResponseValueMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdateAgentCallResponseValueReq,
+              com.tcn.cloud.api.api.v0alpha.UpdateAgentCallResponseValueRes>(
+                service, METHODID_UPDATE_AGENT_CALL_RESPONSE_VALUE)))
+        .addMethod(
+          getGetIntercomPeerInfoMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetIntercomPeerInfoReq,
+              com.tcn.cloud.api.api.v0alpha.GetIntercomPeerInfoRes>(
+                service, METHODID_GET_INTERCOM_PEER_INFO)))
+        .addMethod(
+          getListOrgResponseEvaluatorsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListOrgResponseEvaluatorsReq,
+              com.tcn.cloud.api.api.v0alpha.ListOrgResponseEvaluatorsRes>(
+                service, METHODID_LIST_ORG_RESPONSE_EVALUATORS)))
+        .addMethod(
+          getGetQueueConfigurationOptionsArrayMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetQueueConfigurationOptionsArrayReq,
+              com.tcn.cloud.api.api.v0alpha.GetQueueConfigurationOptionsArrayRes>(
+                service, METHODID_GET_QUEUE_CONFIGURATION_OPTIONS_ARRAY)))
+        .addMethod(
+          getGetConditionalDNCLRulesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetConditionalDNCLRulesReq,
+              com.tcn.cloud.api.api.v0alpha.GetConditionalDNCLRulesRes>(
+                service, METHODID_GET_CONDITIONAL_DNCLRULES)))
+        .addMethod(
+          getManualDialStartMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ManualDialStartReq,
+              com.tcn.cloud.api.api.v0alpha.ManualDialStartRes>(
+                service, METHODID_MANUAL_DIAL_START)))
+        .addMethod(
+          getGetExtendedCallHistoriesMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryReq,
+              com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryRes>(
+                service, METHODID_GET_EXTENDED_CALL_HISTORIES)))
+        .addMethod(
+          getListWhiteListPhoneBooksMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListWhiteListPhoneBooksReq,
+              com.tcn.cloud.api.api.v0alpha.ListWhiteListPhoneBooksRes>(
+                service, METHODID_LIST_WHITE_LIST_PHONE_BOOKS)))
+        .addMethod(
+          getDownloadCallRecordingMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DownloadCallRecordingReq,
+              com.tcn.cloud.api.api.v0alpha.DownloadRecordingRes>(
+                service, METHODID_DOWNLOAD_CALL_RECORDING)))
+        .addMethod(
+          getDownloadCallRecordingsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DownloadCallRecordingsReq,
+              com.tcn.cloud.api.api.v0alpha.DownloadRecordingRes>(
+                service, METHODID_DOWNLOAD_CALL_RECORDINGS)))
+        .addMethod(
+          getPlacePreviewDialCallMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.PlacePreviewDialCallReq,
+              com.tcn.cloud.api.api.v0alpha.PlacePreviewDialCallRes>(
+                service, METHODID_PLACE_PREVIEW_DIAL_CALL)))
+        .addMethod(
+          getCancelPreviewDialCallMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CancelPreviewDialCallReq,
+              com.tcn.cloud.api.api.v0alpha.CancelPreviewDialCallRes>(
+                service, METHODID_CANCEL_PREVIEW_DIAL_CALL)))
+        .addMethod(
+          getUpdateTaskStatusMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdateTaskStatusReq,
+              com.tcn.cloud.api.api.v0alpha.Nil>(
+                service, METHODID_UPDATE_TASK_STATUS)))
+        .addMethod(
+          getListCallbackRoutingAgentsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingAgentsReq,
+              com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingAgentsRes>(
+                service, METHODID_LIST_CALLBACK_ROUTING_AGENTS)))
+        .addMethod(
+          getListCallbackRoutingSkillsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingSkillsReq,
+              com.tcn.cloud.api.api.v0alpha.ListCallbackRoutingSkillsRes>(
+                service, METHODID_LIST_CALLBACK_ROUTING_SKILLS)))
+        .addMethod(
+          getHandleRecordingDelayMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.HandleRecordingDelayReq,
+              com.tcn.cloud.api.api.v0alpha.HandleRecordingDelayRes>(
+                service, METHODID_HANDLE_RECORDING_DELAY)))
+        .addMethod(
+          getUpdateAgentAssignedHuntGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdateAgentAssignedHuntGroupReq,
+              com.tcn.cloud.api.api.v0alpha.UpdateAgentAssignedHuntGroupRes>(
+                service, METHODID_UPDATE_AGENT_ASSIGNED_HUNT_GROUP)))
+        .addMethod(
+          getGetCallDataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetCallDataReq,
+              com.tcn.cloud.api.api.v0alpha.GetCallDataRes>(
+                service, METHODID_GET_CALL_DATA)))
+        .addMethod(
+          getListHuntGroupsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListHuntGroupsReq,
+              com.tcn.cloud.api.api.v0alpha.ListHuntGroupsRes>(
+                service, METHODID_LIST_HUNT_GROUPS)))
+        .addMethod(
+          getListReassignmentHuntGroupsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListReassignmentHuntGroupsReq,
+              com.tcn.cloud.api.api.v0alpha.ListReassignmentHuntGroupsRes>(
+                service, METHODID_LIST_REASSIGNMENT_HUNT_GROUPS)))
+        .addMethod(
+          getGetOrgAgentSettingsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetOrgAgentSettingsReq,
+              com.tcn.cloud.api.api.v0alpha.GetOrgAgentSettingsRes>(
+                service, METHODID_GET_ORG_AGENT_SETTINGS)))
+        .addMethod(
+          getListCallerIdsFromBucketMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListCallerIdsFromBucketReq,
+              com.tcn.cloud.api.api.v0alpha.ListCallerIdsFromBucketRes>(
+                service, METHODID_LIST_CALLER_IDS_FROM_BUCKET)))
+        .addMethod(
+          getSaveLastCallResponseMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SaveLastCallResponseReq,
+              com.tcn.cloud.api.api.v0alpha.SaveLastCallResponseRes>(
+                service, METHODID_SAVE_LAST_CALL_RESPONSE)))
+        .addMethod(
+          getListAgentCallLogsByCallSidAndTypeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListAgentCallLogsByCallSidAndTypeReq,
+              com.tcn.cloud.api.api.v0alpha.ListAgentCallLogsByCallSidAndTypeRes>(
+                service, METHODID_LIST_AGENT_CALL_LOGS_BY_CALL_SID_AND_TYPE)))
+        .addMethod(
+          getListAgentCallResponseValuesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListAgentCallResponseValuesReq,
+              com.tcn.cloud.api.api.v0alpha.ListAgentCallResponseValuesRes>(
+                service, METHODID_LIST_AGENT_CALL_RESPONSE_VALUES)))
+        .addMethod(
+          getGetContactSchemaByContactGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetContactSchemaByContactGroupReq,
+              com.tcn.cloud.api.api.v0alpha.ContactSchema>(
+                service, METHODID_GET_CONTACT_SCHEMA_BY_CONTACT_GROUP)))
+        .addMethod(
+          getListContactGroupDetailsByClientSidMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListContactGroupDetailsByClientSidReq,
+              com.tcn.cloud.api.api.v0alpha.ListContactGroupDetailsByClientSidRes>(
+                service, METHODID_LIST_CONTACT_GROUP_DETAILS_BY_CLIENT_SID)))
+        .addMethod(
+          getGetContactGroupDetailsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetContactGroupReq,
+              com.tcn.cloud.api.api.v0alpha.ContactGroup>(
+                service, METHODID_GET_CONTACT_GROUP_DETAILS)))
+        .addMethod(
+          getGetContactGroupSizeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetContactGroupReq,
+              com.tcn.cloud.api.api.v0alpha.GetContactGroupSizeRes>(
+                service, METHODID_GET_CONTACT_GROUP_SIZE)))
+        .addMethod(
+          getCreateContactFieldDescriptionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionReq,
+              com.tcn.cloud.api.api.v0alpha.CreateContactFieldDescriptionRes>(
+                service, METHODID_CREATE_CONTACT_FIELD_DESCRIPTION)))
+        .addMethod(
+          getDeleteContactFieldDescriptionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DeleteContactFieldDescriptionReq,
+              com.tcn.cloud.api.api.v0alpha.DeleteContactFieldDescriptionRes>(
+                service, METHODID_DELETE_CONTACT_FIELD_DESCRIPTION)))
+        .addMethod(
+          getListContactFieldDescriptionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsReq,
+              com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsRes>(
+                service, METHODID_LIST_CONTACT_FIELD_DESCRIPTIONS)))
+        .addMethod(
+          getListContactFieldDescriptionsByCGSidMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsByCGSidReq,
+              com.tcn.cloud.api.api.v0alpha.ListContactFieldDescriptionsByCGSidRes>(
+                service, METHODID_LIST_CONTACT_FIELD_DESCRIPTIONS_BY_CGSID)))
+        .addMethod(
+          getListContactImportTemplatesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListContactImportTemplatesReq,
+              com.tcn.cloud.api.api.v0alpha.ListContactImportTemplatesRes>(
+                service, METHODID_LIST_CONTACT_IMPORT_TEMPLATES)))
+        .addMethod(
+          getUpdatePreviewRecordToFinishedMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdatePreviewRecordToFinishedReq,
+              com.tcn.cloud.api.api.v0alpha.UpdatePreviewRecordToFinishedRes>(
+                service, METHODID_UPDATE_PREVIEW_RECORD_TO_FINISHED)))
+        .addMethod(
+          getUpdateAgentHuntGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdateAgentHuntGroupReq,
+              com.tcn.cloud.api.api.v0alpha.UpdateAgentHuntGroupRes>(
+                service, METHODID_UPDATE_AGENT_HUNT_GROUP)))
+        .addMethod(
+          getMultiAgentHuntGroupAssignmentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.MultiAgentHuntGroupAssignmentReq,
+              com.tcn.cloud.api.api.v0alpha.MultiAgentHuntGroupAssignmentRes>(
+                service, METHODID_MULTI_AGENT_HUNT_GROUP_ASSIGNMENT)))
+        .addMethod(
+          getGetAgentProfileMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetAgentProfileReq,
+              com.tcn.cloud.api.api.v0alpha.AgentProfile>(
+                service, METHODID_GET_AGENT_PROFILE)))
+        .addMethod(
+          getRecalculateBillingMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.RecalculateBillingReq,
+              com.tcn.cloud.api.api.v0alpha.RecalculateBillingRes>(
+                service, METHODID_RECALCULATE_BILLING)))
+        .addMethod(
+          getListOutboundBroadcastTemplateDataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListOutboundBroadcastTemplateDataReq,
+              com.tcn.cloud.api.api.v0alpha.ListOutboundBroadcastTemplateDataRes>(
+                service, METHODID_LIST_OUTBOUND_BROADCAST_TEMPLATE_DATA)))
+        .addMethod(
+          getMultiAgentSkillAssignmentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.MultiAgentSkillAssignmentReq,
+              com.tcn.cloud.api.api.v0alpha.MultiAgentSkillAssignmentRes>(
+                service, METHODID_MULTI_AGENT_SKILL_ASSIGNMENT)))
+        .addMethod(
+          getMultiAgentSkillUnassignmentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentReq,
+              com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentRes>(
+                service, METHODID_MULTI_AGENT_SKILL_UNASSIGNMENT)))
+        .addMethod(
+          getListMAMAgentHuntGroupsByClientSidMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListMAMAgentHuntGroupsByClientSidReq,
+              com.tcn.cloud.api.api.v0alpha.ListMAMAgentHuntGroupsByClientSidRes>(
+                service, METHODID_LIST_MAMAGENT_HUNT_GROUPS_BY_CLIENT_SID)))
+        .addMethod(
+          getListTtsVoicesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListTtsVoicesReq,
+              com.tcn.cloud.api.api.v0alpha.ListTtsVoicesRes>(
+                service, METHODID_LIST_TTS_VOICES)))
+        .addMethod(
+          getCreateTtsVoiceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CreateTtsVoiceReq,
+              com.tcn.cloud.api.api.v0alpha.CreateTtsVoiceRes>(
+                service, METHODID_CREATE_TTS_VOICE)))
+        .addMethod(
+          getDeleteTtsVoiceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DeleteTtsVoiceReq,
+              com.tcn.cloud.api.api.v0alpha.DeleteTtsVoiceRes>(
+                service, METHODID_DELETE_TTS_VOICE)))
+        .addMethod(
+          getListCustomDataKeysMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListCustomDataKeysReq,
+              com.tcn.cloud.api.api.v0alpha.ListCustomDataKeysRes>(
+                service, METHODID_LIST_CUSTOM_DATA_KEYS)))
+        .addMethod(
+          getCreateCustomDataKeyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CreateCustomDataKeyReq,
+              com.tcn.cloud.api.api.v0alpha.CreateCustomDataKeyRes>(
+                service, METHODID_CREATE_CUSTOM_DATA_KEY)))
+        .addMethod(
+          getDeleteCustomDataKeyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DeleteCustomDataKeyReq,
+              com.tcn.cloud.api.api.v0alpha.DeleteCustomDataKeyRes>(
+                service, METHODID_DELETE_CUSTOM_DATA_KEY)))
+        .addMethod(
+          getUpdateCustomDataKeyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdateCustomDataKeyReq,
+              com.tcn.cloud.api.api.v0alpha.UpdateCustomDataKeyRes>(
+                service, METHODID_UPDATE_CUSTOM_DATA_KEY)))
+        .addMethod(
+          getGetActivityLogHistoriesMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetActivityLogHistoryReq,
+              com.tcn.cloud.api.api.v0alpha.GetActivityLogHistoryRes>(
+                service, METHODID_GET_ACTIVITY_LOG_HISTORIES)))
+        .addMethod(
+          getListTableTemplatePropertiesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListTableTemplatePropertiesReq,
+              com.tcn.cloud.api.api.v0alpha.ListTableTemplatePropertiesRes>(
+                service, METHODID_LIST_TABLE_TEMPLATE_PROPERTIES)))
+        .addMethod(
+          getListAgentSkillsFiltersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListAgentSkillsFiltersReq,
+              com.tcn.cloud.api.api.v0alpha.ListAgentSkillsFiltersRes>(
+                service, METHODID_LIST_AGENT_SKILLS_FILTERS)))
+        .addMethod(
+          getListScheduleRulesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListScheduleRulesRequest,
+              com.tcn.cloud.api.api.v0alpha.ListScheduleRulesResult>(
+                service, METHODID_LIST_SCHEDULE_RULES)))
+        .addMethod(
+          getListCustomReportFiltersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersReq,
+              com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersRes>(
+                service, METHODID_LIST_CUSTOM_REPORT_FILTERS)))
+        .addMethod(
+          getListSmsNumbersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListSmsNumbersReq,
+              com.tcn.cloud.api.api.v0alpha.ListSmsNumbersRes>(
+                service, METHODID_LIST_SMS_NUMBERS)))
+        .build();
   }
 
   private static abstract class P3ApiBaseDescriptorSupplier

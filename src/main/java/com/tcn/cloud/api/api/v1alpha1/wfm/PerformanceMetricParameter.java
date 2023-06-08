@@ -30,67 +30,6 @@ private static final long serialVersionUID = 0L;
     return new PerformanceMetricParameter();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private PerformanceMetricParameter(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-            int rawValue = input.readEnum();
-
-            metricType_ = rawValue;
-            break;
-          }
-          case 18: {
-            com.google.protobuf.Int64Value.Builder subBuilder = null;
-            if (serviceLevelTargetDurationSeconds_ != null) {
-              subBuilder = serviceLevelTargetDurationSeconds_.toBuilder();
-            }
-            serviceLevelTargetDurationSeconds_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(serviceLevelTargetDurationSeconds_);
-              serviceLevelTargetDurationSeconds_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_PerformanceMetricParameter_descriptor;
@@ -105,7 +44,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int METRIC_TYPE_FIELD_NUMBER = 1;
-  private int metricType_;
+  private int metricType_ = 0;
   /**
    * <pre>
    * The type of metric.
@@ -126,8 +65,7 @@ private static final long serialVersionUID = 0L;
    * @return The metricType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.PerformanceMetricType getMetricType() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.PerformanceMetricType result = com.tcn.cloud.api.api.commons.PerformanceMetricType.valueOf(metricType_);
+    com.tcn.cloud.api.api.commons.PerformanceMetricType result = com.tcn.cloud.api.api.commons.PerformanceMetricType.forNumber(metricType_);
     return result == null ? com.tcn.cloud.api.api.commons.PerformanceMetricType.UNRECOGNIZED : result;
   }
 
@@ -169,7 +107,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getServiceLevelTargetDurationSecondsOrBuilder() {
-    return getServiceLevelTargetDurationSeconds();
+    return serviceLevelTargetDurationSeconds_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : serviceLevelTargetDurationSeconds_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -192,7 +130,7 @@ private static final long serialVersionUID = 0L;
     if (serviceLevelTargetDurationSeconds_ != null) {
       output.writeMessage(2, getServiceLevelTargetDurationSeconds());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -209,7 +147,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getServiceLevelTargetDurationSeconds());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -230,7 +168,7 @@ private static final long serialVersionUID = 0L;
       if (!getServiceLevelTargetDurationSeconds()
           .equals(other.getServiceLevelTargetDurationSeconds())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -247,7 +185,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SERVICE_LEVEL_TARGET_DURATION_SECONDS_FIELD_NUMBER;
       hash = (53 * hash) + getServiceLevelTargetDurationSeconds().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -296,11 +234,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -368,28 +308,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       metricType_ = 0;
-
-      if (serviceLevelTargetDurationSecondsBuilder_ == null) {
-        serviceLevelTargetDurationSeconds_ = null;
-      } else {
-        serviceLevelTargetDurationSeconds_ = null;
+      serviceLevelTargetDurationSeconds_ = null;
+      if (serviceLevelTargetDurationSecondsBuilder_ != null) {
+        serviceLevelTargetDurationSecondsBuilder_.dispose();
         serviceLevelTargetDurationSecondsBuilder_ = null;
       }
       return this;
@@ -418,14 +352,21 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter result = new com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter(this);
-      result.metricType_ = metricType_;
-      if (serviceLevelTargetDurationSecondsBuilder_ == null) {
-        result.serviceLevelTargetDurationSeconds_ = serviceLevelTargetDurationSeconds_;
-      } else {
-        result.serviceLevelTargetDurationSeconds_ = serviceLevelTargetDurationSecondsBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.metricType_ = metricType_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.serviceLevelTargetDurationSeconds_ = serviceLevelTargetDurationSecondsBuilder_ == null
+            ? serviceLevelTargetDurationSeconds_
+            : serviceLevelTargetDurationSecondsBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -478,7 +419,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasServiceLevelTargetDurationSeconds()) {
         mergeServiceLevelTargetDurationSeconds(other.getServiceLevelTargetDurationSeconds());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -493,19 +434,45 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              metricType_ = input.readEnum();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              input.readMessage(
+                  getServiceLevelTargetDurationSecondsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private int metricType_ = 0;
     /**
@@ -529,8 +496,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMetricTypeValue(int value) {
-      
       metricType_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -544,8 +511,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.PerformanceMetricType getMetricType() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.PerformanceMetricType result = com.tcn.cloud.api.api.commons.PerformanceMetricType.valueOf(metricType_);
+      com.tcn.cloud.api.api.commons.PerformanceMetricType result = com.tcn.cloud.api.api.commons.PerformanceMetricType.forNumber(metricType_);
       return result == null ? com.tcn.cloud.api.api.commons.PerformanceMetricType.UNRECOGNIZED : result;
     }
     /**
@@ -561,7 +527,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       metricType_ = value.getNumber();
       onChanged();
       return this;
@@ -575,7 +541,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMetricType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       metricType_ = 0;
       onChanged();
       return this;
@@ -594,7 +560,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the serviceLevelTargetDurationSeconds field is set.
      */
     public boolean hasServiceLevelTargetDurationSeconds() {
-      return serviceLevelTargetDurationSecondsBuilder_ != null || serviceLevelTargetDurationSeconds_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -626,11 +592,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         serviceLevelTargetDurationSeconds_ = value;
-        onChanged();
       } else {
         serviceLevelTargetDurationSecondsBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -645,11 +611,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value.Builder builderForValue) {
       if (serviceLevelTargetDurationSecondsBuilder_ == null) {
         serviceLevelTargetDurationSeconds_ = builderForValue.build();
-        onChanged();
       } else {
         serviceLevelTargetDurationSecondsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -662,17 +628,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeServiceLevelTargetDurationSeconds(com.google.protobuf.Int64Value value) {
       if (serviceLevelTargetDurationSecondsBuilder_ == null) {
-        if (serviceLevelTargetDurationSeconds_ != null) {
-          serviceLevelTargetDurationSeconds_ =
-            com.google.protobuf.Int64Value.newBuilder(serviceLevelTargetDurationSeconds_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          serviceLevelTargetDurationSeconds_ != null &&
+          serviceLevelTargetDurationSeconds_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+          getServiceLevelTargetDurationSecondsBuilder().mergeFrom(value);
         } else {
           serviceLevelTargetDurationSeconds_ = value;
         }
-        onChanged();
       } else {
         serviceLevelTargetDurationSecondsBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -684,14 +651,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value service_level_target_duration_seconds = 2 [json_name = "serviceLevelTargetDurationSeconds"];</code>
      */
     public Builder clearServiceLevelTargetDurationSeconds() {
-      if (serviceLevelTargetDurationSecondsBuilder_ == null) {
-        serviceLevelTargetDurationSeconds_ = null;
-        onChanged();
-      } else {
-        serviceLevelTargetDurationSeconds_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      serviceLevelTargetDurationSeconds_ = null;
+      if (serviceLevelTargetDurationSecondsBuilder_ != null) {
+        serviceLevelTargetDurationSecondsBuilder_.dispose();
         serviceLevelTargetDurationSecondsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -703,7 +669,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value service_level_target_duration_seconds = 2 [json_name = "serviceLevelTargetDurationSeconds"];</code>
      */
     public com.google.protobuf.Int64Value.Builder getServiceLevelTargetDurationSecondsBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getServiceLevelTargetDurationSecondsFieldBuilder().getBuilder();
     }
@@ -777,7 +743,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new PerformanceMetricParameter(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

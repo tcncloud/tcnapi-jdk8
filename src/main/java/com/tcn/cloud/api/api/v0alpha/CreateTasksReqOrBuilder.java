@@ -42,5 +42,5 @@ public interface CreateTasksReqOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.ContactListDataSourceOrBuilder getContactListDataSourceOrBuilder();
 
-  public com.tcn.cloud.api.api.v0alpha.CreateTasksReq.DataSourceCase getDataSourceCase();
+  com.tcn.cloud.api.api.v0alpha.CreateTasksReq.DataSourceCase getDataSourceCase();
 }

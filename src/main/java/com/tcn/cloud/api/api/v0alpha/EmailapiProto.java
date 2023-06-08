@@ -1324,236 +1324,236 @@ public final class EmailapiProto {
       "R\006status\"\033\n\031CloseEmailConversationRes2\300H" +
       "\n\010EmailApi\022\225\001\n\023CreateEmailTemplate\022#.api" +
       ".v0alpha.CreateEmailTemplateReq\032#.api.v0" +
-      "alpha.CreateEmailTemplateRes\"4\202\323\344\223\002.:\001*\"" +
-      ")/api/v0alpha/emailapi/createemailtempla" +
-      "te\022\225\001\n\023UpdateEmailTemplate\022#.api.v0alpha" +
+      "alpha.CreateEmailTemplateRes\"4\202\323\344\223\002.\")/a" +
+      "pi/v0alpha/emailapi/createemailtemplate:" +
+      "\001*\022\225\001\n\023UpdateEmailTemplate\022#.api.v0alpha" +
       ".UpdateEmailTemplateReq\032#.api.v0alpha.Up" +
-      "dateEmailTemplateRes\"4\202\323\344\223\002.:\001*\")/api/v0" +
-      "alpha/emailapi/updateemailtemplate\022\275\001\n\035C" +
+      "dateEmailTemplateRes\"4\202\323\344\223\002.\")/api/v0alp" +
+      "ha/emailapi/updateemailtemplate:\001*\022\275\001\n\035C" +
       "reateEmailTemplateAttachment\022-.api.v0alp" +
       "ha.CreateEmailTemplateAttachmentReq\032-.ap" +
       "i.v0alpha.CreateEmailTemplateAttachmentR" +
-      "es\">\202\323\344\223\0028:\001*\"3/api/v0alpha/emailapi/cre" +
-      "ateemailtemplateattachment\022\311\001\n CopyEmail" +
+      "es\">\202\323\344\223\0028\"3/api/v0alpha/emailapi/create" +
+      "emailtemplateattachment:\001*\022\311\001\n CopyEmail" +
       "TemplateWithAttachments\0220.api.v0alpha.Co" +
       "pyEmailTemplateWithAttachmentsReq\0320.api." +
       "v0alpha.CopyEmailTemplateWithAttachments" +
-      "Res\"A\202\323\344\223\002;:\001*\"6/api/v0alpha/emailapi/co" +
-      "pyemailtemplatewithattachments\022\275\001\n\035Updat" +
+      "Res\"A\202\323\344\223\002;\"6/api/v0alpha/emailapi/copye" +
+      "mailtemplatewithattachments:\001*\022\275\001\n\035Updat" +
       "eEmailTemplateAttachment\022-.api.v0alpha.U" +
       "pdateEmailTemplateAttachmentReq\032-.api.v0" +
       "alpha.UpdateEmailTemplateAttachmentRes\">" +
-      "\202\323\344\223\0028:\001*\"3/api/v0alpha/emailapi/updatee" +
-      "mailtemplateattachment\022\271\001\n\035GetEmailTempl" +
+      "\202\323\344\223\0028\"3/api/v0alpha/emailapi/updateemai" +
+      "ltemplateattachment:\001*\022\271\001\n\035GetEmailTempl" +
       "ateByTemplateSid\022-.api.v0alpha.GetEmailT" +
       "emplateByTemplateSidReq\032).api.v0alpha.Em" +
-      "ailTemplateWithAttachments\">\202\323\344\223\0028:\001*\"3/" +
-      "api/v0alpha/emailapi/getemailtemplatebyt" +
-      "emplatesid\022\231\001\n\024GetAllEmailTemplates\022$.ap" +
+      "ailTemplateWithAttachments\">\202\323\344\223\0028\"3/api" +
+      "/v0alpha/emailapi/getemailtemplatebytemp" +
+      "latesid:\001*\022\231\001\n\024GetAllEmailTemplates\022$.ap" +
       "i.v0alpha.GetAllEmailTemplatesReq\032$.api." +
-      "v0alpha.GetAllEmailTemplatesRes\"5\202\323\344\223\002/:" +
-      "\001*\"*/api/v0alpha/emailapi/getallemailtem" +
-      "plates\022\224\001\n\023DeleteEmailTemplate\022#.api.v0a" +
+      "v0alpha.GetAllEmailTemplatesRes\"5\202\323\344\223\002/\"" +
+      "*/api/v0alpha/emailapi/getallemailtempla" +
+      "tes:\001*\022\224\001\n\023DeleteEmailTemplate\022#.api.v0a" +
       "lpha.DeleteEmailTemplateReq\032#.api.v0alph" +
-      "a.DeleteEmailTemplateRes\"3\202\323\344\223\002-:\001*\"(/ap" +
-      "i/v0alpha/emailapi/deletemailtemplate\022\315\001" +
+      "a.DeleteEmailTemplateRes\"3\202\323\344\223\002-\"(/api/v" +
+      "0alpha/emailapi/deletemailtemplate:\001*\022\315\001" +
       "\n!DeleteEmailTemplateAttachmentById\0221.ap" +
       "i.v0alpha.DeleteEmailTemplateAttachmentB" +
       "yIdReq\0321.api.v0alpha.DeleteEmailTemplate" +
-      "AttachmentByIdRes\"B\202\323\344\223\002<:\001*\"7/api/v0alp" +
-      "ha/emailapi/deleteemailtemplateattachmen" +
-      "tbyid\022\301\001\n\036DownloadInboundEmailAttachment" +
+      "AttachmentByIdRes\"B\202\323\344\223\002<\"7/api/v0alpha/" +
+      "emailapi/deleteemailtemplateattachmentby" +
+      "id:\001*\022\301\001\n\036DownloadInboundEmailAttachment" +
       "\022..api.v0alpha.DownloadInboundEmailAttac" +
       "hmentReq\032..api.v0alpha.DownloadInboundEm" +
-      "ailAttachmentRes\"?\202\323\344\223\0029:\001*\"4/api/v0alph" +
-      "a/emailapi/downloadinboundemailattachmen" +
-      "t\022\221\001\n\024PureEmailGroupSearch\022 .api.v0alpha" +
+      "ailAttachmentRes\"?\202\323\344\223\0029\"4/api/v0alpha/e" +
+      "mailapi/downloadinboundemailattachment:\001" +
+      "*\022\221\001\n\024PureEmailGroupSearch\022 .api.v0alpha" +
       ".EmailGroupSearchReq\032 .api.v0alpha.Email" +
-      "GroupSearchRes\"5\202\323\344\223\002/:\001*\"*/api/v0alpha/" +
-      "emailapi/pureemailgroupsearch\022\277\001\n!Manage" +
+      "GroupSearchRes\"5\202\323\344\223\002/\"*/api/v0alpha/ema" +
+      "ilapi/pureemailgroupsearch:\001*\022\277\001\n!Manage" +
       "rListNewEmailMessageReplies\022*.api.v0alph" +
       "a.ListNewEmailMessageRepliesReq\032*.api.v0" +
       "alpha.ListNewEmailMessageRepliesRes\"B\202\323\344" +
-      "\223\002<:\001*\"7/api/v0alpha/emailapi/managerlis" +
-      "tnewemailmessagereplies\022\261\001\n\032ListNewEmail" +
+      "\223\002<\"7/api/v0alpha/emailapi/managerlistne" +
+      "wemailmessagereplies:\001*\022\261\001\n\032ListNewEmail" +
       "MessageReplies\022*.api.v0alpha.ListNewEmai" +
       "lMessageRepliesReq\032*.api.v0alpha.ListNew" +
-      "EmailMessageRepliesRes\";\202\323\344\223\0025:\001*\"0/api/" +
-      "v0alpha/emailapi/listnewemailmessagerepl" +
-      "ies\022\251\001\n\030GetEmailTasksByGroupSids\022(.api.v" +
+      "EmailMessageRepliesRes\";\202\323\344\223\0025\"0/api/v0a" +
+      "lpha/emailapi/listnewemailmessagereplies" +
+      ":\001*\022\251\001\n\030GetEmailTasksByGroupSids\022(.api.v" +
       "0alpha.GetEmailTasksByGroupSidsReq\032(.api" +
       ".v0alpha.GetEmailTasksByGroupSidsRes\"9\202\323" +
-      "\344\223\0023:\001*\"./api/v0alpha/emailapi/getemailt" +
-      "asksbygroupsids\022\225\001\n\026UpdateEmailGroupStat" +
+      "\344\223\0023\"./api/v0alpha/emailapi/getemailtask" +
+      "sbygroupsids:\001*\022\225\001\n\026UpdateEmailGroupStat" +
       "us\022 .api.v0alpha.EmailGroupStatusReq\032 .a" +
-      "pi.v0alpha.EmailGroupStatusRes\"7\202\323\344\223\0021:\001" +
-      "*\",/api/v0alpha/emailapi/updateemailgrou" +
-      "pstatus\022\223\001\n\026GetEmailMessageDetails\022\037.api" +
+      "pi.v0alpha.EmailGroupStatusRes\"7\202\323\344\223\0021\"," +
+      "/api/v0alpha/emailapi/updateemailgroupst" +
+      "atus:\001*\022\223\001\n\026GetEmailMessageDetails\022\037.api" +
       ".v0alpha.GetEmailMessageReq\032\037.api.v0alph" +
-      "a.GetEmailMessageRes\"7\202\323\344\223\0021:\001*\",/api/v0" +
-      "alpha/emailapi/getemailmessagedetails\022\261\001" +
+      "a.GetEmailMessageRes\"7\202\323\344\223\0021\",/api/v0alp" +
+      "ha/emailapi/getemailmessagedetails:\001*\022\261\001" +
       "\n\032CreateInboundEmailTemplate\022*.api.v0alp" +
       "ha.CreateInboundEmailTemplateReq\032*.api.v" +
       "0alpha.CreateInboundEmailTemplateRes\";\202\323" +
-      "\344\223\0025:\001*\"0/api/v0alpha/emailapi/createinb" +
-      "oundemailtemplate\022\261\001\n\032UpdateInboundEmail" +
+      "\344\223\0025\"0/api/v0alpha/emailapi/createinboun" +
+      "demailtemplate:\001*\022\261\001\n\032UpdateInboundEmail" +
       "Template\022*.api.v0alpha.UpdateInboundEmai" +
       "lTemplateReq\032*.api.v0alpha.UpdateInbound" +
-      "EmailTemplateRes\";\202\323\344\223\0025:\001*\"0/api/v0alph" +
-      "a/emailapi/updateinboundemailtemplate\022\301\001" +
+      "EmailTemplateRes\";\202\323\344\223\0025\"0/api/v0alpha/e" +
+      "mailapi/updateinboundemailtemplate:\001*\022\301\001" +
       "\n\036DeleteInboundEmailTemplateById\022..api.v" +
       "0alpha.DeleteInboundEmailTemplateByIdReq" +
       "\032..api.v0alpha.DeleteInboundEmailTemplat" +
-      "eByIdRes\"?\202\323\344\223\0029:\001*\"4/api/v0alpha/emaila" +
-      "pi/deleteinboundemailtemplatebyid\022\255\001\n\031Li" +
+      "eByIdRes\"?\202\323\344\223\0029\"4/api/v0alpha/emailapi/" +
+      "deleteinboundemailtemplatebyid:\001*\022\255\001\n\031Li" +
       "stInboundEmailTemplates\022).api.v0alpha.Li" +
       "stInboundEmailTemplatesReq\032).api.v0alpha" +
-      ".ListInboundEmailTemplatesRes\":\202\323\344\223\0024:\001*" +
-      "\"//api/v0alpha/emailapi/listinboundemail" +
-      "templates\022\253\001\n\033GetInboundEmailTemplateByI" +
+      ".ListInboundEmailTemplatesRes\":\202\323\344\223\0024\"//" +
+      "api/v0alpha/emailapi/listinboundemailtem" +
+      "plates:\001*\022\253\001\n\033GetInboundEmailTemplateByI" +
       "d\022+.api.v0alpha.GetInboundEmailTemplateB" +
       "yIdReq\032!.api.v0alpha.InboundEmailTemplat" +
-      "e\"<\202\323\344\223\0026:\001*\"1/api/v0alpha/emailapi/geti" +
-      "nboundemailtemplatebyid\022\275\001\n\035UpdateInboun" +
+      "e\"<\202\323\344\223\0026\"1/api/v0alpha/emailapi/getinbo" +
+      "undemailtemplatebyid:\001*\022\275\001\n\035UpdateInboun" +
       "dEmailGroupStatus\022-.api.v0alpha.UpdateIn" +
       "boundEmailGroupStatusReq\032-.api.v0alpha.U" +
-      "pdateInboundEmailGroupStatusRes\">\202\323\344\223\0028:" +
-      "\001*\"3/api/v0alpha/emailapi/updateinbounde" +
-      "mailgroupstatus\022\235\001\n\025StopInboundEmailGrou" +
+      "pdateInboundEmailGroupStatusRes\">\202\323\344\223\0028\"" +
+      "3/api/v0alpha/emailapi/updateinboundemai" +
+      "lgroupstatus:\001*\022\235\001\n\025StopInboundEmailGrou" +
       "p\022%.api.v0alpha.StopInboundEmailGroupReq" +
       "\032%.api.v0alpha.StopInboundEmailGroupRes\"" +
-      "6\202\323\344\223\0020:\001*\"+/api/v0alpha/emailapi/stopin" +
-      "boundemailgroup\022\251\001\n\031StopAllInboundEmailG" +
+      "6\202\323\344\223\0020\"+/api/v0alpha/emailapi/stopinbou" +
+      "ndemailgroup:\001*\022\251\001\n\031StopAllInboundEmailG" +
       "roups\022).api.v0alpha.StopAllInboundEmailG" +
       "roupsReq\032%.api.v0alpha.StopInboundEmailG" +
-      "roupRes\":\202\323\344\223\0024:\001*\"//api/v0alpha/emailap" +
-      "i/stopallinboundemailgroups\022\265\001\n\033PureInbo" +
+      "roupRes\":\202\323\344\223\0024\"//api/v0alpha/emailapi/s" +
+      "topallinboundemailgroups:\001*\022\265\001\n\033PureInbo" +
       "undEmailGroupSearch\022+.api.v0alpha.PureIn" +
       "boundEmailGroupSearchReq\032+.api.v0alpha.P" +
-      "ureInboundEmailGroupSearchRes\"<\202\323\344\223\0026:\001*" +
-      "\"1/api/v0alpha/emailapi/pureinboundemail" +
-      "groupsearch\022\245\001\n\027InboundEmailGroupSearch\022" +
+      "ureInboundEmailGroupSearchRes\"<\202\323\344\223\0026\"1/" +
+      "api/v0alpha/emailapi/pureinboundemailgro" +
+      "upsearch:\001*\022\245\001\n\027InboundEmailGroupSearch\022" +
       "\'.api.v0alpha.InboundEmailGroupSearchReq" +
       "\032\'.api.v0alpha.InboundEmailGroupSearchRe" +
-      "s\"8\202\323\344\223\0022:\001*\"-/api/v0alpha/emailapi/inbo" +
-      "undemailgroupsearch\022\311\001\n ListInboundEmail" +
+      "s\"8\202\323\344\223\0022\"-/api/v0alpha/emailapi/inbound" +
+      "emailgroupsearch:\001*\022\311\001\n ListInboundEmail" +
       "GroupsByGroupIds\0220.api.v0alpha.ListInbou" +
       "ndEmailGroupsByGroupIdsReq\0320.api.v0alpha" +
       ".ListInboundEmailGroupsByGroupIdsRes\"A\202\323" +
-      "\344\223\002;:\001*\"6/api/v0alpha/emailapi/listinbou" +
-      "ndemailgroupsbygroupids\022\305\001\n\037ListInboundE" +
+      "\344\223\002;\"6/api/v0alpha/emailapi/listinbounde" +
+      "mailgroupsbygroupids:\001*\022\305\001\n\037ListInboundE" +
       "mailTasksByGroupIds\022/.api.v0alpha.ListIn" +
       "boundEmailTasksByGroupIdsReq\032/.api.v0alp" +
       "ha.ListInboundEmailTasksByGroupIdsRes\"@\202" +
-      "\323\344\223\002::\001*\"5/api/v0alpha/emailapi/listinbo" +
-      "undemailtasksbygroupids\022\271\001\n\034ListActiveIn" +
+      "\323\344\223\002:\"5/api/v0alpha/emailapi/listinbound" +
+      "emailtasksbygroupids:\001*\022\271\001\n\034ListActiveIn" +
       "boundEmailGroups\022,.api.v0alpha.ListActiv" +
       "eInboundEmailGroupsReq\032,.api.v0alpha.Lis" +
-      "tActiveInboundEmailGroupsRes\"=\202\323\344\223\0027:\001*\"" +
-      "2/api/v0alpha/emailapi/listactiveinbound" +
-      "emailgroups\022i\n\010Schedule\022\030.api.v0alpha.Sc" +
+      "tActiveInboundEmailGroupsRes\"=\202\323\344\223\0027\"2/a" +
+      "pi/v0alpha/emailapi/listactiveinboundema" +
+      "ilgroups:\001*\022i\n\010Schedule\022\030.api.v0alpha.Sc" +
       "heduleReq\032\030.api.v0alpha.ScheduleRes\")\202\323\344" +
-      "\223\002#:\001*\"\036/api/v0alpha/emailapi/schedule\022\261" +
+      "\223\002#\"\036/api/v0alpha/emailapi/schedule:\001*\022\261" +
       "\001\n\032ScheduleOutboundEmailGroup\022*.api.v0al" +
       "pha.ScheduleOutboundEmailGroupReq\032*.api." +
       "v0alpha.ScheduleOutboundEmailGroupRes\";\202" +
-      "\323\344\223\0025:\001*\"0/api/v0alpha/emailapi/schedule" +
-      "outboundemailgroup\022\251\001\n\030SchedulePureInbou" +
+      "\323\344\223\0025\"0/api/v0alpha/emailapi/scheduleout" +
+      "boundemailgroup:\001*\022\251\001\n\030SchedulePureInbou" +
       "ndEmail\022(.api.v0alpha.SchedulePureInboun" +
       "dEmailReq\032(.api.v0alpha.SchedulePureInbo" +
-      "undEmailRes\"9\202\323\344\223\0023:\001*\"./api/v0alpha/ema" +
-      "ilapi/schedulepureinboundemail\022\272\001\n\034Creat" +
+      "undEmailRes\"9\202\323\344\223\0023\"./api/v0alpha/emaila" +
+      "pi/schedulepureinboundemail:\001*\022\272\001\n\034Creat" +
       "eEmailMessageAgentReply\022,.api.v0alpha.Cr" +
       "eateEmailMessageAgentReplyReq\032-.api.v0al" +
       "pha.EmailMessageReplyWithAttachments\"=\202\323" +
-      "\344\223\0027:\001*\"2/api/v0alpha/emailapi/createema" +
-      "ilmessageagentreply\022\341\001\n&CreateEmailMessa" +
+      "\344\223\0027\"2/api/v0alpha/emailapi/createemailm" +
+      "essageagentreply:\001*\022\341\001\n&CreateEmailMessa" +
       "geAgentReplyAttachment\0226.api.v0alpha.Cre" +
       "ateEmailMessageAgentReplyAttachmentReq\0326" +
       ".api.v0alpha.CreateEmailMessageAgentRepl" +
-      "yAttachmentRes\"G\202\323\344\223\002A:\001*\"</api/v0alpha/" +
-      "emailapi/createemailmessageagentreplyatt" +
-      "achment\022\201\001\n\tSendReply\022\031.api.v0alpha.Send" +
+      "yAttachmentRes\"G\202\323\344\223\002A\"</api/v0alpha/ema" +
+      "ilapi/createemailmessageagentreplyattach" +
+      "ment:\001*\022\201\001\n\tSendReply\022\031.api.v0alpha.Send" +
       "ReplyReq\032-.api.v0alpha.EmailMessageReply" +
-      "WithAttachments\"*\202\323\344\223\002$:\001*\"\037/api/v0alpha" +
-      "/emailapi/sendreply\022\255\001\n\031GetEmailGroupsBy" +
+      "WithAttachments\"*\202\323\344\223\002$\"\037/api/v0alpha/em" +
+      "ailapi/sendreply:\001*\022\255\001\n\031GetEmailGroupsBy" +
       "GroupSids\022).api.v0alpha.GetEmailGroupsBy",
       "GroupSidsReq\032).api.v0alpha.GetEmailGroup" +
-      "sByGroupSidsRes\":\202\323\344\223\0024:\001*\"//api/v0alpha" +
-      "/emailapi/getemailgroupsbygroupsids\022\253\001\n\027" +
+      "sByGroupSidsRes\":\202\323\344\223\0024\"//api/v0alpha/em" +
+      "ailapi/getemailgroupsbygroupsids:\001*\022\253\001\n\027" +
       "GetEmailGroupByGroupSid\022\'.api.v0alpha.Ge" +
       "tEmailGroupByGroupSidReq\032-.api.v0alpha.E" +
-      "mailGroupDetailsWithAttachments\"8\202\323\344\223\0022:" +
-      "\001*\"-/api/v0alpha/emailapi/getemailgroupb" +
-      "ygroupsid\022\250\001\n\026GetEmailGroupByGroupId\022&.a" +
+      "mailGroupDetailsWithAttachments\"8\202\323\344\223\0022\"" +
+      "-/api/v0alpha/emailapi/getemailgroupbygr" +
+      "oupsid:\001*\022\250\001\n\026GetEmailGroupByGroupId\022&.a" +
       "pi.v0alpha.GetEmailGroupByGroupIdReq\032-.a" +
       "pi.v0alpha.EmailGroupDetailsWithAttachme" +
-      "nts\"7\202\323\344\223\0021:\001*\",/api/v0alpha/emailapi/ge" +
-      "temailgroupbygroupid\022\311\001\n SchedulePureOmn" +
+      "nts\"7\202\323\344\223\0021\",/api/v0alpha/emailapi/getem" +
+      "ailgroupbygroupid:\001*\022\311\001\n SchedulePureOmn" +
       "iLinkInboundEmail\0220.api.v0alpha.Schedule" +
       "PureOmniLinkInboundEmailReq\0320.api.v0alph" +
       "a.SchedulePureOmniLinkInboundEmailRes\"A\202" +
-      "\323\344\223\002;:\001*\"6/api/v0alpha/emailapi/schedule" +
-      "pureomnilinkinboundemail\022\245\001\n\027UpdateInbou" +
+      "\323\344\223\002;\"6/api/v0alpha/emailapi/schedulepur" +
+      "eomnilinkinboundemail:\001*\022\245\001\n\027UpdateInbou" +
       "ndEmailGroup\022\'.api.v0alpha.UpdateInbound" +
       "EmailGroupReq\032\'.api.v0alpha.UpdateInboun" +
-      "dEmailGroupRes\"8\202\323\344\223\0022:\001*\"-/api/v0alpha/" +
-      "emailapi/updateinboundemailgroup\022\275\001\n\"Upd" +
+      "dEmailGroupRes\"8\202\323\344\223\0022\"-/api/v0alpha/ema" +
+      "ilapi/updateinboundemailgroup:\001*\022\275\001\n\"Upd" +
       "ateEmailGroupMstrSendsPerMinute\022(.api.v0" +
       "alpha.EmailGroupSendsPerMinuteReq\032(.api." +
       "v0alpha.EmailGroupSendsPerMinuteRes\"C\202\323\344" +
-      "\223\002=:\001*\"8/api/v0alpha/emailapi/updateemai" +
-      "lgroupmstrsendsperminute\022\251\001\n\030UpdateOutbo" +
+      "\223\002=\"8/api/v0alpha/emailapi/updateemailgr" +
+      "oupmstrsendsperminute:\001*\022\251\001\n\030UpdateOutbo" +
       "undEmailGroup\022(.api.v0alpha.UpdateOutbou" +
       "ndEmailGroupReq\032(.api.v0alpha.UpdateOutb" +
-      "oundEmailGroupRes\"9\202\323\344\223\0023:\001*\"./api/v0alp" +
-      "ha/emailapi/updateoutboundemailgroup\022\234\001\n" +
+      "oundEmailGroupRes\"9\202\323\344\223\0023\"./api/v0alpha/" +
+      "emailapi/updateoutboundemailgroup:\001*\022\234\001\n" +
       "\030GetInboundEmailGroupById\022%.api.v0alpha." +
       "InboundEmailGroupByIdReq\032\036.api.v0alpha.I" +
-      "nboundEmailGroup\"9\202\323\344\223\0023:\001*\"./api/v0alph" +
-      "a/emailapi/getinboundemailgroupbyid\022\271\001\n\034" +
+      "nboundEmailGroup\"9\202\323\344\223\0023\"./api/v0alpha/e" +
+      "mailapi/getinboundemailgroupbyid:\001*\022\271\001\n\034" +
       "CreateEmailMessageAttachment\022,.api.v0alp" +
       "ha.CreateEmailMessageAttachmentReq\032,.api" +
       ".v0alpha.CreateEmailMessageAttachmentRes" +
-      "\"=\202\323\344\223\0027:\001*\"2/api/v0alpha/emailapi/creat" +
-      "eemailmessageattachment\022\265\001\n\033ListEmailMes" +
+      "\"=\202\323\344\223\0027\"2/api/v0alpha/emailapi/createem" +
+      "ailmessageattachment:\001*\022\265\001\n\033ListEmailMes" +
       "sageAttachments\022+.api.v0alpha.ListEmailM" +
       "essageAttachmentsReq\032+.api.v0alpha.ListE" +
-      "mailMessageAttachmentsRes\"<\202\323\344\223\0026:\001*\"1/a" +
-      "pi/v0alpha/emailapi/listemailmessageatta" +
-      "chments\022\342\001\n(UnassignCurrentUserFromEmail" +
+      "mailMessageAttachmentsRes\"<\202\323\344\223\0026\"1/api/" +
+      "v0alpha/emailapi/listemailmessageattachm" +
+      "ents:\001*\022\342\001\n(UnassignCurrentUserFromEmail" +
       "Conversation\0228.api.v0alpha.UnassignCurre" +
       "ntUserFromEmailConversationReq\0321.api.v0a" +
       "lpha.UnassignUserFromEmailConversationRe" +
-      "s\"I\202\323\344\223\002C:\001*\">/api/v0alpha/emailapi/unas" +
-      "signcurrentuserfromemailconversation\022\311\001\n" +
+      "s\"I\202\323\344\223\002C\">/api/v0alpha/emailapi/unassig" +
+      "ncurrentuserfromemailconversation:\001*\022\311\001\n" +
       " DashboardEmailConversationSearch\0220.api." +
       "v0alpha.DashboardEmailConversationSearch" +
       "Req\0320.api.v0alpha.DashboardEmailConversa" +
-      "tionSearchRes\"A\202\323\344\223\002;:\001*\"6/api/v0alpha/e" +
-      "mailapi/dashboardemailconversationsearch" +
+      "tionSearchRes\"A\202\323\344\223\002;\"6/api/v0alpha/emai" +
+      "lapi/dashboardemailconversationsearch:\001*" +
       "\022\255\001\n\031ReassignEmailConversation\022).api.v0a" +
       "lpha.ReassignEmailConversationReq\032).api." +
       "v0alpha.ReassignEmailConversationRes\":\202\323" +
-      "\344\223\0024:\001*\"//api/v0alpha/emailapi/reassigne" +
-      "mailconversation\022\245\001\n\027AssignEmailConversa" +
+      "\344\223\0024\"//api/v0alpha/emailapi/reassignemai" +
+      "lconversation:\001*\022\245\001\n\027AssignEmailConversa" +
       "tion\022\'.api.v0alpha.AssignEmailConversati" +
       "onReq\032\'.api.v0alpha.AssignEmailConversat" +
-      "ionRes\"8\202\323\344\223\0022:\001*\"-/api/v0alpha/emailapi" +
-      "/assignemailconversation\022\251\001\n\030SuspendEmai" +
+      "ionRes\"8\202\323\344\223\0022\"-/api/v0alpha/emailapi/as" +
+      "signemailconversation:\001*\022\251\001\n\030SuspendEmai" +
       "lConversation\022(.api.v0alpha.SuspendEmail" +
       "ConversationReq\032(.api.v0alpha.SuspendEma" +
-      "ilConversationRes\"9\202\323\344\223\0023:\001*\"./api/v0alp" +
-      "ha/emailapi/suspendemailconversation\022\305\001\n" +
+      "ilConversationRes\"9\202\323\344\223\0023\"./api/v0alpha/" +
+      "emailapi/suspendemailconversation:\001*\022\305\001\n" +
       "\037ListCampaignsByConnectedInboxId\022/.api.v" +
       "0alpha.ListCampaignsByConnectedInboxIdRe" +
       "q\032/.api.v0alpha.ListCampaignsByConnected" +
-      "InboxIdRes\"@\202\323\344\223\002::\001*\"5/api/v0alpha/emai" +
-      "lapi/listcampaignsbyconnectedinboxid\022\241\001\n" +
+      "InboxIdRes\"@\202\323\344\223\002:\"5/api/v0alpha/emailap" +
+      "i/listcampaignsbyconnectedinboxid:\001*\022\241\001\n" +
       "\026CloseEmailConversation\022&.api.v0alpha.Cl" +
       "oseEmailConversationReq\032&.api.v0alpha.Cl" +
-      "oseEmailConversationRes\"7\202\323\344\223\0021:\001*\",/api" +
-      "/v0alpha/emailapi/closeemailconversation" +
+      "oseEmailConversationRes\"7\202\323\344\223\0021\",/api/v0" +
+      "alpha/emailapi/closeemailconversation:\001*" +
       "B{\n\035com.tcn.cloud.api.api.v0alphaB\rEmail" +
       "apiProtoP\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0a" +
       "lpha\342\002\027Api\\V0alpha\\GPBMetadata\352\002\014Api::V0" +

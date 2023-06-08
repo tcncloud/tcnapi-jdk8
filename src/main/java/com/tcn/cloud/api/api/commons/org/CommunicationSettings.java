@@ -21,8 +21,10 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CommunicationSettings() {
-    scrubLists_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    scrubListsRemovalAllowed_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    scrubLists_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    scrubListsRemovalAllowed_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     complianceDefaultCountry_ = 0;
   }
 
@@ -33,182 +35,6 @@ private static final long serialVersionUID = 0L;
     return new CommunicationSettings();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private CommunicationSettings(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            enableScrubListAdding_ = input.readBool();
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              scrubLists_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            scrubLists_.add(s);
-            break;
-          }
-          case 24: {
-
-            enableScrubListRemoval_ = input.readBool();
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              scrubListsRemovalAllowed_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            scrubListsRemovalAllowed_.add(s);
-            break;
-          }
-          case 40: {
-            int rawValue = input.readEnum();
-
-            complianceDefaultCountry_ = rawValue;
-            break;
-          }
-          case 48: {
-
-            displayOptionsInWrapup_ = input.readBool();
-            break;
-          }
-          case 802: {
-            com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.Builder subBuilder = null;
-            if (inboundScrubListExpiration_ != null) {
-              subBuilder = inboundScrubListExpiration_.toBuilder();
-            }
-            inboundScrubListExpiration_ = input.readMessage(com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(inboundScrubListExpiration_);
-              inboundScrubListExpiration_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 810: {
-            com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.Builder subBuilder = null;
-            if (manualScrubListExpiration_ != null) {
-              subBuilder = manualScrubListExpiration_.toBuilder();
-            }
-            manualScrubListExpiration_ = input.readMessage(com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(manualScrubListExpiration_);
-              manualScrubListExpiration_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 818: {
-            com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.Builder subBuilder = null;
-            if (outboundScrubListExpiration_ != null) {
-              subBuilder = outboundScrubListExpiration_.toBuilder();
-            }
-            outboundScrubListExpiration_ = input.readMessage(com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(outboundScrubListExpiration_);
-              outboundScrubListExpiration_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 826: {
-            com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.Builder subBuilder = null;
-            if (previewScrubListExpiration_ != null) {
-              subBuilder = previewScrubListExpiration_.toBuilder();
-            }
-            previewScrubListExpiration_ = input.readMessage(com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(previewScrubListExpiration_);
-              previewScrubListExpiration_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1600: {
-
-            automateManuallyDialedScrubList_ = input.readBool();
-            break;
-          }
-          case 1608: {
-
-            automatePreviewDialedScrubList_ = input.readBool();
-            break;
-          }
-          case 1618: {
-            com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateResponseRules.Builder subBuilder = null;
-            if (automateResponseRules_ != null) {
-              subBuilder = automateResponseRules_.toBuilder();
-            }
-            automateResponseRules_ = input.readMessage(com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateResponseRules.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(automateResponseRules_);
-              automateResponseRules_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1626: {
-            com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.Builder subBuilder = null;
-            if (automateScrubListCallData_ != null) {
-              subBuilder = automateScrubListCallData_.toBuilder();
-            }
-            automateScrubListCallData_ = input.readMessage(com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(automateScrubListCallData_);
-              automateScrubListCallData_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        scrubLists_ = scrubLists_.getUnmodifiableView();
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        scrubListsRemovalAllowed_ = scrubListsRemovalAllowed_.getUnmodifiableView();
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_CommunicationSettings_descriptor;
@@ -332,86 +158,6 @@ private static final long serialVersionUID = 0L;
       return new ScrubListExpiration();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private ScrubListExpiration(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              defaultExpiration_ = rawValue;
-              break;
-            }
-            case 16: {
-
-              limitExpiration_ = input.readBool();
-              break;
-            }
-            case 24: {
-              int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                limitedExpirations_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              limitedExpirations_.add(rawValue);
-              break;
-            }
-            case 26: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  limitedExpirations_ = new java.util.ArrayList<java.lang.Integer>();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                limitedExpirations_.add(rawValue);
-              }
-              input.popLimit(oldLimit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          limitedExpirations_ = java.util.Collections.unmodifiableList(limitedExpirations_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_CommunicationSettings_ScrubListExpiration_descriptor;
@@ -426,7 +172,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int DEFAULT_EXPIRATION_FIELD_NUMBER = 1;
-    private int defaultExpiration_;
+    private int defaultExpiration_ = 0;
     /**
      * <pre>
      * Default call DNCL/scrub list expiration time.
@@ -447,13 +193,12 @@ private static final long serialVersionUID = 0L;
      * @return The defaultExpiration.
      */
     @java.lang.Override public com.tcn.cloud.api.api.commons.CommunicationExpiration getDefaultExpiration() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.CommunicationExpiration result = com.tcn.cloud.api.api.commons.CommunicationExpiration.valueOf(defaultExpiration_);
+      com.tcn.cloud.api.api.commons.CommunicationExpiration result = com.tcn.cloud.api.api.commons.CommunicationExpiration.forNumber(defaultExpiration_);
       return result == null ? com.tcn.cloud.api.api.commons.CommunicationExpiration.UNRECOGNIZED : result;
     }
 
     public static final int LIMIT_EXPIRATION_FIELD_NUMBER = 2;
-    private boolean limitExpiration_;
+    private boolean limitExpiration_ = false;
     /**
      * <pre>
      * Enable limiting scrub list expiration choices.
@@ -468,14 +213,14 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int LIMITED_EXPIRATIONS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private java.util.List<java.lang.Integer> limitedExpirations_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
         java.lang.Integer, com.tcn.cloud.api.api.commons.CommunicationExpiration> limitedExpirations_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, com.tcn.cloud.api.api.commons.CommunicationExpiration>() {
               public com.tcn.cloud.api.api.commons.CommunicationExpiration convert(java.lang.Integer from) {
-                @SuppressWarnings("deprecation")
-                com.tcn.cloud.api.api.commons.CommunicationExpiration result = com.tcn.cloud.api.api.commons.CommunicationExpiration.valueOf(from);
+                com.tcn.cloud.api.api.commons.CommunicationExpiration result = com.tcn.cloud.api.api.commons.CommunicationExpiration.forNumber(from);
                 return result == null ? com.tcn.cloud.api.api.commons.CommunicationExpiration.UNRECOGNIZED : result;
               }
             };
@@ -573,7 +318,7 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < limitedExpirations_.size(); i++) {
         output.writeEnumNoTag(limitedExpirations_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -602,7 +347,7 @@ private static final long serialVersionUID = 0L;
             .computeUInt32SizeNoTag(dataSize);
         }limitedExpirationsMemoizedSerializedSize = dataSize;
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -621,7 +366,7 @@ private static final long serialVersionUID = 0L;
       if (getLimitExpiration()
           != other.getLimitExpiration()) return false;
       if (!limitedExpirations_.equals(other.limitedExpirations_)) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -641,7 +386,7 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + LIMITED_EXPIRATIONS_FIELD_NUMBER;
         hash = (53 * hash) + limitedExpirations_.hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -690,11 +435,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -762,28 +509,22 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         defaultExpiration_ = 0;
-
         limitExpiration_ = false;
-
         limitedExpirations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -810,16 +551,28 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration buildPartial() {
         com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration result = new com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration(this);
-        int from_bitField0_ = bitField0_;
-        result.defaultExpiration_ = defaultExpiration_;
-        result.limitExpiration_ = limitExpiration_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          limitedExpirations_ = java.util.Collections.unmodifiableList(limitedExpirations_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.limitedExpirations_ = limitedExpirations_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          limitedExpirations_ = java.util.Collections.unmodifiableList(limitedExpirations_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.limitedExpirations_ = limitedExpirations_;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.defaultExpiration_ = defaultExpiration_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.limitExpiration_ = limitExpiration_;
+        }
       }
 
       @java.lang.Override
@@ -875,14 +628,14 @@ private static final long serialVersionUID = 0L;
         if (!other.limitedExpirations_.isEmpty()) {
           if (limitedExpirations_.isEmpty()) {
             limitedExpirations_ = other.limitedExpirations_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureLimitedExpirationsIsMutable();
             limitedExpirations_.addAll(other.limitedExpirations_);
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -897,17 +650,57 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                defaultExpiration_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                limitExpiration_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                int tmpRaw = input.readEnum();
+                ensureLimitedExpirationsIsMutable();
+                limitedExpirations_.add(tmpRaw);
+                break;
+              } // case 24
+              case 26: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  ensureLimitedExpirationsIsMutable();
+                  limitedExpirations_.add(tmpRaw);
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -934,8 +727,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setDefaultExpirationValue(int value) {
-        
         defaultExpiration_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -949,8 +742,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public com.tcn.cloud.api.api.commons.CommunicationExpiration getDefaultExpiration() {
-        @SuppressWarnings("deprecation")
-        com.tcn.cloud.api.api.commons.CommunicationExpiration result = com.tcn.cloud.api.api.commons.CommunicationExpiration.valueOf(defaultExpiration_);
+        com.tcn.cloud.api.api.commons.CommunicationExpiration result = com.tcn.cloud.api.api.commons.CommunicationExpiration.forNumber(defaultExpiration_);
         return result == null ? com.tcn.cloud.api.api.commons.CommunicationExpiration.UNRECOGNIZED : result;
       }
       /**
@@ -966,7 +758,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         defaultExpiration_ = value.getNumber();
         onChanged();
         return this;
@@ -980,7 +772,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearDefaultExpiration() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         defaultExpiration_ = 0;
         onChanged();
         return this;
@@ -1009,8 +801,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setLimitExpiration(boolean value) {
-        
+
         limitExpiration_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1023,7 +816,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearLimitExpiration() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         limitExpiration_ = false;
         onChanged();
         return this;
@@ -1032,9 +825,9 @@ private static final long serialVersionUID = 0L;
       private java.util.List<java.lang.Integer> limitedExpirations_ =
         java.util.Collections.emptyList();
       private void ensureLimitedExpirationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           limitedExpirations_ = new java.util.ArrayList<java.lang.Integer>(limitedExpirations_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
         }
       }
       /**
@@ -1138,7 +931,7 @@ private static final long serialVersionUID = 0L;
        */
       public Builder clearLimitedExpirations() {
         limitedExpirations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1172,8 +965,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated .api.commons.CommunicationExpiration limited_expirations = 3 [json_name = "limitedExpirations"];</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of limitedExpirations at the given index.
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for limitedExpirations to set.
        * @return This builder for chaining.
        */
       public Builder setLimitedExpirationsValue(
@@ -1249,7 +1042,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ScrubListExpiration(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1321,58 +1125,6 @@ private static final long serialVersionUID = 0L;
       return new AutomateResponseRules();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private AutomateResponseRules(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              enabled_ = input.readBool();
-              break;
-            }
-            case 16: {
-
-              ruleSid_ = input.readInt64();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_CommunicationSettings_AutomateResponseRules_descriptor;
@@ -1387,7 +1139,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int ENABLED_FIELD_NUMBER = 1;
-    private boolean enabled_;
+    private boolean enabled_ = false;
     /**
      * <pre>
      * Whether automated response rules are enabled.
@@ -1402,7 +1154,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int RULE_SID_FIELD_NUMBER = 2;
-    private long ruleSid_;
+    private long ruleSid_ = 0L;
     /**
      * <pre>
      * Sid associated with response rule.
@@ -1438,7 +1190,7 @@ private static final long serialVersionUID = 0L;
       if (ruleSid_ != 0L) {
         output.writeInt64(2, ruleSid_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1455,7 +1207,7 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, ruleSid_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1474,7 +1226,7 @@ private static final long serialVersionUID = 0L;
           != other.getEnabled()) return false;
       if (getRuleSid()
           != other.getRuleSid()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1491,7 +1243,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + RULE_SID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getRuleSid());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1540,11 +1292,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateResponseRules parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateResponseRules parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1612,26 +1366,20 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateResponseRules.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         enabled_ = false;
-
         ruleSid_ = 0L;
-
         return this;
       }
 
@@ -1658,10 +1406,19 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateResponseRules buildPartial() {
         com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateResponseRules result = new com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateResponseRules(this);
-        result.enabled_ = enabled_;
-        result.ruleSid_ = ruleSid_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateResponseRules result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.enabled_ = enabled_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.ruleSid_ = ruleSid_;
+        }
       }
 
       @java.lang.Override
@@ -1714,7 +1471,7 @@ private static final long serialVersionUID = 0L;
         if (other.getRuleSid() != 0L) {
           setRuleSid(other.getRuleSid());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1729,19 +1486,43 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateResponseRules parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                enabled_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                ruleSid_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateResponseRules) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private boolean enabled_ ;
       /**
@@ -1766,8 +1547,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setEnabled(boolean value) {
-        
+
         enabled_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1780,7 +1562,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearEnabled() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         enabled_ = false;
         onChanged();
         return this;
@@ -1813,8 +1595,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRuleSid(long value) {
-        
+
         ruleSid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1829,7 +1612,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearRuleSid() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         ruleSid_ = 0L;
         onChanged();
         return this;
@@ -1867,7 +1650,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AutomateResponseRules(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1972,66 +1766,6 @@ private static final long serialVersionUID = 0L;
       return new AutomateScrubListCallData();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private AutomateScrubListCallData(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              enabled_ = input.readBool();
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                scrubListDataFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.ScrubListDataField>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              scrubListDataFields_.add(
-                  input.readMessage(com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.ScrubListDataField.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          scrubListDataFields_ = java.util.Collections.unmodifiableList(scrubListDataFields_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_CommunicationSettings_AutomateScrubListCallData_descriptor;
@@ -2106,59 +1840,6 @@ private static final long serialVersionUID = 0L;
         return new ScrubListDataField();
       }
 
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private ScrubListDataField(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                scrubList_ = s;
-                break;
-              }
-              case 16: {
-
-                callDataField_ = input.readInt64();
-                break;
-              }
-              default: {
-                if (!parseUnknownField(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_CommunicationSettings_AutomateScrubListCallData_ScrubListDataField_descriptor;
@@ -2173,7 +1854,8 @@ private static final long serialVersionUID = 0L;
       }
 
       public static final int SCRUB_LIST_FIELD_NUMBER = 1;
-      private volatile java.lang.Object scrubList_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object scrubList_ = "";
       /**
        * <pre>
        * Scrub list sid.
@@ -2219,7 +1901,7 @@ private static final long serialVersionUID = 0L;
       }
 
       public static final int CALL_DATA_FIELD_FIELD_NUMBER = 2;
-      private long callDataField_;
+      private long callDataField_ = 0L;
       /**
        * <pre>
        * Call data field sid.
@@ -2247,13 +1929,13 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getScrubListBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scrubList_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scrubList_);
         }
         if (callDataField_ != 0L) {
           output.writeInt64(2, callDataField_);
         }
-        unknownFields.writeTo(output);
+        getUnknownFields().writeTo(output);
       }
 
       @java.lang.Override
@@ -2262,14 +1944,14 @@ private static final long serialVersionUID = 0L;
         if (size != -1) return size;
 
         size = 0;
-        if (!getScrubListBytes().isEmpty()) {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scrubList_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, scrubList_);
         }
         if (callDataField_ != 0L) {
           size += com.google.protobuf.CodedOutputStream
             .computeInt64Size(2, callDataField_);
         }
-        size += unknownFields.getSerializedSize();
+        size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
         return size;
       }
@@ -2288,7 +1970,7 @@ private static final long serialVersionUID = 0L;
             .equals(other.getScrubList())) return false;
         if (getCallDataField()
             != other.getCallDataField()) return false;
-        if (!unknownFields.equals(other.unknownFields)) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
 
@@ -2304,7 +1986,7 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + CALL_DATA_FIELD_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getCallDataField());
-        hash = (29 * hash) + unknownFields.hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
         return hash;
       }
@@ -2353,11 +2035,13 @@ private static final long serialVersionUID = 0L;
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
+
       public static com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.ScrubListDataField parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
+
       public static com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.ScrubListDataField parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2425,26 +2109,20 @@ private static final long serialVersionUID = 0L;
 
         // Construct using com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.ScrubListDataField.newBuilder()
         private Builder() {
-          maybeForceBuilderInitialization();
+
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
+
         }
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           scrubList_ = "";
-
           callDataField_ = 0L;
-
           return this;
         }
 
@@ -2471,10 +2149,19 @@ private static final long serialVersionUID = 0L;
         @java.lang.Override
         public com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.ScrubListDataField buildPartial() {
           com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.ScrubListDataField result = new com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.ScrubListDataField(this);
-          result.scrubList_ = scrubList_;
-          result.callDataField_ = callDataField_;
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.ScrubListDataField result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.scrubList_ = scrubList_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.callDataField_ = callDataField_;
+          }
         }
 
         @java.lang.Override
@@ -2523,12 +2210,13 @@ private static final long serialVersionUID = 0L;
           if (other == com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.ScrubListDataField.getDefaultInstance()) return this;
           if (!other.getScrubList().isEmpty()) {
             scrubList_ = other.scrubList_;
+            bitField0_ |= 0x00000001;
             onChanged();
           }
           if (other.getCallDataField() != 0L) {
             setCallDataField(other.getCallDataField());
           }
-          this.mergeUnknownFields(other.unknownFields);
+          this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
         }
@@ -2543,19 +2231,43 @@ private static final long serialVersionUID = 0L;
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.ScrubListDataField parsedMessage = null;
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
           try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  scrubList_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                case 16: {
+                  callDataField_ = input.readInt64();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 16
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.ScrubListDataField) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
+            onChanged();
+          } // finally
           return this;
         }
+        private int bitField0_;
 
         private java.lang.Object scrubList_ = "";
         /**
@@ -2610,11 +2322,9 @@ private static final long serialVersionUID = 0L;
          */
         public Builder setScrubList(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           scrubList_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -2627,8 +2337,8 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder clearScrubList() {
-          
           scrubList_ = getDefaultInstance().getScrubList();
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
           return this;
         }
@@ -2643,12 +2353,10 @@ private static final long serialVersionUID = 0L;
          */
         public Builder setScrubListBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           scrubList_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -2676,8 +2384,9 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder setCallDataField(long value) {
-          
+
           callDataField_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -2690,7 +2399,7 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder clearCallDataField() {
-          
+          bitField0_ = (bitField0_ & ~0x00000002);
           callDataField_ = 0L;
           onChanged();
           return this;
@@ -2728,7 +2437,18 @@ private static final long serialVersionUID = 0L;
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new ScrubListDataField(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 
@@ -2749,7 +2469,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int ENABLED_FIELD_NUMBER = 1;
-    private boolean enabled_;
+    private boolean enabled_ = false;
     /**
      * <pre>
      * Whether automatic additional of call data to scrub lists is enabled.
@@ -2764,6 +2484,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int SCRUB_LIST_DATA_FIELDS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private java.util.List<com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.ScrubListDataField> scrubListDataFields_;
     /**
      * <pre>
@@ -2843,7 +2564,7 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < scrubListDataFields_.size(); i++) {
         output.writeMessage(2, scrubListDataFields_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2860,7 +2581,7 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, scrubListDataFields_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2879,7 +2600,7 @@ private static final long serialVersionUID = 0L;
           != other.getEnabled()) return false;
       if (!getScrubListDataFieldsList()
           .equals(other.getScrubListDataFieldsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2897,7 +2618,7 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + SCRUB_LIST_DATA_FIELDS_FIELD_NUMBER;
         hash = (53 * hash) + getScrubListDataFieldsList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2946,11 +2667,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3018,31 +2741,26 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getScrubListDataFieldsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         enabled_ = false;
-
         if (scrubListDataFieldsBuilder_ == null) {
           scrubListDataFields_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          scrubListDataFields_ = null;
           scrubListDataFieldsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -3069,19 +2787,29 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData buildPartial() {
         com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData result = new com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData(this);
-        int from_bitField0_ = bitField0_;
-        result.enabled_ = enabled_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData result) {
         if (scrubListDataFieldsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             scrubListDataFields_ = java.util.Collections.unmodifiableList(scrubListDataFields_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.scrubListDataFields_ = scrubListDataFields_;
         } else {
           result.scrubListDataFields_ = scrubListDataFieldsBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.enabled_ = enabled_;
+        }
       }
 
       @java.lang.Override
@@ -3135,7 +2863,7 @@ private static final long serialVersionUID = 0L;
           if (!other.scrubListDataFields_.isEmpty()) {
             if (scrubListDataFields_.isEmpty()) {
               scrubListDataFields_ = other.scrubListDataFields_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureScrubListDataFieldsIsMutable();
               scrubListDataFields_.addAll(other.scrubListDataFields_);
@@ -3148,7 +2876,7 @@ private static final long serialVersionUID = 0L;
               scrubListDataFieldsBuilder_.dispose();
               scrubListDataFieldsBuilder_ = null;
               scrubListDataFields_ = other.scrubListDataFields_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
               scrubListDataFieldsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getScrubListDataFieldsFieldBuilder() : null;
@@ -3157,7 +2885,7 @@ private static final long serialVersionUID = 0L;
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3172,17 +2900,48 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                enabled_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.ScrubListDataField m =
+                    input.readMessage(
+                        com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.ScrubListDataField.parser(),
+                        extensionRegistry);
+                if (scrubListDataFieldsBuilder_ == null) {
+                  ensureScrubListDataFieldsIsMutable();
+                  scrubListDataFields_.add(m);
+                } else {
+                  scrubListDataFieldsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -3210,8 +2969,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setEnabled(boolean value) {
-        
+
         enabled_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3224,7 +2984,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearEnabled() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         enabled_ = false;
         onChanged();
         return this;
@@ -3233,9 +2993,9 @@ private static final long serialVersionUID = 0L;
       private java.util.List<com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.ScrubListDataField> scrubListDataFields_ =
         java.util.Collections.emptyList();
       private void ensureScrubListDataFieldsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           scrubListDataFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.ScrubListDataField>(scrubListDataFields_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -3429,7 +3189,7 @@ private static final long serialVersionUID = 0L;
       public Builder clearScrubListDataFields() {
         if (scrubListDataFieldsBuilder_ == null) {
           scrubListDataFields_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           scrubListDataFieldsBuilder_.clear();
@@ -3534,7 +3294,7 @@ private static final long serialVersionUID = 0L;
           scrubListDataFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.ScrubListDataField, com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.ScrubListDataField.Builder, com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.ScrubListDataFieldOrBuilder>(
                   scrubListDataFields_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           scrubListDataFields_ = null;
@@ -3574,7 +3334,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AutomateScrubListCallData(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3595,7 +3366,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENABLE_SCRUB_LIST_ADDING_FIELD_NUMBER = 1;
-  private boolean enableScrubListAdding_;
+  private boolean enableScrubListAdding_ = false;
   /**
    * <pre>
    * Enable the ability to add valuess from the compliance scrub list.
@@ -3611,7 +3382,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SCRUB_LISTS_FIELD_NUMBER = 2;
-  private com.google.protobuf.LazyStringList scrubLists_;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList scrubLists_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Hunt group compliance scrub lists. `Hunt Group Compliance Scrub Lists`
@@ -3662,7 +3435,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENABLE_SCRUB_LIST_REMOVAL_FIELD_NUMBER = 3;
-  private boolean enableScrubListRemoval_;
+  private boolean enableScrubListRemoval_ = false;
   /**
    * <pre>
    * Enable the ability to remove values from the compliance scrub lists.
@@ -3678,7 +3451,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SCRUB_LISTS_REMOVAL_ALLOWED_FIELD_NUMBER = 4;
-  private com.google.protobuf.LazyStringList scrubListsRemovalAllowed_;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList scrubListsRemovalAllowed_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * List of compliance scrub lists which can be removed.
@@ -3733,7 +3508,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COMPLIANCE_DEFAULT_COUNTRY_FIELD_NUMBER = 5;
-  private int complianceDefaultCountry_;
+  private int complianceDefaultCountry_ = 0;
   /**
    * <pre>
    * Select compliance default country. `Default DNCL Country`
@@ -3754,13 +3529,12 @@ private static final long serialVersionUID = 0L;
    * @return The complianceDefaultCountry.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.Country getComplianceDefaultCountry() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.Country result = com.tcn.cloud.api.api.commons.Country.valueOf(complianceDefaultCountry_);
+    com.tcn.cloud.api.api.commons.Country result = com.tcn.cloud.api.api.commons.Country.forNumber(complianceDefaultCountry_);
     return result == null ? com.tcn.cloud.api.api.commons.Country.UNRECOGNIZED : result;
   }
 
   public static final int DISPLAY_OPTIONS_IN_WRAPUP_FIELD_NUMBER = 6;
-  private boolean displayOptionsInWrapup_;
+  private boolean displayOptionsInWrapup_ = false;
   /**
    * <pre>
    * Display DNCL options in wrap up. `Display DNCL Options In Wrapup`
@@ -3809,7 +3583,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpirationOrBuilder getInboundScrubListExpirationOrBuilder() {
-    return getInboundScrubListExpiration();
+    return inboundScrubListExpiration_ == null ? com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.getDefaultInstance() : inboundScrubListExpiration_;
   }
 
   public static final int MANUAL_SCRUB_LIST_EXPIRATION_FIELD_NUMBER = 101;
@@ -3847,7 +3621,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpirationOrBuilder getManualScrubListExpirationOrBuilder() {
-    return getManualScrubListExpiration();
+    return manualScrubListExpiration_ == null ? com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.getDefaultInstance() : manualScrubListExpiration_;
   }
 
   public static final int OUTBOUND_SCRUB_LIST_EXPIRATION_FIELD_NUMBER = 102;
@@ -3885,7 +3659,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpirationOrBuilder getOutboundScrubListExpirationOrBuilder() {
-    return getOutboundScrubListExpiration();
+    return outboundScrubListExpiration_ == null ? com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.getDefaultInstance() : outboundScrubListExpiration_;
   }
 
   public static final int PREVIEW_SCRUB_LIST_EXPIRATION_FIELD_NUMBER = 103;
@@ -3923,11 +3697,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpirationOrBuilder getPreviewScrubListExpirationOrBuilder() {
-    return getPreviewScrubListExpiration();
+    return previewScrubListExpiration_ == null ? com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.getDefaultInstance() : previewScrubListExpiration_;
   }
 
   public static final int AUTOMATE_MANUALLY_DIALED_SCRUB_LIST_FIELD_NUMBER = 200;
-  private boolean automateManuallyDialedScrubList_;
+  private boolean automateManuallyDialedScrubList_ = false;
   /**
    * <pre>
    * Automate manually dialed number scrub list. `Manual Dial Auto Dncl Add`
@@ -3942,7 +3716,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AUTOMATE_PREVIEW_DIALED_SCRUB_LIST_FIELD_NUMBER = 201;
-  private boolean automatePreviewDialedScrubList_;
+  private boolean automatePreviewDialedScrubList_ = false;
   /**
    * <pre>
    * Automate preview dialed number scrub list. `Preview Dial Auto Dncl Add`
@@ -3991,7 +3765,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateResponseRulesOrBuilder getAutomateResponseRulesOrBuilder() {
-    return getAutomateResponseRules();
+    return automateResponseRules_ == null ? com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateResponseRules.getDefaultInstance() : automateResponseRules_;
   }
 
   public static final int AUTOMATE_SCRUB_LIST_CALL_DATA_FIELD_NUMBER = 203;
@@ -4032,7 +3806,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallDataOrBuilder getAutomateScrubListCallDataOrBuilder() {
-    return getAutomateScrubListCallData();
+    return automateScrubListCallData_ == null ? com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.getDefaultInstance() : automateScrubListCallData_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -4091,7 +3865,7 @@ private static final long serialVersionUID = 0L;
     if (automateScrubListCallData_ != null) {
       output.writeMessage(203, getAutomateScrubListCallData());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -4164,7 +3938,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(203, getAutomateScrubListCallData());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -4224,7 +3998,7 @@ private static final long serialVersionUID = 0L;
       if (!getAutomateScrubListCallData()
           .equals(other.getAutomateScrubListCallData())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -4284,7 +4058,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AUTOMATE_SCRUB_LIST_CALL_DATA_FIELD_NUMBER;
       hash = (53 * hash) + getAutomateScrubListCallData().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -4333,11 +4107,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.org.CommunicationSettings parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.org.CommunicationSettings parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4406,72 +4182,56 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.org.CommunicationSettings.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       enableScrubListAdding_ = false;
-
-      scrubLists_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      scrubLists_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       enableScrubListRemoval_ = false;
-
-      scrubListsRemovalAllowed_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      scrubListsRemovalAllowed_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       complianceDefaultCountry_ = 0;
-
       displayOptionsInWrapup_ = false;
-
-      if (inboundScrubListExpirationBuilder_ == null) {
-        inboundScrubListExpiration_ = null;
-      } else {
-        inboundScrubListExpiration_ = null;
+      inboundScrubListExpiration_ = null;
+      if (inboundScrubListExpirationBuilder_ != null) {
+        inboundScrubListExpirationBuilder_.dispose();
         inboundScrubListExpirationBuilder_ = null;
       }
-      if (manualScrubListExpirationBuilder_ == null) {
-        manualScrubListExpiration_ = null;
-      } else {
-        manualScrubListExpiration_ = null;
+      manualScrubListExpiration_ = null;
+      if (manualScrubListExpirationBuilder_ != null) {
+        manualScrubListExpirationBuilder_.dispose();
         manualScrubListExpirationBuilder_ = null;
       }
-      if (outboundScrubListExpirationBuilder_ == null) {
-        outboundScrubListExpiration_ = null;
-      } else {
-        outboundScrubListExpiration_ = null;
+      outboundScrubListExpiration_ = null;
+      if (outboundScrubListExpirationBuilder_ != null) {
+        outboundScrubListExpirationBuilder_.dispose();
         outboundScrubListExpirationBuilder_ = null;
       }
-      if (previewScrubListExpirationBuilder_ == null) {
-        previewScrubListExpiration_ = null;
-      } else {
-        previewScrubListExpiration_ = null;
+      previewScrubListExpiration_ = null;
+      if (previewScrubListExpirationBuilder_ != null) {
+        previewScrubListExpirationBuilder_.dispose();
         previewScrubListExpirationBuilder_ = null;
       }
       automateManuallyDialedScrubList_ = false;
-
       automatePreviewDialedScrubList_ = false;
-
-      if (automateResponseRulesBuilder_ == null) {
-        automateResponseRules_ = null;
-      } else {
-        automateResponseRules_ = null;
+      automateResponseRules_ = null;
+      if (automateResponseRulesBuilder_ != null) {
+        automateResponseRulesBuilder_.dispose();
         automateResponseRulesBuilder_ = null;
       }
-      if (automateScrubListCallDataBuilder_ == null) {
-        automateScrubListCallData_ = null;
-      } else {
-        automateScrubListCallData_ = null;
+      automateScrubListCallData_ = null;
+      if (automateScrubListCallDataBuilder_ != null) {
+        automateScrubListCallDataBuilder_.dispose();
         automateScrubListCallDataBuilder_ = null;
       }
       return this;
@@ -4500,55 +4260,69 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.org.CommunicationSettings buildPartial() {
       com.tcn.cloud.api.api.commons.org.CommunicationSettings result = new com.tcn.cloud.api.api.commons.org.CommunicationSettings(this);
-      int from_bitField0_ = bitField0_;
-      result.enableScrubListAdding_ = enableScrubListAdding_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        scrubLists_ = scrubLists_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.scrubLists_ = scrubLists_;
-      result.enableScrubListRemoval_ = enableScrubListRemoval_;
-      if (((bitField0_ & 0x00000002) != 0)) {
-        scrubListsRemovalAllowed_ = scrubListsRemovalAllowed_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.scrubListsRemovalAllowed_ = scrubListsRemovalAllowed_;
-      result.complianceDefaultCountry_ = complianceDefaultCountry_;
-      result.displayOptionsInWrapup_ = displayOptionsInWrapup_;
-      if (inboundScrubListExpirationBuilder_ == null) {
-        result.inboundScrubListExpiration_ = inboundScrubListExpiration_;
-      } else {
-        result.inboundScrubListExpiration_ = inboundScrubListExpirationBuilder_.build();
-      }
-      if (manualScrubListExpirationBuilder_ == null) {
-        result.manualScrubListExpiration_ = manualScrubListExpiration_;
-      } else {
-        result.manualScrubListExpiration_ = manualScrubListExpirationBuilder_.build();
-      }
-      if (outboundScrubListExpirationBuilder_ == null) {
-        result.outboundScrubListExpiration_ = outboundScrubListExpiration_;
-      } else {
-        result.outboundScrubListExpiration_ = outboundScrubListExpirationBuilder_.build();
-      }
-      if (previewScrubListExpirationBuilder_ == null) {
-        result.previewScrubListExpiration_ = previewScrubListExpiration_;
-      } else {
-        result.previewScrubListExpiration_ = previewScrubListExpirationBuilder_.build();
-      }
-      result.automateManuallyDialedScrubList_ = automateManuallyDialedScrubList_;
-      result.automatePreviewDialedScrubList_ = automatePreviewDialedScrubList_;
-      if (automateResponseRulesBuilder_ == null) {
-        result.automateResponseRules_ = automateResponseRules_;
-      } else {
-        result.automateResponseRules_ = automateResponseRulesBuilder_.build();
-      }
-      if (automateScrubListCallDataBuilder_ == null) {
-        result.automateScrubListCallData_ = automateScrubListCallData_;
-      } else {
-        result.automateScrubListCallData_ = automateScrubListCallDataBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.org.CommunicationSettings result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.enableScrubListAdding_ = enableScrubListAdding_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        scrubLists_.makeImmutable();
+        result.scrubLists_ = scrubLists_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.enableScrubListRemoval_ = enableScrubListRemoval_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        scrubListsRemovalAllowed_.makeImmutable();
+        result.scrubListsRemovalAllowed_ = scrubListsRemovalAllowed_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.complianceDefaultCountry_ = complianceDefaultCountry_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.displayOptionsInWrapup_ = displayOptionsInWrapup_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.inboundScrubListExpiration_ = inboundScrubListExpirationBuilder_ == null
+            ? inboundScrubListExpiration_
+            : inboundScrubListExpirationBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.manualScrubListExpiration_ = manualScrubListExpirationBuilder_ == null
+            ? manualScrubListExpiration_
+            : manualScrubListExpirationBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.outboundScrubListExpiration_ = outboundScrubListExpirationBuilder_ == null
+            ? outboundScrubListExpiration_
+            : outboundScrubListExpirationBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.previewScrubListExpiration_ = previewScrubListExpirationBuilder_ == null
+            ? previewScrubListExpiration_
+            : previewScrubListExpirationBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.automateManuallyDialedScrubList_ = automateManuallyDialedScrubList_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.automatePreviewDialedScrubList_ = automatePreviewDialedScrubList_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.automateResponseRules_ = automateResponseRulesBuilder_ == null
+            ? automateResponseRules_
+            : automateResponseRulesBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.automateScrubListCallData_ = automateScrubListCallDataBuilder_ == null
+            ? automateScrubListCallData_
+            : automateScrubListCallDataBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -4601,7 +4375,7 @@ private static final long serialVersionUID = 0L;
       if (!other.scrubLists_.isEmpty()) {
         if (scrubLists_.isEmpty()) {
           scrubLists_ = other.scrubLists_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000002;
         } else {
           ensureScrubListsIsMutable();
           scrubLists_.addAll(other.scrubLists_);
@@ -4614,7 +4388,7 @@ private static final long serialVersionUID = 0L;
       if (!other.scrubListsRemovalAllowed_.isEmpty()) {
         if (scrubListsRemovalAllowed_.isEmpty()) {
           scrubListsRemovalAllowed_ = other.scrubListsRemovalAllowed_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ |= 0x00000008;
         } else {
           ensureScrubListsRemovalAllowedIsMutable();
           scrubListsRemovalAllowed_.addAll(other.scrubListsRemovalAllowed_);
@@ -4651,7 +4425,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasAutomateScrubListCallData()) {
         mergeAutomateScrubListCallData(other.getAutomateScrubListCallData());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -4666,17 +4440,114 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.org.CommunicationSettings parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              enableScrubListAdding_ = input.readBool();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureScrubListsIsMutable();
+              scrubLists_.add(s);
+              break;
+            } // case 18
+            case 24: {
+              enableScrubListRemoval_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureScrubListsRemovalAllowedIsMutable();
+              scrubListsRemovalAllowed_.add(s);
+              break;
+            } // case 34
+            case 40: {
+              complianceDefaultCountry_ = input.readEnum();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 48: {
+              displayOptionsInWrapup_ = input.readBool();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
+            case 802: {
+              input.readMessage(
+                  getInboundScrubListExpirationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 802
+            case 810: {
+              input.readMessage(
+                  getManualScrubListExpirationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 810
+            case 818: {
+              input.readMessage(
+                  getOutboundScrubListExpirationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 818
+            case 826: {
+              input.readMessage(
+                  getPreviewScrubListExpirationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 826
+            case 1600: {
+              automateManuallyDialedScrubList_ = input.readBool();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 1600
+            case 1608: {
+              automatePreviewDialedScrubList_ = input.readBool();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 1608
+            case 1618: {
+              input.readMessage(
+                  getAutomateResponseRulesFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 1618
+            case 1626: {
+              input.readMessage(
+                  getAutomateScrubListCallDataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 1626
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.org.CommunicationSettings) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -4706,8 +4577,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnableScrubListAdding(boolean value) {
-      
+
       enableScrubListAdding_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -4721,18 +4593,19 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableScrubListAdding() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       enableScrubListAdding_ = false;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList scrubLists_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList scrubLists_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureScrubListsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!scrubLists_.isModifiable()) {
         scrubLists_ = new com.google.protobuf.LazyStringArrayList(scrubLists_);
-        bitField0_ |= 0x00000001;
-       }
+      }
+      bitField0_ |= 0x00000002;
     }
     /**
      * <pre>
@@ -4744,7 +4617,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getScrubListsList() {
-      return scrubLists_.getUnmodifiableView();
+      scrubLists_.makeImmutable();
+      return scrubLists_;
     }
     /**
      * <pre>
@@ -4794,11 +4668,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setScrubLists(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureScrubListsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureScrubListsIsMutable();
       scrubLists_.set(index, value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -4813,11 +4686,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addScrubLists(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureScrubListsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureScrubListsIsMutable();
       scrubLists_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -4835,6 +4707,7 @@ private static final long serialVersionUID = 0L;
       ensureScrubListsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, scrubLists_);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -4847,8 +4720,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearScrubLists() {
-      scrubLists_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      scrubLists_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000002);;
       onChanged();
       return this;
     }
@@ -4863,12 +4737,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addScrubListsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureScrubListsIsMutable();
       scrubLists_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -4898,8 +4771,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnableScrubListRemoval(boolean value) {
-      
+
       enableScrubListRemoval_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -4913,18 +4787,19 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableScrubListRemoval() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       enableScrubListRemoval_ = false;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList scrubListsRemovalAllowed_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList scrubListsRemovalAllowed_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureScrubListsRemovalAllowedIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!scrubListsRemovalAllowed_.isModifiable()) {
         scrubListsRemovalAllowed_ = new com.google.protobuf.LazyStringArrayList(scrubListsRemovalAllowed_);
-        bitField0_ |= 0x00000002;
-       }
+      }
+      bitField0_ |= 0x00000008;
     }
     /**
      * <pre>
@@ -4937,7 +4812,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getScrubListsRemovalAllowedList() {
-      return scrubListsRemovalAllowed_.getUnmodifiableView();
+      scrubListsRemovalAllowed_.makeImmutable();
+      return scrubListsRemovalAllowed_;
     }
     /**
      * <pre>
@@ -4991,11 +4867,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setScrubListsRemovalAllowed(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureScrubListsRemovalAllowedIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureScrubListsRemovalAllowedIsMutable();
       scrubListsRemovalAllowed_.set(index, value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -5011,11 +4886,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addScrubListsRemovalAllowed(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureScrubListsRemovalAllowedIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureScrubListsRemovalAllowedIsMutable();
       scrubListsRemovalAllowed_.add(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -5034,6 +4908,7 @@ private static final long serialVersionUID = 0L;
       ensureScrubListsRemovalAllowedIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, scrubListsRemovalAllowed_);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -5047,8 +4922,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearScrubListsRemovalAllowed() {
-      scrubListsRemovalAllowed_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      scrubListsRemovalAllowed_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000008);;
       onChanged();
       return this;
     }
@@ -5064,12 +4940,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addScrubListsRemovalAllowedBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureScrubListsRemovalAllowedIsMutable();
       scrubListsRemovalAllowed_.add(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -5096,8 +4971,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setComplianceDefaultCountryValue(int value) {
-      
       complianceDefaultCountry_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -5111,8 +4986,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.Country getComplianceDefaultCountry() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.Country result = com.tcn.cloud.api.api.commons.Country.valueOf(complianceDefaultCountry_);
+      com.tcn.cloud.api.api.commons.Country result = com.tcn.cloud.api.api.commons.Country.forNumber(complianceDefaultCountry_);
       return result == null ? com.tcn.cloud.api.api.commons.Country.UNRECOGNIZED : result;
     }
     /**
@@ -5128,7 +5002,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000010;
       complianceDefaultCountry_ = value.getNumber();
       onChanged();
       return this;
@@ -5142,7 +5016,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearComplianceDefaultCountry() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       complianceDefaultCountry_ = 0;
       onChanged();
       return this;
@@ -5171,8 +5045,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisplayOptionsInWrapup(boolean value) {
-      
+
       displayOptionsInWrapup_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -5185,7 +5060,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayOptionsInWrapup() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       displayOptionsInWrapup_ = false;
       onChanged();
       return this;
@@ -5203,7 +5078,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the inboundScrubListExpiration field is set.
      */
     public boolean hasInboundScrubListExpiration() {
-      return inboundScrubListExpirationBuilder_ != null || inboundScrubListExpiration_ != null;
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -5233,11 +5108,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         inboundScrubListExpiration_ = value;
-        onChanged();
       } else {
         inboundScrubListExpirationBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -5251,11 +5126,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.Builder builderForValue) {
       if (inboundScrubListExpirationBuilder_ == null) {
         inboundScrubListExpiration_ = builderForValue.build();
-        onChanged();
       } else {
         inboundScrubListExpirationBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -5267,17 +5142,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeInboundScrubListExpiration(com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration value) {
       if (inboundScrubListExpirationBuilder_ == null) {
-        if (inboundScrubListExpiration_ != null) {
-          inboundScrubListExpiration_ =
-            com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.newBuilder(inboundScrubListExpiration_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000040) != 0) &&
+          inboundScrubListExpiration_ != null &&
+          inboundScrubListExpiration_ != com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.getDefaultInstance()) {
+          getInboundScrubListExpirationBuilder().mergeFrom(value);
         } else {
           inboundScrubListExpiration_ = value;
         }
-        onChanged();
       } else {
         inboundScrubListExpirationBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -5288,14 +5164,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.CommunicationSettings.ScrubListExpiration inbound_scrub_list_expiration = 100 [json_name = "inboundScrubListExpiration"];</code>
      */
     public Builder clearInboundScrubListExpiration() {
-      if (inboundScrubListExpirationBuilder_ == null) {
-        inboundScrubListExpiration_ = null;
-        onChanged();
-      } else {
-        inboundScrubListExpiration_ = null;
+      bitField0_ = (bitField0_ & ~0x00000040);
+      inboundScrubListExpiration_ = null;
+      if (inboundScrubListExpirationBuilder_ != null) {
+        inboundScrubListExpirationBuilder_.dispose();
         inboundScrubListExpirationBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -5306,7 +5181,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.CommunicationSettings.ScrubListExpiration inbound_scrub_list_expiration = 100 [json_name = "inboundScrubListExpiration"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.Builder getInboundScrubListExpirationBuilder() {
-      
+      bitField0_ |= 0x00000040;
       onChanged();
       return getInboundScrubListExpirationFieldBuilder().getBuilder();
     }
@@ -5358,7 +5233,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the manualScrubListExpiration field is set.
      */
     public boolean hasManualScrubListExpiration() {
-      return manualScrubListExpirationBuilder_ != null || manualScrubListExpiration_ != null;
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -5388,11 +5263,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         manualScrubListExpiration_ = value;
-        onChanged();
       } else {
         manualScrubListExpirationBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -5406,11 +5281,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.Builder builderForValue) {
       if (manualScrubListExpirationBuilder_ == null) {
         manualScrubListExpiration_ = builderForValue.build();
-        onChanged();
       } else {
         manualScrubListExpirationBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -5422,17 +5297,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeManualScrubListExpiration(com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration value) {
       if (manualScrubListExpirationBuilder_ == null) {
-        if (manualScrubListExpiration_ != null) {
-          manualScrubListExpiration_ =
-            com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.newBuilder(manualScrubListExpiration_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000080) != 0) &&
+          manualScrubListExpiration_ != null &&
+          manualScrubListExpiration_ != com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.getDefaultInstance()) {
+          getManualScrubListExpirationBuilder().mergeFrom(value);
         } else {
           manualScrubListExpiration_ = value;
         }
-        onChanged();
       } else {
         manualScrubListExpirationBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -5443,14 +5319,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.CommunicationSettings.ScrubListExpiration manual_scrub_list_expiration = 101 [json_name = "manualScrubListExpiration"];</code>
      */
     public Builder clearManualScrubListExpiration() {
-      if (manualScrubListExpirationBuilder_ == null) {
-        manualScrubListExpiration_ = null;
-        onChanged();
-      } else {
-        manualScrubListExpiration_ = null;
+      bitField0_ = (bitField0_ & ~0x00000080);
+      manualScrubListExpiration_ = null;
+      if (manualScrubListExpirationBuilder_ != null) {
+        manualScrubListExpirationBuilder_.dispose();
         manualScrubListExpirationBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -5461,7 +5336,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.CommunicationSettings.ScrubListExpiration manual_scrub_list_expiration = 101 [json_name = "manualScrubListExpiration"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.Builder getManualScrubListExpirationBuilder() {
-      
+      bitField0_ |= 0x00000080;
       onChanged();
       return getManualScrubListExpirationFieldBuilder().getBuilder();
     }
@@ -5513,7 +5388,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the outboundScrubListExpiration field is set.
      */
     public boolean hasOutboundScrubListExpiration() {
-      return outboundScrubListExpirationBuilder_ != null || outboundScrubListExpiration_ != null;
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -5543,11 +5418,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         outboundScrubListExpiration_ = value;
-        onChanged();
       } else {
         outboundScrubListExpirationBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -5561,11 +5436,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.Builder builderForValue) {
       if (outboundScrubListExpirationBuilder_ == null) {
         outboundScrubListExpiration_ = builderForValue.build();
-        onChanged();
       } else {
         outboundScrubListExpirationBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -5577,17 +5452,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeOutboundScrubListExpiration(com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration value) {
       if (outboundScrubListExpirationBuilder_ == null) {
-        if (outboundScrubListExpiration_ != null) {
-          outboundScrubListExpiration_ =
-            com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.newBuilder(outboundScrubListExpiration_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000100) != 0) &&
+          outboundScrubListExpiration_ != null &&
+          outboundScrubListExpiration_ != com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.getDefaultInstance()) {
+          getOutboundScrubListExpirationBuilder().mergeFrom(value);
         } else {
           outboundScrubListExpiration_ = value;
         }
-        onChanged();
       } else {
         outboundScrubListExpirationBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -5598,14 +5474,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.CommunicationSettings.ScrubListExpiration outbound_scrub_list_expiration = 102 [json_name = "outboundScrubListExpiration"];</code>
      */
     public Builder clearOutboundScrubListExpiration() {
-      if (outboundScrubListExpirationBuilder_ == null) {
-        outboundScrubListExpiration_ = null;
-        onChanged();
-      } else {
-        outboundScrubListExpiration_ = null;
+      bitField0_ = (bitField0_ & ~0x00000100);
+      outboundScrubListExpiration_ = null;
+      if (outboundScrubListExpirationBuilder_ != null) {
+        outboundScrubListExpirationBuilder_.dispose();
         outboundScrubListExpirationBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -5616,7 +5491,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.CommunicationSettings.ScrubListExpiration outbound_scrub_list_expiration = 102 [json_name = "outboundScrubListExpiration"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.Builder getOutboundScrubListExpirationBuilder() {
-      
+      bitField0_ |= 0x00000100;
       onChanged();
       return getOutboundScrubListExpirationFieldBuilder().getBuilder();
     }
@@ -5668,7 +5543,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the previewScrubListExpiration field is set.
      */
     public boolean hasPreviewScrubListExpiration() {
-      return previewScrubListExpirationBuilder_ != null || previewScrubListExpiration_ != null;
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -5698,11 +5573,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         previewScrubListExpiration_ = value;
-        onChanged();
       } else {
         previewScrubListExpirationBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
@@ -5716,11 +5591,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.Builder builderForValue) {
       if (previewScrubListExpirationBuilder_ == null) {
         previewScrubListExpiration_ = builderForValue.build();
-        onChanged();
       } else {
         previewScrubListExpirationBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
@@ -5732,17 +5607,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePreviewScrubListExpiration(com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration value) {
       if (previewScrubListExpirationBuilder_ == null) {
-        if (previewScrubListExpiration_ != null) {
-          previewScrubListExpiration_ =
-            com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.newBuilder(previewScrubListExpiration_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000200) != 0) &&
+          previewScrubListExpiration_ != null &&
+          previewScrubListExpiration_ != com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.getDefaultInstance()) {
+          getPreviewScrubListExpirationBuilder().mergeFrom(value);
         } else {
           previewScrubListExpiration_ = value;
         }
-        onChanged();
       } else {
         previewScrubListExpirationBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
@@ -5753,14 +5629,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.CommunicationSettings.ScrubListExpiration preview_scrub_list_expiration = 103 [json_name = "previewScrubListExpiration"];</code>
      */
     public Builder clearPreviewScrubListExpiration() {
-      if (previewScrubListExpirationBuilder_ == null) {
-        previewScrubListExpiration_ = null;
-        onChanged();
-      } else {
-        previewScrubListExpiration_ = null;
+      bitField0_ = (bitField0_ & ~0x00000200);
+      previewScrubListExpiration_ = null;
+      if (previewScrubListExpirationBuilder_ != null) {
+        previewScrubListExpirationBuilder_.dispose();
         previewScrubListExpirationBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -5771,7 +5646,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.CommunicationSettings.ScrubListExpiration preview_scrub_list_expiration = 103 [json_name = "previewScrubListExpiration"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.CommunicationSettings.ScrubListExpiration.Builder getPreviewScrubListExpirationBuilder() {
-      
+      bitField0_ |= 0x00000200;
       onChanged();
       return getPreviewScrubListExpirationFieldBuilder().getBuilder();
     }
@@ -5834,8 +5709,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAutomateManuallyDialedScrubList(boolean value) {
-      
+
       automateManuallyDialedScrubList_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -5848,7 +5724,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAutomateManuallyDialedScrubList() {
-      
+      bitField0_ = (bitField0_ & ~0x00000400);
       automateManuallyDialedScrubList_ = false;
       onChanged();
       return this;
@@ -5877,8 +5753,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAutomatePreviewDialedScrubList(boolean value) {
-      
+
       automatePreviewDialedScrubList_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -5891,7 +5768,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAutomatePreviewDialedScrubList() {
-      
+      bitField0_ = (bitField0_ & ~0x00000800);
       automatePreviewDialedScrubList_ = false;
       onChanged();
       return this;
@@ -5909,7 +5786,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the automateResponseRules field is set.
      */
     public boolean hasAutomateResponseRules() {
-      return automateResponseRulesBuilder_ != null || automateResponseRules_ != null;
+      return ((bitField0_ & 0x00001000) != 0);
     }
     /**
      * <pre>
@@ -5939,11 +5816,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         automateResponseRules_ = value;
-        onChanged();
       } else {
         automateResponseRulesBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00001000;
+      onChanged();
       return this;
     }
     /**
@@ -5957,11 +5834,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateResponseRules.Builder builderForValue) {
       if (automateResponseRulesBuilder_ == null) {
         automateResponseRules_ = builderForValue.build();
-        onChanged();
       } else {
         automateResponseRulesBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00001000;
+      onChanged();
       return this;
     }
     /**
@@ -5973,17 +5850,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAutomateResponseRules(com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateResponseRules value) {
       if (automateResponseRulesBuilder_ == null) {
-        if (automateResponseRules_ != null) {
-          automateResponseRules_ =
-            com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateResponseRules.newBuilder(automateResponseRules_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00001000) != 0) &&
+          automateResponseRules_ != null &&
+          automateResponseRules_ != com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateResponseRules.getDefaultInstance()) {
+          getAutomateResponseRulesBuilder().mergeFrom(value);
         } else {
           automateResponseRules_ = value;
         }
-        onChanged();
       } else {
         automateResponseRulesBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00001000;
+      onChanged();
       return this;
     }
     /**
@@ -5994,14 +5872,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.CommunicationSettings.AutomateResponseRules automate_response_rules = 202 [json_name = "automateResponseRules"];</code>
      */
     public Builder clearAutomateResponseRules() {
-      if (automateResponseRulesBuilder_ == null) {
-        automateResponseRules_ = null;
-        onChanged();
-      } else {
-        automateResponseRules_ = null;
+      bitField0_ = (bitField0_ & ~0x00001000);
+      automateResponseRules_ = null;
+      if (automateResponseRulesBuilder_ != null) {
+        automateResponseRulesBuilder_.dispose();
         automateResponseRulesBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -6012,7 +5889,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.CommunicationSettings.AutomateResponseRules automate_response_rules = 202 [json_name = "automateResponseRules"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateResponseRules.Builder getAutomateResponseRulesBuilder() {
-      
+      bitField0_ |= 0x00001000;
       onChanged();
       return getAutomateResponseRulesFieldBuilder().getBuilder();
     }
@@ -6065,7 +5942,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the automateScrubListCallData field is set.
      */
     public boolean hasAutomateScrubListCallData() {
-      return automateScrubListCallDataBuilder_ != null || automateScrubListCallData_ != null;
+      return ((bitField0_ & 0x00002000) != 0);
     }
     /**
      * <pre>
@@ -6097,11 +5974,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         automateScrubListCallData_ = value;
-        onChanged();
       } else {
         automateScrubListCallDataBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
@@ -6116,11 +5993,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.Builder builderForValue) {
       if (automateScrubListCallDataBuilder_ == null) {
         automateScrubListCallData_ = builderForValue.build();
-        onChanged();
       } else {
         automateScrubListCallDataBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
@@ -6133,17 +6010,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAutomateScrubListCallData(com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData value) {
       if (automateScrubListCallDataBuilder_ == null) {
-        if (automateScrubListCallData_ != null) {
-          automateScrubListCallData_ =
-            com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.newBuilder(automateScrubListCallData_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00002000) != 0) &&
+          automateScrubListCallData_ != null &&
+          automateScrubListCallData_ != com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.getDefaultInstance()) {
+          getAutomateScrubListCallDataBuilder().mergeFrom(value);
         } else {
           automateScrubListCallData_ = value;
         }
-        onChanged();
       } else {
         automateScrubListCallDataBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
@@ -6155,14 +6033,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.CommunicationSettings.AutomateScrubListCallData automate_scrub_list_call_data = 203 [json_name = "automateScrubListCallData"];</code>
      */
     public Builder clearAutomateScrubListCallData() {
-      if (automateScrubListCallDataBuilder_ == null) {
-        automateScrubListCallData_ = null;
-        onChanged();
-      } else {
-        automateScrubListCallData_ = null;
+      bitField0_ = (bitField0_ & ~0x00002000);
+      automateScrubListCallData_ = null;
+      if (automateScrubListCallDataBuilder_ != null) {
+        automateScrubListCallDataBuilder_.dispose();
         automateScrubListCallDataBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -6174,7 +6051,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.CommunicationSettings.AutomateScrubListCallData automate_scrub_list_call_data = 203 [json_name = "automateScrubListCallData"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.CommunicationSettings.AutomateScrubListCallData.Builder getAutomateScrubListCallDataBuilder() {
-      
+      bitField0_ |= 0x00002000;
       onChanged();
       return getAutomateScrubListCallDataFieldBuilder().getBuilder();
     }
@@ -6248,7 +6125,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new CommunicationSettings(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

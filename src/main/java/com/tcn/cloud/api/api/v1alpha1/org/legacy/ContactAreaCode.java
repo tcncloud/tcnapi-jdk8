@@ -29,67 +29,6 @@ private static final long serialVersionUID = 0L;
     return new ContactAreaCode();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private ContactAreaCode(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-            areaCodeCase_ = 1;
-            areaCode_ = input.readInt32();
-            break;
-          }
-          case 18: {
-            com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactFieldDesc.Builder subBuilder = null;
-            if (areaCodeCase_ == 2) {
-              subBuilder = ((com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactFieldDesc) areaCode_).toBuilder();
-            }
-            areaCode_ =
-                input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactFieldDesc.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactFieldDesc) areaCode_);
-              areaCode_ = subBuilder.buildPartial();
-            }
-            areaCodeCase_ = 2;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.legacy.EntitiesProto.internal_static_api_v1alpha1_org_legacy_ContactAreaCode_descriptor;
@@ -104,6 +43,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int areaCodeCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object areaCode_;
   public enum AreaCodeCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -145,6 +85,18 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOM_FIELD_NUMBER = 1;
+  /**
+   * <pre>
+   * Client-defined area code number
+   * </pre>
+   *
+   * <code>int32 custom = 1 [json_name = "custom"];</code>
+   * @return Whether the custom field is set.
+   */
+  @java.lang.Override
+  public boolean hasCustom() {
+    return areaCodeCase_ == 1;
+  }
   /**
    * <pre>
    * Client-defined area code number
@@ -225,7 +177,7 @@ private static final long serialVersionUID = 0L;
     if (areaCodeCase_ == 2) {
       output.writeMessage(2, (com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactFieldDesc) areaCode_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -243,7 +195,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, (com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactFieldDesc) areaCode_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -271,7 +223,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -294,7 +246,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -343,11 +295,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactAreaCode parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactAreaCode parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -415,22 +369,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactAreaCode.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      if (contactFieldBuilder_ != null) {
+        contactFieldBuilder_.clear();
+      }
       areaCodeCase_ = 0;
       areaCode_ = null;
       return this;
@@ -459,19 +412,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactAreaCode buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactAreaCode result = new com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactAreaCode(this);
-      if (areaCodeCase_ == 1) {
-        result.areaCode_ = areaCode_;
-      }
-      if (areaCodeCase_ == 2) {
-        if (contactFieldBuilder_ == null) {
-          result.areaCode_ = areaCode_;
-        } else {
-          result.areaCode_ = contactFieldBuilder_.build();
-        }
-      }
-      result.areaCodeCase_ = areaCodeCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactAreaCode result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactAreaCode result) {
+      result.areaCodeCase_ = areaCodeCase_;
+      result.areaCode_ = this.areaCode_;
+      if (areaCodeCase_ == 2 &&
+          contactFieldBuilder_ != null) {
+        result.areaCode_ = contactFieldBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -531,7 +488,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -546,17 +503,42 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactAreaCode parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              areaCode_ = input.readInt32();
+              areaCodeCase_ = 1;
+              break;
+            } // case 8
+            case 18: {
+              input.readMessage(
+                  getContactFieldFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              areaCodeCase_ = 2;
+              break;
+            } // case 18
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactAreaCode) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int areaCodeCase_ = 0;
@@ -574,7 +556,19 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
+    /**
+     * <pre>
+     * Client-defined area code number
+     * </pre>
+     *
+     * <code>int32 custom = 1 [json_name = "custom"];</code>
+     * @return Whether the custom field is set.
+     */
+    public boolean hasCustom() {
+      return areaCodeCase_ == 1;
+    }
     /**
      * <pre>
      * Client-defined area code number
@@ -599,6 +593,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCustom(int value) {
+
       areaCodeCase_ = 1;
       areaCode_ = value;
       onChanged();
@@ -715,8 +710,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (areaCodeCase_ == 2) {
           contactFieldBuilder_.mergeFrom(value);
+        } else {
+          contactFieldBuilder_.setMessage(value);
         }
-        contactFieldBuilder_.setMessage(value);
       }
       areaCodeCase_ = 2;
       return this;
@@ -794,7 +790,7 @@ private static final long serialVersionUID = 0L;
         areaCode_ = null;
       }
       areaCodeCase_ = 2;
-      onChanged();;
+      onChanged();
       return contactFieldBuilder_;
     }
     @java.lang.Override
@@ -830,7 +826,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ContactAreaCode(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

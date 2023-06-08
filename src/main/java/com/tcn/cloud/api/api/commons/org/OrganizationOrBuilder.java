@@ -66,7 +66,6 @@ public interface OrganizationOrBuilder extends
    *
    * <code>map&lt;string, int64&gt; enabled_regions = 2 [json_name = "enabledRegions"];</code>
    */
-
   long getEnabledRegionsOrDefault(
       java.lang.String key,
       long defaultValue);
@@ -77,7 +76,6 @@ public interface OrganizationOrBuilder extends
    *
    * <code>map&lt;string, int64&gt; enabled_regions = 2 [json_name = "enabledRegions"];</code>
    */
-
   long getEnabledRegionsOrThrow(
       java.lang.String key);
 

@@ -61,5 +61,5 @@ public interface ListContactListsReqOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.ListContactListsReq.ByProjectOrBuilder getByProjectOrBuilder();
 
-  public com.tcn.cloud.api.api.v0alpha.ListContactListsReq.FilterCase getFilterCase();
+  com.tcn.cloud.api.api.v0alpha.ListContactListsReq.FilterCase getFilterCase();
 }

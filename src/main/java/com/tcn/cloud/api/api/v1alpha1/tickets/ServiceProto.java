@@ -30,64 +30,64 @@ public final class ServiceProto {
       "le/api/annotations.proto2\340\022\n\007Tickets\022\235\001\n" +
       "\014CreateTicket\022%.api.v1alpha1.tickets.Cre" +
       "ateTicketReq\032%.api.v1alpha1.tickets.Crea" +
-      "teTicketRes\"?\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002/:\001*\"*/api/v" +
-      "1alpha1/tickets/tickets/createticket\022\225\001\n" +
+      "teTicketRes\"?\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002/\"*/api/v1al" +
+      "pha1/tickets/tickets/createticket:\001*\022\225\001\n" +
       "\nEditTicket\022#.api.v1alpha1.tickets.EditT" +
       "icketReq\032#.api.v1alpha1.tickets.EditTick" +
-      "etRes\"=\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002-:\001*\"(/api/v1alpha" +
-      "1/tickets/tickets/editticket\022\231\001\n\013ListTic" +
+      "etRes\"=\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002-\"(/api/v1alpha1/t" +
+      "ickets/tickets/editticket:\001*\022\231\001\n\013ListTic" +
       "kets\022$.api.v1alpha1.tickets.ListTicketsR" +
       "eq\032$.api.v1alpha1.tickets.ListTicketsRes" +
-      "\">\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002.:\001*\")/api/v1alpha1/tic" +
-      "kets/tickets/listtickets\022\235\001\n\014AssignTicke" +
+      "\">\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002.\")/api/v1alpha1/ticket" +
+      "s/tickets/listtickets:\001*\022\235\001\n\014AssignTicke" +
       "t\022%.api.v1alpha1.tickets.AssignTicketReq" +
       "\032%.api.v1alpha1.tickets.AssignTicketRes\"" +
-      "?\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002/:\001*\"*/api/v1alpha1/tick" +
-      "ets/tickets/assignticket\022\231\001\n\013CloseTicket" +
+      "?\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002/\"*/api/v1alpha1/tickets" +
+      "/tickets/assignticket:\001*\022\231\001\n\013CloseTicket" +
       "\022$.api.v1alpha1.tickets.CloseTicketReq\032$" +
       ".api.v1alpha1.tickets.CloseTicketRes\">\272\270" +
-      "\221\002\005\n\003\010\234\030\202\323\344\223\002.:\001*\")/api/v1alpha1/tickets" +
-      "/tickets/closeticket\022\225\001\n\nViewTicket\022#.ap" +
+      "\221\002\005\n\003\010\234\030\202\323\344\223\002.\")/api/v1alpha1/tickets/ti" +
+      "ckets/closeticket:\001*\022\225\001\n\nViewTicket\022#.ap" +
       "i.v1alpha1.tickets.ViewTicketReq\032#.api.v" +
       "1alpha1.tickets.ViewTicketRes\"=\272\270\221\002\005\n\003\010\234" +
-      "\030\202\323\344\223\002-:\001*\"(/api/v1alpha1/tickets/ticket" +
-      "s/viewticket\022\241\001\n\rCreateComment\022&.api.v1a" +
+      "\030\202\323\344\223\002-\"(/api/v1alpha1/tickets/tickets/v" +
+      "iewticket:\001*\022\241\001\n\rCreateComment\022&.api.v1a" +
       "lpha1.tickets.CreateCommentReq\032&.api.v1a" +
       "lpha1.tickets.CreateCommentRes\"@\272\270\221\002\005\n\003\010" +
-      "\234\030\202\323\344\223\0020:\001*\"+/api/v1alpha1/tickets/ticke" +
-      "ts/createcomment\022\241\001\n\rEnableProject\022&.api" +
+      "\234\030\202\323\344\223\0020\"+/api/v1alpha1/tickets/tickets/" +
+      "createcomment:\001*\022\241\001\n\rEnableProject\022&.api" +
       ".v1alpha1.tickets.EnableProjectReq\032&.api" +
       ".v1alpha1.tickets.EnableProjectRes\"@\272\270\221\002" +
-      "\005\n\003\010\235\030\202\323\344\223\0020:\001*\"+/api/v1alpha1/tickets/t" +
-      "ickets/enableproject\022\262\001\n\023ListEnabledProj" +
+      "\005\n\003\010\235\030\202\323\344\223\0020\"+/api/v1alpha1/tickets/tick" +
+      "ets/enableproject:\001*\022\262\001\n\023ListEnabledProj" +
       "ects\022,.api.v1alpha1.tickets.ListEnabledP" +
       "rojectsReq\032,.api.v1alpha1.tickets.ListEn" +
-      "abledProjectsRes\"?\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002/:\001*\"*/" +
-      "api/v1alpha1/tickets/tickets/listproject" +
-      "s\022\221\001\n\tCreateSLA\022\".api.v1alpha1.tickets.C" +
+      "abledProjectsRes\"?\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002/\"*/api" +
+      "/v1alpha1/tickets/tickets/listprojects:\001" +
+      "*\022\221\001\n\tCreateSLA\022\".api.v1alpha1.tickets.C" +
       "reateSlaReq\032\".api.v1alpha1.tickets.Creat" +
-      "eSlaRes\"<\272\270\221\002\005\n\003\010\235\030\202\323\344\223\002,:\001*\"\'/api/v1alp" +
-      "ha1/tickets/tickets/createsla\022\211\001\n\007ListSL" +
+      "eSlaRes\"<\272\270\221\002\005\n\003\010\235\030\202\323\344\223\002,\"\'/api/v1alpha1" +
+      "/tickets/tickets/createsla:\001*\022\211\001\n\007ListSL" +
       "A\022 .api.v1alpha1.tickets.ListSlaReq\032 .ap" +
       "i.v1alpha1.tickets.ListSlaRes\":\272\270\221\002\005\n\003\010\235" +
-      "\030\202\323\344\223\002*:\001*\"%/api/v1alpha1/tickets/ticket" +
-      "s/listsla\022\221\001\n\tUpdateSLA\022\".api.v1alpha1.t" +
+      "\030\202\323\344\223\002*\"%/api/v1alpha1/tickets/tickets/l" +
+      "istsla:\001*\022\221\001\n\tUpdateSLA\022\".api.v1alpha1.t" +
       "ickets.UpdateSlaReq\032\".api.v1alpha1.ticke" +
-      "ts.UpdateSlaRes\"<\272\270\221\002\005\n\003\010\235\030\202\323\344\223\002,:\001*\"\'/a" +
-      "pi/v1alpha1/tickets/tickets/updatesla\022\255\001" +
+      "ts.UpdateSlaRes\"<\272\270\221\002\005\n\003\010\235\030\202\323\344\223\002,\"\'/api/" +
+      "v1alpha1/tickets/tickets/updatesla:\001*\022\255\001" +
       "\n\020ListSLACondition\022).api.v1alpha1.ticket" +
       "s.ListSlaConditionReq\032).api.v1alpha1.tic" +
       "kets.ListSlaConditionRes\"C\272\270\221\002\005\n\003\010\235\030\202\323\344\223" +
-      "\0023:\001*\"./api/v1alpha1/tickets/tickets/lis" +
-      "tslacondition\022\235\001\n\014ReplyComment\022%.api.v1a" +
+      "\0023\"./api/v1alpha1/tickets/tickets/listsl" +
+      "acondition:\001*\022\235\001\n\014ReplyComment\022%.api.v1a" +
       "lpha1.tickets.ReplyCommentReq\032%.api.v1al" +
       "pha1.tickets.ReplyCommentRes\"?\272\270\221\002\005\n\003\010\234\030" +
-      "\202\323\344\223\002/:\001*\"*/api/v1alpha1/tickets/tickets" +
-      "/replycomment\022\253\001\n\022ListTicketAuditLog\022+.a" +
+      "\202\323\344\223\002/\"*/api/v1alpha1/tickets/tickets/re" +
+      "plycomment:\001*\022\253\001\n\022ListTicketAuditLog\022+.a" +
       "pi.v1alpha1.tickets.ListTicketAuditLogRe" +
       "q\032+.api.v1alpha1.tickets.ListTicketAudit" +
-      "LogRes\";\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002+:\001*\"&/api/v1alph" +
-      "a1/tickets/tickets/auditlogB\250\001\n&com.tcn." +
+      "LogRes\";\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002+\"&/api/v1alpha1/" +
+      "tickets/tickets/auditlog:\001*B\250\001\n&com.tcn." +
       "cloud.api.api.v1alpha1.ticketsB\014ServiceP" +
       "rotoP\001\242\002\003AVT\252\002\024Api.V1alpha1.Tickets\312\002\024Ap" +
       "i\\V1alpha1\\Tickets\342\002 Api\\V1alpha1\\Ticket" +

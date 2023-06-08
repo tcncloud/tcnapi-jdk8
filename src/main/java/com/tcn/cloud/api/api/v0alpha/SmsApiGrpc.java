@@ -1,19 +1,6 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -23,8 +10,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.14.0)",
+    value = "by gRPC proto compiler (version 1.55.1)",
     comments = "Source: api/v0alpha/smsapi.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class SmsApiGrpc {
 
   private SmsApiGrpc() {}
@@ -46,22 +34,21 @@ public final class SmsApiGrpc {
     if ((getListSmsTemplatesMethod = SmsApiGrpc.getListSmsTemplatesMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getListSmsTemplatesMethod = SmsApiGrpc.getListSmsTemplatesMethod) == null) {
-          SmsApiGrpc.getListSmsTemplatesMethod = getListSmsTemplatesMethod = 
+          SmsApiGrpc.getListSmsTemplatesMethod = getListSmsTemplatesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListSmsTemplatesReq, com.tcn.cloud.api.api.v0alpha.ListSmsTemplatesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "ListSmsTemplates"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSmsTemplates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsTemplatesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsTemplatesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsTemplates"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsTemplates"))
+              .build();
         }
-     }
-     return getListSmsTemplatesMethod;
+      }
+    }
+    return getListSmsTemplatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateSmsTemplateReq,
@@ -78,22 +65,21 @@ public final class SmsApiGrpc {
     if ((getCreateSmsTemplateMethod = SmsApiGrpc.getCreateSmsTemplateMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getCreateSmsTemplateMethod = SmsApiGrpc.getCreateSmsTemplateMethod) == null) {
-          SmsApiGrpc.getCreateSmsTemplateMethod = getCreateSmsTemplateMethod = 
+          SmsApiGrpc.getCreateSmsTemplateMethod = getCreateSmsTemplateMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateSmsTemplateReq, com.tcn.cloud.api.api.v0alpha.CreateSmsTemplateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "CreateSmsTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateSmsTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateSmsTemplateReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateSmsTemplateRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("CreateSmsTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("CreateSmsTemplate"))
+              .build();
         }
-     }
-     return getCreateSmsTemplateMethod;
+      }
+    }
+    return getCreateSmsTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateReq,
@@ -110,22 +96,21 @@ public final class SmsApiGrpc {
     if ((getUpdateSmsTemplateMethod = SmsApiGrpc.getUpdateSmsTemplateMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getUpdateSmsTemplateMethod = SmsApiGrpc.getUpdateSmsTemplateMethod) == null) {
-          SmsApiGrpc.getUpdateSmsTemplateMethod = getUpdateSmsTemplateMethod = 
+          SmsApiGrpc.getUpdateSmsTemplateMethod = getUpdateSmsTemplateMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateReq, com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "UpdateSmsTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSmsTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("UpdateSmsTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("UpdateSmsTemplate"))
+              .build();
         }
-     }
-     return getUpdateSmsTemplateMethod;
+      }
+    }
+    return getUpdateSmsTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteSmsTemplateReq,
@@ -142,22 +127,21 @@ public final class SmsApiGrpc {
     if ((getDeleteSmsTemplateMethod = SmsApiGrpc.getDeleteSmsTemplateMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getDeleteSmsTemplateMethod = SmsApiGrpc.getDeleteSmsTemplateMethod) == null) {
-          SmsApiGrpc.getDeleteSmsTemplateMethod = getDeleteSmsTemplateMethod = 
+          SmsApiGrpc.getDeleteSmsTemplateMethod = getDeleteSmsTemplateMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteSmsTemplateReq, com.tcn.cloud.api.api.v0alpha.DeleteSmsTemplateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "DeleteSmsTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteSmsTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteSmsTemplateReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteSmsTemplateRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("DeleteSmsTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("DeleteSmsTemplate"))
+              .build();
         }
-     }
-     return getDeleteSmsTemplateMethod;
+      }
+    }
+    return getDeleteSmsTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetSmsTemplateBySidReq,
@@ -174,22 +158,21 @@ public final class SmsApiGrpc {
     if ((getGetSmsTemplateBySidMethod = SmsApiGrpc.getGetSmsTemplateBySidMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getGetSmsTemplateBySidMethod = SmsApiGrpc.getGetSmsTemplateBySidMethod) == null) {
-          SmsApiGrpc.getGetSmsTemplateBySidMethod = getGetSmsTemplateBySidMethod = 
+          SmsApiGrpc.getGetSmsTemplateBySidMethod = getGetSmsTemplateBySidMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetSmsTemplateBySidReq, com.tcn.cloud.api.api.v0alpha.GetSmsTemplateBySidRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "GetSmsTemplateBySid"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSmsTemplateBySid"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetSmsTemplateBySidReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetSmsTemplateBySidRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("GetSmsTemplateBySid"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("GetSmsTemplateBySid"))
+              .build();
         }
-     }
-     return getGetSmsTemplateBySidMethod;
+      }
+    }
+    return getGetSmsTemplateBySidMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListSmsIntentTemplatesReq,
@@ -206,22 +189,21 @@ public final class SmsApiGrpc {
     if ((getListSmsIntentTemplatesMethod = SmsApiGrpc.getListSmsIntentTemplatesMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getListSmsIntentTemplatesMethod = SmsApiGrpc.getListSmsIntentTemplatesMethod) == null) {
-          SmsApiGrpc.getListSmsIntentTemplatesMethod = getListSmsIntentTemplatesMethod = 
+          SmsApiGrpc.getListSmsIntentTemplatesMethod = getListSmsIntentTemplatesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListSmsIntentTemplatesReq, com.tcn.cloud.api.api.v0alpha.ListSmsIntentTemplatesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "ListSmsIntentTemplates"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSmsIntentTemplates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsIntentTemplatesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsIntentTemplatesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsIntentTemplates"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsIntentTemplates"))
+              .build();
         }
-     }
-     return getListSmsIntentTemplatesMethod;
+      }
+    }
+    return getListSmsIntentTemplatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate,
@@ -238,22 +220,21 @@ public final class SmsApiGrpc {
     if ((getCreateSmsIntentTemplateMethod = SmsApiGrpc.getCreateSmsIntentTemplateMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getCreateSmsIntentTemplateMethod = SmsApiGrpc.getCreateSmsIntentTemplateMethod) == null) {
-          SmsApiGrpc.getCreateSmsIntentTemplateMethod = getCreateSmsIntentTemplateMethod = 
+          SmsApiGrpc.getCreateSmsIntentTemplateMethod = getCreateSmsIntentTemplateMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate, com.tcn.cloud.api.api.v0alpha.CreateSmsIntentTemplateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "CreateSmsIntentTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateSmsIntentTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateSmsIntentTemplateRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("CreateSmsIntentTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("CreateSmsIntentTemplate"))
+              .build();
         }
-     }
-     return getCreateSmsIntentTemplateMethod;
+      }
+    }
+    return getCreateSmsIntentTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate,
@@ -270,22 +251,21 @@ public final class SmsApiGrpc {
     if ((getUpdateSmsIntentTemplateMethod = SmsApiGrpc.getUpdateSmsIntentTemplateMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getUpdateSmsIntentTemplateMethod = SmsApiGrpc.getUpdateSmsIntentTemplateMethod) == null) {
-          SmsApiGrpc.getUpdateSmsIntentTemplateMethod = getUpdateSmsIntentTemplateMethod = 
+          SmsApiGrpc.getUpdateSmsIntentTemplateMethod = getUpdateSmsIntentTemplateMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate, com.tcn.cloud.api.api.v0alpha.UpdateSmsIntentTemplateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "UpdateSmsIntentTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSmsIntentTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateSmsIntentTemplateRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("UpdateSmsIntentTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("UpdateSmsIntentTemplate"))
+              .build();
         }
-     }
-     return getUpdateSmsIntentTemplateMethod;
+      }
+    }
+    return getUpdateSmsIntentTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteSmsIntentTemplateReq,
@@ -302,22 +282,21 @@ public final class SmsApiGrpc {
     if ((getDeleteSmsIntentTemplateMethod = SmsApiGrpc.getDeleteSmsIntentTemplateMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getDeleteSmsIntentTemplateMethod = SmsApiGrpc.getDeleteSmsIntentTemplateMethod) == null) {
-          SmsApiGrpc.getDeleteSmsIntentTemplateMethod = getDeleteSmsIntentTemplateMethod = 
+          SmsApiGrpc.getDeleteSmsIntentTemplateMethod = getDeleteSmsIntentTemplateMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteSmsIntentTemplateReq, com.tcn.cloud.api.api.v0alpha.DeleteSmsIntentTemplateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "DeleteSmsIntentTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteSmsIntentTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteSmsIntentTemplateReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteSmsIntentTemplateRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("DeleteSmsIntentTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("DeleteSmsIntentTemplate"))
+              .build();
         }
-     }
-     return getDeleteSmsIntentTemplateMethod;
+      }
+    }
+    return getDeleteSmsIntentTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetSmsIntentTemplateBySidReq,
@@ -334,22 +313,21 @@ public final class SmsApiGrpc {
     if ((getGetSmsIntentTemplateBySidMethod = SmsApiGrpc.getGetSmsIntentTemplateBySidMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getGetSmsIntentTemplateBySidMethod = SmsApiGrpc.getGetSmsIntentTemplateBySidMethod) == null) {
-          SmsApiGrpc.getGetSmsIntentTemplateBySidMethod = getGetSmsIntentTemplateBySidMethod = 
+          SmsApiGrpc.getGetSmsIntentTemplateBySidMethod = getGetSmsIntentTemplateBySidMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetSmsIntentTemplateBySidReq, com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "GetSmsIntentTemplateBySid"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSmsIntentTemplateBySid"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetSmsIntentTemplateBySidReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("GetSmsIntentTemplateBySid"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("GetSmsIntentTemplateBySid"))
+              .build();
         }
-     }
-     return getGetSmsIntentTemplateBySidMethod;
+      }
+    }
+    return getGetSmsIntentTemplateBySidMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListSmsSourceNumbersReq,
@@ -366,22 +344,21 @@ public final class SmsApiGrpc {
     if ((getListSmsSourceNumbersMethod = SmsApiGrpc.getListSmsSourceNumbersMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getListSmsSourceNumbersMethod = SmsApiGrpc.getListSmsSourceNumbersMethod) == null) {
-          SmsApiGrpc.getListSmsSourceNumbersMethod = getListSmsSourceNumbersMethod = 
+          SmsApiGrpc.getListSmsSourceNumbersMethod = getListSmsSourceNumbersMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListSmsSourceNumbersReq, com.tcn.cloud.api.api.v0alpha.ListSmsSourceNumbersRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "ListSmsSourceNumbers"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSmsSourceNumbers"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsSourceNumbersReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsSourceNumbersRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsSourceNumbers"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsSourceNumbers"))
+              .build();
         }
-     }
-     return getListSmsSourceNumbersMethod;
+      }
+    }
+    return getListSmsSourceNumbersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateSmsSourceNumberReq,
@@ -398,22 +375,21 @@ public final class SmsApiGrpc {
     if ((getCreateSmsSourceNumberMethod = SmsApiGrpc.getCreateSmsSourceNumberMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getCreateSmsSourceNumberMethod = SmsApiGrpc.getCreateSmsSourceNumberMethod) == null) {
-          SmsApiGrpc.getCreateSmsSourceNumberMethod = getCreateSmsSourceNumberMethod = 
+          SmsApiGrpc.getCreateSmsSourceNumberMethod = getCreateSmsSourceNumberMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateSmsSourceNumberReq, com.tcn.cloud.api.api.v0alpha.CreateSmsSourceNumberRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "CreateSmsSourceNumber"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateSmsSourceNumber"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateSmsSourceNumberReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateSmsSourceNumberRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("CreateSmsSourceNumber"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("CreateSmsSourceNumber"))
+              .build();
         }
-     }
-     return getCreateSmsSourceNumberMethod;
+      }
+    }
+    return getCreateSmsSourceNumberMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateSmsSourceNumberReq,
@@ -430,22 +406,21 @@ public final class SmsApiGrpc {
     if ((getUpdateSmsSourceNumberMethod = SmsApiGrpc.getUpdateSmsSourceNumberMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getUpdateSmsSourceNumberMethod = SmsApiGrpc.getUpdateSmsSourceNumberMethod) == null) {
-          SmsApiGrpc.getUpdateSmsSourceNumberMethod = getUpdateSmsSourceNumberMethod = 
+          SmsApiGrpc.getUpdateSmsSourceNumberMethod = getUpdateSmsSourceNumberMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateSmsSourceNumberReq, com.tcn.cloud.api.api.v0alpha.UpdateSmsSourceNumberRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "UpdateSmsSourceNumber"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSmsSourceNumber"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateSmsSourceNumberReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateSmsSourceNumberRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("UpdateSmsSourceNumber"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("UpdateSmsSourceNumber"))
+              .build();
         }
-     }
-     return getUpdateSmsSourceNumberMethod;
+      }
+    }
+    return getUpdateSmsSourceNumberMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteSmsSourceNumberReq,
@@ -462,22 +437,21 @@ public final class SmsApiGrpc {
     if ((getDeleteSmsSourceNumberMethod = SmsApiGrpc.getDeleteSmsSourceNumberMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getDeleteSmsSourceNumberMethod = SmsApiGrpc.getDeleteSmsSourceNumberMethod) == null) {
-          SmsApiGrpc.getDeleteSmsSourceNumberMethod = getDeleteSmsSourceNumberMethod = 
+          SmsApiGrpc.getDeleteSmsSourceNumberMethod = getDeleteSmsSourceNumberMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteSmsSourceNumberReq, com.tcn.cloud.api.api.v0alpha.DeleteSmsSourceNumberRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "DeleteSmsSourceNumber"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteSmsSourceNumber"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteSmsSourceNumberReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteSmsSourceNumberRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("DeleteSmsSourceNumber"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("DeleteSmsSourceNumber"))
+              .build();
         }
-     }
-     return getDeleteSmsSourceNumberMethod;
+      }
+    }
+    return getDeleteSmsSourceNumberMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetSmsSourceNumberBySidReq,
@@ -494,22 +468,21 @@ public final class SmsApiGrpc {
     if ((getGetSmsSourceNumberBySidMethod = SmsApiGrpc.getGetSmsSourceNumberBySidMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getGetSmsSourceNumberBySidMethod = SmsApiGrpc.getGetSmsSourceNumberBySidMethod) == null) {
-          SmsApiGrpc.getGetSmsSourceNumberBySidMethod = getGetSmsSourceNumberBySidMethod = 
+          SmsApiGrpc.getGetSmsSourceNumberBySidMethod = getGetSmsSourceNumberBySidMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetSmsSourceNumberBySidReq, com.tcn.cloud.api.api.v0alpha.SmsNumbers>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "GetSmsSourceNumberBySid"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSmsSourceNumberBySid"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetSmsSourceNumberBySidReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SmsNumbers.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("GetSmsSourceNumberBySid"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("GetSmsSourceNumberBySid"))
+              .build();
         }
-     }
-     return getGetSmsSourceNumberBySidMethod;
+      }
+    }
+    return getGetSmsSourceNumberBySidMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SendSmsNotificationReq,
@@ -526,22 +499,21 @@ public final class SmsApiGrpc {
     if ((getSendSmsNotificationMethod = SmsApiGrpc.getSendSmsNotificationMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getSendSmsNotificationMethod = SmsApiGrpc.getSendSmsNotificationMethod) == null) {
-          SmsApiGrpc.getSendSmsNotificationMethod = getSendSmsNotificationMethod = 
+          SmsApiGrpc.getSendSmsNotificationMethod = getSendSmsNotificationMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SendSmsNotificationReq, com.tcn.cloud.api.api.v0alpha.SendSmsNotificationRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "SendSmsNotification"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendSmsNotification"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SendSmsNotificationReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SendSmsNotificationRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("SendSmsNotification"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("SendSmsNotification"))
+              .build();
         }
-     }
-     return getSendSmsNotificationMethod;
+      }
+    }
+    return getSendSmsNotificationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersReq,
@@ -558,22 +530,21 @@ public final class SmsApiGrpc {
     if ((getListSmsGroupByFiltersMethod = SmsApiGrpc.getListSmsGroupByFiltersMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getListSmsGroupByFiltersMethod = SmsApiGrpc.getListSmsGroupByFiltersMethod) == null) {
-          SmsApiGrpc.getListSmsGroupByFiltersMethod = getListSmsGroupByFiltersMethod = 
+          SmsApiGrpc.getListSmsGroupByFiltersMethod = getListSmsGroupByFiltersMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersReq, com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "ListSmsGroupByFilters"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSmsGroupByFilters"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsGroupByFilters"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsGroupByFilters"))
+              .build();
         }
-     }
-     return getListSmsGroupByFiltersMethod;
+      }
+    }
+    return getListSmsGroupByFiltersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsReq,
@@ -590,22 +561,21 @@ public final class SmsApiGrpc {
     if ((getListSmsGroupsByGroupSidsMethod = SmsApiGrpc.getListSmsGroupsByGroupSidsMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getListSmsGroupsByGroupSidsMethod = SmsApiGrpc.getListSmsGroupsByGroupSidsMethod) == null) {
-          SmsApiGrpc.getListSmsGroupsByGroupSidsMethod = getListSmsGroupsByGroupSidsMethod = 
+          SmsApiGrpc.getListSmsGroupsByGroupSidsMethod = getListSmsGroupsByGroupSidsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsReq, com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "ListSmsGroupsByGroupSids"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSmsGroupsByGroupSids"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsGroupsByGroupSids"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsGroupsByGroupSids"))
+              .build();
         }
-     }
-     return getListSmsGroupsByGroupSidsMethod;
+      }
+    }
+    return getListSmsGroupsByGroupSidsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsReq,
@@ -622,22 +592,21 @@ public final class SmsApiGrpc {
     if ((getListSmsTasksByGroupSidsMethod = SmsApiGrpc.getListSmsTasksByGroupSidsMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getListSmsTasksByGroupSidsMethod = SmsApiGrpc.getListSmsTasksByGroupSidsMethod) == null) {
-          SmsApiGrpc.getListSmsTasksByGroupSidsMethod = getListSmsTasksByGroupSidsMethod = 
+          SmsApiGrpc.getListSmsTasksByGroupSidsMethod = getListSmsTasksByGroupSidsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsReq, com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "ListSmsTasksByGroupSids"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSmsTasksByGroupSids"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsTasksByGroupSids"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsTasksByGroupSids"))
+              .build();
         }
-     }
-     return getListSmsTasksByGroupSidsMethod;
+      }
+    }
+    return getListSmsTasksByGroupSidsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersReq,
@@ -654,22 +623,21 @@ public final class SmsApiGrpc {
     if ((getListSmsGroupByFiltersForAuditMethod = SmsApiGrpc.getListSmsGroupByFiltersForAuditMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getListSmsGroupByFiltersForAuditMethod = SmsApiGrpc.getListSmsGroupByFiltersForAuditMethod) == null) {
-          SmsApiGrpc.getListSmsGroupByFiltersForAuditMethod = getListSmsGroupByFiltersForAuditMethod = 
+          SmsApiGrpc.getListSmsGroupByFiltersForAuditMethod = getListSmsGroupByFiltersForAuditMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersReq, com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "ListSmsGroupByFiltersForAudit"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSmsGroupByFiltersForAudit"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsGroupByFiltersForAudit"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsGroupByFiltersForAudit"))
+              .build();
         }
-     }
-     return getListSmsGroupByFiltersForAuditMethod;
+      }
+    }
+    return getListSmsGroupByFiltersForAuditMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsReq,
@@ -686,22 +654,21 @@ public final class SmsApiGrpc {
     if ((getListSmsGroupsByGroupSidsForAuditMethod = SmsApiGrpc.getListSmsGroupsByGroupSidsForAuditMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getListSmsGroupsByGroupSidsForAuditMethod = SmsApiGrpc.getListSmsGroupsByGroupSidsForAuditMethod) == null) {
-          SmsApiGrpc.getListSmsGroupsByGroupSidsForAuditMethod = getListSmsGroupsByGroupSidsForAuditMethod = 
+          SmsApiGrpc.getListSmsGroupsByGroupSidsForAuditMethod = getListSmsGroupsByGroupSidsForAuditMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsReq, com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "ListSmsGroupsByGroupSidsForAudit"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSmsGroupsByGroupSidsForAudit"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsGroupsByGroupSidsForAudit"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsGroupsByGroupSidsForAudit"))
+              .build();
         }
-     }
-     return getListSmsGroupsByGroupSidsForAuditMethod;
+      }
+    }
+    return getListSmsGroupsByGroupSidsForAuditMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsReq,
@@ -718,22 +685,21 @@ public final class SmsApiGrpc {
     if ((getListSmsTasksByGroupSidsForAuditMethod = SmsApiGrpc.getListSmsTasksByGroupSidsForAuditMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getListSmsTasksByGroupSidsForAuditMethod = SmsApiGrpc.getListSmsTasksByGroupSidsForAuditMethod) == null) {
-          SmsApiGrpc.getListSmsTasksByGroupSidsForAuditMethod = getListSmsTasksByGroupSidsForAuditMethod = 
+          SmsApiGrpc.getListSmsTasksByGroupSidsForAuditMethod = getListSmsTasksByGroupSidsForAuditMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsReq, com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "ListSmsTasksByGroupSidsForAudit"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSmsTasksByGroupSidsForAudit"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsTasksByGroupSidsForAudit"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsTasksByGroupSidsForAudit"))
+              .build();
         }
-     }
-     return getListSmsTasksByGroupSidsForAuditMethod;
+      }
+    }
+    return getListSmsTasksByGroupSidsForAuditMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListSmsTasksWithDetailedStatusReq,
@@ -750,22 +716,21 @@ public final class SmsApiGrpc {
     if ((getListSmsTasksWithDetailedStatusMethod = SmsApiGrpc.getListSmsTasksWithDetailedStatusMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getListSmsTasksWithDetailedStatusMethod = SmsApiGrpc.getListSmsTasksWithDetailedStatusMethod) == null) {
-          SmsApiGrpc.getListSmsTasksWithDetailedStatusMethod = getListSmsTasksWithDetailedStatusMethod = 
+          SmsApiGrpc.getListSmsTasksWithDetailedStatusMethod = getListSmsTasksWithDetailedStatusMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListSmsTasksWithDetailedStatusReq, com.tcn.cloud.api.api.v0alpha.ListSmsTasksWithDetailedStatusRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "ListSmsTasksWithDetailedStatus"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSmsTasksWithDetailedStatus"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsTasksWithDetailedStatusReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsTasksWithDetailedStatusRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsTasksWithDetailedStatus"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsTasksWithDetailedStatus"))
+              .build();
         }
-     }
-     return getListSmsTasksWithDetailedStatusMethod;
+      }
+    }
+    return getListSmsTasksWithDetailedStatusMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SmsGroupInfo,
@@ -782,22 +747,21 @@ public final class SmsApiGrpc {
     if ((getUpdateSmsGroupStatusMethod = SmsApiGrpc.getUpdateSmsGroupStatusMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getUpdateSmsGroupStatusMethod = SmsApiGrpc.getUpdateSmsGroupStatusMethod) == null) {
-          SmsApiGrpc.getUpdateSmsGroupStatusMethod = getUpdateSmsGroupStatusMethod = 
+          SmsApiGrpc.getUpdateSmsGroupStatusMethod = getUpdateSmsGroupStatusMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SmsGroupInfo, com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "UpdateSmsGroupStatus"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSmsGroupStatus"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SmsGroupInfo.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("UpdateSmsGroupStatus"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("UpdateSmsGroupStatus"))
+              .build();
         }
-     }
-     return getUpdateSmsGroupStatusMethod;
+      }
+    }
+    return getUpdateSmsGroupStatusMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SmsGroupInfo,
@@ -814,22 +778,21 @@ public final class SmsApiGrpc {
     if ((getUpdateSmsGroupSendsPerMinuteMethod = SmsApiGrpc.getUpdateSmsGroupSendsPerMinuteMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getUpdateSmsGroupSendsPerMinuteMethod = SmsApiGrpc.getUpdateSmsGroupSendsPerMinuteMethod) == null) {
-          SmsApiGrpc.getUpdateSmsGroupSendsPerMinuteMethod = getUpdateSmsGroupSendsPerMinuteMethod = 
+          SmsApiGrpc.getUpdateSmsGroupSendsPerMinuteMethod = getUpdateSmsGroupSendsPerMinuteMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SmsGroupInfo, com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "UpdateSmsGroupSendsPerMinute"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSmsGroupSendsPerMinute"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SmsGroupInfo.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("UpdateSmsGroupSendsPerMinute"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("UpdateSmsGroupSendsPerMinute"))
+              .build();
         }
-     }
-     return getUpdateSmsGroupSendsPerMinuteMethod;
+      }
+    }
+    return getUpdateSmsGroupSendsPerMinuteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SmsGroupInfo,
@@ -846,22 +809,21 @@ public final class SmsApiGrpc {
     if ((getUpdateSmsGroupScheduleTimesMethod = SmsApiGrpc.getUpdateSmsGroupScheduleTimesMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getUpdateSmsGroupScheduleTimesMethod = SmsApiGrpc.getUpdateSmsGroupScheduleTimesMethod) == null) {
-          SmsApiGrpc.getUpdateSmsGroupScheduleTimesMethod = getUpdateSmsGroupScheduleTimesMethod = 
+          SmsApiGrpc.getUpdateSmsGroupScheduleTimesMethod = getUpdateSmsGroupScheduleTimesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SmsGroupInfo, com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "UpdateSmsGroupScheduleTimes"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSmsGroupScheduleTimes"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SmsGroupInfo.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("UpdateSmsGroupScheduleTimes"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("UpdateSmsGroupScheduleTimes"))
+              .build();
         }
-     }
-     return getUpdateSmsGroupScheduleTimesMethod;
+      }
+    }
+    return getUpdateSmsGroupScheduleTimesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ScheduleSmsReq,
@@ -878,22 +840,21 @@ public final class SmsApiGrpc {
     if ((getScheduleSmsMethod = SmsApiGrpc.getScheduleSmsMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getScheduleSmsMethod = SmsApiGrpc.getScheduleSmsMethod) == null) {
-          SmsApiGrpc.getScheduleSmsMethod = getScheduleSmsMethod = 
+          SmsApiGrpc.getScheduleSmsMethod = getScheduleSmsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ScheduleSmsReq, com.tcn.cloud.api.api.v0alpha.ScheduleSmsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "ScheduleSms"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ScheduleSms"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ScheduleSmsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ScheduleSmsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ScheduleSms"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ScheduleSms"))
+              .build();
         }
-     }
-     return getScheduleSmsMethod;
+      }
+    }
+    return getScheduleSmsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ResendUnconnectedSmsReq,
@@ -910,22 +871,21 @@ public final class SmsApiGrpc {
     if ((getResendUnconnectedSmsMethod = SmsApiGrpc.getResendUnconnectedSmsMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getResendUnconnectedSmsMethod = SmsApiGrpc.getResendUnconnectedSmsMethod) == null) {
-          SmsApiGrpc.getResendUnconnectedSmsMethod = getResendUnconnectedSmsMethod = 
+          SmsApiGrpc.getResendUnconnectedSmsMethod = getResendUnconnectedSmsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ResendUnconnectedSmsReq, com.tcn.cloud.api.api.v0alpha.ResendUnconnectedSmsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "ResendUnconnectedSms"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ResendUnconnectedSms"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ResendUnconnectedSmsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ResendUnconnectedSmsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ResendUnconnectedSms"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ResendUnconnectedSms"))
+              .build();
         }
-     }
-     return getResendUnconnectedSmsMethod;
+      }
+    }
+    return getResendUnconnectedSmsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SmsActivitySearchReq,
@@ -942,22 +902,21 @@ public final class SmsApiGrpc {
     if ((getSmsActivitySearchMethod = SmsApiGrpc.getSmsActivitySearchMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getSmsActivitySearchMethod = SmsApiGrpc.getSmsActivitySearchMethod) == null) {
-          SmsApiGrpc.getSmsActivitySearchMethod = getSmsActivitySearchMethod = 
+          SmsApiGrpc.getSmsActivitySearchMethod = getSmsActivitySearchMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SmsActivitySearchReq, com.tcn.cloud.api.api.v0alpha.SmsActivitySearchRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "SmsActivitySearch"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SmsActivitySearch"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SmsActivitySearchReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SmsActivitySearchRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("SmsActivitySearch"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("SmsActivitySearch"))
+              .build();
         }
-     }
-     return getSmsActivitySearchMethod;
+      }
+    }
+    return getSmsActivitySearchMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateInboundSmsTemplateReq,
@@ -974,22 +933,21 @@ public final class SmsApiGrpc {
     if ((getCreateInboundSmsTemplateMethod = SmsApiGrpc.getCreateInboundSmsTemplateMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getCreateInboundSmsTemplateMethod = SmsApiGrpc.getCreateInboundSmsTemplateMethod) == null) {
-          SmsApiGrpc.getCreateInboundSmsTemplateMethod = getCreateInboundSmsTemplateMethod = 
+          SmsApiGrpc.getCreateInboundSmsTemplateMethod = getCreateInboundSmsTemplateMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateInboundSmsTemplateReq, com.tcn.cloud.api.api.v0alpha.CreateInboundSmsTemplateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "CreateInboundSmsTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateInboundSmsTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateInboundSmsTemplateReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateInboundSmsTemplateRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("CreateInboundSmsTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("CreateInboundSmsTemplate"))
+              .build();
         }
-     }
-     return getCreateInboundSmsTemplateMethod;
+      }
+    }
+    return getCreateInboundSmsTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateReq,
@@ -1006,22 +964,21 @@ public final class SmsApiGrpc {
     if ((getUpdateInboundSmsTemplateMethod = SmsApiGrpc.getUpdateInboundSmsTemplateMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getUpdateInboundSmsTemplateMethod = SmsApiGrpc.getUpdateInboundSmsTemplateMethod) == null) {
-          SmsApiGrpc.getUpdateInboundSmsTemplateMethod = getUpdateInboundSmsTemplateMethod = 
+          SmsApiGrpc.getUpdateInboundSmsTemplateMethod = getUpdateInboundSmsTemplateMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateReq, com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "UpdateInboundSmsTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateInboundSmsTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("UpdateInboundSmsTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("UpdateInboundSmsTemplate"))
+              .build();
         }
-     }
-     return getUpdateInboundSmsTemplateMethod;
+      }
+    }
+    return getUpdateInboundSmsTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsTemplateReq,
@@ -1038,22 +995,21 @@ public final class SmsApiGrpc {
     if ((getDeleteInboundSmsTemplateMethod = SmsApiGrpc.getDeleteInboundSmsTemplateMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getDeleteInboundSmsTemplateMethod = SmsApiGrpc.getDeleteInboundSmsTemplateMethod) == null) {
-          SmsApiGrpc.getDeleteInboundSmsTemplateMethod = getDeleteInboundSmsTemplateMethod = 
+          SmsApiGrpc.getDeleteInboundSmsTemplateMethod = getDeleteInboundSmsTemplateMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsTemplateReq, com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsTemplateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "DeleteInboundSmsTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteInboundSmsTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsTemplateReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsTemplateRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("DeleteInboundSmsTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("DeleteInboundSmsTemplate"))
+              .build();
         }
-     }
-     return getDeleteInboundSmsTemplateMethod;
+      }
+    }
+    return getDeleteInboundSmsTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListInboundSmsTemplatesReq,
@@ -1070,22 +1026,21 @@ public final class SmsApiGrpc {
     if ((getListInboundSmsTemplatesMethod = SmsApiGrpc.getListInboundSmsTemplatesMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getListInboundSmsTemplatesMethod = SmsApiGrpc.getListInboundSmsTemplatesMethod) == null) {
-          SmsApiGrpc.getListInboundSmsTemplatesMethod = getListInboundSmsTemplatesMethod = 
+          SmsApiGrpc.getListInboundSmsTemplatesMethod = getListInboundSmsTemplatesMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListInboundSmsTemplatesReq, com.tcn.cloud.api.api.v0alpha.ListInboundSmsTemplatesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "ListInboundSmsTemplates"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListInboundSmsTemplates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListInboundSmsTemplatesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListInboundSmsTemplatesRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListInboundSmsTemplates"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListInboundSmsTemplates"))
+              .build();
         }
-     }
-     return getListInboundSmsTemplatesMethod;
+      }
+    }
+    return getListInboundSmsTemplatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdReq,
@@ -1102,22 +1057,21 @@ public final class SmsApiGrpc {
     if ((getGetInboundSmsTemplateByIdMethod = SmsApiGrpc.getGetInboundSmsTemplateByIdMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getGetInboundSmsTemplateByIdMethod = SmsApiGrpc.getGetInboundSmsTemplateByIdMethod) == null) {
-          SmsApiGrpc.getGetInboundSmsTemplateByIdMethod = getGetInboundSmsTemplateByIdMethod = 
+          SmsApiGrpc.getGetInboundSmsTemplateByIdMethod = getGetInboundSmsTemplateByIdMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdReq, com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "GetInboundSmsTemplateById"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetInboundSmsTemplateById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("GetInboundSmsTemplateById"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("GetInboundSmsTemplateById"))
+              .build();
         }
-     }
-     return getGetInboundSmsTemplateByIdMethod;
+      }
+    }
+    return getGetInboundSmsTemplateByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateInboundSmsGroupReq,
@@ -1134,22 +1088,21 @@ public final class SmsApiGrpc {
     if ((getCreateInboundSmsGroupMethod = SmsApiGrpc.getCreateInboundSmsGroupMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getCreateInboundSmsGroupMethod = SmsApiGrpc.getCreateInboundSmsGroupMethod) == null) {
-          SmsApiGrpc.getCreateInboundSmsGroupMethod = getCreateInboundSmsGroupMethod = 
+          SmsApiGrpc.getCreateInboundSmsGroupMethod = getCreateInboundSmsGroupMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateInboundSmsGroupReq, com.tcn.cloud.api.api.v0alpha.CreateInboundSmsGroupRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "CreateInboundSmsGroup"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateInboundSmsGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateInboundSmsGroupReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateInboundSmsGroupRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("CreateInboundSmsGroup"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("CreateInboundSmsGroup"))
+              .build();
         }
-     }
-     return getCreateInboundSmsGroupMethod;
+      }
+    }
+    return getCreateInboundSmsGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq,
@@ -1166,22 +1119,21 @@ public final class SmsApiGrpc {
     if ((getUpdateInboundSmsGroupMethod = SmsApiGrpc.getUpdateInboundSmsGroupMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getUpdateInboundSmsGroupMethod = SmsApiGrpc.getUpdateInboundSmsGroupMethod) == null) {
-          SmsApiGrpc.getUpdateInboundSmsGroupMethod = getUpdateInboundSmsGroupMethod = 
+          SmsApiGrpc.getUpdateInboundSmsGroupMethod = getUpdateInboundSmsGroupMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq, com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "UpdateInboundSmsGroup"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateInboundSmsGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("UpdateInboundSmsGroup"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("UpdateInboundSmsGroup"))
+              .build();
         }
-     }
-     return getUpdateInboundSmsGroupMethod;
+      }
+    }
+    return getUpdateInboundSmsGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsGroupReq,
@@ -1198,22 +1150,21 @@ public final class SmsApiGrpc {
     if ((getDeleteInboundSmsGroupMethod = SmsApiGrpc.getDeleteInboundSmsGroupMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getDeleteInboundSmsGroupMethod = SmsApiGrpc.getDeleteInboundSmsGroupMethod) == null) {
-          SmsApiGrpc.getDeleteInboundSmsGroupMethod = getDeleteInboundSmsGroupMethod = 
+          SmsApiGrpc.getDeleteInboundSmsGroupMethod = getDeleteInboundSmsGroupMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsGroupReq, com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsGroupRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "DeleteInboundSmsGroup"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteInboundSmsGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsGroupReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsGroupRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("DeleteInboundSmsGroup"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("DeleteInboundSmsGroup"))
+              .build();
         }
-     }
-     return getDeleteInboundSmsGroupMethod;
+      }
+    }
+    return getDeleteInboundSmsGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsReq,
@@ -1230,22 +1181,21 @@ public final class SmsApiGrpc {
     if ((getListInboundSmsGroupsMethod = SmsApiGrpc.getListInboundSmsGroupsMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getListInboundSmsGroupsMethod = SmsApiGrpc.getListInboundSmsGroupsMethod) == null) {
-          SmsApiGrpc.getListInboundSmsGroupsMethod = getListInboundSmsGroupsMethod = 
+          SmsApiGrpc.getListInboundSmsGroupsMethod = getListInboundSmsGroupsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsReq, com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "ListInboundSmsGroups"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListInboundSmsGroups"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListInboundSmsGroups"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListInboundSmsGroups"))
+              .build();
         }
-     }
-     return getListInboundSmsGroupsMethod;
+      }
+    }
+    return getListInboundSmsGroupsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListActiveInboundSmsGroupsReq,
@@ -1262,22 +1212,21 @@ public final class SmsApiGrpc {
     if ((getListActiveInboundSmsGroupsMethod = SmsApiGrpc.getListActiveInboundSmsGroupsMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getListActiveInboundSmsGroupsMethod = SmsApiGrpc.getListActiveInboundSmsGroupsMethod) == null) {
-          SmsApiGrpc.getListActiveInboundSmsGroupsMethod = getListActiveInboundSmsGroupsMethod = 
+          SmsApiGrpc.getListActiveInboundSmsGroupsMethod = getListActiveInboundSmsGroupsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListActiveInboundSmsGroupsReq, com.tcn.cloud.api.api.v0alpha.ListActiveInboundSmsGroupsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "ListActiveInboundSmsGroups"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListActiveInboundSmsGroups"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListActiveInboundSmsGroupsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListActiveInboundSmsGroupsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListActiveInboundSmsGroups"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListActiveInboundSmsGroups"))
+              .build();
         }
-     }
-     return getListActiveInboundSmsGroupsMethod;
+      }
+    }
+    return getListActiveInboundSmsGroupsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupByFiltersReq,
@@ -1294,22 +1243,21 @@ public final class SmsApiGrpc {
     if ((getListInboundSmsGroupByFiltersMethod = SmsApiGrpc.getListInboundSmsGroupByFiltersMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getListInboundSmsGroupByFiltersMethod = SmsApiGrpc.getListInboundSmsGroupByFiltersMethod) == null) {
-          SmsApiGrpc.getListInboundSmsGroupByFiltersMethod = getListInboundSmsGroupByFiltersMethod = 
+          SmsApiGrpc.getListInboundSmsGroupByFiltersMethod = getListInboundSmsGroupByFiltersMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupByFiltersReq, com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupByFiltersRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "ListInboundSmsGroupByFilters"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListInboundSmsGroupByFilters"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupByFiltersReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupByFiltersRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListInboundSmsGroupByFilters"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListInboundSmsGroupByFilters"))
+              .build();
         }
-     }
-     return getListInboundSmsGroupByFiltersMethod;
+      }
+    }
+    return getListInboundSmsGroupByFiltersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetInboundSmsGroupByIdReq,
@@ -1326,22 +1274,21 @@ public final class SmsApiGrpc {
     if ((getGetInboundSmsGroupByIdMethod = SmsApiGrpc.getGetInboundSmsGroupByIdMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getGetInboundSmsGroupByIdMethod = SmsApiGrpc.getGetInboundSmsGroupByIdMethod) == null) {
-          SmsApiGrpc.getGetInboundSmsGroupByIdMethod = getGetInboundSmsGroupByIdMethod = 
+          SmsApiGrpc.getGetInboundSmsGroupByIdMethod = getGetInboundSmsGroupByIdMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetInboundSmsGroupByIdReq, com.tcn.cloud.api.api.v0alpha.GetInboundSmsGroupByIdRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "GetInboundSmsGroupById"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetInboundSmsGroupById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetInboundSmsGroupByIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetInboundSmsGroupByIdRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("GetInboundSmsGroupById"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("GetInboundSmsGroupById"))
+              .build();
         }
-     }
-     return getGetInboundSmsGroupByIdMethod;
+      }
+    }
+    return getGetInboundSmsGroupByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsByGroupIdsReq,
@@ -1358,22 +1305,21 @@ public final class SmsApiGrpc {
     if ((getListInboundSmsGroupsByGroupIdsMethod = SmsApiGrpc.getListInboundSmsGroupsByGroupIdsMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getListInboundSmsGroupsByGroupIdsMethod = SmsApiGrpc.getListInboundSmsGroupsByGroupIdsMethod) == null) {
-          SmsApiGrpc.getListInboundSmsGroupsByGroupIdsMethod = getListInboundSmsGroupsByGroupIdsMethod = 
+          SmsApiGrpc.getListInboundSmsGroupsByGroupIdsMethod = getListInboundSmsGroupsByGroupIdsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsByGroupIdsReq, com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsByGroupIdsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "ListInboundSmsGroupsByGroupIds"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListInboundSmsGroupsByGroupIds"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsByGroupIdsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsByGroupIdsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListInboundSmsGroupsByGroupIds"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListInboundSmsGroupsByGroupIds"))
+              .build();
         }
-     }
-     return getListInboundSmsGroupsByGroupIdsMethod;
+      }
+    }
+    return getListInboundSmsGroupsByGroupIdsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.StopInboundSmsGroupReq,
@@ -1390,22 +1336,21 @@ public final class SmsApiGrpc {
     if ((getStopInboundSmsGroupMethod = SmsApiGrpc.getStopInboundSmsGroupMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getStopInboundSmsGroupMethod = SmsApiGrpc.getStopInboundSmsGroupMethod) == null) {
-          SmsApiGrpc.getStopInboundSmsGroupMethod = getStopInboundSmsGroupMethod = 
+          SmsApiGrpc.getStopInboundSmsGroupMethod = getStopInboundSmsGroupMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.StopInboundSmsGroupReq, com.tcn.cloud.api.api.v0alpha.StopInboundSmsGroupRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "StopInboundSmsGroup"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StopInboundSmsGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.StopInboundSmsGroupReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.StopInboundSmsGroupRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("StopInboundSmsGroup"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("StopInboundSmsGroup"))
+              .build();
         }
-     }
-     return getStopInboundSmsGroupMethod;
+      }
+    }
+    return getStopInboundSmsGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ScheduleInboundSmsReq,
@@ -1422,22 +1367,21 @@ public final class SmsApiGrpc {
     if ((getScheduleInboundSmsMethod = SmsApiGrpc.getScheduleInboundSmsMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getScheduleInboundSmsMethod = SmsApiGrpc.getScheduleInboundSmsMethod) == null) {
-          SmsApiGrpc.getScheduleInboundSmsMethod = getScheduleInboundSmsMethod = 
+          SmsApiGrpc.getScheduleInboundSmsMethod = getScheduleInboundSmsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ScheduleInboundSmsReq, com.tcn.cloud.api.api.v0alpha.ScheduleInboundSmsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "ScheduleInboundSms"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ScheduleInboundSms"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ScheduleInboundSmsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ScheduleInboundSmsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ScheduleInboundSms"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ScheduleInboundSms"))
+              .build();
         }
-     }
-     return getScheduleInboundSmsMethod;
+      }
+    }
+    return getScheduleInboundSmsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateSmsConversationReq,
@@ -1454,22 +1398,21 @@ public final class SmsApiGrpc {
     if ((getCreateSmsConversationMethod = SmsApiGrpc.getCreateSmsConversationMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getCreateSmsConversationMethod = SmsApiGrpc.getCreateSmsConversationMethod) == null) {
-          SmsApiGrpc.getCreateSmsConversationMethod = getCreateSmsConversationMethod = 
+          SmsApiGrpc.getCreateSmsConversationMethod = getCreateSmsConversationMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateSmsConversationReq, com.tcn.cloud.api.api.v0alpha.CreateSmsConversationRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "CreateSmsConversation"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateSmsConversation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateSmsConversationReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateSmsConversationRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("CreateSmsConversation"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("CreateSmsConversation"))
+              .build();
         }
-     }
-     return getCreateSmsConversationMethod;
+      }
+    }
+    return getCreateSmsConversationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateSmsConversationReq,
@@ -1486,22 +1429,21 @@ public final class SmsApiGrpc {
     if ((getUpdateSmsConversationMethod = SmsApiGrpc.getUpdateSmsConversationMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getUpdateSmsConversationMethod = SmsApiGrpc.getUpdateSmsConversationMethod) == null) {
-          SmsApiGrpc.getUpdateSmsConversationMethod = getUpdateSmsConversationMethod = 
+          SmsApiGrpc.getUpdateSmsConversationMethod = getUpdateSmsConversationMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateSmsConversationReq, com.tcn.cloud.api.api.v0alpha.UpdateSmsConversationRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "UpdateSmsConversation"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSmsConversation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateSmsConversationReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateSmsConversationRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("UpdateSmsConversation"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("UpdateSmsConversation"))
+              .build();
         }
-     }
-     return getUpdateSmsConversationMethod;
+      }
+    }
+    return getUpdateSmsConversationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteSmsConversationReq,
@@ -1518,22 +1460,21 @@ public final class SmsApiGrpc {
     if ((getDeleteSmsConversationMethod = SmsApiGrpc.getDeleteSmsConversationMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getDeleteSmsConversationMethod = SmsApiGrpc.getDeleteSmsConversationMethod) == null) {
-          SmsApiGrpc.getDeleteSmsConversationMethod = getDeleteSmsConversationMethod = 
+          SmsApiGrpc.getDeleteSmsConversationMethod = getDeleteSmsConversationMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteSmsConversationReq, com.tcn.cloud.api.api.v0alpha.DeleteSmsConversationRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "DeleteSmsConversation"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteSmsConversation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteSmsConversationReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteSmsConversationRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("DeleteSmsConversation"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("DeleteSmsConversation"))
+              .build();
         }
-     }
-     return getDeleteSmsConversationMethod;
+      }
+    }
+    return getDeleteSmsConversationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListSmsConversationsReq,
@@ -1550,22 +1491,21 @@ public final class SmsApiGrpc {
     if ((getListSmsConversationsMethod = SmsApiGrpc.getListSmsConversationsMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getListSmsConversationsMethod = SmsApiGrpc.getListSmsConversationsMethod) == null) {
-          SmsApiGrpc.getListSmsConversationsMethod = getListSmsConversationsMethod = 
+          SmsApiGrpc.getListSmsConversationsMethod = getListSmsConversationsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListSmsConversationsReq, com.tcn.cloud.api.api.v0alpha.ListSmsConversationsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "ListSmsConversations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSmsConversations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsConversationsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsConversationsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsConversations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsConversations"))
+              .build();
         }
-     }
-     return getListSmsConversationsMethod;
+      }
+    }
+    return getListSmsConversationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetSmsConversationByIdReq,
@@ -1582,22 +1522,21 @@ public final class SmsApiGrpc {
     if ((getGetSmsConversationByIdMethod = SmsApiGrpc.getGetSmsConversationByIdMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getGetSmsConversationByIdMethod = SmsApiGrpc.getGetSmsConversationByIdMethod) == null) {
-          SmsApiGrpc.getGetSmsConversationByIdMethod = getGetSmsConversationByIdMethod = 
+          SmsApiGrpc.getGetSmsConversationByIdMethod = getGetSmsConversationByIdMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetSmsConversationByIdReq, com.tcn.cloud.api.api.v0alpha.GetSmsConversationByIdRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "GetSmsConversationById"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSmsConversationById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetSmsConversationByIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetSmsConversationByIdRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("GetSmsConversationById"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("GetSmsConversationById"))
+              .build();
         }
-     }
-     return getGetSmsConversationByIdMethod;
+      }
+    }
+    return getGetSmsConversationByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetSmsMessageReq,
@@ -1614,22 +1553,21 @@ public final class SmsApiGrpc {
     if ((getGetSmsMessageMethod = SmsApiGrpc.getGetSmsMessageMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getGetSmsMessageMethod = SmsApiGrpc.getGetSmsMessageMethod) == null) {
-          SmsApiGrpc.getGetSmsMessageMethod = getGetSmsMessageMethod = 
+          SmsApiGrpc.getGetSmsMessageMethod = getGetSmsMessageMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetSmsMessageReq, com.tcn.cloud.api.api.v0alpha.GetSmsMessageRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "GetSmsMessage"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSmsMessage"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetSmsMessageReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetSmsMessageRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("GetSmsMessage"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("GetSmsMessage"))
+              .build();
         }
-     }
-     return getGetSmsMessageMethod;
+      }
+    }
+    return getGetSmsMessageMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SmsConversationAudit,
@@ -1646,22 +1584,21 @@ public final class SmsApiGrpc {
     if ((getCreateSmsConversationAuditMethod = SmsApiGrpc.getCreateSmsConversationAuditMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getCreateSmsConversationAuditMethod = SmsApiGrpc.getCreateSmsConversationAuditMethod) == null) {
-          SmsApiGrpc.getCreateSmsConversationAuditMethod = getCreateSmsConversationAuditMethod = 
+          SmsApiGrpc.getCreateSmsConversationAuditMethod = getCreateSmsConversationAuditMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SmsConversationAudit, com.tcn.cloud.api.api.v0alpha.CreateSmsConversationAuditRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "CreateSmsConversationAudit"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateSmsConversationAudit"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SmsConversationAudit.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateSmsConversationAuditRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("CreateSmsConversationAudit"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("CreateSmsConversationAudit"))
+              .build();
         }
-     }
-     return getCreateSmsConversationAuditMethod;
+      }
+    }
+    return getCreateSmsConversationAuditMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListSmsConversationAuditsReq,
@@ -1678,22 +1615,21 @@ public final class SmsApiGrpc {
     if ((getListSmsConversationAuditsMethod = SmsApiGrpc.getListSmsConversationAuditsMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getListSmsConversationAuditsMethod = SmsApiGrpc.getListSmsConversationAuditsMethod) == null) {
-          SmsApiGrpc.getListSmsConversationAuditsMethod = getListSmsConversationAuditsMethod = 
+          SmsApiGrpc.getListSmsConversationAuditsMethod = getListSmsConversationAuditsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListSmsConversationAuditsReq, com.tcn.cloud.api.api.v0alpha.ListSmsConversationAuditsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "ListSmsConversationAudits"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSmsConversationAudits"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsConversationAuditsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsConversationAuditsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsConversationAudits"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsConversationAudits"))
+              .build();
         }
-     }
-     return getListSmsConversationAuditsMethod;
+      }
+    }
+    return getListSmsConversationAuditsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetSmsConversationAuditByIdReq,
@@ -1710,22 +1646,21 @@ public final class SmsApiGrpc {
     if ((getGetSmsConversationAuditByIdMethod = SmsApiGrpc.getGetSmsConversationAuditByIdMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getGetSmsConversationAuditByIdMethod = SmsApiGrpc.getGetSmsConversationAuditByIdMethod) == null) {
-          SmsApiGrpc.getGetSmsConversationAuditByIdMethod = getGetSmsConversationAuditByIdMethod = 
+          SmsApiGrpc.getGetSmsConversationAuditByIdMethod = getGetSmsConversationAuditByIdMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetSmsConversationAuditByIdReq, com.tcn.cloud.api.api.v0alpha.GetSmsConversationAuditByIdRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "GetSmsConversationAuditById"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSmsConversationAuditById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetSmsConversationAuditByIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetSmsConversationAuditByIdRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("GetSmsConversationAuditById"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("GetSmsConversationAuditById"))
+              .build();
         }
-     }
-     return getGetSmsConversationAuditByIdMethod;
+      }
+    }
+    return getGetSmsConversationAuditByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SmsConversationAssignedAgent,
@@ -1742,22 +1677,21 @@ public final class SmsApiGrpc {
     if ((getCreateSmsConversationAssignedAgentMethod = SmsApiGrpc.getCreateSmsConversationAssignedAgentMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getCreateSmsConversationAssignedAgentMethod = SmsApiGrpc.getCreateSmsConversationAssignedAgentMethod) == null) {
-          SmsApiGrpc.getCreateSmsConversationAssignedAgentMethod = getCreateSmsConversationAssignedAgentMethod = 
+          SmsApiGrpc.getCreateSmsConversationAssignedAgentMethod = getCreateSmsConversationAssignedAgentMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SmsConversationAssignedAgent, com.tcn.cloud.api.api.v0alpha.CreateSmsConversationAssignedAgentRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "CreateSmsConversationAssignedAgent"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateSmsConversationAssignedAgent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SmsConversationAssignedAgent.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateSmsConversationAssignedAgentRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("CreateSmsConversationAssignedAgent"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("CreateSmsConversationAssignedAgent"))
+              .build();
         }
-     }
-     return getCreateSmsConversationAssignedAgentMethod;
+      }
+    }
+    return getCreateSmsConversationAssignedAgentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListSmsConversationAssignedAgentsReq,
@@ -1774,22 +1708,21 @@ public final class SmsApiGrpc {
     if ((getListSmsConversationAssignedAgentsMethod = SmsApiGrpc.getListSmsConversationAssignedAgentsMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getListSmsConversationAssignedAgentsMethod = SmsApiGrpc.getListSmsConversationAssignedAgentsMethod) == null) {
-          SmsApiGrpc.getListSmsConversationAssignedAgentsMethod = getListSmsConversationAssignedAgentsMethod = 
+          SmsApiGrpc.getListSmsConversationAssignedAgentsMethod = getListSmsConversationAssignedAgentsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListSmsConversationAssignedAgentsReq, com.tcn.cloud.api.api.v0alpha.ListSmsConversationAssignedAgentsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "ListSmsConversationAssignedAgents"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSmsConversationAssignedAgents"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsConversationAssignedAgentsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSmsConversationAssignedAgentsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsConversationAssignedAgents"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListSmsConversationAssignedAgents"))
+              .build();
         }
-     }
-     return getListSmsConversationAssignedAgentsMethod;
+      }
+    }
+    return getListSmsConversationAssignedAgentsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetSmsConversationAssignedAgentByIdReq,
@@ -1806,22 +1739,21 @@ public final class SmsApiGrpc {
     if ((getGetSmsConversationAssignedAgentByIdMethod = SmsApiGrpc.getGetSmsConversationAssignedAgentByIdMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getGetSmsConversationAssignedAgentByIdMethod = SmsApiGrpc.getGetSmsConversationAssignedAgentByIdMethod) == null) {
-          SmsApiGrpc.getGetSmsConversationAssignedAgentByIdMethod = getGetSmsConversationAssignedAgentByIdMethod = 
+          SmsApiGrpc.getGetSmsConversationAssignedAgentByIdMethod = getGetSmsConversationAssignedAgentByIdMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetSmsConversationAssignedAgentByIdReq, com.tcn.cloud.api.api.v0alpha.GetSmsConversationAssignedAgentByIdRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "GetSmsConversationAssignedAgentById"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSmsConversationAssignedAgentById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetSmsConversationAssignedAgentByIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetSmsConversationAssignedAgentByIdRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("GetSmsConversationAssignedAgentById"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("GetSmsConversationAssignedAgentById"))
+              .build();
         }
-     }
-     return getGetSmsConversationAssignedAgentByIdMethod;
+      }
+    }
+    return getGetSmsConversationAssignedAgentByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListInboundSmsTasksByGroupIdsReq,
@@ -1838,22 +1770,21 @@ public final class SmsApiGrpc {
     if ((getListInboundSmsTasksByGroupIdsMethod = SmsApiGrpc.getListInboundSmsTasksByGroupIdsMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getListInboundSmsTasksByGroupIdsMethod = SmsApiGrpc.getListInboundSmsTasksByGroupIdsMethod) == null) {
-          SmsApiGrpc.getListInboundSmsTasksByGroupIdsMethod = getListInboundSmsTasksByGroupIdsMethod = 
+          SmsApiGrpc.getListInboundSmsTasksByGroupIdsMethod = getListInboundSmsTasksByGroupIdsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListInboundSmsTasksByGroupIdsReq, com.tcn.cloud.api.api.v0alpha.ListInboundSmsTasksByGroupIdsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "ListInboundSmsTasksByGroupIds"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListInboundSmsTasksByGroupIds"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListInboundSmsTasksByGroupIdsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListInboundSmsTasksByGroupIdsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListInboundSmsTasksByGroupIds"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("ListInboundSmsTasksByGroupIds"))
+              .build();
         }
-     }
-     return getListInboundSmsTasksByGroupIdsMethod;
+      }
+    }
+    return getListInboundSmsTasksByGroupIdsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsReq,
@@ -1870,22 +1801,21 @@ public final class SmsApiGrpc {
     if ((getStopAllOutboundSmsGroupsMethod = SmsApiGrpc.getStopAllOutboundSmsGroupsMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getStopAllOutboundSmsGroupsMethod = SmsApiGrpc.getStopAllOutboundSmsGroupsMethod) == null) {
-          SmsApiGrpc.getStopAllOutboundSmsGroupsMethod = getStopAllOutboundSmsGroupsMethod = 
+          SmsApiGrpc.getStopAllOutboundSmsGroupsMethod = getStopAllOutboundSmsGroupsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsReq, com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "StopAllOutboundSmsGroups"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StopAllOutboundSmsGroups"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("StopAllOutboundSmsGroups"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("StopAllOutboundSmsGroups"))
+              .build();
         }
-     }
-     return getStopAllOutboundSmsGroupsMethod;
+      }
+    }
+    return getStopAllOutboundSmsGroupsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.StopAllInboundSmsGroupsReq,
@@ -1902,29 +1832,35 @@ public final class SmsApiGrpc {
     if ((getStopAllInboundSmsGroupsMethod = SmsApiGrpc.getStopAllInboundSmsGroupsMethod) == null) {
       synchronized (SmsApiGrpc.class) {
         if ((getStopAllInboundSmsGroupsMethod = SmsApiGrpc.getStopAllInboundSmsGroupsMethod) == null) {
-          SmsApiGrpc.getStopAllInboundSmsGroupsMethod = getStopAllInboundSmsGroupsMethod = 
+          SmsApiGrpc.getStopAllInboundSmsGroupsMethod = getStopAllInboundSmsGroupsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.StopAllInboundSmsGroupsReq, com.tcn.cloud.api.api.v0alpha.StopAllInboundSmsGroupsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "api.v0alpha.SmsApi", "StopAllInboundSmsGroups"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StopAllInboundSmsGroups"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.StopAllInboundSmsGroupsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.StopAllInboundSmsGroupsRes.getDefaultInstance()))
-                  .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("StopAllInboundSmsGroups"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SmsApiMethodDescriptorSupplier("StopAllInboundSmsGroups"))
+              .build();
         }
-     }
-     return getStopAllInboundSmsGroupsMethod;
+      }
+    }
+    return getStopAllInboundSmsGroupsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static SmsApiStub newStub(io.grpc.Channel channel) {
-    return new SmsApiStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SmsApiStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SmsApiStub>() {
+        @java.lang.Override
+        public SmsApiStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SmsApiStub(channel, callOptions);
+        }
+      };
+    return SmsApiStub.newStub(factory, channel);
   }
 
   /**
@@ -1932,7 +1868,14 @@ public final class SmsApiGrpc {
    */
   public static SmsApiBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new SmsApiBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SmsApiBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SmsApiBlockingStub>() {
+        @java.lang.Override
+        public SmsApiBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SmsApiBlockingStub(channel, callOptions);
+        }
+      };
+    return SmsApiBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -1940,7 +1883,14 @@ public final class SmsApiGrpc {
    */
   public static SmsApiFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new SmsApiFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SmsApiFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SmsApiFutureStub>() {
+        @java.lang.Override
+        public SmsApiFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SmsApiFutureStub(channel, callOptions);
+        }
+      };
+    return SmsApiFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -1950,7 +1900,7 @@ public final class SmsApiGrpc {
    * permissions.
    * </pre>
    */
-  public static abstract class SmsApiImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -1961,9 +1911,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void listSmsTemplates(com.tcn.cloud.api.api.v0alpha.ListSmsTemplatesReq request,
+    default void listSmsTemplates(com.tcn.cloud.api.api.v0alpha.ListSmsTemplatesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsTemplatesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListSmsTemplatesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSmsTemplatesMethod(), responseObserver);
     }
 
     /**
@@ -1974,9 +1924,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void createSmsTemplate(com.tcn.cloud.api.api.v0alpha.CreateSmsTemplateReq request,
+    default void createSmsTemplate(com.tcn.cloud.api.api.v0alpha.CreateSmsTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateSmsTemplateRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateSmsTemplateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSmsTemplateMethod(), responseObserver);
     }
 
     /**
@@ -1991,9 +1941,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void updateSmsTemplate(com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateReq request,
+    default void updateSmsTemplate(com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateSmsTemplateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSmsTemplateMethod(), responseObserver);
     }
 
     /**
@@ -2004,9 +1954,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void deleteSmsTemplate(com.tcn.cloud.api.api.v0alpha.DeleteSmsTemplateReq request,
+    default void deleteSmsTemplate(com.tcn.cloud.api.api.v0alpha.DeleteSmsTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteSmsTemplateRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteSmsTemplateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSmsTemplateMethod(), responseObserver);
     }
 
     /**
@@ -2017,9 +1967,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void getSmsTemplateBySid(com.tcn.cloud.api.api.v0alpha.GetSmsTemplateBySidReq request,
+    default void getSmsTemplateBySid(com.tcn.cloud.api.api.v0alpha.GetSmsTemplateBySidReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetSmsTemplateBySidRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetSmsTemplateBySidMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSmsTemplateBySidMethod(), responseObserver);
     }
 
     /**
@@ -2031,9 +1981,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void listSmsIntentTemplates(com.tcn.cloud.api.api.v0alpha.ListSmsIntentTemplatesReq request,
+    default void listSmsIntentTemplates(com.tcn.cloud.api.api.v0alpha.ListSmsIntentTemplatesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsIntentTemplatesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListSmsIntentTemplatesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSmsIntentTemplatesMethod(), responseObserver);
     }
 
     /**
@@ -2044,9 +1994,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void createSmsIntentTemplate(com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate request,
+    default void createSmsIntentTemplate(com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateSmsIntentTemplateRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateSmsIntentTemplateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSmsIntentTemplateMethod(), responseObserver);
     }
 
     /**
@@ -2062,9 +2012,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void updateSmsIntentTemplate(com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate request,
+    default void updateSmsIntentTemplate(com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateSmsIntentTemplateRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateSmsIntentTemplateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSmsIntentTemplateMethod(), responseObserver);
     }
 
     /**
@@ -2075,9 +2025,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void deleteSmsIntentTemplate(com.tcn.cloud.api.api.v0alpha.DeleteSmsIntentTemplateReq request,
+    default void deleteSmsIntentTemplate(com.tcn.cloud.api.api.v0alpha.DeleteSmsIntentTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteSmsIntentTemplateRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteSmsIntentTemplateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSmsIntentTemplateMethod(), responseObserver);
     }
 
     /**
@@ -2088,9 +2038,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void getSmsIntentTemplateBySid(com.tcn.cloud.api.api.v0alpha.GetSmsIntentTemplateBySidReq request,
+    default void getSmsIntentTemplateBySid(com.tcn.cloud.api.api.v0alpha.GetSmsIntentTemplateBySidReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetSmsIntentTemplateBySidMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSmsIntentTemplateBySidMethod(), responseObserver);
     }
 
     /**
@@ -2102,9 +2052,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void listSmsSourceNumbers(com.tcn.cloud.api.api.v0alpha.ListSmsSourceNumbersReq request,
+    default void listSmsSourceNumbers(com.tcn.cloud.api.api.v0alpha.ListSmsSourceNumbersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsSourceNumbersRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListSmsSourceNumbersMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSmsSourceNumbersMethod(), responseObserver);
     }
 
     /**
@@ -2115,9 +2065,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void createSmsSourceNumber(com.tcn.cloud.api.api.v0alpha.CreateSmsSourceNumberReq request,
+    default void createSmsSourceNumber(com.tcn.cloud.api.api.v0alpha.CreateSmsSourceNumberReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateSmsSourceNumberRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateSmsSourceNumberMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSmsSourceNumberMethod(), responseObserver);
     }
 
     /**
@@ -2133,9 +2083,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void updateSmsSourceNumber(com.tcn.cloud.api.api.v0alpha.UpdateSmsSourceNumberReq request,
+    default void updateSmsSourceNumber(com.tcn.cloud.api.api.v0alpha.UpdateSmsSourceNumberReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateSmsSourceNumberRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateSmsSourceNumberMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSmsSourceNumberMethod(), responseObserver);
     }
 
     /**
@@ -2146,9 +2096,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void deleteSmsSourceNumber(com.tcn.cloud.api.api.v0alpha.DeleteSmsSourceNumberReq request,
+    default void deleteSmsSourceNumber(com.tcn.cloud.api.api.v0alpha.DeleteSmsSourceNumberReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteSmsSourceNumberRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteSmsSourceNumberMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSmsSourceNumberMethod(), responseObserver);
     }
 
     /**
@@ -2160,9 +2110,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void getSmsSourceNumberBySid(com.tcn.cloud.api.api.v0alpha.GetSmsSourceNumberBySidReq request,
+    default void getSmsSourceNumberBySid(com.tcn.cloud.api.api.v0alpha.GetSmsSourceNumberBySidReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SmsNumbers> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetSmsSourceNumberBySidMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSmsSourceNumberBySidMethod(), responseObserver);
     }
 
     /**
@@ -2175,9 +2125,9 @@ public final class SmsApiGrpc {
      *      VIEW_SMS
      * </pre>
      */
-    public void sendSmsNotification(com.tcn.cloud.api.api.v0alpha.SendSmsNotificationReq request,
+    default void sendSmsNotification(com.tcn.cloud.api.api.v0alpha.SendSmsNotificationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SendSmsNotificationRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getSendSmsNotificationMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendSmsNotificationMethod(), responseObserver);
     }
 
     /**
@@ -2189,9 +2139,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void listSmsGroupByFilters(com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersReq request,
+    default void listSmsGroupByFilters(com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListSmsGroupByFiltersMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSmsGroupByFiltersMethod(), responseObserver);
     }
 
     /**
@@ -2203,9 +2153,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void listSmsGroupsByGroupSids(com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsReq request,
+    default void listSmsGroupsByGroupSids(com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListSmsGroupsByGroupSidsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSmsGroupsByGroupSidsMethod(), responseObserver);
     }
 
     /**
@@ -2218,9 +2168,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void listSmsTasksByGroupSids(com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsReq request,
+    default void listSmsTasksByGroupSids(com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListSmsTasksByGroupSidsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSmsTasksByGroupSidsMethod(), responseObserver);
     }
 
     /**
@@ -2232,9 +2182,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void listSmsGroupByFiltersForAudit(com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersReq request,
+    default void listSmsGroupByFiltersForAudit(com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListSmsGroupByFiltersForAuditMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSmsGroupByFiltersForAuditMethod(), responseObserver);
     }
 
     /**
@@ -2246,9 +2196,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void listSmsGroupsByGroupSidsForAudit(com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsReq request,
+    default void listSmsGroupsByGroupSidsForAudit(com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListSmsGroupsByGroupSidsForAuditMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSmsGroupsByGroupSidsForAuditMethod(), responseObserver);
     }
 
     /**
@@ -2261,9 +2211,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void listSmsTasksByGroupSidsForAudit(com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsReq request,
+    default void listSmsTasksByGroupSidsForAudit(com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListSmsTasksByGroupSidsForAuditMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSmsTasksByGroupSidsForAuditMethod(), responseObserver);
     }
 
     /**
@@ -2276,9 +2226,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void listSmsTasksWithDetailedStatus(com.tcn.cloud.api.api.v0alpha.ListSmsTasksWithDetailedStatusReq request,
+    default void listSmsTasksWithDetailedStatus(com.tcn.cloud.api.api.v0alpha.ListSmsTasksWithDetailedStatusReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsTasksWithDetailedStatusRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListSmsTasksWithDetailedStatusMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSmsTasksWithDetailedStatusMethod(), responseObserver);
     }
 
     /**
@@ -2289,9 +2239,9 @@ public final class SmsApiGrpc {
      * Required permissions: EXECUTE_SEND_BROADCAST
      * </pre>
      */
-    public void updateSmsGroupStatus(com.tcn.cloud.api.api.v0alpha.SmsGroupInfo request,
+    default void updateSmsGroupStatus(com.tcn.cloud.api.api.v0alpha.SmsGroupInfo request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateSmsGroupStatusMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSmsGroupStatusMethod(), responseObserver);
     }
 
     /**
@@ -2302,9 +2252,9 @@ public final class SmsApiGrpc {
      * Required permissions: EXECUTE_SEND_BROADCAST
      * </pre>
      */
-    public void updateSmsGroupSendsPerMinute(com.tcn.cloud.api.api.v0alpha.SmsGroupInfo request,
+    default void updateSmsGroupSendsPerMinute(com.tcn.cloud.api.api.v0alpha.SmsGroupInfo request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateSmsGroupSendsPerMinuteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSmsGroupSendsPerMinuteMethod(), responseObserver);
     }
 
     /**
@@ -2315,9 +2265,9 @@ public final class SmsApiGrpc {
      * Required permissions: EXECUTE_SEND_BROADCAST
      * </pre>
      */
-    public void updateSmsGroupScheduleTimes(com.tcn.cloud.api.api.v0alpha.SmsGroupInfo request,
+    default void updateSmsGroupScheduleTimes(com.tcn.cloud.api.api.v0alpha.SmsGroupInfo request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateSmsGroupScheduleTimesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSmsGroupScheduleTimesMethod(), responseObserver);
     }
 
     /**
@@ -2328,9 +2278,9 @@ public final class SmsApiGrpc {
      * Required permissions: EXECUTE_SEND_BROADCAST
      * </pre>
      */
-    public void scheduleSms(com.tcn.cloud.api.api.v0alpha.ScheduleSmsReq request,
+    default void scheduleSms(com.tcn.cloud.api.api.v0alpha.ScheduleSmsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScheduleSmsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getScheduleSmsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getScheduleSmsMethod(), responseObserver);
     }
 
     /**
@@ -2341,9 +2291,9 @@ public final class SmsApiGrpc {
      * Required permissions: EXECUTE_SEND_BROADCAST
      * </pre>
      */
-    public void resendUnconnectedSms(com.tcn.cloud.api.api.v0alpha.ResendUnconnectedSmsReq request,
+    default void resendUnconnectedSms(com.tcn.cloud.api.api.v0alpha.ResendUnconnectedSmsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ResendUnconnectedSmsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getResendUnconnectedSmsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResendUnconnectedSmsMethod(), responseObserver);
     }
 
     /**
@@ -2355,9 +2305,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void smsActivitySearch(com.tcn.cloud.api.api.v0alpha.SmsActivitySearchReq request,
+    default void smsActivitySearch(com.tcn.cloud.api.api.v0alpha.SmsActivitySearchReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SmsActivitySearchRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getSmsActivitySearchMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSmsActivitySearchMethod(), responseObserver);
     }
 
     /**
@@ -2368,9 +2318,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void createInboundSmsTemplate(com.tcn.cloud.api.api.v0alpha.CreateInboundSmsTemplateReq request,
+    default void createInboundSmsTemplate(com.tcn.cloud.api.api.v0alpha.CreateInboundSmsTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateInboundSmsTemplateRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateInboundSmsTemplateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateInboundSmsTemplateMethod(), responseObserver);
     }
 
     /**
@@ -2385,9 +2335,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void updateInboundSmsTemplate(com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateReq request,
+    default void updateInboundSmsTemplate(com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateInboundSmsTemplateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateInboundSmsTemplateMethod(), responseObserver);
     }
 
     /**
@@ -2398,9 +2348,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void deleteInboundSmsTemplate(com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsTemplateReq request,
+    default void deleteInboundSmsTemplate(com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsTemplateRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteInboundSmsTemplateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteInboundSmsTemplateMethod(), responseObserver);
     }
 
     /**
@@ -2413,9 +2363,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void listInboundSmsTemplates(com.tcn.cloud.api.api.v0alpha.ListInboundSmsTemplatesReq request,
+    default void listInboundSmsTemplates(com.tcn.cloud.api.api.v0alpha.ListInboundSmsTemplatesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListInboundSmsTemplatesRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListInboundSmsTemplatesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListInboundSmsTemplatesMethod(), responseObserver);
     }
 
     /**
@@ -2426,9 +2376,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void getInboundSmsTemplateById(com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdReq request,
+    default void getInboundSmsTemplateById(com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetInboundSmsTemplateByIdMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetInboundSmsTemplateByIdMethod(), responseObserver);
     }
 
     /**
@@ -2439,9 +2389,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void createInboundSmsGroup(com.tcn.cloud.api.api.v0alpha.CreateInboundSmsGroupReq request,
+    default void createInboundSmsGroup(com.tcn.cloud.api.api.v0alpha.CreateInboundSmsGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateInboundSmsGroupRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateInboundSmsGroupMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateInboundSmsGroupMethod(), responseObserver);
     }
 
     /**
@@ -2456,9 +2406,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void updateInboundSmsGroup(com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq request,
+    default void updateInboundSmsGroup(com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateInboundSmsGroupMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateInboundSmsGroupMethod(), responseObserver);
     }
 
     /**
@@ -2469,9 +2419,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void deleteInboundSmsGroup(com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsGroupReq request,
+    default void deleteInboundSmsGroup(com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsGroupRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteInboundSmsGroupMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteInboundSmsGroupMethod(), responseObserver);
     }
 
     /**
@@ -2484,9 +2434,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void listInboundSmsGroups(com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsReq request,
+    default void listInboundSmsGroups(com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListInboundSmsGroupsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListInboundSmsGroupsMethod(), responseObserver);
     }
 
     /**
@@ -2499,9 +2449,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void listActiveInboundSmsGroups(com.tcn.cloud.api.api.v0alpha.ListActiveInboundSmsGroupsReq request,
+    default void listActiveInboundSmsGroups(com.tcn.cloud.api.api.v0alpha.ListActiveInboundSmsGroupsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListActiveInboundSmsGroupsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListActiveInboundSmsGroupsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListActiveInboundSmsGroupsMethod(), responseObserver);
     }
 
     /**
@@ -2514,9 +2464,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void listInboundSmsGroupByFilters(com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupByFiltersReq request,
+    default void listInboundSmsGroupByFilters(com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupByFiltersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupByFiltersRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListInboundSmsGroupByFiltersMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListInboundSmsGroupByFiltersMethod(), responseObserver);
     }
 
     /**
@@ -2527,9 +2477,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void getInboundSmsGroupById(com.tcn.cloud.api.api.v0alpha.GetInboundSmsGroupByIdReq request,
+    default void getInboundSmsGroupById(com.tcn.cloud.api.api.v0alpha.GetInboundSmsGroupByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetInboundSmsGroupByIdRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetInboundSmsGroupByIdMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetInboundSmsGroupByIdMethod(), responseObserver);
     }
 
     /**
@@ -2542,9 +2492,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void listInboundSmsGroupsByGroupIds(com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsByGroupIdsReq request,
+    default void listInboundSmsGroupsByGroupIds(com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsByGroupIdsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsByGroupIdsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListInboundSmsGroupsByGroupIdsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListInboundSmsGroupsByGroupIdsMethod(), responseObserver);
     }
 
     /**
@@ -2555,9 +2505,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void stopInboundSmsGroup(com.tcn.cloud.api.api.v0alpha.StopInboundSmsGroupReq request,
+    default void stopInboundSmsGroup(com.tcn.cloud.api.api.v0alpha.StopInboundSmsGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StopInboundSmsGroupRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getStopInboundSmsGroupMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStopInboundSmsGroupMethod(), responseObserver);
     }
 
     /**
@@ -2568,9 +2518,9 @@ public final class SmsApiGrpc {
      * Required permissions: EXECUTE_SEND_BROADCAST
      * </pre>
      */
-    public void scheduleInboundSms(com.tcn.cloud.api.api.v0alpha.ScheduleInboundSmsReq request,
+    default void scheduleInboundSms(com.tcn.cloud.api.api.v0alpha.ScheduleInboundSmsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScheduleInboundSmsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getScheduleInboundSmsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getScheduleInboundSmsMethod(), responseObserver);
     }
 
     /**
@@ -2581,9 +2531,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void createSmsConversation(com.tcn.cloud.api.api.v0alpha.CreateSmsConversationReq request,
+    default void createSmsConversation(com.tcn.cloud.api.api.v0alpha.CreateSmsConversationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateSmsConversationRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateSmsConversationMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSmsConversationMethod(), responseObserver);
     }
 
     /**
@@ -2598,9 +2548,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void updateSmsConversation(com.tcn.cloud.api.api.v0alpha.UpdateSmsConversationReq request,
+    default void updateSmsConversation(com.tcn.cloud.api.api.v0alpha.UpdateSmsConversationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateSmsConversationRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateSmsConversationMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSmsConversationMethod(), responseObserver);
     }
 
     /**
@@ -2611,9 +2561,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void deleteSmsConversation(com.tcn.cloud.api.api.v0alpha.DeleteSmsConversationReq request,
+    default void deleteSmsConversation(com.tcn.cloud.api.api.v0alpha.DeleteSmsConversationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteSmsConversationRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteSmsConversationMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSmsConversationMethod(), responseObserver);
     }
 
     /**
@@ -2626,9 +2576,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void listSmsConversations(com.tcn.cloud.api.api.v0alpha.ListSmsConversationsReq request,
+    default void listSmsConversations(com.tcn.cloud.api.api.v0alpha.ListSmsConversationsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsConversationsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListSmsConversationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSmsConversationsMethod(), responseObserver);
     }
 
     /**
@@ -2639,9 +2589,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void getSmsConversationById(com.tcn.cloud.api.api.v0alpha.GetSmsConversationByIdReq request,
+    default void getSmsConversationById(com.tcn.cloud.api.api.v0alpha.GetSmsConversationByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetSmsConversationByIdRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetSmsConversationByIdMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSmsConversationByIdMethod(), responseObserver);
     }
 
     /**
@@ -2652,9 +2602,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void getSmsMessage(com.tcn.cloud.api.api.v0alpha.GetSmsMessageReq request,
+    default void getSmsMessage(com.tcn.cloud.api.api.v0alpha.GetSmsMessageReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetSmsMessageRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetSmsMessageMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSmsMessageMethod(), responseObserver);
     }
 
     /**
@@ -2665,9 +2615,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void createSmsConversationAudit(com.tcn.cloud.api.api.v0alpha.SmsConversationAudit request,
+    default void createSmsConversationAudit(com.tcn.cloud.api.api.v0alpha.SmsConversationAudit request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateSmsConversationAuditRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateSmsConversationAuditMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSmsConversationAuditMethod(), responseObserver);
     }
 
     /**
@@ -2680,9 +2630,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void listSmsConversationAudits(com.tcn.cloud.api.api.v0alpha.ListSmsConversationAuditsReq request,
+    default void listSmsConversationAudits(com.tcn.cloud.api.api.v0alpha.ListSmsConversationAuditsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsConversationAuditsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListSmsConversationAuditsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSmsConversationAuditsMethod(), responseObserver);
     }
 
     /**
@@ -2693,9 +2643,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void getSmsConversationAuditById(com.tcn.cloud.api.api.v0alpha.GetSmsConversationAuditByIdReq request,
+    default void getSmsConversationAuditById(com.tcn.cloud.api.api.v0alpha.GetSmsConversationAuditByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetSmsConversationAuditByIdRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetSmsConversationAuditByIdMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSmsConversationAuditByIdMethod(), responseObserver);
     }
 
     /**
@@ -2705,9 +2655,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void createSmsConversationAssignedAgent(com.tcn.cloud.api.api.v0alpha.SmsConversationAssignedAgent request,
+    default void createSmsConversationAssignedAgent(com.tcn.cloud.api.api.v0alpha.SmsConversationAssignedAgent request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateSmsConversationAssignedAgentRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateSmsConversationAssignedAgentMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSmsConversationAssignedAgentMethod(), responseObserver);
     }
 
     /**
@@ -2720,9 +2670,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void listSmsConversationAssignedAgents(com.tcn.cloud.api.api.v0alpha.ListSmsConversationAssignedAgentsReq request,
+    default void listSmsConversationAssignedAgents(com.tcn.cloud.api.api.v0alpha.ListSmsConversationAssignedAgentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsConversationAssignedAgentsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListSmsConversationAssignedAgentsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSmsConversationAssignedAgentsMethod(), responseObserver);
     }
 
     /**
@@ -2733,9 +2683,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void getSmsConversationAssignedAgentById(com.tcn.cloud.api.api.v0alpha.GetSmsConversationAssignedAgentByIdReq request,
+    default void getSmsConversationAssignedAgentById(com.tcn.cloud.api.api.v0alpha.GetSmsConversationAssignedAgentByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetSmsConversationAssignedAgentByIdRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetSmsConversationAssignedAgentByIdMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSmsConversationAssignedAgentByIdMethod(), responseObserver);
     }
 
     /**
@@ -2748,9 +2698,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void listInboundSmsTasksByGroupIds(com.tcn.cloud.api.api.v0alpha.ListInboundSmsTasksByGroupIdsReq request,
+    default void listInboundSmsTasksByGroupIds(com.tcn.cloud.api.api.v0alpha.ListInboundSmsTasksByGroupIdsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListInboundSmsTasksByGroupIdsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getListInboundSmsTasksByGroupIdsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListInboundSmsTasksByGroupIdsMethod(), responseObserver);
     }
 
     /**
@@ -2761,9 +2711,9 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void stopAllOutboundSmsGroups(com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsReq request,
+    default void stopAllOutboundSmsGroups(com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getStopAllOutboundSmsGroupsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStopAllOutboundSmsGroupsMethod(), responseObserver);
     }
 
     /**
@@ -2774,450 +2724,46 @@ public final class SmsApiGrpc {
      * Required permissions: VIEW_SMS
      * </pre>
      */
-    public void stopAllInboundSmsGroups(com.tcn.cloud.api.api.v0alpha.StopAllInboundSmsGroupsReq request,
+    default void stopAllInboundSmsGroups(com.tcn.cloud.api.api.v0alpha.StopAllInboundSmsGroupsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StopAllInboundSmsGroupsRes> responseObserver) {
-      asyncUnimplementedUnaryCall(getStopAllInboundSmsGroupsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getListSmsTemplatesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListSmsTemplatesReq,
-                com.tcn.cloud.api.api.v0alpha.ListSmsTemplatesRes>(
-                  this, METHODID_LIST_SMS_TEMPLATES)))
-          .addMethod(
-            getCreateSmsTemplateMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.CreateSmsTemplateReq,
-                com.tcn.cloud.api.api.v0alpha.CreateSmsTemplateRes>(
-                  this, METHODID_CREATE_SMS_TEMPLATE)))
-          .addMethod(
-            getUpdateSmsTemplateMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateReq,
-                com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateRes>(
-                  this, METHODID_UPDATE_SMS_TEMPLATE)))
-          .addMethod(
-            getDeleteSmsTemplateMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.DeleteSmsTemplateReq,
-                com.tcn.cloud.api.api.v0alpha.DeleteSmsTemplateRes>(
-                  this, METHODID_DELETE_SMS_TEMPLATE)))
-          .addMethod(
-            getGetSmsTemplateBySidMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetSmsTemplateBySidReq,
-                com.tcn.cloud.api.api.v0alpha.GetSmsTemplateBySidRes>(
-                  this, METHODID_GET_SMS_TEMPLATE_BY_SID)))
-          .addMethod(
-            getListSmsIntentTemplatesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListSmsIntentTemplatesReq,
-                com.tcn.cloud.api.api.v0alpha.ListSmsIntentTemplatesRes>(
-                  this, METHODID_LIST_SMS_INTENT_TEMPLATES)))
-          .addMethod(
-            getCreateSmsIntentTemplateMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate,
-                com.tcn.cloud.api.api.v0alpha.CreateSmsIntentTemplateRes>(
-                  this, METHODID_CREATE_SMS_INTENT_TEMPLATE)))
-          .addMethod(
-            getUpdateSmsIntentTemplateMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate,
-                com.tcn.cloud.api.api.v0alpha.UpdateSmsIntentTemplateRes>(
-                  this, METHODID_UPDATE_SMS_INTENT_TEMPLATE)))
-          .addMethod(
-            getDeleteSmsIntentTemplateMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.DeleteSmsIntentTemplateReq,
-                com.tcn.cloud.api.api.v0alpha.DeleteSmsIntentTemplateRes>(
-                  this, METHODID_DELETE_SMS_INTENT_TEMPLATE)))
-          .addMethod(
-            getGetSmsIntentTemplateBySidMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetSmsIntentTemplateBySidReq,
-                com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate>(
-                  this, METHODID_GET_SMS_INTENT_TEMPLATE_BY_SID)))
-          .addMethod(
-            getListSmsSourceNumbersMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListSmsSourceNumbersReq,
-                com.tcn.cloud.api.api.v0alpha.ListSmsSourceNumbersRes>(
-                  this, METHODID_LIST_SMS_SOURCE_NUMBERS)))
-          .addMethod(
-            getCreateSmsSourceNumberMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.CreateSmsSourceNumberReq,
-                com.tcn.cloud.api.api.v0alpha.CreateSmsSourceNumberRes>(
-                  this, METHODID_CREATE_SMS_SOURCE_NUMBER)))
-          .addMethod(
-            getUpdateSmsSourceNumberMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.UpdateSmsSourceNumberReq,
-                com.tcn.cloud.api.api.v0alpha.UpdateSmsSourceNumberRes>(
-                  this, METHODID_UPDATE_SMS_SOURCE_NUMBER)))
-          .addMethod(
-            getDeleteSmsSourceNumberMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.DeleteSmsSourceNumberReq,
-                com.tcn.cloud.api.api.v0alpha.DeleteSmsSourceNumberRes>(
-                  this, METHODID_DELETE_SMS_SOURCE_NUMBER)))
-          .addMethod(
-            getGetSmsSourceNumberBySidMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetSmsSourceNumberBySidReq,
-                com.tcn.cloud.api.api.v0alpha.SmsNumbers>(
-                  this, METHODID_GET_SMS_SOURCE_NUMBER_BY_SID)))
-          .addMethod(
-            getSendSmsNotificationMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.SendSmsNotificationReq,
-                com.tcn.cloud.api.api.v0alpha.SendSmsNotificationRes>(
-                  this, METHODID_SEND_SMS_NOTIFICATION)))
-          .addMethod(
-            getListSmsGroupByFiltersMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersReq,
-                com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersRes>(
-                  this, METHODID_LIST_SMS_GROUP_BY_FILTERS)))
-          .addMethod(
-            getListSmsGroupsByGroupSidsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsReq,
-                com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsRes>(
-                  this, METHODID_LIST_SMS_GROUPS_BY_GROUP_SIDS)))
-          .addMethod(
-            getListSmsTasksByGroupSidsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsReq,
-                com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsRes>(
-                  this, METHODID_LIST_SMS_TASKS_BY_GROUP_SIDS)))
-          .addMethod(
-            getListSmsGroupByFiltersForAuditMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersReq,
-                com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersRes>(
-                  this, METHODID_LIST_SMS_GROUP_BY_FILTERS_FOR_AUDIT)))
-          .addMethod(
-            getListSmsGroupsByGroupSidsForAuditMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsReq,
-                com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsRes>(
-                  this, METHODID_LIST_SMS_GROUPS_BY_GROUP_SIDS_FOR_AUDIT)))
-          .addMethod(
-            getListSmsTasksByGroupSidsForAuditMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsReq,
-                com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsRes>(
-                  this, METHODID_LIST_SMS_TASKS_BY_GROUP_SIDS_FOR_AUDIT)))
-          .addMethod(
-            getListSmsTasksWithDetailedStatusMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListSmsTasksWithDetailedStatusReq,
-                com.tcn.cloud.api.api.v0alpha.ListSmsTasksWithDetailedStatusRes>(
-                  this, METHODID_LIST_SMS_TASKS_WITH_DETAILED_STATUS)))
-          .addMethod(
-            getUpdateSmsGroupStatusMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.SmsGroupInfo,
-                com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes>(
-                  this, METHODID_UPDATE_SMS_GROUP_STATUS)))
-          .addMethod(
-            getUpdateSmsGroupSendsPerMinuteMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.SmsGroupInfo,
-                com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes>(
-                  this, METHODID_UPDATE_SMS_GROUP_SENDS_PER_MINUTE)))
-          .addMethod(
-            getUpdateSmsGroupScheduleTimesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.SmsGroupInfo,
-                com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes>(
-                  this, METHODID_UPDATE_SMS_GROUP_SCHEDULE_TIMES)))
-          .addMethod(
-            getScheduleSmsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ScheduleSmsReq,
-                com.tcn.cloud.api.api.v0alpha.ScheduleSmsRes>(
-                  this, METHODID_SCHEDULE_SMS)))
-          .addMethod(
-            getResendUnconnectedSmsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ResendUnconnectedSmsReq,
-                com.tcn.cloud.api.api.v0alpha.ResendUnconnectedSmsRes>(
-                  this, METHODID_RESEND_UNCONNECTED_SMS)))
-          .addMethod(
-            getSmsActivitySearchMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.SmsActivitySearchReq,
-                com.tcn.cloud.api.api.v0alpha.SmsActivitySearchRes>(
-                  this, METHODID_SMS_ACTIVITY_SEARCH)))
-          .addMethod(
-            getCreateInboundSmsTemplateMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.CreateInboundSmsTemplateReq,
-                com.tcn.cloud.api.api.v0alpha.CreateInboundSmsTemplateRes>(
-                  this, METHODID_CREATE_INBOUND_SMS_TEMPLATE)))
-          .addMethod(
-            getUpdateInboundSmsTemplateMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateReq,
-                com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateRes>(
-                  this, METHODID_UPDATE_INBOUND_SMS_TEMPLATE)))
-          .addMethod(
-            getDeleteInboundSmsTemplateMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsTemplateReq,
-                com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsTemplateRes>(
-                  this, METHODID_DELETE_INBOUND_SMS_TEMPLATE)))
-          .addMethod(
-            getListInboundSmsTemplatesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListInboundSmsTemplatesReq,
-                com.tcn.cloud.api.api.v0alpha.ListInboundSmsTemplatesRes>(
-                  this, METHODID_LIST_INBOUND_SMS_TEMPLATES)))
-          .addMethod(
-            getGetInboundSmsTemplateByIdMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdReq,
-                com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdRes>(
-                  this, METHODID_GET_INBOUND_SMS_TEMPLATE_BY_ID)))
-          .addMethod(
-            getCreateInboundSmsGroupMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.CreateInboundSmsGroupReq,
-                com.tcn.cloud.api.api.v0alpha.CreateInboundSmsGroupRes>(
-                  this, METHODID_CREATE_INBOUND_SMS_GROUP)))
-          .addMethod(
-            getUpdateInboundSmsGroupMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq,
-                com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupRes>(
-                  this, METHODID_UPDATE_INBOUND_SMS_GROUP)))
-          .addMethod(
-            getDeleteInboundSmsGroupMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsGroupReq,
-                com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsGroupRes>(
-                  this, METHODID_DELETE_INBOUND_SMS_GROUP)))
-          .addMethod(
-            getListInboundSmsGroupsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsReq,
-                com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsRes>(
-                  this, METHODID_LIST_INBOUND_SMS_GROUPS)))
-          .addMethod(
-            getListActiveInboundSmsGroupsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListActiveInboundSmsGroupsReq,
-                com.tcn.cloud.api.api.v0alpha.ListActiveInboundSmsGroupsRes>(
-                  this, METHODID_LIST_ACTIVE_INBOUND_SMS_GROUPS)))
-          .addMethod(
-            getListInboundSmsGroupByFiltersMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupByFiltersReq,
-                com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupByFiltersRes>(
-                  this, METHODID_LIST_INBOUND_SMS_GROUP_BY_FILTERS)))
-          .addMethod(
-            getGetInboundSmsGroupByIdMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetInboundSmsGroupByIdReq,
-                com.tcn.cloud.api.api.v0alpha.GetInboundSmsGroupByIdRes>(
-                  this, METHODID_GET_INBOUND_SMS_GROUP_BY_ID)))
-          .addMethod(
-            getListInboundSmsGroupsByGroupIdsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsByGroupIdsReq,
-                com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsByGroupIdsRes>(
-                  this, METHODID_LIST_INBOUND_SMS_GROUPS_BY_GROUP_IDS)))
-          .addMethod(
-            getStopInboundSmsGroupMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.StopInboundSmsGroupReq,
-                com.tcn.cloud.api.api.v0alpha.StopInboundSmsGroupRes>(
-                  this, METHODID_STOP_INBOUND_SMS_GROUP)))
-          .addMethod(
-            getScheduleInboundSmsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ScheduleInboundSmsReq,
-                com.tcn.cloud.api.api.v0alpha.ScheduleInboundSmsRes>(
-                  this, METHODID_SCHEDULE_INBOUND_SMS)))
-          .addMethod(
-            getCreateSmsConversationMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.CreateSmsConversationReq,
-                com.tcn.cloud.api.api.v0alpha.CreateSmsConversationRes>(
-                  this, METHODID_CREATE_SMS_CONVERSATION)))
-          .addMethod(
-            getUpdateSmsConversationMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.UpdateSmsConversationReq,
-                com.tcn.cloud.api.api.v0alpha.UpdateSmsConversationRes>(
-                  this, METHODID_UPDATE_SMS_CONVERSATION)))
-          .addMethod(
-            getDeleteSmsConversationMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.DeleteSmsConversationReq,
-                com.tcn.cloud.api.api.v0alpha.DeleteSmsConversationRes>(
-                  this, METHODID_DELETE_SMS_CONVERSATION)))
-          .addMethod(
-            getListSmsConversationsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListSmsConversationsReq,
-                com.tcn.cloud.api.api.v0alpha.ListSmsConversationsRes>(
-                  this, METHODID_LIST_SMS_CONVERSATIONS)))
-          .addMethod(
-            getGetSmsConversationByIdMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetSmsConversationByIdReq,
-                com.tcn.cloud.api.api.v0alpha.GetSmsConversationByIdRes>(
-                  this, METHODID_GET_SMS_CONVERSATION_BY_ID)))
-          .addMethod(
-            getGetSmsMessageMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetSmsMessageReq,
-                com.tcn.cloud.api.api.v0alpha.GetSmsMessageRes>(
-                  this, METHODID_GET_SMS_MESSAGE)))
-          .addMethod(
-            getCreateSmsConversationAuditMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.SmsConversationAudit,
-                com.tcn.cloud.api.api.v0alpha.CreateSmsConversationAuditRes>(
-                  this, METHODID_CREATE_SMS_CONVERSATION_AUDIT)))
-          .addMethod(
-            getListSmsConversationAuditsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListSmsConversationAuditsReq,
-                com.tcn.cloud.api.api.v0alpha.ListSmsConversationAuditsRes>(
-                  this, METHODID_LIST_SMS_CONVERSATION_AUDITS)))
-          .addMethod(
-            getGetSmsConversationAuditByIdMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetSmsConversationAuditByIdReq,
-                com.tcn.cloud.api.api.v0alpha.GetSmsConversationAuditByIdRes>(
-                  this, METHODID_GET_SMS_CONVERSATION_AUDIT_BY_ID)))
-          .addMethod(
-            getCreateSmsConversationAssignedAgentMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.SmsConversationAssignedAgent,
-                com.tcn.cloud.api.api.v0alpha.CreateSmsConversationAssignedAgentRes>(
-                  this, METHODID_CREATE_SMS_CONVERSATION_ASSIGNED_AGENT)))
-          .addMethod(
-            getListSmsConversationAssignedAgentsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListSmsConversationAssignedAgentsReq,
-                com.tcn.cloud.api.api.v0alpha.ListSmsConversationAssignedAgentsRes>(
-                  this, METHODID_LIST_SMS_CONVERSATION_ASSIGNED_AGENTS)))
-          .addMethod(
-            getGetSmsConversationAssignedAgentByIdMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.GetSmsConversationAssignedAgentByIdReq,
-                com.tcn.cloud.api.api.v0alpha.GetSmsConversationAssignedAgentByIdRes>(
-                  this, METHODID_GET_SMS_CONVERSATION_ASSIGNED_AGENT_BY_ID)))
-          .addMethod(
-            getListInboundSmsTasksByGroupIdsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.ListInboundSmsTasksByGroupIdsReq,
-                com.tcn.cloud.api.api.v0alpha.ListInboundSmsTasksByGroupIdsRes>(
-                  this, METHODID_LIST_INBOUND_SMS_TASKS_BY_GROUP_IDS)))
-          .addMethod(
-            getStopAllOutboundSmsGroupsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsReq,
-                com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsRes>(
-                  this, METHODID_STOP_ALL_OUTBOUND_SMS_GROUPS)))
-          .addMethod(
-            getStopAllInboundSmsGroupsMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcn.cloud.api.api.v0alpha.StopAllInboundSmsGroupsReq,
-                com.tcn.cloud.api.api.v0alpha.StopAllInboundSmsGroupsRes>(
-                  this, METHODID_STOP_ALL_INBOUND_SMS_GROUPS)))
-          .build();
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStopAllInboundSmsGroupsMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service SmsApi.
    * <pre>
    * Service for interacting with TCN's SMS API system.
    * Accessing all of the methods require an authenticated user with the correct
    * permissions.
    * </pre>
    */
-  public static final class SmsApiStub extends io.grpc.stub.AbstractStub<SmsApiStub> {
-    private SmsApiStub(io.grpc.Channel channel) {
-      super(channel);
-    }
+  public static abstract class SmsApiImplBase
+      implements io.grpc.BindableService, AsyncService {
 
-    private SmsApiStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return SmsApiGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service SmsApi.
+   * <pre>
+   * Service for interacting with TCN's SMS API system.
+   * Accessing all of the methods require an authenticated user with the correct
+   * permissions.
+   * </pre>
+   */
+  public static final class SmsApiStub
+      extends io.grpc.stub.AbstractAsyncStub<SmsApiStub> {
+    private SmsApiStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SmsApiStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SmsApiStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SmsApiStub(channel, callOptions);
     }
 
@@ -3232,7 +2778,7 @@ public final class SmsApiGrpc {
      */
     public void listSmsTemplates(com.tcn.cloud.api.api.v0alpha.ListSmsTemplatesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsTemplatesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSmsTemplatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3246,7 +2792,7 @@ public final class SmsApiGrpc {
      */
     public void createSmsTemplate(com.tcn.cloud.api.api.v0alpha.CreateSmsTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateSmsTemplateRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateSmsTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3264,7 +2810,7 @@ public final class SmsApiGrpc {
      */
     public void updateSmsTemplate(com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateSmsTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3278,7 +2824,7 @@ public final class SmsApiGrpc {
      */
     public void deleteSmsTemplate(com.tcn.cloud.api.api.v0alpha.DeleteSmsTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteSmsTemplateRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteSmsTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3292,7 +2838,7 @@ public final class SmsApiGrpc {
      */
     public void getSmsTemplateBySid(com.tcn.cloud.api.api.v0alpha.GetSmsTemplateBySidReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetSmsTemplateBySidRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSmsTemplateBySidMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3307,7 +2853,7 @@ public final class SmsApiGrpc {
      */
     public void listSmsIntentTemplates(com.tcn.cloud.api.api.v0alpha.ListSmsIntentTemplatesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsIntentTemplatesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSmsIntentTemplatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3321,7 +2867,7 @@ public final class SmsApiGrpc {
      */
     public void createSmsIntentTemplate(com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateSmsIntentTemplateRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateSmsIntentTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3340,7 +2886,7 @@ public final class SmsApiGrpc {
      */
     public void updateSmsIntentTemplate(com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateSmsIntentTemplateRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateSmsIntentTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3354,7 +2900,7 @@ public final class SmsApiGrpc {
      */
     public void deleteSmsIntentTemplate(com.tcn.cloud.api.api.v0alpha.DeleteSmsIntentTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteSmsIntentTemplateRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteSmsIntentTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3368,7 +2914,7 @@ public final class SmsApiGrpc {
      */
     public void getSmsIntentTemplateBySid(com.tcn.cloud.api.api.v0alpha.GetSmsIntentTemplateBySidReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSmsIntentTemplateBySidMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3383,7 +2929,7 @@ public final class SmsApiGrpc {
      */
     public void listSmsSourceNumbers(com.tcn.cloud.api.api.v0alpha.ListSmsSourceNumbersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsSourceNumbersRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSmsSourceNumbersMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3397,7 +2943,7 @@ public final class SmsApiGrpc {
      */
     public void createSmsSourceNumber(com.tcn.cloud.api.api.v0alpha.CreateSmsSourceNumberReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateSmsSourceNumberRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateSmsSourceNumberMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3416,7 +2962,7 @@ public final class SmsApiGrpc {
      */
     public void updateSmsSourceNumber(com.tcn.cloud.api.api.v0alpha.UpdateSmsSourceNumberReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateSmsSourceNumberRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateSmsSourceNumberMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3430,7 +2976,7 @@ public final class SmsApiGrpc {
      */
     public void deleteSmsSourceNumber(com.tcn.cloud.api.api.v0alpha.DeleteSmsSourceNumberReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteSmsSourceNumberRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteSmsSourceNumberMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3445,7 +2991,7 @@ public final class SmsApiGrpc {
      */
     public void getSmsSourceNumberBySid(com.tcn.cloud.api.api.v0alpha.GetSmsSourceNumberBySidReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SmsNumbers> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSmsSourceNumberBySidMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3461,7 +3007,7 @@ public final class SmsApiGrpc {
      */
     public void sendSmsNotification(com.tcn.cloud.api.api.v0alpha.SendSmsNotificationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SendSmsNotificationRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSendSmsNotificationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3476,7 +3022,7 @@ public final class SmsApiGrpc {
      */
     public void listSmsGroupByFilters(com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSmsGroupByFiltersMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3491,7 +3037,7 @@ public final class SmsApiGrpc {
      */
     public void listSmsGroupsByGroupSids(com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSmsGroupsByGroupSidsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3507,7 +3053,7 @@ public final class SmsApiGrpc {
      */
     public void listSmsTasksByGroupSids(com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSmsTasksByGroupSidsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3522,7 +3068,7 @@ public final class SmsApiGrpc {
      */
     public void listSmsGroupByFiltersForAudit(com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSmsGroupByFiltersForAuditMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3537,7 +3083,7 @@ public final class SmsApiGrpc {
      */
     public void listSmsGroupsByGroupSidsForAudit(com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSmsGroupsByGroupSidsForAuditMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3553,7 +3099,7 @@ public final class SmsApiGrpc {
      */
     public void listSmsTasksByGroupSidsForAudit(com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSmsTasksByGroupSidsForAuditMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3569,7 +3115,7 @@ public final class SmsApiGrpc {
      */
     public void listSmsTasksWithDetailedStatus(com.tcn.cloud.api.api.v0alpha.ListSmsTasksWithDetailedStatusReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsTasksWithDetailedStatusRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSmsTasksWithDetailedStatusMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3583,7 +3129,7 @@ public final class SmsApiGrpc {
      */
     public void updateSmsGroupStatus(com.tcn.cloud.api.api.v0alpha.SmsGroupInfo request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateSmsGroupStatusMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3597,7 +3143,7 @@ public final class SmsApiGrpc {
      */
     public void updateSmsGroupSendsPerMinute(com.tcn.cloud.api.api.v0alpha.SmsGroupInfo request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateSmsGroupSendsPerMinuteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3611,7 +3157,7 @@ public final class SmsApiGrpc {
      */
     public void updateSmsGroupScheduleTimes(com.tcn.cloud.api.api.v0alpha.SmsGroupInfo request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateSmsGroupScheduleTimesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3625,7 +3171,7 @@ public final class SmsApiGrpc {
      */
     public void scheduleSms(com.tcn.cloud.api.api.v0alpha.ScheduleSmsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScheduleSmsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getScheduleSmsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3639,7 +3185,7 @@ public final class SmsApiGrpc {
      */
     public void resendUnconnectedSms(com.tcn.cloud.api.api.v0alpha.ResendUnconnectedSmsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ResendUnconnectedSmsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getResendUnconnectedSmsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3654,7 +3200,7 @@ public final class SmsApiGrpc {
      */
     public void smsActivitySearch(com.tcn.cloud.api.api.v0alpha.SmsActivitySearchReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SmsActivitySearchRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSmsActivitySearchMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3668,7 +3214,7 @@ public final class SmsApiGrpc {
      */
     public void createInboundSmsTemplate(com.tcn.cloud.api.api.v0alpha.CreateInboundSmsTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateInboundSmsTemplateRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateInboundSmsTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3686,7 +3232,7 @@ public final class SmsApiGrpc {
      */
     public void updateInboundSmsTemplate(com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateInboundSmsTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3700,7 +3246,7 @@ public final class SmsApiGrpc {
      */
     public void deleteInboundSmsTemplate(com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsTemplateRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteInboundSmsTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3716,7 +3262,7 @@ public final class SmsApiGrpc {
      */
     public void listInboundSmsTemplates(com.tcn.cloud.api.api.v0alpha.ListInboundSmsTemplatesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListInboundSmsTemplatesRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListInboundSmsTemplatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3730,7 +3276,7 @@ public final class SmsApiGrpc {
      */
     public void getInboundSmsTemplateById(com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetInboundSmsTemplateByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3744,7 +3290,7 @@ public final class SmsApiGrpc {
      */
     public void createInboundSmsGroup(com.tcn.cloud.api.api.v0alpha.CreateInboundSmsGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateInboundSmsGroupRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateInboundSmsGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3762,7 +3308,7 @@ public final class SmsApiGrpc {
      */
     public void updateInboundSmsGroup(com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateInboundSmsGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3776,7 +3322,7 @@ public final class SmsApiGrpc {
      */
     public void deleteInboundSmsGroup(com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsGroupRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteInboundSmsGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3792,7 +3338,7 @@ public final class SmsApiGrpc {
      */
     public void listInboundSmsGroups(com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListInboundSmsGroupsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3808,7 +3354,7 @@ public final class SmsApiGrpc {
      */
     public void listActiveInboundSmsGroups(com.tcn.cloud.api.api.v0alpha.ListActiveInboundSmsGroupsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListActiveInboundSmsGroupsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListActiveInboundSmsGroupsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3824,7 +3370,7 @@ public final class SmsApiGrpc {
      */
     public void listInboundSmsGroupByFilters(com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupByFiltersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupByFiltersRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListInboundSmsGroupByFiltersMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3838,7 +3384,7 @@ public final class SmsApiGrpc {
      */
     public void getInboundSmsGroupById(com.tcn.cloud.api.api.v0alpha.GetInboundSmsGroupByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetInboundSmsGroupByIdRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetInboundSmsGroupByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3854,7 +3400,7 @@ public final class SmsApiGrpc {
      */
     public void listInboundSmsGroupsByGroupIds(com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsByGroupIdsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsByGroupIdsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListInboundSmsGroupsByGroupIdsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3868,7 +3414,7 @@ public final class SmsApiGrpc {
      */
     public void stopInboundSmsGroup(com.tcn.cloud.api.api.v0alpha.StopInboundSmsGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StopInboundSmsGroupRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getStopInboundSmsGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3882,7 +3428,7 @@ public final class SmsApiGrpc {
      */
     public void scheduleInboundSms(com.tcn.cloud.api.api.v0alpha.ScheduleInboundSmsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScheduleInboundSmsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getScheduleInboundSmsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3896,7 +3442,7 @@ public final class SmsApiGrpc {
      */
     public void createSmsConversation(com.tcn.cloud.api.api.v0alpha.CreateSmsConversationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateSmsConversationRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateSmsConversationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3914,7 +3460,7 @@ public final class SmsApiGrpc {
      */
     public void updateSmsConversation(com.tcn.cloud.api.api.v0alpha.UpdateSmsConversationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateSmsConversationRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateSmsConversationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3928,7 +3474,7 @@ public final class SmsApiGrpc {
      */
     public void deleteSmsConversation(com.tcn.cloud.api.api.v0alpha.DeleteSmsConversationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteSmsConversationRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteSmsConversationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3944,7 +3490,7 @@ public final class SmsApiGrpc {
      */
     public void listSmsConversations(com.tcn.cloud.api.api.v0alpha.ListSmsConversationsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsConversationsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSmsConversationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3958,7 +3504,7 @@ public final class SmsApiGrpc {
      */
     public void getSmsConversationById(com.tcn.cloud.api.api.v0alpha.GetSmsConversationByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetSmsConversationByIdRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSmsConversationByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3972,7 +3518,7 @@ public final class SmsApiGrpc {
      */
     public void getSmsMessage(com.tcn.cloud.api.api.v0alpha.GetSmsMessageReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetSmsMessageRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSmsMessageMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3986,7 +3532,7 @@ public final class SmsApiGrpc {
      */
     public void createSmsConversationAudit(com.tcn.cloud.api.api.v0alpha.SmsConversationAudit request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateSmsConversationAuditRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateSmsConversationAuditMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4002,7 +3548,7 @@ public final class SmsApiGrpc {
      */
     public void listSmsConversationAudits(com.tcn.cloud.api.api.v0alpha.ListSmsConversationAuditsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsConversationAuditsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSmsConversationAuditsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4016,7 +3562,7 @@ public final class SmsApiGrpc {
      */
     public void getSmsConversationAuditById(com.tcn.cloud.api.api.v0alpha.GetSmsConversationAuditByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetSmsConversationAuditByIdRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSmsConversationAuditByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4029,7 +3575,7 @@ public final class SmsApiGrpc {
      */
     public void createSmsConversationAssignedAgent(com.tcn.cloud.api.api.v0alpha.SmsConversationAssignedAgent request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateSmsConversationAssignedAgentRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateSmsConversationAssignedAgentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4045,7 +3591,7 @@ public final class SmsApiGrpc {
      */
     public void listSmsConversationAssignedAgents(com.tcn.cloud.api.api.v0alpha.ListSmsConversationAssignedAgentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSmsConversationAssignedAgentsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSmsConversationAssignedAgentsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4059,7 +3605,7 @@ public final class SmsApiGrpc {
      */
     public void getSmsConversationAssignedAgentById(com.tcn.cloud.api.api.v0alpha.GetSmsConversationAssignedAgentByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetSmsConversationAssignedAgentByIdRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSmsConversationAssignedAgentByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4075,7 +3621,7 @@ public final class SmsApiGrpc {
      */
     public void listInboundSmsTasksByGroupIds(com.tcn.cloud.api.api.v0alpha.ListInboundSmsTasksByGroupIdsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListInboundSmsTasksByGroupIdsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListInboundSmsTasksByGroupIdsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4089,7 +3635,7 @@ public final class SmsApiGrpc {
      */
     public void stopAllOutboundSmsGroups(com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getStopAllOutboundSmsGroupsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4103,31 +3649,29 @@ public final class SmsApiGrpc {
      */
     public void stopAllInboundSmsGroups(com.tcn.cloud.api.api.v0alpha.StopAllInboundSmsGroupsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StopAllInboundSmsGroupsRes> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getStopAllInboundSmsGroupsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service SmsApi.
    * <pre>
    * Service for interacting with TCN's SMS API system.
    * Accessing all of the methods require an authenticated user with the correct
    * permissions.
    * </pre>
    */
-  public static final class SmsApiBlockingStub extends io.grpc.stub.AbstractStub<SmsApiBlockingStub> {
-    private SmsApiBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SmsApiBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SmsApiBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<SmsApiBlockingStub> {
+    private SmsApiBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SmsApiBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SmsApiBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SmsApiBlockingStub(channel, callOptions);
     }
 
@@ -4141,7 +3685,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListSmsTemplatesRes listSmsTemplates(com.tcn.cloud.api.api.v0alpha.ListSmsTemplatesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSmsTemplatesMethod(), getCallOptions(), request);
     }
 
@@ -4154,7 +3698,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateSmsTemplateRes createSmsTemplate(com.tcn.cloud.api.api.v0alpha.CreateSmsTemplateReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateSmsTemplateMethod(), getCallOptions(), request);
     }
 
@@ -4171,7 +3715,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateRes updateSmsTemplate(com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateSmsTemplateMethod(), getCallOptions(), request);
     }
 
@@ -4184,7 +3728,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteSmsTemplateRes deleteSmsTemplate(com.tcn.cloud.api.api.v0alpha.DeleteSmsTemplateReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteSmsTemplateMethod(), getCallOptions(), request);
     }
 
@@ -4197,7 +3741,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetSmsTemplateBySidRes getSmsTemplateBySid(com.tcn.cloud.api.api.v0alpha.GetSmsTemplateBySidReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSmsTemplateBySidMethod(), getCallOptions(), request);
     }
 
@@ -4211,7 +3755,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListSmsIntentTemplatesRes listSmsIntentTemplates(com.tcn.cloud.api.api.v0alpha.ListSmsIntentTemplatesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSmsIntentTemplatesMethod(), getCallOptions(), request);
     }
 
@@ -4224,7 +3768,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateSmsIntentTemplateRes createSmsIntentTemplate(com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateSmsIntentTemplateMethod(), getCallOptions(), request);
     }
 
@@ -4242,7 +3786,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateSmsIntentTemplateRes updateSmsIntentTemplate(com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateSmsIntentTemplateMethod(), getCallOptions(), request);
     }
 
@@ -4255,7 +3799,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteSmsIntentTemplateRes deleteSmsIntentTemplate(com.tcn.cloud.api.api.v0alpha.DeleteSmsIntentTemplateReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteSmsIntentTemplateMethod(), getCallOptions(), request);
     }
 
@@ -4268,7 +3812,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate getSmsIntentTemplateBySid(com.tcn.cloud.api.api.v0alpha.GetSmsIntentTemplateBySidReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSmsIntentTemplateBySidMethod(), getCallOptions(), request);
     }
 
@@ -4282,7 +3826,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListSmsSourceNumbersRes listSmsSourceNumbers(com.tcn.cloud.api.api.v0alpha.ListSmsSourceNumbersReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSmsSourceNumbersMethod(), getCallOptions(), request);
     }
 
@@ -4295,7 +3839,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateSmsSourceNumberRes createSmsSourceNumber(com.tcn.cloud.api.api.v0alpha.CreateSmsSourceNumberReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateSmsSourceNumberMethod(), getCallOptions(), request);
     }
 
@@ -4313,7 +3857,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateSmsSourceNumberRes updateSmsSourceNumber(com.tcn.cloud.api.api.v0alpha.UpdateSmsSourceNumberReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateSmsSourceNumberMethod(), getCallOptions(), request);
     }
 
@@ -4326,7 +3870,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteSmsSourceNumberRes deleteSmsSourceNumber(com.tcn.cloud.api.api.v0alpha.DeleteSmsSourceNumberReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteSmsSourceNumberMethod(), getCallOptions(), request);
     }
 
@@ -4340,7 +3884,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SmsNumbers getSmsSourceNumberBySid(com.tcn.cloud.api.api.v0alpha.GetSmsSourceNumberBySidReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSmsSourceNumberBySidMethod(), getCallOptions(), request);
     }
 
@@ -4355,7 +3899,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SendSmsNotificationRes sendSmsNotification(com.tcn.cloud.api.api.v0alpha.SendSmsNotificationReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSendSmsNotificationMethod(), getCallOptions(), request);
     }
 
@@ -4369,7 +3913,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersRes listSmsGroupByFilters(com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSmsGroupByFiltersMethod(), getCallOptions(), request);
     }
 
@@ -4383,7 +3927,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsRes listSmsGroupsByGroupSids(com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSmsGroupsByGroupSidsMethod(), getCallOptions(), request);
     }
 
@@ -4398,7 +3942,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsRes listSmsTasksByGroupSids(com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSmsTasksByGroupSidsMethod(), getCallOptions(), request);
     }
 
@@ -4412,7 +3956,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersRes listSmsGroupByFiltersForAudit(com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSmsGroupByFiltersForAuditMethod(), getCallOptions(), request);
     }
 
@@ -4426,7 +3970,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsRes listSmsGroupsByGroupSidsForAudit(com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSmsGroupsByGroupSidsForAuditMethod(), getCallOptions(), request);
     }
 
@@ -4441,7 +3985,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsRes listSmsTasksByGroupSidsForAudit(com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSmsTasksByGroupSidsForAuditMethod(), getCallOptions(), request);
     }
 
@@ -4456,7 +4000,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListSmsTasksWithDetailedStatusRes listSmsTasksWithDetailedStatus(com.tcn.cloud.api.api.v0alpha.ListSmsTasksWithDetailedStatusReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSmsTasksWithDetailedStatusMethod(), getCallOptions(), request);
     }
 
@@ -4469,7 +4013,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes updateSmsGroupStatus(com.tcn.cloud.api.api.v0alpha.SmsGroupInfo request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateSmsGroupStatusMethod(), getCallOptions(), request);
     }
 
@@ -4482,7 +4026,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes updateSmsGroupSendsPerMinute(com.tcn.cloud.api.api.v0alpha.SmsGroupInfo request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateSmsGroupSendsPerMinuteMethod(), getCallOptions(), request);
     }
 
@@ -4495,7 +4039,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes updateSmsGroupScheduleTimes(com.tcn.cloud.api.api.v0alpha.SmsGroupInfo request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateSmsGroupScheduleTimesMethod(), getCallOptions(), request);
     }
 
@@ -4508,7 +4052,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ScheduleSmsRes scheduleSms(com.tcn.cloud.api.api.v0alpha.ScheduleSmsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getScheduleSmsMethod(), getCallOptions(), request);
     }
 
@@ -4521,7 +4065,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ResendUnconnectedSmsRes resendUnconnectedSms(com.tcn.cloud.api.api.v0alpha.ResendUnconnectedSmsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getResendUnconnectedSmsMethod(), getCallOptions(), request);
     }
 
@@ -4535,7 +4079,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SmsActivitySearchRes smsActivitySearch(com.tcn.cloud.api.api.v0alpha.SmsActivitySearchReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSmsActivitySearchMethod(), getCallOptions(), request);
     }
 
@@ -4548,7 +4092,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateInboundSmsTemplateRes createInboundSmsTemplate(com.tcn.cloud.api.api.v0alpha.CreateInboundSmsTemplateReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateInboundSmsTemplateMethod(), getCallOptions(), request);
     }
 
@@ -4565,7 +4109,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateRes updateInboundSmsTemplate(com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateInboundSmsTemplateMethod(), getCallOptions(), request);
     }
 
@@ -4578,7 +4122,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsTemplateRes deleteInboundSmsTemplate(com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsTemplateReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteInboundSmsTemplateMethod(), getCallOptions(), request);
     }
 
@@ -4593,7 +4137,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListInboundSmsTemplatesRes listInboundSmsTemplates(com.tcn.cloud.api.api.v0alpha.ListInboundSmsTemplatesReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListInboundSmsTemplatesMethod(), getCallOptions(), request);
     }
 
@@ -4606,7 +4150,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdRes getInboundSmsTemplateById(com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetInboundSmsTemplateByIdMethod(), getCallOptions(), request);
     }
 
@@ -4619,7 +4163,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateInboundSmsGroupRes createInboundSmsGroup(com.tcn.cloud.api.api.v0alpha.CreateInboundSmsGroupReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateInboundSmsGroupMethod(), getCallOptions(), request);
     }
 
@@ -4636,7 +4180,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupRes updateInboundSmsGroup(com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateInboundSmsGroupMethod(), getCallOptions(), request);
     }
 
@@ -4649,7 +4193,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsGroupRes deleteInboundSmsGroup(com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsGroupReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteInboundSmsGroupMethod(), getCallOptions(), request);
     }
 
@@ -4664,7 +4208,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsRes listInboundSmsGroups(com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListInboundSmsGroupsMethod(), getCallOptions(), request);
     }
 
@@ -4679,7 +4223,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListActiveInboundSmsGroupsRes listActiveInboundSmsGroups(com.tcn.cloud.api.api.v0alpha.ListActiveInboundSmsGroupsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListActiveInboundSmsGroupsMethod(), getCallOptions(), request);
     }
 
@@ -4694,7 +4238,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupByFiltersRes listInboundSmsGroupByFilters(com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupByFiltersReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListInboundSmsGroupByFiltersMethod(), getCallOptions(), request);
     }
 
@@ -4707,7 +4251,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetInboundSmsGroupByIdRes getInboundSmsGroupById(com.tcn.cloud.api.api.v0alpha.GetInboundSmsGroupByIdReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetInboundSmsGroupByIdMethod(), getCallOptions(), request);
     }
 
@@ -4722,7 +4266,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsByGroupIdsRes listInboundSmsGroupsByGroupIds(com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsByGroupIdsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListInboundSmsGroupsByGroupIdsMethod(), getCallOptions(), request);
     }
 
@@ -4735,7 +4279,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.StopInboundSmsGroupRes stopInboundSmsGroup(com.tcn.cloud.api.api.v0alpha.StopInboundSmsGroupReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getStopInboundSmsGroupMethod(), getCallOptions(), request);
     }
 
@@ -4748,7 +4292,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ScheduleInboundSmsRes scheduleInboundSms(com.tcn.cloud.api.api.v0alpha.ScheduleInboundSmsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getScheduleInboundSmsMethod(), getCallOptions(), request);
     }
 
@@ -4761,7 +4305,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateSmsConversationRes createSmsConversation(com.tcn.cloud.api.api.v0alpha.CreateSmsConversationReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateSmsConversationMethod(), getCallOptions(), request);
     }
 
@@ -4778,7 +4322,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateSmsConversationRes updateSmsConversation(com.tcn.cloud.api.api.v0alpha.UpdateSmsConversationReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateSmsConversationMethod(), getCallOptions(), request);
     }
 
@@ -4791,7 +4335,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteSmsConversationRes deleteSmsConversation(com.tcn.cloud.api.api.v0alpha.DeleteSmsConversationReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteSmsConversationMethod(), getCallOptions(), request);
     }
 
@@ -4806,7 +4350,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListSmsConversationsRes listSmsConversations(com.tcn.cloud.api.api.v0alpha.ListSmsConversationsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSmsConversationsMethod(), getCallOptions(), request);
     }
 
@@ -4819,7 +4363,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetSmsConversationByIdRes getSmsConversationById(com.tcn.cloud.api.api.v0alpha.GetSmsConversationByIdReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSmsConversationByIdMethod(), getCallOptions(), request);
     }
 
@@ -4832,7 +4376,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetSmsMessageRes getSmsMessage(com.tcn.cloud.api.api.v0alpha.GetSmsMessageReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSmsMessageMethod(), getCallOptions(), request);
     }
 
@@ -4845,7 +4389,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateSmsConversationAuditRes createSmsConversationAudit(com.tcn.cloud.api.api.v0alpha.SmsConversationAudit request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateSmsConversationAuditMethod(), getCallOptions(), request);
     }
 
@@ -4860,7 +4404,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListSmsConversationAuditsRes listSmsConversationAudits(com.tcn.cloud.api.api.v0alpha.ListSmsConversationAuditsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSmsConversationAuditsMethod(), getCallOptions(), request);
     }
 
@@ -4873,7 +4417,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetSmsConversationAuditByIdRes getSmsConversationAuditById(com.tcn.cloud.api.api.v0alpha.GetSmsConversationAuditByIdReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSmsConversationAuditByIdMethod(), getCallOptions(), request);
     }
 
@@ -4885,7 +4429,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateSmsConversationAssignedAgentRes createSmsConversationAssignedAgent(com.tcn.cloud.api.api.v0alpha.SmsConversationAssignedAgent request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateSmsConversationAssignedAgentMethod(), getCallOptions(), request);
     }
 
@@ -4900,7 +4444,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListSmsConversationAssignedAgentsRes listSmsConversationAssignedAgents(com.tcn.cloud.api.api.v0alpha.ListSmsConversationAssignedAgentsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSmsConversationAssignedAgentsMethod(), getCallOptions(), request);
     }
 
@@ -4913,7 +4457,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetSmsConversationAssignedAgentByIdRes getSmsConversationAssignedAgentById(com.tcn.cloud.api.api.v0alpha.GetSmsConversationAssignedAgentByIdReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSmsConversationAssignedAgentByIdMethod(), getCallOptions(), request);
     }
 
@@ -4928,7 +4472,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListInboundSmsTasksByGroupIdsRes listInboundSmsTasksByGroupIds(com.tcn.cloud.api.api.v0alpha.ListInboundSmsTasksByGroupIdsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListInboundSmsTasksByGroupIdsMethod(), getCallOptions(), request);
     }
 
@@ -4941,7 +4485,7 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsRes stopAllOutboundSmsGroups(com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getStopAllOutboundSmsGroupsMethod(), getCallOptions(), request);
     }
 
@@ -4954,31 +4498,29 @@ public final class SmsApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.StopAllInboundSmsGroupsRes stopAllInboundSmsGroups(com.tcn.cloud.api.api.v0alpha.StopAllInboundSmsGroupsReq request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getStopAllInboundSmsGroupsMethod(), getCallOptions(), request);
     }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service SmsApi.
    * <pre>
    * Service for interacting with TCN's SMS API system.
    * Accessing all of the methods require an authenticated user with the correct
    * permissions.
    * </pre>
    */
-  public static final class SmsApiFutureStub extends io.grpc.stub.AbstractStub<SmsApiFutureStub> {
-    private SmsApiFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SmsApiFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SmsApiFutureStub
+      extends io.grpc.stub.AbstractFutureStub<SmsApiFutureStub> {
+    private SmsApiFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SmsApiFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SmsApiFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SmsApiFutureStub(channel, callOptions);
     }
 
@@ -4993,7 +4535,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListSmsTemplatesRes> listSmsTemplates(
         com.tcn.cloud.api.api.v0alpha.ListSmsTemplatesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSmsTemplatesMethod(), getCallOptions()), request);
     }
 
@@ -5007,7 +4549,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateSmsTemplateRes> createSmsTemplate(
         com.tcn.cloud.api.api.v0alpha.CreateSmsTemplateReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateSmsTemplateMethod(), getCallOptions()), request);
     }
 
@@ -5025,7 +4567,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateRes> updateSmsTemplate(
         com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateSmsTemplateMethod(), getCallOptions()), request);
     }
 
@@ -5039,7 +4581,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteSmsTemplateRes> deleteSmsTemplate(
         com.tcn.cloud.api.api.v0alpha.DeleteSmsTemplateReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteSmsTemplateMethod(), getCallOptions()), request);
     }
 
@@ -5053,7 +4595,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetSmsTemplateBySidRes> getSmsTemplateBySid(
         com.tcn.cloud.api.api.v0alpha.GetSmsTemplateBySidReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetSmsTemplateBySidMethod(), getCallOptions()), request);
     }
 
@@ -5068,7 +4610,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListSmsIntentTemplatesRes> listSmsIntentTemplates(
         com.tcn.cloud.api.api.v0alpha.ListSmsIntentTemplatesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSmsIntentTemplatesMethod(), getCallOptions()), request);
     }
 
@@ -5082,7 +4624,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateSmsIntentTemplateRes> createSmsIntentTemplate(
         com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateSmsIntentTemplateMethod(), getCallOptions()), request);
     }
 
@@ -5101,7 +4643,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateSmsIntentTemplateRes> updateSmsIntentTemplate(
         com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateSmsIntentTemplateMethod(), getCallOptions()), request);
     }
 
@@ -5115,7 +4657,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteSmsIntentTemplateRes> deleteSmsIntentTemplate(
         com.tcn.cloud.api.api.v0alpha.DeleteSmsIntentTemplateReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteSmsIntentTemplateMethod(), getCallOptions()), request);
     }
 
@@ -5129,7 +4671,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate> getSmsIntentTemplateBySid(
         com.tcn.cloud.api.api.v0alpha.GetSmsIntentTemplateBySidReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetSmsIntentTemplateBySidMethod(), getCallOptions()), request);
     }
 
@@ -5144,7 +4686,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListSmsSourceNumbersRes> listSmsSourceNumbers(
         com.tcn.cloud.api.api.v0alpha.ListSmsSourceNumbersReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSmsSourceNumbersMethod(), getCallOptions()), request);
     }
 
@@ -5158,7 +4700,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateSmsSourceNumberRes> createSmsSourceNumber(
         com.tcn.cloud.api.api.v0alpha.CreateSmsSourceNumberReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateSmsSourceNumberMethod(), getCallOptions()), request);
     }
 
@@ -5177,7 +4719,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateSmsSourceNumberRes> updateSmsSourceNumber(
         com.tcn.cloud.api.api.v0alpha.UpdateSmsSourceNumberReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateSmsSourceNumberMethod(), getCallOptions()), request);
     }
 
@@ -5191,7 +4733,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteSmsSourceNumberRes> deleteSmsSourceNumber(
         com.tcn.cloud.api.api.v0alpha.DeleteSmsSourceNumberReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteSmsSourceNumberMethod(), getCallOptions()), request);
     }
 
@@ -5206,7 +4748,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SmsNumbers> getSmsSourceNumberBySid(
         com.tcn.cloud.api.api.v0alpha.GetSmsSourceNumberBySidReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetSmsSourceNumberBySidMethod(), getCallOptions()), request);
     }
 
@@ -5222,7 +4764,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SendSmsNotificationRes> sendSmsNotification(
         com.tcn.cloud.api.api.v0alpha.SendSmsNotificationReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSendSmsNotificationMethod(), getCallOptions()), request);
     }
 
@@ -5237,7 +4779,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersRes> listSmsGroupByFilters(
         com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSmsGroupByFiltersMethod(), getCallOptions()), request);
     }
 
@@ -5252,7 +4794,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsRes> listSmsGroupsByGroupSids(
         com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSmsGroupsByGroupSidsMethod(), getCallOptions()), request);
     }
 
@@ -5268,7 +4810,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsRes> listSmsTasksByGroupSids(
         com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSmsTasksByGroupSidsMethod(), getCallOptions()), request);
     }
 
@@ -5283,7 +4825,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersRes> listSmsGroupByFiltersForAudit(
         com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSmsGroupByFiltersForAuditMethod(), getCallOptions()), request);
     }
 
@@ -5298,7 +4840,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsRes> listSmsGroupsByGroupSidsForAudit(
         com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSmsGroupsByGroupSidsForAuditMethod(), getCallOptions()), request);
     }
 
@@ -5314,7 +4856,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsRes> listSmsTasksByGroupSidsForAudit(
         com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSmsTasksByGroupSidsForAuditMethod(), getCallOptions()), request);
     }
 
@@ -5330,7 +4872,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListSmsTasksWithDetailedStatusRes> listSmsTasksWithDetailedStatus(
         com.tcn.cloud.api.api.v0alpha.ListSmsTasksWithDetailedStatusReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSmsTasksWithDetailedStatusMethod(), getCallOptions()), request);
     }
 
@@ -5344,7 +4886,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes> updateSmsGroupStatus(
         com.tcn.cloud.api.api.v0alpha.SmsGroupInfo request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateSmsGroupStatusMethod(), getCallOptions()), request);
     }
 
@@ -5358,7 +4900,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes> updateSmsGroupSendsPerMinute(
         com.tcn.cloud.api.api.v0alpha.SmsGroupInfo request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateSmsGroupSendsPerMinuteMethod(), getCallOptions()), request);
     }
 
@@ -5372,7 +4914,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes> updateSmsGroupScheduleTimes(
         com.tcn.cloud.api.api.v0alpha.SmsGroupInfo request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateSmsGroupScheduleTimesMethod(), getCallOptions()), request);
     }
 
@@ -5386,7 +4928,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ScheduleSmsRes> scheduleSms(
         com.tcn.cloud.api.api.v0alpha.ScheduleSmsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getScheduleSmsMethod(), getCallOptions()), request);
     }
 
@@ -5400,7 +4942,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ResendUnconnectedSmsRes> resendUnconnectedSms(
         com.tcn.cloud.api.api.v0alpha.ResendUnconnectedSmsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getResendUnconnectedSmsMethod(), getCallOptions()), request);
     }
 
@@ -5415,7 +4957,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SmsActivitySearchRes> smsActivitySearch(
         com.tcn.cloud.api.api.v0alpha.SmsActivitySearchReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSmsActivitySearchMethod(), getCallOptions()), request);
     }
 
@@ -5429,7 +4971,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateInboundSmsTemplateRes> createInboundSmsTemplate(
         com.tcn.cloud.api.api.v0alpha.CreateInboundSmsTemplateReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateInboundSmsTemplateMethod(), getCallOptions()), request);
     }
 
@@ -5447,7 +4989,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateRes> updateInboundSmsTemplate(
         com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateInboundSmsTemplateMethod(), getCallOptions()), request);
     }
 
@@ -5461,7 +5003,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsTemplateRes> deleteInboundSmsTemplate(
         com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsTemplateReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteInboundSmsTemplateMethod(), getCallOptions()), request);
     }
 
@@ -5477,7 +5019,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListInboundSmsTemplatesRes> listInboundSmsTemplates(
         com.tcn.cloud.api.api.v0alpha.ListInboundSmsTemplatesReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListInboundSmsTemplatesMethod(), getCallOptions()), request);
     }
 
@@ -5491,7 +5033,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdRes> getInboundSmsTemplateById(
         com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetInboundSmsTemplateByIdMethod(), getCallOptions()), request);
     }
 
@@ -5505,7 +5047,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateInboundSmsGroupRes> createInboundSmsGroup(
         com.tcn.cloud.api.api.v0alpha.CreateInboundSmsGroupReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateInboundSmsGroupMethod(), getCallOptions()), request);
     }
 
@@ -5523,7 +5065,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupRes> updateInboundSmsGroup(
         com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateInboundSmsGroupMethod(), getCallOptions()), request);
     }
 
@@ -5537,7 +5079,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsGroupRes> deleteInboundSmsGroup(
         com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsGroupReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteInboundSmsGroupMethod(), getCallOptions()), request);
     }
 
@@ -5553,7 +5095,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsRes> listInboundSmsGroups(
         com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListInboundSmsGroupsMethod(), getCallOptions()), request);
     }
 
@@ -5569,7 +5111,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListActiveInboundSmsGroupsRes> listActiveInboundSmsGroups(
         com.tcn.cloud.api.api.v0alpha.ListActiveInboundSmsGroupsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListActiveInboundSmsGroupsMethod(), getCallOptions()), request);
     }
 
@@ -5585,7 +5127,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupByFiltersRes> listInboundSmsGroupByFilters(
         com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupByFiltersReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListInboundSmsGroupByFiltersMethod(), getCallOptions()), request);
     }
 
@@ -5599,7 +5141,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetInboundSmsGroupByIdRes> getInboundSmsGroupById(
         com.tcn.cloud.api.api.v0alpha.GetInboundSmsGroupByIdReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetInboundSmsGroupByIdMethod(), getCallOptions()), request);
     }
 
@@ -5615,7 +5157,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsByGroupIdsRes> listInboundSmsGroupsByGroupIds(
         com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsByGroupIdsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListInboundSmsGroupsByGroupIdsMethod(), getCallOptions()), request);
     }
 
@@ -5629,7 +5171,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.StopInboundSmsGroupRes> stopInboundSmsGroup(
         com.tcn.cloud.api.api.v0alpha.StopInboundSmsGroupReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getStopInboundSmsGroupMethod(), getCallOptions()), request);
     }
 
@@ -5643,7 +5185,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ScheduleInboundSmsRes> scheduleInboundSms(
         com.tcn.cloud.api.api.v0alpha.ScheduleInboundSmsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getScheduleInboundSmsMethod(), getCallOptions()), request);
     }
 
@@ -5657,7 +5199,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateSmsConversationRes> createSmsConversation(
         com.tcn.cloud.api.api.v0alpha.CreateSmsConversationReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateSmsConversationMethod(), getCallOptions()), request);
     }
 
@@ -5675,7 +5217,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateSmsConversationRes> updateSmsConversation(
         com.tcn.cloud.api.api.v0alpha.UpdateSmsConversationReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateSmsConversationMethod(), getCallOptions()), request);
     }
 
@@ -5689,7 +5231,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteSmsConversationRes> deleteSmsConversation(
         com.tcn.cloud.api.api.v0alpha.DeleteSmsConversationReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteSmsConversationMethod(), getCallOptions()), request);
     }
 
@@ -5705,7 +5247,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListSmsConversationsRes> listSmsConversations(
         com.tcn.cloud.api.api.v0alpha.ListSmsConversationsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSmsConversationsMethod(), getCallOptions()), request);
     }
 
@@ -5719,7 +5261,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetSmsConversationByIdRes> getSmsConversationById(
         com.tcn.cloud.api.api.v0alpha.GetSmsConversationByIdReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetSmsConversationByIdMethod(), getCallOptions()), request);
     }
 
@@ -5733,7 +5275,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetSmsMessageRes> getSmsMessage(
         com.tcn.cloud.api.api.v0alpha.GetSmsMessageReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetSmsMessageMethod(), getCallOptions()), request);
     }
 
@@ -5747,7 +5289,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateSmsConversationAuditRes> createSmsConversationAudit(
         com.tcn.cloud.api.api.v0alpha.SmsConversationAudit request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateSmsConversationAuditMethod(), getCallOptions()), request);
     }
 
@@ -5763,7 +5305,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListSmsConversationAuditsRes> listSmsConversationAudits(
         com.tcn.cloud.api.api.v0alpha.ListSmsConversationAuditsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSmsConversationAuditsMethod(), getCallOptions()), request);
     }
 
@@ -5777,7 +5319,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetSmsConversationAuditByIdRes> getSmsConversationAuditById(
         com.tcn.cloud.api.api.v0alpha.GetSmsConversationAuditByIdReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetSmsConversationAuditByIdMethod(), getCallOptions()), request);
     }
 
@@ -5790,7 +5332,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateSmsConversationAssignedAgentRes> createSmsConversationAssignedAgent(
         com.tcn.cloud.api.api.v0alpha.SmsConversationAssignedAgent request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateSmsConversationAssignedAgentMethod(), getCallOptions()), request);
     }
 
@@ -5806,7 +5348,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListSmsConversationAssignedAgentsRes> listSmsConversationAssignedAgents(
         com.tcn.cloud.api.api.v0alpha.ListSmsConversationAssignedAgentsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSmsConversationAssignedAgentsMethod(), getCallOptions()), request);
     }
 
@@ -5820,7 +5362,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetSmsConversationAssignedAgentByIdRes> getSmsConversationAssignedAgentById(
         com.tcn.cloud.api.api.v0alpha.GetSmsConversationAssignedAgentByIdReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetSmsConversationAssignedAgentByIdMethod(), getCallOptions()), request);
     }
 
@@ -5836,7 +5378,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListInboundSmsTasksByGroupIdsRes> listInboundSmsTasksByGroupIds(
         com.tcn.cloud.api.api.v0alpha.ListInboundSmsTasksByGroupIdsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListInboundSmsTasksByGroupIdsMethod(), getCallOptions()), request);
     }
 
@@ -5850,7 +5392,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsRes> stopAllOutboundSmsGroups(
         com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getStopAllOutboundSmsGroupsMethod(), getCallOptions()), request);
     }
 
@@ -5864,7 +5406,7 @@ public final class SmsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.StopAllInboundSmsGroupsRes> stopAllInboundSmsGroups(
         com.tcn.cloud.api.api.v0alpha.StopAllInboundSmsGroupsReq request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getStopAllInboundSmsGroupsMethod(), getCallOptions()), request);
     }
   }
@@ -5934,10 +5476,10 @@ public final class SmsApiGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final SmsApiImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(SmsApiImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -6196,6 +5738,424 @@ public final class SmsApiGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getListSmsTemplatesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListSmsTemplatesReq,
+              com.tcn.cloud.api.api.v0alpha.ListSmsTemplatesRes>(
+                service, METHODID_LIST_SMS_TEMPLATES)))
+        .addMethod(
+          getCreateSmsTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CreateSmsTemplateReq,
+              com.tcn.cloud.api.api.v0alpha.CreateSmsTemplateRes>(
+                service, METHODID_CREATE_SMS_TEMPLATE)))
+        .addMethod(
+          getUpdateSmsTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateReq,
+              com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateRes>(
+                service, METHODID_UPDATE_SMS_TEMPLATE)))
+        .addMethod(
+          getDeleteSmsTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DeleteSmsTemplateReq,
+              com.tcn.cloud.api.api.v0alpha.DeleteSmsTemplateRes>(
+                service, METHODID_DELETE_SMS_TEMPLATE)))
+        .addMethod(
+          getGetSmsTemplateBySidMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetSmsTemplateBySidReq,
+              com.tcn.cloud.api.api.v0alpha.GetSmsTemplateBySidRes>(
+                service, METHODID_GET_SMS_TEMPLATE_BY_SID)))
+        .addMethod(
+          getListSmsIntentTemplatesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListSmsIntentTemplatesReq,
+              com.tcn.cloud.api.api.v0alpha.ListSmsIntentTemplatesRes>(
+                service, METHODID_LIST_SMS_INTENT_TEMPLATES)))
+        .addMethod(
+          getCreateSmsIntentTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate,
+              com.tcn.cloud.api.api.v0alpha.CreateSmsIntentTemplateRes>(
+                service, METHODID_CREATE_SMS_INTENT_TEMPLATE)))
+        .addMethod(
+          getUpdateSmsIntentTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate,
+              com.tcn.cloud.api.api.v0alpha.UpdateSmsIntentTemplateRes>(
+                service, METHODID_UPDATE_SMS_INTENT_TEMPLATE)))
+        .addMethod(
+          getDeleteSmsIntentTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DeleteSmsIntentTemplateReq,
+              com.tcn.cloud.api.api.v0alpha.DeleteSmsIntentTemplateRes>(
+                service, METHODID_DELETE_SMS_INTENT_TEMPLATE)))
+        .addMethod(
+          getGetSmsIntentTemplateBySidMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetSmsIntentTemplateBySidReq,
+              com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate>(
+                service, METHODID_GET_SMS_INTENT_TEMPLATE_BY_SID)))
+        .addMethod(
+          getListSmsSourceNumbersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListSmsSourceNumbersReq,
+              com.tcn.cloud.api.api.v0alpha.ListSmsSourceNumbersRes>(
+                service, METHODID_LIST_SMS_SOURCE_NUMBERS)))
+        .addMethod(
+          getCreateSmsSourceNumberMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CreateSmsSourceNumberReq,
+              com.tcn.cloud.api.api.v0alpha.CreateSmsSourceNumberRes>(
+                service, METHODID_CREATE_SMS_SOURCE_NUMBER)))
+        .addMethod(
+          getUpdateSmsSourceNumberMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdateSmsSourceNumberReq,
+              com.tcn.cloud.api.api.v0alpha.UpdateSmsSourceNumberRes>(
+                service, METHODID_UPDATE_SMS_SOURCE_NUMBER)))
+        .addMethod(
+          getDeleteSmsSourceNumberMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DeleteSmsSourceNumberReq,
+              com.tcn.cloud.api.api.v0alpha.DeleteSmsSourceNumberRes>(
+                service, METHODID_DELETE_SMS_SOURCE_NUMBER)))
+        .addMethod(
+          getGetSmsSourceNumberBySidMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetSmsSourceNumberBySidReq,
+              com.tcn.cloud.api.api.v0alpha.SmsNumbers>(
+                service, METHODID_GET_SMS_SOURCE_NUMBER_BY_SID)))
+        .addMethod(
+          getSendSmsNotificationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SendSmsNotificationReq,
+              com.tcn.cloud.api.api.v0alpha.SendSmsNotificationRes>(
+                service, METHODID_SEND_SMS_NOTIFICATION)))
+        .addMethod(
+          getListSmsGroupByFiltersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersReq,
+              com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersRes>(
+                service, METHODID_LIST_SMS_GROUP_BY_FILTERS)))
+        .addMethod(
+          getListSmsGroupsByGroupSidsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsReq,
+              com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsRes>(
+                service, METHODID_LIST_SMS_GROUPS_BY_GROUP_SIDS)))
+        .addMethod(
+          getListSmsTasksByGroupSidsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsReq,
+              com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsRes>(
+                service, METHODID_LIST_SMS_TASKS_BY_GROUP_SIDS)))
+        .addMethod(
+          getListSmsGroupByFiltersForAuditMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersReq,
+              com.tcn.cloud.api.api.v0alpha.ListSmsGroupByFiltersRes>(
+                service, METHODID_LIST_SMS_GROUP_BY_FILTERS_FOR_AUDIT)))
+        .addMethod(
+          getListSmsGroupsByGroupSidsForAuditMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsReq,
+              com.tcn.cloud.api.api.v0alpha.ListSmsGroupsByGroupSidsRes>(
+                service, METHODID_LIST_SMS_GROUPS_BY_GROUP_SIDS_FOR_AUDIT)))
+        .addMethod(
+          getListSmsTasksByGroupSidsForAuditMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsReq,
+              com.tcn.cloud.api.api.v0alpha.ListSmsTasksByGroupSidsRes>(
+                service, METHODID_LIST_SMS_TASKS_BY_GROUP_SIDS_FOR_AUDIT)))
+        .addMethod(
+          getListSmsTasksWithDetailedStatusMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListSmsTasksWithDetailedStatusReq,
+              com.tcn.cloud.api.api.v0alpha.ListSmsTasksWithDetailedStatusRes>(
+                service, METHODID_LIST_SMS_TASKS_WITH_DETAILED_STATUS)))
+        .addMethod(
+          getUpdateSmsGroupStatusMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SmsGroupInfo,
+              com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes>(
+                service, METHODID_UPDATE_SMS_GROUP_STATUS)))
+        .addMethod(
+          getUpdateSmsGroupSendsPerMinuteMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SmsGroupInfo,
+              com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes>(
+                service, METHODID_UPDATE_SMS_GROUP_SENDS_PER_MINUTE)))
+        .addMethod(
+          getUpdateSmsGroupScheduleTimesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SmsGroupInfo,
+              com.tcn.cloud.api.api.v0alpha.UpdateSmsGroupRes>(
+                service, METHODID_UPDATE_SMS_GROUP_SCHEDULE_TIMES)))
+        .addMethod(
+          getScheduleSmsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ScheduleSmsReq,
+              com.tcn.cloud.api.api.v0alpha.ScheduleSmsRes>(
+                service, METHODID_SCHEDULE_SMS)))
+        .addMethod(
+          getResendUnconnectedSmsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ResendUnconnectedSmsReq,
+              com.tcn.cloud.api.api.v0alpha.ResendUnconnectedSmsRes>(
+                service, METHODID_RESEND_UNCONNECTED_SMS)))
+        .addMethod(
+          getSmsActivitySearchMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SmsActivitySearchReq,
+              com.tcn.cloud.api.api.v0alpha.SmsActivitySearchRes>(
+                service, METHODID_SMS_ACTIVITY_SEARCH)))
+        .addMethod(
+          getCreateInboundSmsTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CreateInboundSmsTemplateReq,
+              com.tcn.cloud.api.api.v0alpha.CreateInboundSmsTemplateRes>(
+                service, METHODID_CREATE_INBOUND_SMS_TEMPLATE)))
+        .addMethod(
+          getUpdateInboundSmsTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateReq,
+              com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateRes>(
+                service, METHODID_UPDATE_INBOUND_SMS_TEMPLATE)))
+        .addMethod(
+          getDeleteInboundSmsTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsTemplateReq,
+              com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsTemplateRes>(
+                service, METHODID_DELETE_INBOUND_SMS_TEMPLATE)))
+        .addMethod(
+          getListInboundSmsTemplatesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListInboundSmsTemplatesReq,
+              com.tcn.cloud.api.api.v0alpha.ListInboundSmsTemplatesRes>(
+                service, METHODID_LIST_INBOUND_SMS_TEMPLATES)))
+        .addMethod(
+          getGetInboundSmsTemplateByIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdReq,
+              com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdRes>(
+                service, METHODID_GET_INBOUND_SMS_TEMPLATE_BY_ID)))
+        .addMethod(
+          getCreateInboundSmsGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CreateInboundSmsGroupReq,
+              com.tcn.cloud.api.api.v0alpha.CreateInboundSmsGroupRes>(
+                service, METHODID_CREATE_INBOUND_SMS_GROUP)))
+        .addMethod(
+          getUpdateInboundSmsGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq,
+              com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupRes>(
+                service, METHODID_UPDATE_INBOUND_SMS_GROUP)))
+        .addMethod(
+          getDeleteInboundSmsGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsGroupReq,
+              com.tcn.cloud.api.api.v0alpha.DeleteInboundSmsGroupRes>(
+                service, METHODID_DELETE_INBOUND_SMS_GROUP)))
+        .addMethod(
+          getListInboundSmsGroupsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsReq,
+              com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsRes>(
+                service, METHODID_LIST_INBOUND_SMS_GROUPS)))
+        .addMethod(
+          getListActiveInboundSmsGroupsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListActiveInboundSmsGroupsReq,
+              com.tcn.cloud.api.api.v0alpha.ListActiveInboundSmsGroupsRes>(
+                service, METHODID_LIST_ACTIVE_INBOUND_SMS_GROUPS)))
+        .addMethod(
+          getListInboundSmsGroupByFiltersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupByFiltersReq,
+              com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupByFiltersRes>(
+                service, METHODID_LIST_INBOUND_SMS_GROUP_BY_FILTERS)))
+        .addMethod(
+          getGetInboundSmsGroupByIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetInboundSmsGroupByIdReq,
+              com.tcn.cloud.api.api.v0alpha.GetInboundSmsGroupByIdRes>(
+                service, METHODID_GET_INBOUND_SMS_GROUP_BY_ID)))
+        .addMethod(
+          getListInboundSmsGroupsByGroupIdsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsByGroupIdsReq,
+              com.tcn.cloud.api.api.v0alpha.ListInboundSmsGroupsByGroupIdsRes>(
+                service, METHODID_LIST_INBOUND_SMS_GROUPS_BY_GROUP_IDS)))
+        .addMethod(
+          getStopInboundSmsGroupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.StopInboundSmsGroupReq,
+              com.tcn.cloud.api.api.v0alpha.StopInboundSmsGroupRes>(
+                service, METHODID_STOP_INBOUND_SMS_GROUP)))
+        .addMethod(
+          getScheduleInboundSmsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ScheduleInboundSmsReq,
+              com.tcn.cloud.api.api.v0alpha.ScheduleInboundSmsRes>(
+                service, METHODID_SCHEDULE_INBOUND_SMS)))
+        .addMethod(
+          getCreateSmsConversationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.CreateSmsConversationReq,
+              com.tcn.cloud.api.api.v0alpha.CreateSmsConversationRes>(
+                service, METHODID_CREATE_SMS_CONVERSATION)))
+        .addMethod(
+          getUpdateSmsConversationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdateSmsConversationReq,
+              com.tcn.cloud.api.api.v0alpha.UpdateSmsConversationRes>(
+                service, METHODID_UPDATE_SMS_CONVERSATION)))
+        .addMethod(
+          getDeleteSmsConversationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DeleteSmsConversationReq,
+              com.tcn.cloud.api.api.v0alpha.DeleteSmsConversationRes>(
+                service, METHODID_DELETE_SMS_CONVERSATION)))
+        .addMethod(
+          getListSmsConversationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListSmsConversationsReq,
+              com.tcn.cloud.api.api.v0alpha.ListSmsConversationsRes>(
+                service, METHODID_LIST_SMS_CONVERSATIONS)))
+        .addMethod(
+          getGetSmsConversationByIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetSmsConversationByIdReq,
+              com.tcn.cloud.api.api.v0alpha.GetSmsConversationByIdRes>(
+                service, METHODID_GET_SMS_CONVERSATION_BY_ID)))
+        .addMethod(
+          getGetSmsMessageMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetSmsMessageReq,
+              com.tcn.cloud.api.api.v0alpha.GetSmsMessageRes>(
+                service, METHODID_GET_SMS_MESSAGE)))
+        .addMethod(
+          getCreateSmsConversationAuditMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SmsConversationAudit,
+              com.tcn.cloud.api.api.v0alpha.CreateSmsConversationAuditRes>(
+                service, METHODID_CREATE_SMS_CONVERSATION_AUDIT)))
+        .addMethod(
+          getListSmsConversationAuditsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListSmsConversationAuditsReq,
+              com.tcn.cloud.api.api.v0alpha.ListSmsConversationAuditsRes>(
+                service, METHODID_LIST_SMS_CONVERSATION_AUDITS)))
+        .addMethod(
+          getGetSmsConversationAuditByIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetSmsConversationAuditByIdReq,
+              com.tcn.cloud.api.api.v0alpha.GetSmsConversationAuditByIdRes>(
+                service, METHODID_GET_SMS_CONVERSATION_AUDIT_BY_ID)))
+        .addMethod(
+          getCreateSmsConversationAssignedAgentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SmsConversationAssignedAgent,
+              com.tcn.cloud.api.api.v0alpha.CreateSmsConversationAssignedAgentRes>(
+                service, METHODID_CREATE_SMS_CONVERSATION_ASSIGNED_AGENT)))
+        .addMethod(
+          getListSmsConversationAssignedAgentsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListSmsConversationAssignedAgentsReq,
+              com.tcn.cloud.api.api.v0alpha.ListSmsConversationAssignedAgentsRes>(
+                service, METHODID_LIST_SMS_CONVERSATION_ASSIGNED_AGENTS)))
+        .addMethod(
+          getGetSmsConversationAssignedAgentByIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetSmsConversationAssignedAgentByIdReq,
+              com.tcn.cloud.api.api.v0alpha.GetSmsConversationAssignedAgentByIdRes>(
+                service, METHODID_GET_SMS_CONVERSATION_ASSIGNED_AGENT_BY_ID)))
+        .addMethod(
+          getListInboundSmsTasksByGroupIdsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListInboundSmsTasksByGroupIdsReq,
+              com.tcn.cloud.api.api.v0alpha.ListInboundSmsTasksByGroupIdsRes>(
+                service, METHODID_LIST_INBOUND_SMS_TASKS_BY_GROUP_IDS)))
+        .addMethod(
+          getStopAllOutboundSmsGroupsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsReq,
+              com.tcn.cloud.api.api.v0alpha.StopAllOutboundSmsGroupsRes>(
+                service, METHODID_STOP_ALL_OUTBOUND_SMS_GROUPS)))
+        .addMethod(
+          getStopAllInboundSmsGroupsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.StopAllInboundSmsGroupsReq,
+              com.tcn.cloud.api.api.v0alpha.StopAllInboundSmsGroupsRes>(
+                service, METHODID_STOP_ALL_INBOUND_SMS_GROUPS)))
+        .build();
   }
 
   private static abstract class SmsApiBaseDescriptorSupplier

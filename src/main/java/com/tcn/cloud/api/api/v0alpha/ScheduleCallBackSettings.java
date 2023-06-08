@@ -29,102 +29,6 @@ private static final long serialVersionUID = 0L;
     return new ScheduleCallBackSettings();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private ScheduleCallBackSettings(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            allowCallbackScheduling_ = input.readBool();
-            break;
-          }
-          case 16: {
-
-            allowScheduledCallbackCalling_ = input.readBool();
-            break;
-          }
-          case 24: {
-
-            allowAutomaticCallbackRetrievalMode_ = input.readBool();
-            break;
-          }
-          case 32: {
-
-            allowDefaultCallbackRouting_ = input.readBool();
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            callbacksRetrievalModeSettings_ = s;
-            break;
-          }
-          case 66: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            defaultCallbackRoutingSettings_ = s;
-            break;
-          }
-          case 74: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            callbacksServiceId_ = s;
-            break;
-          }
-          case 80: {
-
-            hasCustomCallerId_ = input.readBool();
-            break;
-          }
-          case 90: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            defaultCallerId_ = s;
-            break;
-          }
-          case 96: {
-
-            allowScheduledCallbackCalendar_ = input.readBool();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_ScheduleCallBackSettings_descriptor;
@@ -139,7 +43,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ALLOW_CALLBACK_SCHEDULING_FIELD_NUMBER = 1;
-  private boolean allowCallbackScheduling_;
+  private boolean allowCallbackScheduling_ = false;
   /**
    * <code>bool allow_callback_scheduling = 1 [json_name = "allowCallbackScheduling"];</code>
    * @return The allowCallbackScheduling.
@@ -150,7 +54,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ALLOW_SCHEDULED_CALLBACK_CALLING_FIELD_NUMBER = 2;
-  private boolean allowScheduledCallbackCalling_;
+  private boolean allowScheduledCallbackCalling_ = false;
   /**
    * <code>bool allow_scheduled_callback_calling = 2 [json_name = "allowScheduledCallbackCalling"];</code>
    * @return The allowScheduledCallbackCalling.
@@ -161,7 +65,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ALLOW_AUTOMATIC_CALLBACK_RETRIEVAL_MODE_FIELD_NUMBER = 3;
-  private boolean allowAutomaticCallbackRetrievalMode_;
+  private boolean allowAutomaticCallbackRetrievalMode_ = false;
   /**
    * <code>bool allow_automatic_callback_retrieval_mode = 3 [json_name = "allowAutomaticCallbackRetrievalMode"];</code>
    * @return The allowAutomaticCallbackRetrievalMode.
@@ -172,7 +76,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ALLOW_DEFAULT_CALLBACK_ROUTING_FIELD_NUMBER = 4;
-  private boolean allowDefaultCallbackRouting_;
+  private boolean allowDefaultCallbackRouting_ = false;
   /**
    * <code>bool allow_default_callback_routing = 4 [json_name = "allowDefaultCallbackRouting"];</code>
    * @return The allowDefaultCallbackRouting.
@@ -183,7 +87,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALLBACKS_RETRIEVAL_MODE_SETTINGS_FIELD_NUMBER = 6;
-  private volatile java.lang.Object callbacksRetrievalModeSettings_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object callbacksRetrievalModeSettings_ = "";
   /**
    * <code>string callbacks_retrieval_mode_settings = 6 [json_name = "callbacksRetrievalModeSettings"];</code>
    * @return The callbacksRetrievalModeSettings.
@@ -221,7 +126,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFAULT_CALLBACK_ROUTING_SETTINGS_FIELD_NUMBER = 8;
-  private volatile java.lang.Object defaultCallbackRoutingSettings_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object defaultCallbackRoutingSettings_ = "";
   /**
    * <code>string default_callback_routing_settings = 8 [json_name = "defaultCallbackRoutingSettings"];</code>
    * @return The defaultCallbackRoutingSettings.
@@ -259,7 +165,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALLBACKS_SERVICE_ID_FIELD_NUMBER = 9;
-  private volatile java.lang.Object callbacksServiceId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object callbacksServiceId_ = "";
   /**
    * <code>string callbacks_service_id = 9 [json_name = "callbacksServiceId"];</code>
    * @return The callbacksServiceId.
@@ -297,7 +204,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HAS_CUSTOM_CALLER_ID_FIELD_NUMBER = 10;
-  private boolean hasCustomCallerId_;
+  private boolean hasCustomCallerId_ = false;
   /**
    * <pre>
    * agent can edit caller id in scheduled callbacks
@@ -312,7 +219,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFAULT_CALLER_ID_FIELD_NUMBER = 11;
-  private volatile java.lang.Object defaultCallerId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object defaultCallerId_ = "";
   /**
    * <pre>
    * default caller id for scheduled callbacks
@@ -358,7 +266,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ALLOW_SCHEDULED_CALLBACK_CALENDAR_FIELD_NUMBER = 12;
-  private boolean allowScheduledCallbackCalendar_;
+  private boolean allowScheduledCallbackCalendar_ = false;
   /**
    * <pre>
    * agent can view the scheduled callback calendar
@@ -398,25 +306,25 @@ private static final long serialVersionUID = 0L;
     if (allowDefaultCallbackRouting_ != false) {
       output.writeBool(4, allowDefaultCallbackRouting_);
     }
-    if (!getCallbacksRetrievalModeSettingsBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callbacksRetrievalModeSettings_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, callbacksRetrievalModeSettings_);
     }
-    if (!getDefaultCallbackRoutingSettingsBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCallbackRoutingSettings_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, defaultCallbackRoutingSettings_);
     }
-    if (!getCallbacksServiceIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callbacksServiceId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, callbacksServiceId_);
     }
     if (hasCustomCallerId_ != false) {
       output.writeBool(10, hasCustomCallerId_);
     }
-    if (!getDefaultCallerIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCallerId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, defaultCallerId_);
     }
     if (allowScheduledCallbackCalendar_ != false) {
       output.writeBool(12, allowScheduledCallbackCalendar_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -441,27 +349,27 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, allowDefaultCallbackRouting_);
     }
-    if (!getCallbacksRetrievalModeSettingsBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callbacksRetrievalModeSettings_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, callbacksRetrievalModeSettings_);
     }
-    if (!getDefaultCallbackRoutingSettingsBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCallbackRoutingSettings_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, defaultCallbackRoutingSettings_);
     }
-    if (!getCallbacksServiceIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callbacksServiceId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, callbacksServiceId_);
     }
     if (hasCustomCallerId_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(10, hasCustomCallerId_);
     }
-    if (!getDefaultCallerIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCallerId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, defaultCallerId_);
     }
     if (allowScheduledCallbackCalendar_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(12, allowScheduledCallbackCalendar_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -496,7 +404,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getDefaultCallerId())) return false;
     if (getAllowScheduledCallbackCalendar()
         != other.getAllowScheduledCallbackCalendar()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -533,7 +441,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ALLOW_SCHEDULED_CALLBACK_CALENDAR_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getAllowScheduledCallbackCalendar());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -582,11 +490,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.ScheduleCallBackSettings parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.ScheduleCallBackSettings parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -650,42 +560,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ScheduleCallBackSettings.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       allowCallbackScheduling_ = false;
-
       allowScheduledCallbackCalling_ = false;
-
       allowAutomaticCallbackRetrievalMode_ = false;
-
       allowDefaultCallbackRouting_ = false;
-
       callbacksRetrievalModeSettings_ = "";
-
       defaultCallbackRoutingSettings_ = "";
-
       callbacksServiceId_ = "";
-
       hasCustomCallerId_ = false;
-
       defaultCallerId_ = "";
-
       allowScheduledCallbackCalendar_ = false;
-
       return this;
     }
 
@@ -712,18 +608,43 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ScheduleCallBackSettings buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ScheduleCallBackSettings result = new com.tcn.cloud.api.api.v0alpha.ScheduleCallBackSettings(this);
-      result.allowCallbackScheduling_ = allowCallbackScheduling_;
-      result.allowScheduledCallbackCalling_ = allowScheduledCallbackCalling_;
-      result.allowAutomaticCallbackRetrievalMode_ = allowAutomaticCallbackRetrievalMode_;
-      result.allowDefaultCallbackRouting_ = allowDefaultCallbackRouting_;
-      result.callbacksRetrievalModeSettings_ = callbacksRetrievalModeSettings_;
-      result.defaultCallbackRoutingSettings_ = defaultCallbackRoutingSettings_;
-      result.callbacksServiceId_ = callbacksServiceId_;
-      result.hasCustomCallerId_ = hasCustomCallerId_;
-      result.defaultCallerId_ = defaultCallerId_;
-      result.allowScheduledCallbackCalendar_ = allowScheduledCallbackCalendar_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ScheduleCallBackSettings result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.allowCallbackScheduling_ = allowCallbackScheduling_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.allowScheduledCallbackCalling_ = allowScheduledCallbackCalling_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.allowAutomaticCallbackRetrievalMode_ = allowAutomaticCallbackRetrievalMode_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.allowDefaultCallbackRouting_ = allowDefaultCallbackRouting_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.callbacksRetrievalModeSettings_ = callbacksRetrievalModeSettings_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.defaultCallbackRoutingSettings_ = defaultCallbackRoutingSettings_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.callbacksServiceId_ = callbacksServiceId_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.hasCustomCallerId_ = hasCustomCallerId_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.defaultCallerId_ = defaultCallerId_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.allowScheduledCallbackCalendar_ = allowScheduledCallbackCalendar_;
+      }
     }
 
     @java.lang.Override
@@ -784,14 +705,17 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCallbacksRetrievalModeSettings().isEmpty()) {
         callbacksRetrievalModeSettings_ = other.callbacksRetrievalModeSettings_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.getDefaultCallbackRoutingSettings().isEmpty()) {
         defaultCallbackRoutingSettings_ = other.defaultCallbackRoutingSettings_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (!other.getCallbacksServiceId().isEmpty()) {
         callbacksServiceId_ = other.callbacksServiceId_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.getHasCustomCallerId() != false) {
@@ -799,12 +723,13 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getDefaultCallerId().isEmpty()) {
         defaultCallerId_ = other.defaultCallerId_;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       if (other.getAllowScheduledCallbackCalendar() != false) {
         setAllowScheduledCallbackCalendar(other.getAllowScheduledCallbackCalendar());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -819,19 +744,83 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.ScheduleCallBackSettings parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              allowCallbackScheduling_ = input.readBool();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              allowScheduledCallbackCalling_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              allowAutomaticCallbackRetrievalMode_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              allowDefaultCallbackRouting_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 50: {
+              callbacksRetrievalModeSettings_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 50
+            case 66: {
+              defaultCallbackRoutingSettings_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 66
+            case 74: {
+              callbacksServiceId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 74
+            case 80: {
+              hasCustomCallerId_ = input.readBool();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 80
+            case 90: {
+              defaultCallerId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 90
+            case 96: {
+              allowScheduledCallbackCalendar_ = input.readBool();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 96
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ScheduleCallBackSettings) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private boolean allowCallbackScheduling_ ;
     /**
@@ -848,8 +837,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllowCallbackScheduling(boolean value) {
-      
+
       allowCallbackScheduling_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -858,7 +848,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllowCallbackScheduling() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       allowCallbackScheduling_ = false;
       onChanged();
       return this;
@@ -879,8 +869,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllowScheduledCallbackCalling(boolean value) {
-      
+
       allowScheduledCallbackCalling_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -889,7 +880,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllowScheduledCallbackCalling() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       allowScheduledCallbackCalling_ = false;
       onChanged();
       return this;
@@ -910,8 +901,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllowAutomaticCallbackRetrievalMode(boolean value) {
-      
+
       allowAutomaticCallbackRetrievalMode_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -920,7 +912,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllowAutomaticCallbackRetrievalMode() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       allowAutomaticCallbackRetrievalMode_ = false;
       onChanged();
       return this;
@@ -941,8 +933,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllowDefaultCallbackRouting(boolean value) {
-      
+
       allowDefaultCallbackRouting_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -951,7 +944,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllowDefaultCallbackRouting() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       allowDefaultCallbackRouting_ = false;
       onChanged();
       return this;
@@ -998,11 +991,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallbacksRetrievalModeSettings(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       callbacksRetrievalModeSettings_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1011,8 +1002,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallbacksRetrievalModeSettings() {
-      
       callbacksRetrievalModeSettings_ = getDefaultInstance().getCallbacksRetrievalModeSettings();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1023,12 +1014,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallbacksRetrievalModeSettingsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       callbacksRetrievalModeSettings_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1074,11 +1063,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDefaultCallbackRoutingSettings(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       defaultCallbackRoutingSettings_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1087,8 +1074,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultCallbackRoutingSettings() {
-      
       defaultCallbackRoutingSettings_ = getDefaultInstance().getDefaultCallbackRoutingSettings();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1099,12 +1086,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDefaultCallbackRoutingSettingsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       defaultCallbackRoutingSettings_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1150,11 +1135,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallbacksServiceId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       callbacksServiceId_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1163,8 +1146,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallbacksServiceId() {
-      
       callbacksServiceId_ = getDefaultInstance().getCallbacksServiceId();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1175,12 +1158,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallbacksServiceIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       callbacksServiceId_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1208,8 +1189,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHasCustomCallerId(boolean value) {
-      
+
       hasCustomCallerId_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1222,7 +1204,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHasCustomCallerId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       hasCustomCallerId_ = false;
       onChanged();
       return this;
@@ -1281,11 +1263,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDefaultCallerId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       defaultCallerId_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1298,8 +1278,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultCallerId() {
-      
       defaultCallerId_ = getDefaultInstance().getDefaultCallerId();
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -1314,12 +1294,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDefaultCallerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       defaultCallerId_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1347,8 +1325,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllowScheduledCallbackCalendar(boolean value) {
-      
+
       allowScheduledCallbackCalendar_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1361,7 +1340,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllowScheduledCallbackCalendar() {
-      
+      bitField0_ = (bitField0_ & ~0x00000200);
       allowScheduledCallbackCalendar_ = false;
       onChanged();
       return this;
@@ -1399,7 +1378,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ScheduleCallBackSettings(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

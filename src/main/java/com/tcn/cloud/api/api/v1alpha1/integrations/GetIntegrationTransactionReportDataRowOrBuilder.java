@@ -30,14 +30,12 @@ public interface GetIntegrationTransactionReportDataRowOrBuilder extends
   /**
    * <code>map&lt;string, int64&gt; count_metrics = 1 [json_name = "countMetrics"];</code>
    */
-
   long getCountMetricsOrDefault(
       java.lang.String key,
       long defaultValue);
   /**
    * <code>map&lt;string, int64&gt; count_metrics = 1 [json_name = "countMetrics"];</code>
    */
-
   long getCountMetricsOrThrow(
       java.lang.String key);
 
@@ -64,14 +62,14 @@ public interface GetIntegrationTransactionReportDataRowOrBuilder extends
   /**
    * <code>map&lt;string, string&gt; link_data = 2 [json_name = "linkData"];</code>
    */
-
-  java.lang.String getLinkDataOrDefault(
+  /* nullable */
+java.lang.String getLinkDataOrDefault(
       java.lang.String key,
-      java.lang.String defaultValue);
+      /* nullable */
+java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; link_data = 2 [json_name = "linkData"];</code>
    */
-
   java.lang.String getLinkDataOrThrow(
       java.lang.String key);
 

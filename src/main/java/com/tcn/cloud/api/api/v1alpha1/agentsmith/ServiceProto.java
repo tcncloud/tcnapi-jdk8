@@ -91,8 +91,8 @@ public final class ServiceProto {
       "AgentSmith\022\247\001\n\013FollowAgent\022\'.api.v1alpha" +
       "1.agentsmith.FollowAgentReq\032\'.api.v1alph" +
       "a1.agentsmith.FollowAgentRes\"D\272\270\221\002\005\n\003\010\254\002" +
-      "\202\323\344\223\0024:\001*\"//api/v1alpha1/agentsmith/agen" +
-      "tsmith/followagent0\001B\267\001\n)com.tcn.cloud.a" +
+      "\202\323\344\223\0024\"//api/v1alpha1/agentsmith/agentsm" +
+      "ith/followagent:\001*0\001B\267\001\n)com.tcn.cloud.a" +
       "pi.api.v1alpha1.agentsmithB\014ServiceProto" +
       "P\001\242\002\003AVA\252\002\027Api.V1alpha1.Agentsmith\312\002\027Api" +
       "\\V1alpha1\\Agentsmith\342\002#Api\\V1alpha1\\Agen" +

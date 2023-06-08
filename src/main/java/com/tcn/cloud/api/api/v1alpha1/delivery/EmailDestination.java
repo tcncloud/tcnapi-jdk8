@@ -17,7 +17,8 @@ private static final long serialVersionUID = 0L;
   }
   private EmailDestination() {
     toAddr_ = "";
-    ccAddrs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    ccAddrs_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     fromAddr_ = "";
   }
 
@@ -28,73 +29,6 @@ private static final long serialVersionUID = 0L;
     return new EmailDestination();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private EmailDestination(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            toAddr_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              ccAddrs_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            ccAddrs_.add(s);
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            fromAddr_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        ccAddrs_ = ccAddrs_.getUnmodifiableView();
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_EmailDestination_descriptor;
@@ -109,7 +43,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TO_ADDR_FIELD_NUMBER = 1;
-  private volatile java.lang.Object toAddr_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object toAddr_ = "";
   /**
    * <pre>
    * which email we are sending to
@@ -155,7 +90,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CC_ADDRS_FIELD_NUMBER = 2;
-  private com.google.protobuf.LazyStringList ccAddrs_;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList ccAddrs_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * additional emails we are sending to
@@ -206,7 +143,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FROM_ADDR_FIELD_NUMBER = 3;
-  private volatile java.lang.Object fromAddr_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object fromAddr_ = "";
   /**
    * <pre>
    * which email we want to show up as as from
@@ -265,16 +203,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getToAddrBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toAddr_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, toAddr_);
     }
     for (int i = 0; i < ccAddrs_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ccAddrs_.getRaw(i));
     }
-    if (!getFromAddrBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromAddr_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, fromAddr_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -283,7 +221,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getToAddrBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toAddr_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, toAddr_);
     }
     {
@@ -294,10 +232,10 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getCcAddrsList().size();
     }
-    if (!getFromAddrBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromAddr_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, fromAddr_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -318,7 +256,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCcAddrsList())) return false;
     if (!getFromAddr()
         .equals(other.getFromAddr())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -337,7 +275,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + FROM_ADDR_FIELD_NUMBER;
     hash = (53 * hash) + getFromAddr().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -386,11 +324,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.delivery.EmailDestination parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.delivery.EmailDestination parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -454,28 +394,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.delivery.EmailDestination.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       toAddr_ = "";
-
-      ccAddrs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      ccAddrs_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       fromAddr_ = "";
-
       return this;
     }
 
@@ -502,16 +436,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.delivery.EmailDestination buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.delivery.EmailDestination result = new com.tcn.cloud.api.api.v1alpha1.delivery.EmailDestination(this);
-      int from_bitField0_ = bitField0_;
-      result.toAddr_ = toAddr_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        ccAddrs_ = ccAddrs_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.ccAddrs_ = ccAddrs_;
-      result.fromAddr_ = fromAddr_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.delivery.EmailDestination result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.toAddr_ = toAddr_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        ccAddrs_.makeImmutable();
+        result.ccAddrs_ = ccAddrs_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.fromAddr_ = fromAddr_;
+      }
     }
 
     @java.lang.Override
@@ -560,12 +501,13 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v1alpha1.delivery.EmailDestination.getDefaultInstance()) return this;
       if (!other.getToAddr().isEmpty()) {
         toAddr_ = other.toAddr_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.ccAddrs_.isEmpty()) {
         if (ccAddrs_.isEmpty()) {
           ccAddrs_ = other.ccAddrs_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000002;
         } else {
           ensureCcAddrsIsMutable();
           ccAddrs_.addAll(other.ccAddrs_);
@@ -574,9 +516,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getFromAddr().isEmpty()) {
         fromAddr_ = other.fromAddr_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -591,17 +534,46 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.delivery.EmailDestination parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              toAddr_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureCcAddrsIsMutable();
+              ccAddrs_.add(s);
+              break;
+            } // case 18
+            case 26: {
+              fromAddr_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.delivery.EmailDestination) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -659,11 +631,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setToAddr(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       toAddr_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -676,8 +646,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearToAddr() {
-      
       toAddr_ = getDefaultInstance().getToAddr();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -692,22 +662,21 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setToAddrBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       toAddr_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList ccAddrs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList ccAddrs_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureCcAddrsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!ccAddrs_.isModifiable()) {
         ccAddrs_ = new com.google.protobuf.LazyStringArrayList(ccAddrs_);
-        bitField0_ |= 0x00000001;
-       }
+      }
+      bitField0_ |= 0x00000002;
     }
     /**
      * <pre>
@@ -719,7 +688,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getCcAddrsList() {
-      return ccAddrs_.getUnmodifiableView();
+      ccAddrs_.makeImmutable();
+      return ccAddrs_;
     }
     /**
      * <pre>
@@ -769,11 +739,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCcAddrs(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCcAddrsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureCcAddrsIsMutable();
       ccAddrs_.set(index, value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -788,11 +757,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addCcAddrs(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCcAddrsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureCcAddrsIsMutable();
       ccAddrs_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -810,6 +778,7 @@ private static final long serialVersionUID = 0L;
       ensureCcAddrsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, ccAddrs_);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -822,8 +791,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCcAddrs() {
-      ccAddrs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      ccAddrs_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000002);;
       onChanged();
       return this;
     }
@@ -838,12 +808,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addCcAddrsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureCcAddrsIsMutable();
       ccAddrs_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -901,11 +870,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFromAddr(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       fromAddr_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -918,8 +885,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFromAddr() {
-      
       fromAddr_ = getDefaultInstance().getFromAddr();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -934,12 +901,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFromAddrBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       fromAddr_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -976,7 +941,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new EmailDestination(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

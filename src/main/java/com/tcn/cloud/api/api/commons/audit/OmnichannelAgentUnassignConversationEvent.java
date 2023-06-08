@@ -31,96 +31,6 @@ private static final long serialVersionUID = 0L;
     return new OmnichannelAgentUnassignConversationEvent();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private OmnichannelAgentUnassignConversationEvent(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            conversationSid_ = input.readInt64();
-            break;
-          }
-          case 16: {
-
-            campaignSid_ = input.readInt64();
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            channelType_ = rawValue;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            userId_ = s;
-            break;
-          }
-          case 42: {
-            com.tcn.cloud.api.api.commons.OmniConversation.Builder subBuilder = null;
-            if (conversation_ != null) {
-              subBuilder = conversation_.toBuilder();
-            }
-            conversation_ = input.readMessage(com.tcn.cloud.api.api.commons.OmniConversation.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(conversation_);
-              conversation_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 50: {
-            com.tcn.cloud.api.api.commons.OmniMessage.Builder subBuilder = null;
-            if (message_ != null) {
-              subBuilder = message_.toBuilder();
-            }
-            message_ = input.readMessage(com.tcn.cloud.api.api.commons.OmniMessage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(message_);
-              message_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.audit.OmnichannelEventsProto.internal_static_api_commons_audit_OmnichannelAgentUnassignConversationEvent_descriptor;
@@ -135,7 +45,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONVERSATION_SID_FIELD_NUMBER = 1;
-  private long conversationSid_;
+  private long conversationSid_ = 0L;
   /**
    * <pre>
    * conversation id
@@ -150,7 +60,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGN_SID_FIELD_NUMBER = 2;
-  private long campaignSid_;
+  private long campaignSid_ = 0L;
   /**
    * <pre>
    *campaign id
@@ -165,7 +75,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CHANNEL_TYPE_FIELD_NUMBER = 3;
-  private int channelType_;
+  private int channelType_ = 0;
   /**
    * <pre>
    *channel type - chat|email|sms
@@ -186,13 +96,13 @@ private static final long serialVersionUID = 0L;
    * @return The channelType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.ChannelType getChannelType() {
-    @SuppressWarnings("deprecation")
-    com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.valueOf(channelType_);
+    com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.forNumber(channelType_);
     return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
   }
 
   public static final int USER_ID_FIELD_NUMBER = 4;
-  private volatile java.lang.Object userId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object userId_ = "";
   /**
    * <pre>
    *agent user id
@@ -272,7 +182,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.OmniConversationOrBuilder getConversationOrBuilder() {
-    return getConversation();
+    return conversation_ == null ? com.tcn.cloud.api.api.commons.OmniConversation.getDefaultInstance() : conversation_;
   }
 
   public static final int MESSAGE_FIELD_NUMBER = 6;
@@ -310,7 +220,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.OmniMessageOrBuilder getMessageOrBuilder() {
-    return getMessage();
+    return message_ == null ? com.tcn.cloud.api.api.commons.OmniMessage.getDefaultInstance() : message_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -336,7 +246,7 @@ private static final long serialVersionUID = 0L;
     if (channelType_ != com.tcn.cloud.api.api.commons.ChannelType.CHANNEL_TYPE_EMAIL.getNumber()) {
       output.writeEnum(3, channelType_);
     }
-    if (!getUserIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, userId_);
     }
     if (conversation_ != null) {
@@ -345,7 +255,7 @@ private static final long serialVersionUID = 0L;
     if (message_ != null) {
       output.writeMessage(6, getMessage());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -366,7 +276,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, channelType_);
     }
-    if (!getUserIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, userId_);
     }
     if (conversation_ != null) {
@@ -377,7 +287,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getMessage());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -409,7 +319,7 @@ private static final long serialVersionUID = 0L;
       if (!getMessage()
           .equals(other.getMessage())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -438,7 +348,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
       hash = (53 * hash) + getMessage().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -487,11 +397,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.commons.audit.OmnichannelAgentUnassignConversationEvent parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.commons.audit.OmnichannelAgentUnassignConversationEvent parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -559,40 +471,30 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.audit.OmnichannelAgentUnassignConversationEvent.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       conversationSid_ = 0L;
-
       campaignSid_ = 0L;
-
       channelType_ = 0;
-
       userId_ = "";
-
-      if (conversationBuilder_ == null) {
-        conversation_ = null;
-      } else {
-        conversation_ = null;
+      conversation_ = null;
+      if (conversationBuilder_ != null) {
+        conversationBuilder_.dispose();
         conversationBuilder_ = null;
       }
-      if (messageBuilder_ == null) {
-        message_ = null;
-      } else {
-        message_ = null;
+      message_ = null;
+      if (messageBuilder_ != null) {
+        messageBuilder_.dispose();
         messageBuilder_ = null;
       }
       return this;
@@ -621,22 +523,35 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.audit.OmnichannelAgentUnassignConversationEvent buildPartial() {
       com.tcn.cloud.api.api.commons.audit.OmnichannelAgentUnassignConversationEvent result = new com.tcn.cloud.api.api.commons.audit.OmnichannelAgentUnassignConversationEvent(this);
-      result.conversationSid_ = conversationSid_;
-      result.campaignSid_ = campaignSid_;
-      result.channelType_ = channelType_;
-      result.userId_ = userId_;
-      if (conversationBuilder_ == null) {
-        result.conversation_ = conversation_;
-      } else {
-        result.conversation_ = conversationBuilder_.build();
-      }
-      if (messageBuilder_ == null) {
-        result.message_ = message_;
-      } else {
-        result.message_ = messageBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.commons.audit.OmnichannelAgentUnassignConversationEvent result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.conversationSid_ = conversationSid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.campaignSid_ = campaignSid_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.channelType_ = channelType_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.userId_ = userId_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.conversation_ = conversationBuilder_ == null
+            ? conversation_
+            : conversationBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.message_ = messageBuilder_ == null
+            ? message_
+            : messageBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -694,6 +609,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getUserId().isEmpty()) {
         userId_ = other.userId_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasConversation()) {
@@ -702,7 +618,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasMessage()) {
         mergeMessage(other.getMessage());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -717,19 +633,67 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.commons.audit.OmnichannelAgentUnassignConversationEvent parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              conversationSid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              campaignSid_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 24: {
+              channelType_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
+              userId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getConversationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  getMessageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.commons.audit.OmnichannelAgentUnassignConversationEvent) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private long conversationSid_ ;
     /**
@@ -754,8 +718,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConversationSid(long value) {
-      
+
       conversationSid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -768,7 +733,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversationSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       conversationSid_ = 0L;
       onChanged();
       return this;
@@ -797,8 +762,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCampaignSid(long value) {
-      
+
       campaignSid_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -811,7 +777,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaignSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       campaignSid_ = 0L;
       onChanged();
       return this;
@@ -839,8 +805,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setChannelTypeValue(int value) {
-      
       channelType_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -854,8 +820,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ChannelType getChannelType() {
-      @SuppressWarnings("deprecation")
-      com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.valueOf(channelType_);
+      com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.forNumber(channelType_);
       return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
     }
     /**
@@ -871,7 +836,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       channelType_ = value.getNumber();
       onChanged();
       return this;
@@ -885,7 +850,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearChannelType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       channelType_ = 0;
       onChanged();
       return this;
@@ -944,11 +909,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       userId_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -961,8 +924,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUserId() {
-      
       userId_ = getDefaultInstance().getUserId();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -977,12 +940,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       userId_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -999,7 +960,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the conversation field is set.
      */
     public boolean hasConversation() {
-      return conversationBuilder_ != null || conversation_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1029,11 +990,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         conversation_ = value;
-        onChanged();
       } else {
         conversationBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1047,11 +1008,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.OmniConversation.Builder builderForValue) {
       if (conversationBuilder_ == null) {
         conversation_ = builderForValue.build();
-        onChanged();
       } else {
         conversationBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1063,17 +1024,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeConversation(com.tcn.cloud.api.api.commons.OmniConversation value) {
       if (conversationBuilder_ == null) {
-        if (conversation_ != null) {
-          conversation_ =
-            com.tcn.cloud.api.api.commons.OmniConversation.newBuilder(conversation_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000010) != 0) &&
+          conversation_ != null &&
+          conversation_ != com.tcn.cloud.api.api.commons.OmniConversation.getDefaultInstance()) {
+          getConversationBuilder().mergeFrom(value);
         } else {
           conversation_ = value;
         }
-        onChanged();
       } else {
         conversationBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1084,14 +1046,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.OmniConversation conversation = 5 [json_name = "conversation"];</code>
      */
     public Builder clearConversation() {
-      if (conversationBuilder_ == null) {
-        conversation_ = null;
-        onChanged();
-      } else {
-        conversation_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      conversation_ = null;
+      if (conversationBuilder_ != null) {
+        conversationBuilder_.dispose();
         conversationBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1102,7 +1063,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.OmniConversation conversation = 5 [json_name = "conversation"];</code>
      */
     public com.tcn.cloud.api.api.commons.OmniConversation.Builder getConversationBuilder() {
-      
+      bitField0_ |= 0x00000010;
       onChanged();
       return getConversationFieldBuilder().getBuilder();
     }
@@ -1154,7 +1115,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the message field is set.
      */
     public boolean hasMessage() {
-      return messageBuilder_ != null || message_ != null;
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -1184,11 +1145,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         message_ = value;
-        onChanged();
       } else {
         messageBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1202,11 +1163,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.OmniMessage.Builder builderForValue) {
       if (messageBuilder_ == null) {
         message_ = builderForValue.build();
-        onChanged();
       } else {
         messageBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1218,17 +1179,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeMessage(com.tcn.cloud.api.api.commons.OmniMessage value) {
       if (messageBuilder_ == null) {
-        if (message_ != null) {
-          message_ =
-            com.tcn.cloud.api.api.commons.OmniMessage.newBuilder(message_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000020) != 0) &&
+          message_ != null &&
+          message_ != com.tcn.cloud.api.api.commons.OmniMessage.getDefaultInstance()) {
+          getMessageBuilder().mergeFrom(value);
         } else {
           message_ = value;
         }
-        onChanged();
       } else {
         messageBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1239,14 +1201,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.OmniMessage message = 6 [json_name = "message"];</code>
      */
     public Builder clearMessage() {
-      if (messageBuilder_ == null) {
-        message_ = null;
-        onChanged();
-      } else {
-        message_ = null;
+      bitField0_ = (bitField0_ & ~0x00000020);
+      message_ = null;
+      if (messageBuilder_ != null) {
+        messageBuilder_.dispose();
         messageBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1257,7 +1218,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.OmniMessage message = 6 [json_name = "message"];</code>
      */
     public com.tcn.cloud.api.api.commons.OmniMessage.Builder getMessageBuilder() {
-      
+      bitField0_ |= 0x00000020;
       onChanged();
       return getMessageFieldBuilder().getBuilder();
     }
@@ -1329,7 +1290,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new OmnichannelAgentUnassignConversationEvent(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -18,10 +18,14 @@ private static final long serialVersionUID = 0L;
   private GetLostPeerInfoRes() {
     formerAgentName_ = "";
     formerHuntGroupName_ = "";
-    huntGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    agents_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    agentSkills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    pbxExtensions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    huntGroups_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    agents_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    agentSkills_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    pbxExtensions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -31,114 +35,6 @@ private static final long serialVersionUID = 0L;
     return new GetLostPeerInfoRes();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private GetLostPeerInfoRes(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            formerAgentSid_ = input.readInt64();
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            formerAgentName_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            formerHuntGroupName_ = s;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              huntGroups_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            huntGroups_.add(s);
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              agents_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            agents_.add(s);
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-              agentSkills_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000004;
-            }
-            agentSkills_.add(s);
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-              pbxExtensions_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000008;
-            }
-            pbxExtensions_.add(s);
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        huntGroups_ = huntGroups_.getUnmodifiableView();
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        agents_ = agents_.getUnmodifiableView();
-      }
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
-        agentSkills_ = agentSkills_.getUnmodifiableView();
-      }
-      if (((mutable_bitField0_ & 0x00000008) != 0)) {
-        pbxExtensions_ = pbxExtensions_.getUnmodifiableView();
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_GetLostPeerInfoRes_descriptor;
@@ -153,7 +49,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FORMER_AGENT_SID_FIELD_NUMBER = 1;
-  private long formerAgentSid_;
+  private long formerAgentSid_ = 0L;
   /**
    * <code>int64 former_agent_sid = 1 [json_name = "formerAgentSid"];</code>
    * @return The formerAgentSid.
@@ -164,7 +60,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FORMER_AGENT_NAME_FIELD_NUMBER = 2;
-  private volatile java.lang.Object formerAgentName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object formerAgentName_ = "";
   /**
    * <code>string former_agent_name = 2 [json_name = "formerAgentName"];</code>
    * @return The formerAgentName.
@@ -202,7 +99,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FORMER_HUNT_GROUP_NAME_FIELD_NUMBER = 3;
-  private volatile java.lang.Object formerHuntGroupName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object formerHuntGroupName_ = "";
   /**
    * <code>string former_hunt_group_name = 3 [json_name = "formerHuntGroupName"];</code>
    * @return The formerHuntGroupName.
@@ -240,7 +138,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HUNT_GROUPS_FIELD_NUMBER = 4;
-  private com.google.protobuf.LazyStringList huntGroups_;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList huntGroups_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <code>repeated string hunt_groups = 4 [json_name = "huntGroups"];</code>
    * @return A list containing the huntGroups.
@@ -275,7 +175,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENTS_FIELD_NUMBER = 5;
-  private com.google.protobuf.LazyStringList agents_;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList agents_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <code>repeated string agents = 5 [json_name = "agents"];</code>
    * @return A list containing the agents.
@@ -310,7 +212,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENT_SKILLS_FIELD_NUMBER = 6;
-  private com.google.protobuf.LazyStringList agentSkills_;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList agentSkills_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <code>repeated string agent_skills = 6 [json_name = "agentSkills"];</code>
    * @return A list containing the agentSkills.
@@ -345,7 +249,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PBX_EXTENSIONS_FIELD_NUMBER = 7;
-  private com.google.protobuf.LazyStringList pbxExtensions_;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList pbxExtensions_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <code>repeated string pbx_extensions = 7 [json_name = "pbxExtensions"];</code>
    * @return A list containing the pbxExtensions.
@@ -396,10 +302,10 @@ private static final long serialVersionUID = 0L;
     if (formerAgentSid_ != 0L) {
       output.writeInt64(1, formerAgentSid_);
     }
-    if (!getFormerAgentNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formerAgentName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, formerAgentName_);
     }
-    if (!getFormerHuntGroupNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formerHuntGroupName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, formerHuntGroupName_);
     }
     for (int i = 0; i < huntGroups_.size(); i++) {
@@ -414,7 +320,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < pbxExtensions_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, pbxExtensions_.getRaw(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -427,10 +333,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, formerAgentSid_);
     }
-    if (!getFormerAgentNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formerAgentName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, formerAgentName_);
     }
-    if (!getFormerHuntGroupNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formerHuntGroupName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, formerHuntGroupName_);
     }
     {
@@ -465,7 +371,7 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getPbxExtensionsList().size();
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -494,7 +400,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getAgentSkillsList())) return false;
     if (!getPbxExtensionsList()
         .equals(other.getPbxExtensionsList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -528,7 +434,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PBX_EXTENSIONS_FIELD_NUMBER;
       hash = (53 * hash) + getPbxExtensionsList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -577,11 +483,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -645,36 +553,29 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoRes.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       formerAgentSid_ = 0L;
-
       formerAgentName_ = "";
-
       formerHuntGroupName_ = "";
-
-      huntGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
-      agents_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
-      agentSkills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000004);
-      pbxExtensions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000008);
+      huntGroups_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      agents_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      agentSkills_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      pbxExtensions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -701,32 +602,38 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoRes buildPartial() {
       com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoRes result = new com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoRes(this);
-      int from_bitField0_ = bitField0_;
-      result.formerAgentSid_ = formerAgentSid_;
-      result.formerAgentName_ = formerAgentName_;
-      result.formerHuntGroupName_ = formerHuntGroupName_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        huntGroups_ = huntGroups_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.huntGroups_ = huntGroups_;
-      if (((bitField0_ & 0x00000002) != 0)) {
-        agents_ = agents_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.agents_ = agents_;
-      if (((bitField0_ & 0x00000004) != 0)) {
-        agentSkills_ = agentSkills_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000004);
-      }
-      result.agentSkills_ = agentSkills_;
-      if (((bitField0_ & 0x00000008) != 0)) {
-        pbxExtensions_ = pbxExtensions_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000008);
-      }
-      result.pbxExtensions_ = pbxExtensions_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoRes result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.formerAgentSid_ = formerAgentSid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.formerAgentName_ = formerAgentName_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.formerHuntGroupName_ = formerHuntGroupName_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        huntGroups_.makeImmutable();
+        result.huntGroups_ = huntGroups_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        agents_.makeImmutable();
+        result.agents_ = agents_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        agentSkills_.makeImmutable();
+        result.agentSkills_ = agentSkills_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        pbxExtensions_.makeImmutable();
+        result.pbxExtensions_ = pbxExtensions_;
+      }
     }
 
     @java.lang.Override
@@ -778,16 +685,18 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getFormerAgentName().isEmpty()) {
         formerAgentName_ = other.formerAgentName_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getFormerHuntGroupName().isEmpty()) {
         formerHuntGroupName_ = other.formerHuntGroupName_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.huntGroups_.isEmpty()) {
         if (huntGroups_.isEmpty()) {
           huntGroups_ = other.huntGroups_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000008;
         } else {
           ensureHuntGroupsIsMutable();
           huntGroups_.addAll(other.huntGroups_);
@@ -797,7 +706,7 @@ private static final long serialVersionUID = 0L;
       if (!other.agents_.isEmpty()) {
         if (agents_.isEmpty()) {
           agents_ = other.agents_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ |= 0x00000010;
         } else {
           ensureAgentsIsMutable();
           agents_.addAll(other.agents_);
@@ -807,7 +716,7 @@ private static final long serialVersionUID = 0L;
       if (!other.agentSkills_.isEmpty()) {
         if (agentSkills_.isEmpty()) {
           agentSkills_ = other.agentSkills_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ |= 0x00000020;
         } else {
           ensureAgentSkillsIsMutable();
           agentSkills_.addAll(other.agentSkills_);
@@ -817,14 +726,14 @@ private static final long serialVersionUID = 0L;
       if (!other.pbxExtensions_.isEmpty()) {
         if (pbxExtensions_.isEmpty()) {
           pbxExtensions_ = other.pbxExtensions_;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ |= 0x00000040;
         } else {
           ensurePbxExtensionsIsMutable();
           pbxExtensions_.addAll(other.pbxExtensions_);
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -839,17 +748,69 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoRes parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              formerAgentSid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 18: {
+              formerAgentName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              formerHuntGroupName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureHuntGroupsIsMutable();
+              huntGroups_.add(s);
+              break;
+            } // case 34
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureAgentsIsMutable();
+              agents_.add(s);
+              break;
+            } // case 42
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureAgentSkillsIsMutable();
+              agentSkills_.add(s);
+              break;
+            } // case 50
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensurePbxExtensionsIsMutable();
+              pbxExtensions_.add(s);
+              break;
+            } // case 58
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.GetLostPeerInfoRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -869,8 +830,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFormerAgentSid(long value) {
-      
+
       formerAgentSid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -879,7 +841,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFormerAgentSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       formerAgentSid_ = 0L;
       onChanged();
       return this;
@@ -926,11 +888,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFormerAgentName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       formerAgentName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -939,8 +899,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFormerAgentName() {
-      
       formerAgentName_ = getDefaultInstance().getFormerAgentName();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -951,12 +911,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFormerAgentNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       formerAgentName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1002,11 +960,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFormerHuntGroupName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       formerHuntGroupName_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1015,8 +971,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFormerHuntGroupName() {
-      
       formerHuntGroupName_ = getDefaultInstance().getFormerHuntGroupName();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1027,22 +983,21 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFormerHuntGroupNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       formerHuntGroupName_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList huntGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList huntGroups_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureHuntGroupsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!huntGroups_.isModifiable()) {
         huntGroups_ = new com.google.protobuf.LazyStringArrayList(huntGroups_);
-        bitField0_ |= 0x00000001;
-       }
+      }
+      bitField0_ |= 0x00000008;
     }
     /**
      * <code>repeated string hunt_groups = 4 [json_name = "huntGroups"];</code>
@@ -1050,7 +1005,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getHuntGroupsList() {
-      return huntGroups_.getUnmodifiableView();
+      huntGroups_.makeImmutable();
+      return huntGroups_;
     }
     /**
      * <code>repeated string hunt_groups = 4 [json_name = "huntGroups"];</code>
@@ -1084,11 +1040,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHuntGroups(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureHuntGroupsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureHuntGroupsIsMutable();
       huntGroups_.set(index, value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1099,11 +1054,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addHuntGroups(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureHuntGroupsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureHuntGroupsIsMutable();
       huntGroups_.add(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1117,6 +1071,7 @@ private static final long serialVersionUID = 0L;
       ensureHuntGroupsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, huntGroups_);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1125,8 +1080,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHuntGroups() {
-      huntGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      huntGroups_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000008);;
       onChanged();
       return this;
     }
@@ -1137,22 +1093,22 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addHuntGroupsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureHuntGroupsIsMutable();
       huntGroups_.add(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList agents_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList agents_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureAgentsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!agents_.isModifiable()) {
         agents_ = new com.google.protobuf.LazyStringArrayList(agents_);
-        bitField0_ |= 0x00000002;
-       }
+      }
+      bitField0_ |= 0x00000010;
     }
     /**
      * <code>repeated string agents = 5 [json_name = "agents"];</code>
@@ -1160,7 +1116,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getAgentsList() {
-      return agents_.getUnmodifiableView();
+      agents_.makeImmutable();
+      return agents_;
     }
     /**
      * <code>repeated string agents = 5 [json_name = "agents"];</code>
@@ -1194,11 +1151,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAgents(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAgentsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureAgentsIsMutable();
       agents_.set(index, value);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1209,11 +1165,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAgents(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAgentsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureAgentsIsMutable();
       agents_.add(value);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1227,6 +1182,7 @@ private static final long serialVersionUID = 0L;
       ensureAgentsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, agents_);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1235,8 +1191,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAgents() {
-      agents_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      agents_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000010);;
       onChanged();
       return this;
     }
@@ -1247,22 +1204,22 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAgentsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureAgentsIsMutable();
       agents_.add(value);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList agentSkills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList agentSkills_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureAgentSkillsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!agentSkills_.isModifiable()) {
         agentSkills_ = new com.google.protobuf.LazyStringArrayList(agentSkills_);
-        bitField0_ |= 0x00000004;
-       }
+      }
+      bitField0_ |= 0x00000020;
     }
     /**
      * <code>repeated string agent_skills = 6 [json_name = "agentSkills"];</code>
@@ -1270,7 +1227,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getAgentSkillsList() {
-      return agentSkills_.getUnmodifiableView();
+      agentSkills_.makeImmutable();
+      return agentSkills_;
     }
     /**
      * <code>repeated string agent_skills = 6 [json_name = "agentSkills"];</code>
@@ -1304,11 +1262,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAgentSkills(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAgentSkillsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureAgentSkillsIsMutable();
       agentSkills_.set(index, value);
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1319,11 +1276,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAgentSkills(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAgentSkillsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureAgentSkillsIsMutable();
       agentSkills_.add(value);
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1337,6 +1293,7 @@ private static final long serialVersionUID = 0L;
       ensureAgentSkillsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, agentSkills_);
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1345,8 +1302,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAgentSkills() {
-      agentSkills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000004);
+      agentSkills_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000020);;
       onChanged();
       return this;
     }
@@ -1357,22 +1315,22 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAgentSkillsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureAgentSkillsIsMutable();
       agentSkills_.add(value);
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList pbxExtensions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList pbxExtensions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensurePbxExtensionsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!pbxExtensions_.isModifiable()) {
         pbxExtensions_ = new com.google.protobuf.LazyStringArrayList(pbxExtensions_);
-        bitField0_ |= 0x00000008;
-       }
+      }
+      bitField0_ |= 0x00000040;
     }
     /**
      * <code>repeated string pbx_extensions = 7 [json_name = "pbxExtensions"];</code>
@@ -1380,7 +1338,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getPbxExtensionsList() {
-      return pbxExtensions_.getUnmodifiableView();
+      pbxExtensions_.makeImmutable();
+      return pbxExtensions_;
     }
     /**
      * <code>repeated string pbx_extensions = 7 [json_name = "pbxExtensions"];</code>
@@ -1414,11 +1373,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPbxExtensions(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensurePbxExtensionsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensurePbxExtensionsIsMutable();
       pbxExtensions_.set(index, value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1429,11 +1387,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addPbxExtensions(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensurePbxExtensionsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensurePbxExtensionsIsMutable();
       pbxExtensions_.add(value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1447,6 +1404,7 @@ private static final long serialVersionUID = 0L;
       ensurePbxExtensionsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, pbxExtensions_);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1455,8 +1413,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPbxExtensions() {
-      pbxExtensions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000008);
+      pbxExtensions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000040);;
       onChanged();
       return this;
     }
@@ -1467,12 +1426,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addPbxExtensionsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensurePbxExtensionsIsMutable();
       pbxExtensions_.add(value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1509,7 +1467,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GetLostPeerInfoRes(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

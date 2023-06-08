@@ -30,75 +30,6 @@ private static final long serialVersionUID = 0L;
     return new GetAvailableRegressionForecasterModelTypesRes();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private GetAvailableRegressionForecasterModelTypesRes(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-            int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              modelTypes_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            modelTypes_.add(rawValue);
-            break;
-          }
-          case 10: {
-            int length = input.readRawVarint32();
-            int oldLimit = input.pushLimit(length);
-            while(input.getBytesUntilLimit() > 0) {
-              int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                modelTypes_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              modelTypes_.add(rawValue);
-            }
-            input.popLimit(oldLimit);
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        modelTypes_ = java.util.Collections.unmodifiableList(modelTypes_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_GetAvailableRegressionForecasterModelTypesRes_descriptor;
@@ -113,14 +44,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MODEL_TYPES_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> modelTypes_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.RegressionForecasterModelTypes> modelTypes_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.RegressionForecasterModelTypes>() {
             public com.tcn.cloud.api.api.commons.RegressionForecasterModelTypes convert(java.lang.Integer from) {
-              @SuppressWarnings("deprecation")
-              com.tcn.cloud.api.api.commons.RegressionForecasterModelTypes result = com.tcn.cloud.api.api.commons.RegressionForecasterModelTypes.valueOf(from);
+              com.tcn.cloud.api.api.commons.RegressionForecasterModelTypes result = com.tcn.cloud.api.api.commons.RegressionForecasterModelTypes.forNumber(from);
               return result == null ? com.tcn.cloud.api.api.commons.RegressionForecasterModelTypes.UNRECOGNIZED : result;
             }
           };
@@ -212,7 +143,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < modelTypes_.size(); i++) {
       output.writeEnumNoTag(modelTypes_.get(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -233,7 +164,7 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }modelTypesMemoizedSerializedSize = dataSize;
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -249,7 +180,7 @@ private static final long serialVersionUID = 0L;
     com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes other = (com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes) obj;
 
     if (!modelTypes_.equals(other.modelTypes_)) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -264,7 +195,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + MODEL_TYPES_FIELD_NUMBER;
       hash = (53 * hash) + modelTypes_.hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -313,11 +244,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -385,22 +318,18 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       modelTypes_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);
       return this;
@@ -429,14 +358,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes result = new com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes result) {
       if (((bitField0_ & 0x00000001) != 0)) {
         modelTypes_ = java.util.Collections.unmodifiableList(modelTypes_);
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.modelTypes_ = modelTypes_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override
@@ -493,7 +430,7 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -508,17 +445,47 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int tmpRaw = input.readEnum();
+              ensureModelTypesIsMutable();
+              modelTypes_.add(tmpRaw);
+              break;
+            } // case 8
+            case 10: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureModelTypesIsMutable();
+                modelTypes_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -666,8 +633,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .api.commons.RegressionForecasterModelTypes model_types = 1 [json_name = "modelTypes"];</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of modelTypes at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for modelTypes to set.
      * @return This builder for chaining.
      */
     public Builder setModelTypesValue(
@@ -743,7 +710,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GetAvailableRegressionForecasterModelTypesRes(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

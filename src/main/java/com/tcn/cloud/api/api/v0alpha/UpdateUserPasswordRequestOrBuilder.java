@@ -62,6 +62,8 @@ public interface UpdateUserPasswordRequestOrBuilder extends
    * </pre>
    *
    * <code>string org_id = 4 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.UpdateUserPasswordRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=5446
    * @return The orgId.
    */
   @java.lang.Deprecated java.lang.String getOrgId();
@@ -72,6 +74,8 @@ public interface UpdateUserPasswordRequestOrBuilder extends
    * </pre>
    *
    * <code>string org_id = 4 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.UpdateUserPasswordRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=5446
    * @return The bytes for orgId.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString

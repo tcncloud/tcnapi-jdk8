@@ -25,62 +25,6 @@ private static final long serialVersionUID = 0L;
     return new BillingRegionMap();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private BillingRegionMap(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              regionRates_ = com.google.protobuf.MapField.newMapField(
-                  RegionRatesDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000001;
-            }
-            com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates>
-            regionRates__ = input.readMessage(
-                RegionRatesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-            regionRates_.getMutableMap().put(
-                regionRates__.getKey(), regionRates__.getValue());
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.legacy.EntitiesProto.internal_static_api_v1alpha1_org_legacy_BillingRegionMap_descriptor;
@@ -118,6 +62,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
                 com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates.getDefaultInstance());
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates> regionRates_;
   private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates>
@@ -128,7 +73,6 @@ private static final long serialVersionUID = 0L;
     }
     return regionRates_;
   }
-
   public int getRegionRatesCount() {
     return internalGetRegionRates().getMap().size();
   }
@@ -139,11 +83,10 @@ private static final long serialVersionUID = 0L;
    *
    * <code>map&lt;string, .api.v1alpha1.org.legacy.PhoneBillingRates&gt; region_rates = 1 [json_name = "regionRates"];</code>
    */
-
   @java.lang.Override
   public boolean containsRegionRates(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     return internalGetRegionRates().getMap().containsKey(key);
   }
   /**
@@ -162,7 +105,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.v1alpha1.org.legacy.PhoneBillingRates&gt; region_rates = 1 [json_name = "regionRates"];</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates> getRegionRatesMap() {
     return internalGetRegionRates().getMap();
   }
@@ -174,11 +116,12 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.v1alpha1.org.legacy.PhoneBillingRates&gt; region_rates = 1 [json_name = "regionRates"];</code>
    */
   @java.lang.Override
-
-  public com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates getRegionRatesOrDefault(
+  public /* nullable */
+com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates getRegionRatesOrDefault(
       java.lang.String key,
-      com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates defaultValue) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+      /* nullable */
+com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates> map =
         internalGetRegionRates().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -191,10 +134,9 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.v1alpha1.org.legacy.PhoneBillingRates&gt; region_rates = 1 [json_name = "regionRates"];</code>
    */
   @java.lang.Override
-
   public com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates getRegionRatesOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new java.lang.NullPointerException(); }
+    if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates> map =
         internalGetRegionRates().getMap();
     if (!map.containsKey(key)) {
@@ -223,7 +165,7 @@ private static final long serialVersionUID = 0L;
         internalGetRegionRates(),
         RegionRatesDefaultEntryHolder.defaultEntry,
         1);
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -242,7 +184,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, regionRates__);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -259,7 +201,7 @@ private static final long serialVersionUID = 0L;
 
     if (!internalGetRegionRates().equals(
         other.internalGetRegionRates())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -274,7 +216,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + REGION_RATES_FIELD_NUMBER;
       hash = (53 * hash) + internalGetRegionRates().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -323,11 +265,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -413,22 +357,18 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       internalGetMutableRegionRates().clear();
       return this;
     }
@@ -456,11 +396,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap result = new com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap(this);
-      int from_bitField0_ = bitField0_;
-      result.regionRates_ = internalGetRegionRates();
-      result.regionRates_.makeImmutable();
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.regionRates_ = internalGetRegionRates();
+        result.regionRates_.makeImmutable();
+      }
     }
 
     @java.lang.Override
@@ -509,7 +455,8 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap.getDefaultInstance()) return this;
       internalGetMutableRegionRates().mergeFrom(
           other.internalGetRegionRates());
-      this.mergeUnknownFields(other.unknownFields);
+      bitField0_ |= 0x00000001;
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -524,17 +471,39 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates>
+              regionRates__ = input.readMessage(
+                  RegionRatesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableRegionRates().getMutableMap().put(
+                  regionRates__.getKey(), regionRates__.getValue());
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -542,7 +511,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates> regionRates_;
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates>
-    internalGetRegionRates() {
+        internalGetRegionRates() {
       if (regionRates_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             RegionRatesDefaultEntryHolder.defaultEntry);
@@ -550,8 +519,7 @@ private static final long serialVersionUID = 0L;
       return regionRates_;
     }
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates>
-    internalGetMutableRegionRates() {
-      onChanged();;
+        internalGetMutableRegionRates() {
       if (regionRates_ == null) {
         regionRates_ = com.google.protobuf.MapField.newMapField(
             RegionRatesDefaultEntryHolder.defaultEntry);
@@ -559,9 +527,10 @@ private static final long serialVersionUID = 0L;
       if (!regionRates_.isMutable()) {
         regionRates_ = regionRates_.copy();
       }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return regionRates_;
     }
-
     public int getRegionRatesCount() {
       return internalGetRegionRates().getMap().size();
     }
@@ -572,11 +541,10 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, .api.v1alpha1.org.legacy.PhoneBillingRates&gt; region_rates = 1 [json_name = "regionRates"];</code>
      */
-
     @java.lang.Override
     public boolean containsRegionRates(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetRegionRates().getMap().containsKey(key);
     }
     /**
@@ -595,7 +563,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, .api.v1alpha1.org.legacy.PhoneBillingRates&gt; region_rates = 1 [json_name = "regionRates"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates> getRegionRatesMap() {
       return internalGetRegionRates().getMap();
     }
@@ -607,11 +574,12 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, .api.v1alpha1.org.legacy.PhoneBillingRates&gt; region_rates = 1 [json_name = "regionRates"];</code>
      */
     @java.lang.Override
-
-    public com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates getRegionRatesOrDefault(
+    public /* nullable */
+com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates getRegionRatesOrDefault(
         java.lang.String key,
-        com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+        /* nullable */
+com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates> map =
           internalGetRegionRates().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -624,10 +592,9 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, .api.v1alpha1.org.legacy.PhoneBillingRates&gt; region_rates = 1 [json_name = "regionRates"];</code>
      */
     @java.lang.Override
-
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates getRegionRatesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates> map =
           internalGetRegionRates().getMap();
       if (!map.containsKey(key)) {
@@ -635,8 +602,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearRegionRates() {
+      bitField0_ = (bitField0_ & ~0x00000001);
       internalGetMutableRegionRates().getMutableMap()
           .clear();
       return this;
@@ -648,10 +615,9 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, .api.v1alpha1.org.legacy.PhoneBillingRates&gt; region_rates = 1 [json_name = "regionRates"];</code>
      */
-
     public Builder removeRegionRates(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       internalGetMutableRegionRates().getMutableMap()
           .remove(key);
       return this;
@@ -661,7 +627,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates>
-    getMutableRegionRates() {
+        getMutableRegionRates() {
+      bitField0_ |= 0x00000001;
       return internalGetMutableRegionRates().getMutableMap();
     }
     /**
@@ -674,10 +641,11 @@ private static final long serialVersionUID = 0L;
     public Builder putRegionRates(
         java.lang.String key,
         com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates value) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      if (value == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableRegionRates().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000001;
       return this;
     }
     /**
@@ -687,11 +655,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, .api.v1alpha1.org.legacy.PhoneBillingRates&gt; region_rates = 1 [json_name = "regionRates"];</code>
      */
-
     public Builder putAllRegionRates(
         java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.legacy.PhoneBillingRates> values) {
       internalGetMutableRegionRates().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000001;
       return this;
     }
     @java.lang.Override
@@ -727,7 +695,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new BillingRegionMap(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

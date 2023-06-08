@@ -25,448 +25,6 @@ private static final long serialVersionUID = 0L;
     return new ContactSchema();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private ContactSchema(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            contactSchemaSid_ = input.readInt64();
-            break;
-          }
-          case 16: {
-
-            contactGroupSid_ = input.readInt64();
-            break;
-          }
-          case 42: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid01_ != null) {
-              subBuilder = dfcSid01_.toBuilder();
-            }
-            dfcSid01_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid01_);
-              dfcSid01_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 50: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid02_ != null) {
-              subBuilder = dfcSid02_.toBuilder();
-            }
-            dfcSid02_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid02_);
-              dfcSid02_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 58: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid03_ != null) {
-              subBuilder = dfcSid03_.toBuilder();
-            }
-            dfcSid03_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid03_);
-              dfcSid03_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 66: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid04_ != null) {
-              subBuilder = dfcSid04_.toBuilder();
-            }
-            dfcSid04_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid04_);
-              dfcSid04_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 74: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid05_ != null) {
-              subBuilder = dfcSid05_.toBuilder();
-            }
-            dfcSid05_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid05_);
-              dfcSid05_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 82: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid06_ != null) {
-              subBuilder = dfcSid06_.toBuilder();
-            }
-            dfcSid06_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid06_);
-              dfcSid06_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 90: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid07_ != null) {
-              subBuilder = dfcSid07_.toBuilder();
-            }
-            dfcSid07_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid07_);
-              dfcSid07_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 98: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid08_ != null) {
-              subBuilder = dfcSid08_.toBuilder();
-            }
-            dfcSid08_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid08_);
-              dfcSid08_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 106: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid09_ != null) {
-              subBuilder = dfcSid09_.toBuilder();
-            }
-            dfcSid09_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid09_);
-              dfcSid09_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 114: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid10_ != null) {
-              subBuilder = dfcSid10_.toBuilder();
-            }
-            dfcSid10_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid10_);
-              dfcSid10_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 122: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid11_ != null) {
-              subBuilder = dfcSid11_.toBuilder();
-            }
-            dfcSid11_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid11_);
-              dfcSid11_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 130: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid12_ != null) {
-              subBuilder = dfcSid12_.toBuilder();
-            }
-            dfcSid12_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid12_);
-              dfcSid12_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 138: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid13_ != null) {
-              subBuilder = dfcSid13_.toBuilder();
-            }
-            dfcSid13_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid13_);
-              dfcSid13_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 146: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid14_ != null) {
-              subBuilder = dfcSid14_.toBuilder();
-            }
-            dfcSid14_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid14_);
-              dfcSid14_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 154: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid15_ != null) {
-              subBuilder = dfcSid15_.toBuilder();
-            }
-            dfcSid15_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid15_);
-              dfcSid15_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 162: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid16_ != null) {
-              subBuilder = dfcSid16_.toBuilder();
-            }
-            dfcSid16_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid16_);
-              dfcSid16_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 170: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid17_ != null) {
-              subBuilder = dfcSid17_.toBuilder();
-            }
-            dfcSid17_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid17_);
-              dfcSid17_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 178: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid18_ != null) {
-              subBuilder = dfcSid18_.toBuilder();
-            }
-            dfcSid18_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid18_);
-              dfcSid18_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 186: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid19_ != null) {
-              subBuilder = dfcSid19_.toBuilder();
-            }
-            dfcSid19_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid19_);
-              dfcSid19_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 194: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid20_ != null) {
-              subBuilder = dfcSid20_.toBuilder();
-            }
-            dfcSid20_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid20_);
-              dfcSid20_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 202: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid21_ != null) {
-              subBuilder = dfcSid21_.toBuilder();
-            }
-            dfcSid21_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid21_);
-              dfcSid21_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 210: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid22_ != null) {
-              subBuilder = dfcSid22_.toBuilder();
-            }
-            dfcSid22_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid22_);
-              dfcSid22_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 218: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid23_ != null) {
-              subBuilder = dfcSid23_.toBuilder();
-            }
-            dfcSid23_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid23_);
-              dfcSid23_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 226: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid24_ != null) {
-              subBuilder = dfcSid24_.toBuilder();
-            }
-            dfcSid24_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid24_);
-              dfcSid24_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 234: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid25_ != null) {
-              subBuilder = dfcSid25_.toBuilder();
-            }
-            dfcSid25_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid25_);
-              dfcSid25_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 242: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid26_ != null) {
-              subBuilder = dfcSid26_.toBuilder();
-            }
-            dfcSid26_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid26_);
-              dfcSid26_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 250: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid27_ != null) {
-              subBuilder = dfcSid27_.toBuilder();
-            }
-            dfcSid27_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid27_);
-              dfcSid27_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 258: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid28_ != null) {
-              subBuilder = dfcSid28_.toBuilder();
-            }
-            dfcSid28_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid28_);
-              dfcSid28_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 266: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid29_ != null) {
-              subBuilder = dfcSid29_.toBuilder();
-            }
-            dfcSid29_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid29_);
-              dfcSid29_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 274: {
-            com.google.protobuf.Int32Value.Builder subBuilder = null;
-            if (dfcSid30_ != null) {
-              subBuilder = dfcSid30_.toBuilder();
-            }
-            dfcSid30_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dfcSid30_);
-              dfcSid30_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_ContactSchema_descriptor;
@@ -481,7 +39,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONTACT_SCHEMA_SID_FIELD_NUMBER = 1;
-  private long contactSchemaSid_;
+  private long contactSchemaSid_ = 0L;
   /**
    * <code>int64 contact_schema_sid = 1 [json_name = "contactSchemaSid"];</code>
    * @return The contactSchemaSid.
@@ -492,7 +50,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONTACT_GROUP_SID_FIELD_NUMBER = 2;
-  private long contactGroupSid_;
+  private long contactGroupSid_ = 0L;
   /**
    * <code>int64 contact_group_sid = 2 [json_name = "contactGroupSid"];</code>
    * @return The contactGroupSid.
@@ -525,7 +83,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid01OrBuilder() {
-    return getDfcSid01();
+    return dfcSid01_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid01_;
   }
 
   public static final int DFC_SID02_FIELD_NUMBER = 6;
@@ -551,7 +109,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid02OrBuilder() {
-    return getDfcSid02();
+    return dfcSid02_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid02_;
   }
 
   public static final int DFC_SID03_FIELD_NUMBER = 7;
@@ -577,7 +135,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid03OrBuilder() {
-    return getDfcSid03();
+    return dfcSid03_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid03_;
   }
 
   public static final int DFC_SID04_FIELD_NUMBER = 8;
@@ -603,7 +161,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid04OrBuilder() {
-    return getDfcSid04();
+    return dfcSid04_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid04_;
   }
 
   public static final int DFC_SID05_FIELD_NUMBER = 9;
@@ -629,7 +187,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid05OrBuilder() {
-    return getDfcSid05();
+    return dfcSid05_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid05_;
   }
 
   public static final int DFC_SID06_FIELD_NUMBER = 10;
@@ -655,7 +213,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid06OrBuilder() {
-    return getDfcSid06();
+    return dfcSid06_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid06_;
   }
 
   public static final int DFC_SID07_FIELD_NUMBER = 11;
@@ -681,7 +239,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid07OrBuilder() {
-    return getDfcSid07();
+    return dfcSid07_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid07_;
   }
 
   public static final int DFC_SID08_FIELD_NUMBER = 12;
@@ -707,7 +265,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid08OrBuilder() {
-    return getDfcSid08();
+    return dfcSid08_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid08_;
   }
 
   public static final int DFC_SID09_FIELD_NUMBER = 13;
@@ -733,7 +291,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid09OrBuilder() {
-    return getDfcSid09();
+    return dfcSid09_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid09_;
   }
 
   public static final int DFC_SID10_FIELD_NUMBER = 14;
@@ -759,7 +317,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid10OrBuilder() {
-    return getDfcSid10();
+    return dfcSid10_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid10_;
   }
 
   public static final int DFC_SID11_FIELD_NUMBER = 15;
@@ -785,7 +343,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid11OrBuilder() {
-    return getDfcSid11();
+    return dfcSid11_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid11_;
   }
 
   public static final int DFC_SID12_FIELD_NUMBER = 16;
@@ -811,7 +369,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid12OrBuilder() {
-    return getDfcSid12();
+    return dfcSid12_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid12_;
   }
 
   public static final int DFC_SID13_FIELD_NUMBER = 17;
@@ -837,7 +395,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid13OrBuilder() {
-    return getDfcSid13();
+    return dfcSid13_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid13_;
   }
 
   public static final int DFC_SID14_FIELD_NUMBER = 18;
@@ -863,7 +421,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid14OrBuilder() {
-    return getDfcSid14();
+    return dfcSid14_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid14_;
   }
 
   public static final int DFC_SID15_FIELD_NUMBER = 19;
@@ -889,7 +447,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid15OrBuilder() {
-    return getDfcSid15();
+    return dfcSid15_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid15_;
   }
 
   public static final int DFC_SID16_FIELD_NUMBER = 20;
@@ -915,7 +473,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid16OrBuilder() {
-    return getDfcSid16();
+    return dfcSid16_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid16_;
   }
 
   public static final int DFC_SID17_FIELD_NUMBER = 21;
@@ -941,7 +499,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid17OrBuilder() {
-    return getDfcSid17();
+    return dfcSid17_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid17_;
   }
 
   public static final int DFC_SID18_FIELD_NUMBER = 22;
@@ -967,7 +525,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid18OrBuilder() {
-    return getDfcSid18();
+    return dfcSid18_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid18_;
   }
 
   public static final int DFC_SID19_FIELD_NUMBER = 23;
@@ -993,7 +551,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid19OrBuilder() {
-    return getDfcSid19();
+    return dfcSid19_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid19_;
   }
 
   public static final int DFC_SID20_FIELD_NUMBER = 24;
@@ -1019,7 +577,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid20OrBuilder() {
-    return getDfcSid20();
+    return dfcSid20_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid20_;
   }
 
   public static final int DFC_SID21_FIELD_NUMBER = 25;
@@ -1045,7 +603,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid21OrBuilder() {
-    return getDfcSid21();
+    return dfcSid21_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid21_;
   }
 
   public static final int DFC_SID22_FIELD_NUMBER = 26;
@@ -1071,7 +629,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid22OrBuilder() {
-    return getDfcSid22();
+    return dfcSid22_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid22_;
   }
 
   public static final int DFC_SID23_FIELD_NUMBER = 27;
@@ -1097,7 +655,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid23OrBuilder() {
-    return getDfcSid23();
+    return dfcSid23_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid23_;
   }
 
   public static final int DFC_SID24_FIELD_NUMBER = 28;
@@ -1123,7 +681,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid24OrBuilder() {
-    return getDfcSid24();
+    return dfcSid24_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid24_;
   }
 
   public static final int DFC_SID25_FIELD_NUMBER = 29;
@@ -1149,7 +707,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid25OrBuilder() {
-    return getDfcSid25();
+    return dfcSid25_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid25_;
   }
 
   public static final int DFC_SID26_FIELD_NUMBER = 30;
@@ -1175,7 +733,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid26OrBuilder() {
-    return getDfcSid26();
+    return dfcSid26_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid26_;
   }
 
   public static final int DFC_SID27_FIELD_NUMBER = 31;
@@ -1201,7 +759,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid27OrBuilder() {
-    return getDfcSid27();
+    return dfcSid27_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid27_;
   }
 
   public static final int DFC_SID28_FIELD_NUMBER = 32;
@@ -1227,7 +785,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid28OrBuilder() {
-    return getDfcSid28();
+    return dfcSid28_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid28_;
   }
 
   public static final int DFC_SID29_FIELD_NUMBER = 33;
@@ -1253,7 +811,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid29OrBuilder() {
-    return getDfcSid29();
+    return dfcSid29_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid29_;
   }
 
   public static final int DFC_SID30_FIELD_NUMBER = 34;
@@ -1279,7 +837,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getDfcSid30OrBuilder() {
-    return getDfcSid30();
+    return dfcSid30_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : dfcSid30_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -1392,7 +950,7 @@ private static final long serialVersionUID = 0L;
     if (dfcSid30_ != null) {
       output.writeMessage(34, getDfcSid30());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -1529,7 +1087,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(34, getDfcSid30());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1698,7 +1256,7 @@ private static final long serialVersionUID = 0L;
       if (!getDfcSid30()
           .equals(other.getDfcSid30())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1835,7 +1393,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DFC_SID30_FIELD_NUMBER;
       hash = (53 * hash) + getDfcSid30().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1884,11 +1442,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.ContactSchema parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v0alpha.ContactSchema parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1952,204 +1512,168 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ContactSchema.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       contactSchemaSid_ = 0L;
-
       contactGroupSid_ = 0L;
-
-      if (dfcSid01Builder_ == null) {
-        dfcSid01_ = null;
-      } else {
-        dfcSid01_ = null;
+      dfcSid01_ = null;
+      if (dfcSid01Builder_ != null) {
+        dfcSid01Builder_.dispose();
         dfcSid01Builder_ = null;
       }
-      if (dfcSid02Builder_ == null) {
-        dfcSid02_ = null;
-      } else {
-        dfcSid02_ = null;
+      dfcSid02_ = null;
+      if (dfcSid02Builder_ != null) {
+        dfcSid02Builder_.dispose();
         dfcSid02Builder_ = null;
       }
-      if (dfcSid03Builder_ == null) {
-        dfcSid03_ = null;
-      } else {
-        dfcSid03_ = null;
+      dfcSid03_ = null;
+      if (dfcSid03Builder_ != null) {
+        dfcSid03Builder_.dispose();
         dfcSid03Builder_ = null;
       }
-      if (dfcSid04Builder_ == null) {
-        dfcSid04_ = null;
-      } else {
-        dfcSid04_ = null;
+      dfcSid04_ = null;
+      if (dfcSid04Builder_ != null) {
+        dfcSid04Builder_.dispose();
         dfcSid04Builder_ = null;
       }
-      if (dfcSid05Builder_ == null) {
-        dfcSid05_ = null;
-      } else {
-        dfcSid05_ = null;
+      dfcSid05_ = null;
+      if (dfcSid05Builder_ != null) {
+        dfcSid05Builder_.dispose();
         dfcSid05Builder_ = null;
       }
-      if (dfcSid06Builder_ == null) {
-        dfcSid06_ = null;
-      } else {
-        dfcSid06_ = null;
+      dfcSid06_ = null;
+      if (dfcSid06Builder_ != null) {
+        dfcSid06Builder_.dispose();
         dfcSid06Builder_ = null;
       }
-      if (dfcSid07Builder_ == null) {
-        dfcSid07_ = null;
-      } else {
-        dfcSid07_ = null;
+      dfcSid07_ = null;
+      if (dfcSid07Builder_ != null) {
+        dfcSid07Builder_.dispose();
         dfcSid07Builder_ = null;
       }
-      if (dfcSid08Builder_ == null) {
-        dfcSid08_ = null;
-      } else {
-        dfcSid08_ = null;
+      dfcSid08_ = null;
+      if (dfcSid08Builder_ != null) {
+        dfcSid08Builder_.dispose();
         dfcSid08Builder_ = null;
       }
-      if (dfcSid09Builder_ == null) {
-        dfcSid09_ = null;
-      } else {
-        dfcSid09_ = null;
+      dfcSid09_ = null;
+      if (dfcSid09Builder_ != null) {
+        dfcSid09Builder_.dispose();
         dfcSid09Builder_ = null;
       }
-      if (dfcSid10Builder_ == null) {
-        dfcSid10_ = null;
-      } else {
-        dfcSid10_ = null;
+      dfcSid10_ = null;
+      if (dfcSid10Builder_ != null) {
+        dfcSid10Builder_.dispose();
         dfcSid10Builder_ = null;
       }
-      if (dfcSid11Builder_ == null) {
-        dfcSid11_ = null;
-      } else {
-        dfcSid11_ = null;
+      dfcSid11_ = null;
+      if (dfcSid11Builder_ != null) {
+        dfcSid11Builder_.dispose();
         dfcSid11Builder_ = null;
       }
-      if (dfcSid12Builder_ == null) {
-        dfcSid12_ = null;
-      } else {
-        dfcSid12_ = null;
+      dfcSid12_ = null;
+      if (dfcSid12Builder_ != null) {
+        dfcSid12Builder_.dispose();
         dfcSid12Builder_ = null;
       }
-      if (dfcSid13Builder_ == null) {
-        dfcSid13_ = null;
-      } else {
-        dfcSid13_ = null;
+      dfcSid13_ = null;
+      if (dfcSid13Builder_ != null) {
+        dfcSid13Builder_.dispose();
         dfcSid13Builder_ = null;
       }
-      if (dfcSid14Builder_ == null) {
-        dfcSid14_ = null;
-      } else {
-        dfcSid14_ = null;
+      dfcSid14_ = null;
+      if (dfcSid14Builder_ != null) {
+        dfcSid14Builder_.dispose();
         dfcSid14Builder_ = null;
       }
-      if (dfcSid15Builder_ == null) {
-        dfcSid15_ = null;
-      } else {
-        dfcSid15_ = null;
+      dfcSid15_ = null;
+      if (dfcSid15Builder_ != null) {
+        dfcSid15Builder_.dispose();
         dfcSid15Builder_ = null;
       }
-      if (dfcSid16Builder_ == null) {
-        dfcSid16_ = null;
-      } else {
-        dfcSid16_ = null;
+      dfcSid16_ = null;
+      if (dfcSid16Builder_ != null) {
+        dfcSid16Builder_.dispose();
         dfcSid16Builder_ = null;
       }
-      if (dfcSid17Builder_ == null) {
-        dfcSid17_ = null;
-      } else {
-        dfcSid17_ = null;
+      dfcSid17_ = null;
+      if (dfcSid17Builder_ != null) {
+        dfcSid17Builder_.dispose();
         dfcSid17Builder_ = null;
       }
-      if (dfcSid18Builder_ == null) {
-        dfcSid18_ = null;
-      } else {
-        dfcSid18_ = null;
+      dfcSid18_ = null;
+      if (dfcSid18Builder_ != null) {
+        dfcSid18Builder_.dispose();
         dfcSid18Builder_ = null;
       }
-      if (dfcSid19Builder_ == null) {
-        dfcSid19_ = null;
-      } else {
-        dfcSid19_ = null;
+      dfcSid19_ = null;
+      if (dfcSid19Builder_ != null) {
+        dfcSid19Builder_.dispose();
         dfcSid19Builder_ = null;
       }
-      if (dfcSid20Builder_ == null) {
-        dfcSid20_ = null;
-      } else {
-        dfcSid20_ = null;
+      dfcSid20_ = null;
+      if (dfcSid20Builder_ != null) {
+        dfcSid20Builder_.dispose();
         dfcSid20Builder_ = null;
       }
-      if (dfcSid21Builder_ == null) {
-        dfcSid21_ = null;
-      } else {
-        dfcSid21_ = null;
+      dfcSid21_ = null;
+      if (dfcSid21Builder_ != null) {
+        dfcSid21Builder_.dispose();
         dfcSid21Builder_ = null;
       }
-      if (dfcSid22Builder_ == null) {
-        dfcSid22_ = null;
-      } else {
-        dfcSid22_ = null;
+      dfcSid22_ = null;
+      if (dfcSid22Builder_ != null) {
+        dfcSid22Builder_.dispose();
         dfcSid22Builder_ = null;
       }
-      if (dfcSid23Builder_ == null) {
-        dfcSid23_ = null;
-      } else {
-        dfcSid23_ = null;
+      dfcSid23_ = null;
+      if (dfcSid23Builder_ != null) {
+        dfcSid23Builder_.dispose();
         dfcSid23Builder_ = null;
       }
-      if (dfcSid24Builder_ == null) {
-        dfcSid24_ = null;
-      } else {
-        dfcSid24_ = null;
+      dfcSid24_ = null;
+      if (dfcSid24Builder_ != null) {
+        dfcSid24Builder_.dispose();
         dfcSid24Builder_ = null;
       }
-      if (dfcSid25Builder_ == null) {
-        dfcSid25_ = null;
-      } else {
-        dfcSid25_ = null;
+      dfcSid25_ = null;
+      if (dfcSid25Builder_ != null) {
+        dfcSid25Builder_.dispose();
         dfcSid25Builder_ = null;
       }
-      if (dfcSid26Builder_ == null) {
-        dfcSid26_ = null;
-      } else {
-        dfcSid26_ = null;
+      dfcSid26_ = null;
+      if (dfcSid26Builder_ != null) {
+        dfcSid26Builder_.dispose();
         dfcSid26Builder_ = null;
       }
-      if (dfcSid27Builder_ == null) {
-        dfcSid27_ = null;
-      } else {
-        dfcSid27_ = null;
+      dfcSid27_ = null;
+      if (dfcSid27Builder_ != null) {
+        dfcSid27Builder_.dispose();
         dfcSid27Builder_ = null;
       }
-      if (dfcSid28Builder_ == null) {
-        dfcSid28_ = null;
-      } else {
-        dfcSid28_ = null;
+      dfcSid28_ = null;
+      if (dfcSid28Builder_ != null) {
+        dfcSid28Builder_.dispose();
         dfcSid28Builder_ = null;
       }
-      if (dfcSid29Builder_ == null) {
-        dfcSid29_ = null;
-      } else {
-        dfcSid29_ = null;
+      dfcSid29_ = null;
+      if (dfcSid29Builder_ != null) {
+        dfcSid29Builder_.dispose();
         dfcSid29Builder_ = null;
       }
-      if (dfcSid30Builder_ == null) {
-        dfcSid30_ = null;
-      } else {
-        dfcSid30_ = null;
+      dfcSid30_ = null;
+      if (dfcSid30Builder_ != null) {
+        dfcSid30Builder_.dispose();
         dfcSid30Builder_ = null;
       }
       return this;
@@ -2178,160 +1702,169 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ContactSchema buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ContactSchema result = new com.tcn.cloud.api.api.v0alpha.ContactSchema(this);
-      result.contactSchemaSid_ = contactSchemaSid_;
-      result.contactGroupSid_ = contactGroupSid_;
-      if (dfcSid01Builder_ == null) {
-        result.dfcSid01_ = dfcSid01_;
-      } else {
-        result.dfcSid01_ = dfcSid01Builder_.build();
-      }
-      if (dfcSid02Builder_ == null) {
-        result.dfcSid02_ = dfcSid02_;
-      } else {
-        result.dfcSid02_ = dfcSid02Builder_.build();
-      }
-      if (dfcSid03Builder_ == null) {
-        result.dfcSid03_ = dfcSid03_;
-      } else {
-        result.dfcSid03_ = dfcSid03Builder_.build();
-      }
-      if (dfcSid04Builder_ == null) {
-        result.dfcSid04_ = dfcSid04_;
-      } else {
-        result.dfcSid04_ = dfcSid04Builder_.build();
-      }
-      if (dfcSid05Builder_ == null) {
-        result.dfcSid05_ = dfcSid05_;
-      } else {
-        result.dfcSid05_ = dfcSid05Builder_.build();
-      }
-      if (dfcSid06Builder_ == null) {
-        result.dfcSid06_ = dfcSid06_;
-      } else {
-        result.dfcSid06_ = dfcSid06Builder_.build();
-      }
-      if (dfcSid07Builder_ == null) {
-        result.dfcSid07_ = dfcSid07_;
-      } else {
-        result.dfcSid07_ = dfcSid07Builder_.build();
-      }
-      if (dfcSid08Builder_ == null) {
-        result.dfcSid08_ = dfcSid08_;
-      } else {
-        result.dfcSid08_ = dfcSid08Builder_.build();
-      }
-      if (dfcSid09Builder_ == null) {
-        result.dfcSid09_ = dfcSid09_;
-      } else {
-        result.dfcSid09_ = dfcSid09Builder_.build();
-      }
-      if (dfcSid10Builder_ == null) {
-        result.dfcSid10_ = dfcSid10_;
-      } else {
-        result.dfcSid10_ = dfcSid10Builder_.build();
-      }
-      if (dfcSid11Builder_ == null) {
-        result.dfcSid11_ = dfcSid11_;
-      } else {
-        result.dfcSid11_ = dfcSid11Builder_.build();
-      }
-      if (dfcSid12Builder_ == null) {
-        result.dfcSid12_ = dfcSid12_;
-      } else {
-        result.dfcSid12_ = dfcSid12Builder_.build();
-      }
-      if (dfcSid13Builder_ == null) {
-        result.dfcSid13_ = dfcSid13_;
-      } else {
-        result.dfcSid13_ = dfcSid13Builder_.build();
-      }
-      if (dfcSid14Builder_ == null) {
-        result.dfcSid14_ = dfcSid14_;
-      } else {
-        result.dfcSid14_ = dfcSid14Builder_.build();
-      }
-      if (dfcSid15Builder_ == null) {
-        result.dfcSid15_ = dfcSid15_;
-      } else {
-        result.dfcSid15_ = dfcSid15Builder_.build();
-      }
-      if (dfcSid16Builder_ == null) {
-        result.dfcSid16_ = dfcSid16_;
-      } else {
-        result.dfcSid16_ = dfcSid16Builder_.build();
-      }
-      if (dfcSid17Builder_ == null) {
-        result.dfcSid17_ = dfcSid17_;
-      } else {
-        result.dfcSid17_ = dfcSid17Builder_.build();
-      }
-      if (dfcSid18Builder_ == null) {
-        result.dfcSid18_ = dfcSid18_;
-      } else {
-        result.dfcSid18_ = dfcSid18Builder_.build();
-      }
-      if (dfcSid19Builder_ == null) {
-        result.dfcSid19_ = dfcSid19_;
-      } else {
-        result.dfcSid19_ = dfcSid19Builder_.build();
-      }
-      if (dfcSid20Builder_ == null) {
-        result.dfcSid20_ = dfcSid20_;
-      } else {
-        result.dfcSid20_ = dfcSid20Builder_.build();
-      }
-      if (dfcSid21Builder_ == null) {
-        result.dfcSid21_ = dfcSid21_;
-      } else {
-        result.dfcSid21_ = dfcSid21Builder_.build();
-      }
-      if (dfcSid22Builder_ == null) {
-        result.dfcSid22_ = dfcSid22_;
-      } else {
-        result.dfcSid22_ = dfcSid22Builder_.build();
-      }
-      if (dfcSid23Builder_ == null) {
-        result.dfcSid23_ = dfcSid23_;
-      } else {
-        result.dfcSid23_ = dfcSid23Builder_.build();
-      }
-      if (dfcSid24Builder_ == null) {
-        result.dfcSid24_ = dfcSid24_;
-      } else {
-        result.dfcSid24_ = dfcSid24Builder_.build();
-      }
-      if (dfcSid25Builder_ == null) {
-        result.dfcSid25_ = dfcSid25_;
-      } else {
-        result.dfcSid25_ = dfcSid25Builder_.build();
-      }
-      if (dfcSid26Builder_ == null) {
-        result.dfcSid26_ = dfcSid26_;
-      } else {
-        result.dfcSid26_ = dfcSid26Builder_.build();
-      }
-      if (dfcSid27Builder_ == null) {
-        result.dfcSid27_ = dfcSid27_;
-      } else {
-        result.dfcSid27_ = dfcSid27Builder_.build();
-      }
-      if (dfcSid28Builder_ == null) {
-        result.dfcSid28_ = dfcSid28_;
-      } else {
-        result.dfcSid28_ = dfcSid28Builder_.build();
-      }
-      if (dfcSid29Builder_ == null) {
-        result.dfcSid29_ = dfcSid29_;
-      } else {
-        result.dfcSid29_ = dfcSid29Builder_.build();
-      }
-      if (dfcSid30Builder_ == null) {
-        result.dfcSid30_ = dfcSid30_;
-      } else {
-        result.dfcSid30_ = dfcSid30Builder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ContactSchema result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.contactSchemaSid_ = contactSchemaSid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.contactGroupSid_ = contactGroupSid_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.dfcSid01_ = dfcSid01Builder_ == null
+            ? dfcSid01_
+            : dfcSid01Builder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.dfcSid02_ = dfcSid02Builder_ == null
+            ? dfcSid02_
+            : dfcSid02Builder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.dfcSid03_ = dfcSid03Builder_ == null
+            ? dfcSid03_
+            : dfcSid03Builder_.build();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.dfcSid04_ = dfcSid04Builder_ == null
+            ? dfcSid04_
+            : dfcSid04Builder_.build();
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.dfcSid05_ = dfcSid05Builder_ == null
+            ? dfcSid05_
+            : dfcSid05Builder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.dfcSid06_ = dfcSid06Builder_ == null
+            ? dfcSid06_
+            : dfcSid06Builder_.build();
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.dfcSid07_ = dfcSid07Builder_ == null
+            ? dfcSid07_
+            : dfcSid07Builder_.build();
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.dfcSid08_ = dfcSid08Builder_ == null
+            ? dfcSid08_
+            : dfcSid08Builder_.build();
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.dfcSid09_ = dfcSid09Builder_ == null
+            ? dfcSid09_
+            : dfcSid09Builder_.build();
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.dfcSid10_ = dfcSid10Builder_ == null
+            ? dfcSid10_
+            : dfcSid10Builder_.build();
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.dfcSid11_ = dfcSid11Builder_ == null
+            ? dfcSid11_
+            : dfcSid11Builder_.build();
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.dfcSid12_ = dfcSid12Builder_ == null
+            ? dfcSid12_
+            : dfcSid12Builder_.build();
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.dfcSid13_ = dfcSid13Builder_ == null
+            ? dfcSid13_
+            : dfcSid13Builder_.build();
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.dfcSid14_ = dfcSid14Builder_ == null
+            ? dfcSid14_
+            : dfcSid14Builder_.build();
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.dfcSid15_ = dfcSid15Builder_ == null
+            ? dfcSid15_
+            : dfcSid15Builder_.build();
+      }
+      if (((from_bitField0_ & 0x00020000) != 0)) {
+        result.dfcSid16_ = dfcSid16Builder_ == null
+            ? dfcSid16_
+            : dfcSid16Builder_.build();
+      }
+      if (((from_bitField0_ & 0x00040000) != 0)) {
+        result.dfcSid17_ = dfcSid17Builder_ == null
+            ? dfcSid17_
+            : dfcSid17Builder_.build();
+      }
+      if (((from_bitField0_ & 0x00080000) != 0)) {
+        result.dfcSid18_ = dfcSid18Builder_ == null
+            ? dfcSid18_
+            : dfcSid18Builder_.build();
+      }
+      if (((from_bitField0_ & 0x00100000) != 0)) {
+        result.dfcSid19_ = dfcSid19Builder_ == null
+            ? dfcSid19_
+            : dfcSid19Builder_.build();
+      }
+      if (((from_bitField0_ & 0x00200000) != 0)) {
+        result.dfcSid20_ = dfcSid20Builder_ == null
+            ? dfcSid20_
+            : dfcSid20Builder_.build();
+      }
+      if (((from_bitField0_ & 0x00400000) != 0)) {
+        result.dfcSid21_ = dfcSid21Builder_ == null
+            ? dfcSid21_
+            : dfcSid21Builder_.build();
+      }
+      if (((from_bitField0_ & 0x00800000) != 0)) {
+        result.dfcSid22_ = dfcSid22Builder_ == null
+            ? dfcSid22_
+            : dfcSid22Builder_.build();
+      }
+      if (((from_bitField0_ & 0x01000000) != 0)) {
+        result.dfcSid23_ = dfcSid23Builder_ == null
+            ? dfcSid23_
+            : dfcSid23Builder_.build();
+      }
+      if (((from_bitField0_ & 0x02000000) != 0)) {
+        result.dfcSid24_ = dfcSid24Builder_ == null
+            ? dfcSid24_
+            : dfcSid24Builder_.build();
+      }
+      if (((from_bitField0_ & 0x04000000) != 0)) {
+        result.dfcSid25_ = dfcSid25Builder_ == null
+            ? dfcSid25_
+            : dfcSid25Builder_.build();
+      }
+      if (((from_bitField0_ & 0x08000000) != 0)) {
+        result.dfcSid26_ = dfcSid26Builder_ == null
+            ? dfcSid26_
+            : dfcSid26Builder_.build();
+      }
+      if (((from_bitField0_ & 0x10000000) != 0)) {
+        result.dfcSid27_ = dfcSid27Builder_ == null
+            ? dfcSid27_
+            : dfcSid27Builder_.build();
+      }
+      if (((from_bitField0_ & 0x20000000) != 0)) {
+        result.dfcSid28_ = dfcSid28Builder_ == null
+            ? dfcSid28_
+            : dfcSid28Builder_.build();
+      }
+      if (((from_bitField0_ & 0x40000000) != 0)) {
+        result.dfcSid29_ = dfcSid29Builder_ == null
+            ? dfcSid29_
+            : dfcSid29Builder_.build();
+      }
+      if (((from_bitField0_ & 0x80000000) != 0)) {
+        result.dfcSid30_ = dfcSid30Builder_ == null
+            ? dfcSid30_
+            : dfcSid30Builder_.build();
+      }
     }
 
     @java.lang.Override
@@ -2474,7 +2007,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasDfcSid30()) {
         mergeDfcSid30(other.getDfcSid30());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -2489,19 +2022,253 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v0alpha.ContactSchema parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              contactSchemaSid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 16: {
+              contactGroupSid_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
+            case 42: {
+              input.readMessage(
+                  getDfcSid01FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  getDfcSid02FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  getDfcSid03FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 58
+            case 66: {
+              input.readMessage(
+                  getDfcSid04FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 66
+            case 74: {
+              input.readMessage(
+                  getDfcSid05FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 74
+            case 82: {
+              input.readMessage(
+                  getDfcSid06FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 82
+            case 90: {
+              input.readMessage(
+                  getDfcSid07FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 90
+            case 98: {
+              input.readMessage(
+                  getDfcSid08FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 98
+            case 106: {
+              input.readMessage(
+                  getDfcSid09FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 106
+            case 114: {
+              input.readMessage(
+                  getDfcSid10FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 114
+            case 122: {
+              input.readMessage(
+                  getDfcSid11FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 122
+            case 130: {
+              input.readMessage(
+                  getDfcSid12FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 130
+            case 138: {
+              input.readMessage(
+                  getDfcSid13FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 138
+            case 146: {
+              input.readMessage(
+                  getDfcSid14FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 146
+            case 154: {
+              input.readMessage(
+                  getDfcSid15FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 154
+            case 162: {
+              input.readMessage(
+                  getDfcSid16FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00020000;
+              break;
+            } // case 162
+            case 170: {
+              input.readMessage(
+                  getDfcSid17FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00040000;
+              break;
+            } // case 170
+            case 178: {
+              input.readMessage(
+                  getDfcSid18FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00080000;
+              break;
+            } // case 178
+            case 186: {
+              input.readMessage(
+                  getDfcSid19FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00100000;
+              break;
+            } // case 186
+            case 194: {
+              input.readMessage(
+                  getDfcSid20FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00200000;
+              break;
+            } // case 194
+            case 202: {
+              input.readMessage(
+                  getDfcSid21FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00400000;
+              break;
+            } // case 202
+            case 210: {
+              input.readMessage(
+                  getDfcSid22FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00800000;
+              break;
+            } // case 210
+            case 218: {
+              input.readMessage(
+                  getDfcSid23FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x01000000;
+              break;
+            } // case 218
+            case 226: {
+              input.readMessage(
+                  getDfcSid24FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x02000000;
+              break;
+            } // case 226
+            case 234: {
+              input.readMessage(
+                  getDfcSid25FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x04000000;
+              break;
+            } // case 234
+            case 242: {
+              input.readMessage(
+                  getDfcSid26FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x08000000;
+              break;
+            } // case 242
+            case 250: {
+              input.readMessage(
+                  getDfcSid27FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x10000000;
+              break;
+            } // case 250
+            case 258: {
+              input.readMessage(
+                  getDfcSid28FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x20000000;
+              break;
+            } // case 258
+            case 266: {
+              input.readMessage(
+                  getDfcSid29FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x40000000;
+              break;
+            } // case 266
+            case 274: {
+              input.readMessage(
+                  getDfcSid30FieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x80000000;
+              break;
+            } // case 274
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ContactSchema) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private long contactSchemaSid_ ;
     /**
@@ -2518,8 +2285,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setContactSchemaSid(long value) {
-      
+
       contactSchemaSid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -2528,7 +2296,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearContactSchemaSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       contactSchemaSid_ = 0L;
       onChanged();
       return this;
@@ -2549,8 +2317,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setContactGroupSid(long value) {
-      
+
       contactGroupSid_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -2559,7 +2328,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearContactGroupSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       contactGroupSid_ = 0L;
       onChanged();
       return this;
@@ -2573,7 +2342,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid01 field is set.
      */
     public boolean hasDfcSid01() {
-      return dfcSid01Builder_ != null || dfcSid01_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid01 = 5 [json_name = "dfcSid01"];</code>
@@ -2595,11 +2364,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid01_ = value;
-        onChanged();
       } else {
         dfcSid01Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -2609,11 +2378,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid01Builder_ == null) {
         dfcSid01_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid01Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -2621,38 +2390,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid01(com.google.protobuf.Int32Value value) {
       if (dfcSid01Builder_ == null) {
-        if (dfcSid01_ != null) {
-          dfcSid01_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid01_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          dfcSid01_ != null &&
+          dfcSid01_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid01Builder().mergeFrom(value);
         } else {
           dfcSid01_ = value;
         }
-        onChanged();
       } else {
         dfcSid01Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid01 = 5 [json_name = "dfcSid01"];</code>
      */
     public Builder clearDfcSid01() {
-      if (dfcSid01Builder_ == null) {
-        dfcSid01_ = null;
-        onChanged();
-      } else {
-        dfcSid01_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      dfcSid01_ = null;
+      if (dfcSid01Builder_ != null) {
+        dfcSid01Builder_.dispose();
         dfcSid01Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid01 = 5 [json_name = "dfcSid01"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid01Builder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getDfcSid01FieldBuilder().getBuilder();
     }
@@ -2692,7 +2461,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid02 field is set.
      */
     public boolean hasDfcSid02() {
-      return dfcSid02Builder_ != null || dfcSid02_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid02 = 6 [json_name = "dfcSid02"];</code>
@@ -2714,11 +2483,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid02_ = value;
-        onChanged();
       } else {
         dfcSid02Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -2728,11 +2497,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid02Builder_ == null) {
         dfcSid02_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid02Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -2740,38 +2509,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid02(com.google.protobuf.Int32Value value) {
       if (dfcSid02Builder_ == null) {
-        if (dfcSid02_ != null) {
-          dfcSid02_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid02_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000008) != 0) &&
+          dfcSid02_ != null &&
+          dfcSid02_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid02Builder().mergeFrom(value);
         } else {
           dfcSid02_ = value;
         }
-        onChanged();
       } else {
         dfcSid02Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid02 = 6 [json_name = "dfcSid02"];</code>
      */
     public Builder clearDfcSid02() {
-      if (dfcSid02Builder_ == null) {
-        dfcSid02_ = null;
-        onChanged();
-      } else {
-        dfcSid02_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      dfcSid02_ = null;
+      if (dfcSid02Builder_ != null) {
+        dfcSid02Builder_.dispose();
         dfcSid02Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid02 = 6 [json_name = "dfcSid02"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid02Builder() {
-      
+      bitField0_ |= 0x00000008;
       onChanged();
       return getDfcSid02FieldBuilder().getBuilder();
     }
@@ -2811,7 +2580,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid03 field is set.
      */
     public boolean hasDfcSid03() {
-      return dfcSid03Builder_ != null || dfcSid03_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid03 = 7 [json_name = "dfcSid03"];</code>
@@ -2833,11 +2602,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid03_ = value;
-        onChanged();
       } else {
         dfcSid03Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -2847,11 +2616,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid03Builder_ == null) {
         dfcSid03_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid03Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -2859,38 +2628,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid03(com.google.protobuf.Int32Value value) {
       if (dfcSid03Builder_ == null) {
-        if (dfcSid03_ != null) {
-          dfcSid03_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid03_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000010) != 0) &&
+          dfcSid03_ != null &&
+          dfcSid03_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid03Builder().mergeFrom(value);
         } else {
           dfcSid03_ = value;
         }
-        onChanged();
       } else {
         dfcSid03Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid03 = 7 [json_name = "dfcSid03"];</code>
      */
     public Builder clearDfcSid03() {
-      if (dfcSid03Builder_ == null) {
-        dfcSid03_ = null;
-        onChanged();
-      } else {
-        dfcSid03_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      dfcSid03_ = null;
+      if (dfcSid03Builder_ != null) {
+        dfcSid03Builder_.dispose();
         dfcSid03Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid03 = 7 [json_name = "dfcSid03"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid03Builder() {
-      
+      bitField0_ |= 0x00000010;
       onChanged();
       return getDfcSid03FieldBuilder().getBuilder();
     }
@@ -2930,7 +2699,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid04 field is set.
      */
     public boolean hasDfcSid04() {
-      return dfcSid04Builder_ != null || dfcSid04_ != null;
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid04 = 8 [json_name = "dfcSid04"];</code>
@@ -2952,11 +2721,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid04_ = value;
-        onChanged();
       } else {
         dfcSid04Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -2966,11 +2735,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid04Builder_ == null) {
         dfcSid04_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid04Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -2978,38 +2747,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid04(com.google.protobuf.Int32Value value) {
       if (dfcSid04Builder_ == null) {
-        if (dfcSid04_ != null) {
-          dfcSid04_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid04_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000020) != 0) &&
+          dfcSid04_ != null &&
+          dfcSid04_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid04Builder().mergeFrom(value);
         } else {
           dfcSid04_ = value;
         }
-        onChanged();
       } else {
         dfcSid04Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid04 = 8 [json_name = "dfcSid04"];</code>
      */
     public Builder clearDfcSid04() {
-      if (dfcSid04Builder_ == null) {
-        dfcSid04_ = null;
-        onChanged();
-      } else {
-        dfcSid04_ = null;
+      bitField0_ = (bitField0_ & ~0x00000020);
+      dfcSid04_ = null;
+      if (dfcSid04Builder_ != null) {
+        dfcSid04Builder_.dispose();
         dfcSid04Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid04 = 8 [json_name = "dfcSid04"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid04Builder() {
-      
+      bitField0_ |= 0x00000020;
       onChanged();
       return getDfcSid04FieldBuilder().getBuilder();
     }
@@ -3049,7 +2818,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid05 field is set.
      */
     public boolean hasDfcSid05() {
-      return dfcSid05Builder_ != null || dfcSid05_ != null;
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid05 = 9 [json_name = "dfcSid05"];</code>
@@ -3071,11 +2840,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid05_ = value;
-        onChanged();
       } else {
         dfcSid05Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -3085,11 +2854,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid05Builder_ == null) {
         dfcSid05_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid05Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -3097,38 +2866,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid05(com.google.protobuf.Int32Value value) {
       if (dfcSid05Builder_ == null) {
-        if (dfcSid05_ != null) {
-          dfcSid05_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid05_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000040) != 0) &&
+          dfcSid05_ != null &&
+          dfcSid05_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid05Builder().mergeFrom(value);
         } else {
           dfcSid05_ = value;
         }
-        onChanged();
       } else {
         dfcSid05Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid05 = 9 [json_name = "dfcSid05"];</code>
      */
     public Builder clearDfcSid05() {
-      if (dfcSid05Builder_ == null) {
-        dfcSid05_ = null;
-        onChanged();
-      } else {
-        dfcSid05_ = null;
+      bitField0_ = (bitField0_ & ~0x00000040);
+      dfcSid05_ = null;
+      if (dfcSid05Builder_ != null) {
+        dfcSid05Builder_.dispose();
         dfcSid05Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid05 = 9 [json_name = "dfcSid05"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid05Builder() {
-      
+      bitField0_ |= 0x00000040;
       onChanged();
       return getDfcSid05FieldBuilder().getBuilder();
     }
@@ -3168,7 +2937,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid06 field is set.
      */
     public boolean hasDfcSid06() {
-      return dfcSid06Builder_ != null || dfcSid06_ != null;
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid06 = 10 [json_name = "dfcSid06"];</code>
@@ -3190,11 +2959,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid06_ = value;
-        onChanged();
       } else {
         dfcSid06Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -3204,11 +2973,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid06Builder_ == null) {
         dfcSid06_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid06Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
@@ -3216,38 +2985,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid06(com.google.protobuf.Int32Value value) {
       if (dfcSid06Builder_ == null) {
-        if (dfcSid06_ != null) {
-          dfcSid06_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid06_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000080) != 0) &&
+          dfcSid06_ != null &&
+          dfcSid06_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid06Builder().mergeFrom(value);
         } else {
           dfcSid06_ = value;
         }
-        onChanged();
       } else {
         dfcSid06Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000080;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid06 = 10 [json_name = "dfcSid06"];</code>
      */
     public Builder clearDfcSid06() {
-      if (dfcSid06Builder_ == null) {
-        dfcSid06_ = null;
-        onChanged();
-      } else {
-        dfcSid06_ = null;
+      bitField0_ = (bitField0_ & ~0x00000080);
+      dfcSid06_ = null;
+      if (dfcSid06Builder_ != null) {
+        dfcSid06Builder_.dispose();
         dfcSid06Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid06 = 10 [json_name = "dfcSid06"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid06Builder() {
-      
+      bitField0_ |= 0x00000080;
       onChanged();
       return getDfcSid06FieldBuilder().getBuilder();
     }
@@ -3287,7 +3056,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid07 field is set.
      */
     public boolean hasDfcSid07() {
-      return dfcSid07Builder_ != null || dfcSid07_ != null;
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid07 = 11 [json_name = "dfcSid07"];</code>
@@ -3309,11 +3078,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid07_ = value;
-        onChanged();
       } else {
         dfcSid07Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -3323,11 +3092,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid07Builder_ == null) {
         dfcSid07_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid07Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
@@ -3335,38 +3104,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid07(com.google.protobuf.Int32Value value) {
       if (dfcSid07Builder_ == null) {
-        if (dfcSid07_ != null) {
-          dfcSid07_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid07_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000100) != 0) &&
+          dfcSid07_ != null &&
+          dfcSid07_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid07Builder().mergeFrom(value);
         } else {
           dfcSid07_ = value;
         }
-        onChanged();
       } else {
         dfcSid07Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid07 = 11 [json_name = "dfcSid07"];</code>
      */
     public Builder clearDfcSid07() {
-      if (dfcSid07Builder_ == null) {
-        dfcSid07_ = null;
-        onChanged();
-      } else {
-        dfcSid07_ = null;
+      bitField0_ = (bitField0_ & ~0x00000100);
+      dfcSid07_ = null;
+      if (dfcSid07Builder_ != null) {
+        dfcSid07Builder_.dispose();
         dfcSid07Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid07 = 11 [json_name = "dfcSid07"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid07Builder() {
-      
+      bitField0_ |= 0x00000100;
       onChanged();
       return getDfcSid07FieldBuilder().getBuilder();
     }
@@ -3406,7 +3175,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid08 field is set.
      */
     public boolean hasDfcSid08() {
-      return dfcSid08Builder_ != null || dfcSid08_ != null;
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid08 = 12 [json_name = "dfcSid08"];</code>
@@ -3428,11 +3197,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid08_ = value;
-        onChanged();
       } else {
         dfcSid08Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
@@ -3442,11 +3211,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid08Builder_ == null) {
         dfcSid08_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid08Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
@@ -3454,38 +3223,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid08(com.google.protobuf.Int32Value value) {
       if (dfcSid08Builder_ == null) {
-        if (dfcSid08_ != null) {
-          dfcSid08_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid08_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000200) != 0) &&
+          dfcSid08_ != null &&
+          dfcSid08_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid08Builder().mergeFrom(value);
         } else {
           dfcSid08_ = value;
         }
-        onChanged();
       } else {
         dfcSid08Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid08 = 12 [json_name = "dfcSid08"];</code>
      */
     public Builder clearDfcSid08() {
-      if (dfcSid08Builder_ == null) {
-        dfcSid08_ = null;
-        onChanged();
-      } else {
-        dfcSid08_ = null;
+      bitField0_ = (bitField0_ & ~0x00000200);
+      dfcSid08_ = null;
+      if (dfcSid08Builder_ != null) {
+        dfcSid08Builder_.dispose();
         dfcSid08Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid08 = 12 [json_name = "dfcSid08"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid08Builder() {
-      
+      bitField0_ |= 0x00000200;
       onChanged();
       return getDfcSid08FieldBuilder().getBuilder();
     }
@@ -3525,7 +3294,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid09 field is set.
      */
     public boolean hasDfcSid09() {
-      return dfcSid09Builder_ != null || dfcSid09_ != null;
+      return ((bitField0_ & 0x00000400) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid09 = 13 [json_name = "dfcSid09"];</code>
@@ -3547,11 +3316,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid09_ = value;
-        onChanged();
       } else {
         dfcSid09Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000400;
+      onChanged();
       return this;
     }
     /**
@@ -3561,11 +3330,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid09Builder_ == null) {
         dfcSid09_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid09Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000400;
+      onChanged();
       return this;
     }
     /**
@@ -3573,38 +3342,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid09(com.google.protobuf.Int32Value value) {
       if (dfcSid09Builder_ == null) {
-        if (dfcSid09_ != null) {
-          dfcSid09_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid09_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000400) != 0) &&
+          dfcSid09_ != null &&
+          dfcSid09_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid09Builder().mergeFrom(value);
         } else {
           dfcSid09_ = value;
         }
-        onChanged();
       } else {
         dfcSid09Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000400;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid09 = 13 [json_name = "dfcSid09"];</code>
      */
     public Builder clearDfcSid09() {
-      if (dfcSid09Builder_ == null) {
-        dfcSid09_ = null;
-        onChanged();
-      } else {
-        dfcSid09_ = null;
+      bitField0_ = (bitField0_ & ~0x00000400);
+      dfcSid09_ = null;
+      if (dfcSid09Builder_ != null) {
+        dfcSid09Builder_.dispose();
         dfcSid09Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid09 = 13 [json_name = "dfcSid09"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid09Builder() {
-      
+      bitField0_ |= 0x00000400;
       onChanged();
       return getDfcSid09FieldBuilder().getBuilder();
     }
@@ -3644,7 +3413,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid10 field is set.
      */
     public boolean hasDfcSid10() {
-      return dfcSid10Builder_ != null || dfcSid10_ != null;
+      return ((bitField0_ & 0x00000800) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid10 = 14 [json_name = "dfcSid10"];</code>
@@ -3666,11 +3435,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid10_ = value;
-        onChanged();
       } else {
         dfcSid10Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -3680,11 +3449,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid10Builder_ == null) {
         dfcSid10_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid10Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -3692,38 +3461,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid10(com.google.protobuf.Int32Value value) {
       if (dfcSid10Builder_ == null) {
-        if (dfcSid10_ != null) {
-          dfcSid10_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid10_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000800) != 0) &&
+          dfcSid10_ != null &&
+          dfcSid10_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid10Builder().mergeFrom(value);
         } else {
           dfcSid10_ = value;
         }
-        onChanged();
       } else {
         dfcSid10Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid10 = 14 [json_name = "dfcSid10"];</code>
      */
     public Builder clearDfcSid10() {
-      if (dfcSid10Builder_ == null) {
-        dfcSid10_ = null;
-        onChanged();
-      } else {
-        dfcSid10_ = null;
+      bitField0_ = (bitField0_ & ~0x00000800);
+      dfcSid10_ = null;
+      if (dfcSid10Builder_ != null) {
+        dfcSid10Builder_.dispose();
         dfcSid10Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid10 = 14 [json_name = "dfcSid10"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid10Builder() {
-      
+      bitField0_ |= 0x00000800;
       onChanged();
       return getDfcSid10FieldBuilder().getBuilder();
     }
@@ -3763,7 +3532,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid11 field is set.
      */
     public boolean hasDfcSid11() {
-      return dfcSid11Builder_ != null || dfcSid11_ != null;
+      return ((bitField0_ & 0x00001000) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid11 = 15 [json_name = "dfcSid11"];</code>
@@ -3785,11 +3554,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid11_ = value;
-        onChanged();
       } else {
         dfcSid11Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00001000;
+      onChanged();
       return this;
     }
     /**
@@ -3799,11 +3568,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid11Builder_ == null) {
         dfcSid11_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid11Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00001000;
+      onChanged();
       return this;
     }
     /**
@@ -3811,38 +3580,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid11(com.google.protobuf.Int32Value value) {
       if (dfcSid11Builder_ == null) {
-        if (dfcSid11_ != null) {
-          dfcSid11_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid11_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00001000) != 0) &&
+          dfcSid11_ != null &&
+          dfcSid11_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid11Builder().mergeFrom(value);
         } else {
           dfcSid11_ = value;
         }
-        onChanged();
       } else {
         dfcSid11Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00001000;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid11 = 15 [json_name = "dfcSid11"];</code>
      */
     public Builder clearDfcSid11() {
-      if (dfcSid11Builder_ == null) {
-        dfcSid11_ = null;
-        onChanged();
-      } else {
-        dfcSid11_ = null;
+      bitField0_ = (bitField0_ & ~0x00001000);
+      dfcSid11_ = null;
+      if (dfcSid11Builder_ != null) {
+        dfcSid11Builder_.dispose();
         dfcSid11Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid11 = 15 [json_name = "dfcSid11"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid11Builder() {
-      
+      bitField0_ |= 0x00001000;
       onChanged();
       return getDfcSid11FieldBuilder().getBuilder();
     }
@@ -3882,7 +3651,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid12 field is set.
      */
     public boolean hasDfcSid12() {
-      return dfcSid12Builder_ != null || dfcSid12_ != null;
+      return ((bitField0_ & 0x00002000) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid12 = 16 [json_name = "dfcSid12"];</code>
@@ -3904,11 +3673,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid12_ = value;
-        onChanged();
       } else {
         dfcSid12Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
@@ -3918,11 +3687,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid12Builder_ == null) {
         dfcSid12_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid12Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
@@ -3930,38 +3699,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid12(com.google.protobuf.Int32Value value) {
       if (dfcSid12Builder_ == null) {
-        if (dfcSid12_ != null) {
-          dfcSid12_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid12_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00002000) != 0) &&
+          dfcSid12_ != null &&
+          dfcSid12_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid12Builder().mergeFrom(value);
         } else {
           dfcSid12_ = value;
         }
-        onChanged();
       } else {
         dfcSid12Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid12 = 16 [json_name = "dfcSid12"];</code>
      */
     public Builder clearDfcSid12() {
-      if (dfcSid12Builder_ == null) {
-        dfcSid12_ = null;
-        onChanged();
-      } else {
-        dfcSid12_ = null;
+      bitField0_ = (bitField0_ & ~0x00002000);
+      dfcSid12_ = null;
+      if (dfcSid12Builder_ != null) {
+        dfcSid12Builder_.dispose();
         dfcSid12Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid12 = 16 [json_name = "dfcSid12"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid12Builder() {
-      
+      bitField0_ |= 0x00002000;
       onChanged();
       return getDfcSid12FieldBuilder().getBuilder();
     }
@@ -4001,7 +3770,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid13 field is set.
      */
     public boolean hasDfcSid13() {
-      return dfcSid13Builder_ != null || dfcSid13_ != null;
+      return ((bitField0_ & 0x00004000) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid13 = 17 [json_name = "dfcSid13"];</code>
@@ -4023,11 +3792,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid13_ = value;
-        onChanged();
       } else {
         dfcSid13Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00004000;
+      onChanged();
       return this;
     }
     /**
@@ -4037,11 +3806,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid13Builder_ == null) {
         dfcSid13_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid13Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00004000;
+      onChanged();
       return this;
     }
     /**
@@ -4049,38 +3818,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid13(com.google.protobuf.Int32Value value) {
       if (dfcSid13Builder_ == null) {
-        if (dfcSid13_ != null) {
-          dfcSid13_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid13_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00004000) != 0) &&
+          dfcSid13_ != null &&
+          dfcSid13_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid13Builder().mergeFrom(value);
         } else {
           dfcSid13_ = value;
         }
-        onChanged();
       } else {
         dfcSid13Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00004000;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid13 = 17 [json_name = "dfcSid13"];</code>
      */
     public Builder clearDfcSid13() {
-      if (dfcSid13Builder_ == null) {
-        dfcSid13_ = null;
-        onChanged();
-      } else {
-        dfcSid13_ = null;
+      bitField0_ = (bitField0_ & ~0x00004000);
+      dfcSid13_ = null;
+      if (dfcSid13Builder_ != null) {
+        dfcSid13Builder_.dispose();
         dfcSid13Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid13 = 17 [json_name = "dfcSid13"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid13Builder() {
-      
+      bitField0_ |= 0x00004000;
       onChanged();
       return getDfcSid13FieldBuilder().getBuilder();
     }
@@ -4120,7 +3889,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid14 field is set.
      */
     public boolean hasDfcSid14() {
-      return dfcSid14Builder_ != null || dfcSid14_ != null;
+      return ((bitField0_ & 0x00008000) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid14 = 18 [json_name = "dfcSid14"];</code>
@@ -4142,11 +3911,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid14_ = value;
-        onChanged();
       } else {
         dfcSid14Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00008000;
+      onChanged();
       return this;
     }
     /**
@@ -4156,11 +3925,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid14Builder_ == null) {
         dfcSid14_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid14Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00008000;
+      onChanged();
       return this;
     }
     /**
@@ -4168,38 +3937,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid14(com.google.protobuf.Int32Value value) {
       if (dfcSid14Builder_ == null) {
-        if (dfcSid14_ != null) {
-          dfcSid14_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid14_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00008000) != 0) &&
+          dfcSid14_ != null &&
+          dfcSid14_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid14Builder().mergeFrom(value);
         } else {
           dfcSid14_ = value;
         }
-        onChanged();
       } else {
         dfcSid14Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00008000;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid14 = 18 [json_name = "dfcSid14"];</code>
      */
     public Builder clearDfcSid14() {
-      if (dfcSid14Builder_ == null) {
-        dfcSid14_ = null;
-        onChanged();
-      } else {
-        dfcSid14_ = null;
+      bitField0_ = (bitField0_ & ~0x00008000);
+      dfcSid14_ = null;
+      if (dfcSid14Builder_ != null) {
+        dfcSid14Builder_.dispose();
         dfcSid14Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid14 = 18 [json_name = "dfcSid14"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid14Builder() {
-      
+      bitField0_ |= 0x00008000;
       onChanged();
       return getDfcSid14FieldBuilder().getBuilder();
     }
@@ -4239,7 +4008,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid15 field is set.
      */
     public boolean hasDfcSid15() {
-      return dfcSid15Builder_ != null || dfcSid15_ != null;
+      return ((bitField0_ & 0x00010000) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid15 = 19 [json_name = "dfcSid15"];</code>
@@ -4261,11 +4030,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid15_ = value;
-        onChanged();
       } else {
         dfcSid15Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00010000;
+      onChanged();
       return this;
     }
     /**
@@ -4275,11 +4044,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid15Builder_ == null) {
         dfcSid15_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid15Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00010000;
+      onChanged();
       return this;
     }
     /**
@@ -4287,38 +4056,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid15(com.google.protobuf.Int32Value value) {
       if (dfcSid15Builder_ == null) {
-        if (dfcSid15_ != null) {
-          dfcSid15_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid15_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00010000) != 0) &&
+          dfcSid15_ != null &&
+          dfcSid15_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid15Builder().mergeFrom(value);
         } else {
           dfcSid15_ = value;
         }
-        onChanged();
       } else {
         dfcSid15Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00010000;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid15 = 19 [json_name = "dfcSid15"];</code>
      */
     public Builder clearDfcSid15() {
-      if (dfcSid15Builder_ == null) {
-        dfcSid15_ = null;
-        onChanged();
-      } else {
-        dfcSid15_ = null;
+      bitField0_ = (bitField0_ & ~0x00010000);
+      dfcSid15_ = null;
+      if (dfcSid15Builder_ != null) {
+        dfcSid15Builder_.dispose();
         dfcSid15Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid15 = 19 [json_name = "dfcSid15"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid15Builder() {
-      
+      bitField0_ |= 0x00010000;
       onChanged();
       return getDfcSid15FieldBuilder().getBuilder();
     }
@@ -4358,7 +4127,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid16 field is set.
      */
     public boolean hasDfcSid16() {
-      return dfcSid16Builder_ != null || dfcSid16_ != null;
+      return ((bitField0_ & 0x00020000) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid16 = 20 [json_name = "dfcSid16"];</code>
@@ -4380,11 +4149,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid16_ = value;
-        onChanged();
       } else {
         dfcSid16Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00020000;
+      onChanged();
       return this;
     }
     /**
@@ -4394,11 +4163,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid16Builder_ == null) {
         dfcSid16_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid16Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00020000;
+      onChanged();
       return this;
     }
     /**
@@ -4406,38 +4175,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid16(com.google.protobuf.Int32Value value) {
       if (dfcSid16Builder_ == null) {
-        if (dfcSid16_ != null) {
-          dfcSid16_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid16_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00020000) != 0) &&
+          dfcSid16_ != null &&
+          dfcSid16_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid16Builder().mergeFrom(value);
         } else {
           dfcSid16_ = value;
         }
-        onChanged();
       } else {
         dfcSid16Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00020000;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid16 = 20 [json_name = "dfcSid16"];</code>
      */
     public Builder clearDfcSid16() {
-      if (dfcSid16Builder_ == null) {
-        dfcSid16_ = null;
-        onChanged();
-      } else {
-        dfcSid16_ = null;
+      bitField0_ = (bitField0_ & ~0x00020000);
+      dfcSid16_ = null;
+      if (dfcSid16Builder_ != null) {
+        dfcSid16Builder_.dispose();
         dfcSid16Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid16 = 20 [json_name = "dfcSid16"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid16Builder() {
-      
+      bitField0_ |= 0x00020000;
       onChanged();
       return getDfcSid16FieldBuilder().getBuilder();
     }
@@ -4477,7 +4246,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid17 field is set.
      */
     public boolean hasDfcSid17() {
-      return dfcSid17Builder_ != null || dfcSid17_ != null;
+      return ((bitField0_ & 0x00040000) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid17 = 21 [json_name = "dfcSid17"];</code>
@@ -4499,11 +4268,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid17_ = value;
-        onChanged();
       } else {
         dfcSid17Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00040000;
+      onChanged();
       return this;
     }
     /**
@@ -4513,11 +4282,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid17Builder_ == null) {
         dfcSid17_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid17Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00040000;
+      onChanged();
       return this;
     }
     /**
@@ -4525,38 +4294,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid17(com.google.protobuf.Int32Value value) {
       if (dfcSid17Builder_ == null) {
-        if (dfcSid17_ != null) {
-          dfcSid17_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid17_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00040000) != 0) &&
+          dfcSid17_ != null &&
+          dfcSid17_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid17Builder().mergeFrom(value);
         } else {
           dfcSid17_ = value;
         }
-        onChanged();
       } else {
         dfcSid17Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00040000;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid17 = 21 [json_name = "dfcSid17"];</code>
      */
     public Builder clearDfcSid17() {
-      if (dfcSid17Builder_ == null) {
-        dfcSid17_ = null;
-        onChanged();
-      } else {
-        dfcSid17_ = null;
+      bitField0_ = (bitField0_ & ~0x00040000);
+      dfcSid17_ = null;
+      if (dfcSid17Builder_ != null) {
+        dfcSid17Builder_.dispose();
         dfcSid17Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid17 = 21 [json_name = "dfcSid17"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid17Builder() {
-      
+      bitField0_ |= 0x00040000;
       onChanged();
       return getDfcSid17FieldBuilder().getBuilder();
     }
@@ -4596,7 +4365,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid18 field is set.
      */
     public boolean hasDfcSid18() {
-      return dfcSid18Builder_ != null || dfcSid18_ != null;
+      return ((bitField0_ & 0x00080000) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid18 = 22 [json_name = "dfcSid18"];</code>
@@ -4618,11 +4387,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid18_ = value;
-        onChanged();
       } else {
         dfcSid18Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00080000;
+      onChanged();
       return this;
     }
     /**
@@ -4632,11 +4401,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid18Builder_ == null) {
         dfcSid18_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid18Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00080000;
+      onChanged();
       return this;
     }
     /**
@@ -4644,38 +4413,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid18(com.google.protobuf.Int32Value value) {
       if (dfcSid18Builder_ == null) {
-        if (dfcSid18_ != null) {
-          dfcSid18_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid18_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00080000) != 0) &&
+          dfcSid18_ != null &&
+          dfcSid18_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid18Builder().mergeFrom(value);
         } else {
           dfcSid18_ = value;
         }
-        onChanged();
       } else {
         dfcSid18Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00080000;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid18 = 22 [json_name = "dfcSid18"];</code>
      */
     public Builder clearDfcSid18() {
-      if (dfcSid18Builder_ == null) {
-        dfcSid18_ = null;
-        onChanged();
-      } else {
-        dfcSid18_ = null;
+      bitField0_ = (bitField0_ & ~0x00080000);
+      dfcSid18_ = null;
+      if (dfcSid18Builder_ != null) {
+        dfcSid18Builder_.dispose();
         dfcSid18Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid18 = 22 [json_name = "dfcSid18"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid18Builder() {
-      
+      bitField0_ |= 0x00080000;
       onChanged();
       return getDfcSid18FieldBuilder().getBuilder();
     }
@@ -4715,7 +4484,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid19 field is set.
      */
     public boolean hasDfcSid19() {
-      return dfcSid19Builder_ != null || dfcSid19_ != null;
+      return ((bitField0_ & 0x00100000) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid19 = 23 [json_name = "dfcSid19"];</code>
@@ -4737,11 +4506,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid19_ = value;
-        onChanged();
       } else {
         dfcSid19Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00100000;
+      onChanged();
       return this;
     }
     /**
@@ -4751,11 +4520,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid19Builder_ == null) {
         dfcSid19_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid19Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00100000;
+      onChanged();
       return this;
     }
     /**
@@ -4763,38 +4532,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid19(com.google.protobuf.Int32Value value) {
       if (dfcSid19Builder_ == null) {
-        if (dfcSid19_ != null) {
-          dfcSid19_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid19_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00100000) != 0) &&
+          dfcSid19_ != null &&
+          dfcSid19_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid19Builder().mergeFrom(value);
         } else {
           dfcSid19_ = value;
         }
-        onChanged();
       } else {
         dfcSid19Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00100000;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid19 = 23 [json_name = "dfcSid19"];</code>
      */
     public Builder clearDfcSid19() {
-      if (dfcSid19Builder_ == null) {
-        dfcSid19_ = null;
-        onChanged();
-      } else {
-        dfcSid19_ = null;
+      bitField0_ = (bitField0_ & ~0x00100000);
+      dfcSid19_ = null;
+      if (dfcSid19Builder_ != null) {
+        dfcSid19Builder_.dispose();
         dfcSid19Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid19 = 23 [json_name = "dfcSid19"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid19Builder() {
-      
+      bitField0_ |= 0x00100000;
       onChanged();
       return getDfcSid19FieldBuilder().getBuilder();
     }
@@ -4834,7 +4603,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid20 field is set.
      */
     public boolean hasDfcSid20() {
-      return dfcSid20Builder_ != null || dfcSid20_ != null;
+      return ((bitField0_ & 0x00200000) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid20 = 24 [json_name = "dfcSid20"];</code>
@@ -4856,11 +4625,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid20_ = value;
-        onChanged();
       } else {
         dfcSid20Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00200000;
+      onChanged();
       return this;
     }
     /**
@@ -4870,11 +4639,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid20Builder_ == null) {
         dfcSid20_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid20Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00200000;
+      onChanged();
       return this;
     }
     /**
@@ -4882,38 +4651,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid20(com.google.protobuf.Int32Value value) {
       if (dfcSid20Builder_ == null) {
-        if (dfcSid20_ != null) {
-          dfcSid20_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid20_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00200000) != 0) &&
+          dfcSid20_ != null &&
+          dfcSid20_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid20Builder().mergeFrom(value);
         } else {
           dfcSid20_ = value;
         }
-        onChanged();
       } else {
         dfcSid20Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00200000;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid20 = 24 [json_name = "dfcSid20"];</code>
      */
     public Builder clearDfcSid20() {
-      if (dfcSid20Builder_ == null) {
-        dfcSid20_ = null;
-        onChanged();
-      } else {
-        dfcSid20_ = null;
+      bitField0_ = (bitField0_ & ~0x00200000);
+      dfcSid20_ = null;
+      if (dfcSid20Builder_ != null) {
+        dfcSid20Builder_.dispose();
         dfcSid20Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid20 = 24 [json_name = "dfcSid20"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid20Builder() {
-      
+      bitField0_ |= 0x00200000;
       onChanged();
       return getDfcSid20FieldBuilder().getBuilder();
     }
@@ -4953,7 +4722,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid21 field is set.
      */
     public boolean hasDfcSid21() {
-      return dfcSid21Builder_ != null || dfcSid21_ != null;
+      return ((bitField0_ & 0x00400000) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid21 = 25 [json_name = "dfcSid21"];</code>
@@ -4975,11 +4744,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid21_ = value;
-        onChanged();
       } else {
         dfcSid21Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00400000;
+      onChanged();
       return this;
     }
     /**
@@ -4989,11 +4758,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid21Builder_ == null) {
         dfcSid21_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid21Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00400000;
+      onChanged();
       return this;
     }
     /**
@@ -5001,38 +4770,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid21(com.google.protobuf.Int32Value value) {
       if (dfcSid21Builder_ == null) {
-        if (dfcSid21_ != null) {
-          dfcSid21_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid21_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00400000) != 0) &&
+          dfcSid21_ != null &&
+          dfcSid21_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid21Builder().mergeFrom(value);
         } else {
           dfcSid21_ = value;
         }
-        onChanged();
       } else {
         dfcSid21Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00400000;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid21 = 25 [json_name = "dfcSid21"];</code>
      */
     public Builder clearDfcSid21() {
-      if (dfcSid21Builder_ == null) {
-        dfcSid21_ = null;
-        onChanged();
-      } else {
-        dfcSid21_ = null;
+      bitField0_ = (bitField0_ & ~0x00400000);
+      dfcSid21_ = null;
+      if (dfcSid21Builder_ != null) {
+        dfcSid21Builder_.dispose();
         dfcSid21Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid21 = 25 [json_name = "dfcSid21"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid21Builder() {
-      
+      bitField0_ |= 0x00400000;
       onChanged();
       return getDfcSid21FieldBuilder().getBuilder();
     }
@@ -5072,7 +4841,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid22 field is set.
      */
     public boolean hasDfcSid22() {
-      return dfcSid22Builder_ != null || dfcSid22_ != null;
+      return ((bitField0_ & 0x00800000) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid22 = 26 [json_name = "dfcSid22"];</code>
@@ -5094,11 +4863,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid22_ = value;
-        onChanged();
       } else {
         dfcSid22Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00800000;
+      onChanged();
       return this;
     }
     /**
@@ -5108,11 +4877,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid22Builder_ == null) {
         dfcSid22_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid22Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00800000;
+      onChanged();
       return this;
     }
     /**
@@ -5120,38 +4889,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid22(com.google.protobuf.Int32Value value) {
       if (dfcSid22Builder_ == null) {
-        if (dfcSid22_ != null) {
-          dfcSid22_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid22_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00800000) != 0) &&
+          dfcSid22_ != null &&
+          dfcSid22_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid22Builder().mergeFrom(value);
         } else {
           dfcSid22_ = value;
         }
-        onChanged();
       } else {
         dfcSid22Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00800000;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid22 = 26 [json_name = "dfcSid22"];</code>
      */
     public Builder clearDfcSid22() {
-      if (dfcSid22Builder_ == null) {
-        dfcSid22_ = null;
-        onChanged();
-      } else {
-        dfcSid22_ = null;
+      bitField0_ = (bitField0_ & ~0x00800000);
+      dfcSid22_ = null;
+      if (dfcSid22Builder_ != null) {
+        dfcSid22Builder_.dispose();
         dfcSid22Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid22 = 26 [json_name = "dfcSid22"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid22Builder() {
-      
+      bitField0_ |= 0x00800000;
       onChanged();
       return getDfcSid22FieldBuilder().getBuilder();
     }
@@ -5191,7 +4960,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid23 field is set.
      */
     public boolean hasDfcSid23() {
-      return dfcSid23Builder_ != null || dfcSid23_ != null;
+      return ((bitField0_ & 0x01000000) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid23 = 27 [json_name = "dfcSid23"];</code>
@@ -5213,11 +4982,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid23_ = value;
-        onChanged();
       } else {
         dfcSid23Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x01000000;
+      onChanged();
       return this;
     }
     /**
@@ -5227,11 +4996,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid23Builder_ == null) {
         dfcSid23_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid23Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x01000000;
+      onChanged();
       return this;
     }
     /**
@@ -5239,38 +5008,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid23(com.google.protobuf.Int32Value value) {
       if (dfcSid23Builder_ == null) {
-        if (dfcSid23_ != null) {
-          dfcSid23_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid23_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x01000000) != 0) &&
+          dfcSid23_ != null &&
+          dfcSid23_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid23Builder().mergeFrom(value);
         } else {
           dfcSid23_ = value;
         }
-        onChanged();
       } else {
         dfcSid23Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x01000000;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid23 = 27 [json_name = "dfcSid23"];</code>
      */
     public Builder clearDfcSid23() {
-      if (dfcSid23Builder_ == null) {
-        dfcSid23_ = null;
-        onChanged();
-      } else {
-        dfcSid23_ = null;
+      bitField0_ = (bitField0_ & ~0x01000000);
+      dfcSid23_ = null;
+      if (dfcSid23Builder_ != null) {
+        dfcSid23Builder_.dispose();
         dfcSid23Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid23 = 27 [json_name = "dfcSid23"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid23Builder() {
-      
+      bitField0_ |= 0x01000000;
       onChanged();
       return getDfcSid23FieldBuilder().getBuilder();
     }
@@ -5310,7 +5079,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid24 field is set.
      */
     public boolean hasDfcSid24() {
-      return dfcSid24Builder_ != null || dfcSid24_ != null;
+      return ((bitField0_ & 0x02000000) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid24 = 28 [json_name = "dfcSid24"];</code>
@@ -5332,11 +5101,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid24_ = value;
-        onChanged();
       } else {
         dfcSid24Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x02000000;
+      onChanged();
       return this;
     }
     /**
@@ -5346,11 +5115,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid24Builder_ == null) {
         dfcSid24_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid24Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x02000000;
+      onChanged();
       return this;
     }
     /**
@@ -5358,38 +5127,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid24(com.google.protobuf.Int32Value value) {
       if (dfcSid24Builder_ == null) {
-        if (dfcSid24_ != null) {
-          dfcSid24_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid24_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x02000000) != 0) &&
+          dfcSid24_ != null &&
+          dfcSid24_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid24Builder().mergeFrom(value);
         } else {
           dfcSid24_ = value;
         }
-        onChanged();
       } else {
         dfcSid24Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x02000000;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid24 = 28 [json_name = "dfcSid24"];</code>
      */
     public Builder clearDfcSid24() {
-      if (dfcSid24Builder_ == null) {
-        dfcSid24_ = null;
-        onChanged();
-      } else {
-        dfcSid24_ = null;
+      bitField0_ = (bitField0_ & ~0x02000000);
+      dfcSid24_ = null;
+      if (dfcSid24Builder_ != null) {
+        dfcSid24Builder_.dispose();
         dfcSid24Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid24 = 28 [json_name = "dfcSid24"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid24Builder() {
-      
+      bitField0_ |= 0x02000000;
       onChanged();
       return getDfcSid24FieldBuilder().getBuilder();
     }
@@ -5429,7 +5198,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid25 field is set.
      */
     public boolean hasDfcSid25() {
-      return dfcSid25Builder_ != null || dfcSid25_ != null;
+      return ((bitField0_ & 0x04000000) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid25 = 29 [json_name = "dfcSid25"];</code>
@@ -5451,11 +5220,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid25_ = value;
-        onChanged();
       } else {
         dfcSid25Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x04000000;
+      onChanged();
       return this;
     }
     /**
@@ -5465,11 +5234,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid25Builder_ == null) {
         dfcSid25_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid25Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x04000000;
+      onChanged();
       return this;
     }
     /**
@@ -5477,38 +5246,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid25(com.google.protobuf.Int32Value value) {
       if (dfcSid25Builder_ == null) {
-        if (dfcSid25_ != null) {
-          dfcSid25_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid25_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x04000000) != 0) &&
+          dfcSid25_ != null &&
+          dfcSid25_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid25Builder().mergeFrom(value);
         } else {
           dfcSid25_ = value;
         }
-        onChanged();
       } else {
         dfcSid25Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x04000000;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid25 = 29 [json_name = "dfcSid25"];</code>
      */
     public Builder clearDfcSid25() {
-      if (dfcSid25Builder_ == null) {
-        dfcSid25_ = null;
-        onChanged();
-      } else {
-        dfcSid25_ = null;
+      bitField0_ = (bitField0_ & ~0x04000000);
+      dfcSid25_ = null;
+      if (dfcSid25Builder_ != null) {
+        dfcSid25Builder_.dispose();
         dfcSid25Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid25 = 29 [json_name = "dfcSid25"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid25Builder() {
-      
+      bitField0_ |= 0x04000000;
       onChanged();
       return getDfcSid25FieldBuilder().getBuilder();
     }
@@ -5548,7 +5317,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid26 field is set.
      */
     public boolean hasDfcSid26() {
-      return dfcSid26Builder_ != null || dfcSid26_ != null;
+      return ((bitField0_ & 0x08000000) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid26 = 30 [json_name = "dfcSid26"];</code>
@@ -5570,11 +5339,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid26_ = value;
-        onChanged();
       } else {
         dfcSid26Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x08000000;
+      onChanged();
       return this;
     }
     /**
@@ -5584,11 +5353,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid26Builder_ == null) {
         dfcSid26_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid26Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x08000000;
+      onChanged();
       return this;
     }
     /**
@@ -5596,38 +5365,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid26(com.google.protobuf.Int32Value value) {
       if (dfcSid26Builder_ == null) {
-        if (dfcSid26_ != null) {
-          dfcSid26_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid26_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x08000000) != 0) &&
+          dfcSid26_ != null &&
+          dfcSid26_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid26Builder().mergeFrom(value);
         } else {
           dfcSid26_ = value;
         }
-        onChanged();
       } else {
         dfcSid26Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x08000000;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid26 = 30 [json_name = "dfcSid26"];</code>
      */
     public Builder clearDfcSid26() {
-      if (dfcSid26Builder_ == null) {
-        dfcSid26_ = null;
-        onChanged();
-      } else {
-        dfcSid26_ = null;
+      bitField0_ = (bitField0_ & ~0x08000000);
+      dfcSid26_ = null;
+      if (dfcSid26Builder_ != null) {
+        dfcSid26Builder_.dispose();
         dfcSid26Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid26 = 30 [json_name = "dfcSid26"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid26Builder() {
-      
+      bitField0_ |= 0x08000000;
       onChanged();
       return getDfcSid26FieldBuilder().getBuilder();
     }
@@ -5667,7 +5436,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid27 field is set.
      */
     public boolean hasDfcSid27() {
-      return dfcSid27Builder_ != null || dfcSid27_ != null;
+      return ((bitField0_ & 0x10000000) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid27 = 31 [json_name = "dfcSid27"];</code>
@@ -5689,11 +5458,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid27_ = value;
-        onChanged();
       } else {
         dfcSid27Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x10000000;
+      onChanged();
       return this;
     }
     /**
@@ -5703,11 +5472,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid27Builder_ == null) {
         dfcSid27_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid27Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x10000000;
+      onChanged();
       return this;
     }
     /**
@@ -5715,38 +5484,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid27(com.google.protobuf.Int32Value value) {
       if (dfcSid27Builder_ == null) {
-        if (dfcSid27_ != null) {
-          dfcSid27_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid27_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x10000000) != 0) &&
+          dfcSid27_ != null &&
+          dfcSid27_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid27Builder().mergeFrom(value);
         } else {
           dfcSid27_ = value;
         }
-        onChanged();
       } else {
         dfcSid27Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x10000000;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid27 = 31 [json_name = "dfcSid27"];</code>
      */
     public Builder clearDfcSid27() {
-      if (dfcSid27Builder_ == null) {
-        dfcSid27_ = null;
-        onChanged();
-      } else {
-        dfcSid27_ = null;
+      bitField0_ = (bitField0_ & ~0x10000000);
+      dfcSid27_ = null;
+      if (dfcSid27Builder_ != null) {
+        dfcSid27Builder_.dispose();
         dfcSid27Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid27 = 31 [json_name = "dfcSid27"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid27Builder() {
-      
+      bitField0_ |= 0x10000000;
       onChanged();
       return getDfcSid27FieldBuilder().getBuilder();
     }
@@ -5786,7 +5555,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid28 field is set.
      */
     public boolean hasDfcSid28() {
-      return dfcSid28Builder_ != null || dfcSid28_ != null;
+      return ((bitField0_ & 0x20000000) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid28 = 32 [json_name = "dfcSid28"];</code>
@@ -5808,11 +5577,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid28_ = value;
-        onChanged();
       } else {
         dfcSid28Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x20000000;
+      onChanged();
       return this;
     }
     /**
@@ -5822,11 +5591,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid28Builder_ == null) {
         dfcSid28_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid28Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x20000000;
+      onChanged();
       return this;
     }
     /**
@@ -5834,38 +5603,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid28(com.google.protobuf.Int32Value value) {
       if (dfcSid28Builder_ == null) {
-        if (dfcSid28_ != null) {
-          dfcSid28_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid28_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x20000000) != 0) &&
+          dfcSid28_ != null &&
+          dfcSid28_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid28Builder().mergeFrom(value);
         } else {
           dfcSid28_ = value;
         }
-        onChanged();
       } else {
         dfcSid28Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x20000000;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid28 = 32 [json_name = "dfcSid28"];</code>
      */
     public Builder clearDfcSid28() {
-      if (dfcSid28Builder_ == null) {
-        dfcSid28_ = null;
-        onChanged();
-      } else {
-        dfcSid28_ = null;
+      bitField0_ = (bitField0_ & ~0x20000000);
+      dfcSid28_ = null;
+      if (dfcSid28Builder_ != null) {
+        dfcSid28Builder_.dispose();
         dfcSid28Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid28 = 32 [json_name = "dfcSid28"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid28Builder() {
-      
+      bitField0_ |= 0x20000000;
       onChanged();
       return getDfcSid28FieldBuilder().getBuilder();
     }
@@ -5905,7 +5674,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid29 field is set.
      */
     public boolean hasDfcSid29() {
-      return dfcSid29Builder_ != null || dfcSid29_ != null;
+      return ((bitField0_ & 0x40000000) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid29 = 33 [json_name = "dfcSid29"];</code>
@@ -5927,11 +5696,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid29_ = value;
-        onChanged();
       } else {
         dfcSid29Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x40000000;
+      onChanged();
       return this;
     }
     /**
@@ -5941,11 +5710,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid29Builder_ == null) {
         dfcSid29_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid29Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x40000000;
+      onChanged();
       return this;
     }
     /**
@@ -5953,38 +5722,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid29(com.google.protobuf.Int32Value value) {
       if (dfcSid29Builder_ == null) {
-        if (dfcSid29_ != null) {
-          dfcSid29_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid29_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x40000000) != 0) &&
+          dfcSid29_ != null &&
+          dfcSid29_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid29Builder().mergeFrom(value);
         } else {
           dfcSid29_ = value;
         }
-        onChanged();
       } else {
         dfcSid29Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x40000000;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid29 = 33 [json_name = "dfcSid29"];</code>
      */
     public Builder clearDfcSid29() {
-      if (dfcSid29Builder_ == null) {
-        dfcSid29_ = null;
-        onChanged();
-      } else {
-        dfcSid29_ = null;
+      bitField0_ = (bitField0_ & ~0x40000000);
+      dfcSid29_ = null;
+      if (dfcSid29Builder_ != null) {
+        dfcSid29Builder_.dispose();
         dfcSid29Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid29 = 33 [json_name = "dfcSid29"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid29Builder() {
-      
+      bitField0_ |= 0x40000000;
       onChanged();
       return getDfcSid29FieldBuilder().getBuilder();
     }
@@ -6024,7 +5793,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dfcSid30 field is set.
      */
     public boolean hasDfcSid30() {
-      return dfcSid30Builder_ != null || dfcSid30_ != null;
+      return ((bitField0_ & 0x80000000) != 0);
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid30 = 34 [json_name = "dfcSid30"];</code>
@@ -6046,11 +5815,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dfcSid30_ = value;
-        onChanged();
       } else {
         dfcSid30Builder_.setMessage(value);
       }
-
+      bitField0_ |= 0x80000000;
+      onChanged();
       return this;
     }
     /**
@@ -6060,11 +5829,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int32Value.Builder builderForValue) {
       if (dfcSid30Builder_ == null) {
         dfcSid30_ = builderForValue.build();
-        onChanged();
       } else {
         dfcSid30Builder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x80000000;
+      onChanged();
       return this;
     }
     /**
@@ -6072,38 +5841,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDfcSid30(com.google.protobuf.Int32Value value) {
       if (dfcSid30Builder_ == null) {
-        if (dfcSid30_ != null) {
-          dfcSid30_ =
-            com.google.protobuf.Int32Value.newBuilder(dfcSid30_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x80000000) != 0) &&
+          dfcSid30_ != null &&
+          dfcSid30_ != com.google.protobuf.Int32Value.getDefaultInstance()) {
+          getDfcSid30Builder().mergeFrom(value);
         } else {
           dfcSid30_ = value;
         }
-        onChanged();
       } else {
         dfcSid30Builder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x80000000;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid30 = 34 [json_name = "dfcSid30"];</code>
      */
     public Builder clearDfcSid30() {
-      if (dfcSid30Builder_ == null) {
-        dfcSid30_ = null;
-        onChanged();
-      } else {
-        dfcSid30_ = null;
+      bitField0_ = (bitField0_ & ~0x80000000);
+      dfcSid30_ = null;
+      if (dfcSid30Builder_ != null) {
+        dfcSid30Builder_.dispose();
         dfcSid30Builder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Int32Value dfc_sid30 = 34 [json_name = "dfcSid30"];</code>
      */
     public com.google.protobuf.Int32Value.Builder getDfcSid30Builder() {
-      
+      bitField0_ |= 0x80000000;
       onChanged();
       return getDfcSid30FieldBuilder().getBuilder();
     }
@@ -6167,7 +5936,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ContactSchema(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

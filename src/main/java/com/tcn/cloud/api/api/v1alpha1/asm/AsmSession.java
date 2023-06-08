@@ -25,92 +25,6 @@ private static final long serialVersionUID = 0L;
     return new AsmSession();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private AsmSession(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-
-            asmSessionSid_ = input.readInt64();
-            break;
-          }
-          case 34: {
-            com.google.protobuf.Timestamp.Builder subBuilder = null;
-            if (asmSessionStart_ != null) {
-              subBuilder = asmSessionStart_.toBuilder();
-            }
-            asmSessionStart_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(asmSessionStart_);
-              asmSessionStart_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 42: {
-            com.google.protobuf.Timestamp.Builder subBuilder = null;
-            if (asmSessionEnd_ != null) {
-              subBuilder = asmSessionEnd_.toBuilder();
-            }
-            asmSessionEnd_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(asmSessionEnd_);
-              asmSessionEnd_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 50: {
-            com.tcn.cloud.api.api.v1alpha1.asm.VoiceSession.Builder subBuilder = null;
-            if (voiceSession_ != null) {
-              subBuilder = voiceSession_.toBuilder();
-            }
-            voiceSession_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.asm.VoiceSession.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(voiceSession_);
-              voiceSession_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.asm.ServiceProto.internal_static_api_v1alpha1_asm_AsmSession_descriptor;
@@ -125,7 +39,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ASM_SESSION_SID_FIELD_NUMBER = 1;
-  private long asmSessionSid_;
+  private long asmSessionSid_ = 0L;
   /**
    * <code>int64 asm_session_sid = 1 [json_name = "asmSessionSid"];</code>
    * @return The asmSessionSid.
@@ -158,7 +72,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getAsmSessionStartOrBuilder() {
-    return getAsmSessionStart();
+    return asmSessionStart_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : asmSessionStart_;
   }
 
   public static final int ASM_SESSION_END_FIELD_NUMBER = 5;
@@ -184,7 +98,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getAsmSessionEndOrBuilder() {
-    return getAsmSessionEnd();
+    return asmSessionEnd_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : asmSessionEnd_;
   }
 
   public static final int VOICE_SESSION_FIELD_NUMBER = 6;
@@ -210,7 +124,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.asm.VoiceSessionOrBuilder getVoiceSessionOrBuilder() {
-    return getVoiceSession();
+    return voiceSession_ == null ? com.tcn.cloud.api.api.v1alpha1.asm.VoiceSession.getDefaultInstance() : voiceSession_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -239,7 +153,7 @@ private static final long serialVersionUID = 0L;
     if (voiceSession_ != null) {
       output.writeMessage(6, getVoiceSession());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -264,7 +178,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getVoiceSession());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -296,7 +210,7 @@ private static final long serialVersionUID = 0L;
       if (!getVoiceSession()
           .equals(other.getVoiceSession())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -322,7 +236,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + VOICE_SESSION_FIELD_NUMBER;
       hash = (53 * hash) + getVoiceSession().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -371,11 +285,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.asm.AsmSession parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.asm.AsmSession parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -439,40 +355,32 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.asm.AsmSession.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       asmSessionSid_ = 0L;
-
-      if (asmSessionStartBuilder_ == null) {
-        asmSessionStart_ = null;
-      } else {
-        asmSessionStart_ = null;
+      asmSessionStart_ = null;
+      if (asmSessionStartBuilder_ != null) {
+        asmSessionStartBuilder_.dispose();
         asmSessionStartBuilder_ = null;
       }
-      if (asmSessionEndBuilder_ == null) {
-        asmSessionEnd_ = null;
-      } else {
-        asmSessionEnd_ = null;
+      asmSessionEnd_ = null;
+      if (asmSessionEndBuilder_ != null) {
+        asmSessionEndBuilder_.dispose();
         asmSessionEndBuilder_ = null;
       }
-      if (voiceSessionBuilder_ == null) {
-        voiceSession_ = null;
-      } else {
-        voiceSession_ = null;
+      voiceSession_ = null;
+      if (voiceSessionBuilder_ != null) {
+        voiceSessionBuilder_.dispose();
         voiceSessionBuilder_ = null;
       }
       return this;
@@ -501,24 +409,31 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.asm.AsmSession buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.asm.AsmSession result = new com.tcn.cloud.api.api.v1alpha1.asm.AsmSession(this);
-      result.asmSessionSid_ = asmSessionSid_;
-      if (asmSessionStartBuilder_ == null) {
-        result.asmSessionStart_ = asmSessionStart_;
-      } else {
-        result.asmSessionStart_ = asmSessionStartBuilder_.build();
-      }
-      if (asmSessionEndBuilder_ == null) {
-        result.asmSessionEnd_ = asmSessionEnd_;
-      } else {
-        result.asmSessionEnd_ = asmSessionEndBuilder_.build();
-      }
-      if (voiceSessionBuilder_ == null) {
-        result.voiceSession_ = voiceSession_;
-      } else {
-        result.voiceSession_ = voiceSessionBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.asm.AsmSession result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.asmSessionSid_ = asmSessionSid_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.asmSessionStart_ = asmSessionStartBuilder_ == null
+            ? asmSessionStart_
+            : asmSessionStartBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.asmSessionEnd_ = asmSessionEndBuilder_ == null
+            ? asmSessionEnd_
+            : asmSessionEndBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.voiceSession_ = voiceSessionBuilder_ == null
+            ? voiceSession_
+            : voiceSessionBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -577,7 +492,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasVoiceSession()) {
         mergeVoiceSession(other.getVoiceSession());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -592,19 +507,59 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.asm.AsmSession parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              asmSessionSid_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 8
+            case 34: {
+              input.readMessage(
+                  getAsmSessionStartFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getAsmSessionEndFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  getVoiceSessionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 50
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.asm.AsmSession) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private long asmSessionSid_ ;
     /**
@@ -621,8 +576,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAsmSessionSid(long value) {
-      
+
       asmSessionSid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -631,7 +587,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAsmSessionSid() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       asmSessionSid_ = 0L;
       onChanged();
       return this;
@@ -645,7 +601,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the asmSessionStart field is set.
      */
     public boolean hasAsmSessionStart() {
-      return asmSessionStartBuilder_ != null || asmSessionStart_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp asm_session_start = 4 [json_name = "asmSessionStart"];</code>
@@ -667,11 +623,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         asmSessionStart_ = value;
-        onChanged();
       } else {
         asmSessionStartBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -681,11 +637,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (asmSessionStartBuilder_ == null) {
         asmSessionStart_ = builderForValue.build();
-        onChanged();
       } else {
         asmSessionStartBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -693,38 +649,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAsmSessionStart(com.google.protobuf.Timestamp value) {
       if (asmSessionStartBuilder_ == null) {
-        if (asmSessionStart_ != null) {
-          asmSessionStart_ =
-            com.google.protobuf.Timestamp.newBuilder(asmSessionStart_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          asmSessionStart_ != null &&
+          asmSessionStart_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getAsmSessionStartBuilder().mergeFrom(value);
         } else {
           asmSessionStart_ = value;
         }
-        onChanged();
       } else {
         asmSessionStartBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp asm_session_start = 4 [json_name = "asmSessionStart"];</code>
      */
     public Builder clearAsmSessionStart() {
-      if (asmSessionStartBuilder_ == null) {
-        asmSessionStart_ = null;
-        onChanged();
-      } else {
-        asmSessionStart_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      asmSessionStart_ = null;
+      if (asmSessionStartBuilder_ != null) {
+        asmSessionStartBuilder_.dispose();
         asmSessionStartBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp asm_session_start = 4 [json_name = "asmSessionStart"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getAsmSessionStartBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getAsmSessionStartFieldBuilder().getBuilder();
     }
@@ -764,7 +720,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the asmSessionEnd field is set.
      */
     public boolean hasAsmSessionEnd() {
-      return asmSessionEndBuilder_ != null || asmSessionEnd_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp asm_session_end = 5 [json_name = "asmSessionEnd"];</code>
@@ -786,11 +742,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         asmSessionEnd_ = value;
-        onChanged();
       } else {
         asmSessionEndBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -800,11 +756,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (asmSessionEndBuilder_ == null) {
         asmSessionEnd_ = builderForValue.build();
-        onChanged();
       } else {
         asmSessionEndBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -812,38 +768,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAsmSessionEnd(com.google.protobuf.Timestamp value) {
       if (asmSessionEndBuilder_ == null) {
-        if (asmSessionEnd_ != null) {
-          asmSessionEnd_ =
-            com.google.protobuf.Timestamp.newBuilder(asmSessionEnd_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          asmSessionEnd_ != null &&
+          asmSessionEnd_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getAsmSessionEndBuilder().mergeFrom(value);
         } else {
           asmSessionEnd_ = value;
         }
-        onChanged();
       } else {
         asmSessionEndBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp asm_session_end = 5 [json_name = "asmSessionEnd"];</code>
      */
     public Builder clearAsmSessionEnd() {
-      if (asmSessionEndBuilder_ == null) {
-        asmSessionEnd_ = null;
-        onChanged();
-      } else {
-        asmSessionEnd_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      asmSessionEnd_ = null;
+      if (asmSessionEndBuilder_ != null) {
+        asmSessionEndBuilder_.dispose();
         asmSessionEndBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp asm_session_end = 5 [json_name = "asmSessionEnd"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getAsmSessionEndBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getAsmSessionEndFieldBuilder().getBuilder();
     }
@@ -883,7 +839,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the voiceSession field is set.
      */
     public boolean hasVoiceSession() {
-      return voiceSessionBuilder_ != null || voiceSession_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>.api.v1alpha1.asm.VoiceSession voice_session = 6 [json_name = "voiceSession"];</code>
@@ -905,11 +861,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         voiceSession_ = value;
-        onChanged();
       } else {
         voiceSessionBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -919,11 +875,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.asm.VoiceSession.Builder builderForValue) {
       if (voiceSessionBuilder_ == null) {
         voiceSession_ = builderForValue.build();
-        onChanged();
       } else {
         voiceSessionBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -931,38 +887,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeVoiceSession(com.tcn.cloud.api.api.v1alpha1.asm.VoiceSession value) {
       if (voiceSessionBuilder_ == null) {
-        if (voiceSession_ != null) {
-          voiceSession_ =
-            com.tcn.cloud.api.api.v1alpha1.asm.VoiceSession.newBuilder(voiceSession_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000008) != 0) &&
+          voiceSession_ != null &&
+          voiceSession_ != com.tcn.cloud.api.api.v1alpha1.asm.VoiceSession.getDefaultInstance()) {
+          getVoiceSessionBuilder().mergeFrom(value);
         } else {
           voiceSession_ = value;
         }
-        onChanged();
       } else {
         voiceSessionBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v1alpha1.asm.VoiceSession voice_session = 6 [json_name = "voiceSession"];</code>
      */
     public Builder clearVoiceSession() {
-      if (voiceSessionBuilder_ == null) {
-        voiceSession_ = null;
-        onChanged();
-      } else {
-        voiceSession_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      voiceSession_ = null;
+      if (voiceSessionBuilder_ != null) {
+        voiceSessionBuilder_.dispose();
         voiceSessionBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.api.v1alpha1.asm.VoiceSession voice_session = 6 [json_name = "voiceSession"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.asm.VoiceSession.Builder getVoiceSessionBuilder() {
-      
+      bitField0_ |= 0x00000008;
       onChanged();
       return getVoiceSessionFieldBuilder().getBuilder();
     }
@@ -1026,7 +982,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AsmSession(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

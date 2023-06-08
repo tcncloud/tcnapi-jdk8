@@ -29,61 +29,6 @@ private static final long serialVersionUID = 0L;
     return new GetVoiceAnalyticsPreferencesResponse();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
-  private GetVoiceAnalyticsPreferencesResponse(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.tcn.cloud.api.api.v1alpha1.org.legacy.VoiceAnalyticsPreferences.Builder subBuilder = null;
-            if (voiceAnalyticsPreferences_ != null) {
-              subBuilder = voiceAnalyticsPreferences_.toBuilder();
-            }
-            voiceAnalyticsPreferences_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.VoiceAnalyticsPreferences.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(voiceAnalyticsPreferences_);
-              voiceAnalyticsPreferences_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.legacy.EntitiesProto.internal_static_api_v1alpha1_org_legacy_GetVoiceAnalyticsPreferencesResponse_descriptor;
@@ -132,7 +77,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.org.legacy.VoiceAnalyticsPreferencesOrBuilder getVoiceAnalyticsPreferencesOrBuilder() {
-    return getVoiceAnalyticsPreferences();
+    return voiceAnalyticsPreferences_ == null ? com.tcn.cloud.api.api.v1alpha1.org.legacy.VoiceAnalyticsPreferences.getDefaultInstance() : voiceAnalyticsPreferences_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -152,7 +97,7 @@ private static final long serialVersionUID = 0L;
     if (voiceAnalyticsPreferences_ != null) {
       output.writeMessage(1, getVoiceAnalyticsPreferences());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -165,7 +110,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getVoiceAnalyticsPreferences());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -185,7 +130,7 @@ private static final long serialVersionUID = 0L;
       if (!getVoiceAnalyticsPreferences()
           .equals(other.getVoiceAnalyticsPreferences())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -200,7 +145,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + VOICE_ANALYTICS_PREFERENCES_FIELD_NUMBER;
       hash = (53 * hash) + getVoiceAnalyticsPreferences().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -249,11 +194,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.GetVoiceAnalyticsPreferencesResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.GetVoiceAnalyticsPreferencesResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -321,26 +268,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.GetVoiceAnalyticsPreferencesResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (voiceAnalyticsPreferencesBuilder_ == null) {
-        voiceAnalyticsPreferences_ = null;
-      } else {
-        voiceAnalyticsPreferences_ = null;
+      bitField0_ = 0;
+      voiceAnalyticsPreferences_ = null;
+      if (voiceAnalyticsPreferencesBuilder_ != null) {
+        voiceAnalyticsPreferencesBuilder_.dispose();
         voiceAnalyticsPreferencesBuilder_ = null;
       }
       return this;
@@ -369,13 +311,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.GetVoiceAnalyticsPreferencesResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.legacy.GetVoiceAnalyticsPreferencesResponse result = new com.tcn.cloud.api.api.v1alpha1.org.legacy.GetVoiceAnalyticsPreferencesResponse(this);
-      if (voiceAnalyticsPreferencesBuilder_ == null) {
-        result.voiceAnalyticsPreferences_ = voiceAnalyticsPreferences_;
-      } else {
-        result.voiceAnalyticsPreferences_ = voiceAnalyticsPreferencesBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.GetVoiceAnalyticsPreferencesResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.voiceAnalyticsPreferences_ = voiceAnalyticsPreferencesBuilder_ == null
+            ? voiceAnalyticsPreferences_
+            : voiceAnalyticsPreferencesBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -425,7 +372,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasVoiceAnalyticsPreferences()) {
         mergeVoiceAnalyticsPreferences(other.getVoiceAnalyticsPreferences());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -440,19 +387,40 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.tcn.cloud.api.api.v1alpha1.org.legacy.GetVoiceAnalyticsPreferencesResponse parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getVoiceAnalyticsPreferencesFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.legacy.GetVoiceAnalyticsPreferencesResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.tcn.cloud.api.api.v1alpha1.org.legacy.VoiceAnalyticsPreferences voiceAnalyticsPreferences_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -466,7 +434,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the voiceAnalyticsPreferences field is set.
      */
     public boolean hasVoiceAnalyticsPreferences() {
-      return voiceAnalyticsPreferencesBuilder_ != null || voiceAnalyticsPreferences_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -496,11 +464,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         voiceAnalyticsPreferences_ = value;
-        onChanged();
       } else {
         voiceAnalyticsPreferencesBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -514,11 +482,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.org.legacy.VoiceAnalyticsPreferences.Builder builderForValue) {
       if (voiceAnalyticsPreferencesBuilder_ == null) {
         voiceAnalyticsPreferences_ = builderForValue.build();
-        onChanged();
       } else {
         voiceAnalyticsPreferencesBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -530,17 +498,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeVoiceAnalyticsPreferences(com.tcn.cloud.api.api.v1alpha1.org.legacy.VoiceAnalyticsPreferences value) {
       if (voiceAnalyticsPreferencesBuilder_ == null) {
-        if (voiceAnalyticsPreferences_ != null) {
-          voiceAnalyticsPreferences_ =
-            com.tcn.cloud.api.api.v1alpha1.org.legacy.VoiceAnalyticsPreferences.newBuilder(voiceAnalyticsPreferences_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          voiceAnalyticsPreferences_ != null &&
+          voiceAnalyticsPreferences_ != com.tcn.cloud.api.api.v1alpha1.org.legacy.VoiceAnalyticsPreferences.getDefaultInstance()) {
+          getVoiceAnalyticsPreferencesBuilder().mergeFrom(value);
         } else {
           voiceAnalyticsPreferences_ = value;
         }
-        onChanged();
       } else {
         voiceAnalyticsPreferencesBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -551,14 +520,13 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.org.legacy.VoiceAnalyticsPreferences voice_analytics_preferences = 1 [json_name = "voiceAnalyticsPreferences"];</code>
      */
     public Builder clearVoiceAnalyticsPreferences() {
-      if (voiceAnalyticsPreferencesBuilder_ == null) {
-        voiceAnalyticsPreferences_ = null;
-        onChanged();
-      } else {
-        voiceAnalyticsPreferences_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      voiceAnalyticsPreferences_ = null;
+      if (voiceAnalyticsPreferencesBuilder_ != null) {
+        voiceAnalyticsPreferencesBuilder_.dispose();
         voiceAnalyticsPreferencesBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -569,7 +537,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.org.legacy.VoiceAnalyticsPreferences voice_analytics_preferences = 1 [json_name = "voiceAnalyticsPreferences"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.VoiceAnalyticsPreferences.Builder getVoiceAnalyticsPreferencesBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getVoiceAnalyticsPreferencesFieldBuilder().getBuilder();
     }
@@ -641,7 +609,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GetVoiceAnalyticsPreferencesResponse(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 
