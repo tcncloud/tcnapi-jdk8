@@ -184,33 +184,32 @@ public final class LearnProto {
       "s\"\226\001\n\026LearnStandaloneDetails\022\022\n\004name\030\001 \001" +
       "(\tR\004name\022\030\n\007content\030\002 \001(\tR\007content\022N\n\025la" +
       "st_edited_timestamp\030\003 \001(\0132\032.google.proto" +
-      "buf.TimestampR\023lastEditedTimestamp\"i\n\023De" +
+      "buf.TimestampR\023lastEditedTimestamp\"R\n\023De" +
       "leteStandaloneReq\022\026\n\006locale\030\001 \001(\tR\006local" +
-      "e\022\025\n\006org_id\030\002 \001(\tR\005orgId\022#\n\rarticle_name" +
-      "s\030\003 \003(\tR\014articleNames\"\025\n\023DeleteStandalon" +
-      "eRes2\375\005\n\005Learn\0225\n\005Exist\022\025.api.v0alpha.Ex" +
-      "istReq\032\025.api.v0alpha.ExistRes\022;\n\007Content" +
-      "\022\027.api.v0alpha.ContentReq\032\027.api.v0alpha." +
-      "ContentRes\022Y\n\021ContentEditorData\022!.api.v0" +
-      "alpha.ContentEditorDataReq\032!.api.v0alpha" +
-      ".ContentEditorDataRes\0228\n\006Update\022\026.api.v0" +
-      "alpha.UpdateReq\032\026.api.v0alpha.UpdateRes\022" +
-      "@\n\nExportMany\022\032.api.v0alpha.ExportManyRe" +
-      "q\032\026.api.v0alpha.ExportRes\022V\n\020StoreStatic" +
-      "Image\022 .api.v0alpha.StoreStaticImageReq\032" +
-      " .api.v0alpha.StoreStaticImageRes\022F\n\rSea" +
-      "rchContent\022\035.api.v0alpha.SearchContentRe" +
-      "q\032\026.api.v0alpha.SearchRes\022k\n\027UploadDynam" +
-      "icScreenshot\022\'.api.v0alpha.UploadDynamic" +
-      "ScreenshotReq\032\'.api.v0alpha.UploadDynami" +
-      "cScreenshotRes\022D\n\nStandalone\022\032.api.v0alp" +
-      "ha.StandaloneReq\032\032.api.v0alpha.Standalon" +
-      "eRes\022V\n\020DeleteStandalone\022 .api.v0alpha.D" +
-      "eleteStandaloneReq\032 .api.v0alpha.DeleteS" +
-      "tandaloneResBx\n\035com.tcn.cloud.api.api.v0" +
-      "alphaB\nLearnProtoP\001\242\002\003AVX\252\002\013Api.V0alpha\312" +
-      "\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\GPBMetadata\352" +
-      "\002\014Api::V0alphab\006proto3"
+      "e\022#\n\rarticle_names\030\002 \003(\tR\014articleNames\"\025" +
+      "\n\023DeleteStandaloneRes2\375\005\n\005Learn\0225\n\005Exist" +
+      "\022\025.api.v0alpha.ExistReq\032\025.api.v0alpha.Ex" +
+      "istRes\022;\n\007Content\022\027.api.v0alpha.ContentR" +
+      "eq\032\027.api.v0alpha.ContentRes\022Y\n\021ContentEd" +
+      "itorData\022!.api.v0alpha.ContentEditorData" +
+      "Req\032!.api.v0alpha.ContentEditorDataRes\0228" +
+      "\n\006Update\022\026.api.v0alpha.UpdateReq\032\026.api.v" +
+      "0alpha.UpdateRes\022@\n\nExportMany\022\032.api.v0a" +
+      "lpha.ExportManyReq\032\026.api.v0alpha.ExportR" +
+      "es\022V\n\020StoreStaticImage\022 .api.v0alpha.Sto" +
+      "reStaticImageReq\032 .api.v0alpha.StoreStat" +
+      "icImageRes\022F\n\rSearchContent\022\035.api.v0alph" +
+      "a.SearchContentReq\032\026.api.v0alpha.SearchR" +
+      "es\022k\n\027UploadDynamicScreenshot\022\'.api.v0al" +
+      "pha.UploadDynamicScreenshotReq\032\'.api.v0a" +
+      "lpha.UploadDynamicScreenshotRes\022D\n\nStand" +
+      "alone\022\032.api.v0alpha.StandaloneReq\032\032.api." +
+      "v0alpha.StandaloneRes\022V\n\020DeleteStandalon" +
+      "e\022 .api.v0alpha.DeleteStandaloneReq\032 .ap" +
+      "i.v0alpha.DeleteStandaloneResBx\n\035com.tcn" +
+      ".cloud.api.api.v0alphaB\nLearnProtoP\001\242\002\003A" +
+      "VX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0a" +
+      "lpha\\GPBMetadata\352\002\014Api::V0alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -349,7 +348,7 @@ public final class LearnProto {
     internal_static_api_v0alpha_DeleteStandaloneReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_DeleteStandaloneReq_descriptor,
-        new java.lang.String[] { "Locale", "OrgId", "ArticleNames", });
+        new java.lang.String[] { "Locale", "ArticleNames", });
     internal_static_api_v0alpha_DeleteStandaloneRes_descriptor =
       getDescriptor().getMessageTypes().get(22);
     internal_static_api_v0alpha_DeleteStandaloneRes_fieldAccessorTable = new

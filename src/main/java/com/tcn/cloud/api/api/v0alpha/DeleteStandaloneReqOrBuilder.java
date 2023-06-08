@@ -29,30 +29,10 @@ public interface DeleteStandaloneReqOrBuilder extends
 
   /**
    * <pre>
-   * orgId
-   * </pre>
-   *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  java.lang.String getOrgId();
-  /**
-   * <pre>
-   * orgId
-   * </pre>
-   *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  com.google.protobuf.ByteString
-      getOrgIdBytes();
-
-  /**
-   * <pre>
    * list of article names
    * </pre>
    *
-   * <code>repeated string article_names = 3 [json_name = "articleNames"];</code>
+   * <code>repeated string article_names = 2 [json_name = "articleNames"];</code>
    * @return A list containing the articleNames.
    */
   java.util.List<java.lang.String>
@@ -62,7 +42,7 @@ public interface DeleteStandaloneReqOrBuilder extends
    * list of article names
    * </pre>
    *
-   * <code>repeated string article_names = 3 [json_name = "articleNames"];</code>
+   * <code>repeated string article_names = 2 [json_name = "articleNames"];</code>
    * @return The count of articleNames.
    */
   int getArticleNamesCount();
@@ -71,7 +51,7 @@ public interface DeleteStandaloneReqOrBuilder extends
    * list of article names
    * </pre>
    *
-   * <code>repeated string article_names = 3 [json_name = "articleNames"];</code>
+   * <code>repeated string article_names = 2 [json_name = "articleNames"];</code>
    * @param index The index of the element to return.
    * @return The articleNames at the given index.
    */
@@ -81,7 +61,7 @@ public interface DeleteStandaloneReqOrBuilder extends
    * list of article names
    * </pre>
    *
-   * <code>repeated string article_names = 3 [json_name = "articleNames"];</code>
+   * <code>repeated string article_names = 2 [json_name = "articleNames"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the articleNames at the given index.
    */
