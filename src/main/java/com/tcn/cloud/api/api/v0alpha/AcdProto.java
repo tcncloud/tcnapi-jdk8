@@ -568,435 +568,437 @@ public final class AcdProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025api/v0alpha/acd.proto\022\013api.v0alpha\032\025ap" +
-      "i/commons/acd.proto\032\034google/api/annotati" +
-      "ons.proto\"f\n\025AgentGetStatusRequest\022\037\n\013se" +
-      "ssion_sid\030\001 \001(\003R\nsessionSid\022,\n\022perform_k" +
-      "eep_alive\030\002 \001(\010R\020performKeepAlive\"\316\004\n\023Ag" +
-      "entGetStatusReply\022\026\n\006status\030\002 \001(\003R\006statu" +
-      "s\022>\n\013status_desc\030\003 \001(\0162\035.api.commons.Age" +
-      "ntStatus.EnumR\nstatusDesc\022\026\n\006paused\030\004 \001(" +
-      "\010R\006paused\022\024\n\005queue\030\005 \001(\tR\005queue\022,\n\022curre" +
-      "nt_session_id\030\006 \001(\003R\020currentSessionId\022,\n" +
-      "\022last_status_change\030\007 \001(\003R\020lastStatusCha" +
-      "nge\022\036\n\nmonitoring\030\010 \001(\010R\nmonitoring\022\037\n\013c" +
-      "alls_count\030\t \001(\003R\ncallsCount\022\"\n\rlast_sip" +
-      "_code\030\n \001(\003R\013lastSipCode\0224\n\027agent_peer_i" +
-      "s_lost_call\030\013 \001(\010R\023agentPeerIsLostCall\022\032" +
-      "\n\010disabled\030\014 \001(\010R\010disabled\0220\n\024keep_alive" +
-      "_succeeded\030\r \001(\010R\022keepAliveSucceeded\022F\n\020" +
-      "transfer_members\030\016 \003(\0132\033.api.commons.Tra" +
-      "nsferMemberR\017transferMembers\022$\n\016agent_is" +
-      "_muted\030\017 \001(\010R\014agentIsMuted\"Y\n\035AgentGetCo" +
-      "nnectedPartyRequest\022\037\n\013session_sid\030\001 \001(\003" +
-      "R\nsessionSid\022\027\n\007user_id\030\002 \001(\tR\006userId\"o\n" +
-      "\033AgentGetConnectedPartyReply\022\027\n\007call_id\030" +
-      "\002 \001(\003R\006callId\0227\n\tcall_type\030\003 \001(\0162\032.api.c" +
-      "ommons.CallType.EnumR\010callType\"`\n$Manage" +
-      "rAgentGetConnectedPartyRequest\022\037\n\013sessio" +
-      "n_sid\030\001 \001(\003R\nsessionSid\022\027\n\007user_id\030\002 \001(\t" +
-      "R\006userId\"v\n\"ManagerAgentGetConnectedPart" +
-      "yReply\022\027\n\007call_id\030\002 \001(\003R\006callId\0227\n\tcall_" +
-      "type\030\003 \001(\0162\032.api.commons.CallType.EnumR\010" +
-      "callType\"_\n\024AgentIntercomRequest\022&\n\017targ" +
-      "et_agent_id\030\003 \001(\003R\rtargetAgentId\022\037\n\013sess" +
-      "ion_sid\030\004 \001(\003R\nsessionSid\"\024\n\022AgentInterc" +
-      "omReply\"=\n\032AgentIntercomAcceptRequest\022\037\n" +
-      "\013session_sid\030\001 \001(\003R\nsessionSid\"\032\n\030AgentI" +
-      "ntercomAcceptReply\"=\n\032AgentIntercomRejec" +
-      "tRequest\022\037\n\013session_sid\030\001 \001(\003R\nsessionSi" +
-      "d\"\032\n\030AgentIntercomRejectReply\"=\n\032AgentIn" +
-      "tercomCancelRequest\022\037\n\013session_sid\030\001 \001(\003" +
-      "R\nsessionSid\"\032\n\030AgentIntercomCancelReply" +
-      "\";\n\030DialManualPrepareRequest\022\037\n\013session_" +
-      "sid\030\001 \001(\003R\nsessionSid\"\030\n\026DialManualPrepa" +
-      "reReply\":\n\027DialManualCancelRequest\022\037\n\013se" +
-      "ssion_sid\030\001 \001(\003R\nsessionSid\"\027\n\025DialManua" +
-      "lCancelReply\"<\n\031DialPreviewPrepareReques" +
-      "t\022\037\n\013session_sid\030\001 \001(\003R\nsessionSid\"\031\n\027Di" +
-      "alPreviewPrepareReply\"L\n\021AgentPauseReque" +
-      "st\022\037\n\013session_sid\030\001 \001(\003R\nsessionSid\022\026\n\006r" +
-      "eason\030\002 \001(\tR\006reason\"\021\n\017AgentPauseReply\"7" +
-      "\n\024AgentSetReadyRequest\022\037\n\013session_sid\030\001 " +
-      "\001(\003R\nsessionSid\"\024\n\022AgentSetReadyReply\"6\n" +
-      "\023AgentGUIBusyRequest\022\037\n\013session_sid\030\001 \001(" +
-      "\003R\nsessionSid\"\023\n\021AgentGUIBusyReply\"Q\n\026Ag" +
-      "entDisconnectRequest\022\026\n\006reason\030\001 \001(\tR\006re" +
-      "ason\022\037\n\013session_sid\030\002 \001(\003R\nsessionSid\"\026\n" +
-      "\024AgentDisconnectReply\"\260\001\n\024AgentSessionEv" +
-      "entReq\022*\n\021agent_session_sid\030\003 \001(\003R\017agent" +
-      "SessionSid\022I\n\naction_key\030\n \001(\0162*.api.com" +
-      "mons.AgentSessionLogActionKey.EnumR\tacti" +
-      "onKey\022!\n\014action_value\030\013 \001(\tR\013actionValue" +
-      "\"\026\n\024AgentSessionEventRes\"\371\002\n\024CallerReque" +
-      "ueRequest\022*\n\021new_config_folder\030\003 \001(\tR\017ne" +
-      "wConfigFolder\022E\n\006skills\030\004 \003(\0132-.api.v0al" +
-      "pha.CallerRequeueRequest.SkillsEntryR\006sk" +
-      "ills\022%\n\016replace_skills\030\005 \001(\010R\rreplaceSki" +
-      "lls\022F\n\016replace_config\030\006 \001(\0162\037.api.common" +
-      "s.ReplaceConfig.EnumR\rreplaceConfig\022\037\n\013s" +
-      "ession_sid\030\007 \001(\003R\nsessionSid\022#\n\rvoicemai" +
-      "l_box\030\010 \001(\tR\014voicemailBox\0329\n\013SkillsEntry" +
-      "\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\010R\005value" +
-      ":\0028\001\"\024\n\022CallerRequeueReply\"I\n TransferWa" +
-      "rmToAgentCancelRequest\022\037\n\013session_sid\030\004 " +
-      "\001(\003R\nsessionSidJ\004\010\003\020\004\" \n\036TransferWarmToA" +
-      "gentCancelReply\"F\n#TransferWarmToOutboun" +
-      "dCancelRequest\022\037\n\013session_sid\030\001 \001(\003R\nses" +
-      "sionSid\"#\n!TransferWarmToOutboundCancelR" +
-      "eply\"J\n!TransferWarmToAgentApproveReques" +
-      "t\022\037\n\013session_sid\030\004 \001(\003R\nsessionSidJ\004\010\003\020\004" +
-      "\"!\n\037TransferWarmToAgentApproveReply\"v\n$T" +
-      "ransferWarmToOutboundApproveRequest\022\037\n\013s" +
-      "ession_sid\030\001 \001(\003R\nsessionSid\022-\n\022member_i" +
-      "dentifiers\030\002 \003(\tR\021memberIdentifiers\"$\n\"T" +
-      "ransferWarmToOutboundApproveReply\"Y\n\034Cal" +
-      "lerSendToVoicemailRequest\022\030\n\007mailbox\030\003 \001" +
-      "(\tR\007mailbox\022\037\n\013session_sid\030\004 \001(\003R\nsessio" +
-      "nSid\"\034\n\032CallerSendToVoicemailReply\"O\n,Ag" +
-      "entInviteTransferCallerToConferenceReque" +
-      "st\022\037\n\013session_sid\030\001 \001(\003R\nsessionSid\",\n*A" +
-      "gentInviteTransferCallerToConferenceRepl" +
-      "y\"U\n\030AgentMonitorCallsRequest\022\030\n\007monitor" +
-      "\030\003 \001(\010R\007monitor\022\037\n\013session_sid\030\004 \001(\003R\nse" +
-      "ssionSid\"\030\n\026AgentMonitorCallsReply\"\254\001\n\035T" +
-      "ransferColdToOutboundRequest\022\033\n\tcaller_i" +
-      "d\030\003 \001(\tR\010callerId\022 \n\013destination\030\004 \001(\tR\013" +
-      "destination\022+\n\021reserved_carriers\030\005 \003(\tR\020" +
-      "reservedCarriers\022\037\n\013session_sid\030\006 \001(\003R\ns" +
-      "essionSid\"\035\n\033TransferColdToOutboundReply" +
-      "\"o\n\032TransferColdToAgentRequest\0220\n\024destin" +
-      "ation_agent_id\030\003 \001(\003R\022destinationAgentId" +
-      "\022\037\n\013session_sid\030\004 \001(\003R\nsessionSid\"\032\n\030Tra" +
-      "nsferColdToAgentReply\"\322\001\n\"TransferWarmTo" +
-      "OutboundStartRequest\022\033\n\tcaller_id\030\003 \001(\tR" +
-      "\010callerId\022 \n\013destination\030\004 \001(\tR\013destinat" +
-      "ion\022+\n\021reserved_carriers\030\005 \003(\tR\020reserved" +
-      "Carriers\022\037\n\013caller_hold\030\006 \001(\010R\ncallerHol" +
-      "d\022\037\n\013session_sid\030\007 \001(\003R\nsessionSid\"\"\n Tr" +
-      "ansferWarmToOutboundStartReply\"\266\001\n\'Creat" +
-      "eWarmOutboundTransferMemberRequest\022\033\n\tca" +
-      "ller_id\030\003 \001(\tR\010callerId\022 \n\013destination\030\004" +
-      " \001(\tR\013destination\022+\n\021reserved_carriers\030\005" +
-      " \003(\tR\020reservedCarriers\022\037\n\013session_sid\030\006 " +
-      "\001(\003R\nsessionSid\"\'\n%CreateWarmOutboundTra" +
-      "nsferMemberReply\"k\n\033RemoveTransferMember" +
-      "Request\022+\n\021member_identifier\030\001 \001(\tR\020memb" +
-      "erIdentifier\022\037\n\013session_sid\030\002 \001(\003R\nsessi" +
-      "onSid\"\033\n\031RemoveTransferMemberReply\"\242\002\n\037T" +
-      "ransferWarmToAgentStartRequest\0220\n\024destin" +
-      "ation_agent_id\030\003 \001(\003R\022destinationAgentId" +
-      "\022\037\n\013caller_hold\030\004 \001(\010R\ncallerHold\022\037\n\013ses" +
-      "sion_sid\030\005 \001(\003R\nsessionSid\022P\n\006skills\030\006 \003" +
-      "(\01328.api.v0alpha.TransferWarmToAgentStar" +
-      "tRequest.SkillsEntryR\006skills\0329\n\013SkillsEn" +
-      "try\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\010R\005va" +
-      "lue:\0028\001\"\037\n\035TransferWarmToAgentStartReply" +
-      "\">\n\033AgentGetCallFromHoldRequest\022\037\n\013sessi" +
-      "on_sid\030\001 \001(\003R\nsessionSid\"\033\n\031AgentGetCall" +
-      "FromHoldReply\"\230\001\n#AgentGetSpecificCallFr" +
-      "omHoldRequest\022\027\n\007call_id\030\003 \001(\003R\006callId\0227" +
-      "\n\tcall_type\030\004 \001(\0162\032.api.commons.CallType" +
-      ".EnumR\010callType\022\037\n\013session_sid\030\005 \001(\003R\nse" +
-      "ssionSid\"#\n!AgentGetSpecificCallFromHold" +
-      "Reply\"p\n\031AgentPutCallOnHoldRequest\0222\n\tho" +
-      "ld_type\030\001 \001(\0162\025.api.commons.HoldTypeR\010ho" +
-      "ldType\022\037\n\013session_sid\030\002 \001(\003R\nsessionSid\"" +
-      "\031\n\027AgentPutCallOnHoldReply\"h\n\036ACDGetAllA" +
-      "gentsStatusesRequest\022\026\n\006skills\030\002 \003(\tR\006sk" +
-      "ills\022.\n\023all_skills_required\030\003 \001(\010R\021allSk" +
-      "illsRequired\"\305\001\n\022AgentStatusDetails\022\020\n\003s" +
-      "id\030\001 \001(\003R\003sid\022,\n\022current_session_id\030\002 \001(" +
-      "\003R\020currentSessionId\022\026\n\006status\030\003 \001(\003R\006sta" +
-      "tus\022>\n\013status_desc\030\004 \001(\0162\035.api.commons.A" +
-      "gentStatus.EnumR\nstatusDesc\022\027\n\007user_id\030\005" +
-      " \001(\tR\006userId\"q\n\034ACDGetAllAgentsStatusesR" +
-      "eply\022Q\n\024agent_status_details\030\001 \003(\0132\037.api" +
-      ".v0alpha.AgentStatusDetailsR\022agentStatus" +
-      "Details\"j\n\032AgentReceiveMessageRequest\022+\n" +
-      "\021minimum_timestamp\030\003 \001(\003R\020minimumTimesta" +
-      "mp\022\037\n\013session_sid\030\004 \001(\003R\nsessionSid\"R\n\030A" +
-      "gentReceiveMessageReply\022\030\n\007message\030\002 \001(\t" +
-      "R\007message\022\034\n\ttimestamp\030\003 \001(\003R\ttimestamp\"" +
-      "<\n\031AgentPBXRejectCallRequest\022\037\n\013session_" +
-      "sid\030\001 \001(\003R\nsessionSid\"\031\n\027AgentPBXRejectC" +
-      "allReply\"=\n\032AgentPBXApproveCallRequest\022\037" +
-      "\n\013session_sid\030\001 \001(\003R\nsessionSid\"\032\n\030Agent" +
-      "PBXApproveCallReply\"n\n\030GetCallerLostPeer" +
-      "Request\022\031\n\010call_sid\030\001 \001(\003R\007callSid\0227\n\tca" +
-      "ll_type\030\002 \001(\0162\032.api.commons.CallType.Enu" +
-      "mR\010callType\"D\n\026GetCallerLostPeerReply\022$\n" +
-      "\016hunt_group_sid\030\002 \001(\003R\014huntGroupSidJ\004\010\001\020" +
-      "\002\"n\n\030CallerGetRawEventRequest\022\031\n\010call_si" +
-      "d\030\001 \001(\003R\007callSid\0227\n\tcall_type\030\002 \001(\0162\032.ap" +
-      "i.commons.CallType.EnumR\010callType\"H\n\026Cal" +
-      "lerGetRawEventReply\022.\n\005event\030\001 \001(\0132\030.api" +
-      ".v0alpha.CallerEventR\005event\"\213\002\n\013CallerEv" +
-      "ent\022<\n\006skills\030\023 \003(\0132$.api.v0alpha.Caller" +
-      "Event.SkillsEntryR\006skills\022E\n\tallSkills\030\024" +
-      " \003(\0132\'.api.v0alpha.CallerEvent.AllSkills" +
-      "EntryR\tallSkills\0329\n\013SkillsEntry\022\020\n\003key\030\001" +
-      " \001(\tR\003key\022\024\n\005value\030\002 \001(\010R\005value:\0028\001\032<\n\016A" +
-      "llSkillsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value" +
-      "\030\002 \001(\010R\005value:\0028\001\"\221\001\n\032PeerAgentWithCalle" +
-      "rRequest\022\031\n\010call_sid\030\001 \001(\003R\007callSid\0227\n\tc" +
-      "all_type\030\002 \001(\0162\032.api.commons.CallType.En" +
-      "umR\010callType\022\037\n\013session_sid\030\003 \001(\003R\nsessi" +
-      "onSid\"\032\n\030PeerAgentWithCallerReply\"e\n\025Hol" +
-      "dTransferMemberReq\022\037\n\013session_sid\030\001 \001(\003R" +
-      "\nsessionSid\022+\n\021member_identifier\030\002 \001(\tR\020" +
-      "memberIdentifier\"\027\n\025HoldTransferMemberRe" +
-      "s\"g\n\027UnholdTransferMemberReq\022\037\n\013session_" +
-      "sid\030\001 \001(\003R\nsessionSid\022+\n\021member_identifi" +
-      "er\030\002 \001(\tR\020memberIdentifier\"\031\n\027UnholdTran" +
-      "sferMemberRes\"l\n\025GetAgentCallCountsReq\022!" +
-      "\n\014agent_skills\030\001 \003(\tR\013agentSkills\0220\n\024age" +
-      "nt_pbx_extensions\030\002 \003(\tR\022agentPbxExtensi" +
-      "ons\"}\n\025GetAgentCallCountsRes\022\037\n\013agent_ca" +
-      "lls\030\001 \001(\003R\nagentCalls\022\037\n\013skill_calls\030\002 \001" +
-      "(\003R\nskillCalls\022\"\n\ron_hold_calls\030\003 \001(\003R\013o" +
-      "nHoldCalls\"\262\001\n\032WarmCallerTransferStartRe" +
-      "q\022\037\n\013session_sid\030\001 \001(\003R\nsessionSid\022\031\n\010ca" +
-      "ll_sid\030\002 \001(\003R\007callSid\0227\n\tcall_type\030\003 \001(\016" +
-      "2\032.api.commons.CallType.EnumR\010callType\022\037" +
-      "\n\013caller_hold\030\004 \001(\010R\ncallerHold\"\034\n\032WarmC" +
-      "allerTransferStartRes\"V\n\033WarmCallerTrans" +
-      "ferCancelReq\022\037\n\013session_sid\030\001 \001(\003R\nsessi" +
-      "onSid\022\026\n\006reason\030\002 \001(\tR\006reason\"\035\n\033WarmCal" +
-      "lerTransferCancelRes\"W\n\034WarmCallerTransf" +
-      "erApproveReq\022\037\n\013session_sid\030\001 \001(\003R\nsessi" +
-      "onSid\022\026\n\006reason\030\002 \001(\tR\006reason\"\036\n\034WarmCal" +
-      "lerTransferApproveRes\"p\n\027PlaySoundboardE" +
-      "ntityReq\022\037\n\013session_sid\030\001 \001(\003R\nsessionSi" +
-      "d\0224\n\024soundboard_entity_id\030\002 \001(\003B\0020\001R\022sou" +
-      "ndboardEntityId\"E\n\027PlaySoundboardEntityR" +
-      "es\022*\n\021sound_instance_id\030\001 \001(\tR\017soundInst" +
-      "anceId\"f\n\027StopSoundboardEntityReq\022\037\n\013ses" +
-      "sion_sid\030\001 \001(\003R\nsessionSid\022*\n\021sound_inst" +
-      "ance_id\030\002 \001(\tR\017soundInstanceId\"\031\n\027StopSo" +
-      "undboardEntityRes\"\350\001\n\030UpdateAgentSkillsR" +
-      "equest\022\037\n\013session_sid\030\001 \001(\003R\nsessionSid\022" +
-      "I\n\006skills\030\002 \003(\01321.api.v0alpha.UpdateAgen" +
-      "tSkillsRequest.SkillsEntryR\006skills\022%\n\016re" +
-      "place_skills\030\004 \001(\010R\rreplaceSkills\0329\n\013Ski" +
-      "llsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(" +
-      "\003R\005value:\0028\001\"\030\n\026UpdateAgentSkillsReply\"k" +
-      "\n\017PlayDTMFRequest\022\037\n\013session_sid\030\001 \001(\003R\n" +
-      "sessionSid\0227\n\013dtmf_digits\030\002 \003(\0162\026.api.co" +
-      "mmons.DTMFDigitR\ndtmfDigits\"\017\n\rPlayDTMFR" +
-      "eply\"3\n\020AgentMuteRequest\022\037\n\013session_sid\030" +
-      "\001 \001(\003R\nsessionSid\"\020\n\016AgentMuteReply\"5\n\022A" +
-      "gentUnmuteRequest\022\037\n\013session_sid\030\001 \001(\003R\n" +
-      "sessionSid\"\022\n\020AgentUnmuteReply2\205?\n\003Acd\022\220" +
-      "\001\n\024AgentGetStatusStream\022\".api.v0alpha.Ag" +
-      "entGetStatusRequest\032 .api.v0alpha.AgentG" +
-      "etStatusReply\"0\202\323\344\223\002*\"%/api/v0alpha/acd/" +
-      "agentgetstatusstream:\001*0\001\022\202\001\n\016AgentGetSt" +
-      "atus\022\".api.v0alpha.AgentGetStatusRequest" +
-      "\032 .api.v0alpha.AgentGetStatusReply\"*\202\323\344\223" +
-      "\002$\"\037/api/v0alpha/acd/agentgetstatus:\001*\022\242" +
-      "\001\n\026AgentGetConnectedParty\022*.api.v0alpha." +
-      "AgentGetConnectedPartyRequest\032(.api.v0al" +
-      "pha.AgentGetConnectedPartyReply\"2\202\323\344\223\002,\"" +
-      "\'/api/v0alpha/acd/agentgetconnectedparty" +
-      ":\001*\022\276\001\n\035ManagerAgentGetConnectedParty\0221." +
-      "api.v0alpha.ManagerAgentGetConnectedPart" +
-      "yRequest\032/.api.v0alpha.ManagerAgentGetCo" +
-      "nnectedPartyReply\"9\202\323\344\223\0023\"./api/v0alpha/" +
-      "acd/manageragentgetconnectedparty:\001*\022~\n\r" +
-      "AgentIntercom\022!.api.v0alpha.AgentInterco" +
-      "mRequest\032\037.api.v0alpha.AgentIntercomRepl" +
-      "y\")\202\323\344\223\002#\"\036/api/v0alpha/acd/agentInterco" +
-      "m:\001*\022\226\001\n\023AgentIntercomAccept\022\'.api.v0alp" +
-      "ha.AgentIntercomAcceptRequest\032%.api.v0al" +
-      "pha.AgentIntercomAcceptReply\"/\202\323\344\223\002)\"$/a" +
-      "pi/v0alpha/acd/agentintercomaccept:\001*\022\226\001" +
-      "\n\023AgentIntercomReject\022\'.api.v0alpha.Agen" +
-      "tIntercomRejectRequest\032%.api.v0alpha.Age" +
-      "ntIntercomRejectReply\"/\202\323\344\223\002)\"$/api/v0al" +
-      "pha/acd/agentintercomreject:\001*\022\226\001\n\023Agent" +
-      "IntercomCancel\022\'.api.v0alpha.AgentInterc" +
-      "omCancelRequest\032%.api.v0alpha.AgentInter" +
-      "comCancelReply\"/\202\323\344\223\002)\"$/api/v0alpha/acd" +
-      "/agentintercomcancel:\001*\022\216\001\n\021DialManualPr" +
-      "epare\022%.api.v0alpha.DialManualPrepareReq" +
-      "uest\032#.api.v0alpha.DialManualPrepareRepl" +
-      "y\"-\202\323\344\223\002\'\"\"/api/v0alpha/acd/dialmanualpr" +
-      "epare:\001*\022\212\001\n\020DialManualCancel\022$.api.v0al" +
-      "pha.DialManualCancelRequest\032\".api.v0alph" +
-      "a.DialManualCancelReply\",\202\323\344\223\002&\"!/api/v0" +
-      "alpha/acd/dialmanualcancel:\001*\022\222\001\n\022DialPr" +
-      "eviewPrepare\022&.api.v0alpha.DialPreviewPr" +
-      "epareRequest\032$.api.v0alpha.DialPreviewPr" +
-      "epareReply\".\202\323\344\223\002(\"#/api/v0alpha/acd/dia" +
-      "lpreviewprepare:\001*\022r\n\nAgentPause\022\036.api.v" +
-      "0alpha.AgentPauseRequest\032\034.api.v0alpha.A" +
-      "gentPauseReply\"&\202\323\344\223\002 \"\033/api/v0alpha/acd" +
-      "/agentpause:\001*\022~\n\rAgentSetReady\022!.api.v0" +
-      "alpha.AgentSetReadyRequest\032\037.api.v0alpha" +
-      ".AgentSetReadyReply\")\202\323\344\223\002#\"\036/api/v0alph" +
-      "a/acd/agentsetready:\001*\022z\n\014AgentGUIBusy\022 " +
-      ".api.v0alpha.AgentGUIBusyRequest\032\036.api.v" +
-      "0alpha.AgentGUIBusyReply\"(\202\323\344\223\002\"\"\035/api/v" +
-      "0alpha/acd/agentguibusy:\001*\022\224\001\n\027ReportAge" +
-      "ntSessionEvent\022!.api.v0alpha.AgentSessio" +
-      "nEventReq\032!.api.v0alpha.AgentSessionEven" +
-      "tRes\"3\202\323\344\223\002-\"(/api/v0alpha/acd/reportage" +
-      "ntsessionevent:\001*\022~\n\rCallerRequeue\022!.api" +
-      ".v0alpha.CallerRequeueRequest\032\037.api.v0al" +
-      "pha.CallerRequeueReply\")\202\323\344\223\002#\"\036/api/v0a" +
-      "lpha/acd/callerrequeue:\001*\022\206\001\n\017AgentDisco" +
-      "nnect\022#.api.v0alpha.AgentDisconnectReque" +
-      "st\032!.api.v0alpha.AgentDisconnectReply\"+\202" +
-      "\323\344\223\002%\" /api/v0alpha/acd/agentdisconnect:" +
-      "\001*\022\272\001\n\034TransferWarmToOutboundCancel\0220.ap" +
-      "i.v0alpha.TransferWarmToOutboundCancelRe" +
-      "quest\032..api.v0alpha.TransferWarmToOutbou" +
-      "ndCancelReply\"8\202\323\344\223\0022\"-/api/v0alpha/acd/" +
-      "transferwarmtooutboundcancel:\001*\022\256\001\n\031Tran" +
-      "sferWarmToAgentCancel\022-.api.v0alpha.Tran" +
-      "sferWarmToAgentCancelRequest\032+.api.v0alp" +
-      "ha.TransferWarmToAgentCancelReply\"5\202\323\344\223\002" +
-      "/\"*/api/v0alpha/acd/transferwarmtoagentc" +
-      "ancel:\001*\022\276\001\n\035TransferWarmToOutboundAppro" +
-      "ve\0221.api.v0alpha.TransferWarmToOutboundA" +
-      "pproveRequest\032/.api.v0alpha.TransferWarm" +
-      "ToOutboundApproveReply\"9\202\323\344\223\0023\"./api/v0a" +
-      "lpha/acd/transferwarmtooutboundapprove:\001" +
-      "*\022\262\001\n\032TransferWarmToAgentApprove\022..api.v" +
-      "0alpha.TransferWarmToAgentApproveRequest" +
-      "\032,.api.v0alpha.TransferWarmToAgentApprov" +
-      "eReply\"6\202\323\344\223\0020\"+/api/v0alpha/acd/transfe" +
-      "rwarmtoagentapprove:\001*\022\236\001\n\025CallerSendToV" +
-      "oicemail\022).api.v0alpha.CallerSendToVoice" +
-      "mailRequest\032\'.api.v0alpha.CallerSendToVo" +
-      "icemailReply\"1\202\323\344\223\002+\"&/api/v0alpha/acd/c" +
-      "allersendtovoicemail:\001*\022\336\001\n%AgentInviteT" +
-      "ransferCallerToConference\0229.api.v0alpha." +
-      "AgentInviteTransferCallerToConferenceReq" +
-      "uest\0327.api.v0alpha.AgentInviteTransferCa" +
-      "llerToConferenceReply\"A\202\323\344\223\002;\"6/api/v0al" +
-      "pha/acd/agentinvitetransfercallertoconfe" +
-      "rence:\001*\022\216\001\n\021AgentMonitorCalls\022%.api.v0a" +
-      "lpha.AgentMonitorCallsRequest\032#.api.v0al" +
-      "pha.AgentMonitorCallsReply\"-\202\323\344\223\002\'\"\"/api" +
-      "/v0alpha/acd/agentmonitorcalls:\001*\022\242\001\n\026Tr" +
-      "ansferColdToOutbound\022*.api.v0alpha.Trans" +
-      "ferColdToOutboundRequest\032(.api.v0alpha.T" +
-      "ransferColdToOutboundReply\"2\202\323\344\223\002,\"\'/api" +
-      "/v0alpha/acd/transfercoldtooutbound:\001*\022\226" +
-      "\001\n\023TransferColdToAgent\022\'.api.v0alpha.Tra" +
-      "nsferColdToAgentRequest\032%.api.v0alpha.Tr" +
-      "ansferColdToAgentReply\"/\202\323\344\223\002)\"$/api/v0a" +
-      "lpha/acd/transfercoldtoagent:\001*\022\266\001\n\033Tran" +
-      "sferWarmToOutboundStart\022/.api.v0alpha.Tr" +
-      "ansferWarmToOutboundStartRequest\032-.api.v" +
-      "0alpha.TransferWarmToOutboundStartReply\"" +
-      "7\202\323\344\223\0021\",/api/v0alpha/acd/transferwarmto" +
-      "outboundstart:\001*\022\313\001\n CreateWarmOutboundT" +
-      "ransferMember\0224.api.v0alpha.CreateWarmOu" +
-      "tboundTransferMemberRequest\0322.api.v0alph" +
-      "a.CreateWarmOutboundTransferMemberReply\"" +
-      "=\202\323\344\223\0027\"2/api/v0alpha/acd/createwarmoutb" +
-      "oundtransferdmember:\001*\022\247\001\n\024RemoveTransfe" +
-      "rMember\022(.api.v0alpha.RemoveTransferMemb" +
-      "erRequest\032&.api.v0alpha.RemoveTransferMe" +
-      "mberReply\"=\202\323\344\223\0027\"2/api/v0alpha/acd/dele" +
-      "tewarmoutboundtransferdmember:\001*\022\252\001\n\030Tra" +
-      "nsferWarmToAgentStart\022,.api.v0alpha.Tran" +
-      "sferWarmToAgentStartRequest\032*.api.v0alph" +
-      "a.TransferWarmToAgentStartReply\"4\202\323\344\223\002.\"" +
-      ")/api/v0alpha/acd/transferwarmtoagentsta" +
-      "rt:\001*\022\232\001\n\024AgentGetCallFromHold\022(.api.v0a" +
-      "lpha.AgentGetCallFromHoldRequest\032&.api.v" +
-      "0alpha.AgentGetCallFromHoldReply\"0\202\323\344\223\002*" +
-      "\"%/api/v0alpha/acd/agentgetcallfromhold:" +
-      "\001*\022\272\001\n\034AgentGetSpecificCallFromHold\0220.ap" +
-      "i.v0alpha.AgentGetSpecificCallFromHoldRe" +
-      "quest\032..api.v0alpha.AgentGetSpecificCall" +
-      "FromHoldReply\"8\202\323\344\223\0022\"-/api/v0alpha/acd/" +
-      "agentgetspecificcallfromhold:\001*\022\246\001\n\027ACDG" +
-      "etAllAgentsStatuses\022+.api.v0alpha.ACDGet" +
-      "AllAgentsStatusesRequest\032).api.v0alpha.A" +
-      "CDGetAllAgentsStatusesReply\"3\202\323\344\223\002-\"(/ap" +
-      "i/v0alpha/acd/acdgetallagentsstatuses:\001*" +
-      "\022\222\001\n\022AgentPutCallOnHold\022&.api.v0alpha.Ag" +
-      "entPutCallOnHoldRequest\032$.api.v0alpha.Ag" +
-      "entPutCallOnHoldReply\".\202\323\344\223\002(\"#/api/v0al" +
-      "pha/acd/agentputcallonhold:\001*\022\226\001\n\023AgentR" +
-      "eceiveMessage\022\'.api.v0alpha.AgentReceive" +
-      "MessageRequest\032%.api.v0alpha.AgentReceiv" +
-      "eMessageReply\"/\202\323\344\223\002)\"$/api/v0alpha/acd/" +
-      "agentreceivemessage:\001*\022\226\001\n\023AgentPBXAppro" +
-      "veCall\022\'.api.v0alpha.AgentPBXApproveCall" +
-      "Request\032%.api.v0alpha.AgentPBXApproveCal" +
-      "lReply\"/\202\323\344\223\002)\"$/api/v0alpha/acd/agentpb" +
-      "xapprovecall:\001*\022\222\001\n\022AgentPBXRejectCall\022&" +
-      ".api.v0alpha.AgentPBXRejectCallRequest\032$" +
-      ".api.v0alpha.AgentPBXRejectCallReply\".\202\323" +
-      "\344\223\002(\"#/api/v0alpha/acd/agentpbxrejectcal" +
-      "l:\001*\022\216\001\n\021GetCallerLostPeer\022%.api.v0alpha" +
-      ".GetCallerLostPeerRequest\032#.api.v0alpha." +
-      "GetCallerLostPeerReply\"-\202\323\344\223\002\'\"\"/api/v0a" +
-      "lpha/acd/getcallerlostpeer:\001*\022\223\001\n\021Caller" +
-      "GetRawEvent\022%.api.v0alpha.CallerGetRawEv" +
-      "entRequest\032#.api.v0alpha.CallerGetRawEve" +
-      "ntReply\"2\202\323\344\223\002,\"\'/api/v0alpha/acd/getcal" +
-      "lerraweventreply:\001*\022\226\001\n\023PeerAgentWithCal" +
-      "ler\022\'.api.v0alpha.PeerAgentWithCallerReq" +
-      "uest\032%.api.v0alpha.PeerAgentWithCallerRe" +
-      "ply\"/\202\323\344\223\002)\"$/api/v0alpha/acd/peeragentw" +
-      "ithcaller:\001*\022\221\001\n\022HoldTransferMember\022\".ap" +
-      "i.v0alpha.HoldTransferMemberReq\032\".api.v0" +
-      "alpha.HoldTransferMemberRes\"3\202\323\344\223\002-\"(/ap" +
-      "i/v0alpha/acd/mutetransferpartymember:\001*" +
-      "\022\224\001\n\024UnholdTransferMember\022$.api.v0alpha." +
-      "UnholdTransferMemberReq\032$.api.v0alpha.Un" +
-      "holdTransferMemberRes\"0\202\323\344\223\002*\"%/api/v0al" +
-      "pha/acd/unmutetransfermember:\001*\022\214\001\n\022GetA" +
-      "gentCallCounts\022\".api.v0alpha.GetAgentCal" +
-      "lCountsReq\032\".api.v0alpha.GetAgentCallCou" +
-      "ntsRes\".\202\323\344\223\002(\"#/api/v0alpha/acd/getagen" +
-      "tcallcounts:\001*\022\240\001\n\027WarmCallerTransferSta" +
-      "rt\022\'.api.v0alpha.WarmCallerTransferStart" +
-      "Req\032\'.api.v0alpha.WarmCallerTransferStar" +
-      "tRes\"3\202\323\344\223\002-\"(/api/v0alpha/acd/warmcalle" +
-      "rtransferstart:\001*\022\244\001\n\030WarmCallerTransfer" +
-      "Cancel\022(.api.v0alpha.WarmCallerTransferC" +
-      "ancelReq\032(.api.v0alpha.WarmCallerTransfe" +
-      "rCancelRes\"4\202\323\344\223\002.\")/api/v0alpha/acd/war" +
-      "mcallertransfercancel:\001*\022\250\001\n\031WarmCallerT" +
-      "ransferApprove\022).api.v0alpha.WarmCallerT" +
-      "ransferApproveReq\032).api.v0alpha.WarmCall",
-      "erTransferApproveRes\"5\202\323\344\223\002/\"*/api/v0alp" +
-      "ha/acd/warmcallertransferapprove:\001*\022\224\001\n\024" +
-      "PlaySoundboardEntity\022$.api.v0alpha.PlayS" +
-      "oundboardEntityReq\032$.api.v0alpha.PlaySou" +
-      "ndboardEntityRes\"0\202\323\344\223\002*\"%/api/v0alpha/a" +
-      "cd/playsoundboardentity:\001*\022\224\001\n\024StopSound" +
-      "boardEntity\022$.api.v0alpha.StopSoundboard" +
-      "EntityReq\032$.api.v0alpha.StopSoundboardEn" +
-      "tityRes\"0\202\323\344\223\002*\"%/api/v0alpha/acd/stopso" +
-      "undboardentity:\001*\022\216\001\n\021UpdateAgentSkills\022" +
-      "%.api.v0alpha.UpdateAgentSkillsRequest\032#" +
-      ".api.v0alpha.UpdateAgentSkillsReply\"-\202\323\344" +
-      "\223\002\'\"\"/api/v0alpha/acd/updateagentskills:" +
-      "\001*\022j\n\010PlayDTMF\022\034.api.v0alpha.PlayDTMFReq" +
-      "uest\032\032.api.v0alpha.PlayDTMFReply\"$\202\323\344\223\002\036" +
-      "\"\031/api/v0alpha/acd/playdtmf:\001*\022n\n\tAgentM" +
-      "ute\022\035.api.v0alpha.AgentMuteRequest\032\033.api" +
-      ".v0alpha.AgentMuteReply\"%\202\323\344\223\002\037\"\032/api/v0" +
-      "alpha/acd/agentmute:\001*\022v\n\013AgentUnmute\022\037." +
-      "api.v0alpha.AgentUnmuteRequest\032\035.api.v0a" +
-      "lpha.AgentUnmuteReply\"\'\202\323\344\223\002!\"\034/api/v0al" +
-      "pha/acd/agentunmute:\001*Bv\n\035com.tcn.cloud." +
-      "api.api.v0alphaB\010AcdProtoP\001\242\002\003AVX\252\002\013Api." +
-      "V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\GPBM" +
-      "etadata\352\002\014Api::V0alphab\006proto3"
+      "\n\025api/v0alpha/acd.proto\022\013api.v0alpha\032\027an" +
+      "notations/authz.proto\032\025api/commons/acd.p" +
+      "roto\032\034google/api/annotations.proto\"f\n\025Ag" +
+      "entGetStatusRequest\022\037\n\013session_sid\030\001 \001(\003" +
+      "R\nsessionSid\022,\n\022perform_keep_alive\030\002 \001(\010" +
+      "R\020performKeepAlive\"\316\004\n\023AgentGetStatusRep" +
+      "ly\022\026\n\006status\030\002 \001(\003R\006status\022>\n\013status_des" +
+      "c\030\003 \001(\0162\035.api.commons.AgentStatus.EnumR\n" +
+      "statusDesc\022\026\n\006paused\030\004 \001(\010R\006paused\022\024\n\005qu" +
+      "eue\030\005 \001(\tR\005queue\022,\n\022current_session_id\030\006" +
+      " \001(\003R\020currentSessionId\022,\n\022last_status_ch" +
+      "ange\030\007 \001(\003R\020lastStatusChange\022\036\n\nmonitori" +
+      "ng\030\010 \001(\010R\nmonitoring\022\037\n\013calls_count\030\t \001(" +
+      "\003R\ncallsCount\022\"\n\rlast_sip_code\030\n \001(\003R\013la" +
+      "stSipCode\0224\n\027agent_peer_is_lost_call\030\013 \001" +
+      "(\010R\023agentPeerIsLostCall\022\032\n\010disabled\030\014 \001(" +
+      "\010R\010disabled\0220\n\024keep_alive_succeeded\030\r \001(" +
+      "\010R\022keepAliveSucceeded\022F\n\020transfer_member" +
+      "s\030\016 \003(\0132\033.api.commons.TransferMemberR\017tr" +
+      "ansferMembers\022$\n\016agent_is_muted\030\017 \001(\010R\014a" +
+      "gentIsMuted\"Y\n\035AgentGetConnectedPartyReq" +
+      "uest\022\037\n\013session_sid\030\001 \001(\003R\nsessionSid\022\027\n" +
+      "\007user_id\030\002 \001(\tR\006userId\"o\n\033AgentGetConnec" +
+      "tedPartyReply\022\027\n\007call_id\030\002 \001(\003R\006callId\0227" +
+      "\n\tcall_type\030\003 \001(\0162\032.api.commons.CallType" +
+      ".EnumR\010callType\"`\n$ManagerAgentGetConnec" +
+      "tedPartyRequest\022\037\n\013session_sid\030\001 \001(\003R\nse" +
+      "ssionSid\022\027\n\007user_id\030\002 \001(\tR\006userId\"v\n\"Man" +
+      "agerAgentGetConnectedPartyReply\022\027\n\007call_" +
+      "id\030\002 \001(\003R\006callId\0227\n\tcall_type\030\003 \001(\0162\032.ap" +
+      "i.commons.CallType.EnumR\010callType\"_\n\024Age" +
+      "ntIntercomRequest\022&\n\017target_agent_id\030\003 \001" +
+      "(\003R\rtargetAgentId\022\037\n\013session_sid\030\004 \001(\003R\n" +
+      "sessionSid\"\024\n\022AgentIntercomReply\"=\n\032Agen" +
+      "tIntercomAcceptRequest\022\037\n\013session_sid\030\001 " +
+      "\001(\003R\nsessionSid\"\032\n\030AgentIntercomAcceptRe" +
+      "ply\"=\n\032AgentIntercomRejectRequest\022\037\n\013ses" +
+      "sion_sid\030\001 \001(\003R\nsessionSid\"\032\n\030AgentInter" +
+      "comRejectReply\"=\n\032AgentIntercomCancelReq" +
+      "uest\022\037\n\013session_sid\030\001 \001(\003R\nsessionSid\"\032\n" +
+      "\030AgentIntercomCancelReply\";\n\030DialManualP" +
+      "repareRequest\022\037\n\013session_sid\030\001 \001(\003R\nsess" +
+      "ionSid\"\030\n\026DialManualPrepareReply\":\n\027Dial" +
+      "ManualCancelRequest\022\037\n\013session_sid\030\001 \001(\003" +
+      "R\nsessionSid\"\027\n\025DialManualCancelReply\"<\n" +
+      "\031DialPreviewPrepareRequest\022\037\n\013session_si" +
+      "d\030\001 \001(\003R\nsessionSid\"\031\n\027DialPreviewPrepar" +
+      "eReply\"L\n\021AgentPauseRequest\022\037\n\013session_s" +
+      "id\030\001 \001(\003R\nsessionSid\022\026\n\006reason\030\002 \001(\tR\006re" +
+      "ason\"\021\n\017AgentPauseReply\"7\n\024AgentSetReady" +
+      "Request\022\037\n\013session_sid\030\001 \001(\003R\nsessionSid" +
+      "\"\024\n\022AgentSetReadyReply\"6\n\023AgentGUIBusyRe" +
+      "quest\022\037\n\013session_sid\030\001 \001(\003R\nsessionSid\"\023" +
+      "\n\021AgentGUIBusyReply\"Q\n\026AgentDisconnectRe" +
+      "quest\022\026\n\006reason\030\001 \001(\tR\006reason\022\037\n\013session" +
+      "_sid\030\002 \001(\003R\nsessionSid\"\026\n\024AgentDisconnec" +
+      "tReply\"\260\001\n\024AgentSessionEventReq\022*\n\021agent" +
+      "_session_sid\030\003 \001(\003R\017agentSessionSid\022I\n\na" +
+      "ction_key\030\n \001(\0162*.api.commons.AgentSessi" +
+      "onLogActionKey.EnumR\tactionKey\022!\n\014action" +
+      "_value\030\013 \001(\tR\013actionValue\"\026\n\024AgentSessio" +
+      "nEventRes\"\371\002\n\024CallerRequeueRequest\022*\n\021ne" +
+      "w_config_folder\030\003 \001(\tR\017newConfigFolder\022E" +
+      "\n\006skills\030\004 \003(\0132-.api.v0alpha.CallerReque" +
+      "ueRequest.SkillsEntryR\006skills\022%\n\016replace" +
+      "_skills\030\005 \001(\010R\rreplaceSkills\022F\n\016replace_" +
+      "config\030\006 \001(\0162\037.api.commons.ReplaceConfig" +
+      ".EnumR\rreplaceConfig\022\037\n\013session_sid\030\007 \001(" +
+      "\003R\nsessionSid\022#\n\rvoicemail_box\030\010 \001(\tR\014vo" +
+      "icemailBox\0329\n\013SkillsEntry\022\020\n\003key\030\001 \001(\tR\003" +
+      "key\022\024\n\005value\030\002 \001(\010R\005value:\0028\001\"\024\n\022CallerR" +
+      "equeueReply\"I\n TransferWarmToAgentCancel" +
+      "Request\022\037\n\013session_sid\030\004 \001(\003R\nsessionSid" +
+      "J\004\010\003\020\004\" \n\036TransferWarmToAgentCancelReply" +
+      "\"F\n#TransferWarmToOutboundCancelRequest\022" +
+      "\037\n\013session_sid\030\001 \001(\003R\nsessionSid\"#\n!Tran" +
+      "sferWarmToOutboundCancelReply\"J\n!Transfe" +
+      "rWarmToAgentApproveRequest\022\037\n\013session_si" +
+      "d\030\004 \001(\003R\nsessionSidJ\004\010\003\020\004\"!\n\037TransferWar" +
+      "mToAgentApproveReply\"v\n$TransferWarmToOu" +
+      "tboundApproveRequest\022\037\n\013session_sid\030\001 \001(" +
+      "\003R\nsessionSid\022-\n\022member_identifiers\030\002 \003(" +
+      "\tR\021memberIdentifiers\"$\n\"TransferWarmToOu" +
+      "tboundApproveReply\"Y\n\034CallerSendToVoicem" +
+      "ailRequest\022\030\n\007mailbox\030\003 \001(\tR\007mailbox\022\037\n\013" +
+      "session_sid\030\004 \001(\003R\nsessionSid\"\034\n\032CallerS" +
+      "endToVoicemailReply\"O\n,AgentInviteTransf" +
+      "erCallerToConferenceRequest\022\037\n\013session_s" +
+      "id\030\001 \001(\003R\nsessionSid\",\n*AgentInviteTrans" +
+      "ferCallerToConferenceReply\"U\n\030AgentMonit" +
+      "orCallsRequest\022\030\n\007monitor\030\003 \001(\010R\007monitor" +
+      "\022\037\n\013session_sid\030\004 \001(\003R\nsessionSid\"\030\n\026Age" +
+      "ntMonitorCallsReply\"\254\001\n\035TransferColdToOu" +
+      "tboundRequest\022\033\n\tcaller_id\030\003 \001(\tR\010caller" +
+      "Id\022 \n\013destination\030\004 \001(\tR\013destination\022+\n\021" +
+      "reserved_carriers\030\005 \003(\tR\020reservedCarrier" +
+      "s\022\037\n\013session_sid\030\006 \001(\003R\nsessionSid\"\035\n\033Tr" +
+      "ansferColdToOutboundReply\"o\n\032TransferCol" +
+      "dToAgentRequest\0220\n\024destination_agent_id\030" +
+      "\003 \001(\003R\022destinationAgentId\022\037\n\013session_sid" +
+      "\030\004 \001(\003R\nsessionSid\"\032\n\030TransferColdToAgen" +
+      "tReply\"\322\001\n\"TransferWarmToOutboundStartRe" +
+      "quest\022\033\n\tcaller_id\030\003 \001(\tR\010callerId\022 \n\013de" +
+      "stination\030\004 \001(\tR\013destination\022+\n\021reserved" +
+      "_carriers\030\005 \003(\tR\020reservedCarriers\022\037\n\013cal" +
+      "ler_hold\030\006 \001(\010R\ncallerHold\022\037\n\013session_si" +
+      "d\030\007 \001(\003R\nsessionSid\"\"\n TransferWarmToOut" +
+      "boundStartReply\"\266\001\n\'CreateWarmOutboundTr" +
+      "ansferMemberRequest\022\033\n\tcaller_id\030\003 \001(\tR\010" +
+      "callerId\022 \n\013destination\030\004 \001(\tR\013destinati" +
+      "on\022+\n\021reserved_carriers\030\005 \003(\tR\020reservedC" +
+      "arriers\022\037\n\013session_sid\030\006 \001(\003R\nsessionSid" +
+      "\"\'\n%CreateWarmOutboundTransferMemberRepl" +
+      "y\"k\n\033RemoveTransferMemberRequest\022+\n\021memb" +
+      "er_identifier\030\001 \001(\tR\020memberIdentifier\022\037\n" +
+      "\013session_sid\030\002 \001(\003R\nsessionSid\"\033\n\031Remove" +
+      "TransferMemberReply\"\242\002\n\037TransferWarmToAg" +
+      "entStartRequest\0220\n\024destination_agent_id\030" +
+      "\003 \001(\003R\022destinationAgentId\022\037\n\013caller_hold" +
+      "\030\004 \001(\010R\ncallerHold\022\037\n\013session_sid\030\005 \001(\003R" +
+      "\nsessionSid\022P\n\006skills\030\006 \003(\01328.api.v0alph" +
+      "a.TransferWarmToAgentStartRequest.Skills" +
+      "EntryR\006skills\0329\n\013SkillsEntry\022\020\n\003key\030\001 \001(" +
+      "\tR\003key\022\024\n\005value\030\002 \001(\010R\005value:\0028\001\"\037\n\035Tran" +
+      "sferWarmToAgentStartReply\">\n\033AgentGetCal" +
+      "lFromHoldRequest\022\037\n\013session_sid\030\001 \001(\003R\ns" +
+      "essionSid\"\033\n\031AgentGetCallFromHoldReply\"\230" +
+      "\001\n#AgentGetSpecificCallFromHoldRequest\022\027" +
+      "\n\007call_id\030\003 \001(\003R\006callId\0227\n\tcall_type\030\004 \001" +
+      "(\0162\032.api.commons.CallType.EnumR\010callType" +
+      "\022\037\n\013session_sid\030\005 \001(\003R\nsessionSid\"#\n!Age" +
+      "ntGetSpecificCallFromHoldReply\"p\n\031AgentP" +
+      "utCallOnHoldRequest\0222\n\thold_type\030\001 \001(\0162\025" +
+      ".api.commons.HoldTypeR\010holdType\022\037\n\013sessi" +
+      "on_sid\030\002 \001(\003R\nsessionSid\"\031\n\027AgentPutCall" +
+      "OnHoldReply\"h\n\036ACDGetAllAgentsStatusesRe" +
+      "quest\022\026\n\006skills\030\002 \003(\tR\006skills\022.\n\023all_ski" +
+      "lls_required\030\003 \001(\010R\021allSkillsRequired\"\305\001" +
+      "\n\022AgentStatusDetails\022\020\n\003sid\030\001 \001(\003R\003sid\022," +
+      "\n\022current_session_id\030\002 \001(\003R\020currentSessi" +
+      "onId\022\026\n\006status\030\003 \001(\003R\006status\022>\n\013status_d" +
+      "esc\030\004 \001(\0162\035.api.commons.AgentStatus.Enum" +
+      "R\nstatusDesc\022\027\n\007user_id\030\005 \001(\tR\006userId\"q\n" +
+      "\034ACDGetAllAgentsStatusesReply\022Q\n\024agent_s" +
+      "tatus_details\030\001 \003(\0132\037.api.v0alpha.AgentS" +
+      "tatusDetailsR\022agentStatusDetails\"j\n\032Agen" +
+      "tReceiveMessageRequest\022+\n\021minimum_timest" +
+      "amp\030\003 \001(\003R\020minimumTimestamp\022\037\n\013session_s" +
+      "id\030\004 \001(\003R\nsessionSid\"R\n\030AgentReceiveMess" +
+      "ageReply\022\030\n\007message\030\002 \001(\tR\007message\022\034\n\tti" +
+      "mestamp\030\003 \001(\003R\ttimestamp\"<\n\031AgentPBXReje" +
+      "ctCallRequest\022\037\n\013session_sid\030\001 \001(\003R\nsess" +
+      "ionSid\"\031\n\027AgentPBXRejectCallReply\"=\n\032Age" +
+      "ntPBXApproveCallRequest\022\037\n\013session_sid\030\001" +
+      " \001(\003R\nsessionSid\"\032\n\030AgentPBXApproveCallR" +
+      "eply\"n\n\030GetCallerLostPeerRequest\022\031\n\010call" +
+      "_sid\030\001 \001(\003R\007callSid\0227\n\tcall_type\030\002 \001(\0162\032" +
+      ".api.commons.CallType.EnumR\010callType\"D\n\026" +
+      "GetCallerLostPeerReply\022$\n\016hunt_group_sid" +
+      "\030\002 \001(\003R\014huntGroupSidJ\004\010\001\020\002\"n\n\030CallerGetR" +
+      "awEventRequest\022\031\n\010call_sid\030\001 \001(\003R\007callSi" +
+      "d\0227\n\tcall_type\030\002 \001(\0162\032.api.commons.CallT" +
+      "ype.EnumR\010callType\"H\n\026CallerGetRawEventR" +
+      "eply\022.\n\005event\030\001 \001(\0132\030.api.v0alpha.Caller" +
+      "EventR\005event\"\213\002\n\013CallerEvent\022<\n\006skills\030\023" +
+      " \003(\0132$.api.v0alpha.CallerEvent.SkillsEnt" +
+      "ryR\006skills\022E\n\tallSkills\030\024 \003(\0132\'.api.v0al" +
+      "pha.CallerEvent.AllSkillsEntryR\tallSkill" +
+      "s\0329\n\013SkillsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005va" +
+      "lue\030\002 \001(\010R\005value:\0028\001\032<\n\016AllSkillsEntry\022\020" +
+      "\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\010R\005value:\002" +
+      "8\001\"\221\001\n\032PeerAgentWithCallerRequest\022\031\n\010cal" +
+      "l_sid\030\001 \001(\003R\007callSid\0227\n\tcall_type\030\002 \001(\0162" +
+      "\032.api.commons.CallType.EnumR\010callType\022\037\n" +
+      "\013session_sid\030\003 \001(\003R\nsessionSid\"\032\n\030PeerAg" +
+      "entWithCallerReply\"e\n\025HoldTransferMember" +
+      "Req\022\037\n\013session_sid\030\001 \001(\003R\nsessionSid\022+\n\021" +
+      "member_identifier\030\002 \001(\tR\020memberIdentifie" +
+      "r\"\027\n\025HoldTransferMemberRes\"g\n\027UnholdTran" +
+      "sferMemberReq\022\037\n\013session_sid\030\001 \001(\003R\nsess" +
+      "ionSid\022+\n\021member_identifier\030\002 \001(\tR\020membe" +
+      "rIdentifier\"\031\n\027UnholdTransferMemberRes\"l" +
+      "\n\025GetAgentCallCountsReq\022!\n\014agent_skills\030" +
+      "\001 \003(\tR\013agentSkills\0220\n\024agent_pbx_extensio" +
+      "ns\030\002 \003(\tR\022agentPbxExtensions\"}\n\025GetAgent" +
+      "CallCountsRes\022\037\n\013agent_calls\030\001 \001(\003R\nagen" +
+      "tCalls\022\037\n\013skill_calls\030\002 \001(\003R\nskillCalls\022" +
+      "\"\n\ron_hold_calls\030\003 \001(\003R\013onHoldCalls\"\262\001\n\032" +
+      "WarmCallerTransferStartReq\022\037\n\013session_si" +
+      "d\030\001 \001(\003R\nsessionSid\022\031\n\010call_sid\030\002 \001(\003R\007c" +
+      "allSid\0227\n\tcall_type\030\003 \001(\0162\032.api.commons." +
+      "CallType.EnumR\010callType\022\037\n\013caller_hold\030\004" +
+      " \001(\010R\ncallerHold\"\034\n\032WarmCallerTransferSt" +
+      "artRes\"V\n\033WarmCallerTransferCancelReq\022\037\n" +
+      "\013session_sid\030\001 \001(\003R\nsessionSid\022\026\n\006reason" +
+      "\030\002 \001(\tR\006reason\"\035\n\033WarmCallerTransferCanc" +
+      "elRes\"W\n\034WarmCallerTransferApproveReq\022\037\n" +
+      "\013session_sid\030\001 \001(\003R\nsessionSid\022\026\n\006reason" +
+      "\030\002 \001(\tR\006reason\"\036\n\034WarmCallerTransferAppr" +
+      "oveRes\"p\n\027PlaySoundboardEntityReq\022\037\n\013ses" +
+      "sion_sid\030\001 \001(\003R\nsessionSid\0224\n\024soundboard" +
+      "_entity_id\030\002 \001(\003B\0020\001R\022soundboardEntityId" +
+      "\"E\n\027PlaySoundboardEntityRes\022*\n\021sound_ins" +
+      "tance_id\030\001 \001(\tR\017soundInstanceId\"f\n\027StopS" +
+      "oundboardEntityReq\022\037\n\013session_sid\030\001 \001(\003R" +
+      "\nsessionSid\022*\n\021sound_instance_id\030\002 \001(\tR\017" +
+      "soundInstanceId\"\031\n\027StopSoundboardEntityR" +
+      "es\"\350\001\n\030UpdateAgentSkillsRequest\022\037\n\013sessi" +
+      "on_sid\030\001 \001(\003R\nsessionSid\022I\n\006skills\030\002 \003(\013" +
+      "21.api.v0alpha.UpdateAgentSkillsRequest." +
+      "SkillsEntryR\006skills\022%\n\016replace_skills\030\004 " +
+      "\001(\010R\rreplaceSkills\0329\n\013SkillsEntry\022\020\n\003key" +
+      "\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005value:\0028\001\"\030\n" +
+      "\026UpdateAgentSkillsReply\"k\n\017PlayDTMFReque" +
+      "st\022\037\n\013session_sid\030\001 \001(\003R\nsessionSid\0227\n\013d" +
+      "tmf_digits\030\002 \003(\0162\026.api.commons.DTMFDigit" +
+      "R\ndtmfDigits\"\017\n\rPlayDTMFReply\"3\n\020AgentMu" +
+      "teRequest\022\037\n\013session_sid\030\001 \001(\003R\nsessionS" +
+      "id\"\020\n\016AgentMuteReply\"5\n\022AgentUnmuteReque" +
+      "st\022\037\n\013session_sid\030\001 \001(\003R\nsessionSid\"\022\n\020A" +
+      "gentUnmuteReply2\217?\n\003Acd\022\220\001\n\024AgentGetStat" +
+      "usStream\022\".api.v0alpha.AgentGetStatusReq" +
+      "uest\032 .api.v0alpha.AgentGetStatusReply\"0" +
+      "\202\323\344\223\002*\"%/api/v0alpha/acd/agentgetstatuss" +
+      "tream:\001*0\001\022\202\001\n\016AgentGetStatus\022\".api.v0al" +
+      "pha.AgentGetStatusRequest\032 .api.v0alpha." +
+      "AgentGetStatusReply\"*\202\323\344\223\002$\"\037/api/v0alph" +
+      "a/acd/agentgetstatus:\001*\022\242\001\n\026AgentGetConn" +
+      "ectedParty\022*.api.v0alpha.AgentGetConnect" +
+      "edPartyRequest\032(.api.v0alpha.AgentGetCon" +
+      "nectedPartyReply\"2\202\323\344\223\002,\"\'/api/v0alpha/a" +
+      "cd/agentgetconnectedparty:\001*\022\310\001\n\035Manager" +
+      "AgentGetConnectedParty\0221.api.v0alpha.Man" +
+      "agerAgentGetConnectedPartyRequest\032/.api." +
+      "v0alpha.ManagerAgentGetConnectedPartyRep" +
+      "ly\"C\272\270\221\002\005\n\003\010\220\003\202\323\344\223\0023\"./api/v0alpha/acd/m" +
+      "anageragentgetconnectedparty:\001*\022~\n\rAgent" +
+      "Intercom\022!.api.v0alpha.AgentIntercomRequ" +
+      "est\032\037.api.v0alpha.AgentIntercomReply\")\202\323" +
+      "\344\223\002#\"\036/api/v0alpha/acd/agentIntercom:\001*\022" +
+      "\226\001\n\023AgentIntercomAccept\022\'.api.v0alpha.Ag" +
+      "entIntercomAcceptRequest\032%.api.v0alpha.A" +
+      "gentIntercomAcceptReply\"/\202\323\344\223\002)\"$/api/v0" +
+      "alpha/acd/agentintercomaccept:\001*\022\226\001\n\023Age" +
+      "ntIntercomReject\022\'.api.v0alpha.AgentInte" +
+      "rcomRejectRequest\032%.api.v0alpha.AgentInt" +
+      "ercomRejectReply\"/\202\323\344\223\002)\"$/api/v0alpha/a" +
+      "cd/agentintercomreject:\001*\022\226\001\n\023AgentInter" +
+      "comCancel\022\'.api.v0alpha.AgentIntercomCan" +
+      "celRequest\032%.api.v0alpha.AgentIntercomCa" +
+      "ncelReply\"/\202\323\344\223\002)\"$/api/v0alpha/acd/agen" +
+      "tintercomcancel:\001*\022\216\001\n\021DialManualPrepare" +
+      "\022%.api.v0alpha.DialManualPrepareRequest\032" +
+      "#.api.v0alpha.DialManualPrepareReply\"-\202\323" +
+      "\344\223\002\'\"\"/api/v0alpha/acd/dialmanualprepare" +
+      ":\001*\022\212\001\n\020DialManualCancel\022$.api.v0alpha.D" +
+      "ialManualCancelRequest\032\".api.v0alpha.Dia" +
+      "lManualCancelReply\",\202\323\344\223\002&\"!/api/v0alpha" +
+      "/acd/dialmanualcancel:\001*\022\222\001\n\022DialPreview" +
+      "Prepare\022&.api.v0alpha.DialPreviewPrepare" +
+      "Request\032$.api.v0alpha.DialPreviewPrepare" +
+      "Reply\".\202\323\344\223\002(\"#/api/v0alpha/acd/dialprev" +
+      "iewprepare:\001*\022r\n\nAgentPause\022\036.api.v0alph" +
+      "a.AgentPauseRequest\032\034.api.v0alpha.AgentP" +
+      "auseReply\"&\202\323\344\223\002 \"\033/api/v0alpha/acd/agen" +
+      "tpause:\001*\022~\n\rAgentSetReady\022!.api.v0alpha" +
+      ".AgentSetReadyRequest\032\037.api.v0alpha.Agen" +
+      "tSetReadyReply\")\202\323\344\223\002#\"\036/api/v0alpha/acd" +
+      "/agentsetready:\001*\022z\n\014AgentGUIBusy\022 .api." +
+      "v0alpha.AgentGUIBusyRequest\032\036.api.v0alph" +
+      "a.AgentGUIBusyReply\"(\202\323\344\223\002\"\"\035/api/v0alph" +
+      "a/acd/agentguibusy:\001*\022\224\001\n\027ReportAgentSes" +
+      "sionEvent\022!.api.v0alpha.AgentSessionEven" +
+      "tReq\032!.api.v0alpha.AgentSessionEventRes\"" +
+      "3\202\323\344\223\002-\"(/api/v0alpha/acd/reportagentses" +
+      "sionevent:\001*\022~\n\rCallerRequeue\022!.api.v0al" +
+      "pha.CallerRequeueRequest\032\037.api.v0alpha.C" +
+      "allerRequeueReply\")\202\323\344\223\002#\"\036/api/v0alpha/" +
+      "acd/callerrequeue:\001*\022\206\001\n\017AgentDisconnect" +
+      "\022#.api.v0alpha.AgentDisconnectRequest\032!." +
+      "api.v0alpha.AgentDisconnectReply\"+\202\323\344\223\002%" +
+      "\" /api/v0alpha/acd/agentdisconnect:\001*\022\272\001" +
+      "\n\034TransferWarmToOutboundCancel\0220.api.v0a" +
+      "lpha.TransferWarmToOutboundCancelRequest" +
+      "\032..api.v0alpha.TransferWarmToOutboundCan" +
+      "celReply\"8\202\323\344\223\0022\"-/api/v0alpha/acd/trans" +
+      "ferwarmtooutboundcancel:\001*\022\256\001\n\031TransferW" +
+      "armToAgentCancel\022-.api.v0alpha.TransferW" +
+      "armToAgentCancelRequest\032+.api.v0alpha.Tr" +
+      "ansferWarmToAgentCancelReply\"5\202\323\344\223\002/\"*/a" +
+      "pi/v0alpha/acd/transferwarmtoagentcancel" +
+      ":\001*\022\276\001\n\035TransferWarmToOutboundApprove\0221." +
+      "api.v0alpha.TransferWarmToOutboundApprov" +
+      "eRequest\032/.api.v0alpha.TransferWarmToOut" +
+      "boundApproveReply\"9\202\323\344\223\0023\"./api/v0alpha/" +
+      "acd/transferwarmtooutboundapprove:\001*\022\262\001\n" +
+      "\032TransferWarmToAgentApprove\022..api.v0alph" +
+      "a.TransferWarmToAgentApproveRequest\032,.ap" +
+      "i.v0alpha.TransferWarmToAgentApproveRepl" +
+      "y\"6\202\323\344\223\0020\"+/api/v0alpha/acd/transferwarm" +
+      "toagentapprove:\001*\022\236\001\n\025CallerSendToVoicem" +
+      "ail\022).api.v0alpha.CallerSendToVoicemailR" +
+      "equest\032\'.api.v0alpha.CallerSendToVoicema" +
+      "ilReply\"1\202\323\344\223\002+\"&/api/v0alpha/acd/caller" +
+      "sendtovoicemail:\001*\022\336\001\n%AgentInviteTransf" +
+      "erCallerToConference\0229.api.v0alpha.Agent" +
+      "InviteTransferCallerToConferenceRequest\032" +
+      "7.api.v0alpha.AgentInviteTransferCallerT" +
+      "oConferenceReply\"A\202\323\344\223\002;\"6/api/v0alpha/a" +
+      "cd/agentinvitetransfercallertoconference" +
+      ":\001*\022\216\001\n\021AgentMonitorCalls\022%.api.v0alpha." +
+      "AgentMonitorCallsRequest\032#.api.v0alpha.A" +
+      "gentMonitorCallsReply\"-\202\323\344\223\002\'\"\"/api/v0al" +
+      "pha/acd/agentmonitorcalls:\001*\022\242\001\n\026Transfe" +
+      "rColdToOutbound\022*.api.v0alpha.TransferCo" +
+      "ldToOutboundRequest\032(.api.v0alpha.Transf" +
+      "erColdToOutboundReply\"2\202\323\344\223\002,\"\'/api/v0al" +
+      "pha/acd/transfercoldtooutbound:\001*\022\226\001\n\023Tr" +
+      "ansferColdToAgent\022\'.api.v0alpha.Transfer" +
+      "ColdToAgentRequest\032%.api.v0alpha.Transfe" +
+      "rColdToAgentReply\"/\202\323\344\223\002)\"$/api/v0alpha/" +
+      "acd/transfercoldtoagent:\001*\022\266\001\n\033TransferW" +
+      "armToOutboundStart\022/.api.v0alpha.Transfe" +
+      "rWarmToOutboundStartRequest\032-.api.v0alph" +
+      "a.TransferWarmToOutboundStartReply\"7\202\323\344\223" +
+      "\0021\",/api/v0alpha/acd/transferwarmtooutbo" +
+      "undstart:\001*\022\313\001\n CreateWarmOutboundTransf" +
+      "erMember\0224.api.v0alpha.CreateWarmOutboun" +
+      "dTransferMemberRequest\0322.api.v0alpha.Cre" +
+      "ateWarmOutboundTransferMemberReply\"=\202\323\344\223" +
+      "\0027\"2/api/v0alpha/acd/createwarmoutboundt" +
+      "ransferdmember:\001*\022\247\001\n\024RemoveTransferMemb" +
+      "er\022(.api.v0alpha.RemoveTransferMemberReq" +
+      "uest\032&.api.v0alpha.RemoveTransferMemberR" +
+      "eply\"=\202\323\344\223\0027\"2/api/v0alpha/acd/deletewar" +
+      "moutboundtransferdmember:\001*\022\252\001\n\030Transfer" +
+      "WarmToAgentStart\022,.api.v0alpha.TransferW" +
+      "armToAgentStartRequest\032*.api.v0alpha.Tra" +
+      "nsferWarmToAgentStartReply\"4\202\323\344\223\002.\")/api" +
+      "/v0alpha/acd/transferwarmtoagentstart:\001*" +
+      "\022\232\001\n\024AgentGetCallFromHold\022(.api.v0alpha." +
+      "AgentGetCallFromHoldRequest\032&.api.v0alph" +
+      "a.AgentGetCallFromHoldReply\"0\202\323\344\223\002*\"%/ap" +
+      "i/v0alpha/acd/agentgetcallfromhold:\001*\022\272\001" +
+      "\n\034AgentGetSpecificCallFromHold\0220.api.v0a" +
+      "lpha.AgentGetSpecificCallFromHoldRequest" +
+      "\032..api.v0alpha.AgentGetSpecificCallFromH" +
+      "oldReply\"8\202\323\344\223\0022\"-/api/v0alpha/acd/agent" +
+      "getspecificcallfromhold:\001*\022\246\001\n\027ACDGetAll" +
+      "AgentsStatuses\022+.api.v0alpha.ACDGetAllAg" +
+      "entsStatusesRequest\032).api.v0alpha.ACDGet" +
+      "AllAgentsStatusesReply\"3\202\323\344\223\002-\"(/api/v0a" +
+      "lpha/acd/acdgetallagentsstatuses:\001*\022\222\001\n\022" +
+      "AgentPutCallOnHold\022&.api.v0alpha.AgentPu" +
+      "tCallOnHoldRequest\032$.api.v0alpha.AgentPu" +
+      "tCallOnHoldReply\".\202\323\344\223\002(\"#/api/v0alpha/a" +
+      "cd/agentputcallonhold:\001*\022\226\001\n\023AgentReceiv" +
+      "eMessage\022\'.api.v0alpha.AgentReceiveMessa" +
+      "geRequest\032%.api.v0alpha.AgentReceiveMess" +
+      "ageReply\"/\202\323\344\223\002)\"$/api/v0alpha/acd/agent" +
+      "receivemessage:\001*\022\226\001\n\023AgentPBXApproveCal" +
+      "l\022\'.api.v0alpha.AgentPBXApproveCallReque" +
+      "st\032%.api.v0alpha.AgentPBXApproveCallRepl" +
+      "y\"/\202\323\344\223\002)\"$/api/v0alpha/acd/agentpbxappr" +
+      "ovecall:\001*\022\222\001\n\022AgentPBXRejectCall\022&.api." +
+      "v0alpha.AgentPBXRejectCallRequest\032$.api." +
+      "v0alpha.AgentPBXRejectCallReply\".\202\323\344\223\002(\"" +
+      "#/api/v0alpha/acd/agentpbxrejectcall:\001*\022" +
+      "\216\001\n\021GetCallerLostPeer\022%.api.v0alpha.GetC" +
+      "allerLostPeerRequest\032#.api.v0alpha.GetCa" +
+      "llerLostPeerReply\"-\202\323\344\223\002\'\"\"/api/v0alpha/" +
+      "acd/getcallerlostpeer:\001*\022\223\001\n\021CallerGetRa" +
+      "wEvent\022%.api.v0alpha.CallerGetRawEventRe" +
+      "quest\032#.api.v0alpha.CallerGetRawEventRep" +
+      "ly\"2\202\323\344\223\002,\"\'/api/v0alpha/acd/getcallerra" +
+      "weventreply:\001*\022\226\001\n\023PeerAgentWithCaller\022\'" +
+      ".api.v0alpha.PeerAgentWithCallerRequest\032" +
+      "%.api.v0alpha.PeerAgentWithCallerReply\"/" +
+      "\202\323\344\223\002)\"$/api/v0alpha/acd/peeragentwithca" +
+      "ller:\001*\022\221\001\n\022HoldTransferMember\022\".api.v0a" +
+      "lpha.HoldTransferMemberReq\032\".api.v0alpha" +
+      ".HoldTransferMemberRes\"3\202\323\344\223\002-\"(/api/v0a" +
+      "lpha/acd/mutetransferpartymember:\001*\022\224\001\n\024" +
+      "UnholdTransferMember\022$.api.v0alpha.Unhol" +
+      "dTransferMemberReq\032$.api.v0alpha.UnholdT" +
+      "ransferMemberRes\"0\202\323\344\223\002*\"%/api/v0alpha/a" +
+      "cd/unmutetransfermember:\001*\022\214\001\n\022GetAgentC" +
+      "allCounts\022\".api.v0alpha.GetAgentCallCoun" +
+      "tsReq\032\".api.v0alpha.GetAgentCallCountsRe" +
+      "s\".\202\323\344\223\002(\"#/api/v0alpha/acd/getagentcall" +
+      "counts:\001*\022\240\001\n\027WarmCallerTransferStart\022\'." +
+      "api.v0alpha.WarmCallerTransferStartReq\032\'" +
+      ".api.v0alpha.WarmCallerTransferStartRes\"" +
+      "3\202\323\344\223\002-\"(/api/v0alpha/acd/warmcallertran" +
+      "sferstart:\001*\022\244\001\n\030WarmCallerTransferCance" +
+      "l\022(.api.v0alpha.WarmCallerTransferCancel" +
+      "Req\032(.api.v0alpha.WarmCallerTransferCanc" +
+      "elRes\"4\202\323\344\223\002.\")/api/v0alpha/acd/warmcall" +
+      "ertransfercancel:\001*\022\250\001\n\031WarmCallerTransf" +
+      "erApprove\022).api.v0alpha.WarmCallerTransf",
+      "erApproveReq\032).api.v0alpha.WarmCallerTra" +
+      "nsferApproveRes\"5\202\323\344\223\002/\"*/api/v0alpha/ac" +
+      "d/warmcallertransferapprove:\001*\022\224\001\n\024PlayS" +
+      "oundboardEntity\022$.api.v0alpha.PlaySoundb" +
+      "oardEntityReq\032$.api.v0alpha.PlaySoundboa" +
+      "rdEntityRes\"0\202\323\344\223\002*\"%/api/v0alpha/acd/pl" +
+      "aysoundboardentity:\001*\022\224\001\n\024StopSoundboard" +
+      "Entity\022$.api.v0alpha.StopSoundboardEntit" +
+      "yReq\032$.api.v0alpha.StopSoundboardEntityR" +
+      "es\"0\202\323\344\223\002*\"%/api/v0alpha/acd/stopsoundbo" +
+      "ardentity:\001*\022\216\001\n\021UpdateAgentSkills\022%.api" +
+      ".v0alpha.UpdateAgentSkillsRequest\032#.api." +
+      "v0alpha.UpdateAgentSkillsReply\"-\202\323\344\223\002\'\"\"" +
+      "/api/v0alpha/acd/updateagentskills:\001*\022j\n" +
+      "\010PlayDTMF\022\034.api.v0alpha.PlayDTMFRequest\032" +
+      "\032.api.v0alpha.PlayDTMFReply\"$\202\323\344\223\002\036\"\031/ap" +
+      "i/v0alpha/acd/playdtmf:\001*\022n\n\tAgentMute\022\035" +
+      ".api.v0alpha.AgentMuteRequest\032\033.api.v0al" +
+      "pha.AgentMuteReply\"%\202\323\344\223\002\037\"\032/api/v0alpha" +
+      "/acd/agentmute:\001*\022v\n\013AgentUnmute\022\037.api.v" +
+      "0alpha.AgentUnmuteRequest\032\035.api.v0alpha." +
+      "AgentUnmuteReply\"\'\202\323\344\223\002!\"\034/api/v0alpha/a" +
+      "cd/agentunmute:\001*Bv\n\035com.tcn.cloud.api.a" +
+      "pi.v0alphaB\010AcdProtoP\001\242\002\003AVX\252\002\013Api.V0alp" +
+      "ha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\GPBMetada" +
+      "ta\352\002\014Api::V0alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.AcdProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         });
@@ -1656,9 +1658,11 @@ public final class AcdProto {
         new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }
