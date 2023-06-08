@@ -58,44 +58,6 @@ private static final long serialVersionUID = 0L;
     return verifiedEmailSid_;
   }
 
-  public static final int VERIFICATION_KEY_FIELD_NUMBER = 2;
-  private com.google.protobuf.StringValue verificationKey_;
-  /**
-   * <pre>
-   * verification key
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-   * @return Whether the verificationKey field is set.
-   */
-  @java.lang.Override
-  public boolean hasVerificationKey() {
-    return verificationKey_ != null;
-  }
-  /**
-   * <pre>
-   * verification key
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-   * @return The verificationKey.
-   */
-  @java.lang.Override
-  public com.google.protobuf.StringValue getVerificationKey() {
-    return verificationKey_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : verificationKey_;
-  }
-  /**
-   * <pre>
-   * verification key
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-   */
-  @java.lang.Override
-  public com.google.protobuf.StringValueOrBuilder getVerificationKeyOrBuilder() {
-    return verificationKey_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : verificationKey_;
-  }
-
   public static final int EMAIL_ADDRESS_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object emailAddress_ = "";
@@ -304,9 +266,6 @@ private static final long serialVersionUID = 0L;
     if (verifiedEmailSid_ != 0L) {
       output.writeInt64(1, verifiedEmailSid_);
     }
-    if (verificationKey_ != null) {
-      output.writeMessage(2, getVerificationKey());
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailAddress_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, emailAddress_);
     }
@@ -337,10 +296,6 @@ private static final long serialVersionUID = 0L;
     if (verifiedEmailSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, verifiedEmailSid_);
-    }
-    if (verificationKey_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getVerificationKey());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailAddress_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, emailAddress_);
@@ -382,11 +337,6 @@ private static final long serialVersionUID = 0L;
 
     if (getVerifiedEmailSid()
         != other.getVerifiedEmailSid()) return false;
-    if (hasVerificationKey() != other.hasVerificationKey()) return false;
-    if (hasVerificationKey()) {
-      if (!getVerificationKey()
-          .equals(other.getVerificationKey())) return false;
-    }
     if (!getEmailAddress()
         .equals(other.getEmailAddress())) return false;
     if (getVerified()
@@ -422,10 +372,6 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + VERIFIED_EMAIL_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getVerifiedEmailSid());
-    if (hasVerificationKey()) {
-      hash = (37 * hash) + VERIFICATION_KEY_FIELD_NUMBER;
-      hash = (53 * hash) + getVerificationKey().hashCode();
-    }
     hash = (37 * hash) + EMAIL_ADDRESS_FIELD_NUMBER;
     hash = (53 * hash) + getEmailAddress().hashCode();
     hash = (37 * hash) + VERIFIED_FIELD_NUMBER;
@@ -582,11 +528,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       verifiedEmailSid_ = 0L;
-      verificationKey_ = null;
-      if (verificationKeyBuilder_ != null) {
-        verificationKeyBuilder_.dispose();
-        verificationKeyBuilder_ = null;
-      }
       emailAddress_ = "";
       verified_ = false;
       createdOn_ = null;
@@ -642,30 +583,25 @@ private static final long serialVersionUID = 0L;
         result.verifiedEmailSid_ = verifiedEmailSid_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.verificationKey_ = verificationKeyBuilder_ == null
-            ? verificationKey_
-            : verificationKeyBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.emailAddress_ = emailAddress_;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.verified_ = verified_;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.createdOn_ = createdOnBuilder_ == null
             ? createdOn_
             : createdOnBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.verifiedOn_ = verifiedOnBuilder_ == null
             ? verifiedOn_
             : verifiedOnBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.deleted_ = deleted_;
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.description_ = descriptionBuilder_ == null
             ? description_
             : descriptionBuilder_.build();
@@ -719,12 +655,9 @@ private static final long serialVersionUID = 0L;
       if (other.getVerifiedEmailSid() != 0L) {
         setVerifiedEmailSid(other.getVerifiedEmailSid());
       }
-      if (other.hasVerificationKey()) {
-        mergeVerificationKey(other.getVerificationKey());
-      }
       if (!other.getEmailAddress().isEmpty()) {
         emailAddress_ = other.emailAddress_;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getVerified() != false) {
@@ -773,47 +706,40 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 8
-            case 18: {
-              input.readMessage(
-                  getVerificationKeyFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
             case 26: {
               emailAddress_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000002;
               break;
             } // case 26
             case 32: {
               verified_ = input.readBool();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               break;
             } // case 32
             case 42: {
               input.readMessage(
                   getCreatedOnFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000008;
               break;
             } // case 42
             case 50: {
               input.readMessage(
                   getVerifiedOnFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000010;
               break;
             } // case 50
             case 56: {
               deleted_ = input.readBool();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000020;
               break;
             } // case 56
             case 66: {
               input.readMessage(
                   getDescriptionFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000040;
               break;
             } // case 66
             default: {
@@ -877,161 +803,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.StringValue verificationKey_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> verificationKeyBuilder_;
-    /**
-     * <pre>
-     * verification key
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-     * @return Whether the verificationKey field is set.
-     */
-    public boolean hasVerificationKey() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <pre>
-     * verification key
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-     * @return The verificationKey.
-     */
-    public com.google.protobuf.StringValue getVerificationKey() {
-      if (verificationKeyBuilder_ == null) {
-        return verificationKey_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : verificationKey_;
-      } else {
-        return verificationKeyBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * verification key
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-     */
-    public Builder setVerificationKey(com.google.protobuf.StringValue value) {
-      if (verificationKeyBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        verificationKey_ = value;
-      } else {
-        verificationKeyBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * verification key
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-     */
-    public Builder setVerificationKey(
-        com.google.protobuf.StringValue.Builder builderForValue) {
-      if (verificationKeyBuilder_ == null) {
-        verificationKey_ = builderForValue.build();
-      } else {
-        verificationKeyBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * verification key
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-     */
-    public Builder mergeVerificationKey(com.google.protobuf.StringValue value) {
-      if (verificationKeyBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          verificationKey_ != null &&
-          verificationKey_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-          getVerificationKeyBuilder().mergeFrom(value);
-        } else {
-          verificationKey_ = value;
-        }
-      } else {
-        verificationKeyBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * verification key
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-     */
-    public Builder clearVerificationKey() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      verificationKey_ = null;
-      if (verificationKeyBuilder_ != null) {
-        verificationKeyBuilder_.dispose();
-        verificationKeyBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * verification key
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-     */
-    public com.google.protobuf.StringValue.Builder getVerificationKeyBuilder() {
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return getVerificationKeyFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * verification key
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getVerificationKeyOrBuilder() {
-      if (verificationKeyBuilder_ != null) {
-        return verificationKeyBuilder_.getMessageOrBuilder();
-      } else {
-        return verificationKey_ == null ?
-            com.google.protobuf.StringValue.getDefaultInstance() : verificationKey_;
-      }
-    }
-    /**
-     * <pre>
-     * verification key
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-        getVerificationKeyFieldBuilder() {
-      if (verificationKeyBuilder_ == null) {
-        verificationKeyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                getVerificationKey(),
-                getParentForChildren(),
-                isClean());
-        verificationKey_ = null;
-      }
-      return verificationKeyBuilder_;
-    }
-
     private java.lang.Object emailAddress_ = "";
     /**
      * <pre>
@@ -1087,7 +858,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       emailAddress_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1101,7 +872,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearEmailAddress() {
       emailAddress_ = getDefaultInstance().getEmailAddress();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1119,7 +890,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       emailAddress_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1149,7 +920,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVerified(boolean value) {
 
       verified_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1162,7 +933,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVerified() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
       verified_ = false;
       onChanged();
       return this;
@@ -1180,7 +951,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the createdOn field is set.
      */
     public boolean hasCreatedOn() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1213,7 +984,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdOnBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1231,7 +1002,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdOnBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1244,7 +1015,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCreatedOn(com.google.protobuf.Timestamp value) {
       if (createdOnBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
+        if (((bitField0_ & 0x00000008) != 0) &&
           createdOn_ != null &&
           createdOn_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getCreatedOnBuilder().mergeFrom(value);
@@ -1254,7 +1025,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createdOnBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1266,7 +1037,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp created_on = 5 [json_name = "createdOn"];</code>
      */
     public Builder clearCreatedOn() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       createdOn_ = null;
       if (createdOnBuilder_ != null) {
         createdOnBuilder_.dispose();
@@ -1283,7 +1054,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp created_on = 5 [json_name = "createdOn"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreatedOnBuilder() {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return getCreatedOnFieldBuilder().getBuilder();
     }
@@ -1335,7 +1106,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the verifiedOn field is set.
      */
     public boolean hasVerifiedOn() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1368,7 +1139,7 @@ private static final long serialVersionUID = 0L;
       } else {
         verifiedOnBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1386,7 +1157,7 @@ private static final long serialVersionUID = 0L;
       } else {
         verifiedOnBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1399,7 +1170,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeVerifiedOn(com.google.protobuf.Timestamp value) {
       if (verifiedOnBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
+        if (((bitField0_ & 0x00000010) != 0) &&
           verifiedOn_ != null &&
           verifiedOn_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getVerifiedOnBuilder().mergeFrom(value);
@@ -1409,7 +1180,7 @@ private static final long serialVersionUID = 0L;
       } else {
         verifiedOnBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1421,7 +1192,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp verified_on = 6 [json_name = "verifiedOn"];</code>
      */
     public Builder clearVerifiedOn() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000010);
       verifiedOn_ = null;
       if (verifiedOnBuilder_ != null) {
         verifiedOnBuilder_.dispose();
@@ -1438,7 +1209,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp verified_on = 6 [json_name = "verifiedOn"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getVerifiedOnBuilder() {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       onChanged();
       return getVerifiedOnFieldBuilder().getBuilder();
     }
@@ -1503,7 +1274,7 @@ private static final long serialVersionUID = 0L;
     public Builder setDeleted(boolean value) {
 
       deleted_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1516,7 +1287,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDeleted() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000020);
       deleted_ = false;
       onChanged();
       return this;
@@ -1534,7 +1305,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the description field is set.
      */
     public boolean hasDescription() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -1567,7 +1338,7 @@ private static final long serialVersionUID = 0L;
       } else {
         descriptionBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1585,7 +1356,7 @@ private static final long serialVersionUID = 0L;
       } else {
         descriptionBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1598,7 +1369,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDescription(com.google.protobuf.StringValue value) {
       if (descriptionBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0) &&
+        if (((bitField0_ & 0x00000040) != 0) &&
           description_ != null &&
           description_ != com.google.protobuf.StringValue.getDefaultInstance()) {
           getDescriptionBuilder().mergeFrom(value);
@@ -1608,7 +1379,7 @@ private static final long serialVersionUID = 0L;
       } else {
         descriptionBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1620,7 +1391,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue description = 8 [json_name = "description"];</code>
      */
     public Builder clearDescription() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000040);
       description_ = null;
       if (descriptionBuilder_ != null) {
         descriptionBuilder_.dispose();
@@ -1637,7 +1408,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue description = 8 [json_name = "description"];</code>
      */
     public com.google.protobuf.StringValue.Builder getDescriptionBuilder() {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000040;
       onChanged();
       return getDescriptionFieldBuilder().getBuilder();
     }

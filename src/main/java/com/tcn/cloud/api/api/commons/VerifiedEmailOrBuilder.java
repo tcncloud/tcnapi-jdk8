@@ -19,33 +19,6 @@ public interface VerifiedEmailOrBuilder extends
 
   /**
    * <pre>
-   * verification key
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-   * @return Whether the verificationKey field is set.
-   */
-  boolean hasVerificationKey();
-  /**
-   * <pre>
-   * verification key
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-   * @return The verificationKey.
-   */
-  com.google.protobuf.StringValue getVerificationKey();
-  /**
-   * <pre>
-   * verification key
-   * </pre>
-   *
-   * <code>.google.protobuf.StringValue verification_key = 2 [json_name = "verificationKey"];</code>
-   */
-  com.google.protobuf.StringValueOrBuilder getVerificationKeyOrBuilder();
-
-  /**
-   * <pre>
    * connected email address
    * </pre>
    *
