@@ -21,6 +21,37 @@ public final class AcdGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AgentGetStatusRequest,
+      com.tcn.cloud.api.api.v0alpha.AgentGetStatusReply> getAgentGetStatusStreamMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AgentGetStatusStream",
+      requestType = com.tcn.cloud.api.api.v0alpha.AgentGetStatusRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.AgentGetStatusReply.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AgentGetStatusRequest,
+      com.tcn.cloud.api.api.v0alpha.AgentGetStatusReply> getAgentGetStatusStreamMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AgentGetStatusRequest, com.tcn.cloud.api.api.v0alpha.AgentGetStatusReply> getAgentGetStatusStreamMethod;
+    if ((getAgentGetStatusStreamMethod = AcdGrpc.getAgentGetStatusStreamMethod) == null) {
+      synchronized (AcdGrpc.class) {
+        if ((getAgentGetStatusStreamMethod = AcdGrpc.getAgentGetStatusStreamMethod) == null) {
+          AcdGrpc.getAgentGetStatusStreamMethod = getAgentGetStatusStreamMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AgentGetStatusRequest, com.tcn.cloud.api.api.v0alpha.AgentGetStatusReply>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AgentGetStatusStream"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.AgentGetStatusRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.AgentGetStatusReply.getDefaultInstance()))
+              .setSchemaDescriptor(new AcdMethodDescriptorSupplier("AgentGetStatusStream"))
+              .build();
+        }
+      }
+    }
+    return getAgentGetStatusStreamMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AgentGetStatusRequest,
       com.tcn.cloud.api.api.v0alpha.AgentGetStatusReply> getAgentGetStatusMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
@@ -1625,6 +1656,13 @@ public final class AcdGrpc {
 
     /**
      */
+    default void agentGetStatusStream(com.tcn.cloud.api.api.v0alpha.AgentGetStatusRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentGetStatusReply> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentGetStatusStreamMethod(), responseObserver);
+    }
+
+    /**
+     */
     default void agentGetStatus(com.tcn.cloud.api.api.v0alpha.AgentGetStatusRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentGetStatusReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentGetStatusMethod(), responseObserver);
@@ -2042,6 +2080,14 @@ public final class AcdGrpc {
     protected AcdStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AcdStub(channel, callOptions);
+    }
+
+    /**
+     */
+    public void agentGetStatusStream(com.tcn.cloud.api.api.v0alpha.AgentGetStatusRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentGetStatusReply> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getAgentGetStatusStreamMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -2497,6 +2543,14 @@ public final class AcdGrpc {
     protected AcdBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AcdBlockingStub(channel, callOptions);
+    }
+
+    /**
+     */
+    public java.util.Iterator<com.tcn.cloud.api.api.v0alpha.AgentGetStatusReply> agentGetStatusStream(
+        com.tcn.cloud.api.api.v0alpha.AgentGetStatusRequest request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getAgentGetStatusStreamMethod(), getCallOptions(), request);
     }
 
     /**
@@ -3338,56 +3392,57 @@ public final class AcdGrpc {
     }
   }
 
-  private static final int METHODID_AGENT_GET_STATUS = 0;
-  private static final int METHODID_AGENT_GET_CONNECTED_PARTY = 1;
-  private static final int METHODID_AGENT_INTERCOM = 2;
-  private static final int METHODID_AGENT_INTERCOM_ACCEPT = 3;
-  private static final int METHODID_AGENT_INTERCOM_REJECT = 4;
-  private static final int METHODID_AGENT_INTERCOM_CANCEL = 5;
-  private static final int METHODID_DIAL_MANUAL_PREPARE = 6;
-  private static final int METHODID_DIAL_MANUAL_CANCEL = 7;
-  private static final int METHODID_DIAL_PREVIEW_PREPARE = 8;
-  private static final int METHODID_AGENT_PAUSE = 9;
-  private static final int METHODID_AGENT_SET_READY = 10;
-  private static final int METHODID_AGENT_GUIBUSY = 11;
-  private static final int METHODID_REPORT_AGENT_SESSION_EVENT = 12;
-  private static final int METHODID_CALLER_REQUEUE = 13;
-  private static final int METHODID_AGENT_DISCONNECT = 14;
-  private static final int METHODID_TRANSFER_WARM_TO_OUTBOUND_CANCEL = 15;
-  private static final int METHODID_TRANSFER_WARM_TO_AGENT_CANCEL = 16;
-  private static final int METHODID_TRANSFER_WARM_TO_OUTBOUND_APPROVE = 17;
-  private static final int METHODID_TRANSFER_WARM_TO_AGENT_APPROVE = 18;
-  private static final int METHODID_CALLER_SEND_TO_VOICEMAIL = 19;
-  private static final int METHODID_AGENT_INVITE_TRANSFER_CALLER_TO_CONFERENCE = 20;
-  private static final int METHODID_AGENT_MONITOR_CALLS = 21;
-  private static final int METHODID_TRANSFER_COLD_TO_OUTBOUND = 22;
-  private static final int METHODID_TRANSFER_COLD_TO_AGENT = 23;
-  private static final int METHODID_TRANSFER_WARM_TO_OUTBOUND_START = 24;
-  private static final int METHODID_CREATE_WARM_OUTBOUND_TRANSFER_MEMBER = 25;
-  private static final int METHODID_REMOVE_TRANSFER_MEMBER = 26;
-  private static final int METHODID_TRANSFER_WARM_TO_AGENT_START = 27;
-  private static final int METHODID_AGENT_GET_CALL_FROM_HOLD = 28;
-  private static final int METHODID_AGENT_GET_SPECIFIC_CALL_FROM_HOLD = 29;
-  private static final int METHODID_ACDGET_ALL_AGENTS_STATUSES = 30;
-  private static final int METHODID_AGENT_PUT_CALL_ON_HOLD = 31;
-  private static final int METHODID_AGENT_RECEIVE_MESSAGE = 32;
-  private static final int METHODID_AGENT_PBXAPPROVE_CALL = 33;
-  private static final int METHODID_AGENT_PBXREJECT_CALL = 34;
-  private static final int METHODID_GET_CALLER_LOST_PEER = 35;
-  private static final int METHODID_CALLER_GET_RAW_EVENT = 36;
-  private static final int METHODID_PEER_AGENT_WITH_CALLER = 37;
-  private static final int METHODID_HOLD_TRANSFER_MEMBER = 38;
-  private static final int METHODID_UNHOLD_TRANSFER_MEMBER = 39;
-  private static final int METHODID_GET_AGENT_CALL_COUNTS = 40;
-  private static final int METHODID_WARM_CALLER_TRANSFER_START = 41;
-  private static final int METHODID_WARM_CALLER_TRANSFER_CANCEL = 42;
-  private static final int METHODID_WARM_CALLER_TRANSFER_APPROVE = 43;
-  private static final int METHODID_PLAY_SOUNDBOARD_ENTITY = 44;
-  private static final int METHODID_STOP_SOUNDBOARD_ENTITY = 45;
-  private static final int METHODID_UPDATE_AGENT_SKILLS = 46;
-  private static final int METHODID_PLAY_DTMF = 47;
-  private static final int METHODID_AGENT_MUTE = 48;
-  private static final int METHODID_AGENT_UNMUTE = 49;
+  private static final int METHODID_AGENT_GET_STATUS_STREAM = 0;
+  private static final int METHODID_AGENT_GET_STATUS = 1;
+  private static final int METHODID_AGENT_GET_CONNECTED_PARTY = 2;
+  private static final int METHODID_AGENT_INTERCOM = 3;
+  private static final int METHODID_AGENT_INTERCOM_ACCEPT = 4;
+  private static final int METHODID_AGENT_INTERCOM_REJECT = 5;
+  private static final int METHODID_AGENT_INTERCOM_CANCEL = 6;
+  private static final int METHODID_DIAL_MANUAL_PREPARE = 7;
+  private static final int METHODID_DIAL_MANUAL_CANCEL = 8;
+  private static final int METHODID_DIAL_PREVIEW_PREPARE = 9;
+  private static final int METHODID_AGENT_PAUSE = 10;
+  private static final int METHODID_AGENT_SET_READY = 11;
+  private static final int METHODID_AGENT_GUIBUSY = 12;
+  private static final int METHODID_REPORT_AGENT_SESSION_EVENT = 13;
+  private static final int METHODID_CALLER_REQUEUE = 14;
+  private static final int METHODID_AGENT_DISCONNECT = 15;
+  private static final int METHODID_TRANSFER_WARM_TO_OUTBOUND_CANCEL = 16;
+  private static final int METHODID_TRANSFER_WARM_TO_AGENT_CANCEL = 17;
+  private static final int METHODID_TRANSFER_WARM_TO_OUTBOUND_APPROVE = 18;
+  private static final int METHODID_TRANSFER_WARM_TO_AGENT_APPROVE = 19;
+  private static final int METHODID_CALLER_SEND_TO_VOICEMAIL = 20;
+  private static final int METHODID_AGENT_INVITE_TRANSFER_CALLER_TO_CONFERENCE = 21;
+  private static final int METHODID_AGENT_MONITOR_CALLS = 22;
+  private static final int METHODID_TRANSFER_COLD_TO_OUTBOUND = 23;
+  private static final int METHODID_TRANSFER_COLD_TO_AGENT = 24;
+  private static final int METHODID_TRANSFER_WARM_TO_OUTBOUND_START = 25;
+  private static final int METHODID_CREATE_WARM_OUTBOUND_TRANSFER_MEMBER = 26;
+  private static final int METHODID_REMOVE_TRANSFER_MEMBER = 27;
+  private static final int METHODID_TRANSFER_WARM_TO_AGENT_START = 28;
+  private static final int METHODID_AGENT_GET_CALL_FROM_HOLD = 29;
+  private static final int METHODID_AGENT_GET_SPECIFIC_CALL_FROM_HOLD = 30;
+  private static final int METHODID_ACDGET_ALL_AGENTS_STATUSES = 31;
+  private static final int METHODID_AGENT_PUT_CALL_ON_HOLD = 32;
+  private static final int METHODID_AGENT_RECEIVE_MESSAGE = 33;
+  private static final int METHODID_AGENT_PBXAPPROVE_CALL = 34;
+  private static final int METHODID_AGENT_PBXREJECT_CALL = 35;
+  private static final int METHODID_GET_CALLER_LOST_PEER = 36;
+  private static final int METHODID_CALLER_GET_RAW_EVENT = 37;
+  private static final int METHODID_PEER_AGENT_WITH_CALLER = 38;
+  private static final int METHODID_HOLD_TRANSFER_MEMBER = 39;
+  private static final int METHODID_UNHOLD_TRANSFER_MEMBER = 40;
+  private static final int METHODID_GET_AGENT_CALL_COUNTS = 41;
+  private static final int METHODID_WARM_CALLER_TRANSFER_START = 42;
+  private static final int METHODID_WARM_CALLER_TRANSFER_CANCEL = 43;
+  private static final int METHODID_WARM_CALLER_TRANSFER_APPROVE = 44;
+  private static final int METHODID_PLAY_SOUNDBOARD_ENTITY = 45;
+  private static final int METHODID_STOP_SOUNDBOARD_ENTITY = 46;
+  private static final int METHODID_UPDATE_AGENT_SKILLS = 47;
+  private static final int METHODID_PLAY_DTMF = 48;
+  private static final int METHODID_AGENT_MUTE = 49;
+  private static final int METHODID_AGENT_UNMUTE = 50;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3406,6 +3461,10 @@ public final class AcdGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_AGENT_GET_STATUS_STREAM:
+          serviceImpl.agentGetStatusStream((com.tcn.cloud.api.api.v0alpha.AgentGetStatusRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentGetStatusReply>) responseObserver);
+          break;
         case METHODID_AGENT_GET_STATUS:
           serviceImpl.agentGetStatus((com.tcn.cloud.api.api.v0alpha.AgentGetStatusRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentGetStatusReply>) responseObserver);
@@ -3624,6 +3683,13 @@ public final class AcdGrpc {
 
   public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
     return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getAgentGetStatusStreamMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.AgentGetStatusRequest,
+              com.tcn.cloud.api.api.v0alpha.AgentGetStatusReply>(
+                service, METHODID_AGENT_GET_STATUS_STREAM)))
         .addMethod(
           getAgentGetStatusMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -4022,6 +4088,7 @@ public final class AcdGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new AcdFileDescriptorSupplier())
+              .addMethod(getAgentGetStatusStreamMethod())
               .addMethod(getAgentGetStatusMethod())
               .addMethod(getAgentGetConnectedPartyMethod())
               .addMethod(getAgentIntercomMethod())
