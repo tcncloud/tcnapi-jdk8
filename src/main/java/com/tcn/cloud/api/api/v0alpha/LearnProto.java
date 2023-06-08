@@ -119,6 +119,16 @@ public final class LearnProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v0alpha_LearnStandaloneDetails_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v0alpha_DeleteStandaloneReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v0alpha_DeleteStandaloneReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v0alpha_DeleteStandaloneRes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v0alpha_DeleteStandaloneRes_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -174,28 +184,33 @@ public final class LearnProto {
       "s\"\226\001\n\026LearnStandaloneDetails\022\022\n\004name\030\001 \001" +
       "(\tR\004name\022\030\n\007content\030\002 \001(\tR\007content\022N\n\025la" +
       "st_edited_timestamp\030\003 \001(\0132\032.google.proto" +
-      "buf.TimestampR\023lastEditedTimestamp2\245\005\n\005L" +
-      "earn\0225\n\005Exist\022\025.api.v0alpha.ExistReq\032\025.a" +
-      "pi.v0alpha.ExistRes\022;\n\007Content\022\027.api.v0a" +
-      "lpha.ContentReq\032\027.api.v0alpha.ContentRes" +
-      "\022Y\n\021ContentEditorData\022!.api.v0alpha.Cont" +
-      "entEditorDataReq\032!.api.v0alpha.ContentEd" +
-      "itorDataRes\0228\n\006Update\022\026.api.v0alpha.Upda" +
-      "teReq\032\026.api.v0alpha.UpdateRes\022@\n\nExportM" +
-      "any\022\032.api.v0alpha.ExportManyReq\032\026.api.v0" +
-      "alpha.ExportRes\022V\n\020StoreStaticImage\022 .ap" +
-      "i.v0alpha.StoreStaticImageReq\032 .api.v0al" +
-      "pha.StoreStaticImageRes\022F\n\rSearchContent" +
-      "\022\035.api.v0alpha.SearchContentReq\032\026.api.v0" +
-      "alpha.SearchRes\022k\n\027UploadDynamicScreensh" +
-      "ot\022\'.api.v0alpha.UploadDynamicScreenshot" +
-      "Req\032\'.api.v0alpha.UploadDynamicScreensho" +
-      "tRes\022D\n\nStandalone\022\032.api.v0alpha.Standal" +
-      "oneReq\032\032.api.v0alpha.StandaloneResBx\n\035co" +
-      "m.tcn.cloud.api.api.v0alphaB\nLearnProtoP" +
-      "\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027Ap" +
-      "i\\V0alpha\\GPBMetadata\352\002\014Api::V0alphab\006pr" +
-      "oto3"
+      "buf.TimestampR\023lastEditedTimestamp\"i\n\023De" +
+      "leteStandaloneReq\022\026\n\006locale\030\001 \001(\tR\006local" +
+      "e\022\025\n\006org_id\030\002 \001(\tR\005orgId\022#\n\rarticle_name" +
+      "s\030\003 \003(\tR\014articleNames\"\025\n\023DeleteStandalon" +
+      "eRes2\375\005\n\005Learn\0225\n\005Exist\022\025.api.v0alpha.Ex" +
+      "istReq\032\025.api.v0alpha.ExistRes\022;\n\007Content" +
+      "\022\027.api.v0alpha.ContentReq\032\027.api.v0alpha." +
+      "ContentRes\022Y\n\021ContentEditorData\022!.api.v0" +
+      "alpha.ContentEditorDataReq\032!.api.v0alpha" +
+      ".ContentEditorDataRes\0228\n\006Update\022\026.api.v0" +
+      "alpha.UpdateReq\032\026.api.v0alpha.UpdateRes\022" +
+      "@\n\nExportMany\022\032.api.v0alpha.ExportManyRe" +
+      "q\032\026.api.v0alpha.ExportRes\022V\n\020StoreStatic" +
+      "Image\022 .api.v0alpha.StoreStaticImageReq\032" +
+      " .api.v0alpha.StoreStaticImageRes\022F\n\rSea" +
+      "rchContent\022\035.api.v0alpha.SearchContentRe" +
+      "q\032\026.api.v0alpha.SearchRes\022k\n\027UploadDynam" +
+      "icScreenshot\022\'.api.v0alpha.UploadDynamic" +
+      "ScreenshotReq\032\'.api.v0alpha.UploadDynami" +
+      "cScreenshotRes\022D\n\nStandalone\022\032.api.v0alp" +
+      "ha.StandaloneReq\032\032.api.v0alpha.Standalon" +
+      "eRes\022V\n\020DeleteStandalone\022 .api.v0alpha.D" +
+      "eleteStandaloneReq\032 .api.v0alpha.DeleteS" +
+      "tandaloneResBx\n\035com.tcn.cloud.api.api.v0" +
+      "alphaB\nLearnProtoP\001\242\002\003AVX\252\002\013Api.V0alpha\312" +
+      "\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\GPBMetadata\352" +
+      "\002\014Api::V0alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -329,6 +344,18 @@ public final class LearnProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_LearnStandaloneDetails_descriptor,
         new java.lang.String[] { "Name", "Content", "LastEditedTimestamp", });
+    internal_static_api_v0alpha_DeleteStandaloneReq_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_api_v0alpha_DeleteStandaloneReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v0alpha_DeleteStandaloneReq_descriptor,
+        new java.lang.String[] { "Locale", "OrgId", "ArticleNames", });
+    internal_static_api_v0alpha_DeleteStandaloneRes_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_api_v0alpha_DeleteStandaloneRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v0alpha_DeleteStandaloneRes_descriptor,
+        new java.lang.String[] { });
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }

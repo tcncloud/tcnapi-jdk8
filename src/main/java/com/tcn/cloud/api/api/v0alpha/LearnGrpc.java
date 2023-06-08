@@ -297,6 +297,37 @@ public final class LearnGrpc {
     return getStandaloneMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq,
+      com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes> getDeleteStandaloneMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteStandalone",
+      requestType = com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq,
+      com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes> getDeleteStandaloneMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq, com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes> getDeleteStandaloneMethod;
+    if ((getDeleteStandaloneMethod = LearnGrpc.getDeleteStandaloneMethod) == null) {
+      synchronized (LearnGrpc.class) {
+        if ((getDeleteStandaloneMethod = LearnGrpc.getDeleteStandaloneMethod) == null) {
+          LearnGrpc.getDeleteStandaloneMethod = getDeleteStandaloneMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq, com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteStandalone"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("DeleteStandalone"))
+              .build();
+        }
+      }
+    }
+    return getDeleteStandaloneMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -425,6 +456,16 @@ public final class LearnGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StandaloneRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStandaloneMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * delete standalone articles from learning pages
+     * </pre>
+     */
+    default void deleteStandalone(com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteStandaloneMethod(), responseObserver);
+    }
   }
 
   /**
@@ -546,6 +587,17 @@ public final class LearnGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getStandaloneMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * delete standalone articles from learning pages
+     * </pre>
+     */
+    public void deleteStandalone(com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteStandaloneMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -643,6 +695,16 @@ public final class LearnGrpc {
     public com.tcn.cloud.api.api.v0alpha.StandaloneRes standalone(com.tcn.cloud.api.api.v0alpha.StandaloneReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getStandaloneMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * delete standalone articles from learning pages
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes deleteStandalone(com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteStandaloneMethod(), getCallOptions(), request);
     }
   }
 
@@ -751,6 +813,17 @@ public final class LearnGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getStandaloneMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * delete standalone articles from learning pages
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes> deleteStandalone(
+        com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteStandaloneMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_EXIST = 0;
@@ -762,6 +835,7 @@ public final class LearnGrpc {
   private static final int METHODID_SEARCH_CONTENT = 6;
   private static final int METHODID_UPLOAD_DYNAMIC_SCREENSHOT = 7;
   private static final int METHODID_STANDALONE = 8;
+  private static final int METHODID_DELETE_STANDALONE = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -815,6 +889,10 @@ public final class LearnGrpc {
         case METHODID_STANDALONE:
           serviceImpl.standalone((com.tcn.cloud.api.api.v0alpha.StandaloneReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StandaloneRes>) responseObserver);
+          break;
+        case METHODID_DELETE_STANDALONE:
+          serviceImpl.deleteStandalone((com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -897,6 +975,13 @@ public final class LearnGrpc {
               com.tcn.cloud.api.api.v0alpha.StandaloneReq,
               com.tcn.cloud.api.api.v0alpha.StandaloneRes>(
                 service, METHODID_STANDALONE)))
+        .addMethod(
+          getDeleteStandaloneMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq,
+              com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes>(
+                service, METHODID_DELETE_STANDALONE)))
         .build();
   }
 
@@ -954,6 +1039,7 @@ public final class LearnGrpc {
               .addMethod(getSearchContentMethod())
               .addMethod(getUploadDynamicScreenshotMethod())
               .addMethod(getStandaloneMethod())
+              .addMethod(getDeleteStandaloneMethod())
               .build();
         }
       }
