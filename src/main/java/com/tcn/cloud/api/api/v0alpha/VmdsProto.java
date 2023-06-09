@@ -168,125 +168,129 @@ public final class VmdsProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\026api/v0alpha/vmds.proto\022\013api.v0alpha\032\025a" +
-      "pi/commons/acd.proto\032\034google/api/annotat" +
-      "ions.proto\"8\n\027GetVoicemailMetadataReq\022\035\n" +
-      "\nmail_boxes\030\002 \003(\tR\tmailBoxes\"\362\002\n\027GetVoic" +
-      "emailMetadataRes\022\033\n\tcaller_id\030\001 \001(\tR\010cal" +
-      "lerId\022\035\n\ncaller_sid\030\002 \001(\tR\tcallerSid\022;\n\013" +
-      "caller_type\030\003 \001(\0162\032.api.commons.CallType" +
-      ".EnumR\ncallerType\022#\n\rdialed_number\030\004 \001(\t" +
-      "R\014dialedNumber\022)\n\020duration_seconds\030\005 \001(\005" +
-      "R\017durationSeconds\022\033\n\tflag_read\030\006 \001(\010R\010fl" +
-      "agRead\022\031\n\010mail_box\030\007 \001(\tR\007mailBox\022-\n\022rec" +
-      "ording_filename\030\t \001(\tR\021recordingFilename" +
-      "\022\'\n\017recording_start\030\n \001(\005R\016recordingStar" +
-      "t\"\213\001\n\022DeleteVoicemailReq\022\031\n\010mail_box\030\002 \001" +
+      "\n\026api/v0alpha/vmds.proto\022\013api.v0alpha\032\027a" +
+      "nnotations/authz.proto\032\025api/commons/acd." +
+      "proto\032\034google/api/annotations.proto\"8\n\027G" +
+      "etVoicemailMetadataReq\022\035\n\nmail_boxes\030\002 \003" +
+      "(\tR\tmailBoxes\"\362\002\n\027GetVoicemailMetadataRe" +
+      "s\022\033\n\tcaller_id\030\001 \001(\tR\010callerId\022\035\n\ncaller" +
+      "_sid\030\002 \001(\tR\tcallerSid\022;\n\013caller_type\030\003 \001" +
+      "(\0162\032.api.commons.CallType.EnumR\ncallerTy" +
+      "pe\022#\n\rdialed_number\030\004 \001(\tR\014dialedNumber\022" +
+      ")\n\020duration_seconds\030\005 \001(\005R\017durationSecon" +
+      "ds\022\033\n\tflag_read\030\006 \001(\010R\010flagRead\022\031\n\010mail_" +
+      "box\030\007 \001(\tR\007mailBox\022-\n\022recording_filename" +
+      "\030\t \001(\tR\021recordingFilename\022\'\n\017recording_s" +
+      "tart\030\n \001(\005R\016recordingStart\"\213\001\n\022DeleteVoi" +
+      "cemailReq\022\031\n\010mail_box\030\002 \001(\tR\007mailBox\022\035\n\n" +
+      "caller_sid\030\003 \001(\tR\tcallerSid\022;\n\013caller_ty" +
+      "pe\030\004 \001(\0162\032.api.commons.CallType.EnumR\nca" +
+      "llerType\"\024\n\022DeleteVoicemailRes\"/\n\021Delete" +
+      "GreetingReq\022\032\n\010filename\030\002 \001(\tR\010filename\"" +
+      "\023\n\021DeleteGreetingRes\"e\n\023UpdateUploadName" +
+      "Req\022*\n\021current_file_name\030\001 \001(\tR\017currentF" +
+      "ileName\022\"\n\rnew_file_name\030\002 \001(\tR\013newFileN" +
+      "ame\"\025\n\023UpdateUploadNameRes\"5\n\024GetVoicema" +
+      "ilCountReq\022\035\n\nmail_boxes\030\002 \003(\tR\tmailBoxe" +
+      "s\"F\n\024GetVoicemailCountRes\022\024\n\005total\030\001 \001(\005" +
+      "R\005total\022\030\n\007unheard\030\002 \001(\005R\007unheard\"\260\001\n\032Up" +
+      "dateVoicemailFlagReadReq\022\031\n\010mail_box\030\002 \001" +
       "(\tR\007mailBox\022\035\n\ncaller_sid\030\003 \001(\tR\tcallerS" +
       "id\022;\n\013caller_type\030\004 \001(\0162\032.api.commons.Ca" +
-      "llType.EnumR\ncallerType\"\024\n\022DeleteVoicema" +
-      "ilRes\"/\n\021DeleteGreetingReq\022\032\n\010filename\030\002" +
-      " \001(\tR\010filename\"\023\n\021DeleteGreetingRes\"e\n\023U" +
-      "pdateUploadNameReq\022*\n\021current_file_name\030" +
-      "\001 \001(\tR\017currentFileName\022\"\n\rnew_file_name\030" +
-      "\002 \001(\tR\013newFileName\"\025\n\023UpdateUploadNameRe" +
-      "s\"5\n\024GetVoicemailCountReq\022\035\n\nmail_boxes\030" +
-      "\002 \003(\tR\tmailBoxes\"F\n\024GetVoicemailCountRes" +
-      "\022\024\n\005total\030\001 \001(\005R\005total\022\030\n\007unheard\030\002 \001(\005R" +
-      "\007unheard\"\260\001\n\032UpdateVoicemailFlagReadReq\022" +
-      "\031\n\010mail_box\030\002 \001(\tR\007mailBox\022\035\n\ncaller_sid" +
-      "\030\003 \001(\tR\tcallerSid\022;\n\013caller_type\030\004 \001(\0162\032" +
-      ".api.commons.CallType.EnumR\ncallerType\022\033" +
-      "\n\tflag_read\030\005 \001(\010R\010flagRead\"9\n\032UpdateVoi" +
-      "cemailFlagReadRes\022\033\n\tflag_read\030\001 \001(\010R\010fl" +
-      "agRead\"\213\001\n\022DownloadMessageReq\022\031\n\010mail_bo" +
-      "x\030\002 \001(\tR\007mailBox\022\035\n\ncaller_sid\030\003 \001(\tR\tca" +
-      "llerSid\022;\n\013caller_type\030\004 \001(\0162\032.api.commo" +
-      "ns.CallType.EnumR\ncallerType\"&\n\022Download" +
-      "MessageRes\022\020\n\003url\030\001 \001(\tR\003url\"Z\n\027GetUploa" +
-      "dGreetingUrlReq\022#\n\rpbx_extension\030\002 \001(\tR\014" +
-      "pbxExtension\022\032\n\010filename\030\003 \001(\tR\010filename" +
-      "\"+\n\027GetUploadGreetingUrlRes\022\020\n\003url\030\001 \001(\t" +
-      "R\003url\"W\n\023DownloadMessagesReq\022\035\n\nmail_box" +
-      "es\030\002 \003(\tR\tmailBoxes\022!\n\014unheard_only\030\003 \001(" +
-      "\010R\013unheardOnly\"\'\n\023DownloadMessagesRes\022\020\n" +
-      "\003url\030\001 \001(\tR\003url\"<\n\037DownloadGreetingForEx" +
-      "tensionReq\022\031\n\010mail_box\030\002 \001(\tR\007mailBox\"3\n" +
-      "\037DownloadGreetingForExtensionRes\022\020\n\003url\030" +
-      "\001 \001(\tR\003url\"1\n\023DownloadGreetingReq\022\032\n\010fil" +
-      "ename\030\002 \001(\tR\010filename\"\'\n\023DownloadGreetin" +
-      "gRes\022\020\n\003url\030\001 \001(\tR\003url\"[\n\030ProcessGreetin" +
-      "gUploadReq\022#\n\rpbx_extension\030\002 \001(\tR\014pbxEx" +
-      "tension\022\032\n\010filename\030\003 \001(\tR\010filename\"\032\n\030P" +
-      "rocessGreetingUploadRes\"`\n\035UpdateGreetin" +
-      "gForExtensionReq\022#\n\rpbx_extension\030\002 \001(\tR" +
-      "\014pbxExtension\022\032\n\010filename\030\003 \001(\tR\010filenam" +
-      "e\"\037\n\035UpdateGreetingForExtensionRes\"\033\n\031Li" +
-      "stAvailableGreetingsReq\"\246\001\n\031ListAvailabl" +
-      "eGreetingsRes\022M\n\tgreetings\030\001 \003(\0132/.api.v" +
-      "0alpha.ListAvailableGreetingsRes.FileInf" +
-      "oR\tgreetings\032:\n\010FileInfo\022\032\n\010filename\030\001 \001" +
-      "(\tR\010filename\022\022\n\004size\030\002 \001(\003R\004size2\271\020\n\004Vmd" +
-      "s\022\227\001\n\024GetVoicemailMetadata\022$.api.v0alpha" +
-      ".GetVoicemailMetadataReq\032$.api.v0alpha.G" +
-      "etVoicemailMetadataRes\"1\202\323\344\223\002+\"&/api/v0a" +
-      "lpha/vmds/getvoicemailmetadata:\001*0\001\022\227\001\n\030" +
-      "GetVoicemailMessageCount\022!.api.v0alpha.G" +
-      "etVoicemailCountReq\032!.api.v0alpha.GetVoi" +
-      "cemailCountRes\"5\202\323\344\223\002/\"*/api/v0alpha/vmd" +
-      "s/getvoicemailmessagecount:\001*\022\201\001\n\017Delete" +
-      "Voicemail\022\037.api.v0alpha.DeleteVoicemailR" +
-      "eq\032\037.api.v0alpha.DeleteVoicemailRes\",\202\323\344" +
-      "\223\002&\"!/api/v0alpha/vmds/deletevoicemail:\001" +
-      "*\022}\n\016DeleteGreeting\022\036.api.v0alpha.Delete" +
-      "GreetingReq\032\036.api.v0alpha.DeleteGreeting" +
-      "Res\"+\202\323\344\223\002%\" /api/v0alpha/vmds/deletegre" +
-      "eting:\001*\022\205\001\n\020UpdateUploadName\022 .api.v0al" +
-      "pha.UpdateUploadNameReq\032 .api.v0alpha.Up" +
-      "dateUploadNameRes\"-\202\323\344\223\002\'\"\"/api/v0alpha/" +
-      "vmds/updateuploadname:\001*\022\241\001\n\027UpdateVoice" +
-      "mailFlagRead\022\'.api.v0alpha.UpdateVoicema" +
-      "ilFlagReadReq\032\'.api.v0alpha.UpdateVoicem" +
-      "ailFlagReadRes\"4\202\323\344\223\002.\")/api/v0alpha/vmd" +
-      "s/updatevoicemailflagread:\001*\022\201\001\n\017Downloa" +
-      "dMessage\022\037.api.v0alpha.DownloadMessageRe" +
-      "q\032\037.api.v0alpha.DownloadMessageRes\",\202\323\344\223" +
-      "\002&\"!/api/v0alpha/vmds/downloadmessage:\001*" +
-      "\022\205\001\n\020DownloadMessages\022 .api.v0alpha.Down" +
-      "loadMessagesReq\032 .api.v0alpha.DownloadMe" +
-      "ssagesRes\"-\202\323\344\223\002\'\"\"/api/v0alpha/vmds/dow" +
-      "nloadmessages:\001*\022\265\001\n\034DownloadGreetingFor" +
-      "Extension\022,.api.v0alpha.DownloadGreeting" +
-      "ForExtensionReq\032,.api.v0alpha.DownloadGr" +
-      "eetingForExtensionRes\"9\202\323\344\223\0023\"./api/v0al" +
-      "pha/vmds/downloadgreetingforextension:\001*" +
-      "\022\205\001\n\020DownloadGreeting\022 .api.v0alpha.Down" +
-      "loadGreetingReq\032 .api.v0alpha.DownloadGr" +
-      "eetingRes\"-\202\323\344\223\002\'\"\"/api/v0alpha/vmds/dow" +
-      "nloadgreeting:\001*\022\225\001\n\024GetUploadGreetingUr" +
-      "l\022$.api.v0alpha.GetUploadGreetingUrlReq\032" +
-      "$.api.v0alpha.GetUploadGreetingUrlRes\"1\202" +
-      "\323\344\223\002+\"&/api/v0alpha/vmds/getuploadgreeti" +
-      "ngurl:\001*\022\231\001\n\025ProcessGreetingUpload\022%.api" +
-      ".v0alpha.ProcessGreetingUploadReq\032%.api." +
-      "v0alpha.ProcessGreetingUploadRes\"2\202\323\344\223\002," +
-      "\"\'/api/v0alpha/vmds/processgreetinguploa" +
-      "d:\001*\022\255\001\n\032UpdateGreetingForExtension\022*.ap" +
-      "i.v0alpha.UpdateGreetingForExtensionReq\032" +
-      "*.api.v0alpha.UpdateGreetingForExtension" +
-      "Res\"7\202\323\344\223\0021\",/api/v0alpha/vmds/updategre" +
-      "etingforextension:\001*\022\235\001\n\026ListAvailableGr" +
-      "eetings\022&.api.v0alpha.ListAvailableGreet" +
-      "ingsReq\032&.api.v0alpha.ListAvailableGreet" +
-      "ingsRes\"3\202\323\344\223\002-\"(/api/v0alpha/vmds/lista" +
-      "vailablegreetings:\001*Bw\n\035com.tcn.cloud.ap" +
-      "i.api.v0alphaB\tVmdsProtoP\001\242\002\003AVX\252\002\013Api.V" +
-      "0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\GPBMe" +
-      "tadata\352\002\014Api::V0alphab\006proto3"
+      "llType.EnumR\ncallerType\022\033\n\tflag_read\030\005 \001" +
+      "(\010R\010flagRead\"9\n\032UpdateVoicemailFlagReadR" +
+      "es\022\033\n\tflag_read\030\001 \001(\010R\010flagRead\"\213\001\n\022Down" +
+      "loadMessageReq\022\031\n\010mail_box\030\002 \001(\tR\007mailBo" +
+      "x\022\035\n\ncaller_sid\030\003 \001(\tR\tcallerSid\022;\n\013call" +
+      "er_type\030\004 \001(\0162\032.api.commons.CallType.Enu" +
+      "mR\ncallerType\"&\n\022DownloadMessageRes\022\020\n\003u" +
+      "rl\030\001 \001(\tR\003url\"Z\n\027GetUploadGreetingUrlReq" +
+      "\022#\n\rpbx_extension\030\002 \001(\tR\014pbxExtension\022\032\n" +
+      "\010filename\030\003 \001(\tR\010filename\"+\n\027GetUploadGr" +
+      "eetingUrlRes\022\020\n\003url\030\001 \001(\tR\003url\"W\n\023Downlo" +
+      "adMessagesReq\022\035\n\nmail_boxes\030\002 \003(\tR\tmailB" +
+      "oxes\022!\n\014unheard_only\030\003 \001(\010R\013unheardOnly\"" +
+      "\'\n\023DownloadMessagesRes\022\020\n\003url\030\001 \001(\tR\003url" +
+      "\"<\n\037DownloadGreetingForExtensionReq\022\031\n\010m" +
+      "ail_box\030\002 \001(\tR\007mailBox\"3\n\037DownloadGreeti" +
+      "ngForExtensionRes\022\020\n\003url\030\001 \001(\tR\003url\"1\n\023D" +
+      "ownloadGreetingReq\022\032\n\010filename\030\002 \001(\tR\010fi" +
+      "lename\"\'\n\023DownloadGreetingRes\022\020\n\003url\030\001 \001" +
+      "(\tR\003url\"[\n\030ProcessGreetingUploadReq\022#\n\rp" +
+      "bx_extension\030\002 \001(\tR\014pbxExtension\022\032\n\010file" +
+      "name\030\003 \001(\tR\010filename\"\032\n\030ProcessGreetingU" +
+      "ploadRes\"`\n\035UpdateGreetingForExtensionRe" +
+      "q\022#\n\rpbx_extension\030\002 \001(\tR\014pbxExtension\022\032" +
+      "\n\010filename\030\003 \001(\tR\010filename\"\037\n\035UpdateGree" +
+      "tingForExtensionRes\"\033\n\031ListAvailableGree" +
+      "tingsReq\"\246\001\n\031ListAvailableGreetingsRes\022M" +
+      "\n\tgreetings\030\001 \003(\0132/.api.v0alpha.ListAvai" +
+      "lableGreetingsRes.FileInfoR\tgreetings\032:\n" +
+      "\010FileInfo\022\032\n\010filename\030\001 \001(\tR\010filename\022\022\n" +
+      "\004size\030\002 \001(\003R\004size2\234\021\n\004Vmds\022\236\001\n\024GetVoicem" +
+      "ailMetadata\022$.api.v0alpha.GetVoicemailMe" +
+      "tadataReq\032$.api.v0alpha.GetVoicemailMeta" +
+      "dataRes\"8\272\270\221\002\002\030\001\202\323\344\223\002+\"&/api/v0alpha/vmd" +
+      "s/getvoicemailmetadata:\001*0\001\022\236\001\n\030GetVoice" +
+      "mailMessageCount\022!.api.v0alpha.GetVoicem" +
+      "ailCountReq\032!.api.v0alpha.GetVoicemailCo" +
+      "untRes\"<\272\270\221\002\002\030\001\202\323\344\223\002/\"*/api/v0alpha/vmds" +
+      "/getvoicemailmessagecount:\001*\022\210\001\n\017DeleteV" +
+      "oicemail\022\037.api.v0alpha.DeleteVoicemailRe" +
+      "q\032\037.api.v0alpha.DeleteVoicemailRes\"3\272\270\221\002" +
+      "\002\030\001\202\323\344\223\002&\"!/api/v0alpha/vmds/deletevoice" +
+      "mail:\001*\022\204\001\n\016DeleteGreeting\022\036.api.v0alpha" +
+      ".DeleteGreetingReq\032\036.api.v0alpha.DeleteG" +
+      "reetingRes\"2\272\270\221\002\002\030\001\202\323\344\223\002%\" /api/v0alpha/" +
+      "vmds/deletegreeting:\001*\022\214\001\n\020UpdateUploadN" +
+      "ame\022 .api.v0alpha.UpdateUploadNameReq\032 ." +
+      "api.v0alpha.UpdateUploadNameRes\"4\272\270\221\002\002\030\001" +
+      "\202\323\344\223\002\'\"\"/api/v0alpha/vmds/updateuploadna" +
+      "me:\001*\022\250\001\n\027UpdateVoicemailFlagRead\022\'.api." +
+      "v0alpha.UpdateVoicemailFlagReadReq\032\'.api" +
+      ".v0alpha.UpdateVoicemailFlagReadRes\";\272\270\221" +
+      "\002\002\030\001\202\323\344\223\002.\")/api/v0alpha/vmds/updatevoic" +
+      "emailflagread:\001*\022\210\001\n\017DownloadMessage\022\037.a" +
+      "pi.v0alpha.DownloadMessageReq\032\037.api.v0al" +
+      "pha.DownloadMessageRes\"3\272\270\221\002\002\030\001\202\323\344\223\002&\"!/" +
+      "api/v0alpha/vmds/downloadmessage:\001*\022\214\001\n\020" +
+      "DownloadMessages\022 .api.v0alpha.DownloadM" +
+      "essagesReq\032 .api.v0alpha.DownloadMessage" +
+      "sRes\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/v0alpha/vmds/d" +
+      "ownloadmessages:\001*\022\274\001\n\034DownloadGreetingF" +
+      "orExtension\022,.api.v0alpha.DownloadGreeti" +
+      "ngForExtensionReq\032,.api.v0alpha.Download" +
+      "GreetingForExtensionRes\"@\272\270\221\002\002\030\001\202\323\344\223\0023\"." +
+      "/api/v0alpha/vmds/downloadgreetingforext" +
+      "ension:\001*\022\214\001\n\020DownloadGreeting\022 .api.v0a" +
+      "lpha.DownloadGreetingReq\032 .api.v0alpha.D" +
+      "ownloadGreetingRes\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/" +
+      "v0alpha/vmds/downloadgreeting:\001*\022\234\001\n\024Get" +
+      "UploadGreetingUrl\022$.api.v0alpha.GetUploa" +
+      "dGreetingUrlReq\032$.api.v0alpha.GetUploadG" +
+      "reetingUrlRes\"8\272\270\221\002\002\030\001\202\323\344\223\002+\"&/api/v0alp" +
+      "ha/vmds/getuploadgreetingurl:\001*\022\240\001\n\025Proc" +
+      "essGreetingUpload\022%.api.v0alpha.ProcessG" +
+      "reetingUploadReq\032%.api.v0alpha.ProcessGr" +
+      "eetingUploadRes\"9\272\270\221\002\002\030\001\202\323\344\223\002,\"\'/api/v0a" +
+      "lpha/vmds/processgreetingupload:\001*\022\264\001\n\032U" +
+      "pdateGreetingForExtension\022*.api.v0alpha." +
+      "UpdateGreetingForExtensionReq\032*.api.v0al" +
+      "pha.UpdateGreetingForExtensionRes\">\272\270\221\002\002" +
+      "\030\001\202\323\344\223\0021\",/api/v0alpha/vmds/updategreeti" +
+      "ngforextension:\001*\022\244\001\n\026ListAvailableGreet" +
+      "ings\022&.api.v0alpha.ListAvailableGreeting" +
+      "sReq\032&.api.v0alpha.ListAvailableGreeting" +
+      "sRes\":\272\270\221\002\002\030\001\202\323\344\223\002-\"(/api/v0alpha/vmds/l" +
+      "istavailablegreetings:\001*Bw\n\035com.tcn.clou" +
+      "d.api.api.v0alphaB\tVmdsProtoP\001\242\002\003AVX\252\002\013A" +
+      "pi.V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\G" +
+      "PBMetadata\352\002\014Api::V0alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.AcdProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         });
@@ -466,9 +470,11 @@ public final class VmdsProto {
         new java.lang.String[] { "Filename", "Size", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }
