@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 /**
+ * <pre>
+ *request to update learning pages content based on the url
+ * </pre>
+ *
  * Protobuf type {@code api.v0alpha.UpdateReq}
  */
 public final class UpdateReq extends
@@ -393,6 +397,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   *request to update learning pages content based on the url
+   * </pre>
+   *
    * Protobuf type {@code api.v0alpha.UpdateReq}
    */
   public static final class Builder extends

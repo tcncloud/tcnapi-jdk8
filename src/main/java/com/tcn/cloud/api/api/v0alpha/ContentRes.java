@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 /**
+ * <pre>
+ * response to retreive learning pages content
+ * </pre>
+ *
  * Protobuf type {@code api.v0alpha.ContentRes}
  */
 public final class ContentRes extends
@@ -364,6 +368,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * response to retreive learning pages content
+   * </pre>
+   *
    * Protobuf type {@code api.v0alpha.ContentRes}
    */
   public static final class Builder extends

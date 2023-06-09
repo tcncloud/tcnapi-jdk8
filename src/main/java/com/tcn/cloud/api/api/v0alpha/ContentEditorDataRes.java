@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 /**
+ * <pre>
+ * response to retreive last user edited learning pages content
+ * </pre>
+ *
  * Protobuf type {@code api.v0alpha.ContentEditorDataRes}
  */
 public final class ContentEditorDataRes extends
@@ -243,6 +247,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * response to retreive last user edited learning pages content
+   * </pre>
+   *
    * Protobuf type {@code api.v0alpha.ContentEditorDataRes}
    */
   public static final class Builder extends
