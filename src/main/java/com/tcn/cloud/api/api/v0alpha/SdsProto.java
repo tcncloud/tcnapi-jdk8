@@ -83,79 +83,82 @@ public final class SdsProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025api/v0alpha/sds.proto\022\013api.v0alpha\032\025ap" +
-      "i/commons/acd.proto\032\034google/api/annotati" +
-      "ons.proto\032\037google/protobuf/timestamp.pro" +
-      "to\"m\n\027GetAgentResponseDataReq\022\031\n\010call_si" +
-      "d\030\001 \001(\003R\007callSid\0227\n\tcall_type\030\002 \001(\0162\032.ap" +
-      "i.commons.CallType.EnumR\010callType\"\376\001\n\027Ge" +
-      "tAgentResponseDataRes\022\031\n\010call_sid\030\001 \001(\003R" +
-      "\007callSid\0227\n\tcall_type\030\002 \001(\0162\032.api.common" +
-      "s.CallType.EnumR\010callType\022Q\n\tresponses\030\003" +
-      " \003(\01323.api.v0alpha.GetAgentResponseDataR" +
-      "es.ResponsesEntryR\tresponses\032<\n\016Response" +
-      "sEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR" +
-      "\005value:\0028\001\"`\n\nGetCallReq\022\031\n\010call_sid\030\002 \001" +
-      "(\003R\007callSid\0227\n\tcall_type\030\003 \001(\0162\032.api.com" +
-      "mons.CallType.EnumR\010callType\"\220\001\n\025UpdateV" +
-      "oicemailBoxReq\022\031\n\010call_sid\030\002 \001(\003R\007callSi" +
-      "d\0227\n\tcall_type\030\003 \001(\0162\032.api.commons.CallT" +
-      "ype.EnumR\010callType\022#\n\rpbx_extension\030\004 \001(" +
-      "\tR\014pbxExtension\"\027\n\025UpdateVoicemailBoxRes" +
-      "\"\353\007\n\nCallObject\022\020\n\003oid\030\001 \001(\tR\003oid\022\031\n\010cal" +
-      "l_sid\030\002 \001(\003R\007callSid\0227\n\tcall_type\030\003 \001(\0162" +
-      "\032.api.commons.CallType.EnumR\010callType\022\030\n" +
-      "\007updated\030\n \001(\003R\007updated\022;\n\006skills\030\013 \003(\0132" +
-      "#.api.v0alpha.CallObject.SkillsEntryR\006sk" +
-      "ills\022%\n\016recording_file\030\014 \001(\tR\rrecordingF" +
-      "ile\022=\n\014updated_date\030\r \001(\0132\032.google.proto" +
-      "buf.TimestampR\013updatedDate\022\035\n\nsrc_number" +
-      "\030\016 \001(\tR\tsrcNumber\022\035\n\ndst_number\030\017 \001(\tR\td" +
-      "stNumber\022$\n\016caller_id_name\030\020 \001(\tR\014caller" +
-      "IdName\022!\n\014agent_worker\030\021 \001(\tR\013agentWorke" +
-      "r\022\026\n\006events\030\022 \003(\tR\006events\022\033\n\tcall_data\030\023" +
-      " \001(\tR\010callData\022^\n\023agent_response_data\030\024 " +
-      "\003(\0132..api.v0alpha.CallObject.AgentRespon" +
-      "seDataEntryR\021agentResponseData\022\032\n\010record" +
-      "ed\030\025 \001(\010R\010recorded\022\034\n\tconnected\030\026 \001(\010R\tc" +
-      "onnected\022\034\n\tsuspended\030\027 \001(\010R\tsuspended\022+" +
-      "\n\021disconnect_reason\030\030 \001(\tR\020disconnectRea" +
-      "son\022 \n\013voicemailed\030\031 \001(\010R\013voicemailed\022#\n" +
-      "\rvoicemail_box\030\032 \001(\tR\014voicemailBox\022\036\n\nor" +
-      "iginated\030\033 \001(\tR\noriginated\022\026\n\006folder\030\034 \001" +
-      "(\tR\006folder\022\031\n\010rtp_info\030\035 \001(\tR\007rtpInfo\0329\n" +
-      "\013SkillsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030" +
-      "\002 \001(\010R\005value:\0028\001\032D\n\026AgentResponseDataEnt" +
-      "ry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005val" +
-      "ue:\0028\001\"\204\002\n\032UpdateAgentResponseDataReq\022\031\n" +
-      "\010call_sid\030\002 \001(\003R\007callSid\0227\n\tcall_type\030\003 " +
-      "\001(\0162\032.api.commons.CallType.EnumR\010callTyp" +
-      "e\022T\n\tresponses\030\004 \003(\01326.api.v0alpha.Updat" +
-      "eAgentResponseDataReq.ResponsesEntryR\tre" +
-      "sponses\032<\n\016ResponsesEntry\022\020\n\003key\030\001 \001(\tR\003" +
-      "key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\034\n\032UpdateA" +
-      "gentResponseDataRes2\260\004\n\003Sds\022\224\001\n\024GetAgent" +
-      "ResponseData\022$.api.v0alpha.GetAgentRespo" +
-      "nseDataReq\032$.api.v0alpha.GetAgentRespons" +
-      "eDataRes\"0\202\323\344\223\002*\"%/api/v0alpha/sds/getag" +
-      "entresponsedata:\001*\022`\n\007GetCall\022\027.api.v0al" +
-      "pha.GetCallReq\032\027.api.v0alpha.CallObject\"" +
-      "#\202\323\344\223\002\035\"\030/api/v0alpha/sds/getcall:\001*\022\240\001\n" +
-      "\027UpdateAgentResponseData\022\'.api.v0alpha.U" +
-      "pdateAgentResponseDataReq\032\'.api.v0alpha." +
-      "UpdateAgentResponseDataRes\"3\202\323\344\223\002-\"(/api" +
-      "/v0alpha/sds/updateagentresponsedata:\001*\022" +
-      "\214\001\n\022UpdateVoicemailBox\022\".api.v0alpha.Upd" +
-      "ateVoicemailBoxReq\032\".api.v0alpha.UpdateV" +
-      "oicemailBoxRes\".\202\323\344\223\002(\"#/api/v0alpha/sds" +
-      "/updatevoicemailbox:\001*Bv\n\035com.tcn.cloud." +
-      "api.api.v0alphaB\010SdsProtoP\001\242\002\003AVX\252\002\013Api." +
-      "V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\GPBM" +
-      "etadata\352\002\014Api::V0alphab\006proto3"
+      "\n\025api/v0alpha/sds.proto\022\013api.v0alpha\032\027an" +
+      "notations/authz.proto\032\025api/commons/acd.p" +
+      "roto\032\034google/api/annotations.proto\032\037goog" +
+      "le/protobuf/timestamp.proto\"m\n\027GetAgentR" +
+      "esponseDataReq\022\031\n\010call_sid\030\001 \001(\003R\007callSi" +
+      "d\0227\n\tcall_type\030\002 \001(\0162\032.api.commons.CallT" +
+      "ype.EnumR\010callType\"\376\001\n\027GetAgentResponseD" +
+      "ataRes\022\031\n\010call_sid\030\001 \001(\003R\007callSid\0227\n\tcal" +
+      "l_type\030\002 \001(\0162\032.api.commons.CallType.Enum" +
+      "R\010callType\022Q\n\tresponses\030\003 \003(\01323.api.v0al" +
+      "pha.GetAgentResponseDataRes.ResponsesEnt" +
+      "ryR\tresponses\032<\n\016ResponsesEntry\022\020\n\003key\030\001" +
+      " \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"`\n\nG" +
+      "etCallReq\022\031\n\010call_sid\030\002 \001(\003R\007callSid\0227\n\t" +
+      "call_type\030\003 \001(\0162\032.api.commons.CallType.E" +
+      "numR\010callType\"\220\001\n\025UpdateVoicemailBoxReq\022" +
+      "\031\n\010call_sid\030\002 \001(\003R\007callSid\0227\n\tcall_type\030" +
+      "\003 \001(\0162\032.api.commons.CallType.EnumR\010callT" +
+      "ype\022#\n\rpbx_extension\030\004 \001(\tR\014pbxExtension" +
+      "\"\027\n\025UpdateVoicemailBoxRes\"\353\007\n\nCallObject" +
+      "\022\020\n\003oid\030\001 \001(\tR\003oid\022\031\n\010call_sid\030\002 \001(\003R\007ca" +
+      "llSid\0227\n\tcall_type\030\003 \001(\0162\032.api.commons.C" +
+      "allType.EnumR\010callType\022\030\n\007updated\030\n \001(\003R" +
+      "\007updated\022;\n\006skills\030\013 \003(\0132#.api.v0alpha.C" +
+      "allObject.SkillsEntryR\006skills\022%\n\016recordi" +
+      "ng_file\030\014 \001(\tR\rrecordingFile\022=\n\014updated_" +
+      "date\030\r \001(\0132\032.google.protobuf.TimestampR\013" +
+      "updatedDate\022\035\n\nsrc_number\030\016 \001(\tR\tsrcNumb" +
+      "er\022\035\n\ndst_number\030\017 \001(\tR\tdstNumber\022$\n\016cal" +
+      "ler_id_name\030\020 \001(\tR\014callerIdName\022!\n\014agent" +
+      "_worker\030\021 \001(\tR\013agentWorker\022\026\n\006events\030\022 \003" +
+      "(\tR\006events\022\033\n\tcall_data\030\023 \001(\tR\010callData\022" +
+      "^\n\023agent_response_data\030\024 \003(\0132..api.v0alp" +
+      "ha.CallObject.AgentResponseDataEntryR\021ag" +
+      "entResponseData\022\032\n\010recorded\030\025 \001(\010R\010recor" +
+      "ded\022\034\n\tconnected\030\026 \001(\010R\tconnected\022\034\n\tsus" +
+      "pended\030\027 \001(\010R\tsuspended\022+\n\021disconnect_re" +
+      "ason\030\030 \001(\tR\020disconnectReason\022 \n\013voicemai" +
+      "led\030\031 \001(\010R\013voicemailed\022#\n\rvoicemail_box\030" +
+      "\032 \001(\tR\014voicemailBox\022\036\n\noriginated\030\033 \001(\tR" +
+      "\noriginated\022\026\n\006folder\030\034 \001(\tR\006folder\022\031\n\010r" +
+      "tp_info\030\035 \001(\tR\007rtpInfo\0329\n\013SkillsEntry\022\020\n" +
+      "\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\010R\005value:\0028" +
+      "\001\032D\n\026AgentResponseDataEntry\022\020\n\003key\030\001 \001(\t" +
+      "R\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\204\002\n\032Upda" +
+      "teAgentResponseDataReq\022\031\n\010call_sid\030\002 \001(\003" +
+      "R\007callSid\0227\n\tcall_type\030\003 \001(\0162\032.api.commo" +
+      "ns.CallType.EnumR\010callType\022T\n\tresponses\030" +
+      "\004 \003(\01326.api.v0alpha.UpdateAgentResponseD" +
+      "ataReq.ResponsesEntryR\tresponses\032<\n\016Resp" +
+      "onsesEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 " +
+      "\001(\tR\005value:\0028\001\"\034\n\032UpdateAgentResponseDat" +
+      "aRes2\314\004\n\003Sds\022\233\001\n\024GetAgentResponseData\022$." +
+      "api.v0alpha.GetAgentResponseDataReq\032$.ap" +
+      "i.v0alpha.GetAgentResponseDataRes\"7\272\270\221\002\002" +
+      "\030\001\202\323\344\223\002*\"%/api/v0alpha/sds/getagentrespo" +
+      "nsedata:\001*\022g\n\007GetCall\022\027.api.v0alpha.GetC" +
+      "allReq\032\027.api.v0alpha.CallObject\"*\272\270\221\002\002\030\001" +
+      "\202\323\344\223\002\035\"\030/api/v0alpha/sds/getcall:\001*\022\247\001\n\027" +
+      "UpdateAgentResponseData\022\'.api.v0alpha.Up" +
+      "dateAgentResponseDataReq\032\'.api.v0alpha.U" +
+      "pdateAgentResponseDataRes\":\272\270\221\002\002\030\001\202\323\344\223\002-" +
+      "\"(/api/v0alpha/sds/updateagentresponseda" +
+      "ta:\001*\022\223\001\n\022UpdateVoicemailBox\022\".api.v0alp" +
+      "ha.UpdateVoicemailBoxReq\032\".api.v0alpha.U" +
+      "pdateVoicemailBoxRes\"5\272\270\221\002\002\030\001\202\323\344\223\002(\"#/ap" +
+      "i/v0alpha/sds/updatevoicemailbox:\001*Bv\n\035c" +
+      "om.tcn.cloud.api.api.v0alphaB\010SdsProtoP\001" +
+      "\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027Api" +
+      "\\V0alpha\\GPBMetadata\352\002\014Api::V0alphab\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.AcdProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
@@ -234,9 +237,11 @@ public final class SdsProto {
         new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
