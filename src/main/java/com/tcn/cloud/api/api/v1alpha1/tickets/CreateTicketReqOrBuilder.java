@@ -225,4 +225,10 @@ public interface CreateTicketReqOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.SlaOrBuilder getTicketSlaOrBuilder(
       int index);
+
+  /**
+   * <code>bool assign_self = 13 [json_name = "assignSelf"];</code>
+   * @return The assignSelf.
+   */
+  boolean getAssignSelf();
 }

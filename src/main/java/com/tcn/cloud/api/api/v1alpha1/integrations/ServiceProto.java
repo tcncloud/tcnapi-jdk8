@@ -604,660 +604,670 @@ public final class ServiceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\'api/v1alpha1/integrations/service.prot" +
-      "o\022\031api.v1alpha1.integrations\032+api/common" +
-      "s/integrations/integrations.proto\032\034googl" +
-      "e/api/annotations.proto\032 google/protobuf" +
-      "/field_mask.proto\032\037google/protobuf/times" +
-      "tamp.proto\"\027\n\025ListJourneyConfigsReq\"\032\n\030L" +
-      "istNonJourneyConfigsReq\"Z\n\022IntegrationCo" +
-      "nfigs\022D\n\006values\030\001 \003(\0132,.api.v1alpha1.int" +
-      "egrations.IntegrationConfigR\006values\"\217\001\n\027" +
-      "GetIntegrationConfigReq\022P\n\016integration_i" +
-      "d\030\003 \001(\0162).api.commons.integrations.Integ" +
-      "rationTypeR\rintegrationId\022\022\n\004name\030\004 \001(\tR" +
-      "\004name\022\016\n\002id\030\005 \001(\tR\002id\"\357\001\n\032UpdateIntegrat" +
-      "ionConfigReq\022\016\n\002id\030\003 \001(\tR\002id\022P\n\016integrat" +
-      "ion_id\030\004 \001(\0162).api.commons.integrations." +
-      "IntegrationTypeR\rintegrationId\022\022\n\004name\030\005" +
-      " \001(\tR\004name\022 \n\013description\030\007 \001(\tR\013descrip" +
-      "tion\0229\n\006params\030\t \001(\0132!.api.v1alpha1.inte" +
-      "grations.ValuesR\006params\"\222\001\n\032DeleteIntegr" +
-      "ationConfigReq\022P\n\016integration_id\030\004 \001(\0162)" +
+      "o\022\031api.v1alpha1.integrations\032\027annotation" +
+      "s/authz.proto\032+api/commons/integrations/" +
+      "integrations.proto\032\027api/commons/perms.pr" +
+      "oto\032\034google/api/annotations.proto\032 googl" +
+      "e/protobuf/field_mask.proto\032\037google/prot" +
+      "obuf/timestamp.proto\"\027\n\025ListJourneyConfi" +
+      "gsReq\"\032\n\030ListNonJourneyConfigsReq\"Z\n\022Int" +
+      "egrationConfigs\022D\n\006values\030\001 \003(\0132,.api.v1" +
+      "alpha1.integrations.IntegrationConfigR\006v" +
+      "alues\"\217\001\n\027GetIntegrationConfigReq\022P\n\016int" +
+      "egration_id\030\003 \001(\0162).api.commons.integrat" +
+      "ions.IntegrationTypeR\rintegrationId\022\022\n\004n" +
+      "ame\030\004 \001(\tR\004name\022\016\n\002id\030\005 \001(\tR\002id\"\357\001\n\032Upda" +
+      "teIntegrationConfigReq\022\016\n\002id\030\003 \001(\tR\002id\022P" +
+      "\n\016integration_id\030\004 \001(\0162).api.commons.int" +
+      "egrations.IntegrationTypeR\rintegrationId" +
+      "\022\022\n\004name\030\005 \001(\tR\004name\022 \n\013description\030\007 \001(" +
+      "\tR\013description\0229\n\006params\030\t \001(\0132!.api.v1a" +
+      "lpha1.integrations.ValuesR\006params\"\222\001\n\032De" +
+      "leteIntegrationConfigReq\022P\n\016integration_" +
+      "id\030\004 \001(\0162).api.commons.integrations.Inte" +
+      "grationTypeR\rintegrationId\022\022\n\004name\030\005 \001(\t" +
+      "R\004name\022\016\n\002id\030\006 \001(\tR\002id\"\345\003\n\nProcessReq\022\035\n" +
+      "\nrequest_id\030\010 \001(\tR\trequestId\022P\n\016integrat" +
+      "ion_id\030\003 \001(\0162).api.commons.integrations." +
+      "IntegrationTypeR\rintegrationId\022D\n\tmethod" +
+      "_id\030\004 \001(\0162\'.api.commons.integrations.Req" +
+      "uestMethodR\010methodId\022\037\n\013config_name\030\005 \001(" +
+      "\tR\nconfigName\022\033\n\tconfig_id\030\t \001(\tR\010config" +
+      "Id\022I\n\006params\030\006 \003(\01321.api.v1alpha1.integr" +
+      "ations.ProcessReq.ParamsEntryR\006params\022:\n" +
+      "\005conds\030\007 \003(\0132$.api.v1alpha1.integrations" +
+      ".ConditionR\005conds\032[\n\013ParamsEntry\022\020\n\003key\030" +
+      "\001 \001(\tR\003key\0226\n\005value\030\002 \001(\0132 .api.v1alpha1" +
+      ".integrations.ValueR\005value:\0028\001\"\245\002\n\nProce" +
+      "ssRes\022\026\n\006result\030\001 \001(\010R\006result\022C\n\004data\030\002 " +
+      "\003(\0132/.api.v1alpha1.integrations.ProcessR" +
+      "es.DataEntryR\004data\022 \n\013integration\030\003 \001(\tR" +
+      "\013integration\022\026\n\006method\030\004 \001(\tR\006method\022%\n\016" +
+      "transaction_id\030\005 \001(\tR\rtransactionId\032Y\n\tD" +
+      "ataEntry\022\020\n\003key\030\001 \001(\tR\003key\0226\n\005value\030\002 \001(" +
+      "\0132 .api.v1alpha1.integrations.ValueR\005val" +
+      "ue:\0028\001\"V\n\020IntegrationInfos\022B\n\006values\030\001 \003" +
+      "(\0132*.api.v1alpha1.integrations.Integrati" +
+      "onInfoR\006values\"\240\003\n\017IntegrationInfo\022\022\n\004na" +
+      "me\030\001 \001(\tR\004name\022P\n\016integration_id\030\002 \001(\0162)" +
       ".api.commons.integrations.IntegrationTyp" +
-      "eR\rintegrationId\022\022\n\004name\030\005 \001(\tR\004name\022\016\n\002" +
-      "id\030\006 \001(\tR\002id\"\345\003\n\nProcessReq\022\035\n\nrequest_i" +
-      "d\030\010 \001(\tR\trequestId\022P\n\016integration_id\030\003 \001" +
-      "(\0162).api.commons.integrations.Integratio" +
-      "nTypeR\rintegrationId\022D\n\tmethod_id\030\004 \001(\0162" +
-      "\'.api.commons.integrations.RequestMethod" +
-      "R\010methodId\022\037\n\013config_name\030\005 \001(\tR\nconfigN" +
-      "ame\022\033\n\tconfig_id\030\t \001(\tR\010configId\022I\n\006para" +
-      "ms\030\006 \003(\01321.api.v1alpha1.integrations.Pro" +
-      "cessReq.ParamsEntryR\006params\022:\n\005conds\030\007 \003" +
-      "(\0132$.api.v1alpha1.integrations.Condition" +
-      "R\005conds\032[\n\013ParamsEntry\022\020\n\003key\030\001 \001(\tR\003key" +
-      "\0226\n\005value\030\002 \001(\0132 .api.v1alpha1.integrati" +
-      "ons.ValueR\005value:\0028\001\"\245\002\n\nProcessRes\022\026\n\006r" +
-      "esult\030\001 \001(\010R\006result\022C\n\004data\030\002 \003(\0132/.api." +
-      "v1alpha1.integrations.ProcessRes.DataEnt" +
-      "ryR\004data\022 \n\013integration\030\003 \001(\tR\013integrati" +
-      "on\022\026\n\006method\030\004 \001(\tR\006method\022%\n\016transactio" +
-      "n_id\030\005 \001(\tR\rtransactionId\032Y\n\tDataEntry\022\020" +
-      "\n\003key\030\001 \001(\tR\003key\0226\n\005value\030\002 \001(\0132 .api.v1" +
-      "alpha1.integrations.ValueR\005value:\0028\001\"V\n\020" +
-      "IntegrationInfos\022B\n\006values\030\001 \003(\0132*.api.v" +
-      "1alpha1.integrations.IntegrationInfoR\006va" +
-      "lues\"\240\003\n\017IntegrationInfo\022\022\n\004name\030\001 \001(\tR\004" +
-      "name\022P\n\016integration_id\030\002 \001(\0162).api.commo" +
-      "ns.integrations.IntegrationTypeR\rintegra" +
-      "tionId\022 \n\013description\030\003 \001(\tR\013description" +
-      "\022?\n\007methods\030\004 \003(\0132%.api.v1alpha1.integra" +
-      "tions.MethodInfoR\007methods\022^\n\014group_param" +
-      "s\030\005 \003(\0132;.api.v1alpha1.integrations.Inte" +
-      "grationInfo.GroupParamsEntryR\013groupParam" +
-      "s\032d\n\020GroupParamsEntry\022\020\n\003key\030\001 \001(\005R\003key\022" +
-      ":\n\005value\030\002 \001(\0132$.api.v1alpha1.integratio" +
-      "ns.ParameterR\005value:\0028\001\"\205\004\n\nMethodInfo\022\022" +
-      "\n\004name\030\001 \001(\tR\004name\022D\n\tmethod_id\030\002 \001(\0162\'." +
-      "api.commons.integrations.RequestMethodR\010" +
-      "methodId\022B\n\007tx_type\030\003 \001(\0162).api.commons." +
-      "integrations.TransactionTypeR\006txType\022<\n\006" +
-      "params\030\004 \003(\0132$.api.v1alpha1.integrations" +
-      ".ParameterR\006params\022\020\n\003url\030\005 \001(\tR\003url\022@\n\010" +
-      "response\030\006 \003(\0132$.api.v1alpha1.integratio" +
-      "ns.ParameterR\010response\022_\n\016runtime_params" +
-      "\030\007 \003(\01328.api.v1alpha1.integrations.Metho" +
-      "dInfo.RuntimeParamsEntryR\rruntimeParams\032" +
-      "f\n\022RuntimeParamsEntry\022\020\n\003key\030\001 \001(\005R\003key\022" +
-      ":\n\005value\030\002 \001(\0132$.api.v1alpha1.integratio" +
-      "ns.ParameterR\005value:\0028\001\"\274\003\n\tParameter\022\022\n" +
-      "\004name\030\001 \001(\tR\004name\022B\n\nparam_type\030\002 \001(\0162#." +
-      "api.commons.integrations.ValueTypeR\tpara" +
-      "mType\022\032\n\010required\030\003 \001(\010R\010required\022E\n\rdef" +
-      "ault_value\030\004 \001(\0132 .api.v1alpha1.integrat" +
-      "ions.ValueR\014defaultValue\022!\n\014display_name" +
-      "\030\005 \001(\tR\013displayName\022\034\n\tsensitive\030\006 \001(\010R\t" +
-      "sensitive\022#\n\rruntime_param\030\007 \001(\010R\014runtim" +
-      "eParam\022\037\n\013helper_text\030\010 \001(\tR\nhelperText\022" +
-      "\'\n\017template_locked\030\t \001(\010R\016templateLocked" +
-      "\022D\n\nvalidation\030\n \001(\0162$.api.commons.integ" +
-      "rations.ValidationR\nvalidation\"\007\n\005Empty\"" +
-      "\\\n\034GetIntegrationTransactionReq\022<\n\032integ" +
-      "ration_transaction_id\030\001 \001(\tR\030integration" +
-      "TransactionId\"\300\001\n\030GetAggregatedMetadataR" +
-      "eq\0220\n\005start\030\003 \001(\0132\032.google.protobuf.Time" +
-      "stampR\005start\022,\n\003end\030\004 \001(\0132\032.google.proto" +
-      "buf.TimestampR\003end\022D\n\tmethod_id\030\005 \001(\0162\'." +
-      "api.commons.integrations.RequestMethodR\010" +
-      "methodId\"\233\002\n\030GetAggregatedMetadataRes\022\024\n" +
-      "\005views\030\001 \001(\005R\005views\022\'\n\017verify_attempts\030\002" +
-      " \001(\005R\016verifyAttempts\022)\n\020verify_successes" +
-      "\030\003 \001(\005R\017verifySuccesses\022)\n\020payment_attem" +
-      "pts\030\004 \001(\005R\017paymentAttempts\022+\n\021payment_su" +
-      "ccesses\030\005 \001(\005R\020paymentSuccesses\022%\n\016payme" +
-      "nt_amount\030\006 \001(\001R\rpaymentAmount\022\026\n\006fields" +
-      "\030\007 \003(\tR\006fields\"\237\001\n\"GetIntegrationTransac" +
-      "tionReportReq\0220\n\005start\030\003 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\005start\022,\n\003end\030\004 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampR\003end\022\031\n\010group_b" +
-      "y\030\005 \003(\tR\007groupBy\"\235\n\n\037IntegrationTransact" +
-      "ionReportRow\022P\n\016integration_id\030\005 \001(\0162).a" +
-      "pi.commons.integrations.IntegrationTypeR" +
-      "\rintegrationId\022)\n\020integration_name\030\021 \001(\t" +
-      "R\017integrationName\022D\n\tmethod_id\030\006 \001(\0162\'.a" +
-      "pi.commons.integrations.RequestMethodR\010m" +
-      "ethodId\022\037\n\013method_name\030\022 \001(\tR\nmethodName" +
-      "\022T\n\020transaction_type\030\007 \001(\0162).api.commons" +
-      ".integrations.TransactionTypeR\017transacti" +
-      "onType\022N\n\016request_source\030\010 \001(\0162\'.api.com" +
-      "mons.integrations.RequestSourceR\rrequest" +
-      "Source\022\033\n\tflow_name\030\024 \001(\tR\010flowName\022#\n\rc" +
-      "ampaign_type\030\026 \001(\tR\014campaignType\022u\n\017grou" +
-      "p_by_values\030\027 \003(\0132M.api.v1alpha1.integra" +
-      "tions.IntegrationTransactionReportRow.Gr" +
-      "oupByValuesEntryR\rgroupByValues\022\030\n\007reven" +
-      "ue\030\n \001(\001R\007revenue\022}\n\021revenue_subtotals\030\023" +
-      " \003(\0132P.api.v1alpha1.integrations.Integra" +
-      "tionTransactionReportRow.RevenueSubtotal" +
-      "sEntryR\020revenueSubtotals\022#\n\rsuccess_coun" +
-      "t\030\013 \001(\003R\014successCount\022#\n\rfailure_count\030\014" +
-      " \001(\003R\014failureCount\022\037\n\013total_count\030\r \001(\003R" +
-      "\ntotalCount\0220\n\024highest_traffic_date\030\017 \001(" +
-      "\tR\022highestTrafficDate\022.\n\023lowest_traffic_" +
-      "date\030\020 \001(\tR\021lowestTrafficDate\022q\n\rcount_m" +
-      "etrics\030\030 \003(\0132L.api.v1alpha1.integrations" +
-      ".IntegrationTransactionReportRow.CountMe" +
-      "tricsEntryR\014countMetrics\022\026\n\006fields\030\031 \003(\t" +
-      "R\006fields\032@\n\022GroupByValuesEntry\022\020\n\003key\030\001 " +
-      "\001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\032C\n\025Re" +
-      "venueSubtotalsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n" +
-      "\005value\030\002 \001(\001R\005value:\0028\001\032?\n\021CountMetricsE" +
-      "ntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005v" +
-      "alue:\0028\001\"x\n\"GetIntegrationTransactionRep" +
-      "ortRes\022R\n\006values\030\001 \003(\0132:.api.v1alpha1.in" +
+      "eR\rintegrationId\022 \n\013description\030\003 \001(\tR\013d" +
+      "escription\022?\n\007methods\030\004 \003(\0132%.api.v1alph" +
+      "a1.integrations.MethodInfoR\007methods\022^\n\014g" +
+      "roup_params\030\005 \003(\0132;.api.v1alpha1.integra" +
+      "tions.IntegrationInfo.GroupParamsEntryR\013" +
+      "groupParams\032d\n\020GroupParamsEntry\022\020\n\003key\030\001" +
+      " \001(\005R\003key\022:\n\005value\030\002 \001(\0132$.api.v1alpha1." +
+      "integrations.ParameterR\005value:\0028\001\"\205\004\n\nMe" +
+      "thodInfo\022\022\n\004name\030\001 \001(\tR\004name\022D\n\tmethod_i" +
+      "d\030\002 \001(\0162\'.api.commons.integrations.Reque" +
+      "stMethodR\010methodId\022B\n\007tx_type\030\003 \001(\0162).ap" +
+      "i.commons.integrations.TransactionTypeR\006" +
+      "txType\022<\n\006params\030\004 \003(\0132$.api.v1alpha1.in" +
+      "tegrations.ParameterR\006params\022\020\n\003url\030\005 \001(" +
+      "\tR\003url\022@\n\010response\030\006 \003(\0132$.api.v1alpha1." +
+      "integrations.ParameterR\010response\022_\n\016runt" +
+      "ime_params\030\007 \003(\01328.api.v1alpha1.integrat" +
+      "ions.MethodInfo.RuntimeParamsEntryR\rrunt" +
+      "imeParams\032f\n\022RuntimeParamsEntry\022\020\n\003key\030\001" +
+      " \001(\005R\003key\022:\n\005value\030\002 \001(\0132$.api.v1alpha1." +
+      "integrations.ParameterR\005value:\0028\001\"\274\003\n\tPa" +
+      "rameter\022\022\n\004name\030\001 \001(\tR\004name\022B\n\nparam_typ" +
+      "e\030\002 \001(\0162#.api.commons.integrations.Value" +
+      "TypeR\tparamType\022\032\n\010required\030\003 \001(\010R\010requi" +
+      "red\022E\n\rdefault_value\030\004 \001(\0132 .api.v1alpha" +
+      "1.integrations.ValueR\014defaultValue\022!\n\014di" +
+      "splay_name\030\005 \001(\tR\013displayName\022\034\n\tsensiti" +
+      "ve\030\006 \001(\010R\tsensitive\022#\n\rruntime_param\030\007 \001" +
+      "(\010R\014runtimeParam\022\037\n\013helper_text\030\010 \001(\tR\nh" +
+      "elperText\022\'\n\017template_locked\030\t \001(\010R\016temp" +
+      "lateLocked\022D\n\nvalidation\030\n \001(\0162$.api.com" +
+      "mons.integrations.ValidationR\nvalidation" +
+      "\"\007\n\005Empty\"\\\n\034GetIntegrationTransactionRe" +
+      "q\022<\n\032integration_transaction_id\030\001 \001(\tR\030i" +
+      "ntegrationTransactionId\"\300\001\n\030GetAggregate" +
+      "dMetadataReq\0220\n\005start\030\003 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\005start\022,\n\003end\030\004 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampR\003end\022D\n\tmethod_i" +
+      "d\030\005 \001(\0162\'.api.commons.integrations.Reque" +
+      "stMethodR\010methodId\"\233\002\n\030GetAggregatedMeta" +
+      "dataRes\022\024\n\005views\030\001 \001(\005R\005views\022\'\n\017verify_" +
+      "attempts\030\002 \001(\005R\016verifyAttempts\022)\n\020verify" +
+      "_successes\030\003 \001(\005R\017verifySuccesses\022)\n\020pay" +
+      "ment_attempts\030\004 \001(\005R\017paymentAttempts\022+\n\021" +
+      "payment_successes\030\005 \001(\005R\020paymentSuccesse" +
+      "s\022%\n\016payment_amount\030\006 \001(\001R\rpaymentAmount" +
+      "\022\026\n\006fields\030\007 \003(\tR\006fields\"\237\001\n\"GetIntegrat" +
+      "ionTransactionReportReq\0220\n\005start\030\003 \001(\0132\032" +
+      ".google.protobuf.TimestampR\005start\022,\n\003end" +
+      "\030\004 \001(\0132\032.google.protobuf.TimestampR\003end\022" +
+      "\031\n\010group_by\030\005 \003(\tR\007groupBy\"\235\n\n\037Integrati" +
+      "onTransactionReportRow\022P\n\016integration_id" +
+      "\030\005 \001(\0162).api.commons.integrations.Integr" +
+      "ationTypeR\rintegrationId\022)\n\020integration_" +
+      "name\030\021 \001(\tR\017integrationName\022D\n\tmethod_id" +
+      "\030\006 \001(\0162\'.api.commons.integrations.Reques" +
+      "tMethodR\010methodId\022\037\n\013method_name\030\022 \001(\tR\n" +
+      "methodName\022T\n\020transaction_type\030\007 \001(\0162).a" +
+      "pi.commons.integrations.TransactionTypeR" +
+      "\017transactionType\022N\n\016request_source\030\010 \001(\016" +
+      "2\'.api.commons.integrations.RequestSourc" +
+      "eR\rrequestSource\022\033\n\tflow_name\030\024 \001(\tR\010flo" +
+      "wName\022#\n\rcampaign_type\030\026 \001(\tR\014campaignTy" +
+      "pe\022u\n\017group_by_values\030\027 \003(\0132M.api.v1alph" +
+      "a1.integrations.IntegrationTransactionRe" +
+      "portRow.GroupByValuesEntryR\rgroupByValue" +
+      "s\022\030\n\007revenue\030\n \001(\001R\007revenue\022}\n\021revenue_s" +
+      "ubtotals\030\023 \003(\0132P.api.v1alpha1.integratio" +
+      "ns.IntegrationTransactionReportRow.Reven" +
+      "ueSubtotalsEntryR\020revenueSubtotals\022#\n\rsu" +
+      "ccess_count\030\013 \001(\003R\014successCount\022#\n\rfailu" +
+      "re_count\030\014 \001(\003R\014failureCount\022\037\n\013total_co" +
+      "unt\030\r \001(\003R\ntotalCount\0220\n\024highest_traffic" +
+      "_date\030\017 \001(\tR\022highestTrafficDate\022.\n\023lowes" +
+      "t_traffic_date\030\020 \001(\tR\021lowestTrafficDate\022" +
+      "q\n\rcount_metrics\030\030 \003(\0132L.api.v1alpha1.in" +
       "tegrations.IntegrationTransactionReportR" +
-      "owR\006values\"\343\003\n&GetIntegrationTransaction" +
-      "ReportDataReq\0220\n\005start\030\003 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\005start\022,\n\003end\030\004 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampR\003end\022i\n\010group_b" +
-      "y\030\005 \003(\0132N.api.v1alpha1.integrations.GetI" +
-      "ntegrationTransactionReportDataReq.Group" +
-      "ByEntryR\007groupBy\022\033\n\tpage_size\030\007 \001(\005R\010pag" +
-      "eSize\022\031\n\010page_num\030\010 \001(\005R\007pageNum\022P\n\016inte" +
-      "gration_id\030\t \001(\0162).api.commons.integrati" +
-      "ons.IntegrationTypeR\rintegrationId\022(\n\020se" +
-      "arch_after_sid\030\n \001(\003R\016searchAfterSid\032:\n\014" +
-      "GroupByEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030" +
-      "\002 \001(\tR\005value:\0028\001\"\345\003\n&GetIntegrationTrans" +
-      "actionReportDataRow\022x\n\rcount_metrics\030\001 \003" +
-      "(\0132S.api.v1alpha1.integrations.GetIntegr" +
-      "ationTransactionReportDataRow.CountMetri" +
-      "csEntryR\014countMetrics\022l\n\tlink_data\030\002 \003(\013" +
-      "2O.api.v1alpha1.integrations.GetIntegrat" +
-      "ionTransactionReportDataRow.LinkDataEntr" +
-      "yR\010linkData\022.\n\004date\030\003 \001(\0132\032.google.proto" +
-      "buf.TimestampR\004date\022%\n\016payment_amount\030\004 " +
-      "\001(\001R\rpaymentAmount\032?\n\021CountMetricsEntry\022" +
-      "\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005value:" +
-      "\0028\001\032;\n\rLinkDataEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024" +
-      "\n\005value\030\002 \001(\tR\005value:\0028\001\"\271\001\n&GetIntegrat" +
-      "ionTransactionReportDataRes\022]\n\010entities\030" +
-      "\001 \003(\0132A.api.v1alpha1.integrations.GetInt" +
-      "egrationTransactionReportDataRowR\010entiti" +
-      "es\0220\n\024last_transaction_sid\030\002 \001(\003R\022lastTr" +
-      "ansactionSid\"\303\004\n SearchIntegrationTransa" +
-      "ctionsReq\0229\n\nstart_date\030\010 \001(\0132\032.google.p" +
-      "rotobuf.TimestampR\tstartDate\0225\n\010end_date" +
-      "\030\t \001(\0132\032.google.protobuf.TimestampR\007endD" +
-      "ate\022U\n\020integration_type\030\n \001(\0132*.api.v1al" +
-      "pha1.integrations.IntegrationTypeR\017integ" +
-      "rationType\022O\n\016request_method\030\013 \001(\0132(.api" +
-      ".v1alpha1.integrations.RequestMethodR\rre" +
-      "questMethod\022U\n\020transaction_type\030\014 \001(\0132*." +
-      "api.v1alpha1.integrations.TransactionTyp" +
-      "eR\017transactionType\022O\n\016request_source\030\r \001" +
-      "(\0132(.api.v1alpha1.integrations.RequestSo" +
-      "urceR\rrequestSource\022D\n\006result\030\016 \001(\0132,.ap" +
-      "i.v1alpha1.integrations.TransactionResul" +
-      "tR\006result\022\027\n\007task_id\030\017 \001(\tR\006taskId\"y\n Se" +
-      "archIntegrationTransactionsRes\022U\n\014transa" +
-      "ctions\030\001 \003(\01321.api.v1alpha1.integrations" +
-      ".IntegrationTransactionR\014transactions\"c\n" +
-      "\017IntegrationType\022P\n\016integration_id\030\001 \001(\016" +
-      "2).api.commons.integrations.IntegrationT" +
-      "ypeR\rintegrationId\"U\n\rRequestMethod\022D\n\tm" +
-      "ethod_id\030\001 \001(\0162\'.api.commons.integration" +
-      "s.RequestMethodR\010methodId\"g\n\017Transaction" +
-      "Type\022T\n\020transaction_type\030\001 \001(\0162).api.com" +
-      "mons.integrations.TransactionTypeR\017trans" +
-      "actionType\"_\n\rRequestSource\022N\n\016request_s" +
-      "ource\030\001 \001(\0162\'.api.commons.integrations.R" +
-      "equestSourceR\rrequestSource\"X\n\021Transacti" +
-      "onResult\022C\n\006result\030\001 \001(\0162+.api.commons.i" +
-      "ntegrations.TransactionResultR\006result\"q\n" +
-      "\035ListIntegrationConfigNamesReq\022P\n\016integr" +
-      "ation_id\030\004 \001(\0162).api.commons.integration" +
-      "s.IntegrationTypeR\rintegrationId\"\207\001\n\035Lis" +
-      "tIntegrationConfigNamesRes\022P\n\016integratio" +
-      "n_id\030\003 \001(\0162).api.commons.integrations.In" +
-      "tegrationTypeR\rintegrationId\022\024\n\005names\030\004 " +
-      "\003(\tR\005names\")\n\027GetPaymentLinkConfigReq\022\016\n" +
-      "\002id\030\003 \001(\tR\002id\",\n\032DeletePaymentLinkConfig" +
-      "Req\022\016\n\002id\030\003 \001(\tR\002id\"\034\n\004Logo\022\024\n\005value\030\001 \001" +
-      "(\014R\005value\"\272\001\n\024ListPortalConfigsReq\022A\n\006en" +
-      "tity\030\001 \001(\0132).api.v1alpha1.integrations.P" +
-      "ortalConfigIdR\006entity\022.\n\004mask\030\002 \001(\0132\032.go" +
-      "ogle.protobuf.FieldMaskR\004mask\022\033\n\tpage_si" +
-      "ze\030\003 \001(\005R\010pageSize\022\022\n\004page\030\004 \001(\005R\004page\"\227" +
-      "\001\n\022GetPortalConfigReq\022A\n\006entity\030\001 \001(\0132)." +
-      "api.v1alpha1.integrations.PortalConfigId" +
-      "R\006entity\022.\n\004mask\030\002 \001(\0132\032.google.protobuf" +
-      ".FieldMaskR\004mask\022\016\n\002id\030\003 \001(\tR\002id\"\232\001\n\025Del" +
-      "etePortalConfigReq\022A\n\006entity\030\001 \001(\0132).api" +
-      ".v1alpha1.integrations.PortalConfigIdR\006e" +
-      "ntity\022.\n\004mask\030\002 \001(\0132\032.google.protobuf.Fi" +
-      "eldMaskR\004mask\022\016\n\002id\030\003 \001(\tR\002id\"9\n\023UpdateP" +
-      "ortalLogoReq\022\016\n\002id\030\003 \001(\tR\002id\022\022\n\004logo\030\004 \001" +
-      "(\014R\004logo\"\"\n\020GetPortalLogoReq\022\016\n\002id\030\003 \001(\t" +
-      "R\002id\")\n\016RefreshLinkReq\022\027\n\007link_id\030\003 \001(\tR" +
-      "\006linkId\"K\n\016RefreshLinkRes\0229\n\nnew_expiry\030" +
-      "\001 \001(\0132\032.google.protobuf.TimestampR\tnewEx" +
-      "piry\"\252\014\n\021PaymentLinkConfig\022\016\n\002id\030\023 \001(\tR\002" +
-      "id\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013description\030\004 " +
-      "\001(\tR\013description\022\'\n\rcollection_id\030\005 \001(\tB" +
-      "\002\030\001R\014collectionId\022T\n\016integration_id\030\006 \001(" +
-      "\0162).api.commons.integrations.Integration" +
-      "TypeB\002\030\001R\rintegrationId\022a\n\026verification_" +
-      "method_id\030\007 \001(\0162\'.api.commons.integratio" +
-      "ns.RequestMethodB\002\030\001R\024verificationMethod" +
-      "Id\022W\n\021invoice_method_id\030\010 \001(\0162\'.api.comm" +
-      "ons.integrations.RequestMethodB\002\030\001R\017invo" +
-      "iceMethodId\022W\n\021payment_method_id\030\t \001(\0162\'" +
-      ".api.commons.integrations.RequestMethodB" +
-      "\002\030\001R\017paymentMethodId\022`\n\014name_mapping\030\n \003" +
-      "(\0132=.api.v1alpha1.integrations.PaymentLi" +
-      "nkConfig.NameMappingEntryR\013nameMapping\0223" +
-      "\n\023verification_fields\030\013 \003(\tB\002\030\001R\022verific" +
-      "ationFields\022*\n\021payment_portal_id\030\014 \001(\tR\017" +
-      "paymentPortalId\0229\n\ncreated_on\030\016 \001(\0132\032.go" +
-      "ogle.protobuf.TimestampR\tcreatedOn\022\037\n\013ex" +
-      "piry_days\030\017 \001(\005R\nexpiryDays\022+\n\021links_ref" +
-      "reshable\030\020 \001(\010R\020linksRefreshable\0227\n\030refr" +
-      "esh_link_valid_hours\030\021 \001(\001R\025refreshLinkV" +
-      "alidHours\022*\n\021max_refresh_times\030\022 \001(\005R\017ma" +
-      "xRefreshTimes\022a\n\024verification_request\030\024 " +
-      "\001(\0132..api.v1alpha1.integrations.Verifica" +
-      "tionRequestR\023verificationRequest\022R\n\017invo" +
-      "ice_request\030\025 \001(\0132).api.v1alpha1.integra" +
-      "tions.InvoiceRequestR\016invoiceRequest\022T\n\020" +
-      "payment_requests\030\026 \003(\0132).api.v1alpha1.in" +
-      "tegrations.PaymentRequestR\017paymentReques" +
-      "ts\022W\n\tbase_data\030\027 \003(\0132:.api.v1alpha1.int" +
-      "egrations.PaymentLinkConfig.BaseDataEntr" +
-      "yR\010baseData\022S\n\ttemplates\030\030 \001(\01325.api.v1a" +
-      "lpha1.integrations.PaymentLinkConfigTemp" +
-      "latesR\ttemplates\0220\n\024payment_profile_name" +
-      "\030\031 \001(\tR\022paymentProfileName\032>\n\020NameMappin" +
-      "gEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR" +
-      "\005value:\0028\001\032]\n\rBaseDataEntry\022\020\n\003key\030\001 \001(\t" +
-      "R\003key\0226\n\005value\030\002 \001(\0132 .api.v1alpha1.inte" +
-      "grations.ValueR\005value:\0028\001\"\312\002\n\032PaymentLin" +
-      "kConfigTemplates\0220\n\024receipt_sms_template" +
-      "\030\001 \001(\tR\022receiptSmsTemplate\0227\n\030receipt_sm" +
-      "s_source_phone\030\002 \001(\tR\025receiptSmsSourcePh" +
-      "one\0224\n\026receipt_email_template\030\003 \001(\tR\024rec" +
-      "eiptEmailTemplate\0225\n\027receipt_email_from_" +
-      "addr\030\004 \001(\tR\024receiptEmailFromAddr\022)\n\020rece" +
-      "ipt_template\030\005 \001(\tR\017receiptTemplate\022)\n\020i" +
-      "nvoice_template\030\006 \001(\tR\017invoiceTemplate\"\305" +
-      "\001\n\023VerificationRequest\022W\n\025verification_r" +
-      "equests\030\001 \003(\0132\".api.v1alpha1.integration" +
-      "s.RequestR\024verificationRequests\022U\n\023verif" +
-      "ication_fields\030\002 \003(\0132$.api.v1alpha1.inte" +
-      "grations.ParameterR\022verificationFields\"\274" +
-      "\002\n\016PaymentRequest\022K\n\016payment_fields\030\005 \003(" +
-      "\0132$.api.v1alpha1.integrations.ParameterR" +
-      "\rpaymentFields\022Z\n\027payment_request_payloa" +
-      "d\030\001 \003(\0132\".api.v1alpha1.integrations.Requ" +
-      "estR\025paymentRequestPayload\022K\n\017payment_re" +
-      "quest\030\002 \001(\0132\".api.v1alpha1.integrations." +
-      "RequestR\016paymentRequest\022\022\n\004name\030\003 \001(\tR\004n" +
-      "ame\022 \n\013description\030\004 \001(\tR\013description\"\353\001" +
-      "\n\016InvoiceRequest\022Z\n\027invoice_request_payl" +
-      "oad\030\002 \003(\0132\".api.v1alpha1.integrations.Re" +
-      "questR\025invoiceRequestPayload\022K\n\017invoice_" +
-      "request\030\003 \001(\0132\".api.v1alpha1.integration" +
-      "s.RequestR\016invoiceRequest\0220\n\024filter_resp" +
-      "onse_keys\030\004 \003(\tR\022filterResponseKeys\"\371\005\n\007" +
-      "Request\0224\n\025journey_collection_id\030\003 \001(\tH\000" +
-      "R\023journeyCollectionId\022H\n\013method_call\030\004 \001" +
-      "(\0132%.api.v1alpha1.integrations.MethodCal" +
-      "lH\000R\nmethodCall\022\035\n\tconfig_id\030\005 \001(\tH\000R\010co" +
-      "nfigId\022S\n\013static_data\030\006 \003(\01322.api.v1alph" +
-      "a1.integrations.Request.StaticDataEntryR" +
-      "\nstaticData\022l\n\024rename_response_keys\030\007 \003(" +
-      "\0132:.api.v1alpha1.integrations.Request.Re" +
-      "nameResponseKeysEntryR\022renameResponseKey" +
-      "s\022n\n\024reassign_validations\030\010 \003(\0132;.api.v1" +
-      "alpha1.integrations.Request.ReassignVali" +
-      "dationsEntryR\023reassignValidations\032_\n\017Sta" +
-      "ticDataEntry\022\020\n\003key\030\001 \001(\tR\003key\0226\n\005value\030" +
-      "\002 \001(\0132 .api.v1alpha1.integrations.ValueR" +
-      "\005value:\0028\001\032E\n\027RenameResponseKeysEntry\022\020\n" +
-      "\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028" +
-      "\001\032m\n\030ReassignValidationsEntry\022\020\n\003key\030\001 \001" +
-      "(\tR\003key\022;\n\005value\030\002 \001(\0132%.api.v1alpha1.in" +
-      "tegrations.ValidationR\005value:\0028\001B\005\n\003val\"" +
-      "F\n\nValidation\0228\n\004enum\030\001 \001(\0162$.api.common" +
-      "s.integrations.ValidationR\004enum\"\244\001\n\nMeth" +
-      "odCall\022P\n\016integration_id\030\001 \001(\0162).api.com" +
-      "mons.integrations.IntegrationTypeR\rinteg" +
-      "rationId\022D\n\tmethod_id\030\002 \001(\0162\'.api.common" +
-      "s.integrations.RequestMethodR\010methodId\"P" +
-      "\n\rPortalConfigs\022?\n\006values\030\001 \003(\0132\'.api.v1" +
-      "alpha1.integrations.PortalConfigR\006values" +
-      "\"\033\n\031ListPaymentLinkConfigsReq\"Z\n\022Payment" +
-      "LinkConfigs\022D\n\006values\030\001 \003(\0132,.api.v1alph" +
-      "a1.integrations.PaymentLinkConfigR\006value" +
-      "s\"\016\n\014ListLinksReq\"\265\001\n\033CreatePaymentPorta" +
-      "lLinksReq\022$\n\016link_config_id\030\003 \001(\tR\014linkC" +
-      "onfigId\0222\n\006expiry\030\004 \001(\0132\032.google.protobu" +
-      "f.TimestampR\006expiry\022<\n\tuser_data\030\005 \003(\0132\037" +
-      ".api.v1alpha1.integrations.TaskR\010userDat" +
-      "a\"1\n\033CreatePaymentPortalLinksRes\022\022\n\004urls" +
-      "\030\001 \003(\tR\004urls\" \n\nSummaryReq\022\022\n\004year\030\003 \001(\005" +
-      "R\004year\"\203\002\n\nSummaryRes\022M\n\014year_summary\030\001 " +
-      "\001(\0132*.api.v1alpha1.integrations.Calendar" +
-      "SummaryR\013yearSummary\022S\n\017month_summaries\030" +
-      "\002 \003(\0132*.api.v1alpha1.integrations.Calend" +
-      "arSummaryR\016monthSummaries\022Q\n\016week_summar" +
-      "ies\030\003 \003(\0132*.api.v1alpha1.integrations.Ca" +
-      "lendarSummaryR\rweekSummaries\"\327\001\n\017Calenda" +
-      "rSummary\022!\n\014calendar_num\030\001 \001(\005R\013calendar" +
-      "Num\022G\n\007summary\030\002 \001(\0132-.api.v1alpha1.inte" +
-      "grations.TransactionSummaryR\007summary\022X\n\016" +
-      "type_summaries\030\003 \003(\01321.api.v1alpha1.inte" +
-      "grations.IntegrationTypeSummaryR\rtypeSum" +
-      "maries\"\316\001\n\026IntegrationTypeSummary\022T\n\020int" +
-      "egration_type\030\001 \001(\0162).api.commons.integr" +
-      "ations.IntegrationTypeR\017integrationType\022" +
-      "^\n\023integration_summary\030\002 \001(\0132-.api.v1alp" +
-      "ha1.integrations.TransactionSummaryR\022int" +
-      "egrationSummary\"\274\002\n\022TransactionSummary\022@" +
-      "\n\034total_transactions_attempted\030\001 \001(\003R\032to" +
-      "talTransactionsAttempted\022@\n\034total_transa" +
-      "ctions_completed\030\002 \001(\003R\032totalTransaction" +
-      "sCompleted\022:\n\031total_transactions_failed\030" +
-      "\003 \001(\003R\027totalTransactionsFailed\0224\n\026total_" +
-      "amount_collected\030\004 \001(\001R\024totalAmountColle" +
-      "cted\0220\n\024avg_amount_collected\030\005 \001(\001R\022avgA" +
-      "mountCollected\"]\n#ListIntegrationTemplat" +
-      "esByConfigReq\0226\n\027integration_config_name" +
-      "\030\002 \001(\tR\025integrationConfigName\"\216\001\n#ListIn" +
-      "tegrationTemplatesByConfigRes\022g\n\025integra" +
-      "tion_templates\030\001 \003(\01322.api.v1alpha1.inte" +
-      "grations.IntegrationTemplateInfoR\024integr" +
-      "ationTemplates\"t\n\027IntegrationTemplateInf" +
-      "o\0224\n\026broadcast_template_sid\030\001 \001(\003R\024broad" +
-      "castTemplateSid\022#\n\rtemplate_name\030\002 \001(\tR\014" +
-      "templateName\"*\n\030CopyPaymentLinkConfigReq" +
-      "\022\016\n\002id\030\003 \001(\tR\002id\"5\n\030CopyPaymentLinkConfi" +
-      "gRes\022\031\n\010new_name\030\001 \001(\tR\007newName\"!\n\013Profi" +
-      "leName\022\022\n\004name\030\001 \001(\tR\004name\"T\n\017PaymentPro" +
-      "files\022A\n\006values\030\001 \003(\0132).api.v1alpha1.int" +
-      "egrations.PaymentProfileR\006values\"j\n\016Paym" +
-      "entProfile\022\"\n\014verification\030\010 \001(\tR\014verifi" +
-      "cation\022\030\n\007invoice\030\t \001(\tR\007invoice\022\032\n\010paym" +
-      "ents\030\n \003(\tR\010payments\"\223\002\n\014UnknownField\022\022\n" +
-      "\004name\030\001 \001(\tR\004name\022!\n\014display_name\030\005 \001(\tR" +
-      "\013displayName\022#\n\rreason_needed\030\002 \001(\tR\014rea" +
-      "sonNeeded\022R\n\021potential_sources\030\003 \003(\0162%.a" +
-      "pi.commons.integrations.FieldSourceR\020pot" +
-      "entialSources\022S\n\020suggested_fields\030\004 \003(\0132" +
-      "(.api.v1alpha1.integrations.ProvidedFiel" +
-      "dR\017suggestedFields\"\227\002\n\rProvidedField\022\022\n\004" +
-      "name\030\001 \001(\tR\004name\022!\n\014display_name\030\006 \001(\tR\013" +
-      "displayName\022\031\n\010alt_name\030\002 \001(\tR\007altName\022F" +
-      "\n\013provided_by\030\003 \001(\0162%.api.commons.integr" +
-      "ations.FieldSourceR\nprovidedBy\0225\n\027provid" +
-      "ed_by_details_num\030\004 \001(\005R\024providedByDetai" +
-      "lsNum\0225\n\027provided_by_details_str\030\005 \001(\tR\024" +
-      "providedByDetailsStr\"\254\001\n\006Values\022E\n\006value" +
-      "s\030\001 \003(\0132-.api.v1alpha1.integrations.Valu" +
-      "es.ValuesEntryR\006values\032[\n\013ValuesEntry\022\020\n" +
+      "ow.CountMetricsEntryR\014countMetrics\022\026\n\006fi" +
+      "elds\030\031 \003(\tR\006fields\032@\n\022GroupByValuesEntry" +
+      "\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value" +
+      ":\0028\001\032C\n\025RevenueSubtotalsEntry\022\020\n\003key\030\001 \001" +
+      "(\tR\003key\022\024\n\005value\030\002 \001(\001R\005value:\0028\001\032?\n\021Cou" +
+      "ntMetricsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005valu" +
+      "e\030\002 \001(\003R\005value:\0028\001\"x\n\"GetIntegrationTran" +
+      "sactionReportRes\022R\n\006values\030\001 \003(\0132:.api.v" +
+      "1alpha1.integrations.IntegrationTransact" +
+      "ionReportRowR\006values\"\343\003\n&GetIntegrationT" +
+      "ransactionReportDataReq\0220\n\005start\030\003 \001(\0132\032" +
+      ".google.protobuf.TimestampR\005start\022,\n\003end" +
+      "\030\004 \001(\0132\032.google.protobuf.TimestampR\003end\022" +
+      "i\n\010group_by\030\005 \003(\0132N.api.v1alpha1.integra" +
+      "tions.GetIntegrationTransactionReportDat" +
+      "aReq.GroupByEntryR\007groupBy\022\033\n\tpage_size\030" +
+      "\007 \001(\005R\010pageSize\022\031\n\010page_num\030\010 \001(\005R\007pageN" +
+      "um\022P\n\016integration_id\030\t \001(\0162).api.commons" +
+      ".integrations.IntegrationTypeR\rintegrati" +
+      "onId\022(\n\020search_after_sid\030\n \001(\003R\016searchAf" +
+      "terSid\032:\n\014GroupByEntry\022\020\n\003key\030\001 \001(\tR\003key" +
+      "\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\345\003\n&GetIntegr" +
+      "ationTransactionReportDataRow\022x\n\rcount_m" +
+      "etrics\030\001 \003(\0132S.api.v1alpha1.integrations" +
+      ".GetIntegrationTransactionReportDataRow." +
+      "CountMetricsEntryR\014countMetrics\022l\n\tlink_" +
+      "data\030\002 \003(\0132O.api.v1alpha1.integrations.G" +
+      "etIntegrationTransactionReportDataRow.Li" +
+      "nkDataEntryR\010linkData\022.\n\004date\030\003 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampR\004date\022%\n\016payment" +
+      "_amount\030\004 \001(\001R\rpaymentAmount\032?\n\021CountMet" +
+      "ricsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001" +
+      "(\003R\005value:\0028\001\032;\n\rLinkDataEntry\022\020\n\003key\030\001 " +
+      "\001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\271\001\n&G" +
+      "etIntegrationTransactionReportDataRes\022]\n" +
+      "\010entities\030\001 \003(\0132A.api.v1alpha1.integrati" +
+      "ons.GetIntegrationTransactionReportDataR" +
+      "owR\010entities\0220\n\024last_transaction_sid\030\002 \001" +
+      "(\003R\022lastTransactionSid\"\303\004\n SearchIntegra" +
+      "tionTransactionsReq\0229\n\nstart_date\030\010 \001(\0132" +
+      "\032.google.protobuf.TimestampR\tstartDate\0225" +
+      "\n\010end_date\030\t \001(\0132\032.google.protobuf.Times" +
+      "tampR\007endDate\022U\n\020integration_type\030\n \001(\0132" +
+      "*.api.v1alpha1.integrations.IntegrationT" +
+      "ypeR\017integrationType\022O\n\016request_method\030\013" +
+      " \001(\0132(.api.v1alpha1.integrations.Request" +
+      "MethodR\rrequestMethod\022U\n\020transaction_typ" +
+      "e\030\014 \001(\0132*.api.v1alpha1.integrations.Tran" +
+      "sactionTypeR\017transactionType\022O\n\016request_" +
+      "source\030\r \001(\0132(.api.v1alpha1.integrations" +
+      ".RequestSourceR\rrequestSource\022D\n\006result\030" +
+      "\016 \001(\0132,.api.v1alpha1.integrations.Transa" +
+      "ctionResultR\006result\022\027\n\007task_id\030\017 \001(\tR\006ta" +
+      "skId\"y\n SearchIntegrationTransactionsRes" +
+      "\022U\n\014transactions\030\001 \003(\01321.api.v1alpha1.in" +
+      "tegrations.IntegrationTransactionR\014trans" +
+      "actions\"c\n\017IntegrationType\022P\n\016integratio" +
+      "n_id\030\001 \001(\0162).api.commons.integrations.In" +
+      "tegrationTypeR\rintegrationId\"U\n\rRequestM" +
+      "ethod\022D\n\tmethod_id\030\001 \001(\0162\'.api.commons.i" +
+      "ntegrations.RequestMethodR\010methodId\"g\n\017T" +
+      "ransactionType\022T\n\020transaction_type\030\001 \001(\016" +
+      "2).api.commons.integrations.TransactionT" +
+      "ypeR\017transactionType\"_\n\rRequestSource\022N\n" +
+      "\016request_source\030\001 \001(\0162\'.api.commons.inte" +
+      "grations.RequestSourceR\rrequestSource\"X\n" +
+      "\021TransactionResult\022C\n\006result\030\001 \001(\0162+.api" +
+      ".commons.integrations.TransactionResultR" +
+      "\006result\"q\n\035ListIntegrationConfigNamesReq" +
+      "\022P\n\016integration_id\030\004 \001(\0162).api.commons.i" +
+      "ntegrations.IntegrationTypeR\rintegration" +
+      "Id\"\207\001\n\035ListIntegrationConfigNamesRes\022P\n\016" +
+      "integration_id\030\003 \001(\0162).api.commons.integ" +
+      "rations.IntegrationTypeR\rintegrationId\022\024" +
+      "\n\005names\030\004 \003(\tR\005names\")\n\027GetPaymentLinkCo" +
+      "nfigReq\022\016\n\002id\030\003 \001(\tR\002id\",\n\032DeletePayment" +
+      "LinkConfigReq\022\016\n\002id\030\003 \001(\tR\002id\"\034\n\004Logo\022\024\n" +
+      "\005value\030\001 \001(\014R\005value\"\272\001\n\024ListPortalConfig" +
+      "sReq\022A\n\006entity\030\001 \001(\0132).api.v1alpha1.inte" +
+      "grations.PortalConfigIdR\006entity\022.\n\004mask\030" +
+      "\002 \001(\0132\032.google.protobuf.FieldMaskR\004mask\022" +
+      "\033\n\tpage_size\030\003 \001(\005R\010pageSize\022\022\n\004page\030\004 \001" +
+      "(\005R\004page\"\227\001\n\022GetPortalConfigReq\022A\n\006entit" +
+      "y\030\001 \001(\0132).api.v1alpha1.integrations.Port" +
+      "alConfigIdR\006entity\022.\n\004mask\030\002 \001(\0132\032.googl" +
+      "e.protobuf.FieldMaskR\004mask\022\016\n\002id\030\003 \001(\tR\002" +
+      "id\"\232\001\n\025DeletePortalConfigReq\022A\n\006entity\030\001" +
+      " \001(\0132).api.v1alpha1.integrations.PortalC" +
+      "onfigIdR\006entity\022.\n\004mask\030\002 \001(\0132\032.google.p" +
+      "rotobuf.FieldMaskR\004mask\022\016\n\002id\030\003 \001(\tR\002id\"" +
+      "9\n\023UpdatePortalLogoReq\022\016\n\002id\030\003 \001(\tR\002id\022\022" +
+      "\n\004logo\030\004 \001(\014R\004logo\"\"\n\020GetPortalLogoReq\022\016" +
+      "\n\002id\030\003 \001(\tR\002id\")\n\016RefreshLinkReq\022\027\n\007link" +
+      "_id\030\003 \001(\tR\006linkId\"K\n\016RefreshLinkRes\0229\n\nn" +
+      "ew_expiry\030\001 \001(\0132\032.google.protobuf.Timest" +
+      "ampR\tnewExpiry\"\252\014\n\021PaymentLinkConfig\022\016\n\002" +
+      "id\030\023 \001(\tR\002id\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013desc" +
+      "ription\030\004 \001(\tR\013description\022\'\n\rcollection" +
+      "_id\030\005 \001(\tB\002\030\001R\014collectionId\022T\n\016integrati" +
+      "on_id\030\006 \001(\0162).api.commons.integrations.I" +
+      "ntegrationTypeB\002\030\001R\rintegrationId\022a\n\026ver" +
+      "ification_method_id\030\007 \001(\0162\'.api.commons." +
+      "integrations.RequestMethodB\002\030\001R\024verifica" +
+      "tionMethodId\022W\n\021invoice_method_id\030\010 \001(\0162" +
+      "\'.api.commons.integrations.RequestMethod" +
+      "B\002\030\001R\017invoiceMethodId\022W\n\021payment_method_" +
+      "id\030\t \001(\0162\'.api.commons.integrations.Requ" +
+      "estMethodB\002\030\001R\017paymentMethodId\022`\n\014name_m" +
+      "apping\030\n \003(\0132=.api.v1alpha1.integrations" +
+      ".PaymentLinkConfig.NameMappingEntryR\013nam" +
+      "eMapping\0223\n\023verification_fields\030\013 \003(\tB\002\030" +
+      "\001R\022verificationFields\022*\n\021payment_portal_" +
+      "id\030\014 \001(\tR\017paymentPortalId\0229\n\ncreated_on\030" +
+      "\016 \001(\0132\032.google.protobuf.TimestampR\tcreat" +
+      "edOn\022\037\n\013expiry_days\030\017 \001(\005R\nexpiryDays\022+\n" +
+      "\021links_refreshable\030\020 \001(\010R\020linksRefreshab" +
+      "le\0227\n\030refresh_link_valid_hours\030\021 \001(\001R\025re" +
+      "freshLinkValidHours\022*\n\021max_refresh_times" +
+      "\030\022 \001(\005R\017maxRefreshTimes\022a\n\024verification_" +
+      "request\030\024 \001(\0132..api.v1alpha1.integration" +
+      "s.VerificationRequestR\023verificationReque" +
+      "st\022R\n\017invoice_request\030\025 \001(\0132).api.v1alph" +
+      "a1.integrations.InvoiceRequestR\016invoiceR" +
+      "equest\022T\n\020payment_requests\030\026 \003(\0132).api.v" +
+      "1alpha1.integrations.PaymentRequestR\017pay" +
+      "mentRequests\022W\n\tbase_data\030\027 \003(\0132:.api.v1" +
+      "alpha1.integrations.PaymentLinkConfig.Ba" +
+      "seDataEntryR\010baseData\022S\n\ttemplates\030\030 \001(\013" +
+      "25.api.v1alpha1.integrations.PaymentLink" +
+      "ConfigTemplatesR\ttemplates\0220\n\024payment_pr" +
+      "ofile_name\030\031 \001(\tR\022paymentProfileName\032>\n\020" +
+      "NameMappingEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005va" +
+      "lue\030\002 \001(\tR\005value:\0028\001\032]\n\rBaseDataEntry\022\020\n" +
       "\003key\030\001 \001(\tR\003key\0226\n\005value\030\002 \001(\0132 .api.v1a" +
-      "lpha1.integrations.ValueR\005value:\0028\001\"\337\002\n\005" +
-      "Value\022\031\n\007str_val\030\001 \001(\tH\000R\006strVal\022\031\n\007num_" +
-      "val\030\002 \001(\001H\000R\006numVal\022\033\n\010bool_val\030\003 \001(\010H\000R" +
-      "\007boolVal\0227\n\010time_val\030\004 \001(\0132\032.google.prot" +
-      "obuf.TimestampH\000R\007timeVal\022D\n\010comp_val\030\006 " +
-      "\001(\0132\'.api.v1alpha1.integrations.Composit" +
-      "eValH\000R\007compVal\022\031\n\007int_val\030\007 \001(\003H\000R\006intV" +
-      "al\022\034\n\tsensitive\030\005 \001(\010R\tsensitive\022D\n\nvali" +
-      "dation\030\010 \001(\0162$.api.commons.integrations." +
-      "ValidationR\nvalidationB\005\n\003val\"F\n\nFieldOr" +
-      "Str\022\026\n\005field\030\001 \001(\tH\000R\005field\022\031\n\007str_val\030\002" +
-      " \001(\tH\000R\006strValB\005\n\003val\"K\n\014CompositeVal\022;\n" +
-      "\005parts\030\001 \003(\0132%.api.v1alpha1.integrations" +
-      ".FieldOrStrR\005parts\"\221\001\n\tCondition\022\020\n\003key\030" +
-      "\001 \001(\tR\003key\022:\n\002op\030\002 \001(\0162*.api.commons.int" +
-      "egrations.CompareOperationR\002op\0226\n\005value\030" +
-      "\003 \001(\0132 .api.v1alpha1.integrations.ValueR",
-      "\005value\"\372\003\n\021IntegrationConfig\022\016\n\002id\030\001 \001(\t" +
-      "R\002id\022P\n\016integration_id\030\004 \001(\0162).api.commo" +
-      "ns.integrations.IntegrationTypeR\rintegra" +
-      "tionId\022\022\n\004name\030\006 \001(\tR\004name\022 \n\013descriptio" +
-      "n\030\007 \001(\tR\013description\0229\n\006params\030\t \001(\0132!.a" +
-      "pi.v1alpha1.integrations.ValuesR\006params\022" +
-      "\030\n\007deleted\030\n \001(\010R\007deleted\0229\n\ncreated_on\030" +
-      "\013 \001(\0132\032.google.protobuf.TimestampR\tcreat" +
-      "edOn\022:\n\005alias\030\r \001(\0132$.api.v1alpha1.integ" +
-      "rations.MapStringR\005alias\022;\n\005conds\030\016 \001(\0132" +
-      "%.api.v1alpha1.integrations.ConditionsR\005" +
-      "conds\022D\n\tmethod_id\030\017 \001(\0162\'.api.commons.i" +
-      "ntegrations.RequestMethodR\010methodId\"\304\006\n\026" +
-      "IntegrationTransaction\022<\n\032integration_tr" +
-      "ansaction_id\030\001 \001(\tR\030integrationTransacti" +
-      "onId\022\027\n\007task_id\030\004 \001(\tR\006taskId\022P\n\016integra" +
-      "tion_id\030\005 \001(\0162).api.commons.integrations" +
-      ".IntegrationTypeR\rintegrationId\022D\n\tmetho" +
-      "d_id\030\006 \001(\0162\'.api.commons.integrations.Re" +
-      "questMethodR\010methodId\022T\n\020transaction_typ" +
-      "e\030\007 \001(\0162).api.commons.integrations.Trans" +
-      "actionTypeR\017transactionType\022N\n\016request_s" +
-      "ource\030\010 \001(\0162\'.api.commons.integrations.R" +
-      "equestSourceR\rrequestSource\022C\n\006result\030\t " +
-      "\001(\0162+.api.commons.integrations.Transacti" +
-      "onResultR\006result\022)\n\020amount_collected\030\n \001" +
-      "(\001R\017amountCollected\022D\n\014request_data\030\013 \001(" +
-      "\0132!.api.v1alpha1.integrations.ValuesR\013re" +
-      "questData\022F\n\rresponse_data\030\014 \001(\0132!.api.v" +
-      "1alpha1.integrations.ValuesR\014responseDat" +
-      "a\0229\n\ncreated_on\030\r \001(\0132\032.google.protobuf." +
-      "TimestampR\tcreatedOn\022\037\n\013config_name\030\016 \001(" +
-      "\tR\nconfigName\022;\n\005conds\030\017 \001(\0132%.api.v1alp" +
-      "ha1.integrations.ConditionsR\005conds\"\220\001\n\tM" +
-      "apString\022H\n\006values\030\001 \003(\01320.api.v1alpha1." +
-      "integrations.MapString.ValuesEntryR\006valu" +
-      "es\0329\n\013ValuesEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005v" +
-      "alue\030\002 \001(\tR\005value:\0028\001\"J\n\nConditions\022<\n\006v" +
-      "alues\030\001 \003(\0132$.api.v1alpha1.integrations." +
-      "ConditionR\006values\"\374\001\n\004Task\022C\n\006values\030\001 \003" +
-      "(\0132+.api.v1alpha1.integrations.Task.Valu" +
-      "esEntryR\006values\022\027\n\007task_id\030\002 \001(\tR\006taskId" +
-      "\0229\n\003src\030\003 \001(\0162\'.api.commons.integrations" +
-      ".RequestSourceR\003src\032[\n\013ValuesEntry\022\020\n\003ke" +
-      "y\030\001 \001(\tR\003key\0226\n\005value\030\002 \001(\0132 .api.v1alph" +
-      "a1.integrations.ValueR\005value:\0028\001\" \n\016Port" +
-      "alConfigId\022\016\n\002id\030\003 \001(\tR\002id\"\305\003\n\014PortalCon" +
-      "fig\022\016\n\002id\030\025 \001(\tR\002id\022\022\n\004name\030\026 \001(\tR\004name\022" +
-      " \n\013description\030\027 \001(\tR\013description\022(\n\020cha" +
-      "t_client_link\030\002 \001(\tR\016chatClientLink\022#\n\rc" +
-      "ontact_email\030\003 \001(\tR\014contactEmail\022#\n\rcont" +
-      "act_phone\030\004 \001(\tR\014contactPhone\022\037\n\013postal_" +
-      "code\030\005 \001(\tR\npostalCode\022\022\n\004city\030\006 \001(\tR\004ci" +
-      "ty\022\024\n\005state\030\007 \001(\tR\005state\022!\n\014company_name" +
-      "\030\010 \001(\tR\013companyName\022\022\n\004logo\030\r \001(\014R\004logo\022" +
-      "#\n\rprimary_color\030\016 \001(\tR\014primaryColor\022\'\n\017" +
-      "secondary_color\030\017 \001(\tR\016secondaryColor\022%\n" +
-      "\016street_address\030\023 \001(\tR\rstreetAddressJ\004\010\t" +
-      "\020\r\"\036\n\014PortalLinkId\022\016\n\002id\030\003 \001(\tR\002id\"\273\004\n\nP" +
-      "ortalLink\022\016\n\002id\030\003 \001(\tR\002id\022\033\n\tportal_id\030\004" +
-      " \001(\tR\010portalId\0220\n\022plugin_instance_id\030\005 \001" +
-      "(\tB\002\030\001R\020pluginInstanceId\022(\n\020portal_confi" +
-      "g_id\030\006 \001(\tR\016portalConfigId\022\027\n\007task_id\030\007 " +
-      "\001(\tR\006taskId\022C\n\004data\030\010 \003(\0132/.api.v1alpha1" +
-      ".integrations.PortalLink.DataEntryR\004data" +
-      "\022O\n\010metadata\030\t \003(\01323.api.v1alpha1.integr" +
-      "ations.PortalLink.MetadataEntryR\010metadat" +
-      "a\022;\n\013last_edited\030\n \001(\0132\032.google.protobuf" +
-      ".TimestampR\nlastEdited\032Y\n\tDataEntry\022\020\n\003k" +
-      "ey\030\001 \001(\tR\003key\0226\n\005value\030\002 \001(\0132 .api.v1alp" +
-      "ha1.integrations.ValueR\005value:\0028\001\032]\n\rMet" +
-      "adataEntry\022\020\n\003key\030\001 \001(\tR\003key\0226\n\005value\030\002 " +
-      "\001(\0132 .api.v1alpha1.integrations.ValueR\005v" +
-      "alue:\0028\001\"\032\n\010PortalId\022\016\n\002id\030\003 \001(\tR\002id\"\232\002\n" +
-      "\006Portal\022\016\n\002id\030\003 \001(\tR\002id\022\022\n\004name\030\004 \001(\tR\004n" +
-      "ame\022 \n\013description\030\005 \001(\tR\013description\022(\n" +
-      "\020portal_config_id\030\006 \001(\tR\016portalConfigId\022" +
-      "&\n\017plugin_inst_ids\030\007 \003(\tR\rpluginInstIds\022" +
-      ";\n\005ptype\030\010 \001(\0132%.api.v1alpha1.integratio" +
-      "ns.PortalTypeR\005ptype\022;\n\013last_edited\030\t \001(" +
-      "\0132\032.google.protobuf.TimestampR\nlastEdite" +
-      "d\"\330\002\n\nPortalText\022/\n\023verification_header\030" +
-      "\001 \001(\tR\022verificationHeader\022/\n\023verificatio" +
-      "n_footer\030\002 \001(\tR\022verificationFooter\022%\n\016pa" +
-      "yment_header\030\003 \001(\tR\rpaymentHeader\022%\n\016pay" +
-      "ment_footer\030\004 \001(\tR\rpaymentFooter\022%\n\016rece" +
-      "ipt_header\030\005 \001(\tR\rreceiptHeader\022%\n\016recei" +
-      "pt_footer\030\006 \001(\tR\rreceiptFooter\022%\n\016invoic" +
-      "e_header\030\007 \001(\tR\rinvoiceHeader\022%\n\016invoice" +
-      "_footer\030\010 \001(\tR\rinvoiceFooter\"\256\001\n\nPortalT" +
-      "ype\022Q\n\016payment_portal\030\001 \001(\0132(.api.v1alph" +
-      "a1.integrations.PaymentPortalH\000R\rpayment" +
-      "Portal\022E\n\nivr_portal\030\002 \001(\0132$.api.v1alpha" +
-      "1.integrations.IVRPortalH\000R\tivrPortalB\006\n" +
-      "\004data\"\253\002\n\rPaymentPortal\022N\n\014verification\030" +
-      "\010 \001(\0132*.api.commons.integrations.Verific" +
-      "ationFlowR\014verification\022?\n\007invoice\030\t \001(\013" +
-      "2%.api.commons.integrations.InvoiceFlowR" +
-      "\007invoice\022A\n\010payments\030\n \003(\0132%.api.commons" +
-      ".integrations.PaymentFlowR\010payments\022F\n\013p" +
-      "ortal_text\030\024 \001(\0132%.api.v1alpha1.integrat" +
-      "ions.PortalTextR\nportalText\"\013\n\tIVRPortal" +
-      "\"\"\n\020PluginInstanceId\022\016\n\002id\030\003 \001(\tR\002id\"\374\002\n" +
-      "\016PluginInstance\022\016\n\002id\030\003 \001(\tR\002id\022\022\n\004name\030" +
-      "\004 \001(\tR\004name\022 \n\013description\030\005 \001(\tR\013descri" +
-      "ption\022+\n\021plugin_definition\030\006 \001(\tR\020plugin" +
-      "Definition\0225\n\004data\030\007 \001(\0132!.api.v1alpha1." +
-      "integrations.ValuesR\004data\022=\n\010metadata\030\n " +
-      "\001(\0132!.api.v1alpha1.integrations.ValuesR\010" +
-      "metadata\022;\n\013last_edited\030\t \001(\0132\032.google.p" +
-      "rotobuf.TimestampR\nlastEdited\022D\n\tmethod_" +
-      "id\030\014 \001(\0162\'.api.commons.integrations.Requ" +
-      "estMethodR\010methodId\"\362\003\n\030PortalLinkTransa" +
-      "ctionRow\022\024\n\005views\030\001 \001(\005R\005views\022\'\n\017verify" +
-      "_attempts\030\002 \001(\005R\016verifyAttempts\022)\n\020verif" +
-      "y_successes\030\003 \001(\005R\017verifySuccesses\022)\n\020pa" +
-      "yment_attempts\030\004 \001(\005R\017paymentAttempts\022+\n" +
-      "\021payment_successes\030\005 \001(\005R\020paymentSuccess" +
-      "es\022%\n\016payment_amount\030\006 \001(\001R\rpaymentAmoun" +
-      "t\022.\n\004date\030\007 \001(\0132\032.google.protobuf.Timest" +
-      "ampR\004date\022^\n\tlink_data\030\010 \003(\0132A.api.v1alp" +
-      "ha1.integrations.PortalLinkTransactionRo" +
-      "w.LinkDataEntryR\010linkData\032]\n\rLinkDataEnt" +
-      "ry\022\020\n\003key\030\001 \001(\tR\003key\0226\n\005value\030\002 \001(\0132 .ap" +
-      "i.v1alpha1.integrations.ValueR\005value:\0028\001" +
-      "\"\260\002\n\034GetPortalLinksByDateRangeReq\022\025\n\006org" +
-      "_id\030\001 \001(\tR\005orgId\022\033\n\tregion_id\030\002 \001(\tR\010reg" +
-      "ionId\0220\n\005start\030\003 \001(\0132\032.google.protobuf.T" +
-      "imestampR\005start\022,\n\003end\030\004 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\003end\022\033\n\tpage_size\030\005 \001(\005" +
-      "R\010pageSize\022\031\n\010page_num\030\006 \001(\005R\007pageNum\022D\n" +
-      "\tmethod_id\030\007 \001(\0162\'.api.commons.integrati" +
-      "ons.RequestMethodR\010methodId\"g\n\034GetPortal" +
-      "LinksByDateRangeRes\022G\n\004rows\030\002 \003(\01323.api." +
-      "v1alpha1.integrations.PortalLinkTransact" +
-      "ionRowR\004rows2\232\"\n\014Integrations\022\206\001\n\007Proces" +
-      "s\022%.api.v1alpha1.integrations.ProcessReq" +
-      "\032%.api.v1alpha1.integrations.ProcessRes\"" +
-      "-\202\323\344\223\002\'\"\"/api/v1alpha1/integrations/proc" +
-      "ess:\001*\022\310\001\n\031GetIntegrationTransaction\0227.a" +
-      "pi.v1alpha1.integrations.GetIntegrationT" +
-      "ransactionReq\0321.api.v1alpha1.integration" +
-      "s.IntegrationTransaction\"?\202\323\344\223\0029\"4/api/v" +
-      "1alpha1/integrations/getintegrationtrans" +
-      "action:\001*\022\346\001\n\037GetIntegrationTransactionR" +
-      "eport\022=.api.v1alpha1.integrations.GetInt" +
-      "egrationTransactionReportReq\032=.api.v1alp" +
-      "ha1.integrations.GetIntegrationTransacti" +
-      "onReportRes\"E\202\323\344\223\002?\":/api/v1alpha1/integ" +
+      "lpha1.integrations.ValueR\005value:\0028\001\"\312\002\n\032" +
+      "PaymentLinkConfigTemplates\0220\n\024receipt_sm" +
+      "s_template\030\001 \001(\tR\022receiptSmsTemplate\0227\n\030" +
+      "receipt_sms_source_phone\030\002 \001(\tR\025receiptS" +
+      "msSourcePhone\0224\n\026receipt_email_template\030" +
+      "\003 \001(\tR\024receiptEmailTemplate\0225\n\027receipt_e" +
+      "mail_from_addr\030\004 \001(\tR\024receiptEmailFromAd" +
+      "dr\022)\n\020receipt_template\030\005 \001(\tR\017receiptTem" +
+      "plate\022)\n\020invoice_template\030\006 \001(\tR\017invoice" +
+      "Template\"\305\001\n\023VerificationRequest\022W\n\025veri" +
+      "fication_requests\030\001 \003(\0132\".api.v1alpha1.i" +
+      "ntegrations.RequestR\024verificationRequest" +
+      "s\022U\n\023verification_fields\030\002 \003(\0132$.api.v1a" +
+      "lpha1.integrations.ParameterR\022verificati" +
+      "onFields\"\274\002\n\016PaymentRequest\022K\n\016payment_f" +
+      "ields\030\005 \003(\0132$.api.v1alpha1.integrations." +
+      "ParameterR\rpaymentFields\022Z\n\027payment_requ" +
+      "est_payload\030\001 \003(\0132\".api.v1alpha1.integra" +
+      "tions.RequestR\025paymentRequestPayload\022K\n\017" +
+      "payment_request\030\002 \001(\0132\".api.v1alpha1.int" +
+      "egrations.RequestR\016paymentRequest\022\022\n\004nam" +
+      "e\030\003 \001(\tR\004name\022 \n\013description\030\004 \001(\tR\013desc" +
+      "ription\"\353\001\n\016InvoiceRequest\022Z\n\027invoice_re" +
+      "quest_payload\030\002 \003(\0132\".api.v1alpha1.integ" +
+      "rations.RequestR\025invoiceRequestPayload\022K" +
+      "\n\017invoice_request\030\003 \001(\0132\".api.v1alpha1.i" +
+      "ntegrations.RequestR\016invoiceRequest\0220\n\024f" +
+      "ilter_response_keys\030\004 \003(\tR\022filterRespons" +
+      "eKeys\"\371\005\n\007Request\0224\n\025journey_collection_" +
+      "id\030\003 \001(\tH\000R\023journeyCollectionId\022H\n\013metho" +
+      "d_call\030\004 \001(\0132%.api.v1alpha1.integrations" +
+      ".MethodCallH\000R\nmethodCall\022\035\n\tconfig_id\030\005" +
+      " \001(\tH\000R\010configId\022S\n\013static_data\030\006 \003(\01322." +
+      "api.v1alpha1.integrations.Request.Static" +
+      "DataEntryR\nstaticData\022l\n\024rename_response" +
+      "_keys\030\007 \003(\0132:.api.v1alpha1.integrations." +
+      "Request.RenameResponseKeysEntryR\022renameR" +
+      "esponseKeys\022n\n\024reassign_validations\030\010 \003(" +
+      "\0132;.api.v1alpha1.integrations.Request.Re" +
+      "assignValidationsEntryR\023reassignValidati" +
+      "ons\032_\n\017StaticDataEntry\022\020\n\003key\030\001 \001(\tR\003key" +
+      "\0226\n\005value\030\002 \001(\0132 .api.v1alpha1.integrati" +
+      "ons.ValueR\005value:\0028\001\032E\n\027RenameResponseKe" +
+      "ysEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\t" +
+      "R\005value:\0028\001\032m\n\030ReassignValidationsEntry\022" +
+      "\020\n\003key\030\001 \001(\tR\003key\022;\n\005value\030\002 \001(\0132%.api.v" +
+      "1alpha1.integrations.ValidationR\005value:\002" +
+      "8\001B\005\n\003val\"F\n\nValidation\0228\n\004enum\030\001 \001(\0162$." +
+      "api.commons.integrations.ValidationR\004enu" +
+      "m\"\244\001\n\nMethodCall\022P\n\016integration_id\030\001 \001(\016" +
+      "2).api.commons.integrations.IntegrationT" +
+      "ypeR\rintegrationId\022D\n\tmethod_id\030\002 \001(\0162\'." +
+      "api.commons.integrations.RequestMethodR\010" +
+      "methodId\"P\n\rPortalConfigs\022?\n\006values\030\001 \003(" +
+      "\0132\'.api.v1alpha1.integrations.PortalConf" +
+      "igR\006values\"\033\n\031ListPaymentLinkConfigsReq\"" +
+      "Z\n\022PaymentLinkConfigs\022D\n\006values\030\001 \003(\0132,." +
+      "api.v1alpha1.integrations.PaymentLinkCon" +
+      "figR\006values\"\016\n\014ListLinksReq\"\265\001\n\033CreatePa" +
+      "ymentPortalLinksReq\022$\n\016link_config_id\030\003 " +
+      "\001(\tR\014linkConfigId\0222\n\006expiry\030\004 \001(\0132\032.goog" +
+      "le.protobuf.TimestampR\006expiry\022<\n\tuser_da" +
+      "ta\030\005 \003(\0132\037.api.v1alpha1.integrations.Tas" +
+      "kR\010userData\"1\n\033CreatePaymentPortalLinksR" +
+      "es\022\022\n\004urls\030\001 \003(\tR\004urls\" \n\nSummaryReq\022\022\n\004" +
+      "year\030\003 \001(\005R\004year\"\203\002\n\nSummaryRes\022M\n\014year_" +
+      "summary\030\001 \001(\0132*.api.v1alpha1.integration" +
+      "s.CalendarSummaryR\013yearSummary\022S\n\017month_" +
+      "summaries\030\002 \003(\0132*.api.v1alpha1.integrati" +
+      "ons.CalendarSummaryR\016monthSummaries\022Q\n\016w" +
+      "eek_summaries\030\003 \003(\0132*.api.v1alpha1.integ" +
+      "rations.CalendarSummaryR\rweekSummaries\"\327" +
+      "\001\n\017CalendarSummary\022!\n\014calendar_num\030\001 \001(\005" +
+      "R\013calendarNum\022G\n\007summary\030\002 \001(\0132-.api.v1a" +
+      "lpha1.integrations.TransactionSummaryR\007s" +
+      "ummary\022X\n\016type_summaries\030\003 \003(\01321.api.v1a" +
+      "lpha1.integrations.IntegrationTypeSummar" +
+      "yR\rtypeSummaries\"\316\001\n\026IntegrationTypeSumm" +
+      "ary\022T\n\020integration_type\030\001 \001(\0162).api.comm" +
+      "ons.integrations.IntegrationTypeR\017integr" +
+      "ationType\022^\n\023integration_summary\030\002 \001(\0132-" +
+      ".api.v1alpha1.integrations.TransactionSu" +
+      "mmaryR\022integrationSummary\"\274\002\n\022Transactio" +
+      "nSummary\022@\n\034total_transactions_attempted" +
+      "\030\001 \001(\003R\032totalTransactionsAttempted\022@\n\034to" +
+      "tal_transactions_completed\030\002 \001(\003R\032totalT" +
+      "ransactionsCompleted\022:\n\031total_transactio" +
+      "ns_failed\030\003 \001(\003R\027totalTransactionsFailed" +
+      "\0224\n\026total_amount_collected\030\004 \001(\001R\024totalA" +
+      "mountCollected\0220\n\024avg_amount_collected\030\005" +
+      " \001(\001R\022avgAmountCollected\"]\n#ListIntegrat" +
+      "ionTemplatesByConfigReq\0226\n\027integration_c" +
+      "onfig_name\030\002 \001(\tR\025integrationConfigName\"" +
+      "\216\001\n#ListIntegrationTemplatesByConfigRes\022" +
+      "g\n\025integration_templates\030\001 \003(\01322.api.v1a" +
+      "lpha1.integrations.IntegrationTemplateIn" +
+      "foR\024integrationTemplates\"t\n\027IntegrationT" +
+      "emplateInfo\0224\n\026broadcast_template_sid\030\001 " +
+      "\001(\003R\024broadcastTemplateSid\022#\n\rtemplate_na" +
+      "me\030\002 \001(\tR\014templateName\"*\n\030CopyPaymentLin" +
+      "kConfigReq\022\016\n\002id\030\003 \001(\tR\002id\"5\n\030CopyPaymen" +
+      "tLinkConfigRes\022\031\n\010new_name\030\001 \001(\tR\007newNam" +
+      "e\"!\n\013ProfileName\022\022\n\004name\030\001 \001(\tR\004name\"T\n\017" +
+      "PaymentProfiles\022A\n\006values\030\001 \003(\0132).api.v1" +
+      "alpha1.integrations.PaymentProfileR\006valu" +
+      "es\"j\n\016PaymentProfile\022\"\n\014verification\030\010 \001" +
+      "(\tR\014verification\022\030\n\007invoice\030\t \001(\tR\007invoi" +
+      "ce\022\032\n\010payments\030\n \003(\tR\010payments\"\223\002\n\014Unkno" +
+      "wnField\022\022\n\004name\030\001 \001(\tR\004name\022!\n\014display_n" +
+      "ame\030\005 \001(\tR\013displayName\022#\n\rreason_needed\030" +
+      "\002 \001(\tR\014reasonNeeded\022R\n\021potential_sources" +
+      "\030\003 \003(\0162%.api.commons.integrations.FieldS" +
+      "ourceR\020potentialSources\022S\n\020suggested_fie" +
+      "lds\030\004 \003(\0132(.api.v1alpha1.integrations.Pr" +
+      "ovidedFieldR\017suggestedFields\"\227\002\n\rProvide" +
+      "dField\022\022\n\004name\030\001 \001(\tR\004name\022!\n\014display_na" +
+      "me\030\006 \001(\tR\013displayName\022\031\n\010alt_name\030\002 \001(\tR" +
+      "\007altName\022F\n\013provided_by\030\003 \001(\0162%.api.comm" +
+      "ons.integrations.FieldSourceR\nprovidedBy" +
+      "\0225\n\027provided_by_details_num\030\004 \001(\005R\024provi" +
+      "dedByDetailsNum\0225\n\027provided_by_details_s" +
+      "tr\030\005 \001(\tR\024providedByDetailsStr\"\254\001\n\006Value" +
+      "s\022E\n\006values\030\001 \003(\0132-.api.v1alpha1.integra" +
+      "tions.Values.ValuesEntryR\006values\032[\n\013Valu" +
+      "esEntry\022\020\n\003key\030\001 \001(\tR\003key\0226\n\005value\030\002 \001(\013" +
+      "2 .api.v1alpha1.integrations.ValueR\005valu" +
+      "e:\0028\001\"\337\002\n\005Value\022\031\n\007str_val\030\001 \001(\tH\000R\006strV" +
+      "al\022\031\n\007num_val\030\002 \001(\001H\000R\006numVal\022\033\n\010bool_va" +
+      "l\030\003 \001(\010H\000R\007boolVal\0227\n\010time_val\030\004 \001(\0132\032.g" +
+      "oogle.protobuf.TimestampH\000R\007timeVal\022D\n\010c" +
+      "omp_val\030\006 \001(\0132\'.api.v1alpha1.integration" +
+      "s.CompositeValH\000R\007compVal\022\031\n\007int_val\030\007 \001" +
+      "(\003H\000R\006intVal\022\034\n\tsensitive\030\005 \001(\010R\tsensiti" +
+      "ve\022D\n\nvalidation\030\010 \001(\0162$.api.commons.int" +
+      "egrations.ValidationR\nvalidationB\005\n\003val\"" +
+      "F\n\nFieldOrStr\022\026\n\005field\030\001 \001(\tH\000R\005field\022\031\n" +
+      "\007str_val\030\002 \001(\tH\000R\006strValB\005\n\003val\"K\n\014Compo" +
+      "siteVal\022;\n\005parts\030\001 \003(\0132%.api.v1alpha1.in" +
+      "tegrations.FieldOrStrR\005parts\"\221\001\n\tConditi" +
+      "on\022\020\n\003key\030\001 \001(\tR\003key\022:\n\002op\030\002 \001(\0162*.api.c" +
+      "ommons.integrations.CompareOperationR\002op",
+      "\0226\n\005value\030\003 \001(\0132 .api.v1alpha1.integrati" +
+      "ons.ValueR\005value\"\372\003\n\021IntegrationConfig\022\016" +
+      "\n\002id\030\001 \001(\tR\002id\022P\n\016integration_id\030\004 \001(\0162)" +
+      ".api.commons.integrations.IntegrationTyp" +
+      "eR\rintegrationId\022\022\n\004name\030\006 \001(\tR\004name\022 \n\013" +
+      "description\030\007 \001(\tR\013description\0229\n\006params" +
+      "\030\t \001(\0132!.api.v1alpha1.integrations.Value" +
+      "sR\006params\022\030\n\007deleted\030\n \001(\010R\007deleted\0229\n\nc" +
+      "reated_on\030\013 \001(\0132\032.google.protobuf.Timest" +
+      "ampR\tcreatedOn\022:\n\005alias\030\r \001(\0132$.api.v1al" +
+      "pha1.integrations.MapStringR\005alias\022;\n\005co" +
+      "nds\030\016 \001(\0132%.api.v1alpha1.integrations.Co" +
+      "nditionsR\005conds\022D\n\tmethod_id\030\017 \001(\0162\'.api" +
+      ".commons.integrations.RequestMethodR\010met" +
+      "hodId\"\304\006\n\026IntegrationTransaction\022<\n\032inte" +
+      "gration_transaction_id\030\001 \001(\tR\030integratio" +
+      "nTransactionId\022\027\n\007task_id\030\004 \001(\tR\006taskId\022" +
+      "P\n\016integration_id\030\005 \001(\0162).api.commons.in" +
+      "tegrations.IntegrationTypeR\rintegrationI" +
+      "d\022D\n\tmethod_id\030\006 \001(\0162\'.api.commons.integ" +
+      "rations.RequestMethodR\010methodId\022T\n\020trans" +
+      "action_type\030\007 \001(\0162).api.commons.integrat" +
+      "ions.TransactionTypeR\017transactionType\022N\n" +
+      "\016request_source\030\010 \001(\0162\'.api.commons.inte" +
+      "grations.RequestSourceR\rrequestSource\022C\n" +
+      "\006result\030\t \001(\0162+.api.commons.integrations" +
+      ".TransactionResultR\006result\022)\n\020amount_col" +
+      "lected\030\n \001(\001R\017amountCollected\022D\n\014request" +
+      "_data\030\013 \001(\0132!.api.v1alpha1.integrations." +
+      "ValuesR\013requestData\022F\n\rresponse_data\030\014 \001" +
+      "(\0132!.api.v1alpha1.integrations.ValuesR\014r" +
+      "esponseData\0229\n\ncreated_on\030\r \001(\0132\032.google" +
+      ".protobuf.TimestampR\tcreatedOn\022\037\n\013config" +
+      "_name\030\016 \001(\tR\nconfigName\022;\n\005conds\030\017 \001(\0132%" +
+      ".api.v1alpha1.integrations.ConditionsR\005c" +
+      "onds\"\220\001\n\tMapString\022H\n\006values\030\001 \003(\01320.api" +
+      ".v1alpha1.integrations.MapString.ValuesE" +
+      "ntryR\006values\0329\n\013ValuesEntry\022\020\n\003key\030\001 \001(\t" +
+      "R\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"J\n\nCondi" +
+      "tions\022<\n\006values\030\001 \003(\0132$.api.v1alpha1.int" +
+      "egrations.ConditionR\006values\"\374\001\n\004Task\022C\n\006" +
+      "values\030\001 \003(\0132+.api.v1alpha1.integrations" +
+      ".Task.ValuesEntryR\006values\022\027\n\007task_id\030\002 \001" +
+      "(\tR\006taskId\0229\n\003src\030\003 \001(\0162\'.api.commons.in" +
+      "tegrations.RequestSourceR\003src\032[\n\013ValuesE" +
+      "ntry\022\020\n\003key\030\001 \001(\tR\003key\0226\n\005value\030\002 \001(\0132 ." +
+      "api.v1alpha1.integrations.ValueR\005value:\002" +
+      "8\001\" \n\016PortalConfigId\022\016\n\002id\030\003 \001(\tR\002id\"\305\003\n" +
+      "\014PortalConfig\022\016\n\002id\030\025 \001(\tR\002id\022\022\n\004name\030\026 " +
+      "\001(\tR\004name\022 \n\013description\030\027 \001(\tR\013descript" +
+      "ion\022(\n\020chat_client_link\030\002 \001(\tR\016chatClien" +
+      "tLink\022#\n\rcontact_email\030\003 \001(\tR\014contactEma" +
+      "il\022#\n\rcontact_phone\030\004 \001(\tR\014contactPhone\022" +
+      "\037\n\013postal_code\030\005 \001(\tR\npostalCode\022\022\n\004city" +
+      "\030\006 \001(\tR\004city\022\024\n\005state\030\007 \001(\tR\005state\022!\n\014co" +
+      "mpany_name\030\010 \001(\tR\013companyName\022\022\n\004logo\030\r " +
+      "\001(\014R\004logo\022#\n\rprimary_color\030\016 \001(\tR\014primar" +
+      "yColor\022\'\n\017secondary_color\030\017 \001(\tR\016seconda" +
+      "ryColor\022%\n\016street_address\030\023 \001(\tR\rstreetA" +
+      "ddressJ\004\010\t\020\r\"\036\n\014PortalLinkId\022\016\n\002id\030\003 \001(\t" +
+      "R\002id\"\273\004\n\nPortalLink\022\016\n\002id\030\003 \001(\tR\002id\022\033\n\tp" +
+      "ortal_id\030\004 \001(\tR\010portalId\0220\n\022plugin_insta" +
+      "nce_id\030\005 \001(\tB\002\030\001R\020pluginInstanceId\022(\n\020po" +
+      "rtal_config_id\030\006 \001(\tR\016portalConfigId\022\027\n\007" +
+      "task_id\030\007 \001(\tR\006taskId\022C\n\004data\030\010 \003(\0132/.ap" +
+      "i.v1alpha1.integrations.PortalLink.DataE" +
+      "ntryR\004data\022O\n\010metadata\030\t \003(\01323.api.v1alp" +
+      "ha1.integrations.PortalLink.MetadataEntr" +
+      "yR\010metadata\022;\n\013last_edited\030\n \001(\0132\032.googl" +
+      "e.protobuf.TimestampR\nlastEdited\032Y\n\tData" +
+      "Entry\022\020\n\003key\030\001 \001(\tR\003key\0226\n\005value\030\002 \001(\0132 " +
+      ".api.v1alpha1.integrations.ValueR\005value:" +
+      "\0028\001\032]\n\rMetadataEntry\022\020\n\003key\030\001 \001(\tR\003key\0226" +
+      "\n\005value\030\002 \001(\0132 .api.v1alpha1.integration" +
+      "s.ValueR\005value:\0028\001\"\032\n\010PortalId\022\016\n\002id\030\003 \001" +
+      "(\tR\002id\"\232\002\n\006Portal\022\016\n\002id\030\003 \001(\tR\002id\022\022\n\004nam" +
+      "e\030\004 \001(\tR\004name\022 \n\013description\030\005 \001(\tR\013desc" +
+      "ription\022(\n\020portal_config_id\030\006 \001(\tR\016porta" +
+      "lConfigId\022&\n\017plugin_inst_ids\030\007 \003(\tR\rplug" +
+      "inInstIds\022;\n\005ptype\030\010 \001(\0132%.api.v1alpha1." +
+      "integrations.PortalTypeR\005ptype\022;\n\013last_e" +
+      "dited\030\t \001(\0132\032.google.protobuf.TimestampR" +
+      "\nlastEdited\"\330\002\n\nPortalText\022/\n\023verificati" +
+      "on_header\030\001 \001(\tR\022verificationHeader\022/\n\023v" +
+      "erification_footer\030\002 \001(\tR\022verificationFo" +
+      "oter\022%\n\016payment_header\030\003 \001(\tR\rpaymentHea" +
+      "der\022%\n\016payment_footer\030\004 \001(\tR\rpaymentFoot" +
+      "er\022%\n\016receipt_header\030\005 \001(\tR\rreceiptHeade" +
+      "r\022%\n\016receipt_footer\030\006 \001(\tR\rreceiptFooter" +
+      "\022%\n\016invoice_header\030\007 \001(\tR\rinvoiceHeader\022" +
+      "%\n\016invoice_footer\030\010 \001(\tR\rinvoiceFooter\"\256" +
+      "\001\n\nPortalType\022Q\n\016payment_portal\030\001 \001(\0132(." +
+      "api.v1alpha1.integrations.PaymentPortalH" +
+      "\000R\rpaymentPortal\022E\n\nivr_portal\030\002 \001(\0132$.a" +
+      "pi.v1alpha1.integrations.IVRPortalH\000R\tiv" +
+      "rPortalB\006\n\004data\"\253\002\n\rPaymentPortal\022N\n\014ver" +
+      "ification\030\010 \001(\0132*.api.commons.integratio" +
+      "ns.VerificationFlowR\014verification\022?\n\007inv" +
+      "oice\030\t \001(\0132%.api.commons.integrations.In" +
+      "voiceFlowR\007invoice\022A\n\010payments\030\n \003(\0132%.a" +
+      "pi.commons.integrations.PaymentFlowR\010pay" +
+      "ments\022F\n\013portal_text\030\024 \001(\0132%.api.v1alpha" +
+      "1.integrations.PortalTextR\nportalText\"\013\n" +
+      "\tIVRPortal\"\"\n\020PluginInstanceId\022\016\n\002id\030\003 \001" +
+      "(\tR\002id\"\374\002\n\016PluginInstance\022\016\n\002id\030\003 \001(\tR\002i" +
+      "d\022\022\n\004name\030\004 \001(\tR\004name\022 \n\013description\030\005 \001" +
+      "(\tR\013description\022+\n\021plugin_definition\030\006 \001" +
+      "(\tR\020pluginDefinition\0225\n\004data\030\007 \001(\0132!.api" +
+      ".v1alpha1.integrations.ValuesR\004data\022=\n\010m" +
+      "etadata\030\n \001(\0132!.api.v1alpha1.integration" +
+      "s.ValuesR\010metadata\022;\n\013last_edited\030\t \001(\0132" +
+      "\032.google.protobuf.TimestampR\nlastEdited\022" +
+      "D\n\tmethod_id\030\014 \001(\0162\'.api.commons.integra" +
+      "tions.RequestMethodR\010methodId\"\362\003\n\030Portal" +
+      "LinkTransactionRow\022\024\n\005views\030\001 \001(\005R\005views" +
+      "\022\'\n\017verify_attempts\030\002 \001(\005R\016verifyAttempt" +
+      "s\022)\n\020verify_successes\030\003 \001(\005R\017verifySucce" +
+      "sses\022)\n\020payment_attempts\030\004 \001(\005R\017paymentA" +
+      "ttempts\022+\n\021payment_successes\030\005 \001(\005R\020paym" +
+      "entSuccesses\022%\n\016payment_amount\030\006 \001(\001R\rpa" +
+      "ymentAmount\022.\n\004date\030\007 \001(\0132\032.google.proto" +
+      "buf.TimestampR\004date\022^\n\tlink_data\030\010 \003(\0132A" +
+      ".api.v1alpha1.integrations.PortalLinkTra" +
+      "nsactionRow.LinkDataEntryR\010linkData\032]\n\rL" +
+      "inkDataEntry\022\020\n\003key\030\001 \001(\tR\003key\0226\n\005value\030" +
+      "\002 \001(\0132 .api.v1alpha1.integrations.ValueR" +
+      "\005value:\0028\001\"\260\002\n\034GetPortalLinksByDateRange" +
+      "Req\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\033\n\tregion_id\030" +
+      "\002 \001(\tR\010regionId\0220\n\005start\030\003 \001(\0132\032.google." +
+      "protobuf.TimestampR\005start\022,\n\003end\030\004 \001(\0132\032" +
+      ".google.protobuf.TimestampR\003end\022\033\n\tpage_" +
+      "size\030\005 \001(\005R\010pageSize\022\031\n\010page_num\030\006 \001(\005R\007" +
+      "pageNum\022D\n\tmethod_id\030\007 \001(\0162\'.api.commons" +
+      ".integrations.RequestMethodR\010methodId\"g\n" +
+      "\034GetPortalLinksByDateRangeRes\022G\n\004rows\030\002 " +
+      "\003(\01323.api.v1alpha1.integrations.PortalLi" +
+      "nkTransactionRowR\004rows2\212$\n\014Integrations\022" +
+      "\220\001\n\007Process\022%.api.v1alpha1.integrations." +
+      "ProcessReq\032%.api.v1alpha1.integrations.P" +
+      "rocessRes\"7\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002\'\"\"/api/v1alph" +
+      "a1/integrations/process:\001*\022\322\001\n\031GetIntegr" +
+      "ationTransaction\0227.api.v1alpha1.integrat" +
+      "ions.GetIntegrationTransactionReq\0321.api." +
+      "v1alpha1.integrations.IntegrationTransac" +
+      "tion\"I\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0029\"4/api/v1alpha1/in" +
+      "tegrations/getintegrationtransaction:\001*\022" +
+      "\360\001\n\037GetIntegrationTransactionReport\022=.ap" +
+      "i.v1alpha1.integrations.GetIntegrationTr" +
+      "ansactionReportReq\032=.api.v1alpha1.integr" +
+      "ations.GetIntegrationTransactionReportRe" +
+      "s\"O\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002?\":/api/v1alpha1/integ" +
       "rations/getintegrationtransactionreport:" +
-      "\001*\022\366\001\n#GetIntegrationTransactionReportDa" +
+      "\001*\022\200\002\n#GetIntegrationTransactionReportDa" +
       "ta\022A.api.v1alpha1.integrations.GetIntegr" +
       "ationTransactionReportDataReq\032A.api.v1al" +
       "pha1.integrations.GetIntegrationTransact" +
-      "ionReportDataRes\"I\202\323\344\223\002C\">/api/v1alpha1/" +
-      "integrations/getintegrationtransactionre" +
-      "portdata:\001*\022\275\001\n\025GetAggregatedMetadata\0223." +
-      "api.v1alpha1.integrations.GetAggregatedM" +
-      "etadataReq\0323.api.v1alpha1.integrations.G" +
-      "etAggregatedMetadataRes\":\202\323\344\223\0024\"//api/v1" +
-      "alpha1/integrations/getaggregatemetadata" +
-      ":\001*\022\316\001\n\031GetPortalLinksByDateRange\0227.api." +
-      "v1alpha1.integrations.GetPortalLinksByDa" +
-      "teRangeReq\0327.api.v1alpha1.integrations.G" +
-      "etPortalLinksByDateRangeRes\"?\202\323\344\223\0029\"4/ap" +
-      "i/v1alpha1/integrations/getportallinksby" +
-      "daterange:\001*\022\250\001\n\027CreateIntegrationConfig" +
-      "\022,.api.v1alpha1.integrations.Integration" +
-      "Config\032 .api.v1alpha1.integrations.Empty" +
-      "\"=\202\323\344\223\0027\"2/api/v1alpha1/integrations/cre" +
-      "ateintegrationconfig:\001*\022\264\001\n\024GetIntegrati" +
+      "ionReportDataRes\"S\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002C\">/api" +
+      "/v1alpha1/integrations/getintegrationtra" +
+      "nsactionreportdata:\001*\022\307\001\n\025GetAggregatedM" +
+      "etadata\0223.api.v1alpha1.integrations.GetA" +
+      "ggregatedMetadataReq\0323.api.v1alpha1.inte" +
+      "grations.GetAggregatedMetadataRes\"D\272\270\221\002\005" +
+      "\n\003\010\224\n\202\323\344\223\0024\"//api/v1alpha1/integrations/" +
+      "getaggregatemetadata:\001*\022\330\001\n\031GetPortalLin" +
+      "ksByDateRange\0227.api.v1alpha1.integration" +
+      "s.GetPortalLinksByDateRangeReq\0327.api.v1a" +
+      "lpha1.integrations.GetPortalLinksByDateR" +
+      "angeRes\"I\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0029\"4/api/v1alpha1" +
+      "/integrations/getportallinksbydaterange:" +
+      "\001*\022\262\001\n\027CreateIntegrationConfig\022,.api.v1a" +
+      "lpha1.integrations.IntegrationConfig\032 .a" +
+      "pi.v1alpha1.integrations.Empty\"G\272\270\221\002\005\n\003\010" +
+      "\224\n\202\323\344\223\0027\"2/api/v1alpha1/integrations/cre" +
+      "ateintegrationconfig:\001*\022\276\001\n\024GetIntegrati" +
       "onConfig\0222.api.v1alpha1.integrations.Get" +
       "IntegrationConfigReq\032,.api.v1alpha1.inte" +
-      "grations.IntegrationConfig\":\202\323\344\223\0024\"//api" +
-      "/v1alpha1/integrations/getintegrationcon" +
-      "fig:\001*\022\261\001\n\027UpdateIntegrationConfig\0225.api" +
-      ".v1alpha1.integrations.UpdateIntegration" +
+      "grations.IntegrationConfig\"D\272\270\221\002\005\n\003\010\224\n\202\323" +
+      "\344\223\0024\"//api/v1alpha1/integrations/getinte" +
+      "grationconfig:\001*\022\273\001\n\027UpdateIntegrationCo" +
+      "nfig\0225.api.v1alpha1.integrations.UpdateI" +
+      "ntegrationConfigReq\032 .api.v1alpha1.integ" +
+      "rations.Empty\"G\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0027\"2/api/v1" +
+      "alpha1/integrations/udpateintegrationcon" +
+      "fig:\001*\022\273\001\n\027DeleteIntegrationConfig\0225.api" +
+      ".v1alpha1.integrations.DeleteIntegration" +
       "ConfigReq\032 .api.v1alpha1.integrations.Em" +
-      "pty\"=\202\323\344\223\0027\"2/api/v1alpha1/integrations/" +
-      "udpateintegrationconfig:\001*\022\261\001\n\027DeleteInt" +
-      "egrationConfig\0225.api.v1alpha1.integratio" +
-      "ns.DeleteIntegrationConfigReq\032 .api.v1al" +
-      "pha1.integrations.Empty\"=\202\323\344\223\0027\"2/api/v1" +
-      "alpha1/integrations/deleteintegrationcon" +
-      "fig:\001*\022\231\001\n\020ListIntegrations\022 .api.v1alph" +
-      "a1.integrations.Empty\032+.api.v1alpha1.int" +
-      "egrations.IntegrationInfos\"6\202\323\344\223\0020\"+/api" +
+      "pty\"G\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0027\"2/api/v1alpha1/int" +
+      "egrations/deleteintegrationconfig:\001*\022\243\001\n" +
+      "\020ListIntegrations\022 .api.v1alpha1.integra" +
+      "tions.Empty\032+.api.v1alpha1.integrations." +
+      "IntegrationInfos\"@\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0020\"+/api" +
       "/v1alpha1/integrations/listintegrations:" +
-      "\001*\022\322\001\n\032ListIntegrationConfigNames\0228.api." +
+      "\001*\022\334\001\n\032ListIntegrationConfigNames\0228.api." +
       "v1alpha1.integrations.ListIntegrationCon" +
       "figNamesReq\0328.api.v1alpha1.integrations." +
-      "ListIntegrationConfigNamesRes\"@\202\323\344\223\002:\"5/" +
-      "api/v1alpha1/integrations/listintegratio" +
-      "nconfignames:\001*\022\257\001\n\022ListJourneyConfigs\0220" +
-      ".api.v1alpha1.integrations.ListJourneyCo" +
-      "nfigsReq\032-.api.v1alpha1.integrations.Int" +
-      "egrationConfigs\"8\202\323\344\223\0022\"-/api/v1alpha1/i" +
-      "ntegrations/listjourneyconfigs:\001*\022\270\001\n\025Li" +
-      "stNonJourneyConfigs\0223.api.v1alpha1.integ" +
-      "rations.ListNonJourneyConfigsReq\032-.api.v" +
-      "1alpha1.integrations.IntegrationConfigs\"" +
-      ";\202\323\344\223\0025\"0/api/v1alpha1/integrations/list" +
-      "nonjourneyconfigs:\001*\022\231\001\n\022CreatePortalCon" +
-      "fig\022\'.api.v1alpha1.integrations.PortalCo" +
-      "nfig\032 .api.v1alpha1.integrations.Empty\"8" +
+      "ListIntegrationConfigNamesRes\"J\272\270\221\002\005\n\003\010\224" +
+      "\n\202\323\344\223\002:\"5/api/v1alpha1/integrations/list" +
+      "integrationconfignames:\001*\022\271\001\n\022ListJourne" +
+      "yConfigs\0220.api.v1alpha1.integrations.Lis" +
+      "tJourneyConfigsReq\032-.api.v1alpha1.integr" +
+      "ations.IntegrationConfigs\"B\272\270\221\002\005\n\003\010\224\n\202\323\344" +
+      "\223\0022\"-/api/v1alpha1/integrations/listjour" +
+      "neyconfigs:\001*\022\302\001\n\025ListNonJourneyConfigs\022" +
+      "3.api.v1alpha1.integrations.ListNonJourn" +
+      "eyConfigsReq\032-.api.v1alpha1.integrations" +
+      ".IntegrationConfigs\"E\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0025\"0/" +
+      "api/v1alpha1/integrations/listnonjourney" +
+      "configs:\001*\022\243\001\n\022CreatePortalConfig\022\'.api." +
+      "v1alpha1.integrations.PortalConfig\032 .api" +
+      ".v1alpha1.integrations.Empty\"B\272\270\221\002\005\n\003\010\224\n" +
       "\202\323\344\223\0022\"-/api/v1alpha1/integrations/creat" +
-      "eportalconfig:\001*\022\247\001\n\021ListPortalConfigs\022/" +
+      "eportalconfig:\001*\022\261\001\n\021ListPortalConfigs\022/" +
       ".api.v1alpha1.integrations.ListPortalCon" +
       "figsReq\032(.api.v1alpha1.integrations.Port" +
-      "alConfigs\"7\202\323\344\223\0021\",/api/v1alpha1/integra" +
-      "tions/listportalconfigs:\001*\022\231\001\n\022UpdatePor" +
-      "talConfig\022\'.api.v1alpha1.integrations.Po" +
-      "rtalConfig\032 .api.v1alpha1.integrations.E" +
-      "mpty\"8\202\323\344\223\0022\"-/api/v1alpha1/integrations" +
-      "/updateportalconfig:\001*\022\240\001\n\017GetPortalConf" +
-      "ig\022-.api.v1alpha1.integrations.GetPortal" +
-      "ConfigReq\032\'.api.v1alpha1.integrations.Po" +
-      "rtalConfig\"5\202\323\344\223\002/\"*/api/v1alpha1/integr" +
-      "ations/getportalconfig:\001*\022\242\001\n\022DeletePort" +
-      "alConfig\0220.api.v1alpha1.integrations.Del" +
-      "etePortalConfigReq\032 .api.v1alpha1.integr" +
-      "ations.Empty\"8\202\323\344\223\0022\"-/api/v1alpha1/inte" +
-      "grations/deleteportalconfig:\001*\022\234\001\n\020Updat" +
+      "alConfigs\"A\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0021\",/api/v1alph" +
+      "a1/integrations/listportalconfigs:\001*\022\243\001\n" +
+      "\022UpdatePortalConfig\022\'.api.v1alpha1.integ" +
+      "rations.PortalConfig\032 .api.v1alpha1.inte" +
+      "grations.Empty\"B\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0022\"-/api/v" +
+      "1alpha1/integrations/updateportalconfig:" +
+      "\001*\022\252\001\n\017GetPortalConfig\022-.api.v1alpha1.in" +
+      "tegrations.GetPortalConfigReq\032\'.api.v1al" +
+      "pha1.integrations.PortalConfig\"?\272\270\221\002\005\n\003\010" +
+      "\224\n\202\323\344\223\002/\"*/api/v1alpha1/integrations/get" +
+      "portalconfig:\001*\022\254\001\n\022DeletePortalConfig\0220" +
+      ".api.v1alpha1.integrations.DeletePortalC" +
+      "onfigReq\032 .api.v1alpha1.integrations.Emp" +
+      "ty\"B\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0022\"-/api/v1alpha1/inte" +
+      "grations/deleteportalconfig:\001*\022\246\001\n\020Updat" +
       "ePortalLogo\022..api.v1alpha1.integrations." +
       "UpdatePortalLogoReq\032 .api.v1alpha1.integ" +
-      "rations.Empty\"6\202\323\344\223\0020\"+/api/v1alpha1/int" +
-      "egrations/updateportallogo:\001*\022\222\001\n\rGetPor" +
-      "talLogo\022+.api.v1alpha1.integrations.GetP" +
-      "ortalLogoReq\032\037.api.v1alpha1.integrations" +
-      ".Logo\"3\202\323\344\223\002-\"(/api/v1alpha1/integration" +
-      "s/getportallogo:\001*\022\312\001\n\030CreatePaymentPort" +
-      "alLinks\0226.api.v1alpha1.integrations.Crea" +
-      "tePaymentPortalLinksReq\0326.api.v1alpha1.i" +
-      "ntegrations.CreatePaymentPortalLinksRes\"" +
-      ">\202\323\344\223\0028\"3/api/v1alpha1/integrations/crea" +
-      "tepaymentportallinks:\001*\022\206\001\n\007Summary\022%.ap" +
-      "i.v1alpha1.integrations.SummaryReq\032%.api" +
-      ".v1alpha1.integrations.SummaryRes\"-\202\323\344\223\002" +
+      "rations.Empty\"@\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0020\"+/api/v1" +
+      "alpha1/integrations/updateportallogo:\001*\022" +
+      "\234\001\n\rGetPortalLogo\022+.api.v1alpha1.integra" +
+      "tions.GetPortalLogoReq\032\037.api.v1alpha1.in" +
+      "tegrations.Logo\"=\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002-\"(/api/" +
+      "v1alpha1/integrations/getportallogo:\001*\022\324" +
+      "\001\n\030CreatePaymentPortalLinks\0226.api.v1alph" +
+      "a1.integrations.CreatePaymentPortalLinks" +
+      "Req\0326.api.v1alpha1.integrations.CreatePa" +
+      "ymentPortalLinksRes\"H\272\270\221\002\005\n\003\010\224\n\202\323\344\223\0028\"3/" +
+      "api/v1alpha1/integrations/createpaymentp" +
+      "ortallinks:\001*\022\220\001\n\007Summary\022%.api.v1alpha1" +
+      ".integrations.SummaryReq\032%.api.v1alpha1." +
+      "integrations.SummaryRes\"7\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002" +
       "\'\"\"/api/v1alpha1/integrations/summary:\001*" +
-      "\022\346\001\n ListIntegrationTemplatesByConfig\022>." +
+      "\022\360\001\n ListIntegrationTemplatesByConfig\022>." +
       "api.v1alpha1.integrations.ListIntegratio" +
       "nTemplatesByConfigReq\032>.api.v1alpha1.int" +
       "egrations.ListIntegrationTemplatesByConf" +
-      "igRes\"B\202\323\344\223\002<\"7/api/v1alpha1/integration" +
-      "s/integrationtemplatesbyconfig:\001*B\301\001\n+co" +
-      "m.tcn.cloud.api.api.v1alpha1.integration" +
-      "sB\014ServiceProtoP\001\242\002\003AVI\252\002\031Api.V1alpha1.I" +
-      "ntegrations\312\002\031Api\\V1alpha1\\Integrations\342" +
-      "\002%Api\\V1alpha1\\Integrations\\GPBMetadata\352" +
-      "\002\033Api::V1alpha1::Integrationsb\006proto3"
+      "igRes\"L\272\270\221\002\005\n\003\010\224\n\202\323\344\223\002<\"7/api/v1alpha1/i" +
+      "ntegrations/integrationtemplatesbyconfig" +
+      ":\001*B\301\001\n+com.tcn.cloud.api.api.v1alpha1.i" +
+      "ntegrationsB\014ServiceProtoP\001\242\002\003AVI\252\002\031Api." +
+      "V1alpha1.Integrations\312\002\031Api\\V1alpha1\\Int" +
+      "egrations\342\002%Api\\V1alpha1\\Integrations\\GP" +
+      "BMetadata\352\002\033Api::V1alpha1::Integrationsb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.getDescriptor(),
+          com.tcn.cloud.api.api.commons.PermsProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
@@ -1960,10 +1970,13 @@ public final class ServiceProto {
         new java.lang.String[] { "Rows", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.tcn.cloud.api.api.commons.integrations.IntegrationsProto.getDescriptor();
+    com.tcn.cloud.api.api.commons.PermsProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();

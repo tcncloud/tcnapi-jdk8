@@ -392,6 +392,17 @@ private static final long serialVersionUID = 0L;
     return ticketSla_.get(index);
   }
 
+  public static final int ASSIGN_SELF_FIELD_NUMBER = 13;
+  private boolean assignSelf_ = false;
+  /**
+   * <code>bool assign_self = 13 [json_name = "assignSelf"];</code>
+   * @return The assignSelf.
+   */
+  @java.lang.Override
+  public boolean getAssignSelf() {
+    return assignSelf_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -429,6 +440,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < ticketSla_.size(); i++) {
       output.writeMessage(12, ticketSla_.get(i));
+    }
+    if (assignSelf_ != false) {
+      output.writeBool(13, assignSelf_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -469,6 +483,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, ticketSla_.get(i));
     }
+    if (assignSelf_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(13, assignSelf_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -503,6 +521,8 @@ private static final long serialVersionUID = 0L;
         != other.getStatus()) return false;
     if (!getTicketSlaList()
         .equals(other.getTicketSlaList())) return false;
+    if (getAssignSelf()
+        != other.getAssignSelf()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -540,6 +560,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TICKET_SLA_FIELD_NUMBER;
       hash = (53 * hash) + getTicketSlaList().hashCode();
     }
+    hash = (37 * hash) + ASSIGN_SELF_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getAssignSelf());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -705,6 +728,7 @@ private static final long serialVersionUID = 0L;
         ticketSlaBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000080);
+      assignSelf_ = false;
       return this;
     }
 
@@ -785,6 +809,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.assignSelf_ = assignSelf_;
       }
     }
 
@@ -929,6 +956,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.getAssignSelf() != false) {
+        setAssignSelf(other.getAssignSelf());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1021,6 +1051,11 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 98
+            case 104: {
+              assignSelf_ = input.readBool();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 104
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2399,6 +2434,38 @@ private static final long serialVersionUID = 0L;
         ticketSla_ = null;
       }
       return ticketSlaBuilder_;
+    }
+
+    private boolean assignSelf_ ;
+    /**
+     * <code>bool assign_self = 13 [json_name = "assignSelf"];</code>
+     * @return The assignSelf.
+     */
+    @java.lang.Override
+    public boolean getAssignSelf() {
+      return assignSelf_;
+    }
+    /**
+     * <code>bool assign_self = 13 [json_name = "assignSelf"];</code>
+     * @param value The assignSelf to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAssignSelf(boolean value) {
+
+      assignSelf_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool assign_self = 13 [json_name = "assignSelf"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAssignSelf() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      assignSelf_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
