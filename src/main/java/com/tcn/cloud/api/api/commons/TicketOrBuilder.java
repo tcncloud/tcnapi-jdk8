@@ -370,4 +370,16 @@ public interface TicketOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.SlaOrBuilder getTicketSlaOrBuilder(
       int index);
+
+  /**
+   * <code>string assignee = 18 [json_name = "assignee"];</code>
+   * @return The assignee.
+   */
+  java.lang.String getAssignee();
+  /**
+   * <code>string assignee = 18 [json_name = "assignee"];</code>
+   * @return The bytes for assignee.
+   */
+  com.google.protobuf.ByteString
+      getAssigneeBytes();
 }
