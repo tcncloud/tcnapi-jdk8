@@ -139,6 +139,21 @@ private static final long serialVersionUID = 0L;
     return memberDepth_;
   }
 
+  public static final int SCHEDULE_SCENARIO_SID_FIELD_NUMBER = 5;
+  private long scheduleScenarioSid_ = 0L;
+  /**
+   * <pre>
+   * ID of the scenario that the entities desired belong to, must match the scenario of &#64;belongs_to_entity.
+   * </pre>
+   *
+   * <code>int64 schedule_scenario_sid = 5 [json_name = "scheduleScenarioSid"];</code>
+   * @return The scheduleScenarioSid.
+   */
+  @java.lang.Override
+  public long getScheduleScenarioSid() {
+    return scheduleScenarioSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -165,6 +180,9 @@ private static final long serialVersionUID = 0L;
     if (memberDepth_ != 0) {
       output.writeInt32(4, memberDepth_);
     }
+    if (scheduleScenarioSid_ != 0L) {
+      output.writeInt64(5, scheduleScenarioSid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -189,6 +207,10 @@ private static final long serialVersionUID = 0L;
     if (memberDepth_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(4, memberDepth_);
+    }
+    if (scheduleScenarioSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(5, scheduleScenarioSid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -215,6 +237,8 @@ private static final long serialVersionUID = 0L;
         != other.getIncludeInactive()) return false;
     if (getMemberDepth()
         != other.getMemberDepth()) return false;
+    if (getScheduleScenarioSid()
+        != other.getScheduleScenarioSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -237,6 +261,9 @@ private static final long serialVersionUID = 0L;
         getIncludeInactive());
     hash = (37 * hash) + MEMBER_DEPTH_FIELD_NUMBER;
     hash = (53 * hash) + getMemberDepth();
+    hash = (37 * hash) + SCHEDULE_SCENARIO_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getScheduleScenarioSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -380,6 +407,7 @@ private static final long serialVersionUID = 0L;
       }
       includeInactive_ = false;
       memberDepth_ = 0;
+      scheduleScenarioSid_ = 0L;
       return this;
     }
 
@@ -426,6 +454,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.memberDepth_ = memberDepth_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.scheduleScenarioSid_ = scheduleScenarioSid_;
       }
     }
 
@@ -485,6 +516,9 @@ private static final long serialVersionUID = 0L;
       if (other.getMemberDepth() != 0) {
         setMemberDepth(other.getMemberDepth());
       }
+      if (other.getScheduleScenarioSid() != 0L) {
+        setScheduleScenarioSid(other.getScheduleScenarioSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -533,6 +567,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 32
+            case 40: {
+              scheduleScenarioSid_ = input.readInt64();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -868,6 +907,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearMemberDepth() {
       bitField0_ = (bitField0_ & ~0x00000008);
       memberDepth_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private long scheduleScenarioSid_ ;
+    /**
+     * <pre>
+     * ID of the scenario that the entities desired belong to, must match the scenario of &#64;belongs_to_entity.
+     * </pre>
+     *
+     * <code>int64 schedule_scenario_sid = 5 [json_name = "scheduleScenarioSid"];</code>
+     * @return The scheduleScenarioSid.
+     */
+    @java.lang.Override
+    public long getScheduleScenarioSid() {
+      return scheduleScenarioSid_;
+    }
+    /**
+     * <pre>
+     * ID of the scenario that the entities desired belong to, must match the scenario of &#64;belongs_to_entity.
+     * </pre>
+     *
+     * <code>int64 schedule_scenario_sid = 5 [json_name = "scheduleScenarioSid"];</code>
+     * @param value The scheduleScenarioSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setScheduleScenarioSid(long value) {
+
+      scheduleScenarioSid_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ID of the scenario that the entities desired belong to, must match the scenario of &#64;belongs_to_entity.
+     * </pre>
+     *
+     * <code>int64 schedule_scenario_sid = 5 [json_name = "scheduleScenarioSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearScheduleScenarioSid() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      scheduleScenarioSid_ = 0L;
       onChanged();
       return this;
     }
