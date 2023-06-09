@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 /**
+ * <pre>
+ *response to update learning pages content
+ * </pre>
+ *
  * Protobuf type {@code api.v0alpha.UpdateRes}
  */
 public final class UpdateRes extends
@@ -185,6 +189,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   *response to update learning pages content
+   * </pre>
+   *
    * Protobuf type {@code api.v0alpha.UpdateRes}
    */
   public static final class Builder extends

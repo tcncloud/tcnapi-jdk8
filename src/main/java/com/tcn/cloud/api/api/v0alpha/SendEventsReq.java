@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 /**
+ * <pre>
+ * request to sentinel send events
+ * </pre>
+ *
  * Protobuf type {@code api.v0alpha.SendEventsReq}
  */
 public final class SendEventsReq extends
@@ -240,6 +244,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * request to sentinel send events
+   * </pre>
+   *
    * Protobuf type {@code api.v0alpha.SendEventsReq}
    */
   public static final class Builder extends

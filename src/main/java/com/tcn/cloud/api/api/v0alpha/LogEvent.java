@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 /**
+ * <pre>
+ * log events details to be sent
+ * </pre>
+ *
  * Protobuf type {@code api.v0alpha.LogEvent}
  */
 public final class LogEvent extends
@@ -635,6 +639,10 @@ java.lang.String defaultValue) {
     return builder;
   }
   /**
+   * <pre>
+   * log events details to be sent
+   * </pre>
+   *
    * Protobuf type {@code api.v0alpha.LogEvent}
    */
   public static final class Builder extends

@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 /**
+ * <pre>
+ * response for checking if learning page  url exists
+ * </pre>
+ *
  * Protobuf type {@code api.v0alpha.ExistRes}
  */
 public final class ExistRes extends
@@ -208,6 +212,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * response for checking if learning page  url exists
+   * </pre>
+   *
    * Protobuf type {@code api.v0alpha.ExistRes}
    */
   public static final class Builder extends
