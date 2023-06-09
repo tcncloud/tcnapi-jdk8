@@ -85,6 +85,21 @@ public final class VmdsProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v0alpha_DownloadMessageRes_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v0alpha_DownloadSpecifiedMessagesReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v0alpha_DownloadSpecifiedMessagesReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v0alpha_DownloadSpecifiedMessagesReq_MessageReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v0alpha_DownloadSpecifiedMessagesReq_MessageReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v0alpha_DownloadSpecifiedMessagesRes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v0alpha_DownloadSpecifiedMessagesRes_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v0alpha_GetUploadGreetingUrlReq_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -204,88 +219,100 @@ public final class VmdsProto {
       "x\022\035\n\ncaller_sid\030\003 \001(\tR\tcallerSid\022;\n\013call" +
       "er_type\030\004 \001(\0162\032.api.commons.CallType.Enu" +
       "mR\ncallerType\"&\n\022DownloadMessageRes\022\020\n\003u" +
-      "rl\030\001 \001(\tR\003url\"Z\n\027GetUploadGreetingUrlReq" +
-      "\022#\n\rpbx_extension\030\002 \001(\tR\014pbxExtension\022\032\n" +
-      "\010filename\030\003 \001(\tR\010filename\"+\n\027GetUploadGr" +
-      "eetingUrlRes\022\020\n\003url\030\001 \001(\tR\003url\"W\n\023Downlo" +
-      "adMessagesReq\022\035\n\nmail_boxes\030\002 \003(\tR\tmailB" +
-      "oxes\022!\n\014unheard_only\030\003 \001(\010R\013unheardOnly\"" +
-      "\'\n\023DownloadMessagesRes\022\020\n\003url\030\001 \001(\tR\003url" +
-      "\"<\n\037DownloadGreetingForExtensionReq\022\031\n\010m" +
-      "ail_box\030\002 \001(\tR\007mailBox\"3\n\037DownloadGreeti" +
-      "ngForExtensionRes\022\020\n\003url\030\001 \001(\tR\003url\"1\n\023D" +
-      "ownloadGreetingReq\022\032\n\010filename\030\002 \001(\tR\010fi" +
-      "lename\"\'\n\023DownloadGreetingRes\022\020\n\003url\030\001 \001" +
-      "(\tR\003url\"[\n\030ProcessGreetingUploadReq\022#\n\rp" +
-      "bx_extension\030\002 \001(\tR\014pbxExtension\022\032\n\010file" +
-      "name\030\003 \001(\tR\010filename\"\032\n\030ProcessGreetingU" +
-      "ploadRes\"`\n\035UpdateGreetingForExtensionRe" +
-      "q\022#\n\rpbx_extension\030\002 \001(\tR\014pbxExtension\022\032" +
-      "\n\010filename\030\003 \001(\tR\010filename\"\037\n\035UpdateGree" +
-      "tingForExtensionRes\"\033\n\031ListAvailableGree" +
-      "tingsReq\"\246\001\n\031ListAvailableGreetingsRes\022M" +
-      "\n\tgreetings\030\001 \003(\0132/.api.v0alpha.ListAvai" +
-      "lableGreetingsRes.FileInfoR\tgreetings\032:\n" +
-      "\010FileInfo\022\032\n\010filename\030\001 \001(\tR\010filename\022\022\n" +
-      "\004size\030\002 \001(\003R\004size2\234\021\n\004Vmds\022\236\001\n\024GetVoicem" +
-      "ailMetadata\022$.api.v0alpha.GetVoicemailMe" +
-      "tadataReq\032$.api.v0alpha.GetVoicemailMeta" +
-      "dataRes\"8\272\270\221\002\002\030\001\202\323\344\223\002+\"&/api/v0alpha/vmd" +
-      "s/getvoicemailmetadata:\001*0\001\022\236\001\n\030GetVoice" +
-      "mailMessageCount\022!.api.v0alpha.GetVoicem" +
-      "ailCountReq\032!.api.v0alpha.GetVoicemailCo" +
-      "untRes\"<\272\270\221\002\002\030\001\202\323\344\223\002/\"*/api/v0alpha/vmds" +
-      "/getvoicemailmessagecount:\001*\022\210\001\n\017DeleteV" +
-      "oicemail\022\037.api.v0alpha.DeleteVoicemailRe" +
-      "q\032\037.api.v0alpha.DeleteVoicemailRes\"3\272\270\221\002" +
-      "\002\030\001\202\323\344\223\002&\"!/api/v0alpha/vmds/deletevoice" +
-      "mail:\001*\022\204\001\n\016DeleteGreeting\022\036.api.v0alpha" +
-      ".DeleteGreetingReq\032\036.api.v0alpha.DeleteG" +
-      "reetingRes\"2\272\270\221\002\002\030\001\202\323\344\223\002%\" /api/v0alpha/" +
-      "vmds/deletegreeting:\001*\022\214\001\n\020UpdateUploadN" +
-      "ame\022 .api.v0alpha.UpdateUploadNameReq\032 ." +
-      "api.v0alpha.UpdateUploadNameRes\"4\272\270\221\002\002\030\001" +
-      "\202\323\344\223\002\'\"\"/api/v0alpha/vmds/updateuploadna" +
-      "me:\001*\022\250\001\n\027UpdateVoicemailFlagRead\022\'.api." +
-      "v0alpha.UpdateVoicemailFlagReadReq\032\'.api" +
-      ".v0alpha.UpdateVoicemailFlagReadRes\";\272\270\221" +
-      "\002\002\030\001\202\323\344\223\002.\")/api/v0alpha/vmds/updatevoic" +
-      "emailflagread:\001*\022\210\001\n\017DownloadMessage\022\037.a" +
-      "pi.v0alpha.DownloadMessageReq\032\037.api.v0al" +
-      "pha.DownloadMessageRes\"3\272\270\221\002\002\030\001\202\323\344\223\002&\"!/" +
-      "api/v0alpha/vmds/downloadmessage:\001*\022\214\001\n\020" +
-      "DownloadMessages\022 .api.v0alpha.DownloadM" +
-      "essagesReq\032 .api.v0alpha.DownloadMessage" +
-      "sRes\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/v0alpha/vmds/d" +
-      "ownloadmessages:\001*\022\274\001\n\034DownloadGreetingF" +
-      "orExtension\022,.api.v0alpha.DownloadGreeti" +
-      "ngForExtensionReq\032,.api.v0alpha.Download" +
-      "GreetingForExtensionRes\"@\272\270\221\002\002\030\001\202\323\344\223\0023\"." +
-      "/api/v0alpha/vmds/downloadgreetingforext" +
-      "ension:\001*\022\214\001\n\020DownloadGreeting\022 .api.v0a" +
-      "lpha.DownloadGreetingReq\032 .api.v0alpha.D" +
-      "ownloadGreetingRes\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/" +
-      "v0alpha/vmds/downloadgreeting:\001*\022\234\001\n\024Get" +
-      "UploadGreetingUrl\022$.api.v0alpha.GetUploa" +
-      "dGreetingUrlReq\032$.api.v0alpha.GetUploadG" +
-      "reetingUrlRes\"8\272\270\221\002\002\030\001\202\323\344\223\002+\"&/api/v0alp" +
-      "ha/vmds/getuploadgreetingurl:\001*\022\240\001\n\025Proc" +
-      "essGreetingUpload\022%.api.v0alpha.ProcessG" +
-      "reetingUploadReq\032%.api.v0alpha.ProcessGr" +
-      "eetingUploadRes\"9\272\270\221\002\002\030\001\202\323\344\223\002,\"\'/api/v0a" +
-      "lpha/vmds/processgreetingupload:\001*\022\264\001\n\032U" +
-      "pdateGreetingForExtension\022*.api.v0alpha." +
-      "UpdateGreetingForExtensionReq\032*.api.v0al" +
-      "pha.UpdateGreetingForExtensionRes\">\272\270\221\002\002" +
-      "\030\001\202\323\344\223\0021\",/api/v0alpha/vmds/updategreeti" +
-      "ngforextension:\001*\022\244\001\n\026ListAvailableGreet" +
-      "ings\022&.api.v0alpha.ListAvailableGreeting" +
-      "sReq\032&.api.v0alpha.ListAvailableGreeting" +
-      "sRes\":\272\270\221\002\002\030\001\202\323\344\223\002-\"(/api/v0alpha/vmds/l" +
-      "istavailablegreetings:\001*Bw\n\035com.tcn.clou" +
-      "d.api.api.v0alphaB\tVmdsProtoP\001\242\002\003AVX\252\002\013A" +
-      "pi.V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\G" +
-      "PBMetadata\352\002\014Api::V0alphab\006proto3"
+      "rl\030\001 \001(\tR\003url\"\366\001\n\034DownloadSpecifiedMessa" +
+      "gesReq\022P\n\010messages\030\001 \003(\01324.api.v0alpha.D" +
+      "ownloadSpecifiedMessagesReq.MessageReqR\010" +
+      "messages\032\203\001\n\nMessageReq\022\031\n\010mail_box\030\001 \001(" +
+      "\tR\007mailBox\022\035\n\ncaller_sid\030\002 \001(\tR\tcallerSi" +
+      "d\022;\n\013caller_type\030\003 \001(\0162\032.api.commons.Cal" +
+      "lType.EnumR\ncallerType\"0\n\034DownloadSpecif" +
+      "iedMessagesRes\022\020\n\003url\030\001 \001(\tR\003url\"Z\n\027GetU" +
+      "ploadGreetingUrlReq\022#\n\rpbx_extension\030\002 \001" +
+      "(\tR\014pbxExtension\022\032\n\010filename\030\003 \001(\tR\010file" +
+      "name\"+\n\027GetUploadGreetingUrlRes\022\020\n\003url\030\001" +
+      " \001(\tR\003url\"W\n\023DownloadMessagesReq\022\035\n\nmail" +
+      "_boxes\030\002 \003(\tR\tmailBoxes\022!\n\014unheard_only\030" +
+      "\003 \001(\010R\013unheardOnly\"\'\n\023DownloadMessagesRe" +
+      "s\022\020\n\003url\030\001 \001(\tR\003url\"<\n\037DownloadGreetingF" +
+      "orExtensionReq\022\031\n\010mail_box\030\002 \001(\tR\007mailBo" +
+      "x\"3\n\037DownloadGreetingForExtensionRes\022\020\n\003" +
+      "url\030\001 \001(\tR\003url\"1\n\023DownloadGreetingReq\022\032\n" +
+      "\010filename\030\002 \001(\tR\010filename\"\'\n\023DownloadGre" +
+      "etingRes\022\020\n\003url\030\001 \001(\tR\003url\"[\n\030ProcessGre" +
+      "etingUploadReq\022#\n\rpbx_extension\030\002 \001(\tR\014p" +
+      "bxExtension\022\032\n\010filename\030\003 \001(\tR\010filename\"" +
+      "\032\n\030ProcessGreetingUploadRes\"`\n\035UpdateGre" +
+      "etingForExtensionReq\022#\n\rpbx_extension\030\002 " +
+      "\001(\tR\014pbxExtension\022\032\n\010filename\030\003 \001(\tR\010fil" +
+      "ename\"\037\n\035UpdateGreetingForExtensionRes\"\033" +
+      "\n\031ListAvailableGreetingsReq\"\246\001\n\031ListAvai" +
+      "lableGreetingsRes\022M\n\tgreetings\030\001 \003(\0132/.a" +
+      "pi.v0alpha.ListAvailableGreetingsRes.Fil" +
+      "eInfoR\tgreetings\032:\n\010FileInfo\022\032\n\010filename" +
+      "\030\001 \001(\tR\010filename\022\022\n\004size\030\002 \001(\003R\004size2\317\022\n" +
+      "\004Vmds\022\236\001\n\024GetVoicemailMetadata\022$.api.v0a" +
+      "lpha.GetVoicemailMetadataReq\032$.api.v0alp" +
+      "ha.GetVoicemailMetadataRes\"8\272\270\221\002\002\030\001\202\323\344\223\002" +
+      "+\"&/api/v0alpha/vmds/getvoicemailmetadat" +
+      "a:\001*0\001\022\236\001\n\030GetVoicemailMessageCount\022!.ap" +
+      "i.v0alpha.GetVoicemailCountReq\032!.api.v0a" +
+      "lpha.GetVoicemailCountRes\"<\272\270\221\002\002\030\001\202\323\344\223\002/" +
+      "\"*/api/v0alpha/vmds/getvoicemailmessagec" +
+      "ount:\001*\022\210\001\n\017DeleteVoicemail\022\037.api.v0alph" +
+      "a.DeleteVoicemailReq\032\037.api.v0alpha.Delet" +
+      "eVoicemailRes\"3\272\270\221\002\002\030\001\202\323\344\223\002&\"!/api/v0alp" +
+      "ha/vmds/deletevoicemail:\001*\022\204\001\n\016DeleteGre" +
+      "eting\022\036.api.v0alpha.DeleteGreetingReq\032\036." +
+      "api.v0alpha.DeleteGreetingRes\"2\272\270\221\002\002\030\001\202\323" +
+      "\344\223\002%\" /api/v0alpha/vmds/deletegreeting:\001" +
+      "*\022\214\001\n\020UpdateUploadName\022 .api.v0alpha.Upd" +
+      "ateUploadNameReq\032 .api.v0alpha.UpdateUpl" +
+      "oadNameRes\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/v0alpha/" +
+      "vmds/updateuploadname:\001*\022\250\001\n\027UpdateVoice" +
+      "mailFlagRead\022\'.api.v0alpha.UpdateVoicema" +
+      "ilFlagReadReq\032\'.api.v0alpha.UpdateVoicem" +
+      "ailFlagReadRes\";\272\270\221\002\002\030\001\202\323\344\223\002.\")/api/v0al" +
+      "pha/vmds/updatevoicemailflagread:\001*\022\210\001\n\017" +
+      "DownloadMessage\022\037.api.v0alpha.DownloadMe" +
+      "ssageReq\032\037.api.v0alpha.DownloadMessageRe" +
+      "s\"3\272\270\221\002\002\030\001\202\323\344\223\002&\"!/api/v0alpha/vmds/down" +
+      "loadmessage:\001*\022\260\001\n\031DownloadSpecifiedMess" +
+      "ages\022).api.v0alpha.DownloadSpecifiedMess" +
+      "agesReq\032).api.v0alpha.DownloadSpecifiedM" +
+      "essagesRes\"=\272\270\221\002\002\030\001\202\323\344\223\0020\"+/api/v0alpha/" +
+      "vmds/downloadspecifiedmessages:\001*\022\214\001\n\020Do" +
+      "wnloadMessages\022 .api.v0alpha.DownloadMes" +
+      "sagesReq\032 .api.v0alpha.DownloadMessagesR" +
+      "es\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/v0alpha/vmds/dow" +
+      "nloadmessages:\001*\022\274\001\n\034DownloadGreetingFor" +
+      "Extension\022,.api.v0alpha.DownloadGreeting" +
+      "ForExtensionReq\032,.api.v0alpha.DownloadGr" +
+      "eetingForExtensionRes\"@\272\270\221\002\002\030\001\202\323\344\223\0023\"./a" +
+      "pi/v0alpha/vmds/downloadgreetingforexten" +
+      "sion:\001*\022\214\001\n\020DownloadGreeting\022 .api.v0alp" +
+      "ha.DownloadGreetingReq\032 .api.v0alpha.Dow" +
+      "nloadGreetingRes\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/v0" +
+      "alpha/vmds/downloadgreeting:\001*\022\234\001\n\024GetUp" +
+      "loadGreetingUrl\022$.api.v0alpha.GetUploadG" +
+      "reetingUrlReq\032$.api.v0alpha.GetUploadGre" +
+      "etingUrlRes\"8\272\270\221\002\002\030\001\202\323\344\223\002+\"&/api/v0alpha" +
+      "/vmds/getuploadgreetingurl:\001*\022\240\001\n\025Proces" +
+      "sGreetingUpload\022%.api.v0alpha.ProcessGre" +
+      "etingUploadReq\032%.api.v0alpha.ProcessGree" +
+      "tingUploadRes\"9\272\270\221\002\002\030\001\202\323\344\223\002,\"\'/api/v0alp" +
+      "ha/vmds/processgreetingupload:\001*\022\264\001\n\032Upd" +
+      "ateGreetingForExtension\022*.api.v0alpha.Up" +
+      "dateGreetingForExtensionReq\032*.api.v0alph" +
+      "a.UpdateGreetingForExtensionRes\">\272\270\221\002\002\030\001" +
+      "\202\323\344\223\0021\",/api/v0alpha/vmds/updategreeting" +
+      "forextension:\001*\022\244\001\n\026ListAvailableGreetin" +
+      "gs\022&.api.v0alpha.ListAvailableGreetingsR" +
+      "eq\032&.api.v0alpha.ListAvailableGreetingsR" +
+      "es\":\272\270\221\002\002\030\001\202\323\344\223\002-\"(/api/v0alpha/vmds/lis" +
+      "tavailablegreetings:\001*Bw\n\035com.tcn.cloud." +
+      "api.api.v0alphaB\tVmdsProtoP\001\242\002\003AVX\252\002\013Api" +
+      ".V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\GPB" +
+      "Metadata\352\002\014Api::V0alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -378,86 +405,104 @@ public final class VmdsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_DownloadMessageRes_descriptor,
         new java.lang.String[] { "Url", });
-    internal_static_api_v0alpha_GetUploadGreetingUrlReq_descriptor =
+    internal_static_api_v0alpha_DownloadSpecifiedMessagesReq_descriptor =
       getDescriptor().getMessageTypes().get(14);
+    internal_static_api_v0alpha_DownloadSpecifiedMessagesReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v0alpha_DownloadSpecifiedMessagesReq_descriptor,
+        new java.lang.String[] { "Messages", });
+    internal_static_api_v0alpha_DownloadSpecifiedMessagesReq_MessageReq_descriptor =
+      internal_static_api_v0alpha_DownloadSpecifiedMessagesReq_descriptor.getNestedTypes().get(0);
+    internal_static_api_v0alpha_DownloadSpecifiedMessagesReq_MessageReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v0alpha_DownloadSpecifiedMessagesReq_MessageReq_descriptor,
+        new java.lang.String[] { "MailBox", "CallerSid", "CallerType", });
+    internal_static_api_v0alpha_DownloadSpecifiedMessagesRes_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_api_v0alpha_DownloadSpecifiedMessagesRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v0alpha_DownloadSpecifiedMessagesRes_descriptor,
+        new java.lang.String[] { "Url", });
+    internal_static_api_v0alpha_GetUploadGreetingUrlReq_descriptor =
+      getDescriptor().getMessageTypes().get(16);
     internal_static_api_v0alpha_GetUploadGreetingUrlReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GetUploadGreetingUrlReq_descriptor,
         new java.lang.String[] { "PbxExtension", "Filename", });
     internal_static_api_v0alpha_GetUploadGreetingUrlRes_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_api_v0alpha_GetUploadGreetingUrlRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GetUploadGreetingUrlRes_descriptor,
         new java.lang.String[] { "Url", });
     internal_static_api_v0alpha_DownloadMessagesReq_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_api_v0alpha_DownloadMessagesReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_DownloadMessagesReq_descriptor,
         new java.lang.String[] { "MailBoxes", "UnheardOnly", });
     internal_static_api_v0alpha_DownloadMessagesRes_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_api_v0alpha_DownloadMessagesRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_DownloadMessagesRes_descriptor,
         new java.lang.String[] { "Url", });
     internal_static_api_v0alpha_DownloadGreetingForExtensionReq_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_api_v0alpha_DownloadGreetingForExtensionReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_DownloadGreetingForExtensionReq_descriptor,
         new java.lang.String[] { "MailBox", });
     internal_static_api_v0alpha_DownloadGreetingForExtensionRes_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_api_v0alpha_DownloadGreetingForExtensionRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_DownloadGreetingForExtensionRes_descriptor,
         new java.lang.String[] { "Url", });
     internal_static_api_v0alpha_DownloadGreetingReq_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_api_v0alpha_DownloadGreetingReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_DownloadGreetingReq_descriptor,
         new java.lang.String[] { "Filename", });
     internal_static_api_v0alpha_DownloadGreetingRes_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_api_v0alpha_DownloadGreetingRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_DownloadGreetingRes_descriptor,
         new java.lang.String[] { "Url", });
     internal_static_api_v0alpha_ProcessGreetingUploadReq_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_api_v0alpha_ProcessGreetingUploadReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ProcessGreetingUploadReq_descriptor,
         new java.lang.String[] { "PbxExtension", "Filename", });
     internal_static_api_v0alpha_ProcessGreetingUploadRes_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_api_v0alpha_ProcessGreetingUploadRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ProcessGreetingUploadRes_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_UpdateGreetingForExtensionReq_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_api_v0alpha_UpdateGreetingForExtensionReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_UpdateGreetingForExtensionReq_descriptor,
         new java.lang.String[] { "PbxExtension", "Filename", });
     internal_static_api_v0alpha_UpdateGreetingForExtensionRes_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_api_v0alpha_UpdateGreetingForExtensionRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_UpdateGreetingForExtensionRes_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_ListAvailableGreetingsReq_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_api_v0alpha_ListAvailableGreetingsReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ListAvailableGreetingsReq_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_ListAvailableGreetingsRes_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_api_v0alpha_ListAvailableGreetingsRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ListAvailableGreetingsRes_descriptor,
