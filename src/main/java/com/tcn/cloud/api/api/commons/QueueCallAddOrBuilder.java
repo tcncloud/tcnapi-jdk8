@@ -106,41 +106,54 @@ public interface QueueCallAddOrBuilder extends
    * formatted skills that the call requires.
    * </pre>
    *
-   * <code>repeated string skills = 5 [json_name = "skills"];</code>
-   * @return A list containing the skills.
+   * <code>map&lt;string, string&gt; formatted_skills = 5 [json_name = "formattedSkills"];</code>
    */
-  java.util.List<java.lang.String>
-      getSkillsList();
+  int getFormattedSkillsCount();
   /**
    * <pre>
    * formatted skills that the call requires.
    * </pre>
    *
-   * <code>repeated string skills = 5 [json_name = "skills"];</code>
-   * @return The count of skills.
+   * <code>map&lt;string, string&gt; formatted_skills = 5 [json_name = "formattedSkills"];</code>
    */
-  int getSkillsCount();
+  boolean containsFormattedSkills(
+      java.lang.String key);
+  /**
+   * Use {@link #getFormattedSkillsMap()} instead.
+   */
+  @java.lang.Deprecated
+  java.util.Map<java.lang.String, java.lang.String>
+  getFormattedSkills();
   /**
    * <pre>
    * formatted skills that the call requires.
    * </pre>
    *
-   * <code>repeated string skills = 5 [json_name = "skills"];</code>
-   * @param index The index of the element to return.
-   * @return The skills at the given index.
+   * <code>map&lt;string, string&gt; formatted_skills = 5 [json_name = "formattedSkills"];</code>
    */
-  java.lang.String getSkills(int index);
+  java.util.Map<java.lang.String, java.lang.String>
+  getFormattedSkillsMap();
   /**
    * <pre>
    * formatted skills that the call requires.
    * </pre>
    *
-   * <code>repeated string skills = 5 [json_name = "skills"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the skills at the given index.
+   * <code>map&lt;string, string&gt; formatted_skills = 5 [json_name = "formattedSkills"];</code>
    */
-  com.google.protobuf.ByteString
-      getSkillsBytes(int index);
+  /* nullable */
+java.lang.String getFormattedSkillsOrDefault(
+      java.lang.String key,
+      /* nullable */
+java.lang.String defaultValue);
+  /**
+   * <pre>
+   * formatted skills that the call requires.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; formatted_skills = 5 [json_name = "formattedSkills"];</code>
+   */
+  java.lang.String getFormattedSkillsOrThrow(
+      java.lang.String key);
 
   /**
    * <pre>
@@ -197,4 +210,75 @@ public interface QueueCallAddOrBuilder extends
    * <code>.api.commons.CallerSid caller_sid = 8 [json_name = "callerSid"];</code>
    */
   com.tcn.cloud.api.api.commons.CallerSidOrBuilder getCallerSidOrBuilder();
+
+  /**
+   * <pre>
+   * skills
+   * </pre>
+   *
+   * <code>map&lt;string, bool&gt; skills = 9 [json_name = "skills"];</code>
+   */
+  int getSkillsCount();
+  /**
+   * <pre>
+   * skills
+   * </pre>
+   *
+   * <code>map&lt;string, bool&gt; skills = 9 [json_name = "skills"];</code>
+   */
+  boolean containsSkills(
+      java.lang.String key);
+  /**
+   * Use {@link #getSkillsMap()} instead.
+   */
+  @java.lang.Deprecated
+  java.util.Map<java.lang.String, java.lang.Boolean>
+  getSkills();
+  /**
+   * <pre>
+   * skills
+   * </pre>
+   *
+   * <code>map&lt;string, bool&gt; skills = 9 [json_name = "skills"];</code>
+   */
+  java.util.Map<java.lang.String, java.lang.Boolean>
+  getSkillsMap();
+  /**
+   * <pre>
+   * skills
+   * </pre>
+   *
+   * <code>map&lt;string, bool&gt; skills = 9 [json_name = "skills"];</code>
+   */
+  boolean getSkillsOrDefault(
+      java.lang.String key,
+      boolean defaultValue);
+  /**
+   * <pre>
+   * skills
+   * </pre>
+   *
+   * <code>map&lt;string, bool&gt; skills = 9 [json_name = "skills"];</code>
+   */
+  boolean getSkillsOrThrow(
+      java.lang.String key);
+
+  /**
+   * <pre>
+   * queueType
+   * </pre>
+   *
+   * <code>.api.commons.QueueType queue_type = 10 [json_name = "queueType"];</code>
+   * @return The enum numeric value on the wire for queueType.
+   */
+  int getQueueTypeValue();
+  /**
+   * <pre>
+   * queueType
+   * </pre>
+   *
+   * <code>.api.commons.QueueType queue_type = 10 [json_name = "queueType"];</code>
+   * @return The queueType.
+   */
+  com.tcn.cloud.api.api.commons.QueueType getQueueType();
 }

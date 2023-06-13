@@ -18,9 +18,8 @@ private static final long serialVersionUID = 0L;
   private QueueCallAdd() {
     phoneNumber_ = "";
     callerId_ = "";
-    skills_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
     queuedNotificationType_ = 0;
+    queueType_ = 0;
   }
 
   @java.lang.Override
@@ -35,6 +34,20 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.AsmProto.internal_static_api_commons_QueueCallAdd_descriptor;
   }
 
+  @SuppressWarnings({"rawtypes"})
+  @java.lang.Override
+  protected com.google.protobuf.MapField internalGetMapField(
+      int number) {
+    switch (number) {
+      case 5:
+        return internalGetFormattedSkills();
+      case 9:
+        return internalGetSkills();
+      default:
+        throw new RuntimeException(
+            "Invalid map field number: " + number);
+    }
+  }
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
@@ -213,57 +226,99 @@ private static final long serialVersionUID = 0L;
     return holdDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : holdDate_;
   }
 
-  public static final int SKILLS_FIELD_NUMBER = 5;
+  public static final int FORMATTED_SKILLS_FIELD_NUMBER = 5;
+  private static final class FormattedSkillsDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<
+        java.lang.String, java.lang.String> defaultEntry =
+            com.google.protobuf.MapEntry
+            .<java.lang.String, java.lang.String>newDefaultInstance(
+                com.tcn.cloud.api.api.commons.AsmProto.internal_static_api_commons_QueueCallAdd_FormattedSkillsEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "",
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "");
+  }
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList skills_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
-  /**
-   * <pre>
-   * formatted skills that the call requires.
-   * </pre>
-   *
-   * <code>repeated string skills = 5 [json_name = "skills"];</code>
-   * @return A list containing the skills.
-   */
-  public com.google.protobuf.ProtocolStringList
-      getSkillsList() {
-    return skills_;
+  private com.google.protobuf.MapField<
+      java.lang.String, java.lang.String> formattedSkills_;
+  private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+  internalGetFormattedSkills() {
+    if (formattedSkills_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(
+          FormattedSkillsDefaultEntryHolder.defaultEntry);
+    }
+    return formattedSkills_;
+  }
+  public int getFormattedSkillsCount() {
+    return internalGetFormattedSkills().getMap().size();
   }
   /**
    * <pre>
    * formatted skills that the call requires.
    * </pre>
    *
-   * <code>repeated string skills = 5 [json_name = "skills"];</code>
-   * @return The count of skills.
+   * <code>map&lt;string, string&gt; formatted_skills = 5 [json_name = "formattedSkills"];</code>
    */
-  public int getSkillsCount() {
-    return skills_.size();
+  @java.lang.Override
+  public boolean containsFormattedSkills(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    return internalGetFormattedSkills().getMap().containsKey(key);
+  }
+  /**
+   * Use {@link #getFormattedSkillsMap()} instead.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.String, java.lang.String> getFormattedSkills() {
+    return getFormattedSkillsMap();
   }
   /**
    * <pre>
    * formatted skills that the call requires.
    * </pre>
    *
-   * <code>repeated string skills = 5 [json_name = "skills"];</code>
-   * @param index The index of the element to return.
-   * @return The skills at the given index.
+   * <code>map&lt;string, string&gt; formatted_skills = 5 [json_name = "formattedSkills"];</code>
    */
-  public java.lang.String getSkills(int index) {
-    return skills_.get(index);
+  @java.lang.Override
+  public java.util.Map<java.lang.String, java.lang.String> getFormattedSkillsMap() {
+    return internalGetFormattedSkills().getMap();
   }
   /**
    * <pre>
    * formatted skills that the call requires.
    * </pre>
    *
-   * <code>repeated string skills = 5 [json_name = "skills"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the skills at the given index.
+   * <code>map&lt;string, string&gt; formatted_skills = 5 [json_name = "formattedSkills"];</code>
    */
-  public com.google.protobuf.ByteString
-      getSkillsBytes(int index) {
-    return skills_.getByteString(index);
+  @java.lang.Override
+  public /* nullable */
+java.lang.String getFormattedSkillsOrDefault(
+      java.lang.String key,
+      /* nullable */
+java.lang.String defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.String> map =
+        internalGetFormattedSkills().getMap();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /**
+   * <pre>
+   * formatted skills that the call requires.
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; formatted_skills = 5 [json_name = "formattedSkills"];</code>
+   */
+  @java.lang.Override
+  public java.lang.String getFormattedSkillsOrThrow(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.String> map =
+        internalGetFormattedSkills().getMap();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
   }
 
   public static final int AGENT_SPECIFIC_FIELD_NUMBER = 6;
@@ -345,6 +400,125 @@ private static final long serialVersionUID = 0L;
     return callerSid_ == null ? com.tcn.cloud.api.api.commons.CallerSid.getDefaultInstance() : callerSid_;
   }
 
+  public static final int SKILLS_FIELD_NUMBER = 9;
+  private static final class SkillsDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<
+        java.lang.String, java.lang.Boolean> defaultEntry =
+            com.google.protobuf.MapEntry
+            .<java.lang.String, java.lang.Boolean>newDefaultInstance(
+                com.tcn.cloud.api.api.commons.AsmProto.internal_static_api_commons_QueueCallAdd_SkillsEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "",
+                com.google.protobuf.WireFormat.FieldType.BOOL,
+                false);
+  }
+  @SuppressWarnings("serial")
+  private com.google.protobuf.MapField<
+      java.lang.String, java.lang.Boolean> skills_;
+  private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+  internalGetSkills() {
+    if (skills_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(
+          SkillsDefaultEntryHolder.defaultEntry);
+    }
+    return skills_;
+  }
+  public int getSkillsCount() {
+    return internalGetSkills().getMap().size();
+  }
+  /**
+   * <pre>
+   * skills
+   * </pre>
+   *
+   * <code>map&lt;string, bool&gt; skills = 9 [json_name = "skills"];</code>
+   */
+  @java.lang.Override
+  public boolean containsSkills(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    return internalGetSkills().getMap().containsKey(key);
+  }
+  /**
+   * Use {@link #getSkillsMap()} instead.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.String, java.lang.Boolean> getSkills() {
+    return getSkillsMap();
+  }
+  /**
+   * <pre>
+   * skills
+   * </pre>
+   *
+   * <code>map&lt;string, bool&gt; skills = 9 [json_name = "skills"];</code>
+   */
+  @java.lang.Override
+  public java.util.Map<java.lang.String, java.lang.Boolean> getSkillsMap() {
+    return internalGetSkills().getMap();
+  }
+  /**
+   * <pre>
+   * skills
+   * </pre>
+   *
+   * <code>map&lt;string, bool&gt; skills = 9 [json_name = "skills"];</code>
+   */
+  @java.lang.Override
+  public boolean getSkillsOrDefault(
+      java.lang.String key,
+      boolean defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.Boolean> map =
+        internalGetSkills().getMap();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /**
+   * <pre>
+   * skills
+   * </pre>
+   *
+   * <code>map&lt;string, bool&gt; skills = 9 [json_name = "skills"];</code>
+   */
+  @java.lang.Override
+  public boolean getSkillsOrThrow(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, java.lang.Boolean> map =
+        internalGetSkills().getMap();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
+  }
+
+  public static final int QUEUE_TYPE_FIELD_NUMBER = 10;
+  private int queueType_ = 0;
+  /**
+   * <pre>
+   * queueType
+   * </pre>
+   *
+   * <code>.api.commons.QueueType queue_type = 10 [json_name = "queueType"];</code>
+   * @return The enum numeric value on the wire for queueType.
+   */
+  @java.lang.Override public int getQueueTypeValue() {
+    return queueType_;
+  }
+  /**
+   * <pre>
+   * queueType
+   * </pre>
+   *
+   * <code>.api.commons.QueueType queue_type = 10 [json_name = "queueType"];</code>
+   * @return The queueType.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.QueueType getQueueType() {
+    com.tcn.cloud.api.api.commons.QueueType result = com.tcn.cloud.api.api.commons.QueueType.forNumber(queueType_);
+    return result == null ? com.tcn.cloud.api.api.commons.QueueType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -371,9 +545,12 @@ private static final long serialVersionUID = 0L;
     if (holdDate_ != null) {
       output.writeMessage(4, getHoldDate());
     }
-    for (int i = 0; i < skills_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, skills_.getRaw(i));
-    }
+    com.google.protobuf.GeneratedMessageV3
+      .serializeStringMapTo(
+        output,
+        internalGetFormattedSkills(),
+        FormattedSkillsDefaultEntryHolder.defaultEntry,
+        5);
     if (agentSpecific_ != false) {
       output.writeBool(6, agentSpecific_);
     }
@@ -382,6 +559,15 @@ private static final long serialVersionUID = 0L;
     }
     if (callerSid_ != null) {
       output.writeMessage(8, getCallerSid());
+    }
+    com.google.protobuf.GeneratedMessageV3
+      .serializeStringMapTo(
+        output,
+        internalGetSkills(),
+        SkillsDefaultEntryHolder.defaultEntry,
+        9);
+    if (queueType_ != com.tcn.cloud.api.api.commons.QueueType.Agent_Queue_Call.getNumber()) {
+      output.writeEnum(10, queueType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -406,13 +592,15 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getHoldDate());
     }
-    {
-      int dataSize = 0;
-      for (int i = 0; i < skills_.size(); i++) {
-        dataSize += computeStringSizeNoTag(skills_.getRaw(i));
-      }
-      size += dataSize;
-      size += 1 * getSkillsList().size();
+    for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+         : internalGetFormattedSkills().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+      formattedSkills__ = FormattedSkillsDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, formattedSkills__);
     }
     if (agentSpecific_ != false) {
       size += com.google.protobuf.CodedOutputStream
@@ -425,6 +613,20 @@ private static final long serialVersionUID = 0L;
     if (callerSid_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getCallerSid());
+    }
+    for (java.util.Map.Entry<java.lang.String, java.lang.Boolean> entry
+         : internalGetSkills().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+      skills__ = SkillsDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, skills__);
+    }
+    if (queueType_ != com.tcn.cloud.api.api.commons.QueueType.Agent_Queue_Call.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(10, queueType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -455,8 +657,8 @@ private static final long serialVersionUID = 0L;
       if (!getHoldDate()
           .equals(other.getHoldDate())) return false;
     }
-    if (!getSkillsList()
-        .equals(other.getSkillsList())) return false;
+    if (!internalGetFormattedSkills().equals(
+        other.internalGetFormattedSkills())) return false;
     if (getAgentSpecific()
         != other.getAgentSpecific()) return false;
     if (queuedNotificationType_ != other.queuedNotificationType_) return false;
@@ -465,6 +667,9 @@ private static final long serialVersionUID = 0L;
       if (!getCallerSid()
           .equals(other.getCallerSid())) return false;
     }
+    if (!internalGetSkills().equals(
+        other.internalGetSkills())) return false;
+    if (queueType_ != other.queueType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -488,9 +693,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + HOLD_DATE_FIELD_NUMBER;
       hash = (53 * hash) + getHoldDate().hashCode();
     }
-    if (getSkillsCount() > 0) {
-      hash = (37 * hash) + SKILLS_FIELD_NUMBER;
-      hash = (53 * hash) + getSkillsList().hashCode();
+    if (!internalGetFormattedSkills().getMap().isEmpty()) {
+      hash = (37 * hash) + FORMATTED_SKILLS_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetFormattedSkills().hashCode();
     }
     hash = (37 * hash) + AGENT_SPECIFIC_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
@@ -501,6 +706,12 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CALLER_SID_FIELD_NUMBER;
       hash = (53 * hash) + getCallerSid().hashCode();
     }
+    if (!internalGetSkills().getMap().isEmpty()) {
+      hash = (37 * hash) + SKILLS_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetSkills().hashCode();
+    }
+    hash = (37 * hash) + QUEUE_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + queueType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -610,6 +821,32 @@ private static final long serialVersionUID = 0L;
       return com.tcn.cloud.api.api.commons.AsmProto.internal_static_api_commons_QueueCallAdd_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 5:
+          return internalGetFormattedSkills();
+        case 9:
+          return internalGetSkills();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMutableMapField(
+        int number) {
+      switch (number) {
+        case 5:
+          return internalGetMutableFormattedSkills();
+        case 9:
+          return internalGetMutableSkills();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -644,8 +881,7 @@ private static final long serialVersionUID = 0L;
         holdDateBuilder_.dispose();
         holdDateBuilder_ = null;
       }
-      skills_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      internalGetMutableFormattedSkills().clear();
       agentSpecific_ = false;
       queuedNotificationType_ = 0;
       callerSid_ = null;
@@ -653,6 +889,8 @@ private static final long serialVersionUID = 0L;
         callerSidBuilder_.dispose();
         callerSidBuilder_ = null;
       }
+      internalGetMutableSkills().clear();
+      queueType_ = 0;
       return this;
     }
 
@@ -703,8 +941,8 @@ private static final long serialVersionUID = 0L;
             : holdDateBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        skills_.makeImmutable();
-        result.skills_ = skills_;
+        result.formattedSkills_ = internalGetFormattedSkills();
+        result.formattedSkills_.makeImmutable();
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.agentSpecific_ = agentSpecific_;
@@ -716,6 +954,13 @@ private static final long serialVersionUID = 0L;
         result.callerSid_ = callerSidBuilder_ == null
             ? callerSid_
             : callerSidBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.skills_ = internalGetSkills();
+        result.skills_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.queueType_ = queueType_;
       }
     }
 
@@ -779,16 +1024,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasHoldDate()) {
         mergeHoldDate(other.getHoldDate());
       }
-      if (!other.skills_.isEmpty()) {
-        if (skills_.isEmpty()) {
-          skills_ = other.skills_;
-          bitField0_ |= 0x00000010;
-        } else {
-          ensureSkillsIsMutable();
-          skills_.addAll(other.skills_);
-        }
-        onChanged();
-      }
+      internalGetMutableFormattedSkills().mergeFrom(
+          other.internalGetFormattedSkills());
+      bitField0_ |= 0x00000010;
       if (other.getAgentSpecific() != false) {
         setAgentSpecific(other.getAgentSpecific());
       }
@@ -797,6 +1035,12 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasCallerSid()) {
         mergeCallerSid(other.getCallerSid());
+      }
+      internalGetMutableSkills().mergeFrom(
+          other.internalGetSkills());
+      bitField0_ |= 0x00000100;
+      if (other.queueType_ != 0) {
+        setQueueTypeValue(other.getQueueTypeValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -849,9 +1093,12 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 34
             case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureSkillsIsMutable();
-              skills_.add(s);
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              formattedSkills__ = input.readMessage(
+                  FormattedSkillsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableFormattedSkills().getMutableMap().put(
+                  formattedSkills__.getKey(), formattedSkills__.getValue());
+              bitField0_ |= 0x00000010;
               break;
             } // case 42
             case 48: {
@@ -871,6 +1118,20 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 66
+            case 74: {
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+              skills__ = input.readMessage(
+                  SkillsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableSkills().getMutableMap().put(
+                  skills__.getKey(), skills__.getValue());
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 74
+            case 80: {
+              queueType_ = input.readEnum();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1382,80 +1643,104 @@ private static final long serialVersionUID = 0L;
       return holdDateBuilder_;
     }
 
-    private com.google.protobuf.LazyStringArrayList skills_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureSkillsIsMutable() {
-      if (!skills_.isModifiable()) {
-        skills_ = new com.google.protobuf.LazyStringArrayList(skills_);
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> formattedSkills_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetFormattedSkills() {
+      if (formattedSkills_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            FormattedSkillsDefaultEntryHolder.defaultEntry);
+      }
+      return formattedSkills_;
+    }
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+        internalGetMutableFormattedSkills() {
+      if (formattedSkills_ == null) {
+        formattedSkills_ = com.google.protobuf.MapField.newMapField(
+            FormattedSkillsDefaultEntryHolder.defaultEntry);
+      }
+      if (!formattedSkills_.isMutable()) {
+        formattedSkills_ = formattedSkills_.copy();
       }
       bitField0_ |= 0x00000010;
-    }
-    /**
-     * <pre>
-     * formatted skills that the call requires.
-     * </pre>
-     *
-     * <code>repeated string skills = 5 [json_name = "skills"];</code>
-     * @return A list containing the skills.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getSkillsList() {
-      skills_.makeImmutable();
-      return skills_;
-    }
-    /**
-     * <pre>
-     * formatted skills that the call requires.
-     * </pre>
-     *
-     * <code>repeated string skills = 5 [json_name = "skills"];</code>
-     * @return The count of skills.
-     */
-    public int getSkillsCount() {
-      return skills_.size();
-    }
-    /**
-     * <pre>
-     * formatted skills that the call requires.
-     * </pre>
-     *
-     * <code>repeated string skills = 5 [json_name = "skills"];</code>
-     * @param index The index of the element to return.
-     * @return The skills at the given index.
-     */
-    public java.lang.String getSkills(int index) {
-      return skills_.get(index);
-    }
-    /**
-     * <pre>
-     * formatted skills that the call requires.
-     * </pre>
-     *
-     * <code>repeated string skills = 5 [json_name = "skills"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the skills at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getSkillsBytes(int index) {
-      return skills_.getByteString(index);
-    }
-    /**
-     * <pre>
-     * formatted skills that the call requires.
-     * </pre>
-     *
-     * <code>repeated string skills = 5 [json_name = "skills"];</code>
-     * @param index The index to set the value at.
-     * @param value The skills to set.
-     * @return This builder for chaining.
-     */
-    public Builder setSkills(
-        int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureSkillsIsMutable();
-      skills_.set(index, value);
-      bitField0_ |= 0x00000010;
       onChanged();
+      return formattedSkills_;
+    }
+    public int getFormattedSkillsCount() {
+      return internalGetFormattedSkills().getMap().size();
+    }
+    /**
+     * <pre>
+     * formatted skills that the call requires.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; formatted_skills = 5 [json_name = "formattedSkills"];</code>
+     */
+    @java.lang.Override
+    public boolean containsFormattedSkills(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetFormattedSkills().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getFormattedSkillsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getFormattedSkills() {
+      return getFormattedSkillsMap();
+    }
+    /**
+     * <pre>
+     * formatted skills that the call requires.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; formatted_skills = 5 [json_name = "formattedSkills"];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, java.lang.String> getFormattedSkillsMap() {
+      return internalGetFormattedSkills().getMap();
+    }
+    /**
+     * <pre>
+     * formatted skills that the call requires.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; formatted_skills = 5 [json_name = "formattedSkills"];</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+java.lang.String getFormattedSkillsOrDefault(
+        java.lang.String key,
+        /* nullable */
+java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetFormattedSkills().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * formatted skills that the call requires.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; formatted_skills = 5 [json_name = "formattedSkills"];</code>
+     */
+    @java.lang.Override
+    public java.lang.String getFormattedSkillsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetFormattedSkills().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    public Builder clearFormattedSkills() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      internalGetMutableFormattedSkills().getMutableMap()
+          .clear();
       return this;
     }
     /**
@@ -1463,17 +1748,39 @@ private static final long serialVersionUID = 0L;
      * formatted skills that the call requires.
      * </pre>
      *
-     * <code>repeated string skills = 5 [json_name = "skills"];</code>
-     * @param value The skills to add.
-     * @return This builder for chaining.
+     * <code>map&lt;string, string&gt; formatted_skills = 5 [json_name = "formattedSkills"];</code>
      */
-    public Builder addSkills(
+    public Builder removeFormattedSkills(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      internalGetMutableFormattedSkills().getMutableMap()
+          .remove(key);
+      return this;
+    }
+    /**
+     * Use alternate mutation accessors instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String>
+        getMutableFormattedSkills() {
+      bitField0_ |= 0x00000010;
+      return internalGetMutableFormattedSkills().getMutableMap();
+    }
+    /**
+     * <pre>
+     * formatted skills that the call requires.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; formatted_skills = 5 [json_name = "formattedSkills"];</code>
+     */
+    public Builder putFormattedSkills(
+        java.lang.String key,
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureSkillsIsMutable();
-      skills_.add(value);
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
+      internalGetMutableFormattedSkills().getMutableMap()
+          .put(key, value);
       bitField0_ |= 0x00000010;
-      onChanged();
       return this;
     }
     /**
@@ -1481,51 +1788,13 @@ private static final long serialVersionUID = 0L;
      * formatted skills that the call requires.
      * </pre>
      *
-     * <code>repeated string skills = 5 [json_name = "skills"];</code>
-     * @param values The skills to add.
-     * @return This builder for chaining.
+     * <code>map&lt;string, string&gt; formatted_skills = 5 [json_name = "formattedSkills"];</code>
      */
-    public Builder addAllSkills(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureSkillsIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, skills_);
+    public Builder putAllFormattedSkills(
+        java.util.Map<java.lang.String, java.lang.String> values) {
+      internalGetMutableFormattedSkills().getMutableMap()
+          .putAll(values);
       bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * formatted skills that the call requires.
-     * </pre>
-     *
-     * <code>repeated string skills = 5 [json_name = "skills"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearSkills() {
-      skills_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000010);;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * formatted skills that the call requires.
-     * </pre>
-     *
-     * <code>repeated string skills = 5 [json_name = "skills"];</code>
-     * @param value The bytes of the skills to add.
-     * @return This builder for chaining.
-     */
-    public Builder addSkillsBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      ensureSkillsIsMutable();
-      skills_.add(value);
-      bitField0_ |= 0x00000010;
-      onChanged();
       return this;
     }
 
@@ -1799,6 +2068,232 @@ private static final long serialVersionUID = 0L;
         callerSid_ = null;
       }
       return callerSidBuilder_;
+    }
+
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.Boolean> skills_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+        internalGetSkills() {
+      if (skills_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            SkillsDefaultEntryHolder.defaultEntry);
+      }
+      return skills_;
+    }
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+        internalGetMutableSkills() {
+      if (skills_ == null) {
+        skills_ = com.google.protobuf.MapField.newMapField(
+            SkillsDefaultEntryHolder.defaultEntry);
+      }
+      if (!skills_.isMutable()) {
+        skills_ = skills_.copy();
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return skills_;
+    }
+    public int getSkillsCount() {
+      return internalGetSkills().getMap().size();
+    }
+    /**
+     * <pre>
+     * skills
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; skills = 9 [json_name = "skills"];</code>
+     */
+    @java.lang.Override
+    public boolean containsSkills(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetSkills().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getSkillsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Boolean> getSkills() {
+      return getSkillsMap();
+    }
+    /**
+     * <pre>
+     * skills
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; skills = 9 [json_name = "skills"];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, java.lang.Boolean> getSkillsMap() {
+      return internalGetSkills().getMap();
+    }
+    /**
+     * <pre>
+     * skills
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; skills = 9 [json_name = "skills"];</code>
+     */
+    @java.lang.Override
+    public boolean getSkillsOrDefault(
+        java.lang.String key,
+        boolean defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.Boolean> map =
+          internalGetSkills().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * skills
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; skills = 9 [json_name = "skills"];</code>
+     */
+    @java.lang.Override
+    public boolean getSkillsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.Boolean> map =
+          internalGetSkills().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    public Builder clearSkills() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      internalGetMutableSkills().getMutableMap()
+          .clear();
+      return this;
+    }
+    /**
+     * <pre>
+     * skills
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; skills = 9 [json_name = "skills"];</code>
+     */
+    public Builder removeSkills(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      internalGetMutableSkills().getMutableMap()
+          .remove(key);
+      return this;
+    }
+    /**
+     * Use alternate mutation accessors instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Boolean>
+        getMutableSkills() {
+      bitField0_ |= 0x00000100;
+      return internalGetMutableSkills().getMutableMap();
+    }
+    /**
+     * <pre>
+     * skills
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; skills = 9 [json_name = "skills"];</code>
+     */
+    public Builder putSkills(
+        java.lang.String key,
+        boolean value) {
+      if (key == null) { throw new NullPointerException("map key"); }
+
+      internalGetMutableSkills().getMutableMap()
+          .put(key, value);
+      bitField0_ |= 0x00000100;
+      return this;
+    }
+    /**
+     * <pre>
+     * skills
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; skills = 9 [json_name = "skills"];</code>
+     */
+    public Builder putAllSkills(
+        java.util.Map<java.lang.String, java.lang.Boolean> values) {
+      internalGetMutableSkills().getMutableMap()
+          .putAll(values);
+      bitField0_ |= 0x00000100;
+      return this;
+    }
+
+    private int queueType_ = 0;
+    /**
+     * <pre>
+     * queueType
+     * </pre>
+     *
+     * <code>.api.commons.QueueType queue_type = 10 [json_name = "queueType"];</code>
+     * @return The enum numeric value on the wire for queueType.
+     */
+    @java.lang.Override public int getQueueTypeValue() {
+      return queueType_;
+    }
+    /**
+     * <pre>
+     * queueType
+     * </pre>
+     *
+     * <code>.api.commons.QueueType queue_type = 10 [json_name = "queueType"];</code>
+     * @param value The enum numeric value on the wire for queueType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setQueueTypeValue(int value) {
+      queueType_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * queueType
+     * </pre>
+     *
+     * <code>.api.commons.QueueType queue_type = 10 [json_name = "queueType"];</code>
+     * @return The queueType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.QueueType getQueueType() {
+      com.tcn.cloud.api.api.commons.QueueType result = com.tcn.cloud.api.api.commons.QueueType.forNumber(queueType_);
+      return result == null ? com.tcn.cloud.api.api.commons.QueueType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * queueType
+     * </pre>
+     *
+     * <code>.api.commons.QueueType queue_type = 10 [json_name = "queueType"];</code>
+     * @param value The queueType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setQueueType(com.tcn.cloud.api.api.commons.QueueType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000200;
+      queueType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * queueType
+     * </pre>
+     *
+     * <code>.api.commons.QueueType queue_type = 10 [json_name = "queueType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearQueueType() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      queueType_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
