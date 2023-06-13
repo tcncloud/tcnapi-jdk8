@@ -46,4 +46,15 @@ public interface EditAttributeOrBuilder extends
    * @return The isEdited.
    */
   boolean getIsEdited();
+
+  /**
+   * <code>.api.commons.EditColumnType edit_column_type = 5 [json_name = "editColumnType"];</code>
+   * @return The enum numeric value on the wire for editColumnType.
+   */
+  int getEditColumnTypeValue();
+  /**
+   * <code>.api.commons.EditColumnType edit_column_type = 5 [json_name = "editColumnType"];</code>
+   * @return The editColumnType.
+   */
+  com.tcn.cloud.api.api.commons.EditColumnType getEditColumnType();
 }

@@ -18,4 +18,14 @@ public interface SkillsOrBuilder extends
    */
   com.google.protobuf.ByteString
       getSkillIdBytes();
+
+  /**
+   * <pre>
+   * Mandatory = 1, Preferred = 2
+   * </pre>
+   *
+   * <code>int64 mandatory_preferred = 2 [json_name = "mandatoryPreferred"];</code>
+   * @return The mandatoryPreferred.
+   */
+  long getMandatoryPreferred();
 }

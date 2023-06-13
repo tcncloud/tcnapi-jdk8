@@ -45,7 +45,7 @@ private static final long serialVersionUID = 0L;
   public static final int TICKET_SID_FIELD_NUMBER = 1;
   private long ticketSid_ = 0L;
   /**
-   * <code>int64 ticket_sid = 1 [json_name = "ticketSid"];</code>
+   * <code>int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
    * @return The ticketSid.
    */
   @java.lang.Override
@@ -459,7 +459,7 @@ private static final long serialVersionUID = 0L;
 
     private long ticketSid_ ;
     /**
-     * <code>int64 ticket_sid = 1 [json_name = "ticketSid"];</code>
+     * <code>int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
      * @return The ticketSid.
      */
     @java.lang.Override
@@ -467,7 +467,7 @@ private static final long serialVersionUID = 0L;
       return ticketSid_;
     }
     /**
-     * <code>int64 ticket_sid = 1 [json_name = "ticketSid"];</code>
+     * <code>int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
      * @param value The ticketSid to set.
      * @return This builder for chaining.
      */
@@ -479,7 +479,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 ticket_sid = 1 [json_name = "ticketSid"];</code>
+     * <code>int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearTicketSid() {

@@ -8,7 +8,7 @@ public interface EditTicketReqOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 ticket_sid = 1 [json_name = "ticketSid"];</code>
+   * <code>int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
    * @return The ticketSid.
    */
   long getTicketSid();

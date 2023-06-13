@@ -28,6 +28,7 @@ private static final long serialVersionUID = 0L;
   private EditAttribute() {
     fromVal_ = "";
     toVal_ = "";
+    editColumnType_ = 0;
   }
 
   @java.lang.Override
@@ -154,6 +155,24 @@ private static final long serialVersionUID = 0L;
     return isEdited_;
   }
 
+  public static final int EDIT_COLUMN_TYPE_FIELD_NUMBER = 5;
+  private int editColumnType_ = 0;
+  /**
+   * <code>.api.commons.EditColumnType edit_column_type = 5 [json_name = "editColumnType"];</code>
+   * @return The enum numeric value on the wire for editColumnType.
+   */
+  @java.lang.Override public int getEditColumnTypeValue() {
+    return editColumnType_;
+  }
+  /**
+   * <code>.api.commons.EditColumnType edit_column_type = 5 [json_name = "editColumnType"];</code>
+   * @return The editColumnType.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.EditColumnType getEditColumnType() {
+    com.tcn.cloud.api.api.commons.EditColumnType result = com.tcn.cloud.api.api.commons.EditColumnType.forNumber(editColumnType_);
+    return result == null ? com.tcn.cloud.api.api.commons.EditColumnType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -180,6 +199,9 @@ private static final long serialVersionUID = 0L;
     if (isEdited_ != false) {
       output.writeBool(4, isEdited_);
     }
+    if (editColumnType_ != com.tcn.cloud.api.api.commons.EditColumnType.NONE_COLUMN.getNumber()) {
+      output.writeEnum(5, editColumnType_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -202,6 +224,10 @@ private static final long serialVersionUID = 0L;
     if (isEdited_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, isEdited_);
+    }
+    if (editColumnType_ != com.tcn.cloud.api.api.commons.EditColumnType.NONE_COLUMN.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(5, editColumnType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -226,6 +252,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getToVal())) return false;
     if (getIsEdited()
         != other.getIsEdited()) return false;
+    if (editColumnType_ != other.editColumnType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -247,6 +274,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + IS_EDITED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsEdited());
+    hash = (37 * hash) + EDIT_COLUMN_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + editColumnType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -392,6 +421,7 @@ private static final long serialVersionUID = 0L;
       fromVal_ = "";
       toVal_ = "";
       isEdited_ = false;
+      editColumnType_ = 0;
       return this;
     }
 
@@ -436,6 +466,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.isEdited_ = isEdited_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.editColumnType_ = editColumnType_;
       }
     }
 
@@ -499,6 +532,9 @@ private static final long serialVersionUID = 0L;
       if (other.getIsEdited() != false) {
         setIsEdited(other.getIsEdited());
       }
+      if (other.editColumnType_ != 0) {
+        setEditColumnTypeValue(other.getEditColumnTypeValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -545,6 +581,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 32
+            case 40: {
+              editColumnType_ = input.readEnum();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -778,6 +819,59 @@ private static final long serialVersionUID = 0L;
     public Builder clearIsEdited() {
       bitField0_ = (bitField0_ & ~0x00000008);
       isEdited_ = false;
+      onChanged();
+      return this;
+    }
+
+    private int editColumnType_ = 0;
+    /**
+     * <code>.api.commons.EditColumnType edit_column_type = 5 [json_name = "editColumnType"];</code>
+     * @return The enum numeric value on the wire for editColumnType.
+     */
+    @java.lang.Override public int getEditColumnTypeValue() {
+      return editColumnType_;
+    }
+    /**
+     * <code>.api.commons.EditColumnType edit_column_type = 5 [json_name = "editColumnType"];</code>
+     * @param value The enum numeric value on the wire for editColumnType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEditColumnTypeValue(int value) {
+      editColumnType_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.EditColumnType edit_column_type = 5 [json_name = "editColumnType"];</code>
+     * @return The editColumnType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.EditColumnType getEditColumnType() {
+      com.tcn.cloud.api.api.commons.EditColumnType result = com.tcn.cloud.api.api.commons.EditColumnType.forNumber(editColumnType_);
+      return result == null ? com.tcn.cloud.api.api.commons.EditColumnType.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.api.commons.EditColumnType edit_column_type = 5 [json_name = "editColumnType"];</code>
+     * @param value The editColumnType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEditColumnType(com.tcn.cloud.api.api.commons.EditColumnType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000010;
+      editColumnType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.EditColumnType edit_column_type = 5 [json_name = "editColumnType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEditColumnType() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      editColumnType_ = 0;
       onChanged();
       return this;
     }
