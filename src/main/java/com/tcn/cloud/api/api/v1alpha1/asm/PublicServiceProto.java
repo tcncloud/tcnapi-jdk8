@@ -28,7 +28,7 @@ public final class PublicServiceProto {
       "to\032\025api/commons/acd.proto\032\025api/commons/a" +
       "sm.proto\032\035api/commons/omnichannel.proto\032" +
       "\036api/v1alpha1/asm/service.proto\032\034google/" +
-      "api/annotations.proto2\364\017\n\003Asm\022\232\001\n\020Stream" +
+      "api/annotations.proto2\366\017\n\003Asm\022\232\001\n\020Stream" +
       "AgentState\022%.api.v1alpha1.asm.StreamAgen" +
       "tStateReq\032 .api.commons.StreamAgentState" +
       "Res\";\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002+\"&/api/v1alpha1/asm" +
@@ -70,20 +70,20 @@ public final class PublicServiceProto {
       "\001\n\nListAgents\022\037.api.v1alpha1.asm.ListAge" +
       "ntsReq\032\037.api.v1alpha1.asm.ListAgentsRes\"" +
       "5\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002%\" /api/v1alpha1/asm/asm" +
-      "/listagents:\001*\022\320\001\n\034SetConversationCollec" +
+      "/listagents:\001*\022\322\001\n\034SetConversationCollec" +
       "tedData\0221.api.v1alpha1.asm.SetConversati" +
       "onCollectedDataReq\0321.api.v1alpha1.asm.Se" +
-      "tConversationCollectedDataRes\"J\272\270\221\002\010\n\006\010\254" +
-      "\002\010\260\t\202\323\344\223\0027\"2/api/v1alpha1/asm/asm/setcon" +
-      "versationcollecteddata:\001*\022\230\001\n\020GetQueuesD" +
-      "etails\022%.api.v1alpha1.asm.GetQueuesDetai" +
-      "lsReq\032 .api.commons.GetQueuesDetailsRes\"" +
-      ";\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002+\"&/api/v1alpha1/asm/asm" +
-      "/getqueuesdetails:\001*B\232\001\n\"com.tcn.cloud.a" +
-      "pi.api.v1alpha1.asmB\022PublicServiceProtoP" +
-      "\001\242\002\003AVA\252\002\020Api.V1alpha1.Asm\312\002\020Api\\V1alpha" +
-      "1\\Asm\342\002\034Api\\V1alpha1\\Asm\\GPBMetadata\352\002\022A" +
-      "pi::V1alpha1::Asmb\006proto3"
+      "tConversationCollectedDataRes\"L\272\270\221\002\n\n\003\010\254" +
+      "\002\n\003\010\260\t\202\323\344\223\0027\"2/api/v1alpha1/asm/asm/setc" +
+      "onversationcollecteddata:\001*\022\230\001\n\020GetQueue" +
+      "sDetails\022%.api.v1alpha1.asm.GetQueuesDet" +
+      "ailsReq\032 .api.commons.GetQueuesDetailsRe" +
+      "s\";\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002+\"&/api/v1alpha1/asm/a" +
+      "sm/getqueuesdetails:\001*B\232\001\n\"com.tcn.cloud" +
+      ".api.api.v1alpha1.asmB\022PublicServiceProt" +
+      "oP\001\242\002\003AVA\252\002\020Api.V1alpha1.Asm\312\002\020Api\\V1alp" +
+      "ha1\\Asm\342\002\034Api\\V1alpha1\\Asm\\GPBMetadata\352\002" +
+      "\022Api::V1alpha1::Asmb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
