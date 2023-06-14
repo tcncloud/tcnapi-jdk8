@@ -232,37 +232,6 @@ public final class VmdsGrpc {
     return getDownloadMessageMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesReq,
-      com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesRes> getDownloadSpecifiedMessagesMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "DownloadSpecifiedMessages",
-      requestType = com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesReq.class,
-      responseType = com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesReq,
-      com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesRes> getDownloadSpecifiedMessagesMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesReq, com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesRes> getDownloadSpecifiedMessagesMethod;
-    if ((getDownloadSpecifiedMessagesMethod = VmdsGrpc.getDownloadSpecifiedMessagesMethod) == null) {
-      synchronized (VmdsGrpc.class) {
-        if ((getDownloadSpecifiedMessagesMethod = VmdsGrpc.getDownloadSpecifiedMessagesMethod) == null) {
-          VmdsGrpc.getDownloadSpecifiedMessagesMethod = getDownloadSpecifiedMessagesMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesReq, com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DownloadSpecifiedMessages"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesRes.getDefaultInstance()))
-              .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("DownloadSpecifiedMessages"))
-              .build();
-        }
-      }
-    }
-    return getDownloadSpecifiedMessagesMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DownloadMessagesReq,
       com.tcn.cloud.api.api.v0alpha.DownloadMessagesRes> getDownloadMessagesMethod;
 
@@ -579,13 +548,6 @@ public final class VmdsGrpc {
 
     /**
      */
-    default void downloadSpecifiedMessages(com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDownloadSpecifiedMessagesMethod(), responseObserver);
-    }
-
-    /**
-     */
     default void downloadMessages(com.tcn.cloud.api.api.v0alpha.DownloadMessagesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadMessagesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDownloadMessagesMethod(), responseObserver);
@@ -719,14 +681,6 @@ public final class VmdsGrpc {
 
     /**
      */
-    public void downloadSpecifiedMessages(com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getDownloadSpecifiedMessagesMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
     public void downloadMessages(com.tcn.cloud.api.api.v0alpha.DownloadMessagesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadMessagesRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -850,13 +804,6 @@ public final class VmdsGrpc {
 
     /**
      */
-    public com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesRes downloadSpecifiedMessages(com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getDownloadSpecifiedMessagesMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
     public com.tcn.cloud.api.api.v0alpha.DownloadMessagesRes downloadMessages(com.tcn.cloud.api.api.v0alpha.DownloadMessagesReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDownloadMessagesMethod(), getCallOptions(), request);
@@ -971,14 +918,6 @@ public final class VmdsGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesRes> downloadSpecifiedMessages(
-        com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getDownloadSpecifiedMessagesMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DownloadMessagesRes> downloadMessages(
         com.tcn.cloud.api.api.v0alpha.DownloadMessagesReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1041,14 +980,13 @@ public final class VmdsGrpc {
   private static final int METHODID_UPDATE_UPLOAD_NAME = 4;
   private static final int METHODID_UPDATE_VOICEMAIL_FLAG_READ = 5;
   private static final int METHODID_DOWNLOAD_MESSAGE = 6;
-  private static final int METHODID_DOWNLOAD_SPECIFIED_MESSAGES = 7;
-  private static final int METHODID_DOWNLOAD_MESSAGES = 8;
-  private static final int METHODID_DOWNLOAD_GREETING_FOR_EXTENSION = 9;
-  private static final int METHODID_DOWNLOAD_GREETING = 10;
-  private static final int METHODID_GET_UPLOAD_GREETING_URL = 11;
-  private static final int METHODID_PROCESS_GREETING_UPLOAD = 12;
-  private static final int METHODID_UPDATE_GREETING_FOR_EXTENSION = 13;
-  private static final int METHODID_LIST_AVAILABLE_GREETINGS = 14;
+  private static final int METHODID_DOWNLOAD_MESSAGES = 7;
+  private static final int METHODID_DOWNLOAD_GREETING_FOR_EXTENSION = 8;
+  private static final int METHODID_DOWNLOAD_GREETING = 9;
+  private static final int METHODID_GET_UPLOAD_GREETING_URL = 10;
+  private static final int METHODID_PROCESS_GREETING_UPLOAD = 11;
+  private static final int METHODID_UPDATE_GREETING_FOR_EXTENSION = 12;
+  private static final int METHODID_LIST_AVAILABLE_GREETINGS = 13;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1094,10 +1032,6 @@ public final class VmdsGrpc {
         case METHODID_DOWNLOAD_MESSAGE:
           serviceImpl.downloadMessage((com.tcn.cloud.api.api.v0alpha.DownloadMessageReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadMessageRes>) responseObserver);
-          break;
-        case METHODID_DOWNLOAD_SPECIFIED_MESSAGES:
-          serviceImpl.downloadSpecifiedMessages((com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesRes>) responseObserver);
           break;
         case METHODID_DOWNLOAD_MESSAGES:
           serviceImpl.downloadMessages((com.tcn.cloud.api.api.v0alpha.DownloadMessagesReq) request,
@@ -1194,13 +1128,6 @@ public final class VmdsGrpc {
               com.tcn.cloud.api.api.v0alpha.DownloadMessageReq,
               com.tcn.cloud.api.api.v0alpha.DownloadMessageRes>(
                 service, METHODID_DOWNLOAD_MESSAGE)))
-        .addMethod(
-          getDownloadSpecifiedMessagesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesReq,
-              com.tcn.cloud.api.api.v0alpha.DownloadSpecifiedMessagesRes>(
-                service, METHODID_DOWNLOAD_SPECIFIED_MESSAGES)))
         .addMethod(
           getDownloadMessagesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1305,7 +1232,6 @@ public final class VmdsGrpc {
               .addMethod(getUpdateUploadNameMethod())
               .addMethod(getUpdateVoicemailFlagReadMethod())
               .addMethod(getDownloadMessageMethod())
-              .addMethod(getDownloadSpecifiedMessagesMethod())
               .addMethod(getDownloadMessagesMethod())
               .addMethod(getDownloadGreetingForExtensionMethod())
               .addMethod(getDownloadGreetingMethod())
