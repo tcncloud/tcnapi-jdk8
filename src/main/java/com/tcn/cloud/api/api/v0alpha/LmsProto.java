@@ -1861,7 +1861,7 @@ public final class LmsProto {
       "\001(\tR\031cjsSecureSearchCriteriaId\0225\n\nfield_" +
       "type\030\003 \001(\0162\026.api.commons.FieldTypeR\tfiel" +
       "dType*F\n\010TimeUnit\022\013\n\007DEFAULT\020\000\022\016\n\nTIME_W" +
-      "EEKS\020\001\022\r\n\tTIME_DAYS\020\002\022\016\n\nTIME_HOURS\020\0032\3756" +
+      "EEKS\020\001\022\r\n\tTIME_DAYS\020\002\022\016\n\nTIME_HOURS\020\0032\2016" +
       "\n\003LMS\022v\n\014GetPublicKey\022\034.api.v0alpha.GetP" +
       "ublicKeyReq\032\026.api.v0alpha.PublicKey\"0\272\270\221" +
       "\002\005\n\003\010\351\007\202\323\344\223\002 \"\033/api/v0alpha/lms/pgpkey/g" +
@@ -1958,90 +1958,87 @@ public final class LmsProto {
       "eateCollection\022\037.api.v0alpha.CollectionM" +
       "etadata\032\037.api.v0alpha.CollectionMetadata" +
       "\"5\272\270\221\002\002\030\001\202\323\344\223\002(\"#/api/v0alpha/lms/collec" +
-      "tions/create:\001*\022\203\001\n\rGetCollection\022\035.api." +
-      "v0alpha.GetCollectionReq\032\037.api.v0alpha.C" +
-      "ollectionMetadata\"2\272\270\221\002\002\030\001\202\323\344\223\002%\" /api/v" +
-      "0alpha/lms/collections/get:\001*\022\202\001\n\020Update" +
-      "Collection\022\037.api.v0alpha.CollectionMetad" +
-      "ata\032\026.google.protobuf.Empty\"5\272\270\221\002\002\030\001\202\323\344\223" +
-      "\002(\"#/api/v0alpha/lms/collections/update:" +
-      "\001*\022\203\001\n\020DeleteCollection\022 .api.v0alpha.De" +
-      "leteCollectionReq\032\026.google.protobuf.Empt" +
-      "y\"5\272\270\221\002\002\030\001\202\323\344\223\002(\"#/api/v0alpha/lms/colle" +
-      "ctions/delete:\001*\022\203\001\n\017ListCollections\022\037.a" +
-      "pi.v0alpha.ListCollectionsReq\032\037.api.v0al" +
-      "pha.ListCollectionsRes\".\272\270\221\002\002\030\001\202\323\344\223\002!\"\034/" +
-      "api/v0alpha/lms/collections:\001*\022\200\001\n\017Reset" +
-      "Collection\022\037.api.v0alpha.ResetCollection" +
-      "Req\032\026.google.protobuf.Empty\"4\272\270\221\002\002\030\001\202\323\344\223" +
+      "tions/create:\001*\022|\n\rGetCollection\022\035.api.v" +
+      "0alpha.GetCollectionReq\032\037.api.v0alpha.Co" +
+      "llectionMetadata\"+\202\323\344\223\002%\" /api/v0alpha/l" +
+      "ms/collections/get:\001*\022{\n\020UpdateCollectio" +
+      "n\022\037.api.v0alpha.CollectionMetadata\032\026.goo" +
+      "gle.protobuf.Empty\".\202\323\344\223\002(\"#/api/v0alpha" +
+      "/lms/collections/update:\001*\022|\n\020DeleteColl" +
+      "ection\022 .api.v0alpha.DeleteCollectionReq" +
+      "\032\026.google.protobuf.Empty\".\202\323\344\223\002(\"#/api/v" +
+      "0alpha/lms/collections/delete:\001*\022|\n\017List" +
+      "Collections\022\037.api.v0alpha.ListCollection" +
+      "sReq\032\037.api.v0alpha.ListCollectionsRes\"\'\202" +
+      "\323\344\223\002!\"\034/api/v0alpha/lms/collections:\001*\022y" +
+      "\n\017ResetCollection\022\037.api.v0alpha.ResetCol" +
+      "lectionReq\032\026.google.protobuf.Empty\"-\202\323\344\223" +
       "\002\'\"\"/api/v0alpha/lms/collections/reset:\001" +
-      "*\022\212\001\n\022AddCollectionEntry\022\034.api.v0alpha.C" +
+      "*\022\203\001\n\022AddCollectionEntry\022\034.api.v0alpha.C" +
       "ollectionEntry\032\034.api.v0alpha.CollectionE" +
-      "ntry\"8\272\270\221\002\002\030\001\202\323\344\223\002+\"&/api/v0alpha/lms/co" +
-      "llections/add-entry:\001*\022\223\001\n\025DeleteCollect" +
-      "ionEntry\022%.api.v0alpha.DeleteCollectionE" +
-      "ntryReq\032\026.google.protobuf.Empty\";\272\270\221\002\002\030\001" +
-      "\202\323\344\223\002.\")/api/v0alpha/lms/collections/del" +
-      "ete-entry:\001*\022\220\001\n\025UpdateCollectionEntry\022\034" +
-      ".api.v0alpha.CollectionEntry\032\034.api.v0alp" +
-      "ha.CollectionEntry\";\272\270\221\002\002\030\001\202\323\344\223\002.\")/api/" +
-      "v0alpha/lms/collections/update-entry:\001*\022" +
-      "\213\001\n\020StreamCollection\022 .api.v0alpha.Strea" +
-      "mCollectionReq\032\034.api.v0alpha.CollectionE" +
-      "ntry\"5\272\270\221\002\002\030\001\202\323\344\223\002(\"#/api/v0alpha/lms/co" +
-      "llections/stream:\001*0\001\022\253\001\n\032SearchCollecti" +
-      "onsPaginated\022*.api.v0alpha.SearchCollect" +
-      "ionsPaginatedReq\032\037.api.v0alpha.Paginated" +
-      "SearchRes\"@\272\270\221\002\002\030\001\202\323\344\223\0023\"./api/v0alpha/l" +
-      "ms/collections/searchcollections:\001*\022\247\001\n\024" +
-      "GetCollectionEntries\022$.api.v0alpha.GetCo" +
-      "llectionEntriesReq\032$.api.v0alpha.GetColl" +
-      "ectionEntriesRes\"C\272\270\221\002\002\030\001\202\323\344\223\0026\"1/api/v0" +
-      "alpha/lms/collections/getcollectionentri" +
-      "es:\001*\022\246\001\n\031CreateCjsSearchDefinition\022 .ap" +
-      "i.v0alpha.CjsSearchDefinition\032 .api.v0al" +
-      "pha.CjsSearchDefinition\"E\272\270\221\002\002\030\001\202\323\344\223\0028\"3" +
-      "/api/v0alpha/lms/collections/createsearc" +
-      "hdefinition:\001*\022\246\001\n\026GetCjsSearchDefinitio" +
-      "n\022&.api.v0alpha.GetCjsSearchDefinitionRe" +
-      "q\032 .api.v0alpha.CjsSearchDefinition\"B\272\270\221" +
-      "\002\002\030\001\202\323\344\223\0025\"0/api/v0alpha/lms/collections" +
-      "/getsearchdefinition:\001*\022\234\001\n\031UpdateCjsSea" +
-      "rchDefinition\022 .api.v0alpha.CjsSearchDef" +
-      "inition\032\026.google.protobuf.Empty\"E\272\270\221\002\002\030\001" +
-      "\202\323\344\223\0028\"3/api/v0alpha/lms/collections/upd" +
-      "atesearchdefinition:\001*\022\245\001\n\031DeleteCjsSear" +
-      "chDefinition\022).api.v0alpha.DeleteCjsSear" +
-      "chDefinitionReq\032\026.google.protobuf.Empty\"" +
-      "E\272\270\221\002\002\030\001\202\323\344\223\0028\"3/api/v0alpha/lms/collect" +
-      "ions/deletesearchdefinition:\001*\022\264\001\n\030ListC" +
-      "jsSearchDefinitions\022(.api.v0alpha.ListCj" +
-      "sSearchDefinitionsReq\032(.api.v0alpha.List" +
-      "CjsSearchDefinitionsRes\"D\272\270\221\002\002\030\001\202\323\344\223\0027\"2" +
-      "/api/v0alpha/lms/collections/listsearchd" +
-      "efinitions:\001*\022\274\001\n\032ExecuteCjsSearchDefini" +
-      "tion\022*.api.v0alpha.ExecuteCjsSearchDefin" +
-      "itionReq\032*.api.v0alpha.ExecuteCjsSearchD" +
-      "efinitionRes\"F\272\270\221\002\002\030\001\202\323\344\223\0029\"4/api/v0alph" +
-      "a/lms/collections/executesearchdefinitio" +
-      "n:\001*\022\272\001\n\032GetCjsSecureSearchCriteria\022*.ap" +
-      "i.v0alpha.GetCjsSecureSearchCriteriaReq\032" +
-      "$.api.v0alpha.CjsSecureSearchCriteria\"J\272" +
-      "\270\221\002\005\n\003\010\351\007\202\323\344\223\002:\"5/api/v0alpha/lms/collec" +
-      "tions/getsecuresearchdcriteria:\001*\022\272\001\n\035Cr" +
-      "eateCjsSecureSearchCriteria\022$.api.v0alph" +
-      "a.CjsSecureSearchCriteria\032$.api.v0alpha." +
-      "CjsSecureSearchCriteria\"M\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002" +
-      "=\"8/api/v0alpha/lms/collections/createse" +
-      "curesearchdcriteria:\001*\022\254\001\n\035UpdateCjsSecu" +
-      "reSearchCriteria\022$.api.v0alpha.CjsSecure" +
-      "SearchCriteria\032\026.google.protobuf.Empty\"M" +
-      "\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002=\"8/api/v0alpha/lms/colle" +
-      "ctions/updatesecuresearchdcriteria:\001*Bv\n" +
-      "\035com.tcn.cloud.api.api.v0alphaB\010LmsProto" +
-      "P\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027A" +
-      "pi\\V0alpha\\GPBMetadata\352\002\014Api::V0alphab\006p" +
-      "roto3"
+      "ntry\"1\202\323\344\223\002+\"&/api/v0alpha/lms/collectio" +
+      "ns/add-entry:\001*\022\214\001\n\025DeleteCollectionEntr" +
+      "y\022%.api.v0alpha.DeleteCollectionEntryReq" +
+      "\032\026.google.protobuf.Empty\"4\202\323\344\223\002.\")/api/v" +
+      "0alpha/lms/collections/delete-entry:\001*\022\211" +
+      "\001\n\025UpdateCollectionEntry\022\034.api.v0alpha.C" +
+      "ollectionEntry\032\034.api.v0alpha.CollectionE" +
+      "ntry\"4\202\323\344\223\002.\")/api/v0alpha/lms/collectio" +
+      "ns/update-entry:\001*\022\204\001\n\020StreamCollection\022" +
+      " .api.v0alpha.StreamCollectionReq\032\034.api." +
+      "v0alpha.CollectionEntry\".\202\323\344\223\002(\"#/api/v0" +
+      "alpha/lms/collections/stream:\001*0\001\022\244\001\n\032Se" +
+      "archCollectionsPaginated\022*.api.v0alpha.S" +
+      "earchCollectionsPaginatedReq\032\037.api.v0alp" +
+      "ha.PaginatedSearchRes\"9\202\323\344\223\0023\"./api/v0al" +
+      "pha/lms/collections/searchcollections:\001*" +
+      "\022\240\001\n\024GetCollectionEntries\022$.api.v0alpha." +
+      "GetCollectionEntriesReq\032$.api.v0alpha.Ge" +
+      "tCollectionEntriesRes\"<\202\323\344\223\0026\"1/api/v0al" +
+      "pha/lms/collections/getcollectionentries" +
+      ":\001*\022\237\001\n\031CreateCjsSearchDefinition\022 .api." +
+      "v0alpha.CjsSearchDefinition\032 .api.v0alph" +
+      "a.CjsSearchDefinition\">\202\323\344\223\0028\"3/api/v0al" +
+      "pha/lms/collections/createsearchdefiniti" +
+      "on:\001*\022\237\001\n\026GetCjsSearchDefinition\022&.api.v" +
+      "0alpha.GetCjsSearchDefinitionReq\032 .api.v" +
+      "0alpha.CjsSearchDefinition\";\202\323\344\223\0025\"0/api" +
+      "/v0alpha/lms/collections/getsearchdefini" +
+      "tion:\001*\022\225\001\n\031UpdateCjsSearchDefinition\022 ." +
+      "api.v0alpha.CjsSearchDefinition\032\026.google" +
+      ".protobuf.Empty\">\202\323\344\223\0028\"3/api/v0alpha/lm" +
+      "s/collections/updatesearchdefinition:\001*\022" +
+      "\236\001\n\031DeleteCjsSearchDefinition\022).api.v0al" +
+      "pha.DeleteCjsSearchDefinitionReq\032\026.googl" +
+      "e.protobuf.Empty\">\202\323\344\223\0028\"3/api/v0alpha/l" +
+      "ms/collections/deletesearchdefinition:\001*" +
+      "\022\255\001\n\030ListCjsSearchDefinitions\022(.api.v0al" +
+      "pha.ListCjsSearchDefinitionsReq\032(.api.v0" +
+      "alpha.ListCjsSearchDefinitionsRes\"=\202\323\344\223\002" +
+      "7\"2/api/v0alpha/lms/collections/listsear" +
+      "chdefinitions:\001*\022\265\001\n\032ExecuteCjsSearchDef" +
+      "inition\022*.api.v0alpha.ExecuteCjsSearchDe" +
+      "finitionReq\032*.api.v0alpha.ExecuteCjsSear" +
+      "chDefinitionRes\"?\202\323\344\223\0029\"4/api/v0alpha/lm" +
+      "s/collections/executesearchdefinition:\001*" +
+      "\022\272\001\n\032GetCjsSecureSearchCriteria\022*.api.v0" +
+      "alpha.GetCjsSecureSearchCriteriaReq\032$.ap" +
+      "i.v0alpha.CjsSecureSearchCriteria\"J\272\270\221\002\005" +
+      "\n\003\010\351\007\202\323\344\223\002:\"5/api/v0alpha/lms/collection" +
+      "s/getsecuresearchdcriteria:\001*\022\272\001\n\035Create" +
+      "CjsSecureSearchCriteria\022$.api.v0alpha.Cj" +
+      "sSecureSearchCriteria\032$.api.v0alpha.CjsS" +
+      "ecureSearchCriteria\"M\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002=\"8/" +
+      "api/v0alpha/lms/collections/createsecure" +
+      "searchdcriteria:\001*\022\254\001\n\035UpdateCjsSecureSe" +
+      "archCriteria\022$.api.v0alpha.CjsSecureSear" +
+      "chCriteria\032\026.google.protobuf.Empty\"M\272\270\221\002" +
+      "\005\n\003\010\351\007\202\323\344\223\002=\"8/api/v0alpha/lms/collectio" +
+      "ns/updatesecuresearchdcriteria:\001*Bv\n\035com" +
+      ".tcn.cloud.api.api.v0alphaB\010LmsProtoP\001\242\002" +
+      "\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V" +
+      "0alpha\\GPBMetadata\352\002\014Api::V0alphab\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
