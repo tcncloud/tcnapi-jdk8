@@ -97,54 +97,54 @@ public final class CategoryProto {
       "st\0221\n\010category\030\001 \001(\0132\025.api.commons.Categ" +
       "oryR\010category\"K\n\026CreateCategoryResponse\022" +
       "1\n\010category\030\001 \001(\0132\025.api.commons.Category" +
-      "R\010category\"\251\002\n\025ListCategoriesRequest\022\035\n\n" +
+      "R\010category\"\255\002\n\025ListCategoriesRequest\022\035\n\n" +
       "author_ids\030\002 \003(\tR\tauthorIds\022%\n\016skill_pro" +
-      "files\030\003 \003(\003R\rskillProfiles\0229\n\ncall_types" +
-      "\030\004 \003(\0162\032.api.commons.CallType.EnumR\tcall" +
-      "Types\022`\n\rcategory_type\030\005 \001(\0162;.api.v1alp" +
-      "ha1.scorecards.ListCategoriesRequest.Cat" +
-      "egoryTypeR\014categoryType\"-\n\014CategoryType\022" +
-      "\007\n\003ANY\020\000\022\n\n\006SYSTEM\020\001\022\010\n\004USER\020\002\"O\n\026ListCa" +
-      "tegoriesResponse\0225\n\ncategories\030\001 \003(\0132\025.a" +
-      "pi.commons.CategoryR\ncategories\"\207\001\n\025Upda" +
-      "teCategoryRequest\0221\n\010category\030\001 \001(\0132\025.ap" +
-      "i.commons.CategoryR\010category\022;\n\013update_m" +
-      "ask\030\002 \001(\0132\032.google.protobuf.FieldMaskR\nu" +
-      "pdateMask\"K\n\026UpdateCategoryResponse\0221\n\010c" +
-      "ategory\030\001 \001(\0132\025.api.commons.CategoryR\010ca" +
-      "tegory\"8\n\025DeleteCategoryRequest\022\037\n\013categ" +
-      "ory_id\030\002 \001(\003R\ncategoryId\"K\n\026DeleteCatego" +
-      "ryResponse\0221\n\010category\030\001 \001(\0132\025.api.commo" +
-      "ns.CategoryR\010category\"K\n\022GetCategoryRequ" +
-      "est\022\037\n\013category_id\030\002 \001(\003R\ncategoryId\022\024\n\005" +
-      "title\030\003 \001(\tR\005title\"H\n\023GetCategoryRespons" +
-      "e\0221\n\010category\030\001 \001(\0132\025.api.commons.Catego" +
-      "ryR\010category\"\335\002\n\034SampleCallsByCategoryRe" +
-      "quest\022\037\n\013category_id\030\002 \001(\003R\ncategoryId\0229" +
-      "\n\nstart_time\030\003 \001(\0132\032.google.protobuf.Tim" +
-      "estampR\tstartTime\0225\n\010end_time\030\004 \001(\0132\032.go" +
-      "ogle.protobuf.TimestampR\007endTime\0224\n\026scor" +
-      "er_max_evaluations\030\005 \001(\005R\024scorerMaxEvalu" +
-      "ations\022+\n\021sample_percentage\030\006 \001(\005R\020sampl" +
-      "ePercentage\022$\n\016agent_user_ids\030\007 \003(\tR\014age" +
-      "ntUserIds\022!\n\014scorecard_id\030\n \001(\003R\013scoreca" +
-      "rdId\"j\n\035SampleCallsByCategoryResponse\022I\n" +
-      "\013agent_calls\030\001 \003(\0132(.api.v1alpha1.scorec" +
-      "ards.SampleAgentCallR\nagentCalls\"\354\002\n\017Sam" +
-      "pleAgentCall\022\031\n\010call_sid\030\001 \001(\003R\007callSid\022" +
-      "7\n\tcall_type\030\002 \001(\0162\032.api.commons.CallTyp" +
-      "e.EnumR\010callType\0229\n\ncall_start\030\003 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampR\tcallStart\022>\n\rc" +
-      "all_duration\030\004 \001(\0132\031.google.protobuf.Dur" +
-      "ationR\014callDuration\0221\n\006speech\030\005 \001(\0132\031.go" +
-      "ogle.protobuf.DurationR\006speech\0223\n\007silenc" +
-      "e\030\006 \001(\0132\031.google.protobuf.DurationR\007sile" +
-      "nce\022\"\n\ragent_user_id\030\007 \001(\tR\013agentUserIdB" +
-      "\270\001\n)com.tcn.cloud.api.api.v1alpha1.score" +
-      "cardsB\rCategoryProtoP\001\242\002\003AVS\252\002\027Api.V1alp" +
-      "ha1.Scorecards\312\002\027Api\\V1alpha1\\Scorecards" +
-      "\342\002#Api\\V1alpha1\\Scorecards\\GPBMetadata\352\002" +
-      "\031Api::V1alpha1::Scorecardsb\006proto3"
+      "files\030\003 \003(\003R\rskillProfiles\022=\n\ncall_types" +
+      "\030\004 \003(\0162\032.api.commons.CallType.EnumB\002\030\001R\t" +
+      "callTypes\022`\n\rcategory_type\030\005 \001(\0162;.api.v" +
+      "1alpha1.scorecards.ListCategoriesRequest" +
+      ".CategoryTypeR\014categoryType\"-\n\014CategoryT" +
+      "ype\022\007\n\003ANY\020\000\022\n\n\006SYSTEM\020\001\022\010\n\004USER\020\002\"O\n\026Li" +
+      "stCategoriesResponse\0225\n\ncategories\030\001 \003(\013" +
+      "2\025.api.commons.CategoryR\ncategories\"\207\001\n\025" +
+      "UpdateCategoryRequest\0221\n\010category\030\001 \001(\0132" +
+      "\025.api.commons.CategoryR\010category\022;\n\013upda" +
+      "te_mask\030\002 \001(\0132\032.google.protobuf.FieldMas" +
+      "kR\nupdateMask\"K\n\026UpdateCategoryResponse\022" +
+      "1\n\010category\030\001 \001(\0132\025.api.commons.Category" +
+      "R\010category\"8\n\025DeleteCategoryRequest\022\037\n\013c" +
+      "ategory_id\030\002 \001(\003R\ncategoryId\"K\n\026DeleteCa" +
+      "tegoryResponse\0221\n\010category\030\001 \001(\0132\025.api.c" +
+      "ommons.CategoryR\010category\"K\n\022GetCategory" +
+      "Request\022\037\n\013category_id\030\002 \001(\003R\ncategoryId" +
+      "\022\024\n\005title\030\003 \001(\tR\005title\"H\n\023GetCategoryRes" +
+      "ponse\0221\n\010category\030\001 \001(\0132\025.api.commons.Ca" +
+      "tegoryR\010category\"\335\002\n\034SampleCallsByCatego" +
+      "ryRequest\022\037\n\013category_id\030\002 \001(\003R\ncategory" +
+      "Id\0229\n\nstart_time\030\003 \001(\0132\032.google.protobuf" +
+      ".TimestampR\tstartTime\0225\n\010end_time\030\004 \001(\0132" +
+      "\032.google.protobuf.TimestampR\007endTime\0224\n\026" +
+      "scorer_max_evaluations\030\005 \001(\005R\024scorerMaxE" +
+      "valuations\022+\n\021sample_percentage\030\006 \001(\005R\020s" +
+      "amplePercentage\022$\n\016agent_user_ids\030\007 \003(\tR" +
+      "\014agentUserIds\022!\n\014scorecard_id\030\n \001(\003R\013sco" +
+      "recardId\"j\n\035SampleCallsByCategoryRespons" +
+      "e\022I\n\013agent_calls\030\001 \003(\0132(.api.v1alpha1.sc" +
+      "orecards.SampleAgentCallR\nagentCalls\"\354\002\n" +
+      "\017SampleAgentCall\022\031\n\010call_sid\030\001 \001(\003R\007call" +
+      "Sid\0227\n\tcall_type\030\002 \001(\0162\032.api.commons.Cal" +
+      "lType.EnumR\010callType\0229\n\ncall_start\030\003 \001(\013" +
+      "2\032.google.protobuf.TimestampR\tcallStart\022" +
+      ">\n\rcall_duration\030\004 \001(\0132\031.google.protobuf" +
+      ".DurationR\014callDuration\0221\n\006speech\030\005 \001(\0132" +
+      "\031.google.protobuf.DurationR\006speech\0223\n\007si" +
+      "lence\030\006 \001(\0132\031.google.protobuf.DurationR\007" +
+      "silence\022\"\n\ragent_user_id\030\007 \001(\tR\013agentUse" +
+      "rIdB\270\001\n)com.tcn.cloud.api.api.v1alpha1.s" +
+      "corecardsB\rCategoryProtoP\001\242\002\003AVS\252\002\027Api.V" +
+      "1alpha1.Scorecards\312\002\027Api\\V1alpha1\\Scorec" +
+      "ards\342\002#Api\\V1alpha1\\Scorecards\\GPBMetada" +
+      "ta\352\002\031Api::V1alpha1::Scorecardsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
