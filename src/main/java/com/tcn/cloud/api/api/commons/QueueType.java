@@ -9,9 +9,9 @@ package com.tcn.cloud.api.api.commons;
 public enum QueueType
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>Agent_Queue_Call = 0;</code>
+   * <code>AGENT_QUEUE_CALL = 0;</code>
    */
-  Agent_Queue_Call(0),
+  AGENT_QUEUE_CALL(0),
   /**
    * <code>ON_HOLD_CALL = 1;</code>
    */
@@ -24,9 +24,9 @@ public enum QueueType
   ;
 
   /**
-   * <code>Agent_Queue_Call = 0;</code>
+   * <code>AGENT_QUEUE_CALL = 0;</code>
    */
-  public static final int Agent_Queue_Call_VALUE = 0;
+  public static final int AGENT_QUEUE_CALL_VALUE = 0;
   /**
    * <code>ON_HOLD_CALL = 1;</code>
    */
@@ -61,7 +61,7 @@ public enum QueueType
    */
   public static QueueType forNumber(int value) {
     switch (value) {
-      case 0: return Agent_Queue_Call;
+      case 0: return AGENT_QUEUE_CALL;
       case 1: return ON_HOLD_CALL;
       case 2: return HQM_CALL;
       default: return null;

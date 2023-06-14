@@ -566,7 +566,7 @@ java.lang.String defaultValue) {
         internalGetSkills(),
         SkillsDefaultEntryHolder.defaultEntry,
         9);
-    if (queueType_ != com.tcn.cloud.api.api.commons.QueueType.Agent_Queue_Call.getNumber()) {
+    if (queueType_ != com.tcn.cloud.api.api.commons.QueueType.AGENT_QUEUE_CALL.getNumber()) {
       output.writeEnum(10, queueType_);
     }
     getUnknownFields().writeTo(output);
@@ -624,7 +624,7 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, skills__);
     }
-    if (queueType_ != com.tcn.cloud.api.api.commons.QueueType.Agent_Queue_Call.getNumber()) {
+    if (queueType_ != com.tcn.cloud.api.api.commons.QueueType.AGENT_QUEUE_CALL.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(10, queueType_);
     }

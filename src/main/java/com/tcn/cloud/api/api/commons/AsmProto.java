@@ -149,7 +149,7 @@ public final class AsmProto {
       "ype\022\t\n\005VOICE\020\000\022\010\n\004OMNI\020\001*U\n\013StatusState\022" +
       "\030\n\024STATUS_STATE_UNKNOWN\020\000\022\013\n\007WAITING\020\001\022\010" +
       "\n\004IDLE\020\002\022\025\n\021CONVERSATION_OPEN\020\003*A\n\tQueue" +
-      "Type\022\024\n\020Agent_Queue_Call\020\000\022\020\n\014ON_HOLD_CA" +
+      "Type\022\024\n\020AGENT_QUEUE_CALL\020\000\022\020\n\014ON_HOLD_CA" +
       "LL\020\001\022\014\n\010HQM_CALL\020\002Bv\n\035com.tcn.cloud.api." +
       "api.commonsB\010AsmProtoP\001\242\002\003ACX\252\002\013Api.Comm" +
       "ons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetad" +
