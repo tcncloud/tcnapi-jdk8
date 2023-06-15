@@ -163,18 +163,14 @@ public final class TicketsProto {
       ".protobuf.TimestampR\rcreatedByDate\"j\n\nEd" +
       "itTicket\022!\n\nticket_sid\030\001 \001(\003B\0020\001R\tticket" +
       "Sid\0229\n\nedit_value\030\002 \001(\0132\032.api.commons.Ed" +
-      "itAttributeR\teditValue\"\304\001\n\rEditAttribute" +
-      "\022\035\n\010col_desc\030\001 \001(\003B\0020\001R\007colDesc\022\031\n\010from_" +
-      "val\030\002 \001(\tR\007fromVal\022\025\n\006to_val\030\003 \001(\tR\005toVa" +
-      "l\022\033\n\tis_edited\030\004 \001(\010R\010isEdited\022E\n\020edit_c" +
-      "olumn_type\030\005 \001(\0162\033.api.commons.EditColum" +
-      "nTypeR\016editColumnType*o\n\016EditColumnType\022" +
-      "\017\n\013NONE_COLUMN\020\000\022\017\n\013DESCRIPTION\020\001\022\n\n\006SKI" +
-      "LLS\020\002\022\n\n\006STATUS\020\003\022\014\n\010DUE_DATE\020\004\022\007\n\003SLA\020\005" +
-      "\022\014\n\010ASSIGNEE\020\006Bz\n\035com.tcn.cloud.api.api." +
-      "commonsB\014TicketsProtoP\001\242\002\003ACX\252\002\013Api.Comm" +
-      "ons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetad" +
-      "ata\352\002\014Api::Commonsb\006proto3"
+      "itAttributeR\teditValue\"}\n\rEditAttribute\022" +
+      "\035\n\010col_desc\030\001 \001(\003B\0020\001R\007colDesc\022\031\n\010from_v" +
+      "al\030\002 \001(\tR\007fromVal\022\025\n\006to_val\030\003 \001(\tR\005toVal" +
+      "\022\033\n\tis_edited\030\004 \001(\010R\010isEditedBz\n\035com.tcn" +
+      ".cloud.api.api.commonsB\014TicketsProtoP\001\242\002" +
+      "\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\C" +
+      "ommons\\GPBMetadata\352\002\014Api::Commonsb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -270,7 +266,7 @@ public final class TicketsProto {
     internal_static_api_commons_EditAttribute_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_EditAttribute_descriptor,
-        new java.lang.String[] { "ColDesc", "FromVal", "ToVal", "IsEdited", "EditColumnType", });
+        new java.lang.String[] { "ColDesc", "FromVal", "ToVal", "IsEdited", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
