@@ -262,23 +262,4 @@ java.lang.String defaultValue);
    */
   boolean getSkillsOrThrow(
       java.lang.String key);
-
-  /**
-   * <pre>
-   * queueType
-   * </pre>
-   *
-   * <code>.api.commons.QueueType queue_type = 10 [json_name = "queueType"];</code>
-   * @return The enum numeric value on the wire for queueType.
-   */
-  int getQueueTypeValue();
-  /**
-   * <pre>
-   * queueType
-   * </pre>
-   *
-   * <code>.api.commons.QueueType queue_type = 10 [json_name = "queueType"];</code>
-   * @return The queueType.
-   */
-  com.tcn.cloud.api.api.commons.QueueType getQueueType();
 }

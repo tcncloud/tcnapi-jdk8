@@ -19,7 +19,6 @@ private static final long serialVersionUID = 0L;
     phoneNumber_ = "";
     callerId_ = "";
     queuedNotificationType_ = 0;
-    queueType_ = 0;
   }
 
   @java.lang.Override
@@ -493,32 +492,6 @@ java.lang.String defaultValue) {
     return map.get(key);
   }
 
-  public static final int QUEUE_TYPE_FIELD_NUMBER = 10;
-  private int queueType_ = 0;
-  /**
-   * <pre>
-   * queueType
-   * </pre>
-   *
-   * <code>.api.commons.QueueType queue_type = 10 [json_name = "queueType"];</code>
-   * @return The enum numeric value on the wire for queueType.
-   */
-  @java.lang.Override public int getQueueTypeValue() {
-    return queueType_;
-  }
-  /**
-   * <pre>
-   * queueType
-   * </pre>
-   *
-   * <code>.api.commons.QueueType queue_type = 10 [json_name = "queueType"];</code>
-   * @return The queueType.
-   */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.QueueType getQueueType() {
-    com.tcn.cloud.api.api.commons.QueueType result = com.tcn.cloud.api.api.commons.QueueType.forNumber(queueType_);
-    return result == null ? com.tcn.cloud.api.api.commons.QueueType.UNRECOGNIZED : result;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -566,9 +539,6 @@ java.lang.String defaultValue) {
         internalGetSkills(),
         SkillsDefaultEntryHolder.defaultEntry,
         9);
-    if (queueType_ != com.tcn.cloud.api.api.commons.QueueType.AGENT_QUEUE_CALL.getNumber()) {
-      output.writeEnum(10, queueType_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -624,10 +594,6 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, skills__);
     }
-    if (queueType_ != com.tcn.cloud.api.api.commons.QueueType.AGENT_QUEUE_CALL.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(10, queueType_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -669,7 +635,6 @@ java.lang.String defaultValue) {
     }
     if (!internalGetSkills().equals(
         other.internalGetSkills())) return false;
-    if (queueType_ != other.queueType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -710,8 +675,6 @@ java.lang.String defaultValue) {
       hash = (37 * hash) + SKILLS_FIELD_NUMBER;
       hash = (53 * hash) + internalGetSkills().hashCode();
     }
-    hash = (37 * hash) + QUEUE_TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + queueType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -890,7 +853,6 @@ java.lang.String defaultValue) {
         callerSidBuilder_ = null;
       }
       internalGetMutableSkills().clear();
-      queueType_ = 0;
       return this;
     }
 
@@ -958,9 +920,6 @@ java.lang.String defaultValue) {
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.skills_ = internalGetSkills();
         result.skills_.makeImmutable();
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.queueType_ = queueType_;
       }
     }
 
@@ -1039,9 +998,6 @@ java.lang.String defaultValue) {
       internalGetMutableSkills().mergeFrom(
           other.internalGetSkills());
       bitField0_ |= 0x00000100;
-      if (other.queueType_ != 0) {
-        setQueueTypeValue(other.getQueueTypeValue());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1127,11 +1083,6 @@ java.lang.String defaultValue) {
               bitField0_ |= 0x00000100;
               break;
             } // case 74
-            case 80: {
-              queueType_ = input.readEnum();
-              bitField0_ |= 0x00000200;
-              break;
-            } // case 80
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2220,79 +2171,6 @@ java.lang.String defaultValue) {
       internalGetMutableSkills().getMutableMap()
           .putAll(values);
       bitField0_ |= 0x00000100;
-      return this;
-    }
-
-    private int queueType_ = 0;
-    /**
-     * <pre>
-     * queueType
-     * </pre>
-     *
-     * <code>.api.commons.QueueType queue_type = 10 [json_name = "queueType"];</code>
-     * @return The enum numeric value on the wire for queueType.
-     */
-    @java.lang.Override public int getQueueTypeValue() {
-      return queueType_;
-    }
-    /**
-     * <pre>
-     * queueType
-     * </pre>
-     *
-     * <code>.api.commons.QueueType queue_type = 10 [json_name = "queueType"];</code>
-     * @param value The enum numeric value on the wire for queueType to set.
-     * @return This builder for chaining.
-     */
-    public Builder setQueueTypeValue(int value) {
-      queueType_ = value;
-      bitField0_ |= 0x00000200;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * queueType
-     * </pre>
-     *
-     * <code>.api.commons.QueueType queue_type = 10 [json_name = "queueType"];</code>
-     * @return The queueType.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.QueueType getQueueType() {
-      com.tcn.cloud.api.api.commons.QueueType result = com.tcn.cloud.api.api.commons.QueueType.forNumber(queueType_);
-      return result == null ? com.tcn.cloud.api.api.commons.QueueType.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * queueType
-     * </pre>
-     *
-     * <code>.api.commons.QueueType queue_type = 10 [json_name = "queueType"];</code>
-     * @param value The queueType to set.
-     * @return This builder for chaining.
-     */
-    public Builder setQueueType(com.tcn.cloud.api.api.commons.QueueType value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000200;
-      queueType_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * queueType
-     * </pre>
-     *
-     * <code>.api.commons.QueueType queue_type = 10 [json_name = "queueType"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearQueueType() {
-      bitField0_ = (bitField0_ & ~0x00000200);
-      queueType_ = 0;
-      onChanged();
       return this;
     }
     @java.lang.Override
