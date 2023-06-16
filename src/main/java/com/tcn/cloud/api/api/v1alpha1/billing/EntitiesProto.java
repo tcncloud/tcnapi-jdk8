@@ -30,11 +30,6 @@ public final class EntitiesProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_billing_UpdateBillingPlanReq_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_billing_UpdateBillingPlanReq_UpdateReq_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_billing_UpdateBillingPlanReq_UpdateReq_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_billing_UpdateBillingPlanRes_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -66,22 +61,19 @@ public final class EntitiesProto {
       "/timestamp.proto\"\023\n\021GetBillingPlanReq\"Q\n" +
       "\021GetBillingPlanRes\022<\n\014billing_plan\030\001 \001(\013" +
       "2\031.api.commons.billing.PlanR\013billingPlan" +
-      "\"\317\001\n\024UpdateBillingPlanReq\022N\n\007updates\030\001 \003" +
-      "(\01324.api.v1alpha1.billing.UpdateBillingP" +
-      "lanReq.UpdateReqR\007updates\032g\n\tUpdateReq\022B" +
-      "\n\016billing_detail\030\001 \001(\0132\033.api.commons.bil" +
-      "ling.DetailR\rbillingDetail\022\026\n\006fields\030\002 \003" +
-      "(\tR\006fields\"T\n\024UpdateBillingPlanRes\022<\n\014bi" +
-      "lling_plan\030\001 \001(\0132\031.api.commons.billing.P" +
-      "lanR\013billingPlan\"N\n\rGetInvoiceReq\022=\n\014inv" +
-      "oice_date\030\001 \001(\0132\032.google.protobuf.Timest" +
-      "ampR\013invoiceDate\"G\n\rGetInvoiceRes\0226\n\007inv" +
-      "oice\030\001 \001(\0132\034.api.commons.billing.Invoice" +
-      "R\007invoiceB\251\001\n&com.tcn.cloud.api.api.v1al" +
-      "pha1.billingB\rEntitiesProtoP\001\242\002\003AVB\252\002\024Ap" +
-      "i.V1alpha1.Billing\312\002\024Api\\V1alpha1\\Billin" +
-      "g\342\002 Api\\V1alpha1\\Billing\\GPBMetadata\352\002\026A" +
-      "pi::V1alpha1::Billingb\006proto3"
+      "\"\\\n\024UpdateBillingPlanReq\022D\n\017billing_deta" +
+      "ils\030\001 \003(\0132\033.api.commons.billing.DetailR\016" +
+      "billingDetails\"T\n\024UpdateBillingPlanRes\022<" +
+      "\n\014billing_plan\030\001 \001(\0132\031.api.commons.billi" +
+      "ng.PlanR\013billingPlan\"N\n\rGetInvoiceReq\022=\n" +
+      "\014invoice_date\030\001 \001(\0132\032.google.protobuf.Ti" +
+      "mestampR\013invoiceDate\"G\n\rGetInvoiceRes\0226\n" +
+      "\007invoice\030\001 \001(\0132\034.api.commons.billing.Inv" +
+      "oiceR\007invoiceB\251\001\n&com.tcn.cloud.api.api." +
+      "v1alpha1.billingB\rEntitiesProtoP\001\242\002\003AVB\252" +
+      "\002\024Api.V1alpha1.Billing\312\002\024Api\\V1alpha1\\Bi" +
+      "lling\342\002 Api\\V1alpha1\\Billing\\GPBMetadata" +
+      "\352\002\026Api::V1alpha1::Billingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -109,13 +101,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_billing_UpdateBillingPlanReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_billing_UpdateBillingPlanReq_descriptor,
-        new java.lang.String[] { "Updates", });
-    internal_static_api_v1alpha1_billing_UpdateBillingPlanReq_UpdateReq_descriptor =
-      internal_static_api_v1alpha1_billing_UpdateBillingPlanReq_descriptor.getNestedTypes().get(0);
-    internal_static_api_v1alpha1_billing_UpdateBillingPlanReq_UpdateReq_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_billing_UpdateBillingPlanReq_UpdateReq_descriptor,
-        new java.lang.String[] { "BillingDetail", "Fields", });
+        new java.lang.String[] { "BillingDetails", });
     internal_static_api_v1alpha1_billing_UpdateBillingPlanRes_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_api_v1alpha1_billing_UpdateBillingPlanRes_fieldAccessorTable = new
