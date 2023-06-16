@@ -50,6 +50,16 @@ public final class AsmProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_QueueCallAdd_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_QueueCallAdd_FormattedSkillsEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_QueueCallAdd_FormattedSkillsEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_QueueCallAdd_SkillsEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_QueueCallAdd_SkillsEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_QueueCallRemove_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -115,26 +125,32 @@ public final class AsmProto {
       "eRes\022/\n\005state\030\001 \001(\0132\027.api.commons.AgentS" +
       "tateH\000R\005state\0227\n\nheart_beat\030\002 \001(\0132\026.api." +
       "commons.KeepAliveH\000R\theartBeatB\025\n\023manage" +
-      "r_agent_state\"\013\n\tKeepAlive\"\227\003\n\014QueueCall" +
+      "r_agent_state\"\013\n\tKeepAlive\"\230\005\n\014QueueCall" +
       "Add\022!\n\014phone_number\030\001 \001(\tR\013phoneNumber\022\033" +
       "\n\tcaller_id\030\002 \001(\tR\010callerId\0229\n\nstart_dat" +
       "e\030\003 \001(\0132\032.google.protobuf.TimestampR\tsta" +
       "rtDate\0227\n\thold_date\030\004 \001(\0132\032.google.proto" +
-      "buf.TimestampR\010holdDate\022\026\n\006skills\030\005 \003(\tR" +
-      "\006skills\022%\n\016agent_specific\030\006 \001(\010R\ragentSp" +
-      "ecific\022]\n\030queued_notification_type\030\007 \001(\016" +
-      "2#.api.commons.QueuedNotificationTypeR\026q" +
-      "ueuedNotificationType\0225\n\ncaller_sid\030\010 \001(" +
-      "\0132\026.api.commons.CallerSidR\tcallerSid\"H\n\017" +
-      "QueueCallRemove\0225\n\ncaller_sid\030\001 \001(\0132\026.ap" +
-      "i.commons.CallerSidR\tcallerSid*(\n\021AsmSub" +
-      "sessionType\022\t\n\005VOICE\020\000\022\010\n\004OMNI\020\001*U\n\013Stat" +
-      "usState\022\030\n\024STATUS_STATE_UNKNOWN\020\000\022\013\n\007WAI" +
-      "TING\020\001\022\010\n\004IDLE\020\002\022\025\n\021CONVERSATION_OPEN\020\003B" +
-      "v\n\035com.tcn.cloud.api.api.commonsB\010AsmPro" +
-      "toP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002" +
-      "\027Api\\Commons\\GPBMetadata\352\002\014Api::Commonsb" +
-      "\006proto3"
+      "buf.TimestampR\010holdDate\022Y\n\020formatted_ski" +
+      "lls\030\005 \003(\0132..api.commons.QueueCallAdd.For" +
+      "mattedSkillsEntryR\017formattedSkills\022%\n\016ag" +
+      "ent_specific\030\006 \001(\010R\ragentSpecific\022]\n\030que" +
+      "ued_notification_type\030\007 \001(\0162#.api.common" +
+      "s.QueuedNotificationTypeR\026queuedNotifica" +
+      "tionType\0225\n\ncaller_sid\030\010 \001(\0132\026.api.commo" +
+      "ns.CallerSidR\tcallerSid\022=\n\006skills\030\t \003(\0132" +
+      "%.api.commons.QueueCallAdd.SkillsEntryR\006" +
+      "skills\032B\n\024FormattedSkillsEntry\022\020\n\003key\030\001 " +
+      "\001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\0329\n\013Sk" +
+      "illsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001" +
+      "(\010R\005value:\0028\001\"H\n\017QueueCallRemove\0225\n\ncall" +
+      "er_sid\030\001 \001(\0132\026.api.commons.CallerSidR\tca" +
+      "llerSid*(\n\021AsmSubsessionType\022\t\n\005VOICE\020\000\022" +
+      "\010\n\004OMNI\020\001*U\n\013StatusState\022\030\n\024STATUS_STATE" +
+      "_UNKNOWN\020\000\022\013\n\007WAITING\020\001\022\010\n\004IDLE\020\002\022\025\n\021CON" +
+      "VERSATION_OPEN\020\003Bv\n\035com.tcn.cloud.api.ap" +
+      "i.commonsB\010AsmProtoP\001\242\002\003ACX\252\002\013Api.Common" +
+      "s\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetadat" +
+      "a\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -184,7 +200,19 @@ public final class AsmProto {
     internal_static_api_commons_QueueCallAdd_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_QueueCallAdd_descriptor,
-        new java.lang.String[] { "PhoneNumber", "CallerId", "StartDate", "HoldDate", "Skills", "AgentSpecific", "QueuedNotificationType", "CallerSid", });
+        new java.lang.String[] { "PhoneNumber", "CallerId", "StartDate", "HoldDate", "FormattedSkills", "AgentSpecific", "QueuedNotificationType", "CallerSid", "Skills", });
+    internal_static_api_commons_QueueCallAdd_FormattedSkillsEntry_descriptor =
+      internal_static_api_commons_QueueCallAdd_descriptor.getNestedTypes().get(0);
+    internal_static_api_commons_QueueCallAdd_FormattedSkillsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_QueueCallAdd_FormattedSkillsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_api_commons_QueueCallAdd_SkillsEntry_descriptor =
+      internal_static_api_commons_QueueCallAdd_descriptor.getNestedTypes().get(1);
+    internal_static_api_commons_QueueCallAdd_SkillsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_QueueCallAdd_SkillsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_api_commons_QueueCallRemove_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_api_commons_QueueCallRemove_fieldAccessorTable = new
