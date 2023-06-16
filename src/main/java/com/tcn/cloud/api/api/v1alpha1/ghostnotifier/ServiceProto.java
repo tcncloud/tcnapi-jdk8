@@ -29,24 +29,25 @@ public final class ServiceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n(api/v1alpha1/ghostnotifier/service.pro" +
-      "to\022\032api.v1alpha1.ghostnotifier\032\037api/comm" +
-      "ons/ghostnotifier.proto\032\034google/api/anno" +
-      "tations.proto\"\026\n\024ListNotificationsReq2\307\001" +
-      "\n\020GhostNotifierApi\022\262\001\n\021ListNotifications" +
-      "\0220.api.v1alpha1.ghostnotifier.ListNotifi" +
-      "cationsReq\032\036.api.commons.GhostNotificati" +
-      "on\"I\202\323\344\223\002C\">/api/v1alpha1/ghostnotifier/" +
-      "ghostnotifierapi/listnotifications:\001*0\001B" +
-      "\306\001\n,com.tcn.cloud.api.api.v1alpha1.ghost" +
-      "notifierB\014ServiceProtoP\001\242\002\003AVG\252\002\032Api.V1a" +
-      "lpha1.Ghostnotifier\312\002\032Api\\V1alpha1\\Ghost" +
-      "notifier\342\002&Api\\V1alpha1\\Ghostnotifier\\GP" +
-      "BMetadata\352\002\034Api::V1alpha1::Ghostnotifier" +
-      "b\006proto3"
+      "to\022\032api.v1alpha1.ghostnotifier\032\027annotati" +
+      "ons/authz.proto\032\037api/commons/ghostnotifi" +
+      "er.proto\032\034google/api/annotations.proto\"\026" +
+      "\n\024ListNotificationsReq2\316\001\n\020GhostNotifier" +
+      "Api\022\271\001\n\021ListNotifications\0220.api.v1alpha1" +
+      ".ghostnotifier.ListNotificationsReq\032\036.ap" +
+      "i.commons.GhostNotification\"P\272\270\221\002\002\030\001\202\323\344\223" +
+      "\002C\">/api/v1alpha1/ghostnotifier/ghostnot" +
+      "ifierapi/listnotifications:\001*0\001B\306\001\n,com." +
+      "tcn.cloud.api.api.v1alpha1.ghostnotifier" +
+      "B\014ServiceProtoP\001\242\002\003AVG\252\002\032Api.V1alpha1.Gh" +
+      "ostnotifier\312\002\032Api\\V1alpha1\\Ghostnotifier" +
+      "\342\002&Api\\V1alpha1\\Ghostnotifier\\GPBMetadat" +
+      "a\352\002\034Api::V1alpha1::Ghostnotifierb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.GhostnotifierProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         });
@@ -58,9 +59,11 @@ public final class ServiceProto {
         new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.tcn.cloud.api.api.commons.GhostnotifierProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

@@ -80,6 +80,99 @@ public final class LearnGrpc {
     return getContentMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ExportManyReq,
+      com.tcn.cloud.api.api.v0alpha.ExportRes> getExportManyMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ExportMany",
+      requestType = com.tcn.cloud.api.api.v0alpha.ExportManyReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ExportRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ExportManyReq,
+      com.tcn.cloud.api.api.v0alpha.ExportRes> getExportManyMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ExportManyReq, com.tcn.cloud.api.api.v0alpha.ExportRes> getExportManyMethod;
+    if ((getExportManyMethod = LearnGrpc.getExportManyMethod) == null) {
+      synchronized (LearnGrpc.class) {
+        if ((getExportManyMethod = LearnGrpc.getExportManyMethod) == null) {
+          LearnGrpc.getExportManyMethod = getExportManyMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ExportManyReq, com.tcn.cloud.api.api.v0alpha.ExportRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ExportMany"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ExportManyReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ExportRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("ExportMany"))
+              .build();
+        }
+      }
+    }
+    return getExportManyMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SearchContentReq,
+      com.tcn.cloud.api.api.v0alpha.SearchRes> getSearchContentMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SearchContent",
+      requestType = com.tcn.cloud.api.api.v0alpha.SearchContentReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.SearchRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SearchContentReq,
+      com.tcn.cloud.api.api.v0alpha.SearchRes> getSearchContentMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SearchContentReq, com.tcn.cloud.api.api.v0alpha.SearchRes> getSearchContentMethod;
+    if ((getSearchContentMethod = LearnGrpc.getSearchContentMethod) == null) {
+      synchronized (LearnGrpc.class) {
+        if ((getSearchContentMethod = LearnGrpc.getSearchContentMethod) == null) {
+          LearnGrpc.getSearchContentMethod = getSearchContentMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SearchContentReq, com.tcn.cloud.api.api.v0alpha.SearchRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SearchContent"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.SearchContentReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.SearchRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("SearchContent"))
+              .build();
+        }
+      }
+    }
+    return getSearchContentMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.StandaloneReq,
+      com.tcn.cloud.api.api.v0alpha.StandaloneRes> getStandaloneMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Standalone",
+      requestType = com.tcn.cloud.api.api.v0alpha.StandaloneReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.StandaloneRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.StandaloneReq,
+      com.tcn.cloud.api.api.v0alpha.StandaloneRes> getStandaloneMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.StandaloneReq, com.tcn.cloud.api.api.v0alpha.StandaloneRes> getStandaloneMethod;
+    if ((getStandaloneMethod = LearnGrpc.getStandaloneMethod) == null) {
+      synchronized (LearnGrpc.class) {
+        if ((getStandaloneMethod = LearnGrpc.getStandaloneMethod) == null) {
+          LearnGrpc.getStandaloneMethod = getStandaloneMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.StandaloneReq, com.tcn.cloud.api.api.v0alpha.StandaloneRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Standalone"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.StandaloneReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.StandaloneRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("Standalone"))
+              .build();
+        }
+      }
+    }
+    return getStandaloneMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ContentEditorDataReq,
       com.tcn.cloud.api.api.v0alpha.ContentEditorDataRes> getContentEditorDataMethod;
 
@@ -142,37 +235,6 @@ public final class LearnGrpc {
     return getUpdateMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ExportManyReq,
-      com.tcn.cloud.api.api.v0alpha.ExportRes> getExportManyMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ExportMany",
-      requestType = com.tcn.cloud.api.api.v0alpha.ExportManyReq.class,
-      responseType = com.tcn.cloud.api.api.v0alpha.ExportRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ExportManyReq,
-      com.tcn.cloud.api.api.v0alpha.ExportRes> getExportManyMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ExportManyReq, com.tcn.cloud.api.api.v0alpha.ExportRes> getExportManyMethod;
-    if ((getExportManyMethod = LearnGrpc.getExportManyMethod) == null) {
-      synchronized (LearnGrpc.class) {
-        if ((getExportManyMethod = LearnGrpc.getExportManyMethod) == null) {
-          LearnGrpc.getExportManyMethod = getExportManyMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ExportManyReq, com.tcn.cloud.api.api.v0alpha.ExportRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ExportMany"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.ExportManyReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.ExportRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("ExportMany"))
-              .build();
-        }
-      }
-    }
-    return getExportManyMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq,
       com.tcn.cloud.api.api.v0alpha.StoreStaticImageRes> getStoreStaticImageMethod;
 
@@ -202,37 +264,6 @@ public final class LearnGrpc {
       }
     }
     return getStoreStaticImageMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SearchContentReq,
-      com.tcn.cloud.api.api.v0alpha.SearchRes> getSearchContentMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "SearchContent",
-      requestType = com.tcn.cloud.api.api.v0alpha.SearchContentReq.class,
-      responseType = com.tcn.cloud.api.api.v0alpha.SearchRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SearchContentReq,
-      com.tcn.cloud.api.api.v0alpha.SearchRes> getSearchContentMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SearchContentReq, com.tcn.cloud.api.api.v0alpha.SearchRes> getSearchContentMethod;
-    if ((getSearchContentMethod = LearnGrpc.getSearchContentMethod) == null) {
-      synchronized (LearnGrpc.class) {
-        if ((getSearchContentMethod = LearnGrpc.getSearchContentMethod) == null) {
-          LearnGrpc.getSearchContentMethod = getSearchContentMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SearchContentReq, com.tcn.cloud.api.api.v0alpha.SearchRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SearchContent"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.SearchContentReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.SearchRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("SearchContent"))
-              .build();
-        }
-      }
-    }
-    return getSearchContentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotReq,
@@ -266,35 +297,35 @@ public final class LearnGrpc {
     return getUploadDynamicScreenshotMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.StandaloneReq,
-      com.tcn.cloud.api.api.v0alpha.StandaloneRes> getStandaloneMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq,
+      com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes> getDeleteStandaloneMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "Standalone",
-      requestType = com.tcn.cloud.api.api.v0alpha.StandaloneReq.class,
-      responseType = com.tcn.cloud.api.api.v0alpha.StandaloneRes.class,
+      fullMethodName = SERVICE_NAME + '/' + "DeleteStandalone",
+      requestType = com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.StandaloneReq,
-      com.tcn.cloud.api.api.v0alpha.StandaloneRes> getStandaloneMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.StandaloneReq, com.tcn.cloud.api.api.v0alpha.StandaloneRes> getStandaloneMethod;
-    if ((getStandaloneMethod = LearnGrpc.getStandaloneMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq,
+      com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes> getDeleteStandaloneMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq, com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes> getDeleteStandaloneMethod;
+    if ((getDeleteStandaloneMethod = LearnGrpc.getDeleteStandaloneMethod) == null) {
       synchronized (LearnGrpc.class) {
-        if ((getStandaloneMethod = LearnGrpc.getStandaloneMethod) == null) {
-          LearnGrpc.getStandaloneMethod = getStandaloneMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.StandaloneReq, com.tcn.cloud.api.api.v0alpha.StandaloneRes>newBuilder()
+        if ((getDeleteStandaloneMethod = LearnGrpc.getDeleteStandaloneMethod) == null) {
+          LearnGrpc.getDeleteStandaloneMethod = getDeleteStandaloneMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq, com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Standalone"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteStandalone"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.StandaloneReq.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.StandaloneRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("Standalone"))
+                  com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("DeleteStandalone"))
               .build();
         }
       }
     }
-    return getStandaloneMethod;
+    return getDeleteStandaloneMethod;
   }
 
   /**
@@ -349,6 +380,9 @@ public final class LearnGrpc {
   public interface AsyncService {
 
     /**
+     * <pre>
+     * check if learning page already exists
+     * </pre>
      */
     default void exist(com.tcn.cloud.api.api.v0alpha.ExistReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExistRes> responseObserver) {
@@ -356,24 +390,13 @@ public final class LearnGrpc {
     }
 
     /**
+     * <pre>
+     * retreive content from learning pages
+     * </pre>
      */
     default void content(com.tcn.cloud.api.api.v0alpha.ContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ContentRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getContentMethod(), responseObserver);
-    }
-
-    /**
-     */
-    default void contentEditorData(com.tcn.cloud.api.api.v0alpha.ContentEditorDataReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ContentEditorDataRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getContentEditorDataMethod(), responseObserver);
-    }
-
-    /**
-     */
-    default void update(com.tcn.cloud.api.api.v0alpha.UpdateReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -388,22 +411,52 @@ public final class LearnGrpc {
 
     /**
      * <pre>
-     * upload url for static images
-     * </pre>
-     */
-    default void storeStaticImage(com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StoreStaticImageRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStoreStaticImageMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * search content in learning pages
      * </pre>
      */
     default void searchContent(com.tcn.cloud.api.api.v0alpha.SearchContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchContentMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * get standalone articles from learning pages
+     * </pre>
+     */
+    default void standalone(com.tcn.cloud.api.api.v0alpha.StandaloneReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StandaloneRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStandaloneMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * retrieve user who edited the content last
+     * </pre>
+     */
+    default void contentEditorData(com.tcn.cloud.api.api.v0alpha.ContentEditorDataReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ContentEditorDataRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getContentEditorDataMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * update contents for learning pages
+     * </pre>
+     */
+    default void update(com.tcn.cloud.api.api.v0alpha.UpdateReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * upload url for static images
+     * </pre>
+     */
+    default void storeStaticImage(com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StoreStaticImageRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStoreStaticImageMethod(), responseObserver);
     }
 
     /**
@@ -418,12 +471,12 @@ public final class LearnGrpc {
 
     /**
      * <pre>
-     * get standalone articles from learning pages
+     * delete standalone articles from learning pages
      * </pre>
      */
-    default void standalone(com.tcn.cloud.api.api.v0alpha.StandaloneReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StandaloneRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStandaloneMethod(), responseObserver);
+    default void deleteStandalone(com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteStandaloneMethod(), responseObserver);
     }
   }
 
@@ -461,6 +514,9 @@ public final class LearnGrpc {
     }
 
     /**
+     * <pre>
+     * check if learning page already exists
+     * </pre>
      */
     public void exist(com.tcn.cloud.api.api.v0alpha.ExistReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExistRes> responseObserver) {
@@ -469,27 +525,14 @@ public final class LearnGrpc {
     }
 
     /**
+     * <pre>
+     * retreive content from learning pages
+     * </pre>
      */
     public void content(com.tcn.cloud.api.api.v0alpha.ContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ContentRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getContentMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void contentEditorData(com.tcn.cloud.api.api.v0alpha.ContentEditorDataReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ContentEditorDataRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getContentEditorDataMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void update(com.tcn.cloud.api.api.v0alpha.UpdateReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -505,17 +548,6 @@ public final class LearnGrpc {
 
     /**
      * <pre>
-     * upload url for static images
-     * </pre>
-     */
-    public void storeStaticImage(com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StoreStaticImageRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getStoreStaticImageMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * search content in learning pages
      * </pre>
      */
@@ -523,6 +555,50 @@ public final class LearnGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSearchContentMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * get standalone articles from learning pages
+     * </pre>
+     */
+    public void standalone(com.tcn.cloud.api.api.v0alpha.StandaloneReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StandaloneRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getStandaloneMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * retrieve user who edited the content last
+     * </pre>
+     */
+    public void contentEditorData(com.tcn.cloud.api.api.v0alpha.ContentEditorDataReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ContentEditorDataRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getContentEditorDataMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * update contents for learning pages
+     * </pre>
+     */
+    public void update(com.tcn.cloud.api.api.v0alpha.UpdateReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * upload url for static images
+     * </pre>
+     */
+    public void storeStaticImage(com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StoreStaticImageRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getStoreStaticImageMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -538,13 +614,13 @@ public final class LearnGrpc {
 
     /**
      * <pre>
-     * get standalone articles from learning pages
+     * delete standalone articles from learning pages
      * </pre>
      */
-    public void standalone(com.tcn.cloud.api.api.v0alpha.StandaloneReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StandaloneRes> responseObserver) {
+    public void deleteStandalone(com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getStandaloneMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getDeleteStandaloneMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -568,6 +644,9 @@ public final class LearnGrpc {
     }
 
     /**
+     * <pre>
+     * check if learning page already exists
+     * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ExistRes exist(com.tcn.cloud.api.api.v0alpha.ExistReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -575,24 +654,13 @@ public final class LearnGrpc {
     }
 
     /**
+     * <pre>
+     * retreive content from learning pages
+     * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ContentRes content(com.tcn.cloud.api.api.v0alpha.ContentReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getContentMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.tcn.cloud.api.api.v0alpha.ContentEditorDataRes contentEditorData(com.tcn.cloud.api.api.v0alpha.ContentEditorDataReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getContentEditorDataMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.tcn.cloud.api.api.v0alpha.UpdateRes update(com.tcn.cloud.api.api.v0alpha.UpdateReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
     /**
@@ -607,22 +675,52 @@ public final class LearnGrpc {
 
     /**
      * <pre>
-     * upload url for static images
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v0alpha.StoreStaticImageRes storeStaticImage(com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getStoreStaticImageMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
      * search content in learning pages
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SearchRes searchContent(com.tcn.cloud.api.api.v0alpha.SearchContentReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSearchContentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * get standalone articles from learning pages
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.StandaloneRes standalone(com.tcn.cloud.api.api.v0alpha.StandaloneReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getStandaloneMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * retrieve user who edited the content last
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.ContentEditorDataRes contentEditorData(com.tcn.cloud.api.api.v0alpha.ContentEditorDataReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getContentEditorDataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * update contents for learning pages
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.UpdateRes update(com.tcn.cloud.api.api.v0alpha.UpdateReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * upload url for static images
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.StoreStaticImageRes storeStaticImage(com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getStoreStaticImageMethod(), getCallOptions(), request);
     }
 
     /**
@@ -637,12 +735,12 @@ public final class LearnGrpc {
 
     /**
      * <pre>
-     * get standalone articles from learning pages
+     * delete standalone articles from learning pages
      * </pre>
      */
-    public com.tcn.cloud.api.api.v0alpha.StandaloneRes standalone(com.tcn.cloud.api.api.v0alpha.StandaloneReq request) {
+    public com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes deleteStandalone(com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getStandaloneMethod(), getCallOptions(), request);
+          getChannel(), getDeleteStandaloneMethod(), getCallOptions(), request);
     }
   }
 
@@ -666,6 +764,9 @@ public final class LearnGrpc {
     }
 
     /**
+     * <pre>
+     * check if learning page already exists
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ExistRes> exist(
         com.tcn.cloud.api.api.v0alpha.ExistReq request) {
@@ -674,27 +775,14 @@ public final class LearnGrpc {
     }
 
     /**
+     * <pre>
+     * retreive content from learning pages
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ContentRes> content(
         com.tcn.cloud.api.api.v0alpha.ContentReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getContentMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ContentEditorDataRes> contentEditorData(
-        com.tcn.cloud.api.api.v0alpha.ContentEditorDataReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getContentEditorDataMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateRes> update(
-        com.tcn.cloud.api.api.v0alpha.UpdateReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
     /**
@@ -710,17 +798,6 @@ public final class LearnGrpc {
 
     /**
      * <pre>
-     * upload url for static images
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.StoreStaticImageRes> storeStaticImage(
-        com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getStoreStaticImageMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * search content in learning pages
      * </pre>
      */
@@ -728,6 +805,50 @@ public final class LearnGrpc {
         com.tcn.cloud.api.api.v0alpha.SearchContentReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSearchContentMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * get standalone articles from learning pages
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.StandaloneRes> standalone(
+        com.tcn.cloud.api.api.v0alpha.StandaloneReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getStandaloneMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * retrieve user who edited the content last
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ContentEditorDataRes> contentEditorData(
+        com.tcn.cloud.api.api.v0alpha.ContentEditorDataReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getContentEditorDataMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * update contents for learning pages
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateRes> update(
+        com.tcn.cloud.api.api.v0alpha.UpdateReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * upload url for static images
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.StoreStaticImageRes> storeStaticImage(
+        com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getStoreStaticImageMethod(), getCallOptions()), request);
     }
 
     /**
@@ -743,25 +864,26 @@ public final class LearnGrpc {
 
     /**
      * <pre>
-     * get standalone articles from learning pages
+     * delete standalone articles from learning pages
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.StandaloneRes> standalone(
-        com.tcn.cloud.api.api.v0alpha.StandaloneReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes> deleteStandalone(
+        com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getStandaloneMethod(), getCallOptions()), request);
+          getChannel().newCall(getDeleteStandaloneMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_EXIST = 0;
   private static final int METHODID_CONTENT = 1;
-  private static final int METHODID_CONTENT_EDITOR_DATA = 2;
-  private static final int METHODID_UPDATE = 3;
-  private static final int METHODID_EXPORT_MANY = 4;
-  private static final int METHODID_STORE_STATIC_IMAGE = 5;
-  private static final int METHODID_SEARCH_CONTENT = 6;
-  private static final int METHODID_UPLOAD_DYNAMIC_SCREENSHOT = 7;
-  private static final int METHODID_STANDALONE = 8;
+  private static final int METHODID_EXPORT_MANY = 2;
+  private static final int METHODID_SEARCH_CONTENT = 3;
+  private static final int METHODID_STANDALONE = 4;
+  private static final int METHODID_CONTENT_EDITOR_DATA = 5;
+  private static final int METHODID_UPDATE = 6;
+  private static final int METHODID_STORE_STATIC_IMAGE = 7;
+  private static final int METHODID_UPLOAD_DYNAMIC_SCREENSHOT = 8;
+  private static final int METHODID_DELETE_STANDALONE = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -788,6 +910,18 @@ public final class LearnGrpc {
           serviceImpl.content((com.tcn.cloud.api.api.v0alpha.ContentReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ContentRes>) responseObserver);
           break;
+        case METHODID_EXPORT_MANY:
+          serviceImpl.exportMany((com.tcn.cloud.api.api.v0alpha.ExportManyReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExportRes>) responseObserver);
+          break;
+        case METHODID_SEARCH_CONTENT:
+          serviceImpl.searchContent((com.tcn.cloud.api.api.v0alpha.SearchContentReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchRes>) responseObserver);
+          break;
+        case METHODID_STANDALONE:
+          serviceImpl.standalone((com.tcn.cloud.api.api.v0alpha.StandaloneReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StandaloneRes>) responseObserver);
+          break;
         case METHODID_CONTENT_EDITOR_DATA:
           serviceImpl.contentEditorData((com.tcn.cloud.api.api.v0alpha.ContentEditorDataReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ContentEditorDataRes>) responseObserver);
@@ -796,25 +930,17 @@ public final class LearnGrpc {
           serviceImpl.update((com.tcn.cloud.api.api.v0alpha.UpdateReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateRes>) responseObserver);
           break;
-        case METHODID_EXPORT_MANY:
-          serviceImpl.exportMany((com.tcn.cloud.api.api.v0alpha.ExportManyReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExportRes>) responseObserver);
-          break;
         case METHODID_STORE_STATIC_IMAGE:
           serviceImpl.storeStaticImage((com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StoreStaticImageRes>) responseObserver);
-          break;
-        case METHODID_SEARCH_CONTENT:
-          serviceImpl.searchContent((com.tcn.cloud.api.api.v0alpha.SearchContentReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchRes>) responseObserver);
           break;
         case METHODID_UPLOAD_DYNAMIC_SCREENSHOT:
           serviceImpl.uploadDynamicScreenshot((com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotRes>) responseObserver);
           break;
-        case METHODID_STANDALONE:
-          serviceImpl.standalone((com.tcn.cloud.api.api.v0alpha.StandaloneReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StandaloneRes>) responseObserver);
+        case METHODID_DELETE_STANDALONE:
+          serviceImpl.deleteStandalone((com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -849,6 +975,27 @@ public final class LearnGrpc {
               com.tcn.cloud.api.api.v0alpha.ContentRes>(
                 service, METHODID_CONTENT)))
         .addMethod(
+          getExportManyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ExportManyReq,
+              com.tcn.cloud.api.api.v0alpha.ExportRes>(
+                service, METHODID_EXPORT_MANY)))
+        .addMethod(
+          getSearchContentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SearchContentReq,
+              com.tcn.cloud.api.api.v0alpha.SearchRes>(
+                service, METHODID_SEARCH_CONTENT)))
+        .addMethod(
+          getStandaloneMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.StandaloneReq,
+              com.tcn.cloud.api.api.v0alpha.StandaloneRes>(
+                service, METHODID_STANDALONE)))
+        .addMethod(
           getContentEditorDataMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -863,26 +1010,12 @@ public final class LearnGrpc {
               com.tcn.cloud.api.api.v0alpha.UpdateRes>(
                 service, METHODID_UPDATE)))
         .addMethod(
-          getExportManyMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ExportManyReq,
-              com.tcn.cloud.api.api.v0alpha.ExportRes>(
-                service, METHODID_EXPORT_MANY)))
-        .addMethod(
           getStoreStaticImageMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq,
               com.tcn.cloud.api.api.v0alpha.StoreStaticImageRes>(
                 service, METHODID_STORE_STATIC_IMAGE)))
-        .addMethod(
-          getSearchContentMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.SearchContentReq,
-              com.tcn.cloud.api.api.v0alpha.SearchRes>(
-                service, METHODID_SEARCH_CONTENT)))
         .addMethod(
           getUploadDynamicScreenshotMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -891,12 +1024,12 @@ public final class LearnGrpc {
               com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotRes>(
                 service, METHODID_UPLOAD_DYNAMIC_SCREENSHOT)))
         .addMethod(
-          getStandaloneMethod(),
+          getDeleteStandaloneMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.StandaloneReq,
-              com.tcn.cloud.api.api.v0alpha.StandaloneRes>(
-                service, METHODID_STANDALONE)))
+              com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq,
+              com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes>(
+                service, METHODID_DELETE_STANDALONE)))
         .build();
   }
 
@@ -947,13 +1080,14 @@ public final class LearnGrpc {
               .setSchemaDescriptor(new LearnFileDescriptorSupplier())
               .addMethod(getExistMethod())
               .addMethod(getContentMethod())
+              .addMethod(getExportManyMethod())
+              .addMethod(getSearchContentMethod())
+              .addMethod(getStandaloneMethod())
               .addMethod(getContentEditorDataMethod())
               .addMethod(getUpdateMethod())
-              .addMethod(getExportManyMethod())
               .addMethod(getStoreStaticImageMethod())
-              .addMethod(getSearchContentMethod())
               .addMethod(getUploadDynamicScreenshotMethod())
-              .addMethod(getStandaloneMethod())
+              .addMethod(getDeleteStandaloneMethod())
               .build();
         }
       }

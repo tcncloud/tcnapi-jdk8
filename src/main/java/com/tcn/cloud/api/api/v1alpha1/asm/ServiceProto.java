@@ -234,246 +234,250 @@ public final class ServiceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\036api/v1alpha1/asm/service.proto\022\020api.v1" +
-      "alpha1.asm\032\025api/commons/acd.proto\032\025api/c" +
-      "ommons/asm.proto\032\033api/commons/auth/user." +
-      "proto\032\027api/commons/event.proto\032\035api/comm" +
-      "ons/omnichannel.proto\032\034google/api/annota" +
-      "tions.proto\032 google/protobuf/field_mask." +
-      "proto\032\037google/protobuf/timestamp.proto\"\204" +
-      "\002\n\020CreateSessionReq\022$\n\016hunt_group_sid\030\001 " +
-      "\001(\003R\014huntGroupSid\022F\n\006skills\030\002 \003(\0132..api." +
-      "v1alpha1.asm.CreateSessionReq.SkillsEntr" +
-      "yR\006skills\022G\n\017subsession_type\030\003 \001(\0162\036.api" +
-      ".commons.AsmSubsessionTypeR\016subsessionTy" +
-      "pe\0329\n\013SkillsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005v" +
-      "alue\030\002 \001(\003R\005value:\0028\001\"\272\001\n\020CreateSessionR" +
-      "es\022&\n\017asm_session_sid\030\001 \001(\003R\rasmSessionS" +
-      "id\022*\n\021voice_session_sid\030\002 \001(\003R\017voiceSess" +
-      "ionSid\022R\n\022voice_registration\030\003 \001(\0132#.api" +
-      ".v1alpha1.asm.VoiceRegistrationR\021voiceRe" +
-      "gistration\"\344\001\n\021VoiceRegistration\022\032\n\010user" +
-      "name\030\002 \001(\tR\010username\022\032\n\010password\030\003 \001(\tR\010" +
-      "password\022\031\n\010dial_url\030\004 \001(\tR\007dialUrl\022\035\n\np" +
-      "stn_phone\030\005 \001(\tR\tpstnPhone\022*\n\021default_ti" +
-      "me_zone\030\006 \001(\tR\017defaultTimeZone\0221\n\024expira" +
-      "tion_timestamp\030\007 \001(\003R\023expirationTimestam" +
-      "p\"\\\n\023StreamAgentStateReq\022&\n\017asm_session_" +
-      "sid\030\001 \001(\003R\rasmSessionSid\022\035\n\nkeep_alive\030\002" +
-      " \001(\010R\tkeepAlive\"\034\n\032ManagerStreamAgentSta" +
-      "teReq\"\377\002\n\014GetStatusReq\022&\n\017asm_session_si" +
-      "d\030\001 \001(\003R\rasmSessionSid\022,\n\022perform_keep_a" +
-      "live\030\002 \001(\010R\020performKeepAlive\0227\n\030perform_" +
-      "get_queued_calls\030\003 \001(\010R\025performGetQueued" +
-      "Calls\022.\n\023perform_get_message\030\004 \001(\010R\021perf" +
-      "ormGetMessage\022:\n\031minimum_message_timesta" +
-      "mp\030\005 \001(\003R\027minimumMessageTimestamp\022\026\n\006ski" +
-      "lls\030\006 \003(\tR\006skills\022*\n\006events\030\007 \003(\0132\022.api." +
-      "commons.EventR\006events\0220\n\024agent_pbx_exten" +
-      "sions\030\010 \003(\tR\022agentPbxExtensions\"P\n\014GetSt" +
-      "atusRes\022@\n\014voice_status\030\001 \001(\0132\035.api.v1al" +
-      "pha1.asm.VoiceStatusR\013voiceStatus\"\361\006\n\013Vo" +
-      "iceStatus\022\026\n\006status\030\002 \001(\003R\006status\022>\n\013sta" +
-      "tus_desc\030\003 \001(\0162\035.api.commons.AgentStatus" +
-      ".EnumR\nstatusDesc\022\026\n\006paused\030\004 \001(\010R\006pause" +
-      "d\022\024\n\005queue\030\005 \001(\tR\005queue\022,\n\022current_sessi" +
-      "on_id\030\006 \001(\003R\020currentSessionId\022,\n\022last_st" +
-      "atus_change\030\007 \001(\003R\020lastStatusChange\022\036\n\nm" +
-      "onitoring\030\010 \001(\010R\nmonitoring\022\037\n\013calls_cou" +
-      "nt\030\t \001(\003R\ncallsCount\022\"\n\rlast_sip_code\030\n " +
-      "\001(\003R\013lastSipCode\0224\n\027agent_peer_is_lost_c" +
-      "all\030\013 \001(\010R\023agentPeerIsLostCall\022\032\n\010disabl" +
-      "ed\030\014 \001(\010R\010disabled\0220\n\024keep_alive_succeed" +
-      "ed\030\r \001(\010R\022keepAliveSucceeded\022\030\n\007message\030" +
-      "\016 \001(\tR\007message\022+\n\021message_timestamp\030\017 \001(" +
-      "\003R\020messageTimestamp\022@\n\014queued_calls\030\020 \001(" +
-      "\0132\035.api.v1alpha1.asm.QueuedCallsR\013queued" +
-      "Calls\0220\n\024caller_was_suspended\030\021 \001(\010R\022cal" +
-      "lerWasSuspended\022F\n\020transfer_members\030\022 \003(" +
-      "\0132\033.api.commons.TransferMemberR\017transfer" +
-      "Members\022-\n\005alert\030\023 \001(\0132\027.api.commons.Age" +
-      "ntAlertR\005alert\022?\n\035agent_peer_is_direct_t" +
-      "o_agent\030\024 \001(\010R\030agentPeerIsDirectToAgent\022" +
-      "$\n\016agent_is_muted\030\025 \001(\010R\014agentIsMuted\"\275\005" +
-      "\n\013QueuedCalls\022X\n\021agent_queue_calls\030\020 \003(\013" +
-      "2,.api.v1alpha1.asm.QueuedCalls.QueuedCa" +
-      "llDataR\017agentQueueCalls\022P\n\ron_hold_calls" +
-      "\030\021 \003(\0132,.api.v1alpha1.asm.QueuedCalls.Qu" +
-      "euedCallDataR\013onHoldCalls\022I\n\thqm_calls\030\022" +
-      " \003(\0132,.api.v1alpha1.asm.QueuedCalls.Queu" +
-      "edCallDataR\010hqmCalls\032\266\003\n\016QueuedCallData\022" +
-      "\031\n\010call_sid\030\001 \001(\003R\007callSid\022!\n\014phone_numb" +
-      "er\030\002 \001(\tR\013phoneNumber\022\033\n\tcaller_id\030\003 \001(\t" +
-      "R\010callerId\0227\n\tcall_type\030\004 \001(\0162\032.api.comm" +
-      "ons.CallType.EnumR\010callType\0229\n\nstart_dat" +
-      "e\030\005 \001(\0132\032.google.protobuf.TimestampR\tsta" +
-      "rtDate\0227\n\thold_date\030\006 \001(\0132\032.google.proto" +
-      "buf.TimestampR\010holdDate\022\026\n\006skills\030\007 \003(\tR" +
-      "\006skills\022%\n\016agent_specific\030\010 \001(\010R\ragentSp" +
-      "ecific\022]\n\030queued_notification_type\030\t \001(\016" +
-      "2#.api.commons.QueuedNotificationTypeR\026q" +
-      "ueuedNotificationType\"O\n\rEndSessionReq\022&" +
-      "\n\017asm_session_sid\030\001 \001(\003R\rasmSessionSid\022\026" +
-      "\n\006reason\030\002 \001(\tR\006reason\"\017\n\rEndSessionRes\"" +
-      "\026\n\024GetCurrentSessionReq\"\205\002\n\nAsmSession\022&" +
-      "\n\017asm_session_sid\030\001 \001(\003R\rasmSessionSid\022F" +
-      "\n\021asm_session_start\030\004 \001(\0132\032.google.proto" +
-      "buf.TimestampR\017asmSessionStart\022B\n\017asm_se" +
-      "ssion_end\030\005 \001(\0132\032.google.protobuf.Timest" +
-      "ampR\rasmSessionEnd\022C\n\rvoice_session\030\006 \001(" +
-      "\0132\036.api.v1alpha1.asm.VoiceSessionR\014voice" +
-      "Session\"\316\001\n\014VoiceSession\022*\n\021voice_sessio" +
-      "n_sid\030\001 \001(\003R\017voiceSessionSid\022J\n\023voice_se" +
-      "ssion_start\030\002 \001(\0132\032.google.protobuf.Time" +
-      "stampR\021voiceSessionStart\022F\n\021voice_sessio" +
-      "n_end\030\003 \001(\0132\032.google.protobuf.TimestampR" +
-      "\017voiceSessionEnd\"\254\002\n\023SwitchSubsessionReq" +
-      "\022&\n\017asm_session_sid\030\001 \001(\003R\rasmSessionSid" +
-      "\022$\n\016hunt_group_sid\030\002 \001(\003R\014huntGroupSid\022I" +
-      "\n\006skills\030\003 \003(\01321.api.v1alpha1.asm.Switch" +
-      "SubsessionReq.SkillsEntryR\006skills\022A\n\014cha" +
-      "nnel_type\030\004 \001(\0162\036.api.commons.AsmSubsess" +
-      "ionTypeR\013channelType\0329\n\013SkillsEntry\022\020\n\003k" +
-      "ey\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005value:\0028\001\"" +
-      "\225\001\n\023SwitchSubsessionRes\022*\n\021voice_session" +
-      "_sid\030\001 \001(\003R\017voiceSessionSid\022R\n\022voice_reg" +
-      "istration\030\002 \001(\0132#.api.v1alpha1.asm.Voice" +
-      "RegistrationR\021voiceRegistration\"\326\010\n\014Conv" +
-      "ersation\022-\n\020conversation_sid\030\006 \001(\003B\0020\001R\017" +
-      "conversationSid\022V\n\031conversation_created_" +
-      "time\030\007 \001(\0132\032.google.protobuf.TimestampR\027" +
-      "conversationCreatedTime\022W\n\032assigned_last" +
-      "_updated_time\030\010 \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\027assignedLastUpdatedTime\022P\n\023conv" +
-      "ersation_status\030\t \001(\0162\037.api.commons.Conv" +
-      "ersationStatusR\022conversationStatus\022;\n\014ch" +
-      "annel_type\030\n \001(\0162\030.api.commons.ChannelTy" +
-      "peR\013channelType\022Q\n\rcustomer_info\030\013 \001(\0132," +
-      ".api.commons.ConversationCustomerInforma" +
-      "tionR\014customerInfo\022F\n\021last_message_time\030" +
-      "\014 \001(\0132\032.google.protobuf.TimestampR\017lastM" +
-      "essageTime\022<\n\006skills\030\r \001(\0132$.api.v1alpha" +
-      "1.asm.ConversationSkillsR\006skills\022[\n\021assi" +
-      "gnment_status\030\016 \001(\0162..api.commons.AgentC" +
-      "onversationAssignmentStatusR\020assignmentS" +
-      "tatus\022U\n\017assignment_type\030\017 \001(\0162,.api.com" +
-      "mons.AgentConversationAssignmentTypeR\016as" +
-      "signmentType\022;\n\014sla_timeouts\030\020 \001(\0132\030.api" +
-      ".commons.SLATimeoutsR\013slaTimeouts\022f\n\033con" +
-      "versation_collected_data\030\021 \001(\0132&.api.com" +
-      "mons.ConversationCollectedDataR\031conversa" +
-      "tionCollectedData\022Q\n\027last_message_group_" +
-      "time\030\022 \001(\0132\032.google.protobuf.TimestampR\024" +
-      "lastMessageGroupTime\022R\n\027last_message_gro" +
-      "up_type\030\023 \001(\0162\033.api.commons.OmniSenderTy" +
-      "peR\024lastMessageGroupType\"\231\001\n\022Conversatio" +
-      "nSkills\022H\n\006skills\030\001 \003(\01320.api.v1alpha1.a" +
-      "sm.ConversationSkills.SkillsEntryR\006skill" +
-      "s\0329\n\013SkillsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005va" +
-      "lue\030\002 \001(\010R\005value:\0028\001\"\214\002\n\030AssignNewConver" +
-      "sationReq\022&\n\017asm_session_sid\030\001 \001(\003R\rasmS" +
-      "essionSid\022N\n\006skills\030\002 \003(\01326.api.v1alpha1" +
-      ".asm.AssignNewConversationReq.SkillsEntr" +
-      "yR\006skills\022=\n\rchannel_types\030\003 \003(\0162\030.api.c" +
-      "ommons.ChannelTypeR\014channelTypes\0329\n\013Skil" +
-      "lsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\003" +
-      "R\005value:\0028\001\"\201\001\n\030AssignNewConversationRes" +
-      "\022B\n\014conversation\030\001 \001(\0132\036.api.v1alpha1.as" +
-      "m.ConversationR\014conversation\022!\n\014referenc" +
-      "e_id\030\002 \001(\tR\013referenceId\"\017\n\rListAgentsReq" +
-      "\"H\n\rListAgentsRes\0227\n\006agents\030\001 \003(\0132\037.api." +
-      "commons.DashboardAgentInfoR\006agents\"\274\002\n\037S" +
-      "etConversationCollectedDataReq\022-\n\020conver" +
-      "sation_sid\030\001 \001(\003B\0020\001R\017conversationSid\022;\n" +
-      "\014channel_type\030\002 \001(\0162\030.api.commons.Channe" +
-      "lTypeR\013channelType\022k\n\016collected_data\030\003 \003" +
-      "(\0132D.api.v1alpha1.asm.SetConversationCol" +
-      "lectedDataReq.CollectedDataEntryR\rcollec" +
-      "tedData\032@\n\022CollectedDataEntry\022\020\n\003key\030\001 \001" +
-      "(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"!\n\037Set" +
-      "ConversationCollectedDataRes\"\342\002\n\024ListCon" +
-      "versationsReq\022&\n\017asm_session_sid\030\001 \001(\003R\r" +
-      "asmSessionSid\022R\n\022authenticated_user\030\002 \001(" +
-      "\0132#.api.commons.auth.AuthenticatedUserR\021" +
-      "authenticatedUser\022\027\n\007user_id\030\003 \001(\tR\006user" +
-      "Id\022;\n\010statuses\030\004 \003(\0162\037.api.commons.Conve" +
-      "rsationStatusR\010statuses\0229\n\nfield_mask\030\005 " +
-      "\001(\0132\032.google.protobuf.FieldMaskR\tfieldMa" +
-      "sk\022=\n\rchannel_types\030\006 \003(\0162\030.api.commons." +
-      "ChannelTypeR\014channelTypes\"\203\001\n\024ListConver" +
-      "sationsRes\022C\n\rconversations\030\001 \003(\0132\035.api." +
-      "commons.OmniConversationR\rconversations\022" +
-      "&\n\017next_page_token\030\002 \001(\tR\rnextPageToken\"" +
-      "\202\002\n\023GetQueuesDetailsReq\022&\n\017asm_session_s" +
-      "id\030\001 \001(\003R\rasmSessionSid\022=\n\rchannel_types" +
-      "\030\002 \003(\0162\030.api.commons.ChannelTypeR\014channe" +
-      "lTypes\022I\n\006skills\030\003 \003(\01321.api.v1alpha1.as" +
-      "m.GetQueuesDetailsReq.SkillsEntryR\006skill" +
-      "s\0329\n\013SkillsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005va" +
-      "lue\030\002 \001(\003R\005value:\0028\001\"f\n\rPushEventsReq\022&\n" +
-      "\017asm_session_sid\030\001 \001(\003R\rasmSessionSid\022-\n" +
-      "\006events\030\002 \003(\0132\025.api.commons.AsmEventR\006ev" +
-      "ents\"\017\n\rPushEventsRes\"\337\001\n\016EnableVoiceReq" +
-      "\022&\n\017asm_session_sid\030\001 \001(\003R\rasmSessionSid" +
-      "\022$\n\016hunt_group_sid\030\002 \001(\003R\014huntGroupSid\022D" +
-      "\n\006skills\030\003 \003(\0132,.api.v1alpha1.asm.Enable" +
+      "alpha1.asm\032\027annotations/authz.proto\032\025api" +
+      "/commons/acd.proto\032\025api/commons/asm.prot" +
+      "o\032\033api/commons/auth/user.proto\032\027api/comm" +
+      "ons/event.proto\032\035api/commons/omnichannel" +
+      ".proto\032\034google/api/annotations.proto\032 go" +
+      "ogle/protobuf/field_mask.proto\032\037google/p" +
+      "rotobuf/timestamp.proto\"\204\002\n\020CreateSessio" +
+      "nReq\022$\n\016hunt_group_sid\030\001 \001(\003R\014huntGroupS" +
+      "id\022F\n\006skills\030\002 \003(\0132..api.v1alpha1.asm.Cr" +
+      "eateSessionReq.SkillsEntryR\006skills\022G\n\017su" +
+      "bsession_type\030\003 \001(\0162\036.api.commons.AsmSub" +
+      "sessionTypeR\016subsessionType\0329\n\013SkillsEnt" +
+      "ry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005val" +
+      "ue:\0028\001\"\272\001\n\020CreateSessionRes\022&\n\017asm_sessi" +
+      "on_sid\030\001 \001(\003R\rasmSessionSid\022*\n\021voice_ses" +
+      "sion_sid\030\002 \001(\003R\017voiceSessionSid\022R\n\022voice" +
+      "_registration\030\003 \001(\0132#.api.v1alpha1.asm.V" +
+      "oiceRegistrationR\021voiceRegistration\"\344\001\n\021" +
+      "VoiceRegistration\022\032\n\010username\030\002 \001(\tR\010use" +
+      "rname\022\032\n\010password\030\003 \001(\tR\010password\022\031\n\010dia" +
+      "l_url\030\004 \001(\tR\007dialUrl\022\035\n\npstn_phone\030\005 \001(\t" +
+      "R\tpstnPhone\022*\n\021default_time_zone\030\006 \001(\tR\017" +
+      "defaultTimeZone\0221\n\024expiration_timestamp\030" +
+      "\007 \001(\003R\023expirationTimestamp\"\\\n\023StreamAgen" +
+      "tStateReq\022&\n\017asm_session_sid\030\001 \001(\003R\rasmS" +
+      "essionSid\022\035\n\nkeep_alive\030\002 \001(\010R\tkeepAlive" +
+      "\"\034\n\032ManagerStreamAgentStateReq\"\377\002\n\014GetSt" +
+      "atusReq\022&\n\017asm_session_sid\030\001 \001(\003R\rasmSes" +
+      "sionSid\022,\n\022perform_keep_alive\030\002 \001(\010R\020per" +
+      "formKeepAlive\0227\n\030perform_get_queued_call" +
+      "s\030\003 \001(\010R\025performGetQueuedCalls\022.\n\023perfor" +
+      "m_get_message\030\004 \001(\010R\021performGetMessage\022:" +
+      "\n\031minimum_message_timestamp\030\005 \001(\003R\027minim" +
+      "umMessageTimestamp\022\026\n\006skills\030\006 \003(\tR\006skil" +
+      "ls\022*\n\006events\030\007 \003(\0132\022.api.commons.EventR\006" +
+      "events\0220\n\024agent_pbx_extensions\030\010 \003(\tR\022ag" +
+      "entPbxExtensions\"P\n\014GetStatusRes\022@\n\014voic" +
+      "e_status\030\001 \001(\0132\035.api.v1alpha1.asm.VoiceS" +
+      "tatusR\013voiceStatus\"\361\006\n\013VoiceStatus\022\026\n\006st" +
+      "atus\030\002 \001(\003R\006status\022>\n\013status_desc\030\003 \001(\0162" +
+      "\035.api.commons.AgentStatus.EnumR\nstatusDe" +
+      "sc\022\026\n\006paused\030\004 \001(\010R\006paused\022\024\n\005queue\030\005 \001(" +
+      "\tR\005queue\022,\n\022current_session_id\030\006 \001(\003R\020cu" +
+      "rrentSessionId\022,\n\022last_status_change\030\007 \001" +
+      "(\003R\020lastStatusChange\022\036\n\nmonitoring\030\010 \001(\010" +
+      "R\nmonitoring\022\037\n\013calls_count\030\t \001(\003R\ncalls" +
+      "Count\022\"\n\rlast_sip_code\030\n \001(\003R\013lastSipCod" +
+      "e\0224\n\027agent_peer_is_lost_call\030\013 \001(\010R\023agen" +
+      "tPeerIsLostCall\022\032\n\010disabled\030\014 \001(\010R\010disab" +
+      "led\0220\n\024keep_alive_succeeded\030\r \001(\010R\022keepA" +
+      "liveSucceeded\022\030\n\007message\030\016 \001(\tR\007message\022" +
+      "+\n\021message_timestamp\030\017 \001(\003R\020messageTimes" +
+      "tamp\022@\n\014queued_calls\030\020 \001(\0132\035.api.v1alpha" +
+      "1.asm.QueuedCallsR\013queuedCalls\0220\n\024caller" +
+      "_was_suspended\030\021 \001(\010R\022callerWasSuspended" +
+      "\022F\n\020transfer_members\030\022 \003(\0132\033.api.commons" +
+      ".TransferMemberR\017transferMembers\022-\n\005aler" +
+      "t\030\023 \001(\0132\027.api.commons.AgentAlertR\005alert\022" +
+      "?\n\035agent_peer_is_direct_to_agent\030\024 \001(\010R\030" +
+      "agentPeerIsDirectToAgent\022$\n\016agent_is_mut" +
+      "ed\030\025 \001(\010R\014agentIsMuted\"\275\005\n\013QueuedCalls\022X" +
+      "\n\021agent_queue_calls\030\020 \003(\0132,.api.v1alpha1" +
+      ".asm.QueuedCalls.QueuedCallDataR\017agentQu" +
+      "eueCalls\022P\n\ron_hold_calls\030\021 \003(\0132,.api.v1" +
+      "alpha1.asm.QueuedCalls.QueuedCallDataR\013o" +
+      "nHoldCalls\022I\n\thqm_calls\030\022 \003(\0132,.api.v1al" +
+      "pha1.asm.QueuedCalls.QueuedCallDataR\010hqm" +
+      "Calls\032\266\003\n\016QueuedCallData\022\031\n\010call_sid\030\001 \001" +
+      "(\003R\007callSid\022!\n\014phone_number\030\002 \001(\tR\013phone" +
+      "Number\022\033\n\tcaller_id\030\003 \001(\tR\010callerId\0227\n\tc" +
+      "all_type\030\004 \001(\0162\032.api.commons.CallType.En" +
+      "umR\010callType\0229\n\nstart_date\030\005 \001(\0132\032.googl" +
+      "e.protobuf.TimestampR\tstartDate\0227\n\thold_" +
+      "date\030\006 \001(\0132\032.google.protobuf.TimestampR\010" +
+      "holdDate\022\026\n\006skills\030\007 \003(\tR\006skills\022%\n\016agen" +
+      "t_specific\030\010 \001(\010R\ragentSpecific\022]\n\030queue" +
+      "d_notification_type\030\t \001(\0162#.api.commons." +
+      "QueuedNotificationTypeR\026queuedNotificati" +
+      "onType\"O\n\rEndSessionReq\022&\n\017asm_session_s" +
+      "id\030\001 \001(\003R\rasmSessionSid\022\026\n\006reason\030\002 \001(\tR" +
+      "\006reason\"\017\n\rEndSessionRes\"\026\n\024GetCurrentSe" +
+      "ssionReq\"\205\002\n\nAsmSession\022&\n\017asm_session_s" +
+      "id\030\001 \001(\003R\rasmSessionSid\022F\n\021asm_session_s" +
+      "tart\030\004 \001(\0132\032.google.protobuf.TimestampR\017" +
+      "asmSessionStart\022B\n\017asm_session_end\030\005 \001(\013" +
+      "2\032.google.protobuf.TimestampR\rasmSession" +
+      "End\022C\n\rvoice_session\030\006 \001(\0132\036.api.v1alpha" +
+      "1.asm.VoiceSessionR\014voiceSession\"\316\001\n\014Voi" +
+      "ceSession\022*\n\021voice_session_sid\030\001 \001(\003R\017vo" +
+      "iceSessionSid\022J\n\023voice_session_start\030\002 \001" +
+      "(\0132\032.google.protobuf.TimestampR\021voiceSes" +
+      "sionStart\022F\n\021voice_session_end\030\003 \001(\0132\032.g" +
+      "oogle.protobuf.TimestampR\017voiceSessionEn" +
+      "d\"\254\002\n\023SwitchSubsessionReq\022&\n\017asm_session" +
+      "_sid\030\001 \001(\003R\rasmSessionSid\022$\n\016hunt_group_" +
+      "sid\030\002 \001(\003R\014huntGroupSid\022I\n\006skills\030\003 \003(\0132" +
+      "1.api.v1alpha1.asm.SwitchSubsessionReq.S" +
+      "killsEntryR\006skills\022A\n\014channel_type\030\004 \001(\016" +
+      "2\036.api.commons.AsmSubsessionTypeR\013channe" +
+      "lType\0329\n\013SkillsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024" +
+      "\n\005value\030\002 \001(\003R\005value:\0028\001\"\225\001\n\023SwitchSubse" +
+      "ssionRes\022*\n\021voice_session_sid\030\001 \001(\003R\017voi" +
+      "ceSessionSid\022R\n\022voice_registration\030\002 \001(\013" +
+      "2#.api.v1alpha1.asm.VoiceRegistrationR\021v" +
+      "oiceRegistration\"\326\010\n\014Conversation\022-\n\020con" +
+      "versation_sid\030\006 \001(\003B\0020\001R\017conversationSid" +
+      "\022V\n\031conversation_created_time\030\007 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampR\027conversationCre" +
+      "atedTime\022W\n\032assigned_last_updated_time\030\010" +
+      " \001(\0132\032.google.protobuf.TimestampR\027assign" +
+      "edLastUpdatedTime\022P\n\023conversation_status" +
+      "\030\t \001(\0162\037.api.commons.ConversationStatusR" +
+      "\022conversationStatus\022;\n\014channel_type\030\n \001(" +
+      "\0162\030.api.commons.ChannelTypeR\013channelType" +
+      "\022Q\n\rcustomer_info\030\013 \001(\0132,.api.commons.Co" +
+      "nversationCustomerInformationR\014customerI" +
+      "nfo\022F\n\021last_message_time\030\014 \001(\0132\032.google." +
+      "protobuf.TimestampR\017lastMessageTime\022<\n\006s" +
+      "kills\030\r \001(\0132$.api.v1alpha1.asm.Conversat" +
+      "ionSkillsR\006skills\022[\n\021assignment_status\030\016" +
+      " \001(\0162..api.commons.AgentConversationAssi" +
+      "gnmentStatusR\020assignmentStatus\022U\n\017assign" +
+      "ment_type\030\017 \001(\0162,.api.commons.AgentConve" +
+      "rsationAssignmentTypeR\016assignmentType\022;\n" +
+      "\014sla_timeouts\030\020 \001(\0132\030.api.commons.SLATim" +
+      "eoutsR\013slaTimeouts\022f\n\033conversation_colle" +
+      "cted_data\030\021 \001(\0132&.api.commons.Conversati" +
+      "onCollectedDataR\031conversationCollectedDa" +
+      "ta\022Q\n\027last_message_group_time\030\022 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampR\024lastMessageGrou" +
+      "pTime\022R\n\027last_message_group_type\030\023 \001(\0162\033" +
+      ".api.commons.OmniSenderTypeR\024lastMessage" +
+      "GroupType\"\231\001\n\022ConversationSkills\022H\n\006skil" +
+      "ls\030\001 \003(\01320.api.v1alpha1.asm.Conversation" +
+      "Skills.SkillsEntryR\006skills\0329\n\013SkillsEntr" +
+      "y\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\010R\005valu" +
+      "e:\0028\001\"\214\002\n\030AssignNewConversationReq\022&\n\017as" +
+      "m_session_sid\030\001 \001(\003R\rasmSessionSid\022N\n\006sk" +
+      "ills\030\002 \003(\01326.api.v1alpha1.asm.AssignNewC" +
+      "onversationReq.SkillsEntryR\006skills\022=\n\rch" +
+      "annel_types\030\003 \003(\0162\030.api.commons.ChannelT" +
+      "ypeR\014channelTypes\0329\n\013SkillsEntry\022\020\n\003key\030" +
+      "\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005value:\0028\001\"\201\001\n" +
+      "\030AssignNewConversationRes\022B\n\014conversatio" +
+      "n\030\001 \001(\0132\036.api.v1alpha1.asm.ConversationR" +
+      "\014conversation\022!\n\014reference_id\030\002 \001(\tR\013ref" +
+      "erenceId\"\017\n\rListAgentsReq\"H\n\rListAgentsR" +
+      "es\0227\n\006agents\030\001 \003(\0132\037.api.commons.Dashboa" +
+      "rdAgentInfoR\006agents\"\274\002\n\037SetConversationC" +
+      "ollectedDataReq\022-\n\020conversation_sid\030\001 \001(" +
+      "\003B\0020\001R\017conversationSid\022;\n\014channel_type\030\002" +
+      " \001(\0162\030.api.commons.ChannelTypeR\013channelT" +
+      "ype\022k\n\016collected_data\030\003 \003(\0132D.api.v1alph" +
+      "a1.asm.SetConversationCollectedDataReq.C" +
+      "ollectedDataEntryR\rcollectedData\032@\n\022Coll" +
+      "ectedDataEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005valu" +
+      "e\030\002 \001(\tR\005value:\0028\001\"!\n\037SetConversationCol" +
+      "lectedDataRes\"\342\002\n\024ListConversationsReq\022&" +
+      "\n\017asm_session_sid\030\001 \001(\003R\rasmSessionSid\022R" +
+      "\n\022authenticated_user\030\002 \001(\0132#.api.commons" +
+      ".auth.AuthenticatedUserR\021authenticatedUs" +
+      "er\022\027\n\007user_id\030\003 \001(\tR\006userId\022;\n\010statuses\030" +
+      "\004 \003(\0162\037.api.commons.ConversationStatusR\010" +
+      "statuses\0229\n\nfield_mask\030\005 \001(\0132\032.google.pr" +
+      "otobuf.FieldMaskR\tfieldMask\022=\n\rchannel_t" +
+      "ypes\030\006 \003(\0162\030.api.commons.ChannelTypeR\014ch" +
+      "annelTypes\"\203\001\n\024ListConversationsRes\022C\n\rc" +
+      "onversations\030\001 \003(\0132\035.api.commons.OmniCon" +
+      "versationR\rconversations\022&\n\017next_page_to" +
+      "ken\030\002 \001(\tR\rnextPageToken\"\202\002\n\023GetQueuesDe" +
+      "tailsReq\022&\n\017asm_session_sid\030\001 \001(\003R\rasmSe" +
+      "ssionSid\022=\n\rchannel_types\030\002 \003(\0162\030.api.co" +
+      "mmons.ChannelTypeR\014channelTypes\022I\n\006skill" +
+      "s\030\003 \003(\01321.api.v1alpha1.asm.GetQueuesDeta" +
+      "ilsReq.SkillsEntryR\006skills\0329\n\013SkillsEntr" +
+      "y\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005valu" +
+      "e:\0028\001\"f\n\rPushEventsReq\022&\n\017asm_session_si" +
+      "d\030\001 \001(\003R\rasmSessionSid\022-\n\006events\030\002 \003(\0132\025" +
+      ".api.commons.AsmEventR\006events\"\017\n\rPushEve" +
+      "ntsRes\"\337\001\n\016EnableVoiceReq\022&\n\017asm_session" +
+      "_sid\030\001 \001(\003R\rasmSessionSid\022$\n\016hunt_group_" +
+      "sid\030\002 \001(\003R\014huntGroupSid\022D\n\006skills\030\003 \003(\0132" +
+      ",.api.v1alpha1.asm.EnableVoiceReq.Skills" +
+      "EntryR\006skills\0329\n\013SkillsEntry\022\020\n\003key\030\001 \001(" +
+      "\tR\003key\022\024\n\005value\030\002 \001(\003R\005value:\0028\001\"\220\001\n\016Ena" +
+      "bleVoiceRes\022*\n\021voice_session_sid\030\001 \001(\003R\017" +
+      "voiceSessionSid\022R\n\022voice_registration\030\002 " +
+      "\001(\0132#.api.v1alpha1.asm.VoiceRegistration" +
+      "R\021voiceRegistration\"\341\001\n\017DisableVoiceReq\022" +
+      "&\n\017asm_session_sid\030\001 \001(\003R\rasmSessionSid\022" +
+      "$\n\016hunt_group_sid\030\002 \001(\003R\014huntGroupSid\022E\n" +
+      "\006skills\030\003 \003(\0132-.api.v1alpha1.asm.Disable" +
       "VoiceReq.SkillsEntryR\006skills\0329\n\013SkillsEn" +
       "try\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005va" +
-      "lue:\0028\001\"\220\001\n\016EnableVoiceRes\022*\n\021voice_sess" +
-      "ion_sid\030\001 \001(\003R\017voiceSessionSid\022R\n\022voice_" +
-      "registration\030\002 \001(\0132#.api.v1alpha1.asm.Vo" +
-      "iceRegistrationR\021voiceRegistration\"\341\001\n\017D" +
-      "isableVoiceReq\022&\n\017asm_session_sid\030\001 \001(\003R" +
-      "\rasmSessionSid\022$\n\016hunt_group_sid\030\002 \001(\003R\014" +
-      "huntGroupSid\022E\n\006skills\030\003 \003(\0132-.api.v1alp" +
-      "ha1.asm.DisableVoiceReq.SkillsEntryR\006ski" +
-      "lls\0329\n\013SkillsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005" +
-      "value\030\002 \001(\003R\005value:\0028\001\"\021\n\017DisableVoiceRe" +
-      "s2\344\013\n\006AsmApi\022\212\001\n\rCreateSession\022\".api.v1a" +
-      "lpha1.asm.CreateSessionReq\032\".api.v1alpha" +
-      "1.asm.CreateSessionRes\"1\202\323\344\223\002+\"&/api/v1a" +
-      "lpha1/asm/asmapi/createsession:\001*\022z\n\tGet" +
-      "Status\022\036.api.v1alpha1.asm.GetStatusReq\032\036" +
-      ".api.v1alpha1.asm.GetStatusRes\"-\202\323\344\223\002\'\"\"" +
-      "/api/v1alpha1/asm/asmapi/getstatus:\001*\022~\n" +
-      "\nEndSession\022\037.api.v1alpha1.asm.EndSessio" +
-      "nReq\032\037.api.v1alpha1.asm.EndSessionRes\".\202" +
-      "\323\344\223\002(\"#/api/v1alpha1/asm/asmapi/endsessi" +
-      "on:\001*\022\220\001\n\021GetCurrentSession\022&.api.v1alph" +
-      "a1.asm.GetCurrentSessionReq\032\034.api.v1alph" +
-      "a1.asm.AsmSession\"5\202\323\344\223\002/\"*/api/v1alpha1" +
-      "/asm/asmapi/getcurrentsession:\001*\022\226\001\n\020Swi" +
-      "tchSubsession\022%.api.v1alpha1.asm.SwitchS" +
-      "ubsessionReq\032%.api.v1alpha1.asm.SwitchSu" +
-      "bsessionRes\"4\202\323\344\223\002.\")/api/v1alpha1/asm/a" +
-      "smapi/switchsubsession:\001*\022\232\001\n\021ListConver" +
-      "sations\022&.api.v1alpha1.asm.ListConversat" +
-      "ionsReq\032&.api.v1alpha1.asm.ListConversat" +
-      "ionsRes\"5\202\323\344\223\002/\"*/api/v1alpha1/asm/asmap" +
-      "i/listconversations:\001*\022\252\001\n\025AssignNewConv" +
-      "ersation\022*.api.v1alpha1.asm.AssignNewCon" +
-      "versationReq\032*.api.v1alpha1.asm.AssignNe" +
-      "wConversationRes\"9\202\323\344\223\0023\"./api/v1alpha1/" +
-      "asm/asmapi/assignnewconversation:\001*\022~\n\nL" +
-      "istAgents\022\037.api.v1alpha1.asm.ListAgentsR" +
-      "eq\032\037.api.v1alpha1.asm.ListAgentsRes\".\202\323\344" +
-      "\223\002(\"#/api/v1alpha1/asm/asmapi/listagents" +
-      ":\001*\022\306\001\n\034SetConversationCollectedData\0221.a" +
-      "pi.v1alpha1.asm.SetConversationCollected" +
-      "DataReq\0321.api.v1alpha1.asm.SetConversati" +
-      "onCollectedDataRes\"@\202\323\344\223\002:\"5/api/v1alpha" +
-      "1/asm/asmapi/setconversationcollecteddat" +
-      "a:\001*\022\221\001\n\020GetQueuesDetails\022%.api.v1alpha1" +
-      ".asm.GetQueuesDetailsReq\032 .api.commons.G" +
-      "etQueuesDetailsRes\"4\202\323\344\223\002.\")/api/v1alpha" +
-      "1/asm/asmapi/getqueuesdetails:\001*B\224\001\n\"com" +
-      ".tcn.cloud.api.api.v1alpha1.asmB\014Service" +
-      "ProtoP\001\242\002\003AVA\252\002\020Api.V1alpha1.Asm\312\002\020Api\\V" +
-      "1alpha1\\Asm\342\002\034Api\\V1alpha1\\Asm\\GPBMetada" +
-      "ta\352\002\022Api::V1alpha1::Asmb\006proto3"
+      "lue:\0028\001\"\021\n\017DisableVoiceRes2\301\014\n\006AsmApi\022\221\001" +
+      "\n\rCreateSession\022\".api.v1alpha1.asm.Creat" +
+      "eSessionReq\032\".api.v1alpha1.asm.CreateSes" +
+      "sionRes\"8\272\270\221\002\002\030\001\202\323\344\223\002+\"&/api/v1alpha1/as" +
+      "m/asmapi/createsession:\001*\022\201\001\n\tGetStatus\022" +
+      "\036.api.v1alpha1.asm.GetStatusReq\032\036.api.v1" +
+      "alpha1.asm.GetStatusRes\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"" +
+      "/api/v1alpha1/asm/asmapi/getstatus:\001*\022\205\001" +
+      "\n\nEndSession\022\037.api.v1alpha1.asm.EndSessi" +
+      "onReq\032\037.api.v1alpha1.asm.EndSessionRes\"5" +
+      "\272\270\221\002\002\030\001\202\323\344\223\002(\"#/api/v1alpha1/asm/asmapi/" +
+      "endsession:\001*\022\227\001\n\021GetCurrentSession\022&.ap" +
+      "i.v1alpha1.asm.GetCurrentSessionReq\032\034.ap" +
+      "i.v1alpha1.asm.AsmSession\"<\272\270\221\002\002\030\001\202\323\344\223\002/" +
+      "\"*/api/v1alpha1/asm/asmapi/getcurrentses" +
+      "sion:\001*\022\235\001\n\020SwitchSubsession\022%.api.v1alp" +
+      "ha1.asm.SwitchSubsessionReq\032%.api.v1alph" +
+      "a1.asm.SwitchSubsessionRes\";\272\270\221\002\002\030\001\202\323\344\223\002" +
+      ".\")/api/v1alpha1/asm/asmapi/switchsubses" +
+      "sion:\001*\022\244\001\n\021ListConversations\022&.api.v1al" +
+      "pha1.asm.ListConversationsReq\032&.api.v1al" +
+      "pha1.asm.ListConversationsRes\"?\272\270\221\002\005\n\003\010\254" +
+      "\002\202\323\344\223\002/\"*/api/v1alpha1/asm/asmapi/listco" +
+      "nversations:\001*\022\264\001\n\025AssignNewConversation" +
+      "\022*.api.v1alpha1.asm.AssignNewConversatio" +
+      "nReq\032*.api.v1alpha1.asm.AssignNewConvers" +
+      "ationRes\"C\272\270\221\002\005\n\003\010\254\002\202\323\344\223\0023\"./api/v1alpha" +
+      "1/asm/asmapi/assignnewconversation:\001*\022\210\001" +
+      "\n\nListAgents\022\037.api.v1alpha1.asm.ListAgen" +
+      "tsReq\032\037.api.v1alpha1.asm.ListAgentsRes\"8" +
+      "\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002(\"#/api/v1alpha1/asm/asma" +
+      "pi/listagents:\001*\022\325\001\n\034SetConversationColl" +
+      "ectedData\0221.api.v1alpha1.asm.SetConversa" +
+      "tionCollectedDataReq\0321.api.v1alpha1.asm." +
+      "SetConversationCollectedDataRes\"O\272\270\221\002\n\n\003" +
+      "\010\254\002\n\003\010\260\t\202\323\344\223\002:\"5/api/v1alpha1/asm/asmapi" +
+      "/setconversationcollecteddata:\001*\022\233\001\n\020Get" +
+      "QueuesDetails\022%.api.v1alpha1.asm.GetQueu" +
+      "esDetailsReq\032 .api.commons.GetQueuesDeta" +
+      "ilsRes\">\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002.\")/api/v1alpha1/" +
+      "asm/asmapi/getqueuesdetails:\001*B\224\001\n\"com.t" +
+      "cn.cloud.api.api.v1alpha1.asmB\014ServicePr" +
+      "otoP\001\242\002\003AVA\252\002\020Api.V1alpha1.Asm\312\002\020Api\\V1a" +
+      "lpha1\\Asm\342\002\034Api\\V1alpha1\\Asm\\GPBMetadata" +
+      "\352\002\022Api::V1alpha1::Asmb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.AcdProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.AsmProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.auth.UserProto.getDescriptor(),
@@ -737,9 +741,11 @@ public final class ServiceProto {
         new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
     com.tcn.cloud.api.api.commons.AsmProto.getDescriptor();
     com.tcn.cloud.api.api.commons.auth.UserProto.getDescriptor();

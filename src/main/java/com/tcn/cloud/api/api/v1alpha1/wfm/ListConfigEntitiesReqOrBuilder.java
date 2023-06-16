@@ -74,4 +74,14 @@ public interface ListConfigEntitiesReqOrBuilder extends
    * @return The memberDepth.
    */
   int getMemberDepth();
+
+  /**
+   * <pre>
+   * ID of the scenario that the entities desired belong to, must match the scenario of &#64;belongs_to_entity.
+   * </pre>
+   *
+   * <code>int64 schedule_scenario_sid = 5 [json_name = "scheduleScenarioSid"];</code>
+   * @return The scheduleScenarioSid.
+   */
+  long getScheduleScenarioSid();
 }

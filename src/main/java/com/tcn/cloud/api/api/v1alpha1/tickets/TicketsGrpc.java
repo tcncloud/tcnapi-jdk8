@@ -483,6 +483,37 @@ public final class TicketsGrpc {
     return getListTicketAuditLogMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignReq,
+      com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignRes> getAssignSelfMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AssignSelf",
+      requestType = com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignReq,
+      com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignRes> getAssignSelfMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignReq, com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignRes> getAssignSelfMethod;
+    if ((getAssignSelfMethod = TicketsGrpc.getAssignSelfMethod) == null) {
+      synchronized (TicketsGrpc.class) {
+        if ((getAssignSelfMethod = TicketsGrpc.getAssignSelfMethod) == null) {
+          TicketsGrpc.getAssignSelfMethod = getAssignSelfMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignReq, com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AssignSelf"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignRes.getDefaultInstance()))
+              .setSchemaDescriptor(new TicketsMethodDescriptorSupplier("AssignSelf"))
+              .build();
+        }
+      }
+    }
+    return getAssignSelfMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -683,6 +714,16 @@ public final class TicketsGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketAuditLogRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTicketAuditLogMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Public method to assign a ticket
+     * </pre>
+     */
+    default void assignSelf(com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignSelfMethod(), responseObserver);
+    }
   }
 
   /**
@@ -882,6 +923,17 @@ public final class TicketsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListTicketAuditLogMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Public method to assign a ticket
+     * </pre>
+     */
+    public void assignSelf(com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAssignSelfMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1051,6 +1103,16 @@ public final class TicketsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketAuditLogRes listTicketAuditLog(com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketAuditLogReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListTicketAuditLogMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Public method to assign a ticket
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignRes assignSelf(com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAssignSelfMethod(), getCallOptions(), request);
     }
   }
 
@@ -1237,6 +1299,17 @@ public final class TicketsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListTicketAuditLogMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Public method to assign a ticket
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignRes> assignSelf(
+        com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAssignSelfMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_TICKET = 0;
@@ -1254,6 +1327,7 @@ public final class TicketsGrpc {
   private static final int METHODID_LIST_SLACONDITION = 12;
   private static final int METHODID_REPLY_COMMENT = 13;
   private static final int METHODID_LIST_TICKET_AUDIT_LOG = 14;
+  private static final int METHODID_ASSIGN_SELF = 15;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1331,6 +1405,10 @@ public final class TicketsGrpc {
         case METHODID_LIST_TICKET_AUDIT_LOG:
           serviceImpl.listTicketAuditLog((com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketAuditLogReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketAuditLogRes>) responseObserver);
+          break;
+        case METHODID_ASSIGN_SELF:
+          serviceImpl.assignSelf((com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1455,6 +1533,13 @@ public final class TicketsGrpc {
               com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketAuditLogReq,
               com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketAuditLogRes>(
                 service, METHODID_LIST_TICKET_AUDIT_LOG)))
+        .addMethod(
+          getAssignSelfMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignReq,
+              com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignRes>(
+                service, METHODID_ASSIGN_SELF)))
         .build();
   }
 
@@ -1518,6 +1603,7 @@ public final class TicketsGrpc {
               .addMethod(getListSLAConditionMethod())
               .addMethod(getReplyCommentMethod())
               .addMethod(getListTicketAuditLogMethod())
+              .addMethod(getAssignSelfMethod())
               .build();
         }
       }

@@ -118,52 +118,62 @@ public interface CategoryOrBuilder extends
 
   /**
    * <pre>
-   * call types supported by the category
+   * Deprecated. Use scorecard.call_types
    * </pre>
    *
-   * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes"];</code>
+   * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
+   * @deprecated api.commons.Category.call_types is deprecated.
+   *     See api/commons/scorecards.proto;l=102
    * @return A list containing the callTypes.
    */
-  java.util.List<com.tcn.cloud.api.api.commons.CallType.Enum> getCallTypesList();
+  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.commons.CallType.Enum> getCallTypesList();
   /**
    * <pre>
-   * call types supported by the category
+   * Deprecated. Use scorecard.call_types
    * </pre>
    *
-   * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes"];</code>
+   * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
+   * @deprecated api.commons.Category.call_types is deprecated.
+   *     See api/commons/scorecards.proto;l=102
    * @return The count of callTypes.
    */
-  int getCallTypesCount();
+  @java.lang.Deprecated int getCallTypesCount();
   /**
    * <pre>
-   * call types supported by the category
+   * Deprecated. Use scorecard.call_types
    * </pre>
    *
-   * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes"];</code>
+   * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
+   * @deprecated api.commons.Category.call_types is deprecated.
+   *     See api/commons/scorecards.proto;l=102
    * @param index The index of the element to return.
    * @return The callTypes at the given index.
    */
-  com.tcn.cloud.api.api.commons.CallType.Enum getCallTypes(int index);
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.CallType.Enum getCallTypes(int index);
   /**
    * <pre>
-   * call types supported by the category
+   * Deprecated. Use scorecard.call_types
    * </pre>
    *
-   * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes"];</code>
+   * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
+   * @deprecated api.commons.Category.call_types is deprecated.
+   *     See api/commons/scorecards.proto;l=102
    * @return A list containing the enum numeric values on the wire for callTypes.
    */
-  java.util.List<java.lang.Integer>
+  @java.lang.Deprecated java.util.List<java.lang.Integer>
   getCallTypesValueList();
   /**
    * <pre>
-   * call types supported by the category
+   * Deprecated. Use scorecard.call_types
    * </pre>
    *
-   * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes"];</code>
+   * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes", deprecated = true];</code>
+   * @deprecated api.commons.Category.call_types is deprecated.
+   *     See api/commons/scorecards.proto;l=102
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of callTypes at the given index.
    */
-  int getCallTypesValue(int index);
+  @java.lang.Deprecated int getCallTypesValue(int index);
 
   /**
    * <pre>

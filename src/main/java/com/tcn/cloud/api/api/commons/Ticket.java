@@ -31,6 +31,7 @@ private static final long serialVersionUID = 0L;
     metadata_ = java.util.Collections.emptyList();
     ticketSkills_ = java.util.Collections.emptyList();
     ticketSla_ = java.util.Collections.emptyList();
+    assignee_ = "";
   }
 
   @java.lang.Override
@@ -721,6 +722,45 @@ private static final long serialVersionUID = 0L;
     return ticketSla_.get(index);
   }
 
+  public static final int ASSIGNEE_FIELD_NUMBER = 18;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object assignee_ = "";
+  /**
+   * <code>string assignee = 18 [json_name = "assignee"];</code>
+   * @return The assignee.
+   */
+  @java.lang.Override
+  public java.lang.String getAssignee() {
+    java.lang.Object ref = assignee_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      assignee_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string assignee = 18 [json_name = "assignee"];</code>
+   * @return The bytes for assignee.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getAssigneeBytes() {
+    java.lang.Object ref = assignee_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      assignee_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -782,6 +822,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < ticketSla_.size(); i++) {
       output.writeMessage(17, ticketSla_.get(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assignee_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 18, assignee_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -848,6 +891,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(17, ticketSla_.get(i));
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assignee_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, assignee_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -901,6 +947,8 @@ private static final long serialVersionUID = 0L;
         != other.getStatus()) return false;
     if (!getTicketSlaList()
         .equals(other.getTicketSlaList())) return false;
+    if (!getAssignee()
+        .equals(other.getAssignee())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -957,6 +1005,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TICKET_SLA_FIELD_NUMBER;
       hash = (53 * hash) + getTicketSlaList().hashCode();
     }
+    hash = (37 * hash) + ASSIGNEE_FIELD_NUMBER;
+    hash = (53 * hash) + getAssignee().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1134,6 +1184,7 @@ private static final long serialVersionUID = 0L;
         ticketSlaBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00008000);
+      assignee_ = "";
       return this;
     }
 
@@ -1240,6 +1291,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00004000) != 0)) {
         result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.assignee_ = assignee_;
       }
     }
 
@@ -1420,6 +1474,11 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (!other.getAssignee().isEmpty()) {
+        assignee_ = other.assignee_;
+        bitField0_ |= 0x00010000;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1554,6 +1613,11 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 138
+            case 146: {
+              assignee_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 146
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -3647,6 +3711,78 @@ private static final long serialVersionUID = 0L;
         ticketSla_ = null;
       }
       return ticketSlaBuilder_;
+    }
+
+    private java.lang.Object assignee_ = "";
+    /**
+     * <code>string assignee = 18 [json_name = "assignee"];</code>
+     * @return The assignee.
+     */
+    public java.lang.String getAssignee() {
+      java.lang.Object ref = assignee_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        assignee_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string assignee = 18 [json_name = "assignee"];</code>
+     * @return The bytes for assignee.
+     */
+    public com.google.protobuf.ByteString
+        getAssigneeBytes() {
+      java.lang.Object ref = assignee_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        assignee_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string assignee = 18 [json_name = "assignee"];</code>
+     * @param value The assignee to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAssignee(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      assignee_ = value;
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string assignee = 18 [json_name = "assignee"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAssignee() {
+      assignee_ = getDefaultInstance().getAssignee();
+      bitField0_ = (bitField0_ & ~0x00010000);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string assignee = 18 [json_name = "assignee"];</code>
+     * @param value The bytes for assignee to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAssigneeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      assignee_ = value;
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

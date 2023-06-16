@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 /**
+ * <pre>
+ * request to check if learning page url exists
+ * </pre>
+ *
  * Protobuf type {@code api.v0alpha.ExistReq}
  */
 public final class ExistReq extends
@@ -285,6 +289,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * request to check if learning page url exists
+   * </pre>
+   *
    * Protobuf type {@code api.v0alpha.ExistReq}
    */
   public static final class Builder extends

@@ -28,6 +28,10 @@ public enum RiskLevel
    * <code>RISK_LEVEL_HIGH = 3;</code>
    */
   RISK_LEVEL_HIGH(3),
+  /**
+   * <code>RISK_LEVEL_RISK_FREE = 4;</code>
+   */
+  RISK_LEVEL_RISK_FREE(4),
   UNRECOGNIZED(-1),
   ;
 
@@ -47,6 +51,10 @@ public enum RiskLevel
    * <code>RISK_LEVEL_HIGH = 3;</code>
    */
   public static final int RISK_LEVEL_HIGH_VALUE = 3;
+  /**
+   * <code>RISK_LEVEL_RISK_FREE = 4;</code>
+   */
+  public static final int RISK_LEVEL_RISK_FREE_VALUE = 4;
 
 
   public final int getNumber() {
@@ -77,6 +85,7 @@ public enum RiskLevel
       case 1: return RISK_LEVEL_LOW;
       case 2: return RISK_LEVEL_MEDIUM;
       case 3: return RISK_LEVEL_HIGH;
+      case 4: return RISK_LEVEL_RISK_FREE;
       default: return null;
     }
   }

@@ -18,37 +18,6 @@ public final class BillingGrpc {
   public static final String SERVICE_NAME = "api.v1alpha1.billing.Billing";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanReq,
-      com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanRes> getCreateBillingPlanMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "CreateBillingPlan",
-      requestType = com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanReq.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanReq,
-      com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanRes> getCreateBillingPlanMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanReq, com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanRes> getCreateBillingPlanMethod;
-    if ((getCreateBillingPlanMethod = BillingGrpc.getCreateBillingPlanMethod) == null) {
-      synchronized (BillingGrpc.class) {
-        if ((getCreateBillingPlanMethod = BillingGrpc.getCreateBillingPlanMethod) == null) {
-          BillingGrpc.getCreateBillingPlanMethod = getCreateBillingPlanMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanReq, com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateBillingPlan"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanRes.getDefaultInstance()))
-              .setSchemaDescriptor(new BillingMethodDescriptorSupplier("CreateBillingPlan"))
-              .build();
-        }
-      }
-    }
-    return getCreateBillingPlanMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.billing.GetBillingPlanReq,
       com.tcn.cloud.api.api.v1alpha1.billing.GetBillingPlanRes> getGetBillingPlanMethod;
 
@@ -109,37 +78,6 @@ public final class BillingGrpc {
       }
     }
     return getUpdateBillingPlanMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsReq,
-      com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsRes> getDeleteBillingDetailsMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "DeleteBillingDetails",
-      requestType = com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsReq.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsReq,
-      com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsRes> getDeleteBillingDetailsMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsReq, com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsRes> getDeleteBillingDetailsMethod;
-    if ((getDeleteBillingDetailsMethod = BillingGrpc.getDeleteBillingDetailsMethod) == null) {
-      synchronized (BillingGrpc.class) {
-        if ((getDeleteBillingDetailsMethod = BillingGrpc.getDeleteBillingDetailsMethod) == null) {
-          BillingGrpc.getDeleteBillingDetailsMethod = getDeleteBillingDetailsMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsReq, com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteBillingDetails"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new BillingMethodDescriptorSupplier("DeleteBillingDetails"))
-              .build();
-        }
-      }
-    }
-    return getDeleteBillingDetailsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceReq,
@@ -226,18 +164,6 @@ public final class BillingGrpc {
 
     /**
      * <pre>
-     * CreateBillingPlan - saves the provided billing plan, and returns the saved
-     * plan. However, in an organization's Billing Plan there can only ever be
-     * one billing detail with a specific config type and event type.
-     * </pre>
-     */
-    default void createBillingPlan(com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateBillingPlanMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * GetBillingPlan - returns the billing plan for the provided organization.
      * </pre>
      */
@@ -260,17 +186,6 @@ public final class BillingGrpc {
     default void updateBillingPlan(com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateBillingPlanMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * DeleteBillingDetails - deletes the provided billing details. If the billing
-     * details do not exist, this won't do anything.
-     * </pre>
-     */
-    default void deleteBillingDetails(com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteBillingDetailsMethod(), responseObserver);
     }
 
     /**
@@ -323,19 +238,6 @@ public final class BillingGrpc {
 
     /**
      * <pre>
-     * CreateBillingPlan - saves the provided billing plan, and returns the saved
-     * plan. However, in an organization's Billing Plan there can only ever be
-     * one billing detail with a specific config type and event type.
-     * </pre>
-     */
-    public void createBillingPlan(com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getCreateBillingPlanMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * GetBillingPlan - returns the billing plan for the provided organization.
      * </pre>
      */
@@ -360,18 +262,6 @@ public final class BillingGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateBillingPlanMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * DeleteBillingDetails - deletes the provided billing details. If the billing
-     * details do not exist, this won't do anything.
-     * </pre>
-     */
-    public void deleteBillingDetails(com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getDeleteBillingDetailsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -411,18 +301,6 @@ public final class BillingGrpc {
 
     /**
      * <pre>
-     * CreateBillingPlan - saves the provided billing plan, and returns the saved
-     * plan. However, in an organization's Billing Plan there can only ever be
-     * one billing detail with a specific config type and event type.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanRes createBillingPlan(com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getCreateBillingPlanMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
      * GetBillingPlan - returns the billing plan for the provided organization.
      * </pre>
      */
@@ -445,17 +323,6 @@ public final class BillingGrpc {
     public com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanRes updateBillingPlan(com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateBillingPlanMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * DeleteBillingDetails - deletes the provided billing details. If the billing
-     * details do not exist, this won't do anything.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsRes deleteBillingDetails(com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getDeleteBillingDetailsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -494,19 +361,6 @@ public final class BillingGrpc {
 
     /**
      * <pre>
-     * CreateBillingPlan - saves the provided billing plan, and returns the saved
-     * plan. However, in an organization's Billing Plan there can only ever be
-     * one billing detail with a specific config type and event type.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanRes> createBillingPlan(
-        com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getCreateBillingPlanMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * GetBillingPlan - returns the billing plan for the provided organization.
      * </pre>
      */
@@ -535,18 +389,6 @@ public final class BillingGrpc {
 
     /**
      * <pre>
-     * DeleteBillingDetails - deletes the provided billing details. If the billing
-     * details do not exist, this won't do anything.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsRes> deleteBillingDetails(
-        com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getDeleteBillingDetailsMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * GetInvoice - returns the invoice for the organization. If a date is
      * provided, this will return the invoice for the organization that
      * corresponds to the billing cycle that contains the provided date. If
@@ -561,11 +403,9 @@ public final class BillingGrpc {
     }
   }
 
-  private static final int METHODID_CREATE_BILLING_PLAN = 0;
-  private static final int METHODID_GET_BILLING_PLAN = 1;
-  private static final int METHODID_UPDATE_BILLING_PLAN = 2;
-  private static final int METHODID_DELETE_BILLING_DETAILS = 3;
-  private static final int METHODID_GET_INVOICE = 4;
+  private static final int METHODID_GET_BILLING_PLAN = 0;
+  private static final int METHODID_UPDATE_BILLING_PLAN = 1;
+  private static final int METHODID_GET_INVOICE = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -584,10 +424,6 @@ public final class BillingGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_CREATE_BILLING_PLAN:
-          serviceImpl.createBillingPlan((com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanRes>) responseObserver);
-          break;
         case METHODID_GET_BILLING_PLAN:
           serviceImpl.getBillingPlan((com.tcn.cloud.api.api.v1alpha1.billing.GetBillingPlanReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.GetBillingPlanRes>) responseObserver);
@@ -595,10 +431,6 @@ public final class BillingGrpc {
         case METHODID_UPDATE_BILLING_PLAN:
           serviceImpl.updateBillingPlan((com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanRes>) responseObserver);
-          break;
-        case METHODID_DELETE_BILLING_DETAILS:
-          serviceImpl.deleteBillingDetails((com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsRes>) responseObserver);
           break;
         case METHODID_GET_INVOICE:
           serviceImpl.getInvoice((com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceReq) request,
@@ -623,13 +455,6 @@ public final class BillingGrpc {
   public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
     return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
         .addMethod(
-          getCreateBillingPlanMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanReq,
-              com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanRes>(
-                service, METHODID_CREATE_BILLING_PLAN)))
-        .addMethod(
           getGetBillingPlanMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -643,13 +468,6 @@ public final class BillingGrpc {
               com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq,
               com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanRes>(
                 service, METHODID_UPDATE_BILLING_PLAN)))
-        .addMethod(
-          getDeleteBillingDetailsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsReq,
-              com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsRes>(
-                service, METHODID_DELETE_BILLING_DETAILS)))
         .addMethod(
           getGetInvoiceMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -705,10 +523,8 @@ public final class BillingGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new BillingFileDescriptorSupplier())
-              .addMethod(getCreateBillingPlanMethod())
               .addMethod(getGetBillingPlanMethod())
               .addMethod(getUpdateBillingPlanMethod())
-              .addMethod(getDeleteBillingDetailsMethod())
               .addMethod(getGetInvoiceMethod())
               .build();
         }
