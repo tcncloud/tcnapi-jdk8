@@ -56,20 +56,10 @@ public interface CreateShiftInstanceReqOrBuilder extends
 
   /**
    * <pre>
-   * Width in minutes of the shift instance.
-   * </pre>
-   *
-   * <code>int32 width_in_minutes = 4 [json_name = "widthInMinutes"];</code>
-   * @return The widthInMinutes.
-   */
-  int getWidthInMinutes();
-
-  /**
-   * <pre>
    * Indicates whether the shift instance is locked.
    * </pre>
    *
-   * <code>bool is_locked = 5 [json_name = "isLocked"];</code>
+   * <code>bool is_locked = 4 [json_name = "isLocked"];</code>
    * @return The isLocked.
    */
   boolean getIsLocked();
@@ -81,7 +71,7 @@ public interface CreateShiftInstanceReqOrBuilder extends
    * If given more than one sid, then a copy of the instance will be created for each agent.
    * </pre>
    *
-   * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+   * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
    * @return A list containing the wfmAgentSids.
    */
   java.util.List<java.lang.Long> getWfmAgentSidsList();
@@ -92,7 +82,7 @@ public interface CreateShiftInstanceReqOrBuilder extends
    * If given more than one sid, then a copy of the instance will be created for each agent.
    * </pre>
    *
-   * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+   * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
    * @return The count of wfmAgentSids.
    */
   int getWfmAgentSidsCount();
@@ -103,7 +93,7 @@ public interface CreateShiftInstanceReqOrBuilder extends
    * If given more than one sid, then a copy of the instance will be created for each agent.
    * </pre>
    *
-   * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+   * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
    * @param index The index of the element to return.
    * @return The wfmAgentSids at the given index.
    */

@@ -5178,6 +5178,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when creating the shift instance.
+     *   - grpc.NotFound: the &#64;draft_schedule_sid, &#64;shift_template_sid, or &#64;wfm_agent_sids do not exist for the org sending the request.
      * </pre>
      */
     default void createShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq request,
@@ -7211,6 +7212,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when creating the shift instance.
+     *   - grpc.NotFound: the &#64;draft_schedule_sid, &#64;shift_template_sid, or &#64;wfm_agent_sids do not exist for the org sending the request.
      * </pre>
      */
     public void createShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq request,
@@ -9145,6 +9147,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when creating the shift instance.
+     *   - grpc.NotFound: the &#64;draft_schedule_sid, &#64;shift_template_sid, or &#64;wfm_agent_sids do not exist for the org sending the request.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes createShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq request) {
@@ -11068,6 +11071,7 @@ public final class WFMGrpc {
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
      *   - grpc.Internal: error occurs when creating the shift instance.
+     *   - grpc.NotFound: the &#64;draft_schedule_sid, &#64;shift_template_sid, or &#64;wfm_agent_sids do not exist for the org sending the request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes> createShiftInstance(

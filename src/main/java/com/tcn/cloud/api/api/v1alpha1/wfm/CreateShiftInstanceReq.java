@@ -111,29 +111,14 @@ private static final long serialVersionUID = 0L;
     return startDatetime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDatetime_;
   }
 
-  public static final int WIDTH_IN_MINUTES_FIELD_NUMBER = 4;
-  private int widthInMinutes_ = 0;
-  /**
-   * <pre>
-   * Width in minutes of the shift instance.
-   * </pre>
-   *
-   * <code>int32 width_in_minutes = 4 [json_name = "widthInMinutes"];</code>
-   * @return The widthInMinutes.
-   */
-  @java.lang.Override
-  public int getWidthInMinutes() {
-    return widthInMinutes_;
-  }
-
-  public static final int IS_LOCKED_FIELD_NUMBER = 5;
+  public static final int IS_LOCKED_FIELD_NUMBER = 4;
   private boolean isLocked_ = false;
   /**
    * <pre>
    * Indicates whether the shift instance is locked.
    * </pre>
    *
-   * <code>bool is_locked = 5 [json_name = "isLocked"];</code>
+   * <code>bool is_locked = 4 [json_name = "isLocked"];</code>
    * @return The isLocked.
    */
   @java.lang.Override
@@ -141,7 +126,7 @@ private static final long serialVersionUID = 0L;
     return isLocked_;
   }
 
-  public static final int WFM_AGENT_SIDS_FIELD_NUMBER = 6;
+  public static final int WFM_AGENT_SIDS_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList wfmAgentSids_;
   /**
@@ -151,7 +136,7 @@ private static final long serialVersionUID = 0L;
    * If given more than one sid, then a copy of the instance will be created for each agent.
    * </pre>
    *
-   * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+   * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
    * @return A list containing the wfmAgentSids.
    */
   @java.lang.Override
@@ -166,7 +151,7 @@ private static final long serialVersionUID = 0L;
    * If given more than one sid, then a copy of the instance will be created for each agent.
    * </pre>
    *
-   * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+   * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
    * @return The count of wfmAgentSids.
    */
   public int getWfmAgentSidsCount() {
@@ -179,7 +164,7 @@ private static final long serialVersionUID = 0L;
    * If given more than one sid, then a copy of the instance will be created for each agent.
    * </pre>
    *
-   * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+   * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
    * @param index The index of the element to return.
    * @return The wfmAgentSids at the given index.
    */
@@ -212,14 +197,11 @@ private static final long serialVersionUID = 0L;
     if (startDatetime_ != null) {
       output.writeMessage(3, getStartDatetime());
     }
-    if (widthInMinutes_ != 0) {
-      output.writeInt32(4, widthInMinutes_);
-    }
     if (isLocked_ != false) {
-      output.writeBool(5, isLocked_);
+      output.writeBool(4, isLocked_);
     }
     if (getWfmAgentSidsList().size() > 0) {
-      output.writeUInt32NoTag(50);
+      output.writeUInt32NoTag(42);
       output.writeUInt32NoTag(wfmAgentSidsMemoizedSerializedSize);
     }
     for (int i = 0; i < wfmAgentSids_.size(); i++) {
@@ -246,13 +228,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getStartDatetime());
     }
-    if (widthInMinutes_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(4, widthInMinutes_);
-    }
     if (isLocked_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(5, isLocked_);
+        .computeBoolSize(4, isLocked_);
     }
     {
       int dataSize = 0;
@@ -292,8 +270,6 @@ private static final long serialVersionUID = 0L;
       if (!getStartDatetime()
           .equals(other.getStartDatetime())) return false;
     }
-    if (getWidthInMinutes()
-        != other.getWidthInMinutes()) return false;
     if (getIsLocked()
         != other.getIsLocked()) return false;
     if (!getWfmAgentSidsList()
@@ -319,8 +295,6 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + START_DATETIME_FIELD_NUMBER;
       hash = (53 * hash) + getStartDatetime().hashCode();
     }
-    hash = (37 * hash) + WIDTH_IN_MINUTES_FIELD_NUMBER;
-    hash = (53 * hash) + getWidthInMinutes();
     hash = (37 * hash) + IS_LOCKED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsLocked());
@@ -470,7 +444,6 @@ private static final long serialVersionUID = 0L;
         startDatetimeBuilder_.dispose();
         startDatetimeBuilder_ = null;
       }
-      widthInMinutes_ = 0;
       isLocked_ = false;
       wfmAgentSids_ = emptyLongList();
       return this;
@@ -506,9 +479,9 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq result) {
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         wfmAgentSids_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
       }
       result.wfmAgentSids_ = wfmAgentSids_;
     }
@@ -527,9 +500,6 @@ private static final long serialVersionUID = 0L;
             : startDatetimeBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.widthInMinutes_ = widthInMinutes_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.isLocked_ = isLocked_;
       }
     }
@@ -587,16 +557,13 @@ private static final long serialVersionUID = 0L;
       if (other.hasStartDatetime()) {
         mergeStartDatetime(other.getStartDatetime());
       }
-      if (other.getWidthInMinutes() != 0) {
-        setWidthInMinutes(other.getWidthInMinutes());
-      }
       if (other.getIsLocked() != false) {
         setIsLocked(other.getIsLocked());
       }
       if (!other.wfmAgentSids_.isEmpty()) {
         if (wfmAgentSids_.isEmpty()) {
           wfmAgentSids_ = other.wfmAgentSids_;
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
           ensureWfmAgentSidsIsMutable();
           wfmAgentSids_.addAll(other.wfmAgentSids_);
@@ -647,22 +614,17 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 26
             case 32: {
-              widthInMinutes_ = input.readInt32();
+              isLocked_ = input.readBool();
               bitField0_ |= 0x00000008;
               break;
             } // case 32
             case 40: {
-              isLocked_ = input.readBool();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 40
-            case 48: {
               long v = input.readInt64();
               ensureWfmAgentSidsIsMutable();
               wfmAgentSids_.addLong(v);
               break;
-            } // case 48
-            case 50: {
+            } // case 40
+            case 42: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               ensureWfmAgentSidsIsMutable();
@@ -671,7 +633,7 @@ private static final long serialVersionUID = 0L;
               }
               input.popLimit(limit);
               break;
-            } // case 50
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -932,57 +894,13 @@ private static final long serialVersionUID = 0L;
       return startDatetimeBuilder_;
     }
 
-    private int widthInMinutes_ ;
-    /**
-     * <pre>
-     * Width in minutes of the shift instance.
-     * </pre>
-     *
-     * <code>int32 width_in_minutes = 4 [json_name = "widthInMinutes"];</code>
-     * @return The widthInMinutes.
-     */
-    @java.lang.Override
-    public int getWidthInMinutes() {
-      return widthInMinutes_;
-    }
-    /**
-     * <pre>
-     * Width in minutes of the shift instance.
-     * </pre>
-     *
-     * <code>int32 width_in_minutes = 4 [json_name = "widthInMinutes"];</code>
-     * @param value The widthInMinutes to set.
-     * @return This builder for chaining.
-     */
-    public Builder setWidthInMinutes(int value) {
-
-      widthInMinutes_ = value;
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Width in minutes of the shift instance.
-     * </pre>
-     *
-     * <code>int32 width_in_minutes = 4 [json_name = "widthInMinutes"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearWidthInMinutes() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      widthInMinutes_ = 0;
-      onChanged();
-      return this;
-    }
-
     private boolean isLocked_ ;
     /**
      * <pre>
      * Indicates whether the shift instance is locked.
      * </pre>
      *
-     * <code>bool is_locked = 5 [json_name = "isLocked"];</code>
+     * <code>bool is_locked = 4 [json_name = "isLocked"];</code>
      * @return The isLocked.
      */
     @java.lang.Override
@@ -994,14 +912,14 @@ private static final long serialVersionUID = 0L;
      * Indicates whether the shift instance is locked.
      * </pre>
      *
-     * <code>bool is_locked = 5 [json_name = "isLocked"];</code>
+     * <code>bool is_locked = 4 [json_name = "isLocked"];</code>
      * @param value The isLocked to set.
      * @return This builder for chaining.
      */
     public Builder setIsLocked(boolean value) {
 
       isLocked_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1010,11 +928,11 @@ private static final long serialVersionUID = 0L;
      * Indicates whether the shift instance is locked.
      * </pre>
      *
-     * <code>bool is_locked = 5 [json_name = "isLocked"];</code>
+     * <code>bool is_locked = 4 [json_name = "isLocked"];</code>
      * @return This builder for chaining.
      */
     public Builder clearIsLocked() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       isLocked_ = false;
       onChanged();
       return this;
@@ -1022,9 +940,9 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList wfmAgentSids_ = emptyLongList();
     private void ensureWfmAgentSidsIsMutable() {
-      if (!((bitField0_ & 0x00000020) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         wfmAgentSids_ = mutableCopy(wfmAgentSids_);
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
       }
     }
     /**
@@ -1034,12 +952,12 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+     * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
      * @return A list containing the wfmAgentSids.
      */
     public java.util.List<java.lang.Long>
         getWfmAgentSidsList() {
-      return ((bitField0_ & 0x00000020) != 0) ?
+      return ((bitField0_ & 0x00000010) != 0) ?
                java.util.Collections.unmodifiableList(wfmAgentSids_) : wfmAgentSids_;
     }
     /**
@@ -1049,7 +967,7 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+     * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
      * @return The count of wfmAgentSids.
      */
     public int getWfmAgentSidsCount() {
@@ -1062,7 +980,7 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+     * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
      * @param index The index of the element to return.
      * @return The wfmAgentSids at the given index.
      */
@@ -1076,7 +994,7 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+     * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
      * @param index The index to set the value at.
      * @param value The wfmAgentSids to set.
      * @return This builder for chaining.
@@ -1096,7 +1014,7 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+     * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
      * @param value The wfmAgentSids to add.
      * @return This builder for chaining.
      */
@@ -1114,7 +1032,7 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+     * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
      * @param values The wfmAgentSids to add.
      * @return This builder for chaining.
      */
@@ -1133,12 +1051,12 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+     * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
      * @return This builder for chaining.
      */
     public Builder clearWfmAgentSids() {
       wfmAgentSids_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
