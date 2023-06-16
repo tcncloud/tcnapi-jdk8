@@ -20,7 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CreateShiftInstanceReq() {
-    wfmAgentSids_ = java.util.Collections.emptyList();
+    wfmAgentSids_ = emptyLongList();
   }
 
   @java.lang.Override
@@ -143,74 +143,50 @@ private static final long serialVersionUID = 0L;
 
   public static final int WFM_AGENT_SIDS_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
-  private java.util.List<com.google.protobuf.Int64Value> wfmAgentSids_;
+  private com.google.protobuf.Internal.LongList wfmAgentSids_;
   /**
    * <pre>
    * ID of the wfm agents for the shift instance.
-   * If null it will create a new unassigned WfmAgent for the shift instance.
+   * If empty it will create a new unassigned WfmAgent for the shift instance.
    * If given more than one sid, then a copy of the instance will be created for each agent.
    * </pre>
    *
-   * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+   * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+   * @return A list containing the wfmAgentSids.
    */
   @java.lang.Override
-  public java.util.List<com.google.protobuf.Int64Value> getWfmAgentSidsList() {
+  public java.util.List<java.lang.Long>
+      getWfmAgentSidsList() {
     return wfmAgentSids_;
   }
   /**
    * <pre>
    * ID of the wfm agents for the shift instance.
-   * If null it will create a new unassigned WfmAgent for the shift instance.
+   * If empty it will create a new unassigned WfmAgent for the shift instance.
    * If given more than one sid, then a copy of the instance will be created for each agent.
    * </pre>
    *
-   * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+   * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+   * @return The count of wfmAgentSids.
    */
-  @java.lang.Override
-  public java.util.List<? extends com.google.protobuf.Int64ValueOrBuilder> 
-      getWfmAgentSidsOrBuilderList() {
-    return wfmAgentSids_;
-  }
-  /**
-   * <pre>
-   * ID of the wfm agents for the shift instance.
-   * If null it will create a new unassigned WfmAgent for the shift instance.
-   * If given more than one sid, then a copy of the instance will be created for each agent.
-   * </pre>
-   *
-   * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
-   */
-  @java.lang.Override
   public int getWfmAgentSidsCount() {
     return wfmAgentSids_.size();
   }
   /**
    * <pre>
    * ID of the wfm agents for the shift instance.
-   * If null it will create a new unassigned WfmAgent for the shift instance.
+   * If empty it will create a new unassigned WfmAgent for the shift instance.
    * If given more than one sid, then a copy of the instance will be created for each agent.
    * </pre>
    *
-   * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+   * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+   * @param index The index of the element to return.
+   * @return The wfmAgentSids at the given index.
    */
-  @java.lang.Override
-  public com.google.protobuf.Int64Value getWfmAgentSids(int index) {
-    return wfmAgentSids_.get(index);
+  public long getWfmAgentSids(int index) {
+    return wfmAgentSids_.getLong(index);
   }
-  /**
-   * <pre>
-   * ID of the wfm agents for the shift instance.
-   * If null it will create a new unassigned WfmAgent for the shift instance.
-   * If given more than one sid, then a copy of the instance will be created for each agent.
-   * </pre>
-   *
-   * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
-   */
-  @java.lang.Override
-  public com.google.protobuf.Int64ValueOrBuilder getWfmAgentSidsOrBuilder(
-      int index) {
-    return wfmAgentSids_.get(index);
-  }
+  private int wfmAgentSidsMemoizedSerializedSize = -1;
 
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
@@ -226,6 +202,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
     if (draftScheduleSid_ != 0L) {
       output.writeInt64(1, draftScheduleSid_);
     }
@@ -241,8 +218,12 @@ private static final long serialVersionUID = 0L;
     if (isLocked_ != false) {
       output.writeBool(5, isLocked_);
     }
+    if (getWfmAgentSidsList().size() > 0) {
+      output.writeUInt32NoTag(50);
+      output.writeUInt32NoTag(wfmAgentSidsMemoizedSerializedSize);
+    }
     for (int i = 0; i < wfmAgentSids_.size(); i++) {
-      output.writeMessage(6, wfmAgentSids_.get(i));
+      output.writeInt64NoTag(wfmAgentSids_.getLong(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -273,9 +254,19 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(5, isLocked_);
     }
-    for (int i = 0; i < wfmAgentSids_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, wfmAgentSids_.get(i));
+    {
+      int dataSize = 0;
+      for (int i = 0; i < wfmAgentSids_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeInt64SizeNoTag(wfmAgentSids_.getLong(i));
+      }
+      size += dataSize;
+      if (!getWfmAgentSidsList().isEmpty()) {
+        size += 1;
+        size += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(dataSize);
+      }
+      wfmAgentSidsMemoizedSerializedSize = dataSize;
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -481,13 +472,7 @@ private static final long serialVersionUID = 0L;
       }
       widthInMinutes_ = 0;
       isLocked_ = false;
-      if (wfmAgentSidsBuilder_ == null) {
-        wfmAgentSids_ = java.util.Collections.emptyList();
-      } else {
-        wfmAgentSids_ = null;
-        wfmAgentSidsBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00000020);
+      wfmAgentSids_ = emptyLongList();
       return this;
     }
 
@@ -521,15 +506,11 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq result) {
-      if (wfmAgentSidsBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0)) {
-          wfmAgentSids_ = java.util.Collections.unmodifiableList(wfmAgentSids_);
-          bitField0_ = (bitField0_ & ~0x00000020);
-        }
-        result.wfmAgentSids_ = wfmAgentSids_;
-      } else {
-        result.wfmAgentSids_ = wfmAgentSidsBuilder_.build();
+      if (((bitField0_ & 0x00000020) != 0)) {
+        wfmAgentSids_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000020);
       }
+      result.wfmAgentSids_ = wfmAgentSids_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq result) {
@@ -612,31 +593,15 @@ private static final long serialVersionUID = 0L;
       if (other.getIsLocked() != false) {
         setIsLocked(other.getIsLocked());
       }
-      if (wfmAgentSidsBuilder_ == null) {
-        if (!other.wfmAgentSids_.isEmpty()) {
-          if (wfmAgentSids_.isEmpty()) {
-            wfmAgentSids_ = other.wfmAgentSids_;
-            bitField0_ = (bitField0_ & ~0x00000020);
-          } else {
-            ensureWfmAgentSidsIsMutable();
-            wfmAgentSids_.addAll(other.wfmAgentSids_);
-          }
-          onChanged();
+      if (!other.wfmAgentSids_.isEmpty()) {
+        if (wfmAgentSids_.isEmpty()) {
+          wfmAgentSids_ = other.wfmAgentSids_;
+          bitField0_ = (bitField0_ & ~0x00000020);
+        } else {
+          ensureWfmAgentSidsIsMutable();
+          wfmAgentSids_.addAll(other.wfmAgentSids_);
         }
-      } else {
-        if (!other.wfmAgentSids_.isEmpty()) {
-          if (wfmAgentSidsBuilder_.isEmpty()) {
-            wfmAgentSidsBuilder_.dispose();
-            wfmAgentSidsBuilder_ = null;
-            wfmAgentSids_ = other.wfmAgentSids_;
-            bitField0_ = (bitField0_ & ~0x00000020);
-            wfmAgentSidsBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getWfmAgentSidsFieldBuilder() : null;
-          } else {
-            wfmAgentSidsBuilder_.addAllMessages(other.wfmAgentSids_);
-          }
-        }
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -691,17 +656,20 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 40
+            case 48: {
+              long v = input.readInt64();
+              ensureWfmAgentSidsIsMutable();
+              wfmAgentSids_.addLong(v);
+              break;
+            } // case 48
             case 50: {
-              com.google.protobuf.Int64Value m =
-                  input.readMessage(
-                      com.google.protobuf.Int64Value.parser(),
-                      extensionRegistry);
-              if (wfmAgentSidsBuilder_ == null) {
-                ensureWfmAgentSidsIsMutable();
-                wfmAgentSids_.add(m);
-              } else {
-                wfmAgentSidsBuilder_.addMessage(m);
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              ensureWfmAgentSidsIsMutable();
+              while (input.getBytesUntilLimit() > 0) {
+                wfmAgentSids_.addLong(input.readInt64());
               }
+              input.popLimit(limit);
               break;
             } // case 50
             default: {
@@ -1052,352 +1020,127 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<com.google.protobuf.Int64Value> wfmAgentSids_ =
-      java.util.Collections.emptyList();
+    private com.google.protobuf.Internal.LongList wfmAgentSids_ = emptyLongList();
     private void ensureWfmAgentSidsIsMutable() {
       if (!((bitField0_ & 0x00000020) != 0)) {
-        wfmAgentSids_ = new java.util.ArrayList<com.google.protobuf.Int64Value>(wfmAgentSids_);
+        wfmAgentSids_ = mutableCopy(wfmAgentSids_);
         bitField0_ |= 0x00000020;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> wfmAgentSidsBuilder_;
-
-    /**
-     * <pre>
-     * ID of the wfm agents for the shift instance.
-     * If null it will create a new unassigned WfmAgent for the shift instance.
-     * If given more than one sid, then a copy of the instance will be created for each agent.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
-     */
-    public java.util.List<com.google.protobuf.Int64Value> getWfmAgentSidsList() {
-      if (wfmAgentSidsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(wfmAgentSids_);
-      } else {
-        return wfmAgentSidsBuilder_.getMessageList();
       }
     }
     /**
      * <pre>
      * ID of the wfm agents for the shift instance.
-     * If null it will create a new unassigned WfmAgent for the shift instance.
+     * If empty it will create a new unassigned WfmAgent for the shift instance.
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+     * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+     * @return A list containing the wfmAgentSids.
+     */
+    public java.util.List<java.lang.Long>
+        getWfmAgentSidsList() {
+      return ((bitField0_ & 0x00000020) != 0) ?
+               java.util.Collections.unmodifiableList(wfmAgentSids_) : wfmAgentSids_;
+    }
+    /**
+     * <pre>
+     * ID of the wfm agents for the shift instance.
+     * If empty it will create a new unassigned WfmAgent for the shift instance.
+     * If given more than one sid, then a copy of the instance will be created for each agent.
+     * </pre>
+     *
+     * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+     * @return The count of wfmAgentSids.
      */
     public int getWfmAgentSidsCount() {
-      if (wfmAgentSidsBuilder_ == null) {
-        return wfmAgentSids_.size();
-      } else {
-        return wfmAgentSidsBuilder_.getCount();
-      }
+      return wfmAgentSids_.size();
     }
     /**
      * <pre>
      * ID of the wfm agents for the shift instance.
-     * If null it will create a new unassigned WfmAgent for the shift instance.
+     * If empty it will create a new unassigned WfmAgent for the shift instance.
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+     * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+     * @param index The index of the element to return.
+     * @return The wfmAgentSids at the given index.
      */
-    public com.google.protobuf.Int64Value getWfmAgentSids(int index) {
-      if (wfmAgentSidsBuilder_ == null) {
-        return wfmAgentSids_.get(index);
-      } else {
-        return wfmAgentSidsBuilder_.getMessage(index);
-      }
+    public long getWfmAgentSids(int index) {
+      return wfmAgentSids_.getLong(index);
     }
     /**
      * <pre>
      * ID of the wfm agents for the shift instance.
-     * If null it will create a new unassigned WfmAgent for the shift instance.
+     * If empty it will create a new unassigned WfmAgent for the shift instance.
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+     * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+     * @param index The index to set the value at.
+     * @param value The wfmAgentSids to set.
+     * @return This builder for chaining.
      */
     public Builder setWfmAgentSids(
-        int index, com.google.protobuf.Int64Value value) {
-      if (wfmAgentSidsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureWfmAgentSidsIsMutable();
-        wfmAgentSids_.set(index, value);
-        onChanged();
-      } else {
-        wfmAgentSidsBuilder_.setMessage(index, value);
-      }
+        int index, long value) {
+
+      ensureWfmAgentSidsIsMutable();
+      wfmAgentSids_.setLong(index, value);
+      onChanged();
       return this;
     }
     /**
      * <pre>
      * ID of the wfm agents for the shift instance.
-     * If null it will create a new unassigned WfmAgent for the shift instance.
+     * If empty it will create a new unassigned WfmAgent for the shift instance.
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+     * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+     * @param value The wfmAgentSids to add.
+     * @return This builder for chaining.
      */
-    public Builder setWfmAgentSids(
-        int index, com.google.protobuf.Int64Value.Builder builderForValue) {
-      if (wfmAgentSidsBuilder_ == null) {
-        ensureWfmAgentSidsIsMutable();
-        wfmAgentSids_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        wfmAgentSidsBuilder_.setMessage(index, builderForValue.build());
-      }
+    public Builder addWfmAgentSids(long value) {
+
+      ensureWfmAgentSidsIsMutable();
+      wfmAgentSids_.addLong(value);
+      onChanged();
       return this;
     }
     /**
      * <pre>
      * ID of the wfm agents for the shift instance.
-     * If null it will create a new unassigned WfmAgent for the shift instance.
+     * If empty it will create a new unassigned WfmAgent for the shift instance.
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
-     */
-    public Builder addWfmAgentSids(com.google.protobuf.Int64Value value) {
-      if (wfmAgentSidsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureWfmAgentSidsIsMutable();
-        wfmAgentSids_.add(value);
-        onChanged();
-      } else {
-        wfmAgentSidsBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * ID of the wfm agents for the shift instance.
-     * If null it will create a new unassigned WfmAgent for the shift instance.
-     * If given more than one sid, then a copy of the instance will be created for each agent.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
-     */
-    public Builder addWfmAgentSids(
-        int index, com.google.protobuf.Int64Value value) {
-      if (wfmAgentSidsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureWfmAgentSidsIsMutable();
-        wfmAgentSids_.add(index, value);
-        onChanged();
-      } else {
-        wfmAgentSidsBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * ID of the wfm agents for the shift instance.
-     * If null it will create a new unassigned WfmAgent for the shift instance.
-     * If given more than one sid, then a copy of the instance will be created for each agent.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
-     */
-    public Builder addWfmAgentSids(
-        com.google.protobuf.Int64Value.Builder builderForValue) {
-      if (wfmAgentSidsBuilder_ == null) {
-        ensureWfmAgentSidsIsMutable();
-        wfmAgentSids_.add(builderForValue.build());
-        onChanged();
-      } else {
-        wfmAgentSidsBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * ID of the wfm agents for the shift instance.
-     * If null it will create a new unassigned WfmAgent for the shift instance.
-     * If given more than one sid, then a copy of the instance will be created for each agent.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
-     */
-    public Builder addWfmAgentSids(
-        int index, com.google.protobuf.Int64Value.Builder builderForValue) {
-      if (wfmAgentSidsBuilder_ == null) {
-        ensureWfmAgentSidsIsMutable();
-        wfmAgentSids_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        wfmAgentSidsBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * ID of the wfm agents for the shift instance.
-     * If null it will create a new unassigned WfmAgent for the shift instance.
-     * If given more than one sid, then a copy of the instance will be created for each agent.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+     * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+     * @param values The wfmAgentSids to add.
+     * @return This builder for chaining.
      */
     public Builder addAllWfmAgentSids(
-        java.lang.Iterable<? extends com.google.protobuf.Int64Value> values) {
-      if (wfmAgentSidsBuilder_ == null) {
-        ensureWfmAgentSidsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, wfmAgentSids_);
-        onChanged();
-      } else {
-        wfmAgentSidsBuilder_.addAllMessages(values);
-      }
+        java.lang.Iterable<? extends java.lang.Long> values) {
+      ensureWfmAgentSidsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, wfmAgentSids_);
+      onChanged();
       return this;
     }
     /**
      * <pre>
      * ID of the wfm agents for the shift instance.
-     * If null it will create a new unassigned WfmAgent for the shift instance.
+     * If empty it will create a new unassigned WfmAgent for the shift instance.
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+     * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+     * @return This builder for chaining.
      */
     public Builder clearWfmAgentSids() {
-      if (wfmAgentSidsBuilder_ == null) {
-        wfmAgentSids_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
-        onChanged();
-      } else {
-        wfmAgentSidsBuilder_.clear();
-      }
+      wfmAgentSids_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onChanged();
       return this;
-    }
-    /**
-     * <pre>
-     * ID of the wfm agents for the shift instance.
-     * If null it will create a new unassigned WfmAgent for the shift instance.
-     * If given more than one sid, then a copy of the instance will be created for each agent.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
-     */
-    public Builder removeWfmAgentSids(int index) {
-      if (wfmAgentSidsBuilder_ == null) {
-        ensureWfmAgentSidsIsMutable();
-        wfmAgentSids_.remove(index);
-        onChanged();
-      } else {
-        wfmAgentSidsBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * ID of the wfm agents for the shift instance.
-     * If null it will create a new unassigned WfmAgent for the shift instance.
-     * If given more than one sid, then a copy of the instance will be created for each agent.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
-     */
-    public com.google.protobuf.Int64Value.Builder getWfmAgentSidsBuilder(
-        int index) {
-      return getWfmAgentSidsFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * ID of the wfm agents for the shift instance.
-     * If null it will create a new unassigned WfmAgent for the shift instance.
-     * If given more than one sid, then a copy of the instance will be created for each agent.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
-     */
-    public com.google.protobuf.Int64ValueOrBuilder getWfmAgentSidsOrBuilder(
-        int index) {
-      if (wfmAgentSidsBuilder_ == null) {
-        return wfmAgentSids_.get(index);  } else {
-        return wfmAgentSidsBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <pre>
-     * ID of the wfm agents for the shift instance.
-     * If null it will create a new unassigned WfmAgent for the shift instance.
-     * If given more than one sid, then a copy of the instance will be created for each agent.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
-     */
-    public java.util.List<? extends com.google.protobuf.Int64ValueOrBuilder> 
-         getWfmAgentSidsOrBuilderList() {
-      if (wfmAgentSidsBuilder_ != null) {
-        return wfmAgentSidsBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(wfmAgentSids_);
-      }
-    }
-    /**
-     * <pre>
-     * ID of the wfm agents for the shift instance.
-     * If null it will create a new unassigned WfmAgent for the shift instance.
-     * If given more than one sid, then a copy of the instance will be created for each agent.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
-     */
-    public com.google.protobuf.Int64Value.Builder addWfmAgentSidsBuilder() {
-      return getWfmAgentSidsFieldBuilder().addBuilder(
-          com.google.protobuf.Int64Value.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * ID of the wfm agents for the shift instance.
-     * If null it will create a new unassigned WfmAgent for the shift instance.
-     * If given more than one sid, then a copy of the instance will be created for each agent.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
-     */
-    public com.google.protobuf.Int64Value.Builder addWfmAgentSidsBuilder(
-        int index) {
-      return getWfmAgentSidsFieldBuilder().addBuilder(
-          index, com.google.protobuf.Int64Value.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * ID of the wfm agents for the shift instance.
-     * If null it will create a new unassigned WfmAgent for the shift instance.
-     * If given more than one sid, then a copy of the instance will be created for each agent.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
-     */
-    public java.util.List<com.google.protobuf.Int64Value.Builder> 
-         getWfmAgentSidsBuilderList() {
-      return getWfmAgentSidsFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-        getWfmAgentSidsFieldBuilder() {
-      if (wfmAgentSidsBuilder_ == null) {
-        wfmAgentSidsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                wfmAgentSids_,
-                ((bitField0_ & 0x00000020) != 0),
-                getParentForChildren(),
-                isClean());
-        wfmAgentSids_ = null;
-      }
-      return wfmAgentSidsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

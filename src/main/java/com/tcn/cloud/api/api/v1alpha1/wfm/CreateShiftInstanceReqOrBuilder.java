@@ -77,54 +77,35 @@ public interface CreateShiftInstanceReqOrBuilder extends
   /**
    * <pre>
    * ID of the wfm agents for the shift instance.
-   * If null it will create a new unassigned WfmAgent for the shift instance.
+   * If empty it will create a new unassigned WfmAgent for the shift instance.
    * If given more than one sid, then a copy of the instance will be created for each agent.
    * </pre>
    *
-   * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+   * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+   * @return A list containing the wfmAgentSids.
    */
-  java.util.List<com.google.protobuf.Int64Value> 
-      getWfmAgentSidsList();
+  java.util.List<java.lang.Long> getWfmAgentSidsList();
   /**
    * <pre>
    * ID of the wfm agents for the shift instance.
-   * If null it will create a new unassigned WfmAgent for the shift instance.
+   * If empty it will create a new unassigned WfmAgent for the shift instance.
    * If given more than one sid, then a copy of the instance will be created for each agent.
    * </pre>
    *
-   * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
-   */
-  com.google.protobuf.Int64Value getWfmAgentSids(int index);
-  /**
-   * <pre>
-   * ID of the wfm agents for the shift instance.
-   * If null it will create a new unassigned WfmAgent for the shift instance.
-   * If given more than one sid, then a copy of the instance will be created for each agent.
-   * </pre>
-   *
-   * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+   * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+   * @return The count of wfmAgentSids.
    */
   int getWfmAgentSidsCount();
   /**
    * <pre>
    * ID of the wfm agents for the shift instance.
-   * If null it will create a new unassigned WfmAgent for the shift instance.
+   * If empty it will create a new unassigned WfmAgent for the shift instance.
    * If given more than one sid, then a copy of the instance will be created for each agent.
    * </pre>
    *
-   * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+   * <code>repeated int64 wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
+   * @param index The index of the element to return.
+   * @return The wfmAgentSids at the given index.
    */
-  java.util.List<? extends com.google.protobuf.Int64ValueOrBuilder> 
-      getWfmAgentSidsOrBuilderList();
-  /**
-   * <pre>
-   * ID of the wfm agents for the shift instance.
-   * If null it will create a new unassigned WfmAgent for the shift instance.
-   * If given more than one sid, then a copy of the instance will be created for each agent.
-   * </pre>
-   *
-   * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
-   */
-  com.google.protobuf.Int64ValueOrBuilder getWfmAgentSidsOrBuilder(
-      int index);
+  long getWfmAgentSids(int index);
 }
