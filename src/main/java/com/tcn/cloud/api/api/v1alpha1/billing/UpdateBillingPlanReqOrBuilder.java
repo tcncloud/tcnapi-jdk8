@@ -9,45 +9,45 @@ public interface UpdateBillingPlanReqOrBuilder extends
 
   /**
    * <pre>
-   * Required. the updates to perform on the billing plan
+   * Required. the billing details to update
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReq updates = 1 [json_name = "updates"];</code>
+   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReq> 
-      getUpdatesList();
+  java.util.List<com.tcn.cloud.api.api.commons.billing.Detail> 
+      getBillingDetailsList();
   /**
    * <pre>
-   * Required. the updates to perform on the billing plan
+   * Required. the billing details to update
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReq updates = 1 [json_name = "updates"];</code>
+   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReq getUpdates(int index);
+  com.tcn.cloud.api.api.commons.billing.Detail getBillingDetails(int index);
   /**
    * <pre>
-   * Required. the updates to perform on the billing plan
+   * Required. the billing details to update
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReq updates = 1 [json_name = "updates"];</code>
+   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
    */
-  int getUpdatesCount();
+  int getBillingDetailsCount();
   /**
    * <pre>
-   * Required. the updates to perform on the billing plan
+   * Required. the billing details to update
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReq updates = 1 [json_name = "updates"];</code>
+   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReqOrBuilder> 
-      getUpdatesOrBuilderList();
+  java.util.List<? extends com.tcn.cloud.api.api.commons.billing.DetailOrBuilder> 
+      getBillingDetailsOrBuilderList();
   /**
    * <pre>
-   * Required. the updates to perform on the billing plan
+   * Required. the billing details to update
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReq updates = 1 [json_name = "updates"];</code>
+   * <code>repeated .api.commons.billing.Detail billing_details = 1 [json_name = "billingDetails"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReqOrBuilder getUpdatesOrBuilder(
+  com.tcn.cloud.api.api.commons.billing.DetailOrBuilder getBillingDetailsOrBuilder(
       int index);
 }
