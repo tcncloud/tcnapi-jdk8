@@ -140,6 +140,66 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostBalanceByIdOrBuilder getRelatientPostBalanceByIdOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken relatient_create_fortis_achtoken = 207 [json_name = "relatientCreateFortisAchtoken"];</code>
+   * @return Whether the relatientCreateFortisAchtoken field is set.
+   */
+  boolean hasRelatientCreateFortisAchtoken();
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken relatient_create_fortis_achtoken = 207 [json_name = "relatientCreateFortisAchtoken"];</code>
+   * @return The relatientCreateFortisAchtoken.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken getRelatientCreateFortisAchtoken();
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken relatient_create_fortis_achtoken = 207 [json_name = "relatientCreateFortisAchtoken"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtokenOrBuilder getRelatientCreateFortisAchtokenOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientCreateFortisCctoken relatient_create_fortis_cctoken = 208 [json_name = "relatientCreateFortisCctoken"];</code>
+   * @return Whether the relatientCreateFortisCctoken field is set.
+   */
+  boolean hasRelatientCreateFortisCctoken();
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientCreateFortisCctoken relatient_create_fortis_cctoken = 208 [json_name = "relatientCreateFortisCctoken"];</code>
+   * @return The relatientCreateFortisCctoken.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken getRelatientCreateFortisCctoken();
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientCreateFortisCctoken relatient_create_fortis_cctoken = 208 [json_name = "relatientCreateFortisCctoken"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctokenOrBuilder getRelatientCreateFortisCctokenOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment relatient_fortis_token_ach_debit_payment = 209 [json_name = "relatientFortisTokenAchDebitPayment"];</code>
+   * @return Whether the relatientFortisTokenAchDebitPayment field is set.
+   */
+  boolean hasRelatientFortisTokenAchDebitPayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment relatient_fortis_token_ach_debit_payment = 209 [json_name = "relatientFortisTokenAchDebitPayment"];</code>
+   * @return The relatientFortisTokenAchDebitPayment.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment getRelatientFortisTokenAchDebitPayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment relatient_fortis_token_ach_debit_payment = 209 [json_name = "relatientFortisTokenAchDebitPayment"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPaymentOrBuilder getRelatientFortisTokenAchDebitPaymentOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment relatient_fortis_token_cc_payment = 210 [json_name = "relatientFortisTokenCcPayment"];</code>
+   * @return Whether the relatientFortisTokenCcPayment field is set.
+   */
+  boolean hasRelatientFortisTokenCcPayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment relatient_fortis_token_cc_payment = 210 [json_name = "relatientFortisTokenCcPayment"];</code>
+   * @return The relatientFortisTokenCcPayment.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment getRelatientFortisTokenCcPayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment relatient_fortis_token_cc_payment = 210 [json_name = "relatientFortisTokenCcPayment"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPaymentOrBuilder getRelatientFortisTokenCcPaymentOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecuteCybersourceCreditPayment cybersource_credit_payment = 301 [json_name = "cybersourceCreditPayment"];</code>
    * @return Whether the cybersourceCreditPayment field is set.
    */

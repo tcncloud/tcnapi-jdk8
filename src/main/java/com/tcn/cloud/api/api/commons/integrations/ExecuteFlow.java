@@ -60,6 +60,10 @@ private static final long serialVersionUID = 0L;
     RELATIENT_POST_PATIENT_BALANCE(204),
     RELATIENT_GET_PATIENT(205),
     RELATIENT_POST_BALANCE_BY_ID(206),
+    RELATIENT_CREATE_FORTIS_ACHTOKEN(207),
+    RELATIENT_CREATE_FORTIS_CCTOKEN(208),
+    RELATIENT_FORTIS_TOKEN_ACH_DEBIT_PAYMENT(209),
+    RELATIENT_FORTIS_TOKEN_CC_PAYMENT(210),
     CYBERSOURCE_CREDIT_PAYMENT(301),
     CYBERSOURCE_ECHECK_PAYMENT(302),
     CIRCPRO_PHONE_LOOKUP_WITH_BUNDLE(401),
@@ -231,6 +235,10 @@ private static final long serialVersionUID = 0L;
         case 204: return RELATIENT_POST_PATIENT_BALANCE;
         case 205: return RELATIENT_GET_PATIENT;
         case 206: return RELATIENT_POST_BALANCE_BY_ID;
+        case 207: return RELATIENT_CREATE_FORTIS_ACHTOKEN;
+        case 208: return RELATIENT_CREATE_FORTIS_CCTOKEN;
+        case 209: return RELATIENT_FORTIS_TOKEN_ACH_DEBIT_PAYMENT;
+        case 210: return RELATIENT_FORTIS_TOKEN_CC_PAYMENT;
         case 301: return CYBERSOURCE_CREDIT_PAYMENT;
         case 302: return CYBERSOURCE_ECHECK_PAYMENT;
         case 401: return CIRCPRO_PHONE_LOOKUP_WITH_BUNDLE;
@@ -677,6 +685,130 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostBalanceById) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostBalanceById.getDefaultInstance();
+  }
+
+  public static final int RELATIENT_CREATE_FORTIS_ACHTOKEN_FIELD_NUMBER = 207;
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken relatient_create_fortis_achtoken = 207 [json_name = "relatientCreateFortisAchtoken"];</code>
+   * @return Whether the relatientCreateFortisAchtoken field is set.
+   */
+  @java.lang.Override
+  public boolean hasRelatientCreateFortisAchtoken() {
+    return valueCase_ == 207;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken relatient_create_fortis_achtoken = 207 [json_name = "relatientCreateFortisAchtoken"];</code>
+   * @return The relatientCreateFortisAchtoken.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken getRelatientCreateFortisAchtoken() {
+    if (valueCase_ == 207) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken relatient_create_fortis_achtoken = 207 [json_name = "relatientCreateFortisAchtoken"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtokenOrBuilder getRelatientCreateFortisAchtokenOrBuilder() {
+    if (valueCase_ == 207) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken.getDefaultInstance();
+  }
+
+  public static final int RELATIENT_CREATE_FORTIS_CCTOKEN_FIELD_NUMBER = 208;
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientCreateFortisCctoken relatient_create_fortis_cctoken = 208 [json_name = "relatientCreateFortisCctoken"];</code>
+   * @return Whether the relatientCreateFortisCctoken field is set.
+   */
+  @java.lang.Override
+  public boolean hasRelatientCreateFortisCctoken() {
+    return valueCase_ == 208;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientCreateFortisCctoken relatient_create_fortis_cctoken = 208 [json_name = "relatientCreateFortisCctoken"];</code>
+   * @return The relatientCreateFortisCctoken.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken getRelatientCreateFortisCctoken() {
+    if (valueCase_ == 208) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientCreateFortisCctoken relatient_create_fortis_cctoken = 208 [json_name = "relatientCreateFortisCctoken"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctokenOrBuilder getRelatientCreateFortisCctokenOrBuilder() {
+    if (valueCase_ == 208) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken.getDefaultInstance();
+  }
+
+  public static final int RELATIENT_FORTIS_TOKEN_ACH_DEBIT_PAYMENT_FIELD_NUMBER = 209;
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment relatient_fortis_token_ach_debit_payment = 209 [json_name = "relatientFortisTokenAchDebitPayment"];</code>
+   * @return Whether the relatientFortisTokenAchDebitPayment field is set.
+   */
+  @java.lang.Override
+  public boolean hasRelatientFortisTokenAchDebitPayment() {
+    return valueCase_ == 209;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment relatient_fortis_token_ach_debit_payment = 209 [json_name = "relatientFortisTokenAchDebitPayment"];</code>
+   * @return The relatientFortisTokenAchDebitPayment.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment getRelatientFortisTokenAchDebitPayment() {
+    if (valueCase_ == 209) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment relatient_fortis_token_ach_debit_payment = 209 [json_name = "relatientFortisTokenAchDebitPayment"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPaymentOrBuilder getRelatientFortisTokenAchDebitPaymentOrBuilder() {
+    if (valueCase_ == 209) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment.getDefaultInstance();
+  }
+
+  public static final int RELATIENT_FORTIS_TOKEN_CC_PAYMENT_FIELD_NUMBER = 210;
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment relatient_fortis_token_cc_payment = 210 [json_name = "relatientFortisTokenCcPayment"];</code>
+   * @return Whether the relatientFortisTokenCcPayment field is set.
+   */
+  @java.lang.Override
+  public boolean hasRelatientFortisTokenCcPayment() {
+    return valueCase_ == 210;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment relatient_fortis_token_cc_payment = 210 [json_name = "relatientFortisTokenCcPayment"];</code>
+   * @return The relatientFortisTokenCcPayment.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment getRelatientFortisTokenCcPayment() {
+    if (valueCase_ == 210) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment relatient_fortis_token_cc_payment = 210 [json_name = "relatientFortisTokenCcPayment"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPaymentOrBuilder getRelatientFortisTokenCcPaymentOrBuilder() {
+    if (valueCase_ == 210) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment.getDefaultInstance();
   }
 
   public static final int CYBERSOURCE_CREDIT_PAYMENT_FIELD_NUMBER = 301;
@@ -5246,6 +5378,18 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 206) {
       output.writeMessage(206, (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostBalanceById) value_);
     }
+    if (valueCase_ == 207) {
+      output.writeMessage(207, (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken) value_);
+    }
+    if (valueCase_ == 208) {
+      output.writeMessage(208, (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken) value_);
+    }
+    if (valueCase_ == 209) {
+      output.writeMessage(209, (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment) value_);
+    }
+    if (valueCase_ == 210) {
+      output.writeMessage(210, (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment) value_);
+    }
     if (valueCase_ == 301) {
       output.writeMessage(301, (com.tcn.cloud.api.api.commons.integrations.ExecuteCybersourceCreditPayment) value_);
     }
@@ -5727,6 +5871,22 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 206) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(206, (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostBalanceById) value_);
+    }
+    if (valueCase_ == 207) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(207, (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken) value_);
+    }
+    if (valueCase_ == 208) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(208, (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken) value_);
+    }
+    if (valueCase_ == 209) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(209, (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment) value_);
+    }
+    if (valueCase_ == 210) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(210, (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment) value_);
     }
     if (valueCase_ == 301) {
       size += com.google.protobuf.CodedOutputStream
@@ -6363,6 +6523,22 @@ private static final long serialVersionUID = 0L;
         if (!getRelatientPostBalanceById()
             .equals(other.getRelatientPostBalanceById())) return false;
         break;
+      case 207:
+        if (!getRelatientCreateFortisAchtoken()
+            .equals(other.getRelatientCreateFortisAchtoken())) return false;
+        break;
+      case 208:
+        if (!getRelatientCreateFortisCctoken()
+            .equals(other.getRelatientCreateFortisCctoken())) return false;
+        break;
+      case 209:
+        if (!getRelatientFortisTokenAchDebitPayment()
+            .equals(other.getRelatientFortisTokenAchDebitPayment())) return false;
+        break;
+      case 210:
+        if (!getRelatientFortisTokenCcPayment()
+            .equals(other.getRelatientFortisTokenCcPayment())) return false;
+        break;
       case 301:
         if (!getCybersourceCreditPayment()
             .equals(other.getCybersourceCreditPayment())) return false;
@@ -6995,6 +7171,22 @@ private static final long serialVersionUID = 0L;
       case 206:
         hash = (37 * hash) + RELATIENT_POST_BALANCE_BY_ID_FIELD_NUMBER;
         hash = (53 * hash) + getRelatientPostBalanceById().hashCode();
+        break;
+      case 207:
+        hash = (37 * hash) + RELATIENT_CREATE_FORTIS_ACHTOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getRelatientCreateFortisAchtoken().hashCode();
+        break;
+      case 208:
+        hash = (37 * hash) + RELATIENT_CREATE_FORTIS_CCTOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getRelatientCreateFortisCctoken().hashCode();
+        break;
+      case 209:
+        hash = (37 * hash) + RELATIENT_FORTIS_TOKEN_ACH_DEBIT_PAYMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getRelatientFortisTokenAchDebitPayment().hashCode();
+        break;
+      case 210:
+        hash = (37 * hash) + RELATIENT_FORTIS_TOKEN_CC_PAYMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getRelatientFortisTokenCcPayment().hashCode();
         break;
       case 301:
         hash = (37 * hash) + CYBERSOURCE_CREDIT_PAYMENT_FIELD_NUMBER;
@@ -7750,6 +7942,18 @@ private static final long serialVersionUID = 0L;
       if (relatientPostBalanceByIdBuilder_ != null) {
         relatientPostBalanceByIdBuilder_.clear();
       }
+      if (relatientCreateFortisAchtokenBuilder_ != null) {
+        relatientCreateFortisAchtokenBuilder_.clear();
+      }
+      if (relatientCreateFortisCctokenBuilder_ != null) {
+        relatientCreateFortisCctokenBuilder_.clear();
+      }
+      if (relatientFortisTokenAchDebitPaymentBuilder_ != null) {
+        relatientFortisTokenAchDebitPaymentBuilder_.clear();
+      }
+      if (relatientFortisTokenCcPaymentBuilder_ != null) {
+        relatientFortisTokenCcPaymentBuilder_.clear();
+      }
       if (cybersourceCreditPaymentBuilder_ != null) {
         cybersourceCreditPaymentBuilder_.clear();
       }
@@ -8283,6 +8487,22 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 206 &&
           relatientPostBalanceByIdBuilder_ != null) {
         result.value_ = relatientPostBalanceByIdBuilder_.build();
+      }
+      if (valueCase_ == 207 &&
+          relatientCreateFortisAchtokenBuilder_ != null) {
+        result.value_ = relatientCreateFortisAchtokenBuilder_.build();
+      }
+      if (valueCase_ == 208 &&
+          relatientCreateFortisCctokenBuilder_ != null) {
+        result.value_ = relatientCreateFortisCctokenBuilder_.build();
+      }
+      if (valueCase_ == 209 &&
+          relatientFortisTokenAchDebitPaymentBuilder_ != null) {
+        result.value_ = relatientFortisTokenAchDebitPaymentBuilder_.build();
+      }
+      if (valueCase_ == 210 &&
+          relatientFortisTokenCcPaymentBuilder_ != null) {
+        result.value_ = relatientFortisTokenCcPaymentBuilder_.build();
       }
       if (valueCase_ == 301 &&
           cybersourceCreditPaymentBuilder_ != null) {
@@ -8950,6 +9170,22 @@ private static final long serialVersionUID = 0L;
         }
         case RELATIENT_POST_BALANCE_BY_ID: {
           mergeRelatientPostBalanceById(other.getRelatientPostBalanceById());
+          break;
+        }
+        case RELATIENT_CREATE_FORTIS_ACHTOKEN: {
+          mergeRelatientCreateFortisAchtoken(other.getRelatientCreateFortisAchtoken());
+          break;
+        }
+        case RELATIENT_CREATE_FORTIS_CCTOKEN: {
+          mergeRelatientCreateFortisCctoken(other.getRelatientCreateFortisCctoken());
+          break;
+        }
+        case RELATIENT_FORTIS_TOKEN_ACH_DEBIT_PAYMENT: {
+          mergeRelatientFortisTokenAchDebitPayment(other.getRelatientFortisTokenAchDebitPayment());
+          break;
+        }
+        case RELATIENT_FORTIS_TOKEN_CC_PAYMENT: {
+          mergeRelatientFortisTokenCcPayment(other.getRelatientFortisTokenCcPayment());
           break;
         }
         case CYBERSOURCE_CREDIT_PAYMENT: {
@@ -9627,6 +9863,34 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 206;
               break;
             } // case 1650
+            case 1658: {
+              input.readMessage(
+                  getRelatientCreateFortisAchtokenFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 207;
+              break;
+            } // case 1658
+            case 1666: {
+              input.readMessage(
+                  getRelatientCreateFortisCctokenFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 208;
+              break;
+            } // case 1666
+            case 1674: {
+              input.readMessage(
+                  getRelatientFortisTokenAchDebitPaymentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 209;
+              break;
+            } // case 1674
+            case 1682: {
+              input.readMessage(
+                  getRelatientFortisTokenCcPaymentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 210;
+              break;
+            } // case 1682
             case 2410: {
               input.readMessage(
                   getCybersourceCreditPaymentFieldBuilder().getBuilder(),
@@ -11891,6 +12155,574 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 206;
       onChanged();
       return relatientPostBalanceByIdBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtokenOrBuilder> relatientCreateFortisAchtokenBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken relatient_create_fortis_achtoken = 207 [json_name = "relatientCreateFortisAchtoken"];</code>
+     * @return Whether the relatientCreateFortisAchtoken field is set.
+     */
+    @java.lang.Override
+    public boolean hasRelatientCreateFortisAchtoken() {
+      return valueCase_ == 207;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken relatient_create_fortis_achtoken = 207 [json_name = "relatientCreateFortisAchtoken"];</code>
+     * @return The relatientCreateFortisAchtoken.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken getRelatientCreateFortisAchtoken() {
+      if (relatientCreateFortisAchtokenBuilder_ == null) {
+        if (valueCase_ == 207) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken.getDefaultInstance();
+      } else {
+        if (valueCase_ == 207) {
+          return relatientCreateFortisAchtokenBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken relatient_create_fortis_achtoken = 207 [json_name = "relatientCreateFortisAchtoken"];</code>
+     */
+    public Builder setRelatientCreateFortisAchtoken(com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken value) {
+      if (relatientCreateFortisAchtokenBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        relatientCreateFortisAchtokenBuilder_.setMessage(value);
+      }
+      valueCase_ = 207;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken relatient_create_fortis_achtoken = 207 [json_name = "relatientCreateFortisAchtoken"];</code>
+     */
+    public Builder setRelatientCreateFortisAchtoken(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken.Builder builderForValue) {
+      if (relatientCreateFortisAchtokenBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        relatientCreateFortisAchtokenBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 207;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken relatient_create_fortis_achtoken = 207 [json_name = "relatientCreateFortisAchtoken"];</code>
+     */
+    public Builder mergeRelatientCreateFortisAchtoken(com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken value) {
+      if (relatientCreateFortisAchtokenBuilder_ == null) {
+        if (valueCase_ == 207 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 207) {
+          relatientCreateFortisAchtokenBuilder_.mergeFrom(value);
+        } else {
+          relatientCreateFortisAchtokenBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 207;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken relatient_create_fortis_achtoken = 207 [json_name = "relatientCreateFortisAchtoken"];</code>
+     */
+    public Builder clearRelatientCreateFortisAchtoken() {
+      if (relatientCreateFortisAchtokenBuilder_ == null) {
+        if (valueCase_ == 207) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 207) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        relatientCreateFortisAchtokenBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken relatient_create_fortis_achtoken = 207 [json_name = "relatientCreateFortisAchtoken"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken.Builder getRelatientCreateFortisAchtokenBuilder() {
+      return getRelatientCreateFortisAchtokenFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken relatient_create_fortis_achtoken = 207 [json_name = "relatientCreateFortisAchtoken"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtokenOrBuilder getRelatientCreateFortisAchtokenOrBuilder() {
+      if ((valueCase_ == 207) && (relatientCreateFortisAchtokenBuilder_ != null)) {
+        return relatientCreateFortisAchtokenBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 207) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken relatient_create_fortis_achtoken = 207 [json_name = "relatientCreateFortisAchtoken"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtokenOrBuilder> 
+        getRelatientCreateFortisAchtokenFieldBuilder() {
+      if (relatientCreateFortisAchtokenBuilder_ == null) {
+        if (!(valueCase_ == 207)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken.getDefaultInstance();
+        }
+        relatientCreateFortisAchtokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtokenOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 207;
+      onChanged();
+      return relatientCreateFortisAchtokenBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctokenOrBuilder> relatientCreateFortisCctokenBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientCreateFortisCctoken relatient_create_fortis_cctoken = 208 [json_name = "relatientCreateFortisCctoken"];</code>
+     * @return Whether the relatientCreateFortisCctoken field is set.
+     */
+    @java.lang.Override
+    public boolean hasRelatientCreateFortisCctoken() {
+      return valueCase_ == 208;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientCreateFortisCctoken relatient_create_fortis_cctoken = 208 [json_name = "relatientCreateFortisCctoken"];</code>
+     * @return The relatientCreateFortisCctoken.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken getRelatientCreateFortisCctoken() {
+      if (relatientCreateFortisCctokenBuilder_ == null) {
+        if (valueCase_ == 208) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken.getDefaultInstance();
+      } else {
+        if (valueCase_ == 208) {
+          return relatientCreateFortisCctokenBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientCreateFortisCctoken relatient_create_fortis_cctoken = 208 [json_name = "relatientCreateFortisCctoken"];</code>
+     */
+    public Builder setRelatientCreateFortisCctoken(com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken value) {
+      if (relatientCreateFortisCctokenBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        relatientCreateFortisCctokenBuilder_.setMessage(value);
+      }
+      valueCase_ = 208;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientCreateFortisCctoken relatient_create_fortis_cctoken = 208 [json_name = "relatientCreateFortisCctoken"];</code>
+     */
+    public Builder setRelatientCreateFortisCctoken(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken.Builder builderForValue) {
+      if (relatientCreateFortisCctokenBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        relatientCreateFortisCctokenBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 208;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientCreateFortisCctoken relatient_create_fortis_cctoken = 208 [json_name = "relatientCreateFortisCctoken"];</code>
+     */
+    public Builder mergeRelatientCreateFortisCctoken(com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken value) {
+      if (relatientCreateFortisCctokenBuilder_ == null) {
+        if (valueCase_ == 208 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 208) {
+          relatientCreateFortisCctokenBuilder_.mergeFrom(value);
+        } else {
+          relatientCreateFortisCctokenBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 208;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientCreateFortisCctoken relatient_create_fortis_cctoken = 208 [json_name = "relatientCreateFortisCctoken"];</code>
+     */
+    public Builder clearRelatientCreateFortisCctoken() {
+      if (relatientCreateFortisCctokenBuilder_ == null) {
+        if (valueCase_ == 208) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 208) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        relatientCreateFortisCctokenBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientCreateFortisCctoken relatient_create_fortis_cctoken = 208 [json_name = "relatientCreateFortisCctoken"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken.Builder getRelatientCreateFortisCctokenBuilder() {
+      return getRelatientCreateFortisCctokenFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientCreateFortisCctoken relatient_create_fortis_cctoken = 208 [json_name = "relatientCreateFortisCctoken"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctokenOrBuilder getRelatientCreateFortisCctokenOrBuilder() {
+      if ((valueCase_ == 208) && (relatientCreateFortisCctokenBuilder_ != null)) {
+        return relatientCreateFortisCctokenBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 208) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientCreateFortisCctoken relatient_create_fortis_cctoken = 208 [json_name = "relatientCreateFortisCctoken"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctokenOrBuilder> 
+        getRelatientCreateFortisCctokenFieldBuilder() {
+      if (relatientCreateFortisCctokenBuilder_ == null) {
+        if (!(valueCase_ == 208)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken.getDefaultInstance();
+        }
+        relatientCreateFortisCctokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctokenOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 208;
+      onChanged();
+      return relatientCreateFortisCctokenBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPaymentOrBuilder> relatientFortisTokenAchDebitPaymentBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment relatient_fortis_token_ach_debit_payment = 209 [json_name = "relatientFortisTokenAchDebitPayment"];</code>
+     * @return Whether the relatientFortisTokenAchDebitPayment field is set.
+     */
+    @java.lang.Override
+    public boolean hasRelatientFortisTokenAchDebitPayment() {
+      return valueCase_ == 209;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment relatient_fortis_token_ach_debit_payment = 209 [json_name = "relatientFortisTokenAchDebitPayment"];</code>
+     * @return The relatientFortisTokenAchDebitPayment.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment getRelatientFortisTokenAchDebitPayment() {
+      if (relatientFortisTokenAchDebitPaymentBuilder_ == null) {
+        if (valueCase_ == 209) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment.getDefaultInstance();
+      } else {
+        if (valueCase_ == 209) {
+          return relatientFortisTokenAchDebitPaymentBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment relatient_fortis_token_ach_debit_payment = 209 [json_name = "relatientFortisTokenAchDebitPayment"];</code>
+     */
+    public Builder setRelatientFortisTokenAchDebitPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment value) {
+      if (relatientFortisTokenAchDebitPaymentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        relatientFortisTokenAchDebitPaymentBuilder_.setMessage(value);
+      }
+      valueCase_ = 209;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment relatient_fortis_token_ach_debit_payment = 209 [json_name = "relatientFortisTokenAchDebitPayment"];</code>
+     */
+    public Builder setRelatientFortisTokenAchDebitPayment(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment.Builder builderForValue) {
+      if (relatientFortisTokenAchDebitPaymentBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        relatientFortisTokenAchDebitPaymentBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 209;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment relatient_fortis_token_ach_debit_payment = 209 [json_name = "relatientFortisTokenAchDebitPayment"];</code>
+     */
+    public Builder mergeRelatientFortisTokenAchDebitPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment value) {
+      if (relatientFortisTokenAchDebitPaymentBuilder_ == null) {
+        if (valueCase_ == 209 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 209) {
+          relatientFortisTokenAchDebitPaymentBuilder_.mergeFrom(value);
+        } else {
+          relatientFortisTokenAchDebitPaymentBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 209;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment relatient_fortis_token_ach_debit_payment = 209 [json_name = "relatientFortisTokenAchDebitPayment"];</code>
+     */
+    public Builder clearRelatientFortisTokenAchDebitPayment() {
+      if (relatientFortisTokenAchDebitPaymentBuilder_ == null) {
+        if (valueCase_ == 209) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 209) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        relatientFortisTokenAchDebitPaymentBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment relatient_fortis_token_ach_debit_payment = 209 [json_name = "relatientFortisTokenAchDebitPayment"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment.Builder getRelatientFortisTokenAchDebitPaymentBuilder() {
+      return getRelatientFortisTokenAchDebitPaymentFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment relatient_fortis_token_ach_debit_payment = 209 [json_name = "relatientFortisTokenAchDebitPayment"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPaymentOrBuilder getRelatientFortisTokenAchDebitPaymentOrBuilder() {
+      if ((valueCase_ == 209) && (relatientFortisTokenAchDebitPaymentBuilder_ != null)) {
+        return relatientFortisTokenAchDebitPaymentBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 209) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment relatient_fortis_token_ach_debit_payment = 209 [json_name = "relatientFortisTokenAchDebitPayment"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPaymentOrBuilder> 
+        getRelatientFortisTokenAchDebitPaymentFieldBuilder() {
+      if (relatientFortisTokenAchDebitPaymentBuilder_ == null) {
+        if (!(valueCase_ == 209)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment.getDefaultInstance();
+        }
+        relatientFortisTokenAchDebitPaymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPaymentOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 209;
+      onChanged();
+      return relatientFortisTokenAchDebitPaymentBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPaymentOrBuilder> relatientFortisTokenCcPaymentBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment relatient_fortis_token_cc_payment = 210 [json_name = "relatientFortisTokenCcPayment"];</code>
+     * @return Whether the relatientFortisTokenCcPayment field is set.
+     */
+    @java.lang.Override
+    public boolean hasRelatientFortisTokenCcPayment() {
+      return valueCase_ == 210;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment relatient_fortis_token_cc_payment = 210 [json_name = "relatientFortisTokenCcPayment"];</code>
+     * @return The relatientFortisTokenCcPayment.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment getRelatientFortisTokenCcPayment() {
+      if (relatientFortisTokenCcPaymentBuilder_ == null) {
+        if (valueCase_ == 210) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment.getDefaultInstance();
+      } else {
+        if (valueCase_ == 210) {
+          return relatientFortisTokenCcPaymentBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment relatient_fortis_token_cc_payment = 210 [json_name = "relatientFortisTokenCcPayment"];</code>
+     */
+    public Builder setRelatientFortisTokenCcPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment value) {
+      if (relatientFortisTokenCcPaymentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        relatientFortisTokenCcPaymentBuilder_.setMessage(value);
+      }
+      valueCase_ = 210;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment relatient_fortis_token_cc_payment = 210 [json_name = "relatientFortisTokenCcPayment"];</code>
+     */
+    public Builder setRelatientFortisTokenCcPayment(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment.Builder builderForValue) {
+      if (relatientFortisTokenCcPaymentBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        relatientFortisTokenCcPaymentBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 210;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment relatient_fortis_token_cc_payment = 210 [json_name = "relatientFortisTokenCcPayment"];</code>
+     */
+    public Builder mergeRelatientFortisTokenCcPayment(com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment value) {
+      if (relatientFortisTokenCcPaymentBuilder_ == null) {
+        if (valueCase_ == 210 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 210) {
+          relatientFortisTokenCcPaymentBuilder_.mergeFrom(value);
+        } else {
+          relatientFortisTokenCcPaymentBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 210;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment relatient_fortis_token_cc_payment = 210 [json_name = "relatientFortisTokenCcPayment"];</code>
+     */
+    public Builder clearRelatientFortisTokenCcPayment() {
+      if (relatientFortisTokenCcPaymentBuilder_ == null) {
+        if (valueCase_ == 210) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 210) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        relatientFortisTokenCcPaymentBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment relatient_fortis_token_cc_payment = 210 [json_name = "relatientFortisTokenCcPayment"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment.Builder getRelatientFortisTokenCcPaymentBuilder() {
+      return getRelatientFortisTokenCcPaymentFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment relatient_fortis_token_cc_payment = 210 [json_name = "relatientFortisTokenCcPayment"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPaymentOrBuilder getRelatientFortisTokenCcPaymentOrBuilder() {
+      if ((valueCase_ == 210) && (relatientFortisTokenCcPaymentBuilder_ != null)) {
+        return relatientFortisTokenCcPaymentBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 210) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment relatient_fortis_token_cc_payment = 210 [json_name = "relatientFortisTokenCcPayment"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPaymentOrBuilder> 
+        getRelatientFortisTokenCcPaymentFieldBuilder() {
+      if (relatientFortisTokenCcPaymentBuilder_ == null) {
+        if (!(valueCase_ == 210)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment.getDefaultInstance();
+        }
+        relatientFortisTokenCcPaymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPaymentOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 210;
+      onChanged();
+      return relatientFortisTokenCcPaymentBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
