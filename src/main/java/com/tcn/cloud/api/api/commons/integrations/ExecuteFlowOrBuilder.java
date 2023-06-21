@@ -2389,5 +2389,50 @@ public interface ExecuteFlowOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPaymentsOrBuilder getShift4CcPaymentOrBuilder();
 
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpAccesstoken poscorp_accesstoken = 3501 [json_name = "poscorpAccesstoken"];</code>
+   * @return Whether the poscorpAccesstoken field is set.
+   */
+  boolean hasPoscorpAccesstoken();
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpAccesstoken poscorp_accesstoken = 3501 [json_name = "poscorpAccesstoken"];</code>
+   * @return The poscorpAccesstoken.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken getPoscorpAccesstoken();
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpAccesstoken poscorp_accesstoken = 3501 [json_name = "poscorpAccesstoken"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstokenOrBuilder getPoscorpAccesstokenOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpLookupGuarantor poscorp_lookup_guarantor = 3502 [json_name = "poscorpLookupGuarantor"];</code>
+   * @return Whether the poscorpLookupGuarantor field is set.
+   */
+  boolean hasPoscorpLookupGuarantor();
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpLookupGuarantor poscorp_lookup_guarantor = 3502 [json_name = "poscorpLookupGuarantor"];</code>
+   * @return The poscorpLookupGuarantor.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor getPoscorpLookupGuarantor();
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpLookupGuarantor poscorp_lookup_guarantor = 3502 [json_name = "poscorpLookupGuarantor"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantorOrBuilder getPoscorpLookupGuarantorOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus poscorp_update_payment_status = 3503 [json_name = "poscorpUpdatePaymentStatus"];</code>
+   * @return Whether the poscorpUpdatePaymentStatus field is set.
+   */
+  boolean hasPoscorpUpdatePaymentStatus();
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus poscorp_update_payment_status = 3503 [json_name = "poscorpUpdatePaymentStatus"];</code>
+   * @return The poscorpUpdatePaymentStatus.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus getPoscorpUpdatePaymentStatus();
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus poscorp_update_payment_status = 3503 [json_name = "poscorpUpdatePaymentStatus"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatusOrBuilder getPoscorpUpdatePaymentStatusOrBuilder();
+
   com.tcn.cloud.api.api.commons.integrations.ExecuteFlow.ValueCase getValueCase();
 }
