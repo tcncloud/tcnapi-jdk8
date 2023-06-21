@@ -210,6 +210,9 @@ private static final long serialVersionUID = 0L;
     I2C_TRANSACTION_HISTORY(3210),
     OPAYO_CC_PAYMENT(3301),
     SHIFT4_CC_PAYMENT(3401),
+    POSCORP_ACCESSTOKEN(3501),
+    POSCORP_LOOKUP_GUARANTOR(3502),
+    POSCORP_UPDATE_PAYMENT_STATUS(3503),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -385,6 +388,9 @@ private static final long serialVersionUID = 0L;
         case 3210: return I2C_TRANSACTION_HISTORY;
         case 3301: return OPAYO_CC_PAYMENT;
         case 3401: return SHIFT4_CC_PAYMENT;
+        case 3501: return POSCORP_ACCESSTOKEN;
+        case 3502: return POSCORP_LOOKUP_GUARANTOR;
+        case 3503: return POSCORP_UPDATE_PAYMENT_STATUS;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -5337,6 +5343,99 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments.getDefaultInstance();
   }
 
+  public static final int POSCORP_ACCESSTOKEN_FIELD_NUMBER = 3501;
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpAccesstoken poscorp_accesstoken = 3501 [json_name = "poscorpAccesstoken"];</code>
+   * @return Whether the poscorpAccesstoken field is set.
+   */
+  @java.lang.Override
+  public boolean hasPoscorpAccesstoken() {
+    return valueCase_ == 3501;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpAccesstoken poscorp_accesstoken = 3501 [json_name = "poscorpAccesstoken"];</code>
+   * @return The poscorpAccesstoken.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken getPoscorpAccesstoken() {
+    if (valueCase_ == 3501) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpAccesstoken poscorp_accesstoken = 3501 [json_name = "poscorpAccesstoken"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstokenOrBuilder getPoscorpAccesstokenOrBuilder() {
+    if (valueCase_ == 3501) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken.getDefaultInstance();
+  }
+
+  public static final int POSCORP_LOOKUP_GUARANTOR_FIELD_NUMBER = 3502;
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpLookupGuarantor poscorp_lookup_guarantor = 3502 [json_name = "poscorpLookupGuarantor"];</code>
+   * @return Whether the poscorpLookupGuarantor field is set.
+   */
+  @java.lang.Override
+  public boolean hasPoscorpLookupGuarantor() {
+    return valueCase_ == 3502;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpLookupGuarantor poscorp_lookup_guarantor = 3502 [json_name = "poscorpLookupGuarantor"];</code>
+   * @return The poscorpLookupGuarantor.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor getPoscorpLookupGuarantor() {
+    if (valueCase_ == 3502) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpLookupGuarantor poscorp_lookup_guarantor = 3502 [json_name = "poscorpLookupGuarantor"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantorOrBuilder getPoscorpLookupGuarantorOrBuilder() {
+    if (valueCase_ == 3502) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor.getDefaultInstance();
+  }
+
+  public static final int POSCORP_UPDATE_PAYMENT_STATUS_FIELD_NUMBER = 3503;
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus poscorp_update_payment_status = 3503 [json_name = "poscorpUpdatePaymentStatus"];</code>
+   * @return Whether the poscorpUpdatePaymentStatus field is set.
+   */
+  @java.lang.Override
+  public boolean hasPoscorpUpdatePaymentStatus() {
+    return valueCase_ == 3503;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus poscorp_update_payment_status = 3503 [json_name = "poscorpUpdatePaymentStatus"];</code>
+   * @return The poscorpUpdatePaymentStatus.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus getPoscorpUpdatePaymentStatus() {
+    if (valueCase_ == 3503) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus poscorp_update_payment_status = 3503 [json_name = "poscorpUpdatePaymentStatus"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatusOrBuilder getPoscorpUpdatePaymentStatusOrBuilder() {
+    if (valueCase_ == 3503) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -5827,6 +5926,15 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 3401) {
       output.writeMessage(3401, (com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments) value_);
+    }
+    if (valueCase_ == 3501) {
+      output.writeMessage(3501, (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken) value_);
+    }
+    if (valueCase_ == 3502) {
+      output.writeMessage(3502, (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor) value_);
+    }
+    if (valueCase_ == 3503) {
+      output.writeMessage(3503, (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus) value_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -6471,6 +6579,18 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3401) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3401, (com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPayments) value_);
+    }
+    if (valueCase_ == 3501) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3501, (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken) value_);
+    }
+    if (valueCase_ == 3502) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3502, (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor) value_);
+    }
+    if (valueCase_ == 3503) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3503, (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus) value_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -7123,6 +7243,18 @@ private static final long serialVersionUID = 0L;
         if (!getShift4CcPayment()
             .equals(other.getShift4CcPayment())) return false;
         break;
+      case 3501:
+        if (!getPoscorpAccesstoken()
+            .equals(other.getPoscorpAccesstoken())) return false;
+        break;
+      case 3502:
+        if (!getPoscorpLookupGuarantor()
+            .equals(other.getPoscorpLookupGuarantor())) return false;
+        break;
+      case 3503:
+        if (!getPoscorpUpdatePaymentStatus()
+            .equals(other.getPoscorpUpdatePaymentStatus())) return false;
+        break;
       case 0:
       default:
     }
@@ -7772,6 +7904,18 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + SHIFT4_CC_PAYMENT_FIELD_NUMBER;
         hash = (53 * hash) + getShift4CcPayment().hashCode();
         break;
+      case 3501:
+        hash = (37 * hash) + POSCORP_ACCESSTOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getPoscorpAccesstoken().hashCode();
+        break;
+      case 3502:
+        hash = (37 * hash) + POSCORP_LOOKUP_GUARANTOR_FIELD_NUMBER;
+        hash = (53 * hash) + getPoscorpLookupGuarantor().hashCode();
+        break;
+      case 3503:
+        hash = (37 * hash) + POSCORP_UPDATE_PAYMENT_STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + getPoscorpUpdatePaymentStatus().hashCode();
+        break;
       case 0:
       default:
     }
@@ -7917,6 +8061,7 @@ private static final long serialVersionUID = 0L;
       bitField2_ = 0;
       bitField3_ = 0;
       bitField4_ = 0;
+      bitField5_ = 0;
       pluginInstanceId_ = "";
       if (braintreeCreditSaleBuilder_ != null) {
         braintreeCreditSaleBuilder_.clear();
@@ -8392,6 +8537,15 @@ private static final long serialVersionUID = 0L;
       if (shift4CcPaymentBuilder_ != null) {
         shift4CcPaymentBuilder_.clear();
       }
+      if (poscorpAccesstokenBuilder_ != null) {
+        poscorpAccesstokenBuilder_.clear();
+      }
+      if (poscorpLookupGuarantorBuilder_ != null) {
+        poscorpLookupGuarantorBuilder_.clear();
+      }
+      if (poscorpUpdatePaymentStatusBuilder_ != null) {
+        poscorpUpdatePaymentStatusBuilder_.clear();
+      }
       valueCase_ = 0;
       value_ = null;
       return this;
@@ -8425,6 +8579,7 @@ private static final long serialVersionUID = 0L;
       if (bitField2_ != 0) { buildPartial2(result); }
       if (bitField3_ != 0) { buildPartial3(result); }
       if (bitField4_ != 0) { buildPartial4(result); }
+      if (bitField5_ != 0) { buildPartial5(result); }
       buildPartialOneofs(result);
       onBuilt();
       return result;
@@ -8451,6 +8606,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial4(com.tcn.cloud.api.api.commons.integrations.ExecuteFlow result) {
       int from_bitField4_ = bitField4_;
+    }
+
+    private void buildPartial5(com.tcn.cloud.api.api.commons.integrations.ExecuteFlow result) {
+      int from_bitField5_ = bitField5_;
     }
 
     private void buildPartialOneofs(com.tcn.cloud.api.api.commons.integrations.ExecuteFlow result) {
@@ -9087,6 +9246,18 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 3401 &&
           shift4CcPaymentBuilder_ != null) {
         result.value_ = shift4CcPaymentBuilder_.build();
+      }
+      if (valueCase_ == 3501 &&
+          poscorpAccesstokenBuilder_ != null) {
+        result.value_ = poscorpAccesstokenBuilder_.build();
+      }
+      if (valueCase_ == 3502 &&
+          poscorpLookupGuarantorBuilder_ != null) {
+        result.value_ = poscorpLookupGuarantorBuilder_.build();
+      }
+      if (valueCase_ == 3503 &&
+          poscorpUpdatePaymentStatusBuilder_ != null) {
+        result.value_ = poscorpUpdatePaymentStatusBuilder_.build();
       }
     }
 
@@ -9770,6 +9941,18 @@ private static final long serialVersionUID = 0L;
         }
         case SHIFT4_CC_PAYMENT: {
           mergeShift4CcPayment(other.getShift4CcPayment());
+          break;
+        }
+        case POSCORP_ACCESSTOKEN: {
+          mergePoscorpAccesstoken(other.getPoscorpAccesstoken());
+          break;
+        }
+        case POSCORP_LOOKUP_GUARANTOR: {
+          mergePoscorpLookupGuarantor(other.getPoscorpLookupGuarantor());
+          break;
+        }
+        case POSCORP_UPDATE_PAYMENT_STATUS: {
+          mergePoscorpUpdatePaymentStatus(other.getPoscorpUpdatePaymentStatus());
           break;
         }
         case VALUE_NOT_SET: {
@@ -10913,6 +11096,27 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 3401;
               break;
             } // case 27210
+            case 28010: {
+              input.readMessage(
+                  getPoscorpAccesstokenFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3501;
+              break;
+            } // case 28010
+            case 28018: {
+              input.readMessage(
+                  getPoscorpLookupGuarantorFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3502;
+              break;
+            } // case 28018
+            case 28026: {
+              input.readMessage(
+                  getPoscorpUpdatePaymentStatusFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3503;
+              break;
+            } // case 28026
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -10948,6 +11152,7 @@ private static final long serialVersionUID = 0L;
     private int bitField2_;
     private int bitField3_;
     private int bitField4_;
+    private int bitField5_;
 
     private java.lang.Object pluginInstanceId_ = "";
     /**
@@ -33455,6 +33660,432 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 3401;
       onChanged();
       return shift4CcPaymentBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken, com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstokenOrBuilder> poscorpAccesstokenBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpAccesstoken poscorp_accesstoken = 3501 [json_name = "poscorpAccesstoken"];</code>
+     * @return Whether the poscorpAccesstoken field is set.
+     */
+    @java.lang.Override
+    public boolean hasPoscorpAccesstoken() {
+      return valueCase_ == 3501;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpAccesstoken poscorp_accesstoken = 3501 [json_name = "poscorpAccesstoken"];</code>
+     * @return The poscorpAccesstoken.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken getPoscorpAccesstoken() {
+      if (poscorpAccesstokenBuilder_ == null) {
+        if (valueCase_ == 3501) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3501) {
+          return poscorpAccesstokenBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpAccesstoken poscorp_accesstoken = 3501 [json_name = "poscorpAccesstoken"];</code>
+     */
+    public Builder setPoscorpAccesstoken(com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken value) {
+      if (poscorpAccesstokenBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        poscorpAccesstokenBuilder_.setMessage(value);
+      }
+      valueCase_ = 3501;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpAccesstoken poscorp_accesstoken = 3501 [json_name = "poscorpAccesstoken"];</code>
+     */
+    public Builder setPoscorpAccesstoken(
+        com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken.Builder builderForValue) {
+      if (poscorpAccesstokenBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        poscorpAccesstokenBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3501;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpAccesstoken poscorp_accesstoken = 3501 [json_name = "poscorpAccesstoken"];</code>
+     */
+    public Builder mergePoscorpAccesstoken(com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken value) {
+      if (poscorpAccesstokenBuilder_ == null) {
+        if (valueCase_ == 3501 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3501) {
+          poscorpAccesstokenBuilder_.mergeFrom(value);
+        } else {
+          poscorpAccesstokenBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3501;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpAccesstoken poscorp_accesstoken = 3501 [json_name = "poscorpAccesstoken"];</code>
+     */
+    public Builder clearPoscorpAccesstoken() {
+      if (poscorpAccesstokenBuilder_ == null) {
+        if (valueCase_ == 3501) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3501) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        poscorpAccesstokenBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpAccesstoken poscorp_accesstoken = 3501 [json_name = "poscorpAccesstoken"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken.Builder getPoscorpAccesstokenBuilder() {
+      return getPoscorpAccesstokenFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpAccesstoken poscorp_accesstoken = 3501 [json_name = "poscorpAccesstoken"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstokenOrBuilder getPoscorpAccesstokenOrBuilder() {
+      if ((valueCase_ == 3501) && (poscorpAccesstokenBuilder_ != null)) {
+        return poscorpAccesstokenBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3501) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpAccesstoken poscorp_accesstoken = 3501 [json_name = "poscorpAccesstoken"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken, com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstokenOrBuilder> 
+        getPoscorpAccesstokenFieldBuilder() {
+      if (poscorpAccesstokenBuilder_ == null) {
+        if (!(valueCase_ == 3501)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken.getDefaultInstance();
+        }
+        poscorpAccesstokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken, com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstokenOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3501;
+      onChanged();
+      return poscorpAccesstokenBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor, com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantorOrBuilder> poscorpLookupGuarantorBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpLookupGuarantor poscorp_lookup_guarantor = 3502 [json_name = "poscorpLookupGuarantor"];</code>
+     * @return Whether the poscorpLookupGuarantor field is set.
+     */
+    @java.lang.Override
+    public boolean hasPoscorpLookupGuarantor() {
+      return valueCase_ == 3502;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpLookupGuarantor poscorp_lookup_guarantor = 3502 [json_name = "poscorpLookupGuarantor"];</code>
+     * @return The poscorpLookupGuarantor.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor getPoscorpLookupGuarantor() {
+      if (poscorpLookupGuarantorBuilder_ == null) {
+        if (valueCase_ == 3502) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3502) {
+          return poscorpLookupGuarantorBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpLookupGuarantor poscorp_lookup_guarantor = 3502 [json_name = "poscorpLookupGuarantor"];</code>
+     */
+    public Builder setPoscorpLookupGuarantor(com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor value) {
+      if (poscorpLookupGuarantorBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        poscorpLookupGuarantorBuilder_.setMessage(value);
+      }
+      valueCase_ = 3502;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpLookupGuarantor poscorp_lookup_guarantor = 3502 [json_name = "poscorpLookupGuarantor"];</code>
+     */
+    public Builder setPoscorpLookupGuarantor(
+        com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor.Builder builderForValue) {
+      if (poscorpLookupGuarantorBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        poscorpLookupGuarantorBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3502;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpLookupGuarantor poscorp_lookup_guarantor = 3502 [json_name = "poscorpLookupGuarantor"];</code>
+     */
+    public Builder mergePoscorpLookupGuarantor(com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor value) {
+      if (poscorpLookupGuarantorBuilder_ == null) {
+        if (valueCase_ == 3502 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3502) {
+          poscorpLookupGuarantorBuilder_.mergeFrom(value);
+        } else {
+          poscorpLookupGuarantorBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3502;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpLookupGuarantor poscorp_lookup_guarantor = 3502 [json_name = "poscorpLookupGuarantor"];</code>
+     */
+    public Builder clearPoscorpLookupGuarantor() {
+      if (poscorpLookupGuarantorBuilder_ == null) {
+        if (valueCase_ == 3502) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3502) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        poscorpLookupGuarantorBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpLookupGuarantor poscorp_lookup_guarantor = 3502 [json_name = "poscorpLookupGuarantor"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor.Builder getPoscorpLookupGuarantorBuilder() {
+      return getPoscorpLookupGuarantorFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpLookupGuarantor poscorp_lookup_guarantor = 3502 [json_name = "poscorpLookupGuarantor"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantorOrBuilder getPoscorpLookupGuarantorOrBuilder() {
+      if ((valueCase_ == 3502) && (poscorpLookupGuarantorBuilder_ != null)) {
+        return poscorpLookupGuarantorBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3502) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpLookupGuarantor poscorp_lookup_guarantor = 3502 [json_name = "poscorpLookupGuarantor"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor, com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantorOrBuilder> 
+        getPoscorpLookupGuarantorFieldBuilder() {
+      if (poscorpLookupGuarantorBuilder_ == null) {
+        if (!(valueCase_ == 3502)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor.getDefaultInstance();
+        }
+        poscorpLookupGuarantorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor, com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantorOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3502;
+      onChanged();
+      return poscorpLookupGuarantorBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus, com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatusOrBuilder> poscorpUpdatePaymentStatusBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus poscorp_update_payment_status = 3503 [json_name = "poscorpUpdatePaymentStatus"];</code>
+     * @return Whether the poscorpUpdatePaymentStatus field is set.
+     */
+    @java.lang.Override
+    public boolean hasPoscorpUpdatePaymentStatus() {
+      return valueCase_ == 3503;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus poscorp_update_payment_status = 3503 [json_name = "poscorpUpdatePaymentStatus"];</code>
+     * @return The poscorpUpdatePaymentStatus.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus getPoscorpUpdatePaymentStatus() {
+      if (poscorpUpdatePaymentStatusBuilder_ == null) {
+        if (valueCase_ == 3503) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3503) {
+          return poscorpUpdatePaymentStatusBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus poscorp_update_payment_status = 3503 [json_name = "poscorpUpdatePaymentStatus"];</code>
+     */
+    public Builder setPoscorpUpdatePaymentStatus(com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus value) {
+      if (poscorpUpdatePaymentStatusBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        poscorpUpdatePaymentStatusBuilder_.setMessage(value);
+      }
+      valueCase_ = 3503;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus poscorp_update_payment_status = 3503 [json_name = "poscorpUpdatePaymentStatus"];</code>
+     */
+    public Builder setPoscorpUpdatePaymentStatus(
+        com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus.Builder builderForValue) {
+      if (poscorpUpdatePaymentStatusBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        poscorpUpdatePaymentStatusBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3503;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus poscorp_update_payment_status = 3503 [json_name = "poscorpUpdatePaymentStatus"];</code>
+     */
+    public Builder mergePoscorpUpdatePaymentStatus(com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus value) {
+      if (poscorpUpdatePaymentStatusBuilder_ == null) {
+        if (valueCase_ == 3503 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3503) {
+          poscorpUpdatePaymentStatusBuilder_.mergeFrom(value);
+        } else {
+          poscorpUpdatePaymentStatusBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3503;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus poscorp_update_payment_status = 3503 [json_name = "poscorpUpdatePaymentStatus"];</code>
+     */
+    public Builder clearPoscorpUpdatePaymentStatus() {
+      if (poscorpUpdatePaymentStatusBuilder_ == null) {
+        if (valueCase_ == 3503) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3503) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        poscorpUpdatePaymentStatusBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus poscorp_update_payment_status = 3503 [json_name = "poscorpUpdatePaymentStatus"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus.Builder getPoscorpUpdatePaymentStatusBuilder() {
+      return getPoscorpUpdatePaymentStatusFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus poscorp_update_payment_status = 3503 [json_name = "poscorpUpdatePaymentStatus"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatusOrBuilder getPoscorpUpdatePaymentStatusOrBuilder() {
+      if ((valueCase_ == 3503) && (poscorpUpdatePaymentStatusBuilder_ != null)) {
+        return poscorpUpdatePaymentStatusBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3503) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus poscorp_update_payment_status = 3503 [json_name = "poscorpUpdatePaymentStatus"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus, com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatusOrBuilder> 
+        getPoscorpUpdatePaymentStatusFieldBuilder() {
+      if (poscorpUpdatePaymentStatusBuilder_ == null) {
+        if (!(valueCase_ == 3503)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus.getDefaultInstance();
+        }
+        poscorpUpdatePaymentStatusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus, com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatusOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3503;
+      onChanged();
+      return poscorpUpdatePaymentStatusBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
