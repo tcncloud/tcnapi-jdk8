@@ -4512,7 +4512,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes a membership association for each of the given &#64;wfm_agent_sids with the given &#64;agent_group_sid.
+     * Deletes a membership association for each of the given &#64;wfm_agent_sids with the given &#64;agent_group_sid for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
@@ -6520,7 +6520,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes a membership association for each of the given &#64;wfm_agent_sids with the given &#64;agent_group_sid.
+     * Deletes a membership association for each of the given &#64;wfm_agent_sids with the given &#64;agent_group_sid for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
@@ -8506,7 +8506,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes a membership association for each of the given &#64;wfm_agent_sids with the given &#64;agent_group_sid.
+     * Deletes a membership association for each of the given &#64;wfm_agent_sids with the given &#64;agent_group_sid for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
@@ -10404,7 +10404,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Deletes a membership association for each of the given &#64;wfm_agent_sids with the given &#64;agent_group_sid.
+     * Deletes a membership association for each of the given &#64;wfm_agent_sids with the given &#64;agent_group_sid for the org sending the request.
      * Required permissions:
      *   NONE
      * Errors:
