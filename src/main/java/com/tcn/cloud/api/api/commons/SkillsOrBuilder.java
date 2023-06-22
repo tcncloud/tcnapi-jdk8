@@ -21,11 +21,11 @@ public interface SkillsOrBuilder extends
 
   /**
    * <pre>
-   * Mandatory = 1, Preferred = 2
+   * Mandatory = 0, Preferred = 1
    * </pre>
    *
-   * <code>int64 mandatory_preferred = 2 [json_name = "mandatoryPreferred"];</code>
-   * @return The mandatoryPreferred.
+   * <code>bool is_preferred = 2 [json_name = "isPreferred"];</code>
+   * @return The isPreferred.
    */
-  long getMandatoryPreferred();
+  boolean getIsPreferred();
 }
