@@ -8,211 +8,42 @@ public interface UserDetailsOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.commons.org.User user = 1 [json_name = "user"];</code>
-   * @return Whether the user field is set.
+   * <pre>
+   * The ID of the user
+   * </pre>
+   *
+   * <code>string user_id = 1 [json_name = "userId"];</code>
+   * @return The userId.
    */
-  boolean hasUser();
+  java.lang.String getUserId();
   /**
-   * <code>.api.commons.org.User user = 1 [json_name = "user"];</code>
-   * @return The user.
-   */
-  com.tcn.cloud.api.api.commons.org.User getUser();
-  /**
-   * <code>.api.commons.org.User user = 1 [json_name = "user"];</code>
-   */
-  com.tcn.cloud.api.api.commons.org.UserOrBuilder getUserOrBuilder();
-
-  /**
-   * <code>string org_name = 2 [json_name = "orgName"];</code>
-   * @return The orgName.
-   */
-  java.lang.String getOrgName();
-  /**
-   * <code>string org_name = 2 [json_name = "orgName"];</code>
-   * @return The bytes for orgName.
+   * <pre>
+   * The ID of the user
+   * </pre>
+   *
+   * <code>string user_id = 1 [json_name = "userId"];</code>
+   * @return The bytes for userId.
    */
   com.google.protobuf.ByteString
-      getOrgNameBytes();
-
-  /**
-   * <code>.api.v1alpha1.room303.UserDetails.HuntGroup hunt_group = 3 [json_name = "huntGroup"];</code>
-   * @return Whether the huntGroup field is set.
-   */
-  boolean hasHuntGroup();
-  /**
-   * <code>.api.v1alpha1.room303.UserDetails.HuntGroup hunt_group = 3 [json_name = "huntGroup"];</code>
-   * @return The huntGroup.
-   */
-  com.tcn.cloud.api.api.v1alpha1.room303.UserDetails.HuntGroup getHuntGroup();
-  /**
-   * <code>.api.v1alpha1.room303.UserDetails.HuntGroup hunt_group = 3 [json_name = "huntGroup"];</code>
-   */
-  com.tcn.cloud.api.api.v1alpha1.room303.UserDetails.HuntGroupOrBuilder getHuntGroupOrBuilder();
-
-  /**
-   * <code>.api.v1alpha1.room303.UserDetails.AgentProfileGroup agent_profile_group = 4 [json_name = "agentProfileGroup"];</code>
-   * @return Whether the agentProfileGroup field is set.
-   */
-  boolean hasAgentProfileGroup();
-  /**
-   * <code>.api.v1alpha1.room303.UserDetails.AgentProfileGroup agent_profile_group = 4 [json_name = "agentProfileGroup"];</code>
-   * @return The agentProfileGroup.
-   */
-  com.tcn.cloud.api.api.v1alpha1.room303.UserDetails.AgentProfileGroup getAgentProfileGroup();
-  /**
-   * <code>.api.v1alpha1.room303.UserDetails.AgentProfileGroup agent_profile_group = 4 [json_name = "agentProfileGroup"];</code>
-   */
-  com.tcn.cloud.api.api.v1alpha1.room303.UserDetails.AgentProfileGroupOrBuilder getAgentProfileGroupOrBuilder();
-
-  /**
-   * <code>repeated .api.commons.org.Skill skills = 5 [json_name = "skills"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.api.commons.org.Skill> 
-      getSkillsList();
-  /**
-   * <code>repeated .api.commons.org.Skill skills = 5 [json_name = "skills"];</code>
-   */
-  com.tcn.cloud.api.api.commons.org.Skill getSkills(int index);
-  /**
-   * <code>repeated .api.commons.org.Skill skills = 5 [json_name = "skills"];</code>
-   */
-  int getSkillsCount();
-  /**
-   * <code>repeated .api.commons.org.Skill skills = 5 [json_name = "skills"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.org.SkillOrBuilder> 
-      getSkillsOrBuilderList();
-  /**
-   * <code>repeated .api.commons.org.Skill skills = 5 [json_name = "skills"];</code>
-   */
-  com.tcn.cloud.api.api.commons.org.SkillOrBuilder getSkillsOrBuilder(
-      int index);
-
-  /**
-   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 6 [json_name = "permissionGroups"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.api.commons.org.PermissionGroup> 
-      getPermissionGroupsList();
-  /**
-   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 6 [json_name = "permissionGroups"];</code>
-   */
-  com.tcn.cloud.api.api.commons.org.PermissionGroup getPermissionGroups(int index);
-  /**
-   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 6 [json_name = "permissionGroups"];</code>
-   */
-  int getPermissionGroupsCount();
-  /**
-   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 6 [json_name = "permissionGroups"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.org.PermissionGroupOrBuilder> 
-      getPermissionGroupsOrBuilderList();
-  /**
-   * <code>repeated .api.commons.org.PermissionGroup permission_groups = 6 [json_name = "permissionGroups"];</code>
-   */
-  com.tcn.cloud.api.api.commons.org.PermissionGroupOrBuilder getPermissionGroupsOrBuilder(
-      int index);
-
-  /**
-   * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 7 [json_name = "p3PermissionGroup"];</code>
-   * @return Whether the p3PermissionGroup field is set.
-   */
-  boolean hasP3PermissionGroup();
-  /**
-   * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 7 [json_name = "p3PermissionGroup"];</code>
-   * @return The p3PermissionGroup.
-   */
-  com.tcn.cloud.api.api.commons.org.P3PermissionGroup getP3PermissionGroup();
-  /**
-   * <code>.api.commons.org.P3PermissionGroup p3_permission_group = 7 [json_name = "p3PermissionGroup"];</code>
-   */
-  com.tcn.cloud.api.api.commons.org.P3PermissionGroupOrBuilder getP3PermissionGroupOrBuilder();
-
-  /**
-   * <code>bool delegated = 8 [json_name = "delegated"];</code>
-   * @return The delegated.
-   */
-  boolean getDelegated();
-
-  /**
-   * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.api.commons.org.Label> 
-      getLabelsList();
-  /**
-   * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
-   */
-  com.tcn.cloud.api.api.commons.org.Label getLabels(int index);
-  /**
-   * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
-   */
-  int getLabelsCount();
-  /**
-   * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.org.LabelOrBuilder> 
-      getLabelsOrBuilderList();
-  /**
-   * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
-   */
-  com.tcn.cloud.api.api.commons.org.LabelOrBuilder getLabelsOrBuilder(
-      int index);
-
-  /**
-   * <code>.api.v1alpha1.room303.UserDetails.LoginInfo login_info = 10 [json_name = "loginInfo"];</code>
-   * @return Whether the loginInfo field is set.
-   */
-  boolean hasLoginInfo();
-  /**
-   * <code>.api.v1alpha1.room303.UserDetails.LoginInfo login_info = 10 [json_name = "loginInfo"];</code>
-   * @return The loginInfo.
-   */
-  com.tcn.cloud.api.api.v1alpha1.room303.UserDetails.LoginInfo getLoginInfo();
-  /**
-   * <code>.api.v1alpha1.room303.UserDetails.LoginInfo login_info = 10 [json_name = "loginInfo"];</code>
-   */
-  com.tcn.cloud.api.api.v1alpha1.room303.UserDetails.LoginInfoOrBuilder getLoginInfoOrBuilder();
+      getUserIdBytes();
 
   /**
    * <pre>
-   * Billing_prefix + clientSid. Used for integrations and billing. This is from the organization
+   * The name of the user.
    * </pre>
    *
-   * <code>string billing_id = 11 [json_name = "billingId"];</code>
-   * @return The billingId.
+   * <code>string user_name = 2 [json_name = "userName"];</code>
+   * @return The userName.
    */
-  java.lang.String getBillingId();
+  java.lang.String getUserName();
   /**
    * <pre>
-   * Billing_prefix + clientSid. Used for integrations and billing. This is from the organization
+   * The name of the user.
    * </pre>
    *
-   * <code>string billing_id = 11 [json_name = "billingId"];</code>
-   * @return The bytes for billingId.
+   * <code>string user_name = 2 [json_name = "userName"];</code>
+   * @return The bytes for userName.
    */
   com.google.protobuf.ByteString
-      getBillingIdBytes();
-
-  /**
-   * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.api.commons.org.Trust> 
-      getTrustsList();
-  /**
-   * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
-   */
-  com.tcn.cloud.api.api.commons.org.Trust getTrusts(int index);
-  /**
-   * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
-   */
-  int getTrustsCount();
-  /**
-   * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.org.TrustOrBuilder> 
-      getTrustsOrBuilderList();
-  /**
-   * <code>repeated .api.commons.org.Trust trusts = 12 [json_name = "trusts"];</code>
-   */
-  com.tcn.cloud.api.api.commons.org.TrustOrBuilder getTrustsOrBuilder(
-      int index);
+      getUserNameBytes();
 }
