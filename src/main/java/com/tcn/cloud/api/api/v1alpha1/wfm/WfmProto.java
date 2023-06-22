@@ -2079,7 +2079,7 @@ public final class WfmProto {
       "mplateR\rshiftTemplate\"\030\n\026UpdateShiftTemp" +
       "lateRes\"\205\001\n\033ListShiftTemplatesBySidsReq\022" +
       ".\n\023shift_template_sids\030\001 \003(\003R\021shiftTempl" +
-      "ateSids\0226\n\027include_placement_rules\030  \001(\010" +
+      "ateSids\0226\n\027include_placement_rules\030\002 \001(\010" +
       "R\025includePlacementRules\"g\n\033ListShiftTemp" +
       "latesBySidsRes\022H\n\017shift_templates\030\001 \003(\0132" +
       "\037.api.v1alpha1.wfm.ShiftTemplateR\016shiftT" +

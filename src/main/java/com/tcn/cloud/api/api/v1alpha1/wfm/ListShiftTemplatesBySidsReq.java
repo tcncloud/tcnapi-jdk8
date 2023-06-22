@@ -84,14 +84,14 @@ private static final long serialVersionUID = 0L;
   }
   private int shiftTemplateSidsMemoizedSerializedSize = -1;
 
-  public static final int INCLUDE_PLACEMENT_RULES_FIELD_NUMBER = 32;
+  public static final int INCLUDE_PLACEMENT_RULES_FIELD_NUMBER = 2;
   private boolean includePlacementRules_ = false;
   /**
    * <pre>
    * Indicates whether the &#64;shift_templates in the response should include member placement rules.
    * </pre>
    *
-   * <code>bool include_placement_rules = 32 [json_name = "includePlacementRules"];</code>
+   * <code>bool include_placement_rules = 2 [json_name = "includePlacementRules"];</code>
    * @return The includePlacementRules.
    */
   @java.lang.Override
@@ -122,7 +122,7 @@ private static final long serialVersionUID = 0L;
       output.writeInt64NoTag(shiftTemplateSids_.getLong(i));
     }
     if (includePlacementRules_ != false) {
-      output.writeBool(32, includePlacementRules_);
+      output.writeBool(2, includePlacementRules_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -149,7 +149,7 @@ private static final long serialVersionUID = 0L;
     }
     if (includePlacementRules_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(32, includePlacementRules_);
+        .computeBoolSize(2, includePlacementRules_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -471,11 +471,11 @@ private static final long serialVersionUID = 0L;
               input.popLimit(limit);
               break;
             } // case 10
-            case 256: {
+            case 16: {
               includePlacementRules_ = input.readBool();
               bitField0_ |= 0x00000002;
               break;
-            } // case 256
+            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -608,7 +608,7 @@ private static final long serialVersionUID = 0L;
      * Indicates whether the &#64;shift_templates in the response should include member placement rules.
      * </pre>
      *
-     * <code>bool include_placement_rules = 32 [json_name = "includePlacementRules"];</code>
+     * <code>bool include_placement_rules = 2 [json_name = "includePlacementRules"];</code>
      * @return The includePlacementRules.
      */
     @java.lang.Override
@@ -620,7 +620,7 @@ private static final long serialVersionUID = 0L;
      * Indicates whether the &#64;shift_templates in the response should include member placement rules.
      * </pre>
      *
-     * <code>bool include_placement_rules = 32 [json_name = "includePlacementRules"];</code>
+     * <code>bool include_placement_rules = 2 [json_name = "includePlacementRules"];</code>
      * @param value The includePlacementRules to set.
      * @return This builder for chaining.
      */
@@ -636,7 +636,7 @@ private static final long serialVersionUID = 0L;
      * Indicates whether the &#64;shift_templates in the response should include member placement rules.
      * </pre>
      *
-     * <code>bool include_placement_rules = 32 [json_name = "includePlacementRules"];</code>
+     * <code>bool include_placement_rules = 2 [json_name = "includePlacementRules"];</code>
      * @return This builder for chaining.
      */
     public Builder clearIncludePlacementRules() {

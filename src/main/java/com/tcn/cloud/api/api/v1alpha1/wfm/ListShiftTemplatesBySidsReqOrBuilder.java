@@ -41,7 +41,7 @@ public interface ListShiftTemplatesBySidsReqOrBuilder extends
    * Indicates whether the &#64;shift_templates in the response should include member placement rules.
    * </pre>
    *
-   * <code>bool include_placement_rules = 32 [json_name = "includePlacementRules"];</code>
+   * <code>bool include_placement_rules = 2 [json_name = "includePlacementRules"];</code>
    * @return The includePlacementRules.
    */
   boolean getIncludePlacementRules();
