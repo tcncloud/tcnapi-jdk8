@@ -880,6 +880,9 @@ public final class Room303APIGrpc {
     }
 
     /**
+     * <pre>
+     * ListUsersNames returns a list of users with names and ids
+     * </pre>
      */
     default void listUsersNames(com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesResponse> responseObserver) {
@@ -1100,6 +1103,9 @@ public final class Room303APIGrpc {
     }
 
     /**
+     * <pre>
+     * ListUsersNames returns a list of users with names and ids
+     * </pre>
      */
     public void listUsersNames(com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesResponse> responseObserver) {
@@ -1291,6 +1297,9 @@ public final class Room303APIGrpc {
     }
 
     /**
+     * <pre>
+     * ListUsersNames returns a list of users with names and ids
+     * </pre>
      */
     public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesResponse> listUsersNames(
         com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesRequest request) {
