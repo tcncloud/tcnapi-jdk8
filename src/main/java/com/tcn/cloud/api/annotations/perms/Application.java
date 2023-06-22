@@ -76,6 +76,10 @@ public enum Application
    * <code>APPLICATION_WORK_FORCE_MANAGEMENT = 15;</code>
    */
   APPLICATION_WORK_FORCE_MANAGEMENT(15),
+  /**
+   * <code>APPLICATION_WORKFLOWS = 16;</code>
+   */
+  APPLICATION_WORKFLOWS(16),
   UNRECOGNIZED(-1),
   ;
 
@@ -143,6 +147,10 @@ public enum Application
    * <code>APPLICATION_WORK_FORCE_MANAGEMENT = 15;</code>
    */
   public static final int APPLICATION_WORK_FORCE_MANAGEMENT_VALUE = 15;
+  /**
+   * <code>APPLICATION_WORKFLOWS = 16;</code>
+   */
+  public static final int APPLICATION_WORKFLOWS_VALUE = 16;
 
 
   public final int getNumber() {
@@ -185,6 +193,7 @@ public enum Application
       case 13: return APPLICATION_TICKETS;
       case 14: return APPLICATION_VOICE_ANALYTICS;
       case 15: return APPLICATION_WORK_FORCE_MANAGEMENT;
+      case 16: return APPLICATION_WORKFLOWS;
       default: return null;
     }
   }
