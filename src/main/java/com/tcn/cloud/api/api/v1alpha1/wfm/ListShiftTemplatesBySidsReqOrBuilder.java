@@ -35,4 +35,14 @@ public interface ListShiftTemplatesBySidsReqOrBuilder extends
    * @return The shiftTemplateSids at the given index.
    */
   long getShiftTemplateSids(int index);
+
+  /**
+   * <pre>
+   * Indicates whether the &#64;shift_templates in the response should include member placement rules.
+   * </pre>
+   *
+   * <code>bool include_placement_rules = 32 [json_name = "includePlacementRules"];</code>
+   * @return The includePlacementRules.
+   */
+  boolean getIncludePlacementRules();
 }
