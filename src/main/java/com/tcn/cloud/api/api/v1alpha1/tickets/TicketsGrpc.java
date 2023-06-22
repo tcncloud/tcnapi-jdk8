@@ -577,7 +577,7 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Public Method to create a ticket.
+     * Public Method to edit a ticket.
      * </pre>
      */
     default void editTicket(com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketReq request,
@@ -607,7 +607,7 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Closes the ticket
+     * Public Method to Close a ticket
      * </pre>
      */
     default void closeTicket(com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketReq request,
@@ -772,7 +772,7 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Public Method to create a ticket.
+     * Public Method to edit a ticket.
      * </pre>
      */
     public void editTicket(com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketReq request,
@@ -805,7 +805,7 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Closes the ticket
+     * Public Method to Close a ticket
      * </pre>
      */
     public void closeTicket(com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketReq request,
@@ -967,7 +967,7 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Public Method to create a ticket.
+     * Public Method to edit a ticket.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketRes editTicket(com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketReq request) {
@@ -997,7 +997,7 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Closes the ticket
+     * Public Method to Close a ticket
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketRes closeTicket(com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketReq request) {
@@ -1148,7 +1148,7 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Public Method to create a ticket.
+     * Public Method to edit a ticket.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketRes> editTicket(
@@ -1181,7 +1181,7 @@ public final class TicketsGrpc {
 
     /**
      * <pre>
-     * Closes the ticket
+     * Public Method to Close a ticket
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketRes> closeTicket(
