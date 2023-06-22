@@ -231,16 +231,4 @@ public interface CreateTicketReqOrBuilder extends
    * @return The assignSelf.
    */
   boolean getAssignSelf();
-
-  /**
-   * <code>string assign_other = 14 [json_name = "assignOther"];</code>
-   * @return The assignOther.
-   */
-  java.lang.String getAssignOther();
-  /**
-   * <code>string assign_other = 14 [json_name = "assignOther"];</code>
-   * @return The bytes for assignOther.
-   */
-  com.google.protobuf.ByteString
-      getAssignOtherBytes();
 }

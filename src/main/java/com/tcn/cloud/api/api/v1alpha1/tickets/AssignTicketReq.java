@@ -4,10 +4,6 @@
 package com.tcn.cloud.api.api.v1alpha1.tickets;
 
 /**
- * <pre>
- * AssignTicketReq
- * </pre>
- *
  * Protobuf type {@code api.v1alpha1.tickets.AssignTicketReq}
  */
 public final class AssignTicketReq extends
@@ -328,10 +324,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * AssignTicketReq
-   * </pre>
-   *
    * Protobuf type {@code api.v1alpha1.tickets.AssignTicketReq}
    */
   public static final class Builder extends

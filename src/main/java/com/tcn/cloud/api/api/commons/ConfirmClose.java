@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.commons;
 
 /**
  * <pre>
- * ConfirmClose - Boolean response for closing a Ticket
+ * ConfirmClose - Boolean response Field post closing a Ticket
  * </pre>
  *
  * Protobuf type {@code api.commons.ConfirmClose}
@@ -213,7 +213,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * ConfirmClose - Boolean response for closing a Ticket
+   * ConfirmClose - Boolean response Field post closing a Ticket
    * </pre>
    *
    * Protobuf type {@code api.commons.ConfirmClose}
