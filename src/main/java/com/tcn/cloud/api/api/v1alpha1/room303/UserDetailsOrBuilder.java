@@ -46,4 +46,44 @@ public interface UserDetailsOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUserNameBytes();
+
+  /**
+   * <pre>
+   * user first name
+   * </pre>
+   *
+   * <code>string first_name = 3 [json_name = "firstName"];</code>
+   * @return The firstName.
+   */
+  java.lang.String getFirstName();
+  /**
+   * <pre>
+   * user first name
+   * </pre>
+   *
+   * <code>string first_name = 3 [json_name = "firstName"];</code>
+   * @return The bytes for firstName.
+   */
+  com.google.protobuf.ByteString
+      getFirstNameBytes();
+
+  /**
+   * <pre>
+   * user last name
+   * </pre>
+   *
+   * <code>string last_name = 4 [json_name = "lastName"];</code>
+   * @return The lastName.
+   */
+  java.lang.String getLastName();
+  /**
+   * <pre>
+   * user last name
+   * </pre>
+   *
+   * <code>string last_name = 4 [json_name = "lastName"];</code>
+   * @return The bytes for lastName.
+   */
+  com.google.protobuf.ByteString
+      getLastNameBytes();
 }

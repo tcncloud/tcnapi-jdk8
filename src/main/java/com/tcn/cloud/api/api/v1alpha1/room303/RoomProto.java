@@ -84,13 +84,15 @@ public final class RoomProto {
       "pi.commons.UserArchivedStateFilterR\016arch" +
       "ivedFilter\"^\n\026ListUsersNamesResponse\022D\n\014" +
       "user_details\030\001 \003(\0132!.api.v1alpha1.room30" +
-      "3.UserDetailsR\013userDetails\"C\n\013UserDetail" +
+      "3.UserDetailsR\013userDetails\"\177\n\013UserDetail" +
       "s\022\027\n\007user_id\030\001 \001(\tR\006userId\022\033\n\tuser_name\030" +
-      "\002 \001(\tR\010userNameB\245\001\n&com.tcn.cloud.api.ap" +
-      "i.v1alpha1.room303B\tRoomProtoP\001\242\002\003AVR\252\002\024" +
-      "Api.V1alpha1.Room303\312\002\024Api\\V1alpha1\\Room" +
-      "303\342\002 Api\\V1alpha1\\Room303\\GPBMetadata\352\002" +
-      "\026Api::V1alpha1::Room303b\006proto3"
+      "\002 \001(\tR\010userName\022\035\n\nfirst_name\030\003 \001(\tR\tfir" +
+      "stName\022\033\n\tlast_name\030\004 \001(\tR\010lastNameB\245\001\n&" +
+      "com.tcn.cloud.api.api.v1alpha1.room303B\t" +
+      "RoomProtoP\001\242\002\003AVR\252\002\024Api.V1alpha1.Room303" +
+      "\312\002\024Api\\V1alpha1\\Room303\342\002 Api\\V1alpha1\\R" +
+      "oom303\\GPBMetadata\352\002\026Api::V1alpha1::Room" +
+      "303b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -151,7 +153,7 @@ public final class RoomProto {
     internal_static_api_v1alpha1_room303_UserDetails_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_room303_UserDetails_descriptor,
-        new java.lang.String[] { "UserId", "UserName", });
+        new java.lang.String[] { "UserId", "UserName", "FirstName", "LastName", });
     com.tcn.cloud.api.api.commons.Room303Proto.getDescriptor();
     com.tcn.cloud.api.api.commons.UserProto.getDescriptor();
   }
