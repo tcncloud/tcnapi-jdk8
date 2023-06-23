@@ -162,4 +162,34 @@ public interface FlagSnapshotOrBuilder extends
    * @return The mustNotify.
    */
   boolean getMustNotify();
+
+  /**
+   * <pre>
+   * Required. Boolean expression of filters which a transcript must match
+   * for this flag to be applied.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr bool_expr = 12 [json_name = "boolExpr"];</code>
+   * @return Whether the boolExpr field is set.
+   */
+  boolean hasBoolExpr();
+  /**
+   * <pre>
+   * Required. Boolean expression of filters which a transcript must match
+   * for this flag to be applied.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr bool_expr = 12 [json_name = "boolExpr"];</code>
+   * @return The boolExpr.
+   */
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr getBoolExpr();
+  /**
+   * <pre>
+   * Required. Boolean expression of filters which a transcript must match
+   * for this flag to be applied.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr bool_expr = 12 [json_name = "boolExpr"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExprOrBuilder getBoolExprOrBuilder();
 }
