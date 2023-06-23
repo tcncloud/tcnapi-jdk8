@@ -29,6 +29,16 @@ public final class FlagSnapshotProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_vanalytics_FlagSnapshot_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_vanalytics_FlagSnapshot_BoolExpr_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_vanalytics_FlagSnapshot_BoolExpr_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_vanalytics_FlagSnapshot_BoolExpr_Filter_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_vanalytics_FlagSnapshot_BoolExpr_Filter_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -51,7 +61,7 @@ public final class FlagSnapshotProto {
       "napshotsResponse\022&\n\017next_page_token\030\001 \001(" +
       "\tR\rnextPageToken\022L\n\016flag_snapshots\030\002 \003(\013" +
       "2%.api.v1alpha1.vanalytics.FlagSnapshotR" +
-      "\rflagSnapshots\"\356\002\n\014FlagSnapshot\022*\n\021flag_" +
+      "\rflagSnapshots\"\302\005\n\014FlagSnapshot\022*\n\021flag_" +
       "snapshot_sid\030\001 \001(\003R\017flagSnapshotSid\022\031\n\010f" +
       "lag_sid\030\002 \001(\003R\007flagSid\022\022\n\004name\030\004 \001(\tR\004na" +
       "me\022&\n\017review_group_id\030\005 \001(\tR\rreviewGroup" +
@@ -60,12 +70,21 @@ public final class FlagSnapshotProto {
       "n\030\010 \001(\003R\007version\022;\n\013create_time\030\t \001(\0132\032." +
       "google.protobuf.TimestampR\ncreateTime\022\037\n" +
       "\013must_review\030\n \001(\010R\nmustReview\022\037\n\013must_n" +
-      "otify\030\013 \001(\010R\nmustNotifyB\274\001\n)com.tcn.clou" +
-      "d.api.api.v1alpha1.vanalyticsB\021FlagSnaps" +
-      "hotProtoP\001\242\002\003AVV\252\002\027Api.V1alpha1.Vanalyti" +
-      "cs\312\002\027Api\\V1alpha1\\Vanalytics\342\002#Api\\V1alp" +
-      "ha1\\Vanalytics\\GPBMetadata\352\002\031Api::V1alph" +
-      "a1::Vanalyticsb\006proto3"
+      "otify\030\013 \001(\010R\nmustNotify\022K\n\tbool_expr\030\014 \001" +
+      "(\0132..api.v1alpha1.vanalytics.FlagSnapsho" +
+      "t.BoolExprR\010boolExpr\032\204\002\n\010BoolExpr\022@\n\003and" +
+      "\030\001 \003(\0132..api.v1alpha1.vanalytics.FlagSna" +
+      "pshot.BoolExprR\003and\022>\n\002or\030\002 \003(\0132..api.v1" +
+      "alpha1.vanalytics.FlagSnapshot.BoolExprR" +
+      "\002or\022M\n\006filter\030\003 \001(\01325.api.v1alpha1.vanal" +
+      "ytics.FlagSnapshot.BoolExpr.FilterR\006filt" +
+      "er\032\'\n\006Filter\022\035\n\nfilter_sid\030\001 \001(\003R\tfilter" +
+      "SidB\274\001\n)com.tcn.cloud.api.api.v1alpha1.v" +
+      "analyticsB\021FlagSnapshotProtoP\001\242\002\003AVV\252\002\027A" +
+      "pi.V1alpha1.Vanalytics\312\002\027Api\\V1alpha1\\Va" +
+      "nalytics\342\002#Api\\V1alpha1\\Vanalytics\\GPBMe" +
+      "tadata\352\002\031Api::V1alpha1::Vanalyticsb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -90,7 +109,19 @@ public final class FlagSnapshotProto {
     internal_static_api_v1alpha1_vanalytics_FlagSnapshot_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_vanalytics_FlagSnapshot_descriptor,
-        new java.lang.String[] { "FlagSnapshotSid", "FlagSid", "Name", "ReviewGroupId", "NotifyGroupId", "Priority", "Version", "CreateTime", "MustReview", "MustNotify", });
+        new java.lang.String[] { "FlagSnapshotSid", "FlagSid", "Name", "ReviewGroupId", "NotifyGroupId", "Priority", "Version", "CreateTime", "MustReview", "MustNotify", "BoolExpr", });
+    internal_static_api_v1alpha1_vanalytics_FlagSnapshot_BoolExpr_descriptor =
+      internal_static_api_v1alpha1_vanalytics_FlagSnapshot_descriptor.getNestedTypes().get(0);
+    internal_static_api_v1alpha1_vanalytics_FlagSnapshot_BoolExpr_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_vanalytics_FlagSnapshot_BoolExpr_descriptor,
+        new java.lang.String[] { "And", "Or", "Filter", });
+    internal_static_api_v1alpha1_vanalytics_FlagSnapshot_BoolExpr_Filter_descriptor =
+      internal_static_api_v1alpha1_vanalytics_FlagSnapshot_BoolExpr_descriptor.getNestedTypes().get(0);
+    internal_static_api_v1alpha1_vanalytics_FlagSnapshot_BoolExpr_Filter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_vanalytics_FlagSnapshot_BoolExpr_Filter_descriptor,
+        new java.lang.String[] { "FilterSid", });
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }

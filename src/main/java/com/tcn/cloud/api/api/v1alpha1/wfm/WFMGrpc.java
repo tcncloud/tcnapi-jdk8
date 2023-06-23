@@ -4602,6 +4602,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the shift templates matching the specified &#64;shift_template_sids for the org sending the request.
+     * If &#64;include_placement_rules is set to true, the &#64;shift_templates will be returned with their member placement rules.
      * Required permissions:
      *   NONE
      * Errors:
@@ -6615,6 +6616,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the shift templates matching the specified &#64;shift_template_sids for the org sending the request.
+     * If &#64;include_placement_rules is set to true, the &#64;shift_templates will be returned with their member placement rules.
      * Required permissions:
      *   NONE
      * Errors:
@@ -8596,6 +8598,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the shift templates matching the specified &#64;shift_template_sids for the org sending the request.
+     * If &#64;include_placement_rules is set to true, the &#64;shift_templates will be returned with their member placement rules.
      * Required permissions:
      *   NONE
      * Errors:
@@ -10499,6 +10502,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the shift templates matching the specified &#64;shift_template_sids for the org sending the request.
+     * If &#64;include_placement_rules is set to true, the &#64;shift_templates will be returned with their member placement rules.
      * Required permissions:
      *   NONE
      * Errors:
