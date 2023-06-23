@@ -47,12 +47,21 @@ public final class ServiceProto {
       "Request\0328.api.v1alpha1.workflows.DeleteF" +
       "lowDefinitionByIdResponse\"E\272\270\221\002\005\n\003\010\240\037\202\323\344" +
       "\223\0025\"0/api/v1alpha1/workflows/deleteflowd" +
-      "efinitionbyid:\001*B\262\001\n(com.tcn.cloud.api.a" +
-      "pi.v1alpha1.workflowsB\014ServiceProtoP\001\242\002\003" +
-      "AVW\252\002\026Api.V1alpha1.Workflows\312\002\026Api\\V1alp" +
-      "ha1\\Workflows\342\002\"Api\\V1alpha1\\Workflows\\G" +
-      "PBMetadata\352\002\030Api::V1alpha1::Workflowsb\006p" +
-      "roto3"
+      "efinitionbyid:\001*2\351\002\n\025WorkflowsStateServi" +
+      "ce\022\244\001\n\014GetFlowState\022+.api.v1alpha1.workf" +
+      "lows.GetFlowStateRequest\032,.api.v1alpha1." +
+      "workflows.GetFlowStateResponse\"9\272\270\221\002\005\n\003\010" +
+      "\240\037\202\323\344\223\002)\"$/api/v1alpha1/workflows/getflo" +
+      "wstate:\001*\022\250\001\n\rSaveFlowState\022,.api.v1alph" +
+      "a1.workflows.SaveFlowStateRequest\032-.api." +
+      "v1alpha1.workflows.SaveFlowStateResponse" +
+      "\":\272\270\221\002\005\n\003\010\240\037\202\323\344\223\002*\"%/api/v1alpha1/workfl" +
+      "ows/saveflowstate:\001*B\262\001\n(com.tcn.cloud.a" +
+      "pi.api.v1alpha1.workflowsB\014ServiceProtoP" +
+      "\001\242\002\003AVW\252\002\026Api.V1alpha1.Workflows\312\002\026Api\\V" +
+      "1alpha1\\Workflows\342\002\"Api\\V1alpha1\\Workflo" +
+      "ws\\GPBMetadata\352\002\030Api::V1alpha1::Workflow" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
