@@ -635,35 +635,35 @@ public final class Room303APIGrpc {
     return getArchiveRoomMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesRequest,
-      com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesResponse> getListUsersNamesMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.room303.ListUsersByOrgIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.room303.ListUsersByOrgIdResponse> getListUsersByOrgIdMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListUsersNames",
-      requestType = com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "ListUsersByOrgId",
+      requestType = com.tcn.cloud.api.api.v1alpha1.room303.ListUsersByOrgIdRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.room303.ListUsersByOrgIdResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesRequest,
-      com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesResponse> getListUsersNamesMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesRequest, com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesResponse> getListUsersNamesMethod;
-    if ((getListUsersNamesMethod = Room303APIGrpc.getListUsersNamesMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.room303.ListUsersByOrgIdRequest,
+      com.tcn.cloud.api.api.v1alpha1.room303.ListUsersByOrgIdResponse> getListUsersByOrgIdMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.room303.ListUsersByOrgIdRequest, com.tcn.cloud.api.api.v1alpha1.room303.ListUsersByOrgIdResponse> getListUsersByOrgIdMethod;
+    if ((getListUsersByOrgIdMethod = Room303APIGrpc.getListUsersByOrgIdMethod) == null) {
       synchronized (Room303APIGrpc.class) {
-        if ((getListUsersNamesMethod = Room303APIGrpc.getListUsersNamesMethod) == null) {
-          Room303APIGrpc.getListUsersNamesMethod = getListUsersNamesMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesRequest, com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesResponse>newBuilder()
+        if ((getListUsersByOrgIdMethod = Room303APIGrpc.getListUsersByOrgIdMethod) == null) {
+          Room303APIGrpc.getListUsersByOrgIdMethod = getListUsersByOrgIdMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.room303.ListUsersByOrgIdRequest, com.tcn.cloud.api.api.v1alpha1.room303.ListUsersByOrgIdResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListUsersNames"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListUsersByOrgId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.room303.ListUsersByOrgIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new Room303APIMethodDescriptorSupplier("ListUsersNames"))
+                  com.tcn.cloud.api.api.v1alpha1.room303.ListUsersByOrgIdResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new Room303APIMethodDescriptorSupplier("ListUsersByOrgId"))
               .build();
         }
       }
     }
-    return getListUsersNamesMethod;
+    return getListUsersByOrgIdMethod;
   }
 
   /**
@@ -880,13 +880,10 @@ public final class Room303APIGrpc {
     }
 
     /**
-     * <pre>
-     * ListUsersNames returns a list of users with names and ids
-     * </pre>
      */
-    default void listUsersNames(com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUsersNamesMethod(), responseObserver);
+    default void listUsersByOrgId(com.tcn.cloud.api.api.v1alpha1.room303.ListUsersByOrgIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.ListUsersByOrgIdResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUsersByOrgIdMethod(), responseObserver);
     }
   }
 
@@ -1103,14 +1100,11 @@ public final class Room303APIGrpc {
     }
 
     /**
-     * <pre>
-     * ListUsersNames returns a list of users with names and ids
-     * </pre>
      */
-    public void listUsersNames(com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesResponse> responseObserver) {
+    public void listUsersByOrgId(com.tcn.cloud.api.api.v1alpha1.room303.ListUsersByOrgIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.ListUsersByOrgIdResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
-          getChannel().newCall(getListUsersNamesMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListUsersByOrgIdMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -1297,14 +1291,11 @@ public final class Room303APIGrpc {
     }
 
     /**
-     * <pre>
-     * ListUsersNames returns a list of users with names and ids
-     * </pre>
      */
-    public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesResponse> listUsersNames(
-        com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesRequest request) {
+    public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.room303.ListUsersByOrgIdResponse> listUsersByOrgId(
+        com.tcn.cloud.api.api.v1alpha1.room303.ListUsersByOrgIdRequest request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
-          getChannel(), getListUsersNamesMethod(), getCallOptions(), request);
+          getChannel(), getListUsersByOrgIdMethod(), getCallOptions(), request);
     }
   }
 
@@ -1522,7 +1513,7 @@ public final class Room303APIGrpc {
   private static final int METHODID_LIST_ALL_ROOMS = 17;
   private static final int METHODID_LIST_ROOMS_FOR_MEMBER = 18;
   private static final int METHODID_ARCHIVE_ROOM = 19;
-  private static final int METHODID_LIST_USERS_NAMES = 20;
+  private static final int METHODID_LIST_USERS_BY_ORG_ID = 20;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1621,9 +1612,9 @@ public final class Room303APIGrpc {
           serviceImpl.archiveRoom((com.tcn.cloud.api.api.v1alpha1.room303.ArchiveRoomRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Room>) responseObserver);
           break;
-        case METHODID_LIST_USERS_NAMES:
-          serviceImpl.listUsersNames((com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesResponse>) responseObserver);
+        case METHODID_LIST_USERS_BY_ORG_ID:
+          serviceImpl.listUsersByOrgId((com.tcn.cloud.api.api.v1alpha1.room303.ListUsersByOrgIdRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.ListUsersByOrgIdResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1784,12 +1775,12 @@ public final class Room303APIGrpc {
               com.tcn.cloud.api.api.commons.Room>(
                 service, METHODID_ARCHIVE_ROOM)))
         .addMethod(
-          getListUsersNamesMethod(),
+          getListUsersByOrgIdMethod(),
           io.grpc.stub.ServerCalls.asyncServerStreamingCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesRequest,
-              com.tcn.cloud.api.api.v1alpha1.room303.ListUsersNamesResponse>(
-                service, METHODID_LIST_USERS_NAMES)))
+              com.tcn.cloud.api.api.v1alpha1.room303.ListUsersByOrgIdRequest,
+              com.tcn.cloud.api.api.v1alpha1.room303.ListUsersByOrgIdResponse>(
+                service, METHODID_LIST_USERS_BY_ORG_ID)))
         .build();
   }
 
@@ -1858,7 +1849,7 @@ public final class Room303APIGrpc {
               .addMethod(getListAllRoomsMethod())
               .addMethod(getListRoomsForMemberMethod())
               .addMethod(getArchiveRoomMethod())
-              .addMethod(getListUsersNamesMethod())
+              .addMethod(getListUsersByOrgIdMethod())
               .build();
         }
       }

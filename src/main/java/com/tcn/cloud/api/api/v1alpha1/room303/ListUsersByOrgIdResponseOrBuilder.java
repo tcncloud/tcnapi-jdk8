@@ -3,13 +3,13 @@
 
 package com.tcn.cloud.api.api.v1alpha1.room303;
 
-public interface ListUsersNamesResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.room303.ListUsersNamesResponse)
+public interface ListUsersByOrgIdResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.room303.ListUsersByOrgIdResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <pre>
-   * List of returned users with names and ids
+   * List of returned users with masked data.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.room303.UserDetails user_details = 1 [json_name = "userDetails"];</code>
@@ -18,7 +18,7 @@ public interface ListUsersNamesResponseOrBuilder extends
       getUserDetailsList();
   /**
    * <pre>
-   * List of returned users with names and ids
+   * List of returned users with masked data.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.room303.UserDetails user_details = 1 [json_name = "userDetails"];</code>
@@ -26,7 +26,7 @@ public interface ListUsersNamesResponseOrBuilder extends
   com.tcn.cloud.api.api.v1alpha1.room303.UserDetails getUserDetails(int index);
   /**
    * <pre>
-   * List of returned users with names and ids
+   * List of returned users with masked data.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.room303.UserDetails user_details = 1 [json_name = "userDetails"];</code>
@@ -34,7 +34,7 @@ public interface ListUsersNamesResponseOrBuilder extends
   int getUserDetailsCount();
   /**
    * <pre>
-   * List of returned users with names and ids
+   * List of returned users with masked data.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.room303.UserDetails user_details = 1 [json_name = "userDetails"];</code>
@@ -43,7 +43,7 @@ public interface ListUsersNamesResponseOrBuilder extends
       getUserDetailsOrBuilderList();
   /**
    * <pre>
-   * List of returned users with names and ids
+   * List of returned users with masked data.
    * </pre>
    *
    * <code>repeated .api.v1alpha1.room303.UserDetails user_details = 1 [json_name = "userDetails"];</code>

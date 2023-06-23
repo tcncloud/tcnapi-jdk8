@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.room303;
 
-public interface ListUsersNamesRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.room303.ListUsersNamesRequest)
+public interface ListUsersByOrgIdRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.room303.ListUsersByOrgIdRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
