@@ -45,15 +45,15 @@ public final class EntitiesProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_workflows_GetFlowDefinitionResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionRequest_descriptor;
+    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionRequest_fieldAccessorTable;
+      internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionResponse_descriptor;
+    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionResponse_fieldAccessorTable;
+      internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -83,15 +83,15 @@ public final class EntitiesProto {
       "\030\001 \001(\tR\020flowDefinitionId\"k\n\031GetFlowDefin" +
       "itionResponse\022N\n\017flow_definition\030\001 \001(\0132%" +
       ".api.commons.workflows.FlowDefinitionR\016f" +
-      "lowDefinition\"K\n\033DeleteFlowDefinitionReq" +
-      "uest\022,\n\022flow_definition_id\030\001 \001(\tR\020flowDe" +
-      "finitionId\"L\n\034DeleteFlowDefinitionRespon" +
-      "se\022,\n\022flow_definition_id\030\001 \001(\tR\020flowDefi" +
-      "nitionIdB\263\001\n(com.tcn.cloud.api.api.v1alp" +
-      "ha1.workflowsB\rEntitiesProtoP\001\242\002\003AVW\252\002\026A" +
-      "pi.V1alpha1.Workflows\312\002\026Api\\V1alpha1\\Wor" +
-      "kflows\342\002\"Api\\V1alpha1\\Workflows\\GPBMetad" +
-      "ata\352\002\030Api::V1alpha1::Workflowsb\006proto3"
+      "lowDefinition\"O\n\037DeleteFlowDefinitionByI" +
+      "dRequest\022,\n\022flow_definition_id\030\001 \001(\tR\020fl" +
+      "owDefinitionId\":\n DeleteFlowDefinitionBy" +
+      "IdResponse\022\026\n\006result\030\001 \001(\010R\006resultB\263\001\n(c" +
+      "om.tcn.cloud.api.api.v1alpha1.workflowsB" +
+      "\rEntitiesProtoP\001\242\002\003AVW\252\002\026Api.V1alpha1.Wo" +
+      "rkflows\312\002\026Api\\V1alpha1\\Workflows\342\002\"Api\\V" +
+      "1alpha1\\Workflows\\GPBMetadata\352\002\030Api::V1a" +
+      "lpha1::Workflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -135,18 +135,18 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_workflows_GetFlowDefinitionResponse_descriptor,
         new java.lang.String[] { "FlowDefinition", });
-    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionRequest_descriptor =
+    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdRequest_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionRequest_fieldAccessorTable = new
+    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionRequest_descriptor,
+        internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdRequest_descriptor,
         new java.lang.String[] { "FlowDefinitionId", });
-    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionResponse_descriptor =
+    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdResponse_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionResponse_fieldAccessorTable = new
+    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionResponse_descriptor,
-        new java.lang.String[] { "FlowDefinitionId", });
+        internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdResponse_descriptor,
+        new java.lang.String[] { "Result", });
     com.tcn.cloud.api.api.commons.workflows.EntitiesProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
   }

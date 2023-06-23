@@ -8,86 +8,53 @@ package com.tcn.cloud.api.api.v1alpha1.workflows;
  * DeleteFlowDefinitionsResponse is the response object for deleting a flow definition
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.workflows.DeleteFlowDefinitionResponse}
+ * Protobuf type {@code api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse}
  */
-public final class DeleteFlowDefinitionResponse extends
+public final class DeleteFlowDefinitionByIdResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.workflows.DeleteFlowDefinitionResponse)
-    DeleteFlowDefinitionResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse)
+    DeleteFlowDefinitionByIdResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use DeleteFlowDefinitionResponse.newBuilder() to construct.
-  private DeleteFlowDefinitionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use DeleteFlowDefinitionByIdResponse.newBuilder() to construct.
+  private DeleteFlowDefinitionByIdResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private DeleteFlowDefinitionResponse() {
-    flowDefinitionId_ = "";
+  private DeleteFlowDefinitionByIdResponse() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new DeleteFlowDefinitionResponse();
+    return new DeleteFlowDefinitionByIdResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.workflows.EntitiesProto.internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionResponse_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.workflows.EntitiesProto.internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.workflows.EntitiesProto.internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionResponse_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.workflows.EntitiesProto.internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse.class, com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse.class, com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse.Builder.class);
   }
 
-  public static final int FLOW_DEFINITION_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object flowDefinitionId_ = "";
+  public static final int RESULT_FIELD_NUMBER = 1;
+  private boolean result_ = false;
   /**
    * <pre>
-   * The ID of the flow definition that was deleted
+   * true if the flow definition was deleted
    * </pre>
    *
-   * <code>string flow_definition_id = 1 [json_name = "flowDefinitionId"];</code>
-   * @return The flowDefinitionId.
+   * <code>bool result = 1 [json_name = "result"];</code>
+   * @return The result.
    */
   @java.lang.Override
-  public java.lang.String getFlowDefinitionId() {
-    java.lang.Object ref = flowDefinitionId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      flowDefinitionId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * The ID of the flow definition that was deleted
-   * </pre>
-   *
-   * <code>string flow_definition_id = 1 [json_name = "flowDefinitionId"];</code>
-   * @return The bytes for flowDefinitionId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getFlowDefinitionIdBytes() {
-    java.lang.Object ref = flowDefinitionId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      flowDefinitionId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public boolean getResult() {
+    return result_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -104,8 +71,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(flowDefinitionId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, flowDefinitionId_);
+    if (result_ != false) {
+      output.writeBool(1, result_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -116,8 +83,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(flowDefinitionId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, flowDefinitionId_);
+    if (result_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(1, result_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -129,13 +97,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse other = (com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse) obj;
+    com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse other = (com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse) obj;
 
-    if (!getFlowDefinitionId()
-        .equals(other.getFlowDefinitionId())) return false;
+    if (getResult()
+        != other.getResult()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -147,51 +115,52 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + FLOW_DEFINITION_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getFlowDefinitionId().hashCode();
+    hash = (37 * hash) + RESULT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getResult());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -199,26 +168,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -231,7 +200,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -251,26 +220,26 @@ private static final long serialVersionUID = 0L;
    * DeleteFlowDefinitionsResponse is the response object for deleting a flow definition
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.workflows.DeleteFlowDefinitionResponse}
+   * Protobuf type {@code api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.workflows.DeleteFlowDefinitionResponse)
-      com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse)
+      com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.workflows.EntitiesProto.internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.workflows.EntitiesProto.internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.workflows.EntitiesProto.internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionResponse_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.workflows.EntitiesProto.internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse.class, com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse.class, com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse.newBuilder()
     private Builder() {
 
     }
@@ -284,24 +253,24 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      flowDefinitionId_ = "";
+      result_ = false;
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.workflows.EntitiesProto.internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionResponse_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.workflows.EntitiesProto.internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse build() {
-      com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse build() {
+      com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -309,17 +278,17 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse result = new com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse(this);
+    public com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse result = new com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.flowDefinitionId_ = flowDefinitionId_;
+        result.result_ = result_;
       }
     }
 
@@ -357,20 +326,18 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse.getDefaultInstance()) return this;
-      if (!other.getFlowDefinitionId().isEmpty()) {
-        flowDefinitionId_ = other.flowDefinitionId_;
-        bitField0_ |= 0x00000001;
-        onChanged();
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse.getDefaultInstance()) return this;
+      if (other.getResult() != false) {
+        setResult(other.getResult());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -398,11 +365,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              flowDefinitionId_ = input.readStringRequireUtf8();
+            case 8: {
+              result_ = input.readBool();
               bitField0_ |= 0x00000001;
               break;
-            } // case 10
+            } // case 8
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -420,94 +387,46 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object flowDefinitionId_ = "";
+    private boolean result_ ;
     /**
      * <pre>
-     * The ID of the flow definition that was deleted
+     * true if the flow definition was deleted
      * </pre>
      *
-     * <code>string flow_definition_id = 1 [json_name = "flowDefinitionId"];</code>
-     * @return The flowDefinitionId.
+     * <code>bool result = 1 [json_name = "result"];</code>
+     * @return The result.
      */
-    public java.lang.String getFlowDefinitionId() {
-      java.lang.Object ref = flowDefinitionId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        flowDefinitionId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    @java.lang.Override
+    public boolean getResult() {
+      return result_;
     }
     /**
      * <pre>
-     * The ID of the flow definition that was deleted
+     * true if the flow definition was deleted
      * </pre>
      *
-     * <code>string flow_definition_id = 1 [json_name = "flowDefinitionId"];</code>
-     * @return The bytes for flowDefinitionId.
-     */
-    public com.google.protobuf.ByteString
-        getFlowDefinitionIdBytes() {
-      java.lang.Object ref = flowDefinitionId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        flowDefinitionId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * The ID of the flow definition that was deleted
-     * </pre>
-     *
-     * <code>string flow_definition_id = 1 [json_name = "flowDefinitionId"];</code>
-     * @param value The flowDefinitionId to set.
+     * <code>bool result = 1 [json_name = "result"];</code>
+     * @param value The result to set.
      * @return This builder for chaining.
      */
-    public Builder setFlowDefinitionId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      flowDefinitionId_ = value;
+    public Builder setResult(boolean value) {
+
+      result_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The ID of the flow definition that was deleted
+     * true if the flow definition was deleted
      * </pre>
      *
-     * <code>string flow_definition_id = 1 [json_name = "flowDefinitionId"];</code>
+     * <code>bool result = 1 [json_name = "result"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearFlowDefinitionId() {
-      flowDefinitionId_ = getDefaultInstance().getFlowDefinitionId();
+    public Builder clearResult() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * The ID of the flow definition that was deleted
-     * </pre>
-     *
-     * <code>string flow_definition_id = 1 [json_name = "flowDefinitionId"];</code>
-     * @param value The bytes for flowDefinitionId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setFlowDefinitionIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      flowDefinitionId_ = value;
-      bitField0_ |= 0x00000001;
+      result_ = false;
       onChanged();
       return this;
     }
@@ -524,23 +443,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.workflows.DeleteFlowDefinitionResponse)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.workflows.DeleteFlowDefinitionResponse)
-  private static final com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse)
+  private static final com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<DeleteFlowDefinitionResponse>
-      PARSER = new com.google.protobuf.AbstractParser<DeleteFlowDefinitionResponse>() {
+  private static final com.google.protobuf.Parser<DeleteFlowDefinitionByIdResponse>
+      PARSER = new com.google.protobuf.AbstractParser<DeleteFlowDefinitionByIdResponse>() {
     @java.lang.Override
-    public DeleteFlowDefinitionResponse parsePartialFrom(
+    public DeleteFlowDefinitionByIdResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -559,17 +478,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<DeleteFlowDefinitionResponse> parser() {
+  public static com.google.protobuf.Parser<DeleteFlowDefinitionByIdResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<DeleteFlowDefinitionResponse> getParserForType() {
+  public com.google.protobuf.Parser<DeleteFlowDefinitionByIdResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
