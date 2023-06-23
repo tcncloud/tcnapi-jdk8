@@ -84,6 +84,21 @@ private static final long serialVersionUID = 0L;
   }
   private int shiftTemplateSidsMemoizedSerializedSize = -1;
 
+  public static final int INCLUDE_PLACEMENT_RULES_FIELD_NUMBER = 2;
+  private boolean includePlacementRules_ = false;
+  /**
+   * <pre>
+   * Indicates whether the &#64;shift_templates in the response should include member placement rules.
+   * </pre>
+   *
+   * <code>bool include_placement_rules = 2 [json_name = "includePlacementRules"];</code>
+   * @return The includePlacementRules.
+   */
+  @java.lang.Override
+  public boolean getIncludePlacementRules() {
+    return includePlacementRules_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -105,6 +120,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < shiftTemplateSids_.size(); i++) {
       output.writeInt64NoTag(shiftTemplateSids_.getLong(i));
+    }
+    if (includePlacementRules_ != false) {
+      output.writeBool(2, includePlacementRules_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -129,6 +147,10 @@ private static final long serialVersionUID = 0L;
       }
       shiftTemplateSidsMemoizedSerializedSize = dataSize;
     }
+    if (includePlacementRules_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(2, includePlacementRules_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -146,6 +168,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getShiftTemplateSidsList()
         .equals(other.getShiftTemplateSidsList())) return false;
+    if (getIncludePlacementRules()
+        != other.getIncludePlacementRules()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -161,6 +185,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SHIFT_TEMPLATE_SIDS_FIELD_NUMBER;
       hash = (53 * hash) + getShiftTemplateSidsList().hashCode();
     }
+    hash = (37 * hash) + INCLUDE_PLACEMENT_RULES_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIncludePlacementRules());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -297,6 +324,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       shiftTemplateSids_ = emptyLongList();
+      includePlacementRules_ = false;
       return this;
     }
 
@@ -339,6 +367,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsReq result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.includePlacementRules_ = includePlacementRules_;
+      }
     }
 
     @java.lang.Override
@@ -395,6 +426,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.getIncludePlacementRules() != false) {
+        setIncludePlacementRules(other.getIncludePlacementRules());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -437,6 +471,11 @@ private static final long serialVersionUID = 0L;
               input.popLimit(limit);
               break;
             } // case 10
+            case 16: {
+              includePlacementRules_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -559,6 +598,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearShiftTemplateSids() {
       shiftTemplateSids_ = emptyLongList();
       bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+
+    private boolean includePlacementRules_ ;
+    /**
+     * <pre>
+     * Indicates whether the &#64;shift_templates in the response should include member placement rules.
+     * </pre>
+     *
+     * <code>bool include_placement_rules = 2 [json_name = "includePlacementRules"];</code>
+     * @return The includePlacementRules.
+     */
+    @java.lang.Override
+    public boolean getIncludePlacementRules() {
+      return includePlacementRules_;
+    }
+    /**
+     * <pre>
+     * Indicates whether the &#64;shift_templates in the response should include member placement rules.
+     * </pre>
+     *
+     * <code>bool include_placement_rules = 2 [json_name = "includePlacementRules"];</code>
+     * @param value The includePlacementRules to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIncludePlacementRules(boolean value) {
+
+      includePlacementRules_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Indicates whether the &#64;shift_templates in the response should include member placement rules.
+     * </pre>
+     *
+     * <code>bool include_placement_rules = 2 [json_name = "includePlacementRules"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIncludePlacementRules() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      includePlacementRules_ = false;
       onChanged();
       return this;
     }
