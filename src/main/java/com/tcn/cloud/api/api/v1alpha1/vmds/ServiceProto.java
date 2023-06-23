@@ -49,16 +49,16 @@ public final class ServiceProto {
       "sid\030\002 \001(\tR\tcallerSid\022;\n\013caller_type\030\003 \001(" +
       "\0162\032.api.commons.CallType.EnumR\ncallerTyp" +
       "e\"5\n!DownloadSpecifiedMessagesResponse\022\020" +
-      "\n\003url\030\001 \001(\tR\003url2\326\001\n\013VmdsService\022\306\001\n\031Dow" +
+      "\n\003url\030\001 \001(\tR\003url2\331\001\n\013VmdsService\022\311\001\n\031Dow" +
       "nloadSpecifiedMessages\0223.api.v1alpha1.vm" +
       "ds.DownloadSpecifiedMessagesRequest\0324.ap" +
       "i.v1alpha1.vmds.DownloadSpecifiedMessage" +
-      "sResponse\">\272\270\221\002\002\030\001\202\323\344\223\0021\",/api/v1alpha1/" +
-      "vmds/downloadspecifiedmessages:\001*B\231\001\n#co" +
-      "m.tcn.cloud.api.api.v1alpha1.vmdsB\014Servi" +
-      "ceProtoP\001\242\002\003AVV\252\002\021Api.V1alpha1.Vmds\312\002\021Ap" +
-      "i\\V1alpha1\\Vmds\342\002\035Api\\V1alpha1\\Vmds\\GPBM" +
-      "etadata\352\002\023Api::V1alpha1::Vmdsb\006proto3"
+      "sResponse\"A\272\270\221\002\005\n\003\010\371\n\202\323\344\223\0021\",/api/v1alph" +
+      "a1/vmds/downloadspecifiedmessages:\001*B\231\001\n" +
+      "#com.tcn.cloud.api.api.v1alpha1.vmdsB\014Se" +
+      "rviceProtoP\001\242\002\003AVV\252\002\021Api.V1alpha1.Vmds\312\002" +
+      "\021Api\\V1alpha1\\Vmds\342\002\035Api\\V1alpha1\\Vmds\\G" +
+      "PBMetadata\352\002\023Api::V1alpha1::Vmdsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
