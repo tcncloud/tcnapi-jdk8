@@ -47,7 +47,7 @@ public interface UpdateUserDisabledRequestOrBuilder extends
    *
    * <code>string org_id = 3 [json_name = "orgId", deprecated = true];</code>
    * @deprecated api.v0alpha.UpdateUserDisabledRequest.org_id is deprecated.
-   *     See api/v0alpha/org.proto;l=3499
+   *     See api/v0alpha/org.proto;l=3503
    * @return The orgId.
    */
   @java.lang.Deprecated java.lang.String getOrgId();
@@ -59,7 +59,7 @@ public interface UpdateUserDisabledRequestOrBuilder extends
    *
    * <code>string org_id = 3 [json_name = "orgId", deprecated = true];</code>
    * @deprecated api.v0alpha.UpdateUserDisabledRequest.org_id is deprecated.
-   *     See api/v0alpha/org.proto;l=3499
+   *     See api/v0alpha/org.proto;l=3503
    * @return The bytes for orgId.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString

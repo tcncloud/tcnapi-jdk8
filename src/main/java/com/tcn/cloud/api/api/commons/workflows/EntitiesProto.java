@@ -55,28 +55,29 @@ public final class EntitiesProto {
     java.lang.String[] descriptorData = {
       "\n$api/commons/workflows/entities.proto\022\025" +
       "api.commons.workflows\032!api/commons/workf" +
-      "lows/nodes.proto\"\333\001\n\016FlowDefinition\022\016\n\002i" +
+      "lows/nodes.proto\"\362\001\n\016FlowDefinition\022\016\n\002i" +
       "d\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013descr" +
       "iption\030\003 \001(\tR\013description\022\"\n\rentry_node_" +
-      "id\030\004 \001(\tR\013entryNodeId\022;\n\005nodes\030\n \003(\0132%.a" +
-      "pi.commons.workflows.NodeDefinitionR\005nod" +
-      "es\022\"\n\rerror_node_id\030\013 \001(\tR\013errorNodeId\"\266" +
-      "\001\n\tFlowState\022;\n\010envelope\030\001 \001(\0132\037.api.com" +
-      "mons.workflows.EnvelopeR\010envelope\0222\n\005sta" +
-      "te\030\002 \001(\0132\034.api.commons.workflows.StateR\005" +
-      "state\0228\n\007payload\030d \001(\0132\036.api.commons.wor" +
-      "kflows.PayloadR\007payload\"1\n\010Envelope\022\016\n\002i" +
-      "d\030\001 \001(\tR\002id\022\025\n\006org_id\030\002 \001(\tR\005orgId\"v\n\005St" +
-      "ate\022\033\n\tflow_done\030\001 \001(\010R\010flowDone\022\027\n\007flow" +
-      "_id\030\002 \001(\tR\006flowId\022!\n\014current_node\030\003 \001(\tR" +
-      "\013currentNode\022\024\n\005error\030\004 \001(\tR\005error\"3\n\007Pa" +
-      "yload\022\022\n\004data\030\001 \001(\tR\004data\022\024\n\005error\030\002 \001(\t" +
-      "R\005error\"*\n\007Message\022\024\n\004text\030\001 \001(\tH\000R\004text" +
-      "B\t\n\007payloadB\256\001\n\'com.tcn.cloud.api.api.co" +
-      "mmons.workflowsB\rEntitiesProtoP\001\242\002\003ACW\252\002" +
-      "\025Api.Commons.Workflows\312\002\025Api\\Commons\\Wor" +
-      "kflows\342\002!Api\\Commons\\Workflows\\GPBMetada" +
-      "ta\352\002\027Api::Commons::Workflowsb\006proto3"
+      "id\030\004 \001(\tR\013entryNodeId\022\025\n\006org_id\030\005 \001(\tR\005o" +
+      "rgId\022;\n\005nodes\030\n \003(\0132%.api.commons.workfl" +
+      "ows.NodeDefinitionR\005nodes\022\"\n\rerror_node_" +
+      "id\030\013 \001(\tR\013errorNodeId\"\266\001\n\tFlowState\022;\n\010e" +
+      "nvelope\030\001 \001(\0132\037.api.commons.workflows.En" +
+      "velopeR\010envelope\0222\n\005state\030\002 \001(\0132\034.api.co" +
+      "mmons.workflows.StateR\005state\0228\n\007payload\030" +
+      "d \001(\0132\036.api.commons.workflows.PayloadR\007p" +
+      "ayload\"1\n\010Envelope\022\016\n\002id\030\001 \001(\tR\002id\022\025\n\006or" +
+      "g_id\030\002 \001(\tR\005orgId\"v\n\005State\022\033\n\tflow_done\030" +
+      "\001 \001(\010R\010flowDone\022\027\n\007flow_id\030\002 \001(\tR\006flowId" +
+      "\022!\n\014current_node\030\003 \001(\tR\013currentNode\022\024\n\005e" +
+      "rror\030\004 \001(\tR\005error\"3\n\007Payload\022\022\n\004data\030\001 \001" +
+      "(\tR\004data\022\024\n\005error\030\002 \001(\tR\005error\"*\n\007Messag" +
+      "e\022\024\n\004text\030\001 \001(\tH\000R\004textB\t\n\007payloadB\256\001\n\'c" +
+      "om.tcn.cloud.api.api.commons.workflowsB\r" +
+      "EntitiesProtoP\001\242\002\003ACW\252\002\025Api.Commons.Work" +
+      "flows\312\002\025Api\\Commons\\Workflows\342\002!Api\\Comm" +
+      "ons\\Workflows\\GPBMetadata\352\002\027Api::Commons" +
+      "::Workflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -88,7 +89,7 @@ public final class EntitiesProto {
     internal_static_api_commons_workflows_FlowDefinition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_workflows_FlowDefinition_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "EntryNodeId", "Nodes", "ErrorNodeId", });
+        new java.lang.String[] { "Id", "Name", "Description", "EntryNodeId", "OrgId", "Nodes", "ErrorNodeId", });
     internal_static_api_commons_workflows_FlowState_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_api_commons_workflows_FlowState_fieldAccessorTable = new

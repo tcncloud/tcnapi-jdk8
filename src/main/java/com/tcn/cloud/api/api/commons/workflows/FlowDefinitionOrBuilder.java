@@ -56,6 +56,18 @@ public interface FlowDefinitionOrBuilder extends
       getEntryNodeIdBytes();
 
   /**
+   * <code>string org_id = 5 [json_name = "orgId"];</code>
+   * @return The orgId.
+   */
+  java.lang.String getOrgId();
+  /**
+   * <code>string org_id = 5 [json_name = "orgId"];</code>
+   * @return The bytes for orgId.
+   */
+  com.google.protobuf.ByteString
+      getOrgIdBytes();
+
+  /**
    * <code>repeated .api.commons.workflows.NodeDefinition nodes = 10 [json_name = "nodes"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.workflows.NodeDefinition> 

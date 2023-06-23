@@ -29,7 +29,7 @@ public final class ServiceProto {
       "pha1/room303/member.proto\032\"api/v1alpha1/" +
       "room303/message.proto\032\037api/v1alpha1/room" +
       "303/room.proto\032\034google/api/annotations.p" +
-      "roto2\300\034\n\nRoom303API\022\225\001\n\rAddRoomMember\022*." +
+      "roto2\270\034\n\nRoom303API\022\225\001\n\rAddRoomMember\022*." +
       "api.v1alpha1.room303.AddRoomMemberReques" +
       "t\032\023.api.commons.Member\"C\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0023" +
       "\"./api/v1alpha1/room303/room303api/addro" +
@@ -115,16 +115,16 @@ public final class ServiceProto {
       "er:\001*\022\211\001\n\013ArchiveRoom\022(.api.v1alpha1.roo" +
       "m303.ArchiveRoomRequest\032\021.api.commons.Ro" +
       "om\"=\272\270\221\002\005\n\003\010\274\005\202\323\344\223\002-\"(/api/v1alpha1/room" +
-      "303/room303api/archive:\001*\022\273\001\n\020ListUsersB" +
-      "yOrgId\022-.api.v1alpha1.room303.ListUsersB" +
-      "yOrgIdRequest\032..api.v1alpha1.room303.Lis" +
-      "tUsersByOrgIdResponse\"F\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0026\"" +
-      "1/api/v1alpha1/room303/room303api/listus" +
-      "ersbyorgid:\001*0\001B\250\001\n&com.tcn.cloud.api.ap" +
-      "i.v1alpha1.room303B\014ServiceProtoP\001\242\002\003AVR" +
-      "\252\002\024Api.V1alpha1.Room303\312\002\024Api\\V1alpha1\\R" +
-      "oom303\342\002 Api\\V1alpha1\\Room303\\GPBMetadat" +
-      "a\352\002\026Api::V1alpha1::Room303b\006proto3"
+      "303/room303api/archive:\001*\022\263\001\n\016ListUsersN" +
+      "ames\022+.api.v1alpha1.room303.ListUsersNam" +
+      "esRequest\032,.api.v1alpha1.room303.ListUse" +
+      "rsNamesResponse\"D\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0024\"//api/" +
+      "v1alpha1/room303/room303api/listusersnam" +
+      "es:\001*0\001B\250\001\n&com.tcn.cloud.api.api.v1alph" +
+      "a1.room303B\014ServiceProtoP\001\242\002\003AVR\252\002\024Api.V" +
+      "1alpha1.Room303\312\002\024Api\\V1alpha1\\Room303\342\002" +
+      " Api\\V1alpha1\\Room303\\GPBMetadata\352\002\026Api:" +
+      ":V1alpha1::Room303b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
