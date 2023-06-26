@@ -163,6 +163,33 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr.Filter filter = 3 [json_name = "filter"];</code>
      */
     com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr.FilterOrBuilder getFilterOrBuilder();
+
+    /**
+     * <pre>
+     * Optional. Boolean not operator.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr not = 4 [json_name = "not"];</code>
+     * @return Whether the not field is set.
+     */
+    boolean hasNot();
+    /**
+     * <pre>
+     * Optional. Boolean not operator.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr not = 4 [json_name = "not"];</code>
+     * @return The not.
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr getNot();
+    /**
+     * <pre>
+     * Optional. Boolean not operator.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr not = 4 [json_name = "not"];</code>
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExprOrBuilder getNotOrBuilder();
   }
   /**
    * <pre>
@@ -870,6 +897,44 @@ private static final long serialVersionUID = 0L;
       return filter_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr.Filter.getDefaultInstance() : filter_;
     }
 
+    public static final int NOT_FIELD_NUMBER = 4;
+    private com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr not_;
+    /**
+     * <pre>
+     * Optional. Boolean not operator.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr not = 4 [json_name = "not"];</code>
+     * @return Whether the not field is set.
+     */
+    @java.lang.Override
+    public boolean hasNot() {
+      return not_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. Boolean not operator.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr not = 4 [json_name = "not"];</code>
+     * @return The not.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr getNot() {
+      return not_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr.getDefaultInstance() : not_;
+    }
+    /**
+     * <pre>
+     * Optional. Boolean not operator.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr not = 4 [json_name = "not"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExprOrBuilder getNotOrBuilder() {
+      return not_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr.getDefaultInstance() : not_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -893,6 +958,9 @@ private static final long serialVersionUID = 0L;
       if (filter_ != null) {
         output.writeMessage(3, getFilter());
       }
+      if (not_ != null) {
+        output.writeMessage(4, getNot());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -913,6 +981,10 @@ private static final long serialVersionUID = 0L;
       if (filter_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getFilter());
+      }
+      if (not_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getNot());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -938,6 +1010,11 @@ private static final long serialVersionUID = 0L;
         if (!getFilter()
             .equals(other.getFilter())) return false;
       }
+      if (hasNot() != other.hasNot()) return false;
+      if (hasNot()) {
+        if (!getNot()
+            .equals(other.getNot())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -960,6 +1037,10 @@ private static final long serialVersionUID = 0L;
       if (hasFilter()) {
         hash = (37 * hash) + FILTER_FIELD_NUMBER;
         hash = (53 * hash) + getFilter().hashCode();
+      }
+      if (hasNot()) {
+        hash = (37 * hash) + NOT_FIELD_NUMBER;
+        hash = (53 * hash) + getNot().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1115,6 +1196,11 @@ private static final long serialVersionUID = 0L;
           filterBuilder_.dispose();
           filterBuilder_ = null;
         }
+        not_ = null;
+        if (notBuilder_ != null) {
+          notBuilder_.dispose();
+          notBuilder_ = null;
+        }
         return this;
       }
 
@@ -1174,6 +1260,11 @@ private static final long serialVersionUID = 0L;
           result.filter_ = filterBuilder_ == null
               ? filter_
               : filterBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.not_ = notBuilder_ == null
+              ? not_
+              : notBuilder_.build();
         }
       }
 
@@ -1276,6 +1367,9 @@ private static final long serialVersionUID = 0L;
         if (other.hasFilter()) {
           mergeFilter(other.getFilter());
         }
+        if (other.hasNot()) {
+          mergeNot(other.getNot());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1335,6 +1429,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000004;
                 break;
               } // case 26
+              case 34: {
+                input.readMessage(
+                    getNotFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2129,6 +2230,161 @@ private static final long serialVersionUID = 0L;
           filter_ = null;
         }
         return filterBuilder_;
+      }
+
+      private com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr not_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr, com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExprOrBuilder> notBuilder_;
+      /**
+       * <pre>
+       * Optional. Boolean not operator.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr not = 4 [json_name = "not"];</code>
+       * @return Whether the not field is set.
+       */
+      public boolean hasNot() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. Boolean not operator.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr not = 4 [json_name = "not"];</code>
+       * @return The not.
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr getNot() {
+        if (notBuilder_ == null) {
+          return not_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr.getDefaultInstance() : not_;
+        } else {
+          return notBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Boolean not operator.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr not = 4 [json_name = "not"];</code>
+       */
+      public Builder setNot(com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr value) {
+        if (notBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          not_ = value;
+        } else {
+          notBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Boolean not operator.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr not = 4 [json_name = "not"];</code>
+       */
+      public Builder setNot(
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr.Builder builderForValue) {
+        if (notBuilder_ == null) {
+          not_ = builderForValue.build();
+        } else {
+          notBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Boolean not operator.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr not = 4 [json_name = "not"];</code>
+       */
+      public Builder mergeNot(com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr value) {
+        if (notBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            not_ != null &&
+            not_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr.getDefaultInstance()) {
+            getNotBuilder().mergeFrom(value);
+          } else {
+            not_ = value;
+          }
+        } else {
+          notBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Boolean not operator.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr not = 4 [json_name = "not"];</code>
+       */
+      public Builder clearNot() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        not_ = null;
+        if (notBuilder_ != null) {
+          notBuilder_.dispose();
+          notBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Boolean not operator.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr not = 4 [json_name = "not"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr.Builder getNotBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getNotFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. Boolean not operator.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr not = 4 [json_name = "not"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExprOrBuilder getNotOrBuilder() {
+        if (notBuilder_ != null) {
+          return notBuilder_.getMessageOrBuilder();
+        } else {
+          return not_ == null ?
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr.getDefaultInstance() : not_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Boolean not operator.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr not = 4 [json_name = "not"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr, com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExprOrBuilder> 
+          getNotFieldBuilder() {
+        if (notBuilder_ == null) {
+          notBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr, com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExpr.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.BoolExprOrBuilder>(
+                  getNot(),
+                  getParentForChildren(),
+                  isClean());
+          not_ = null;
+        }
+        return notBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
