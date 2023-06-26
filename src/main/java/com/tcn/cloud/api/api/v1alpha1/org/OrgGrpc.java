@@ -4637,161 +4637,6 @@ public final class OrgGrpc {
     return getRevokeUsersP3PermissionGroupMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionResponse> getCreateAuthConnectionMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "CreateAuthConnection",
-      requestType = com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionResponse> getCreateAuthConnectionMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionRequest, com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionResponse> getCreateAuthConnectionMethod;
-    if ((getCreateAuthConnectionMethod = OrgGrpc.getCreateAuthConnectionMethod) == null) {
-      synchronized (OrgGrpc.class) {
-        if ((getCreateAuthConnectionMethod = OrgGrpc.getCreateAuthConnectionMethod) == null) {
-          OrgGrpc.getCreateAuthConnectionMethod = getCreateAuthConnectionMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionRequest, com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAuthConnection"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateAuthConnection"))
-              .build();
-        }
-      }
-    }
-    return getCreateAuthConnectionMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsResponse> getGetAuthConnectionSettingsMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetAuthConnectionSettings",
-      requestType = com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsResponse> getGetAuthConnectionSettingsMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsRequest, com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsResponse> getGetAuthConnectionSettingsMethod;
-    if ((getGetAuthConnectionSettingsMethod = OrgGrpc.getGetAuthConnectionSettingsMethod) == null) {
-      synchronized (OrgGrpc.class) {
-        if ((getGetAuthConnectionSettingsMethod = OrgGrpc.getGetAuthConnectionSettingsMethod) == null) {
-          OrgGrpc.getGetAuthConnectionSettingsMethod = getGetAuthConnectionSettingsMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsRequest, com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAuthConnectionSettings"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetAuthConnectionSettings"))
-              .build();
-        }
-      }
-    }
-    return getGetAuthConnectionSettingsMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionResponse> getDeleteAuthConnectionMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "DeleteAuthConnection",
-      requestType = com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionResponse> getDeleteAuthConnectionMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionRequest, com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionResponse> getDeleteAuthConnectionMethod;
-    if ((getDeleteAuthConnectionMethod = OrgGrpc.getDeleteAuthConnectionMethod) == null) {
-      synchronized (OrgGrpc.class) {
-        if ((getDeleteAuthConnectionMethod = OrgGrpc.getDeleteAuthConnectionMethod) == null) {
-          OrgGrpc.getDeleteAuthConnectionMethod = getDeleteAuthConnectionMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionRequest, com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteAuthConnection"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteAuthConnection"))
-              .build();
-        }
-      }
-    }
-    return getDeleteAuthConnectionMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretResponse> getUpdateAuthConnectionSecretMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UpdateAuthConnectionSecret",
-      requestType = com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretResponse> getUpdateAuthConnectionSecretMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretRequest, com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretResponse> getUpdateAuthConnectionSecretMethod;
-    if ((getUpdateAuthConnectionSecretMethod = OrgGrpc.getUpdateAuthConnectionSecretMethod) == null) {
-      synchronized (OrgGrpc.class) {
-        if ((getUpdateAuthConnectionSecretMethod = OrgGrpc.getUpdateAuthConnectionSecretMethod) == null) {
-          OrgGrpc.getUpdateAuthConnectionSecretMethod = getUpdateAuthConnectionSecretMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretRequest, com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAuthConnectionSecret"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateAuthConnectionSecret"))
-              .build();
-        }
-      }
-    }
-    return getUpdateAuthConnectionSecretMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsResponse> getUpdateAuthConnectionGroupsMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UpdateAuthConnectionGroups",
-      requestType = com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsRequest,
-      com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsResponse> getUpdateAuthConnectionGroupsMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsRequest, com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsResponse> getUpdateAuthConnectionGroupsMethod;
-    if ((getUpdateAuthConnectionGroupsMethod = OrgGrpc.getUpdateAuthConnectionGroupsMethod) == null) {
-      synchronized (OrgGrpc.class) {
-        if ((getUpdateAuthConnectionGroupsMethod = OrgGrpc.getUpdateAuthConnectionGroupsMethod) == null) {
-          OrgGrpc.getUpdateAuthConnectionGroupsMethod = getUpdateAuthConnectionGroupsMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsRequest, com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAuthConnectionGroups"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateAuthConnectionGroups"))
-              .build();
-        }
-      }
-    }
-    return getUpdateAuthConnectionGroupsMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -6377,56 +6222,6 @@ public final class OrgGrpc {
     default void revokeUsersP3PermissionGroup(com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRevokeUsersP3PermissionGroupMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * CreateAuthConnection creates a new auth0 connection.
-     * </pre>
-     */
-    default void createAuthConnection(com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAuthConnectionMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * GetAuthConnectionSettings gets auth0 connection settings.
-     * </pre>
-     */
-    default void getAuthConnectionSettings(com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAuthConnectionSettingsMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * DeleteAuthConnection removes the current orgs auth settings.
-     * </pre>
-     */
-    default void deleteAuthConnection(com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAuthConnectionMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * UpdateAuthConnectionSecret updates a connections secret.
-     * </pre>
-     */
-    default void updateAuthConnectionSecret(com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAuthConnectionSecretMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * UpdateAuthConnectionGroups updates a connections groups.
-     * </pre>
-     */
-    default void updateAuthConnectionGroups(com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAuthConnectionGroupsMethod(), responseObserver);
     }
   }
 
@@ -8147,61 +7942,6 @@ public final class OrgGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRevokeUsersP3PermissionGroupMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     * <pre>
-     * CreateAuthConnection creates a new auth0 connection.
-     * </pre>
-     */
-    public void createAuthConnection(com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getCreateAuthConnectionMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * GetAuthConnectionSettings gets auth0 connection settings.
-     * </pre>
-     */
-    public void getAuthConnectionSettings(com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetAuthConnectionSettingsMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * DeleteAuthConnection removes the current orgs auth settings.
-     * </pre>
-     */
-    public void deleteAuthConnection(com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getDeleteAuthConnectionMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * UpdateAuthConnectionSecret updates a connections secret.
-     * </pre>
-     */
-    public void updateAuthConnectionSecret(com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getUpdateAuthConnectionSecretMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * UpdateAuthConnectionGroups updates a connections groups.
-     * </pre>
-     */
-    public void updateAuthConnectionGroups(com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getUpdateAuthConnectionGroupsMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -9765,56 +9505,6 @@ public final class OrgGrpc {
     public com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupResponse revokeUsersP3PermissionGroup(com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRevokeUsersP3PermissionGroupMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * CreateAuthConnection creates a new auth0 connection.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionResponse createAuthConnection(com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getCreateAuthConnectionMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * GetAuthConnectionSettings gets auth0 connection settings.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsResponse getAuthConnectionSettings(com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetAuthConnectionSettingsMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * DeleteAuthConnection removes the current orgs auth settings.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionResponse deleteAuthConnection(com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getDeleteAuthConnectionMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * UpdateAuthConnectionSecret updates a connections secret.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretResponse updateAuthConnectionSecret(com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getUpdateAuthConnectionSecretMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * UpdateAuthConnectionGroups updates a connections groups.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsResponse updateAuthConnectionGroups(com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getUpdateAuthConnectionGroupsMethod(), getCallOptions(), request);
     }
   }
 
@@ -11433,61 +11123,6 @@ public final class OrgGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRevokeUsersP3PermissionGroupMethod(), getCallOptions()), request);
     }
-
-    /**
-     * <pre>
-     * CreateAuthConnection creates a new auth0 connection.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionResponse> createAuthConnection(
-        com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getCreateAuthConnectionMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * GetAuthConnectionSettings gets auth0 connection settings.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsResponse> getAuthConnectionSettings(
-        com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetAuthConnectionSettingsMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * DeleteAuthConnection removes the current orgs auth settings.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionResponse> deleteAuthConnection(
-        com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getDeleteAuthConnectionMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * UpdateAuthConnectionSecret updates a connections secret.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretResponse> updateAuthConnectionSecret(
-        com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getUpdateAuthConnectionSecretMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * UpdateAuthConnectionGroups updates a connections groups.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsResponse> updateAuthConnectionGroups(
-        com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getUpdateAuthConnectionGroupsMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_CREATE_ORGANIZATION = 0;
@@ -11639,11 +11274,6 @@ public final class OrgGrpc {
   private static final int METHODID_DELETE_P3PERMISSION_GROUP = 146;
   private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 147;
   private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 148;
-  private static final int METHODID_CREATE_AUTH_CONNECTION = 149;
-  private static final int METHODID_GET_AUTH_CONNECTION_SETTINGS = 150;
-  private static final int METHODID_DELETE_AUTH_CONNECTION = 151;
-  private static final int METHODID_UPDATE_AUTH_CONNECTION_SECRET = 152;
-  private static final int METHODID_UPDATE_AUTH_CONNECTION_GROUPS = 153;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -12257,26 +11887,6 @@ public final class OrgGrpc {
         case METHODID_REVOKE_USERS_P3PERMISSION_GROUP:
           serviceImpl.revokeUsersP3PermissionGroup((com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupResponse>) responseObserver);
-          break;
-        case METHODID_CREATE_AUTH_CONNECTION:
-          serviceImpl.createAuthConnection((com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionResponse>) responseObserver);
-          break;
-        case METHODID_GET_AUTH_CONNECTION_SETTINGS:
-          serviceImpl.getAuthConnectionSettings((com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsResponse>) responseObserver);
-          break;
-        case METHODID_DELETE_AUTH_CONNECTION:
-          serviceImpl.deleteAuthConnection((com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionResponse>) responseObserver);
-          break;
-        case METHODID_UPDATE_AUTH_CONNECTION_SECRET:
-          serviceImpl.updateAuthConnectionSecret((com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretResponse>) responseObserver);
-          break;
-        case METHODID_UPDATE_AUTH_CONNECTION_GROUPS:
-          serviceImpl.updateAuthConnectionGroups((com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -13339,41 +12949,6 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupRequest,
               com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupResponse>(
                 service, METHODID_REVOKE_USERS_P3PERMISSION_GROUP)))
-        .addMethod(
-          getCreateAuthConnectionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionRequest,
-              com.tcn.cloud.api.api.v1alpha1.org.CreateAuthConnectionResponse>(
-                service, METHODID_CREATE_AUTH_CONNECTION)))
-        .addMethod(
-          getGetAuthConnectionSettingsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsRequest,
-              com.tcn.cloud.api.api.v1alpha1.org.GetAuthConnectionSettingsResponse>(
-                service, METHODID_GET_AUTH_CONNECTION_SETTINGS)))
-        .addMethod(
-          getDeleteAuthConnectionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionRequest,
-              com.tcn.cloud.api.api.v1alpha1.org.DeleteAuthConnectionResponse>(
-                service, METHODID_DELETE_AUTH_CONNECTION)))
-        .addMethod(
-          getUpdateAuthConnectionSecretMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretRequest,
-              com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionSecretResponse>(
-                service, METHODID_UPDATE_AUTH_CONNECTION_SECRET)))
-        .addMethod(
-          getUpdateAuthConnectionGroupsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsRequest,
-              com.tcn.cloud.api.api.v1alpha1.org.UpdateAuthConnectionGroupsResponse>(
-                service, METHODID_UPDATE_AUTH_CONNECTION_GROUPS)))
         .build();
   }
 
@@ -13571,11 +13146,6 @@ public final class OrgGrpc {
               .addMethod(getDeleteP3PermissionGroupMethod())
               .addMethod(getAssignUsersP3PermissionGroupMethod())
               .addMethod(getRevokeUsersP3PermissionGroupMethod())
-              .addMethod(getCreateAuthConnectionMethod())
-              .addMethod(getGetAuthConnectionSettingsMethod())
-              .addMethod(getDeleteAuthConnectionMethod())
-              .addMethod(getUpdateAuthConnectionSecretMethod())
-              .addMethod(getUpdateAuthConnectionGroupsMethod())
               .build();
         }
       }
