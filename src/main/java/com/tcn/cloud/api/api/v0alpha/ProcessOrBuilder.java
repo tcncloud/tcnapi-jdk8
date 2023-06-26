@@ -661,5 +661,20 @@ public interface ProcessOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.WebExchangeProcessOrBuilder getWebExchangeProcessOrBuilder();
 
+  /**
+   * <code>.api.v0alpha.SplitCreiteria split = 75 [json_name = "split"];</code>
+   * @return Whether the split field is set.
+   */
+  boolean hasSplit();
+  /**
+   * <code>.api.v0alpha.SplitCreiteria split = 75 [json_name = "split"];</code>
+   * @return The split.
+   */
+  com.tcn.cloud.api.api.v0alpha.SplitCreiteria getSplit();
+  /**
+   * <code>.api.v0alpha.SplitCreiteria split = 75 [json_name = "split"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.SplitCreiteriaOrBuilder getSplitOrBuilder();
+
   com.tcn.cloud.api.api.v0alpha.Process.ProcCase getProcCase();
 }
