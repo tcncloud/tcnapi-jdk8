@@ -543,9 +543,9 @@ public enum Permission
    * Enables access to workflows builder
    * </pre>
    *
-   * <code>PERMISSION_WORKFLOWS_EDIT = 4000 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_WORKFLOWS = 4000 [(.annotations.perms.options) = { ... }</code>
    */
-  PERMISSION_WORKFLOWS_EDIT(4000),
+  PERMISSION_WORKFLOWS(4000),
   UNRECOGNIZED(-1),
   ;
 
@@ -1080,9 +1080,9 @@ public enum Permission
    * Enables access to workflows builder
    * </pre>
    *
-   * <code>PERMISSION_WORKFLOWS_EDIT = 4000 [(.annotations.perms.options) = { ... }</code>
+   * <code>PERMISSION_WORKFLOWS = 4000 [(.annotations.perms.options) = { ... }</code>
    */
-  public static final int PERMISSION_WORKFLOWS_EDIT_VALUE = 4000;
+  public static final int PERMISSION_WORKFLOWS_VALUE = 4000;
 
 
   public final int getNumber() {
@@ -1175,7 +1175,7 @@ public enum Permission
       case 2001: return PERMISSION_DELIVERY_NOTIFICATIONS_EDIT;
       case 3100: return PERMISSION_TICKETS_APP;
       case 3101: return PERMISSION_TICKETS_ADMIN;
-      case 4000: return PERMISSION_WORKFLOWS_EDIT;
+      case 4000: return PERMISSION_WORKFLOWS;
       default: return null;
     }
   }
