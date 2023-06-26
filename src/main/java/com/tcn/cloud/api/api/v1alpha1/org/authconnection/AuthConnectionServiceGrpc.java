@@ -8,11 +8,11 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
     value = "by gRPC proto compiler (version 1.56.0)",
     comments = "Source: api/v1alpha1/org/authconnection/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
-public final class AuthConnectionGrpc {
+public final class AuthConnectionServiceGrpc {
 
-  private AuthConnectionGrpc() {}
+  private AuthConnectionServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "api.v1alpha1.org.authconnection.AuthConnection";
+  public static final String SERVICE_NAME = "api.v1alpha1.org.authconnection.AuthConnectionService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionRequest,
@@ -26,10 +26,10 @@ public final class AuthConnectionGrpc {
   public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionRequest,
       com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionResponse> getCreateAuthConnectionMethod() {
     io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionRequest, com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionResponse> getCreateAuthConnectionMethod;
-    if ((getCreateAuthConnectionMethod = AuthConnectionGrpc.getCreateAuthConnectionMethod) == null) {
-      synchronized (AuthConnectionGrpc.class) {
-        if ((getCreateAuthConnectionMethod = AuthConnectionGrpc.getCreateAuthConnectionMethod) == null) {
-          AuthConnectionGrpc.getCreateAuthConnectionMethod = getCreateAuthConnectionMethod =
+    if ((getCreateAuthConnectionMethod = AuthConnectionServiceGrpc.getCreateAuthConnectionMethod) == null) {
+      synchronized (AuthConnectionServiceGrpc.class) {
+        if ((getCreateAuthConnectionMethod = AuthConnectionServiceGrpc.getCreateAuthConnectionMethod) == null) {
+          AuthConnectionServiceGrpc.getCreateAuthConnectionMethod = getCreateAuthConnectionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionRequest, com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAuthConnection"))
@@ -38,7 +38,7 @@ public final class AuthConnectionGrpc {
                   com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AuthConnectionMethodDescriptorSupplier("CreateAuthConnection"))
+              .setSchemaDescriptor(new AuthConnectionServiceMethodDescriptorSupplier("CreateAuthConnection"))
               .build();
         }
       }
@@ -57,10 +57,10 @@ public final class AuthConnectionGrpc {
   public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.authconnection.GetAuthConnectionSettingsRequest,
       com.tcn.cloud.api.api.v1alpha1.org.authconnection.GetAuthConnectionSettingsResponse> getGetAuthConnectionSettingsMethod() {
     io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.authconnection.GetAuthConnectionSettingsRequest, com.tcn.cloud.api.api.v1alpha1.org.authconnection.GetAuthConnectionSettingsResponse> getGetAuthConnectionSettingsMethod;
-    if ((getGetAuthConnectionSettingsMethod = AuthConnectionGrpc.getGetAuthConnectionSettingsMethod) == null) {
-      synchronized (AuthConnectionGrpc.class) {
-        if ((getGetAuthConnectionSettingsMethod = AuthConnectionGrpc.getGetAuthConnectionSettingsMethod) == null) {
-          AuthConnectionGrpc.getGetAuthConnectionSettingsMethod = getGetAuthConnectionSettingsMethod =
+    if ((getGetAuthConnectionSettingsMethod = AuthConnectionServiceGrpc.getGetAuthConnectionSettingsMethod) == null) {
+      synchronized (AuthConnectionServiceGrpc.class) {
+        if ((getGetAuthConnectionSettingsMethod = AuthConnectionServiceGrpc.getGetAuthConnectionSettingsMethod) == null) {
+          AuthConnectionServiceGrpc.getGetAuthConnectionSettingsMethod = getGetAuthConnectionSettingsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.authconnection.GetAuthConnectionSettingsRequest, com.tcn.cloud.api.api.v1alpha1.org.authconnection.GetAuthConnectionSettingsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAuthConnectionSettings"))
@@ -69,7 +69,7 @@ public final class AuthConnectionGrpc {
                   com.tcn.cloud.api.api.v1alpha1.org.authconnection.GetAuthConnectionSettingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.org.authconnection.GetAuthConnectionSettingsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AuthConnectionMethodDescriptorSupplier("GetAuthConnectionSettings"))
+              .setSchemaDescriptor(new AuthConnectionServiceMethodDescriptorSupplier("GetAuthConnectionSettings"))
               .build();
         }
       }
@@ -88,10 +88,10 @@ public final class AuthConnectionGrpc {
   public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.authconnection.DeleteAuthConnectionRequest,
       com.tcn.cloud.api.api.v1alpha1.org.authconnection.DeleteAuthConnectionResponse> getDeleteAuthConnectionMethod() {
     io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.authconnection.DeleteAuthConnectionRequest, com.tcn.cloud.api.api.v1alpha1.org.authconnection.DeleteAuthConnectionResponse> getDeleteAuthConnectionMethod;
-    if ((getDeleteAuthConnectionMethod = AuthConnectionGrpc.getDeleteAuthConnectionMethod) == null) {
-      synchronized (AuthConnectionGrpc.class) {
-        if ((getDeleteAuthConnectionMethod = AuthConnectionGrpc.getDeleteAuthConnectionMethod) == null) {
-          AuthConnectionGrpc.getDeleteAuthConnectionMethod = getDeleteAuthConnectionMethod =
+    if ((getDeleteAuthConnectionMethod = AuthConnectionServiceGrpc.getDeleteAuthConnectionMethod) == null) {
+      synchronized (AuthConnectionServiceGrpc.class) {
+        if ((getDeleteAuthConnectionMethod = AuthConnectionServiceGrpc.getDeleteAuthConnectionMethod) == null) {
+          AuthConnectionServiceGrpc.getDeleteAuthConnectionMethod = getDeleteAuthConnectionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.authconnection.DeleteAuthConnectionRequest, com.tcn.cloud.api.api.v1alpha1.org.authconnection.DeleteAuthConnectionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteAuthConnection"))
@@ -100,7 +100,7 @@ public final class AuthConnectionGrpc {
                   com.tcn.cloud.api.api.v1alpha1.org.authconnection.DeleteAuthConnectionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.org.authconnection.DeleteAuthConnectionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AuthConnectionMethodDescriptorSupplier("DeleteAuthConnection"))
+              .setSchemaDescriptor(new AuthConnectionServiceMethodDescriptorSupplier("DeleteAuthConnection"))
               .build();
         }
       }
@@ -119,10 +119,10 @@ public final class AuthConnectionGrpc {
   public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest,
       com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretResponse> getUpdateAuthConnectionSecretMethod() {
     io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest, com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretResponse> getUpdateAuthConnectionSecretMethod;
-    if ((getUpdateAuthConnectionSecretMethod = AuthConnectionGrpc.getUpdateAuthConnectionSecretMethod) == null) {
-      synchronized (AuthConnectionGrpc.class) {
-        if ((getUpdateAuthConnectionSecretMethod = AuthConnectionGrpc.getUpdateAuthConnectionSecretMethod) == null) {
-          AuthConnectionGrpc.getUpdateAuthConnectionSecretMethod = getUpdateAuthConnectionSecretMethod =
+    if ((getUpdateAuthConnectionSecretMethod = AuthConnectionServiceGrpc.getUpdateAuthConnectionSecretMethod) == null) {
+      synchronized (AuthConnectionServiceGrpc.class) {
+        if ((getUpdateAuthConnectionSecretMethod = AuthConnectionServiceGrpc.getUpdateAuthConnectionSecretMethod) == null) {
+          AuthConnectionServiceGrpc.getUpdateAuthConnectionSecretMethod = getUpdateAuthConnectionSecretMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest, com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAuthConnectionSecret"))
@@ -131,7 +131,7 @@ public final class AuthConnectionGrpc {
                   com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AuthConnectionMethodDescriptorSupplier("UpdateAuthConnectionSecret"))
+              .setSchemaDescriptor(new AuthConnectionServiceMethodDescriptorSupplier("UpdateAuthConnectionSecret"))
               .build();
         }
       }
@@ -150,10 +150,10 @@ public final class AuthConnectionGrpc {
   public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionGroupsRequest,
       com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionGroupsResponse> getUpdateAuthConnectionGroupsMethod() {
     io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionGroupsRequest, com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionGroupsResponse> getUpdateAuthConnectionGroupsMethod;
-    if ((getUpdateAuthConnectionGroupsMethod = AuthConnectionGrpc.getUpdateAuthConnectionGroupsMethod) == null) {
-      synchronized (AuthConnectionGrpc.class) {
-        if ((getUpdateAuthConnectionGroupsMethod = AuthConnectionGrpc.getUpdateAuthConnectionGroupsMethod) == null) {
-          AuthConnectionGrpc.getUpdateAuthConnectionGroupsMethod = getUpdateAuthConnectionGroupsMethod =
+    if ((getUpdateAuthConnectionGroupsMethod = AuthConnectionServiceGrpc.getUpdateAuthConnectionGroupsMethod) == null) {
+      synchronized (AuthConnectionServiceGrpc.class) {
+        if ((getUpdateAuthConnectionGroupsMethod = AuthConnectionServiceGrpc.getUpdateAuthConnectionGroupsMethod) == null) {
+          AuthConnectionServiceGrpc.getUpdateAuthConnectionGroupsMethod = getUpdateAuthConnectionGroupsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionGroupsRequest, com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionGroupsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAuthConnectionGroups"))
@@ -162,7 +162,7 @@ public final class AuthConnectionGrpc {
                   com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionGroupsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionGroupsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AuthConnectionMethodDescriptorSupplier("UpdateAuthConnectionGroups"))
+              .setSchemaDescriptor(new AuthConnectionServiceMethodDescriptorSupplier("UpdateAuthConnectionGroups"))
               .build();
         }
       }
@@ -173,45 +173,45 @@ public final class AuthConnectionGrpc {
   /**
    * Creates a new async stub that supports all call types for the service
    */
-  public static AuthConnectionStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<AuthConnectionStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<AuthConnectionStub>() {
+  public static AuthConnectionServiceStub newStub(io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AuthConnectionServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AuthConnectionServiceStub>() {
         @java.lang.Override
-        public AuthConnectionStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new AuthConnectionStub(channel, callOptions);
+        public AuthConnectionServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AuthConnectionServiceStub(channel, callOptions);
         }
       };
-    return AuthConnectionStub.newStub(factory, channel);
+    return AuthConnectionServiceStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static AuthConnectionBlockingStub newBlockingStub(
+  public static AuthConnectionServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<AuthConnectionBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<AuthConnectionBlockingStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<AuthConnectionServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AuthConnectionServiceBlockingStub>() {
         @java.lang.Override
-        public AuthConnectionBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new AuthConnectionBlockingStub(channel, callOptions);
+        public AuthConnectionServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AuthConnectionServiceBlockingStub(channel, callOptions);
         }
       };
-    return AuthConnectionBlockingStub.newStub(factory, channel);
+    return AuthConnectionServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
-  public static AuthConnectionFutureStub newFutureStub(
+  public static AuthConnectionServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<AuthConnectionFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<AuthConnectionFutureStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<AuthConnectionServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AuthConnectionServiceFutureStub>() {
         @java.lang.Override
-        public AuthConnectionFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new AuthConnectionFutureStub(channel, callOptions);
+        public AuthConnectionServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AuthConnectionServiceFutureStub(channel, callOptions);
         }
       };
-    return AuthConnectionFutureStub.newStub(factory, channel);
+    return AuthConnectionServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -270,30 +270,30 @@ public final class AuthConnectionGrpc {
   }
 
   /**
-   * Base class for the server implementation of the service AuthConnection.
+   * Base class for the server implementation of the service AuthConnectionService.
    */
-  public static abstract class AuthConnectionImplBase
+  public static abstract class AuthConnectionServiceImplBase
       implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return AuthConnectionGrpc.bindService(this);
+      return AuthConnectionServiceGrpc.bindService(this);
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service AuthConnection.
+   * A stub to allow clients to do asynchronous rpc calls to service AuthConnectionService.
    */
-  public static final class AuthConnectionStub
-      extends io.grpc.stub.AbstractAsyncStub<AuthConnectionStub> {
-    private AuthConnectionStub(
+  public static final class AuthConnectionServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<AuthConnectionServiceStub> {
+    private AuthConnectionServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AuthConnectionStub build(
+    protected AuthConnectionServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new AuthConnectionStub(channel, callOptions);
+      return new AuthConnectionServiceStub(channel, callOptions);
     }
 
     /**
@@ -353,19 +353,19 @@ public final class AuthConnectionGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service AuthConnection.
+   * A stub to allow clients to do synchronous rpc calls to service AuthConnectionService.
    */
-  public static final class AuthConnectionBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<AuthConnectionBlockingStub> {
-    private AuthConnectionBlockingStub(
+  public static final class AuthConnectionServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<AuthConnectionServiceBlockingStub> {
+    private AuthConnectionServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AuthConnectionBlockingStub build(
+    protected AuthConnectionServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new AuthConnectionBlockingStub(channel, callOptions);
+      return new AuthConnectionServiceBlockingStub(channel, callOptions);
     }
 
     /**
@@ -420,19 +420,19 @@ public final class AuthConnectionGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service AuthConnection.
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service AuthConnectionService.
    */
-  public static final class AuthConnectionFutureStub
-      extends io.grpc.stub.AbstractFutureStub<AuthConnectionFutureStub> {
-    private AuthConnectionFutureStub(
+  public static final class AuthConnectionServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<AuthConnectionServiceFutureStub> {
+    private AuthConnectionServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AuthConnectionFutureStub build(
+    protected AuthConnectionServiceFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new AuthConnectionFutureStub(channel, callOptions);
+      return new AuthConnectionServiceFutureStub(channel, callOptions);
     }
 
     /**
@@ -590,9 +590,9 @@ public final class AuthConnectionGrpc {
         .build();
   }
 
-  private static abstract class AuthConnectionBaseDescriptorSupplier
+  private static abstract class AuthConnectionServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    AuthConnectionBaseDescriptorSupplier() {}
+    AuthConnectionServiceBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
@@ -601,21 +601,21 @@ public final class AuthConnectionGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("AuthConnection");
+      return getFileDescriptor().findServiceByName("AuthConnectionService");
     }
   }
 
-  private static final class AuthConnectionFileDescriptorSupplier
-      extends AuthConnectionBaseDescriptorSupplier {
-    AuthConnectionFileDescriptorSupplier() {}
+  private static final class AuthConnectionServiceFileDescriptorSupplier
+      extends AuthConnectionServiceBaseDescriptorSupplier {
+    AuthConnectionServiceFileDescriptorSupplier() {}
   }
 
-  private static final class AuthConnectionMethodDescriptorSupplier
-      extends AuthConnectionBaseDescriptorSupplier
+  private static final class AuthConnectionServiceMethodDescriptorSupplier
+      extends AuthConnectionServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final String methodName;
 
-    AuthConnectionMethodDescriptorSupplier(String methodName) {
+    AuthConnectionServiceMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 
@@ -630,11 +630,11 @@ public final class AuthConnectionGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
-      synchronized (AuthConnectionGrpc.class) {
+      synchronized (AuthConnectionServiceGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new AuthConnectionFileDescriptorSupplier())
+              .setSchemaDescriptor(new AuthConnectionServiceFileDescriptorSupplier())
               .addMethod(getCreateAuthConnectionMethod())
               .addMethod(getGetAuthConnectionSettingsMethod())
               .addMethod(getDeleteAuthConnectionMethod())
