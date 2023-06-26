@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v0alpha;
 
-public interface SplitCreiteriaOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v0alpha.SplitCreiteria)
+public interface SplitCriteriaOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v0alpha.SplitCriteria)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -52,5 +52,5 @@ public interface SplitCreiteriaOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.SplitByEqualPartsOrBuilder getEqualPartsOrBuilder();
 
-  com.tcn.cloud.api.api.v0alpha.SplitCreiteria.ActionCase getActionCase();
+  com.tcn.cloud.api.api.v0alpha.SplitCriteria.ActionCase getActionCase();
 }
