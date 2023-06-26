@@ -54,6 +54,12 @@ private static final long serialVersionUID = 0L;
   public enum DefinitionCase
       implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    PRINT(101),
+    RANDOM(102),
+    CONSOLE_INPUT(103),
+    COMPARATOR(104),
+    STORE_INPUT(105),
+    CHATBOT(1000),
     OMNI_PROMPT(201),
     OMNI_SET_SKILL(202),
     OMNI_TO_AGENT(203),
@@ -75,6 +81,12 @@ private static final long serialVersionUID = 0L;
 
     public static DefinitionCase forNumber(int value) {
       switch (value) {
+        case 101: return PRINT;
+        case 102: return RANDOM;
+        case 103: return CONSOLE_INPUT;
+        case 104: return COMPARATOR;
+        case 105: return STORE_INPUT;
+        case 1000: return CHATBOT;
         case 201: return OMNI_PROMPT;
         case 202: return OMNI_SET_SKILL;
         case 203: return OMNI_TO_AGENT;
@@ -295,6 +307,192 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int PRINT_FIELD_NUMBER = 101;
+  /**
+   * <code>.api.commons.workflows.NodePrint print = 101 [json_name = "print"];</code>
+   * @return Whether the print field is set.
+   */
+  @java.lang.Override
+  public boolean hasPrint() {
+    return definitionCase_ == 101;
+  }
+  /**
+   * <code>.api.commons.workflows.NodePrint print = 101 [json_name = "print"];</code>
+   * @return The print.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.NodePrint getPrint() {
+    if (definitionCase_ == 101) {
+       return (com.tcn.cloud.api.api.commons.workflows.NodePrint) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.NodePrint.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.workflows.NodePrint print = 101 [json_name = "print"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.NodePrintOrBuilder getPrintOrBuilder() {
+    if (definitionCase_ == 101) {
+       return (com.tcn.cloud.api.api.commons.workflows.NodePrint) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.NodePrint.getDefaultInstance();
+  }
+
+  public static final int RANDOM_FIELD_NUMBER = 102;
+  /**
+   * <code>.api.commons.workflows.NodeRandom random = 102 [json_name = "random"];</code>
+   * @return Whether the random field is set.
+   */
+  @java.lang.Override
+  public boolean hasRandom() {
+    return definitionCase_ == 102;
+  }
+  /**
+   * <code>.api.commons.workflows.NodeRandom random = 102 [json_name = "random"];</code>
+   * @return The random.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.NodeRandom getRandom() {
+    if (definitionCase_ == 102) {
+       return (com.tcn.cloud.api.api.commons.workflows.NodeRandom) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.NodeRandom.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.workflows.NodeRandom random = 102 [json_name = "random"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.NodeRandomOrBuilder getRandomOrBuilder() {
+    if (definitionCase_ == 102) {
+       return (com.tcn.cloud.api.api.commons.workflows.NodeRandom) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.NodeRandom.getDefaultInstance();
+  }
+
+  public static final int CONSOLE_INPUT_FIELD_NUMBER = 103;
+  /**
+   * <code>.api.commons.workflows.NodeConsoleInput console_input = 103 [json_name = "consoleInput"];</code>
+   * @return Whether the consoleInput field is set.
+   */
+  @java.lang.Override
+  public boolean hasConsoleInput() {
+    return definitionCase_ == 103;
+  }
+  /**
+   * <code>.api.commons.workflows.NodeConsoleInput console_input = 103 [json_name = "consoleInput"];</code>
+   * @return The consoleInput.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput getConsoleInput() {
+    if (definitionCase_ == 103) {
+       return (com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.workflows.NodeConsoleInput console_input = 103 [json_name = "consoleInput"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.NodeConsoleInputOrBuilder getConsoleInputOrBuilder() {
+    if (definitionCase_ == 103) {
+       return (com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput.getDefaultInstance();
+  }
+
+  public static final int COMPARATOR_FIELD_NUMBER = 104;
+  /**
+   * <code>.api.commons.workflows.NodeComparator comparator = 104 [json_name = "comparator"];</code>
+   * @return Whether the comparator field is set.
+   */
+  @java.lang.Override
+  public boolean hasComparator() {
+    return definitionCase_ == 104;
+  }
+  /**
+   * <code>.api.commons.workflows.NodeComparator comparator = 104 [json_name = "comparator"];</code>
+   * @return The comparator.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.NodeComparator getComparator() {
+    if (definitionCase_ == 104) {
+       return (com.tcn.cloud.api.api.commons.workflows.NodeComparator) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.NodeComparator.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.workflows.NodeComparator comparator = 104 [json_name = "comparator"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.NodeComparatorOrBuilder getComparatorOrBuilder() {
+    if (definitionCase_ == 104) {
+       return (com.tcn.cloud.api.api.commons.workflows.NodeComparator) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.NodeComparator.getDefaultInstance();
+  }
+
+  public static final int STORE_INPUT_FIELD_NUMBER = 105;
+  /**
+   * <code>.api.commons.workflows.NodeStoreInput store_input = 105 [json_name = "storeInput"];</code>
+   * @return Whether the storeInput field is set.
+   */
+  @java.lang.Override
+  public boolean hasStoreInput() {
+    return definitionCase_ == 105;
+  }
+  /**
+   * <code>.api.commons.workflows.NodeStoreInput store_input = 105 [json_name = "storeInput"];</code>
+   * @return The storeInput.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.NodeStoreInput getStoreInput() {
+    if (definitionCase_ == 105) {
+       return (com.tcn.cloud.api.api.commons.workflows.NodeStoreInput) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.NodeStoreInput.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.workflows.NodeStoreInput store_input = 105 [json_name = "storeInput"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.NodeStoreInputOrBuilder getStoreInputOrBuilder() {
+    if (definitionCase_ == 105) {
+       return (com.tcn.cloud.api.api.commons.workflows.NodeStoreInput) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.NodeStoreInput.getDefaultInstance();
+  }
+
+  public static final int CHATBOT_FIELD_NUMBER = 1000;
+  /**
+   * <code>.api.commons.workflows.NodeChatbot chatbot = 1000 [json_name = "chatbot"];</code>
+   * @return Whether the chatbot field is set.
+   */
+  @java.lang.Override
+  public boolean hasChatbot() {
+    return definitionCase_ == 1000;
+  }
+  /**
+   * <code>.api.commons.workflows.NodeChatbot chatbot = 1000 [json_name = "chatbot"];</code>
+   * @return The chatbot.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.NodeChatbot getChatbot() {
+    if (definitionCase_ == 1000) {
+       return (com.tcn.cloud.api.api.commons.workflows.NodeChatbot) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.NodeChatbot.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.workflows.NodeChatbot chatbot = 1000 [json_name = "chatbot"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.NodeChatbotOrBuilder getChatbotOrBuilder() {
+    if (definitionCase_ == 1000) {
+       return (com.tcn.cloud.api.api.commons.workflows.NodeChatbot) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.NodeChatbot.getDefaultInstance();
+  }
+
   public static final int OMNI_PROMPT_FIELD_NUMBER = 201;
   /**
    * <code>.api.commons.workflows.OmniNodePrompt omni_prompt = 201 [json_name = "omniPrompt"];</code>
@@ -448,6 +646,21 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(errorNodeId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, errorNodeId_);
     }
+    if (definitionCase_ == 101) {
+      output.writeMessage(101, (com.tcn.cloud.api.api.commons.workflows.NodePrint) definition_);
+    }
+    if (definitionCase_ == 102) {
+      output.writeMessage(102, (com.tcn.cloud.api.api.commons.workflows.NodeRandom) definition_);
+    }
+    if (definitionCase_ == 103) {
+      output.writeMessage(103, (com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput) definition_);
+    }
+    if (definitionCase_ == 104) {
+      output.writeMessage(104, (com.tcn.cloud.api.api.commons.workflows.NodeComparator) definition_);
+    }
+    if (definitionCase_ == 105) {
+      output.writeMessage(105, (com.tcn.cloud.api.api.commons.workflows.NodeStoreInput) definition_);
+    }
     if (definitionCase_ == 201) {
       output.writeMessage(201, (com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt) definition_);
     }
@@ -459,6 +672,9 @@ private static final long serialVersionUID = 0L;
     }
     if (definitionCase_ == 204) {
       output.writeMessage(204, (com.tcn.cloud.api.api.commons.workflows.OmniNodeError) definition_);
+    }
+    if (definitionCase_ == 1000) {
+      output.writeMessage(1000, (com.tcn.cloud.api.api.commons.workflows.NodeChatbot) definition_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -489,6 +705,26 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(errorNodeId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, errorNodeId_);
     }
+    if (definitionCase_ == 101) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(101, (com.tcn.cloud.api.api.commons.workflows.NodePrint) definition_);
+    }
+    if (definitionCase_ == 102) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(102, (com.tcn.cloud.api.api.commons.workflows.NodeRandom) definition_);
+    }
+    if (definitionCase_ == 103) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(103, (com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput) definition_);
+    }
+    if (definitionCase_ == 104) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(104, (com.tcn.cloud.api.api.commons.workflows.NodeComparator) definition_);
+    }
+    if (definitionCase_ == 105) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(105, (com.tcn.cloud.api.api.commons.workflows.NodeStoreInput) definition_);
+    }
     if (definitionCase_ == 201) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(201, (com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt) definition_);
@@ -504,6 +740,10 @@ private static final long serialVersionUID = 0L;
     if (definitionCase_ == 204) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(204, (com.tcn.cloud.api.api.commons.workflows.OmniNodeError) definition_);
+    }
+    if (definitionCase_ == 1000) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1000, (com.tcn.cloud.api.api.commons.workflows.NodeChatbot) definition_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -532,6 +772,30 @@ private static final long serialVersionUID = 0L;
         .equals(other.getErrorNodeId())) return false;
     if (!getDefinitionCase().equals(other.getDefinitionCase())) return false;
     switch (definitionCase_) {
+      case 101:
+        if (!getPrint()
+            .equals(other.getPrint())) return false;
+        break;
+      case 102:
+        if (!getRandom()
+            .equals(other.getRandom())) return false;
+        break;
+      case 103:
+        if (!getConsoleInput()
+            .equals(other.getConsoleInput())) return false;
+        break;
+      case 104:
+        if (!getComparator()
+            .equals(other.getComparator())) return false;
+        break;
+      case 105:
+        if (!getStoreInput()
+            .equals(other.getStoreInput())) return false;
+        break;
+      case 1000:
+        if (!getChatbot()
+            .equals(other.getChatbot())) return false;
+        break;
       case 201:
         if (!getOmniPrompt()
             .equals(other.getOmniPrompt())) return false;
@@ -575,6 +839,30 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ERROR_NODE_ID_FIELD_NUMBER;
     hash = (53 * hash) + getErrorNodeId().hashCode();
     switch (definitionCase_) {
+      case 101:
+        hash = (37 * hash) + PRINT_FIELD_NUMBER;
+        hash = (53 * hash) + getPrint().hashCode();
+        break;
+      case 102:
+        hash = (37 * hash) + RANDOM_FIELD_NUMBER;
+        hash = (53 * hash) + getRandom().hashCode();
+        break;
+      case 103:
+        hash = (37 * hash) + CONSOLE_INPUT_FIELD_NUMBER;
+        hash = (53 * hash) + getConsoleInput().hashCode();
+        break;
+      case 104:
+        hash = (37 * hash) + COMPARATOR_FIELD_NUMBER;
+        hash = (53 * hash) + getComparator().hashCode();
+        break;
+      case 105:
+        hash = (37 * hash) + STORE_INPUT_FIELD_NUMBER;
+        hash = (53 * hash) + getStoreInput().hashCode();
+        break;
+      case 1000:
+        hash = (37 * hash) + CHATBOT_FIELD_NUMBER;
+        hash = (53 * hash) + getChatbot().hashCode();
+        break;
       case 201:
         hash = (37 * hash) + OMNI_PROMPT_FIELD_NUMBER;
         hash = (53 * hash) + getOmniPrompt().hashCode();
@@ -735,6 +1023,24 @@ private static final long serialVersionUID = 0L;
       outputs_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       errorNodeId_ = "";
+      if (printBuilder_ != null) {
+        printBuilder_.clear();
+      }
+      if (randomBuilder_ != null) {
+        randomBuilder_.clear();
+      }
+      if (consoleInputBuilder_ != null) {
+        consoleInputBuilder_.clear();
+      }
+      if (comparatorBuilder_ != null) {
+        comparatorBuilder_.clear();
+      }
+      if (storeInputBuilder_ != null) {
+        storeInputBuilder_.clear();
+      }
+      if (chatbotBuilder_ != null) {
+        chatbotBuilder_.clear();
+      }
       if (omniPromptBuilder_ != null) {
         omniPromptBuilder_.clear();
       }
@@ -804,6 +1110,30 @@ private static final long serialVersionUID = 0L;
     private void buildPartialOneofs(com.tcn.cloud.api.api.commons.workflows.NodeDefinition result) {
       result.definitionCase_ = definitionCase_;
       result.definition_ = this.definition_;
+      if (definitionCase_ == 101 &&
+          printBuilder_ != null) {
+        result.definition_ = printBuilder_.build();
+      }
+      if (definitionCase_ == 102 &&
+          randomBuilder_ != null) {
+        result.definition_ = randomBuilder_.build();
+      }
+      if (definitionCase_ == 103 &&
+          consoleInputBuilder_ != null) {
+        result.definition_ = consoleInputBuilder_.build();
+      }
+      if (definitionCase_ == 104 &&
+          comparatorBuilder_ != null) {
+        result.definition_ = comparatorBuilder_.build();
+      }
+      if (definitionCase_ == 105 &&
+          storeInputBuilder_ != null) {
+        result.definition_ = storeInputBuilder_.build();
+      }
+      if (definitionCase_ == 1000 &&
+          chatbotBuilder_ != null) {
+        result.definition_ = chatbotBuilder_.build();
+      }
       if (definitionCase_ == 201 &&
           omniPromptBuilder_ != null) {
         result.definition_ = omniPromptBuilder_.build();
@@ -897,6 +1227,30 @@ private static final long serialVersionUID = 0L;
         onChanged();
       }
       switch (other.getDefinitionCase()) {
+        case PRINT: {
+          mergePrint(other.getPrint());
+          break;
+        }
+        case RANDOM: {
+          mergeRandom(other.getRandom());
+          break;
+        }
+        case CONSOLE_INPUT: {
+          mergeConsoleInput(other.getConsoleInput());
+          break;
+        }
+        case COMPARATOR: {
+          mergeComparator(other.getComparator());
+          break;
+        }
+        case STORE_INPUT: {
+          mergeStoreInput(other.getStoreInput());
+          break;
+        }
+        case CHATBOT: {
+          mergeChatbot(other.getChatbot());
+          break;
+        }
         case OMNI_PROMPT: {
           mergeOmniPrompt(other.getOmniPrompt());
           break;
@@ -969,6 +1323,41 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 50
+            case 810: {
+              input.readMessage(
+                  getPrintFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              definitionCase_ = 101;
+              break;
+            } // case 810
+            case 818: {
+              input.readMessage(
+                  getRandomFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              definitionCase_ = 102;
+              break;
+            } // case 818
+            case 826: {
+              input.readMessage(
+                  getConsoleInputFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              definitionCase_ = 103;
+              break;
+            } // case 826
+            case 834: {
+              input.readMessage(
+                  getComparatorFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              definitionCase_ = 104;
+              break;
+            } // case 834
+            case 842: {
+              input.readMessage(
+                  getStoreInputFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              definitionCase_ = 105;
+              break;
+            } // case 842
             case 1610: {
               input.readMessage(
                   getOmniPromptFieldBuilder().getBuilder(),
@@ -997,6 +1386,13 @@ private static final long serialVersionUID = 0L;
               definitionCase_ = 204;
               break;
             } // case 1634
+            case 8002: {
+              input.readMessage(
+                  getChatbotFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              definitionCase_ = 1000;
+              break;
+            } // case 8002
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1446,6 +1842,858 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000010;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.NodePrint, com.tcn.cloud.api.api.commons.workflows.NodePrint.Builder, com.tcn.cloud.api.api.commons.workflows.NodePrintOrBuilder> printBuilder_;
+    /**
+     * <code>.api.commons.workflows.NodePrint print = 101 [json_name = "print"];</code>
+     * @return Whether the print field is set.
+     */
+    @java.lang.Override
+    public boolean hasPrint() {
+      return definitionCase_ == 101;
+    }
+    /**
+     * <code>.api.commons.workflows.NodePrint print = 101 [json_name = "print"];</code>
+     * @return The print.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.NodePrint getPrint() {
+      if (printBuilder_ == null) {
+        if (definitionCase_ == 101) {
+          return (com.tcn.cloud.api.api.commons.workflows.NodePrint) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.NodePrint.getDefaultInstance();
+      } else {
+        if (definitionCase_ == 101) {
+          return printBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.workflows.NodePrint.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.NodePrint print = 101 [json_name = "print"];</code>
+     */
+    public Builder setPrint(com.tcn.cloud.api.api.commons.workflows.NodePrint value) {
+      if (printBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        definition_ = value;
+        onChanged();
+      } else {
+        printBuilder_.setMessage(value);
+      }
+      definitionCase_ = 101;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodePrint print = 101 [json_name = "print"];</code>
+     */
+    public Builder setPrint(
+        com.tcn.cloud.api.api.commons.workflows.NodePrint.Builder builderForValue) {
+      if (printBuilder_ == null) {
+        definition_ = builderForValue.build();
+        onChanged();
+      } else {
+        printBuilder_.setMessage(builderForValue.build());
+      }
+      definitionCase_ = 101;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodePrint print = 101 [json_name = "print"];</code>
+     */
+    public Builder mergePrint(com.tcn.cloud.api.api.commons.workflows.NodePrint value) {
+      if (printBuilder_ == null) {
+        if (definitionCase_ == 101 &&
+            definition_ != com.tcn.cloud.api.api.commons.workflows.NodePrint.getDefaultInstance()) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.NodePrint.newBuilder((com.tcn.cloud.api.api.commons.workflows.NodePrint) definition_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          definition_ = value;
+        }
+        onChanged();
+      } else {
+        if (definitionCase_ == 101) {
+          printBuilder_.mergeFrom(value);
+        } else {
+          printBuilder_.setMessage(value);
+        }
+      }
+      definitionCase_ = 101;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodePrint print = 101 [json_name = "print"];</code>
+     */
+    public Builder clearPrint() {
+      if (printBuilder_ == null) {
+        if (definitionCase_ == 101) {
+          definitionCase_ = 0;
+          definition_ = null;
+          onChanged();
+        }
+      } else {
+        if (definitionCase_ == 101) {
+          definitionCase_ = 0;
+          definition_ = null;
+        }
+        printBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodePrint print = 101 [json_name = "print"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.workflows.NodePrint.Builder getPrintBuilder() {
+      return getPrintFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.workflows.NodePrint print = 101 [json_name = "print"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.NodePrintOrBuilder getPrintOrBuilder() {
+      if ((definitionCase_ == 101) && (printBuilder_ != null)) {
+        return printBuilder_.getMessageOrBuilder();
+      } else {
+        if (definitionCase_ == 101) {
+          return (com.tcn.cloud.api.api.commons.workflows.NodePrint) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.NodePrint.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.NodePrint print = 101 [json_name = "print"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.NodePrint, com.tcn.cloud.api.api.commons.workflows.NodePrint.Builder, com.tcn.cloud.api.api.commons.workflows.NodePrintOrBuilder> 
+        getPrintFieldBuilder() {
+      if (printBuilder_ == null) {
+        if (!(definitionCase_ == 101)) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.NodePrint.getDefaultInstance();
+        }
+        printBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.workflows.NodePrint, com.tcn.cloud.api.api.commons.workflows.NodePrint.Builder, com.tcn.cloud.api.api.commons.workflows.NodePrintOrBuilder>(
+                (com.tcn.cloud.api.api.commons.workflows.NodePrint) definition_,
+                getParentForChildren(),
+                isClean());
+        definition_ = null;
+      }
+      definitionCase_ = 101;
+      onChanged();
+      return printBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.NodeRandom, com.tcn.cloud.api.api.commons.workflows.NodeRandom.Builder, com.tcn.cloud.api.api.commons.workflows.NodeRandomOrBuilder> randomBuilder_;
+    /**
+     * <code>.api.commons.workflows.NodeRandom random = 102 [json_name = "random"];</code>
+     * @return Whether the random field is set.
+     */
+    @java.lang.Override
+    public boolean hasRandom() {
+      return definitionCase_ == 102;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeRandom random = 102 [json_name = "random"];</code>
+     * @return The random.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.NodeRandom getRandom() {
+      if (randomBuilder_ == null) {
+        if (definitionCase_ == 102) {
+          return (com.tcn.cloud.api.api.commons.workflows.NodeRandom) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.NodeRandom.getDefaultInstance();
+      } else {
+        if (definitionCase_ == 102) {
+          return randomBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.workflows.NodeRandom.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.NodeRandom random = 102 [json_name = "random"];</code>
+     */
+    public Builder setRandom(com.tcn.cloud.api.api.commons.workflows.NodeRandom value) {
+      if (randomBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        definition_ = value;
+        onChanged();
+      } else {
+        randomBuilder_.setMessage(value);
+      }
+      definitionCase_ = 102;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeRandom random = 102 [json_name = "random"];</code>
+     */
+    public Builder setRandom(
+        com.tcn.cloud.api.api.commons.workflows.NodeRandom.Builder builderForValue) {
+      if (randomBuilder_ == null) {
+        definition_ = builderForValue.build();
+        onChanged();
+      } else {
+        randomBuilder_.setMessage(builderForValue.build());
+      }
+      definitionCase_ = 102;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeRandom random = 102 [json_name = "random"];</code>
+     */
+    public Builder mergeRandom(com.tcn.cloud.api.api.commons.workflows.NodeRandom value) {
+      if (randomBuilder_ == null) {
+        if (definitionCase_ == 102 &&
+            definition_ != com.tcn.cloud.api.api.commons.workflows.NodeRandom.getDefaultInstance()) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.NodeRandom.newBuilder((com.tcn.cloud.api.api.commons.workflows.NodeRandom) definition_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          definition_ = value;
+        }
+        onChanged();
+      } else {
+        if (definitionCase_ == 102) {
+          randomBuilder_.mergeFrom(value);
+        } else {
+          randomBuilder_.setMessage(value);
+        }
+      }
+      definitionCase_ = 102;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeRandom random = 102 [json_name = "random"];</code>
+     */
+    public Builder clearRandom() {
+      if (randomBuilder_ == null) {
+        if (definitionCase_ == 102) {
+          definitionCase_ = 0;
+          definition_ = null;
+          onChanged();
+        }
+      } else {
+        if (definitionCase_ == 102) {
+          definitionCase_ = 0;
+          definition_ = null;
+        }
+        randomBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeRandom random = 102 [json_name = "random"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.workflows.NodeRandom.Builder getRandomBuilder() {
+      return getRandomFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.workflows.NodeRandom random = 102 [json_name = "random"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.NodeRandomOrBuilder getRandomOrBuilder() {
+      if ((definitionCase_ == 102) && (randomBuilder_ != null)) {
+        return randomBuilder_.getMessageOrBuilder();
+      } else {
+        if (definitionCase_ == 102) {
+          return (com.tcn.cloud.api.api.commons.workflows.NodeRandom) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.NodeRandom.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.NodeRandom random = 102 [json_name = "random"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.NodeRandom, com.tcn.cloud.api.api.commons.workflows.NodeRandom.Builder, com.tcn.cloud.api.api.commons.workflows.NodeRandomOrBuilder> 
+        getRandomFieldBuilder() {
+      if (randomBuilder_ == null) {
+        if (!(definitionCase_ == 102)) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.NodeRandom.getDefaultInstance();
+        }
+        randomBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.workflows.NodeRandom, com.tcn.cloud.api.api.commons.workflows.NodeRandom.Builder, com.tcn.cloud.api.api.commons.workflows.NodeRandomOrBuilder>(
+                (com.tcn.cloud.api.api.commons.workflows.NodeRandom) definition_,
+                getParentForChildren(),
+                isClean());
+        definition_ = null;
+      }
+      definitionCase_ = 102;
+      onChanged();
+      return randomBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput, com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput.Builder, com.tcn.cloud.api.api.commons.workflows.NodeConsoleInputOrBuilder> consoleInputBuilder_;
+    /**
+     * <code>.api.commons.workflows.NodeConsoleInput console_input = 103 [json_name = "consoleInput"];</code>
+     * @return Whether the consoleInput field is set.
+     */
+    @java.lang.Override
+    public boolean hasConsoleInput() {
+      return definitionCase_ == 103;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeConsoleInput console_input = 103 [json_name = "consoleInput"];</code>
+     * @return The consoleInput.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput getConsoleInput() {
+      if (consoleInputBuilder_ == null) {
+        if (definitionCase_ == 103) {
+          return (com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput.getDefaultInstance();
+      } else {
+        if (definitionCase_ == 103) {
+          return consoleInputBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.NodeConsoleInput console_input = 103 [json_name = "consoleInput"];</code>
+     */
+    public Builder setConsoleInput(com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput value) {
+      if (consoleInputBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        definition_ = value;
+        onChanged();
+      } else {
+        consoleInputBuilder_.setMessage(value);
+      }
+      definitionCase_ = 103;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeConsoleInput console_input = 103 [json_name = "consoleInput"];</code>
+     */
+    public Builder setConsoleInput(
+        com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput.Builder builderForValue) {
+      if (consoleInputBuilder_ == null) {
+        definition_ = builderForValue.build();
+        onChanged();
+      } else {
+        consoleInputBuilder_.setMessage(builderForValue.build());
+      }
+      definitionCase_ = 103;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeConsoleInput console_input = 103 [json_name = "consoleInput"];</code>
+     */
+    public Builder mergeConsoleInput(com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput value) {
+      if (consoleInputBuilder_ == null) {
+        if (definitionCase_ == 103 &&
+            definition_ != com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput.getDefaultInstance()) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput.newBuilder((com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput) definition_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          definition_ = value;
+        }
+        onChanged();
+      } else {
+        if (definitionCase_ == 103) {
+          consoleInputBuilder_.mergeFrom(value);
+        } else {
+          consoleInputBuilder_.setMessage(value);
+        }
+      }
+      definitionCase_ = 103;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeConsoleInput console_input = 103 [json_name = "consoleInput"];</code>
+     */
+    public Builder clearConsoleInput() {
+      if (consoleInputBuilder_ == null) {
+        if (definitionCase_ == 103) {
+          definitionCase_ = 0;
+          definition_ = null;
+          onChanged();
+        }
+      } else {
+        if (definitionCase_ == 103) {
+          definitionCase_ = 0;
+          definition_ = null;
+        }
+        consoleInputBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeConsoleInput console_input = 103 [json_name = "consoleInput"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput.Builder getConsoleInputBuilder() {
+      return getConsoleInputFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.workflows.NodeConsoleInput console_input = 103 [json_name = "consoleInput"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.NodeConsoleInputOrBuilder getConsoleInputOrBuilder() {
+      if ((definitionCase_ == 103) && (consoleInputBuilder_ != null)) {
+        return consoleInputBuilder_.getMessageOrBuilder();
+      } else {
+        if (definitionCase_ == 103) {
+          return (com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.NodeConsoleInput console_input = 103 [json_name = "consoleInput"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput, com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput.Builder, com.tcn.cloud.api.api.commons.workflows.NodeConsoleInputOrBuilder> 
+        getConsoleInputFieldBuilder() {
+      if (consoleInputBuilder_ == null) {
+        if (!(definitionCase_ == 103)) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput.getDefaultInstance();
+        }
+        consoleInputBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput, com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput.Builder, com.tcn.cloud.api.api.commons.workflows.NodeConsoleInputOrBuilder>(
+                (com.tcn.cloud.api.api.commons.workflows.NodeConsoleInput) definition_,
+                getParentForChildren(),
+                isClean());
+        definition_ = null;
+      }
+      definitionCase_ = 103;
+      onChanged();
+      return consoleInputBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.NodeComparator, com.tcn.cloud.api.api.commons.workflows.NodeComparator.Builder, com.tcn.cloud.api.api.commons.workflows.NodeComparatorOrBuilder> comparatorBuilder_;
+    /**
+     * <code>.api.commons.workflows.NodeComparator comparator = 104 [json_name = "comparator"];</code>
+     * @return Whether the comparator field is set.
+     */
+    @java.lang.Override
+    public boolean hasComparator() {
+      return definitionCase_ == 104;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeComparator comparator = 104 [json_name = "comparator"];</code>
+     * @return The comparator.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.NodeComparator getComparator() {
+      if (comparatorBuilder_ == null) {
+        if (definitionCase_ == 104) {
+          return (com.tcn.cloud.api.api.commons.workflows.NodeComparator) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.NodeComparator.getDefaultInstance();
+      } else {
+        if (definitionCase_ == 104) {
+          return comparatorBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.workflows.NodeComparator.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.NodeComparator comparator = 104 [json_name = "comparator"];</code>
+     */
+    public Builder setComparator(com.tcn.cloud.api.api.commons.workflows.NodeComparator value) {
+      if (comparatorBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        definition_ = value;
+        onChanged();
+      } else {
+        comparatorBuilder_.setMessage(value);
+      }
+      definitionCase_ = 104;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeComparator comparator = 104 [json_name = "comparator"];</code>
+     */
+    public Builder setComparator(
+        com.tcn.cloud.api.api.commons.workflows.NodeComparator.Builder builderForValue) {
+      if (comparatorBuilder_ == null) {
+        definition_ = builderForValue.build();
+        onChanged();
+      } else {
+        comparatorBuilder_.setMessage(builderForValue.build());
+      }
+      definitionCase_ = 104;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeComparator comparator = 104 [json_name = "comparator"];</code>
+     */
+    public Builder mergeComparator(com.tcn.cloud.api.api.commons.workflows.NodeComparator value) {
+      if (comparatorBuilder_ == null) {
+        if (definitionCase_ == 104 &&
+            definition_ != com.tcn.cloud.api.api.commons.workflows.NodeComparator.getDefaultInstance()) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.NodeComparator.newBuilder((com.tcn.cloud.api.api.commons.workflows.NodeComparator) definition_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          definition_ = value;
+        }
+        onChanged();
+      } else {
+        if (definitionCase_ == 104) {
+          comparatorBuilder_.mergeFrom(value);
+        } else {
+          comparatorBuilder_.setMessage(value);
+        }
+      }
+      definitionCase_ = 104;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeComparator comparator = 104 [json_name = "comparator"];</code>
+     */
+    public Builder clearComparator() {
+      if (comparatorBuilder_ == null) {
+        if (definitionCase_ == 104) {
+          definitionCase_ = 0;
+          definition_ = null;
+          onChanged();
+        }
+      } else {
+        if (definitionCase_ == 104) {
+          definitionCase_ = 0;
+          definition_ = null;
+        }
+        comparatorBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeComparator comparator = 104 [json_name = "comparator"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.workflows.NodeComparator.Builder getComparatorBuilder() {
+      return getComparatorFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.workflows.NodeComparator comparator = 104 [json_name = "comparator"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.NodeComparatorOrBuilder getComparatorOrBuilder() {
+      if ((definitionCase_ == 104) && (comparatorBuilder_ != null)) {
+        return comparatorBuilder_.getMessageOrBuilder();
+      } else {
+        if (definitionCase_ == 104) {
+          return (com.tcn.cloud.api.api.commons.workflows.NodeComparator) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.NodeComparator.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.NodeComparator comparator = 104 [json_name = "comparator"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.NodeComparator, com.tcn.cloud.api.api.commons.workflows.NodeComparator.Builder, com.tcn.cloud.api.api.commons.workflows.NodeComparatorOrBuilder> 
+        getComparatorFieldBuilder() {
+      if (comparatorBuilder_ == null) {
+        if (!(definitionCase_ == 104)) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.NodeComparator.getDefaultInstance();
+        }
+        comparatorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.workflows.NodeComparator, com.tcn.cloud.api.api.commons.workflows.NodeComparator.Builder, com.tcn.cloud.api.api.commons.workflows.NodeComparatorOrBuilder>(
+                (com.tcn.cloud.api.api.commons.workflows.NodeComparator) definition_,
+                getParentForChildren(),
+                isClean());
+        definition_ = null;
+      }
+      definitionCase_ = 104;
+      onChanged();
+      return comparatorBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.NodeStoreInput, com.tcn.cloud.api.api.commons.workflows.NodeStoreInput.Builder, com.tcn.cloud.api.api.commons.workflows.NodeStoreInputOrBuilder> storeInputBuilder_;
+    /**
+     * <code>.api.commons.workflows.NodeStoreInput store_input = 105 [json_name = "storeInput"];</code>
+     * @return Whether the storeInput field is set.
+     */
+    @java.lang.Override
+    public boolean hasStoreInput() {
+      return definitionCase_ == 105;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeStoreInput store_input = 105 [json_name = "storeInput"];</code>
+     * @return The storeInput.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.NodeStoreInput getStoreInput() {
+      if (storeInputBuilder_ == null) {
+        if (definitionCase_ == 105) {
+          return (com.tcn.cloud.api.api.commons.workflows.NodeStoreInput) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.NodeStoreInput.getDefaultInstance();
+      } else {
+        if (definitionCase_ == 105) {
+          return storeInputBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.workflows.NodeStoreInput.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.NodeStoreInput store_input = 105 [json_name = "storeInput"];</code>
+     */
+    public Builder setStoreInput(com.tcn.cloud.api.api.commons.workflows.NodeStoreInput value) {
+      if (storeInputBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        definition_ = value;
+        onChanged();
+      } else {
+        storeInputBuilder_.setMessage(value);
+      }
+      definitionCase_ = 105;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeStoreInput store_input = 105 [json_name = "storeInput"];</code>
+     */
+    public Builder setStoreInput(
+        com.tcn.cloud.api.api.commons.workflows.NodeStoreInput.Builder builderForValue) {
+      if (storeInputBuilder_ == null) {
+        definition_ = builderForValue.build();
+        onChanged();
+      } else {
+        storeInputBuilder_.setMessage(builderForValue.build());
+      }
+      definitionCase_ = 105;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeStoreInput store_input = 105 [json_name = "storeInput"];</code>
+     */
+    public Builder mergeStoreInput(com.tcn.cloud.api.api.commons.workflows.NodeStoreInput value) {
+      if (storeInputBuilder_ == null) {
+        if (definitionCase_ == 105 &&
+            definition_ != com.tcn.cloud.api.api.commons.workflows.NodeStoreInput.getDefaultInstance()) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.NodeStoreInput.newBuilder((com.tcn.cloud.api.api.commons.workflows.NodeStoreInput) definition_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          definition_ = value;
+        }
+        onChanged();
+      } else {
+        if (definitionCase_ == 105) {
+          storeInputBuilder_.mergeFrom(value);
+        } else {
+          storeInputBuilder_.setMessage(value);
+        }
+      }
+      definitionCase_ = 105;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeStoreInput store_input = 105 [json_name = "storeInput"];</code>
+     */
+    public Builder clearStoreInput() {
+      if (storeInputBuilder_ == null) {
+        if (definitionCase_ == 105) {
+          definitionCase_ = 0;
+          definition_ = null;
+          onChanged();
+        }
+      } else {
+        if (definitionCase_ == 105) {
+          definitionCase_ = 0;
+          definition_ = null;
+        }
+        storeInputBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeStoreInput store_input = 105 [json_name = "storeInput"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.workflows.NodeStoreInput.Builder getStoreInputBuilder() {
+      return getStoreInputFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.workflows.NodeStoreInput store_input = 105 [json_name = "storeInput"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.NodeStoreInputOrBuilder getStoreInputOrBuilder() {
+      if ((definitionCase_ == 105) && (storeInputBuilder_ != null)) {
+        return storeInputBuilder_.getMessageOrBuilder();
+      } else {
+        if (definitionCase_ == 105) {
+          return (com.tcn.cloud.api.api.commons.workflows.NodeStoreInput) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.NodeStoreInput.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.NodeStoreInput store_input = 105 [json_name = "storeInput"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.NodeStoreInput, com.tcn.cloud.api.api.commons.workflows.NodeStoreInput.Builder, com.tcn.cloud.api.api.commons.workflows.NodeStoreInputOrBuilder> 
+        getStoreInputFieldBuilder() {
+      if (storeInputBuilder_ == null) {
+        if (!(definitionCase_ == 105)) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.NodeStoreInput.getDefaultInstance();
+        }
+        storeInputBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.workflows.NodeStoreInput, com.tcn.cloud.api.api.commons.workflows.NodeStoreInput.Builder, com.tcn.cloud.api.api.commons.workflows.NodeStoreInputOrBuilder>(
+                (com.tcn.cloud.api.api.commons.workflows.NodeStoreInput) definition_,
+                getParentForChildren(),
+                isClean());
+        definition_ = null;
+      }
+      definitionCase_ = 105;
+      onChanged();
+      return storeInputBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.NodeChatbot, com.tcn.cloud.api.api.commons.workflows.NodeChatbot.Builder, com.tcn.cloud.api.api.commons.workflows.NodeChatbotOrBuilder> chatbotBuilder_;
+    /**
+     * <code>.api.commons.workflows.NodeChatbot chatbot = 1000 [json_name = "chatbot"];</code>
+     * @return Whether the chatbot field is set.
+     */
+    @java.lang.Override
+    public boolean hasChatbot() {
+      return definitionCase_ == 1000;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeChatbot chatbot = 1000 [json_name = "chatbot"];</code>
+     * @return The chatbot.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.NodeChatbot getChatbot() {
+      if (chatbotBuilder_ == null) {
+        if (definitionCase_ == 1000) {
+          return (com.tcn.cloud.api.api.commons.workflows.NodeChatbot) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.NodeChatbot.getDefaultInstance();
+      } else {
+        if (definitionCase_ == 1000) {
+          return chatbotBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.workflows.NodeChatbot.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.NodeChatbot chatbot = 1000 [json_name = "chatbot"];</code>
+     */
+    public Builder setChatbot(com.tcn.cloud.api.api.commons.workflows.NodeChatbot value) {
+      if (chatbotBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        definition_ = value;
+        onChanged();
+      } else {
+        chatbotBuilder_.setMessage(value);
+      }
+      definitionCase_ = 1000;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeChatbot chatbot = 1000 [json_name = "chatbot"];</code>
+     */
+    public Builder setChatbot(
+        com.tcn.cloud.api.api.commons.workflows.NodeChatbot.Builder builderForValue) {
+      if (chatbotBuilder_ == null) {
+        definition_ = builderForValue.build();
+        onChanged();
+      } else {
+        chatbotBuilder_.setMessage(builderForValue.build());
+      }
+      definitionCase_ = 1000;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeChatbot chatbot = 1000 [json_name = "chatbot"];</code>
+     */
+    public Builder mergeChatbot(com.tcn.cloud.api.api.commons.workflows.NodeChatbot value) {
+      if (chatbotBuilder_ == null) {
+        if (definitionCase_ == 1000 &&
+            definition_ != com.tcn.cloud.api.api.commons.workflows.NodeChatbot.getDefaultInstance()) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.NodeChatbot.newBuilder((com.tcn.cloud.api.api.commons.workflows.NodeChatbot) definition_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          definition_ = value;
+        }
+        onChanged();
+      } else {
+        if (definitionCase_ == 1000) {
+          chatbotBuilder_.mergeFrom(value);
+        } else {
+          chatbotBuilder_.setMessage(value);
+        }
+      }
+      definitionCase_ = 1000;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeChatbot chatbot = 1000 [json_name = "chatbot"];</code>
+     */
+    public Builder clearChatbot() {
+      if (chatbotBuilder_ == null) {
+        if (definitionCase_ == 1000) {
+          definitionCase_ = 0;
+          definition_ = null;
+          onChanged();
+        }
+      } else {
+        if (definitionCase_ == 1000) {
+          definitionCase_ = 0;
+          definition_ = null;
+        }
+        chatbotBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.NodeChatbot chatbot = 1000 [json_name = "chatbot"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.workflows.NodeChatbot.Builder getChatbotBuilder() {
+      return getChatbotFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.workflows.NodeChatbot chatbot = 1000 [json_name = "chatbot"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.NodeChatbotOrBuilder getChatbotOrBuilder() {
+      if ((definitionCase_ == 1000) && (chatbotBuilder_ != null)) {
+        return chatbotBuilder_.getMessageOrBuilder();
+      } else {
+        if (definitionCase_ == 1000) {
+          return (com.tcn.cloud.api.api.commons.workflows.NodeChatbot) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.NodeChatbot.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.NodeChatbot chatbot = 1000 [json_name = "chatbot"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.NodeChatbot, com.tcn.cloud.api.api.commons.workflows.NodeChatbot.Builder, com.tcn.cloud.api.api.commons.workflows.NodeChatbotOrBuilder> 
+        getChatbotFieldBuilder() {
+      if (chatbotBuilder_ == null) {
+        if (!(definitionCase_ == 1000)) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.NodeChatbot.getDefaultInstance();
+        }
+        chatbotBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.workflows.NodeChatbot, com.tcn.cloud.api.api.commons.workflows.NodeChatbot.Builder, com.tcn.cloud.api.api.commons.workflows.NodeChatbotOrBuilder>(
+                (com.tcn.cloud.api.api.commons.workflows.NodeChatbot) definition_,
+                getParentForChildren(),
+                isClean());
+        definition_ = null;
+      }
+      definitionCase_ = 1000;
+      onChanged();
+      return chatbotBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
