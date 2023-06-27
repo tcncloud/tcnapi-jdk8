@@ -8,11 +8,11 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
     value = "by gRPC proto compiler (version 1.56.0)",
     comments = "Source: api/v1alpha1/workflows/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
-public final class WorkflowsDefinitionsServiceGrpc {
+public final class WorkflowsDefinitionServiceGrpc {
 
-  private WorkflowsDefinitionsServiceGrpc() {}
+  private WorkflowsDefinitionServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "api.v1alpha1.workflows.WorkflowsDefinitionsService";
+  public static final String SERVICE_NAME = "api.v1alpha1.workflows.WorkflowsDefinitionService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest,
@@ -26,10 +26,10 @@ public final class WorkflowsDefinitionsServiceGrpc {
   public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest,
       com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsResponse> getListFlowDefinitionsMethod() {
     io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest, com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsResponse> getListFlowDefinitionsMethod;
-    if ((getListFlowDefinitionsMethod = WorkflowsDefinitionsServiceGrpc.getListFlowDefinitionsMethod) == null) {
-      synchronized (WorkflowsDefinitionsServiceGrpc.class) {
-        if ((getListFlowDefinitionsMethod = WorkflowsDefinitionsServiceGrpc.getListFlowDefinitionsMethod) == null) {
-          WorkflowsDefinitionsServiceGrpc.getListFlowDefinitionsMethod = getListFlowDefinitionsMethod =
+    if ((getListFlowDefinitionsMethod = WorkflowsDefinitionServiceGrpc.getListFlowDefinitionsMethod) == null) {
+      synchronized (WorkflowsDefinitionServiceGrpc.class) {
+        if ((getListFlowDefinitionsMethod = WorkflowsDefinitionServiceGrpc.getListFlowDefinitionsMethod) == null) {
+          WorkflowsDefinitionServiceGrpc.getListFlowDefinitionsMethod = getListFlowDefinitionsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest, com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListFlowDefinitions"))
@@ -38,7 +38,7 @@ public final class WorkflowsDefinitionsServiceGrpc {
                   com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.workflows.ListFlowDefinitionsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new WorkflowsDefinitionsServiceMethodDescriptorSupplier("ListFlowDefinitions"))
+              .setSchemaDescriptor(new WorkflowsDefinitionServiceMethodDescriptorSupplier("ListFlowDefinitions"))
               .build();
         }
       }
@@ -57,10 +57,10 @@ public final class WorkflowsDefinitionsServiceGrpc {
   public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.workflows.SaveFlowDefinitionRequest,
       com.tcn.cloud.api.api.v1alpha1.workflows.SaveFlowDefinitionResponse> getSaveFlowDefinitionMethod() {
     io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.workflows.SaveFlowDefinitionRequest, com.tcn.cloud.api.api.v1alpha1.workflows.SaveFlowDefinitionResponse> getSaveFlowDefinitionMethod;
-    if ((getSaveFlowDefinitionMethod = WorkflowsDefinitionsServiceGrpc.getSaveFlowDefinitionMethod) == null) {
-      synchronized (WorkflowsDefinitionsServiceGrpc.class) {
-        if ((getSaveFlowDefinitionMethod = WorkflowsDefinitionsServiceGrpc.getSaveFlowDefinitionMethod) == null) {
-          WorkflowsDefinitionsServiceGrpc.getSaveFlowDefinitionMethod = getSaveFlowDefinitionMethod =
+    if ((getSaveFlowDefinitionMethod = WorkflowsDefinitionServiceGrpc.getSaveFlowDefinitionMethod) == null) {
+      synchronized (WorkflowsDefinitionServiceGrpc.class) {
+        if ((getSaveFlowDefinitionMethod = WorkflowsDefinitionServiceGrpc.getSaveFlowDefinitionMethod) == null) {
+          WorkflowsDefinitionServiceGrpc.getSaveFlowDefinitionMethod = getSaveFlowDefinitionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.workflows.SaveFlowDefinitionRequest, com.tcn.cloud.api.api.v1alpha1.workflows.SaveFlowDefinitionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SaveFlowDefinition"))
@@ -69,7 +69,7 @@ public final class WorkflowsDefinitionsServiceGrpc {
                   com.tcn.cloud.api.api.v1alpha1.workflows.SaveFlowDefinitionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.workflows.SaveFlowDefinitionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new WorkflowsDefinitionsServiceMethodDescriptorSupplier("SaveFlowDefinition"))
+              .setSchemaDescriptor(new WorkflowsDefinitionServiceMethodDescriptorSupplier("SaveFlowDefinition"))
               .build();
         }
       }
@@ -88,10 +88,10 @@ public final class WorkflowsDefinitionsServiceGrpc {
   public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.workflows.GetFlowDefinitionRequest,
       com.tcn.cloud.api.api.v1alpha1.workflows.GetFlowDefinitionResponse> getGetFlowDefinitionMethod() {
     io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.workflows.GetFlowDefinitionRequest, com.tcn.cloud.api.api.v1alpha1.workflows.GetFlowDefinitionResponse> getGetFlowDefinitionMethod;
-    if ((getGetFlowDefinitionMethod = WorkflowsDefinitionsServiceGrpc.getGetFlowDefinitionMethod) == null) {
-      synchronized (WorkflowsDefinitionsServiceGrpc.class) {
-        if ((getGetFlowDefinitionMethod = WorkflowsDefinitionsServiceGrpc.getGetFlowDefinitionMethod) == null) {
-          WorkflowsDefinitionsServiceGrpc.getGetFlowDefinitionMethod = getGetFlowDefinitionMethod =
+    if ((getGetFlowDefinitionMethod = WorkflowsDefinitionServiceGrpc.getGetFlowDefinitionMethod) == null) {
+      synchronized (WorkflowsDefinitionServiceGrpc.class) {
+        if ((getGetFlowDefinitionMethod = WorkflowsDefinitionServiceGrpc.getGetFlowDefinitionMethod) == null) {
+          WorkflowsDefinitionServiceGrpc.getGetFlowDefinitionMethod = getGetFlowDefinitionMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.workflows.GetFlowDefinitionRequest, com.tcn.cloud.api.api.v1alpha1.workflows.GetFlowDefinitionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetFlowDefinition"))
@@ -100,7 +100,7 @@ public final class WorkflowsDefinitionsServiceGrpc {
                   com.tcn.cloud.api.api.v1alpha1.workflows.GetFlowDefinitionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.workflows.GetFlowDefinitionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new WorkflowsDefinitionsServiceMethodDescriptorSupplier("GetFlowDefinition"))
+              .setSchemaDescriptor(new WorkflowsDefinitionServiceMethodDescriptorSupplier("GetFlowDefinition"))
               .build();
         }
       }
@@ -119,10 +119,10 @@ public final class WorkflowsDefinitionsServiceGrpc {
   public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdRequest,
       com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse> getDeleteFlowDefinitionByIdMethod() {
     io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdRequest, com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse> getDeleteFlowDefinitionByIdMethod;
-    if ((getDeleteFlowDefinitionByIdMethod = WorkflowsDefinitionsServiceGrpc.getDeleteFlowDefinitionByIdMethod) == null) {
-      synchronized (WorkflowsDefinitionsServiceGrpc.class) {
-        if ((getDeleteFlowDefinitionByIdMethod = WorkflowsDefinitionsServiceGrpc.getDeleteFlowDefinitionByIdMethod) == null) {
-          WorkflowsDefinitionsServiceGrpc.getDeleteFlowDefinitionByIdMethod = getDeleteFlowDefinitionByIdMethod =
+    if ((getDeleteFlowDefinitionByIdMethod = WorkflowsDefinitionServiceGrpc.getDeleteFlowDefinitionByIdMethod) == null) {
+      synchronized (WorkflowsDefinitionServiceGrpc.class) {
+        if ((getDeleteFlowDefinitionByIdMethod = WorkflowsDefinitionServiceGrpc.getDeleteFlowDefinitionByIdMethod) == null) {
+          WorkflowsDefinitionServiceGrpc.getDeleteFlowDefinitionByIdMethod = getDeleteFlowDefinitionByIdMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdRequest, com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteFlowDefinitionById"))
@@ -131,7 +131,7 @@ public final class WorkflowsDefinitionsServiceGrpc {
                   com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new WorkflowsDefinitionsServiceMethodDescriptorSupplier("DeleteFlowDefinitionById"))
+              .setSchemaDescriptor(new WorkflowsDefinitionServiceMethodDescriptorSupplier("DeleteFlowDefinitionById"))
               .build();
         }
       }
@@ -142,45 +142,45 @@ public final class WorkflowsDefinitionsServiceGrpc {
   /**
    * Creates a new async stub that supports all call types for the service
    */
-  public static WorkflowsDefinitionsServiceStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<WorkflowsDefinitionsServiceStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<WorkflowsDefinitionsServiceStub>() {
+  public static WorkflowsDefinitionServiceStub newStub(io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<WorkflowsDefinitionServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<WorkflowsDefinitionServiceStub>() {
         @java.lang.Override
-        public WorkflowsDefinitionsServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new WorkflowsDefinitionsServiceStub(channel, callOptions);
+        public WorkflowsDefinitionServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new WorkflowsDefinitionServiceStub(channel, callOptions);
         }
       };
-    return WorkflowsDefinitionsServiceStub.newStub(factory, channel);
+    return WorkflowsDefinitionServiceStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static WorkflowsDefinitionsServiceBlockingStub newBlockingStub(
+  public static WorkflowsDefinitionServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<WorkflowsDefinitionsServiceBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<WorkflowsDefinitionsServiceBlockingStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<WorkflowsDefinitionServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<WorkflowsDefinitionServiceBlockingStub>() {
         @java.lang.Override
-        public WorkflowsDefinitionsServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new WorkflowsDefinitionsServiceBlockingStub(channel, callOptions);
+        public WorkflowsDefinitionServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new WorkflowsDefinitionServiceBlockingStub(channel, callOptions);
         }
       };
-    return WorkflowsDefinitionsServiceBlockingStub.newStub(factory, channel);
+    return WorkflowsDefinitionServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
-  public static WorkflowsDefinitionsServiceFutureStub newFutureStub(
+  public static WorkflowsDefinitionServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<WorkflowsDefinitionsServiceFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<WorkflowsDefinitionsServiceFutureStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<WorkflowsDefinitionServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<WorkflowsDefinitionServiceFutureStub>() {
         @java.lang.Override
-        public WorkflowsDefinitionsServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new WorkflowsDefinitionsServiceFutureStub(channel, callOptions);
+        public WorkflowsDefinitionServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new WorkflowsDefinitionServiceFutureStub(channel, callOptions);
         }
       };
-    return WorkflowsDefinitionsServiceFutureStub.newStub(factory, channel);
+    return WorkflowsDefinitionServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -229,30 +229,30 @@ public final class WorkflowsDefinitionsServiceGrpc {
   }
 
   /**
-   * Base class for the server implementation of the service WorkflowsDefinitionsService.
+   * Base class for the server implementation of the service WorkflowsDefinitionService.
    */
-  public static abstract class WorkflowsDefinitionsServiceImplBase
+  public static abstract class WorkflowsDefinitionServiceImplBase
       implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return WorkflowsDefinitionsServiceGrpc.bindService(this);
+      return WorkflowsDefinitionServiceGrpc.bindService(this);
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service WorkflowsDefinitionsService.
+   * A stub to allow clients to do asynchronous rpc calls to service WorkflowsDefinitionService.
    */
-  public static final class WorkflowsDefinitionsServiceStub
-      extends io.grpc.stub.AbstractAsyncStub<WorkflowsDefinitionsServiceStub> {
-    private WorkflowsDefinitionsServiceStub(
+  public static final class WorkflowsDefinitionServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<WorkflowsDefinitionServiceStub> {
+    private WorkflowsDefinitionServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected WorkflowsDefinitionsServiceStub build(
+    protected WorkflowsDefinitionServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new WorkflowsDefinitionsServiceStub(channel, callOptions);
+      return new WorkflowsDefinitionServiceStub(channel, callOptions);
     }
 
     /**
@@ -301,19 +301,19 @@ public final class WorkflowsDefinitionsServiceGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service WorkflowsDefinitionsService.
+   * A stub to allow clients to do synchronous rpc calls to service WorkflowsDefinitionService.
    */
-  public static final class WorkflowsDefinitionsServiceBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<WorkflowsDefinitionsServiceBlockingStub> {
-    private WorkflowsDefinitionsServiceBlockingStub(
+  public static final class WorkflowsDefinitionServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<WorkflowsDefinitionServiceBlockingStub> {
+    private WorkflowsDefinitionServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected WorkflowsDefinitionsServiceBlockingStub build(
+    protected WorkflowsDefinitionServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new WorkflowsDefinitionsServiceBlockingStub(channel, callOptions);
+      return new WorkflowsDefinitionServiceBlockingStub(channel, callOptions);
     }
 
     /**
@@ -358,19 +358,19 @@ public final class WorkflowsDefinitionsServiceGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service WorkflowsDefinitionsService.
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service WorkflowsDefinitionService.
    */
-  public static final class WorkflowsDefinitionsServiceFutureStub
-      extends io.grpc.stub.AbstractFutureStub<WorkflowsDefinitionsServiceFutureStub> {
-    private WorkflowsDefinitionsServiceFutureStub(
+  public static final class WorkflowsDefinitionServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<WorkflowsDefinitionServiceFutureStub> {
+    private WorkflowsDefinitionServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected WorkflowsDefinitionsServiceFutureStub build(
+    protected WorkflowsDefinitionServiceFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new WorkflowsDefinitionsServiceFutureStub(channel, callOptions);
+      return new WorkflowsDefinitionServiceFutureStub(channel, callOptions);
     }
 
     /**
@@ -505,9 +505,9 @@ public final class WorkflowsDefinitionsServiceGrpc {
         .build();
   }
 
-  private static abstract class WorkflowsDefinitionsServiceBaseDescriptorSupplier
+  private static abstract class WorkflowsDefinitionServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    WorkflowsDefinitionsServiceBaseDescriptorSupplier() {}
+    WorkflowsDefinitionServiceBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
@@ -516,21 +516,21 @@ public final class WorkflowsDefinitionsServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("WorkflowsDefinitionsService");
+      return getFileDescriptor().findServiceByName("WorkflowsDefinitionService");
     }
   }
 
-  private static final class WorkflowsDefinitionsServiceFileDescriptorSupplier
-      extends WorkflowsDefinitionsServiceBaseDescriptorSupplier {
-    WorkflowsDefinitionsServiceFileDescriptorSupplier() {}
+  private static final class WorkflowsDefinitionServiceFileDescriptorSupplier
+      extends WorkflowsDefinitionServiceBaseDescriptorSupplier {
+    WorkflowsDefinitionServiceFileDescriptorSupplier() {}
   }
 
-  private static final class WorkflowsDefinitionsServiceMethodDescriptorSupplier
-      extends WorkflowsDefinitionsServiceBaseDescriptorSupplier
+  private static final class WorkflowsDefinitionServiceMethodDescriptorSupplier
+      extends WorkflowsDefinitionServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final String methodName;
 
-    WorkflowsDefinitionsServiceMethodDescriptorSupplier(String methodName) {
+    WorkflowsDefinitionServiceMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 
@@ -545,11 +545,11 @@ public final class WorkflowsDefinitionsServiceGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
-      synchronized (WorkflowsDefinitionsServiceGrpc.class) {
+      synchronized (WorkflowsDefinitionServiceGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new WorkflowsDefinitionsServiceFileDescriptorSupplier())
+              .setSchemaDescriptor(new WorkflowsDefinitionServiceFileDescriptorSupplier())
               .addMethod(getListFlowDefinitionsMethod())
               .addMethod(getSaveFlowDefinitionMethod())
               .addMethod(getGetFlowDefinitionMethod())
