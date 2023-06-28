@@ -78,6 +78,7 @@ private static final long serialVersionUID = 0L;
     BULK_WEB_ENTRYPOINT(72),
     OMNI_EXCHANGE_PROCESS(73),
     WEB_EXCHANGE_PROCESS(74),
+    SPLIT(75),
     PROC_NOT_SET(0);
     private final int value;
     private ProcCase(int value) {
@@ -128,6 +129,7 @@ private static final long serialVersionUID = 0L;
         case 72: return BULK_WEB_ENTRYPOINT;
         case 73: return OMNI_EXCHANGE_PROCESS;
         case 74: return WEB_EXCHANGE_PROCESS;
+        case 75: return SPLIT;
         case 0: return PROC_NOT_SET;
         default: return null;
       }
@@ -1352,6 +1354,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v0alpha.WebExchangeProcess.getDefaultInstance();
   }
 
+  public static final int SPLIT_FIELD_NUMBER = 75;
+  /**
+   * <code>.api.v0alpha.SplitCriteria split = 75 [json_name = "split"];</code>
+   * @return Whether the split field is set.
+   */
+  @java.lang.Override
+  public boolean hasSplit() {
+    return procCase_ == 75;
+  }
+  /**
+   * <code>.api.v0alpha.SplitCriteria split = 75 [json_name = "split"];</code>
+   * @return The split.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.SplitCriteria getSplit() {
+    if (procCase_ == 75) {
+       return (com.tcn.cloud.api.api.v0alpha.SplitCriteria) proc_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.SplitCriteria.getDefaultInstance();
+  }
+  /**
+   * <code>.api.v0alpha.SplitCriteria split = 75 [json_name = "split"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.SplitCriteriaOrBuilder getSplitOrBuilder() {
+    if (procCase_ == 75) {
+       return (com.tcn.cloud.api.api.v0alpha.SplitCriteria) proc_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.SplitCriteria.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1467,6 +1500,9 @@ private static final long serialVersionUID = 0L;
     }
     if (procCase_ == 74) {
       output.writeMessage(74, (com.tcn.cloud.api.api.v0alpha.WebExchangeProcess) proc_);
+    }
+    if (procCase_ == 75) {
+      output.writeMessage(75, (com.tcn.cloud.api.api.v0alpha.SplitCriteria) proc_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -1611,6 +1647,10 @@ private static final long serialVersionUID = 0L;
     if (procCase_ == 74) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(74, (com.tcn.cloud.api.api.v0alpha.WebExchangeProcess) proc_);
+    }
+    if (procCase_ == 75) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(75, (com.tcn.cloud.api.api.v0alpha.SplitCriteria) proc_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1763,6 +1803,10 @@ private static final long serialVersionUID = 0L;
         if (!getWebExchangeProcess()
             .equals(other.getWebExchangeProcess())) return false;
         break;
+      case 75:
+        if (!getSplit()
+            .equals(other.getSplit())) return false;
+        break;
       case 0:
       default:
     }
@@ -1911,6 +1955,10 @@ private static final long serialVersionUID = 0L;
       case 74:
         hash = (37 * hash) + WEB_EXCHANGE_PROCESS_FIELD_NUMBER;
         hash = (53 * hash) + getWebExchangeProcess().hashCode();
+        break;
+      case 75:
+        hash = (37 * hash) + SPLIT_FIELD_NUMBER;
+        hash = (53 * hash) + getSplit().hashCode();
         break;
       case 0:
       default:
@@ -2147,6 +2195,9 @@ private static final long serialVersionUID = 0L;
       if (webExchangeProcessBuilder_ != null) {
         webExchangeProcessBuilder_.clear();
       }
+      if (splitBuilder_ != null) {
+        splitBuilder_.clear();
+      }
       procCase_ = 0;
       proc_ = null;
       return this;
@@ -2327,6 +2378,10 @@ private static final long serialVersionUID = 0L;
       if (procCase_ == 74 &&
           webExchangeProcessBuilder_ != null) {
         result.proc_ = webExchangeProcessBuilder_.build();
+      }
+      if (procCase_ == 75 &&
+          splitBuilder_ != null) {
+        result.proc_ = splitBuilder_.build();
       }
     }
 
@@ -2510,6 +2565,10 @@ private static final long serialVersionUID = 0L;
         }
         case WEB_EXCHANGE_PROCESS: {
           mergeWebExchangeProcess(other.getWebExchangeProcess());
+          break;
+        }
+        case SPLIT: {
+          mergeSplit(other.getSplit());
           break;
         }
         case PROC_NOT_SET: {
@@ -2778,6 +2837,13 @@ private static final long serialVersionUID = 0L;
               procCase_ = 74;
               break;
             } // case 594
+            case 602: {
+              input.readMessage(
+                  getSplitFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              procCase_ = 75;
+              break;
+            } // case 602
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -7984,6 +8050,148 @@ private static final long serialVersionUID = 0L;
       procCase_ = 74;
       onChanged();
       return webExchangeProcessBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.SplitCriteria, com.tcn.cloud.api.api.v0alpha.SplitCriteria.Builder, com.tcn.cloud.api.api.v0alpha.SplitCriteriaOrBuilder> splitBuilder_;
+    /**
+     * <code>.api.v0alpha.SplitCriteria split = 75 [json_name = "split"];</code>
+     * @return Whether the split field is set.
+     */
+    @java.lang.Override
+    public boolean hasSplit() {
+      return procCase_ == 75;
+    }
+    /**
+     * <code>.api.v0alpha.SplitCriteria split = 75 [json_name = "split"];</code>
+     * @return The split.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.SplitCriteria getSplit() {
+      if (splitBuilder_ == null) {
+        if (procCase_ == 75) {
+          return (com.tcn.cloud.api.api.v0alpha.SplitCriteria) proc_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.SplitCriteria.getDefaultInstance();
+      } else {
+        if (procCase_ == 75) {
+          return splitBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v0alpha.SplitCriteria.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.SplitCriteria split = 75 [json_name = "split"];</code>
+     */
+    public Builder setSplit(com.tcn.cloud.api.api.v0alpha.SplitCriteria value) {
+      if (splitBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        proc_ = value;
+        onChanged();
+      } else {
+        splitBuilder_.setMessage(value);
+      }
+      procCase_ = 75;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.SplitCriteria split = 75 [json_name = "split"];</code>
+     */
+    public Builder setSplit(
+        com.tcn.cloud.api.api.v0alpha.SplitCriteria.Builder builderForValue) {
+      if (splitBuilder_ == null) {
+        proc_ = builderForValue.build();
+        onChanged();
+      } else {
+        splitBuilder_.setMessage(builderForValue.build());
+      }
+      procCase_ = 75;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.SplitCriteria split = 75 [json_name = "split"];</code>
+     */
+    public Builder mergeSplit(com.tcn.cloud.api.api.v0alpha.SplitCriteria value) {
+      if (splitBuilder_ == null) {
+        if (procCase_ == 75 &&
+            proc_ != com.tcn.cloud.api.api.v0alpha.SplitCriteria.getDefaultInstance()) {
+          proc_ = com.tcn.cloud.api.api.v0alpha.SplitCriteria.newBuilder((com.tcn.cloud.api.api.v0alpha.SplitCriteria) proc_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          proc_ = value;
+        }
+        onChanged();
+      } else {
+        if (procCase_ == 75) {
+          splitBuilder_.mergeFrom(value);
+        } else {
+          splitBuilder_.setMessage(value);
+        }
+      }
+      procCase_ = 75;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.SplitCriteria split = 75 [json_name = "split"];</code>
+     */
+    public Builder clearSplit() {
+      if (splitBuilder_ == null) {
+        if (procCase_ == 75) {
+          procCase_ = 0;
+          proc_ = null;
+          onChanged();
+        }
+      } else {
+        if (procCase_ == 75) {
+          procCase_ = 0;
+          proc_ = null;
+        }
+        splitBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.SplitCriteria split = 75 [json_name = "split"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.SplitCriteria.Builder getSplitBuilder() {
+      return getSplitFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.v0alpha.SplitCriteria split = 75 [json_name = "split"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.SplitCriteriaOrBuilder getSplitOrBuilder() {
+      if ((procCase_ == 75) && (splitBuilder_ != null)) {
+        return splitBuilder_.getMessageOrBuilder();
+      } else {
+        if (procCase_ == 75) {
+          return (com.tcn.cloud.api.api.v0alpha.SplitCriteria) proc_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.SplitCriteria.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.SplitCriteria split = 75 [json_name = "split"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.SplitCriteria, com.tcn.cloud.api.api.v0alpha.SplitCriteria.Builder, com.tcn.cloud.api.api.v0alpha.SplitCriteriaOrBuilder> 
+        getSplitFieldBuilder() {
+      if (splitBuilder_ == null) {
+        if (!(procCase_ == 75)) {
+          proc_ = com.tcn.cloud.api.api.v0alpha.SplitCriteria.getDefaultInstance();
+        }
+        splitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v0alpha.SplitCriteria, com.tcn.cloud.api.api.v0alpha.SplitCriteria.Builder, com.tcn.cloud.api.api.v0alpha.SplitCriteriaOrBuilder>(
+                (com.tcn.cloud.api.api.v0alpha.SplitCriteria) proc_,
+                getParentForChildren(),
+                isClean());
+        proc_ = null;
+      }
+      procCase_ = 75;
+      onChanged();
+      return splitBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
