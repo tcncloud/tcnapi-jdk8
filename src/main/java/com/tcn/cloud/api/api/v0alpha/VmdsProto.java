@@ -227,7 +227,7 @@ public final class VmdsProto {
       "\n\tgreetings\030\001 \003(\0132/.api.v0alpha.ListAvai" +
       "lableGreetingsRes.FileInfoR\tgreetings\032:\n" +
       "\010FileInfo\022\032\n\010filename\030\001 \001(\tR\010filename\022\022\n" +
-      "\004size\030\002 \001(\003R\004size2\243\021\n\004Vmds\022\236\001\n\024GetVoicem" +
+      "\004size\030\002 \001(\003R\004size2\234\021\n\004Vmds\022\236\001\n\024GetVoicem" +
       "ailMetadata\022$.api.v0alpha.GetVoicemailMe" +
       "tadataReq\032$.api.v0alpha.GetVoicemailMeta" +
       "dataRes\"8\272\270\221\002\002\030\001\202\323\344\223\002+\"&/api/v0alpha/vmd" +
@@ -257,35 +257,35 @@ public final class VmdsProto {
       "DownloadMessages\022 .api.v0alpha.DownloadM" +
       "essagesReq\032 .api.v0alpha.DownloadMessage" +
       "sRes\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/v0alpha/vmds/d" +
-      "ownloadmessages:\001*\022\303\001\n\034DownloadGreetingF" +
+      "ownloadmessages:\001*\022\274\001\n\034DownloadGreetingF" +
       "orExtension\022,.api.v0alpha.DownloadGreeti" +
       "ngForExtensionReq\032,.api.v0alpha.Download" +
-      "GreetingForExtensionRes\"G\272\270\221\002\t\n\003\010\254\002\n\002\010e\202" +
-      "\323\344\223\0023\"./api/v0alpha/vmds/downloadgreetin" +
-      "gforextension:\001*\022\214\001\n\020DownloadGreeting\022 ." +
-      "api.v0alpha.DownloadGreetingReq\032 .api.v0" +
-      "alpha.DownloadGreetingRes\"4\272\270\221\002\002\030\001\202\323\344\223\002\'" +
-      "\"\"/api/v0alpha/vmds/downloadgreeting:\001*\022" +
-      "\234\001\n\024GetUploadGreetingUrl\022$.api.v0alpha.G" +
-      "etUploadGreetingUrlReq\032$.api.v0alpha.Get" +
-      "UploadGreetingUrlRes\"8\272\270\221\002\002\030\001\202\323\344\223\002+\"&/ap" +
-      "i/v0alpha/vmds/getuploadgreetingurl:\001*\022\240" +
-      "\001\n\025ProcessGreetingUpload\022%.api.v0alpha.P" +
-      "rocessGreetingUploadReq\032%.api.v0alpha.Pr" +
-      "ocessGreetingUploadRes\"9\272\270\221\002\002\030\001\202\323\344\223\002,\"\'/" +
-      "api/v0alpha/vmds/processgreetingupload:\001" +
-      "*\022\264\001\n\032UpdateGreetingForExtension\022*.api.v" +
-      "0alpha.UpdateGreetingForExtensionReq\032*.a" +
-      "pi.v0alpha.UpdateGreetingForExtensionRes" +
-      "\">\272\270\221\002\002\030\001\202\323\344\223\0021\",/api/v0alpha/vmds/updat" +
-      "egreetingforextension:\001*\022\244\001\n\026ListAvailab" +
-      "leGreetings\022&.api.v0alpha.ListAvailableG" +
-      "reetingsReq\032&.api.v0alpha.ListAvailableG" +
-      "reetingsRes\":\272\270\221\002\002\030\001\202\323\344\223\002-\"(/api/v0alpha" +
-      "/vmds/listavailablegreetings:\001*Bw\n\035com.t" +
-      "cn.cloud.api.api.v0alphaB\tVmdsProtoP\001\242\002\003" +
-      "AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0" +
-      "alpha\\GPBMetadata\352\002\014Api::V0alphab\006proto3"
+      "GreetingForExtensionRes\"@\272\270\221\002\002\030\001\202\323\344\223\0023\"." +
+      "/api/v0alpha/vmds/downloadgreetingforext" +
+      "ension:\001*\022\214\001\n\020DownloadGreeting\022 .api.v0a" +
+      "lpha.DownloadGreetingReq\032 .api.v0alpha.D" +
+      "ownloadGreetingRes\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/" +
+      "v0alpha/vmds/downloadgreeting:\001*\022\234\001\n\024Get" +
+      "UploadGreetingUrl\022$.api.v0alpha.GetUploa" +
+      "dGreetingUrlReq\032$.api.v0alpha.GetUploadG" +
+      "reetingUrlRes\"8\272\270\221\002\002\030\001\202\323\344\223\002+\"&/api/v0alp" +
+      "ha/vmds/getuploadgreetingurl:\001*\022\240\001\n\025Proc" +
+      "essGreetingUpload\022%.api.v0alpha.ProcessG" +
+      "reetingUploadReq\032%.api.v0alpha.ProcessGr" +
+      "eetingUploadRes\"9\272\270\221\002\002\030\001\202\323\344\223\002,\"\'/api/v0a" +
+      "lpha/vmds/processgreetingupload:\001*\022\264\001\n\032U" +
+      "pdateGreetingForExtension\022*.api.v0alpha." +
+      "UpdateGreetingForExtensionReq\032*.api.v0al" +
+      "pha.UpdateGreetingForExtensionRes\">\272\270\221\002\002" +
+      "\030\001\202\323\344\223\0021\",/api/v0alpha/vmds/updategreeti" +
+      "ngforextension:\001*\022\244\001\n\026ListAvailableGreet" +
+      "ings\022&.api.v0alpha.ListAvailableGreeting" +
+      "sReq\032&.api.v0alpha.ListAvailableGreeting" +
+      "sRes\":\272\270\221\002\002\030\001\202\323\344\223\002-\"(/api/v0alpha/vmds/l" +
+      "istavailablegreetings:\001*Bw\n\035com.tcn.clou" +
+      "d.api.api.v0alphaB\tVmdsProtoP\001\242\002\003AVX\252\002\013A" +
+      "pi.V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\G" +
+      "PBMetadata\352\002\014Api::V0alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
