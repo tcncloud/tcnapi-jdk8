@@ -168,6 +168,44 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int SCHEDULE_RANGE_FIELD_NUMBER = 5;
+  private com.tcn.cloud.api.api.commons.DatetimeRange scheduleRange_;
+  /**
+   * <pre>
+   * Datetime range that the schedules for the new scenario will cover when built using the copied schedule scenario.
+   * </pre>
+   *
+   * <code>.api.commons.DatetimeRange schedule_range = 5 [json_name = "scheduleRange"];</code>
+   * @return Whether the scheduleRange field is set.
+   */
+  @java.lang.Override
+  public boolean hasScheduleRange() {
+    return scheduleRange_ != null;
+  }
+  /**
+   * <pre>
+   * Datetime range that the schedules for the new scenario will cover when built using the copied schedule scenario.
+   * </pre>
+   *
+   * <code>.api.commons.DatetimeRange schedule_range = 5 [json_name = "scheduleRange"];</code>
+   * @return The scheduleRange.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.DatetimeRange getScheduleRange() {
+    return scheduleRange_ == null ? com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : scheduleRange_;
+  }
+  /**
+   * <pre>
+   * Datetime range that the schedules for the new scenario will cover when built using the copied schedule scenario.
+   * </pre>
+   *
+   * <code>.api.commons.DatetimeRange schedule_range = 5 [json_name = "scheduleRange"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getScheduleRangeOrBuilder() {
+    return scheduleRange_ == null ? com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : scheduleRange_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -194,6 +232,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
     }
+    if (scheduleRange_ != null) {
+      output.writeMessage(5, getScheduleRange());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -216,6 +257,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
+    }
+    if (scheduleRange_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getScheduleRange());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -240,6 +285,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getName())) return false;
     if (!getDescription()
         .equals(other.getDescription())) return false;
+    if (hasScheduleRange() != other.hasScheduleRange()) return false;
+    if (hasScheduleRange()) {
+      if (!getScheduleRange()
+          .equals(other.getScheduleRange())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -261,6 +311,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getName().hashCode();
     hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
     hash = (53 * hash) + getDescription().hashCode();
+    if (hasScheduleRange()) {
+      hash = (37 * hash) + SCHEDULE_RANGE_FIELD_NUMBER;
+      hash = (53 * hash) + getScheduleRange().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -400,6 +454,11 @@ private static final long serialVersionUID = 0L;
       includeInactive_ = false;
       name_ = "";
       description_ = "";
+      scheduleRange_ = null;
+      if (scheduleRangeBuilder_ != null) {
+        scheduleRangeBuilder_.dispose();
+        scheduleRangeBuilder_ = null;
+      }
       return this;
     }
 
@@ -444,6 +503,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.scheduleRange_ = scheduleRangeBuilder_ == null
+            ? scheduleRange_
+            : scheduleRangeBuilder_.build();
       }
     }
 
@@ -507,6 +571,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
+      if (other.hasScheduleRange()) {
+        mergeScheduleRange(other.getScheduleRange());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -553,6 +620,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 42: {
+              input.readMessage(
+                  getScheduleRangeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -840,6 +914,161 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.commons.DatetimeRange scheduleRange_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.DatetimeRange, com.tcn.cloud.api.api.commons.DatetimeRange.Builder, com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder> scheduleRangeBuilder_;
+    /**
+     * <pre>
+     * Datetime range that the schedules for the new scenario will cover when built using the copied schedule scenario.
+     * </pre>
+     *
+     * <code>.api.commons.DatetimeRange schedule_range = 5 [json_name = "scheduleRange"];</code>
+     * @return Whether the scheduleRange field is set.
+     */
+    public boolean hasScheduleRange() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * Datetime range that the schedules for the new scenario will cover when built using the copied schedule scenario.
+     * </pre>
+     *
+     * <code>.api.commons.DatetimeRange schedule_range = 5 [json_name = "scheduleRange"];</code>
+     * @return The scheduleRange.
+     */
+    public com.tcn.cloud.api.api.commons.DatetimeRange getScheduleRange() {
+      if (scheduleRangeBuilder_ == null) {
+        return scheduleRange_ == null ? com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : scheduleRange_;
+      } else {
+        return scheduleRangeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Datetime range that the schedules for the new scenario will cover when built using the copied schedule scenario.
+     * </pre>
+     *
+     * <code>.api.commons.DatetimeRange schedule_range = 5 [json_name = "scheduleRange"];</code>
+     */
+    public Builder setScheduleRange(com.tcn.cloud.api.api.commons.DatetimeRange value) {
+      if (scheduleRangeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        scheduleRange_ = value;
+      } else {
+        scheduleRangeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Datetime range that the schedules for the new scenario will cover when built using the copied schedule scenario.
+     * </pre>
+     *
+     * <code>.api.commons.DatetimeRange schedule_range = 5 [json_name = "scheduleRange"];</code>
+     */
+    public Builder setScheduleRange(
+        com.tcn.cloud.api.api.commons.DatetimeRange.Builder builderForValue) {
+      if (scheduleRangeBuilder_ == null) {
+        scheduleRange_ = builderForValue.build();
+      } else {
+        scheduleRangeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Datetime range that the schedules for the new scenario will cover when built using the copied schedule scenario.
+     * </pre>
+     *
+     * <code>.api.commons.DatetimeRange schedule_range = 5 [json_name = "scheduleRange"];</code>
+     */
+    public Builder mergeScheduleRange(com.tcn.cloud.api.api.commons.DatetimeRange value) {
+      if (scheduleRangeBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          scheduleRange_ != null &&
+          scheduleRange_ != com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance()) {
+          getScheduleRangeBuilder().mergeFrom(value);
+        } else {
+          scheduleRange_ = value;
+        }
+      } else {
+        scheduleRangeBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Datetime range that the schedules for the new scenario will cover when built using the copied schedule scenario.
+     * </pre>
+     *
+     * <code>.api.commons.DatetimeRange schedule_range = 5 [json_name = "scheduleRange"];</code>
+     */
+    public Builder clearScheduleRange() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      scheduleRange_ = null;
+      if (scheduleRangeBuilder_ != null) {
+        scheduleRangeBuilder_.dispose();
+        scheduleRangeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Datetime range that the schedules for the new scenario will cover when built using the copied schedule scenario.
+     * </pre>
+     *
+     * <code>.api.commons.DatetimeRange schedule_range = 5 [json_name = "scheduleRange"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.DatetimeRange.Builder getScheduleRangeBuilder() {
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return getScheduleRangeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Datetime range that the schedules for the new scenario will cover when built using the copied schedule scenario.
+     * </pre>
+     *
+     * <code>.api.commons.DatetimeRange schedule_range = 5 [json_name = "scheduleRange"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getScheduleRangeOrBuilder() {
+      if (scheduleRangeBuilder_ != null) {
+        return scheduleRangeBuilder_.getMessageOrBuilder();
+      } else {
+        return scheduleRange_ == null ?
+            com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : scheduleRange_;
+      }
+    }
+    /**
+     * <pre>
+     * Datetime range that the schedules for the new scenario will cover when built using the copied schedule scenario.
+     * </pre>
+     *
+     * <code>.api.commons.DatetimeRange schedule_range = 5 [json_name = "scheduleRange"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.DatetimeRange, com.tcn.cloud.api.api.commons.DatetimeRange.Builder, com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder> 
+        getScheduleRangeFieldBuilder() {
+      if (scheduleRangeBuilder_ == null) {
+        scheduleRangeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.DatetimeRange, com.tcn.cloud.api.api.commons.DatetimeRange.Builder, com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder>(
+                getScheduleRange(),
+                getParentForChildren(),
+                isClean());
+        scheduleRange_ = null;
+      }
+      return scheduleRangeBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -1265,6 +1265,126 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteExperianAchPaymentPlanRequestOrBuilder getExperianAchPaymentPlanRequestOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardEntry experian_stella_card_entry = 2006 [json_name = "experianStellaCardEntry"];</code>
+   * @return Whether the experianStellaCardEntry field is set.
+   */
+  boolean hasExperianStellaCardEntry();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardEntry experian_stella_card_entry = 2006 [json_name = "experianStellaCardEntry"];</code>
+   * @return The experianStellaCardEntry.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntry getExperianStellaCardEntry();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardEntry experian_stella_card_entry = 2006 [json_name = "experianStellaCardEntry"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryOrBuilder getExperianStellaCardEntryOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaECheck experian_stella_echeck = 2007 [json_name = "experianStellaEcheck"];</code>
+   * @return Whether the experianStellaEcheck field is set.
+   */
+  boolean hasExperianStellaEcheck();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaECheck experian_stella_echeck = 2007 [json_name = "experianStellaEcheck"];</code>
+   * @return The experianStellaEcheck.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaECheck getExperianStellaEcheck();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaECheck experian_stella_echeck = 2007 [json_name = "experianStellaEcheck"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaECheckOrBuilder getExperianStellaEcheckOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardDeviceTokenization experian_stella_card_device_tokenization = 2008 [json_name = "experianStellaCardDeviceTokenization"];</code>
+   * @return Whether the experianStellaCardDeviceTokenization field is set.
+   */
+  boolean hasExperianStellaCardDeviceTokenization();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardDeviceTokenization experian_stella_card_device_tokenization = 2008 [json_name = "experianStellaCardDeviceTokenization"];</code>
+   * @return The experianStellaCardDeviceTokenization.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardDeviceTokenization getExperianStellaCardDeviceTokenization();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardDeviceTokenization experian_stella_card_device_tokenization = 2008 [json_name = "experianStellaCardDeviceTokenization"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardDeviceTokenizationOrBuilder getExperianStellaCardDeviceTokenizationOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaTokenPayment experian_stella_token_payment = 2009 [json_name = "experianStellaTokenPayment"];</code>
+   * @return Whether the experianStellaTokenPayment field is set.
+   */
+  boolean hasExperianStellaTokenPayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaTokenPayment experian_stella_token_payment = 2009 [json_name = "experianStellaTokenPayment"];</code>
+   * @return The experianStellaTokenPayment.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaTokenPayment getExperianStellaTokenPayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaTokenPayment experian_stella_token_payment = 2009 [json_name = "experianStellaTokenPayment"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaTokenPaymentOrBuilder getExperianStellaTokenPaymentOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaAchTokenization experian_stella_ach_tokenization = 2010 [json_name = "experianStellaAchTokenization"];</code>
+   * @return Whether the experianStellaAchTokenization field is set.
+   */
+  boolean hasExperianStellaAchTokenization();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaAchTokenization experian_stella_ach_tokenization = 2010 [json_name = "experianStellaAchTokenization"];</code>
+   * @return The experianStellaAchTokenization.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAchTokenization getExperianStellaAchTokenization();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaAchTokenization experian_stella_ach_tokenization = 2010 [json_name = "experianStellaAchTokenization"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAchTokenizationOrBuilder getExperianStellaAchTokenizationOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaAddusaepaytoken experian_stella_add_usa_epay_token = 2011 [json_name = "experianStellaAddUsaEpayToken"];</code>
+   * @return Whether the experianStellaAddUsaEpayToken field is set.
+   */
+  boolean hasExperianStellaAddUsaEpayToken();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaAddusaepaytoken experian_stella_add_usa_epay_token = 2011 [json_name = "experianStellaAddUsaEpayToken"];</code>
+   * @return The experianStellaAddUsaEpayToken.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAddusaepaytoken getExperianStellaAddUsaEpayToken();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaAddusaepaytoken experian_stella_add_usa_epay_token = 2011 [json_name = "experianStellaAddUsaEpayToken"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAddusaepaytokenOrBuilder getExperianStellaAddUsaEpayTokenOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlans experian_stella_payment_plans = 2012 [json_name = "experianStellaPaymentPlans"];</code>
+   * @return Whether the experianStellaPaymentPlans field is set.
+   */
+  boolean hasExperianStellaPaymentPlans();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlans experian_stella_payment_plans = 2012 [json_name = "experianStellaPaymentPlans"];</code>
+   * @return The experianStellaPaymentPlans.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlans getExperianStellaPaymentPlans();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlans experian_stella_payment_plans = 2012 [json_name = "experianStellaPaymentPlans"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansOrBuilder getExperianStellaPaymentPlansOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaAuth experian_stella_auth = 2013 [json_name = "experianStellaAuth"];</code>
+   * @return Whether the experianStellaAuth field is set.
+   */
+  boolean hasExperianStellaAuth();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaAuth experian_stella_auth = 2013 [json_name = "experianStellaAuth"];</code>
+   * @return The experianStellaAuth.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAuth getExperianStellaAuth();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaAuth experian_stella_auth = 2013 [json_name = "experianStellaAuth"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAuthOrBuilder getExperianStellaAuthOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecuteNewscycleLogin newscycle_login = 2101 [json_name = "newscycleLogin"];</code>
    * @return Whether the newscycleLogin field is set.
    */

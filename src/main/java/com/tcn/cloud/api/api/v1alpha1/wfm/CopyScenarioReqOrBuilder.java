@@ -66,4 +66,31 @@ public interface CopyScenarioReqOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDescriptionBytes();
+
+  /**
+   * <pre>
+   * Datetime range that the schedules for the new scenario will cover when built using the copied schedule scenario.
+   * </pre>
+   *
+   * <code>.api.commons.DatetimeRange schedule_range = 5 [json_name = "scheduleRange"];</code>
+   * @return Whether the scheduleRange field is set.
+   */
+  boolean hasScheduleRange();
+  /**
+   * <pre>
+   * Datetime range that the schedules for the new scenario will cover when built using the copied schedule scenario.
+   * </pre>
+   *
+   * <code>.api.commons.DatetimeRange schedule_range = 5 [json_name = "scheduleRange"];</code>
+   * @return The scheduleRange.
+   */
+  com.tcn.cloud.api.api.commons.DatetimeRange getScheduleRange();
+  /**
+   * <pre>
+   * Datetime range that the schedules for the new scenario will cover when built using the copied schedule scenario.
+   * </pre>
+   *
+   * <code>.api.commons.DatetimeRange schedule_range = 5 [json_name = "scheduleRange"];</code>
+   */
+  com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getScheduleRangeOrBuilder();
 }
