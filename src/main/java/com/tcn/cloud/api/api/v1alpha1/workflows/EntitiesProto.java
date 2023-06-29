@@ -45,15 +45,15 @@ public final class EntitiesProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_workflows_GetFlowDefinitionResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdRequest_descriptor;
+    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdRequest_fieldAccessorTable;
+      internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdResponse_descriptor;
+    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdResponse_fieldAccessorTable;
+      internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_workflows_SaveFlowStateRequest_descriptor;
   static final 
@@ -103,25 +103,25 @@ public final class EntitiesProto {
       "\030\001 \001(\tR\020flowDefinitionId\"k\n\031GetFlowDefin" +
       "itionResponse\022N\n\017flow_definition\030\001 \001(\0132%" +
       ".api.commons.workflows.FlowDefinitionR\016f" +
-      "lowDefinition\"O\n\037DeleteFlowDefinitionByI" +
-      "dRequest\022,\n\022flow_definition_id\030\001 \001(\tR\020fl" +
-      "owDefinitionId\":\n DeleteFlowDefinitionBy" +
-      "IdResponse\022\026\n\006result\030\001 \001(\010R\006result\"\224\001\n\024S" +
-      "aveFlowStateRequest\022?\n\nflow_state\030\001 \001(\0132" +
-      " .api.commons.workflows.FlowStateR\tflowS" +
-      "tate\022;\n\013update_mask\030\002 \001(\0132\032.google.proto" +
-      "buf.FieldMaskR\nupdateMask\"X\n\025SaveFlowSta" +
-      "teResponse\022?\n\nflow_state\030\001 \001(\0132 .api.com" +
-      "mons.workflows.FlowStateR\tflowState\"9\n\023G" +
-      "etFlowStateRequest\022\"\n\rflow_state_id\030\001 \001(" +
-      "\tR\013flowStateId\"W\n\024GetFlowStateResponse\022?" +
-      "\n\nflow_state\030\001 \001(\0132 .api.commons.workflo" +
-      "ws.FlowStateR\tflowStateB\263\001\n(com.tcn.clou" +
-      "d.api.api.v1alpha1.workflowsB\rEntitiesPr" +
-      "otoP\001\242\002\003AVW\252\002\026Api.V1alpha1.Workflows\312\002\026A" +
-      "pi\\V1alpha1\\Workflows\342\002\"Api\\V1alpha1\\Wor" +
-      "kflows\\GPBMetadata\352\002\030Api::V1alpha1::Work" +
-      "flowsb\006proto3"
+      "lowDefinition\"K\n\033DeleteFlowDefinitionReq" +
+      "uest\022,\n\022flow_definition_id\030\001 \001(\tR\020flowDe" +
+      "finitionId\"6\n\034DeleteFlowDefinitionRespon" +
+      "se\022\026\n\006result\030\001 \001(\010R\006result\"\224\001\n\024SaveFlowS" +
+      "tateRequest\022?\n\nflow_state\030\001 \001(\0132 .api.co" +
+      "mmons.workflows.FlowStateR\tflowState\022;\n\013" +
+      "update_mask\030\002 \001(\0132\032.google.protobuf.Fiel" +
+      "dMaskR\nupdateMask\"X\n\025SaveFlowStateRespon" +
+      "se\022?\n\nflow_state\030\001 \001(\0132 .api.commons.wor" +
+      "kflows.FlowStateR\tflowState\"9\n\023GetFlowSt" +
+      "ateRequest\022\"\n\rflow_state_id\030\001 \001(\tR\013flowS" +
+      "tateId\"W\n\024GetFlowStateResponse\022?\n\nflow_s" +
+      "tate\030\001 \001(\0132 .api.commons.workflows.FlowS" +
+      "tateR\tflowStateB\263\001\n(com.tcn.cloud.api.ap" +
+      "i.v1alpha1.workflowsB\rEntitiesProtoP\001\242\002\003" +
+      "AVW\252\002\026Api.V1alpha1.Workflows\312\002\026Api\\V1alp" +
+      "ha1\\Workflows\342\002\"Api\\V1alpha1\\Workflows\\G" +
+      "PBMetadata\352\002\030Api::V1alpha1::Workflowsb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -165,17 +165,17 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_workflows_GetFlowDefinitionResponse_descriptor,
         new java.lang.String[] { "FlowDefinition", });
-    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdRequest_descriptor =
+    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionRequest_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdRequest_fieldAccessorTable = new
+    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdRequest_descriptor,
+        internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionRequest_descriptor,
         new java.lang.String[] { "FlowDefinitionId", });
-    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdResponse_descriptor =
+    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionResponse_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdResponse_fieldAccessorTable = new
+    internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionByIdResponse_descriptor,
+        internal_static_api_v1alpha1_workflows_DeleteFlowDefinitionResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_api_v1alpha1_workflows_SaveFlowStateRequest_descriptor =
       getDescriptor().getMessageTypes().get(8);

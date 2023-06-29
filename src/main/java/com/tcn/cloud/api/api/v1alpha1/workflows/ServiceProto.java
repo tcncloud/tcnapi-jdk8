@@ -26,7 +26,7 @@ public final class ServiceProto {
       "\n$api/v1alpha1/workflows/service.proto\022\026" +
       "api.v1alpha1.workflows\032\027annotations/auth" +
       "z.proto\032%api/v1alpha1/workflows/entities" +
-      ".proto\032\034google/api/annotations.proto2\260\006\n" +
+      ".proto\032\034google/api/annotations.proto2\244\006\n" +
       "\032WorkflowsDefinitionService\022\300\001\n\023ListFlow" +
       "Definitions\0222.api.v1alpha1.workflows.Lis" +
       "tFlowDefinitionsRequest\0323.api.v1alpha1.w" +
@@ -42,17 +42,16 @@ public final class ServiceProto {
       "quest\0321.api.v1alpha1.workflows.GetFlowDe" +
       "finitionResponse\">\272\270\221\002\005\n\003\010\240\037\202\323\344\223\002.\")/api" +
       "/v1alpha1/workflows/getflowdefinition:\001*" +
-      "\022\324\001\n\030DeleteFlowDefinitionById\0227.api.v1al" +
-      "pha1.workflows.DeleteFlowDefinitionByIdR" +
-      "equest\0328.api.v1alpha1.workflows.DeleteFl" +
-      "owDefinitionByIdResponse\"E\272\270\221\002\005\n\003\010\240\037\202\323\344\223" +
-      "\0025\"0/api/v1alpha1/workflows/deleteflowde" +
-      "finitionbyid:\001*B\262\001\n(com.tcn.cloud.api.ap" +
-      "i.v1alpha1.workflowsB\014ServiceProtoP\001\242\002\003A" +
-      "VW\252\002\026Api.V1alpha1.Workflows\312\002\026Api\\V1alph" +
-      "a1\\Workflows\342\002\"Api\\V1alpha1\\Workflows\\GP" +
-      "BMetadata\352\002\030Api::V1alpha1::Workflowsb\006pr" +
-      "oto3"
+      "\022\310\001\n\030DeleteFlowDefinitionById\0223.api.v1al" +
+      "pha1.workflows.DeleteFlowDefinitionReque" +
+      "st\0324.api.v1alpha1.workflows.DeleteFlowDe" +
+      "finitionResponse\"A\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0021\",/api" +
+      "/v1alpha1/workflows/deleteflowdefinition" +
+      ":\001*B\262\001\n(com.tcn.cloud.api.api.v1alpha1.w" +
+      "orkflowsB\014ServiceProtoP\001\242\002\003AVW\252\002\026Api.V1a" +
+      "lpha1.Workflows\312\002\026Api\\V1alpha1\\Workflows" +
+      "\342\002\"Api\\V1alpha1\\Workflows\\GPBMetadata\352\002\030" +
+      "Api::V1alpha1::Workflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

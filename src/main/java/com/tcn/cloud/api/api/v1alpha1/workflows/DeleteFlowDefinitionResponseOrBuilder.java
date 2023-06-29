@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.workflows;
 
-public interface DeleteFlowDefinitionByIdResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse)
+public interface DeleteFlowDefinitionResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.workflows.DeleteFlowDefinitionResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**

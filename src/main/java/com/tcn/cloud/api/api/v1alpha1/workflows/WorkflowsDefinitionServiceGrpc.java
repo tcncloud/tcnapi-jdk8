@@ -108,29 +108,29 @@ public final class WorkflowsDefinitionServiceGrpc {
     return getGetFlowDefinitionMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdRequest,
-      com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse> getDeleteFlowDefinitionByIdMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionRequest,
+      com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse> getDeleteFlowDefinitionByIdMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "DeleteFlowDefinitionById",
-      requestType = com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdRequest.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse.class,
+      requestType = com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdRequest,
-      com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse> getDeleteFlowDefinitionByIdMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdRequest, com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse> getDeleteFlowDefinitionByIdMethod;
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionRequest,
+      com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse> getDeleteFlowDefinitionByIdMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionRequest, com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse> getDeleteFlowDefinitionByIdMethod;
     if ((getDeleteFlowDefinitionByIdMethod = WorkflowsDefinitionServiceGrpc.getDeleteFlowDefinitionByIdMethod) == null) {
       synchronized (WorkflowsDefinitionServiceGrpc.class) {
         if ((getDeleteFlowDefinitionByIdMethod = WorkflowsDefinitionServiceGrpc.getDeleteFlowDefinitionByIdMethod) == null) {
           WorkflowsDefinitionServiceGrpc.getDeleteFlowDefinitionByIdMethod = getDeleteFlowDefinitionByIdMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdRequest, com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionRequest, com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteFlowDefinitionById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse.getDefaultInstance()))
               .setSchemaDescriptor(new WorkflowsDefinitionServiceMethodDescriptorSupplier("DeleteFlowDefinitionById"))
               .build();
         }
@@ -222,8 +222,8 @@ public final class WorkflowsDefinitionServiceGrpc {
      * DeleteFlowDefinition deletes a flow definition
      * </pre>
      */
-    default void deleteFlowDefinitionById(com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse> responseObserver) {
+    default void deleteFlowDefinitionById(com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteFlowDefinitionByIdMethod(), responseObserver);
     }
   }
@@ -293,8 +293,8 @@ public final class WorkflowsDefinitionServiceGrpc {
      * DeleteFlowDefinition deletes a flow definition
      * </pre>
      */
-    public void deleteFlowDefinitionById(com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse> responseObserver) {
+    public void deleteFlowDefinitionById(com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteFlowDefinitionByIdMethod(), getCallOptions()), request, responseObserver);
     }
@@ -351,7 +351,7 @@ public final class WorkflowsDefinitionServiceGrpc {
      * DeleteFlowDefinition deletes a flow definition
      * </pre>
      */
-    public com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse deleteFlowDefinitionById(com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdRequest request) {
+    public com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse deleteFlowDefinitionById(com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteFlowDefinitionByIdMethod(), getCallOptions(), request);
     }
@@ -411,8 +411,8 @@ public final class WorkflowsDefinitionServiceGrpc {
      * DeleteFlowDefinition deletes a flow definition
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse> deleteFlowDefinitionById(
-        com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse> deleteFlowDefinitionById(
+        com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteFlowDefinitionByIdMethod(), getCallOptions()), request);
     }
@@ -453,8 +453,8 @@ public final class WorkflowsDefinitionServiceGrpc {
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.workflows.GetFlowDefinitionResponse>) responseObserver);
           break;
         case METHODID_DELETE_FLOW_DEFINITION_BY_ID:
-          serviceImpl.deleteFlowDefinitionById((com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse>) responseObserver);
+          serviceImpl.deleteFlowDefinitionById((com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -499,8 +499,8 @@ public final class WorkflowsDefinitionServiceGrpc {
           getDeleteFlowDefinitionByIdMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdRequest,
-              com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionByIdResponse>(
+              com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionRequest,
+              com.tcn.cloud.api.api.v1alpha1.workflows.DeleteFlowDefinitionResponse>(
                 service, METHODID_DELETE_FLOW_DEFINITION_BY_ID)))
         .build();
   }
