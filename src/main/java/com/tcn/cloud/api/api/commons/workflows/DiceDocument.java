@@ -52,10 +52,10 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.workflows.DiceDocument.class, com.tcn.cloud.api.api.commons.workflows.DiceDocument.Builder.class);
   }
 
-  public static final int DICEVALUE_FIELD_NUMBER = 1;
+  public static final int DICE_VALUE_FIELD_NUMBER = 1;
   private int diceValue_ = 0;
   /**
-   * <code>int32 diceValue = 1 [json_name = "diceValue"];</code>
+   * <code>int32 dice_value = 1 [json_name = "diceValue"];</code>
    * @return The diceValue.
    */
   @java.lang.Override
@@ -63,10 +63,10 @@ private static final long serialVersionUID = 0L;
     return diceValue_;
   }
 
-  public static final int DICEVALUEMAX_FIELD_NUMBER = 2;
+  public static final int DICE_VALUE_MAX_FIELD_NUMBER = 2;
   private int diceValueMax_ = 0;
   /**
-   * <code>int32 diceValueMax = 2 [json_name = "diceValueMax"];</code>
+   * <code>int32 dice_value_max = 2 [json_name = "diceValueMax"];</code>
    * @return The diceValueMax.
    */
   @java.lang.Override
@@ -74,10 +74,10 @@ private static final long serialVersionUID = 0L;
     return diceValueMax_;
   }
 
-  public static final int DICEVALUEMIN_FIELD_NUMBER = 3;
+  public static final int DICE_VALUE_MIN_FIELD_NUMBER = 3;
   private int diceValueMin_ = 0;
   /**
-   * <code>int32 diceValueMin = 3 [json_name = "diceValueMin"];</code>
+   * <code>int32 dice_value_min = 3 [json_name = "diceValueMin"];</code>
    * @return The diceValueMin.
    */
   @java.lang.Override
@@ -352,11 +352,11 @@ java.lang.String defaultValue) {
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + DICEVALUE_FIELD_NUMBER;
+    hash = (37 * hash) + DICE_VALUE_FIELD_NUMBER;
     hash = (53 * hash) + getDiceValue();
-    hash = (37 * hash) + DICEVALUEMAX_FIELD_NUMBER;
+    hash = (37 * hash) + DICE_VALUE_MAX_FIELD_NUMBER;
     hash = (53 * hash) + getDiceValueMax();
-    hash = (37 * hash) + DICEVALUEMIN_FIELD_NUMBER;
+    hash = (37 * hash) + DICE_VALUE_MIN_FIELD_NUMBER;
     hash = (53 * hash) + getDiceValueMin();
     hash = (37 * hash) + LAST_MESSAGE_FIELD_NUMBER;
     hash = (53 * hash) + getLastMessage().hashCode();
@@ -724,7 +724,7 @@ java.lang.String defaultValue) {
 
     private int diceValue_ ;
     /**
-     * <code>int32 diceValue = 1 [json_name = "diceValue"];</code>
+     * <code>int32 dice_value = 1 [json_name = "diceValue"];</code>
      * @return The diceValue.
      */
     @java.lang.Override
@@ -732,7 +732,7 @@ java.lang.String defaultValue) {
       return diceValue_;
     }
     /**
-     * <code>int32 diceValue = 1 [json_name = "diceValue"];</code>
+     * <code>int32 dice_value = 1 [json_name = "diceValue"];</code>
      * @param value The diceValue to set.
      * @return This builder for chaining.
      */
@@ -744,7 +744,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>int32 diceValue = 1 [json_name = "diceValue"];</code>
+     * <code>int32 dice_value = 1 [json_name = "diceValue"];</code>
      * @return This builder for chaining.
      */
     public Builder clearDiceValue() {
@@ -756,7 +756,7 @@ java.lang.String defaultValue) {
 
     private int diceValueMax_ ;
     /**
-     * <code>int32 diceValueMax = 2 [json_name = "diceValueMax"];</code>
+     * <code>int32 dice_value_max = 2 [json_name = "diceValueMax"];</code>
      * @return The diceValueMax.
      */
     @java.lang.Override
@@ -764,7 +764,7 @@ java.lang.String defaultValue) {
       return diceValueMax_;
     }
     /**
-     * <code>int32 diceValueMax = 2 [json_name = "diceValueMax"];</code>
+     * <code>int32 dice_value_max = 2 [json_name = "diceValueMax"];</code>
      * @param value The diceValueMax to set.
      * @return This builder for chaining.
      */
@@ -776,7 +776,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>int32 diceValueMax = 2 [json_name = "diceValueMax"];</code>
+     * <code>int32 dice_value_max = 2 [json_name = "diceValueMax"];</code>
      * @return This builder for chaining.
      */
     public Builder clearDiceValueMax() {
@@ -788,7 +788,7 @@ java.lang.String defaultValue) {
 
     private int diceValueMin_ ;
     /**
-     * <code>int32 diceValueMin = 3 [json_name = "diceValueMin"];</code>
+     * <code>int32 dice_value_min = 3 [json_name = "diceValueMin"];</code>
      * @return The diceValueMin.
      */
     @java.lang.Override
@@ -796,7 +796,7 @@ java.lang.String defaultValue) {
       return diceValueMin_;
     }
     /**
-     * <code>int32 diceValueMin = 3 [json_name = "diceValueMin"];</code>
+     * <code>int32 dice_value_min = 3 [json_name = "diceValueMin"];</code>
      * @param value The diceValueMin to set.
      * @return This builder for chaining.
      */
@@ -808,7 +808,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>int32 diceValueMin = 3 [json_name = "diceValueMin"];</code>
+     * <code>int32 dice_value_min = 3 [json_name = "diceValueMin"];</code>
      * @return This builder for chaining.
      */
     public Builder clearDiceValueMin() {
