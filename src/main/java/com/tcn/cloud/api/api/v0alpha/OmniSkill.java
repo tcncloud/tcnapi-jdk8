@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 /**
+ * <pre>
+ * skill details
+ * </pre>
+ *
  * Protobuf type {@code api.v0alpha.OmniSkill}
  */
 public final class OmniSkill extends
@@ -47,6 +51,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object region_ = "";
   /**
+   * <pre>
+   * region
+   * </pre>
+   *
    * <code>string region = 1 [json_name = "region"];</code>
    * @return The region.
    */
@@ -64,6 +72,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * region
+   * </pre>
+   *
    * <code>string region = 1 [json_name = "region"];</code>
    * @return The bytes for region.
    */
@@ -86,6 +98,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object p3Id_ = "";
   /**
+   * <pre>
+   * p3 id
+   * </pre>
+   *
    * <code>string p3_id = 2 [json_name = "p3Id"];</code>
    * @return The p3Id.
    */
@@ -103,6 +119,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * p3 id
+   * </pre>
+   *
    * <code>string p3_id = 2 [json_name = "p3Id"];</code>
    * @return The bytes for p3Id.
    */
@@ -125,6 +145,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
   /**
+   * <pre>
+   * skill name
+   * </pre>
+   *
    * <code>string name = 3 [json_name = "name"];</code>
    * @return The name.
    */
@@ -142,6 +166,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * skill name
+   * </pre>
+   *
    * <code>string name = 3 [json_name = "name"];</code>
    * @return The bytes for name.
    */
@@ -164,6 +192,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object description_ = "";
   /**
+   * <pre>
+   * skill description
+   * </pre>
+   *
    * <code>string description = 4 [json_name = "description"];</code>
    * @return The description.
    */
@@ -181,6 +213,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * skill description
+   * </pre>
+   *
    * <code>string description = 4 [json_name = "description"];</code>
    * @return The bytes for description.
    */
@@ -414,6 +450,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * skill details
+   * </pre>
+   *
    * Protobuf type {@code api.v0alpha.OmniSkill}
    */
   public static final class Builder extends
@@ -639,6 +679,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object region_ = "";
     /**
+     * <pre>
+     * region
+     * </pre>
+     *
      * <code>string region = 1 [json_name = "region"];</code>
      * @return The region.
      */
@@ -655,6 +699,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * region
+     * </pre>
+     *
      * <code>string region = 1 [json_name = "region"];</code>
      * @return The bytes for region.
      */
@@ -672,6 +720,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * region
+     * </pre>
+     *
      * <code>string region = 1 [json_name = "region"];</code>
      * @param value The region to set.
      * @return This builder for chaining.
@@ -685,6 +737,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * region
+     * </pre>
+     *
      * <code>string region = 1 [json_name = "region"];</code>
      * @return This builder for chaining.
      */
@@ -695,6 +751,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * region
+     * </pre>
+     *
      * <code>string region = 1 [json_name = "region"];</code>
      * @param value The bytes for region to set.
      * @return This builder for chaining.
@@ -711,6 +771,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object p3Id_ = "";
     /**
+     * <pre>
+     * p3 id
+     * </pre>
+     *
      * <code>string p3_id = 2 [json_name = "p3Id"];</code>
      * @return The p3Id.
      */
@@ -727,6 +791,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * p3 id
+     * </pre>
+     *
      * <code>string p3_id = 2 [json_name = "p3Id"];</code>
      * @return The bytes for p3Id.
      */
@@ -744,6 +812,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * p3 id
+     * </pre>
+     *
      * <code>string p3_id = 2 [json_name = "p3Id"];</code>
      * @param value The p3Id to set.
      * @return This builder for chaining.
@@ -757,6 +829,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * p3 id
+     * </pre>
+     *
      * <code>string p3_id = 2 [json_name = "p3Id"];</code>
      * @return This builder for chaining.
      */
@@ -767,6 +843,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * p3 id
+     * </pre>
+     *
      * <code>string p3_id = 2 [json_name = "p3Id"];</code>
      * @param value The bytes for p3Id to set.
      * @return This builder for chaining.
@@ -783,6 +863,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
+     * <pre>
+     * skill name
+     * </pre>
+     *
      * <code>string name = 3 [json_name = "name"];</code>
      * @return The name.
      */
@@ -799,6 +883,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * skill name
+     * </pre>
+     *
      * <code>string name = 3 [json_name = "name"];</code>
      * @return The bytes for name.
      */
@@ -816,6 +904,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * skill name
+     * </pre>
+     *
      * <code>string name = 3 [json_name = "name"];</code>
      * @param value The name to set.
      * @return This builder for chaining.
@@ -829,6 +921,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * skill name
+     * </pre>
+     *
      * <code>string name = 3 [json_name = "name"];</code>
      * @return This builder for chaining.
      */
@@ -839,6 +935,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * skill name
+     * </pre>
+     *
      * <code>string name = 3 [json_name = "name"];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
@@ -855,6 +955,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object description_ = "";
     /**
+     * <pre>
+     * skill description
+     * </pre>
+     *
      * <code>string description = 4 [json_name = "description"];</code>
      * @return The description.
      */
@@ -871,6 +975,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * skill description
+     * </pre>
+     *
      * <code>string description = 4 [json_name = "description"];</code>
      * @return The bytes for description.
      */
@@ -888,6 +996,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * skill description
+     * </pre>
+     *
      * <code>string description = 4 [json_name = "description"];</code>
      * @param value The description to set.
      * @return This builder for chaining.
@@ -901,6 +1013,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * skill description
+     * </pre>
+     *
      * <code>string description = 4 [json_name = "description"];</code>
      * @return This builder for chaining.
      */
@@ -911,6 +1027,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * skill description
+     * </pre>
+     *
      * <code>string description = 4 [json_name = "description"];</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.

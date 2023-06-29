@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 /**
+ * <pre>
+ * request to list user skills
+ * </pre>
+ *
  * Protobuf type {@code api.v0alpha.ListUserSkillsReq}
  */
 public final class ListUserSkillsReq extends
@@ -309,6 +313,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * request to list user skills
+   * </pre>
+   *
    * Protobuf type {@code api.v0alpha.ListUserSkillsReq}
    */
   public static final class Builder extends
