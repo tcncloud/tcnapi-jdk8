@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v0alpha;
 
-public interface OmniSkillOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v0alpha.OmniSkill)
+public interface UserSkillOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v0alpha.UserSkill)
     com.google.protobuf.MessageOrBuilder {
 
   /**

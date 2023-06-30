@@ -660,10 +660,10 @@ public final class OmniapiProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v0alpha_ListUserSkillsRes_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v0alpha_OmniSkill_descriptor;
+    internal_static_api_v0alpha_UserSkill_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v0alpha_OmniSkill_fieldAccessorTable;
+      internal_static_api_v0alpha_UserSkill_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1052,7 +1052,7 @@ public final class OmniapiProto {
       "rSkillsReq\022>\n\014type_filters\030\001 \003(\0162\033.api.c" +
       "ommons.SkillType.EnumR\013typeFilters\"C\n\021Li" +
       "stUserSkillsRes\022.\n\006skills\030\001 \003(\0132\026.api.v0" +
-      "alpha.OmniSkillR\006skills\"\237\001\n\tOmniSkill\022\026\n" +
+      "alpha.UserSkillR\006skills\"\237\001\n\tUserSkill\022\026\n" +
       "\006region\030\001 \001(\tR\006region\022\023\n\005p3_id\030\002 \001(\tR\004p3" +
       "Id\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013description\030\004 " +
       "\001(\tR\013description\022/\n\004type\030\005 \001(\0162\033.api.com" +
@@ -2098,11 +2098,11 @@ public final class OmniapiProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_ListUserSkillsRes_descriptor,
         new java.lang.String[] { "Skills", });
-    internal_static_api_v0alpha_OmniSkill_descriptor =
+    internal_static_api_v0alpha_UserSkill_descriptor =
       getDescriptor().getMessageTypes().get(111);
-    internal_static_api_v0alpha_OmniSkill_fieldAccessorTable = new
+    internal_static_api_v0alpha_UserSkill_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v0alpha_OmniSkill_descriptor,
+        internal_static_api_v0alpha_UserSkill_descriptor,
         new java.lang.String[] { "Region", "P3Id", "Name", "Description", "Type", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

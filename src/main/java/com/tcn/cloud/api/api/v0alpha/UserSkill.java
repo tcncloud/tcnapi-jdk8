@@ -5,21 +5,21 @@ package com.tcn.cloud.api.api.v0alpha;
 
 /**
  * <pre>
- * skill details
+ * user skill details
  * </pre>
  *
- * Protobuf type {@code api.v0alpha.OmniSkill}
+ * Protobuf type {@code api.v0alpha.UserSkill}
  */
-public final class OmniSkill extends
+public final class UserSkill extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v0alpha.OmniSkill)
-    OmniSkillOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v0alpha.UserSkill)
+    UserSkillOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use OmniSkill.newBuilder() to construct.
-  private OmniSkill(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use UserSkill.newBuilder() to construct.
+  private UserSkill(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private OmniSkill() {
+  private UserSkill() {
     region_ = "";
     p3Id_ = "";
     name_ = "";
@@ -31,20 +31,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new OmniSkill();
+    return new UserSkill();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_OmniSkill_descriptor;
+    return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_UserSkill_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_OmniSkill_fieldAccessorTable
+    return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_UserSkill_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v0alpha.OmniSkill.class, com.tcn.cloud.api.api.v0alpha.OmniSkill.Builder.class);
+            com.tcn.cloud.api.api.v0alpha.UserSkill.class, com.tcn.cloud.api.api.v0alpha.UserSkill.Builder.class);
   }
 
   public static final int REGION_FIELD_NUMBER = 1;
@@ -317,10 +317,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.OmniSkill)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.UserSkill)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v0alpha.OmniSkill other = (com.tcn.cloud.api.api.v0alpha.OmniSkill) obj;
+    com.tcn.cloud.api.api.v0alpha.UserSkill other = (com.tcn.cloud.api.api.v0alpha.UserSkill) obj;
 
     if (!getRegion()
         .equals(other.getRegion())) return false;
@@ -357,44 +357,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.OmniSkill parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UserSkill parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.OmniSkill parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UserSkill parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.OmniSkill parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UserSkill parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.OmniSkill parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UserSkill parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.OmniSkill parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v0alpha.UserSkill parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.OmniSkill parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UserSkill parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.OmniSkill parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.UserSkill parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.OmniSkill parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UserSkill parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -402,26 +402,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.OmniSkill parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.UserSkill parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.OmniSkill parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UserSkill parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.OmniSkill parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UserSkill parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.OmniSkill parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UserSkill parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -434,7 +434,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.OmniSkill prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.UserSkill prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -451,29 +451,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * skill details
+   * user skill details
    * </pre>
    *
-   * Protobuf type {@code api.v0alpha.OmniSkill}
+   * Protobuf type {@code api.v0alpha.UserSkill}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v0alpha.OmniSkill)
-      com.tcn.cloud.api.api.v0alpha.OmniSkillOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v0alpha.UserSkill)
+      com.tcn.cloud.api.api.v0alpha.UserSkillOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_OmniSkill_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_UserSkill_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_OmniSkill_fieldAccessorTable
+      return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_UserSkill_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v0alpha.OmniSkill.class, com.tcn.cloud.api.api.v0alpha.OmniSkill.Builder.class);
+              com.tcn.cloud.api.api.v0alpha.UserSkill.class, com.tcn.cloud.api.api.v0alpha.UserSkill.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v0alpha.OmniSkill.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v0alpha.UserSkill.newBuilder()
     private Builder() {
 
     }
@@ -498,17 +498,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_OmniSkill_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_UserSkill_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.OmniSkill getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v0alpha.OmniSkill.getDefaultInstance();
+    public com.tcn.cloud.api.api.v0alpha.UserSkill getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v0alpha.UserSkill.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.OmniSkill build() {
-      com.tcn.cloud.api.api.v0alpha.OmniSkill result = buildPartial();
+    public com.tcn.cloud.api.api.v0alpha.UserSkill build() {
+      com.tcn.cloud.api.api.v0alpha.UserSkill result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -516,14 +516,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.OmniSkill buildPartial() {
-      com.tcn.cloud.api.api.v0alpha.OmniSkill result = new com.tcn.cloud.api.api.v0alpha.OmniSkill(this);
+    public com.tcn.cloud.api.api.v0alpha.UserSkill buildPartial() {
+      com.tcn.cloud.api.api.v0alpha.UserSkill result = new com.tcn.cloud.api.api.v0alpha.UserSkill(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.OmniSkill result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.UserSkill result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.region_ = region_;
@@ -576,16 +576,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v0alpha.OmniSkill) {
-        return mergeFrom((com.tcn.cloud.api.api.v0alpha.OmniSkill)other);
+      if (other instanceof com.tcn.cloud.api.api.v0alpha.UserSkill) {
+        return mergeFrom((com.tcn.cloud.api.api.v0alpha.UserSkill)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.OmniSkill other) {
-      if (other == com.tcn.cloud.api.api.v0alpha.OmniSkill.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.UserSkill other) {
+      if (other == com.tcn.cloud.api.api.v0alpha.UserSkill.getDefaultInstance()) return this;
       if (!other.getRegion().isEmpty()) {
         region_ = other.region_;
         bitField0_ |= 0x00000001;
@@ -1110,23 +1110,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v0alpha.OmniSkill)
+    // @@protoc_insertion_point(builder_scope:api.v0alpha.UserSkill)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v0alpha.OmniSkill)
-  private static final com.tcn.cloud.api.api.v0alpha.OmniSkill DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v0alpha.UserSkill)
+  private static final com.tcn.cloud.api.api.v0alpha.UserSkill DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.OmniSkill();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.UserSkill();
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.OmniSkill getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v0alpha.UserSkill getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<OmniSkill>
-      PARSER = new com.google.protobuf.AbstractParser<OmniSkill>() {
+  private static final com.google.protobuf.Parser<UserSkill>
+      PARSER = new com.google.protobuf.AbstractParser<UserSkill>() {
     @java.lang.Override
-    public OmniSkill parsePartialFrom(
+    public UserSkill parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1145,17 +1145,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<OmniSkill> parser() {
+  public static com.google.protobuf.Parser<UserSkill> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<OmniSkill> getParserForType() {
+  public com.google.protobuf.Parser<UserSkill> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.OmniSkill getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v0alpha.UserSkill getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

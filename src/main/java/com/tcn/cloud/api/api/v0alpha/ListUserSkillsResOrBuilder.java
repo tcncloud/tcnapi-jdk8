@@ -8,26 +8,26 @@ public interface ListUserSkillsResOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+   * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v0alpha.OmniSkill> 
+  java.util.List<com.tcn.cloud.api.api.v0alpha.UserSkill> 
       getSkillsList();
   /**
-   * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+   * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.OmniSkill getSkills(int index);
+  com.tcn.cloud.api.api.v0alpha.UserSkill getSkills(int index);
   /**
-   * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+   * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
    */
   int getSkillsCount();
   /**
-   * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+   * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v0alpha.OmniSkillOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.v0alpha.UserSkillOrBuilder> 
       getSkillsOrBuilderList();
   /**
-   * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+   * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.OmniSkillOrBuilder getSkillsOrBuilder(
+  com.tcn.cloud.api.api.v0alpha.UserSkillOrBuilder getSkillsOrBuilder(
       int index);
 }

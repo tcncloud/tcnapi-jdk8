@@ -45,41 +45,41 @@ private static final long serialVersionUID = 0L;
 
   public static final int SKILLS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v0alpha.OmniSkill> skills_;
+  private java.util.List<com.tcn.cloud.api.api.v0alpha.UserSkill> skills_;
   /**
-   * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+   * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v0alpha.OmniSkill> getSkillsList() {
+  public java.util.List<com.tcn.cloud.api.api.v0alpha.UserSkill> getSkillsList() {
     return skills_;
   }
   /**
-   * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+   * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.OmniSkillOrBuilder> 
+  public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.UserSkillOrBuilder> 
       getSkillsOrBuilderList() {
     return skills_;
   }
   /**
-   * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+   * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
    */
   @java.lang.Override
   public int getSkillsCount() {
     return skills_.size();
   }
   /**
-   * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+   * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.OmniSkill getSkills(int index) {
+  public com.tcn.cloud.api.api.v0alpha.UserSkill getSkills(int index) {
     return skills_.get(index);
   }
   /**
-   * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+   * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.OmniSkillOrBuilder getSkillsOrBuilder(
+  public com.tcn.cloud.api.api.v0alpha.UserSkillOrBuilder getSkillsOrBuilder(
       int index) {
     return skills_.get(index);
   }
@@ -433,9 +433,9 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              com.tcn.cloud.api.api.v0alpha.OmniSkill m =
+              com.tcn.cloud.api.api.v0alpha.UserSkill m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.v0alpha.OmniSkill.parser(),
+                      com.tcn.cloud.api.api.v0alpha.UserSkill.parser(),
                       extensionRegistry);
               if (skillsBuilder_ == null) {
                 ensureSkillsIsMutable();
@@ -462,22 +462,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<com.tcn.cloud.api.api.v0alpha.OmniSkill> skills_ =
+    private java.util.List<com.tcn.cloud.api.api.v0alpha.UserSkill> skills_ =
       java.util.Collections.emptyList();
     private void ensureSkillsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        skills_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.OmniSkill>(skills_);
+        skills_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.UserSkill>(skills_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.OmniSkill, com.tcn.cloud.api.api.v0alpha.OmniSkill.Builder, com.tcn.cloud.api.api.v0alpha.OmniSkillOrBuilder> skillsBuilder_;
+        com.tcn.cloud.api.api.v0alpha.UserSkill, com.tcn.cloud.api.api.v0alpha.UserSkill.Builder, com.tcn.cloud.api.api.v0alpha.UserSkillOrBuilder> skillsBuilder_;
 
     /**
-     * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+     * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v0alpha.OmniSkill> getSkillsList() {
+    public java.util.List<com.tcn.cloud.api.api.v0alpha.UserSkill> getSkillsList() {
       if (skillsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(skills_);
       } else {
@@ -485,7 +485,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+     * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
      */
     public int getSkillsCount() {
       if (skillsBuilder_ == null) {
@@ -495,9 +495,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+     * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.OmniSkill getSkills(int index) {
+    public com.tcn.cloud.api.api.v0alpha.UserSkill getSkills(int index) {
       if (skillsBuilder_ == null) {
         return skills_.get(index);
       } else {
@@ -505,10 +505,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+     * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
      */
     public Builder setSkills(
-        int index, com.tcn.cloud.api.api.v0alpha.OmniSkill value) {
+        int index, com.tcn.cloud.api.api.v0alpha.UserSkill value) {
       if (skillsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -522,10 +522,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+     * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
      */
     public Builder setSkills(
-        int index, com.tcn.cloud.api.api.v0alpha.OmniSkill.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.v0alpha.UserSkill.Builder builderForValue) {
       if (skillsBuilder_ == null) {
         ensureSkillsIsMutable();
         skills_.set(index, builderForValue.build());
@@ -536,9 +536,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+     * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
      */
-    public Builder addSkills(com.tcn.cloud.api.api.v0alpha.OmniSkill value) {
+    public Builder addSkills(com.tcn.cloud.api.api.v0alpha.UserSkill value) {
       if (skillsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -552,10 +552,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+     * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
      */
     public Builder addSkills(
-        int index, com.tcn.cloud.api.api.v0alpha.OmniSkill value) {
+        int index, com.tcn.cloud.api.api.v0alpha.UserSkill value) {
       if (skillsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -569,10 +569,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+     * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
      */
     public Builder addSkills(
-        com.tcn.cloud.api.api.v0alpha.OmniSkill.Builder builderForValue) {
+        com.tcn.cloud.api.api.v0alpha.UserSkill.Builder builderForValue) {
       if (skillsBuilder_ == null) {
         ensureSkillsIsMutable();
         skills_.add(builderForValue.build());
@@ -583,10 +583,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+     * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
      */
     public Builder addSkills(
-        int index, com.tcn.cloud.api.api.v0alpha.OmniSkill.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.v0alpha.UserSkill.Builder builderForValue) {
       if (skillsBuilder_ == null) {
         ensureSkillsIsMutable();
         skills_.add(index, builderForValue.build());
@@ -597,10 +597,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+     * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
      */
     public Builder addAllSkills(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v0alpha.OmniSkill> values) {
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v0alpha.UserSkill> values) {
       if (skillsBuilder_ == null) {
         ensureSkillsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -612,7 +612,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+     * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
      */
     public Builder clearSkills() {
       if (skillsBuilder_ == null) {
@@ -625,7 +625,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+     * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
      */
     public Builder removeSkills(int index) {
       if (skillsBuilder_ == null) {
@@ -638,16 +638,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+     * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.OmniSkill.Builder getSkillsBuilder(
+    public com.tcn.cloud.api.api.v0alpha.UserSkill.Builder getSkillsBuilder(
         int index) {
       return getSkillsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+     * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.OmniSkillOrBuilder getSkillsOrBuilder(
+    public com.tcn.cloud.api.api.v0alpha.UserSkillOrBuilder getSkillsOrBuilder(
         int index) {
       if (skillsBuilder_ == null) {
         return skills_.get(index);  } else {
@@ -655,9 +655,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+     * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.OmniSkillOrBuilder> 
+    public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.UserSkillOrBuilder> 
          getSkillsOrBuilderList() {
       if (skillsBuilder_ != null) {
         return skillsBuilder_.getMessageOrBuilderList();
@@ -666,33 +666,33 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+     * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.OmniSkill.Builder addSkillsBuilder() {
+    public com.tcn.cloud.api.api.v0alpha.UserSkill.Builder addSkillsBuilder() {
       return getSkillsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.v0alpha.OmniSkill.getDefaultInstance());
+          com.tcn.cloud.api.api.v0alpha.UserSkill.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+     * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.OmniSkill.Builder addSkillsBuilder(
+    public com.tcn.cloud.api.api.v0alpha.UserSkill.Builder addSkillsBuilder(
         int index) {
       return getSkillsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.v0alpha.OmniSkill.getDefaultInstance());
+          index, com.tcn.cloud.api.api.v0alpha.UserSkill.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.v0alpha.OmniSkill skills = 1 [json_name = "skills"];</code>
+     * <code>repeated .api.v0alpha.UserSkill skills = 1 [json_name = "skills"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v0alpha.OmniSkill.Builder> 
+    public java.util.List<com.tcn.cloud.api.api.v0alpha.UserSkill.Builder> 
          getSkillsBuilderList() {
       return getSkillsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.OmniSkill, com.tcn.cloud.api.api.v0alpha.OmniSkill.Builder, com.tcn.cloud.api.api.v0alpha.OmniSkillOrBuilder> 
+        com.tcn.cloud.api.api.v0alpha.UserSkill, com.tcn.cloud.api.api.v0alpha.UserSkill.Builder, com.tcn.cloud.api.api.v0alpha.UserSkillOrBuilder> 
         getSkillsFieldBuilder() {
       if (skillsBuilder_ == null) {
         skillsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.v0alpha.OmniSkill, com.tcn.cloud.api.api.v0alpha.OmniSkill.Builder, com.tcn.cloud.api.api.v0alpha.OmniSkillOrBuilder>(
+            com.tcn.cloud.api.api.v0alpha.UserSkill, com.tcn.cloud.api.api.v0alpha.UserSkill.Builder, com.tcn.cloud.api.api.v0alpha.UserSkillOrBuilder>(
                 skills_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
