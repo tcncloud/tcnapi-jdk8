@@ -2004,6 +2004,37 @@ public final class OmniApiGrpc {
     return getGetCannedMessageGroupByIdMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListUserSkillsReq,
+      com.tcn.cloud.api.api.v0alpha.ListUserSkillsRes> getListUserSkillsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListUserSkills",
+      requestType = com.tcn.cloud.api.api.v0alpha.ListUserSkillsReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ListUserSkillsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListUserSkillsReq,
+      com.tcn.cloud.api.api.v0alpha.ListUserSkillsRes> getListUserSkillsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListUserSkillsReq, com.tcn.cloud.api.api.v0alpha.ListUserSkillsRes> getListUserSkillsMethod;
+    if ((getListUserSkillsMethod = OmniApiGrpc.getListUserSkillsMethod) == null) {
+      synchronized (OmniApiGrpc.class) {
+        if ((getListUserSkillsMethod = OmniApiGrpc.getListUserSkillsMethod) == null) {
+          OmniApiGrpc.getListUserSkillsMethod = getListUserSkillsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListUserSkillsReq, com.tcn.cloud.api.api.v0alpha.ListUserSkillsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListUserSkills"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListUserSkillsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListUserSkillsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListUserSkills"))
+              .build();
+        }
+      }
+    }
+    return getListUserSkillsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -2828,6 +2859,18 @@ public final class OmniApiGrpc {
     default void getCannedMessageGroupById(com.tcn.cloud.api.api.v0alpha.GetCannedMessageGroupByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CannedMessageGroup> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCannedMessageGroupByIdMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns a list of skills filtered by types given on
+     * the request message field type_filter. Leaving the type_filter
+     * field empty will return all types of skills.
+     * </pre>
+     */
+    default void listUserSkills(com.tcn.cloud.api.api.v0alpha.ListUserSkillsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListUserSkillsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUserSkillsMethod(), responseObserver);
     }
   }
 
@@ -3704,6 +3747,19 @@ public final class OmniApiGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetCannedMessageGroupByIdMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Returns a list of skills filtered by types given on
+     * the request message field type_filter. Leaving the type_filter
+     * field empty will return all types of skills.
+     * </pre>
+     */
+    public void listUserSkills(com.tcn.cloud.api.api.v0alpha.ListUserSkillsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListUserSkillsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListUserSkillsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -4500,6 +4556,18 @@ public final class OmniApiGrpc {
     public com.tcn.cloud.api.api.v0alpha.CannedMessageGroup getCannedMessageGroupById(com.tcn.cloud.api.api.v0alpha.GetCannedMessageGroupByIdReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetCannedMessageGroupByIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns a list of skills filtered by types given on
+     * the request message field type_filter. Leaving the type_filter
+     * field empty will return all types of skills.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.ListUserSkillsRes listUserSkills(com.tcn.cloud.api.api.v0alpha.ListUserSkillsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListUserSkillsMethod(), getCallOptions(), request);
     }
   }
 
@@ -5336,6 +5404,19 @@ public final class OmniApiGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetCannedMessageGroupByIdMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Returns a list of skills filtered by types given on
+     * the request message field type_filter. Leaving the type_filter
+     * field empty will return all types of skills.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListUserSkillsRes> listUserSkills(
+        com.tcn.cloud.api.api.v0alpha.ListUserSkillsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListUserSkillsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_ARCHIVE_CAMPAIGN = 0;
@@ -5402,6 +5483,7 @@ public final class OmniApiGrpc {
   private static final int METHODID_DELETE_CANNED_MESSAGE_GROUP = 61;
   private static final int METHODID_LIST_CANNED_MESSAGES_BY_GROUP_ID = 62;
   private static final int METHODID_GET_CANNED_MESSAGE_GROUP_BY_ID = 63;
+  private static final int METHODID_LIST_USER_SKILLS = 64;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -5675,6 +5757,10 @@ public final class OmniApiGrpc {
         case METHODID_GET_CANNED_MESSAGE_GROUP_BY_ID:
           serviceImpl.getCannedMessageGroupById((com.tcn.cloud.api.api.v0alpha.GetCannedMessageGroupByIdReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CannedMessageGroup>) responseObserver);
+          break;
+        case METHODID_LIST_USER_SKILLS:
+          serviceImpl.listUserSkills((com.tcn.cloud.api.api.v0alpha.ListUserSkillsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListUserSkillsRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -6142,6 +6228,13 @@ public final class OmniApiGrpc {
               com.tcn.cloud.api.api.v0alpha.GetCannedMessageGroupByIdReq,
               com.tcn.cloud.api.api.v0alpha.CannedMessageGroup>(
                 service, METHODID_GET_CANNED_MESSAGE_GROUP_BY_ID)))
+        .addMethod(
+          getListUserSkillsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListUserSkillsReq,
+              com.tcn.cloud.api.api.v0alpha.ListUserSkillsRes>(
+                service, METHODID_LIST_USER_SKILLS)))
         .build();
   }
 
@@ -6254,6 +6347,7 @@ public final class OmniApiGrpc {
               .addMethod(getDeleteCannedMessageGroupMethod())
               .addMethod(getListCannedMessagesByGroupIdMethod())
               .addMethod(getGetCannedMessageGroupByIdMethod())
+              .addMethod(getListUserSkillsMethod())
               .build();
         }
       }
