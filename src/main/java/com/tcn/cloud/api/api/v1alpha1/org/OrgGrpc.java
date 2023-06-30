@@ -4637,6 +4637,37 @@ public final class OrgGrpc {
     return getRevokeUsersP3PermissionGroupMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsReq,
+      com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsRes> getListOrgSkillsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListOrgSkills",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsReq,
+      com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsRes> getListOrgSkillsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsReq, com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsRes> getListOrgSkillsMethod;
+    if ((getListOrgSkillsMethod = OrgGrpc.getListOrgSkillsMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getListOrgSkillsMethod = OrgGrpc.getListOrgSkillsMethod) == null) {
+          OrgGrpc.getListOrgSkillsMethod = getListOrgSkillsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsReq, com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOrgSkills"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListOrgSkills"))
+              .build();
+        }
+      }
+    }
+    return getListOrgSkillsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -6222,6 +6253,18 @@ public final class OrgGrpc {
     default void revokeUsersP3PermissionGroup(com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRevokeUsersP3PermissionGroupMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns a list of skills filtered by types given on
+     * the request message field type_filter. Leaving the type_filter
+     * field empty will return all types of skills.
+     * </pre>
+     */
+    default void listOrgSkills(com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOrgSkillsMethod(), responseObserver);
     }
   }
 
@@ -7942,6 +7985,19 @@ public final class OrgGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRevokeUsersP3PermissionGroupMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Returns a list of skills filtered by types given on
+     * the request message field type_filter. Leaving the type_filter
+     * field empty will return all types of skills.
+     * </pre>
+     */
+    public void listOrgSkills(com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListOrgSkillsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -9505,6 +9561,18 @@ public final class OrgGrpc {
     public com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupResponse revokeUsersP3PermissionGroup(com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRevokeUsersP3PermissionGroupMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns a list of skills filtered by types given on
+     * the request message field type_filter. Leaving the type_filter
+     * field empty will return all types of skills.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsRes listOrgSkills(com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListOrgSkillsMethod(), getCallOptions(), request);
     }
   }
 
@@ -11123,6 +11191,19 @@ public final class OrgGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRevokeUsersP3PermissionGroupMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Returns a list of skills filtered by types given on
+     * the request message field type_filter. Leaving the type_filter
+     * field empty will return all types of skills.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsRes> listOrgSkills(
+        com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListOrgSkillsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_ORGANIZATION = 0;
@@ -11274,6 +11355,7 @@ public final class OrgGrpc {
   private static final int METHODID_DELETE_P3PERMISSION_GROUP = 146;
   private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 147;
   private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 148;
+  private static final int METHODID_LIST_ORG_SKILLS = 149;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -11887,6 +11969,10 @@ public final class OrgGrpc {
         case METHODID_REVOKE_USERS_P3PERMISSION_GROUP:
           serviceImpl.revokeUsersP3PermissionGroup((com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupResponse>) responseObserver);
+          break;
+        case METHODID_LIST_ORG_SKILLS:
+          serviceImpl.listOrgSkills((com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -12949,6 +13035,13 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupRequest,
               com.tcn.cloud.api.api.v1alpha1.org.RevokeUsersP3PermissionGroupResponse>(
                 service, METHODID_REVOKE_USERS_P3PERMISSION_GROUP)))
+        .addMethod(
+          getListOrgSkillsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsReq,
+              com.tcn.cloud.api.api.v1alpha1.org.ListOrgSkillsRes>(
+                service, METHODID_LIST_ORG_SKILLS)))
         .build();
   }
 
@@ -13146,6 +13239,7 @@ public final class OrgGrpc {
               .addMethod(getDeleteP3PermissionGroupMethod())
               .addMethod(getAssignUsersP3PermissionGroupMethod())
               .addMethod(getRevokeUsersP3PermissionGroupMethod())
+              .addMethod(getListOrgSkillsMethod())
               .build();
         }
       }

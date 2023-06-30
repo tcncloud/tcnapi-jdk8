@@ -34,7 +34,7 @@ public final class ServiceProto {
       "missions.proto\032\"api/v1alpha1/org/prefere" +
       "nces.proto\032\035api/v1alpha1/org/trusts.prot" +
       "o\032\033api/v1alpha1/org/user.proto\032\034google/a" +
-      "pi/annotations.proto2\204\332\001\n\003Org\022\236\001\n\022Create" +
+      "pi/annotations.proto2\223\333\001\n\003Org\022\236\001\n\022Create" +
       "Organization\022+.api.v1alpha1.org.CreateOr" +
       "ganizationRequest\032,.api.v1alpha1.org.Cre" +
       "ateOrganizationResponse\"-\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002" +
@@ -732,11 +732,14 @@ public final class ServiceProto {
       "ionGroupRequest\0326.api.v1alpha1.org.Revok" +
       "eUsersP3PermissionGroupResponse\";\272\270\221\002\004\n\002" +
       "\010o\202\323\344\223\002,\"\'/api/v1alpha1/org/permissions/" +
-      "p3/revoke:\001*B\224\001\n\"com.tcn.cloud.api.api.v" +
-      "1alpha1.orgB\014ServiceProtoP\001\242\002\003AVO\252\002\020Api." +
-      "V1alpha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034Api\\V1" +
-      "alpha1\\Org\\GPBMetadata\352\002\022Api::V1alpha1::" +
-      "Orgb\006proto3"
+      "p3/revoke:\001*\022\214\001\n\rListOrgSkills\022\".api.v1a" +
+      "lpha1.org.ListOrgSkillsReq\032\".api.v1alpha" +
+      "1.org.ListOrgSkillsRes\"3\272\270\221\002\004\n\002\010e\202\323\344\223\002$\"" +
+      "\037/api/v1alpha1/org/listorgskills:\001*B\224\001\n\"" +
+      "com.tcn.cloud.api.api.v1alpha1.orgB\014Serv" +
+      "iceProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Ap" +
+      "i\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMet" +
+      "adata\352\002\022Api::V1alpha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

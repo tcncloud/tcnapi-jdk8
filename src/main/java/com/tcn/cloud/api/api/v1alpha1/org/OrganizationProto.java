@@ -154,6 +154,21 @@ public final class OrganizationProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_ListArchivedOrganizationsResponse_OrganizationDetails_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_ListOrgSkillsReq_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_ListOrgSkillsReq_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_ListOrgSkillsRes_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_ListOrgSkillsRes_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_OrgSkill_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_OrgSkill_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -166,94 +181,103 @@ public final class OrganizationProto {
       "\n#api/v1alpha1/org/organization.proto\022\020a" +
       "pi.v1alpha1.org\032\031api/commons/country.pro" +
       "to\032\025api/commons/org.proto\032\"api/commons/o" +
-      "rg/organization.proto\032\037google/protobuf/t" +
-      "imestamp.proto\"\342\002\n\031CreateOrganizationReq" +
-      "uest\022\022\n\004name\030\001 \001(\tR\004name\022\025\n\006crm_id\030\002 \001(\t" +
-      "R\005crmId\0222\n\ttime_zone\030\003 \001(\0162\025.api.commons" +
-      ".TimeZoneR\010timeZone\0223\n\026is_manual_only_ac" +
-      "count\030\004 \001(\010R\023isManualOnlyAccount\022B\n\020back" +
-      "office_theme\030\005 \001(\0162\027.api.commons.ClientS" +
-      "kinR\017backofficeTheme\022A\n\021allowed_countrie" +
-      "s\030\006 \003(\0162\024.api.commons.CountryR\020allowedCo" +
-      "untries\022*\n\021p3_parent_account\030\007 \001(\tR\017p3Pa" +
-      "rentAccount\"3\n\032CreateOrganizationRespons" +
-      "e\022\025\n\006org_id\030\001 \001(\tR\005orgId\"\030\n\026GetOrganizat" +
-      "ionRequest\"\\\n\027GetOrganizationResponse\022A\n" +
-      "\014organization\030\001 \001(\0132\035.api.commons.org.Or" +
-      "ganizationR\014organization\"3\n\032GetOrganizat" +
-      "ionByIdRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\"`\n" +
-      "\033GetOrganizationByIdResponse\022A\n\014organiza" +
+      "rg/organization.proto\032\025api/commons/wfm.p" +
+      "roto\032\037google/protobuf/timestamp.proto\"\342\002" +
+      "\n\031CreateOrganizationRequest\022\022\n\004name\030\001 \001(" +
+      "\tR\004name\022\025\n\006crm_id\030\002 \001(\tR\005crmId\0222\n\ttime_z" +
+      "one\030\003 \001(\0162\025.api.commons.TimeZoneR\010timeZo" +
+      "ne\0223\n\026is_manual_only_account\030\004 \001(\010R\023isMa" +
+      "nualOnlyAccount\022B\n\020backoffice_theme\030\005 \001(" +
+      "\0162\027.api.commons.ClientSkinR\017backofficeTh" +
+      "eme\022A\n\021allowed_countries\030\006 \003(\0162\024.api.com" +
+      "mons.CountryR\020allowedCountries\022*\n\021p3_par" +
+      "ent_account\030\007 \001(\tR\017p3ParentAccount\"3\n\032Cr" +
+      "eateOrganizationResponse\022\025\n\006org_id\030\001 \001(\t" +
+      "R\005orgId\"\030\n\026GetOrganizationRequest\"\\\n\027Get" +
+      "OrganizationResponse\022A\n\014organization\030\001 \001" +
+      "(\0132\035.api.commons.org.OrganizationR\014organ" +
+      "ization\"3\n\032GetOrganizationByIdRequest\022\025\n" +
+      "\006org_id\030\001 \001(\tR\005orgId\"`\n\033GetOrganizationB" +
+      "yIdResponse\022A\n\014organization\030\001 \001(\0132\035.api." +
+      "commons.org.OrganizationR\014organization\"}" +
+      "\n\030ListOrganizationsRequest\022\030\n\006global\030\001 \001" +
+      "(\010H\000R\006global\022\035\n\tregion_id\030\002 \001(\tH\000R\010regio" +
+      "nId\022\032\n\010archived\030\003 \001(\010R\010archivedB\014\n\nident" +
+      "ifier\"u\n\031ListOrganizationsResponse\022X\n\024or" +
+      "ganization_details\030\001 \003(\0132%.api.v1alpha1." +
+      "org.OrganizationDetailsR\023organizationDet" +
+      "ails\"\244\001\n\023OrganizationDetails\022A\n\014organiza" +
       "tion\030\001 \001(\0132\035.api.commons.org.Organizatio" +
-      "nR\014organization\"}\n\030ListOrganizationsRequ" +
-      "est\022\030\n\006global\030\001 \001(\010H\000R\006global\022\035\n\tregion_" +
-      "id\030\002 \001(\tH\000R\010regionId\022\032\n\010archived\030\003 \001(\010R\010" +
-      "archivedB\014\n\nidentifier\"u\n\031ListOrganizati" +
-      "onsResponse\022X\n\024organization_details\030\001 \003(" +
-      "\0132%.api.v1alpha1.org.OrganizationDetails" +
-      "R\023organizationDetails\"\244\001\n\023OrganizationDe" +
-      "tails\022A\n\014organization\030\001 \001(\0132\035.api.common" +
-      "s.org.OrganizationR\014organization\022J\n\023last" +
-      "_scheduled_date\030\002 \001(\0132\032.google.protobuf." +
-      "TimestampR\021lastScheduledDate\"2\n\031ConvertO" +
-      "rgToManualRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId" +
-      "\"\034\n\032ConvertOrgToManualResponse\"\026\n\024ListOw" +
-      "nedOrgsRequest\"q\n\025ListOwnedOrgsResponse\022" +
-      "X\n\024organization_details\030\001 \003(\0132%.api.v1al" +
-      "pha1.org.OrganizationDetailsR\023organizati" +
-      "onDetails\"\364\001\n\031UpdateOrganizationRequest\022" +
-      "\025\n\006org_id\030\001 \001(\tR\005orgId\0222\n\ttime_zone\030\002 \001(" +
-      "\0162\025.api.commons.TimeZoneR\010timeZone\022\035\n\nbi" +
-      "lling_id\030\003 \001(\tR\tbillingId\022\022\n\004name\030\004 \001(\tR" +
-      "\004name\022\036\n\013p3_owner_id\030\005 \001(\tR\tp3OwnerId\022\032\n" +
-      "\010archived\030\006 \001(\010R\010archived\022\035\n\nfield_mask\030" +
-      "\n \003(\tR\tfieldMask\"_\n\032UpdateOrganizationRe" +
-      "sponse\022A\n\014organization\030\001 \001(\0132\035.api.commo" +
-      "ns.org.OrganizationR\014organization\"3\n\032Arc" +
-      "hiveOrganizationRequest\022\025\n\006org_id\030\001 \001(\tR" +
-      "\005orgId\"\035\n\033ArchiveOrganizationResponse\"5\n" +
-      "\034UnArchiveOrganizationRequest\022\025\n\006org_id\030" +
-      "\001 \001(\tR\005orgId\"\037\n\035UnArchiveOrganizationRes" +
-      "ponse\"%\n#ListAllOrganizationsGloballyReq" +
-      "uest\"\342\003\n$ListAllOrganizationsGloballyRes" +
-      "ponse\022}\n\024organization_details\030\001 \003(\0132J.ap" +
-      "i.v1alpha1.org.ListAllOrganizationsGloba" +
-      "llyResponse.OrganizationDetailsR\023organiz" +
-      "ationDetails\032\272\002\n\023OrganizationDetails\022\025\n\006" +
-      "org_id\030\001 \001(\tR\005orgId\022\022\n\004name\030\002 \001(\tR\004name\022" +
-      "\035\n\nclient_sid\030\003 \001(\003R\tclientSid\022\035\n\nbillin" +
-      "g_id\030\004 \001(\tR\tbillingId\022\033\n\tregion_id\030\005 \001(\t" +
-      "R\010regionId\0225\n\010add_date\030\006 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\007addDate\022J\n\023last_schedu" +
-      "led_date\030\007 \001(\0132\032.google.protobuf.Timesta" +
-      "mpR\021lastScheduledDate\022\032\n\010archived\030\010 \001(\010R" +
-      "\010archived\"?\n ListOrganizationsByRegionRe" +
-      "quest\022\033\n\tregion_id\030\001 \001(\tR\010regionId\"\300\003\n!L" +
-      "istOrganizationsByRegionResponse\022z\n\024orga" +
-      "nization_details\030\001 \003(\0132G.api.v1alpha1.or" +
-      "g.ListOrganizationsByRegionResponse.Orga" +
-      "nizationDetailsR\023organizationDetails\032\236\002\n" +
-      "\023OrganizationDetails\022\025\n\006org_id\030\001 \001(\tR\005or" +
-      "gId\022\022\n\004name\030\002 \001(\tR\004name\022\035\n\nclient_sid\030\003 " +
-      "\001(\003R\tclientSid\022\035\n\nbilling_id\030\004 \001(\tR\tbill" +
-      "ingId\022\033\n\tregion_id\030\005 \001(\tR\010regionId\0225\n\010ad" +
-      "d_date\030\006 \001(\0132\032.google.protobuf.Timestamp" +
-      "R\007addDate\022J\n\023last_scheduled_date\030\007 \001(\0132\032" +
-      ".google.protobuf.TimestampR\021lastSchedule" +
-      "dDate\"\"\n ListArchivedOrganizationsReques" +
-      "t\"\204\003\n!ListArchivedOrganizationsResponse\022" +
-      "z\n\024organization_details\030\001 \003(\0132G.api.v1al" +
-      "pha1.org.ListArchivedOrganizationsRespon" +
-      "se.OrganizationDetailsR\023organizationDeta" +
-      "ils\032\342\001\n\023OrganizationDetails\022\025\n\006org_id\030\001 " +
-      "\001(\tR\005orgId\022\022\n\004name\030\002 \001(\tR\004name\022\035\n\nbillin" +
-      "g_id\030\003 \001(\tR\tbillingId\0225\n\010add_date\030\004 \001(\0132" +
-      "\032.google.protobuf.TimestampR\007addDate\022J\n\023" +
-      "last_scheduled_date\030\005 \001(\0132\032.google.proto" +
-      "buf.TimestampR\021lastScheduledDateB\231\001\n\"com" +
-      ".tcn.cloud.api.api.v1alpha1.orgB\021Organiz" +
-      "ationProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020" +
-      "Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBM" +
-      "etadata\352\002\022Api::V1alpha1::Orgb\006proto3"
+      "nR\014organization\022J\n\023last_scheduled_date\030\002" +
+      " \001(\0132\032.google.protobuf.TimestampR\021lastSc" +
+      "heduledDate\"2\n\031ConvertOrgToManualRequest" +
+      "\022\025\n\006org_id\030\001 \001(\tR\005orgId\"\034\n\032ConvertOrgToM" +
+      "anualResponse\"\026\n\024ListOwnedOrgsRequest\"q\n" +
+      "\025ListOwnedOrgsResponse\022X\n\024organization_d" +
+      "etails\030\001 \003(\0132%.api.v1alpha1.org.Organiza" +
+      "tionDetailsR\023organizationDetails\"\364\001\n\031Upd" +
+      "ateOrganizationRequest\022\025\n\006org_id\030\001 \001(\tR\005" +
+      "orgId\0222\n\ttime_zone\030\002 \001(\0162\025.api.commons.T" +
+      "imeZoneR\010timeZone\022\035\n\nbilling_id\030\003 \001(\tR\tb" +
+      "illingId\022\022\n\004name\030\004 \001(\tR\004name\022\036\n\013p3_owner" +
+      "_id\030\005 \001(\tR\tp3OwnerId\022\032\n\010archived\030\006 \001(\010R\010" +
+      "archived\022\035\n\nfield_mask\030\n \003(\tR\tfieldMask\"" +
+      "_\n\032UpdateOrganizationResponse\022A\n\014organiz" +
+      "ation\030\001 \001(\0132\035.api.commons.org.Organizati" +
+      "onR\014organization\"3\n\032ArchiveOrganizationR" +
+      "equest\022\025\n\006org_id\030\001 \001(\tR\005orgId\"\035\n\033Archive" +
+      "OrganizationResponse\"5\n\034UnArchiveOrganiz" +
+      "ationRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\"\037\n\035U" +
+      "nArchiveOrganizationResponse\"%\n#ListAllO" +
+      "rganizationsGloballyRequest\"\342\003\n$ListAllO" +
+      "rganizationsGloballyResponse\022}\n\024organiza" +
+      "tion_details\030\001 \003(\0132J.api.v1alpha1.org.Li" +
+      "stAllOrganizationsGloballyResponse.Organ" +
+      "izationDetailsR\023organizationDetails\032\272\002\n\023" +
+      "OrganizationDetails\022\025\n\006org_id\030\001 \001(\tR\005org" +
+      "Id\022\022\n\004name\030\002 \001(\tR\004name\022\035\n\nclient_sid\030\003 \001" +
+      "(\003R\tclientSid\022\035\n\nbilling_id\030\004 \001(\tR\tbilli" +
+      "ngId\022\033\n\tregion_id\030\005 \001(\tR\010regionId\0225\n\010add" +
+      "_date\030\006 \001(\0132\032.google.protobuf.TimestampR" +
+      "\007addDate\022J\n\023last_scheduled_date\030\007 \001(\0132\032." +
+      "google.protobuf.TimestampR\021lastScheduled" +
+      "Date\022\032\n\010archived\030\010 \001(\010R\010archived\"?\n List" +
+      "OrganizationsByRegionRequest\022\033\n\tregion_i" +
+      "d\030\001 \001(\tR\010regionId\"\300\003\n!ListOrganizationsB" +
+      "yRegionResponse\022z\n\024organization_details\030" +
+      "\001 \003(\0132G.api.v1alpha1.org.ListOrganizatio" +
+      "nsByRegionResponse.OrganizationDetailsR\023" +
+      "organizationDetails\032\236\002\n\023OrganizationDeta" +
+      "ils\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\022\n\004name\030\002 \001(\t" +
+      "R\004name\022\035\n\nclient_sid\030\003 \001(\003R\tclientSid\022\035\n" +
+      "\nbilling_id\030\004 \001(\tR\tbillingId\022\033\n\tregion_i" +
+      "d\030\005 \001(\tR\010regionId\0225\n\010add_date\030\006 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampR\007addDate\022J\n\023last" +
+      "_scheduled_date\030\007 \001(\0132\032.google.protobuf." +
+      "TimestampR\021lastScheduledDate\"\"\n ListArch" +
+      "ivedOrganizationsRequest\"\204\003\n!ListArchive" +
+      "dOrganizationsResponse\022z\n\024organization_d" +
+      "etails\030\001 \003(\0132G.api.v1alpha1.org.ListArch" +
+      "ivedOrganizationsResponse.OrganizationDe" +
+      "tailsR\023organizationDetails\032\342\001\n\023Organizat" +
+      "ionDetails\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\022\n\004nam" +
+      "e\030\002 \001(\tR\004name\022\035\n\nbilling_id\030\003 \001(\tR\tbilli" +
+      "ngId\0225\n\010add_date\030\004 \001(\0132\032.google.protobuf" +
+      ".TimestampR\007addDate\022J\n\023last_scheduled_da" +
+      "te\030\005 \001(\0132\032.google.protobuf.TimestampR\021la" +
+      "stScheduledDate\"R\n\020ListOrgSkillsReq\022>\n\014t" +
+      "ype_filters\030\001 \003(\0162\033.api.commons.SkillTyp" +
+      "e.EnumR\013typeFilters\"F\n\020ListOrgSkillsRes\022" +
+      "2\n\006skills\030\001 \003(\0132\032.api.v1alpha1.org.OrgSk" +
+      "illR\006skills\"\236\001\n\010OrgSkill\022\026\n\006region\030\001 \001(\t" +
+      "R\006region\022\023\n\005p3_id\030\002 \001(\tR\004p3Id\022\022\n\004name\030\003 " +
+      "\001(\tR\004name\022 \n\013description\030\004 \001(\tR\013descript" +
+      "ion\022/\n\004type\030\005 \001(\0162\033.api.commons.SkillTyp" +
+      "e.EnumR\004typeB\231\001\n\"com.tcn.cloud.api.api.v" +
+      "1alpha1.orgB\021OrganizationProtoP\001\242\002\003AVO\252\002" +
+      "\020Api.V1alpha1.Org\312\002\020Api\\V1alpha1\\Org\342\002\034A" +
+      "pi\\V1alpha1\\Org\\GPBMetadata\352\002\022Api::V1alp" +
+      "ha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -261,6 +285,7 @@ public final class OrganizationProto {
           com.tcn.cloud.api.api.commons.CountryProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.OrgProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.org.OrganizationProto.getDescriptor(),
+          com.tcn.cloud.api.api.commons.WfmProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_api_v1alpha1_org_CreateOrganizationRequest_descriptor =
@@ -431,9 +456,28 @@ public final class OrganizationProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListArchivedOrganizationsResponse_OrganizationDetails_descriptor,
         new java.lang.String[] { "OrgId", "Name", "BillingId", "AddDate", "LastScheduledDate", });
+    internal_static_api_v1alpha1_org_ListOrgSkillsReq_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_api_v1alpha1_org_ListOrgSkillsReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_ListOrgSkillsReq_descriptor,
+        new java.lang.String[] { "TypeFilters", });
+    internal_static_api_v1alpha1_org_ListOrgSkillsRes_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_api_v1alpha1_org_ListOrgSkillsRes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_ListOrgSkillsRes_descriptor,
+        new java.lang.String[] { "Skills", });
+    internal_static_api_v1alpha1_org_OrgSkill_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_api_v1alpha1_org_OrgSkill_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_OrgSkill_descriptor,
+        new java.lang.String[] { "Region", "P3Id", "Name", "Description", "Type", });
     com.tcn.cloud.api.api.commons.CountryProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OrgProto.getDescriptor();
     com.tcn.cloud.api.api.commons.org.OrganizationProto.getDescriptor();
+    com.tcn.cloud.api.api.commons.WfmProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
