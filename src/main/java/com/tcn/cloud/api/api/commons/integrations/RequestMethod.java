@@ -693,6 +693,14 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_POSCORP_UPDATE_PAYMENT_STATUS = 3503;</code>
    */
   REQUEST_METHOD_POSCORP_UPDATE_PAYMENT_STATUS(3503),
+  /**
+   * <code>REQUEST_METHOD_PIANO_GET_USER = 3601;</code>
+   */
+  REQUEST_METHOD_PIANO_GET_USER(3601),
+  /**
+   * <code>REQUEST_METHOD_PIANO_UPDATE_USER = 3602;</code>
+   */
+  REQUEST_METHOD_PIANO_UPDATE_USER(3602),
   UNRECOGNIZED(-1),
   ;
 
@@ -1376,6 +1384,14 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_POSCORP_UPDATE_PAYMENT_STATUS = 3503;</code>
    */
   public static final int REQUEST_METHOD_POSCORP_UPDATE_PAYMENT_STATUS_VALUE = 3503;
+  /**
+   * <code>REQUEST_METHOD_PIANO_GET_USER = 3601;</code>
+   */
+  public static final int REQUEST_METHOD_PIANO_GET_USER_VALUE = 3601;
+  /**
+   * <code>REQUEST_METHOD_PIANO_UPDATE_USER = 3602;</code>
+   */
+  public static final int REQUEST_METHOD_PIANO_UPDATE_USER_VALUE = 3602;
 
 
   public final int getNumber() {
@@ -1572,6 +1588,8 @@ public enum RequestMethod
       case 3501: return REQUEST_METHOD_POSCORP_ACCESSTOKEN;
       case 3502: return REQUEST_METHOD_POSCORP_LOOKUP_GUARANTOR;
       case 3503: return REQUEST_METHOD_POSCORP_UPDATE_PAYMENT_STATUS;
+      case 3601: return REQUEST_METHOD_PIANO_GET_USER;
+      case 3602: return REQUEST_METHOD_PIANO_UPDATE_USER;
       default: return null;
     }
   }

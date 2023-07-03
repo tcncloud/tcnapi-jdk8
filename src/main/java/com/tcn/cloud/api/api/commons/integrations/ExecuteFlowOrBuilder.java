@@ -2554,5 +2554,35 @@ public interface ExecuteFlowOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatusOrBuilder getPoscorpUpdatePaymentStatusOrBuilder();
 
+  /**
+   * <code>.api.commons.integrations.ExecutePianoGetUser PIANO_GET_USER = 3601 [json_name = "PIANOGETUSER"];</code>
+   * @return Whether the pIANOGETUSER field is set.
+   */
+  boolean hasPIANOGETUSER();
+  /**
+   * <code>.api.commons.integrations.ExecutePianoGetUser PIANO_GET_USER = 3601 [json_name = "PIANOGETUSER"];</code>
+   * @return The pIANOGETUSER.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser getPIANOGETUSER();
+  /**
+   * <code>.api.commons.integrations.ExecutePianoGetUser PIANO_GET_USER = 3601 [json_name = "PIANOGETUSER"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUserOrBuilder getPIANOGETUSEROrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecutePianoUpdateUser PIANO_UPDATE_USER = 3602 [json_name = "PIANOUPDATEUSER"];</code>
+   * @return Whether the pIANOUPDATEUSER field is set.
+   */
+  boolean hasPIANOUPDATEUSER();
+  /**
+   * <code>.api.commons.integrations.ExecutePianoUpdateUser PIANO_UPDATE_USER = 3602 [json_name = "PIANOUPDATEUSER"];</code>
+   * @return The pIANOUPDATEUSER.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser getPIANOUPDATEUSER();
+  /**
+   * <code>.api.commons.integrations.ExecutePianoUpdateUser PIANO_UPDATE_USER = 3602 [json_name = "PIANOUPDATEUSER"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUserOrBuilder getPIANOUPDATEUSEROrBuilder();
+
   com.tcn.cloud.api.api.commons.integrations.ExecuteFlow.ValueCase getValueCase();
 }

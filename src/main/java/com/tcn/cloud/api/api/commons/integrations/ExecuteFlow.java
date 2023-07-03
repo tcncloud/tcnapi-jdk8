@@ -221,6 +221,8 @@ private static final long serialVersionUID = 0L;
     POSCORP_ACCESSTOKEN(3501),
     POSCORP_LOOKUP_GUARANTOR(3502),
     POSCORP_UPDATE_PAYMENT_STATUS(3503),
+    PIANO_GET_USER(3601),
+    PIANO_UPDATE_USER(3602),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -407,6 +409,8 @@ private static final long serialVersionUID = 0L;
         case 3501: return POSCORP_ACCESSTOKEN;
         case 3502: return POSCORP_LOOKUP_GUARANTOR;
         case 3503: return POSCORP_UPDATE_PAYMENT_STATUS;
+        case 3601: return PIANO_GET_USER;
+        case 3602: return PIANO_UPDATE_USER;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -5700,6 +5704,68 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus.getDefaultInstance();
   }
 
+  public static final int PIANO_GET_USER_FIELD_NUMBER = 3601;
+  /**
+   * <code>.api.commons.integrations.ExecutePianoGetUser PIANO_GET_USER = 3601 [json_name = "PIANOGETUSER"];</code>
+   * @return Whether the pIANOGETUSER field is set.
+   */
+  @java.lang.Override
+  public boolean hasPIANOGETUSER() {
+    return valueCase_ == 3601;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePianoGetUser PIANO_GET_USER = 3601 [json_name = "PIANOGETUSER"];</code>
+   * @return The pIANOGETUSER.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser getPIANOGETUSER() {
+    if (valueCase_ == 3601) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePianoGetUser PIANO_GET_USER = 3601 [json_name = "PIANOGETUSER"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUserOrBuilder getPIANOGETUSEROrBuilder() {
+    if (valueCase_ == 3601) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser.getDefaultInstance();
+  }
+
+  public static final int PIANO_UPDATE_USER_FIELD_NUMBER = 3602;
+  /**
+   * <code>.api.commons.integrations.ExecutePianoUpdateUser PIANO_UPDATE_USER = 3602 [json_name = "PIANOUPDATEUSER"];</code>
+   * @return Whether the pIANOUPDATEUSER field is set.
+   */
+  @java.lang.Override
+  public boolean hasPIANOUPDATEUSER() {
+    return valueCase_ == 3602;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePianoUpdateUser PIANO_UPDATE_USER = 3602 [json_name = "PIANOUPDATEUSER"];</code>
+   * @return The pIANOUPDATEUSER.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser getPIANOUPDATEUSER() {
+    if (valueCase_ == 3602) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecutePianoUpdateUser PIANO_UPDATE_USER = 3602 [json_name = "PIANOUPDATEUSER"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUserOrBuilder getPIANOUPDATEUSEROrBuilder() {
+    if (valueCase_ == 3602) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -6223,6 +6289,12 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 3503) {
       output.writeMessage(3503, (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus) value_);
+    }
+    if (valueCase_ == 3601) {
+      output.writeMessage(3601, (com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser) value_);
+    }
+    if (valueCase_ == 3602) {
+      output.writeMessage(3602, (com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser) value_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -6911,6 +6983,14 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3503) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3503, (com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus) value_);
+    }
+    if (valueCase_ == 3601) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3601, (com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser) value_);
+    }
+    if (valueCase_ == 3602) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3602, (com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser) value_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -7607,6 +7687,14 @@ private static final long serialVersionUID = 0L;
         if (!getPoscorpUpdatePaymentStatus()
             .equals(other.getPoscorpUpdatePaymentStatus())) return false;
         break;
+      case 3601:
+        if (!getPIANOGETUSER()
+            .equals(other.getPIANOGETUSER())) return false;
+        break;
+      case 3602:
+        if (!getPIANOUPDATEUSER()
+            .equals(other.getPIANOUPDATEUSER())) return false;
+        break;
       case 0:
       default:
     }
@@ -8300,6 +8388,14 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + POSCORP_UPDATE_PAYMENT_STATUS_FIELD_NUMBER;
         hash = (53 * hash) + getPoscorpUpdatePaymentStatus().hashCode();
         break;
+      case 3601:
+        hash = (37 * hash) + PIANO_GET_USER_FIELD_NUMBER;
+        hash = (53 * hash) + getPIANOGETUSER().hashCode();
+        break;
+      case 3602:
+        hash = (37 * hash) + PIANO_UPDATE_USER_FIELD_NUMBER;
+        hash = (53 * hash) + getPIANOUPDATEUSER().hashCode();
+        break;
       case 0:
       default:
     }
@@ -8953,6 +9049,12 @@ private static final long serialVersionUID = 0L;
       }
       if (poscorpUpdatePaymentStatusBuilder_ != null) {
         poscorpUpdatePaymentStatusBuilder_.clear();
+      }
+      if (pIANOGETUSERBuilder_ != null) {
+        pIANOGETUSERBuilder_.clear();
+      }
+      if (pIANOUPDATEUSERBuilder_ != null) {
+        pIANOUPDATEUSERBuilder_.clear();
       }
       valueCase_ = 0;
       value_ = null;
@@ -9699,6 +9801,14 @@ private static final long serialVersionUID = 0L;
           poscorpUpdatePaymentStatusBuilder_ != null) {
         result.value_ = poscorpUpdatePaymentStatusBuilder_.build();
       }
+      if (valueCase_ == 3601 &&
+          pIANOGETUSERBuilder_ != null) {
+        result.value_ = pIANOGETUSERBuilder_.build();
+      }
+      if (valueCase_ == 3602 &&
+          pIANOUPDATEUSERBuilder_ != null) {
+        result.value_ = pIANOUPDATEUSERBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -10425,6 +10535,14 @@ private static final long serialVersionUID = 0L;
         }
         case POSCORP_UPDATE_PAYMENT_STATUS: {
           mergePoscorpUpdatePaymentStatus(other.getPoscorpUpdatePaymentStatus());
+          break;
+        }
+        case PIANO_GET_USER: {
+          mergePIANOGETUSER(other.getPIANOGETUSER());
+          break;
+        }
+        case PIANO_UPDATE_USER: {
+          mergePIANOUPDATEUSER(other.getPIANOUPDATEUSER());
           break;
         }
         case VALUE_NOT_SET: {
@@ -11645,6 +11763,20 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 3503;
               break;
             } // case 28026
+            case 28810: {
+              input.readMessage(
+                  getPIANOGETUSERFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3601;
+              break;
+            } // case 28810
+            case 28818: {
+              input.readMessage(
+                  getPIANOUPDATEUSERFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3602;
+              break;
+            } // case 28818
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -35750,6 +35882,290 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 3503;
       onChanged();
       return poscorpUpdatePaymentStatusBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser, com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUserOrBuilder> pIANOGETUSERBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecutePianoGetUser PIANO_GET_USER = 3601 [json_name = "PIANOGETUSER"];</code>
+     * @return Whether the pIANOGETUSER field is set.
+     */
+    @java.lang.Override
+    public boolean hasPIANOGETUSER() {
+      return valueCase_ == 3601;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoGetUser PIANO_GET_USER = 3601 [json_name = "PIANOGETUSER"];</code>
+     * @return The pIANOGETUSER.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser getPIANOGETUSER() {
+      if (pIANOGETUSERBuilder_ == null) {
+        if (valueCase_ == 3601) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3601) {
+          return pIANOGETUSERBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoGetUser PIANO_GET_USER = 3601 [json_name = "PIANOGETUSER"];</code>
+     */
+    public Builder setPIANOGETUSER(com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser value) {
+      if (pIANOGETUSERBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        pIANOGETUSERBuilder_.setMessage(value);
+      }
+      valueCase_ = 3601;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoGetUser PIANO_GET_USER = 3601 [json_name = "PIANOGETUSER"];</code>
+     */
+    public Builder setPIANOGETUSER(
+        com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser.Builder builderForValue) {
+      if (pIANOGETUSERBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        pIANOGETUSERBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3601;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoGetUser PIANO_GET_USER = 3601 [json_name = "PIANOGETUSER"];</code>
+     */
+    public Builder mergePIANOGETUSER(com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser value) {
+      if (pIANOGETUSERBuilder_ == null) {
+        if (valueCase_ == 3601 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3601) {
+          pIANOGETUSERBuilder_.mergeFrom(value);
+        } else {
+          pIANOGETUSERBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3601;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoGetUser PIANO_GET_USER = 3601 [json_name = "PIANOGETUSER"];</code>
+     */
+    public Builder clearPIANOGETUSER() {
+      if (pIANOGETUSERBuilder_ == null) {
+        if (valueCase_ == 3601) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3601) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        pIANOGETUSERBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoGetUser PIANO_GET_USER = 3601 [json_name = "PIANOGETUSER"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser.Builder getPIANOGETUSERBuilder() {
+      return getPIANOGETUSERFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoGetUser PIANO_GET_USER = 3601 [json_name = "PIANOGETUSER"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUserOrBuilder getPIANOGETUSEROrBuilder() {
+      if ((valueCase_ == 3601) && (pIANOGETUSERBuilder_ != null)) {
+        return pIANOGETUSERBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3601) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoGetUser PIANO_GET_USER = 3601 [json_name = "PIANOGETUSER"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser, com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUserOrBuilder> 
+        getPIANOGETUSERFieldBuilder() {
+      if (pIANOGETUSERBuilder_ == null) {
+        if (!(valueCase_ == 3601)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser.getDefaultInstance();
+        }
+        pIANOGETUSERBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser, com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUserOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3601;
+      onChanged();
+      return pIANOGETUSERBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser, com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUserOrBuilder> pIANOUPDATEUSERBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecutePianoUpdateUser PIANO_UPDATE_USER = 3602 [json_name = "PIANOUPDATEUSER"];</code>
+     * @return Whether the pIANOUPDATEUSER field is set.
+     */
+    @java.lang.Override
+    public boolean hasPIANOUPDATEUSER() {
+      return valueCase_ == 3602;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoUpdateUser PIANO_UPDATE_USER = 3602 [json_name = "PIANOUPDATEUSER"];</code>
+     * @return The pIANOUPDATEUSER.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser getPIANOUPDATEUSER() {
+      if (pIANOUPDATEUSERBuilder_ == null) {
+        if (valueCase_ == 3602) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3602) {
+          return pIANOUPDATEUSERBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoUpdateUser PIANO_UPDATE_USER = 3602 [json_name = "PIANOUPDATEUSER"];</code>
+     */
+    public Builder setPIANOUPDATEUSER(com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser value) {
+      if (pIANOUPDATEUSERBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        pIANOUPDATEUSERBuilder_.setMessage(value);
+      }
+      valueCase_ = 3602;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoUpdateUser PIANO_UPDATE_USER = 3602 [json_name = "PIANOUPDATEUSER"];</code>
+     */
+    public Builder setPIANOUPDATEUSER(
+        com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser.Builder builderForValue) {
+      if (pIANOUPDATEUSERBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        pIANOUPDATEUSERBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3602;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoUpdateUser PIANO_UPDATE_USER = 3602 [json_name = "PIANOUPDATEUSER"];</code>
+     */
+    public Builder mergePIANOUPDATEUSER(com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser value) {
+      if (pIANOUPDATEUSERBuilder_ == null) {
+        if (valueCase_ == 3602 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3602) {
+          pIANOUPDATEUSERBuilder_.mergeFrom(value);
+        } else {
+          pIANOUPDATEUSERBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3602;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoUpdateUser PIANO_UPDATE_USER = 3602 [json_name = "PIANOUPDATEUSER"];</code>
+     */
+    public Builder clearPIANOUPDATEUSER() {
+      if (pIANOUPDATEUSERBuilder_ == null) {
+        if (valueCase_ == 3602) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3602) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        pIANOUPDATEUSERBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoUpdateUser PIANO_UPDATE_USER = 3602 [json_name = "PIANOUPDATEUSER"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser.Builder getPIANOUPDATEUSERBuilder() {
+      return getPIANOUPDATEUSERFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoUpdateUser PIANO_UPDATE_USER = 3602 [json_name = "PIANOUPDATEUSER"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUserOrBuilder getPIANOUPDATEUSEROrBuilder() {
+      if ((valueCase_ == 3602) && (pIANOUPDATEUSERBuilder_ != null)) {
+        return pIANOUPDATEUSERBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3602) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecutePianoUpdateUser PIANO_UPDATE_USER = 3602 [json_name = "PIANOUPDATEUSER"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser, com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUserOrBuilder> 
+        getPIANOUPDATEUSERFieldBuilder() {
+      if (pIANOUPDATEUSERBuilder_ == null) {
+        if (!(valueCase_ == 3602)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser.getDefaultInstance();
+        }
+        pIANOUPDATEUSERBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser, com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser.Builder, com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUserOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3602;
+      onChanged();
+      return pIANOUPDATEUSERBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
