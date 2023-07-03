@@ -238,5 +238,50 @@ public interface NodeDefinitionOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.workflows.OmniNodeErrorOrBuilder getOmniErrorOrBuilder();
 
+  /**
+   * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart"];</code>
+   * @return Whether the omniBotTestStart field is set.
+   */
+  boolean hasOmniBotTestStart();
+  /**
+   * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart"];</code>
+   * @return The omniBotTestStart.
+   */
+  com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart getOmniBotTestStart();
+  /**
+   * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart"];</code>
+   */
+  com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStartOrBuilder getOmniBotTestStartOrBuilder();
+
+  /**
+   * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep"];</code>
+   * @return Whether the omniBotTestStep field is set.
+   */
+  boolean hasOmniBotTestStep();
+  /**
+   * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep"];</code>
+   * @return The omniBotTestStep.
+   */
+  com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep getOmniBotTestStep();
+  /**
+   * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep"];</code>
+   */
+  com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStepOrBuilder getOmniBotTestStepOrBuilder();
+
+  /**
+   * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd"];</code>
+   * @return Whether the omniBotTestEnd field is set.
+   */
+  boolean hasOmniBotTestEnd();
+  /**
+   * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd"];</code>
+   * @return The omniBotTestEnd.
+   */
+  com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd getOmniBotTestEnd();
+  /**
+   * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd"];</code>
+   */
+  com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEndOrBuilder getOmniBotTestEndOrBuilder();
+
   com.tcn.cloud.api.api.commons.workflows.NodeDefinition.DefinitionCase getDefinitionCase();
 }
