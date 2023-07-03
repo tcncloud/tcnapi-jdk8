@@ -64,6 +64,9 @@ private static final long serialVersionUID = 0L;
     OMNI_SET_SKILL(202),
     OMNI_TO_AGENT(203),
     OMNI_ERROR(204),
+    OMNI_BOT_TEST_START(301),
+    OMNI_BOT_TEST_STEP(302),
+    OMNI_BOT_TEST_END(303),
     DEFINITION_NOT_SET(0);
     private final int value;
     private DefinitionCase(int value) {
@@ -91,6 +94,9 @@ private static final long serialVersionUID = 0L;
         case 202: return OMNI_SET_SKILL;
         case 203: return OMNI_TO_AGENT;
         case 204: return OMNI_ERROR;
+        case 301: return OMNI_BOT_TEST_START;
+        case 302: return OMNI_BOT_TEST_STEP;
+        case 303: return OMNI_BOT_TEST_END;
         case 0: return DEFINITION_NOT_SET;
         default: return null;
       }
@@ -617,6 +623,99 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.workflows.OmniNodeError.getDefaultInstance();
   }
 
+  public static final int OMNI_BOT_TEST_START_FIELD_NUMBER = 301;
+  /**
+   * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart"];</code>
+   * @return Whether the omniBotTestStart field is set.
+   */
+  @java.lang.Override
+  public boolean hasOmniBotTestStart() {
+    return definitionCase_ == 301;
+  }
+  /**
+   * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart"];</code>
+   * @return The omniBotTestStart.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart getOmniBotTestStart() {
+    if (definitionCase_ == 301) {
+       return (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStartOrBuilder getOmniBotTestStartOrBuilder() {
+    if (definitionCase_ == 301) {
+       return (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart.getDefaultInstance();
+  }
+
+  public static final int OMNI_BOT_TEST_STEP_FIELD_NUMBER = 302;
+  /**
+   * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep"];</code>
+   * @return Whether the omniBotTestStep field is set.
+   */
+  @java.lang.Override
+  public boolean hasOmniBotTestStep() {
+    return definitionCase_ == 302;
+  }
+  /**
+   * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep"];</code>
+   * @return The omniBotTestStep.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep getOmniBotTestStep() {
+    if (definitionCase_ == 302) {
+       return (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStepOrBuilder getOmniBotTestStepOrBuilder() {
+    if (definitionCase_ == 302) {
+       return (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep.getDefaultInstance();
+  }
+
+  public static final int OMNI_BOT_TEST_END_FIELD_NUMBER = 303;
+  /**
+   * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd"];</code>
+   * @return Whether the omniBotTestEnd field is set.
+   */
+  @java.lang.Override
+  public boolean hasOmniBotTestEnd() {
+    return definitionCase_ == 303;
+  }
+  /**
+   * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd"];</code>
+   * @return The omniBotTestEnd.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd getOmniBotTestEnd() {
+    if (definitionCase_ == 303) {
+       return (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEndOrBuilder getOmniBotTestEndOrBuilder() {
+    if (definitionCase_ == 303) {
+       return (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -672,6 +771,15 @@ private static final long serialVersionUID = 0L;
     }
     if (definitionCase_ == 204) {
       output.writeMessage(204, (com.tcn.cloud.api.api.commons.workflows.OmniNodeError) definition_);
+    }
+    if (definitionCase_ == 301) {
+      output.writeMessage(301, (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart) definition_);
+    }
+    if (definitionCase_ == 302) {
+      output.writeMessage(302, (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep) definition_);
+    }
+    if (definitionCase_ == 303) {
+      output.writeMessage(303, (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd) definition_);
     }
     if (definitionCase_ == 1000) {
       output.writeMessage(1000, (com.tcn.cloud.api.api.commons.workflows.NodeChatbot) definition_);
@@ -740,6 +848,18 @@ private static final long serialVersionUID = 0L;
     if (definitionCase_ == 204) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(204, (com.tcn.cloud.api.api.commons.workflows.OmniNodeError) definition_);
+    }
+    if (definitionCase_ == 301) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(301, (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart) definition_);
+    }
+    if (definitionCase_ == 302) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(302, (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep) definition_);
+    }
+    if (definitionCase_ == 303) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(303, (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd) definition_);
     }
     if (definitionCase_ == 1000) {
       size += com.google.protobuf.CodedOutputStream
@@ -812,6 +932,18 @@ private static final long serialVersionUID = 0L;
         if (!getOmniError()
             .equals(other.getOmniError())) return false;
         break;
+      case 301:
+        if (!getOmniBotTestStart()
+            .equals(other.getOmniBotTestStart())) return false;
+        break;
+      case 302:
+        if (!getOmniBotTestStep()
+            .equals(other.getOmniBotTestStep())) return false;
+        break;
+      case 303:
+        if (!getOmniBotTestEnd()
+            .equals(other.getOmniBotTestEnd())) return false;
+        break;
       case 0:
       default:
     }
@@ -878,6 +1010,18 @@ private static final long serialVersionUID = 0L;
       case 204:
         hash = (37 * hash) + OMNI_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getOmniError().hashCode();
+        break;
+      case 301:
+        hash = (37 * hash) + OMNI_BOT_TEST_START_FIELD_NUMBER;
+        hash = (53 * hash) + getOmniBotTestStart().hashCode();
+        break;
+      case 302:
+        hash = (37 * hash) + OMNI_BOT_TEST_STEP_FIELD_NUMBER;
+        hash = (53 * hash) + getOmniBotTestStep().hashCode();
+        break;
+      case 303:
+        hash = (37 * hash) + OMNI_BOT_TEST_END_FIELD_NUMBER;
+        hash = (53 * hash) + getOmniBotTestEnd().hashCode();
         break;
       case 0:
       default:
@@ -1053,6 +1197,15 @@ private static final long serialVersionUID = 0L;
       if (omniErrorBuilder_ != null) {
         omniErrorBuilder_.clear();
       }
+      if (omniBotTestStartBuilder_ != null) {
+        omniBotTestStartBuilder_.clear();
+      }
+      if (omniBotTestStepBuilder_ != null) {
+        omniBotTestStepBuilder_.clear();
+      }
+      if (omniBotTestEndBuilder_ != null) {
+        omniBotTestEndBuilder_.clear();
+      }
       definitionCase_ = 0;
       definition_ = null;
       return this;
@@ -1149,6 +1302,18 @@ private static final long serialVersionUID = 0L;
       if (definitionCase_ == 204 &&
           omniErrorBuilder_ != null) {
         result.definition_ = omniErrorBuilder_.build();
+      }
+      if (definitionCase_ == 301 &&
+          omniBotTestStartBuilder_ != null) {
+        result.definition_ = omniBotTestStartBuilder_.build();
+      }
+      if (definitionCase_ == 302 &&
+          omniBotTestStepBuilder_ != null) {
+        result.definition_ = omniBotTestStepBuilder_.build();
+      }
+      if (definitionCase_ == 303 &&
+          omniBotTestEndBuilder_ != null) {
+        result.definition_ = omniBotTestEndBuilder_.build();
       }
     }
 
@@ -1265,6 +1430,18 @@ private static final long serialVersionUID = 0L;
         }
         case OMNI_ERROR: {
           mergeOmniError(other.getOmniError());
+          break;
+        }
+        case OMNI_BOT_TEST_START: {
+          mergeOmniBotTestStart(other.getOmniBotTestStart());
+          break;
+        }
+        case OMNI_BOT_TEST_STEP: {
+          mergeOmniBotTestStep(other.getOmniBotTestStep());
+          break;
+        }
+        case OMNI_BOT_TEST_END: {
+          mergeOmniBotTestEnd(other.getOmniBotTestEnd());
           break;
         }
         case DEFINITION_NOT_SET: {
@@ -1386,6 +1563,27 @@ private static final long serialVersionUID = 0L;
               definitionCase_ = 204;
               break;
             } // case 1634
+            case 2410: {
+              input.readMessage(
+                  getOmniBotTestStartFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              definitionCase_ = 301;
+              break;
+            } // case 2410
+            case 2418: {
+              input.readMessage(
+                  getOmniBotTestStepFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              definitionCase_ = 302;
+              break;
+            } // case 2418
+            case 2426: {
+              input.readMessage(
+                  getOmniBotTestEndFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              definitionCase_ = 303;
+              break;
+            } // case 2426
             case 8002: {
               input.readMessage(
                   getChatbotFieldBuilder().getBuilder(),
@@ -3262,6 +3460,432 @@ private static final long serialVersionUID = 0L;
       definitionCase_ = 204;
       onChanged();
       return omniErrorBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart, com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart.Builder, com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStartOrBuilder> omniBotTestStartBuilder_;
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart"];</code>
+     * @return Whether the omniBotTestStart field is set.
+     */
+    @java.lang.Override
+    public boolean hasOmniBotTestStart() {
+      return definitionCase_ == 301;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart"];</code>
+     * @return The omniBotTestStart.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart getOmniBotTestStart() {
+      if (omniBotTestStartBuilder_ == null) {
+        if (definitionCase_ == 301) {
+          return (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart.getDefaultInstance();
+      } else {
+        if (definitionCase_ == 301) {
+          return omniBotTestStartBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart"];</code>
+     */
+    public Builder setOmniBotTestStart(com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart value) {
+      if (omniBotTestStartBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        definition_ = value;
+        onChanged();
+      } else {
+        omniBotTestStartBuilder_.setMessage(value);
+      }
+      definitionCase_ = 301;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart"];</code>
+     */
+    public Builder setOmniBotTestStart(
+        com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart.Builder builderForValue) {
+      if (omniBotTestStartBuilder_ == null) {
+        definition_ = builderForValue.build();
+        onChanged();
+      } else {
+        omniBotTestStartBuilder_.setMessage(builderForValue.build());
+      }
+      definitionCase_ = 301;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart"];</code>
+     */
+    public Builder mergeOmniBotTestStart(com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart value) {
+      if (omniBotTestStartBuilder_ == null) {
+        if (definitionCase_ == 301 &&
+            definition_ != com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart.getDefaultInstance()) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart.newBuilder((com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart) definition_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          definition_ = value;
+        }
+        onChanged();
+      } else {
+        if (definitionCase_ == 301) {
+          omniBotTestStartBuilder_.mergeFrom(value);
+        } else {
+          omniBotTestStartBuilder_.setMessage(value);
+        }
+      }
+      definitionCase_ = 301;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart"];</code>
+     */
+    public Builder clearOmniBotTestStart() {
+      if (omniBotTestStartBuilder_ == null) {
+        if (definitionCase_ == 301) {
+          definitionCase_ = 0;
+          definition_ = null;
+          onChanged();
+        }
+      } else {
+        if (definitionCase_ == 301) {
+          definitionCase_ = 0;
+          definition_ = null;
+        }
+        omniBotTestStartBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart.Builder getOmniBotTestStartBuilder() {
+      return getOmniBotTestStartFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStartOrBuilder getOmniBotTestStartOrBuilder() {
+      if ((definitionCase_ == 301) && (omniBotTestStartBuilder_ != null)) {
+        return omniBotTestStartBuilder_.getMessageOrBuilder();
+      } else {
+        if (definitionCase_ == 301) {
+          return (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart, com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart.Builder, com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStartOrBuilder> 
+        getOmniBotTestStartFieldBuilder() {
+      if (omniBotTestStartBuilder_ == null) {
+        if (!(definitionCase_ == 301)) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart.getDefaultInstance();
+        }
+        omniBotTestStartBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart, com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart.Builder, com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStartOrBuilder>(
+                (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart) definition_,
+                getParentForChildren(),
+                isClean());
+        definition_ = null;
+      }
+      definitionCase_ = 301;
+      onChanged();
+      return omniBotTestStartBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep, com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep.Builder, com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStepOrBuilder> omniBotTestStepBuilder_;
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep"];</code>
+     * @return Whether the omniBotTestStep field is set.
+     */
+    @java.lang.Override
+    public boolean hasOmniBotTestStep() {
+      return definitionCase_ == 302;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep"];</code>
+     * @return The omniBotTestStep.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep getOmniBotTestStep() {
+      if (omniBotTestStepBuilder_ == null) {
+        if (definitionCase_ == 302) {
+          return (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep.getDefaultInstance();
+      } else {
+        if (definitionCase_ == 302) {
+          return omniBotTestStepBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep"];</code>
+     */
+    public Builder setOmniBotTestStep(com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep value) {
+      if (omniBotTestStepBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        definition_ = value;
+        onChanged();
+      } else {
+        omniBotTestStepBuilder_.setMessage(value);
+      }
+      definitionCase_ = 302;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep"];</code>
+     */
+    public Builder setOmniBotTestStep(
+        com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep.Builder builderForValue) {
+      if (omniBotTestStepBuilder_ == null) {
+        definition_ = builderForValue.build();
+        onChanged();
+      } else {
+        omniBotTestStepBuilder_.setMessage(builderForValue.build());
+      }
+      definitionCase_ = 302;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep"];</code>
+     */
+    public Builder mergeOmniBotTestStep(com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep value) {
+      if (omniBotTestStepBuilder_ == null) {
+        if (definitionCase_ == 302 &&
+            definition_ != com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep.getDefaultInstance()) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep.newBuilder((com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep) definition_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          definition_ = value;
+        }
+        onChanged();
+      } else {
+        if (definitionCase_ == 302) {
+          omniBotTestStepBuilder_.mergeFrom(value);
+        } else {
+          omniBotTestStepBuilder_.setMessage(value);
+        }
+      }
+      definitionCase_ = 302;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep"];</code>
+     */
+    public Builder clearOmniBotTestStep() {
+      if (omniBotTestStepBuilder_ == null) {
+        if (definitionCase_ == 302) {
+          definitionCase_ = 0;
+          definition_ = null;
+          onChanged();
+        }
+      } else {
+        if (definitionCase_ == 302) {
+          definitionCase_ = 0;
+          definition_ = null;
+        }
+        omniBotTestStepBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep.Builder getOmniBotTestStepBuilder() {
+      return getOmniBotTestStepFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStepOrBuilder getOmniBotTestStepOrBuilder() {
+      if ((definitionCase_ == 302) && (omniBotTestStepBuilder_ != null)) {
+        return omniBotTestStepBuilder_.getMessageOrBuilder();
+      } else {
+        if (definitionCase_ == 302) {
+          return (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep, com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep.Builder, com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStepOrBuilder> 
+        getOmniBotTestStepFieldBuilder() {
+      if (omniBotTestStepBuilder_ == null) {
+        if (!(definitionCase_ == 302)) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep.getDefaultInstance();
+        }
+        omniBotTestStepBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep, com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep.Builder, com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStepOrBuilder>(
+                (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep) definition_,
+                getParentForChildren(),
+                isClean());
+        definition_ = null;
+      }
+      definitionCase_ = 302;
+      onChanged();
+      return omniBotTestStepBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd, com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd.Builder, com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEndOrBuilder> omniBotTestEndBuilder_;
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd"];</code>
+     * @return Whether the omniBotTestEnd field is set.
+     */
+    @java.lang.Override
+    public boolean hasOmniBotTestEnd() {
+      return definitionCase_ == 303;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd"];</code>
+     * @return The omniBotTestEnd.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd getOmniBotTestEnd() {
+      if (omniBotTestEndBuilder_ == null) {
+        if (definitionCase_ == 303) {
+          return (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd.getDefaultInstance();
+      } else {
+        if (definitionCase_ == 303) {
+          return omniBotTestEndBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd"];</code>
+     */
+    public Builder setOmniBotTestEnd(com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd value) {
+      if (omniBotTestEndBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        definition_ = value;
+        onChanged();
+      } else {
+        omniBotTestEndBuilder_.setMessage(value);
+      }
+      definitionCase_ = 303;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd"];</code>
+     */
+    public Builder setOmniBotTestEnd(
+        com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd.Builder builderForValue) {
+      if (omniBotTestEndBuilder_ == null) {
+        definition_ = builderForValue.build();
+        onChanged();
+      } else {
+        omniBotTestEndBuilder_.setMessage(builderForValue.build());
+      }
+      definitionCase_ = 303;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd"];</code>
+     */
+    public Builder mergeOmniBotTestEnd(com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd value) {
+      if (omniBotTestEndBuilder_ == null) {
+        if (definitionCase_ == 303 &&
+            definition_ != com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd.getDefaultInstance()) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd.newBuilder((com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd) definition_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          definition_ = value;
+        }
+        onChanged();
+      } else {
+        if (definitionCase_ == 303) {
+          omniBotTestEndBuilder_.mergeFrom(value);
+        } else {
+          omniBotTestEndBuilder_.setMessage(value);
+        }
+      }
+      definitionCase_ = 303;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd"];</code>
+     */
+    public Builder clearOmniBotTestEnd() {
+      if (omniBotTestEndBuilder_ == null) {
+        if (definitionCase_ == 303) {
+          definitionCase_ = 0;
+          definition_ = null;
+          onChanged();
+        }
+      } else {
+        if (definitionCase_ == 303) {
+          definitionCase_ = 0;
+          definition_ = null;
+        }
+        omniBotTestEndBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd.Builder getOmniBotTestEndBuilder() {
+      return getOmniBotTestEndFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEndOrBuilder getOmniBotTestEndOrBuilder() {
+      if ((definitionCase_ == 303) && (omniBotTestEndBuilder_ != null)) {
+        return omniBotTestEndBuilder_.getMessageOrBuilder();
+      } else {
+        if (definitionCase_ == 303) {
+          return (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd, com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd.Builder, com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEndOrBuilder> 
+        getOmniBotTestEndFieldBuilder() {
+      if (omniBotTestEndBuilder_ == null) {
+        if (!(definitionCase_ == 303)) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd.getDefaultInstance();
+        }
+        omniBotTestEndBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd, com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd.Builder, com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEndOrBuilder>(
+                (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd) definition_,
+                getParentForChildren(),
+                isClean());
+        definition_ = null;
+      }
+      definitionCase_ = 303;
+      onChanged();
+      return omniBotTestEndBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
