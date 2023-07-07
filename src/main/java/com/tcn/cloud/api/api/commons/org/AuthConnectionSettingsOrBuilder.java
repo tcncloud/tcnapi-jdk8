@@ -9,6 +9,65 @@ public interface AuthConnectionSettingsOrBuilder extends
 
   /**
    * <pre>
+   * org_id is the id of the organization the connection belongs too.
+   * </pre>
+   *
+   * <code>string org_id = 8 [json_name = "orgId"];</code>
+   * @return The orgId.
+   */
+  java.lang.String getOrgId();
+  /**
+   * <pre>
+   * org_id is the id of the organization the connection belongs too.
+   * </pre>
+   *
+   * <code>string org_id = 8 [json_name = "orgId"];</code>
+   * @return The bytes for orgId.
+   */
+  com.google.protobuf.ByteString
+      getOrgIdBytes();
+
+  /**
+   * <pre>
+   * name is the name of the connection.
+   * </pre>
+   *
+   * <code>string name = 9 [json_name = "name"];</code>
+   * @return The name.
+   */
+  java.lang.String getName();
+  /**
+   * <pre>
+   * name is the name of the connection.
+   * </pre>
+   *
+   * <code>string name = 9 [json_name = "name"];</code>
+   * @return The bytes for name.
+   */
+  com.google.protobuf.ByteString
+      getNameBytes();
+
+  /**
+   * <pre>
+   * type is what type of provider is used for the connection.
+   * </pre>
+   *
+   * <code>.api.commons.org.ConnectionType type = 10 [json_name = "type"];</code>
+   * @return The enum numeric value on the wire for type.
+   */
+  int getTypeValue();
+  /**
+   * <pre>
+   * type is what type of provider is used for the connection.
+   * </pre>
+   *
+   * <code>.api.commons.org.ConnectionType type = 10 [json_name = "type"];</code>
+   * @return The type.
+   */
+  com.tcn.cloud.api.api.commons.org.ConnectionType getType();
+
+  /**
+   * <pre>
    * issuer_url is the url provided by the identity provider
    * used to get authorization tokens.
    * </pre>
