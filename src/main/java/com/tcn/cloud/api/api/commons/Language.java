@@ -17,17 +17,13 @@ public enum Language
    */
   LANGUAGE_ENGLISH(0),
   /**
-   * <code>LANGUAGE_AUTO_DETECT = 1;</code>
+   * <code>LANGUAGE_SPANISH = 1;</code>
    */
-  LANGUAGE_AUTO_DETECT(1),
+  LANGUAGE_SPANISH(1),
   /**
-   * <code>LANGUAGE_SPANISH = 2;</code>
+   * <code>LANGUAGE_ROMANIAN = 2;</code>
    */
-  LANGUAGE_SPANISH(2),
-  /**
-   * <code>LANGUAGE_ROMANIAN = 3;</code>
-   */
-  LANGUAGE_ROMANIAN(3),
+  LANGUAGE_ROMANIAN(2),
   UNRECOGNIZED(-1),
   ;
 
@@ -36,17 +32,13 @@ public enum Language
    */
   public static final int LANGUAGE_ENGLISH_VALUE = 0;
   /**
-   * <code>LANGUAGE_AUTO_DETECT = 1;</code>
+   * <code>LANGUAGE_SPANISH = 1;</code>
    */
-  public static final int LANGUAGE_AUTO_DETECT_VALUE = 1;
+  public static final int LANGUAGE_SPANISH_VALUE = 1;
   /**
-   * <code>LANGUAGE_SPANISH = 2;</code>
+   * <code>LANGUAGE_ROMANIAN = 2;</code>
    */
-  public static final int LANGUAGE_SPANISH_VALUE = 2;
-  /**
-   * <code>LANGUAGE_ROMANIAN = 3;</code>
-   */
-  public static final int LANGUAGE_ROMANIAN_VALUE = 3;
+  public static final int LANGUAGE_ROMANIAN_VALUE = 2;
 
 
   public final int getNumber() {
@@ -74,9 +66,8 @@ public enum Language
   public static Language forNumber(int value) {
     switch (value) {
       case 0: return LANGUAGE_ENGLISH;
-      case 1: return LANGUAGE_AUTO_DETECT;
-      case 2: return LANGUAGE_SPANISH;
-      case 3: return LANGUAGE_ROMANIAN;
+      case 1: return LANGUAGE_SPANISH;
+      case 2: return LANGUAGE_ROMANIAN;
       default: return null;
     }
   }
