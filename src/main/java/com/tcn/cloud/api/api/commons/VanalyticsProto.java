@@ -28,11 +28,13 @@ public final class VanalyticsProto {
       "\020\001\022\r\n\tTHIS_WEEK\020\002\022\017\n\013LAST_7_DAYS\020\003\022\r\n\tLA" +
       "ST_WEEK\020\004\022\020\n\014LAST_14_DAYS\020\005\022\016\n\nTHIS_MONT" +
       "H\020\006\022\020\n\014LAST_30_DAYS\020\007\022\020\n\014LAST_60_DAYS\020\010\022" +
-      "\020\n\014LAST_90_DAYS\020\t\022\021\n\rLAST_180_DAYS\020\nB}\n\035" +
-      "com.tcn.cloud.api.api.commonsB\017Vanalytic" +
-      "sProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commo" +
-      "ns\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::Comm" +
-      "onsb\006proto3"
+      "\020\n\014LAST_90_DAYS\020\t\022\021\n\rLAST_180_DAYS\020\n*g\n\010" +
+      "Language\022\024\n\020LANGUAGE_ENGLISH\020\000\022\030\n\024LANGUA" +
+      "GE_AUTO_DETECT\020\001\022\024\n\020LANGUAGE_SPANISH\020\002\022\025" +
+      "\n\021LANGUAGE_ROMANIAN\020\003B}\n\035com.tcn.cloud.a" +
+      "pi.api.commonsB\017VanalyticsProtoP\001\242\002\003ACX\252" +
+      "\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Common" +
+      "s\\GPBMetadata\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
