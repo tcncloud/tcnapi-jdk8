@@ -514,6 +514,37 @@ public final class TicketsGrpc {
     return getAssignSelfMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketReq,
+      com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketRes> getEditMaskTicketMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EditMaskTicket",
+      requestType = com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketReq,
+      com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketRes> getEditMaskTicketMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketReq, com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketRes> getEditMaskTicketMethod;
+    if ((getEditMaskTicketMethod = TicketsGrpc.getEditMaskTicketMethod) == null) {
+      synchronized (TicketsGrpc.class) {
+        if ((getEditMaskTicketMethod = TicketsGrpc.getEditMaskTicketMethod) == null) {
+          TicketsGrpc.getEditMaskTicketMethod = getEditMaskTicketMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketReq, com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EditMaskTicket"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketRes.getDefaultInstance()))
+              .setSchemaDescriptor(new TicketsMethodDescriptorSupplier("EditMaskTicket"))
+              .build();
+        }
+      }
+    }
+    return getEditMaskTicketMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -723,6 +754,17 @@ public final class TicketsGrpc {
     default void assignSelf(com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignSelfMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Public Method to edit a ticket.
+     * EditTicket would be deprecated
+     * </pre>
+     */
+    default void editMaskTicket(com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEditMaskTicketMethod(), responseObserver);
     }
   }
 
@@ -934,6 +976,18 @@ public final class TicketsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAssignSelfMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Public Method to edit a ticket.
+     * EditTicket would be deprecated
+     * </pre>
+     */
+    public void editMaskTicket(com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getEditMaskTicketMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1113,6 +1167,17 @@ public final class TicketsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignRes assignSelf(com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAssignSelfMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Public Method to edit a ticket.
+     * EditTicket would be deprecated
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketRes editMaskTicket(com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getEditMaskTicketMethod(), getCallOptions(), request);
     }
   }
 
@@ -1310,6 +1375,18 @@ public final class TicketsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAssignSelfMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Public Method to edit a ticket.
+     * EditTicket would be deprecated
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketRes> editMaskTicket(
+        com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getEditMaskTicketMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_TICKET = 0;
@@ -1328,6 +1405,7 @@ public final class TicketsGrpc {
   private static final int METHODID_REPLY_COMMENT = 13;
   private static final int METHODID_LIST_TICKET_AUDIT_LOG = 14;
   private static final int METHODID_ASSIGN_SELF = 15;
+  private static final int METHODID_EDIT_MASK_TICKET = 16;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1409,6 +1487,10 @@ public final class TicketsGrpc {
         case METHODID_ASSIGN_SELF:
           serviceImpl.assignSelf((com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignRes>) responseObserver);
+          break;
+        case METHODID_EDIT_MASK_TICKET:
+          serviceImpl.editMaskTicket((com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1540,6 +1622,13 @@ public final class TicketsGrpc {
               com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignReq,
               com.tcn.cloud.api.api.v1alpha1.tickets.CreateSelfAssignRes>(
                 service, METHODID_ASSIGN_SELF)))
+        .addMethod(
+          getEditMaskTicketMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketReq,
+              com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketRes>(
+                service, METHODID_EDIT_MASK_TICKET)))
         .build();
   }
 
@@ -1604,6 +1693,7 @@ public final class TicketsGrpc {
               .addMethod(getReplyCommentMethod())
               .addMethod(getListTicketAuditLogMethod())
               .addMethod(getAssignSelfMethod())
+              .addMethod(getEditMaskTicketMethod())
               .build();
         }
       }

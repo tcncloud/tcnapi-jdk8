@@ -96,7 +96,6 @@ private static final long serialVersionUID = 0L;
     INSTAMED_VOID_PAYMENT(802),
     USAEPAY_SUBMIT_CC_PAYMENTS(901),
     USAEPAY_SUBMIT_ACH_PAYMENTS(902),
-    USAEPAY_GET_CC_TOKEN(903),
     EZIDEBIT_SUBMIT_CC_PAYMENTS(1001),
     EZIDEBIT_SUBMIT_ACH_PAYMENTS(1002),
     BAMBORA_SUBMIT_CC_PAYMENTS(1101),
@@ -285,7 +284,6 @@ private static final long serialVersionUID = 0L;
         case 802: return INSTAMED_VOID_PAYMENT;
         case 901: return USAEPAY_SUBMIT_CC_PAYMENTS;
         case 902: return USAEPAY_SUBMIT_ACH_PAYMENTS;
-        case 903: return USAEPAY_GET_CC_TOKEN;
         case 1001: return EZIDEBIT_SUBMIT_CC_PAYMENTS;
         case 1002: return EZIDEBIT_SUBMIT_ACH_PAYMENTS;
         case 1101: return BAMBORA_SUBMIT_CC_PAYMENTS;
@@ -1829,37 +1827,6 @@ private static final long serialVersionUID = 0L;
        return (com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepaySubmitAchPayments) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepaySubmitAchPayments.getDefaultInstance();
-  }
-
-  public static final int USAEPAY_GET_CC_TOKEN_FIELD_NUMBER = 903;
-  /**
-   * <code>.api.commons.integrations.ExecuteUsaepayGetCcToken usaepay_get_cc_token = 903 [json_name = "usaepayGetCcToken"];</code>
-   * @return Whether the usaepayGetCcToken field is set.
-   */
-  @java.lang.Override
-  public boolean hasUsaepayGetCcToken() {
-    return valueCase_ == 903;
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteUsaepayGetCcToken usaepay_get_cc_token = 903 [json_name = "usaepayGetCcToken"];</code>
-   * @return The usaepayGetCcToken.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken getUsaepayGetCcToken() {
-    if (valueCase_ == 903) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.ExecuteUsaepayGetCcToken usaepay_get_cc_token = 903 [json_name = "usaepayGetCcToken"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcTokenOrBuilder getUsaepayGetCcTokenOrBuilder() {
-    if (valueCase_ == 903) {
-       return (com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken.getDefaultInstance();
   }
 
   public static final int EZIDEBIT_SUBMIT_CC_PAYMENTS_FIELD_NUMBER = 1001;
@@ -5948,9 +5915,6 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 902) {
       output.writeMessage(902, (com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepaySubmitAchPayments) value_);
     }
-    if (valueCase_ == 903) {
-      output.writeMessage(903, (com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken) value_);
-    }
     if (valueCase_ == 1001) {
       output.writeMessage(1001, (com.tcn.cloud.api.api.commons.integrations.ExecuteEzidebitSubmitCcPayments) value_);
     }
@@ -6519,10 +6483,6 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 902) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(902, (com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepaySubmitAchPayments) value_);
-    }
-    if (valueCase_ == 903) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(903, (com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken) value_);
     }
     if (valueCase_ == 1001) {
       size += com.google.protobuf.CodedOutputStream
@@ -7227,10 +7187,6 @@ private static final long serialVersionUID = 0L;
         if (!getUsaepaySubmitAchPayments()
             .equals(other.getUsaepaySubmitAchPayments())) return false;
         break;
-      case 903:
-        if (!getUsaepayGetCcToken()
-            .equals(other.getUsaepayGetCcToken())) return false;
-        break;
       case 1001:
         if (!getEzidebitSubmitCcPayments()
             .equals(other.getEzidebitSubmitCcPayments())) return false;
@@ -7931,10 +7887,6 @@ private static final long serialVersionUID = 0L;
       case 902:
         hash = (37 * hash) + USAEPAY_SUBMIT_ACH_PAYMENTS_FIELD_NUMBER;
         hash = (53 * hash) + getUsaepaySubmitAchPayments().hashCode();
-        break;
-      case 903:
-        hash = (37 * hash) + USAEPAY_GET_CC_TOKEN_FIELD_NUMBER;
-        hash = (53 * hash) + getUsaepayGetCcToken().hashCode();
         break;
       case 1001:
         hash = (37 * hash) + EZIDEBIT_SUBMIT_CC_PAYMENTS_FIELD_NUMBER;
@@ -8723,9 +8675,6 @@ private static final long serialVersionUID = 0L;
       if (usaepaySubmitAchPaymentsBuilder_ != null) {
         usaepaySubmitAchPaymentsBuilder_.clear();
       }
-      if (usaepayGetCcTokenBuilder_ != null) {
-        usaepayGetCcTokenBuilder_.clear();
-      }
       if (ezidebitSubmitCcPaymentsBuilder_ != null) {
         ezidebitSubmitCcPaymentsBuilder_.clear();
       }
@@ -9351,10 +9300,6 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 902 &&
           usaepaySubmitAchPaymentsBuilder_ != null) {
         result.value_ = usaepaySubmitAchPaymentsBuilder_.build();
-      }
-      if (valueCase_ == 903 &&
-          usaepayGetCcTokenBuilder_ != null) {
-        result.value_ = usaepayGetCcTokenBuilder_.build();
       }
       if (valueCase_ == 1001 &&
           ezidebitSubmitCcPaymentsBuilder_ != null) {
@@ -10090,10 +10035,6 @@ private static final long serialVersionUID = 0L;
         }
         case USAEPAY_SUBMIT_ACH_PAYMENTS: {
           mergeUsaepaySubmitAchPayments(other.getUsaepaySubmitAchPayments());
-          break;
-        }
-        case USAEPAY_GET_CC_TOKEN: {
-          mergeUsaepayGetCcToken(other.getUsaepayGetCcToken());
           break;
         }
         case EZIDEBIT_SUBMIT_CC_PAYMENTS: {
@@ -10947,13 +10888,6 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 902;
               break;
             } // case 7218
-            case 7226: {
-              input.readMessage(
-                  getUsaepayGetCcTokenFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 903;
-              break;
-            } // case 7226
             case 8010: {
               input.readMessage(
                   getEzidebitSubmitCcPaymentsFieldBuilder().getBuilder(),
@@ -18198,148 +18132,6 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 902;
       onChanged();
       return usaepaySubmitAchPaymentsBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken, com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcTokenOrBuilder> usaepayGetCcTokenBuilder_;
-    /**
-     * <code>.api.commons.integrations.ExecuteUsaepayGetCcToken usaepay_get_cc_token = 903 [json_name = "usaepayGetCcToken"];</code>
-     * @return Whether the usaepayGetCcToken field is set.
-     */
-    @java.lang.Override
-    public boolean hasUsaepayGetCcToken() {
-      return valueCase_ == 903;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteUsaepayGetCcToken usaepay_get_cc_token = 903 [json_name = "usaepayGetCcToken"];</code>
-     * @return The usaepayGetCcToken.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken getUsaepayGetCcToken() {
-      if (usaepayGetCcTokenBuilder_ == null) {
-        if (valueCase_ == 903) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken.getDefaultInstance();
-      } else {
-        if (valueCase_ == 903) {
-          return usaepayGetCcTokenBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteUsaepayGetCcToken usaepay_get_cc_token = 903 [json_name = "usaepayGetCcToken"];</code>
-     */
-    public Builder setUsaepayGetCcToken(com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken value) {
-      if (usaepayGetCcTokenBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        usaepayGetCcTokenBuilder_.setMessage(value);
-      }
-      valueCase_ = 903;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteUsaepayGetCcToken usaepay_get_cc_token = 903 [json_name = "usaepayGetCcToken"];</code>
-     */
-    public Builder setUsaepayGetCcToken(
-        com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken.Builder builderForValue) {
-      if (usaepayGetCcTokenBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        usaepayGetCcTokenBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 903;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteUsaepayGetCcToken usaepay_get_cc_token = 903 [json_name = "usaepayGetCcToken"];</code>
-     */
-    public Builder mergeUsaepayGetCcToken(com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken value) {
-      if (usaepayGetCcTokenBuilder_ == null) {
-        if (valueCase_ == 903 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 903) {
-          usaepayGetCcTokenBuilder_.mergeFrom(value);
-        } else {
-          usaepayGetCcTokenBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 903;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteUsaepayGetCcToken usaepay_get_cc_token = 903 [json_name = "usaepayGetCcToken"];</code>
-     */
-    public Builder clearUsaepayGetCcToken() {
-      if (usaepayGetCcTokenBuilder_ == null) {
-        if (valueCase_ == 903) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 903) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        usaepayGetCcTokenBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteUsaepayGetCcToken usaepay_get_cc_token = 903 [json_name = "usaepayGetCcToken"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken.Builder getUsaepayGetCcTokenBuilder() {
-      return getUsaepayGetCcTokenFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteUsaepayGetCcToken usaepay_get_cc_token = 903 [json_name = "usaepayGetCcToken"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcTokenOrBuilder getUsaepayGetCcTokenOrBuilder() {
-      if ((valueCase_ == 903) && (usaepayGetCcTokenBuilder_ != null)) {
-        return usaepayGetCcTokenBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 903) {
-          return (com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.ExecuteUsaepayGetCcToken usaepay_get_cc_token = 903 [json_name = "usaepayGetCcToken"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken, com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcTokenOrBuilder> 
-        getUsaepayGetCcTokenFieldBuilder() {
-      if (usaepayGetCcTokenBuilder_ == null) {
-        if (!(valueCase_ == 903)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken.getDefaultInstance();
-        }
-        usaepayGetCcTokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken, com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcTokenOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 903;
-      onChanged();
-      return usaepayGetCcTokenBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
