@@ -545,6 +545,37 @@ public final class TicketsGrpc {
     return getEditMaskTicketMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq,
+      com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketRes> getListAllocatedTicketsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListAllocatedTickets",
+      requestType = com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq,
+      com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketRes> getListAllocatedTicketsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq, com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketRes> getListAllocatedTicketsMethod;
+    if ((getListAllocatedTicketsMethod = TicketsGrpc.getListAllocatedTicketsMethod) == null) {
+      synchronized (TicketsGrpc.class) {
+        if ((getListAllocatedTicketsMethod = TicketsGrpc.getListAllocatedTicketsMethod) == null) {
+          TicketsGrpc.getListAllocatedTicketsMethod = getListAllocatedTicketsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq, com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAllocatedTickets"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketRes.getDefaultInstance()))
+              .setSchemaDescriptor(new TicketsMethodDescriptorSupplier("ListAllocatedTickets"))
+              .build();
+        }
+      }
+    }
+    return getListAllocatedTicketsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -765,6 +796,13 @@ public final class TicketsGrpc {
     default void editMaskTicket(com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEditMaskTicketMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void listAllocatedTickets(com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAllocatedTicketsMethod(), responseObserver);
     }
   }
 
@@ -988,6 +1026,14 @@ public final class TicketsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getEditMaskTicketMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void listAllocatedTickets(com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListAllocatedTicketsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1178,6 +1224,13 @@ public final class TicketsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketRes editMaskTicket(com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getEditMaskTicketMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketRes listAllocatedTickets(com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListAllocatedTicketsMethod(), getCallOptions(), request);
     }
   }
 
@@ -1387,6 +1440,14 @@ public final class TicketsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getEditMaskTicketMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketRes> listAllocatedTickets(
+        com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListAllocatedTicketsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_TICKET = 0;
@@ -1406,6 +1467,7 @@ public final class TicketsGrpc {
   private static final int METHODID_LIST_TICKET_AUDIT_LOG = 14;
   private static final int METHODID_ASSIGN_SELF = 15;
   private static final int METHODID_EDIT_MASK_TICKET = 16;
+  private static final int METHODID_LIST_ALLOCATED_TICKETS = 17;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1491,6 +1553,10 @@ public final class TicketsGrpc {
         case METHODID_EDIT_MASK_TICKET:
           serviceImpl.editMaskTicket((com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketRes>) responseObserver);
+          break;
+        case METHODID_LIST_ALLOCATED_TICKETS:
+          serviceImpl.listAllocatedTickets((com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1629,6 +1695,13 @@ public final class TicketsGrpc {
               com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketReq,
               com.tcn.cloud.api.api.v1alpha1.tickets.EditMaskTicketRes>(
                 service, METHODID_EDIT_MASK_TICKET)))
+        .addMethod(
+          getListAllocatedTicketsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq,
+              com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketRes>(
+                service, METHODID_LIST_ALLOCATED_TICKETS)))
         .build();
   }
 
@@ -1694,6 +1767,7 @@ public final class TicketsGrpc {
               .addMethod(getListTicketAuditLogMethod())
               .addMethod(getAssignSelfMethod())
               .addMethod(getEditMaskTicketMethod())
+              .addMethod(getListAllocatedTicketsMethod())
               .build();
         }
       }
