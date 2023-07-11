@@ -20,14 +20,14 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private AuthConnectionSettings() {
-    orgId_ = "";
-    name_ = "";
-    type_ = 0;
     issuerUrl_ = "";
     tenantUrl_ = "";
     clientId_ = "";
     connectionId_ = "";
     customGroups_ = java.util.Collections.emptyList();
+    orgId_ = "";
+    name_ = "";
+    type_ = 0;
   }
 
   @java.lang.Override
@@ -650,126 +650,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  public static final int ORG_ID_FIELD_NUMBER = 8;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object orgId_ = "";
-  /**
-   * <pre>
-   * org_id is the id of the organization the connection belongs too.
-   * </pre>
-   *
-   * <code>string org_id = 8 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  @java.lang.Override
-  public java.lang.String getOrgId() {
-    java.lang.Object ref = orgId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      orgId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * org_id is the id of the organization the connection belongs too.
-   * </pre>
-   *
-   * <code>string org_id = 8 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getOrgIdBytes() {
-    java.lang.Object ref = orgId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      orgId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int NAME_FIELD_NUMBER = 9;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object name_ = "";
-  /**
-   * <pre>
-   * name is the name of the connection.
-   * </pre>
-   *
-   * <code>string name = 9 [json_name = "name"];</code>
-   * @return The name.
-   */
-  @java.lang.Override
-  public java.lang.String getName() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      name_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * name is the name of the connection.
-   * </pre>
-   *
-   * <code>string name = 9 [json_name = "name"];</code>
-   * @return The bytes for name.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getNameBytes() {
-    java.lang.Object ref = name_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      name_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int TYPE_FIELD_NUMBER = 10;
-  private int type_ = 0;
-  /**
-   * <pre>
-   * type is what type of provider is used for the connection.
-   * </pre>
-   *
-   * <code>.api.commons.org.ConnectionType type = 10 [json_name = "type"];</code>
-   * @return The enum numeric value on the wire for type.
-   */
-  @java.lang.Override public int getTypeValue() {
-    return type_;
-  }
-  /**
-   * <pre>
-   * type is what type of provider is used for the connection.
-   * </pre>
-   *
-   * <code>.api.commons.org.ConnectionType type = 10 [json_name = "type"];</code>
-   * @return The type.
-   */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.org.ConnectionType getType() {
-    com.tcn.cloud.api.api.commons.org.ConnectionType result = com.tcn.cloud.api.api.commons.org.ConnectionType.forNumber(type_);
-    return result == null ? com.tcn.cloud.api.api.commons.org.ConnectionType.UNRECOGNIZED : result;
-  }
-
   public static final int ISSUER_URL_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object issuerUrl_ = "";
@@ -1137,6 +1017,126 @@ private static final long serialVersionUID = 0L;
     return customGroups_.get(index);
   }
 
+  public static final int ORG_ID_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object orgId_ = "";
+  /**
+   * <pre>
+   * org_id is the id of the organization the connection belongs too.
+   * </pre>
+   *
+   * <code>string org_id = 8 [json_name = "orgId"];</code>
+   * @return The orgId.
+   */
+  @java.lang.Override
+  public java.lang.String getOrgId() {
+    java.lang.Object ref = orgId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      orgId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * org_id is the id of the organization the connection belongs too.
+   * </pre>
+   *
+   * <code>string org_id = 8 [json_name = "orgId"];</code>
+   * @return The bytes for orgId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getOrgIdBytes() {
+    java.lang.Object ref = orgId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      orgId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int NAME_FIELD_NUMBER = 9;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
+  /**
+   * <pre>
+   * name is the name of the connection.
+   * </pre>
+   *
+   * <code>string name = 9 [json_name = "name"];</code>
+   * @return The name.
+   */
+  @java.lang.Override
+  public java.lang.String getName() {
+    java.lang.Object ref = name_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      name_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * name is the name of the connection.
+   * </pre>
+   *
+   * <code>string name = 9 [json_name = "name"];</code>
+   * @return The bytes for name.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getNameBytes() {
+    java.lang.Object ref = name_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      name_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TYPE_FIELD_NUMBER = 10;
+  private int type_ = 0;
+  /**
+   * <pre>
+   * type is what type of provider is used for the connection.
+   * </pre>
+   *
+   * <code>.api.commons.org.ConnectionType type = 10 [json_name = "type"];</code>
+   * @return The enum numeric value on the wire for type.
+   */
+  @java.lang.Override public int getTypeValue() {
+    return type_;
+  }
+  /**
+   * <pre>
+   * type is what type of provider is used for the connection.
+   * </pre>
+   *
+   * <code>.api.commons.org.ConnectionType type = 10 [json_name = "type"];</code>
+   * @return The type.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.org.ConnectionType getType() {
+    com.tcn.cloud.api.api.commons.org.ConnectionType result = com.tcn.cloud.api.api.commons.org.ConnectionType.forNumber(type_);
+    return result == null ? com.tcn.cloud.api.api.commons.org.ConnectionType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1239,11 +1239,6 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.org.AuthConnectionSettings other = (com.tcn.cloud.api.api.commons.org.AuthConnectionSettings) obj;
 
-    if (!getOrgId()
-        .equals(other.getOrgId())) return false;
-    if (!getName()
-        .equals(other.getName())) return false;
-    if (type_ != other.type_) return false;
     if (!getIssuerUrl()
         .equals(other.getIssuerUrl())) return false;
     if (!getTenantUrl()
@@ -1264,6 +1259,11 @@ private static final long serialVersionUID = 0L;
     }
     if (!getCustomGroupsList()
         .equals(other.getCustomGroupsList())) return false;
+    if (!getOrgId()
+        .equals(other.getOrgId())) return false;
+    if (!getName()
+        .equals(other.getName())) return false;
+    if (type_ != other.type_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1275,12 +1275,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getOrgId().hashCode();
-    hash = (37 * hash) + NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getName().hashCode();
-    hash = (37 * hash) + TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + type_;
     hash = (37 * hash) + ISSUER_URL_FIELD_NUMBER;
     hash = (53 * hash) + getIssuerUrl().hashCode();
     hash = (37 * hash) + TENANT_URL_FIELD_NUMBER;
@@ -1301,6 +1295,12 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CUSTOM_GROUPS_FIELD_NUMBER;
       hash = (53 * hash) + getCustomGroupsList().hashCode();
     }
+    hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getOrgId().hashCode();
+    hash = (37 * hash) + NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getName().hashCode();
+    hash = (37 * hash) + TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + type_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1436,9 +1436,6 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      orgId_ = "";
-      name_ = "";
-      type_ = 0;
       issuerUrl_ = "";
       tenantUrl_ = "";
       clientId_ = "";
@@ -1459,7 +1456,10 @@ private static final long serialVersionUID = 0L;
         customGroups_ = null;
         customGroupsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000040);
+      orgId_ = "";
+      name_ = "";
+      type_ = 0;
       return this;
     }
 
@@ -1494,9 +1494,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.org.AuthConnectionSettings result) {
       if (customGroupsBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) != 0)) {
+        if (((bitField0_ & 0x00000040) != 0)) {
           customGroups_ = java.util.Collections.unmodifiableList(customGroups_);
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.customGroups_ = customGroups_;
       } else {
@@ -1507,35 +1507,35 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.commons.org.AuthConnectionSettings result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.orgId_ = orgId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.name_ = name_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.type_ = type_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.issuerUrl_ = issuerUrl_;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.tenantUrl_ = tenantUrl_;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.clientId_ = clientId_;
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.connectionId_ = connectionId_;
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.secretExpiration_ = secretExpirationBuilder_ == null
             ? secretExpiration_
             : secretExpirationBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.defaultGroup_ = defaultGroupBuilder_ == null
             ? defaultGroup_
             : defaultGroupBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.orgId_ = orgId_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.type_ = type_;
       }
     }
 
@@ -1583,37 +1583,24 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.org.AuthConnectionSettings other) {
       if (other == com.tcn.cloud.api.api.commons.org.AuthConnectionSettings.getDefaultInstance()) return this;
-      if (!other.getOrgId().isEmpty()) {
-        orgId_ = other.orgId_;
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
-      if (!other.getName().isEmpty()) {
-        name_ = other.name_;
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
-      if (other.type_ != 0) {
-        setTypeValue(other.getTypeValue());
-      }
       if (!other.getIssuerUrl().isEmpty()) {
         issuerUrl_ = other.issuerUrl_;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getTenantUrl().isEmpty()) {
         tenantUrl_ = other.tenantUrl_;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getClientId().isEmpty()) {
         clientId_ = other.clientId_;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getConnectionId().isEmpty()) {
         connectionId_ = other.connectionId_;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasSecretExpiration()) {
@@ -1626,7 +1613,7 @@ private static final long serialVersionUID = 0L;
         if (!other.customGroups_.isEmpty()) {
           if (customGroups_.isEmpty()) {
             customGroups_ = other.customGroups_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensureCustomGroupsIsMutable();
             customGroups_.addAll(other.customGroups_);
@@ -1639,7 +1626,7 @@ private static final long serialVersionUID = 0L;
             customGroupsBuilder_.dispose();
             customGroupsBuilder_ = null;
             customGroups_ = other.customGroups_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000040);
             customGroupsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getCustomGroupsFieldBuilder() : null;
@@ -1647,6 +1634,19 @@ private static final long serialVersionUID = 0L;
             customGroupsBuilder_.addAllMessages(other.customGroups_);
           }
         }
+      }
+      if (!other.getOrgId().isEmpty()) {
+        orgId_ = other.orgId_;
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
+      if (!other.getName().isEmpty()) {
+        name_ = other.name_;
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
+      if (other.type_ != 0) {
+        setTypeValue(other.getTypeValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1676,36 +1676,36 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               issuerUrl_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               tenantUrl_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               clientId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
               connectionId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
               input.readMessage(
                   getSecretExpirationFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000010;
               break;
             } // case 42
             case 50: {
               input.readMessage(
                   getDefaultGroupFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000020;
               break;
             } // case 50
             case 58: {
@@ -1723,17 +1723,17 @@ private static final long serialVersionUID = 0L;
             } // case 58
             case 66: {
               orgId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000080;
               break;
             } // case 66
             case 74: {
               name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000100;
               break;
             } // case 74
             case 80: {
               type_ = input.readEnum();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000200;
               break;
             } // case 80
             default: {
@@ -1752,263 +1752,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     private int bitField0_;
-
-    private java.lang.Object orgId_ = "";
-    /**
-     * <pre>
-     * org_id is the id of the organization the connection belongs too.
-     * </pre>
-     *
-     * <code>string org_id = 8 [json_name = "orgId"];</code>
-     * @return The orgId.
-     */
-    public java.lang.String getOrgId() {
-      java.lang.Object ref = orgId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        orgId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * org_id is the id of the organization the connection belongs too.
-     * </pre>
-     *
-     * <code>string org_id = 8 [json_name = "orgId"];</code>
-     * @return The bytes for orgId.
-     */
-    public com.google.protobuf.ByteString
-        getOrgIdBytes() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orgId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * org_id is the id of the organization the connection belongs too.
-     * </pre>
-     *
-     * <code>string org_id = 8 [json_name = "orgId"];</code>
-     * @param value The orgId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      orgId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * org_id is the id of the organization the connection belongs too.
-     * </pre>
-     *
-     * <code>string org_id = 8 [json_name = "orgId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearOrgId() {
-      orgId_ = getDefaultInstance().getOrgId();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * org_id is the id of the organization the connection belongs too.
-     * </pre>
-     *
-     * <code>string org_id = 8 [json_name = "orgId"];</code>
-     * @param value The bytes for orgId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      orgId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object name_ = "";
-    /**
-     * <pre>
-     * name is the name of the connection.
-     * </pre>
-     *
-     * <code>string name = 9 [json_name = "name"];</code>
-     * @return The name.
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * name is the name of the connection.
-     * </pre>
-     *
-     * <code>string name = 9 [json_name = "name"];</code>
-     * @return The bytes for name.
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * name is the name of the connection.
-     * </pre>
-     *
-     * <code>string name = 9 [json_name = "name"];</code>
-     * @param value The name to set.
-     * @return This builder for chaining.
-     */
-    public Builder setName(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      name_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * name is the name of the connection.
-     * </pre>
-     *
-     * <code>string name = 9 [json_name = "name"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearName() {
-      name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * name is the name of the connection.
-     * </pre>
-     *
-     * <code>string name = 9 [json_name = "name"];</code>
-     * @param value The bytes for name to set.
-     * @return This builder for chaining.
-     */
-    public Builder setNameBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      name_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
-    private int type_ = 0;
-    /**
-     * <pre>
-     * type is what type of provider is used for the connection.
-     * </pre>
-     *
-     * <code>.api.commons.org.ConnectionType type = 10 [json_name = "type"];</code>
-     * @return The enum numeric value on the wire for type.
-     */
-    @java.lang.Override public int getTypeValue() {
-      return type_;
-    }
-    /**
-     * <pre>
-     * type is what type of provider is used for the connection.
-     * </pre>
-     *
-     * <code>.api.commons.org.ConnectionType type = 10 [json_name = "type"];</code>
-     * @param value The enum numeric value on the wire for type to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTypeValue(int value) {
-      type_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * type is what type of provider is used for the connection.
-     * </pre>
-     *
-     * <code>.api.commons.org.ConnectionType type = 10 [json_name = "type"];</code>
-     * @return The type.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.org.ConnectionType getType() {
-      com.tcn.cloud.api.api.commons.org.ConnectionType result = com.tcn.cloud.api.api.commons.org.ConnectionType.forNumber(type_);
-      return result == null ? com.tcn.cloud.api.api.commons.org.ConnectionType.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * type is what type of provider is used for the connection.
-     * </pre>
-     *
-     * <code>.api.commons.org.ConnectionType type = 10 [json_name = "type"];</code>
-     * @param value The type to set.
-     * @return This builder for chaining.
-     */
-    public Builder setType(com.tcn.cloud.api.api.commons.org.ConnectionType value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000004;
-      type_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * type is what type of provider is used for the connection.
-     * </pre>
-     *
-     * <code>.api.commons.org.ConnectionType type = 10 [json_name = "type"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearType() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      type_ = 0;
-      onChanged();
-      return this;
-    }
 
     private java.lang.Object issuerUrl_ = "";
     /**
@@ -2068,7 +1811,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       issuerUrl_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -2083,7 +1826,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearIssuerUrl() {
       issuerUrl_ = getDefaultInstance().getIssuerUrl();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -2102,7 +1845,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       issuerUrl_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -2165,7 +1908,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       tenantUrl_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -2180,7 +1923,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearTenantUrl() {
       tenantUrl_ = getDefaultInstance().getTenantUrl();
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -2199,7 +1942,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       tenantUrl_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -2262,7 +2005,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       clientId_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -2277,7 +2020,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearClientId() {
       clientId_ = getDefaultInstance().getClientId();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -2296,7 +2039,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       clientId_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -2362,7 +2105,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       connectionId_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -2378,7 +2121,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearConnectionId() {
       connectionId_ = getDefaultInstance().getConnectionId();
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -2398,7 +2141,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       connectionId_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -2417,7 +2160,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the secretExpiration field is set.
      */
     public boolean hasSecretExpiration() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -2454,7 +2197,7 @@ private static final long serialVersionUID = 0L;
       } else {
         secretExpirationBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -2474,7 +2217,7 @@ private static final long serialVersionUID = 0L;
       } else {
         secretExpirationBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -2489,7 +2232,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSecretExpiration(com.tcn.cloud.api.api.commons.org.AuthConnectionSettings.SecretExpiration value) {
       if (secretExpirationBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0) &&
+        if (((bitField0_ & 0x00000010) != 0) &&
           secretExpiration_ != null &&
           secretExpiration_ != com.tcn.cloud.api.api.commons.org.AuthConnectionSettings.SecretExpiration.getDefaultInstance()) {
           getSecretExpirationBuilder().mergeFrom(value);
@@ -2499,7 +2242,7 @@ private static final long serialVersionUID = 0L;
       } else {
         secretExpirationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -2513,7 +2256,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.AuthConnectionSettings.SecretExpiration secret_expiration = 5 [json_name = "secretExpiration"];</code>
      */
     public Builder clearSecretExpiration() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000010);
       secretExpiration_ = null;
       if (secretExpirationBuilder_ != null) {
         secretExpirationBuilder_.dispose();
@@ -2532,7 +2275,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.AuthConnectionSettings.SecretExpiration secret_expiration = 5 [json_name = "secretExpiration"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.AuthConnectionSettings.SecretExpiration.Builder getSecretExpirationBuilder() {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000010;
       onChanged();
       return getSecretExpirationFieldBuilder().getBuilder();
     }
@@ -2590,7 +2333,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the defaultGroup field is set.
      */
     public boolean hasDefaultGroup() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -2627,7 +2370,7 @@ private static final long serialVersionUID = 0L;
       } else {
         defaultGroupBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2647,7 +2390,7 @@ private static final long serialVersionUID = 0L;
       } else {
         defaultGroupBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2662,7 +2405,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDefaultGroup(com.tcn.cloud.api.api.commons.org.GroupItem value) {
       if (defaultGroupBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0) &&
+        if (((bitField0_ & 0x00000020) != 0) &&
           defaultGroup_ != null &&
           defaultGroup_ != com.tcn.cloud.api.api.commons.org.GroupItem.getDefaultInstance()) {
           getDefaultGroupBuilder().mergeFrom(value);
@@ -2672,7 +2415,7 @@ private static final long serialVersionUID = 0L;
       } else {
         defaultGroupBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2686,7 +2429,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GroupItem default_group = 6 [json_name = "defaultGroup"];</code>
      */
     public Builder clearDefaultGroup() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000020);
       defaultGroup_ = null;
       if (defaultGroupBuilder_ != null) {
         defaultGroupBuilder_.dispose();
@@ -2705,7 +2448,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GroupItem default_group = 6 [json_name = "defaultGroup"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.GroupItem.Builder getDefaultGroupBuilder() {
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000020;
       onChanged();
       return getDefaultGroupFieldBuilder().getBuilder();
     }
@@ -2752,9 +2495,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.commons.org.GroupItem> customGroups_ =
       java.util.Collections.emptyList();
     private void ensureCustomGroupsIsMutable() {
-      if (!((bitField0_ & 0x00000200) != 0)) {
+      if (!((bitField0_ & 0x00000040) != 0)) {
         customGroups_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.GroupItem>(customGroups_);
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000040;
        }
     }
 
@@ -2992,7 +2735,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearCustomGroups() {
       if (customGroupsBuilder_ == null) {
         customGroups_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
       } else {
         customGroupsBuilder_.clear();
@@ -3125,12 +2868,269 @@ private static final long serialVersionUID = 0L;
         customGroupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.org.GroupItem, com.tcn.cloud.api.api.commons.org.GroupItem.Builder, com.tcn.cloud.api.api.commons.org.GroupItemOrBuilder>(
                 customGroups_,
-                ((bitField0_ & 0x00000200) != 0),
+                ((bitField0_ & 0x00000040) != 0),
                 getParentForChildren(),
                 isClean());
         customGroups_ = null;
       }
       return customGroupsBuilder_;
+    }
+
+    private java.lang.Object orgId_ = "";
+    /**
+     * <pre>
+     * org_id is the id of the organization the connection belongs too.
+     * </pre>
+     *
+     * <code>string org_id = 8 [json_name = "orgId"];</code>
+     * @return The orgId.
+     */
+    public java.lang.String getOrgId() {
+      java.lang.Object ref = orgId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orgId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * org_id is the id of the organization the connection belongs too.
+     * </pre>
+     *
+     * <code>string org_id = 8 [json_name = "orgId"];</code>
+     * @return The bytes for orgId.
+     */
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      java.lang.Object ref = orgId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orgId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * org_id is the id of the organization the connection belongs too.
+     * </pre>
+     *
+     * <code>string org_id = 8 [json_name = "orgId"];</code>
+     * @param value The orgId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOrgId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      orgId_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * org_id is the id of the organization the connection belongs too.
+     * </pre>
+     *
+     * <code>string org_id = 8 [json_name = "orgId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOrgId() {
+      orgId_ = getDefaultInstance().getOrgId();
+      bitField0_ = (bitField0_ & ~0x00000080);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * org_id is the id of the organization the connection belongs too.
+     * </pre>
+     *
+     * <code>string org_id = 8 [json_name = "orgId"];</code>
+     * @param value The bytes for orgId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      orgId_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * name is the name of the connection.
+     * </pre>
+     *
+     * <code>string name = 9 [json_name = "name"];</code>
+     * @return The name.
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * name is the name of the connection.
+     * </pre>
+     *
+     * <code>string name = 9 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * name is the name of the connection.
+     * </pre>
+     *
+     * <code>string name = 9 [json_name = "name"];</code>
+     * @param value The name to set.
+     * @return This builder for chaining.
+     */
+    public Builder setName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      name_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * name is the name of the connection.
+     * </pre>
+     *
+     * <code>string name = 9 [json_name = "name"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearName() {
+      name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000100);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * name is the name of the connection.
+     * </pre>
+     *
+     * <code>string name = 9 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      name_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+
+    private int type_ = 0;
+    /**
+     * <pre>
+     * type is what type of provider is used for the connection.
+     * </pre>
+     *
+     * <code>.api.commons.org.ConnectionType type = 10 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * type is what type of provider is used for the connection.
+     * </pre>
+     *
+     * <code>.api.commons.org.ConnectionType type = 10 [json_name = "type"];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTypeValue(int value) {
+      type_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * type is what type of provider is used for the connection.
+     * </pre>
+     *
+     * <code>.api.commons.org.ConnectionType type = 10 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.org.ConnectionType getType() {
+      com.tcn.cloud.api.api.commons.org.ConnectionType result = com.tcn.cloud.api.api.commons.org.ConnectionType.forNumber(type_);
+      return result == null ? com.tcn.cloud.api.api.commons.org.ConnectionType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * type is what type of provider is used for the connection.
+     * </pre>
+     *
+     * <code>.api.commons.org.ConnectionType type = 10 [json_name = "type"];</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
+     */
+    public Builder setType(com.tcn.cloud.api.api.commons.org.ConnectionType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000200;
+      type_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * type is what type of provider is used for the connection.
+     * </pre>
+     *
+     * <code>.api.commons.org.ConnectionType type = 10 [json_name = "type"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearType() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      type_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
