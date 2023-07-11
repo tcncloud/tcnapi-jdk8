@@ -387,6 +387,68 @@ public final class LMSGrpc {
     return getListAvailableFieldsByElementIdMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListFieldsForElementReq,
+      com.tcn.cloud.api.api.v0alpha.ListFieldsForElementRes> getListFieldsForElementMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListFieldsForElement",
+      requestType = com.tcn.cloud.api.api.v0alpha.ListFieldsForElementReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ListFieldsForElementRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListFieldsForElementReq,
+      com.tcn.cloud.api.api.v0alpha.ListFieldsForElementRes> getListFieldsForElementMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListFieldsForElementReq, com.tcn.cloud.api.api.v0alpha.ListFieldsForElementRes> getListFieldsForElementMethod;
+    if ((getListFieldsForElementMethod = LMSGrpc.getListFieldsForElementMethod) == null) {
+      synchronized (LMSGrpc.class) {
+        if ((getListFieldsForElementMethod = LMSGrpc.getListFieldsForElementMethod) == null) {
+          LMSGrpc.getListFieldsForElementMethod = getListFieldsForElementMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListFieldsForElementReq, com.tcn.cloud.api.api.v0alpha.ListFieldsForElementRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListFieldsForElement"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListFieldsForElementReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListFieldsForElementRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ListFieldsForElement"))
+              .build();
+        }
+      }
+    }
+    return getListFieldsForElementMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsReq,
+      com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsRes> getListAutocompleteFieldsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListAutocompleteFields",
+      requestType = com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsReq,
+      com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsRes> getListAutocompleteFieldsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsReq, com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsRes> getListAutocompleteFieldsMethod;
+    if ((getListAutocompleteFieldsMethod = LMSGrpc.getListAutocompleteFieldsMethod) == null) {
+      synchronized (LMSGrpc.class) {
+        if ((getListAutocompleteFieldsMethod = LMSGrpc.getListAutocompleteFieldsMethod) == null) {
+          LMSGrpc.getListAutocompleteFieldsMethod = getListAutocompleteFieldsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsReq, com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAutocompleteFields"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ListAutocompleteFields"))
+              .build();
+        }
+      }
+    }
+    return getListAutocompleteFieldsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
       com.tcn.cloud.api.api.v0alpha.ListCampaignLinksRes> getListCampaignLinksMethod;
 
@@ -1698,6 +1760,20 @@ public final class LMSGrpc {
     }
 
     /**
+     */
+    default void listFieldsForElement(com.tcn.cloud.api.api.v0alpha.ListFieldsForElementReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListFieldsForElementRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListFieldsForElementMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void listAutocompleteFields(com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAutocompleteFieldsMethod(), responseObserver);
+    }
+
+    /**
      * <pre>
      * list campaign links and descriptions
      * </pre>
@@ -2139,6 +2215,22 @@ public final class LMSGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ProcessFields> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAvailableFieldsByElementIdMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void listFieldsForElement(com.tcn.cloud.api.api.v0alpha.ListFieldsForElementReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListFieldsForElementRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListFieldsForElementMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void listAutocompleteFields(com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListAutocompleteFieldsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -2602,6 +2694,20 @@ public final class LMSGrpc {
     }
 
     /**
+     */
+    public com.tcn.cloud.api.api.v0alpha.ListFieldsForElementRes listFieldsForElement(com.tcn.cloud.api.api.v0alpha.ListFieldsForElementReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListFieldsForElementMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsRes listAutocompleteFields(com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListAutocompleteFieldsMethod(), getCallOptions(), request);
+    }
+
+    /**
      * <pre>
      * list campaign links and descriptions
      * </pre>
@@ -3031,6 +3137,22 @@ public final class LMSGrpc {
     }
 
     /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListFieldsForElementRes> listFieldsForElement(
+        com.tcn.cloud.api.api.v0alpha.ListFieldsForElementReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListFieldsForElementMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsRes> listAutocompleteFields(
+        com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListAutocompleteFieldsMethod(), getCallOptions()), request);
+    }
+
+    /**
      * <pre>
      * list campaign links and descriptions
      * </pre>
@@ -3359,44 +3481,46 @@ public final class LMSGrpc {
   private static final int METHODID_UPDATE_FIELD = 9;
   private static final int METHODID_DELETE_FIELD = 10;
   private static final int METHODID_LIST_AVAILABLE_FIELDS_BY_ELEMENT_ID = 11;
-  private static final int METHODID_LIST_CAMPAIGN_LINKS = 12;
-  private static final int METHODID_PEEK_LIST = 13;
-  private static final int METHODID_GET_HISTORY = 14;
-  private static final int METHODID_CREATE_ELEMENT = 15;
-  private static final int METHODID_LIST_ELEMENTS = 16;
-  private static final int METHODID_UPDATE_ELEMENT = 17;
-  private static final int METHODID_DELETE_ELEMENT = 18;
-  private static final int METHODID_COPY_PIPELINE_UPSTREAM = 19;
-  private static final int METHODID_COPY_PIPELINE_DOWNSTREAM = 20;
-  private static final int METHODID_PROCESS_ELEMENT = 21;
-  private static final int METHODID_GET_AVAILABLE_FIELDS = 22;
-  private static final int METHODID_LIST_NEW_EVENTS = 23;
-  private static final int METHODID_VIEW_QUEUE = 24;
-  private static final int METHODID_AUTOCOMPLETE = 25;
-  private static final int METHODID_GET_COMPLIANCE_SCRUB_LISTS = 26;
-  private static final int METHODID_FIND_FIELD_USAGES = 27;
-  private static final int METHODID_FIND_INVALID_ELEMENTS = 28;
-  private static final int METHODID_CREATE_COLLECTION = 29;
-  private static final int METHODID_GET_COLLECTION = 30;
-  private static final int METHODID_UPDATE_COLLECTION = 31;
-  private static final int METHODID_DELETE_COLLECTION = 32;
-  private static final int METHODID_LIST_COLLECTIONS = 33;
-  private static final int METHODID_RESET_COLLECTION = 34;
-  private static final int METHODID_ADD_COLLECTION_ENTRY = 35;
-  private static final int METHODID_DELETE_COLLECTION_ENTRY = 36;
-  private static final int METHODID_UPDATE_COLLECTION_ENTRY = 37;
-  private static final int METHODID_STREAM_COLLECTION = 38;
-  private static final int METHODID_SEARCH_COLLECTIONS_PAGINATED = 39;
-  private static final int METHODID_GET_COLLECTION_ENTRIES = 40;
-  private static final int METHODID_CREATE_CJS_SEARCH_DEFINITION = 41;
-  private static final int METHODID_GET_CJS_SEARCH_DEFINITION = 42;
-  private static final int METHODID_UPDATE_CJS_SEARCH_DEFINITION = 43;
-  private static final int METHODID_DELETE_CJS_SEARCH_DEFINITION = 44;
-  private static final int METHODID_LIST_CJS_SEARCH_DEFINITIONS = 45;
-  private static final int METHODID_EXECUTE_CJS_SEARCH_DEFINITION = 46;
-  private static final int METHODID_GET_CJS_SECURE_SEARCH_CRITERIA = 47;
-  private static final int METHODID_CREATE_CJS_SECURE_SEARCH_CRITERIA = 48;
-  private static final int METHODID_UPDATE_CJS_SECURE_SEARCH_CRITERIA = 49;
+  private static final int METHODID_LIST_FIELDS_FOR_ELEMENT = 12;
+  private static final int METHODID_LIST_AUTOCOMPLETE_FIELDS = 13;
+  private static final int METHODID_LIST_CAMPAIGN_LINKS = 14;
+  private static final int METHODID_PEEK_LIST = 15;
+  private static final int METHODID_GET_HISTORY = 16;
+  private static final int METHODID_CREATE_ELEMENT = 17;
+  private static final int METHODID_LIST_ELEMENTS = 18;
+  private static final int METHODID_UPDATE_ELEMENT = 19;
+  private static final int METHODID_DELETE_ELEMENT = 20;
+  private static final int METHODID_COPY_PIPELINE_UPSTREAM = 21;
+  private static final int METHODID_COPY_PIPELINE_DOWNSTREAM = 22;
+  private static final int METHODID_PROCESS_ELEMENT = 23;
+  private static final int METHODID_GET_AVAILABLE_FIELDS = 24;
+  private static final int METHODID_LIST_NEW_EVENTS = 25;
+  private static final int METHODID_VIEW_QUEUE = 26;
+  private static final int METHODID_AUTOCOMPLETE = 27;
+  private static final int METHODID_GET_COMPLIANCE_SCRUB_LISTS = 28;
+  private static final int METHODID_FIND_FIELD_USAGES = 29;
+  private static final int METHODID_FIND_INVALID_ELEMENTS = 30;
+  private static final int METHODID_CREATE_COLLECTION = 31;
+  private static final int METHODID_GET_COLLECTION = 32;
+  private static final int METHODID_UPDATE_COLLECTION = 33;
+  private static final int METHODID_DELETE_COLLECTION = 34;
+  private static final int METHODID_LIST_COLLECTIONS = 35;
+  private static final int METHODID_RESET_COLLECTION = 36;
+  private static final int METHODID_ADD_COLLECTION_ENTRY = 37;
+  private static final int METHODID_DELETE_COLLECTION_ENTRY = 38;
+  private static final int METHODID_UPDATE_COLLECTION_ENTRY = 39;
+  private static final int METHODID_STREAM_COLLECTION = 40;
+  private static final int METHODID_SEARCH_COLLECTIONS_PAGINATED = 41;
+  private static final int METHODID_GET_COLLECTION_ENTRIES = 42;
+  private static final int METHODID_CREATE_CJS_SEARCH_DEFINITION = 43;
+  private static final int METHODID_GET_CJS_SEARCH_DEFINITION = 44;
+  private static final int METHODID_UPDATE_CJS_SEARCH_DEFINITION = 45;
+  private static final int METHODID_DELETE_CJS_SEARCH_DEFINITION = 46;
+  private static final int METHODID_LIST_CJS_SEARCH_DEFINITIONS = 47;
+  private static final int METHODID_EXECUTE_CJS_SEARCH_DEFINITION = 48;
+  private static final int METHODID_GET_CJS_SECURE_SEARCH_CRITERIA = 49;
+  private static final int METHODID_CREATE_CJS_SECURE_SEARCH_CRITERIA = 50;
+  private static final int METHODID_UPDATE_CJS_SECURE_SEARCH_CRITERIA = 51;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3462,6 +3586,14 @@ public final class LMSGrpc {
         case METHODID_LIST_AVAILABLE_FIELDS_BY_ELEMENT_ID:
           serviceImpl.listAvailableFieldsByElementId((com.tcn.cloud.api.api.v0alpha.ListAvailableFieldsByElementIdReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ProcessFields>) responseObserver);
+          break;
+        case METHODID_LIST_FIELDS_FOR_ELEMENT:
+          serviceImpl.listFieldsForElement((com.tcn.cloud.api.api.v0alpha.ListFieldsForElementReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListFieldsForElementRes>) responseObserver);
+          break;
+        case METHODID_LIST_AUTOCOMPLETE_FIELDS:
+          serviceImpl.listAutocompleteFields((com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsRes>) responseObserver);
           break;
         case METHODID_LIST_CAMPAIGN_LINKS:
           serviceImpl.listCampaignLinks((com.google.protobuf.Empty) request,
@@ -3717,6 +3849,20 @@ public final class LMSGrpc {
               com.tcn.cloud.api.api.v0alpha.ListAvailableFieldsByElementIdReq,
               com.tcn.cloud.api.api.v0alpha.ProcessFields>(
                 service, METHODID_LIST_AVAILABLE_FIELDS_BY_ELEMENT_ID)))
+        .addMethod(
+          getListFieldsForElementMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListFieldsForElementReq,
+              com.tcn.cloud.api.api.v0alpha.ListFieldsForElementRes>(
+                service, METHODID_LIST_FIELDS_FOR_ELEMENT)))
+        .addMethod(
+          getListAutocompleteFieldsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsReq,
+              com.tcn.cloud.api.api.v0alpha.ListAutocompleteFieldsRes>(
+                service, METHODID_LIST_AUTOCOMPLETE_FIELDS)))
         .addMethod(
           getListCampaignLinksMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -4043,6 +4189,8 @@ public final class LMSGrpc {
               .addMethod(getUpdateFieldMethod())
               .addMethod(getDeleteFieldMethod())
               .addMethod(getListAvailableFieldsByElementIdMethod())
+              .addMethod(getListFieldsForElementMethod())
+              .addMethod(getListAutocompleteFieldsMethod())
               .addMethod(getListCampaignLinksMethod())
               .addMethod(getPeekListMethod())
               .addMethod(getGetHistoryMethod())

@@ -256,14 +256,4 @@ public interface DraftScheduleOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder getPerformanceMetricsOrBuilder(
       int index);
-
-  /**
-   * <pre>
-   * Schedule Scenario of the draft schedule.
-   * </pre>
-   *
-   * <code>int64 schedule_scenario_sid = 10 [json_name = "scheduleScenarioSid"];</code>
-   * @return The scheduleScenarioSid.
-   */
-  long getScheduleScenarioSid();
 }

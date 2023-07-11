@@ -680,21 +680,6 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepaySubmitAchPaymentsOrBuilder getUsaepaySubmitAchPaymentsOrBuilder();
 
   /**
-   * <code>.api.commons.integrations.ExecuteUsaepayGetCcToken usaepay_get_cc_token = 903 [json_name = "usaepayGetCcToken"];</code>
-   * @return Whether the usaepayGetCcToken field is set.
-   */
-  boolean hasUsaepayGetCcToken();
-  /**
-   * <code>.api.commons.integrations.ExecuteUsaepayGetCcToken usaepay_get_cc_token = 903 [json_name = "usaepayGetCcToken"];</code>
-   * @return The usaepayGetCcToken.
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken getUsaepayGetCcToken();
-  /**
-   * <code>.api.commons.integrations.ExecuteUsaepayGetCcToken usaepay_get_cc_token = 903 [json_name = "usaepayGetCcToken"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcTokenOrBuilder getUsaepayGetCcTokenOrBuilder();
-
-  /**
    * <code>.api.commons.integrations.ExecuteEzidebitSubmitCcPayments ezidebit_submit_cc_payments = 1001 [json_name = "ezidebitSubmitCcPayments"];</code>
    * @return Whether the ezidebitSubmitCcPayments field is set.
    */

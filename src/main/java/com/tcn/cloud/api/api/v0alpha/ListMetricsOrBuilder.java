@@ -74,41 +74,49 @@ public interface ListMetricsOrBuilder extends
    * THeir indexes match up
    * </pre>
    *
-   * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes"];</code>
+   * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
+   *     See api/v0alpha/lms.proto;l=2191
    * @return A list containing the fieldTypes.
    */
-  java.util.List<com.tcn.cloud.api.api.commons.RecordType> getFieldTypesList();
+  @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.commons.RecordType> getFieldTypesList();
   /**
    * <pre>
    * all the field types that exist. field_types[i] has a name of field_names[i].
    * THeir indexes match up
    * </pre>
    *
-   * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes"];</code>
+   * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
+   *     See api/v0alpha/lms.proto;l=2191
    * @return The count of fieldTypes.
    */
-  int getFieldTypesCount();
+  @java.lang.Deprecated int getFieldTypesCount();
   /**
    * <pre>
    * all the field types that exist. field_types[i] has a name of field_names[i].
    * THeir indexes match up
    * </pre>
    *
-   * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes"];</code>
+   * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
+   *     See api/v0alpha/lms.proto;l=2191
    * @param index The index of the element to return.
    * @return The fieldTypes at the given index.
    */
-  com.tcn.cloud.api.api.commons.RecordType getFieldTypes(int index);
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.RecordType getFieldTypes(int index);
   /**
    * <pre>
    * all the field types that exist. field_types[i] has a name of field_names[i].
    * THeir indexes match up
    * </pre>
    *
-   * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes"];</code>
+   * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
+   *     See api/v0alpha/lms.proto;l=2191
    * @return A list containing the enum numeric values on the wire for fieldTypes.
    */
-  java.util.List<java.lang.Integer>
+  @java.lang.Deprecated java.util.List<java.lang.Integer>
   getFieldTypesValueList();
   /**
    * <pre>
@@ -116,11 +124,42 @@ public interface ListMetricsOrBuilder extends
    * THeir indexes match up
    * </pre>
    *
-   * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes"];</code>
+   * <code>repeated .api.commons.RecordType field_types = 4 [json_name = "fieldTypes", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListMetrics.field_types is deprecated.
+   *     See api/v0alpha/lms.proto;l=2191
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of fieldTypes at the given index.
    */
-  int getFieldTypesValue(int index);
+  @java.lang.Deprecated int getFieldTypesValue(int index);
+
+  /**
+   * <code>repeated .api.commons.FieldType ftypes = 18 [json_name = "ftypes"];</code>
+   * @return A list containing the ftypes.
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.FieldType> getFtypesList();
+  /**
+   * <code>repeated .api.commons.FieldType ftypes = 18 [json_name = "ftypes"];</code>
+   * @return The count of ftypes.
+   */
+  int getFtypesCount();
+  /**
+   * <code>repeated .api.commons.FieldType ftypes = 18 [json_name = "ftypes"];</code>
+   * @param index The index of the element to return.
+   * @return The ftypes at the given index.
+   */
+  com.tcn.cloud.api.api.commons.FieldType getFtypes(int index);
+  /**
+   * <code>repeated .api.commons.FieldType ftypes = 18 [json_name = "ftypes"];</code>
+   * @return A list containing the enum numeric values on the wire for ftypes.
+   */
+  java.util.List<java.lang.Integer>
+  getFtypesValueList();
+  /**
+   * <code>repeated .api.commons.FieldType ftypes = 18 [json_name = "ftypes"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of ftypes at the given index.
+   */
+  int getFtypesValue(int index);
 
   /**
    * <pre>
