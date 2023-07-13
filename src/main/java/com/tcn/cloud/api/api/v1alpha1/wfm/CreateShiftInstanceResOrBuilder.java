@@ -12,43 +12,43 @@ public interface CreateShiftInstanceResOrBuilder extends
    * Any shift instances that were created.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance> 
-      getShiftInstanceList();
+      getShiftInstancesList();
   /**
    * <pre>
    * Any shift instances that were created.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance getShiftInstance(int index);
+  com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance getShiftInstances(int index);
   /**
    * <pre>
    * Any shift instances that were created.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
    */
-  int getShiftInstanceCount();
+  int getShiftInstancesCount();
   /**
    * <pre>
    * Any shift instances that were created.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder> 
-      getShiftInstanceOrBuilderList();
+      getShiftInstancesOrBuilderList();
   /**
    * <pre>
    * Any shift instances that were created.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder getShiftInstanceOrBuilder(
+  com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder getShiftInstancesOrBuilder(
       int index);
 
   /**

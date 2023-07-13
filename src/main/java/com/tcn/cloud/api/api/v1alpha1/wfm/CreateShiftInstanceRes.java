@@ -20,7 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CreateShiftInstanceRes() {
-    shiftInstance_ = java.util.Collections.emptyList();
+    shiftInstances_ = java.util.Collections.emptyList();
     diagnostics_ = java.util.Collections.emptyList();
   }
 
@@ -44,65 +44,65 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes.class, com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes.Builder.class);
   }
 
-  public static final int SHIFT_INSTANCE_FIELD_NUMBER = 1;
+  public static final int SHIFT_INSTANCES_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance> shiftInstance_;
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance> shiftInstances_;
   /**
    * <pre>
    * Any shift instances that were created.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance> getShiftInstanceList() {
-    return shiftInstance_;
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance> getShiftInstancesList() {
+    return shiftInstances_;
   }
   /**
    * <pre>
    * Any shift instances that were created.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder> 
-      getShiftInstanceOrBuilderList() {
-    return shiftInstance_;
+      getShiftInstancesOrBuilderList() {
+    return shiftInstances_;
   }
   /**
    * <pre>
    * Any shift instances that were created.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
    */
   @java.lang.Override
-  public int getShiftInstanceCount() {
-    return shiftInstance_.size();
+  public int getShiftInstancesCount() {
+    return shiftInstances_.size();
   }
   /**
    * <pre>
    * Any shift instances that were created.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance getShiftInstance(int index) {
-    return shiftInstance_.get(index);
+  public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance getShiftInstances(int index) {
+    return shiftInstances_.get(index);
   }
   /**
    * <pre>
    * Any shift instances that were created.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder getShiftInstanceOrBuilder(
+  public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder getShiftInstancesOrBuilder(
       int index) {
-    return shiftInstance_.get(index);
+    return shiftInstances_.get(index);
   }
 
   public static final int DIAGNOSTICS_FIELD_NUMBER = 2;
@@ -180,8 +180,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (int i = 0; i < shiftInstance_.size(); i++) {
-      output.writeMessage(1, shiftInstance_.get(i));
+    for (int i = 0; i < shiftInstances_.size(); i++) {
+      output.writeMessage(1, shiftInstances_.get(i));
     }
     for (int i = 0; i < diagnostics_.size(); i++) {
       output.writeMessage(2, diagnostics_.get(i));
@@ -195,9 +195,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    for (int i = 0; i < shiftInstance_.size(); i++) {
+    for (int i = 0; i < shiftInstances_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, shiftInstance_.get(i));
+        .computeMessageSize(1, shiftInstances_.get(i));
     }
     for (int i = 0; i < diagnostics_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
@@ -218,8 +218,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes other = (com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes) obj;
 
-    if (!getShiftInstanceList()
-        .equals(other.getShiftInstanceList())) return false;
+    if (!getShiftInstancesList()
+        .equals(other.getShiftInstancesList())) return false;
     if (!getDiagnosticsList()
         .equals(other.getDiagnosticsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -233,9 +233,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (getShiftInstanceCount() > 0) {
-      hash = (37 * hash) + SHIFT_INSTANCE_FIELD_NUMBER;
-      hash = (53 * hash) + getShiftInstanceList().hashCode();
+    if (getShiftInstancesCount() > 0) {
+      hash = (37 * hash) + SHIFT_INSTANCES_FIELD_NUMBER;
+      hash = (53 * hash) + getShiftInstancesList().hashCode();
     }
     if (getDiagnosticsCount() > 0) {
       hash = (37 * hash) + DIAGNOSTICS_FIELD_NUMBER;
@@ -376,11 +376,11 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      if (shiftInstanceBuilder_ == null) {
-        shiftInstance_ = java.util.Collections.emptyList();
+      if (shiftInstancesBuilder_ == null) {
+        shiftInstances_ = java.util.Collections.emptyList();
       } else {
-        shiftInstance_ = null;
-        shiftInstanceBuilder_.clear();
+        shiftInstances_ = null;
+        shiftInstancesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
       if (diagnosticsBuilder_ == null) {
@@ -423,14 +423,14 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes result) {
-      if (shiftInstanceBuilder_ == null) {
+      if (shiftInstancesBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
-          shiftInstance_ = java.util.Collections.unmodifiableList(shiftInstance_);
+          shiftInstances_ = java.util.Collections.unmodifiableList(shiftInstances_);
           bitField0_ = (bitField0_ & ~0x00000001);
         }
-        result.shiftInstance_ = shiftInstance_;
+        result.shiftInstances_ = shiftInstances_;
       } else {
-        result.shiftInstance_ = shiftInstanceBuilder_.build();
+        result.shiftInstances_ = shiftInstancesBuilder_.build();
       }
       if (diagnosticsBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0)) {
@@ -491,29 +491,29 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes.getDefaultInstance()) return this;
-      if (shiftInstanceBuilder_ == null) {
-        if (!other.shiftInstance_.isEmpty()) {
-          if (shiftInstance_.isEmpty()) {
-            shiftInstance_ = other.shiftInstance_;
+      if (shiftInstancesBuilder_ == null) {
+        if (!other.shiftInstances_.isEmpty()) {
+          if (shiftInstances_.isEmpty()) {
+            shiftInstances_ = other.shiftInstances_;
             bitField0_ = (bitField0_ & ~0x00000001);
           } else {
-            ensureShiftInstanceIsMutable();
-            shiftInstance_.addAll(other.shiftInstance_);
+            ensureShiftInstancesIsMutable();
+            shiftInstances_.addAll(other.shiftInstances_);
           }
           onChanged();
         }
       } else {
-        if (!other.shiftInstance_.isEmpty()) {
-          if (shiftInstanceBuilder_.isEmpty()) {
-            shiftInstanceBuilder_.dispose();
-            shiftInstanceBuilder_ = null;
-            shiftInstance_ = other.shiftInstance_;
+        if (!other.shiftInstances_.isEmpty()) {
+          if (shiftInstancesBuilder_.isEmpty()) {
+            shiftInstancesBuilder_.dispose();
+            shiftInstancesBuilder_ = null;
+            shiftInstances_ = other.shiftInstances_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            shiftInstanceBuilder_ = 
+            shiftInstancesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getShiftInstanceFieldBuilder() : null;
+                 getShiftInstancesFieldBuilder() : null;
           } else {
-            shiftInstanceBuilder_.addAllMessages(other.shiftInstance_);
+            shiftInstancesBuilder_.addAllMessages(other.shiftInstances_);
           }
         }
       }
@@ -574,11 +574,11 @@ private static final long serialVersionUID = 0L;
                   input.readMessage(
                       com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.parser(),
                       extensionRegistry);
-              if (shiftInstanceBuilder_ == null) {
-                ensureShiftInstanceIsMutable();
-                shiftInstance_.add(m);
+              if (shiftInstancesBuilder_ == null) {
+                ensureShiftInstancesIsMutable();
+                shiftInstances_.add(m);
               } else {
-                shiftInstanceBuilder_.addMessage(m);
+                shiftInstancesBuilder_.addMessage(m);
               }
               break;
             } // case 10
@@ -612,30 +612,30 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance> shiftInstance_ =
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance> shiftInstances_ =
       java.util.Collections.emptyList();
-    private void ensureShiftInstanceIsMutable() {
+    private void ensureShiftInstancesIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        shiftInstance_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance>(shiftInstance_);
+        shiftInstances_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance>(shiftInstances_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder> shiftInstanceBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder> shiftInstancesBuilder_;
 
     /**
      * <pre>
      * Any shift instances that were created.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance> getShiftInstanceList() {
-      if (shiftInstanceBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(shiftInstance_);
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance> getShiftInstancesList() {
+      if (shiftInstancesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(shiftInstances_);
       } else {
-        return shiftInstanceBuilder_.getMessageList();
+        return shiftInstancesBuilder_.getMessageList();
       }
     }
     /**
@@ -643,13 +643,13 @@ private static final long serialVersionUID = 0L;
      * Any shift instances that were created.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
      */
-    public int getShiftInstanceCount() {
-      if (shiftInstanceBuilder_ == null) {
-        return shiftInstance_.size();
+    public int getShiftInstancesCount() {
+      if (shiftInstancesBuilder_ == null) {
+        return shiftInstances_.size();
       } else {
-        return shiftInstanceBuilder_.getCount();
+        return shiftInstancesBuilder_.getCount();
       }
     }
     /**
@@ -657,13 +657,13 @@ private static final long serialVersionUID = 0L;
      * Any shift instances that were created.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance getShiftInstance(int index) {
-      if (shiftInstanceBuilder_ == null) {
-        return shiftInstance_.get(index);
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance getShiftInstances(int index) {
+      if (shiftInstancesBuilder_ == null) {
+        return shiftInstances_.get(index);
       } else {
-        return shiftInstanceBuilder_.getMessage(index);
+        return shiftInstancesBuilder_.getMessage(index);
       }
     }
     /**
@@ -671,19 +671,19 @@ private static final long serialVersionUID = 0L;
      * Any shift instances that were created.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
      */
-    public Builder setShiftInstance(
+    public Builder setShiftInstances(
         int index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance value) {
-      if (shiftInstanceBuilder_ == null) {
+      if (shiftInstancesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureShiftInstanceIsMutable();
-        shiftInstance_.set(index, value);
+        ensureShiftInstancesIsMutable();
+        shiftInstances_.set(index, value);
         onChanged();
       } else {
-        shiftInstanceBuilder_.setMessage(index, value);
+        shiftInstancesBuilder_.setMessage(index, value);
       }
       return this;
     }
@@ -692,16 +692,16 @@ private static final long serialVersionUID = 0L;
      * Any shift instances that were created.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
      */
-    public Builder setShiftInstance(
+    public Builder setShiftInstances(
         int index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder builderForValue) {
-      if (shiftInstanceBuilder_ == null) {
-        ensureShiftInstanceIsMutable();
-        shiftInstance_.set(index, builderForValue.build());
+      if (shiftInstancesBuilder_ == null) {
+        ensureShiftInstancesIsMutable();
+        shiftInstances_.set(index, builderForValue.build());
         onChanged();
       } else {
-        shiftInstanceBuilder_.setMessage(index, builderForValue.build());
+        shiftInstancesBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -710,18 +710,18 @@ private static final long serialVersionUID = 0L;
      * Any shift instances that were created.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
      */
-    public Builder addShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance value) {
-      if (shiftInstanceBuilder_ == null) {
+    public Builder addShiftInstances(com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance value) {
+      if (shiftInstancesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureShiftInstanceIsMutable();
-        shiftInstance_.add(value);
+        ensureShiftInstancesIsMutable();
+        shiftInstances_.add(value);
         onChanged();
       } else {
-        shiftInstanceBuilder_.addMessage(value);
+        shiftInstancesBuilder_.addMessage(value);
       }
       return this;
     }
@@ -730,19 +730,19 @@ private static final long serialVersionUID = 0L;
      * Any shift instances that were created.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
      */
-    public Builder addShiftInstance(
+    public Builder addShiftInstances(
         int index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance value) {
-      if (shiftInstanceBuilder_ == null) {
+      if (shiftInstancesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureShiftInstanceIsMutable();
-        shiftInstance_.add(index, value);
+        ensureShiftInstancesIsMutable();
+        shiftInstances_.add(index, value);
         onChanged();
       } else {
-        shiftInstanceBuilder_.addMessage(index, value);
+        shiftInstancesBuilder_.addMessage(index, value);
       }
       return this;
     }
@@ -751,16 +751,16 @@ private static final long serialVersionUID = 0L;
      * Any shift instances that were created.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
      */
-    public Builder addShiftInstance(
+    public Builder addShiftInstances(
         com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder builderForValue) {
-      if (shiftInstanceBuilder_ == null) {
-        ensureShiftInstanceIsMutable();
-        shiftInstance_.add(builderForValue.build());
+      if (shiftInstancesBuilder_ == null) {
+        ensureShiftInstancesIsMutable();
+        shiftInstances_.add(builderForValue.build());
         onChanged();
       } else {
-        shiftInstanceBuilder_.addMessage(builderForValue.build());
+        shiftInstancesBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
@@ -769,16 +769,16 @@ private static final long serialVersionUID = 0L;
      * Any shift instances that were created.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
      */
-    public Builder addShiftInstance(
+    public Builder addShiftInstances(
         int index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder builderForValue) {
-      if (shiftInstanceBuilder_ == null) {
-        ensureShiftInstanceIsMutable();
-        shiftInstance_.add(index, builderForValue.build());
+      if (shiftInstancesBuilder_ == null) {
+        ensureShiftInstancesIsMutable();
+        shiftInstances_.add(index, builderForValue.build());
         onChanged();
       } else {
-        shiftInstanceBuilder_.addMessage(index, builderForValue.build());
+        shiftInstancesBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -787,17 +787,17 @@ private static final long serialVersionUID = 0L;
      * Any shift instances that were created.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
      */
-    public Builder addAllShiftInstance(
+    public Builder addAllShiftInstances(
         java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance> values) {
-      if (shiftInstanceBuilder_ == null) {
-        ensureShiftInstanceIsMutable();
+      if (shiftInstancesBuilder_ == null) {
+        ensureShiftInstancesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, shiftInstance_);
+            values, shiftInstances_);
         onChanged();
       } else {
-        shiftInstanceBuilder_.addAllMessages(values);
+        shiftInstancesBuilder_.addAllMessages(values);
       }
       return this;
     }
@@ -806,15 +806,15 @@ private static final long serialVersionUID = 0L;
      * Any shift instances that were created.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
      */
-    public Builder clearShiftInstance() {
-      if (shiftInstanceBuilder_ == null) {
-        shiftInstance_ = java.util.Collections.emptyList();
+    public Builder clearShiftInstances() {
+      if (shiftInstancesBuilder_ == null) {
+        shiftInstances_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
-        shiftInstanceBuilder_.clear();
+        shiftInstancesBuilder_.clear();
       }
       return this;
     }
@@ -823,15 +823,15 @@ private static final long serialVersionUID = 0L;
      * Any shift instances that were created.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
      */
-    public Builder removeShiftInstance(int index) {
-      if (shiftInstanceBuilder_ == null) {
-        ensureShiftInstanceIsMutable();
-        shiftInstance_.remove(index);
+    public Builder removeShiftInstances(int index) {
+      if (shiftInstancesBuilder_ == null) {
+        ensureShiftInstancesIsMutable();
+        shiftInstances_.remove(index);
         onChanged();
       } else {
-        shiftInstanceBuilder_.remove(index);
+        shiftInstancesBuilder_.remove(index);
       }
       return this;
     }
@@ -840,24 +840,24 @@ private static final long serialVersionUID = 0L;
      * Any shift instances that were created.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder getShiftInstanceBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder getShiftInstancesBuilder(
         int index) {
-      return getShiftInstanceFieldBuilder().getBuilder(index);
+      return getShiftInstancesFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
      * Any shift instances that were created.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder getShiftInstanceOrBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder getShiftInstancesOrBuilder(
         int index) {
-      if (shiftInstanceBuilder_ == null) {
-        return shiftInstance_.get(index);  } else {
-        return shiftInstanceBuilder_.getMessageOrBuilder(index);
+      if (shiftInstancesBuilder_ == null) {
+        return shiftInstances_.get(index);  } else {
+        return shiftInstancesBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
@@ -865,14 +865,14 @@ private static final long serialVersionUID = 0L;
      * Any shift instances that were created.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
      */
     public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder> 
-         getShiftInstanceOrBuilderList() {
-      if (shiftInstanceBuilder_ != null) {
-        return shiftInstanceBuilder_.getMessageOrBuilderList();
+         getShiftInstancesOrBuilderList() {
+      if (shiftInstancesBuilder_ != null) {
+        return shiftInstancesBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(shiftInstance_);
+        return java.util.Collections.unmodifiableList(shiftInstances_);
       }
     }
     /**
@@ -880,10 +880,10 @@ private static final long serialVersionUID = 0L;
      * Any shift instances that were created.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder addShiftInstanceBuilder() {
-      return getShiftInstanceFieldBuilder().addBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder addShiftInstancesBuilder() {
+      return getShiftInstancesFieldBuilder().addBuilder(
           com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.getDefaultInstance());
     }
     /**
@@ -891,11 +891,11 @@ private static final long serialVersionUID = 0L;
      * Any shift instances that were created.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder addShiftInstanceBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder addShiftInstancesBuilder(
         int index) {
-      return getShiftInstanceFieldBuilder().addBuilder(
+      return getShiftInstancesFieldBuilder().addBuilder(
           index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.getDefaultInstance());
     }
     /**
@@ -903,25 +903,25 @@ private static final long serialVersionUID = 0L;
      * Any shift instances that were created.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instances = 1 [json_name = "shiftInstances"];</code>
      */
     public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder> 
-         getShiftInstanceBuilderList() {
-      return getShiftInstanceFieldBuilder().getBuilderList();
+         getShiftInstancesBuilderList() {
+      return getShiftInstancesFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder> 
-        getShiftInstanceFieldBuilder() {
-      if (shiftInstanceBuilder_ == null) {
-        shiftInstanceBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+        getShiftInstancesFieldBuilder() {
+      if (shiftInstancesBuilder_ == null) {
+        shiftInstancesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder>(
-                shiftInstance_,
+                shiftInstances_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
-        shiftInstance_ = null;
+        shiftInstances_ = null;
       }
-      return shiftInstanceBuilder_;
+      return shiftInstancesBuilder_;
     }
 
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> diagnostics_ =
