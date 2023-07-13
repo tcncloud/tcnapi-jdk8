@@ -82,6 +82,21 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int IS_PREFERRED_FIELD_NUMBER = 2;
+  private boolean isPreferred_ = false;
+  /**
+   * <pre>
+   * Mandatory = 0, Preferred = 1
+   * </pre>
+   *
+   * <code>bool is_preferred = 2 [json_name = "isPreferred"];</code>
+   * @return The isPreferred.
+   */
+  @java.lang.Override
+  public boolean getIsPreferred() {
+    return isPreferred_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -99,6 +114,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(skillId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, skillId_);
     }
+    if (isPreferred_ != false) {
+      output.writeBool(2, isPreferred_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -110,6 +128,10 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(skillId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, skillId_);
+    }
+    if (isPreferred_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(2, isPreferred_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -128,6 +150,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getSkillId()
         .equals(other.getSkillId())) return false;
+    if (getIsPreferred()
+        != other.getIsPreferred()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -141,6 +165,9 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + SKILL_ID_FIELD_NUMBER;
     hash = (53 * hash) + getSkillId().hashCode();
+    hash = (37 * hash) + IS_PREFERRED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIsPreferred());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -277,6 +304,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       skillId_ = "";
+      isPreferred_ = false;
       return this;
     }
 
@@ -312,6 +340,9 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.skillId_ = skillId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.isPreferred_ = isPreferred_;
       }
     }
 
@@ -364,6 +395,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
+      if (other.getIsPreferred() != false) {
+        setIsPreferred(other.getIsPreferred());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -395,6 +429,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 16: {
+              isPreferred_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -480,6 +519,50 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       skillId_ = value;
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private boolean isPreferred_ ;
+    /**
+     * <pre>
+     * Mandatory = 0, Preferred = 1
+     * </pre>
+     *
+     * <code>bool is_preferred = 2 [json_name = "isPreferred"];</code>
+     * @return The isPreferred.
+     */
+    @java.lang.Override
+    public boolean getIsPreferred() {
+      return isPreferred_;
+    }
+    /**
+     * <pre>
+     * Mandatory = 0, Preferred = 1
+     * </pre>
+     *
+     * <code>bool is_preferred = 2 [json_name = "isPreferred"];</code>
+     * @param value The isPreferred to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIsPreferred(boolean value) {
+
+      isPreferred_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Mandatory = 0, Preferred = 1
+     * </pre>
+     *
+     * <code>bool is_preferred = 2 [json_name = "isPreferred"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIsPreferred() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      isPreferred_ = false;
       onChanged();
       return this;
     }

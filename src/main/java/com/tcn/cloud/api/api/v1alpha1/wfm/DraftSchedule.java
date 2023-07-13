@@ -450,6 +450,21 @@ private static final long serialVersionUID = 0L;
     return performanceMetrics_.get(index);
   }
 
+  public static final int SCHEDULE_SCENARIO_SID_FIELD_NUMBER = 10;
+  private long scheduleScenarioSid_ = 0L;
+  /**
+   * <pre>
+   * Schedule Scenario of the draft schedule.
+   * </pre>
+   *
+   * <code>int64 schedule_scenario_sid = 10 [json_name = "scheduleScenarioSid"];</code>
+   * @return The scheduleScenarioSid.
+   */
+  @java.lang.Override
+  public long getScheduleScenarioSid() {
+    return scheduleScenarioSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -490,6 +505,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < performanceMetrics_.size(); i++) {
       output.writeMessage(9, performanceMetrics_.get(i));
+    }
+    if (scheduleScenarioSid_ != 0L) {
+      output.writeInt64(10, scheduleScenarioSid_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -533,6 +551,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, performanceMetrics_.get(i));
     }
+    if (scheduleScenarioSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(10, scheduleScenarioSid_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -575,6 +597,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getShiftInstancesList())) return false;
     if (!getPerformanceMetricsList()
         .equals(other.getPerformanceMetricsList())) return false;
+    if (getScheduleScenarioSid()
+        != other.getScheduleScenarioSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -615,6 +639,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PERFORMANCE_METRICS_FIELD_NUMBER;
       hash = (53 * hash) + getPerformanceMetricsList().hashCode();
     }
+    hash = (37 * hash) + SCHEDULE_SCENARIO_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getScheduleScenarioSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -783,6 +810,7 @@ private static final long serialVersionUID = 0L;
         performanceMetricsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000100);
+      scheduleScenarioSid_ = 0L;
       return this;
     }
 
@@ -864,6 +892,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.createdByUserId_ = createdByUserId_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.scheduleScenarioSid_ = scheduleScenarioSid_;
       }
     }
 
@@ -990,6 +1021,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.getScheduleScenarioSid() != 0L) {
+        setScheduleScenarioSid(other.getScheduleScenarioSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1083,6 +1117,11 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 74
+            case 80: {
+              scheduleScenarioSid_ = input.readInt64();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 80
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2543,6 +2582,50 @@ private static final long serialVersionUID = 0L;
         performanceMetrics_ = null;
       }
       return performanceMetricsBuilder_;
+    }
+
+    private long scheduleScenarioSid_ ;
+    /**
+     * <pre>
+     * Schedule Scenario of the draft schedule.
+     * </pre>
+     *
+     * <code>int64 schedule_scenario_sid = 10 [json_name = "scheduleScenarioSid"];</code>
+     * @return The scheduleScenarioSid.
+     */
+    @java.lang.Override
+    public long getScheduleScenarioSid() {
+      return scheduleScenarioSid_;
+    }
+    /**
+     * <pre>
+     * Schedule Scenario of the draft schedule.
+     * </pre>
+     *
+     * <code>int64 schedule_scenario_sid = 10 [json_name = "scheduleScenarioSid"];</code>
+     * @param value The scheduleScenarioSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setScheduleScenarioSid(long value) {
+
+      scheduleScenarioSid_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Schedule Scenario of the draft schedule.
+     * </pre>
+     *
+     * <code>int64 schedule_scenario_sid = 10 [json_name = "scheduleScenarioSid"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearScheduleScenarioSid() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      scheduleScenarioSid_ = 0L;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

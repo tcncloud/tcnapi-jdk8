@@ -152,6 +152,14 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_SHIFT4 = 3400;</code>
    */
   INTEGRATION_TYPE_SHIFT4(3400),
+  /**
+   * <code>INTEGRATION_TYPE_POSCORP = 3500;</code>
+   */
+  INTEGRATION_TYPE_POSCORP(3500),
+  /**
+   * <code>INTEGRATION_TYPE_PIANO = 3600;</code>
+   */
+  INTEGRATION_TYPE_PIANO(3600),
   UNRECOGNIZED(-1),
   ;
 
@@ -295,6 +303,14 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_SHIFT4 = 3400;</code>
    */
   public static final int INTEGRATION_TYPE_SHIFT4_VALUE = 3400;
+  /**
+   * <code>INTEGRATION_TYPE_POSCORP = 3500;</code>
+   */
+  public static final int INTEGRATION_TYPE_POSCORP_VALUE = 3500;
+  /**
+   * <code>INTEGRATION_TYPE_PIANO = 3600;</code>
+   */
+  public static final int INTEGRATION_TYPE_PIANO_VALUE = 3600;
 
 
   public final int getNumber() {
@@ -356,6 +372,8 @@ public enum IntegrationType
       case 3200: return INTEGRATION_TYPE_I2C;
       case 3300: return INTEGRATION_TYPE_OPAYO;
       case 3400: return INTEGRATION_TYPE_SHIFT4;
+      case 3500: return INTEGRATION_TYPE_POSCORP;
+      case 3600: return INTEGRATION_TYPE_PIANO;
       default: return null;
     }
   }

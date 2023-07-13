@@ -140,6 +140,66 @@ public interface ExecuteFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientPostBalanceByIdOrBuilder getRelatientPostBalanceByIdOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken relatient_create_fortis_achtoken = 207 [json_name = "relatientCreateFortisAchtoken"];</code>
+   * @return Whether the relatientCreateFortisAchtoken field is set.
+   */
+  boolean hasRelatientCreateFortisAchtoken();
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken relatient_create_fortis_achtoken = 207 [json_name = "relatientCreateFortisAchtoken"];</code>
+   * @return The relatientCreateFortisAchtoken.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken getRelatientCreateFortisAchtoken();
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientCreateFortisAchtoken relatient_create_fortis_achtoken = 207 [json_name = "relatientCreateFortisAchtoken"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisAchtokenOrBuilder getRelatientCreateFortisAchtokenOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientCreateFortisCctoken relatient_create_fortis_cctoken = 208 [json_name = "relatientCreateFortisCctoken"];</code>
+   * @return Whether the relatientCreateFortisCctoken field is set.
+   */
+  boolean hasRelatientCreateFortisCctoken();
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientCreateFortisCctoken relatient_create_fortis_cctoken = 208 [json_name = "relatientCreateFortisCctoken"];</code>
+   * @return The relatientCreateFortisCctoken.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctoken getRelatientCreateFortisCctoken();
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientCreateFortisCctoken relatient_create_fortis_cctoken = 208 [json_name = "relatientCreateFortisCctoken"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientCreateFortisCctokenOrBuilder getRelatientCreateFortisCctokenOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment relatient_fortis_token_ach_debit_payment = 209 [json_name = "relatientFortisTokenAchDebitPayment"];</code>
+   * @return Whether the relatientFortisTokenAchDebitPayment field is set.
+   */
+  boolean hasRelatientFortisTokenAchDebitPayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment relatient_fortis_token_ach_debit_payment = 209 [json_name = "relatientFortisTokenAchDebitPayment"];</code>
+   * @return The relatientFortisTokenAchDebitPayment.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment getRelatientFortisTokenAchDebitPayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPayment relatient_fortis_token_ach_debit_payment = 209 [json_name = "relatientFortisTokenAchDebitPayment"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenAchDebitPaymentOrBuilder getRelatientFortisTokenAchDebitPaymentOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment relatient_fortis_token_cc_payment = 210 [json_name = "relatientFortisTokenCcPayment"];</code>
+   * @return Whether the relatientFortisTokenCcPayment field is set.
+   */
+  boolean hasRelatientFortisTokenCcPayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment relatient_fortis_token_cc_payment = 210 [json_name = "relatientFortisTokenCcPayment"];</code>
+   * @return The relatientFortisTokenCcPayment.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment getRelatientFortisTokenCcPayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteRelatientFortisTokenCcPayment relatient_fortis_token_cc_payment = 210 [json_name = "relatientFortisTokenCcPayment"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteRelatientFortisTokenCcPaymentOrBuilder getRelatientFortisTokenCcPaymentOrBuilder();
+
+  /**
    * <code>.api.commons.integrations.ExecuteCybersourceCreditPayment cybersource_credit_payment = 301 [json_name = "cybersourceCreditPayment"];</code>
    * @return Whether the cybersourceCreditPayment field is set.
    */
@@ -618,6 +678,21 @@ public interface ExecuteFlowOrBuilder extends
    * <code>.api.commons.integrations.ExecuteUsaepaySubmitAchPayments usaepay_submit_ach_payments = 902 [json_name = "usaepaySubmitAchPayments"];</code>
    */
   com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepaySubmitAchPaymentsOrBuilder getUsaepaySubmitAchPaymentsOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteUsaepayGetCcToken usaepay_get_cc_token = 903 [json_name = "usaepayGetCcToken"];</code>
+   * @return Whether the usaepayGetCcToken field is set.
+   */
+  boolean hasUsaepayGetCcToken();
+  /**
+   * <code>.api.commons.integrations.ExecuteUsaepayGetCcToken usaepay_get_cc_token = 903 [json_name = "usaepayGetCcToken"];</code>
+   * @return The usaepayGetCcToken.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcToken getUsaepayGetCcToken();
+  /**
+   * <code>.api.commons.integrations.ExecuteUsaepayGetCcToken usaepay_get_cc_token = 903 [json_name = "usaepayGetCcToken"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteUsaepayGetCcTokenOrBuilder getUsaepayGetCcTokenOrBuilder();
 
   /**
    * <code>.api.commons.integrations.ExecuteEzidebitSubmitCcPayments ezidebit_submit_cc_payments = 1001 [json_name = "ezidebitSubmitCcPayments"];</code>
@@ -1203,6 +1278,126 @@ public interface ExecuteFlowOrBuilder extends
    * <code>.api.commons.integrations.ExecuteExperianAchPaymentPlanRequest experian_ach_payment_plan_request = 2005 [json_name = "experianAchPaymentPlanRequest"];</code>
    */
   com.tcn.cloud.api.api.commons.integrations.ExecuteExperianAchPaymentPlanRequestOrBuilder getExperianAchPaymentPlanRequestOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardEntry experian_stella_card_entry = 2006 [json_name = "experianStellaCardEntry"];</code>
+   * @return Whether the experianStellaCardEntry field is set.
+   */
+  boolean hasExperianStellaCardEntry();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardEntry experian_stella_card_entry = 2006 [json_name = "experianStellaCardEntry"];</code>
+   * @return The experianStellaCardEntry.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntry getExperianStellaCardEntry();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardEntry experian_stella_card_entry = 2006 [json_name = "experianStellaCardEntry"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardEntryOrBuilder getExperianStellaCardEntryOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaECheck experian_stella_echeck = 2007 [json_name = "experianStellaEcheck"];</code>
+   * @return Whether the experianStellaEcheck field is set.
+   */
+  boolean hasExperianStellaEcheck();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaECheck experian_stella_echeck = 2007 [json_name = "experianStellaEcheck"];</code>
+   * @return The experianStellaEcheck.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaECheck getExperianStellaEcheck();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaECheck experian_stella_echeck = 2007 [json_name = "experianStellaEcheck"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaECheckOrBuilder getExperianStellaEcheckOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardDeviceTokenization experian_stella_card_device_tokenization = 2008 [json_name = "experianStellaCardDeviceTokenization"];</code>
+   * @return Whether the experianStellaCardDeviceTokenization field is set.
+   */
+  boolean hasExperianStellaCardDeviceTokenization();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardDeviceTokenization experian_stella_card_device_tokenization = 2008 [json_name = "experianStellaCardDeviceTokenization"];</code>
+   * @return The experianStellaCardDeviceTokenization.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardDeviceTokenization getExperianStellaCardDeviceTokenization();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaCardDeviceTokenization experian_stella_card_device_tokenization = 2008 [json_name = "experianStellaCardDeviceTokenization"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaCardDeviceTokenizationOrBuilder getExperianStellaCardDeviceTokenizationOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaTokenPayment experian_stella_token_payment = 2009 [json_name = "experianStellaTokenPayment"];</code>
+   * @return Whether the experianStellaTokenPayment field is set.
+   */
+  boolean hasExperianStellaTokenPayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaTokenPayment experian_stella_token_payment = 2009 [json_name = "experianStellaTokenPayment"];</code>
+   * @return The experianStellaTokenPayment.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaTokenPayment getExperianStellaTokenPayment();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaTokenPayment experian_stella_token_payment = 2009 [json_name = "experianStellaTokenPayment"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaTokenPaymentOrBuilder getExperianStellaTokenPaymentOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaAchTokenization experian_stella_ach_tokenization = 2010 [json_name = "experianStellaAchTokenization"];</code>
+   * @return Whether the experianStellaAchTokenization field is set.
+   */
+  boolean hasExperianStellaAchTokenization();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaAchTokenization experian_stella_ach_tokenization = 2010 [json_name = "experianStellaAchTokenization"];</code>
+   * @return The experianStellaAchTokenization.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAchTokenization getExperianStellaAchTokenization();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaAchTokenization experian_stella_ach_tokenization = 2010 [json_name = "experianStellaAchTokenization"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAchTokenizationOrBuilder getExperianStellaAchTokenizationOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaAddusaepaytoken experian_stella_add_usa_epay_token = 2011 [json_name = "experianStellaAddUsaEpayToken"];</code>
+   * @return Whether the experianStellaAddUsaEpayToken field is set.
+   */
+  boolean hasExperianStellaAddUsaEpayToken();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaAddusaepaytoken experian_stella_add_usa_epay_token = 2011 [json_name = "experianStellaAddUsaEpayToken"];</code>
+   * @return The experianStellaAddUsaEpayToken.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAddusaepaytoken getExperianStellaAddUsaEpayToken();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaAddusaepaytoken experian_stella_add_usa_epay_token = 2011 [json_name = "experianStellaAddUsaEpayToken"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAddusaepaytokenOrBuilder getExperianStellaAddUsaEpayTokenOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlans experian_stella_payment_plans = 2012 [json_name = "experianStellaPaymentPlans"];</code>
+   * @return Whether the experianStellaPaymentPlans field is set.
+   */
+  boolean hasExperianStellaPaymentPlans();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlans experian_stella_payment_plans = 2012 [json_name = "experianStellaPaymentPlans"];</code>
+   * @return The experianStellaPaymentPlans.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlans getExperianStellaPaymentPlans();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaPaymentPlans experian_stella_payment_plans = 2012 [json_name = "experianStellaPaymentPlans"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaPaymentPlansOrBuilder getExperianStellaPaymentPlansOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaAuth experian_stella_auth = 2013 [json_name = "experianStellaAuth"];</code>
+   * @return Whether the experianStellaAuth field is set.
+   */
+  boolean hasExperianStellaAuth();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaAuth experian_stella_auth = 2013 [json_name = "experianStellaAuth"];</code>
+   * @return The experianStellaAuth.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAuth getExperianStellaAuth();
+  /**
+   * <code>.api.commons.integrations.ExecuteExperianStellaAuth experian_stella_auth = 2013 [json_name = "experianStellaAuth"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteExperianStellaAuthOrBuilder getExperianStellaAuthOrBuilder();
 
   /**
    * <code>.api.commons.integrations.ExecuteNewscycleLogin newscycle_login = 2101 [json_name = "newscycleLogin"];</code>
@@ -2328,6 +2523,81 @@ public interface ExecuteFlowOrBuilder extends
    * <code>.api.commons.integrations.ExecuteShift4CcPayments shift4_cc_payment = 3401 [json_name = "shift4CcPayment"];</code>
    */
   com.tcn.cloud.api.api.commons.integrations.ExecuteShift4CcPaymentsOrBuilder getShift4CcPaymentOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpAccesstoken poscorp_accesstoken = 3501 [json_name = "poscorpAccesstoken"];</code>
+   * @return Whether the poscorpAccesstoken field is set.
+   */
+  boolean hasPoscorpAccesstoken();
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpAccesstoken poscorp_accesstoken = 3501 [json_name = "poscorpAccesstoken"];</code>
+   * @return The poscorpAccesstoken.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstoken getPoscorpAccesstoken();
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpAccesstoken poscorp_accesstoken = 3501 [json_name = "poscorpAccesstoken"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpAccesstokenOrBuilder getPoscorpAccesstokenOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpLookupGuarantor poscorp_lookup_guarantor = 3502 [json_name = "poscorpLookupGuarantor"];</code>
+   * @return Whether the poscorpLookupGuarantor field is set.
+   */
+  boolean hasPoscorpLookupGuarantor();
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpLookupGuarantor poscorp_lookup_guarantor = 3502 [json_name = "poscorpLookupGuarantor"];</code>
+   * @return The poscorpLookupGuarantor.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantor getPoscorpLookupGuarantor();
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpLookupGuarantor poscorp_lookup_guarantor = 3502 [json_name = "poscorpLookupGuarantor"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpLookupGuarantorOrBuilder getPoscorpLookupGuarantorOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus poscorp_update_payment_status = 3503 [json_name = "poscorpUpdatePaymentStatus"];</code>
+   * @return Whether the poscorpUpdatePaymentStatus field is set.
+   */
+  boolean hasPoscorpUpdatePaymentStatus();
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus poscorp_update_payment_status = 3503 [json_name = "poscorpUpdatePaymentStatus"];</code>
+   * @return The poscorpUpdatePaymentStatus.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus getPoscorpUpdatePaymentStatus();
+  /**
+   * <code>.api.commons.integrations.ExecutePoscorpUpdatePaymentStatus poscorp_update_payment_status = 3503 [json_name = "poscorpUpdatePaymentStatus"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePoscorpUpdatePaymentStatusOrBuilder getPoscorpUpdatePaymentStatusOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecutePianoGetUser PIANO_GET_USER = 3601 [json_name = "PIANOGETUSER"];</code>
+   * @return Whether the pIANOGETUSER field is set.
+   */
+  boolean hasPIANOGETUSER();
+  /**
+   * <code>.api.commons.integrations.ExecutePianoGetUser PIANO_GET_USER = 3601 [json_name = "PIANOGETUSER"];</code>
+   * @return The pIANOGETUSER.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUser getPIANOGETUSER();
+  /**
+   * <code>.api.commons.integrations.ExecutePianoGetUser PIANO_GET_USER = 3601 [json_name = "PIANOGETUSER"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePianoGetUserOrBuilder getPIANOGETUSEROrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecutePianoUpdateUser PIANO_UPDATE_USER = 3602 [json_name = "PIANOUPDATEUSER"];</code>
+   * @return Whether the pIANOUPDATEUSER field is set.
+   */
+  boolean hasPIANOUPDATEUSER();
+  /**
+   * <code>.api.commons.integrations.ExecutePianoUpdateUser PIANO_UPDATE_USER = 3602 [json_name = "PIANOUPDATEUSER"];</code>
+   * @return The pIANOUPDATEUSER.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser getPIANOUPDATEUSER();
+  /**
+   * <code>.api.commons.integrations.ExecutePianoUpdateUser PIANO_UPDATE_USER = 3602 [json_name = "PIANOUPDATEUSER"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUserOrBuilder getPIANOUPDATEUSEROrBuilder();
 
   com.tcn.cloud.api.api.commons.integrations.ExecuteFlow.ValueCase getValueCase();
 }

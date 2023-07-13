@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.v1alpha1.tickets;
 
 /**
  * <pre>
- * EditTicketReq - Request for EditTicketReq
+ * EditTicketRes - Response for EditTicketReq
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.tickets.EditTicketRes}
@@ -213,7 +213,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * EditTicketReq - Request for EditTicketReq
+   * EditTicketRes - Response for EditTicketReq
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.tickets.EditTicketRes}
