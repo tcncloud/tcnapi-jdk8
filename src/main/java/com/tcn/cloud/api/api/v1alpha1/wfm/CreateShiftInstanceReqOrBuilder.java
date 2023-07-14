@@ -56,46 +56,100 @@ public interface CreateShiftInstanceReqOrBuilder extends
 
   /**
    * <pre>
+   * Width in minutes of the shift instance.
+   * </pre>
+   *
+   * <code>int32 width_in_minutes = 4 [json_name = "widthInMinutes"];</code>
+   * @return The widthInMinutes.
+   */
+  int getWidthInMinutes();
+
+  /**
+   * <pre>
    * Indicates whether the shift instance is locked.
    * </pre>
    *
-   * <code>bool is_locked = 4 [json_name = "isLocked"];</code>
+   * <code>bool is_locked = 5 [json_name = "isLocked"];</code>
    * @return The isLocked.
    */
   boolean getIsLocked();
 
   /**
    * <pre>
-   * ID of the wfm agents for the shift instance.
-   * If empty it will create a new unassigned WfmAgent for the shift instance.
-   * If given more than one sid, then a copy of the instance will be created for each agent.
+   * ID of the wfm agent for the shift instance. If null it will
+   * create a new unassigned WfmAgent for the shift instance.
    * </pre>
    *
-   * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
-   * @return A list containing the wfmAgentSids.
+   * <code>.google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+   * @return Whether the wfmAgentSid field is set.
    */
-  java.util.List<java.lang.Long> getWfmAgentSidsList();
+  boolean hasWfmAgentSid();
   /**
    * <pre>
-   * ID of the wfm agents for the shift instance.
-   * If empty it will create a new unassigned WfmAgent for the shift instance.
-   * If given more than one sid, then a copy of the instance will be created for each agent.
+   * ID of the wfm agent for the shift instance. If null it will
+   * create a new unassigned WfmAgent for the shift instance.
    * </pre>
    *
-   * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
-   * @return The count of wfmAgentSids.
+   * <code>.google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+   * @return The wfmAgentSid.
    */
-  int getWfmAgentSidsCount();
+  com.google.protobuf.Int64Value getWfmAgentSid();
   /**
    * <pre>
-   * ID of the wfm agents for the shift instance.
-   * If empty it will create a new unassigned WfmAgent for the shift instance.
-   * If given more than one sid, then a copy of the instance will be created for each agent.
+   * ID of the wfm agent for the shift instance. If null it will
+   * create a new unassigned WfmAgent for the shift instance.
    * </pre>
    *
-   * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
+   * <code>.google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getWfmAgentSidOrBuilder();
+
+  /**
+   * <pre>
+   * Metric types for the shift instance.
+   * </pre>
+   *
+   * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
+   * @return A list containing the metricTypes.
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.PerformanceMetricType> getMetricTypesList();
+  /**
+   * <pre>
+   * Metric types for the shift instance.
+   * </pre>
+   *
+   * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
+   * @return The count of metricTypes.
+   */
+  int getMetricTypesCount();
+  /**
+   * <pre>
+   * Metric types for the shift instance.
+   * </pre>
+   *
+   * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
    * @param index The index of the element to return.
-   * @return The wfmAgentSids at the given index.
+   * @return The metricTypes at the given index.
    */
-  long getWfmAgentSids(int index);
+  com.tcn.cloud.api.api.commons.PerformanceMetricType getMetricTypes(int index);
+  /**
+   * <pre>
+   * Metric types for the shift instance.
+   * </pre>
+   *
+   * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
+   * @return A list containing the enum numeric values on the wire for metricTypes.
+   */
+  java.util.List<java.lang.Integer>
+  getMetricTypesValueList();
+  /**
+   * <pre>
+   * Metric types for the shift instance.
+   * </pre>
+   *
+   * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of metricTypes at the given index.
+   */
+  int getMetricTypesValue(int index);
 }

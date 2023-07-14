@@ -12,7 +12,7 @@ public interface UpdateSkillProfileProficienciesReqOrBuilder extends
    * Proficiencies to update.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.Proficiency proficiencies = 1 [json_name = "proficiencies"];</code>
+   * <code>repeated .api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.Proficiency proficiencies = 2 [json_name = "proficiencies"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.Proficiency> 
       getProficienciesList();
@@ -21,7 +21,7 @@ public interface UpdateSkillProfileProficienciesReqOrBuilder extends
    * Proficiencies to update.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.Proficiency proficiencies = 1 [json_name = "proficiencies"];</code>
+   * <code>repeated .api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.Proficiency proficiencies = 2 [json_name = "proficiencies"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.Proficiency getProficiencies(int index);
   /**
@@ -29,7 +29,7 @@ public interface UpdateSkillProfileProficienciesReqOrBuilder extends
    * Proficiencies to update.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.Proficiency proficiencies = 1 [json_name = "proficiencies"];</code>
+   * <code>repeated .api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.Proficiency proficiencies = 2 [json_name = "proficiencies"];</code>
    */
   int getProficienciesCount();
   /**
@@ -37,7 +37,7 @@ public interface UpdateSkillProfileProficienciesReqOrBuilder extends
    * Proficiencies to update.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.Proficiency proficiencies = 1 [json_name = "proficiencies"];</code>
+   * <code>repeated .api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.Proficiency proficiencies = 2 [json_name = "proficiencies"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.ProficiencyOrBuilder> 
       getProficienciesOrBuilderList();
@@ -46,7 +46,7 @@ public interface UpdateSkillProfileProficienciesReqOrBuilder extends
    * Proficiencies to update.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.Proficiency proficiencies = 1 [json_name = "proficiencies"];</code>
+   * <code>repeated .api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.Proficiency proficiencies = 2 [json_name = "proficiencies"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.ProficiencyOrBuilder getProficienciesOrBuilder(
       int index);

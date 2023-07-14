@@ -6,6 +6,7 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 /**
  * <pre>
  * Request message for the CreateShiftInstance RPC
+ * Method is Unimplimented. Use CreateShiftInstanceV2 instead.
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.wfm.CreateShiftInstanceReq}
@@ -20,7 +21,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CreateShiftInstanceReq() {
-    wfmAgentSids_ = emptyLongList();
+    metricTypes_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -111,14 +112,29 @@ private static final long serialVersionUID = 0L;
     return startDatetime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDatetime_;
   }
 
-  public static final int IS_LOCKED_FIELD_NUMBER = 4;
+  public static final int WIDTH_IN_MINUTES_FIELD_NUMBER = 4;
+  private int widthInMinutes_ = 0;
+  /**
+   * <pre>
+   * Width in minutes of the shift instance.
+   * </pre>
+   *
+   * <code>int32 width_in_minutes = 4 [json_name = "widthInMinutes"];</code>
+   * @return The widthInMinutes.
+   */
+  @java.lang.Override
+  public int getWidthInMinutes() {
+    return widthInMinutes_;
+  }
+
+  public static final int IS_LOCKED_FIELD_NUMBER = 5;
   private boolean isLocked_ = false;
   /**
    * <pre>
    * Indicates whether the shift instance is locked.
    * </pre>
    *
-   * <code>bool is_locked = 4 [json_name = "isLocked"];</code>
+   * <code>bool is_locked = 5 [json_name = "isLocked"];</code>
    * @return The isLocked.
    */
   @java.lang.Override
@@ -126,52 +142,124 @@ private static final long serialVersionUID = 0L;
     return isLocked_;
   }
 
-  public static final int WFM_AGENT_SIDS_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList wfmAgentSids_;
+  public static final int WFM_AGENT_SID_FIELD_NUMBER = 6;
+  private com.google.protobuf.Int64Value wfmAgentSid_;
   /**
    * <pre>
-   * ID of the wfm agents for the shift instance.
-   * If empty it will create a new unassigned WfmAgent for the shift instance.
-   * If given more than one sid, then a copy of the instance will be created for each agent.
+   * ID of the wfm agent for the shift instance. If null it will
+   * create a new unassigned WfmAgent for the shift instance.
    * </pre>
    *
-   * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
-   * @return A list containing the wfmAgentSids.
+   * <code>.google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+   * @return Whether the wfmAgentSid field is set.
    */
   @java.lang.Override
-  public java.util.List<java.lang.Long>
-      getWfmAgentSidsList() {
-    return wfmAgentSids_;
+  public boolean hasWfmAgentSid() {
+    return wfmAgentSid_ != null;
   }
   /**
    * <pre>
-   * ID of the wfm agents for the shift instance.
-   * If empty it will create a new unassigned WfmAgent for the shift instance.
-   * If given more than one sid, then a copy of the instance will be created for each agent.
+   * ID of the wfm agent for the shift instance. If null it will
+   * create a new unassigned WfmAgent for the shift instance.
    * </pre>
    *
-   * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
-   * @return The count of wfmAgentSids.
+   * <code>.google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+   * @return The wfmAgentSid.
    */
-  public int getWfmAgentSidsCount() {
-    return wfmAgentSids_.size();
+  @java.lang.Override
+  public com.google.protobuf.Int64Value getWfmAgentSid() {
+    return wfmAgentSid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : wfmAgentSid_;
   }
   /**
    * <pre>
-   * ID of the wfm agents for the shift instance.
-   * If empty it will create a new unassigned WfmAgent for the shift instance.
-   * If given more than one sid, then a copy of the instance will be created for each agent.
+   * ID of the wfm agent for the shift instance. If null it will
+   * create a new unassigned WfmAgent for the shift instance.
    * </pre>
    *
-   * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
+   * <code>.google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.Int64ValueOrBuilder getWfmAgentSidOrBuilder() {
+    return wfmAgentSid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : wfmAgentSid_;
+  }
+
+  public static final int METRIC_TYPES_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private java.util.List<java.lang.Integer> metricTypes_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, com.tcn.cloud.api.api.commons.PerformanceMetricType> metricTypes_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.tcn.cloud.api.api.commons.PerformanceMetricType>() {
+            public com.tcn.cloud.api.api.commons.PerformanceMetricType convert(java.lang.Integer from) {
+              com.tcn.cloud.api.api.commons.PerformanceMetricType result = com.tcn.cloud.api.api.commons.PerformanceMetricType.forNumber(from);
+              return result == null ? com.tcn.cloud.api.api.commons.PerformanceMetricType.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * Metric types for the shift instance.
+   * </pre>
+   *
+   * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
+   * @return A list containing the metricTypes.
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.PerformanceMetricType> getMetricTypesList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.tcn.cloud.api.api.commons.PerformanceMetricType>(metricTypes_, metricTypes_converter_);
+  }
+  /**
+   * <pre>
+   * Metric types for the shift instance.
+   * </pre>
+   *
+   * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
+   * @return The count of metricTypes.
+   */
+  @java.lang.Override
+  public int getMetricTypesCount() {
+    return metricTypes_.size();
+  }
+  /**
+   * <pre>
+   * Metric types for the shift instance.
+   * </pre>
+   *
+   * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
    * @param index The index of the element to return.
-   * @return The wfmAgentSids at the given index.
+   * @return The metricTypes at the given index.
    */
-  public long getWfmAgentSids(int index) {
-    return wfmAgentSids_.getLong(index);
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.PerformanceMetricType getMetricTypes(int index) {
+    return metricTypes_converter_.convert(metricTypes_.get(index));
   }
-  private int wfmAgentSidsMemoizedSerializedSize = -1;
+  /**
+   * <pre>
+   * Metric types for the shift instance.
+   * </pre>
+   *
+   * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
+   * @return A list containing the enum numeric values on the wire for metricTypes.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Integer>
+  getMetricTypesValueList() {
+    return metricTypes_;
+  }
+  /**
+   * <pre>
+   * Metric types for the shift instance.
+   * </pre>
+   *
+   * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of metricTypes at the given index.
+   */
+  @java.lang.Override
+  public int getMetricTypesValue(int index) {
+    return metricTypes_.get(index);
+  }
+  private int metricTypesMemoizedSerializedSize;
 
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
@@ -197,15 +285,21 @@ private static final long serialVersionUID = 0L;
     if (startDatetime_ != null) {
       output.writeMessage(3, getStartDatetime());
     }
+    if (widthInMinutes_ != 0) {
+      output.writeInt32(4, widthInMinutes_);
+    }
     if (isLocked_ != false) {
-      output.writeBool(4, isLocked_);
+      output.writeBool(5, isLocked_);
     }
-    if (getWfmAgentSidsList().size() > 0) {
-      output.writeUInt32NoTag(42);
-      output.writeUInt32NoTag(wfmAgentSidsMemoizedSerializedSize);
+    if (wfmAgentSid_ != null) {
+      output.writeMessage(6, getWfmAgentSid());
     }
-    for (int i = 0; i < wfmAgentSids_.size(); i++) {
-      output.writeInt64NoTag(wfmAgentSids_.getLong(i));
+    if (getMetricTypesList().size() > 0) {
+      output.writeUInt32NoTag(58);
+      output.writeUInt32NoTag(metricTypesMemoizedSerializedSize);
+    }
+    for (int i = 0; i < metricTypes_.size(); i++) {
+      output.writeEnumNoTag(metricTypes_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -228,23 +322,29 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getStartDatetime());
     }
+    if (widthInMinutes_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(4, widthInMinutes_);
+    }
     if (isLocked_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(4, isLocked_);
+        .computeBoolSize(5, isLocked_);
+    }
+    if (wfmAgentSid_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getWfmAgentSid());
     }
     {
       int dataSize = 0;
-      for (int i = 0; i < wfmAgentSids_.size(); i++) {
+      for (int i = 0; i < metricTypes_.size(); i++) {
         dataSize += com.google.protobuf.CodedOutputStream
-          .computeInt64SizeNoTag(wfmAgentSids_.getLong(i));
+          .computeEnumSizeNoTag(metricTypes_.get(i));
       }
       size += dataSize;
-      if (!getWfmAgentSidsList().isEmpty()) {
-        size += 1;
+      if (!getMetricTypesList().isEmpty()) {  size += 1;
         size += com.google.protobuf.CodedOutputStream
-            .computeInt32SizeNoTag(dataSize);
-      }
-      wfmAgentSidsMemoizedSerializedSize = dataSize;
+          .computeUInt32SizeNoTag(dataSize);
+      }metricTypesMemoizedSerializedSize = dataSize;
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -270,10 +370,16 @@ private static final long serialVersionUID = 0L;
       if (!getStartDatetime()
           .equals(other.getStartDatetime())) return false;
     }
+    if (getWidthInMinutes()
+        != other.getWidthInMinutes()) return false;
     if (getIsLocked()
         != other.getIsLocked()) return false;
-    if (!getWfmAgentSidsList()
-        .equals(other.getWfmAgentSidsList())) return false;
+    if (hasWfmAgentSid() != other.hasWfmAgentSid()) return false;
+    if (hasWfmAgentSid()) {
+      if (!getWfmAgentSid()
+          .equals(other.getWfmAgentSid())) return false;
+    }
+    if (!metricTypes_.equals(other.metricTypes_)) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -295,12 +401,18 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + START_DATETIME_FIELD_NUMBER;
       hash = (53 * hash) + getStartDatetime().hashCode();
     }
+    hash = (37 * hash) + WIDTH_IN_MINUTES_FIELD_NUMBER;
+    hash = (53 * hash) + getWidthInMinutes();
     hash = (37 * hash) + IS_LOCKED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsLocked());
-    if (getWfmAgentSidsCount() > 0) {
-      hash = (37 * hash) + WFM_AGENT_SIDS_FIELD_NUMBER;
-      hash = (53 * hash) + getWfmAgentSidsList().hashCode();
+    if (hasWfmAgentSid()) {
+      hash = (37 * hash) + WFM_AGENT_SID_FIELD_NUMBER;
+      hash = (53 * hash) + getWfmAgentSid().hashCode();
+    }
+    if (getMetricTypesCount() > 0) {
+      hash = (37 * hash) + METRIC_TYPES_FIELD_NUMBER;
+      hash = (53 * hash) + metricTypes_.hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -402,6 +514,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Request message for the CreateShiftInstance RPC
+   * Method is Unimplimented. Use CreateShiftInstanceV2 instead.
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.wfm.CreateShiftInstanceReq}
@@ -444,8 +557,15 @@ private static final long serialVersionUID = 0L;
         startDatetimeBuilder_.dispose();
         startDatetimeBuilder_ = null;
       }
+      widthInMinutes_ = 0;
       isLocked_ = false;
-      wfmAgentSids_ = emptyLongList();
+      wfmAgentSid_ = null;
+      if (wfmAgentSidBuilder_ != null) {
+        wfmAgentSidBuilder_.dispose();
+        wfmAgentSidBuilder_ = null;
+      }
+      metricTypes_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000040);
       return this;
     }
 
@@ -479,11 +599,11 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq result) {
-      if (((bitField0_ & 0x00000010) != 0)) {
-        wfmAgentSids_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000010);
+      if (((bitField0_ & 0x00000040) != 0)) {
+        metricTypes_ = java.util.Collections.unmodifiableList(metricTypes_);
+        bitField0_ = (bitField0_ & ~0x00000040);
       }
-      result.wfmAgentSids_ = wfmAgentSids_;
+      result.metricTypes_ = metricTypes_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq result) {
@@ -500,7 +620,15 @@ private static final long serialVersionUID = 0L;
             : startDatetimeBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.widthInMinutes_ = widthInMinutes_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.isLocked_ = isLocked_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.wfmAgentSid_ = wfmAgentSidBuilder_ == null
+            ? wfmAgentSid_
+            : wfmAgentSidBuilder_.build();
       }
     }
 
@@ -557,16 +685,22 @@ private static final long serialVersionUID = 0L;
       if (other.hasStartDatetime()) {
         mergeStartDatetime(other.getStartDatetime());
       }
+      if (other.getWidthInMinutes() != 0) {
+        setWidthInMinutes(other.getWidthInMinutes());
+      }
       if (other.getIsLocked() != false) {
         setIsLocked(other.getIsLocked());
       }
-      if (!other.wfmAgentSids_.isEmpty()) {
-        if (wfmAgentSids_.isEmpty()) {
-          wfmAgentSids_ = other.wfmAgentSids_;
-          bitField0_ = (bitField0_ & ~0x00000010);
+      if (other.hasWfmAgentSid()) {
+        mergeWfmAgentSid(other.getWfmAgentSid());
+      }
+      if (!other.metricTypes_.isEmpty()) {
+        if (metricTypes_.isEmpty()) {
+          metricTypes_ = other.metricTypes_;
+          bitField0_ = (bitField0_ & ~0x00000040);
         } else {
-          ensureWfmAgentSidsIsMutable();
-          wfmAgentSids_.addAll(other.wfmAgentSids_);
+          ensureMetricTypesIsMutable();
+          metricTypes_.addAll(other.metricTypes_);
         }
         onChanged();
       }
@@ -614,26 +748,39 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 26
             case 32: {
-              isLocked_ = input.readBool();
+              widthInMinutes_ = input.readInt32();
               bitField0_ |= 0x00000008;
               break;
             } // case 32
             case 40: {
-              long v = input.readInt64();
-              ensureWfmAgentSidsIsMutable();
-              wfmAgentSids_.addLong(v);
+              isLocked_ = input.readBool();
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
-            case 42: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              ensureWfmAgentSidsIsMutable();
-              while (input.getBytesUntilLimit() > 0) {
-                wfmAgentSids_.addLong(input.readInt64());
-              }
-              input.popLimit(limit);
+            case 50: {
+              input.readMessage(
+                  getWfmAgentSidFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
               break;
-            } // case 42
+            } // case 50
+            case 56: {
+              int tmpRaw = input.readEnum();
+              ensureMetricTypesIsMutable();
+              metricTypes_.add(tmpRaw);
+              break;
+            } // case 56
+            case 58: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureMetricTypesIsMutable();
+                metricTypes_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -894,13 +1041,57 @@ private static final long serialVersionUID = 0L;
       return startDatetimeBuilder_;
     }
 
+    private int widthInMinutes_ ;
+    /**
+     * <pre>
+     * Width in minutes of the shift instance.
+     * </pre>
+     *
+     * <code>int32 width_in_minutes = 4 [json_name = "widthInMinutes"];</code>
+     * @return The widthInMinutes.
+     */
+    @java.lang.Override
+    public int getWidthInMinutes() {
+      return widthInMinutes_;
+    }
+    /**
+     * <pre>
+     * Width in minutes of the shift instance.
+     * </pre>
+     *
+     * <code>int32 width_in_minutes = 4 [json_name = "widthInMinutes"];</code>
+     * @param value The widthInMinutes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setWidthInMinutes(int value) {
+
+      widthInMinutes_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Width in minutes of the shift instance.
+     * </pre>
+     *
+     * <code>int32 width_in_minutes = 4 [json_name = "widthInMinutes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearWidthInMinutes() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      widthInMinutes_ = 0;
+      onChanged();
+      return this;
+    }
+
     private boolean isLocked_ ;
     /**
      * <pre>
      * Indicates whether the shift instance is locked.
      * </pre>
      *
-     * <code>bool is_locked = 4 [json_name = "isLocked"];</code>
+     * <code>bool is_locked = 5 [json_name = "isLocked"];</code>
      * @return The isLocked.
      */
     @java.lang.Override
@@ -912,14 +1103,14 @@ private static final long serialVersionUID = 0L;
      * Indicates whether the shift instance is locked.
      * </pre>
      *
-     * <code>bool is_locked = 4 [json_name = "isLocked"];</code>
+     * <code>bool is_locked = 5 [json_name = "isLocked"];</code>
      * @param value The isLocked to set.
      * @return This builder for chaining.
      */
     public Builder setIsLocked(boolean value) {
 
       isLocked_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -928,135 +1119,364 @@ private static final long serialVersionUID = 0L;
      * Indicates whether the shift instance is locked.
      * </pre>
      *
-     * <code>bool is_locked = 4 [json_name = "isLocked"];</code>
+     * <code>bool is_locked = 5 [json_name = "isLocked"];</code>
      * @return This builder for chaining.
      */
     public Builder clearIsLocked() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       isLocked_ = false;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.Internal.LongList wfmAgentSids_ = emptyLongList();
-    private void ensureWfmAgentSidsIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
-        wfmAgentSids_ = mutableCopy(wfmAgentSids_);
-        bitField0_ |= 0x00000010;
+    private com.google.protobuf.Int64Value wfmAgentSid_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> wfmAgentSidBuilder_;
+    /**
+     * <pre>
+     * ID of the wfm agent for the shift instance. If null it will
+     * create a new unassigned WfmAgent for the shift instance.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     * @return Whether the wfmAgentSid field is set.
+     */
+    public boolean hasWfmAgentSid() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * ID of the wfm agent for the shift instance. If null it will
+     * create a new unassigned WfmAgent for the shift instance.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     * @return The wfmAgentSid.
+     */
+    public com.google.protobuf.Int64Value getWfmAgentSid() {
+      if (wfmAgentSidBuilder_ == null) {
+        return wfmAgentSid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : wfmAgentSid_;
+      } else {
+        return wfmAgentSidBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * ID of the wfm agents for the shift instance.
-     * If empty it will create a new unassigned WfmAgent for the shift instance.
-     * If given more than one sid, then a copy of the instance will be created for each agent.
+     * ID of the wfm agent for the shift instance. If null it will
+     * create a new unassigned WfmAgent for the shift instance.
      * </pre>
      *
-     * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
-     * @return A list containing the wfmAgentSids.
+     * <code>.google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
      */
-    public java.util.List<java.lang.Long>
-        getWfmAgentSidsList() {
-      return ((bitField0_ & 0x00000010) != 0) ?
-               java.util.Collections.unmodifiableList(wfmAgentSids_) : wfmAgentSids_;
+    public Builder setWfmAgentSid(com.google.protobuf.Int64Value value) {
+      if (wfmAgentSidBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        wfmAgentSid_ = value;
+      } else {
+        wfmAgentSidBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
     }
     /**
      * <pre>
-     * ID of the wfm agents for the shift instance.
-     * If empty it will create a new unassigned WfmAgent for the shift instance.
-     * If given more than one sid, then a copy of the instance will be created for each agent.
+     * ID of the wfm agent for the shift instance. If null it will
+     * create a new unassigned WfmAgent for the shift instance.
      * </pre>
      *
-     * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
-     * @return The count of wfmAgentSids.
+     * <code>.google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
      */
-    public int getWfmAgentSidsCount() {
-      return wfmAgentSids_.size();
+    public Builder setWfmAgentSid(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (wfmAgentSidBuilder_ == null) {
+        wfmAgentSid_ = builderForValue.build();
+      } else {
+        wfmAgentSidBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
     }
     /**
      * <pre>
-     * ID of the wfm agents for the shift instance.
-     * If empty it will create a new unassigned WfmAgent for the shift instance.
-     * If given more than one sid, then a copy of the instance will be created for each agent.
+     * ID of the wfm agent for the shift instance. If null it will
+     * create a new unassigned WfmAgent for the shift instance.
      * </pre>
      *
-     * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
+     * <code>.google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     */
+    public Builder mergeWfmAgentSid(com.google.protobuf.Int64Value value) {
+      if (wfmAgentSidBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          wfmAgentSid_ != null &&
+          wfmAgentSid_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+          getWfmAgentSidBuilder().mergeFrom(value);
+        } else {
+          wfmAgentSid_ = value;
+        }
+      } else {
+        wfmAgentSidBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ID of the wfm agent for the shift instance. If null it will
+     * create a new unassigned WfmAgent for the shift instance.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     */
+    public Builder clearWfmAgentSid() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      wfmAgentSid_ = null;
+      if (wfmAgentSidBuilder_ != null) {
+        wfmAgentSidBuilder_.dispose();
+        wfmAgentSidBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * ID of the wfm agent for the shift instance. If null it will
+     * create a new unassigned WfmAgent for the shift instance.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getWfmAgentSidBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getWfmAgentSidFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * ID of the wfm agent for the shift instance. If null it will
+     * create a new unassigned WfmAgent for the shift instance.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getWfmAgentSidOrBuilder() {
+      if (wfmAgentSidBuilder_ != null) {
+        return wfmAgentSidBuilder_.getMessageOrBuilder();
+      } else {
+        return wfmAgentSid_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : wfmAgentSid_;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the wfm agent for the shift instance. If null it will
+     * create a new unassigned WfmAgent for the shift instance.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getWfmAgentSidFieldBuilder() {
+      if (wfmAgentSidBuilder_ == null) {
+        wfmAgentSidBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getWfmAgentSid(),
+                getParentForChildren(),
+                isClean());
+        wfmAgentSid_ = null;
+      }
+      return wfmAgentSidBuilder_;
+    }
+
+    private java.util.List<java.lang.Integer> metricTypes_ =
+      java.util.Collections.emptyList();
+    private void ensureMetricTypesIsMutable() {
+      if (!((bitField0_ & 0x00000040) != 0)) {
+        metricTypes_ = new java.util.ArrayList<java.lang.Integer>(metricTypes_);
+        bitField0_ |= 0x00000040;
+      }
+    }
+    /**
+     * <pre>
+     * Metric types for the shift instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
+     * @return A list containing the metricTypes.
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.PerformanceMetricType> getMetricTypesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.tcn.cloud.api.api.commons.PerformanceMetricType>(metricTypes_, metricTypes_converter_);
+    }
+    /**
+     * <pre>
+     * Metric types for the shift instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
+     * @return The count of metricTypes.
+     */
+    public int getMetricTypesCount() {
+      return metricTypes_.size();
+    }
+    /**
+     * <pre>
+     * Metric types for the shift instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
      * @param index The index of the element to return.
-     * @return The wfmAgentSids at the given index.
+     * @return The metricTypes at the given index.
      */
-    public long getWfmAgentSids(int index) {
-      return wfmAgentSids_.getLong(index);
+    public com.tcn.cloud.api.api.commons.PerformanceMetricType getMetricTypes(int index) {
+      return metricTypes_converter_.convert(metricTypes_.get(index));
     }
     /**
      * <pre>
-     * ID of the wfm agents for the shift instance.
-     * If empty it will create a new unassigned WfmAgent for the shift instance.
-     * If given more than one sid, then a copy of the instance will be created for each agent.
+     * Metric types for the shift instance.
      * </pre>
      *
-     * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
+     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
      * @param index The index to set the value at.
-     * @param value The wfmAgentSids to set.
+     * @param value The metricTypes to set.
      * @return This builder for chaining.
      */
-    public Builder setWfmAgentSids(
-        int index, long value) {
-
-      ensureWfmAgentSidsIsMutable();
-      wfmAgentSids_.setLong(index, value);
+    public Builder setMetricTypes(
+        int index, com.tcn.cloud.api.api.commons.PerformanceMetricType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureMetricTypesIsMutable();
+      metricTypes_.set(index, value.getNumber());
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * ID of the wfm agents for the shift instance.
-     * If empty it will create a new unassigned WfmAgent for the shift instance.
-     * If given more than one sid, then a copy of the instance will be created for each agent.
+     * Metric types for the shift instance.
      * </pre>
      *
-     * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
-     * @param value The wfmAgentSids to add.
+     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
+     * @param value The metricTypes to add.
      * @return This builder for chaining.
      */
-    public Builder addWfmAgentSids(long value) {
-
-      ensureWfmAgentSidsIsMutable();
-      wfmAgentSids_.addLong(value);
+    public Builder addMetricTypes(com.tcn.cloud.api.api.commons.PerformanceMetricType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureMetricTypesIsMutable();
+      metricTypes_.add(value.getNumber());
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * ID of the wfm agents for the shift instance.
-     * If empty it will create a new unassigned WfmAgent for the shift instance.
-     * If given more than one sid, then a copy of the instance will be created for each agent.
+     * Metric types for the shift instance.
      * </pre>
      *
-     * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
-     * @param values The wfmAgentSids to add.
+     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
+     * @param values The metricTypes to add.
      * @return This builder for chaining.
      */
-    public Builder addAllWfmAgentSids(
-        java.lang.Iterable<? extends java.lang.Long> values) {
-      ensureWfmAgentSidsIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, wfmAgentSids_);
+    public Builder addAllMetricTypes(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.PerformanceMetricType> values) {
+      ensureMetricTypesIsMutable();
+      for (com.tcn.cloud.api.api.commons.PerformanceMetricType value : values) {
+        metricTypes_.add(value.getNumber());
+      }
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * ID of the wfm agents for the shift instance.
-     * If empty it will create a new unassigned WfmAgent for the shift instance.
-     * If given more than one sid, then a copy of the instance will be created for each agent.
+     * Metric types for the shift instance.
      * </pre>
      *
-     * <code>repeated int64 wfm_agent_sids = 5 [json_name = "wfmAgentSids"];</code>
+     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearWfmAgentSids() {
-      wfmAgentSids_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000010);
+    public Builder clearMetricTypes() {
+      metricTypes_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Metric types for the shift instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
+     * @return A list containing the enum numeric values on the wire for metricTypes.
+     */
+    public java.util.List<java.lang.Integer>
+    getMetricTypesValueList() {
+      return java.util.Collections.unmodifiableList(metricTypes_);
+    }
+    /**
+     * <pre>
+     * Metric types for the shift instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of metricTypes at the given index.
+     */
+    public int getMetricTypesValue(int index) {
+      return metricTypes_.get(index);
+    }
+    /**
+     * <pre>
+     * Metric types for the shift instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for metricTypes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMetricTypesValue(
+        int index, int value) {
+      ensureMetricTypesIsMutable();
+      metricTypes_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Metric types for the shift instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
+     * @param value The enum numeric value on the wire for metricTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addMetricTypesValue(int value) {
+      ensureMetricTypesIsMutable();
+      metricTypes_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Metric types for the shift instance.
+     * </pre>
+     *
+     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
+     * @param values The enum numeric values on the wire for metricTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllMetricTypesValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureMetricTypesIsMutable();
+      for (int value : values) {
+        metricTypes_.add(value);
+      }
       onChanged();
       return this;
     }
