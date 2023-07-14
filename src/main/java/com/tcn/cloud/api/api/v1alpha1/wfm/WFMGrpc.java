@@ -4952,7 +4952,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a schedule scenario corresponding to the given &#64;schedule_scenario_sid and org sending the request with the provided parameters.
-     * Only the &#64;name and &#64;description fields may be updated, and must be filled in with current value if updating the field is not desired.
+     * Only the &#64;name, &#64;description and &#64;datetime_set_to_inactive fields may be updated, and must be filled in with current value if updating the field is not desired.
      * The &#64;schedule_scenario_sid must be the original for the schedule scenario since it cannot be updated.
      * All other fields will be ignored since they cannot be updated.
      * Required permissions:
@@ -5164,7 +5164,8 @@ public final class WFMGrpc {
      * Gets the draft schedule with &#64;draft_schedule_sid for the corresponding &#64;datetime_range for the org sending the request.
      * The &#64;datetime_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the draft schedule will be returned in the draft schedules shift_instances field.
-     * if &#64;node_selector is set then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included
+     * if &#64;node_selector is set then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
+     * &#64;node_selector must be for a node that belongs to the same schedule scenario as &#64;draft_schedule_sid.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
@@ -6985,7 +6986,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a schedule scenario corresponding to the given &#64;schedule_scenario_sid and org sending the request with the provided parameters.
-     * Only the &#64;name and &#64;description fields may be updated, and must be filled in with current value if updating the field is not desired.
+     * Only the &#64;name, &#64;description and &#64;datetime_set_to_inactive fields may be updated, and must be filled in with current value if updating the field is not desired.
      * The &#64;schedule_scenario_sid must be the original for the schedule scenario since it cannot be updated.
      * All other fields will be ignored since they cannot be updated.
      * Required permissions:
@@ -7209,7 +7210,8 @@ public final class WFMGrpc {
      * Gets the draft schedule with &#64;draft_schedule_sid for the corresponding &#64;datetime_range for the org sending the request.
      * The &#64;datetime_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the draft schedule will be returned in the draft schedules shift_instances field.
-     * if &#64;node_selector is set then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included
+     * if &#64;node_selector is set then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
+     * &#64;node_selector must be for a node that belongs to the same schedule scenario as &#64;draft_schedule_sid.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
@@ -8948,7 +8950,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a schedule scenario corresponding to the given &#64;schedule_scenario_sid and org sending the request with the provided parameters.
-     * Only the &#64;name and &#64;description fields may be updated, and must be filled in with current value if updating the field is not desired.
+     * Only the &#64;name, &#64;description and &#64;datetime_set_to_inactive fields may be updated, and must be filled in with current value if updating the field is not desired.
      * The &#64;schedule_scenario_sid must be the original for the schedule scenario since it cannot be updated.
      * All other fields will be ignored since they cannot be updated.
      * Required permissions:
@@ -9160,7 +9162,8 @@ public final class WFMGrpc {
      * Gets the draft schedule with &#64;draft_schedule_sid for the corresponding &#64;datetime_range for the org sending the request.
      * The &#64;datetime_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the draft schedule will be returned in the draft schedules shift_instances field.
-     * if &#64;node_selector is set then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included
+     * if &#64;node_selector is set then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
+     * &#64;node_selector must be for a node that belongs to the same schedule scenario as &#64;draft_schedule_sid.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
@@ -10871,7 +10874,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a schedule scenario corresponding to the given &#64;schedule_scenario_sid and org sending the request with the provided parameters.
-     * Only the &#64;name and &#64;description fields may be updated, and must be filled in with current value if updating the field is not desired.
+     * Only the &#64;name, &#64;description and &#64;datetime_set_to_inactive fields may be updated, and must be filled in with current value if updating the field is not desired.
      * The &#64;schedule_scenario_sid must be the original for the schedule scenario since it cannot be updated.
      * All other fields will be ignored since they cannot be updated.
      * Required permissions:
@@ -11095,7 +11098,8 @@ public final class WFMGrpc {
      * Gets the draft schedule with &#64;draft_schedule_sid for the corresponding &#64;datetime_range for the org sending the request.
      * The &#64;datetime_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * if &#64;include_shift_instances is true, the shift instances associated within &#64;datetime_range for the draft schedule will be returned in the draft schedules shift_instances field.
-     * if &#64;node_selector is set then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included
+     * if &#64;node_selector is set then only instances belonging to the origin of &#64;node_selector and its children node will be returned, otherwise all matching shift instances will be included.
+     * &#64;node_selector must be for a node that belongs to the same schedule scenario as &#64;draft_schedule_sid.
      * if &#64;include_shift_template is true, any returned shift instances will have their orginating shift template returned in their origin_shift_template field.
      * if &#64;include_shift_segments is true, any returned shift instances will have their shift_segments field set, otherwise the field will be left nil.
      * if &#64;include_scheduling_activity is true, any returned shift segments will have their scheduling_activity field set, otherwise the field will be left nil.
