@@ -27,7 +27,7 @@ public final class ServiceProto {
       "i.v1alpha1.tickets\032\027annotations/authz.pr" +
       "oto\032\"api/v1alpha1/tickets/project.proto\032" +
       "!api/v1alpha1/tickets/ticket.proto\032\034goog" +
-      "le/api/annotations.proto2\204\024\n\007Tickets\022\235\001\n" +
+      "le/api/annotations.proto2\352\026\n\007Tickets\022\235\001\n" +
       "\014CreateTicket\022%.api.v1alpha1.tickets.Cre" +
       "ateTicketReq\032%.api.v1alpha1.tickets.Crea" +
       "teTicketRes\"?\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002/\"*/api/v1al" +
@@ -91,12 +91,21 @@ public final class ServiceProto {
       "lf\022).api.v1alpha1.tickets.CreateSelfAssi" +
       "gnReq\032).api.v1alpha1.tickets.CreateSelfA" +
       "ssignRes\"=\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002-\"(/api/v1alpha" +
-      "1/tickets/tickets/assignself:\001*B\250\001\n&com." +
-      "tcn.cloud.api.api.v1alpha1.ticketsB\014Serv" +
-      "iceProtoP\001\242\002\003AVT\252\002\024Api.V1alpha1.Tickets\312" +
-      "\002\024Api\\V1alpha1\\Tickets\342\002 Api\\V1alpha1\\Ti" +
-      "ckets\\GPBMetadata\352\002\026Api::V1alpha1::Ticke" +
-      "tsb\006proto3"
+      "1/tickets/tickets/assignself:\001*\022\245\001\n\016Edit" +
+      "MaskTicket\022\'.api.v1alpha1.tickets.EditMa" +
+      "skTicketReq\032\'.api.v1alpha1.tickets.EditM" +
+      "askTicketRes\"A\272\270\221\002\005\n\003\010\234\030\202\323\344\223\0021\",/api/v1a" +
+      "lpha1/tickets/tickets/editmaskticket:\001*\022" +
+      "\273\001\n\024ListAllocatedTickets\022,.api.v1alpha1." +
+      "tickets.ListAllocatedTicketReq\032,.api.v1a" +
+      "lpha1.tickets.ListAllocatedTicketRes\"G\272\270" +
+      "\221\002\005\n\003\010\234\030\202\323\344\223\0027\"2/api/v1alpha1/tickets/ti" +
+      "ckets/listallocatedtickets:\001*B\250\001\n&com.tc" +
+      "n.cloud.api.api.v1alpha1.ticketsB\014Servic" +
+      "eProtoP\001\242\002\003AVT\252\002\024Api.V1alpha1.Tickets\312\002\024" +
+      "Api\\V1alpha1\\Tickets\342\002 Api\\V1alpha1\\Tick" +
+      "ets\\GPBMetadata\352\002\026Api::V1alpha1::Tickets" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
