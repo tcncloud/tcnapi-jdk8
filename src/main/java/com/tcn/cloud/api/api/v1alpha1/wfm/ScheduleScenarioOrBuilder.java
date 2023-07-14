@@ -169,4 +169,41 @@ public interface ScheduleScenarioOrBuilder extends
    * <code>.api.commons.DatetimeRange schedule_range = 8 [json_name = "scheduleRange"];</code>
    */
   com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getScheduleRangeOrBuilder();
+
+  /**
+   * <pre>
+   * Datetime that the sceneario was set to inactive.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp datetime_set_to_inactive = 9 [json_name = "datetimeSetToInactive"];</code>
+   * @return Whether the datetimeSetToInactive field is set.
+   */
+  boolean hasDatetimeSetToInactive();
+  /**
+   * <pre>
+   * Datetime that the sceneario was set to inactive.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp datetime_set_to_inactive = 9 [json_name = "datetimeSetToInactive"];</code>
+   * @return The datetimeSetToInactive.
+   */
+  com.google.protobuf.Timestamp getDatetimeSetToInactive();
+  /**
+   * <pre>
+   * Datetime that the sceneario was set to inactive.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp datetime_set_to_inactive = 9 [json_name = "datetimeSetToInactive"];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getDatetimeSetToInactiveOrBuilder();
+
+  /**
+   * <pre>
+   * Indicates whether or not the scenario is active.
+   * </pre>
+   *
+   * <code>bool is_active = 10 [json_name = "isActive"];</code>
+   * @return The isActive.
+   */
+  boolean getIsActive();
 }

@@ -4983,7 +4983,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a schedule scenario corresponding to the given &#64;schedule_scenario_sid and org sending the request with the provided parameters.
-     * Only the &#64;name and &#64;description fields may be updated, and must be filled in with current value if updating the field is not desired.
+     * Only the &#64;name, &#64;description and &#64;datetime_set_to_inactive fields may be updated, and must be filled in with current value if updating the field is not desired.
      * The &#64;schedule_scenario_sid must be the original for the schedule scenario since it cannot be updated.
      * All other fields will be ignored since they cannot be updated.
      * Required permissions:
@@ -7036,7 +7036,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a schedule scenario corresponding to the given &#64;schedule_scenario_sid and org sending the request with the provided parameters.
-     * Only the &#64;name and &#64;description fields may be updated, and must be filled in with current value if updating the field is not desired.
+     * Only the &#64;name, &#64;description and &#64;datetime_set_to_inactive fields may be updated, and must be filled in with current value if updating the field is not desired.
      * The &#64;schedule_scenario_sid must be the original for the schedule scenario since it cannot be updated.
      * All other fields will be ignored since they cannot be updated.
      * Required permissions:
@@ -9020,7 +9020,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a schedule scenario corresponding to the given &#64;schedule_scenario_sid and org sending the request with the provided parameters.
-     * Only the &#64;name and &#64;description fields may be updated, and must be filled in with current value if updating the field is not desired.
+     * Only the &#64;name, &#64;description and &#64;datetime_set_to_inactive fields may be updated, and must be filled in with current value if updating the field is not desired.
      * The &#64;schedule_scenario_sid must be the original for the schedule scenario since it cannot be updated.
      * All other fields will be ignored since they cannot be updated.
      * Required permissions:
@@ -10963,7 +10963,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a schedule scenario corresponding to the given &#64;schedule_scenario_sid and org sending the request with the provided parameters.
-     * Only the &#64;name and &#64;description fields may be updated, and must be filled in with current value if updating the field is not desired.
+     * Only the &#64;name, &#64;description and &#64;datetime_set_to_inactive fields may be updated, and must be filled in with current value if updating the field is not desired.
      * The &#64;schedule_scenario_sid must be the original for the schedule scenario since it cannot be updated.
      * All other fields will be ignored since they cannot be updated.
      * Required permissions:
