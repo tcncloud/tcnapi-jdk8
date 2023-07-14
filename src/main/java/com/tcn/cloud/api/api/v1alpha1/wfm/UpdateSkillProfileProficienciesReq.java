@@ -20,7 +20,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private UpdateSkillProfileProficienciesReq() {
-    orgId_ = "";
     proficiencies_ = java.util.Collections.emptyList();
   }
 
@@ -726,53 +725,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  public static final int ORG_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object orgId_ = "";
-  /**
-   * <pre>
-   * Org ID that the skill profiles belong to.
-   * </pre>
-   *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  @java.lang.Override
-  public java.lang.String getOrgId() {
-    java.lang.Object ref = orgId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      orgId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * Org ID that the skill profiles belong to.
-   * </pre>
-   *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getOrgIdBytes() {
-    java.lang.Object ref = orgId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      orgId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   public static final int PROFICIENCIES_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.Proficiency> proficiencies_;
@@ -848,9 +800,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
-    }
     for (int i = 0; i < proficiencies_.size(); i++) {
       output.writeMessage(2, proficiencies_.get(i));
     }
@@ -863,9 +812,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
-    }
     for (int i = 0; i < proficiencies_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, proficiencies_.get(i));
@@ -885,8 +831,6 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq other = (com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq) obj;
 
-    if (!getOrgId()
-        .equals(other.getOrgId())) return false;
     if (!getProficienciesList()
         .equals(other.getProficienciesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -900,8 +844,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getOrgId().hashCode();
     if (getProficienciesCount() > 0) {
       hash = (37 * hash) + PROFICIENCIES_FIELD_NUMBER;
       hash = (53 * hash) + getProficienciesList().hashCode();
@@ -1041,14 +983,13 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      orgId_ = "";
       if (proficienciesBuilder_ == null) {
         proficiencies_ = java.util.Collections.emptyList();
       } else {
         proficiencies_ = null;
         proficienciesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -1083,9 +1024,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq result) {
       if (proficienciesBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           proficiencies_ = java.util.Collections.unmodifiableList(proficiencies_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.proficiencies_ = proficiencies_;
       } else {
@@ -1095,9 +1036,6 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.orgId_ = orgId_;
-      }
     }
 
     @java.lang.Override
@@ -1144,16 +1082,11 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.getDefaultInstance()) return this;
-      if (!other.getOrgId().isEmpty()) {
-        orgId_ = other.orgId_;
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
       if (proficienciesBuilder_ == null) {
         if (!other.proficiencies_.isEmpty()) {
           if (proficiencies_.isEmpty()) {
             proficiencies_ = other.proficiencies_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureProficienciesIsMutable();
             proficiencies_.addAll(other.proficiencies_);
@@ -1166,7 +1099,7 @@ private static final long serialVersionUID = 0L;
             proficienciesBuilder_.dispose();
             proficienciesBuilder_ = null;
             proficiencies_ = other.proficiencies_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             proficienciesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getProficienciesFieldBuilder() : null;
@@ -1201,11 +1134,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              orgId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
             case 18: {
               com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.Proficiency m =
                   input.readMessage(
@@ -1236,104 +1164,12 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object orgId_ = "";
-    /**
-     * <pre>
-     * Org ID that the skill profiles belong to.
-     * </pre>
-     *
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @return The orgId.
-     */
-    public java.lang.String getOrgId() {
-      java.lang.Object ref = orgId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        orgId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Org ID that the skill profiles belong to.
-     * </pre>
-     *
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @return The bytes for orgId.
-     */
-    public com.google.protobuf.ByteString
-        getOrgIdBytes() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orgId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Org ID that the skill profiles belong to.
-     * </pre>
-     *
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @param value The orgId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      orgId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Org ID that the skill profiles belong to.
-     * </pre>
-     *
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearOrgId() {
-      orgId_ = getDefaultInstance().getOrgId();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Org ID that the skill profiles belong to.
-     * </pre>
-     *
-     * <code>string org_id = 1 [json_name = "orgId"];</code>
-     * @param value The bytes for orgId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      orgId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.Proficiency> proficiencies_ =
       java.util.Collections.emptyList();
     private void ensureProficienciesIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         proficiencies_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.Proficiency>(proficiencies_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1527,7 +1363,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearProficiencies() {
       if (proficienciesBuilder_ == null) {
         proficiencies_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         proficienciesBuilder_.clear();
@@ -1632,7 +1468,7 @@ private static final long serialVersionUID = 0L;
         proficienciesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.Proficiency, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.Proficiency.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq.ProficiencyOrBuilder>(
                 proficiencies_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         proficiencies_ = null;
