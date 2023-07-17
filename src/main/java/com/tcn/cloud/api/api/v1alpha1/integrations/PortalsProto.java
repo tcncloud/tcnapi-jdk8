@@ -459,7 +459,7 @@ public final class PortalsProto {
       "(/api/v1alpha1/portalmanager/upsertporta" +
       "l:\001*\022\236\001\n\tGetPortal\022\'.api.v1alpha1.integr" +
       "ations.GetPortalReq\032\'.api.v1alpha1.integ" +
-      "rations.GetPortalRes\"?\272\270\221\002\n\n\003\010\224\n\n\003\010\227\n\202\323\344" +
+      "rations.GetPortalRes\"?\272\270\221\002\n\n\003\010\224\n\n\003\010\324\002\202\323\344" +
       "\223\002*\"%/api/v1alpha1/portalmanager/getport" +
       "al:\001*\022\245\001\n\014DeletePortal\022*.api.v1alpha1.in" +
       "tegrations.DeletePortalReq\032*.api.v1alpha" +
@@ -468,16 +468,16 @@ public final class PortalsProto {
       "leteportal:\001*\022\246\001\n\013ListPortals\022).api.v1al" +
       "pha1.integrations.ListPortalsReq\032).api.v" +
       "1alpha1.integrations.ListPortalsRes\"A\272\270\221" +
-      "\002\n\n\003\010\224\n\n\003\010\227\n\202\323\344\223\002,\"\'/api/v1alpha1/portal" +
+      "\002\n\n\003\010\224\n\n\003\010\324\002\202\323\344\223\002,\"\'/api/v1alpha1/portal" +
       "manager/listportals:\001*\022\306\001\n\023ListDetailedP" +
       "ortals\0221.api.v1alpha1.integrations.ListD" +
       "etailedPortalsReq\0321.api.v1alpha1.integra" +
       "tions.ListDetailedPortalsRes\"I\272\270\221\002\n\n\003\010\224\n" +
-      "\n\003\010\227\n\202\323\344\223\0024\"//api/v1alpha1/portalmanager" +
+      "\n\003\010\324\002\202\323\344\223\0024\"//api/v1alpha1/portalmanager" +
       "/listdetailedportals:\001*\022\276\001\n\021GetDetailedP" +
       "ortal\022/.api.v1alpha1.integrations.GetDet" +
       "ailedPortalReq\032/.api.v1alpha1.integratio" +
-      "ns.GetDetailedPortalRes\"G\272\270\221\002\n\n\003\010\224\n\n\003\010\227\n" +
+      "ns.GetDetailedPortalRes\"G\272\270\221\002\n\n\003\010\224\n\n\003\010\324\002" +
       "\202\323\344\223\0022\"-/api/v1alpha1/portalmanager/getd" +
       "etailedportal:\001*\022\305\001\n\024UpsertPluginInstanc" +
       "e\0222.api.v1alpha1.integrations.UpsertPlug" +

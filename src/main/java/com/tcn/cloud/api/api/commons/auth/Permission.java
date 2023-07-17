@@ -284,6 +284,14 @@ public enum Permission
   PERMISSION_VOICEMAIL_DOWNLOAD(1401),
   /**
    * <pre>
+   * Enables Agents to view portals.
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_PORTALS_VIEW = 340 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_AGENT_PORTALS_VIEW(340),
+  /**
+   * <pre>
    * Enables access to voice analytics app.
    * </pre>
    *
@@ -466,14 +474,6 @@ public enum Permission
    * <code>PERMISSION_INTEGRATIONS_JOURNEY = 1302 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_INTEGRATIONS_JOURNEY(1302),
-  /**
-   * <pre>
-   * Enables Agents to view portals.
-   * </pre>
-   *
-   * <code>PERMISSION_INTEGRATIONS_PORTALS_VIEW = 1303 [(.annotations.perms.options) = { ... }</code>
-   */
-  PERMISSION_INTEGRATIONS_PORTALS_VIEW(1303),
   /**
    * <pre>
    * Enables access to WFM app
@@ -829,6 +829,14 @@ public enum Permission
   public static final int PERMISSION_VOICEMAIL_DOWNLOAD_VALUE = 1401;
   /**
    * <pre>
+   * Enables Agents to view portals.
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_PORTALS_VIEW = 340 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_AGENT_PORTALS_VIEW_VALUE = 340;
+  /**
+   * <pre>
    * Enables access to voice analytics app.
    * </pre>
    *
@@ -1013,14 +1021,6 @@ public enum Permission
   public static final int PERMISSION_INTEGRATIONS_JOURNEY_VALUE = 1302;
   /**
    * <pre>
-   * Enables Agents to view portals.
-   * </pre>
-   *
-   * <code>PERMISSION_INTEGRATIONS_PORTALS_VIEW = 1303 [(.annotations.perms.options) = { ... }</code>
-   */
-  public static final int PERMISSION_INTEGRATIONS_PORTALS_VIEW_VALUE = 1303;
-  /**
-   * <pre>
    * Enables access to WFM app
    * </pre>
    *
@@ -1159,6 +1159,7 @@ public enum Permission
       case 330: return PERMISSION_AGENT_COMPLIANCE_SCRUBLIST_OPTIONS;
       case 1400: return PERMISSION_EXTENSION_EDIT;
       case 1401: return PERMISSION_VOICEMAIL_DOWNLOAD;
+      case 340: return PERMISSION_AGENT_PORTALS_VIEW;
       case 500: return PERMISSION_VOICE_ANALYTICS;
       case 501: return PERMISSION_VOICE_ANALYTICS_FLAG;
       case 502: return PERMISSION_VOICE_ANALYTICS_CONFIG;
@@ -1182,7 +1183,6 @@ public enum Permission
       case 1300: return PERMISSION_INTEGRATIONS_VIEW;
       case 1301: return PERMISSION_INTEGRATIONS_PAYMENT;
       case 1302: return PERMISSION_INTEGRATIONS_JOURNEY;
-      case 1303: return PERMISSION_INTEGRATIONS_PORTALS_VIEW;
       case 1500: return PERMISSION_WFM;
       case 1600: return PERMISSION_SCORECARDS;
       case 1601: return PERMISSION_SCORECARDS_MANAGE;
