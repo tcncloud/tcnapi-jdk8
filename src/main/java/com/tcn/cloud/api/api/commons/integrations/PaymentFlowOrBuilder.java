@@ -125,6 +125,36 @@ public interface PaymentFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.PaymentAuthorizeNetGooglePayOrBuilder getAuthorizeNetGooglePayOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest payway_submit_card_sale_request = 9 [json_name = "paywaySubmitCardSaleRequest"];</code>
+   * @return Whether the paywaySubmitCardSaleRequest field is set.
+   */
+  boolean hasPaywaySubmitCardSaleRequest();
+  /**
+   * <code>.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest payway_submit_card_sale_request = 9 [json_name = "paywaySubmitCardSaleRequest"];</code>
+   * @return The paywaySubmitCardSaleRequest.
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest getPaywaySubmitCardSaleRequest();
+  /**
+   * <code>.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest payway_submit_card_sale_request = 9 [json_name = "paywaySubmitCardSaleRequest"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequestOrBuilder getPaywaySubmitCardSaleRequestOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest payway_submit_ach_alert_request = 10 [json_name = "paywaySubmitAchAlertRequest"];</code>
+   * @return Whether the paywaySubmitAchAlertRequest field is set.
+   */
+  boolean hasPaywaySubmitAchAlertRequest();
+  /**
+   * <code>.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest payway_submit_ach_alert_request = 10 [json_name = "paywaySubmitAchAlertRequest"];</code>
+   * @return The paywaySubmitAchAlertRequest.
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest getPaywaySubmitAchAlertRequest();
+  /**
+   * <code>.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest payway_submit_ach_alert_request = 10 [json_name = "paywaySubmitAchAlertRequest"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequestOrBuilder getPaywaySubmitAchAlertRequestOrBuilder();
+
+  /**
    * <pre>
    * the fields the user will use for the payment form
    * must be a subset of fields that is enough data to make the api call.
