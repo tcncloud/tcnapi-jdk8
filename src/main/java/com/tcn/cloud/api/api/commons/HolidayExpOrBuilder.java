@@ -8,36 +8,36 @@ public interface HolidayExpOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 3 [json_name = "name"];</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 3 [json_name = "name"];</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
 
   /**
-   * <code>string country = 2 [json_name = "country"];</code>
+   * <code>string country = 4 [json_name = "country"];</code>
    * @return The country.
    */
   java.lang.String getCountry();
   /**
-   * <code>string country = 2 [json_name = "country"];</code>
+   * <code>string country = 4 [json_name = "country"];</code>
    * @return The bytes for country.
    */
   com.google.protobuf.ByteString
       getCountryBytes();
 
   /**
-   * <code>string type = 3 [json_name = "type"];</code>
+   * <code>string type = 5 [json_name = "type"];</code>
    * @return The type.
    */
   java.lang.String getType();
   /**
-   * <code>string type = 3 [json_name = "type"];</code>
+   * <code>string type = 5 [json_name = "type"];</code>
    * @return The bytes for type.
    */
   com.google.protobuf.ByteString
