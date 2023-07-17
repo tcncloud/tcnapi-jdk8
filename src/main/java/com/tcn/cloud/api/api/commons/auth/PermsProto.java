@@ -24,7 +24,7 @@ public final class PermsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\034api/commons/auth/perms.proto\022\020api.comm" +
-      "ons.auth\032\033annotations/perms/tcn.proto*\376\035" +
+      "ons.auth\032\033annotations/perms/tcn.proto*\272\036" +
       "\n\nPermission\022\032\n\026PERMISSION_UNSPECIFIED\020\000" +
       "\022\022\n\016PERMISSION_DEV\020\001\022\031\n\025PERMISSION_LEARN" +
       "_EDIT\020\n\022!\n\023PERMISSION_ORG_EDIT\020d\032\010\212\265\030\004\020\t" +
@@ -106,25 +106,27 @@ public final class PermsProto {
       "\"\007Portals\022B\n\037PERMISSION_INTEGRATIONS_PAY" +
       "MENT\020\225\n\032\034\212\265\030\030\020\005\"\024Payment Integrations\022B\n" +
       "\037PERMISSION_INTEGRATIONS_JOURNEY\020\226\n\032\034\212\265\030" +
-      "\030\020\005\"\024Journey Integrations\022\260\001\n\016PERMISSION" +
-      "_WFM\020\334\013\032\232\001\212\265\030\225\001\020\017\"\nForecaster\"\016Skill Pro" +
-      "files\"\026Forecasting Parameters\"\023Profile F" +
-      "orecasting\"\026Regression Forecasting\"\023Curr" +
-      "ent Forecasting\"\tScheduler\"\020Agent Manage" +
-      "ment\022\"\n\025PERMISSION_SCORECARDS\020\300\014\032\006\212\265\030\002\020\013" +
-      "\022)\n\034PERMISSION_SCORECARDS_MANAGE\020\301\014\032\006\212\265\030" +
-      "\002\020\013\022+\n\036PERMISSION_SCORECARDS_EVALUATE\020\302\014" +
-      "\032\006\212\265\030\002\020\013\022/\n\024PERMISSION_DEV_TOOLS\020\210\016\032\024\212\265\030" +
-      "\020\020\004\"\014API Explorer\0223\n&PERMISSION_DELIVERY" +
-      "_NOTIFICATIONS_VIEW\020\320\017\032\006\212\265\030\002\020\003\0223\n&PERMIS" +
-      "SION_DELIVERY_NOTIFICATIONS_EDIT\020\321\017\032\006\212\265\030" +
-      "\002\020\003\022%\n\026PERMISSION_TICKETS_APP\020\234\030\032\010\212\265\030\004\010\001" +
-      "\020\r\022\'\n\030PERMISSION_TICKETS_ADMIN\020\235\030\032\010\212\265\030\004\010" +
-      "\001\020\r\022!\n\024PERMISSION_WORKFLOWS\020\240\037\032\006\212\265\030\002\020\020B\222" +
-      "\001\n\"com.tcn.cloud.api.api.commons.authB\nP" +
-      "ermsProtoP\001\242\002\003ACA\252\002\020Api.Commons.Auth\312\002\020A" +
-      "pi\\Commons\\Auth\342\002\034Api\\Commons\\Auth\\GPBMe" +
-      "tadata\352\002\022Api::Commons::Authb\006proto3"
+      "\030\020\005\"\024Journey Integrations\022:\n$PERMISSION_" +
+      "INTEGRATIONS_PORTALS_VIEW\020\227\n\032\017\212\265\030\013\020\005\"\007Po" +
+      "rtals\022\260\001\n\016PERMISSION_WFM\020\334\013\032\232\001\212\265\030\225\001\020\017\"\nF" +
+      "orecaster\"\016Skill Profiles\"\026Forecasting P" +
+      "arameters\"\023Profile Forecasting\"\026Regressi" +
+      "on Forecasting\"\023Current Forecasting\"\tSch" +
+      "eduler\"\020Agent Management\022\"\n\025PERMISSION_S" +
+      "CORECARDS\020\300\014\032\006\212\265\030\002\020\013\022)\n\034PERMISSION_SCORE" +
+      "CARDS_MANAGE\020\301\014\032\006\212\265\030\002\020\013\022+\n\036PERMISSION_SC" +
+      "ORECARDS_EVALUATE\020\302\014\032\006\212\265\030\002\020\013\022/\n\024PERMISSI" +
+      "ON_DEV_TOOLS\020\210\016\032\024\212\265\030\020\020\004\"\014API Explorer\0223\n" +
+      "&PERMISSION_DELIVERY_NOTIFICATIONS_VIEW\020" +
+      "\320\017\032\006\212\265\030\002\020\003\0223\n&PERMISSION_DELIVERY_NOTIFI" +
+      "CATIONS_EDIT\020\321\017\032\006\212\265\030\002\020\003\022%\n\026PERMISSION_TI" +
+      "CKETS_APP\020\234\030\032\010\212\265\030\004\010\001\020\r\022\'\n\030PERMISSION_TIC" +
+      "KETS_ADMIN\020\235\030\032\010\212\265\030\004\010\001\020\r\022!\n\024PERMISSION_WO" +
+      "RKFLOWS\020\240\037\032\006\212\265\030\002\020\020B\222\001\n\"com.tcn.cloud.api" +
+      ".api.commons.authB\nPermsProtoP\001\242\002\003ACA\252\002\020" +
+      "Api.Commons.Auth\312\002\020Api\\Commons\\Auth\342\002\034Ap" +
+      "i\\Commons\\Auth\\GPBMetadata\352\002\022Api::Common" +
+      "s::Authb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
