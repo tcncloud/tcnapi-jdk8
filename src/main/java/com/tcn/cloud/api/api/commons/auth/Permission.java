@@ -468,7 +468,7 @@ public enum Permission
   PERMISSION_INTEGRATIONS_JOURNEY(1302),
   /**
    * <pre>
-   * Enables Agents to view portals.option
+   * Enables Agents to view portals.
    * </pre>
    *
    * <code>PERMISSION_INTEGRATIONS_PORTALS_VIEW = 1303 [(.annotations.perms.options) = { ... }</code>
@@ -1013,7 +1013,7 @@ public enum Permission
   public static final int PERMISSION_INTEGRATIONS_JOURNEY_VALUE = 1302;
   /**
    * <pre>
-   * Enables Agents to view portals.option
+   * Enables Agents to view portals.
    * </pre>
    *
    * <code>PERMISSION_INTEGRATIONS_PORTALS_VIEW = 1303 [(.annotations.perms.options) = { ... }</code>
