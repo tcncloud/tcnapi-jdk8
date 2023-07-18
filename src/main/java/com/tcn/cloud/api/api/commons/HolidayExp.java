@@ -41,11 +41,11 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.HolidayExp.class, com.tcn.cloud.api.api.commons.HolidayExp.Builder.class);
   }
 
-  public static final int NAME_FIELD_NUMBER = 1;
+  public static final int NAME_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 3 [json_name = "name"];</code>
    * @return The name.
    */
   @java.lang.Override
@@ -62,7 +62,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 3 [json_name = "name"];</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -80,11 +80,11 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int COUNTRY_FIELD_NUMBER = 2;
+  public static final int COUNTRY_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
   private volatile java.lang.Object country_ = "";
   /**
-   * <code>string country = 2 [json_name = "country"];</code>
+   * <code>string country = 4 [json_name = "country"];</code>
    * @return The country.
    */
   @java.lang.Override
@@ -101,7 +101,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string country = 2 [json_name = "country"];</code>
+   * <code>string country = 4 [json_name = "country"];</code>
    * @return The bytes for country.
    */
   @java.lang.Override
@@ -119,11 +119,11 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int TYPE_FIELD_NUMBER = 3;
+  public static final int TYPE_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
   private volatile java.lang.Object type_ = "";
   /**
-   * <code>string type = 3 [json_name = "type"];</code>
+   * <code>string type = 5 [json_name = "type"];</code>
    * @return The type.
    */
   @java.lang.Override
@@ -140,7 +140,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string type = 3 [json_name = "type"];</code>
+   * <code>string type = 5 [json_name = "type"];</code>
    * @return The bytes for type.
    */
   @java.lang.Override
@@ -173,13 +173,13 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(country_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, country_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, country_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, type_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, type_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -191,13 +191,13 @@ private static final long serialVersionUID = 0L;
 
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(country_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, country_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, country_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, type_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, type_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -500,21 +500,21 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
+            case 26: {
               name_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
-            } // case 10
-            case 18: {
+            } // case 26
+            case 34: {
               country_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
-            } // case 18
-            case 26: {
+            } // case 34
+            case 42: {
               type_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000004;
               break;
-            } // case 26
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -534,7 +534,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object name_ = "";
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 3 [json_name = "name"];</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -550,7 +550,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 3 [json_name = "name"];</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -567,7 +567,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 3 [json_name = "name"];</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -580,7 +580,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 3 [json_name = "name"];</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -590,7 +590,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 3 [json_name = "name"];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -606,7 +606,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object country_ = "";
     /**
-     * <code>string country = 2 [json_name = "country"];</code>
+     * <code>string country = 4 [json_name = "country"];</code>
      * @return The country.
      */
     public java.lang.String getCountry() {
@@ -622,7 +622,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string country = 2 [json_name = "country"];</code>
+     * <code>string country = 4 [json_name = "country"];</code>
      * @return The bytes for country.
      */
     public com.google.protobuf.ByteString
@@ -639,7 +639,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string country = 2 [json_name = "country"];</code>
+     * <code>string country = 4 [json_name = "country"];</code>
      * @param value The country to set.
      * @return This builder for chaining.
      */
@@ -652,7 +652,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string country = 2 [json_name = "country"];</code>
+     * <code>string country = 4 [json_name = "country"];</code>
      * @return This builder for chaining.
      */
     public Builder clearCountry() {
@@ -662,7 +662,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string country = 2 [json_name = "country"];</code>
+     * <code>string country = 4 [json_name = "country"];</code>
      * @param value The bytes for country to set.
      * @return This builder for chaining.
      */
@@ -678,7 +678,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object type_ = "";
     /**
-     * <code>string type = 3 [json_name = "type"];</code>
+     * <code>string type = 5 [json_name = "type"];</code>
      * @return The type.
      */
     public java.lang.String getType() {
@@ -694,7 +694,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string type = 3 [json_name = "type"];</code>
+     * <code>string type = 5 [json_name = "type"];</code>
      * @return The bytes for type.
      */
     public com.google.protobuf.ByteString
@@ -711,7 +711,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string type = 3 [json_name = "type"];</code>
+     * <code>string type = 5 [json_name = "type"];</code>
      * @param value The type to set.
      * @return This builder for chaining.
      */
@@ -724,7 +724,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string type = 3 [json_name = "type"];</code>
+     * <code>string type = 5 [json_name = "type"];</code>
      * @return This builder for chaining.
      */
     public Builder clearType() {
@@ -734,7 +734,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string type = 3 [json_name = "type"];</code>
+     * <code>string type = 5 [json_name = "type"];</code>
      * @param value The bytes for type to set.
      * @return This builder for chaining.
      */

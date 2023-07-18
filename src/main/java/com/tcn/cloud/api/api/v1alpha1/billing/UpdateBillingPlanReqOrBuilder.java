@@ -50,4 +50,24 @@ public interface UpdateBillingPlanReqOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.billing.DetailOrBuilder getBillingDetailsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * organization identifier
+   * </pre>
+   *
+   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * @return The orgId.
+   */
+  java.lang.String getOrgId();
+  /**
+   * <pre>
+   * organization identifier
+   * </pre>
+   *
+   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * @return The bytes for orgId.
+   */
+  com.google.protobuf.ByteString
+      getOrgIdBytes();
 }

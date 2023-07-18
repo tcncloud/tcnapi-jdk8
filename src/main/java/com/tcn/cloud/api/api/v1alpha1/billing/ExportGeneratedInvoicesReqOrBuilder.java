@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.billing;
 
-public interface GetInvoiceReqOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.billing.GetInvoiceReq)
+public interface ExportGeneratedInvoicesReqOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.billing.ExportGeneratedInvoicesReq)
     com.google.protobuf.MessageOrBuilder {
 
   /**

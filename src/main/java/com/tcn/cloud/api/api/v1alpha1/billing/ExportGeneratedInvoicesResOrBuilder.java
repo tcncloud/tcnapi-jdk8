@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.billing;
 
-public interface GetInvoiceResOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.billing.GetInvoiceRes)
+public interface ExportGeneratedInvoicesResOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.billing.ExportGeneratedInvoicesRes)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -39,5 +39,5 @@ public interface GetInvoiceResOrBuilder extends
   com.google.protobuf.ByteString
       getCsvBytes();
 
-  com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes.FormatCase getFormatCase();
+  com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesRes.FormatCase getFormatCase();
 }
