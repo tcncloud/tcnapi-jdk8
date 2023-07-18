@@ -9,26 +9,6 @@ public interface UpdateSkillProfileProficienciesReqOrBuilder extends
 
   /**
    * <pre>
-   * Org ID that the skill profiles belong to.
-   * </pre>
-   *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  java.lang.String getOrgId();
-  /**
-   * <pre>
-   * Org ID that the skill profiles belong to.
-   * </pre>
-   *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  com.google.protobuf.ByteString
-      getOrgIdBytes();
-
-  /**
-   * <pre>
    * Proficiencies to update.
    * </pre>
    *

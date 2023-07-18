@@ -3149,6 +3149,37 @@ public final class WFMGrpc {
     return getCreateShiftInstanceMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Req,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Res> getCreateShiftInstanceV2Method;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateShiftInstanceV2",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Req.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Res.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Req,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Res> getCreateShiftInstanceV2Method() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Req, com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Res> getCreateShiftInstanceV2Method;
+    if ((getCreateShiftInstanceV2Method = WFMGrpc.getCreateShiftInstanceV2Method) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCreateShiftInstanceV2Method = WFMGrpc.getCreateShiftInstanceV2Method) == null) {
+          WFMGrpc.getCreateShiftInstanceV2Method = getCreateShiftInstanceV2Method =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Req, com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Res>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateShiftInstanceV2"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Req.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Res.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CreateShiftInstanceV2"))
+              .build();
+        }
+      }
+    }
+    return getCreateShiftInstanceV2Method;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesRes> getSwapShiftInstancesMethod;
 
@@ -4083,7 +4114,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
-     * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the given &#64;org_id.
+     * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
@@ -4800,7 +4831,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;agent_availability_pattern_sid or &#64;org_id have invalid values.
+     *   - grpc.Invalid: the &#64;agent_availability_pattern_sid has an invalid value.
      *   - grpc.NotFound: the &#64;agent_availability_pattern with the given sid doesn't exist.
      *   - grpc.Internal: error occurs when removing the agent availability pattern.
      * </pre>
@@ -4952,7 +4983,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a schedule scenario corresponding to the given &#64;schedule_scenario_sid and org sending the request with the provided parameters.
-     * Only the &#64;name and &#64;description fields may be updated, and must be filled in with current value if updating the field is not desired.
+     * Only the &#64;name, &#64;description and &#64;datetime_set_to_inactive fields may be updated, and must be filled in with current value if updating the field is not desired.
      * The &#64;schedule_scenario_sid must be the original for the schedule scenario since it cannot be updated.
      * All other fields will be ignored since they cannot be updated.
      * Required permissions:
@@ -4977,7 +5008,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;org_id, &#64;entity_type, or &#64;belongs_to_entity have invalid values.
+     *   - grpc.Invalid: the &#64;entity_type, or &#64;belongs_to_entity have invalid values.
      *   - grpc.Internal: error occurs when getting the config entities.
      * </pre>
      */
@@ -5219,6 +5250,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates a shift instance for the org sending the request with the provided parameters.
+     * This method is not implemented. Do not use.
      * Required permissions:
      * NONE
      * Errors:
@@ -5229,6 +5261,24 @@ public final class WFMGrpc {
     default void createShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateShiftInstanceMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates a shift instance for the org sending the request with the provided parameters.
+     * If &#64;wfm_agent_sids is empty, then the shift instance will be created for a newly created unassigned agent.
+     * A shift instance will be created for each wfm agent sid provided.
+     * Required permissions:
+     * NONE
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.Internal: error occurs when creating the shift instance.
+     *   - grpc.NotFound: the &#64;draft_schedule_sid, &#64;shift_template_sid, or &#64;wfm_agent_sids do not exist for the org sending the request.
+     * </pre>
+     */
+    default void createShiftInstanceV2(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Req request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Res> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateShiftInstanceV2Method(), responseObserver);
     }
 
     /**
@@ -6070,7 +6120,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
-     * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the given &#64;org_id.
+     * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
@@ -6826,7 +6876,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;agent_availability_pattern_sid or &#64;org_id have invalid values.
+     *   - grpc.Invalid: the &#64;agent_availability_pattern_sid has an invalid value.
      *   - grpc.NotFound: the &#64;agent_availability_pattern with the given sid doesn't exist.
      *   - grpc.Internal: error occurs when removing the agent availability pattern.
      * </pre>
@@ -6986,7 +7036,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a schedule scenario corresponding to the given &#64;schedule_scenario_sid and org sending the request with the provided parameters.
-     * Only the &#64;name and &#64;description fields may be updated, and must be filled in with current value if updating the field is not desired.
+     * Only the &#64;name, &#64;description and &#64;datetime_set_to_inactive fields may be updated, and must be filled in with current value if updating the field is not desired.
      * The &#64;schedule_scenario_sid must be the original for the schedule scenario since it cannot be updated.
      * All other fields will be ignored since they cannot be updated.
      * Required permissions:
@@ -7012,7 +7062,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;org_id, &#64;entity_type, or &#64;belongs_to_entity have invalid values.
+     *   - grpc.Invalid: the &#64;entity_type, or &#64;belongs_to_entity have invalid values.
      *   - grpc.Internal: error occurs when getting the config entities.
      * </pre>
      */
@@ -7268,6 +7318,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates a shift instance for the org sending the request with the provided parameters.
+     * This method is not implemented. Do not use.
      * Required permissions:
      * NONE
      * Errors:
@@ -7279,6 +7330,25 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateShiftInstanceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Creates a shift instance for the org sending the request with the provided parameters.
+     * If &#64;wfm_agent_sids is empty, then the shift instance will be created for a newly created unassigned agent.
+     * A shift instance will be created for each wfm agent sid provided.
+     * Required permissions:
+     * NONE
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.Internal: error occurs when creating the shift instance.
+     *   - grpc.NotFound: the &#64;draft_schedule_sid, &#64;shift_template_sid, or &#64;wfm_agent_sids do not exist for the org sending the request.
+     * </pre>
+     */
+    public void createShiftInstanceV2(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Req request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Res> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateShiftInstanceV2Method(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -8081,7 +8151,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
-     * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the given &#64;org_id.
+     * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
@@ -8798,7 +8868,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;agent_availability_pattern_sid or &#64;org_id have invalid values.
+     *   - grpc.Invalid: the &#64;agent_availability_pattern_sid has an invalid value.
      *   - grpc.NotFound: the &#64;agent_availability_pattern with the given sid doesn't exist.
      *   - grpc.Internal: error occurs when removing the agent availability pattern.
      * </pre>
@@ -8950,7 +9020,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a schedule scenario corresponding to the given &#64;schedule_scenario_sid and org sending the request with the provided parameters.
-     * Only the &#64;name and &#64;description fields may be updated, and must be filled in with current value if updating the field is not desired.
+     * Only the &#64;name, &#64;description and &#64;datetime_set_to_inactive fields may be updated, and must be filled in with current value if updating the field is not desired.
      * The &#64;schedule_scenario_sid must be the original for the schedule scenario since it cannot be updated.
      * All other fields will be ignored since they cannot be updated.
      * Required permissions:
@@ -8975,7 +9045,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;org_id, &#64;entity_type, or &#64;belongs_to_entity have invalid values.
+     *   - grpc.Invalid: the &#64;entity_type, or &#64;belongs_to_entity have invalid values.
      *   - grpc.Internal: error occurs when getting the config entities.
      * </pre>
      */
@@ -9217,6 +9287,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates a shift instance for the org sending the request with the provided parameters.
+     * This method is not implemented. Do not use.
      * Required permissions:
      * NONE
      * Errors:
@@ -9227,6 +9298,24 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes createShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateShiftInstanceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a shift instance for the org sending the request with the provided parameters.
+     * If &#64;wfm_agent_sids is empty, then the shift instance will be created for a newly created unassigned agent.
+     * A shift instance will be created for each wfm agent sid provided.
+     * Required permissions:
+     * NONE
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.Internal: error occurs when creating the shift instance.
+     *   - grpc.NotFound: the &#64;draft_schedule_sid, &#64;shift_template_sid, or &#64;wfm_agent_sids do not exist for the org sending the request.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Res createShiftInstanceV2(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Req request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateShiftInstanceV2Method(), getCallOptions(), request);
     }
 
     /**
@@ -9958,7 +10047,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Calculates the averages for call characteristics using the historical data of the given &#64;skill_profile_sids and org sending the request.
-     * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the given &#64;org_id.
+     * If no &#64;skill_profile_sids are given, it will calculate the averages for all skill profiles for the org sending the request.
      * Averages will be weighted by the number of calls that each historical data interval has.
      * Once the averages are calculated, they will be updated in the db for those skill profiles.
      * If a nil &#64;datetime_range is given then the range used will be &#64;training_data_range_end_datetime - &#64;averages_calculation_range_in_months to the &#64;training_data_range_end_datetime from the forecasting parameters.
@@ -10714,7 +10803,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;agent_availability_pattern_sid or &#64;org_id have invalid values.
+     *   - grpc.Invalid: the &#64;agent_availability_pattern_sid has an invalid value.
      *   - grpc.NotFound: the &#64;agent_availability_pattern with the given sid doesn't exist.
      *   - grpc.Internal: error occurs when removing the agent availability pattern.
      * </pre>
@@ -10874,7 +10963,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a schedule scenario corresponding to the given &#64;schedule_scenario_sid and org sending the request with the provided parameters.
-     * Only the &#64;name and &#64;description fields may be updated, and must be filled in with current value if updating the field is not desired.
+     * Only the &#64;name, &#64;description and &#64;datetime_set_to_inactive fields may be updated, and must be filled in with current value if updating the field is not desired.
      * The &#64;schedule_scenario_sid must be the original for the schedule scenario since it cannot be updated.
      * All other fields will be ignored since they cannot be updated.
      * Required permissions:
@@ -10900,7 +10989,7 @@ public final class WFMGrpc {
      * Required permissions:
      *   NONE
      * Errors:
-     *   - grpc.Invalid: the &#64;org_id, &#64;entity_type, or &#64;belongs_to_entity have invalid values.
+     *   - grpc.Invalid: the &#64;entity_type, or &#64;belongs_to_entity have invalid values.
      *   - grpc.Internal: error occurs when getting the config entities.
      * </pre>
      */
@@ -11156,6 +11245,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Creates a shift instance for the org sending the request with the provided parameters.
+     * This method is not implemented. Do not use.
      * Required permissions:
      * NONE
      * Errors:
@@ -11167,6 +11257,25 @@ public final class WFMGrpc {
         com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateShiftInstanceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a shift instance for the org sending the request with the provided parameters.
+     * If &#64;wfm_agent_sids is empty, then the shift instance will be created for a newly created unassigned agent.
+     * A shift instance will be created for each wfm agent sid provided.
+     * Required permissions:
+     * NONE
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.Internal: error occurs when creating the shift instance.
+     *   - grpc.NotFound: the &#64;draft_schedule_sid, &#64;shift_template_sid, or &#64;wfm_agent_sids do not exist for the org sending the request.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Res> createShiftInstanceV2(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Req request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateShiftInstanceV2Method(), getCallOptions()), request);
     }
 
     /**
@@ -11411,14 +11520,15 @@ public final class WFMGrpc {
   private static final int METHODID_LIST_DRAFT_SCHEDULES = 98;
   private static final int METHODID_DELETE_DRAFT_SCHEDULE = 99;
   private static final int METHODID_CREATE_SHIFT_INSTANCE = 100;
-  private static final int METHODID_SWAP_SHIFT_INSTANCES = 101;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 102;
-  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 103;
-  private static final int METHODID_SET_SCHEDULING_TARGET = 104;
-  private static final int METHODID_GET_SCHEDULING_TARGET = 105;
-  private static final int METHODID_DELETE_SCHEDULING_TARGET = 106;
-  private static final int METHODID_GET_PERFORMANCE_METRICS = 107;
-  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 108;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 101;
+  private static final int METHODID_SWAP_SHIFT_INSTANCES = 102;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 103;
+  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 104;
+  private static final int METHODID_SET_SCHEDULING_TARGET = 105;
+  private static final int METHODID_GET_SCHEDULING_TARGET = 106;
+  private static final int METHODID_DELETE_SCHEDULING_TARGET = 107;
+  private static final int METHODID_GET_PERFORMANCE_METRICS = 108;
+  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 109;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -11840,6 +11950,10 @@ public final class WFMGrpc {
         case METHODID_CREATE_SHIFT_INSTANCE:
           serviceImpl.createShiftInstance((com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes>) responseObserver);
+          break;
+        case METHODID_CREATE_SHIFT_INSTANCE_V2:
+          serviceImpl.createShiftInstanceV2((com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Req) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Res>) responseObserver);
           break;
         case METHODID_SWAP_SHIFT_INSTANCES:
           serviceImpl.swapShiftInstances((com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq) request,
@@ -12599,6 +12713,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes>(
                 service, METHODID_CREATE_SHIFT_INSTANCE)))
         .addMethod(
+          getCreateShiftInstanceV2Method(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Req,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceV2Res>(
+                service, METHODID_CREATE_SHIFT_INSTANCE_V2)))
+        .addMethod(
           getSwapShiftInstancesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -12803,6 +12924,7 @@ public final class WFMGrpc {
               .addMethod(getListDraftSchedulesMethod())
               .addMethod(getDeleteDraftScheduleMethod())
               .addMethod(getCreateShiftInstanceMethod())
+              .addMethod(getCreateShiftInstanceV2Method())
               .addMethod(getSwapShiftInstancesMethod())
               .addMethod(getUpdateShiftInstanceMethod())
               .addMethod(getListShiftSegmentsByShiftInstanceSidsMethod())

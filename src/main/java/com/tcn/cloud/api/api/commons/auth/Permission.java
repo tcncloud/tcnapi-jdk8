@@ -284,6 +284,14 @@ public enum Permission
   PERMISSION_VOICEMAIL_DOWNLOAD(1401),
   /**
    * <pre>
+   * Enables Agents to view portals.
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_PORTALS_VIEW = 340 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_AGENT_PORTALS_VIEW(340),
+  /**
+   * <pre>
    * Enables access to voice analytics app.
    * </pre>
    *
@@ -821,6 +829,14 @@ public enum Permission
   public static final int PERMISSION_VOICEMAIL_DOWNLOAD_VALUE = 1401;
   /**
    * <pre>
+   * Enables Agents to view portals.
+   * </pre>
+   *
+   * <code>PERMISSION_AGENT_PORTALS_VIEW = 340 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_AGENT_PORTALS_VIEW_VALUE = 340;
+  /**
+   * <pre>
    * Enables access to voice analytics app.
    * </pre>
    *
@@ -1143,6 +1159,7 @@ public enum Permission
       case 330: return PERMISSION_AGENT_COMPLIANCE_SCRUBLIST_OPTIONS;
       case 1400: return PERMISSION_EXTENSION_EDIT;
       case 1401: return PERMISSION_VOICEMAIL_DOWNLOAD;
+      case 340: return PERMISSION_AGENT_PORTALS_VIEW;
       case 500: return PERMISSION_VOICE_ANALYTICS;
       case 501: return PERMISSION_VOICE_ANALYTICS_FLAG;
       case 502: return PERMISSION_VOICE_ANALYTICS_CONFIG;

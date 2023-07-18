@@ -6,6 +6,7 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 /**
  * <pre>
  * Request message for the CreateShiftInstance RPC
+ * Method is Unimplimented. Use CreateShiftInstanceV2 instead.
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.wfm.CreateShiftInstanceReq}
@@ -513,6 +514,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Request message for the CreateShiftInstance RPC
+   * Method is Unimplimented. Use CreateShiftInstanceV2 instead.
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.wfm.CreateShiftInstanceReq}

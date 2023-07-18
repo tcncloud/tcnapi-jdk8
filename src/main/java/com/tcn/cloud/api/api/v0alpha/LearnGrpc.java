@@ -543,7 +543,8 @@ public final class LearnGrpc {
 
     /**
      * <pre>
-     * get snippet from learning pages
+     * get snippet content from learning pages
+     * we allow all the logged in agents/admins to view snippet content
      * </pre>
      */
     default void snippet(com.tcn.cloud.api.api.v0alpha.SnippetReq request,
@@ -707,7 +708,8 @@ public final class LearnGrpc {
 
     /**
      * <pre>
-     * get snippet from learning pages
+     * get snippet content from learning pages
+     * we allow all the logged in agents/admins to view snippet content
      * </pre>
      */
     public void snippet(com.tcn.cloud.api.api.v0alpha.SnippetReq request,
@@ -849,7 +851,8 @@ public final class LearnGrpc {
 
     /**
      * <pre>
-     * get snippet from learning pages
+     * get snippet content from learning pages
+     * we allow all the logged in agents/admins to view snippet content
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SnippetRes snippet(com.tcn.cloud.api.api.v0alpha.SnippetReq request) {
@@ -999,7 +1002,8 @@ public final class LearnGrpc {
 
     /**
      * <pre>
-     * get snippet from learning pages
+     * get snippet content from learning pages
+     * we allow all the logged in agents/admins to view snippet content
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SnippetRes> snippet(
