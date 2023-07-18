@@ -142,7 +142,8 @@ private static final long serialVersionUID = 0L;
   private int format_ = 0;
   /**
    * <pre>
-   * the invoice for the organization. Optional field that will use the proto format as the default
+   * Optional. the invoice for the organization. If not specified,
+   * will use the proto format as the default
    * </pre>
    *
    * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
@@ -153,7 +154,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * the invoice for the organization. Optional field that will use the proto format as the default
+   * Optional. the invoice for the organization. If not specified,
+   * will use the proto format as the default
    * </pre>
    *
    * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
@@ -829,7 +831,8 @@ private static final long serialVersionUID = 0L;
     private int format_ = 0;
     /**
      * <pre>
-     * the invoice for the organization. Optional field that will use the proto format as the default
+     * Optional. the invoice for the organization. If not specified,
+     * will use the proto format as the default
      * </pre>
      *
      * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
@@ -840,7 +843,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the invoice for the organization. Optional field that will use the proto format as the default
+     * Optional. the invoice for the organization. If not specified,
+     * will use the proto format as the default
      * </pre>
      *
      * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
@@ -855,7 +859,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the invoice for the organization. Optional field that will use the proto format as the default
+     * Optional. the invoice for the organization. If not specified,
+     * will use the proto format as the default
      * </pre>
      *
      * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
@@ -868,7 +873,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the invoice for the organization. Optional field that will use the proto format as the default
+     * Optional. the invoice for the organization. If not specified,
+     * will use the proto format as the default
      * </pre>
      *
      * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
@@ -886,7 +892,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the invoice for the organization. Optional field that will use the proto format as the default
+     * Optional. the invoice for the organization. If not specified,
+     * will use the proto format as the default
      * </pre>
      *
      * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>

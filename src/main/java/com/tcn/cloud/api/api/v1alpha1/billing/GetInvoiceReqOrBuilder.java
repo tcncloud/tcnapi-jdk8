@@ -65,7 +65,8 @@ public interface GetInvoiceReqOrBuilder extends
 
   /**
    * <pre>
-   * the invoice for the organization. Optional field that will use the proto format as the default
+   * Optional. the invoice for the organization. If not specified,
+   * will use the proto format as the default
    * </pre>
    *
    * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
@@ -74,7 +75,8 @@ public interface GetInvoiceReqOrBuilder extends
   int getFormatValue();
   /**
    * <pre>
-   * the invoice for the organization. Optional field that will use the proto format as the default
+   * Optional. the invoice for the organization. If not specified,
+   * will use the proto format as the default
    * </pre>
    *
    * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
