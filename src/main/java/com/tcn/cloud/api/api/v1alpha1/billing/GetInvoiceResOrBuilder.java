@@ -9,7 +9,7 @@ public interface GetInvoiceResOrBuilder extends
 
   /**
    * <pre>
-   * depricated
+   * deprecated
    * </pre>
    *
    * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -18,7 +18,7 @@ public interface GetInvoiceResOrBuilder extends
   boolean hasInvoice();
   /**
    * <pre>
-   * depricated
+   * deprecated
    * </pre>
    *
    * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -27,7 +27,7 @@ public interface GetInvoiceResOrBuilder extends
   com.tcn.cloud.api.api.commons.billing.Invoice getInvoice();
   /**
    * <pre>
-   * depricated
+   * deprecated
    * </pre>
    *
    * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>

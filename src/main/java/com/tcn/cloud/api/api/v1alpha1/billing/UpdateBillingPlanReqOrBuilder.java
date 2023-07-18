@@ -53,7 +53,7 @@ public interface UpdateBillingPlanReqOrBuilder extends
 
   /**
    * <pre>
-   * Required. the identifier of the organization to get the plan for
+   * Required. the identifier of the organization to update the plan for
    * </pre>
    *
    * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -62,7 +62,7 @@ public interface UpdateBillingPlanReqOrBuilder extends
   java.lang.String getOrgId();
   /**
    * <pre>
-   * Required. the identifier of the organization to get the plan for
+   * Required. the identifier of the organization to update the plan for
    * </pre>
    *
    * <code>string org_id = 2 [json_name = "orgId"];</code>

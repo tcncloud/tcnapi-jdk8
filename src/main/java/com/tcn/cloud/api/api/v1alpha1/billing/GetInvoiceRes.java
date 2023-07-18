@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
   private com.tcn.cloud.api.api.commons.billing.Invoice invoice_;
   /**
    * <pre>
-   * depricated
+   * deprecated
    * </pre>
    *
    * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -100,7 +100,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * depricated
+   * deprecated
    * </pre>
    *
    * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * depricated
+   * deprecated
    * </pre>
    *
    * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -648,7 +648,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.billing.Invoice, com.tcn.cloud.api.api.commons.billing.Invoice.Builder, com.tcn.cloud.api.api.commons.billing.InvoiceOrBuilder> invoiceBuilder_;
     /**
      * <pre>
-     * depricated
+     * deprecated
      * </pre>
      *
      * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -659,7 +659,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * depricated
+     * deprecated
      * </pre>
      *
      * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -674,7 +674,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * depricated
+     * deprecated
      * </pre>
      *
      * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -694,7 +694,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * depricated
+     * deprecated
      * </pre>
      *
      * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -712,7 +712,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * depricated
+     * deprecated
      * </pre>
      *
      * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -735,7 +735,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * depricated
+     * deprecated
      * </pre>
      *
      * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -752,7 +752,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * depricated
+     * deprecated
      * </pre>
      *
      * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -764,7 +764,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * depricated
+     * deprecated
      * </pre>
      *
      * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -779,7 +779,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * depricated
+     * deprecated
      * </pre>
      *
      * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>

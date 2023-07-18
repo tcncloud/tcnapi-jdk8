@@ -110,7 +110,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object orgId_ = "";
   /**
    * <pre>
-   * Required. the identifier of the organization to get the plan for
+   * Required. the identifier of the organization to update the plan for
    * </pre>
    *
    * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -131,7 +131,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. the identifier of the organization to get the plan for
+   * Required. the identifier of the organization to update the plan for
    * </pre>
    *
    * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -869,7 +869,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object orgId_ = "";
     /**
      * <pre>
-     * Required. the identifier of the organization to get the plan for
+     * Required. the identifier of the organization to update the plan for
      * </pre>
      *
      * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -889,7 +889,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. the identifier of the organization to get the plan for
+     * Required. the identifier of the organization to update the plan for
      * </pre>
      *
      * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -910,7 +910,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. the identifier of the organization to get the plan for
+     * Required. the identifier of the organization to update the plan for
      * </pre>
      *
      * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -927,7 +927,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. the identifier of the organization to get the plan for
+     * Required. the identifier of the organization to update the plan for
      * </pre>
      *
      * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -941,7 +941,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. the identifier of the organization to get the plan for
+     * Required. the identifier of the organization to update the plan for
      * </pre>
      *
      * <code>string org_id = 2 [json_name = "orgId"];</code>

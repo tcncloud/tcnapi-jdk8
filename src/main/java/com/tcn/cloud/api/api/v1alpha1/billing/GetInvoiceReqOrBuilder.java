@@ -45,7 +45,7 @@ public interface GetInvoiceReqOrBuilder extends
 
   /**
    * <pre>
-   * Required. the identifier of the organization to get the plan for
+   * Required. the identifier of the organization to update the plan for
    * </pre>
    *
    * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -54,7 +54,7 @@ public interface GetInvoiceReqOrBuilder extends
   java.lang.String getOrgId();
   /**
    * <pre>
-   * Required. the identifier of the organization to get the plan for
+   * Required. the identifier of the organization to update the plan for
    * </pre>
    *
    * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -64,36 +64,21 @@ public interface GetInvoiceReqOrBuilder extends
       getOrgIdBytes();
 
   /**
-   * <code>.api.commons.billing.Invoice invoice = 3 [json_name = "invoice"];</code>
-   * @return Whether the invoice field is set.
+   * <pre>
+   * the invoice for the organization. Optional field that will use the proto format as the default
+   * </pre>
+   *
+   * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
+   * @return The enum numeric value on the wire for format.
    */
-  boolean hasInvoice();
+  int getFormatValue();
   /**
-   * <code>.api.commons.billing.Invoice invoice = 3 [json_name = "invoice"];</code>
-   * @return The invoice.
+   * <pre>
+   * the invoice for the organization. Optional field that will use the proto format as the default
+   * </pre>
+   *
+   * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
+   * @return The format.
    */
-  com.tcn.cloud.api.api.commons.billing.Invoice getInvoice();
-  /**
-   * <code>.api.commons.billing.Invoice invoice = 3 [json_name = "invoice"];</code>
-   */
-  com.tcn.cloud.api.api.commons.billing.InvoiceOrBuilder getInvoiceOrBuilder();
-
-  /**
-   * <code>string csv = 4 [json_name = "csv"];</code>
-   * @return Whether the csv field is set.
-   */
-  boolean hasCsv();
-  /**
-   * <code>string csv = 4 [json_name = "csv"];</code>
-   * @return The csv.
-   */
-  java.lang.String getCsv();
-  /**
-   * <code>string csv = 4 [json_name = "csv"];</code>
-   * @return The bytes for csv.
-   */
-  com.google.protobuf.ByteString
-      getCsvBytes();
-
-  com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceReq.FormatCase getFormatCase();
+  com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat getFormat();
 }
