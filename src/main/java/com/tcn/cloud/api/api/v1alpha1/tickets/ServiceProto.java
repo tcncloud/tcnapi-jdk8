@@ -27,7 +27,7 @@ public final class ServiceProto {
       "i.v1alpha1.tickets\032\027annotations/authz.pr" +
       "oto\032\"api/v1alpha1/tickets/project.proto\032" +
       "!api/v1alpha1/tickets/ticket.proto\032\034goog" +
-      "le/api/annotations.proto2\352\026\n\007Tickets\022\235\001\n" +
+      "le/api/annotations.proto2\226\031\n\007Tickets\022\235\001\n" +
       "\014CreateTicket\022%.api.v1alpha1.tickets.Cre" +
       "ateTicketReq\032%.api.v1alpha1.tickets.Crea" +
       "teTicketRes\"?\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002/\"*/api/v1al" +
@@ -100,12 +100,19 @@ public final class ServiceProto {
       "tickets.ListAllocatedTicketReq\032,.api.v1a" +
       "lpha1.tickets.ListAllocatedTicketRes\"G\272\270" +
       "\221\002\005\n\003\010\234\030\202\323\344\223\0027\"2/api/v1alpha1/tickets/ti" +
-      "ckets/listallocatedtickets:\001*B\250\001\n&com.tc" +
-      "n.cloud.api.api.v1alpha1.ticketsB\014Servic" +
-      "eProtoP\001\242\002\003AVT\252\002\024Api.V1alpha1.Tickets\312\002\024" +
-      "Api\\V1alpha1\\Tickets\342\002 Api\\V1alpha1\\Tick" +
-      "ets\\GPBMetadata\352\002\026Api::V1alpha1::Tickets" +
-      "b\006proto3"
+      "ckets/listallocatedtickets:\001*\022\225\001\n\nListSk" +
+      "ills\022#.api.v1alpha1.tickets.ListSkillsRe" +
+      "q\032#.api.v1alpha1.tickets.ListSkillsRes\"=" +
+      "\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002-\"(/api/v1alpha1/tickets/" +
+      "tickets/listskills:\001*\022\221\001\n\tListUsers\022\".ap" +
+      "i.v1alpha1.tickets.ListUsersReq\032\".api.v1" +
+      "alpha1.tickets.ListUsersRes\"<\272\270\221\002\005\n\003\010\234\030\202" +
+      "\323\344\223\002,\"\'/api/v1alpha1/tickets/tickets/lis" +
+      "tusers:\001*B\250\001\n&com.tcn.cloud.api.api.v1al" +
+      "pha1.ticketsB\014ServiceProtoP\001\242\002\003AVT\252\002\024Api" +
+      ".V1alpha1.Tickets\312\002\024Api\\V1alpha1\\Tickets" +
+      "\342\002 Api\\V1alpha1\\Tickets\\GPBMetadata\352\002\026Ap" +
+      "i::V1alpha1::Ticketsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
