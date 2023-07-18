@@ -26,4 +26,24 @@ public interface StandaloneReqOrBuilder extends
    */
   com.google.protobuf.ByteString
       getLocaleBytes();
+
+  /**
+   * <pre>
+   * category
+   * </pre>
+   *
+   * <code>string category = 2 [json_name = "category"];</code>
+   * @return The category.
+   */
+  java.lang.String getCategory();
+  /**
+   * <pre>
+   * category
+   * </pre>
+   *
+   * <code>string category = 2 [json_name = "category"];</code>
+   * @return The bytes for category.
+   */
+  com.google.protobuf.ByteString
+      getCategoryBytes();
 }
