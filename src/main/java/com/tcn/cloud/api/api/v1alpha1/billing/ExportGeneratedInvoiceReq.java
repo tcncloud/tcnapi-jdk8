@@ -8,18 +8,18 @@ package com.tcn.cloud.api.api.v1alpha1.billing;
  * ExportGenerateInvoicesReq - request to export a generated invoice
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.billing.ExportGeneratedInvoicesReq}
+ * Protobuf type {@code api.v1alpha1.billing.ExportGeneratedInvoiceReq}
  */
-public final class ExportGeneratedInvoicesReq extends
+public final class ExportGeneratedInvoiceReq extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.billing.ExportGeneratedInvoicesReq)
-    ExportGeneratedInvoicesReqOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.billing.ExportGeneratedInvoiceReq)
+    ExportGeneratedInvoiceReqOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ExportGeneratedInvoicesReq.newBuilder() to construct.
-  private ExportGeneratedInvoicesReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ExportGeneratedInvoiceReq.newBuilder() to construct.
+  private ExportGeneratedInvoiceReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ExportGeneratedInvoicesReq() {
+  private ExportGeneratedInvoiceReq() {
     orgId_ = "";
   }
 
@@ -27,20 +27,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ExportGeneratedInvoicesReq();
+    return new ExportGeneratedInvoiceReq();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.billing.EntitiesProto.internal_static_api_v1alpha1_billing_ExportGeneratedInvoicesReq_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.billing.EntitiesProto.internal_static_api_v1alpha1_billing_ExportGeneratedInvoiceReq_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.billing.EntitiesProto.internal_static_api_v1alpha1_billing_ExportGeneratedInvoicesReq_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.billing.EntitiesProto.internal_static_api_v1alpha1_billing_ExportGeneratedInvoiceReq_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq.class, com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq.class, com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq.Builder.class);
   }
 
   public static final int INVOICE_DATE_FIELD_NUMBER = 1;
@@ -95,7 +95,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object orgId_ = "";
   /**
    * <pre>
-   * organization identifier
+   * Required. the identifier of the organization to get the plan for
    * </pre>
    *
    * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -116,7 +116,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * organization identifier
+   * Required. the identifier of the organization to get the plan for
    * </pre>
    *
    * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -183,10 +183,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq other = (com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq) obj;
+    com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq other = (com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq) obj;
 
     if (hasInvoiceDate() != other.hasInvoiceDate()) return false;
     if (hasInvoiceDate()) {
@@ -217,44 +217,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -262,26 +262,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -294,7 +294,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -314,26 +314,26 @@ private static final long serialVersionUID = 0L;
    * ExportGenerateInvoicesReq - request to export a generated invoice
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.billing.ExportGeneratedInvoicesReq}
+   * Protobuf type {@code api.v1alpha1.billing.ExportGeneratedInvoiceReq}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.billing.ExportGeneratedInvoicesReq)
-      com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReqOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.billing.ExportGeneratedInvoiceReq)
+      com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReqOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.billing.EntitiesProto.internal_static_api_v1alpha1_billing_ExportGeneratedInvoicesReq_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.billing.EntitiesProto.internal_static_api_v1alpha1_billing_ExportGeneratedInvoiceReq_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.billing.EntitiesProto.internal_static_api_v1alpha1_billing_ExportGeneratedInvoicesReq_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.billing.EntitiesProto.internal_static_api_v1alpha1_billing_ExportGeneratedInvoiceReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq.class, com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq.class, com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq.newBuilder()
     private Builder() {
 
     }
@@ -359,17 +359,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.billing.EntitiesProto.internal_static_api_v1alpha1_billing_ExportGeneratedInvoicesReq_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.billing.EntitiesProto.internal_static_api_v1alpha1_billing_ExportGeneratedInvoiceReq_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq build() {
-      com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq build() {
+      com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -377,14 +377,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq result = new com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq(this);
+    public com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq result = new com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.invoiceDate_ = invoiceDateBuilder_ == null
@@ -430,16 +430,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq.getDefaultInstance()) return this;
       if (other.hasInvoiceDate()) {
         mergeInvoiceDate(other.getInvoiceDate());
       }
@@ -688,7 +688,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object orgId_ = "";
     /**
      * <pre>
-     * organization identifier
+     * Required. the identifier of the organization to get the plan for
      * </pre>
      *
      * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -708,7 +708,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * organization identifier
+     * Required. the identifier of the organization to get the plan for
      * </pre>
      *
      * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -729,7 +729,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * organization identifier
+     * Required. the identifier of the organization to get the plan for
      * </pre>
      *
      * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -746,7 +746,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * organization identifier
+     * Required. the identifier of the organization to get the plan for
      * </pre>
      *
      * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -760,7 +760,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * organization identifier
+     * Required. the identifier of the organization to get the plan for
      * </pre>
      *
      * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -789,23 +789,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.billing.ExportGeneratedInvoicesReq)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.billing.ExportGeneratedInvoiceReq)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.billing.ExportGeneratedInvoicesReq)
-  private static final com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.billing.ExportGeneratedInvoiceReq)
+  private static final com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ExportGeneratedInvoicesReq>
-      PARSER = new com.google.protobuf.AbstractParser<ExportGeneratedInvoicesReq>() {
+  private static final com.google.protobuf.Parser<ExportGeneratedInvoiceReq>
+      PARSER = new com.google.protobuf.AbstractParser<ExportGeneratedInvoiceReq>() {
     @java.lang.Override
-    public ExportGeneratedInvoicesReq parsePartialFrom(
+    public ExportGeneratedInvoiceReq parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -824,17 +824,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ExportGeneratedInvoicesReq> parser() {
+  public static com.google.protobuf.Parser<ExportGeneratedInvoiceReq> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ExportGeneratedInvoicesReq> getParserForType() {
+  public com.google.protobuf.Parser<ExportGeneratedInvoiceReq> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

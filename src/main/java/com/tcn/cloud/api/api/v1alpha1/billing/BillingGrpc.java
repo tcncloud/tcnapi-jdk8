@@ -111,29 +111,29 @@ public final class BillingGrpc {
     return getGetInvoiceMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq,
-      com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesRes> getExportGeneratedInvoiceMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq,
+      com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes> getExportGeneratedInvoiceMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "ExportGeneratedInvoice",
-      requestType = com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq.class,
-      responseType = com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesRes.class,
+      requestType = com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq,
-      com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesRes> getExportGeneratedInvoiceMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq, com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesRes> getExportGeneratedInvoiceMethod;
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq,
+      com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes> getExportGeneratedInvoiceMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq, com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes> getExportGeneratedInvoiceMethod;
     if ((getExportGeneratedInvoiceMethod = BillingGrpc.getExportGeneratedInvoiceMethod) == null) {
       synchronized (BillingGrpc.class) {
         if ((getExportGeneratedInvoiceMethod = BillingGrpc.getExportGeneratedInvoiceMethod) == null) {
           BillingGrpc.getExportGeneratedInvoiceMethod = getExportGeneratedInvoiceMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq, com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesRes>newBuilder()
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq, com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ExportGeneratedInvoice"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesRes.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes.getDefaultInstance()))
               .setSchemaDescriptor(new BillingMethodDescriptorSupplier("ExportGeneratedInvoice"))
               .build();
         }
@@ -235,8 +235,8 @@ public final class BillingGrpc {
 
     /**
      */
-    default void exportGeneratedInvoice(com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesRes> responseObserver) {
+    default void exportGeneratedInvoice(com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExportGeneratedInvoiceMethod(), responseObserver);
     }
   }
@@ -319,8 +319,8 @@ public final class BillingGrpc {
 
     /**
      */
-    public void exportGeneratedInvoice(com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesRes> responseObserver) {
+    public void exportGeneratedInvoice(com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getExportGeneratedInvoiceMethod(), getCallOptions()), request, responseObserver);
     }
@@ -387,7 +387,7 @@ public final class BillingGrpc {
 
     /**
      */
-    public com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesRes exportGeneratedInvoice(com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq request) {
+    public com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes exportGeneratedInvoice(com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getExportGeneratedInvoiceMethod(), getCallOptions(), request);
     }
@@ -457,8 +457,8 @@ public final class BillingGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesRes> exportGeneratedInvoice(
-        com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes> exportGeneratedInvoice(
+        com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getExportGeneratedInvoiceMethod(), getCallOptions()), request);
     }
@@ -499,8 +499,8 @@ public final class BillingGrpc {
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes>) responseObserver);
           break;
         case METHODID_EXPORT_GENERATED_INVOICE:
-          serviceImpl.exportGeneratedInvoice((com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesRes>) responseObserver);
+          serviceImpl.exportGeneratedInvoice((com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -545,8 +545,8 @@ public final class BillingGrpc {
           getExportGeneratedInvoiceMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesReq,
-              com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoicesRes>(
+              com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq,
+              com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes>(
                 service, METHODID_EXPORT_GENERATED_INVOICE)))
         .build();
   }

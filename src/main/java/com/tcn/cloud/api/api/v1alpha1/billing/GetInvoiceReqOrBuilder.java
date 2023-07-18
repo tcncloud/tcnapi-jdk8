@@ -45,7 +45,7 @@ public interface GetInvoiceReqOrBuilder extends
 
   /**
    * <pre>
-   * organization identifier
+   * Required. the identifier of the organization to get the plan for
    * </pre>
    *
    * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -54,7 +54,7 @@ public interface GetInvoiceReqOrBuilder extends
   java.lang.String getOrgId();
   /**
    * <pre>
-   * organization identifier
+   * Required. the identifier of the organization to get the plan for
    * </pre>
    *
    * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -62,4 +62,38 @@ public interface GetInvoiceReqOrBuilder extends
    */
   com.google.protobuf.ByteString
       getOrgIdBytes();
+
+  /**
+   * <code>.api.commons.billing.Invoice invoice = 3 [json_name = "invoice"];</code>
+   * @return Whether the invoice field is set.
+   */
+  boolean hasInvoice();
+  /**
+   * <code>.api.commons.billing.Invoice invoice = 3 [json_name = "invoice"];</code>
+   * @return The invoice.
+   */
+  com.tcn.cloud.api.api.commons.billing.Invoice getInvoice();
+  /**
+   * <code>.api.commons.billing.Invoice invoice = 3 [json_name = "invoice"];</code>
+   */
+  com.tcn.cloud.api.api.commons.billing.InvoiceOrBuilder getInvoiceOrBuilder();
+
+  /**
+   * <code>string csv = 4 [json_name = "csv"];</code>
+   * @return Whether the csv field is set.
+   */
+  boolean hasCsv();
+  /**
+   * <code>string csv = 4 [json_name = "csv"];</code>
+   * @return The csv.
+   */
+  java.lang.String getCsv();
+  /**
+   * <code>string csv = 4 [json_name = "csv"];</code>
+   * @return The bytes for csv.
+   */
+  com.google.protobuf.ByteString
+      getCsvBytes();
+
+  com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceReq.FormatCase getFormatCase();
 }

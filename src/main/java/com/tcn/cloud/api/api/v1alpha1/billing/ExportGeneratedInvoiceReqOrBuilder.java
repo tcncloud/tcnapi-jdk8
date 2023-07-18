@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.billing;
 
-public interface ExportGeneratedInvoicesReqOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.billing.ExportGeneratedInvoicesReq)
+public interface ExportGeneratedInvoiceReqOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.billing.ExportGeneratedInvoiceReq)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -45,7 +45,7 @@ public interface ExportGeneratedInvoicesReqOrBuilder extends
 
   /**
    * <pre>
-   * organization identifier
+   * Required. the identifier of the organization to get the plan for
    * </pre>
    *
    * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -54,7 +54,7 @@ public interface ExportGeneratedInvoicesReqOrBuilder extends
   java.lang.String getOrgId();
   /**
    * <pre>
-   * organization identifier
+   * Required. the identifier of the organization to get the plan for
    * </pre>
    *
    * <code>string org_id = 2 [json_name = "orgId"];</code>

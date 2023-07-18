@@ -8,32 +8,59 @@ public interface GetInvoiceResOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * depricated
+   * </pre>
+   *
    * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
    * @return Whether the invoice field is set.
    */
   boolean hasInvoice();
   /**
+   * <pre>
+   * depricated
+   * </pre>
+   *
    * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
    * @return The invoice.
    */
   com.tcn.cloud.api.api.commons.billing.Invoice getInvoice();
   /**
+   * <pre>
+   * depricated
+   * </pre>
+   *
    * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
    */
   com.tcn.cloud.api.api.commons.billing.InvoiceOrBuilder getInvoiceOrBuilder();
 
   /**
-   * <code>string csv = 2 [json_name = "csv"];</code>
+   * <code>.api.commons.billing.Invoice invoice_format = 2 [json_name = "invoiceFormat"];</code>
+   * @return Whether the invoiceFormat field is set.
+   */
+  boolean hasInvoiceFormat();
+  /**
+   * <code>.api.commons.billing.Invoice invoice_format = 2 [json_name = "invoiceFormat"];</code>
+   * @return The invoiceFormat.
+   */
+  com.tcn.cloud.api.api.commons.billing.Invoice getInvoiceFormat();
+  /**
+   * <code>.api.commons.billing.Invoice invoice_format = 2 [json_name = "invoiceFormat"];</code>
+   */
+  com.tcn.cloud.api.api.commons.billing.InvoiceOrBuilder getInvoiceFormatOrBuilder();
+
+  /**
+   * <code>string csv = 3 [json_name = "csv"];</code>
    * @return Whether the csv field is set.
    */
   boolean hasCsv();
   /**
-   * <code>string csv = 2 [json_name = "csv"];</code>
+   * <code>string csv = 3 [json_name = "csv"];</code>
    * @return The csv.
    */
   java.lang.String getCsv();
   /**
-   * <code>string csv = 2 [json_name = "csv"];</code>
+   * <code>string csv = 3 [json_name = "csv"];</code>
    * @return The bytes for csv.
    */
   com.google.protobuf.ByteString

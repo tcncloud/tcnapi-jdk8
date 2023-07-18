@@ -9,7 +9,7 @@ public interface GetBillingPlanReqOrBuilder extends
 
   /**
    * <pre>
-   * organization identifier
+   * Required. the identifier of the organization to get the plan for
    * </pre>
    *
    * <code>string org_id = 1 [json_name = "orgId"];</code>
@@ -18,7 +18,7 @@ public interface GetBillingPlanReqOrBuilder extends
   java.lang.String getOrgId();
   /**
    * <pre>
-   * organization identifier
+   * Required. the identifier of the organization to get the plan for
    * </pre>
    *
    * <code>string org_id = 1 [json_name = "orgId"];</code>

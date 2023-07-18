@@ -53,6 +53,8 @@ private static final long serialVersionUID = 0L;
     AUTHORIZE_NET_PAYPAL(6),
     AUTHORIZE_NET_APPLE_PAY(7),
     AUTHORIZE_NET_GOOGLE_PAY(8),
+    PAYWAY_SUBMIT_CARD_SALE_REQUEST(9),
+    PAYWAY_SUBMIT_ACH_ALERT_REQUEST(10),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -77,6 +79,8 @@ private static final long serialVersionUID = 0L;
         case 6: return AUTHORIZE_NET_PAYPAL;
         case 7: return AUTHORIZE_NET_APPLE_PAY;
         case 8: return AUTHORIZE_NET_GOOGLE_PAY;
+        case 9: return PAYWAY_SUBMIT_CARD_SALE_REQUEST;
+        case 10: return PAYWAY_SUBMIT_ACH_ALERT_REQUEST;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -348,6 +352,68 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.PaymentAuthorizeNetGooglePay.getDefaultInstance();
   }
 
+  public static final int PAYWAY_SUBMIT_CARD_SALE_REQUEST_FIELD_NUMBER = 9;
+  /**
+   * <code>.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest payway_submit_card_sale_request = 9 [json_name = "paywaySubmitCardSaleRequest"];</code>
+   * @return Whether the paywaySubmitCardSaleRequest field is set.
+   */
+  @java.lang.Override
+  public boolean hasPaywaySubmitCardSaleRequest() {
+    return valueCase_ == 9;
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest payway_submit_card_sale_request = 9 [json_name = "paywaySubmitCardSaleRequest"];</code>
+   * @return The paywaySubmitCardSaleRequest.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest getPaywaySubmitCardSaleRequest() {
+    if (valueCase_ == 9) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest payway_submit_card_sale_request = 9 [json_name = "paywaySubmitCardSaleRequest"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequestOrBuilder getPaywaySubmitCardSaleRequestOrBuilder() {
+    if (valueCase_ == 9) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest.getDefaultInstance();
+  }
+
+  public static final int PAYWAY_SUBMIT_ACH_ALERT_REQUEST_FIELD_NUMBER = 10;
+  /**
+   * <code>.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest payway_submit_ach_alert_request = 10 [json_name = "paywaySubmitAchAlertRequest"];</code>
+   * @return Whether the paywaySubmitAchAlertRequest field is set.
+   */
+  @java.lang.Override
+  public boolean hasPaywaySubmitAchAlertRequest() {
+    return valueCase_ == 10;
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest payway_submit_ach_alert_request = 10 [json_name = "paywaySubmitAchAlertRequest"];</code>
+   * @return The paywaySubmitAchAlertRequest.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest getPaywaySubmitAchAlertRequest() {
+    if (valueCase_ == 10) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest payway_submit_ach_alert_request = 10 [json_name = "paywaySubmitAchAlertRequest"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequestOrBuilder getPaywaySubmitAchAlertRequestOrBuilder() {
+    if (valueCase_ == 10) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest.getDefaultInstance();
+  }
+
   public static final int PAYMENT_FIELDS_FIELD_NUMBER = 20;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> paymentFields_;
@@ -462,6 +528,12 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 8) {
       output.writeMessage(8, (com.tcn.cloud.api.api.commons.integrations.PaymentAuthorizeNetGooglePay) value_);
     }
+    if (valueCase_ == 9) {
+      output.writeMessage(9, (com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest) value_);
+    }
+    if (valueCase_ == 10) {
+      output.writeMessage(10, (com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest) value_);
+    }
     for (int i = 0; i < paymentFields_.size(); i++) {
       output.writeMessage(20, paymentFields_.get(i));
     }
@@ -504,6 +576,14 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 8) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, (com.tcn.cloud.api.api.commons.integrations.PaymentAuthorizeNetGooglePay) value_);
+    }
+    if (valueCase_ == 9) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, (com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest) value_);
+    }
+    if (valueCase_ == 10) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, (com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest) value_);
     }
     for (int i = 0; i < paymentFields_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
@@ -558,6 +638,14 @@ private static final long serialVersionUID = 0L;
         if (!getAuthorizeNetGooglePay()
             .equals(other.getAuthorizeNetGooglePay())) return false;
         break;
+      case 9:
+        if (!getPaywaySubmitCardSaleRequest()
+            .equals(other.getPaywaySubmitCardSaleRequest())) return false;
+        break;
+      case 10:
+        if (!getPaywaySubmitAchAlertRequest()
+            .equals(other.getPaywaySubmitAchAlertRequest())) return false;
+        break;
       case 0:
       default:
     }
@@ -606,6 +694,14 @@ private static final long serialVersionUID = 0L;
       case 8:
         hash = (37 * hash) + AUTHORIZE_NET_GOOGLE_PAY_FIELD_NUMBER;
         hash = (53 * hash) + getAuthorizeNetGooglePay().hashCode();
+        break;
+      case 9:
+        hash = (37 * hash) + PAYWAY_SUBMIT_CARD_SALE_REQUEST_FIELD_NUMBER;
+        hash = (53 * hash) + getPaywaySubmitCardSaleRequest().hashCode();
+        break;
+      case 10:
+        hash = (37 * hash) + PAYWAY_SUBMIT_ACH_ALERT_REQUEST_FIELD_NUMBER;
+        hash = (53 * hash) + getPaywaySubmitAchAlertRequest().hashCode();
         break;
       case 0:
       default:
@@ -763,13 +859,19 @@ private static final long serialVersionUID = 0L;
       if (authorizeNetGooglePayBuilder_ != null) {
         authorizeNetGooglePayBuilder_.clear();
       }
+      if (paywaySubmitCardSaleRequestBuilder_ != null) {
+        paywaySubmitCardSaleRequestBuilder_.clear();
+      }
+      if (paywaySubmitAchAlertRequestBuilder_ != null) {
+        paywaySubmitAchAlertRequestBuilder_.clear();
+      }
       if (paymentFieldsBuilder_ == null) {
         paymentFields_ = java.util.Collections.emptyList();
       } else {
         paymentFields_ = null;
         paymentFieldsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000400);
       valueCase_ = 0;
       value_ = null;
       return this;
@@ -807,9 +909,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.integrations.PaymentFlow result) {
       if (paymentFieldsBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0)) {
+        if (((bitField0_ & 0x00000400) != 0)) {
           paymentFields_ = java.util.Collections.unmodifiableList(paymentFields_);
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000400);
         }
         result.paymentFields_ = paymentFields_;
       } else {
@@ -854,6 +956,14 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 8 &&
           authorizeNetGooglePayBuilder_ != null) {
         result.value_ = authorizeNetGooglePayBuilder_.build();
+      }
+      if (valueCase_ == 9 &&
+          paywaySubmitCardSaleRequestBuilder_ != null) {
+        result.value_ = paywaySubmitCardSaleRequestBuilder_.build();
+      }
+      if (valueCase_ == 10 &&
+          paywaySubmitAchAlertRequestBuilder_ != null) {
+        result.value_ = paywaySubmitAchAlertRequestBuilder_.build();
       }
     }
 
@@ -910,7 +1020,7 @@ private static final long serialVersionUID = 0L;
         if (!other.paymentFields_.isEmpty()) {
           if (paymentFields_.isEmpty()) {
             paymentFields_ = other.paymentFields_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000400);
           } else {
             ensurePaymentFieldsIsMutable();
             paymentFields_.addAll(other.paymentFields_);
@@ -923,7 +1033,7 @@ private static final long serialVersionUID = 0L;
             paymentFieldsBuilder_.dispose();
             paymentFieldsBuilder_ = null;
             paymentFields_ = other.paymentFields_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000400);
             paymentFieldsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getPaymentFieldsFieldBuilder() : null;
@@ -959,6 +1069,14 @@ private static final long serialVersionUID = 0L;
         }
         case AUTHORIZE_NET_GOOGLE_PAY: {
           mergeAuthorizeNetGooglePay(other.getAuthorizeNetGooglePay());
+          break;
+        }
+        case PAYWAY_SUBMIT_CARD_SALE_REQUEST: {
+          mergePaywaySubmitCardSaleRequest(other.getPaywaySubmitCardSaleRequest());
+          break;
+        }
+        case PAYWAY_SUBMIT_ACH_ALERT_REQUEST: {
+          mergePaywaySubmitAchAlertRequest(other.getPaywaySubmitAchAlertRequest());
           break;
         }
         case VALUE_NOT_SET: {
@@ -1045,6 +1163,20 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 8;
               break;
             } // case 66
+            case 74: {
+              input.readMessage(
+                  getPaywaySubmitCardSaleRequestFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 9;
+              break;
+            } // case 74
+            case 82: {
+              input.readMessage(
+                  getPaywaySubmitAchAlertRequestFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 10;
+              break;
+            } // case 82
             case 162: {
               com.tcn.cloud.api.api.commons.integrations.FieldDefinition m =
                   input.readMessage(
@@ -2156,12 +2288,296 @@ private static final long serialVersionUID = 0L;
       return authorizeNetGooglePayBuilder_;
     }
 
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest, com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequestOrBuilder> paywaySubmitCardSaleRequestBuilder_;
+    /**
+     * <code>.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest payway_submit_card_sale_request = 9 [json_name = "paywaySubmitCardSaleRequest"];</code>
+     * @return Whether the paywaySubmitCardSaleRequest field is set.
+     */
+    @java.lang.Override
+    public boolean hasPaywaySubmitCardSaleRequest() {
+      return valueCase_ == 9;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest payway_submit_card_sale_request = 9 [json_name = "paywaySubmitCardSaleRequest"];</code>
+     * @return The paywaySubmitCardSaleRequest.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest getPaywaySubmitCardSaleRequest() {
+      if (paywaySubmitCardSaleRequestBuilder_ == null) {
+        if (valueCase_ == 9) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest.getDefaultInstance();
+      } else {
+        if (valueCase_ == 9) {
+          return paywaySubmitCardSaleRequestBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest payway_submit_card_sale_request = 9 [json_name = "paywaySubmitCardSaleRequest"];</code>
+     */
+    public Builder setPaywaySubmitCardSaleRequest(com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest value) {
+      if (paywaySubmitCardSaleRequestBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        paywaySubmitCardSaleRequestBuilder_.setMessage(value);
+      }
+      valueCase_ = 9;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest payway_submit_card_sale_request = 9 [json_name = "paywaySubmitCardSaleRequest"];</code>
+     */
+    public Builder setPaywaySubmitCardSaleRequest(
+        com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest.Builder builderForValue) {
+      if (paywaySubmitCardSaleRequestBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        paywaySubmitCardSaleRequestBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 9;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest payway_submit_card_sale_request = 9 [json_name = "paywaySubmitCardSaleRequest"];</code>
+     */
+    public Builder mergePaywaySubmitCardSaleRequest(com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest value) {
+      if (paywaySubmitCardSaleRequestBuilder_ == null) {
+        if (valueCase_ == 9 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest.newBuilder((com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 9) {
+          paywaySubmitCardSaleRequestBuilder_.mergeFrom(value);
+        } else {
+          paywaySubmitCardSaleRequestBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 9;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest payway_submit_card_sale_request = 9 [json_name = "paywaySubmitCardSaleRequest"];</code>
+     */
+    public Builder clearPaywaySubmitCardSaleRequest() {
+      if (paywaySubmitCardSaleRequestBuilder_ == null) {
+        if (valueCase_ == 9) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 9) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        paywaySubmitCardSaleRequestBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest payway_submit_card_sale_request = 9 [json_name = "paywaySubmitCardSaleRequest"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest.Builder getPaywaySubmitCardSaleRequestBuilder() {
+      return getPaywaySubmitCardSaleRequestFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest payway_submit_card_sale_request = 9 [json_name = "paywaySubmitCardSaleRequest"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequestOrBuilder getPaywaySubmitCardSaleRequestOrBuilder() {
+      if ((valueCase_ == 9) && (paywaySubmitCardSaleRequestBuilder_ != null)) {
+        return paywaySubmitCardSaleRequestBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 9) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest payway_submit_card_sale_request = 9 [json_name = "paywaySubmitCardSaleRequest"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest, com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequestOrBuilder> 
+        getPaywaySubmitCardSaleRequestFieldBuilder() {
+      if (paywaySubmitCardSaleRequestBuilder_ == null) {
+        if (!(valueCase_ == 9)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest.getDefaultInstance();
+        }
+        paywaySubmitCardSaleRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest, com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequestOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitCardSaleRequest) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 9;
+      onChanged();
+      return paywaySubmitCardSaleRequestBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest, com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequestOrBuilder> paywaySubmitAchAlertRequestBuilder_;
+    /**
+     * <code>.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest payway_submit_ach_alert_request = 10 [json_name = "paywaySubmitAchAlertRequest"];</code>
+     * @return Whether the paywaySubmitAchAlertRequest field is set.
+     */
+    @java.lang.Override
+    public boolean hasPaywaySubmitAchAlertRequest() {
+      return valueCase_ == 10;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest payway_submit_ach_alert_request = 10 [json_name = "paywaySubmitAchAlertRequest"];</code>
+     * @return The paywaySubmitAchAlertRequest.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest getPaywaySubmitAchAlertRequest() {
+      if (paywaySubmitAchAlertRequestBuilder_ == null) {
+        if (valueCase_ == 10) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest.getDefaultInstance();
+      } else {
+        if (valueCase_ == 10) {
+          return paywaySubmitAchAlertRequestBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest payway_submit_ach_alert_request = 10 [json_name = "paywaySubmitAchAlertRequest"];</code>
+     */
+    public Builder setPaywaySubmitAchAlertRequest(com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest value) {
+      if (paywaySubmitAchAlertRequestBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        paywaySubmitAchAlertRequestBuilder_.setMessage(value);
+      }
+      valueCase_ = 10;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest payway_submit_ach_alert_request = 10 [json_name = "paywaySubmitAchAlertRequest"];</code>
+     */
+    public Builder setPaywaySubmitAchAlertRequest(
+        com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest.Builder builderForValue) {
+      if (paywaySubmitAchAlertRequestBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        paywaySubmitAchAlertRequestBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 10;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest payway_submit_ach_alert_request = 10 [json_name = "paywaySubmitAchAlertRequest"];</code>
+     */
+    public Builder mergePaywaySubmitAchAlertRequest(com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest value) {
+      if (paywaySubmitAchAlertRequestBuilder_ == null) {
+        if (valueCase_ == 10 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest.newBuilder((com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 10) {
+          paywaySubmitAchAlertRequestBuilder_.mergeFrom(value);
+        } else {
+          paywaySubmitAchAlertRequestBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 10;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest payway_submit_ach_alert_request = 10 [json_name = "paywaySubmitAchAlertRequest"];</code>
+     */
+    public Builder clearPaywaySubmitAchAlertRequest() {
+      if (paywaySubmitAchAlertRequestBuilder_ == null) {
+        if (valueCase_ == 10) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 10) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        paywaySubmitAchAlertRequestBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest payway_submit_ach_alert_request = 10 [json_name = "paywaySubmitAchAlertRequest"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest.Builder getPaywaySubmitAchAlertRequestBuilder() {
+      return getPaywaySubmitAchAlertRequestFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest payway_submit_ach_alert_request = 10 [json_name = "paywaySubmitAchAlertRequest"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequestOrBuilder getPaywaySubmitAchAlertRequestOrBuilder() {
+      if ((valueCase_ == 10) && (paywaySubmitAchAlertRequestBuilder_ != null)) {
+        return paywaySubmitAchAlertRequestBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 10) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest payway_submit_ach_alert_request = 10 [json_name = "paywaySubmitAchAlertRequest"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest, com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequestOrBuilder> 
+        getPaywaySubmitAchAlertRequestFieldBuilder() {
+      if (paywaySubmitAchAlertRequestBuilder_ == null) {
+        if (!(valueCase_ == 10)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest.getDefaultInstance();
+        }
+        paywaySubmitAchAlertRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest, com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequestOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 10;
+      onChanged();
+      return paywaySubmitAchAlertRequestBuilder_;
+    }
+
     private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> paymentFields_ =
       java.util.Collections.emptyList();
     private void ensurePaymentFieldsIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
+      if (!((bitField0_ & 0x00000400) != 0)) {
         paymentFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.integrations.FieldDefinition>(paymentFields_);
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000400;
        }
     }
 
@@ -2388,7 +2804,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearPaymentFields() {
       if (paymentFieldsBuilder_ == null) {
         paymentFields_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
       } else {
         paymentFieldsBuilder_.clear();
@@ -2514,7 +2930,7 @@ private static final long serialVersionUID = 0L;
         paymentFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder>(
                 paymentFields_,
-                ((bitField0_ & 0x00000100) != 0),
+                ((bitField0_ & 0x00000400) != 0),
                 getParentForChildren(),
                 isClean());
         paymentFields_ = null;
