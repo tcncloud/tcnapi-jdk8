@@ -9,7 +9,7 @@ public interface OmniBotNodeTestStepOrBuilder extends
 
   /**
    * <pre>
-   * Required. Data to be used by the test.
+   * deprecated
    * </pre>
    *
    * <code>string data = 1 [json_name = "data"];</code>
@@ -18,7 +18,7 @@ public interface OmniBotNodeTestStepOrBuilder extends
   java.lang.String getData();
   /**
    * <pre>
-   * Required. Data to be used by the test.
+   * deprecated
    * </pre>
    *
    * <code>string data = 1 [json_name = "data"];</code>

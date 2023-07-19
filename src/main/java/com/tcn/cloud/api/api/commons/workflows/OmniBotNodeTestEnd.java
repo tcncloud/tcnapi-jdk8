@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object error_ = "";
   /**
    * <pre>
-   * Optional. Error message if the test failed.
+   * deprecated
    * </pre>
    *
    * <code>string error = 1 [json_name = "error"];</code>
@@ -69,7 +69,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. Error message if the test failed.
+   * deprecated
    * </pre>
    *
    * <code>string error = 1 [json_name = "error"];</code>
@@ -423,7 +423,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object error_ = "";
     /**
      * <pre>
-     * Optional. Error message if the test failed.
+     * deprecated
      * </pre>
      *
      * <code>string error = 1 [json_name = "error"];</code>
@@ -443,7 +443,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Error message if the test failed.
+     * deprecated
      * </pre>
      *
      * <code>string error = 1 [json_name = "error"];</code>
@@ -464,7 +464,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Error message if the test failed.
+     * deprecated
      * </pre>
      *
      * <code>string error = 1 [json_name = "error"];</code>
@@ -481,7 +481,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Error message if the test failed.
+     * deprecated
      * </pre>
      *
      * <code>string error = 1 [json_name = "error"];</code>
@@ -495,7 +495,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Error message if the test failed.
+     * deprecated
      * </pre>
      *
      * <code>string error = 1 [json_name = "error"];</code>

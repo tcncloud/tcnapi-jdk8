@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object data_ = "";
   /**
    * <pre>
-   * Required. Data to be used by the test.
+   * deprecated
    * </pre>
    *
    * <code>string data = 1 [json_name = "data"];</code>
@@ -69,7 +69,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Data to be used by the test.
+   * deprecated
    * </pre>
    *
    * <code>string data = 1 [json_name = "data"];</code>
@@ -423,7 +423,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object data_ = "";
     /**
      * <pre>
-     * Required. Data to be used by the test.
+     * deprecated
      * </pre>
      *
      * <code>string data = 1 [json_name = "data"];</code>
@@ -443,7 +443,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Data to be used by the test.
+     * deprecated
      * </pre>
      *
      * <code>string data = 1 [json_name = "data"];</code>
@@ -464,7 +464,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Data to be used by the test.
+     * deprecated
      * </pre>
      *
      * <code>string data = 1 [json_name = "data"];</code>
@@ -481,7 +481,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Data to be used by the test.
+     * deprecated
      * </pre>
      *
      * <code>string data = 1 [json_name = "data"];</code>
@@ -495,7 +495,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Data to be used by the test.
+     * deprecated
      * </pre>
      *
      * <code>string data = 1 [json_name = "data"];</code>

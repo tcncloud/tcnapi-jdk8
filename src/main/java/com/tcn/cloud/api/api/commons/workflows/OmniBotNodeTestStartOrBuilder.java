@@ -9,7 +9,7 @@ public interface OmniBotNodeTestStartOrBuilder extends
 
   /**
    * <pre>
-   * Optional. Startup data to be used by the test.
+   * deprecated
    * </pre>
    *
    * <code>string data = 1 [json_name = "data"];</code>
@@ -18,7 +18,7 @@ public interface OmniBotNodeTestStartOrBuilder extends
   java.lang.String getData();
   /**
    * <pre>
-   * Optional. Startup data to be used by the test.
+   * deprecated
    * </pre>
    *
    * <code>string data = 1 [json_name = "data"];</code>
