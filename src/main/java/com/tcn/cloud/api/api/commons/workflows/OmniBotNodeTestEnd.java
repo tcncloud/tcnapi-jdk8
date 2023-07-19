@@ -48,14 +48,16 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object error_ = "";
   /**
    * <pre>
-   * Optional. Error message if the test failed.
+   * deprecated
    * </pre>
    *
-   * <code>string error = 1 [json_name = "error"];</code>
+   * <code>string error = 1 [json_name = "error", deprecated = true];</code>
+   * @deprecated api.commons.workflows.OmniBotNodeTestEnd.error is deprecated.
+   *     See api/commons/workflows/omni_bot.proto;l=19
    * @return The error.
    */
   @java.lang.Override
-  public java.lang.String getError() {
+  @java.lang.Deprecated public java.lang.String getError() {
     java.lang.Object ref = error_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -69,14 +71,16 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. Error message if the test failed.
+   * deprecated
    * </pre>
    *
-   * <code>string error = 1 [json_name = "error"];</code>
+   * <code>string error = 1 [json_name = "error", deprecated = true];</code>
+   * @deprecated api.commons.workflows.OmniBotNodeTestEnd.error is deprecated.
+   *     See api/commons/workflows/omni_bot.proto;l=19
    * @return The bytes for error.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getErrorBytes() {
     java.lang.Object ref = error_;
     if (ref instanceof java.lang.String) {
@@ -423,13 +427,15 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object error_ = "";
     /**
      * <pre>
-     * Optional. Error message if the test failed.
+     * deprecated
      * </pre>
      *
-     * <code>string error = 1 [json_name = "error"];</code>
+     * <code>string error = 1 [json_name = "error", deprecated = true];</code>
+     * @deprecated api.commons.workflows.OmniBotNodeTestEnd.error is deprecated.
+     *     See api/commons/workflows/omni_bot.proto;l=19
      * @return The error.
      */
-    public java.lang.String getError() {
+    @java.lang.Deprecated public java.lang.String getError() {
       java.lang.Object ref = error_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -443,13 +449,15 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Error message if the test failed.
+     * deprecated
      * </pre>
      *
-     * <code>string error = 1 [json_name = "error"];</code>
+     * <code>string error = 1 [json_name = "error", deprecated = true];</code>
+     * @deprecated api.commons.workflows.OmniBotNodeTestEnd.error is deprecated.
+     *     See api/commons/workflows/omni_bot.proto;l=19
      * @return The bytes for error.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getErrorBytes() {
       java.lang.Object ref = error_;
       if (ref instanceof String) {
@@ -464,14 +472,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Error message if the test failed.
+     * deprecated
      * </pre>
      *
-     * <code>string error = 1 [json_name = "error"];</code>
+     * <code>string error = 1 [json_name = "error", deprecated = true];</code>
+     * @deprecated api.commons.workflows.OmniBotNodeTestEnd.error is deprecated.
+     *     See api/commons/workflows/omni_bot.proto;l=19
      * @param value The error to set.
      * @return This builder for chaining.
      */
-    public Builder setError(
+    @java.lang.Deprecated public Builder setError(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       error_ = value;
@@ -481,13 +491,15 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Error message if the test failed.
+     * deprecated
      * </pre>
      *
-     * <code>string error = 1 [json_name = "error"];</code>
+     * <code>string error = 1 [json_name = "error", deprecated = true];</code>
+     * @deprecated api.commons.workflows.OmniBotNodeTestEnd.error is deprecated.
+     *     See api/commons/workflows/omni_bot.proto;l=19
      * @return This builder for chaining.
      */
-    public Builder clearError() {
+    @java.lang.Deprecated public Builder clearError() {
       error_ = getDefaultInstance().getError();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
@@ -495,14 +507,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Error message if the test failed.
+     * deprecated
      * </pre>
      *
-     * <code>string error = 1 [json_name = "error"];</code>
+     * <code>string error = 1 [json_name = "error", deprecated = true];</code>
+     * @deprecated api.commons.workflows.OmniBotNodeTestEnd.error is deprecated.
+     *     See api/commons/workflows/omni_bot.proto;l=19
      * @param value The bytes for error to set.
      * @return This builder for chaining.
      */
-    public Builder setErrorBytes(
+    @java.lang.Deprecated public Builder setErrorBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);

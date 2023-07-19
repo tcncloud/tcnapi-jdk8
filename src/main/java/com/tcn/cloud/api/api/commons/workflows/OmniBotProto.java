@@ -39,15 +39,15 @@ public final class OmniBotProto {
   static {
     java.lang.String[] descriptorData = {
       "\n$api/commons/workflows/omni_bot.proto\022\025" +
-      "api.commons.workflows\"*\n\024OmniBotNodeTest" +
-      "Start\022\022\n\004data\030\001 \001(\tR\004data\")\n\023OmniBotNode" +
-      "TestStep\022\022\n\004data\030\001 \001(\tR\004data\"*\n\022OmniBotN" +
-      "odeTestEnd\022\024\n\005error\030\001 \001(\tR\005errorB\255\001\n\'com" +
-      ".tcn.cloud.api.api.commons.workflowsB\014Om" +
-      "niBotProtoP\001\242\002\003ACW\252\002\025Api.Commons.Workflo" +
-      "ws\312\002\025Api\\Commons\\Workflows\342\002!Api\\Commons" +
-      "\\Workflows\\GPBMetadata\352\002\027Api::Commons::W" +
-      "orkflowsb\006proto3"
+      "api.commons.workflows\".\n\024OmniBotNodeTest" +
+      "Start\022\026\n\004data\030\001 \001(\tB\002\030\001R\004data\"-\n\023OmniBot" +
+      "NodeTestStep\022\026\n\004data\030\001 \001(\tB\002\030\001R\004data\".\n\022" +
+      "OmniBotNodeTestEnd\022\030\n\005error\030\001 \001(\tB\002\030\001R\005e" +
+      "rrorB\255\001\n\'com.tcn.cloud.api.api.commons.w" +
+      "orkflowsB\014OmniBotProtoP\001\242\002\003ACW\252\002\025Api.Com" +
+      "mons.Workflows\312\002\025Api\\Commons\\Workflows\342\002" +
+      "!Api\\Commons\\Workflows\\GPBMetadata\352\002\027Api" +
+      "::Commons::Workflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
