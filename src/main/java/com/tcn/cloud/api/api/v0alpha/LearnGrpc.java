@@ -118,7 +118,7 @@ public final class LearnGrpc {
       fullMethodName = SERVICE_NAME + '/' + "SearchContent",
       requestType = com.tcn.cloud.api.api.v0alpha.SearchContentReq.class,
       responseType = com.tcn.cloud.api.api.v0alpha.SearchRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SearchContentReq,
       com.tcn.cloud.api.api.v0alpha.SearchRes> getSearchContentMethod() {
     io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SearchContentReq, com.tcn.cloud.api.api.v0alpha.SearchRes> getSearchContentMethod;
@@ -127,7 +127,7 @@ public final class LearnGrpc {
         if ((getSearchContentMethod = LearnGrpc.getSearchContentMethod) == null) {
           LearnGrpc.getSearchContentMethod = getSearchContentMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SearchContentReq, com.tcn.cloud.api.api.v0alpha.SearchRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SearchContent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -140,6 +140,37 @@ public final class LearnGrpc {
       }
     }
     return getSearchContentMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SearchContentReq,
+      com.tcn.cloud.api.api.v0alpha.SearchRes> getListSearchResultsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListSearchResults",
+      requestType = com.tcn.cloud.api.api.v0alpha.SearchContentReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.SearchRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SearchContentReq,
+      com.tcn.cloud.api.api.v0alpha.SearchRes> getListSearchResultsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SearchContentReq, com.tcn.cloud.api.api.v0alpha.SearchRes> getListSearchResultsMethod;
+    if ((getListSearchResultsMethod = LearnGrpc.getListSearchResultsMethod) == null) {
+      synchronized (LearnGrpc.class) {
+        if ((getListSearchResultsMethod = LearnGrpc.getListSearchResultsMethod) == null) {
+          LearnGrpc.getListSearchResultsMethod = getListSearchResultsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SearchContentReq, com.tcn.cloud.api.api.v0alpha.SearchRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSearchResults"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.SearchContentReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.SearchRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("ListSearchResults"))
+              .build();
+        }
+      }
+    }
+    return getListSearchResultsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.StandaloneReq,
@@ -474,12 +505,23 @@ public final class LearnGrpc {
     /**
      * <pre>
      * search content in learning pages
-     * we allow all the logged in agents/admins to view snippet content
+     * we allow all the logged in agents/admins to view search content
      * </pre>
      */
     default void searchContent(com.tcn.cloud.api.api.v0alpha.SearchContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchContentMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * stream search content results in learning pages
+     * we allow all the logged in agents/admins to view search content
+     * </pre>
+     */
+    default void listSearchResults(com.tcn.cloud.api.api.v0alpha.SearchContentReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSearchResultsMethod(), responseObserver);
     }
 
     /**
@@ -633,13 +675,25 @@ public final class LearnGrpc {
     /**
      * <pre>
      * search content in learning pages
-     * we allow all the logged in agents/admins to view snippet content
+     * we allow all the logged in agents/admins to view search content
      * </pre>
      */
     public void searchContent(com.tcn.cloud.api.api.v0alpha.SearchContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSearchContentMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * stream search content results in learning pages
+     * we allow all the logged in agents/admins to view search content
+     * </pre>
+     */
+    public void listSearchResults(com.tcn.cloud.api.api.v0alpha.SearchContentReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getListSearchResultsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -784,13 +838,24 @@ public final class LearnGrpc {
     /**
      * <pre>
      * search content in learning pages
-     * we allow all the logged in agents/admins to view snippet content
+     * we allow all the logged in agents/admins to view search content
      * </pre>
      */
-    public java.util.Iterator<com.tcn.cloud.api.api.v0alpha.SearchRes> searchContent(
+    public com.tcn.cloud.api.api.v0alpha.SearchRes searchContent(com.tcn.cloud.api.api.v0alpha.SearchContentReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSearchContentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * stream search content results in learning pages
+     * we allow all the logged in agents/admins to view search content
+     * </pre>
+     */
+    public java.util.Iterator<com.tcn.cloud.api.api.v0alpha.SearchRes> listSearchResults(
         com.tcn.cloud.api.api.v0alpha.SearchContentReq request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
-          getChannel(), getSearchContentMethod(), getCallOptions(), request);
+          getChannel(), getListSearchResultsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -929,6 +994,18 @@ public final class LearnGrpc {
 
     /**
      * <pre>
+     * search content in learning pages
+     * we allow all the logged in agents/admins to view search content
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SearchRes> searchContent(
+        com.tcn.cloud.api.api.v0alpha.SearchContentReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSearchContentMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * get standalone articles from learning pages
      * </pre>
      */
@@ -1021,14 +1098,15 @@ public final class LearnGrpc {
   private static final int METHODID_CONTENT = 1;
   private static final int METHODID_EXPORT_MANY = 2;
   private static final int METHODID_SEARCH_CONTENT = 3;
-  private static final int METHODID_STANDALONE = 4;
-  private static final int METHODID_CONTENT_EDITOR_DATA = 5;
-  private static final int METHODID_UPDATE = 6;
-  private static final int METHODID_STORE_STATIC_IMAGE = 7;
-  private static final int METHODID_UPLOAD_DYNAMIC_SCREENSHOT = 8;
-  private static final int METHODID_DELETE_STANDALONE = 9;
-  private static final int METHODID_SNIPPET = 10;
-  private static final int METHODID_DELETE_LEARN_PAGES = 11;
+  private static final int METHODID_LIST_SEARCH_RESULTS = 4;
+  private static final int METHODID_STANDALONE = 5;
+  private static final int METHODID_CONTENT_EDITOR_DATA = 6;
+  private static final int METHODID_UPDATE = 7;
+  private static final int METHODID_STORE_STATIC_IMAGE = 8;
+  private static final int METHODID_UPLOAD_DYNAMIC_SCREENSHOT = 9;
+  private static final int METHODID_DELETE_STANDALONE = 10;
+  private static final int METHODID_SNIPPET = 11;
+  private static final int METHODID_DELETE_LEARN_PAGES = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1061,6 +1139,10 @@ public final class LearnGrpc {
           break;
         case METHODID_SEARCH_CONTENT:
           serviceImpl.searchContent((com.tcn.cloud.api.api.v0alpha.SearchContentReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchRes>) responseObserver);
+          break;
+        case METHODID_LIST_SEARCH_RESULTS:
+          serviceImpl.listSearchResults((com.tcn.cloud.api.api.v0alpha.SearchContentReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchRes>) responseObserver);
           break;
         case METHODID_STANDALONE:
@@ -1136,11 +1218,18 @@ public final class LearnGrpc {
                 service, METHODID_EXPORT_MANY)))
         .addMethod(
           getSearchContentMethod(),
-          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.tcn.cloud.api.api.v0alpha.SearchContentReq,
               com.tcn.cloud.api.api.v0alpha.SearchRes>(
                 service, METHODID_SEARCH_CONTENT)))
+        .addMethod(
+          getListSearchResultsMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SearchContentReq,
+              com.tcn.cloud.api.api.v0alpha.SearchRes>(
+                service, METHODID_LIST_SEARCH_RESULTS)))
         .addMethod(
           getStandaloneMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1249,6 +1338,7 @@ public final class LearnGrpc {
               .addMethod(getContentMethod())
               .addMethod(getExportManyMethod())
               .addMethod(getSearchContentMethod())
+              .addMethod(getListSearchResultsMethod())
               .addMethod(getStandaloneMethod())
               .addMethod(getContentEditorDataMethod())
               .addMethod(getUpdateMethod())
