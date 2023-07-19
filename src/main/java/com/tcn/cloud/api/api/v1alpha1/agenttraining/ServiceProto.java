@@ -27,25 +27,25 @@ public final class ServiceProto {
       "to\022\032api.v1alpha1.agenttraining\032\027annotati" +
       "ons/authz.proto\0325api/v1alpha1/agenttrain" +
       "ing/learning_opportunity.proto\032\034google/a" +
-      "pi/annotations.proto2\364\003\n\024AgentTrainingSe" +
-      "rvice\022\354\001\n\031CreateLearningOpportunity\022<.ap" +
+      "pi/annotations.proto2\216\004\n\024AgentTrainingSe" +
+      "rvice\022\371\001\n\031CreateLearningOpportunity\022<.ap" +
       "i.v1alpha1.agenttraining.CreateLearningO" +
       "pportunityRequest\032=.api.v1alpha1.agenttr" +
       "aining.CreateLearningOpportunityResponse" +
-      "\"R\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002B\"=/api/v1alpha1/scorec" +
-      "ards/scorecards/createlearningopportunit" +
-      "y:\001*\022\354\001\n\031ListLearningOpportunities\022<.api" +
-      ".v1alpha1.agenttraining.ListLearningOppo" +
-      "rtunitiesRequest\032=.api.v1alpha1.agenttra" +
-      "ining.ListLearningOpportunitiesResponse\"" +
-      "R\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002B\"=/api/v1alpha1/scoreca" +
-      "rds/scorecards/listlearningopportunities" +
-      ":\001*B\306\001\n,com.tcn.cloud.api.api.v1alpha1.a" +
-      "genttrainingB\014ServiceProtoP\001\242\002\003AVA\252\002\032Api" +
-      ".V1alpha1.Agenttraining\312\002\032Api\\V1alpha1\\A" +
-      "genttraining\342\002&Api\\V1alpha1\\Agenttrainin" +
-      "g\\GPBMetadata\352\002\034Api::V1alpha1::Agenttrai" +
-      "ningb\006proto3"
+      "\"_\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002O\"J/api/v1alpha1/agentt" +
+      "raining/agenttrainingservice/createlearn" +
+      "ingopportunity:\001*\022\371\001\n\031ListLearningOpport" +
+      "unities\022<.api.v1alpha1.agenttraining.Lis" +
+      "tLearningOpportunitiesRequest\032=.api.v1al" +
+      "pha1.agenttraining.ListLearningOpportuni" +
+      "tiesResponse\"_\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002O\"J/api/v1a" +
+      "lpha1/agenttraining/agenttrainingservice" +
+      "/listlearningopportunities:\001*B\306\001\n,com.tc" +
+      "n.cloud.api.api.v1alpha1.agenttrainingB\014" +
+      "ServiceProtoP\001\242\002\003AVA\252\002\032Api.V1alpha1.Agen" +
+      "ttraining\312\002\032Api\\V1alpha1\\Agenttraining\342\002" +
+      "&Api\\V1alpha1\\Agenttraining\\GPBMetadata\352" +
+      "\002\034Api::V1alpha1::Agenttrainingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
