@@ -26,7 +26,7 @@ public final class ServiceProto {
       "\n\"api/v1alpha1/billing/service.proto\022\024ap" +
       "i.v1alpha1.billing\032\027annotations/authz.pr" +
       "oto\032#api/v1alpha1/billing/entities.proto" +
-      "\032\034google/api/annotations.proto2\236\005\n\007Billi" +
+      "\032\034google/api/annotations.proto2\245\005\n\007Billi" +
       "ng\022\235\001\n\016GetBillingPlan\022\'.api.v1alpha1.bil" +
       "ling.GetBillingPlanReq\032\'.api.v1alpha1.bi" +
       "lling.GetBillingPlanRes\"9\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002" +
@@ -38,17 +38,17 @@ public final class ServiceProto {
       "billingplan:\001*\022\215\001\n\nGetInvoice\022#.api.v1al" +
       "pha1.billing.GetInvoiceReq\032#.api.v1alpha" +
       "1.billing.GetInvoiceRes\"5\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002" +
-      "%\" /api/v1alpha1/billing/getinvoice:\001*\022\266" +
+      "%\" /api/v1alpha1/billing/getinvoice:\001*\022\275" +
       "\001\n\026ExportGeneratedInvoice\022/.api.v1alpha1" +
       ".billing.ExportGeneratedInvoiceReq\032/.api" +
       ".v1alpha1.billing.ExportGeneratedInvoice" +
-      "Res\":\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002*\"%/api/v1alpha1/bil" +
-      "ling/generateinvoice:\001*B\250\001\n&com.tcn.clou" +
-      "d.api.api.v1alpha1.billingB\014ServiceProto" +
-      "P\001\242\002\003AVB\252\002\024Api.V1alpha1.Billing\312\002\024Api\\V1" +
-      "alpha1\\Billing\342\002 Api\\V1alpha1\\Billing\\GP" +
-      "BMetadata\352\002\026Api::V1alpha1::Billingb\006prot" +
-      "o3"
+      "Res\"A\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0021\",/api/v1alpha1/bil" +
+      "ling/exportgeneratedinvoice:\001*B\250\001\n&com.t" +
+      "cn.cloud.api.api.v1alpha1.billingB\014Servi" +
+      "ceProtoP\001\242\002\003AVB\252\002\024Api.V1alpha1.Billing\312\002" +
+      "\024Api\\V1alpha1\\Billing\342\002 Api\\V1alpha1\\Bil" +
+      "ling\\GPBMetadata\352\002\026Api::V1alpha1::Billin" +
+      "gb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

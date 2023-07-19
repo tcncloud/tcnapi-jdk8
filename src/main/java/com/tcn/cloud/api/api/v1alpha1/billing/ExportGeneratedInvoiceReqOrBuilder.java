@@ -62,4 +62,25 @@ public interface ExportGeneratedInvoiceReqOrBuilder extends
    */
   com.google.protobuf.ByteString
       getOrgIdBytes();
+
+  /**
+   * <pre>
+   * Optional. the invoice for the organization. If not specified,
+   * will use the proto format as the default
+   * </pre>
+   *
+   * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
+   * @return The enum numeric value on the wire for format.
+   */
+  int getFormatValue();
+  /**
+   * <pre>
+   * Optional. the invoice for the organization. If not specified,
+   * will use the proto format as the default
+   * </pre>
+   *
+   * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
+   * @return The format.
+   */
+  com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat getFormat();
 }

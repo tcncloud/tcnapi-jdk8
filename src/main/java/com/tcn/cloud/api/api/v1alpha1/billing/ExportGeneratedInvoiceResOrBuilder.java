@@ -8,36 +8,36 @@ public interface ExportGeneratedInvoiceResOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
-   * @return Whether the invoice field is set.
+   * <code>.api.commons.billing.Invoice proto = 1 [json_name = "proto"];</code>
+   * @return Whether the proto field is set.
    */
-  boolean hasInvoice();
+  boolean hasProto();
   /**
-   * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
-   * @return The invoice.
+   * <code>.api.commons.billing.Invoice proto = 1 [json_name = "proto"];</code>
+   * @return The proto.
    */
-  com.tcn.cloud.api.api.commons.billing.Invoice getInvoice();
+  com.tcn.cloud.api.api.commons.billing.Invoice getProto();
   /**
-   * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
+   * <code>.api.commons.billing.Invoice proto = 1 [json_name = "proto"];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.InvoiceOrBuilder getInvoiceOrBuilder();
+  com.tcn.cloud.api.api.commons.billing.InvoiceOrBuilder getProtoOrBuilder();
 
   /**
-   * <code>string csv = 2 [json_name = "csv"];</code>
-   * @return Whether the csv field is set.
+   * <code>string csv_url = 2 [json_name = "csvUrl"];</code>
+   * @return Whether the csvUrl field is set.
    */
-  boolean hasCsv();
+  boolean hasCsvUrl();
   /**
-   * <code>string csv = 2 [json_name = "csv"];</code>
-   * @return The csv.
+   * <code>string csv_url = 2 [json_name = "csvUrl"];</code>
+   * @return The csvUrl.
    */
-  java.lang.String getCsv();
+  java.lang.String getCsvUrl();
   /**
-   * <code>string csv = 2 [json_name = "csv"];</code>
-   * @return The bytes for csv.
+   * <code>string csv_url = 2 [json_name = "csvUrl"];</code>
+   * @return The bytes for csvUrl.
    */
   com.google.protobuf.ByteString
-      getCsvBytes();
+      getCsvUrlBytes();
 
   com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes.FormatCase getFormatCase();
 }

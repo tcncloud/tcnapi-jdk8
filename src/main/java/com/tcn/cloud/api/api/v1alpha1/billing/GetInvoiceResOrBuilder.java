@@ -35,36 +35,36 @@ public interface GetInvoiceResOrBuilder extends
   com.tcn.cloud.api.api.commons.billing.InvoiceOrBuilder getInvoiceOrBuilder();
 
   /**
-   * <code>.api.commons.billing.Invoice invoice_format = 2 [json_name = "invoiceFormat"];</code>
-   * @return Whether the invoiceFormat field is set.
+   * <code>.api.commons.billing.Invoice proto = 2 [json_name = "proto"];</code>
+   * @return Whether the proto field is set.
    */
-  boolean hasInvoiceFormat();
+  boolean hasProto();
   /**
-   * <code>.api.commons.billing.Invoice invoice_format = 2 [json_name = "invoiceFormat"];</code>
-   * @return The invoiceFormat.
+   * <code>.api.commons.billing.Invoice proto = 2 [json_name = "proto"];</code>
+   * @return The proto.
    */
-  com.tcn.cloud.api.api.commons.billing.Invoice getInvoiceFormat();
+  com.tcn.cloud.api.api.commons.billing.Invoice getProto();
   /**
-   * <code>.api.commons.billing.Invoice invoice_format = 2 [json_name = "invoiceFormat"];</code>
+   * <code>.api.commons.billing.Invoice proto = 2 [json_name = "proto"];</code>
    */
-  com.tcn.cloud.api.api.commons.billing.InvoiceOrBuilder getInvoiceFormatOrBuilder();
+  com.tcn.cloud.api.api.commons.billing.InvoiceOrBuilder getProtoOrBuilder();
 
   /**
-   * <code>string csv = 3 [json_name = "csv"];</code>
-   * @return Whether the csv field is set.
+   * <code>string csv_url = 3 [json_name = "csvUrl"];</code>
+   * @return Whether the csvUrl field is set.
    */
-  boolean hasCsv();
+  boolean hasCsvUrl();
   /**
-   * <code>string csv = 3 [json_name = "csv"];</code>
-   * @return The csv.
+   * <code>string csv_url = 3 [json_name = "csvUrl"];</code>
+   * @return The csvUrl.
    */
-  java.lang.String getCsv();
+  java.lang.String getCsvUrl();
   /**
-   * <code>string csv = 3 [json_name = "csv"];</code>
-   * @return The bytes for csv.
+   * <code>string csv_url = 3 [json_name = "csvUrl"];</code>
+   * @return The bytes for csvUrl.
    */
   com.google.protobuf.ByteString
-      getCsvBytes();
+      getCsvUrlBytes();
 
   com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes.FormatCase getFormatCase();
 }

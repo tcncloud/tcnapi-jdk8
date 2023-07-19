@@ -80,24 +80,26 @@ public final class EntitiesProto {
       "eReq\022=\n\014invoice_date\030\001 \001(\0132\032.google.prot" +
       "obuf.TimestampR\013invoiceDate\022\025\n\006org_id\030\002 " +
       "\001(\tR\005orgId\022;\n\006format\030\003 \001(\0162#.api.v1alpha" +
-      "1.billing.InvoiceFormatR\006format\"\254\001\n\rGetI" +
+      "1.billing.InvoiceFormatR\006format\"\242\001\n\rGetI" +
       "nvoiceRes\0226\n\007invoice\030\001 \001(\0132\034.api.commons" +
-      ".billing.InvoiceR\007invoice\022E\n\016invoice_for" +
-      "mat\030\002 \001(\0132\034.api.commons.billing.InvoiceH" +
-      "\000R\rinvoiceFormat\022\022\n\003csv\030\003 \001(\tH\000R\003csvB\010\n\006" +
-      "format\"q\n\031ExportGeneratedInvoiceReq\022=\n\014i" +
-      "nvoice_date\030\001 \001(\0132\032.google.protobuf.Time" +
-      "stampR\013invoiceDate\022\025\n\006org_id\030\002 \001(\tR\005orgI" +
-      "d\"s\n\031ExportGeneratedInvoiceRes\0228\n\007invoic" +
-      "e\030\001 \001(\0132\034.api.commons.billing.InvoiceH\000R" +
-      "\007invoice\022\022\n\003csv\030\002 \001(\tH\000R\003csvB\010\n\006format*a" +
-      "\n\rInvoiceFormat\022\036\n\032INVOICE_FORMAT_UNSPEC" +
-      "IFIED\020\000\022\030\n\024INVOICE_FORMAT_PROTO\020\001\022\026\n\022INV" +
-      "OICE_FORMAT_CSV\020\002B\251\001\n&com.tcn.cloud.api." +
-      "api.v1alpha1.billingB\rEntitiesProtoP\001\242\002\003" +
-      "AVB\252\002\024Api.V1alpha1.Billing\312\002\024Api\\V1alpha" +
-      "1\\Billing\342\002 Api\\V1alpha1\\Billing\\GPBMeta" +
-      "data\352\002\026Api::V1alpha1::Billingb\006proto3"
+      ".billing.InvoiceR\007invoice\0224\n\005proto\030\002 \001(\013" +
+      "2\034.api.commons.billing.InvoiceH\000R\005proto\022" +
+      "\031\n\007csv_url\030\003 \001(\tH\000R\006csvUrlB\010\n\006format\"\256\001\n" +
+      "\031ExportGeneratedInvoiceReq\022=\n\014invoice_da" +
+      "te\030\001 \001(\0132\032.google.protobuf.TimestampR\013in" +
+      "voiceDate\022\025\n\006org_id\030\002 \001(\tR\005orgId\022;\n\006form" +
+      "at\030\003 \001(\0162#.api.v1alpha1.billing.InvoiceF" +
+      "ormatR\006format\"v\n\031ExportGeneratedInvoiceR" +
+      "es\0224\n\005proto\030\001 \001(\0132\034.api.commons.billing." +
+      "InvoiceH\000R\005proto\022\031\n\007csv_url\030\002 \001(\tH\000R\006csv" +
+      "UrlB\010\n\006format*a\n\rInvoiceFormat\022\036\n\032INVOIC" +
+      "E_FORMAT_UNSPECIFIED\020\000\022\030\n\024INVOICE_FORMAT" +
+      "_PROTO\020\001\022\026\n\022INVOICE_FORMAT_CSV\020\002B\251\001\n&com" +
+      ".tcn.cloud.api.api.v1alpha1.billingB\rEnt" +
+      "itiesProtoP\001\242\002\003AVB\252\002\024Api.V1alpha1.Billin" +
+      "g\312\002\024Api\\V1alpha1\\Billing\342\002 Api\\V1alpha1\\" +
+      "Billing\\GPBMetadata\352\002\026Api::V1alpha1::Bil" +
+      "lingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -143,19 +145,19 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_billing_GetInvoiceRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_billing_GetInvoiceRes_descriptor,
-        new java.lang.String[] { "Invoice", "InvoiceFormat", "Csv", "Format", });
+        new java.lang.String[] { "Invoice", "Proto", "CsvUrl", "Format", });
     internal_static_api_v1alpha1_billing_ExportGeneratedInvoiceReq_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_api_v1alpha1_billing_ExportGeneratedInvoiceReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_billing_ExportGeneratedInvoiceReq_descriptor,
-        new java.lang.String[] { "InvoiceDate", "OrgId", });
+        new java.lang.String[] { "InvoiceDate", "OrgId", "Format", });
     internal_static_api_v1alpha1_billing_ExportGeneratedInvoiceRes_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_api_v1alpha1_billing_ExportGeneratedInvoiceRes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_billing_ExportGeneratedInvoiceRes_descriptor,
-        new java.lang.String[] { "Invoice", "Csv", "Format", });
+        new java.lang.String[] { "Proto", "CsvUrl", "Format", });
     com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.tcn.cloud.api.api.commons.billing.DetailProto.getDescriptor();
     com.tcn.cloud.api.api.commons.billing.InvoiceProto.getDescriptor();
