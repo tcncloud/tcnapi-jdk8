@@ -118,7 +118,7 @@ public final class LearnGrpc {
       fullMethodName = SERVICE_NAME + '/' + "SearchContent",
       requestType = com.tcn.cloud.api.api.v0alpha.SearchContentReq.class,
       responseType = com.tcn.cloud.api.api.v0alpha.SearchRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
   public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SearchContentReq,
       com.tcn.cloud.api.api.v0alpha.SearchRes> getSearchContentMethod() {
     io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SearchContentReq, com.tcn.cloud.api.api.v0alpha.SearchRes> getSearchContentMethod;
@@ -127,7 +127,7 @@ public final class LearnGrpc {
         if ((getSearchContentMethod = LearnGrpc.getSearchContentMethod) == null) {
           LearnGrpc.getSearchContentMethod = getSearchContentMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SearchContentReq, com.tcn.cloud.api.api.v0alpha.SearchRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SearchContent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -474,6 +474,7 @@ public final class LearnGrpc {
     /**
      * <pre>
      * search content in learning pages
+     * we allow all the logged in agents/admins to view snippet content
      * </pre>
      */
     default void searchContent(com.tcn.cloud.api.api.v0alpha.SearchContentReq request,
@@ -632,11 +633,12 @@ public final class LearnGrpc {
     /**
      * <pre>
      * search content in learning pages
+     * we allow all the logged in agents/admins to view snippet content
      * </pre>
      */
     public void searchContent(com.tcn.cloud.api.api.v0alpha.SearchContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getSearchContentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -782,10 +784,12 @@ public final class LearnGrpc {
     /**
      * <pre>
      * search content in learning pages
+     * we allow all the logged in agents/admins to view snippet content
      * </pre>
      */
-    public com.tcn.cloud.api.api.v0alpha.SearchRes searchContent(com.tcn.cloud.api.api.v0alpha.SearchContentReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public java.util.Iterator<com.tcn.cloud.api.api.v0alpha.SearchRes> searchContent(
+        com.tcn.cloud.api.api.v0alpha.SearchContentReq request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getSearchContentMethod(), getCallOptions(), request);
     }
 
@@ -921,17 +925,6 @@ public final class LearnGrpc {
         com.tcn.cloud.api.api.v0alpha.ExportManyReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getExportManyMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * search content in learning pages
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SearchRes> searchContent(
-        com.tcn.cloud.api.api.v0alpha.SearchContentReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getSearchContentMethod(), getCallOptions()), request);
     }
 
     /**
@@ -1143,7 +1136,7 @@ public final class LearnGrpc {
                 service, METHODID_EXPORT_MANY)))
         .addMethod(
           getSearchContentMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
             new MethodHandlers<
               com.tcn.cloud.api.api.v0alpha.SearchContentReq,
               com.tcn.cloud.api.api.v0alpha.SearchRes>(
