@@ -76,33 +76,36 @@ public final class EntitiesProto {
       "ommons.billing.DetailR\016billingDetails\022\025\n" +
       "\006org_id\030\002 \001(\tR\005orgId\"T\n\024UpdateBillingPla" +
       "nRes\022<\n\014billing_plan\030\001 \001(\0132\031.api.commons" +
-      ".billing.PlanR\013billingPlan\"\276\001\n\rGetInvoic" +
+      ".billing.PlanR\013billingPlan\"\361\001\n\rGetInvoic" +
       "eReq\022=\n\014invoice_date\030\001 \001(\0132\032.google.prot" +
       "obuf.TimestampR\013invoiceDate\022\025\n\006org_id\030\002 " +
-      "\001(\tR\005orgId\022I\n\016invoice_format\030\004 \001(\0162\".api" +
-      ".commons.billing.InvoiceFormatR\rinvoiceF" +
-      "ormatJ\004\010\003\020\004R\006format\"\307\001\n\rGetInvoiceRes\0226\n" +
-      "\007invoice\030\001 \001(\0132\034.api.commons.billing.Inv" +
-      "oiceR\007invoice\0224\n\005proto\030\002 \001(\0132\034.api.commo" +
-      "ns.billing.InvoiceH\000R\005proto\022\031\n\007csv_url\030\003" +
-      " \001(\tH\000R\006csvUrl\022#\n\rbilling_cycle\030\004 \001(\tR\014b" +
-      "illingCycleB\010\n\006format\"\312\001\n\031ExportGenerate" +
-      "dInvoiceReq\022=\n\014invoice_date\030\001 \001(\0132\032.goog" +
-      "le.protobuf.TimestampR\013invoiceDate\022\025\n\006or" +
-      "g_id\030\002 \001(\tR\005orgId\022I\n\016invoice_format\030\004 \001(" +
-      "\0162\".api.commons.billing.InvoiceFormatR\ri" +
-      "nvoiceFormatJ\004\010\003\020\004R\006format\"\233\001\n\031ExportGen" +
-      "eratedInvoiceRes\0224\n\005proto\030\001 \001(\0132\034.api.co" +
-      "mmons.billing.InvoiceH\000R\005proto\022\031\n\007csv_ur" +
-      "l\030\002 \001(\tH\000R\006csvUrl\022#\n\rbilling_cycle\030\003 \001(\t" +
-      "R\014billingCycleB\010\n\006format*a\n\rInvoiceForma" +
-      "t\022\036\n\032INVOICE_FORMAT_UNSPECIFIED\020\000\022\030\n\024INV" +
-      "OICE_FORMAT_PROTO\020\001\022\026\n\022INVOICE_FORMAT_CS" +
-      "V\020\002B\251\001\n&com.tcn.cloud.api.api.v1alpha1.b" +
-      "illingB\rEntitiesProtoP\001\242\002\003AVB\252\002\024Api.V1al" +
-      "pha1.Billing\312\002\024Api\\V1alpha1\\Billing\342\002 Ap" +
-      "i\\V1alpha1\\Billing\\GPBMetadata\352\002\026Api::V1" +
-      "alpha1::Billingb\006proto3"
+      "\001(\tR\005orgId\022?\n\006format\030\003 \001(\0162#.api.v1alpha" +
+      "1.billing.InvoiceFormatB\002\030\001R\006format\022I\n\016i" +
+      "nvoice_format\030\004 \001(\0162\".api.commons.billin" +
+      "g.InvoiceFormatR\rinvoiceFormat\"\307\001\n\rGetIn" +
+      "voiceRes\0226\n\007invoice\030\001 \001(\0132\034.api.commons." +
+      "billing.InvoiceR\007invoice\0224\n\005proto\030\002 \001(\0132" +
+      "\034.api.commons.billing.InvoiceH\000R\005proto\022\031" +
+      "\n\007csv_url\030\003 \001(\tH\000R\006csvUrl\022#\n\rbilling_cyc" +
+      "le\030\004 \001(\tR\014billingCycleB\010\n\006format\"\375\001\n\031Exp" +
+      "ortGeneratedInvoiceReq\022=\n\014invoice_date\030\001" +
+      " \001(\0132\032.google.protobuf.TimestampR\013invoic" +
+      "eDate\022\025\n\006org_id\030\002 \001(\tR\005orgId\022?\n\006format\030\003" +
+      " \001(\0162#.api.v1alpha1.billing.InvoiceForma" +
+      "tB\002\030\001R\006format\022I\n\016invoice_format\030\004 \001(\0162\"." +
+      "api.commons.billing.InvoiceFormatR\rinvoi" +
+      "ceFormat\"\233\001\n\031ExportGeneratedInvoiceRes\0224" +
+      "\n\005proto\030\001 \001(\0132\034.api.commons.billing.Invo" +
+      "iceH\000R\005proto\022\031\n\007csv_url\030\002 \001(\tH\000R\006csvUrl\022" +
+      "#\n\rbilling_cycle\030\003 \001(\tR\014billingCycleB\010\n\006" +
+      "format*a\n\rInvoiceFormat\022\036\n\032INVOICE_FORMA" +
+      "T_UNSPECIFIED\020\000\022\030\n\024INVOICE_FORMAT_PROTO\020" +
+      "\001\022\026\n\022INVOICE_FORMAT_CSV\020\002B\251\001\n&com.tcn.cl" +
+      "oud.api.api.v1alpha1.billingB\rEntitiesPr" +
+      "otoP\001\242\002\003AVB\252\002\024Api.V1alpha1.Billing\312\002\024Api" +
+      "\\V1alpha1\\Billing\342\002 Api\\V1alpha1\\Billing" +
+      "\\GPBMetadata\352\002\026Api::V1alpha1::Billingb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -142,7 +145,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_billing_GetInvoiceReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_billing_GetInvoiceReq_descriptor,
-        new java.lang.String[] { "InvoiceDate", "OrgId", "InvoiceFormat", });
+        new java.lang.String[] { "InvoiceDate", "OrgId", "Format", "InvoiceFormat", });
     internal_static_api_v1alpha1_billing_GetInvoiceRes_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_api_v1alpha1_billing_GetInvoiceRes_fieldAccessorTable = new
@@ -154,7 +157,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_billing_ExportGeneratedInvoiceReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_billing_ExportGeneratedInvoiceReq_descriptor,
-        new java.lang.String[] { "InvoiceDate", "OrgId", "InvoiceFormat", });
+        new java.lang.String[] { "InvoiceDate", "OrgId", "Format", "InvoiceFormat", });
     internal_static_api_v1alpha1_billing_ExportGeneratedInvoiceRes_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_api_v1alpha1_billing_ExportGeneratedInvoiceRes_fieldAccessorTable = new

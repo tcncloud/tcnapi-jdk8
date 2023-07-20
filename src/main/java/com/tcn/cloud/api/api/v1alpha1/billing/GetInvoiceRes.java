@@ -210,6 +210,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object billingCycle_ = "";
   /**
+   * <pre>
+   * the billing cycle of the invoice requested
+   * </pre>
+   *
    * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
    * @return The billingCycle.
    */
@@ -227,6 +231,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * the billing cycle of the invoice requested
+   * </pre>
+   *
    * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
    * @return The bytes for billingCycle.
    */
@@ -1099,6 +1107,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object billingCycle_ = "";
     /**
+     * <pre>
+     * the billing cycle of the invoice requested
+     * </pre>
+     *
      * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
      * @return The billingCycle.
      */
@@ -1115,6 +1127,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * the billing cycle of the invoice requested
+     * </pre>
+     *
      * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
      * @return The bytes for billingCycle.
      */
@@ -1132,6 +1148,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * the billing cycle of the invoice requested
+     * </pre>
+     *
      * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
      * @param value The billingCycle to set.
      * @return This builder for chaining.
@@ -1145,6 +1165,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the billing cycle of the invoice requested
+     * </pre>
+     *
      * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
      * @return This builder for chaining.
      */
@@ -1155,6 +1179,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the billing cycle of the invoice requested
+     * </pre>
+     *
      * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
      * @param value The bytes for billingCycle to set.
      * @return This builder for chaining.

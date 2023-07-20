@@ -67,11 +67,19 @@ public interface GetInvoiceResOrBuilder extends
       getCsvUrlBytes();
 
   /**
+   * <pre>
+   * the billing cycle of the invoice requested
+   * </pre>
+   *
    * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
    * @return The billingCycle.
    */
   java.lang.String getBillingCycle();
   /**
+   * <pre>
+   * the billing cycle of the invoice requested
+   * </pre>
+   *
    * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
    * @return The bytes for billingCycle.
    */
