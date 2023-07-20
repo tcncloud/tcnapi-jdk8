@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v0alpha;
 
-public interface StandaloneReqOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v0alpha.StandaloneReq)
+public interface SnippetReqOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v0alpha.SnippetReq)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -26,24 +26,4 @@ public interface StandaloneReqOrBuilder extends
    */
   com.google.protobuf.ByteString
       getLocaleBytes();
-
-  /**
-   * <pre>
-   * categorize the articles
-   * </pre>
-   *
-   * <code>string category = 2 [json_name = "category"];</code>
-   * @return The category.
-   */
-  java.lang.String getCategory();
-  /**
-   * <pre>
-   * categorize the articles
-   * </pre>
-   *
-   * <code>string category = 2 [json_name = "category"];</code>
-   * @return The bytes for category.
-   */
-  com.google.protobuf.ByteString
-      getCategoryBytes();
 }

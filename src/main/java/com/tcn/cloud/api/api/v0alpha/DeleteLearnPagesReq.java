@@ -5,43 +5,44 @@ package com.tcn.cloud.api.api.v0alpha;
 
 /**
  * <pre>
- * request to get standalone articles
+ * request to delete learn pages
  * </pre>
  *
- * Protobuf type {@code api.v0alpha.StandaloneReq}
+ * Protobuf type {@code api.v0alpha.DeleteLearnPagesReq}
  */
-public final class StandaloneReq extends
+public final class DeleteLearnPagesReq extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v0alpha.StandaloneReq)
-    StandaloneReqOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v0alpha.DeleteLearnPagesReq)
+    DeleteLearnPagesReqOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use StandaloneReq.newBuilder() to construct.
-  private StandaloneReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use DeleteLearnPagesReq.newBuilder() to construct.
+  private DeleteLearnPagesReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private StandaloneReq() {
+  private DeleteLearnPagesReq() {
     locale_ = "";
-    category_ = "";
+    url_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new StandaloneReq();
+    return new DeleteLearnPagesReq();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v0alpha.LearnProto.internal_static_api_v0alpha_StandaloneReq_descriptor;
+    return com.tcn.cloud.api.api.v0alpha.LearnProto.internal_static_api_v0alpha_DeleteLearnPagesReq_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v0alpha.LearnProto.internal_static_api_v0alpha_StandaloneReq_fieldAccessorTable
+    return com.tcn.cloud.api.api.v0alpha.LearnProto.internal_static_api_v0alpha_DeleteLearnPagesReq_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v0alpha.StandaloneReq.class, com.tcn.cloud.api.api.v0alpha.StandaloneReq.Builder.class);
+            com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq.class, com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq.Builder.class);
   }
 
   public static final int LOCALE_FIELD_NUMBER = 1;
@@ -91,51 +92,57 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CATEGORY_FIELD_NUMBER = 2;
+  public static final int URL_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object category_ = "";
+  private com.google.protobuf.LazyStringArrayList url_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
-   * categorize the articles
+   * list of learning urls to be deleted
    * </pre>
    *
-   * <code>string category = 2 [json_name = "category"];</code>
-   * @return The category.
+   * <code>repeated string url = 2 [json_name = "url"];</code>
+   * @return A list containing the url.
    */
-  @java.lang.Override
-  public java.lang.String getCategory() {
-    java.lang.Object ref = category_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      category_ = s;
-      return s;
-    }
+  public com.google.protobuf.ProtocolStringList
+      getUrlList() {
+    return url_;
   }
   /**
    * <pre>
-   * categorize the articles
+   * list of learning urls to be deleted
    * </pre>
    *
-   * <code>string category = 2 [json_name = "category"];</code>
-   * @return The bytes for category.
+   * <code>repeated string url = 2 [json_name = "url"];</code>
+   * @return The count of url.
    */
-  @java.lang.Override
+  public int getUrlCount() {
+    return url_.size();
+  }
+  /**
+   * <pre>
+   * list of learning urls to be deleted
+   * </pre>
+   *
+   * <code>repeated string url = 2 [json_name = "url"];</code>
+   * @param index The index of the element to return.
+   * @return The url at the given index.
+   */
+  public java.lang.String getUrl(int index) {
+    return url_.get(index);
+  }
+  /**
+   * <pre>
+   * list of learning urls to be deleted
+   * </pre>
+   *
+   * <code>repeated string url = 2 [json_name = "url"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the url at the given index.
+   */
   public com.google.protobuf.ByteString
-      getCategoryBytes() {
-    java.lang.Object ref = category_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      category_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+      getUrlBytes(int index) {
+    return url_.getByteString(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -155,8 +162,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locale_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, locale_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(category_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, category_);
+    for (int i = 0; i < url_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, url_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -170,8 +177,13 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locale_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, locale_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(category_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, category_);
+    {
+      int dataSize = 0;
+      for (int i = 0; i < url_.size(); i++) {
+        dataSize += computeStringSizeNoTag(url_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getUrlList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -183,15 +195,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.StandaloneReq)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v0alpha.StandaloneReq other = (com.tcn.cloud.api.api.v0alpha.StandaloneReq) obj;
+    com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq other = (com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq) obj;
 
     if (!getLocale()
         .equals(other.getLocale())) return false;
-    if (!getCategory()
-        .equals(other.getCategory())) return false;
+    if (!getUrlList()
+        .equals(other.getUrlList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -205,51 +217,53 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + LOCALE_FIELD_NUMBER;
     hash = (53 * hash) + getLocale().hashCode();
-    hash = (37 * hash) + CATEGORY_FIELD_NUMBER;
-    hash = (53 * hash) + getCategory().hashCode();
+    if (getUrlCount() > 0) {
+      hash = (37 * hash) + URL_FIELD_NUMBER;
+      hash = (53 * hash) + getUrlList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.StandaloneReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.StandaloneReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.StandaloneReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.StandaloneReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.StandaloneReq parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.StandaloneReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.StandaloneReq parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.StandaloneReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -257,26 +271,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.StandaloneReq parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.StandaloneReq parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.StandaloneReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.StandaloneReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -289,7 +303,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.StandaloneReq prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -306,29 +320,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * request to get standalone articles
+   * request to delete learn pages
    * </pre>
    *
-   * Protobuf type {@code api.v0alpha.StandaloneReq}
+   * Protobuf type {@code api.v0alpha.DeleteLearnPagesReq}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v0alpha.StandaloneReq)
-      com.tcn.cloud.api.api.v0alpha.StandaloneReqOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v0alpha.DeleteLearnPagesReq)
+      com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReqOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v0alpha.LearnProto.internal_static_api_v0alpha_StandaloneReq_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.LearnProto.internal_static_api_v0alpha_DeleteLearnPagesReq_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v0alpha.LearnProto.internal_static_api_v0alpha_StandaloneReq_fieldAccessorTable
+      return com.tcn.cloud.api.api.v0alpha.LearnProto.internal_static_api_v0alpha_DeleteLearnPagesReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v0alpha.StandaloneReq.class, com.tcn.cloud.api.api.v0alpha.StandaloneReq.Builder.class);
+              com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq.class, com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v0alpha.StandaloneReq.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq.newBuilder()
     private Builder() {
 
     }
@@ -343,24 +357,25 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       locale_ = "";
-      category_ = "";
+      url_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v0alpha.LearnProto.internal_static_api_v0alpha_StandaloneReq_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.LearnProto.internal_static_api_v0alpha_DeleteLearnPagesReq_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.StandaloneReq getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v0alpha.StandaloneReq.getDefaultInstance();
+    public com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.StandaloneReq build() {
-      com.tcn.cloud.api.api.v0alpha.StandaloneReq result = buildPartial();
+    public com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq build() {
+      com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -368,20 +383,21 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.StandaloneReq buildPartial() {
-      com.tcn.cloud.api.api.v0alpha.StandaloneReq result = new com.tcn.cloud.api.api.v0alpha.StandaloneReq(this);
+    public com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq buildPartial() {
+      com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq result = new com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.StandaloneReq result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.locale_ = locale_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.category_ = category_;
+        url_.makeImmutable();
+        result.url_ = url_;
       }
     }
 
@@ -419,24 +435,29 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v0alpha.StandaloneReq) {
-        return mergeFrom((com.tcn.cloud.api.api.v0alpha.StandaloneReq)other);
+      if (other instanceof com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq) {
+        return mergeFrom((com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.StandaloneReq other) {
-      if (other == com.tcn.cloud.api.api.v0alpha.StandaloneReq.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq other) {
+      if (other == com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq.getDefaultInstance()) return this;
       if (!other.getLocale().isEmpty()) {
         locale_ = other.locale_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getCategory().isEmpty()) {
-        category_ = other.category_;
-        bitField0_ |= 0x00000002;
+      if (!other.url_.isEmpty()) {
+        if (url_.isEmpty()) {
+          url_ = other.url_;
+          bitField0_ |= 0x00000002;
+        } else {
+          ensureUrlIsMutable();
+          url_.addAll(other.url_);
+        }
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -471,8 +492,9 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 10
             case 18: {
-              category_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureUrlIsMutable();
+              url_.add(s);
               break;
             } // case 18
             default: {
@@ -584,93 +606,148 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object category_ = "";
-    /**
-     * <pre>
-     * categorize the articles
-     * </pre>
-     *
-     * <code>string category = 2 [json_name = "category"];</code>
-     * @return The category.
-     */
-    public java.lang.String getCategory() {
-      java.lang.Object ref = category_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        category_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
+    private com.google.protobuf.LazyStringArrayList url_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureUrlIsMutable() {
+      if (!url_.isModifiable()) {
+        url_ = new com.google.protobuf.LazyStringArrayList(url_);
       }
+      bitField0_ |= 0x00000002;
     }
     /**
      * <pre>
-     * categorize the articles
+     * list of learning urls to be deleted
      * </pre>
      *
-     * <code>string category = 2 [json_name = "category"];</code>
-     * @return The bytes for category.
+     * <code>repeated string url = 2 [json_name = "url"];</code>
+     * @return A list containing the url.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getUrlList() {
+      url_.makeImmutable();
+      return url_;
+    }
+    /**
+     * <pre>
+     * list of learning urls to be deleted
+     * </pre>
+     *
+     * <code>repeated string url = 2 [json_name = "url"];</code>
+     * @return The count of url.
+     */
+    public int getUrlCount() {
+      return url_.size();
+    }
+    /**
+     * <pre>
+     * list of learning urls to be deleted
+     * </pre>
+     *
+     * <code>repeated string url = 2 [json_name = "url"];</code>
+     * @param index The index of the element to return.
+     * @return The url at the given index.
+     */
+    public java.lang.String getUrl(int index) {
+      return url_.get(index);
+    }
+    /**
+     * <pre>
+     * list of learning urls to be deleted
+     * </pre>
+     *
+     * <code>repeated string url = 2 [json_name = "url"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the url at the given index.
      */
     public com.google.protobuf.ByteString
-        getCategoryBytes() {
-      java.lang.Object ref = category_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        category_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+        getUrlBytes(int index) {
+      return url_.getByteString(index);
     }
     /**
      * <pre>
-     * categorize the articles
+     * list of learning urls to be deleted
      * </pre>
      *
-     * <code>string category = 2 [json_name = "category"];</code>
-     * @param value The category to set.
+     * <code>repeated string url = 2 [json_name = "url"];</code>
+     * @param index The index to set the value at.
+     * @param value The url to set.
      * @return This builder for chaining.
      */
-    public Builder setCategory(
-        java.lang.String value) {
+    public Builder setUrl(
+        int index, java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      category_ = value;
+      ensureUrlIsMutable();
+      url_.set(index, value);
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * categorize the articles
+     * list of learning urls to be deleted
      * </pre>
      *
-     * <code>string category = 2 [json_name = "category"];</code>
+     * <code>repeated string url = 2 [json_name = "url"];</code>
+     * @param value The url to add.
      * @return This builder for chaining.
      */
-    public Builder clearCategory() {
-      category_ = getDefaultInstance().getCategory();
-      bitField0_ = (bitField0_ & ~0x00000002);
+    public Builder addUrl(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureUrlIsMutable();
+      url_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * categorize the articles
+     * list of learning urls to be deleted
      * </pre>
      *
-     * <code>string category = 2 [json_name = "category"];</code>
-     * @param value The bytes for category to set.
+     * <code>repeated string url = 2 [json_name = "url"];</code>
+     * @param values The url to add.
      * @return This builder for chaining.
      */
-    public Builder setCategoryBytes(
+    public Builder addAllUrl(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureUrlIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, url_);
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * list of learning urls to be deleted
+     * </pre>
+     *
+     * <code>repeated string url = 2 [json_name = "url"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUrl() {
+      url_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000002);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * list of learning urls to be deleted
+     * </pre>
+     *
+     * <code>repeated string url = 2 [json_name = "url"];</code>
+     * @param value The bytes of the url to add.
+     * @return This builder for chaining.
+     */
+    public Builder addUrlBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      category_ = value;
+      ensureUrlIsMutable();
+      url_.add(value);
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
@@ -688,23 +765,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v0alpha.StandaloneReq)
+    // @@protoc_insertion_point(builder_scope:api.v0alpha.DeleteLearnPagesReq)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v0alpha.StandaloneReq)
-  private static final com.tcn.cloud.api.api.v0alpha.StandaloneReq DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v0alpha.DeleteLearnPagesReq)
+  private static final com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.StandaloneReq();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq();
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.StandaloneReq getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<StandaloneReq>
-      PARSER = new com.google.protobuf.AbstractParser<StandaloneReq>() {
+  private static final com.google.protobuf.Parser<DeleteLearnPagesReq>
+      PARSER = new com.google.protobuf.AbstractParser<DeleteLearnPagesReq>() {
     @java.lang.Override
-    public StandaloneReq parsePartialFrom(
+    public DeleteLearnPagesReq parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -723,17 +800,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<StandaloneReq> parser() {
+  public static com.google.protobuf.Parser<DeleteLearnPagesReq> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<StandaloneReq> getParserForType() {
+  public com.google.protobuf.Parser<DeleteLearnPagesReq> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.StandaloneReq getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

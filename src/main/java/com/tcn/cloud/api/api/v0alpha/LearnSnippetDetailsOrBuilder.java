@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v0alpha;
 
-public interface LearnStandaloneDetailsOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v0alpha.LearnStandaloneDetails)
+public interface LearnSnippetDetailsOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v0alpha.LearnSnippetDetails)
     com.google.protobuf.MessageOrBuilder {
 
   /**
