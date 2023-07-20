@@ -73,4 +73,14 @@ public interface CreateDraftScheduleReqOrBuilder extends
    * <code>.api.commons.DatetimeRange scheduling_range = 3 [json_name = "schedulingRange"];</code>
    */
   com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getSchedulingRangeOrBuilder();
+
+  /**
+   * <pre>
+   * ID of the schedule scenario that the draft schedule will be associated with.
+   * </pre>
+   *
+   * <code>int64 schedule_scenario_sid = 4 [json_name = "scheduleScenarioSid"];</code>
+   * @return The scheduleScenarioSid.
+   */
+  long getScheduleScenarioSid();
 }
