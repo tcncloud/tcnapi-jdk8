@@ -8,19 +8,19 @@ public interface DiceDocumentOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int32 dice_value = 1 [json_name = "diceValue"];</code>
+   * <code>int32 diceValue = 1 [json_name = "diceValue"];</code>
    * @return The diceValue.
    */
   int getDiceValue();
 
   /**
-   * <code>int32 dice_value_max = 2 [json_name = "diceValueMax"];</code>
+   * <code>int32 diceValueMax = 2 [json_name = "diceValueMax"];</code>
    * @return The diceValueMax.
    */
   int getDiceValueMax();
 
   /**
-   * <code>int32 dice_value_min = 3 [json_name = "diceValueMin"];</code>
+   * <code>int32 diceValueMin = 3 [json_name = "diceValueMin"];</code>
    * @return The diceValueMin.
    */
   int getDiceValueMin();
