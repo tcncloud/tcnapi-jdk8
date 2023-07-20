@@ -34,7 +34,7 @@ public final class ServiceProto {
       "missions.proto\032\"api/v1alpha1/org/prefere" +
       "nces.proto\032\035api/v1alpha1/org/trusts.prot" +
       "o\032\033api/v1alpha1/org/user.proto\032\034google/a" +
-      "pi/annotations.proto2\204\332\001\n\003Org\022\236\001\n\022Create" +
+      "pi/annotations.proto2\224\335\001\n\003Org\022\236\001\n\022Create" +
       "Organization\022+.api.v1alpha1.org.CreateOr" +
       "ganizationRequest\032,.api.v1alpha1.org.Cre" +
       "ateOrganizationResponse\"-\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002" +
@@ -515,6 +515,16 @@ public final class ServiceProto {
       "st\032/.api.v1alpha1.org.CreateDataDipTempl" +
       "ateResponse\"K\272\270\221\002\n\n\003\010\354\016\n\003\010\254\002\202\323\344\223\0026\"1/api" +
       "/v1alpha1/org/huntgroup/createdatadiptem" +
+      "plate:\001*\022\305\001\n\025UpdateDataDipTemplate\022..api" +
+      ".v1alpha1.org.UpdateDataDipTemplateReque" +
+      "st\032/.api.v1alpha1.org.UpdateDataDipTempl" +
+      "ateResponse\"K\272\270\221\002\n\n\003\010\354\016\n\003\010\254\002\202\323\344\223\0026\"1/api" +
+      "/v1alpha1/org/huntgroup/updatedatadiptem" +
+      "plate:\001*\022\305\001\n\025DeleteDataDipTemplate\022..api" +
+      ".v1alpha1.org.DeleteDataDipTemplateReque" +
+      "st\032/.api.v1alpha1.org.DeleteDataDipTempl" +
+      "ateResponse\"K\272\270\221\002\n\n\003\010\354\016\n\003\010\254\002\202\323\344\223\0026\"1/api" +
+      "/v1alpha1/org/huntgroup/deletedatadiptem" +
       "plate:\001*\022\324\001\n\032ListAgentResponseAutoRules\022" +
       "3.api.v1alpha1.org.ListAgentResponseAuto" +
       "RulesRequest\0324.api.v1alpha1.org.ListAgen" +
