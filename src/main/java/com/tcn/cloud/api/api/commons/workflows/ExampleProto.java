@@ -78,23 +78,23 @@ public final class ExampleProto {
       "odeComparator\022\037\n\013first_field\030\001 \001(\tR\nfirs" +
       "tField\022!\n\014second_field\030\002 \001(\tR\013secondFiel" +
       "d\"\'\n\013NodeChatbot\022\030\n\007message\030\001 \001(\tR\007messa" +
-      "ge\"\373\002\n\014DiceDocument\022\035\n\ndice_value\030\013 \001(\005R" +
-      "\tdiceValue\022$\n\016dice_value_max\030\014 \001(\005R\014dice" +
-      "ValueMax\022$\n\016dice_value_min\030\r \001(\005R\014diceVa" +
-      "lueMin\022!\n\014last_message\030\016 \001(\tR\013lastMessag" +
-      "e\022P\n\tvariables\030\017 \003(\01322.api.commons.workf" +
+      "ge\"\351\002\n\014DiceDocument\022\035\n\ndice_value\030\001 \001(\005R" +
+      "\tdiceValue\022$\n\016dice_value_max\030\002 \001(\005R\014dice" +
+      "ValueMax\022$\n\016dice_value_min\030\003 \001(\005R\014diceVa" +
+      "lueMin\022!\n\014last_message\030\004 \001(\tR\013lastMessag" +
+      "e\022P\n\tvariables\030\005 \003(\01322.api.commons.workf" +
       "lows.DiceDocument.VariablesEntryR\tvariab" +
       "les\022\024\n\005error\030d \001(\tR\005error\032<\n\016VariablesEn" +
       "try\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005va" +
-      "lue:\0028\001J\004\010\001\020\002J\004\010\002\020\003J\004\010\003\020\004R\tdiceValueR\014di" +
-      "ceValueMaxR\014diceValueMin\"g\n\017ChatbotDocum" +
-      "ent\022\035\n\nin_message\030\001 \001(\tR\tinMessage\022\037\n\013ou" +
-      "t_message\030\002 \001(\tR\noutMessage\022\024\n\005error\030d \001" +
-      "(\tR\005errorB\255\001\n\'com.tcn.cloud.api.api.comm" +
-      "ons.workflowsB\014ExampleProtoP\001\242\002\003ACW\252\002\025Ap" +
-      "i.Commons.Workflows\312\002\025Api\\Commons\\Workfl" +
-      "ows\342\002!Api\\Commons\\Workflows\\GPBMetadata\352" +
-      "\002\027Api::Commons::Workflowsb\006proto3"
+      "lue:\0028\001R\tdiceValueR\014diceValueMaxR\014diceVa" +
+      "lueMin\"g\n\017ChatbotDocument\022\035\n\nin_message\030" +
+      "\001 \001(\tR\tinMessage\022\037\n\013out_message\030\002 \001(\tR\no" +
+      "utMessage\022\024\n\005error\030d \001(\tR\005errorB\255\001\n\'com." +
+      "tcn.cloud.api.api.commons.workflowsB\014Exa" +
+      "mpleProtoP\001\242\002\003ACW\252\002\025Api.Commons.Workflow" +
+      "s\312\002\025Api\\Commons\\Workflows\342\002!Api\\Commons\\" +
+      "Workflows\\GPBMetadata\352\002\027Api::Commons::Wo" +
+      "rkflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -37,7 +37,7 @@ private static final long serialVersionUID = 0L;
   protected com.google.protobuf.MapField internalGetMapField(
       int number) {
     switch (number) {
-      case 15:
+      case 5:
         return internalGetVariables();
       default:
         throw new RuntimeException(
@@ -52,10 +52,10 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.workflows.DiceDocument.class, com.tcn.cloud.api.api.commons.workflows.DiceDocument.Builder.class);
   }
 
-  public static final int DICE_VALUE_FIELD_NUMBER = 11;
+  public static final int DICE_VALUE_FIELD_NUMBER = 1;
   private int diceValue_ = 0;
   /**
-   * <code>int32 dice_value = 11 [json_name = "diceValue"];</code>
+   * <code>int32 dice_value = 1 [json_name = "diceValue"];</code>
    * @return The diceValue.
    */
   @java.lang.Override
@@ -63,10 +63,10 @@ private static final long serialVersionUID = 0L;
     return diceValue_;
   }
 
-  public static final int DICE_VALUE_MAX_FIELD_NUMBER = 12;
+  public static final int DICE_VALUE_MAX_FIELD_NUMBER = 2;
   private int diceValueMax_ = 0;
   /**
-   * <code>int32 dice_value_max = 12 [json_name = "diceValueMax"];</code>
+   * <code>int32 dice_value_max = 2 [json_name = "diceValueMax"];</code>
    * @return The diceValueMax.
    */
   @java.lang.Override
@@ -74,10 +74,10 @@ private static final long serialVersionUID = 0L;
     return diceValueMax_;
   }
 
-  public static final int DICE_VALUE_MIN_FIELD_NUMBER = 13;
+  public static final int DICE_VALUE_MIN_FIELD_NUMBER = 3;
   private int diceValueMin_ = 0;
   /**
-   * <code>int32 dice_value_min = 13 [json_name = "diceValueMin"];</code>
+   * <code>int32 dice_value_min = 3 [json_name = "diceValueMin"];</code>
    * @return The diceValueMin.
    */
   @java.lang.Override
@@ -85,11 +85,11 @@ private static final long serialVersionUID = 0L;
     return diceValueMin_;
   }
 
-  public static final int LAST_MESSAGE_FIELD_NUMBER = 14;
+  public static final int LAST_MESSAGE_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
   private volatile java.lang.Object lastMessage_ = "";
   /**
-   * <code>string last_message = 14 [json_name = "lastMessage"];</code>
+   * <code>string last_message = 4 [json_name = "lastMessage"];</code>
    * @return The lastMessage.
    */
   @java.lang.Override
@@ -106,7 +106,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string last_message = 14 [json_name = "lastMessage"];</code>
+   * <code>string last_message = 4 [json_name = "lastMessage"];</code>
    * @return The bytes for lastMessage.
    */
   @java.lang.Override
@@ -124,7 +124,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int VARIABLES_FIELD_NUMBER = 15;
+  public static final int VARIABLES_FIELD_NUMBER = 5;
   private static final class VariablesDefaultEntryHolder {
     static final com.google.protobuf.MapEntry<
         java.lang.String, java.lang.String> defaultEntry =
@@ -151,7 +151,7 @@ private static final long serialVersionUID = 0L;
     return internalGetVariables().getMap().size();
   }
   /**
-   * <code>map&lt;string, string&gt; variables = 15 [json_name = "variables"];</code>
+   * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
    */
   @java.lang.Override
   public boolean containsVariables(
@@ -168,14 +168,14 @@ private static final long serialVersionUID = 0L;
     return getVariablesMap();
   }
   /**
-   * <code>map&lt;string, string&gt; variables = 15 [json_name = "variables"];</code>
+   * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
    */
   @java.lang.Override
   public java.util.Map<java.lang.String, java.lang.String> getVariablesMap() {
     return internalGetVariables().getMap();
   }
   /**
-   * <code>map&lt;string, string&gt; variables = 15 [json_name = "variables"];</code>
+   * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
    */
   @java.lang.Override
   public /* nullable */
@@ -189,7 +189,7 @@ java.lang.String defaultValue) {
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /**
-   * <code>map&lt;string, string&gt; variables = 15 [json_name = "variables"];</code>
+   * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
    */
   @java.lang.Override
   public java.lang.String getVariablesOrThrow(
@@ -257,23 +257,23 @@ java.lang.String defaultValue) {
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (diceValue_ != 0) {
-      output.writeInt32(11, diceValue_);
+      output.writeInt32(1, diceValue_);
     }
     if (diceValueMax_ != 0) {
-      output.writeInt32(12, diceValueMax_);
+      output.writeInt32(2, diceValueMax_);
     }
     if (diceValueMin_ != 0) {
-      output.writeInt32(13, diceValueMin_);
+      output.writeInt32(3, diceValueMin_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastMessage_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 14, lastMessage_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, lastMessage_);
     }
     com.google.protobuf.GeneratedMessageV3
       .serializeStringMapTo(
         output,
         internalGetVariables(),
         VariablesDefaultEntryHolder.defaultEntry,
-        15);
+        5);
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 100, error_);
     }
@@ -288,18 +288,18 @@ java.lang.String defaultValue) {
     size = 0;
     if (diceValue_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(11, diceValue_);
+        .computeInt32Size(1, diceValue_);
     }
     if (diceValueMax_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(12, diceValueMax_);
+        .computeInt32Size(2, diceValueMax_);
     }
     if (diceValueMin_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(13, diceValueMin_);
+        .computeInt32Size(3, diceValueMin_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastMessage_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, lastMessage_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, lastMessage_);
     }
     for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
          : internalGetVariables().getMap().entrySet()) {
@@ -309,7 +309,7 @@ java.lang.String defaultValue) {
           .setValue(entry.getValue())
           .build();
       size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, variables__);
+          .computeMessageSize(5, variables__);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(100, error_);
@@ -479,7 +479,7 @@ java.lang.String defaultValue) {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 15:
+        case 5:
           return internalGetVariables();
         default:
           throw new RuntimeException(
@@ -490,7 +490,7 @@ java.lang.String defaultValue) {
     protected com.google.protobuf.MapField internalGetMutableMapField(
         int number) {
       switch (number) {
-        case 15:
+        case 5:
           return internalGetMutableVariables();
         default:
           throw new RuntimeException(
@@ -671,27 +671,27 @@ java.lang.String defaultValue) {
             case 0:
               done = true;
               break;
-            case 88: {
+            case 8: {
               diceValue_ = input.readInt32();
               bitField0_ |= 0x00000001;
               break;
-            } // case 88
-            case 96: {
+            } // case 8
+            case 16: {
               diceValueMax_ = input.readInt32();
               bitField0_ |= 0x00000002;
               break;
-            } // case 96
-            case 104: {
+            } // case 16
+            case 24: {
               diceValueMin_ = input.readInt32();
               bitField0_ |= 0x00000004;
               break;
-            } // case 104
-            case 114: {
+            } // case 24
+            case 34: {
               lastMessage_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000008;
               break;
-            } // case 114
-            case 122: {
+            } // case 34
+            case 42: {
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               variables__ = input.readMessage(
                   VariablesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
@@ -699,7 +699,7 @@ java.lang.String defaultValue) {
                   variables__.getKey(), variables__.getValue());
               bitField0_ |= 0x00000010;
               break;
-            } // case 122
+            } // case 42
             case 802: {
               error_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000020;
@@ -724,7 +724,7 @@ java.lang.String defaultValue) {
 
     private int diceValue_ ;
     /**
-     * <code>int32 dice_value = 11 [json_name = "diceValue"];</code>
+     * <code>int32 dice_value = 1 [json_name = "diceValue"];</code>
      * @return The diceValue.
      */
     @java.lang.Override
@@ -732,7 +732,7 @@ java.lang.String defaultValue) {
       return diceValue_;
     }
     /**
-     * <code>int32 dice_value = 11 [json_name = "diceValue"];</code>
+     * <code>int32 dice_value = 1 [json_name = "diceValue"];</code>
      * @param value The diceValue to set.
      * @return This builder for chaining.
      */
@@ -744,7 +744,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>int32 dice_value = 11 [json_name = "diceValue"];</code>
+     * <code>int32 dice_value = 1 [json_name = "diceValue"];</code>
      * @return This builder for chaining.
      */
     public Builder clearDiceValue() {
@@ -756,7 +756,7 @@ java.lang.String defaultValue) {
 
     private int diceValueMax_ ;
     /**
-     * <code>int32 dice_value_max = 12 [json_name = "diceValueMax"];</code>
+     * <code>int32 dice_value_max = 2 [json_name = "diceValueMax"];</code>
      * @return The diceValueMax.
      */
     @java.lang.Override
@@ -764,7 +764,7 @@ java.lang.String defaultValue) {
       return diceValueMax_;
     }
     /**
-     * <code>int32 dice_value_max = 12 [json_name = "diceValueMax"];</code>
+     * <code>int32 dice_value_max = 2 [json_name = "diceValueMax"];</code>
      * @param value The diceValueMax to set.
      * @return This builder for chaining.
      */
@@ -776,7 +776,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>int32 dice_value_max = 12 [json_name = "diceValueMax"];</code>
+     * <code>int32 dice_value_max = 2 [json_name = "diceValueMax"];</code>
      * @return This builder for chaining.
      */
     public Builder clearDiceValueMax() {
@@ -788,7 +788,7 @@ java.lang.String defaultValue) {
 
     private int diceValueMin_ ;
     /**
-     * <code>int32 dice_value_min = 13 [json_name = "diceValueMin"];</code>
+     * <code>int32 dice_value_min = 3 [json_name = "diceValueMin"];</code>
      * @return The diceValueMin.
      */
     @java.lang.Override
@@ -796,7 +796,7 @@ java.lang.String defaultValue) {
       return diceValueMin_;
     }
     /**
-     * <code>int32 dice_value_min = 13 [json_name = "diceValueMin"];</code>
+     * <code>int32 dice_value_min = 3 [json_name = "diceValueMin"];</code>
      * @param value The diceValueMin to set.
      * @return This builder for chaining.
      */
@@ -808,7 +808,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>int32 dice_value_min = 13 [json_name = "diceValueMin"];</code>
+     * <code>int32 dice_value_min = 3 [json_name = "diceValueMin"];</code>
      * @return This builder for chaining.
      */
     public Builder clearDiceValueMin() {
@@ -820,7 +820,7 @@ java.lang.String defaultValue) {
 
     private java.lang.Object lastMessage_ = "";
     /**
-     * <code>string last_message = 14 [json_name = "lastMessage"];</code>
+     * <code>string last_message = 4 [json_name = "lastMessage"];</code>
      * @return The lastMessage.
      */
     public java.lang.String getLastMessage() {
@@ -836,7 +836,7 @@ java.lang.String defaultValue) {
       }
     }
     /**
-     * <code>string last_message = 14 [json_name = "lastMessage"];</code>
+     * <code>string last_message = 4 [json_name = "lastMessage"];</code>
      * @return The bytes for lastMessage.
      */
     public com.google.protobuf.ByteString
@@ -853,7 +853,7 @@ java.lang.String defaultValue) {
       }
     }
     /**
-     * <code>string last_message = 14 [json_name = "lastMessage"];</code>
+     * <code>string last_message = 4 [json_name = "lastMessage"];</code>
      * @param value The lastMessage to set.
      * @return This builder for chaining.
      */
@@ -866,7 +866,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>string last_message = 14 [json_name = "lastMessage"];</code>
+     * <code>string last_message = 4 [json_name = "lastMessage"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLastMessage() {
@@ -876,7 +876,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>string last_message = 14 [json_name = "lastMessage"];</code>
+     * <code>string last_message = 4 [json_name = "lastMessage"];</code>
      * @param value The bytes for lastMessage to set.
      * @return This builder for chaining.
      */
@@ -917,7 +917,7 @@ java.lang.String defaultValue) {
       return internalGetVariables().getMap().size();
     }
     /**
-     * <code>map&lt;string, string&gt; variables = 15 [json_name = "variables"];</code>
+     * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
      */
     @java.lang.Override
     public boolean containsVariables(
@@ -934,14 +934,14 @@ java.lang.String defaultValue) {
       return getVariablesMap();
     }
     /**
-     * <code>map&lt;string, string&gt; variables = 15 [json_name = "variables"];</code>
+     * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
      */
     @java.lang.Override
     public java.util.Map<java.lang.String, java.lang.String> getVariablesMap() {
       return internalGetVariables().getMap();
     }
     /**
-     * <code>map&lt;string, string&gt; variables = 15 [json_name = "variables"];</code>
+     * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
      */
     @java.lang.Override
     public /* nullable */
@@ -955,7 +955,7 @@ java.lang.String defaultValue) {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, string&gt; variables = 15 [json_name = "variables"];</code>
+     * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
      */
     @java.lang.Override
     public java.lang.String getVariablesOrThrow(
@@ -975,7 +975,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>map&lt;string, string&gt; variables = 15 [json_name = "variables"];</code>
+     * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
      */
     public Builder removeVariables(
         java.lang.String key) {
@@ -994,7 +994,7 @@ java.lang.String defaultValue) {
       return internalGetMutableVariables().getMutableMap();
     }
     /**
-     * <code>map&lt;string, string&gt; variables = 15 [json_name = "variables"];</code>
+     * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
      */
     public Builder putVariables(
         java.lang.String key,
@@ -1007,7 +1007,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>map&lt;string, string&gt; variables = 15 [json_name = "variables"];</code>
+     * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
      */
     public Builder putAllVariables(
         java.util.Map<java.lang.String, java.lang.String> values) {
