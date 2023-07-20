@@ -52,10 +52,10 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.workflows.DiceDocument.class, com.tcn.cloud.api.api.commons.workflows.DiceDocument.Builder.class);
   }
 
-  public static final int DICEVALUE_FIELD_NUMBER = 1;
+  public static final int DICE_VALUE_FIELD_NUMBER = 1;
   private int diceValue_ = 0;
   /**
-   * <code>int32 diceValue = 1 [json_name = "diceValue"];</code>
+   * <code>int32 dice_value = 1 [json_name = "diceValue"];</code>
    * @return The diceValue.
    */
   @java.lang.Override
@@ -63,10 +63,10 @@ private static final long serialVersionUID = 0L;
     return diceValue_;
   }
 
-  public static final int DICEVALUEMAX_FIELD_NUMBER = 2;
+  public static final int DICE_VALUE_MAX_FIELD_NUMBER = 2;
   private int diceValueMax_ = 0;
   /**
-   * <code>int32 diceValueMax = 2 [json_name = "diceValueMax"];</code>
+   * <code>int32 dice_value_max = 2 [json_name = "diceValueMax"];</code>
    * @return The diceValueMax.
    */
   @java.lang.Override
@@ -74,10 +74,10 @@ private static final long serialVersionUID = 0L;
     return diceValueMax_;
   }
 
-  public static final int DICEVALUEMIN_FIELD_NUMBER = 3;
+  public static final int DICE_VALUE_MIN_FIELD_NUMBER = 3;
   private int diceValueMin_ = 0;
   /**
-   * <code>int32 diceValueMin = 3 [json_name = "diceValueMin"];</code>
+   * <code>int32 dice_value_min = 3 [json_name = "diceValueMin"];</code>
    * @return The diceValueMin.
    */
   @java.lang.Override
@@ -85,11 +85,11 @@ private static final long serialVersionUID = 0L;
     return diceValueMin_;
   }
 
-  public static final int LAST_MESSAGE_FIELD_NUMBER = 4;
+  public static final int LAST_MESSAGE_FIELD_NUMBER = 14;
   @SuppressWarnings("serial")
   private volatile java.lang.Object lastMessage_ = "";
   /**
-   * <code>string last_message = 4 [json_name = "lastMessage"];</code>
+   * <code>string last_message = 14 [json_name = "lastMessage"];</code>
    * @return The lastMessage.
    */
   @java.lang.Override
@@ -106,7 +106,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string last_message = 4 [json_name = "lastMessage"];</code>
+   * <code>string last_message = 14 [json_name = "lastMessage"];</code>
    * @return The bytes for lastMessage.
    */
   @java.lang.Override
@@ -265,15 +265,15 @@ java.lang.String defaultValue) {
     if (diceValueMin_ != 0) {
       output.writeInt32(3, diceValueMin_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastMessage_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, lastMessage_);
-    }
     com.google.protobuf.GeneratedMessageV3
       .serializeStringMapTo(
         output,
         internalGetVariables(),
         VariablesDefaultEntryHolder.defaultEntry,
         5);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastMessage_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 14, lastMessage_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 100, error_);
     }
@@ -298,9 +298,6 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(3, diceValueMin_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastMessage_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, lastMessage_);
-    }
     for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
          : internalGetVariables().getMap().entrySet()) {
       com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
@@ -310,6 +307,9 @@ java.lang.String defaultValue) {
           .build();
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, variables__);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastMessage_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, lastMessage_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(error_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(100, error_);
@@ -352,11 +352,11 @@ java.lang.String defaultValue) {
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + DICEVALUE_FIELD_NUMBER;
+    hash = (37 * hash) + DICE_VALUE_FIELD_NUMBER;
     hash = (53 * hash) + getDiceValue();
-    hash = (37 * hash) + DICEVALUEMAX_FIELD_NUMBER;
+    hash = (37 * hash) + DICE_VALUE_MAX_FIELD_NUMBER;
     hash = (53 * hash) + getDiceValueMax();
-    hash = (37 * hash) + DICEVALUEMIN_FIELD_NUMBER;
+    hash = (37 * hash) + DICE_VALUE_MIN_FIELD_NUMBER;
     hash = (53 * hash) + getDiceValueMin();
     hash = (37 * hash) + LAST_MESSAGE_FIELD_NUMBER;
     hash = (53 * hash) + getLastMessage().hashCode();
@@ -686,11 +686,6 @@ java.lang.String defaultValue) {
               bitField0_ |= 0x00000004;
               break;
             } // case 24
-            case 34: {
-              lastMessage_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
             case 42: {
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               variables__ = input.readMessage(
@@ -700,6 +695,11 @@ java.lang.String defaultValue) {
               bitField0_ |= 0x00000010;
               break;
             } // case 42
+            case 114: {
+              lastMessage_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 114
             case 802: {
               error_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000020;
@@ -724,7 +724,7 @@ java.lang.String defaultValue) {
 
     private int diceValue_ ;
     /**
-     * <code>int32 diceValue = 1 [json_name = "diceValue"];</code>
+     * <code>int32 dice_value = 1 [json_name = "diceValue"];</code>
      * @return The diceValue.
      */
     @java.lang.Override
@@ -732,7 +732,7 @@ java.lang.String defaultValue) {
       return diceValue_;
     }
     /**
-     * <code>int32 diceValue = 1 [json_name = "diceValue"];</code>
+     * <code>int32 dice_value = 1 [json_name = "diceValue"];</code>
      * @param value The diceValue to set.
      * @return This builder for chaining.
      */
@@ -744,7 +744,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>int32 diceValue = 1 [json_name = "diceValue"];</code>
+     * <code>int32 dice_value = 1 [json_name = "diceValue"];</code>
      * @return This builder for chaining.
      */
     public Builder clearDiceValue() {
@@ -756,7 +756,7 @@ java.lang.String defaultValue) {
 
     private int diceValueMax_ ;
     /**
-     * <code>int32 diceValueMax = 2 [json_name = "diceValueMax"];</code>
+     * <code>int32 dice_value_max = 2 [json_name = "diceValueMax"];</code>
      * @return The diceValueMax.
      */
     @java.lang.Override
@@ -764,7 +764,7 @@ java.lang.String defaultValue) {
       return diceValueMax_;
     }
     /**
-     * <code>int32 diceValueMax = 2 [json_name = "diceValueMax"];</code>
+     * <code>int32 dice_value_max = 2 [json_name = "diceValueMax"];</code>
      * @param value The diceValueMax to set.
      * @return This builder for chaining.
      */
@@ -776,7 +776,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>int32 diceValueMax = 2 [json_name = "diceValueMax"];</code>
+     * <code>int32 dice_value_max = 2 [json_name = "diceValueMax"];</code>
      * @return This builder for chaining.
      */
     public Builder clearDiceValueMax() {
@@ -788,7 +788,7 @@ java.lang.String defaultValue) {
 
     private int diceValueMin_ ;
     /**
-     * <code>int32 diceValueMin = 3 [json_name = "diceValueMin"];</code>
+     * <code>int32 dice_value_min = 3 [json_name = "diceValueMin"];</code>
      * @return The diceValueMin.
      */
     @java.lang.Override
@@ -796,7 +796,7 @@ java.lang.String defaultValue) {
       return diceValueMin_;
     }
     /**
-     * <code>int32 diceValueMin = 3 [json_name = "diceValueMin"];</code>
+     * <code>int32 dice_value_min = 3 [json_name = "diceValueMin"];</code>
      * @param value The diceValueMin to set.
      * @return This builder for chaining.
      */
@@ -808,7 +808,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>int32 diceValueMin = 3 [json_name = "diceValueMin"];</code>
+     * <code>int32 dice_value_min = 3 [json_name = "diceValueMin"];</code>
      * @return This builder for chaining.
      */
     public Builder clearDiceValueMin() {
@@ -820,7 +820,7 @@ java.lang.String defaultValue) {
 
     private java.lang.Object lastMessage_ = "";
     /**
-     * <code>string last_message = 4 [json_name = "lastMessage"];</code>
+     * <code>string last_message = 14 [json_name = "lastMessage"];</code>
      * @return The lastMessage.
      */
     public java.lang.String getLastMessage() {
@@ -836,7 +836,7 @@ java.lang.String defaultValue) {
       }
     }
     /**
-     * <code>string last_message = 4 [json_name = "lastMessage"];</code>
+     * <code>string last_message = 14 [json_name = "lastMessage"];</code>
      * @return The bytes for lastMessage.
      */
     public com.google.protobuf.ByteString
@@ -853,7 +853,7 @@ java.lang.String defaultValue) {
       }
     }
     /**
-     * <code>string last_message = 4 [json_name = "lastMessage"];</code>
+     * <code>string last_message = 14 [json_name = "lastMessage"];</code>
      * @param value The lastMessage to set.
      * @return This builder for chaining.
      */
@@ -866,7 +866,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>string last_message = 4 [json_name = "lastMessage"];</code>
+     * <code>string last_message = 14 [json_name = "lastMessage"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLastMessage() {
@@ -876,7 +876,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>string last_message = 4 [json_name = "lastMessage"];</code>
+     * <code>string last_message = 14 [json_name = "lastMessage"];</code>
      * @param value The bytes for lastMessage to set.
      * @return This builder for chaining.
      */
