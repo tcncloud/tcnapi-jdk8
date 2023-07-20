@@ -21,7 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private GetInvoiceReq() {
     orgId_ = "";
-    format_ = 0;
+    invoiceFormat_ = 0;
   }
 
   @java.lang.Override
@@ -138,32 +138,32 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int FORMAT_FIELD_NUMBER = 3;
-  private int format_ = 0;
+  public static final int INVOICE_FORMAT_FIELD_NUMBER = 4;
+  private int invoiceFormat_ = 0;
   /**
    * <pre>
-   * Optional. the invoice for the organization. If not specified,
+   * Optional. the format the invoice is returned using. If not specified,
    * will use the proto format as the default
    * </pre>
    *
-   * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
-   * @return The enum numeric value on the wire for format.
+   * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+   * @return The enum numeric value on the wire for invoiceFormat.
    */
-  @java.lang.Override public int getFormatValue() {
-    return format_;
+  @java.lang.Override public int getInvoiceFormatValue() {
+    return invoiceFormat_;
   }
   /**
    * <pre>
-   * Optional. the invoice for the organization. If not specified,
+   * Optional. the format the invoice is returned using. If not specified,
    * will use the proto format as the default
    * </pre>
    *
-   * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
-   * @return The format.
+   * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+   * @return The invoiceFormat.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat getFormat() {
-    com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat result = com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat.forNumber(format_);
-    return result == null ? com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.billing.InvoiceFormat getInvoiceFormat() {
+    com.tcn.cloud.api.api.commons.billing.InvoiceFormat result = com.tcn.cloud.api.api.commons.billing.InvoiceFormat.forNumber(invoiceFormat_);
+    return result == null ? com.tcn.cloud.api.api.commons.billing.InvoiceFormat.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -186,8 +186,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orgId_);
     }
-    if (format_ != com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat.INVOICE_FORMAT_UNSPECIFIED.getNumber()) {
-      output.writeEnum(3, format_);
+    if (invoiceFormat_ != com.tcn.cloud.api.api.commons.billing.InvoiceFormat.INVOICE_FORMAT_UNSPECIFIED.getNumber()) {
+      output.writeEnum(4, invoiceFormat_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -205,9 +205,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orgId_);
     }
-    if (format_ != com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat.INVOICE_FORMAT_UNSPECIFIED.getNumber()) {
+    if (invoiceFormat_ != com.tcn.cloud.api.api.commons.billing.InvoiceFormat.INVOICE_FORMAT_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(3, format_);
+        .computeEnumSize(4, invoiceFormat_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -231,7 +231,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getOrgId()
         .equals(other.getOrgId())) return false;
-    if (format_ != other.format_) return false;
+    if (invoiceFormat_ != other.invoiceFormat_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -249,8 +249,8 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
     hash = (53 * hash) + getOrgId().hashCode();
-    hash = (37 * hash) + FORMAT_FIELD_NUMBER;
-    hash = (53 * hash) + format_;
+    hash = (37 * hash) + INVOICE_FORMAT_FIELD_NUMBER;
+    hash = (53 * hash) + invoiceFormat_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -392,7 +392,7 @@ private static final long serialVersionUID = 0L;
         invoiceDateBuilder_ = null;
       }
       orgId_ = "";
-      format_ = 0;
+      invoiceFormat_ = 0;
       return this;
     }
 
@@ -435,7 +435,7 @@ private static final long serialVersionUID = 0L;
         result.orgId_ = orgId_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.format_ = format_;
+        result.invoiceFormat_ = invoiceFormat_;
       }
     }
 
@@ -491,8 +491,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (other.format_ != 0) {
-        setFormatValue(other.getFormatValue());
+      if (other.invoiceFormat_ != 0) {
+        setInvoiceFormatValue(other.getInvoiceFormatValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -532,11 +532,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 24: {
-              format_ = input.readEnum();
+            case 32: {
+              invoiceFormat_ = input.readEnum();
               bitField0_ |= 0x00000004;
               break;
-            } // case 24
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -828,80 +828,80 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int format_ = 0;
+    private int invoiceFormat_ = 0;
     /**
      * <pre>
-     * Optional. the invoice for the organization. If not specified,
+     * Optional. the format the invoice is returned using. If not specified,
      * will use the proto format as the default
      * </pre>
      *
-     * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
-     * @return The enum numeric value on the wire for format.
+     * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+     * @return The enum numeric value on the wire for invoiceFormat.
      */
-    @java.lang.Override public int getFormatValue() {
-      return format_;
+    @java.lang.Override public int getInvoiceFormatValue() {
+      return invoiceFormat_;
     }
     /**
      * <pre>
-     * Optional. the invoice for the organization. If not specified,
+     * Optional. the format the invoice is returned using. If not specified,
      * will use the proto format as the default
      * </pre>
      *
-     * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
-     * @param value The enum numeric value on the wire for format to set.
+     * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+     * @param value The enum numeric value on the wire for invoiceFormat to set.
      * @return This builder for chaining.
      */
-    public Builder setFormatValue(int value) {
-      format_ = value;
+    public Builder setInvoiceFormatValue(int value) {
+      invoiceFormat_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Optional. the invoice for the organization. If not specified,
+     * Optional. the format the invoice is returned using. If not specified,
      * will use the proto format as the default
      * </pre>
      *
-     * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
-     * @return The format.
+     * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+     * @return The invoiceFormat.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat getFormat() {
-      com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat result = com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat.forNumber(format_);
-      return result == null ? com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.billing.InvoiceFormat getInvoiceFormat() {
+      com.tcn.cloud.api.api.commons.billing.InvoiceFormat result = com.tcn.cloud.api.api.commons.billing.InvoiceFormat.forNumber(invoiceFormat_);
+      return result == null ? com.tcn.cloud.api.api.commons.billing.InvoiceFormat.UNRECOGNIZED : result;
     }
     /**
      * <pre>
-     * Optional. the invoice for the organization. If not specified,
+     * Optional. the format the invoice is returned using. If not specified,
      * will use the proto format as the default
      * </pre>
      *
-     * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
-     * @param value The format to set.
+     * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+     * @param value The invoiceFormat to set.
      * @return This builder for chaining.
      */
-    public Builder setFormat(com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat value) {
+    public Builder setInvoiceFormat(com.tcn.cloud.api.api.commons.billing.InvoiceFormat value) {
       if (value == null) {
         throw new NullPointerException();
       }
       bitField0_ |= 0x00000004;
-      format_ = value.getNumber();
+      invoiceFormat_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Optional. the invoice for the organization. If not specified,
+     * Optional. the format the invoice is returned using. If not specified,
      * will use the proto format as the default
      * </pre>
      *
-     * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
+     * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearFormat() {
+    public Builder clearInvoiceFormat() {
       bitField0_ = (bitField0_ & ~0x00000004);
-      format_ = 0;
+      invoiceFormat_ = 0;
       onChanged();
       return this;
     }

@@ -66,5 +66,17 @@ public interface GetInvoiceResOrBuilder extends
   com.google.protobuf.ByteString
       getCsvUrlBytes();
 
+  /**
+   * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
+   * @return The billingCycle.
+   */
+  java.lang.String getBillingCycle();
+  /**
+   * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
+   * @return The bytes for billingCycle.
+   */
+  com.google.protobuf.ByteString
+      getBillingCycleBytes();
+
   com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes.FormatCase getFormatCase();
 }

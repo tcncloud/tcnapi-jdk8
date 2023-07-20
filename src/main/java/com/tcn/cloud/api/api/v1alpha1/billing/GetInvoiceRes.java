@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private GetInvoiceRes() {
+    billingCycle_ = "";
   }
 
   @java.lang.Override
@@ -205,6 +206,45 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int BILLING_CYCLE_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object billingCycle_ = "";
+  /**
+   * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
+   * @return The billingCycle.
+   */
+  @java.lang.Override
+  public java.lang.String getBillingCycle() {
+    java.lang.Object ref = billingCycle_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      billingCycle_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
+   * @return The bytes for billingCycle.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getBillingCycleBytes() {
+    java.lang.Object ref = billingCycle_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      billingCycle_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -228,6 +268,9 @@ private static final long serialVersionUID = 0L;
     if (formatCase_ == 3) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, format_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingCycle_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, billingCycle_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -247,6 +290,9 @@ private static final long serialVersionUID = 0L;
     }
     if (formatCase_ == 3) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, format_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingCycle_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, billingCycle_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -268,6 +314,8 @@ private static final long serialVersionUID = 0L;
       if (!getInvoice()
           .equals(other.getInvoice())) return false;
     }
+    if (!getBillingCycle()
+        .equals(other.getBillingCycle())) return false;
     if (!getFormatCase().equals(other.getFormatCase())) return false;
     switch (formatCase_) {
       case 2:
@@ -296,6 +344,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + INVOICE_FIELD_NUMBER;
       hash = (53 * hash) + getInvoice().hashCode();
     }
+    hash = (37 * hash) + BILLING_CYCLE_FIELD_NUMBER;
+    hash = (53 * hash) + getBillingCycle().hashCode();
     switch (formatCase_) {
       case 2:
         hash = (37 * hash) + PROTO_FIELD_NUMBER;
@@ -451,6 +501,7 @@ private static final long serialVersionUID = 0L;
       if (protoBuilder_ != null) {
         protoBuilder_.clear();
       }
+      billingCycle_ = "";
       formatCase_ = 0;
       format_ = null;
       return this;
@@ -491,6 +542,9 @@ private static final long serialVersionUID = 0L;
         result.invoice_ = invoiceBuilder_ == null
             ? invoice_
             : invoiceBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.billingCycle_ = billingCycle_;
       }
     }
 
@@ -549,6 +603,11 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes.getDefaultInstance()) return this;
       if (other.hasInvoice()) {
         mergeInvoice(other.getInvoice());
+      }
+      if (!other.getBillingCycle().isEmpty()) {
+        billingCycle_ = other.billingCycle_;
+        bitField0_ |= 0x00000008;
+        onChanged();
       }
       switch (other.getFormatCase()) {
         case PROTO: {
@@ -611,6 +670,11 @@ private static final long serialVersionUID = 0L;
               format_ = s;
               break;
             } // case 26
+            case 34: {
+              billingCycle_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1029,6 +1093,78 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       formatCase_ = 3;
       format_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object billingCycle_ = "";
+    /**
+     * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
+     * @return The billingCycle.
+     */
+    public java.lang.String getBillingCycle() {
+      java.lang.Object ref = billingCycle_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        billingCycle_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
+     * @return The bytes for billingCycle.
+     */
+    public com.google.protobuf.ByteString
+        getBillingCycleBytes() {
+      java.lang.Object ref = billingCycle_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        billingCycle_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
+     * @param value The billingCycle to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBillingCycle(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      billingCycle_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBillingCycle() {
+      billingCycle_ = getDefaultInstance().getBillingCycle();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string billing_cycle = 4 [json_name = "billingCycle"];</code>
+     * @param value The bytes for billingCycle to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBillingCycleBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      billingCycle_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

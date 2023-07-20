@@ -65,22 +65,22 @@ public interface GetInvoiceReqOrBuilder extends
 
   /**
    * <pre>
-   * Optional. the invoice for the organization. If not specified,
+   * Optional. the format the invoice is returned using. If not specified,
    * will use the proto format as the default
    * </pre>
    *
-   * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
-   * @return The enum numeric value on the wire for format.
+   * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+   * @return The enum numeric value on the wire for invoiceFormat.
    */
-  int getFormatValue();
+  int getInvoiceFormatValue();
   /**
    * <pre>
-   * Optional. the invoice for the organization. If not specified,
+   * Optional. the format the invoice is returned using. If not specified,
    * will use the proto format as the default
    * </pre>
    *
-   * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
-   * @return The format.
+   * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+   * @return The invoiceFormat.
    */
-  com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat getFormat();
+  com.tcn.cloud.api.api.commons.billing.InvoiceFormat getInvoiceFormat();
 }
