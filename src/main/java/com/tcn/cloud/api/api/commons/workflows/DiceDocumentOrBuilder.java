@@ -8,19 +8,19 @@ public interface DiceDocumentOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int32 dice_value = 1 [json_name = "diceValue"];</code>
+   * <code>int32 dice_value = 11 [json_name = "diceValue"];</code>
    * @return The diceValue.
    */
   int getDiceValue();
 
   /**
-   * <code>int32 dice_value_max = 2 [json_name = "diceValueMax"];</code>
+   * <code>int32 dice_value_max = 12 [json_name = "diceValueMax"];</code>
    * @return The diceValueMax.
    */
   int getDiceValueMax();
 
   /**
-   * <code>int32 dice_value_min = 3 [json_name = "diceValueMin"];</code>
+   * <code>int32 dice_value_min = 13 [json_name = "diceValueMin"];</code>
    * @return The diceValueMin.
    */
   int getDiceValueMin();
@@ -38,11 +38,11 @@ public interface DiceDocumentOrBuilder extends
       getLastMessageBytes();
 
   /**
-   * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
+   * <code>map&lt;string, string&gt; variables = 15 [json_name = "variables"];</code>
    */
   int getVariablesCount();
   /**
-   * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
+   * <code>map&lt;string, string&gt; variables = 15 [json_name = "variables"];</code>
    */
   boolean containsVariables(
       java.lang.String key);
@@ -53,12 +53,12 @@ public interface DiceDocumentOrBuilder extends
   java.util.Map<java.lang.String, java.lang.String>
   getVariables();
   /**
-   * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
+   * <code>map&lt;string, string&gt; variables = 15 [json_name = "variables"];</code>
    */
   java.util.Map<java.lang.String, java.lang.String>
   getVariablesMap();
   /**
-   * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
+   * <code>map&lt;string, string&gt; variables = 15 [json_name = "variables"];</code>
    */
   /* nullable */
 java.lang.String getVariablesOrDefault(
@@ -66,7 +66,7 @@ java.lang.String getVariablesOrDefault(
       /* nullable */
 java.lang.String defaultValue);
   /**
-   * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
+   * <code>map&lt;string, string&gt; variables = 15 [json_name = "variables"];</code>
    */
   java.lang.String getVariablesOrThrow(
       java.lang.String key);
