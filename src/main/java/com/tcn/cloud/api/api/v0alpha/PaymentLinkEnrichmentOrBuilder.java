@@ -10,7 +10,7 @@ public interface PaymentLinkEnrichmentOrBuilder extends
   /**
    * <code>repeated string fields = 1 [json_name = "fields", deprecated = true];</code>
    * @deprecated api.v0alpha.PaymentLinkEnrichment.fields is deprecated.
-   *     See api/v0alpha/lms.proto;l=1055
+   *     See api/v0alpha/lms.proto;l=1069
    * @return A list containing the fields.
    */
   @java.lang.Deprecated java.util.List<java.lang.String>
@@ -18,14 +18,14 @@ public interface PaymentLinkEnrichmentOrBuilder extends
   /**
    * <code>repeated string fields = 1 [json_name = "fields", deprecated = true];</code>
    * @deprecated api.v0alpha.PaymentLinkEnrichment.fields is deprecated.
-   *     See api/v0alpha/lms.proto;l=1055
+   *     See api/v0alpha/lms.proto;l=1069
    * @return The count of fields.
    */
   @java.lang.Deprecated int getFieldsCount();
   /**
    * <code>repeated string fields = 1 [json_name = "fields", deprecated = true];</code>
    * @deprecated api.v0alpha.PaymentLinkEnrichment.fields is deprecated.
-   *     See api/v0alpha/lms.proto;l=1055
+   *     See api/v0alpha/lms.proto;l=1069
    * @param index The index of the element to return.
    * @return The fields at the given index.
    */
@@ -33,7 +33,7 @@ public interface PaymentLinkEnrichmentOrBuilder extends
   /**
    * <code>repeated string fields = 1 [json_name = "fields", deprecated = true];</code>
    * @deprecated api.v0alpha.PaymentLinkEnrichment.fields is deprecated.
-   *     See api/v0alpha/lms.proto;l=1055
+   *     See api/v0alpha/lms.proto;l=1069
    * @param index The index of the value to return.
    * @return The bytes of the fields at the given index.
    */
@@ -43,14 +43,14 @@ public interface PaymentLinkEnrichmentOrBuilder extends
   /**
    * <code>string payment_link_config_id = 2 [json_name = "paymentLinkConfigId", deprecated = true];</code>
    * @deprecated api.v0alpha.PaymentLinkEnrichment.payment_link_config_id is deprecated.
-   *     See api/v0alpha/lms.proto;l=1056
+   *     See api/v0alpha/lms.proto;l=1070
    * @return The paymentLinkConfigId.
    */
   @java.lang.Deprecated java.lang.String getPaymentLinkConfigId();
   /**
    * <code>string payment_link_config_id = 2 [json_name = "paymentLinkConfigId", deprecated = true];</code>
    * @deprecated api.v0alpha.PaymentLinkEnrichment.payment_link_config_id is deprecated.
-   *     See api/v0alpha/lms.proto;l=1056
+   *     See api/v0alpha/lms.proto;l=1070
    * @return The bytes for paymentLinkConfigId.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -64,7 +64,7 @@ public interface PaymentLinkEnrichmentOrBuilder extends
    *
    * <code>bool discard_on_missing_fields = 3 [json_name = "discardOnMissingFields", deprecated = true];</code>
    * @deprecated api.v0alpha.PaymentLinkEnrichment.discard_on_missing_fields is deprecated.
-   *     See api/v0alpha/lms.proto;l=1059
+   *     See api/v0alpha/lms.proto;l=1073
    * @return The discardOnMissingFields.
    */
   @java.lang.Deprecated boolean getDiscardOnMissingFields();

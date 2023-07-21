@@ -604,6 +604,37 @@ public final class LMSGrpc {
     return getListElementsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ElementPK,
+      com.tcn.cloud.api.api.v0alpha.Element> getGetElementMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetElement",
+      requestType = com.tcn.cloud.api.api.v0alpha.ElementPK.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.Element.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ElementPK,
+      com.tcn.cloud.api.api.v0alpha.Element> getGetElementMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ElementPK, com.tcn.cloud.api.api.v0alpha.Element> getGetElementMethod;
+    if ((getGetElementMethod = LMSGrpc.getGetElementMethod) == null) {
+      synchronized (LMSGrpc.class) {
+        if ((getGetElementMethod = LMSGrpc.getGetElementMethod) == null) {
+          LMSGrpc.getGetElementMethod = getGetElementMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ElementPK, com.tcn.cloud.api.api.v0alpha.Element>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetElement"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ElementPK.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.Element.getDefaultInstance()))
+              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetElement"))
+              .build();
+        }
+      }
+    }
+    return getGetElementMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.Element,
       com.tcn.cloud.api.api.v0alpha.Element> getUpdateElementMethod;
 
@@ -1813,6 +1844,13 @@ public final class LMSGrpc {
 
     /**
      */
+    default void getElement(com.tcn.cloud.api.api.v0alpha.ElementPK request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Element> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetElementMethod(), responseObserver);
+    }
+
+    /**
+     */
     default void updateElement(com.tcn.cloud.api.api.v0alpha.Element request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Element> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateElementMethod(), responseObserver);
@@ -2274,6 +2312,14 @@ public final class LMSGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Element> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListElementsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getElement(com.tcn.cloud.api.api.v0alpha.ElementPK request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Element> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetElementMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -2748,6 +2794,13 @@ public final class LMSGrpc {
 
     /**
      */
+    public com.tcn.cloud.api.api.v0alpha.Element getElement(com.tcn.cloud.api.api.v0alpha.ElementPK request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetElementMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public com.tcn.cloud.api.api.v0alpha.Element updateElement(com.tcn.cloud.api.api.v0alpha.Element request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateElementMethod(), getCallOptions(), request);
@@ -3189,6 +3242,14 @@ public final class LMSGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Element> getElement(
+        com.tcn.cloud.api.api.v0alpha.ElementPK request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetElementMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Element> updateElement(
         com.tcn.cloud.api.api.v0alpha.Element request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -3488,39 +3549,40 @@ public final class LMSGrpc {
   private static final int METHODID_GET_HISTORY = 16;
   private static final int METHODID_CREATE_ELEMENT = 17;
   private static final int METHODID_LIST_ELEMENTS = 18;
-  private static final int METHODID_UPDATE_ELEMENT = 19;
-  private static final int METHODID_DELETE_ELEMENT = 20;
-  private static final int METHODID_COPY_PIPELINE_UPSTREAM = 21;
-  private static final int METHODID_COPY_PIPELINE_DOWNSTREAM = 22;
-  private static final int METHODID_PROCESS_ELEMENT = 23;
-  private static final int METHODID_GET_AVAILABLE_FIELDS = 24;
-  private static final int METHODID_LIST_NEW_EVENTS = 25;
-  private static final int METHODID_VIEW_QUEUE = 26;
-  private static final int METHODID_AUTOCOMPLETE = 27;
-  private static final int METHODID_GET_COMPLIANCE_SCRUB_LISTS = 28;
-  private static final int METHODID_FIND_FIELD_USAGES = 29;
-  private static final int METHODID_FIND_INVALID_ELEMENTS = 30;
-  private static final int METHODID_CREATE_COLLECTION = 31;
-  private static final int METHODID_GET_COLLECTION = 32;
-  private static final int METHODID_UPDATE_COLLECTION = 33;
-  private static final int METHODID_DELETE_COLLECTION = 34;
-  private static final int METHODID_LIST_COLLECTIONS = 35;
-  private static final int METHODID_RESET_COLLECTION = 36;
-  private static final int METHODID_ADD_COLLECTION_ENTRY = 37;
-  private static final int METHODID_DELETE_COLLECTION_ENTRY = 38;
-  private static final int METHODID_UPDATE_COLLECTION_ENTRY = 39;
-  private static final int METHODID_STREAM_COLLECTION = 40;
-  private static final int METHODID_SEARCH_COLLECTIONS_PAGINATED = 41;
-  private static final int METHODID_GET_COLLECTION_ENTRIES = 42;
-  private static final int METHODID_CREATE_CJS_SEARCH_DEFINITION = 43;
-  private static final int METHODID_GET_CJS_SEARCH_DEFINITION = 44;
-  private static final int METHODID_UPDATE_CJS_SEARCH_DEFINITION = 45;
-  private static final int METHODID_DELETE_CJS_SEARCH_DEFINITION = 46;
-  private static final int METHODID_LIST_CJS_SEARCH_DEFINITIONS = 47;
-  private static final int METHODID_EXECUTE_CJS_SEARCH_DEFINITION = 48;
-  private static final int METHODID_GET_CJS_SECURE_SEARCH_CRITERIA = 49;
-  private static final int METHODID_CREATE_CJS_SECURE_SEARCH_CRITERIA = 50;
-  private static final int METHODID_UPDATE_CJS_SECURE_SEARCH_CRITERIA = 51;
+  private static final int METHODID_GET_ELEMENT = 19;
+  private static final int METHODID_UPDATE_ELEMENT = 20;
+  private static final int METHODID_DELETE_ELEMENT = 21;
+  private static final int METHODID_COPY_PIPELINE_UPSTREAM = 22;
+  private static final int METHODID_COPY_PIPELINE_DOWNSTREAM = 23;
+  private static final int METHODID_PROCESS_ELEMENT = 24;
+  private static final int METHODID_GET_AVAILABLE_FIELDS = 25;
+  private static final int METHODID_LIST_NEW_EVENTS = 26;
+  private static final int METHODID_VIEW_QUEUE = 27;
+  private static final int METHODID_AUTOCOMPLETE = 28;
+  private static final int METHODID_GET_COMPLIANCE_SCRUB_LISTS = 29;
+  private static final int METHODID_FIND_FIELD_USAGES = 30;
+  private static final int METHODID_FIND_INVALID_ELEMENTS = 31;
+  private static final int METHODID_CREATE_COLLECTION = 32;
+  private static final int METHODID_GET_COLLECTION = 33;
+  private static final int METHODID_UPDATE_COLLECTION = 34;
+  private static final int METHODID_DELETE_COLLECTION = 35;
+  private static final int METHODID_LIST_COLLECTIONS = 36;
+  private static final int METHODID_RESET_COLLECTION = 37;
+  private static final int METHODID_ADD_COLLECTION_ENTRY = 38;
+  private static final int METHODID_DELETE_COLLECTION_ENTRY = 39;
+  private static final int METHODID_UPDATE_COLLECTION_ENTRY = 40;
+  private static final int METHODID_STREAM_COLLECTION = 41;
+  private static final int METHODID_SEARCH_COLLECTIONS_PAGINATED = 42;
+  private static final int METHODID_GET_COLLECTION_ENTRIES = 43;
+  private static final int METHODID_CREATE_CJS_SEARCH_DEFINITION = 44;
+  private static final int METHODID_GET_CJS_SEARCH_DEFINITION = 45;
+  private static final int METHODID_UPDATE_CJS_SEARCH_DEFINITION = 46;
+  private static final int METHODID_DELETE_CJS_SEARCH_DEFINITION = 47;
+  private static final int METHODID_LIST_CJS_SEARCH_DEFINITIONS = 48;
+  private static final int METHODID_EXECUTE_CJS_SEARCH_DEFINITION = 49;
+  private static final int METHODID_GET_CJS_SECURE_SEARCH_CRITERIA = 50;
+  private static final int METHODID_CREATE_CJS_SECURE_SEARCH_CRITERIA = 51;
+  private static final int METHODID_UPDATE_CJS_SECURE_SEARCH_CRITERIA = 52;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3613,6 +3675,10 @@ public final class LMSGrpc {
           break;
         case METHODID_LIST_ELEMENTS:
           serviceImpl.listElements((com.tcn.cloud.api.api.v0alpha.ListElementsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Element>) responseObserver);
+          break;
+        case METHODID_GET_ELEMENT:
+          serviceImpl.getElement((com.tcn.cloud.api.api.v0alpha.ElementPK) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Element>) responseObserver);
           break;
         case METHODID_UPDATE_ELEMENT:
@@ -3898,6 +3964,13 @@ public final class LMSGrpc {
               com.tcn.cloud.api.api.v0alpha.ListElementsReq,
               com.tcn.cloud.api.api.v0alpha.Element>(
                 service, METHODID_LIST_ELEMENTS)))
+        .addMethod(
+          getGetElementMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ElementPK,
+              com.tcn.cloud.api.api.v0alpha.Element>(
+                service, METHODID_GET_ELEMENT)))
         .addMethod(
           getUpdateElementMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -4196,6 +4269,7 @@ public final class LMSGrpc {
               .addMethod(getGetHistoryMethod())
               .addMethod(getCreateElementMethod())
               .addMethod(getListElementsMethod())
+              .addMethod(getGetElementMethod())
               .addMethod(getUpdateElementMethod())
               .addMethod(getDeleteElementMethod())
               .addMethod(getCopyPipelineUpstreamMethod())
