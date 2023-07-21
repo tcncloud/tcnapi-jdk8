@@ -131,7 +131,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.billing.Invoice proto = 1 [json_name = "proto", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.proto is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=92
+   *     See api/v1alpha1/billing/entities.proto;l=93
    * @return Whether the proto field is set.
    */
   @java.lang.Override
@@ -141,7 +141,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.billing.Invoice proto = 1 [json_name = "proto", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.proto is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=92
+   *     See api/v1alpha1/billing/entities.proto;l=93
    * @return The proto.
    */
   @java.lang.Override
@@ -166,7 +166,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string csv_url = 2 [json_name = "csvUrl", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.csv_url is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=93
+   *     See api/v1alpha1/billing/entities.proto;l=94
    * @return Whether the csvUrl field is set.
    */
   @java.lang.Deprecated public boolean hasCsvUrl() {
@@ -175,7 +175,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string csv_url = 2 [json_name = "csvUrl", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.csv_url is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=93
+   *     See api/v1alpha1/billing/entities.proto;l=94
    * @return The csvUrl.
    */
   @java.lang.Deprecated public java.lang.String getCsvUrl() {
@@ -198,7 +198,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string csv_url = 2 [json_name = "csvUrl", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.csv_url is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=93
+   *     See api/v1alpha1/billing/entities.proto;l=94
    * @return The bytes for csvUrl.
    */
   @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -873,7 +873,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.billing.Invoice proto = 1 [json_name = "proto", deprecated = true];</code>
      * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.proto is deprecated.
-     *     See api/v1alpha1/billing/entities.proto;l=92
+     *     See api/v1alpha1/billing/entities.proto;l=93
      * @return Whether the proto field is set.
      */
     @java.lang.Override
@@ -883,7 +883,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.billing.Invoice proto = 1 [json_name = "proto", deprecated = true];</code>
      * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.proto is deprecated.
-     *     See api/v1alpha1/billing/entities.proto;l=92
+     *     See api/v1alpha1/billing/entities.proto;l=93
      * @return The proto.
      */
     @java.lang.Override
@@ -1017,7 +1017,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string csv_url = 2 [json_name = "csvUrl", deprecated = true];</code>
      * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.csv_url is deprecated.
-     *     See api/v1alpha1/billing/entities.proto;l=93
+     *     See api/v1alpha1/billing/entities.proto;l=94
      * @return Whether the csvUrl field is set.
      */
     @java.lang.Override
@@ -1027,7 +1027,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string csv_url = 2 [json_name = "csvUrl", deprecated = true];</code>
      * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.csv_url is deprecated.
-     *     See api/v1alpha1/billing/entities.proto;l=93
+     *     See api/v1alpha1/billing/entities.proto;l=94
      * @return The csvUrl.
      */
     @java.lang.Override
@@ -1051,7 +1051,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string csv_url = 2 [json_name = "csvUrl", deprecated = true];</code>
      * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.csv_url is deprecated.
-     *     See api/v1alpha1/billing/entities.proto;l=93
+     *     See api/v1alpha1/billing/entities.proto;l=94
      * @return The bytes for csvUrl.
      */
     @java.lang.Override
@@ -1076,7 +1076,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string csv_url = 2 [json_name = "csvUrl", deprecated = true];</code>
      * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.csv_url is deprecated.
-     *     See api/v1alpha1/billing/entities.proto;l=93
+     *     See api/v1alpha1/billing/entities.proto;l=94
      * @param value The csvUrl to set.
      * @return This builder for chaining.
      */
@@ -1091,7 +1091,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string csv_url = 2 [json_name = "csvUrl", deprecated = true];</code>
      * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.csv_url is deprecated.
-     *     See api/v1alpha1/billing/entities.proto;l=93
+     *     See api/v1alpha1/billing/entities.proto;l=94
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearCsvUrl() {
@@ -1105,7 +1105,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>string csv_url = 2 [json_name = "csvUrl", deprecated = true];</code>
      * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceRes.csv_url is deprecated.
-     *     See api/v1alpha1/billing/entities.proto;l=93
+     *     See api/v1alpha1/billing/entities.proto;l=94
      * @param value The bytes for csvUrl to set.
      * @return This builder for chaining.
      */
