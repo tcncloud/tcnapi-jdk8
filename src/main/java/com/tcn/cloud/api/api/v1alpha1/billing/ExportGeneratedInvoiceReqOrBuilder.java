@@ -71,7 +71,7 @@ public interface ExportGeneratedInvoiceReqOrBuilder extends
    *
    * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceReq.format is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=78
+   *     See api/v1alpha1/billing/entities.proto;l=82
    * @return The enum numeric value on the wire for format.
    */
   @java.lang.Deprecated int getFormatValue();
@@ -83,7 +83,7 @@ public interface ExportGeneratedInvoiceReqOrBuilder extends
    *
    * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceReq.format is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=78
+   *     See api/v1alpha1/billing/entities.proto;l=82
    * @return The format.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat getFormat();
