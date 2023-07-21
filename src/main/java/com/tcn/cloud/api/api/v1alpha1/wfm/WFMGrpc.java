@@ -3242,6 +3242,37 @@ public final class WFMGrpc {
     return getUpdateShiftInstanceMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Res> getUpdateShiftInstanceV2Method;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateShiftInstanceV2",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Res.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Res> getUpdateShiftInstanceV2Method() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Res> getUpdateShiftInstanceV2Method;
+    if ((getUpdateShiftInstanceV2Method = WFMGrpc.getUpdateShiftInstanceV2Method) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getUpdateShiftInstanceV2Method = WFMGrpc.getUpdateShiftInstanceV2Method) == null) {
+          WFMGrpc.getUpdateShiftInstanceV2Method = getUpdateShiftInstanceV2Method =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Res>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateShiftInstanceV2"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Res.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateShiftInstanceV2"))
+              .build();
+        }
+      }
+    }
+    return getUpdateShiftInstanceV2Method;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsRes> getListShiftSegmentsByShiftInstanceSidsMethod;
 
@@ -5299,6 +5330,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a shift instance for the org sending the request with the provided parameters.
+     * This method is not implemented. Do not use.
      * Required permissions:
      * NONE
      * Errors:
@@ -5309,6 +5341,21 @@ public final class WFMGrpc {
     default void updateShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateShiftInstanceMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates a shift instance for the org sending the request with the provided parameters.
+     * Required permissions:
+     * NONE
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.Internal: error occurs when updating the shift instance.
+     * </pre>
+     */
+    default void updateShiftInstanceV2(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Res> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateShiftInstanceV2Method(), responseObserver);
     }
 
     /**
@@ -7370,6 +7417,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a shift instance for the org sending the request with the provided parameters.
+     * This method is not implemented. Do not use.
      * Required permissions:
      * NONE
      * Errors:
@@ -7381,6 +7429,22 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateShiftInstanceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates a shift instance for the org sending the request with the provided parameters.
+     * Required permissions:
+     * NONE
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.Internal: error occurs when updating the shift instance.
+     * </pre>
+     */
+    public void updateShiftInstanceV2(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Res> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateShiftInstanceV2Method(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -9336,6 +9400,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a shift instance for the org sending the request with the provided parameters.
+     * This method is not implemented. Do not use.
      * Required permissions:
      * NONE
      * Errors:
@@ -9346,6 +9411,21 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes updateShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateShiftInstanceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates a shift instance for the org sending the request with the provided parameters.
+     * Required permissions:
+     * NONE
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.Internal: error occurs when updating the shift instance.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Res updateShiftInstanceV2(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateShiftInstanceV2Method(), getCallOptions(), request);
     }
 
     /**
@@ -11297,6 +11377,7 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Updates a shift instance for the org sending the request with the provided parameters.
+     * This method is not implemented. Do not use.
      * Required permissions:
      * NONE
      * Errors:
@@ -11308,6 +11389,22 @@ public final class WFMGrpc {
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateShiftInstanceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates a shift instance for the org sending the request with the provided parameters.
+     * Required permissions:
+     * NONE
+     * Errors:
+     *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.Internal: error occurs when updating the shift instance.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Res> updateShiftInstanceV2(
+        com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateShiftInstanceV2Method(), getCallOptions()), request);
     }
 
     /**
@@ -11523,12 +11620,13 @@ public final class WFMGrpc {
   private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 101;
   private static final int METHODID_SWAP_SHIFT_INSTANCES = 102;
   private static final int METHODID_UPDATE_SHIFT_INSTANCE = 103;
-  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 104;
-  private static final int METHODID_SET_SCHEDULING_TARGET = 105;
-  private static final int METHODID_GET_SCHEDULING_TARGET = 106;
-  private static final int METHODID_DELETE_SCHEDULING_TARGET = 107;
-  private static final int METHODID_GET_PERFORMANCE_METRICS = 108;
-  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 109;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 104;
+  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 105;
+  private static final int METHODID_SET_SCHEDULING_TARGET = 106;
+  private static final int METHODID_GET_SCHEDULING_TARGET = 107;
+  private static final int METHODID_DELETE_SCHEDULING_TARGET = 108;
+  private static final int METHODID_GET_PERFORMANCE_METRICS = 109;
+  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 110;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -11962,6 +12060,10 @@ public final class WFMGrpc {
         case METHODID_UPDATE_SHIFT_INSTANCE:
           serviceImpl.updateShiftInstance((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes>) responseObserver);
+          break;
+        case METHODID_UPDATE_SHIFT_INSTANCE_V2:
+          serviceImpl.updateShiftInstanceV2((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Res>) responseObserver);
           break;
         case METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS:
           serviceImpl.listShiftSegmentsByShiftInstanceSids((com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsReq) request,
@@ -12734,6 +12836,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes>(
                 service, METHODID_UPDATE_SHIFT_INSTANCE)))
         .addMethod(
+          getUpdateShiftInstanceV2Method(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req,
+              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Res>(
+                service, METHODID_UPDATE_SHIFT_INSTANCE_V2)))
+        .addMethod(
           getListShiftSegmentsByShiftInstanceSidsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -12927,6 +13036,7 @@ public final class WFMGrpc {
               .addMethod(getCreateShiftInstanceV2Method())
               .addMethod(getSwapShiftInstancesMethod())
               .addMethod(getUpdateShiftInstanceMethod())
+              .addMethod(getUpdateShiftInstanceV2Method())
               .addMethod(getListShiftSegmentsByShiftInstanceSidsMethod())
               .addMethod(getSetSchedulingTargetMethod())
               .addMethod(getGetSchedulingTargetMethod())
