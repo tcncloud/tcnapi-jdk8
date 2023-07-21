@@ -3149,6 +3149,68 @@ public final class OrgGrpc {
     return getCreateDataDipTemplateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateResponse> getUpdateDataDipTemplateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateDataDipTemplate",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateResponse> getUpdateDataDipTemplateMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateRequest, com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateResponse> getUpdateDataDipTemplateMethod;
+    if ((getUpdateDataDipTemplateMethod = OrgGrpc.getUpdateDataDipTemplateMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getUpdateDataDipTemplateMethod = OrgGrpc.getUpdateDataDipTemplateMethod) == null) {
+          OrgGrpc.getUpdateDataDipTemplateMethod = getUpdateDataDipTemplateMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateRequest, com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateDataDipTemplate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateDataDipTemplate"))
+              .build();
+        }
+      }
+    }
+    return getUpdateDataDipTemplateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateResponse> getDeleteDataDipTemplateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteDataDipTemplate",
+      requestType = com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateRequest,
+      com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateResponse> getDeleteDataDipTemplateMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateRequest, com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateResponse> getDeleteDataDipTemplateMethod;
+    if ((getDeleteDataDipTemplateMethod = OrgGrpc.getDeleteDataDipTemplateMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getDeleteDataDipTemplateMethod = OrgGrpc.getDeleteDataDipTemplateMethod) == null) {
+          OrgGrpc.getDeleteDataDipTemplateMethod = getDeleteDataDipTemplateMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateRequest, com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteDataDipTemplate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteDataDipTemplate"))
+              .build();
+        }
+      }
+    }
+    return getDeleteDataDipTemplateMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.ListAgentResponseAutoRulesRequest,
       com.tcn.cloud.api.api.v1alpha1.org.ListAgentResponseAutoRulesResponse> getListAgentResponseAutoRulesMethod;
 
@@ -5729,6 +5791,26 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * Updates a data dip template.
+     * </pre>
+     */
+    default void updateDataDipTemplate(com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateDataDipTemplateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes a data dip template.
+     * </pre>
+     */
+    default void deleteDataDipTemplate(com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteDataDipTemplateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists Agent Call Response Automatically added compliance rules for an Org.
      * </pre>
      */
@@ -7400,6 +7482,28 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * Updates a data dip template.
+     * </pre>
+     */
+    public void updateDataDipTemplate(com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateDataDipTemplateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes a data dip template.
+     * </pre>
+     */
+    public void deleteDataDipTemplate(com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteDataDipTemplateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists Agent Call Response Automatically added compliance rules for an Org.
      * </pre>
      */
@@ -9012,6 +9116,26 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * Updates a data dip template.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateResponse updateDataDipTemplate(com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateDataDipTemplateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes a data dip template.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateResponse deleteDataDipTemplate(com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteDataDipTemplateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Lists Agent Call Response Automatically added compliance rules for an Org.
      * </pre>
      */
@@ -10581,6 +10705,28 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * Updates a data dip template.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateResponse> updateDataDipTemplate(
+        com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateDataDipTemplateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes a data dip template.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateResponse> deleteDataDipTemplate(
+        com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteDataDipTemplateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists Agent Call Response Automatically added compliance rules for an Org.
      * </pre>
      */
@@ -11226,54 +11372,56 @@ public final class OrgGrpc {
   private static final int METHODID_GET_DATA_DIP_TEMPLATE = 98;
   private static final int METHODID_LIST_DATA_DIP_TEMPLATES = 99;
   private static final int METHODID_CREATE_DATA_DIP_TEMPLATE = 100;
-  private static final int METHODID_LIST_AGENT_RESPONSE_AUTO_RULES = 101;
-  private static final int METHODID_CREATE_AGENT_RESPONSE_AUTO_RULES = 102;
-  private static final int METHODID_UPDATE_AGENT_RESPONSE_AUTO_RULES = 103;
-  private static final int METHODID_DELETE_AGENT_RESPONSE_AUTO_RULES = 104;
-  private static final int METHODID_CREATE_TRUST = 105;
-  private static final int METHODID_ACCEPT_TRUST = 106;
-  private static final int METHODID_REJECT_TRUST = 107;
-  private static final int METHODID_GET_TRUST = 108;
-  private static final int METHODID_LIST_INCOMING_TRUSTS = 109;
-  private static final int METHODID_LIST_GIVEN_TRUSTS = 110;
-  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 111;
-  private static final int METHODID_DELETE_TRUST = 112;
-  private static final int METHODID_ASSIGN_TRUST = 113;
-  private static final int METHODID_UNASSIGN_TRUST = 114;
-  private static final int METHODID_CREATE_LABEL = 115;
-  private static final int METHODID_DELETE_LABEL = 116;
-  private static final int METHODID_LIST_LABELS = 117;
-  private static final int METHODID_GET_LABEL = 118;
-  private static final int METHODID_UPDATE_LABEL = 119;
-  private static final int METHODID_ASSIGN_LABEL = 120;
-  private static final int METHODID_UNASSIGN_LABEL = 121;
-  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 122;
-  private static final int METHODID_GET_ASSIGNABLE_LABELS = 123;
-  private static final int METHODID_GET_PERMISSIONS = 124;
-  private static final int METHODID_GET_USER_PERMISSIONS = 125;
-  private static final int METHODID_CREATE_PERMISSION_GROUP = 126;
-  private static final int METHODID_UPDATE_PERMISSION_GROUP = 127;
-  private static final int METHODID_DELETE_PERMISSION_GROUP = 128;
-  private static final int METHODID_LIST_PERMISSION_GROUPS = 129;
-  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 130;
-  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 131;
-  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 132;
-  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 133;
-  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 134;
-  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 135;
-  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 136;
-  private static final int METHODID_GET_LICENSES = 137;
-  private static final int METHODID_GET_ORG_LICENSES = 138;
-  private static final int METHODID_UPDATE_LICENSES = 139;
-  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 140;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 141;
-  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 142;
-  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 143;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 144;
-  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 145;
-  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 146;
-  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 147;
-  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 148;
+  private static final int METHODID_UPDATE_DATA_DIP_TEMPLATE = 101;
+  private static final int METHODID_DELETE_DATA_DIP_TEMPLATE = 102;
+  private static final int METHODID_LIST_AGENT_RESPONSE_AUTO_RULES = 103;
+  private static final int METHODID_CREATE_AGENT_RESPONSE_AUTO_RULES = 104;
+  private static final int METHODID_UPDATE_AGENT_RESPONSE_AUTO_RULES = 105;
+  private static final int METHODID_DELETE_AGENT_RESPONSE_AUTO_RULES = 106;
+  private static final int METHODID_CREATE_TRUST = 107;
+  private static final int METHODID_ACCEPT_TRUST = 108;
+  private static final int METHODID_REJECT_TRUST = 109;
+  private static final int METHODID_GET_TRUST = 110;
+  private static final int METHODID_LIST_INCOMING_TRUSTS = 111;
+  private static final int METHODID_LIST_GIVEN_TRUSTS = 112;
+  private static final int METHODID_LIST_ASSIGNABLE_TRUSTS = 113;
+  private static final int METHODID_DELETE_TRUST = 114;
+  private static final int METHODID_ASSIGN_TRUST = 115;
+  private static final int METHODID_UNASSIGN_TRUST = 116;
+  private static final int METHODID_CREATE_LABEL = 117;
+  private static final int METHODID_DELETE_LABEL = 118;
+  private static final int METHODID_LIST_LABELS = 119;
+  private static final int METHODID_GET_LABEL = 120;
+  private static final int METHODID_UPDATE_LABEL = 121;
+  private static final int METHODID_ASSIGN_LABEL = 122;
+  private static final int METHODID_UNASSIGN_LABEL = 123;
+  private static final int METHODID_GET_ASSIGNMENT_COUNTS = 124;
+  private static final int METHODID_GET_ASSIGNABLE_LABELS = 125;
+  private static final int METHODID_GET_PERMISSIONS = 126;
+  private static final int METHODID_GET_USER_PERMISSIONS = 127;
+  private static final int METHODID_CREATE_PERMISSION_GROUP = 128;
+  private static final int METHODID_UPDATE_PERMISSION_GROUP = 129;
+  private static final int METHODID_DELETE_PERMISSION_GROUP = 130;
+  private static final int METHODID_LIST_PERMISSION_GROUPS = 131;
+  private static final int METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID = 132;
+  private static final int METHODID_ASSIGN_USERS_PERMISSION_GROUP = 133;
+  private static final int METHODID_REVOKE_USERS_PERMISSION_GROUP = 134;
+  private static final int METHODID_ASSIGN_ACCOUNT_OWNER_PERMISSION_TO_USER = 135;
+  private static final int METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER = 136;
+  private static final int METHODID_INIT_DEFAULT_PERMISSION_GROUPS = 137;
+  private static final int METHODID_GET_ACCOUNT_OWNER_GROUP = 138;
+  private static final int METHODID_GET_LICENSES = 139;
+  private static final int METHODID_GET_ORG_LICENSES = 140;
+  private static final int METHODID_UPDATE_LICENSES = 141;
+  private static final int METHODID_REMOVE_PERMISSION_FROM_ALL_PERMISSION_GROUPS = 142;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS = 143;
+  private static final int METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID = 144;
+  private static final int METHODID_CREATE_P3PERMISSION_GROUP = 145;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP = 146;
+  private static final int METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID = 147;
+  private static final int METHODID_DELETE_P3PERMISSION_GROUP = 148;
+  private static final int METHODID_ASSIGN_USERS_P3PERMISSION_GROUP = 149;
+  private static final int METHODID_REVOKE_USERS_P3PERMISSION_GROUP = 150;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -11695,6 +11843,14 @@ public final class OrgGrpc {
         case METHODID_CREATE_DATA_DIP_TEMPLATE:
           serviceImpl.createDataDipTemplate((com.tcn.cloud.api.api.v1alpha1.org.CreateDataDipTemplateRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.CreateDataDipTemplateResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_DATA_DIP_TEMPLATE:
+          serviceImpl.updateDataDipTemplate((com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_DATA_DIP_TEMPLATE:
+          serviceImpl.deleteDataDipTemplate((com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateResponse>) responseObserver);
           break;
         case METHODID_LIST_AGENT_RESPONSE_AUTO_RULES:
           serviceImpl.listAgentResponseAutoRules((com.tcn.cloud.api.api.v1alpha1.org.ListAgentResponseAutoRulesRequest) request,
@@ -12614,6 +12770,20 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v1alpha1.org.CreateDataDipTemplateResponse>(
                 service, METHODID_CREATE_DATA_DIP_TEMPLATE)))
         .addMethod(
+          getUpdateDataDipTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.UpdateDataDipTemplateResponse>(
+                service, METHODID_UPDATE_DATA_DIP_TEMPLATE)))
+        .addMethod(
+          getDeleteDataDipTemplateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateRequest,
+              com.tcn.cloud.api.api.v1alpha1.org.DeleteDataDipTemplateResponse>(
+                service, METHODID_DELETE_DATA_DIP_TEMPLATE)))
+        .addMethod(
           getListAgentResponseAutoRulesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -13098,6 +13268,8 @@ public final class OrgGrpc {
               .addMethod(getGetDataDipTemplateMethod())
               .addMethod(getListDataDipTemplatesMethod())
               .addMethod(getCreateDataDipTemplateMethod())
+              .addMethod(getUpdateDataDipTemplateMethod())
+              .addMethod(getDeleteDataDipTemplateMethod())
               .addMethod(getListAgentResponseAutoRulesMethod())
               .addMethod(getCreateAgentResponseAutoRulesMethod())
               .addMethod(getUpdateAgentResponseAutoRulesMethod())
