@@ -273,7 +273,7 @@ public interface ConsentExportProcessOrBuilder extends
    *
    * <code>string expire = 16 [json_name = "expire", deprecated = true];</code>
    * @deprecated api.v0alpha.ConsentExportProcess.expire is deprecated.
-   *     See api/v0alpha/lms.proto;l=1043
+   *     See api/v0alpha/lms.proto;l=1055
    * @return The expire.
    */
   @java.lang.Deprecated java.lang.String getExpire();
@@ -285,7 +285,7 @@ public interface ConsentExportProcessOrBuilder extends
    *
    * <code>string expire = 16 [json_name = "expire", deprecated = true];</code>
    * @deprecated api.v0alpha.ConsentExportProcess.expire is deprecated.
-   *     See api/v0alpha/lms.proto;l=1043
+   *     See api/v0alpha/lms.proto;l=1055
    * @return The bytes for expire.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
