@@ -143,13 +143,12 @@ private static final long serialVersionUID = 0L;
   private int format_ = 0;
   /**
    * <pre>
-   * Optional. the format the invoice is returned using. If not specified,
-   * will use the proto format as the default
+   * deprecated
    * </pre>
    *
    * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceReq.format is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=83
+   *     See api/v1alpha1/billing/entities.proto;l=81
    * @return The enum numeric value on the wire for format.
    */
   @java.lang.Override @java.lang.Deprecated public int getFormatValue() {
@@ -157,13 +156,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. the format the invoice is returned using. If not specified,
-   * will use the proto format as the default
+   * deprecated
    * </pre>
    *
    * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceReq.format is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=83
+   *     See api/v1alpha1/billing/entities.proto;l=81
    * @return The format.
    */
   @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat getFormat() {
@@ -886,13 +884,12 @@ private static final long serialVersionUID = 0L;
     private int format_ = 0;
     /**
      * <pre>
-     * Optional. the format the invoice is returned using. If not specified,
-     * will use the proto format as the default
+     * deprecated
      * </pre>
      *
      * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
      * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceReq.format is deprecated.
-     *     See api/v1alpha1/billing/entities.proto;l=83
+     *     See api/v1alpha1/billing/entities.proto;l=81
      * @return The enum numeric value on the wire for format.
      */
     @java.lang.Override @java.lang.Deprecated public int getFormatValue() {
@@ -900,13 +897,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. the format the invoice is returned using. If not specified,
-     * will use the proto format as the default
+     * deprecated
      * </pre>
      *
      * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
      * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceReq.format is deprecated.
-     *     See api/v1alpha1/billing/entities.proto;l=83
+     *     See api/v1alpha1/billing/entities.proto;l=81
      * @param value The enum numeric value on the wire for format to set.
      * @return This builder for chaining.
      */
@@ -918,13 +914,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. the format the invoice is returned using. If not specified,
-     * will use the proto format as the default
+     * deprecated
      * </pre>
      *
      * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
      * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceReq.format is deprecated.
-     *     See api/v1alpha1/billing/entities.proto;l=83
+     *     See api/v1alpha1/billing/entities.proto;l=81
      * @return The format.
      */
     @java.lang.Override
@@ -934,13 +929,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. the format the invoice is returned using. If not specified,
-     * will use the proto format as the default
+     * deprecated
      * </pre>
      *
      * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
      * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceReq.format is deprecated.
-     *     See api/v1alpha1/billing/entities.proto;l=83
+     *     See api/v1alpha1/billing/entities.proto;l=81
      * @param value The format to set.
      * @return This builder for chaining.
      */
@@ -955,13 +949,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. the format the invoice is returned using. If not specified,
-     * will use the proto format as the default
+     * deprecated
      * </pre>
      *
      * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
      * @deprecated api.v1alpha1.billing.ExportGeneratedInvoiceReq.format is deprecated.
-     *     See api/v1alpha1/billing/entities.proto;l=83
+     *     See api/v1alpha1/billing/entities.proto;l=81
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearFormat() {

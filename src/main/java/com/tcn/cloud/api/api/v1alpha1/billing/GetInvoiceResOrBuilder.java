@@ -14,7 +14,7 @@ public interface GetInvoiceResOrBuilder extends
    *
    * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.GetInvoiceRes.invoice is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=57
+   *     See api/v1alpha1/billing/entities.proto;l=56
    * @return Whether the invoice field is set.
    */
   @java.lang.Deprecated boolean hasInvoice();
@@ -25,7 +25,7 @@ public interface GetInvoiceResOrBuilder extends
    *
    * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.GetInvoiceRes.invoice is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=57
+   *     See api/v1alpha1/billing/entities.proto;l=56
    * @return The invoice.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.Invoice getInvoice();
@@ -41,14 +41,14 @@ public interface GetInvoiceResOrBuilder extends
   /**
    * <code>.api.commons.billing.Invoice proto = 2 [json_name = "proto", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.GetInvoiceRes.proto is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=60
+   *     See api/v1alpha1/billing/entities.proto;l=59
    * @return Whether the proto field is set.
    */
   @java.lang.Deprecated boolean hasProto();
   /**
    * <code>.api.commons.billing.Invoice proto = 2 [json_name = "proto", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.GetInvoiceRes.proto is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=60
+   *     See api/v1alpha1/billing/entities.proto;l=59
    * @return The proto.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.billing.Invoice getProto();
@@ -60,21 +60,21 @@ public interface GetInvoiceResOrBuilder extends
   /**
    * <code>string csv_url = 3 [json_name = "csvUrl", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.GetInvoiceRes.csv_url is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=61
+   *     See api/v1alpha1/billing/entities.proto;l=60
    * @return Whether the csvUrl field is set.
    */
   @java.lang.Deprecated boolean hasCsvUrl();
   /**
    * <code>string csv_url = 3 [json_name = "csvUrl", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.GetInvoiceRes.csv_url is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=61
+   *     See api/v1alpha1/billing/entities.proto;l=60
    * @return The csvUrl.
    */
   @java.lang.Deprecated java.lang.String getCsvUrl();
   /**
    * <code>string csv_url = 3 [json_name = "csvUrl", deprecated = true];</code>
    * @deprecated api.v1alpha1.billing.GetInvoiceRes.csv_url is deprecated.
-   *     See api/v1alpha1/billing/entities.proto;l=61
+   *     See api/v1alpha1/billing/entities.proto;l=60
    * @return The bytes for csvUrl.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -96,17 +96,17 @@ public interface GetInvoiceResOrBuilder extends
   com.tcn.cloud.api.api.commons.billing.InvoiceOrBuilder getInvoiceProtoOrBuilder();
 
   /**
-   * <code>string invoice_csv_url = 1001 [json_name = "invoiceCsvUrl"];</code>
+   * <code>string invoice_csv_url = 101 [json_name = "invoiceCsvUrl"];</code>
    * @return Whether the invoiceCsvUrl field is set.
    */
   boolean hasInvoiceCsvUrl();
   /**
-   * <code>string invoice_csv_url = 1001 [json_name = "invoiceCsvUrl"];</code>
+   * <code>string invoice_csv_url = 101 [json_name = "invoiceCsvUrl"];</code>
    * @return The invoiceCsvUrl.
    */
   java.lang.String getInvoiceCsvUrl();
   /**
-   * <code>string invoice_csv_url = 1001 [json_name = "invoiceCsvUrl"];</code>
+   * <code>string invoice_csv_url = 101 [json_name = "invoiceCsvUrl"];</code>
    * @return The bytes for invoiceCsvUrl.
    */
   com.google.protobuf.ByteString
