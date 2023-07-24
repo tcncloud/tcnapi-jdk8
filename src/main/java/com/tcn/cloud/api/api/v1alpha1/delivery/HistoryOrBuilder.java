@@ -8,10 +8,22 @@ public interface HistoryOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 sid = 1 [json_name = "sid", jstype = JS_STRING];</code>
+   * <code>int64 sid = 1 [json_name = "sid"];</code>
    * @return The sid.
    */
   long getSid();
+
+  /**
+   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * @return The orgId.
+   */
+  java.lang.String getOrgId();
+  /**
+   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * @return The bytes for orgId.
+   */
+  com.google.protobuf.ByteString
+      getOrgIdBytes();
 
   /**
    * <code>string transfer_config_name = 3 [json_name = "transferConfigName"];</code>
@@ -26,7 +38,7 @@ public interface HistoryOrBuilder extends
       getTransferConfigNameBytes();
 
   /**
-   * <code>int64 transfer_config_sid = 4 [json_name = "transferConfigSid", jstype = JS_STRING];</code>
+   * <code>int64 transfer_config_sid = 4 [json_name = "transferConfigSid"];</code>
    * @return The transferConfigSid.
    */
   long getTransferConfigSid();
@@ -64,17 +76,11 @@ public interface HistoryOrBuilder extends
       getErrorBytes();
 
   /**
-   * <code>bool success = 7 [json_name = "success"];</code>
-   * @return The success.
-   */
-  boolean getSuccess();
-
-  /**
    * <pre>
    * when the transaction was first opened
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp created_on = 8 [json_name = "createdOn"];</code>
+   * <code>.google.protobuf.Timestamp created_on = 7 [json_name = "createdOn"];</code>
    * @return Whether the createdOn field is set.
    */
   boolean hasCreatedOn();
@@ -83,7 +89,7 @@ public interface HistoryOrBuilder extends
    * when the transaction was first opened
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp created_on = 8 [json_name = "createdOn"];</code>
+   * <code>.google.protobuf.Timestamp created_on = 7 [json_name = "createdOn"];</code>
    * @return The createdOn.
    */
   com.google.protobuf.Timestamp getCreatedOn();
@@ -92,7 +98,7 @@ public interface HistoryOrBuilder extends
    * when the transaction was first opened
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp created_on = 8 [json_name = "createdOn"];</code>
+   * <code>.google.protobuf.Timestamp created_on = 7 [json_name = "createdOn"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getCreatedOnOrBuilder();
 
@@ -101,7 +107,7 @@ public interface HistoryOrBuilder extends
    * when upload of deps is finished and we started moving the files
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp transfer_start = 9 [json_name = "transferStart"];</code>
+   * <code>.google.protobuf.Timestamp transfer_start = 8 [json_name = "transferStart"];</code>
    * @return Whether the transferStart field is set.
    */
   boolean hasTransferStart();
@@ -110,7 +116,7 @@ public interface HistoryOrBuilder extends
    * when upload of deps is finished and we started moving the files
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp transfer_start = 9 [json_name = "transferStart"];</code>
+   * <code>.google.protobuf.Timestamp transfer_start = 8 [json_name = "transferStart"];</code>
    * @return The transferStart.
    */
   com.google.protobuf.Timestamp getTransferStart();
@@ -119,7 +125,7 @@ public interface HistoryOrBuilder extends
    * when upload of deps is finished and we started moving the files
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp transfer_start = 9 [json_name = "transferStart"];</code>
+   * <code>.google.protobuf.Timestamp transfer_start = 8 [json_name = "transferStart"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getTransferStartOrBuilder();
 
@@ -128,7 +134,7 @@ public interface HistoryOrBuilder extends
    * when the record was inserted into the db (delivery ended)
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp transfer_complete = 10 [json_name = "transferComplete"];</code>
+   * <code>.google.protobuf.Timestamp transfer_complete = 9 [json_name = "transferComplete"];</code>
    * @return Whether the transferComplete field is set.
    */
   boolean hasTransferComplete();
@@ -137,7 +143,7 @@ public interface HistoryOrBuilder extends
    * when the record was inserted into the db (delivery ended)
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp transfer_complete = 10 [json_name = "transferComplete"];</code>
+   * <code>.google.protobuf.Timestamp transfer_complete = 9 [json_name = "transferComplete"];</code>
    * @return The transferComplete.
    */
   com.google.protobuf.Timestamp getTransferComplete();
@@ -146,16 +152,46 @@ public interface HistoryOrBuilder extends
    * when the record was inserted into the db (delivery ended)
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp transfer_complete = 10 [json_name = "transferComplete"];</code>
+   * <code>.google.protobuf.Timestamp transfer_complete = 9 [json_name = "transferComplete"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getTransferCompleteOrBuilder();
+
+  /**
+   * <pre>
+   * this should only be the first 64 chars of the message_payload
+   * </pre>
+   *
+   * <code>string message_payload = 10 [json_name = "messagePayload"];</code>
+   * @return The messagePayload.
+   */
+  java.lang.String getMessagePayload();
+  /**
+   * <pre>
+   * this should only be the first 64 chars of the message_payload
+   * </pre>
+   *
+   * <code>string message_payload = 10 [json_name = "messagePayload"];</code>
+   * @return The bytes for messagePayload.
+   */
+  com.google.protobuf.ByteString
+      getMessagePayloadBytes();
+
+  /**
+   * <pre>
+   * this represents the full actual length of the message_payload from the frontend
+   * </pre>
+   *
+   * <code>int32 message_payload_len = 11 [json_name = "messagePayloadLen"];</code>
+   * @return The messagePayloadLen.
+   */
+  int getMessagePayloadLen();
 
   /**
    * <pre>
    * the application calling for delivery
    * </pre>
    *
-   * <code>.api.commons.OperatorApplications origin = 11 [json_name = "origin"];</code>
+   * <code>.api.commons.OperatorApplications origin = 12 [json_name = "origin"];</code>
    * @return The enum numeric value on the wire for origin.
    */
   int getOriginValue();
@@ -164,8 +200,39 @@ public interface HistoryOrBuilder extends
    * the application calling for delivery
    * </pre>
    *
-   * <code>.api.commons.OperatorApplications origin = 11 [json_name = "origin"];</code>
+   * <code>.api.commons.OperatorApplications origin = 12 [json_name = "origin"];</code>
    * @return The origin.
    */
   com.tcn.cloud.api.api.commons.OperatorApplications getOrigin();
+
+  /**
+   * <pre>
+   * the status of the delivery
+   * </pre>
+   *
+   * <code>.api.commons.TransferStatus status = 13 [json_name = "status"];</code>
+   * @return The enum numeric value on the wire for status.
+   */
+  int getStatusValue();
+  /**
+   * <pre>
+   * the status of the delivery
+   * </pre>
+   *
+   * <code>.api.commons.TransferStatus status = 13 [json_name = "status"];</code>
+   * @return The status.
+   */
+  com.tcn.cloud.api.api.commons.TransferStatus getStatus();
+
+  /**
+   * <code>bool is_inbound = 14 [json_name = "isInbound"];</code>
+   * @return The isInbound.
+   */
+  boolean getIsInbound();
+
+  /**
+   * <code>int64 transaction_sid = 15 [json_name = "transactionSid"];</code>
+   * @return The transactionSid.
+   */
+  long getTransactionSid();
 }
