@@ -208,68 +208,69 @@ public final class LearnProto {
       "\n\rStandaloneReq\022\026\n\006locale\030\001 \001(\tR\006locale\"" +
       "c\n\rStandaloneRes\022R\n\022standalone_details\030\001" +
       " \003(\0132#.api.v0alpha.LearnStandaloneDetail" +
-      "sR\021standaloneDetails\"\226\001\n\026LearnStandalone" +
+      "sR\021standaloneDetails\"\254\001\n\026LearnStandalone" +
       "Details\022\022\n\004name\030\001 \001(\tR\004name\022\030\n\007content\030\002" +
       " \001(\tR\007content\022N\n\025last_edited_timestamp\030\003" +
       " \001(\0132\032.google.protobuf.TimestampR\023lastEd" +
-      "itedTimestamp\"R\n\023DeleteStandaloneReq\022\026\n\006" +
-      "locale\030\001 \001(\tR\006locale\022#\n\rarticle_names\030\002 " +
-      "\003(\tR\014articleNames\"\025\n\023DeleteStandaloneRes" +
-      "\"$\n\nSnippetReq\022\026\n\006locale\030\001 \001(\tR\006locale\"W" +
-      "\n\nSnippetRes\022I\n\017snippet_details\030\001 \003(\0132 ." +
-      "api.v0alpha.LearnSnippetDetailsR\016snippet" +
-      "Details\"\251\001\n\023LearnSnippetDetails\022\022\n\004name\030" +
-      "\001 \001(\tR\004name\022\030\n\007content\030\002 \001(\tR\007content\022N\n" +
-      "\025last_edited_timestamp\030\003 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\023lastEditedTimestamp\022\024\n" +
-      "\005title\030\004 \001(\tR\005title\"?\n\023DeleteLearnPagesR" +
-      "eq\022\026\n\006locale\030\001 \001(\tR\006locale\022\020\n\003url\030\002 \003(\tR" +
-      "\003url\"\025\n\023DeleteLearnPagesRes2\206\r\n\005Learn\022a\n" +
-      "\005Exist\022\025.api.v0alpha.ExistReq\032\025.api.v0al" +
-      "pha.ExistRes\"*\272\270\221\002\002\030\001\202\323\344\223\002\035\"\030/api/v0alph" +
-      "a/learn/exist:\001*\022i\n\007Content\022\027.api.v0alph" +
-      "a.ContentReq\032\027.api.v0alpha.ContentRes\",\272" +
-      "\270\221\002\002\030\001\202\323\344\223\002\037\"\032/api/v0alpha/learn/content" +
-      ":\001*\022q\n\nExportMany\022\032.api.v0alpha.ExportMa" +
-      "nyReq\032\026.api.v0alpha.ExportRes\"/\272\270\221\002\002\030\001\202\323" +
-      "\344\223\002\"\"\035/api/v0alpha/learn/exportmany:\001*\022z" +
-      "\n\rSearchContent\022\035.api.v0alpha.SearchCont" +
-      "entReq\032\026.api.v0alpha.SearchRes\"2\272\270\221\002\002\030\001\202" +
-      "\323\344\223\002%\" /api/v0alpha/learn/searchcontent:" +
-      "\001*\022\204\001\n\021ListSearchResults\022\035.api.v0alpha.S" +
-      "earchContentReq\032\026.api.v0alpha.SearchRes\"" +
-      "6\272\270\221\002\002\030\001\202\323\344\223\002)\"$/api/v0alpha/learn/lists" +
-      "earchresults:\001*0\001\022u\n\nStandalone\022\032.api.v0" +
-      "alpha.StandaloneReq\032\032.api.v0alpha.Standa" +
-      "loneRes\"/\272\270\221\002\002\030\001\202\323\344\223\002\"\"\035/api/v0alpha/lea" +
-      "rn/standalone:\001*\022\223\001\n\021ContentEditorData\022!" +
-      ".api.v0alpha.ContentEditorDataReq\032!.api." +
-      "v0alpha.ContentEditorDataRes\"8\272\270\221\002\004\n\002\010\n\202" +
-      "\323\344\223\002)\"$/api/v0alpha/learn/contenteditord" +
-      "ata:\001*\022g\n\006Update\022\026.api.v0alpha.UpdateReq" +
-      "\032\026.api.v0alpha.UpdateRes\"-\272\270\221\002\004\n\002\010\n\202\323\344\223\002" +
-      "\036\"\031/api/v0alpha/learn/update:\001*\022\217\001\n\020Stor" +
-      "eStaticImage\022 .api.v0alpha.StoreStaticIm" +
-      "ageReq\032 .api.v0alpha.StoreStaticImageRes" +
-      "\"7\272\270\221\002\004\n\002\010\n\202\323\344\223\002(\"#/api/v0alpha/learn/st" +
-      "orestaticimage:\001*\022\241\001\n\027UploadDynamicScree" +
-      "nshot\022\'.api.v0alpha.UploadDynamicScreens" +
-      "hotReq\032\'.api.v0alpha.UploadDynamicScreen" +
-      "shotRes\"4\272\270\221\002\004\n\002\010\n\202\323\344\223\002%\" /api/v0alpha/l" +
-      "earn/uploaddynamic:\001*\022\217\001\n\020DeleteStandalo" +
-      "ne\022 .api.v0alpha.DeleteStandaloneReq\032 .a" +
-      "pi.v0alpha.DeleteStandaloneRes\"7\272\270\221\002\004\n\002\010" +
-      "\n\202\323\344\223\002(\"#/api/v0alpha/learn/deletestanda" +
-      "lone:\001*\022i\n\007Snippet\022\027.api.v0alpha.Snippet" +
-      "Req\032\027.api.v0alpha.SnippetRes\",\272\270\221\002\002\030\001\202\323\344" +
-      "\223\002\037\"\032/api/v0alpha/learn/snippet:\001*\022\217\001\n\020D" +
-      "eleteLearnPages\022 .api.v0alpha.DeleteLear" +
-      "nPagesReq\032 .api.v0alpha.DeleteLearnPages" +
-      "Res\"7\272\270\221\002\004\n\002\010\n\202\323\344\223\002(\"#/api/v0alpha/learn" +
-      "/deletelearnpages:\001*Bx\n\035com.tcn.cloud.ap" +
-      "i.api.v0alphaB\nLearnProtoP\001\242\002\003AVX\252\002\013Api." +
-      "V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\GPBM" +
-      "etadata\352\002\014Api::V0alphab\006proto3"
+      "itedTimestamp\022\024\n\005title\030\004 \001(\tR\005title\"R\n\023D" +
+      "eleteStandaloneReq\022\026\n\006locale\030\001 \001(\tR\006loca" +
+      "le\022#\n\rarticle_names\030\002 \003(\tR\014articleNames\"" +
+      "\025\n\023DeleteStandaloneRes\"$\n\nSnippetReq\022\026\n\006" +
+      "locale\030\001 \001(\tR\006locale\"W\n\nSnippetRes\022I\n\017sn" +
+      "ippet_details\030\001 \003(\0132 .api.v0alpha.LearnS" +
+      "nippetDetailsR\016snippetDetails\"\251\001\n\023LearnS" +
+      "nippetDetails\022\022\n\004name\030\001 \001(\tR\004name\022\030\n\007con" +
+      "tent\030\002 \001(\tR\007content\022N\n\025last_edited_times" +
+      "tamp\030\003 \001(\0132\032.google.protobuf.TimestampR\023" +
+      "lastEditedTimestamp\022\024\n\005title\030\004 \001(\tR\005titl" +
+      "e\"?\n\023DeleteLearnPagesReq\022\026\n\006locale\030\001 \001(\t" +
+      "R\006locale\022\020\n\003url\030\002 \003(\tR\003url\"\025\n\023DeleteLear" +
+      "nPagesRes2\206\r\n\005Learn\022a\n\005Exist\022\025.api.v0alp" +
+      "ha.ExistReq\032\025.api.v0alpha.ExistRes\"*\272\270\221\002" +
+      "\002\030\001\202\323\344\223\002\035\"\030/api/v0alpha/learn/exist:\001*\022i" +
+      "\n\007Content\022\027.api.v0alpha.ContentReq\032\027.api" +
+      ".v0alpha.ContentRes\",\272\270\221\002\002\030\001\202\323\344\223\002\037\"\032/api" +
+      "/v0alpha/learn/content:\001*\022q\n\nExportMany\022" +
+      "\032.api.v0alpha.ExportManyReq\032\026.api.v0alph" +
+      "a.ExportRes\"/\272\270\221\002\002\030\001\202\323\344\223\002\"\"\035/api/v0alpha" +
+      "/learn/exportmany:\001*\022z\n\rSearchContent\022\035." +
+      "api.v0alpha.SearchContentReq\032\026.api.v0alp" +
+      "ha.SearchRes\"2\272\270\221\002\002\030\001\202\323\344\223\002%\" /api/v0alph" +
+      "a/learn/searchcontent:\001*\022\204\001\n\021ListSearchR" +
+      "esults\022\035.api.v0alpha.SearchContentReq\032\026." +
+      "api.v0alpha.SearchRes\"6\272\270\221\002\002\030\001\202\323\344\223\002)\"$/a" +
+      "pi/v0alpha/learn/listsearchresults:\001*0\001\022" +
+      "u\n\nStandalone\022\032.api.v0alpha.StandaloneRe" +
+      "q\032\032.api.v0alpha.StandaloneRes\"/\272\270\221\002\002\030\001\202\323" +
+      "\344\223\002\"\"\035/api/v0alpha/learn/standalone:\001*\022\223" +
+      "\001\n\021ContentEditorData\022!.api.v0alpha.Conte" +
+      "ntEditorDataReq\032!.api.v0alpha.ContentEdi" +
+      "torDataRes\"8\272\270\221\002\004\n\002\010\n\202\323\344\223\002)\"$/api/v0alph" +
+      "a/learn/contenteditordata:\001*\022g\n\006Update\022\026" +
+      ".api.v0alpha.UpdateReq\032\026.api.v0alpha.Upd" +
+      "ateRes\"-\272\270\221\002\004\n\002\010\n\202\323\344\223\002\036\"\031/api/v0alpha/le" +
+      "arn/update:\001*\022\217\001\n\020StoreStaticImage\022 .api" +
+      ".v0alpha.StoreStaticImageReq\032 .api.v0alp" +
+      "ha.StoreStaticImageRes\"7\272\270\221\002\004\n\002\010\n\202\323\344\223\002(\"" +
+      "#/api/v0alpha/learn/storestaticimage:\001*\022" +
+      "\241\001\n\027UploadDynamicScreenshot\022\'.api.v0alph" +
+      "a.UploadDynamicScreenshotReq\032\'.api.v0alp" +
+      "ha.UploadDynamicScreenshotRes\"4\272\270\221\002\004\n\002\010\n" +
+      "\202\323\344\223\002%\" /api/v0alpha/learn/uploaddynamic" +
+      ":\001*\022\217\001\n\020DeleteStandalone\022 .api.v0alpha.D" +
+      "eleteStandaloneReq\032 .api.v0alpha.DeleteS" +
+      "tandaloneRes\"7\272\270\221\002\004\n\002\010\n\202\323\344\223\002(\"#/api/v0al" +
+      "pha/learn/deletestandalone:\001*\022i\n\007Snippet" +
+      "\022\027.api.v0alpha.SnippetReq\032\027.api.v0alpha." +
+      "SnippetRes\",\272\270\221\002\002\030\001\202\323\344\223\002\037\"\032/api/v0alpha/" +
+      "learn/snippet:\001*\022\217\001\n\020DeleteLearnPages\022 ." +
+      "api.v0alpha.DeleteLearnPagesReq\032 .api.v0" +
+      "alpha.DeleteLearnPagesRes\"7\272\270\221\002\004\n\002\010\n\202\323\344\223" +
+      "\002(\"#/api/v0alpha/learn/deletelearnpages:" +
+      "\001*Bx\n\035com.tcn.cloud.api.api.v0alphaB\nLea" +
+      "rnProtoP\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0al" +
+      "pha\342\002\027Api\\V0alpha\\GPBMetadata\352\002\014Api::V0a" +
+      "lphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -404,7 +405,7 @@ public final class LearnProto {
     internal_static_api_v0alpha_LearnStandaloneDetails_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_LearnStandaloneDetails_descriptor,
-        new java.lang.String[] { "Name", "Content", "LastEditedTimestamp", });
+        new java.lang.String[] { "Name", "Content", "LastEditedTimestamp", "Title", });
     internal_static_api_v0alpha_DeleteStandaloneReq_descriptor =
       getDescriptor().getMessageTypes().get(21);
     internal_static_api_v0alpha_DeleteStandaloneReq_fieldAccessorTable = new
