@@ -62,4 +62,24 @@ public interface UpdateReqOrBuilder extends
    */
   com.google.protobuf.ByteString
       getMessageBytes();
+
+  /**
+   * <pre>
+   * previously existing name
+   * </pre>
+   *
+   * <code>string previous_name = 13 [json_name = "previousName"];</code>
+   * @return The previousName.
+   */
+  java.lang.String getPreviousName();
+  /**
+   * <pre>
+   * previously existing name
+   * </pre>
+   *
+   * <code>string previous_name = 13 [json_name = "previousName"];</code>
+   * @return The bytes for previousName.
+   */
+  com.google.protobuf.ByteString
+      getPreviousNameBytes();
 }
