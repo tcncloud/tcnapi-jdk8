@@ -27,7 +27,7 @@ public final class ServiceProto {
       "i.v1alpha1.tickets\032\027annotations/authz.pr" +
       "oto\032\"api/v1alpha1/tickets/project.proto\032" +
       "!api/v1alpha1/tickets/ticket.proto\032\034goog" +
-      "le/api/annotations.proto2\250\031\n\007Tickets\022\235\001\n" +
+      "le/api/annotations.proto2\210\033\n\007Tickets\022\235\001\n" +
       "\014CreateTicket\022%.api.v1alpha1.tickets.Cre" +
       "ateTicketReq\032%.api.v1alpha1.tickets.Crea" +
       "teTicketRes\"?\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002/\"*/api/v1al" +
@@ -96,24 +96,29 @@ public final class ServiceProto {
       "skTicketReq\032\'.api.v1alpha1.tickets.EditM" +
       "askTicketRes\"A\272\270\221\002\005\n\003\010\234\030\202\323\344\223\0021\",/api/v1a" +
       "lpha1/tickets/tickets/editmaskticket:\001*\022" +
-      "\273\001\n\024ListAllocatedTickets\022,.api.v1alpha1." +
+      "\276\001\n\024ListAllocatedTickets\022,.api.v1alpha1." +
       "tickets.ListAllocatedTicketReq\032,.api.v1a" +
-      "lpha1.tickets.ListAllocatedTicketRes\"G\272\270" +
-      "\221\002\005\n\003\010\234\030\202\323\344\223\0027\"2/api/v1alpha1/tickets/ti" +
-      "ckets/listallocatedtickets:\001*\022\236\001\n\nListSk" +
-      "ills\022\'.api.v1alpha1.tickets.ListSkillsRe" +
-      "quest\032(.api.v1alpha1.tickets.ListSkillsR" +
-      "esponse\"=\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002-\"(/api/v1alpha1" +
-      "/tickets/tickets/listskills:\001*\022\232\001\n\tListU" +
-      "sers\022&.api.v1alpha1.tickets.ListUsersReq" +
-      "uest\032\'.api.v1alpha1.tickets.ListUsersRes" +
-      "ponse\"<\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002,\"\'/api/v1alpha1/t" +
-      "ickets/tickets/listusers:\001*B\250\001\n&com.tcn." +
-      "cloud.api.api.v1alpha1.ticketsB\014ServiceP" +
-      "rotoP\001\242\002\003AVT\252\002\024Api.V1alpha1.Tickets\312\002\024Ap" +
-      "i\\V1alpha1\\Tickets\342\002 Api\\V1alpha1\\Ticket" +
-      "s\\GPBMetadata\352\002\026Api::V1alpha1::Ticketsb\006" +
-      "proto3"
+      "lpha1.tickets.ListAllocatedTicketRes\"J\210\002" +
+      "\001\272\270\221\002\005\n\003\010\234\030\202\323\344\223\0027\"2/api/v1alpha1/tickets" +
+      "/tickets/listallocatedtickets:\001*\022\332\001\n\031Lis" +
+      "tAvailableAgentTickets\0226.api.v1alpha1.ti" +
+      "ckets.ListAvailableAgentTicketsRequest\0327" +
+      ".api.v1alpha1.tickets.ListAvailableAgent" +
+      "TicketsResponse\"L\272\270\221\002\005\n\003\010\234\030\202\323\344\223\002<\"7/api/" +
+      "v1alpha1/tickets/tickets/listavailableag" +
+      "enttickets:\001*\022\236\001\n\nListSkills\022\'.api.v1alp" +
+      "ha1.tickets.ListSkillsRequest\032(.api.v1al" +
+      "pha1.tickets.ListSkillsResponse\"=\272\270\221\002\005\n\003" +
+      "\010\234\030\202\323\344\223\002-\"(/api/v1alpha1/tickets/tickets" +
+      "/listskills:\001*\022\232\001\n\tListUsers\022&.api.v1alp" +
+      "ha1.tickets.ListUsersRequest\032\'.api.v1alp" +
+      "ha1.tickets.ListUsersResponse\"<\272\270\221\002\005\n\003\010\234" +
+      "\030\202\323\344\223\002,\"\'/api/v1alpha1/tickets/tickets/l" +
+      "istusers:\001*B\250\001\n&com.tcn.cloud.api.api.v1" +
+      "alpha1.ticketsB\014ServiceProtoP\001\242\002\003AVT\252\002\024A" +
+      "pi.V1alpha1.Tickets\312\002\024Api\\V1alpha1\\Ticke" +
+      "ts\342\002 Api\\V1alpha1\\Tickets\\GPBMetadata\352\002\026" +
+      "Api::V1alpha1::Ticketsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
