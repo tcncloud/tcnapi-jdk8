@@ -60,6 +60,11 @@ public final class EntitiesProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretRequest_SecretExpiration_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretRequest_SecretExpiration_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -86,42 +91,48 @@ public final class EntitiesProto {
       "\n.api/v1alpha1/org/authconnection/entiti" +
       "es.proto\022\037api.v1alpha1.org.authconnectio" +
       "n\032&api/commons/org/auth_connections.prot" +
-      "o\"\207\001\n\033CreateAuthConnectionRequest\022C\n\010set" +
-      "tings\030\001 \001(\0132\'.api.commons.org.AuthConnec" +
-      "tionSettingsR\010settings\022#\n\rclient_secret\030" +
-      "\002 \001(\tR\014clientSecret\"C\n\034CreateAuthConnect" +
-      "ionResponse\022#\n\rconnection_id\030\001 \001(\tR\014conn" +
-      "ectionId\"\"\n GetAuthConnectionSettingsReq" +
-      "uest\"h\n!GetAuthConnectionSettingsRespons" +
-      "e\022C\n\010settings\030\001 \001(\0132\'.api.commons.org.Au" +
-      "thConnectionSettingsR\010settings\"?\n\030GetAut" +
-      "hConnectionRequest\022#\n\rconnection_id\030\001 \001(" +
-      "\tR\014connectionId\"`\n\031GetAuthConnectionResp" +
-      "onse\022C\n\010settings\030\001 \001(\0132\'.api.commons.org" +
-      ".AuthConnectionSettingsR\010settings\"B\n\033Del" +
-      "eteAuthConnectionRequest\022#\n\rconnection_i" +
-      "d\030\001 \001(\tR\014connectionId\"\036\n\034DeleteAuthConne" +
-      "ctionResponse\"m\n!UpdateAuthConnectionSec" +
-      "retRequest\022#\n\rconnection_id\030\001 \001(\tR\014conne" +
-      "ctionId\022#\n\rclient_secret\030\002 \001(\tR\014clientSe" +
-      "cret\"$\n\"UpdateAuthConnectionSecretRespon" +
-      "se\"\245\001\n!UpdateAuthConnectionGroupsRequest" +
-      "\022?\n\rdefault_group\030\001 \001(\0132\032.api.commons.or" +
-      "g.GroupItemR\014defaultGroup\022?\n\rcustom_grou" +
-      "ps\030\002 \003(\0132\032.api.commons.org.GroupItemR\014cu" +
-      "stomGroups\"$\n\"UpdateAuthConnectionGroups" +
-      "ResponseB\342\001\n1com.tcn.cloud.api.api.v1alp" +
-      "ha1.org.authconnectionB\rEntitiesProtoP\001\242" +
-      "\002\004AVOA\252\002\037Api.V1alpha1.Org.Authconnection" +
-      "\312\002\037Api\\V1alpha1\\Org\\Authconnection\342\002+Api" +
-      "\\V1alpha1\\Org\\Authconnection\\GPBMetadata" +
-      "\352\002\"Api::V1alpha1::Org::Authconnectionb\006p" +
-      "roto3"
+      "o\032\037google/protobuf/timestamp.proto\"\207\001\n\033C" +
+      "reateAuthConnectionRequest\022C\n\010settings\030\001" +
+      " \001(\0132\'.api.commons.org.AuthConnectionSet" +
+      "tingsR\010settings\022#\n\rclient_secret\030\002 \001(\tR\014" +
+      "clientSecret\"C\n\034CreateAuthConnectionResp" +
+      "onse\022#\n\rconnection_id\030\001 \001(\tR\014connectionI" +
+      "d\"\"\n GetAuthConnectionSettingsRequest\"h\n" +
+      "!GetAuthConnectionSettingsResponse\022C\n\010se" +
+      "ttings\030\001 \001(\0132\'.api.commons.org.AuthConne" +
+      "ctionSettingsR\010settings\"?\n\030GetAuthConnec" +
+      "tionRequest\022#\n\rconnection_id\030\001 \001(\tR\014conn" +
+      "ectionId\"`\n\031GetAuthConnectionResponse\022C\n" +
+      "\010settings\030\001 \001(\0132\'.api.commons.org.AuthCo" +
+      "nnectionSettingsR\010settings\"B\n\033DeleteAuth" +
+      "ConnectionRequest\022#\n\rconnection_id\030\001 \001(\t" +
+      "R\014connectionId\"\036\n\034DeleteAuthConnectionRe" +
+      "sponse\"\264\002\n!UpdateAuthConnectionSecretReq" +
+      "uest\022#\n\rconnection_id\030\001 \001(\tR\014connectionI" +
+      "d\022#\n\rclient_secret\030\002 \001(\tR\014clientSecret\022\200" +
+      "\001\n\021secret_expiration\030\003 \001(\0132S.api.v1alpha" +
+      "1.org.authconnection.UpdateAuthConnectio" +
+      "nSecretRequest.SecretExpirationR\020secretE" +
+      "xpiration\032B\n\020SecretExpiration\022.\n\004date\030\001 " +
+      "\001(\0132\032.google.protobuf.TimestampR\004date\"$\n" +
+      "\"UpdateAuthConnectionSecretResponse\"\245\001\n!" +
+      "UpdateAuthConnectionGroupsRequest\022?\n\rdef" +
+      "ault_group\030\001 \001(\0132\032.api.commons.org.Group" +
+      "ItemR\014defaultGroup\022?\n\rcustom_groups\030\002 \003(" +
+      "\0132\032.api.commons.org.GroupItemR\014customGro" +
+      "ups\"$\n\"UpdateAuthConnectionGroupsRespons" +
+      "eB\342\001\n1com.tcn.cloud.api.api.v1alpha1.org" +
+      ".authconnectionB\rEntitiesProtoP\001\242\002\004AVOA\252" +
+      "\002\037Api.V1alpha1.Org.Authconnection\312\002\037Api\\" +
+      "V1alpha1\\Org\\Authconnection\342\002+Api\\V1alph" +
+      "a1\\Org\\Authconnection\\GPBMetadata\352\002\"Api:" +
+      ":V1alpha1::Org::Authconnectionb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.api.commons.org.AuthConnectionsProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_api_v1alpha1_org_authconnection_CreateAuthConnectionRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -176,7 +187,13 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretRequest_descriptor,
-        new java.lang.String[] { "ConnectionId", "ClientSecret", });
+        new java.lang.String[] { "ConnectionId", "ClientSecret", "SecretExpiration", });
+    internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretRequest_SecretExpiration_descriptor =
+      internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretRequest_descriptor.getNestedTypes().get(0);
+    internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretRequest_SecretExpiration_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretRequest_SecretExpiration_descriptor,
+        new java.lang.String[] { "Date", });
     internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretResponse_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretResponse_fieldAccessorTable = new
@@ -196,6 +213,7 @@ public final class EntitiesProto {
         internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionGroupsResponse_descriptor,
         new java.lang.String[] { });
     com.tcn.cloud.api.api.commons.org.AuthConnectionsProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
