@@ -115,18 +115,19 @@ public final class EntitiesProto {
       "nSecretRequest.SecretExpirationR\020secretE" +
       "xpiration\032B\n\020SecretExpiration\022.\n\004date\030\001 " +
       "\001(\0132\032.google.protobuf.TimestampR\004date\"$\n" +
-      "\"UpdateAuthConnectionSecretResponse\"\245\001\n!" +
+      "\"UpdateAuthConnectionSecretResponse\"\312\001\n!" +
       "UpdateAuthConnectionGroupsRequest\022?\n\rdef" +
       "ault_group\030\001 \001(\0132\032.api.commons.org.Group" +
       "ItemR\014defaultGroup\022?\n\rcustom_groups\030\002 \003(" +
       "\0132\032.api.commons.org.GroupItemR\014customGro" +
-      "ups\"$\n\"UpdateAuthConnectionGroupsRespons" +
-      "eB\342\001\n1com.tcn.cloud.api.api.v1alpha1.org" +
-      ".authconnectionB\rEntitiesProtoP\001\242\002\004AVOA\252" +
-      "\002\037Api.V1alpha1.Org.Authconnection\312\002\037Api\\" +
-      "V1alpha1\\Org\\Authconnection\342\002+Api\\V1alph" +
-      "a1\\Org\\Authconnection\\GPBMetadata\352\002\"Api:" +
-      ":V1alpha1::Org::Authconnectionb\006proto3"
+      "ups\022#\n\rconnection_id\030\003 \001(\tR\014connectionId" +
+      "\"$\n\"UpdateAuthConnectionGroupsResponseB\342" +
+      "\001\n1com.tcn.cloud.api.api.v1alpha1.org.au" +
+      "thconnectionB\rEntitiesProtoP\001\242\002\004AVOA\252\002\037A" +
+      "pi.V1alpha1.Org.Authconnection\312\002\037Api\\V1a" +
+      "lpha1\\Org\\Authconnection\342\002+Api\\V1alpha1\\" +
+      "Org\\Authconnection\\GPBMetadata\352\002\"Api::V1" +
+      "alpha1::Org::Authconnectionb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -205,7 +206,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionGroupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionGroupsRequest_descriptor,
-        new java.lang.String[] { "DefaultGroup", "CustomGroups", });
+        new java.lang.String[] { "DefaultGroup", "CustomGroups", "ConnectionId", });
     internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionGroupsResponse_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionGroupsResponse_fieldAccessorTable = new
