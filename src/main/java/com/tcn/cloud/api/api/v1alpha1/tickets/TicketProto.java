@@ -175,30 +175,30 @@ public final class TicketProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_tickets_CreateSelfAssignRes_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_tickets_ListSkillsReq_descriptor;
+    internal_static_api_v1alpha1_tickets_ListSkillsRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_tickets_ListSkillsReq_fieldAccessorTable;
+      internal_static_api_v1alpha1_tickets_ListSkillsRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_tickets_ListSkillsRes_descriptor;
+    internal_static_api_v1alpha1_tickets_ListSkillsResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_tickets_ListSkillsRes_fieldAccessorTable;
+      internal_static_api_v1alpha1_tickets_ListSkillsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_tickets_Skill_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_tickets_Skill_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_tickets_ListUsersReq_descriptor;
+    internal_static_api_v1alpha1_tickets_ListUsersRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_tickets_ListUsersReq_fieldAccessorTable;
+      internal_static_api_v1alpha1_tickets_ListUsersRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_tickets_ListUsersRes_descriptor;
+    internal_static_api_v1alpha1_tickets_ListUsersResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_tickets_ListUsersRes_fieldAccessorTable;
+      internal_static_api_v1alpha1_tickets_ListUsersResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_tickets_User_descriptor;
   static final 
@@ -284,20 +284,20 @@ public final class TicketProto {
       ".api.commons.ConfirmReplyCommentR\tisCrea" +
       "ted\"8\n\023CreateSelfAssignReq\022!\n\nticket_sid" +
       "\030\001 \001(\003B\0020\001R\tticketSid\"6\n\023CreateSelfAssig" +
-      "nRes\022\037\n\013is_assigned\030\001 \001(\010R\nisAssigned\"\017\n" +
-      "\rListSkillsReq\"D\n\rListSkillsRes\0223\n\006skill" +
-      "s\030\001 \003(\0132\033.api.v1alpha1.tickets.SkillR\006sk" +
-      "ills\"6\n\005Skill\022\031\n\010skill_id\030\001 \001(\tR\007skillId" +
-      "\022\022\n\004name\030\002 \001(\tR\004name\"\016\n\014ListUsersReq\"@\n\014" +
-      "ListUsersRes\0220\n\005users\030\001 \003(\0132\032.api.v1alph" +
-      "a1.tickets.UserR\005users\"[\n\004User\022\027\n\007user_i" +
-      "d\030\001 \001(\tR\006userId\022\035\n\nfirst_name\030\002 \001(\tR\tfir" +
-      "stName\022\033\n\tlast_name\030\003 \001(\tR\010lastNameB\247\001\n&" +
-      "com.tcn.cloud.api.api.v1alpha1.ticketsB\013" +
-      "TicketProtoP\001\242\002\003AVT\252\002\024Api.V1alpha1.Ticke" +
-      "ts\312\002\024Api\\V1alpha1\\Tickets\342\002 Api\\V1alpha1" +
-      "\\Tickets\\GPBMetadata\352\002\026Api::V1alpha1::Ti" +
-      "cketsb\006proto3"
+      "nRes\022\037\n\013is_assigned\030\001 \001(\010R\nisAssigned\"\023\n" +
+      "\021ListSkillsRequest\"I\n\022ListSkillsResponse" +
+      "\0223\n\006skills\030\001 \003(\0132\033.api.v1alpha1.tickets." +
+      "SkillR\006skills\"6\n\005Skill\022\031\n\010skill_id\030\001 \001(\t" +
+      "R\007skillId\022\022\n\004name\030\002 \001(\tR\004name\"\022\n\020ListUse" +
+      "rsRequest\"E\n\021ListUsersResponse\0220\n\005users\030" +
+      "\001 \003(\0132\032.api.v1alpha1.tickets.UserR\005users" +
+      "\"[\n\004User\022\027\n\007user_id\030\001 \001(\tR\006userId\022\035\n\nfir" +
+      "st_name\030\002 \001(\tR\tfirstName\022\033\n\tlast_name\030\003 " +
+      "\001(\tR\010lastNameB\247\001\n&com.tcn.cloud.api.api." +
+      "v1alpha1.ticketsB\013TicketProtoP\001\242\002\003AVT\252\002\024" +
+      "Api.V1alpha1.Tickets\312\002\024Api\\V1alpha1\\Tick" +
+      "ets\342\002 Api\\V1alpha1\\Tickets\\GPBMetadata\352\002" +
+      "\026Api::V1alpha1::Ticketsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -498,17 +498,17 @@ public final class TicketProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_CreateSelfAssignRes_descriptor,
         new java.lang.String[] { "IsAssigned", });
-    internal_static_api_v1alpha1_tickets_ListSkillsReq_descriptor =
+    internal_static_api_v1alpha1_tickets_ListSkillsRequest_descriptor =
       getDescriptor().getMessageTypes().get(32);
-    internal_static_api_v1alpha1_tickets_ListSkillsReq_fieldAccessorTable = new
+    internal_static_api_v1alpha1_tickets_ListSkillsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_tickets_ListSkillsReq_descriptor,
+        internal_static_api_v1alpha1_tickets_ListSkillsRequest_descriptor,
         new java.lang.String[] { });
-    internal_static_api_v1alpha1_tickets_ListSkillsRes_descriptor =
+    internal_static_api_v1alpha1_tickets_ListSkillsResponse_descriptor =
       getDescriptor().getMessageTypes().get(33);
-    internal_static_api_v1alpha1_tickets_ListSkillsRes_fieldAccessorTable = new
+    internal_static_api_v1alpha1_tickets_ListSkillsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_tickets_ListSkillsRes_descriptor,
+        internal_static_api_v1alpha1_tickets_ListSkillsResponse_descriptor,
         new java.lang.String[] { "Skills", });
     internal_static_api_v1alpha1_tickets_Skill_descriptor =
       getDescriptor().getMessageTypes().get(34);
@@ -516,17 +516,17 @@ public final class TicketProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_tickets_Skill_descriptor,
         new java.lang.String[] { "SkillId", "Name", });
-    internal_static_api_v1alpha1_tickets_ListUsersReq_descriptor =
+    internal_static_api_v1alpha1_tickets_ListUsersRequest_descriptor =
       getDescriptor().getMessageTypes().get(35);
-    internal_static_api_v1alpha1_tickets_ListUsersReq_fieldAccessorTable = new
+    internal_static_api_v1alpha1_tickets_ListUsersRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_tickets_ListUsersReq_descriptor,
+        internal_static_api_v1alpha1_tickets_ListUsersRequest_descriptor,
         new java.lang.String[] { });
-    internal_static_api_v1alpha1_tickets_ListUsersRes_descriptor =
+    internal_static_api_v1alpha1_tickets_ListUsersResponse_descriptor =
       getDescriptor().getMessageTypes().get(36);
-    internal_static_api_v1alpha1_tickets_ListUsersRes_fieldAccessorTable = new
+    internal_static_api_v1alpha1_tickets_ListUsersResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_tickets_ListUsersRes_descriptor,
+        internal_static_api_v1alpha1_tickets_ListUsersResponse_descriptor,
         new java.lang.String[] { "Users", });
     internal_static_api_v1alpha1_tickets_User_descriptor =
       getDescriptor().getMessageTypes().get(37);

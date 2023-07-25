@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.tickets;
 
-public interface ListUsersReqOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.tickets.ListUsersReq)
+public interface ListSkillsRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.tickets.ListSkillsRequest)
     com.google.protobuf.MessageOrBuilder {
 }

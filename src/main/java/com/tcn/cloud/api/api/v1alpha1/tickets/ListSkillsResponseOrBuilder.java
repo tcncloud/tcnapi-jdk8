@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v1alpha1.tickets;
 
-public interface ListSkillsResOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.tickets.ListSkillsRes)
+public interface ListSkillsResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.tickets.ListSkillsResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
