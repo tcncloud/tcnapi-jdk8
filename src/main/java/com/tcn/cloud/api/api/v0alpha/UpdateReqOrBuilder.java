@@ -65,21 +65,21 @@ public interface UpdateReqOrBuilder extends
 
   /**
    * <pre>
-   * previously existing name
+   * title of the article
    * </pre>
    *
-   * <code>string previous_name = 13 [json_name = "previousName"];</code>
-   * @return The previousName.
+   * <code>string title = 13 [json_name = "title"];</code>
+   * @return The title.
    */
-  java.lang.String getPreviousName();
+  java.lang.String getTitle();
   /**
    * <pre>
-   * previously existing name
+   * title of the article
    * </pre>
    *
-   * <code>string previous_name = 13 [json_name = "previousName"];</code>
-   * @return The bytes for previousName.
+   * <code>string title = 13 [json_name = "title"];</code>
+   * @return The bytes for title.
    */
   com.google.protobuf.ByteString
-      getPreviousNameBytes();
+      getTitleBytes();
 }

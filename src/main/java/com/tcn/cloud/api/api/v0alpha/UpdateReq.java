@@ -24,7 +24,7 @@ private static final long serialVersionUID = 0L;
     locale_ = "";
     content_ = "";
     message_ = "";
-    previousName_ = "";
+    title_ = "";
   }
 
   @java.lang.Override
@@ -211,47 +211,47 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int PREVIOUS_NAME_FIELD_NUMBER = 13;
+  public static final int TITLE_FIELD_NUMBER = 13;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object previousName_ = "";
+  private volatile java.lang.Object title_ = "";
   /**
    * <pre>
-   * previously existing name
+   * title of the article
    * </pre>
    *
-   * <code>string previous_name = 13 [json_name = "previousName"];</code>
-   * @return The previousName.
+   * <code>string title = 13 [json_name = "title"];</code>
+   * @return The title.
    */
   @java.lang.Override
-  public java.lang.String getPreviousName() {
-    java.lang.Object ref = previousName_;
+  public java.lang.String getTitle() {
+    java.lang.Object ref = title_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      previousName_ = s;
+      title_ = s;
       return s;
     }
   }
   /**
    * <pre>
-   * previously existing name
+   * title of the article
    * </pre>
    *
-   * <code>string previous_name = 13 [json_name = "previousName"];</code>
-   * @return The bytes for previousName.
+   * <code>string title = 13 [json_name = "title"];</code>
+   * @return The bytes for title.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getPreviousNameBytes() {
-    java.lang.Object ref = previousName_;
+      getTitleBytes() {
+    java.lang.Object ref = title_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      previousName_ = b;
+      title_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -284,8 +284,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, message_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(previousName_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 13, previousName_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 13, title_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -308,8 +308,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, message_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(previousName_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, previousName_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, title_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -334,8 +334,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getContent())) return false;
     if (!getMessage()
         .equals(other.getMessage())) return false;
-    if (!getPreviousName()
-        .equals(other.getPreviousName())) return false;
+    if (!getTitle()
+        .equals(other.getTitle())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -355,8 +355,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getContent().hashCode();
     hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
     hash = (53 * hash) + getMessage().hashCode();
-    hash = (37 * hash) + PREVIOUS_NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getPreviousName().hashCode();
+    hash = (37 * hash) + TITLE_FIELD_NUMBER;
+    hash = (53 * hash) + getTitle().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -496,7 +496,7 @@ private static final long serialVersionUID = 0L;
       locale_ = "";
       content_ = "";
       message_ = "";
-      previousName_ = "";
+      title_ = "";
       return this;
     }
 
@@ -543,7 +543,7 @@ private static final long serialVersionUID = 0L;
         result.message_ = message_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.previousName_ = previousName_;
+        result.title_ = title_;
       }
     }
 
@@ -611,8 +611,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
-      if (!other.getPreviousName().isEmpty()) {
-        previousName_ = other.previousName_;
+      if (!other.getTitle().isEmpty()) {
+        title_ = other.title_;
         bitField0_ |= 0x00000010;
         onChanged();
       }
@@ -663,7 +663,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 98
             case 106: {
-              previousName_ = input.readStringRequireUtf8();
+              title_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000010;
               break;
             } // case 106
@@ -992,22 +992,22 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object previousName_ = "";
+    private java.lang.Object title_ = "";
     /**
      * <pre>
-     * previously existing name
+     * title of the article
      * </pre>
      *
-     * <code>string previous_name = 13 [json_name = "previousName"];</code>
-     * @return The previousName.
+     * <code>string title = 13 [json_name = "title"];</code>
+     * @return The title.
      */
-    public java.lang.String getPreviousName() {
-      java.lang.Object ref = previousName_;
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        previousName_ = s;
+        title_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -1015,20 +1015,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * previously existing name
+     * title of the article
      * </pre>
      *
-     * <code>string previous_name = 13 [json_name = "previousName"];</code>
-     * @return The bytes for previousName.
+     * <code>string title = 13 [json_name = "title"];</code>
+     * @return The bytes for title.
      */
     public com.google.protobuf.ByteString
-        getPreviousNameBytes() {
-      java.lang.Object ref = previousName_;
+        getTitleBytes() {
+      java.lang.Object ref = title_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        previousName_ = b;
+        title_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1036,49 +1036,49 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * previously existing name
+     * title of the article
      * </pre>
      *
-     * <code>string previous_name = 13 [json_name = "previousName"];</code>
-     * @param value The previousName to set.
+     * <code>string title = 13 [json_name = "title"];</code>
+     * @param value The title to set.
      * @return This builder for chaining.
      */
-    public Builder setPreviousName(
+    public Builder setTitle(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      previousName_ = value;
+      title_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * previously existing name
+     * title of the article
      * </pre>
      *
-     * <code>string previous_name = 13 [json_name = "previousName"];</code>
+     * <code>string title = 13 [json_name = "title"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearPreviousName() {
-      previousName_ = getDefaultInstance().getPreviousName();
+    public Builder clearTitle() {
+      title_ = getDefaultInstance().getTitle();
       bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * previously existing name
+     * title of the article
      * </pre>
      *
-     * <code>string previous_name = 13 [json_name = "previousName"];</code>
-     * @param value The bytes for previousName to set.
+     * <code>string title = 13 [json_name = "title"];</code>
+     * @param value The bytes for title to set.
      * @return This builder for chaining.
      */
-    public Builder setPreviousNameBytes(
+    public Builder setTitleBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      previousName_ = value;
+      title_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
       return this;

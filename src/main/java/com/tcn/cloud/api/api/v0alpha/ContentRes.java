@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private ContentRes() {
     content_ = "";
     images_ = java.util.Collections.emptyList();
+    title_ = "";
   }
 
   @java.lang.Override
@@ -182,6 +183,53 @@ private static final long serialVersionUID = 0L;
     return images_.get(index);
   }
 
+  public static final int TITLE_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object title_ = "";
+  /**
+   * <pre>
+   * title of the article
+   * </pre>
+   *
+   * <code>string title = 4 [json_name = "title"];</code>
+   * @return The title.
+   */
+  @java.lang.Override
+  public java.lang.String getTitle() {
+    java.lang.Object ref = title_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      title_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * title of the article
+   * </pre>
+   *
+   * <code>string title = 4 [json_name = "title"];</code>
+   * @return The bytes for title.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getTitleBytes() {
+    java.lang.Object ref = title_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      title_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -205,6 +253,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < images_.size(); i++) {
       output.writeMessage(3, images_.get(i));
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, title_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -224,6 +275,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < images_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, images_.get(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, title_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -249,6 +303,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getImagesList()
         .equals(other.getImagesList())) return false;
+    if (!getTitle()
+        .equals(other.getTitle())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -270,6 +326,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + IMAGES_FIELD_NUMBER;
       hash = (53 * hash) + getImagesList().hashCode();
     }
+    hash = (37 * hash) + TITLE_FIELD_NUMBER;
+    hash = (53 * hash) + getTitle().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -418,6 +476,7 @@ private static final long serialVersionUID = 0L;
         imagesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000004);
+      title_ = "";
       return this;
     }
 
@@ -471,6 +530,9 @@ private static final long serialVersionUID = 0L;
         result.lastEditedTimestamp_ = lastEditedTimestampBuilder_ == null
             ? lastEditedTimestamp_
             : lastEditedTimestampBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.title_ = title_;
       }
     }
 
@@ -552,6 +614,11 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (!other.getTitle().isEmpty()) {
+        title_ = other.title_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -603,6 +670,11 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 26
+            case 34: {
+              title_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1157,6 +1229,98 @@ private static final long serialVersionUID = 0L;
         images_ = null;
       }
       return imagesBuilder_;
+    }
+
+    private java.lang.Object title_ = "";
+    /**
+     * <pre>
+     * title of the article
+     * </pre>
+     *
+     * <code>string title = 4 [json_name = "title"];</code>
+     * @return The title.
+     */
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * title of the article
+     * </pre>
+     *
+     * <code>string title = 4 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * title of the article
+     * </pre>
+     *
+     * <code>string title = 4 [json_name = "title"];</code>
+     * @param value The title to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTitle(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      title_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * title of the article
+     * </pre>
+     *
+     * <code>string title = 4 [json_name = "title"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTitle() {
+      title_ = getDefaultInstance().getTitle();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * title of the article
+     * </pre>
+     *
+     * <code>string title = 4 [json_name = "title"];</code>
+     * @param value The bytes for title to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTitleBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      title_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
