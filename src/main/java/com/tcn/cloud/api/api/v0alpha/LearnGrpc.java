@@ -142,6 +142,37 @@ public final class LearnGrpc {
     return getSearchContentMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SearchContentReq,
+      com.tcn.cloud.api.api.v0alpha.SearchRes> getListSearchResultsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListSearchResults",
+      requestType = com.tcn.cloud.api.api.v0alpha.SearchContentReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.SearchRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SearchContentReq,
+      com.tcn.cloud.api.api.v0alpha.SearchRes> getListSearchResultsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SearchContentReq, com.tcn.cloud.api.api.v0alpha.SearchRes> getListSearchResultsMethod;
+    if ((getListSearchResultsMethod = LearnGrpc.getListSearchResultsMethod) == null) {
+      synchronized (LearnGrpc.class) {
+        if ((getListSearchResultsMethod = LearnGrpc.getListSearchResultsMethod) == null) {
+          LearnGrpc.getListSearchResultsMethod = getListSearchResultsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SearchContentReq, com.tcn.cloud.api.api.v0alpha.SearchRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSearchResults"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.SearchContentReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.SearchRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("ListSearchResults"))
+              .build();
+        }
+      }
+    }
+    return getListSearchResultsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.StandaloneReq,
       com.tcn.cloud.api.api.v0alpha.StandaloneRes> getStandaloneMethod;
 
@@ -328,6 +359,68 @@ public final class LearnGrpc {
     return getDeleteStandaloneMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SnippetReq,
+      com.tcn.cloud.api.api.v0alpha.SnippetRes> getSnippetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Snippet",
+      requestType = com.tcn.cloud.api.api.v0alpha.SnippetReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.SnippetRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SnippetReq,
+      com.tcn.cloud.api.api.v0alpha.SnippetRes> getSnippetMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SnippetReq, com.tcn.cloud.api.api.v0alpha.SnippetRes> getSnippetMethod;
+    if ((getSnippetMethod = LearnGrpc.getSnippetMethod) == null) {
+      synchronized (LearnGrpc.class) {
+        if ((getSnippetMethod = LearnGrpc.getSnippetMethod) == null) {
+          LearnGrpc.getSnippetMethod = getSnippetMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SnippetReq, com.tcn.cloud.api.api.v0alpha.SnippetRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Snippet"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.SnippetReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.SnippetRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("Snippet"))
+              .build();
+        }
+      }
+    }
+    return getSnippetMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq,
+      com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesRes> getDeleteLearnPagesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteLearnPages",
+      requestType = com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq,
+      com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesRes> getDeleteLearnPagesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq, com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesRes> getDeleteLearnPagesMethod;
+    if ((getDeleteLearnPagesMethod = LearnGrpc.getDeleteLearnPagesMethod) == null) {
+      synchronized (LearnGrpc.class) {
+        if ((getDeleteLearnPagesMethod = LearnGrpc.getDeleteLearnPagesMethod) == null) {
+          LearnGrpc.getDeleteLearnPagesMethod = getDeleteLearnPagesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq, com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteLearnPages"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesRes.getDefaultInstance()))
+              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("DeleteLearnPages"))
+              .build();
+        }
+      }
+    }
+    return getDeleteLearnPagesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -412,11 +505,23 @@ public final class LearnGrpc {
     /**
      * <pre>
      * search content in learning pages
+     * we allow all the logged in agents/admins to view search content
      * </pre>
      */
     default void searchContent(com.tcn.cloud.api.api.v0alpha.SearchContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchContentMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * stream search content results in learning pages
+     * we allow all the logged in agents/admins to view search content
+     * </pre>
+     */
+    default void listSearchResults(com.tcn.cloud.api.api.v0alpha.SearchContentReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSearchResultsMethod(), responseObserver);
     }
 
     /**
@@ -477,6 +582,27 @@ public final class LearnGrpc {
     default void deleteStandalone(com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteStandaloneMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * get snippet content from learning pages
+     * we allow all the logged in agents/admins to view snippet content
+     * </pre>
+     */
+    default void snippet(com.tcn.cloud.api.api.v0alpha.SnippetReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SnippetRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSnippetMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * delete learning pages
+     * </pre>
+     */
+    default void deleteLearnPages(com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteLearnPagesMethod(), responseObserver);
     }
   }
 
@@ -549,12 +675,25 @@ public final class LearnGrpc {
     /**
      * <pre>
      * search content in learning pages
+     * we allow all the logged in agents/admins to view search content
      * </pre>
      */
     public void searchContent(com.tcn.cloud.api.api.v0alpha.SearchContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSearchContentMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * stream search content results in learning pages
+     * we allow all the logged in agents/admins to view search content
+     * </pre>
+     */
+    public void listSearchResults(com.tcn.cloud.api.api.v0alpha.SearchContentReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getListSearchResultsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -622,6 +761,29 @@ public final class LearnGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteStandaloneMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * get snippet content from learning pages
+     * we allow all the logged in agents/admins to view snippet content
+     * </pre>
+     */
+    public void snippet(com.tcn.cloud.api.api.v0alpha.SnippetReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SnippetRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSnippetMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * delete learning pages
+     * </pre>
+     */
+    public void deleteLearnPages(com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteLearnPagesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -676,11 +838,24 @@ public final class LearnGrpc {
     /**
      * <pre>
      * search content in learning pages
+     * we allow all the logged in agents/admins to view search content
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SearchRes searchContent(com.tcn.cloud.api.api.v0alpha.SearchContentReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSearchContentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * stream search content results in learning pages
+     * we allow all the logged in agents/admins to view search content
+     * </pre>
+     */
+    public java.util.Iterator<com.tcn.cloud.api.api.v0alpha.SearchRes> listSearchResults(
+        com.tcn.cloud.api.api.v0alpha.SearchContentReq request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getListSearchResultsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -742,6 +917,27 @@ public final class LearnGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteStandaloneMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * get snippet content from learning pages
+     * we allow all the logged in agents/admins to view snippet content
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.SnippetRes snippet(com.tcn.cloud.api.api.v0alpha.SnippetReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSnippetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * delete learning pages
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesRes deleteLearnPages(com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteLearnPagesMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -799,6 +995,7 @@ public final class LearnGrpc {
     /**
      * <pre>
      * search content in learning pages
+     * we allow all the logged in agents/admins to view search content
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SearchRes> searchContent(
@@ -872,18 +1069,44 @@ public final class LearnGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteStandaloneMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * get snippet content from learning pages
+     * we allow all the logged in agents/admins to view snippet content
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SnippetRes> snippet(
+        com.tcn.cloud.api.api.v0alpha.SnippetReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSnippetMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * delete learning pages
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesRes> deleteLearnPages(
+        com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteLearnPagesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_EXIST = 0;
   private static final int METHODID_CONTENT = 1;
   private static final int METHODID_EXPORT_MANY = 2;
   private static final int METHODID_SEARCH_CONTENT = 3;
-  private static final int METHODID_STANDALONE = 4;
-  private static final int METHODID_CONTENT_EDITOR_DATA = 5;
-  private static final int METHODID_UPDATE = 6;
-  private static final int METHODID_STORE_STATIC_IMAGE = 7;
-  private static final int METHODID_UPLOAD_DYNAMIC_SCREENSHOT = 8;
-  private static final int METHODID_DELETE_STANDALONE = 9;
+  private static final int METHODID_LIST_SEARCH_RESULTS = 4;
+  private static final int METHODID_STANDALONE = 5;
+  private static final int METHODID_CONTENT_EDITOR_DATA = 6;
+  private static final int METHODID_UPDATE = 7;
+  private static final int METHODID_STORE_STATIC_IMAGE = 8;
+  private static final int METHODID_UPLOAD_DYNAMIC_SCREENSHOT = 9;
+  private static final int METHODID_DELETE_STANDALONE = 10;
+  private static final int METHODID_SNIPPET = 11;
+  private static final int METHODID_DELETE_LEARN_PAGES = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -918,6 +1141,10 @@ public final class LearnGrpc {
           serviceImpl.searchContent((com.tcn.cloud.api.api.v0alpha.SearchContentReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchRes>) responseObserver);
           break;
+        case METHODID_LIST_SEARCH_RESULTS:
+          serviceImpl.listSearchResults((com.tcn.cloud.api.api.v0alpha.SearchContentReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchRes>) responseObserver);
+          break;
         case METHODID_STANDALONE:
           serviceImpl.standalone((com.tcn.cloud.api.api.v0alpha.StandaloneReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StandaloneRes>) responseObserver);
@@ -941,6 +1168,14 @@ public final class LearnGrpc {
         case METHODID_DELETE_STANDALONE:
           serviceImpl.deleteStandalone((com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes>) responseObserver);
+          break;
+        case METHODID_SNIPPET:
+          serviceImpl.snippet((com.tcn.cloud.api.api.v0alpha.SnippetReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SnippetRes>) responseObserver);
+          break;
+        case METHODID_DELETE_LEARN_PAGES:
+          serviceImpl.deleteLearnPages((com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -989,6 +1224,13 @@ public final class LearnGrpc {
               com.tcn.cloud.api.api.v0alpha.SearchRes>(
                 service, METHODID_SEARCH_CONTENT)))
         .addMethod(
+          getListSearchResultsMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SearchContentReq,
+              com.tcn.cloud.api.api.v0alpha.SearchRes>(
+                service, METHODID_LIST_SEARCH_RESULTS)))
+        .addMethod(
           getStandaloneMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1030,6 +1272,20 @@ public final class LearnGrpc {
               com.tcn.cloud.api.api.v0alpha.DeleteStandaloneReq,
               com.tcn.cloud.api.api.v0alpha.DeleteStandaloneRes>(
                 service, METHODID_DELETE_STANDALONE)))
+        .addMethod(
+          getSnippetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SnippetReq,
+              com.tcn.cloud.api.api.v0alpha.SnippetRes>(
+                service, METHODID_SNIPPET)))
+        .addMethod(
+          getDeleteLearnPagesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesReq,
+              com.tcn.cloud.api.api.v0alpha.DeleteLearnPagesRes>(
+                service, METHODID_DELETE_LEARN_PAGES)))
         .build();
   }
 
@@ -1082,12 +1338,15 @@ public final class LearnGrpc {
               .addMethod(getContentMethod())
               .addMethod(getExportManyMethod())
               .addMethod(getSearchContentMethod())
+              .addMethod(getListSearchResultsMethod())
               .addMethod(getStandaloneMethod())
               .addMethod(getContentEditorDataMethod())
               .addMethod(getUpdateMethod())
               .addMethod(getStoreStaticImageMethod())
               .addMethod(getUploadDynamicScreenshotMethod())
               .addMethod(getDeleteStandaloneMethod())
+              .addMethod(getSnippetMethod())
+              .addMethod(getDeleteLearnPagesMethod())
               .build();
         }
       }

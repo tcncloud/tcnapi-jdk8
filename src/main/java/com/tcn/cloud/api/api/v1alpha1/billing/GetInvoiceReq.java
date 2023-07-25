@@ -20,6 +20,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private GetInvoiceReq() {
+    orgId_ = "";
+    format_ = 0;
   }
 
   @java.lang.Override
@@ -89,6 +91,81 @@ private static final long serialVersionUID = 0L;
     return invoiceDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : invoiceDate_;
   }
 
+  public static final int ORG_ID_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object orgId_ = "";
+  /**
+   * <pre>
+   * Required. the identifier of the organization to update the plan for
+   * </pre>
+   *
+   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * @return The orgId.
+   */
+  @java.lang.Override
+  public java.lang.String getOrgId() {
+    java.lang.Object ref = orgId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      orgId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Required. the identifier of the organization to update the plan for
+   * </pre>
+   *
+   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * @return The bytes for orgId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getOrgIdBytes() {
+    java.lang.Object ref = orgId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      orgId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int FORMAT_FIELD_NUMBER = 3;
+  private int format_ = 0;
+  /**
+   * <pre>
+   * Optional. the invoice for the organization. If not specified,
+   * will use the proto format as the default
+   * </pre>
+   *
+   * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
+   * @return The enum numeric value on the wire for format.
+   */
+  @java.lang.Override public int getFormatValue() {
+    return format_;
+  }
+  /**
+   * <pre>
+   * Optional. the invoice for the organization. If not specified,
+   * will use the proto format as the default
+   * </pre>
+   *
+   * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
+   * @return The format.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat getFormat() {
+    com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat result = com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat.forNumber(format_);
+    return result == null ? com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -106,6 +183,12 @@ private static final long serialVersionUID = 0L;
     if (invoiceDate_ != null) {
       output.writeMessage(1, getInvoiceDate());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orgId_);
+    }
+    if (format_ != com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat.INVOICE_FORMAT_UNSPECIFIED.getNumber()) {
+      output.writeEnum(3, format_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -118,6 +201,13 @@ private static final long serialVersionUID = 0L;
     if (invoiceDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getInvoiceDate());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orgId_);
+    }
+    if (format_ != com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat.INVOICE_FORMAT_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(3, format_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -139,6 +229,9 @@ private static final long serialVersionUID = 0L;
       if (!getInvoiceDate()
           .equals(other.getInvoiceDate())) return false;
     }
+    if (!getOrgId()
+        .equals(other.getOrgId())) return false;
+    if (format_ != other.format_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -154,6 +247,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + INVOICE_DATE_FIELD_NUMBER;
       hash = (53 * hash) + getInvoiceDate().hashCode();
     }
+    hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getOrgId().hashCode();
+    hash = (37 * hash) + FORMAT_FIELD_NUMBER;
+    hash = (53 * hash) + format_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -294,6 +391,8 @@ private static final long serialVersionUID = 0L;
         invoiceDateBuilder_.dispose();
         invoiceDateBuilder_ = null;
       }
+      orgId_ = "";
+      format_ = 0;
       return this;
     }
 
@@ -331,6 +430,12 @@ private static final long serialVersionUID = 0L;
         result.invoiceDate_ = invoiceDateBuilder_ == null
             ? invoiceDate_
             : invoiceDateBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.orgId_ = orgId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.format_ = format_;
       }
     }
 
@@ -381,6 +486,14 @@ private static final long serialVersionUID = 0L;
       if (other.hasInvoiceDate()) {
         mergeInvoiceDate(other.getInvoiceDate());
       }
+      if (!other.getOrgId().isEmpty()) {
+        orgId_ = other.orgId_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (other.format_ != 0) {
+        setFormatValue(other.getFormatValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -414,6 +527,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              orgId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 24: {
+              format_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -611,6 +734,176 @@ private static final long serialVersionUID = 0L;
         invoiceDate_ = null;
       }
       return invoiceDateBuilder_;
+    }
+
+    private java.lang.Object orgId_ = "";
+    /**
+     * <pre>
+     * Required. the identifier of the organization to update the plan for
+     * </pre>
+     *
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * @return The orgId.
+     */
+    public java.lang.String getOrgId() {
+      java.lang.Object ref = orgId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orgId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Required. the identifier of the organization to update the plan for
+     * </pre>
+     *
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * @return The bytes for orgId.
+     */
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      java.lang.Object ref = orgId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orgId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Required. the identifier of the organization to update the plan for
+     * </pre>
+     *
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * @param value The orgId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOrgId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      orgId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Required. the identifier of the organization to update the plan for
+     * </pre>
+     *
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOrgId() {
+      orgId_ = getDefaultInstance().getOrgId();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Required. the identifier of the organization to update the plan for
+     * </pre>
+     *
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * @param value The bytes for orgId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      orgId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private int format_ = 0;
+    /**
+     * <pre>
+     * Optional. the invoice for the organization. If not specified,
+     * will use the proto format as the default
+     * </pre>
+     *
+     * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
+     * @return The enum numeric value on the wire for format.
+     */
+    @java.lang.Override public int getFormatValue() {
+      return format_;
+    }
+    /**
+     * <pre>
+     * Optional. the invoice for the organization. If not specified,
+     * will use the proto format as the default
+     * </pre>
+     *
+     * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
+     * @param value The enum numeric value on the wire for format to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFormatValue(int value) {
+      format_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. the invoice for the organization. If not specified,
+     * will use the proto format as the default
+     * </pre>
+     *
+     * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
+     * @return The format.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat getFormat() {
+      com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat result = com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat.forNumber(format_);
+      return result == null ? com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Optional. the invoice for the organization. If not specified,
+     * will use the proto format as the default
+     * </pre>
+     *
+     * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
+     * @param value The format to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFormat(com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000004;
+      format_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. the invoice for the organization. If not specified,
+     * will use the proto format as the default
+     * </pre>
+     *
+     * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFormat() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      format_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

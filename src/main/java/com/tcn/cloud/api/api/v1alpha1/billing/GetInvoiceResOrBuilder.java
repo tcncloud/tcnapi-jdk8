@@ -9,7 +9,7 @@ public interface GetInvoiceResOrBuilder extends
 
   /**
    * <pre>
-   * the invoice for the organization
+   * deprecated
    * </pre>
    *
    * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -18,7 +18,7 @@ public interface GetInvoiceResOrBuilder extends
   boolean hasInvoice();
   /**
    * <pre>
-   * the invoice for the organization
+   * deprecated
    * </pre>
    *
    * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -27,10 +27,44 @@ public interface GetInvoiceResOrBuilder extends
   com.tcn.cloud.api.api.commons.billing.Invoice getInvoice();
   /**
    * <pre>
-   * the invoice for the organization
+   * deprecated
    * </pre>
    *
    * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
    */
   com.tcn.cloud.api.api.commons.billing.InvoiceOrBuilder getInvoiceOrBuilder();
+
+  /**
+   * <code>.api.commons.billing.Invoice proto = 2 [json_name = "proto"];</code>
+   * @return Whether the proto field is set.
+   */
+  boolean hasProto();
+  /**
+   * <code>.api.commons.billing.Invoice proto = 2 [json_name = "proto"];</code>
+   * @return The proto.
+   */
+  com.tcn.cloud.api.api.commons.billing.Invoice getProto();
+  /**
+   * <code>.api.commons.billing.Invoice proto = 2 [json_name = "proto"];</code>
+   */
+  com.tcn.cloud.api.api.commons.billing.InvoiceOrBuilder getProtoOrBuilder();
+
+  /**
+   * <code>string csv_url = 3 [json_name = "csvUrl"];</code>
+   * @return Whether the csvUrl field is set.
+   */
+  boolean hasCsvUrl();
+  /**
+   * <code>string csv_url = 3 [json_name = "csvUrl"];</code>
+   * @return The csvUrl.
+   */
+  java.lang.String getCsvUrl();
+  /**
+   * <code>string csv_url = 3 [json_name = "csvUrl"];</code>
+   * @return The bytes for csvUrl.
+   */
+  com.google.protobuf.ByteString
+      getCsvUrlBytes();
+
+  com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes.FormatCase getFormatCase();
 }
