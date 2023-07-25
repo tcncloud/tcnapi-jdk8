@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CreateAuthConnectionResponse() {
+    connectionId_ = "";
   }
 
   @java.lang.Override
@@ -42,6 +43,53 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionResponse.class, com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionResponse.Builder.class);
   }
 
+  public static final int CONNECTION_ID_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object connectionId_ = "";
+  /**
+   * <pre>
+   * The id of the newly created auth connection.
+   * </pre>
+   *
+   * <code>string connection_id = 1 [json_name = "connectionId"];</code>
+   * @return The connectionId.
+   */
+  @java.lang.Override
+  public java.lang.String getConnectionId() {
+    java.lang.Object ref = connectionId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      connectionId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The id of the newly created auth connection.
+   * </pre>
+   *
+   * <code>string connection_id = 1 [json_name = "connectionId"];</code>
+   * @return The bytes for connectionId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getConnectionIdBytes() {
+    java.lang.Object ref = connectionId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      connectionId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -56,6 +104,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, connectionId_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -65,6 +116,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, connectionId_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -80,6 +134,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionResponse other = (com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionResponse) obj;
 
+    if (!getConnectionId()
+        .equals(other.getConnectionId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -91,6 +147,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getConnectionId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -225,6 +283,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      connectionId_ = "";
       return this;
     }
 
@@ -251,8 +311,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionResponse result = new com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionResponse(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.connectionId_ = connectionId_;
+      }
     }
 
     @java.lang.Override
@@ -299,6 +367,11 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionResponse other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.org.authconnection.CreateAuthConnectionResponse.getDefaultInstance()) return this;
+      if (!other.getConnectionId().isEmpty()) {
+        connectionId_ = other.connectionId_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -325,6 +398,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              connectionId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -338,6 +416,99 @@ private static final long serialVersionUID = 0L;
       } finally {
         onChanged();
       } // finally
+      return this;
+    }
+    private int bitField0_;
+
+    private java.lang.Object connectionId_ = "";
+    /**
+     * <pre>
+     * The id of the newly created auth connection.
+     * </pre>
+     *
+     * <code>string connection_id = 1 [json_name = "connectionId"];</code>
+     * @return The connectionId.
+     */
+    public java.lang.String getConnectionId() {
+      java.lang.Object ref = connectionId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectionId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The id of the newly created auth connection.
+     * </pre>
+     *
+     * <code>string connection_id = 1 [json_name = "connectionId"];</code>
+     * @return The bytes for connectionId.
+     */
+    public com.google.protobuf.ByteString
+        getConnectionIdBytes() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The id of the newly created auth connection.
+     * </pre>
+     *
+     * <code>string connection_id = 1 [json_name = "connectionId"];</code>
+     * @param value The connectionId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConnectionId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      connectionId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The id of the newly created auth connection.
+     * </pre>
+     *
+     * <code>string connection_id = 1 [json_name = "connectionId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConnectionId() {
+      connectionId_ = getDefaultInstance().getConnectionId();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The id of the newly created auth connection.
+     * </pre>
+     *
+     * <code>string connection_id = 1 [json_name = "connectionId"];</code>
+     * @param value The bytes for connectionId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConnectionIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      connectionId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     @java.lang.Override

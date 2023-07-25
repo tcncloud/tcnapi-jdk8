@@ -6,24 +6,4 @@ package com.tcn.cloud.api.api.v1alpha1.billing;
 public interface GetBillingPlanReqOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.billing.GetBillingPlanReq)
     com.google.protobuf.MessageOrBuilder {
-
-  /**
-   * <pre>
-   * Required. the identifier of the organization to get the plan for
-   * </pre>
-   *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  java.lang.String getOrgId();
-  /**
-   * <pre>
-   * Required. the identifier of the organization to get the plan for
-   * </pre>
-   *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  com.google.protobuf.ByteString
-      getOrgIdBytes();
 }

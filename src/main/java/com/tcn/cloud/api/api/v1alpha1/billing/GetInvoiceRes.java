@@ -42,53 +42,11 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes.class, com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes.Builder.class);
   }
 
-  private int formatCase_ = 0;
-  @SuppressWarnings("serial")
-  private java.lang.Object format_;
-  public enum FormatCase
-      implements com.google.protobuf.Internal.EnumLite,
-          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-    PROTO(2),
-    CSV_URL(3),
-    FORMAT_NOT_SET(0);
-    private final int value;
-    private FormatCase(int value) {
-      this.value = value;
-    }
-    /**
-     * @param value The number of the enum to look for.
-     * @return The enum associated with the given number.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static FormatCase valueOf(int value) {
-      return forNumber(value);
-    }
-
-    public static FormatCase forNumber(int value) {
-      switch (value) {
-        case 2: return PROTO;
-        case 3: return CSV_URL;
-        case 0: return FORMAT_NOT_SET;
-        default: return null;
-      }
-    }
-    public int getNumber() {
-      return this.value;
-    }
-  };
-
-  public FormatCase
-  getFormatCase() {
-    return FormatCase.forNumber(
-        formatCase_);
-  }
-
   public static final int INVOICE_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.billing.Invoice invoice_;
   /**
    * <pre>
-   * deprecated
+   * the invoice for the organization
    * </pre>
    *
    * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -100,7 +58,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * deprecated
+   * the invoice for the organization
    * </pre>
    *
    * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -112,7 +70,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * deprecated
+   * the invoice for the organization
    * </pre>
    *
    * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -120,89 +78,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.billing.InvoiceOrBuilder getInvoiceOrBuilder() {
     return invoice_ == null ? com.tcn.cloud.api.api.commons.billing.Invoice.getDefaultInstance() : invoice_;
-  }
-
-  public static final int PROTO_FIELD_NUMBER = 2;
-  /**
-   * <code>.api.commons.billing.Invoice proto = 2 [json_name = "proto"];</code>
-   * @return Whether the proto field is set.
-   */
-  @java.lang.Override
-  public boolean hasProto() {
-    return formatCase_ == 2;
-  }
-  /**
-   * <code>.api.commons.billing.Invoice proto = 2 [json_name = "proto"];</code>
-   * @return The proto.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.Invoice getProto() {
-    if (formatCase_ == 2) {
-       return (com.tcn.cloud.api.api.commons.billing.Invoice) format_;
-    }
-    return com.tcn.cloud.api.api.commons.billing.Invoice.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.billing.Invoice proto = 2 [json_name = "proto"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.billing.InvoiceOrBuilder getProtoOrBuilder() {
-    if (formatCase_ == 2) {
-       return (com.tcn.cloud.api.api.commons.billing.Invoice) format_;
-    }
-    return com.tcn.cloud.api.api.commons.billing.Invoice.getDefaultInstance();
-  }
-
-  public static final int CSV_URL_FIELD_NUMBER = 3;
-  /**
-   * <code>string csv_url = 3 [json_name = "csvUrl"];</code>
-   * @return Whether the csvUrl field is set.
-   */
-  public boolean hasCsvUrl() {
-    return formatCase_ == 3;
-  }
-  /**
-   * <code>string csv_url = 3 [json_name = "csvUrl"];</code>
-   * @return The csvUrl.
-   */
-  public java.lang.String getCsvUrl() {
-    java.lang.Object ref = "";
-    if (formatCase_ == 3) {
-      ref = format_;
-    }
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      if (formatCase_ == 3) {
-        format_ = s;
-      }
-      return s;
-    }
-  }
-  /**
-   * <code>string csv_url = 3 [json_name = "csvUrl"];</code>
-   * @return The bytes for csvUrl.
-   */
-  public com.google.protobuf.ByteString
-      getCsvUrlBytes() {
-    java.lang.Object ref = "";
-    if (formatCase_ == 3) {
-      ref = format_;
-    }
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      if (formatCase_ == 3) {
-        format_ = b;
-      }
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -222,12 +97,6 @@ private static final long serialVersionUID = 0L;
     if (invoice_ != null) {
       output.writeMessage(1, getInvoice());
     }
-    if (formatCase_ == 2) {
-      output.writeMessage(2, (com.tcn.cloud.api.api.commons.billing.Invoice) format_);
-    }
-    if (formatCase_ == 3) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, format_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -240,13 +109,6 @@ private static final long serialVersionUID = 0L;
     if (invoice_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getInvoice());
-    }
-    if (formatCase_ == 2) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, (com.tcn.cloud.api.api.commons.billing.Invoice) format_);
-    }
-    if (formatCase_ == 3) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, format_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -268,19 +130,6 @@ private static final long serialVersionUID = 0L;
       if (!getInvoice()
           .equals(other.getInvoice())) return false;
     }
-    if (!getFormatCase().equals(other.getFormatCase())) return false;
-    switch (formatCase_) {
-      case 2:
-        if (!getProto()
-            .equals(other.getProto())) return false;
-        break;
-      case 3:
-        if (!getCsvUrl()
-            .equals(other.getCsvUrl())) return false;
-        break;
-      case 0:
-      default:
-    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -295,18 +144,6 @@ private static final long serialVersionUID = 0L;
     if (hasInvoice()) {
       hash = (37 * hash) + INVOICE_FIELD_NUMBER;
       hash = (53 * hash) + getInvoice().hashCode();
-    }
-    switch (formatCase_) {
-      case 2:
-        hash = (37 * hash) + PROTO_FIELD_NUMBER;
-        hash = (53 * hash) + getProto().hashCode();
-        break;
-      case 3:
-        hash = (37 * hash) + CSV_URL_FIELD_NUMBER;
-        hash = (53 * hash) + getCsvUrl().hashCode();
-        break;
-      case 0:
-      default:
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -448,11 +285,6 @@ private static final long serialVersionUID = 0L;
         invoiceBuilder_.dispose();
         invoiceBuilder_ = null;
       }
-      if (protoBuilder_ != null) {
-        protoBuilder_.clear();
-      }
-      formatCase_ = 0;
-      format_ = null;
       return this;
     }
 
@@ -480,7 +312,6 @@ private static final long serialVersionUID = 0L;
     public com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes result = new com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes(this);
       if (bitField0_ != 0) { buildPartial0(result); }
-      buildPartialOneofs(result);
       onBuilt();
       return result;
     }
@@ -491,15 +322,6 @@ private static final long serialVersionUID = 0L;
         result.invoice_ = invoiceBuilder_ == null
             ? invoice_
             : invoiceBuilder_.build();
-      }
-    }
-
-    private void buildPartialOneofs(com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes result) {
-      result.formatCase_ = formatCase_;
-      result.format_ = this.format_;
-      if (formatCase_ == 2 &&
-          protoBuilder_ != null) {
-        result.format_ = protoBuilder_.build();
       }
     }
 
@@ -550,21 +372,6 @@ private static final long serialVersionUID = 0L;
       if (other.hasInvoice()) {
         mergeInvoice(other.getInvoice());
       }
-      switch (other.getFormatCase()) {
-        case PROTO: {
-          mergeProto(other.getProto());
-          break;
-        }
-        case CSV_URL: {
-          formatCase_ = 3;
-          format_ = other.format_;
-          onChanged();
-          break;
-        }
-        case FORMAT_NOT_SET: {
-          break;
-        }
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -598,19 +405,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              input.readMessage(
-                  getProtoFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              formatCase_ = 2;
-              break;
-            } // case 18
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-              formatCase_ = 3;
-              format_ = s;
-              break;
-            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -626,21 +420,6 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
-    private int formatCase_ = 0;
-    private java.lang.Object format_;
-    public FormatCase
-        getFormatCase() {
-      return FormatCase.forNumber(
-          formatCase_);
-    }
-
-    public Builder clearFormat() {
-      formatCase_ = 0;
-      format_ = null;
-      onChanged();
-      return this;
-    }
-
     private int bitField0_;
 
     private com.tcn.cloud.api.api.commons.billing.Invoice invoice_;
@@ -648,7 +427,7 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.billing.Invoice, com.tcn.cloud.api.api.commons.billing.Invoice.Builder, com.tcn.cloud.api.api.commons.billing.InvoiceOrBuilder> invoiceBuilder_;
     /**
      * <pre>
-     * deprecated
+     * the invoice for the organization
      * </pre>
      *
      * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -659,7 +438,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * deprecated
+     * the invoice for the organization
      * </pre>
      *
      * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -674,7 +453,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * deprecated
+     * the invoice for the organization
      * </pre>
      *
      * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -694,7 +473,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * deprecated
+     * the invoice for the organization
      * </pre>
      *
      * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -712,7 +491,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * deprecated
+     * the invoice for the organization
      * </pre>
      *
      * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -735,7 +514,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * deprecated
+     * the invoice for the organization
      * </pre>
      *
      * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -752,7 +531,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * deprecated
+     * the invoice for the organization
      * </pre>
      *
      * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -764,7 +543,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * deprecated
+     * the invoice for the organization
      * </pre>
      *
      * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -779,7 +558,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * deprecated
+     * the invoice for the organization
      * </pre>
      *
      * <code>.api.commons.billing.Invoice invoice = 1 [json_name = "invoice"];</code>
@@ -796,241 +575,6 @@ private static final long serialVersionUID = 0L;
         invoice_ = null;
       }
       return invoiceBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.billing.Invoice, com.tcn.cloud.api.api.commons.billing.Invoice.Builder, com.tcn.cloud.api.api.commons.billing.InvoiceOrBuilder> protoBuilder_;
-    /**
-     * <code>.api.commons.billing.Invoice proto = 2 [json_name = "proto"];</code>
-     * @return Whether the proto field is set.
-     */
-    @java.lang.Override
-    public boolean hasProto() {
-      return formatCase_ == 2;
-    }
-    /**
-     * <code>.api.commons.billing.Invoice proto = 2 [json_name = "proto"];</code>
-     * @return The proto.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.Invoice getProto() {
-      if (protoBuilder_ == null) {
-        if (formatCase_ == 2) {
-          return (com.tcn.cloud.api.api.commons.billing.Invoice) format_;
-        }
-        return com.tcn.cloud.api.api.commons.billing.Invoice.getDefaultInstance();
-      } else {
-        if (formatCase_ == 2) {
-          return protoBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.billing.Invoice.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.billing.Invoice proto = 2 [json_name = "proto"];</code>
-     */
-    public Builder setProto(com.tcn.cloud.api.api.commons.billing.Invoice value) {
-      if (protoBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        format_ = value;
-        onChanged();
-      } else {
-        protoBuilder_.setMessage(value);
-      }
-      formatCase_ = 2;
-      return this;
-    }
-    /**
-     * <code>.api.commons.billing.Invoice proto = 2 [json_name = "proto"];</code>
-     */
-    public Builder setProto(
-        com.tcn.cloud.api.api.commons.billing.Invoice.Builder builderForValue) {
-      if (protoBuilder_ == null) {
-        format_ = builderForValue.build();
-        onChanged();
-      } else {
-        protoBuilder_.setMessage(builderForValue.build());
-      }
-      formatCase_ = 2;
-      return this;
-    }
-    /**
-     * <code>.api.commons.billing.Invoice proto = 2 [json_name = "proto"];</code>
-     */
-    public Builder mergeProto(com.tcn.cloud.api.api.commons.billing.Invoice value) {
-      if (protoBuilder_ == null) {
-        if (formatCase_ == 2 &&
-            format_ != com.tcn.cloud.api.api.commons.billing.Invoice.getDefaultInstance()) {
-          format_ = com.tcn.cloud.api.api.commons.billing.Invoice.newBuilder((com.tcn.cloud.api.api.commons.billing.Invoice) format_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          format_ = value;
-        }
-        onChanged();
-      } else {
-        if (formatCase_ == 2) {
-          protoBuilder_.mergeFrom(value);
-        } else {
-          protoBuilder_.setMessage(value);
-        }
-      }
-      formatCase_ = 2;
-      return this;
-    }
-    /**
-     * <code>.api.commons.billing.Invoice proto = 2 [json_name = "proto"];</code>
-     */
-    public Builder clearProto() {
-      if (protoBuilder_ == null) {
-        if (formatCase_ == 2) {
-          formatCase_ = 0;
-          format_ = null;
-          onChanged();
-        }
-      } else {
-        if (formatCase_ == 2) {
-          formatCase_ = 0;
-          format_ = null;
-        }
-        protoBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.billing.Invoice proto = 2 [json_name = "proto"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.billing.Invoice.Builder getProtoBuilder() {
-      return getProtoFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.billing.Invoice proto = 2 [json_name = "proto"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.billing.InvoiceOrBuilder getProtoOrBuilder() {
-      if ((formatCase_ == 2) && (protoBuilder_ != null)) {
-        return protoBuilder_.getMessageOrBuilder();
-      } else {
-        if (formatCase_ == 2) {
-          return (com.tcn.cloud.api.api.commons.billing.Invoice) format_;
-        }
-        return com.tcn.cloud.api.api.commons.billing.Invoice.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.billing.Invoice proto = 2 [json_name = "proto"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.billing.Invoice, com.tcn.cloud.api.api.commons.billing.Invoice.Builder, com.tcn.cloud.api.api.commons.billing.InvoiceOrBuilder> 
-        getProtoFieldBuilder() {
-      if (protoBuilder_ == null) {
-        if (!(formatCase_ == 2)) {
-          format_ = com.tcn.cloud.api.api.commons.billing.Invoice.getDefaultInstance();
-        }
-        protoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.billing.Invoice, com.tcn.cloud.api.api.commons.billing.Invoice.Builder, com.tcn.cloud.api.api.commons.billing.InvoiceOrBuilder>(
-                (com.tcn.cloud.api.api.commons.billing.Invoice) format_,
-                getParentForChildren(),
-                isClean());
-        format_ = null;
-      }
-      formatCase_ = 2;
-      onChanged();
-      return protoBuilder_;
-    }
-
-    /**
-     * <code>string csv_url = 3 [json_name = "csvUrl"];</code>
-     * @return Whether the csvUrl field is set.
-     */
-    @java.lang.Override
-    public boolean hasCsvUrl() {
-      return formatCase_ == 3;
-    }
-    /**
-     * <code>string csv_url = 3 [json_name = "csvUrl"];</code>
-     * @return The csvUrl.
-     */
-    @java.lang.Override
-    public java.lang.String getCsvUrl() {
-      java.lang.Object ref = "";
-      if (formatCase_ == 3) {
-        ref = format_;
-      }
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (formatCase_ == 3) {
-          format_ = s;
-        }
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string csv_url = 3 [json_name = "csvUrl"];</code>
-     * @return The bytes for csvUrl.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCsvUrlBytes() {
-      java.lang.Object ref = "";
-      if (formatCase_ == 3) {
-        ref = format_;
-      }
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        if (formatCase_ == 3) {
-          format_ = b;
-        }
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string csv_url = 3 [json_name = "csvUrl"];</code>
-     * @param value The csvUrl to set.
-     * @return This builder for chaining.
-     */
-    public Builder setCsvUrl(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      formatCase_ = 3;
-      format_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string csv_url = 3 [json_name = "csvUrl"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearCsvUrl() {
-      if (formatCase_ == 3) {
-        formatCase_ = 0;
-        format_ = null;
-        onChanged();
-      }
-      return this;
-    }
-    /**
-     * <code>string csv_url = 3 [json_name = "csvUrl"];</code>
-     * @param value The bytes for csvUrl to set.
-     * @return This builder for chaining.
-     */
-    public Builder setCsvUrlBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      formatCase_ = 3;
-      format_ = value;
-      onChanged();
-      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

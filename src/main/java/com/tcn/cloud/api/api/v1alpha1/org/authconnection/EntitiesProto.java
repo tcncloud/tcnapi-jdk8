@@ -35,6 +35,16 @@ public final class EntitiesProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_authconnection_GetAuthConnectionSettingsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_authconnection_GetAuthConnectionRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_authconnection_GetAuthConnectionRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_org_authconnection_GetAuthConnectionResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_org_authconnection_GetAuthConnectionResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_org_authconnection_DeleteAuthConnectionRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -79,9 +89,14 @@ public final class EntitiesProto {
       "o\"\207\001\n\033CreateAuthConnectionRequest\022C\n\010set" +
       "tings\030\001 \001(\0132\'.api.commons.org.AuthConnec" +
       "tionSettingsR\010settings\022#\n\rclient_secret\030" +
-      "\002 \001(\tR\014clientSecret\"\036\n\034CreateAuthConnect" +
-      "ionResponse\"\"\n GetAuthConnectionSettings" +
-      "Request\"h\n!GetAuthConnectionSettingsResp" +
+      "\002 \001(\tR\014clientSecret\"C\n\034CreateAuthConnect" +
+      "ionResponse\022#\n\rconnection_id\030\001 \001(\tR\014conn" +
+      "ectionId\"\"\n GetAuthConnectionSettingsReq" +
+      "uest\"h\n!GetAuthConnectionSettingsRespons" +
+      "e\022C\n\010settings\030\001 \001(\0132\'.api.commons.org.Au" +
+      "thConnectionSettingsR\010settings\"?\n\030GetAut" +
+      "hConnectionRequest\022#\n\rconnection_id\030\001 \001(" +
+      "\tR\014connectionId\"`\n\031GetAuthConnectionResp" +
       "onse\022C\n\010settings\030\001 \001(\0132\'.api.commons.org" +
       ".AuthConnectionSettingsR\010settings\"B\n\033Del" +
       "eteAuthConnectionRequest\022#\n\rconnection_i" +
@@ -119,7 +134,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_org_authconnection_CreateAuthConnectionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_authconnection_CreateAuthConnectionResponse_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "ConnectionId", });
     internal_static_api_v1alpha1_org_authconnection_GetAuthConnectionSettingsRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_api_v1alpha1_org_authconnection_GetAuthConnectionSettingsRequest_fieldAccessorTable = new
@@ -132,38 +147,50 @@ public final class EntitiesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_authconnection_GetAuthConnectionSettingsResponse_descriptor,
         new java.lang.String[] { "Settings", });
-    internal_static_api_v1alpha1_org_authconnection_DeleteAuthConnectionRequest_descriptor =
+    internal_static_api_v1alpha1_org_authconnection_GetAuthConnectionRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
+    internal_static_api_v1alpha1_org_authconnection_GetAuthConnectionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_authconnection_GetAuthConnectionRequest_descriptor,
+        new java.lang.String[] { "ConnectionId", });
+    internal_static_api_v1alpha1_org_authconnection_GetAuthConnectionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_api_v1alpha1_org_authconnection_GetAuthConnectionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_org_authconnection_GetAuthConnectionResponse_descriptor,
+        new java.lang.String[] { "Settings", });
+    internal_static_api_v1alpha1_org_authconnection_DeleteAuthConnectionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_api_v1alpha1_org_authconnection_DeleteAuthConnectionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_authconnection_DeleteAuthConnectionRequest_descriptor,
         new java.lang.String[] { "ConnectionId", });
     internal_static_api_v1alpha1_org_authconnection_DeleteAuthConnectionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_api_v1alpha1_org_authconnection_DeleteAuthConnectionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_authconnection_DeleteAuthConnectionResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretRequest_descriptor,
         new java.lang.String[] { "ConnectionId", "ClientSecret", });
     internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionGroupsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionGroupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionGroupsRequest_descriptor,
         new java.lang.String[] { "DefaultGroup", "CustomGroups", });
     internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionGroupsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionGroupsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionGroupsResponse_descriptor,

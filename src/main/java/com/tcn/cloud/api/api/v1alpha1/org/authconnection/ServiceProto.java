@@ -27,41 +27,46 @@ public final class ServiceProto {
       "e.proto\022\037api.v1alpha1.org.authconnection" +
       "\032\027annotations/authz.proto\032.api/v1alpha1/" +
       "org/authconnection/entities.proto\032\034googl" +
-      "e/api/annotations.proto2\345\010\n\025AuthConnecti" +
+      "e/api/annotations.proto2\261\n\n\025AuthConnecti" +
       "onService\022\315\001\n\024CreateAuthConnection\022<.api" +
       ".v1alpha1.org.authconnection.CreateAuthC" +
       "onnectionRequest\032=.api.v1alpha1.org.auth" +
       "connection.CreateAuthConnectionResponse\"" +
       "8\272\270\221\002\005\n\003\010\204\002\202\323\344\223\002(\"#/api/v1alpha1/org/con" +
-      "nection/create:\001*\022\331\001\n\031GetAuthConnectionS" +
+      "nection/create:\001*\022\341\001\n\031GetAuthConnectionS" +
       "ettings\022A.api.v1alpha1.org.authconnectio" +
       "n.GetAuthConnectionSettingsRequest\032B.api" +
       ".v1alpha1.org.authconnection.GetAuthConn" +
-      "ectionSettingsResponse\"5\272\270\221\002\005\n\003\010\204\002\202\323\344\223\002%" +
-      "\" /api/v1alpha1/org/connection/get:\001*\022\315\001" +
-      "\n\024DeleteAuthConnection\022<.api.v1alpha1.or" +
-      "g.authconnection.DeleteAuthConnectionReq" +
-      "uest\032=.api.v1alpha1.org.authconnection.D" +
-      "eleteAuthConnectionResponse\"8\272\270\221\002\005\n\003\010\204\002\202" +
-      "\323\344\223\002(\"#/api/v1alpha1/org/connection/dele" +
-      "te:\001*\022\346\001\n\032UpdateAuthConnectionSecret\022B.a" +
-      "pi.v1alpha1.org.authconnection.UpdateAut" +
-      "hConnectionSecretRequest\032C.api.v1alpha1." +
-      "org.authconnection.UpdateAuthConnectionS" +
-      "ecretResponse\"?\272\270\221\002\005\n\003\010\204\002\202\323\344\223\002/\"*/api/v1" +
-      "alpha1/org/connection/update/secret:\001*\022\346" +
-      "\001\n\032UpdateAuthConnectionGroups\022B.api.v1al" +
-      "pha1.org.authconnection.UpdateAuthConnec" +
-      "tionGroupsRequest\032C.api.v1alpha1.org.aut" +
-      "hconnection.UpdateAuthConnectionGroupsRe" +
-      "sponse\"?\272\270\221\002\005\n\003\010\204\002\202\323\344\223\002/\"*/api/v1alpha1/" +
-      "org/connection/update/groups:\001*B\341\001\n1com." +
-      "tcn.cloud.api.api.v1alpha1.org.authconne" +
-      "ctionB\014ServiceProtoP\001\242\002\004AVOA\252\002\037Api.V1alp" +
-      "ha1.Org.Authconnection\312\002\037Api\\V1alpha1\\Or" +
-      "g\\Authconnection\342\002+Api\\V1alpha1\\Org\\Auth" +
-      "connection\\GPBMetadata\352\002\"Api::V1alpha1::" +
-      "Org::Authconnectionb\006proto3"
+      "ectionSettingsResponse\"=\272\270\221\002\005\n\003\010\204\002\202\323\344\223\002-" +
+      "\"(/api/v1alpha1/org/connection/getsettin" +
+      "gs:\001*\022\301\001\n\021GetAuthConnection\0229.api.v1alph" +
+      "a1.org.authconnection.GetAuthConnectionR" +
+      "equest\032:.api.v1alpha1.org.authconnection" +
+      ".GetAuthConnectionResponse\"5\272\270\221\002\005\n\003\010\204\002\202\323" +
+      "\344\223\002%\" /api/v1alpha1/org/connection/get:\001" +
+      "*\022\315\001\n\024DeleteAuthConnection\022<.api.v1alpha" +
+      "1.org.authconnection.DeleteAuthConnectio" +
+      "nRequest\032=.api.v1alpha1.org.authconnecti" +
+      "on.DeleteAuthConnectionResponse\"8\272\270\221\002\005\n\003" +
+      "\010\204\002\202\323\344\223\002(\"#/api/v1alpha1/org/connection/" +
+      "delete:\001*\022\346\001\n\032UpdateAuthConnectionSecret" +
+      "\022B.api.v1alpha1.org.authconnection.Updat" +
+      "eAuthConnectionSecretRequest\032C.api.v1alp" +
+      "ha1.org.authconnection.UpdateAuthConnect" +
+      "ionSecretResponse\"?\272\270\221\002\005\n\003\010\204\002\202\323\344\223\002/\"*/ap" +
+      "i/v1alpha1/org/connection/update/secret:" +
+      "\001*\022\346\001\n\032UpdateAuthConnectionGroups\022B.api." +
+      "v1alpha1.org.authconnection.UpdateAuthCo" +
+      "nnectionGroupsRequest\032C.api.v1alpha1.org" +
+      ".authconnection.UpdateAuthConnectionGrou" +
+      "psResponse\"?\272\270\221\002\005\n\003\010\204\002\202\323\344\223\002/\"*/api/v1alp" +
+      "ha1/org/connection/update/groups:\001*B\341\001\n1" +
+      "com.tcn.cloud.api.api.v1alpha1.org.authc" +
+      "onnectionB\014ServiceProtoP\001\242\002\004AVOA\252\002\037Api.V" +
+      "1alpha1.Org.Authconnection\312\002\037Api\\V1alpha" +
+      "1\\Org\\Authconnection\342\002+Api\\V1alpha1\\Org\\" +
+      "Authconnection\\GPBMetadata\352\002\"Api::V1alph" +
+      "a1::Org::Authconnectionb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -223,7 +223,7 @@ public final class LearnProto {
       "uf.TimestampR\023lastEditedTimestamp\"?\n\023Del" +
       "eteLearnPagesReq\022\026\n\006locale\030\001 \001(\tR\006locale" +
       "\022\020\n\003url\030\002 \003(\tR\003url\"\025\n\023DeleteLearnPagesRe" +
-      "s2\206\r\n\005Learn\022a\n\005Exist\022\025.api.v0alpha.Exist" +
+      "s2\377\013\n\005Learn\022a\n\005Exist\022\025.api.v0alpha.Exist" +
       "Req\032\025.api.v0alpha.ExistRes\"*\272\270\221\002\002\030\001\202\323\344\223\002" +
       "\035\"\030/api/v0alpha/learn/exist:\001*\022i\n\007Conten" +
       "t\022\027.api.v0alpha.ContentReq\032\027.api.v0alpha" +
@@ -234,41 +234,37 @@ public final class LearnProto {
       "xportmany:\001*\022z\n\rSearchContent\022\035.api.v0al" +
       "pha.SearchContentReq\032\026.api.v0alpha.Searc" +
       "hRes\"2\272\270\221\002\002\030\001\202\323\344\223\002%\" /api/v0alpha/learn/" +
-      "searchcontent:\001*\022\204\001\n\021ListSearchResults\022\035" +
-      ".api.v0alpha.SearchContentReq\032\026.api.v0al" +
-      "pha.SearchRes\"6\272\270\221\002\002\030\001\202\323\344\223\002)\"$/api/v0alp" +
-      "ha/learn/listsearchresults:\001*0\001\022u\n\nStand" +
-      "alone\022\032.api.v0alpha.StandaloneReq\032\032.api." +
-      "v0alpha.StandaloneRes\"/\272\270\221\002\002\030\001\202\323\344\223\002\"\"\035/a" +
-      "pi/v0alpha/learn/standalone:\001*\022\223\001\n\021Conte" +
-      "ntEditorData\022!.api.v0alpha.ContentEditor" +
-      "DataReq\032!.api.v0alpha.ContentEditorDataR" +
-      "es\"8\272\270\221\002\004\n\002\010\n\202\323\344\223\002)\"$/api/v0alpha/learn/" +
-      "contenteditordata:\001*\022g\n\006Update\022\026.api.v0a" +
-      "lpha.UpdateReq\032\026.api.v0alpha.UpdateRes\"-" +
-      "\272\270\221\002\004\n\002\010\n\202\323\344\223\002\036\"\031/api/v0alpha/learn/upda" +
-      "te:\001*\022\217\001\n\020StoreStaticImage\022 .api.v0alpha" +
-      ".StoreStaticImageReq\032 .api.v0alpha.Store" +
-      "StaticImageRes\"7\272\270\221\002\004\n\002\010\n\202\323\344\223\002(\"#/api/v0" +
-      "alpha/learn/storestaticimage:\001*\022\241\001\n\027Uplo" +
-      "adDynamicScreenshot\022\'.api.v0alpha.Upload" +
-      "DynamicScreenshotReq\032\'.api.v0alpha.Uploa" +
-      "dDynamicScreenshotRes\"4\272\270\221\002\004\n\002\010\n\202\323\344\223\002%\" " +
-      "/api/v0alpha/learn/uploaddynamic:\001*\022\217\001\n\020" +
-      "DeleteStandalone\022 .api.v0alpha.DeleteSta" +
-      "ndaloneReq\032 .api.v0alpha.DeleteStandalon" +
-      "eRes\"7\272\270\221\002\004\n\002\010\n\202\323\344\223\002(\"#/api/v0alpha/lear" +
-      "n/deletestandalone:\001*\022i\n\007Snippet\022\027.api.v" +
-      "0alpha.SnippetReq\032\027.api.v0alpha.SnippetR" +
-      "es\",\272\270\221\002\002\030\001\202\323\344\223\002\037\"\032/api/v0alpha/learn/sn" +
-      "ippet:\001*\022\217\001\n\020DeleteLearnPages\022 .api.v0al" +
-      "pha.DeleteLearnPagesReq\032 .api.v0alpha.De" +
-      "leteLearnPagesRes\"7\272\270\221\002\004\n\002\010\n\202\323\344\223\002(\"#/api" +
-      "/v0alpha/learn/deletelearnpages:\001*Bx\n\035co" +
-      "m.tcn.cloud.api.api.v0alphaB\nLearnProtoP" +
-      "\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027Ap" +
-      "i\\V0alpha\\GPBMetadata\352\002\014Api::V0alphab\006pr" +
-      "oto3"
+      "searchcontent:\001*\022u\n\nStandalone\022\032.api.v0a" +
+      "lpha.StandaloneReq\032\032.api.v0alpha.Standal" +
+      "oneRes\"/\272\270\221\002\002\030\001\202\323\344\223\002\"\"\035/api/v0alpha/lear" +
+      "n/standalone:\001*\022\223\001\n\021ContentEditorData\022!." +
+      "api.v0alpha.ContentEditorDataReq\032!.api.v" +
+      "0alpha.ContentEditorDataRes\"8\272\270\221\002\004\n\002\010\n\202\323" +
+      "\344\223\002)\"$/api/v0alpha/learn/contenteditorda" +
+      "ta:\001*\022g\n\006Update\022\026.api.v0alpha.UpdateReq\032" +
+      "\026.api.v0alpha.UpdateRes\"-\272\270\221\002\004\n\002\010\n\202\323\344\223\002\036" +
+      "\"\031/api/v0alpha/learn/update:\001*\022\217\001\n\020Store" +
+      "StaticImage\022 .api.v0alpha.StoreStaticIma" +
+      "geReq\032 .api.v0alpha.StoreStaticImageRes\"" +
+      "7\272\270\221\002\004\n\002\010\n\202\323\344\223\002(\"#/api/v0alpha/learn/sto" +
+      "restaticimage:\001*\022\241\001\n\027UploadDynamicScreen" +
+      "shot\022\'.api.v0alpha.UploadDynamicScreensh" +
+      "otReq\032\'.api.v0alpha.UploadDynamicScreens" +
+      "hotRes\"4\272\270\221\002\004\n\002\010\n\202\323\344\223\002%\" /api/v0alpha/le" +
+      "arn/uploaddynamic:\001*\022\217\001\n\020DeleteStandalon" +
+      "e\022 .api.v0alpha.DeleteStandaloneReq\032 .ap" +
+      "i.v0alpha.DeleteStandaloneRes\"7\272\270\221\002\004\n\002\010\n" +
+      "\202\323\344\223\002(\"#/api/v0alpha/learn/deletestandal" +
+      "one:\001*\022i\n\007Snippet\022\027.api.v0alpha.SnippetR" +
+      "eq\032\027.api.v0alpha.SnippetRes\",\272\270\221\002\002\030\001\202\323\344\223" +
+      "\002\037\"\032/api/v0alpha/learn/snippet:\001*\022\217\001\n\020De" +
+      "leteLearnPages\022 .api.v0alpha.DeleteLearn" +
+      "PagesReq\032 .api.v0alpha.DeleteLearnPagesR" +
+      "es\"7\272\270\221\002\004\n\002\010\n\202\323\344\223\002(\"#/api/v0alpha/learn/" +
+      "deletelearnpages:\001*Bx\n\035com.tcn.cloud.api" +
+      ".api.v0alphaB\nLearnProtoP\001\242\002\003AVX\252\002\013Api.V" +
+      "0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\GPBMe" +
+      "tadata\352\002\014Api::V0alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

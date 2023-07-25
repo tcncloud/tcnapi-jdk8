@@ -48,16 +48,14 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object data_ = "";
   /**
    * <pre>
-   * deprecated
+   * Required. Data to be used by the test.
    * </pre>
    *
-   * <code>string data = 1 [json_name = "data", deprecated = true];</code>
-   * @deprecated api.commons.workflows.OmniBotNodeTestStep.data is deprecated.
-   *     See api/commons/workflows/omni_bot.proto;l=13
+   * <code>string data = 1 [json_name = "data"];</code>
    * @return The data.
    */
   @java.lang.Override
-  @java.lang.Deprecated public java.lang.String getData() {
+  public java.lang.String getData() {
     java.lang.Object ref = data_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -71,16 +69,14 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * deprecated
+   * Required. Data to be used by the test.
    * </pre>
    *
-   * <code>string data = 1 [json_name = "data", deprecated = true];</code>
-   * @deprecated api.commons.workflows.OmniBotNodeTestStep.data is deprecated.
-   *     See api/commons/workflows/omni_bot.proto;l=13
+   * <code>string data = 1 [json_name = "data"];</code>
    * @return The bytes for data.
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.google.protobuf.ByteString
+  public com.google.protobuf.ByteString
       getDataBytes() {
     java.lang.Object ref = data_;
     if (ref instanceof java.lang.String) {
@@ -427,15 +423,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object data_ = "";
     /**
      * <pre>
-     * deprecated
+     * Required. Data to be used by the test.
      * </pre>
      *
-     * <code>string data = 1 [json_name = "data", deprecated = true];</code>
-     * @deprecated api.commons.workflows.OmniBotNodeTestStep.data is deprecated.
-     *     See api/commons/workflows/omni_bot.proto;l=13
+     * <code>string data = 1 [json_name = "data"];</code>
      * @return The data.
      */
-    @java.lang.Deprecated public java.lang.String getData() {
+    public java.lang.String getData() {
       java.lang.Object ref = data_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -449,15 +443,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * deprecated
+     * Required. Data to be used by the test.
      * </pre>
      *
-     * <code>string data = 1 [json_name = "data", deprecated = true];</code>
-     * @deprecated api.commons.workflows.OmniBotNodeTestStep.data is deprecated.
-     *     See api/commons/workflows/omni_bot.proto;l=13
+     * <code>string data = 1 [json_name = "data"];</code>
      * @return The bytes for data.
      */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
+    public com.google.protobuf.ByteString
         getDataBytes() {
       java.lang.Object ref = data_;
       if (ref instanceof String) {
@@ -472,16 +464,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * deprecated
+     * Required. Data to be used by the test.
      * </pre>
      *
-     * <code>string data = 1 [json_name = "data", deprecated = true];</code>
-     * @deprecated api.commons.workflows.OmniBotNodeTestStep.data is deprecated.
-     *     See api/commons/workflows/omni_bot.proto;l=13
+     * <code>string data = 1 [json_name = "data"];</code>
      * @param value The data to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setData(
+    public Builder setData(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       data_ = value;
@@ -491,15 +481,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * deprecated
+     * Required. Data to be used by the test.
      * </pre>
      *
-     * <code>string data = 1 [json_name = "data", deprecated = true];</code>
-     * @deprecated api.commons.workflows.OmniBotNodeTestStep.data is deprecated.
-     *     See api/commons/workflows/omni_bot.proto;l=13
+     * <code>string data = 1 [json_name = "data"];</code>
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder clearData() {
+    public Builder clearData() {
       data_ = getDefaultInstance().getData();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
@@ -507,16 +495,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * deprecated
+     * Required. Data to be used by the test.
      * </pre>
      *
-     * <code>string data = 1 [json_name = "data", deprecated = true];</code>
-     * @deprecated api.commons.workflows.OmniBotNodeTestStep.data is deprecated.
-     *     See api/commons/workflows/omni_bot.proto;l=13
+     * <code>string data = 1 [json_name = "data"];</code>
      * @param value The bytes for data to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setDataBytes(
+    public Builder setDataBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);

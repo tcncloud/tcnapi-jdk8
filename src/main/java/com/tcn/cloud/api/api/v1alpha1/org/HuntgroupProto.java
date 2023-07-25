@@ -75,26 +75,6 @@ public final class HuntgroupProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_org_CreateDataDipTemplateResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_UpdateDataDipTemplateRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_UpdateDataDipTemplateRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_UpdateDataDipTemplateResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_UpdateDataDipTemplateResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_DeleteDataDipTemplateRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_DeleteDataDipTemplateRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_org_DeleteDataDipTemplateResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_org_DeleteDataDipTemplateResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_org_ListAgentResponseAutoRulesRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -202,33 +182,26 @@ public final class HuntgroupProto {
       "ateRequest\022:\n\010template\030\001 \001(\0132\036.api.commo" +
       "ns.org.DataDipConfigR\010template\"V\n\035Create" +
       "DataDipTemplateResponse\0225\n\027xml_client_pr" +
-      "operty_sid\030\001 \001(\003R\024xmlClientPropertySid\"q" +
-      "\n\034UpdateDataDipTemplateRequest\022\025\n\006org_id" +
-      "\030\001 \001(\tR\005orgId\022:\n\010template\030\002 \001(\0132\036.api.co" +
-      "mmons.org.DataDipConfigR\010template\"\037\n\035Upd" +
-      "ateDataDipTemplateResponse\"l\n\034DeleteData" +
-      "DipTemplateRequest\022\025\n\006org_id\030\001 \001(\tR\005orgI" +
-      "d\0225\n\027xml_client_property_sid\030\002 \001(\003R\024xmlC" +
-      "lientPropertySid\"\037\n\035DeleteDataDipTemplat" +
-      "eResponse\"#\n!ListAgentResponseAutoRulesR" +
-      "equest\"k\n\"ListAgentResponseAutoRulesResp" +
-      "onse\022E\n\010rulesets\030\001 \003(\0132).api.commons.org" +
-      ".AgentResponseAutoRuleSetR\010rulesets\"j\n#C" +
-      "reateAgentResponseAutoRulesRequest\022C\n\007ru" +
-      "leset\030\001 \001(\0132).api.commons.org.AgentRespo" +
-      "nseAutoRuleSetR\007ruleset\"&\n$CreateAgentRe" +
-      "sponseAutoRulesResponse\"\212\001\n#UpdateAgentR" +
-      "esponseAutoRulesRequest\022\036\n\nrulesetSid\030\001 " +
-      "\001(\003R\nrulesetSid\022C\n\007ruleset\030\002 \001(\0132).api.c" +
-      "ommons.org.AgentResponseAutoRuleSetR\007rul" +
-      "eset\"&\n$UpdateAgentResponseAutoRulesResp" +
-      "onse\"E\n#DeleteAgentResponseAutoRulesRequ" +
-      "est\022\036\n\nrulesetSid\030\001 \001(\003R\nrulesetSid\"&\n$D" +
-      "eleteAgentResponseAutoRulesResponseB\226\001\n\"" +
-      "com.tcn.cloud.api.api.v1alpha1.orgB\016Hunt" +
-      "groupProtoP\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020" +
-      "Api\\V1alpha1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBM" +
-      "etadata\352\002\022Api::V1alpha1::Orgb\006proto3"
+      "operty_sid\030\001 \001(\003R\024xmlClientPropertySid\"#" +
+      "\n!ListAgentResponseAutoRulesRequest\"k\n\"L" +
+      "istAgentResponseAutoRulesResponse\022E\n\010rul" +
+      "esets\030\001 \003(\0132).api.commons.org.AgentRespo" +
+      "nseAutoRuleSetR\010rulesets\"j\n#CreateAgentR" +
+      "esponseAutoRulesRequest\022C\n\007ruleset\030\001 \001(\013" +
+      "2).api.commons.org.AgentResponseAutoRule" +
+      "SetR\007ruleset\"&\n$CreateAgentResponseAutoR" +
+      "ulesResponse\"\212\001\n#UpdateAgentResponseAuto" +
+      "RulesRequest\022\036\n\nrulesetSid\030\001 \001(\003R\nrulese" +
+      "tSid\022C\n\007ruleset\030\002 \001(\0132).api.commons.org." +
+      "AgentResponseAutoRuleSetR\007ruleset\"&\n$Upd" +
+      "ateAgentResponseAutoRulesResponse\"E\n#Del" +
+      "eteAgentResponseAutoRulesRequest\022\036\n\nrule" +
+      "setSid\030\001 \001(\003R\nrulesetSid\"&\n$DeleteAgentR" +
+      "esponseAutoRulesResponseB\226\001\n\"com.tcn.clo" +
+      "ud.api.api.v1alpha1.orgB\016HuntgroupProtoP" +
+      "\001\242\002\003AVO\252\002\020Api.V1alpha1.Org\312\002\020Api\\V1alpha" +
+      "1\\Org\342\002\034Api\\V1alpha1\\Org\\GPBMetadata\352\002\022A" +
+      "pi::V1alpha1::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -309,74 +282,50 @@ public final class HuntgroupProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_CreateDataDipTemplateResponse_descriptor,
         new java.lang.String[] { "XmlClientPropertySid", });
-    internal_static_api_v1alpha1_org_UpdateDataDipTemplateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
-    internal_static_api_v1alpha1_org_UpdateDataDipTemplateRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_UpdateDataDipTemplateRequest_descriptor,
-        new java.lang.String[] { "OrgId", "Template", });
-    internal_static_api_v1alpha1_org_UpdateDataDipTemplateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
-    internal_static_api_v1alpha1_org_UpdateDataDipTemplateResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_UpdateDataDipTemplateResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_api_v1alpha1_org_DeleteDataDipTemplateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
-    internal_static_api_v1alpha1_org_DeleteDataDipTemplateRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_DeleteDataDipTemplateRequest_descriptor,
-        new java.lang.String[] { "OrgId", "XmlClientPropertySid", });
-    internal_static_api_v1alpha1_org_DeleteDataDipTemplateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
-    internal_static_api_v1alpha1_org_DeleteDataDipTemplateResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_org_DeleteDataDipTemplateResponse_descriptor,
-        new java.lang.String[] { });
     internal_static_api_v1alpha1_org_ListAgentResponseAutoRulesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_api_v1alpha1_org_ListAgentResponseAutoRulesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListAgentResponseAutoRulesRequest_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_ListAgentResponseAutoRulesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_api_v1alpha1_org_ListAgentResponseAutoRulesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_ListAgentResponseAutoRulesResponse_descriptor,
         new java.lang.String[] { "Rulesets", });
     internal_static_api_v1alpha1_org_CreateAgentResponseAutoRulesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_api_v1alpha1_org_CreateAgentResponseAutoRulesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_CreateAgentResponseAutoRulesRequest_descriptor,
         new java.lang.String[] { "Ruleset", });
     internal_static_api_v1alpha1_org_CreateAgentResponseAutoRulesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_api_v1alpha1_org_CreateAgentResponseAutoRulesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_CreateAgentResponseAutoRulesResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_UpdateAgentResponseAutoRulesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_api_v1alpha1_org_UpdateAgentResponseAutoRulesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UpdateAgentResponseAutoRulesRequest_descriptor,
         new java.lang.String[] { "RulesetSid", "Ruleset", });
     internal_static_api_v1alpha1_org_UpdateAgentResponseAutoRulesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_api_v1alpha1_org_UpdateAgentResponseAutoRulesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_UpdateAgentResponseAutoRulesResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v1alpha1_org_DeleteAgentResponseAutoRulesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_api_v1alpha1_org_DeleteAgentResponseAutoRulesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_DeleteAgentResponseAutoRulesRequest_descriptor,
         new java.lang.String[] { "RulesetSid", });
     internal_static_api_v1alpha1_org_DeleteAgentResponseAutoRulesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_api_v1alpha1_org_DeleteAgentResponseAutoRulesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_org_DeleteAgentResponseAutoRulesResponse_descriptor,

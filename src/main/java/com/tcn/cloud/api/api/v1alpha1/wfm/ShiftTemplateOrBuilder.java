@@ -286,48 +286,4 @@ public interface ShiftTemplateOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.DOWPlacementOrBuilder getDOWPlacementsOrBuilder(
       int index);
-
-  /**
-   * <pre>
-   * agent groups that are children of call center node
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-   */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup> 
-      getMemberAgentGroupsList();
-  /**
-   * <pre>
-   * agent groups that are children of call center node
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-   */
-  com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup getMemberAgentGroups(int index);
-  /**
-   * <pre>
-   * agent groups that are children of call center node
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-   */
-  int getMemberAgentGroupsCount();
-  /**
-   * <pre>
-   * agent groups that are children of call center node
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-   */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroupOrBuilder> 
-      getMemberAgentGroupsOrBuilderList();
-  /**
-   * <pre>
-   * agent groups that are children of call center node
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-   */
-  com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroupOrBuilder getMemberAgentGroupsOrBuilder(
-      int index);
 }

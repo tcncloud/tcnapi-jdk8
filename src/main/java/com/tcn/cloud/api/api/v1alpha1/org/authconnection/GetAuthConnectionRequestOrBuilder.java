@@ -3,13 +3,13 @@
 
 package com.tcn.cloud.api.api.v1alpha1.org.authconnection;
 
-public interface CreateAuthConnectionResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.authconnection.CreateAuthConnectionResponse)
+public interface GetAuthConnectionRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.authconnection.GetAuthConnectionRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <pre>
-   * The id of the newly created auth connection.
+   * The id of the connetion to retrieve.
    * </pre>
    *
    * <code>string connection_id = 1 [json_name = "connectionId"];</code>
@@ -18,7 +18,7 @@ public interface CreateAuthConnectionResponseOrBuilder extends
   java.lang.String getConnectionId();
   /**
    * <pre>
-   * The id of the newly created auth connection.
+   * The id of the connetion to retrieve.
    * </pre>
    *
    * <code>string connection_id = 1 [json_name = "connectionId"];</code>

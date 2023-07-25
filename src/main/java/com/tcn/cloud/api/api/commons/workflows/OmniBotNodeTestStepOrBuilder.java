@@ -9,25 +9,21 @@ public interface OmniBotNodeTestStepOrBuilder extends
 
   /**
    * <pre>
-   * deprecated
+   * Required. Data to be used by the test.
    * </pre>
    *
-   * <code>string data = 1 [json_name = "data", deprecated = true];</code>
-   * @deprecated api.commons.workflows.OmniBotNodeTestStep.data is deprecated.
-   *     See api/commons/workflows/omni_bot.proto;l=13
+   * <code>string data = 1 [json_name = "data"];</code>
    * @return The data.
    */
-  @java.lang.Deprecated java.lang.String getData();
+  java.lang.String getData();
   /**
    * <pre>
-   * deprecated
+   * Required. Data to be used by the test.
    * </pre>
    *
-   * <code>string data = 1 [json_name = "data", deprecated = true];</code>
-   * @deprecated api.commons.workflows.OmniBotNodeTestStep.data is deprecated.
-   *     See api/commons/workflows/omni_bot.proto;l=13
+   * <code>string data = 1 [json_name = "data"];</code>
    * @return The bytes for data.
    */
-  @java.lang.Deprecated com.google.protobuf.ByteString
+  com.google.protobuf.ByteString
       getDataBytes();
 }

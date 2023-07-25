@@ -9,25 +9,21 @@ public interface OmniBotNodeTestEndOrBuilder extends
 
   /**
    * <pre>
-   * deprecated
+   * Optional. Error message if the test failed.
    * </pre>
    *
-   * <code>string error = 1 [json_name = "error", deprecated = true];</code>
-   * @deprecated api.commons.workflows.OmniBotNodeTestEnd.error is deprecated.
-   *     See api/commons/workflows/omni_bot.proto;l=19
+   * <code>string error = 1 [json_name = "error"];</code>
    * @return The error.
    */
-  @java.lang.Deprecated java.lang.String getError();
+  java.lang.String getError();
   /**
    * <pre>
-   * deprecated
+   * Optional. Error message if the test failed.
    * </pre>
    *
-   * <code>string error = 1 [json_name = "error", deprecated = true];</code>
-   * @deprecated api.commons.workflows.OmniBotNodeTestEnd.error is deprecated.
-   *     See api/commons/workflows/omni_bot.proto;l=19
+   * <code>string error = 1 [json_name = "error"];</code>
    * @return The bytes for error.
    */
-  @java.lang.Deprecated com.google.protobuf.ByteString
+  com.google.protobuf.ByteString
       getErrorBytes();
 }

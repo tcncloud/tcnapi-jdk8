@@ -24,7 +24,6 @@ private static final long serialVersionUID = 0L;
     description_ = "";
     memberPlacementRules_ = java.util.Collections.emptyList();
     dOWPlacements_ = java.util.Collections.emptyList();
-    memberAgentGroups_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -481,67 +480,6 @@ private static final long serialVersionUID = 0L;
     return dOWPlacements_.get(index);
   }
 
-  public static final int MEMBER_AGENT_GROUPS_FIELD_NUMBER = 17;
-  @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup> memberAgentGroups_;
-  /**
-   * <pre>
-   * agent groups that are children of call center node
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup> getMemberAgentGroupsList() {
-    return memberAgentGroups_;
-  }
-  /**
-   * <pre>
-   * agent groups that are children of call center node
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroupOrBuilder> 
-      getMemberAgentGroupsOrBuilderList() {
-    return memberAgentGroups_;
-  }
-  /**
-   * <pre>
-   * agent groups that are children of call center node
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-   */
-  @java.lang.Override
-  public int getMemberAgentGroupsCount() {
-    return memberAgentGroups_.size();
-  }
-  /**
-   * <pre>
-   * agent groups that are children of call center node
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup getMemberAgentGroups(int index) {
-    return memberAgentGroups_.get(index);
-  }
-  /**
-   * <pre>
-   * agent groups that are children of call center node
-   * </pre>
-   *
-   * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroupOrBuilder getMemberAgentGroupsOrBuilder(
-      int index) {
-    return memberAgentGroups_.get(index);
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -603,9 +541,6 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < dOWPlacements_.size(); i++) {
       output.writeMessage(16, dOWPlacements_.get(i));
-    }
-    for (int i = 0; i < memberAgentGroups_.size(); i++) {
-      output.writeMessage(17, memberAgentGroups_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -678,10 +613,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(16, dOWPlacements_.get(i));
     }
-    for (int i = 0; i < memberAgentGroups_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(17, memberAgentGroups_.get(i));
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -732,8 +663,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getMemberPlacementRulesList())) return false;
     if (!getDOWPlacementsList()
         .equals(other.getDOWPlacementsList())) return false;
-    if (!getMemberAgentGroupsList()
-        .equals(other.getMemberAgentGroupsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -788,10 +717,6 @@ private static final long serialVersionUID = 0L;
     if (getDOWPlacementsCount() > 0) {
       hash = (37 * hash) + DOW_PLACEMENTS_FIELD_NUMBER;
       hash = (53 * hash) + getDOWPlacementsList().hashCode();
-    }
-    if (getMemberAgentGroupsCount() > 0) {
-      hash = (37 * hash) + MEMBER_AGENT_GROUPS_FIELD_NUMBER;
-      hash = (53 * hash) + getMemberAgentGroupsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -960,13 +885,6 @@ private static final long serialVersionUID = 0L;
         dOWPlacementsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00008000);
-      if (memberAgentGroupsBuilder_ == null) {
-        memberAgentGroups_ = java.util.Collections.emptyList();
-      } else {
-        memberAgentGroups_ = null;
-        memberAgentGroupsBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00010000);
       return this;
     }
 
@@ -1017,15 +935,6 @@ private static final long serialVersionUID = 0L;
         result.dOWPlacements_ = dOWPlacements_;
       } else {
         result.dOWPlacements_ = dOWPlacementsBuilder_.build();
-      }
-      if (memberAgentGroupsBuilder_ == null) {
-        if (((bitField0_ & 0x00010000) != 0)) {
-          memberAgentGroups_ = java.util.Collections.unmodifiableList(memberAgentGroups_);
-          bitField0_ = (bitField0_ & ~0x00010000);
-        }
-        result.memberAgentGroups_ = memberAgentGroups_;
-      } else {
-        result.memberAgentGroups_ = memberAgentGroupsBuilder_.build();
       }
     }
 
@@ -1219,32 +1128,6 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (memberAgentGroupsBuilder_ == null) {
-        if (!other.memberAgentGroups_.isEmpty()) {
-          if (memberAgentGroups_.isEmpty()) {
-            memberAgentGroups_ = other.memberAgentGroups_;
-            bitField0_ = (bitField0_ & ~0x00010000);
-          } else {
-            ensureMemberAgentGroupsIsMutable();
-            memberAgentGroups_.addAll(other.memberAgentGroups_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.memberAgentGroups_.isEmpty()) {
-          if (memberAgentGroupsBuilder_.isEmpty()) {
-            memberAgentGroupsBuilder_.dispose();
-            memberAgentGroupsBuilder_ = null;
-            memberAgentGroups_ = other.memberAgentGroups_;
-            bitField0_ = (bitField0_ & ~0x00010000);
-            memberAgentGroupsBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getMemberAgentGroupsFieldBuilder() : null;
-          } else {
-            memberAgentGroupsBuilder_.addAllMessages(other.memberAgentGroups_);
-          }
-        }
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1369,19 +1252,6 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 130
-            case 138: {
-              com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.parser(),
-                      extensionRegistry);
-              if (memberAgentGroupsBuilder_ == null) {
-                ensureMemberAgentGroupsIsMutable();
-                memberAgentGroups_.add(m);
-              } else {
-                memberAgentGroupsBuilder_.addMessage(m);
-              }
-              break;
-            } // case 138
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2898,318 +2768,6 @@ private static final long serialVersionUID = 0L;
         dOWPlacements_ = null;
       }
       return dOWPlacementsBuilder_;
-    }
-
-    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup> memberAgentGroups_ =
-      java.util.Collections.emptyList();
-    private void ensureMemberAgentGroupsIsMutable() {
-      if (!((bitField0_ & 0x00010000) != 0)) {
-        memberAgentGroups_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup>(memberAgentGroups_);
-        bitField0_ |= 0x00010000;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup, com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroupOrBuilder> memberAgentGroupsBuilder_;
-
-    /**
-     * <pre>
-     * agent groups that are children of call center node
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup> getMemberAgentGroupsList() {
-      if (memberAgentGroupsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(memberAgentGroups_);
-      } else {
-        return memberAgentGroupsBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <pre>
-     * agent groups that are children of call center node
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-     */
-    public int getMemberAgentGroupsCount() {
-      if (memberAgentGroupsBuilder_ == null) {
-        return memberAgentGroups_.size();
-      } else {
-        return memberAgentGroupsBuilder_.getCount();
-      }
-    }
-    /**
-     * <pre>
-     * agent groups that are children of call center node
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup getMemberAgentGroups(int index) {
-      if (memberAgentGroupsBuilder_ == null) {
-        return memberAgentGroups_.get(index);
-      } else {
-        return memberAgentGroupsBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <pre>
-     * agent groups that are children of call center node
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-     */
-    public Builder setMemberAgentGroups(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup value) {
-      if (memberAgentGroupsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureMemberAgentGroupsIsMutable();
-        memberAgentGroups_.set(index, value);
-        onChanged();
-      } else {
-        memberAgentGroupsBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * agent groups that are children of call center node
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-     */
-    public Builder setMemberAgentGroups(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.Builder builderForValue) {
-      if (memberAgentGroupsBuilder_ == null) {
-        ensureMemberAgentGroupsIsMutable();
-        memberAgentGroups_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        memberAgentGroupsBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * agent groups that are children of call center node
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-     */
-    public Builder addMemberAgentGroups(com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup value) {
-      if (memberAgentGroupsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureMemberAgentGroupsIsMutable();
-        memberAgentGroups_.add(value);
-        onChanged();
-      } else {
-        memberAgentGroupsBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * agent groups that are children of call center node
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-     */
-    public Builder addMemberAgentGroups(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup value) {
-      if (memberAgentGroupsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureMemberAgentGroupsIsMutable();
-        memberAgentGroups_.add(index, value);
-        onChanged();
-      } else {
-        memberAgentGroupsBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * agent groups that are children of call center node
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-     */
-    public Builder addMemberAgentGroups(
-        com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.Builder builderForValue) {
-      if (memberAgentGroupsBuilder_ == null) {
-        ensureMemberAgentGroupsIsMutable();
-        memberAgentGroups_.add(builderForValue.build());
-        onChanged();
-      } else {
-        memberAgentGroupsBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * agent groups that are children of call center node
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-     */
-    public Builder addMemberAgentGroups(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.Builder builderForValue) {
-      if (memberAgentGroupsBuilder_ == null) {
-        ensureMemberAgentGroupsIsMutable();
-        memberAgentGroups_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        memberAgentGroupsBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * agent groups that are children of call center node
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-     */
-    public Builder addAllMemberAgentGroups(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup> values) {
-      if (memberAgentGroupsBuilder_ == null) {
-        ensureMemberAgentGroupsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, memberAgentGroups_);
-        onChanged();
-      } else {
-        memberAgentGroupsBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * agent groups that are children of call center node
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-     */
-    public Builder clearMemberAgentGroups() {
-      if (memberAgentGroupsBuilder_ == null) {
-        memberAgentGroups_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00010000);
-        onChanged();
-      } else {
-        memberAgentGroupsBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * agent groups that are children of call center node
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-     */
-    public Builder removeMemberAgentGroups(int index) {
-      if (memberAgentGroupsBuilder_ == null) {
-        ensureMemberAgentGroupsIsMutable();
-        memberAgentGroups_.remove(index);
-        onChanged();
-      } else {
-        memberAgentGroupsBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * agent groups that are children of call center node
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.Builder getMemberAgentGroupsBuilder(
-        int index) {
-      return getMemberAgentGroupsFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * agent groups that are children of call center node
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroupOrBuilder getMemberAgentGroupsOrBuilder(
-        int index) {
-      if (memberAgentGroupsBuilder_ == null) {
-        return memberAgentGroups_.get(index);  } else {
-        return memberAgentGroupsBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <pre>
-     * agent groups that are children of call center node
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-     */
-    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroupOrBuilder> 
-         getMemberAgentGroupsOrBuilderList() {
-      if (memberAgentGroupsBuilder_ != null) {
-        return memberAgentGroupsBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(memberAgentGroups_);
-      }
-    }
-    /**
-     * <pre>
-     * agent groups that are children of call center node
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.Builder addMemberAgentGroupsBuilder() {
-      return getMemberAgentGroupsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * agent groups that are children of call center node
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.Builder addMemberAgentGroupsBuilder(
-        int index) {
-      return getMemberAgentGroupsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * agent groups that are children of call center node
-     * </pre>
-     *
-     * <code>repeated .api.v1alpha1.wfm.AgentGroup member_agent_groups = 17 [json_name = "memberAgentGroups"];</code>
-     */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.Builder> 
-         getMemberAgentGroupsBuilderList() {
-      return getMemberAgentGroupsFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup, com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroupOrBuilder> 
-        getMemberAgentGroupsFieldBuilder() {
-      if (memberAgentGroupsBuilder_ == null) {
-        memberAgentGroupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup, com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroupOrBuilder>(
-                memberAgentGroups_,
-                ((bitField0_ & 0x00010000) != 0),
-                getParentForChildren(),
-                isClean());
-        memberAgentGroups_ = null;
-      }
-      return memberAgentGroupsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
