@@ -5345,14 +5345,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Swaps a list of shift instances to have a different &#64;wfm_agent_sid.
+     * Swaps shift instances with the given &#64;shift_instance_sids that belong to &#64;wfm_agent_sid1 to belong to &#64;wfm_agent_sid2 (and viceversa).
      * Returns the swapped &#64;shift_instances after they are succesfully updated.
-     * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, a diagnostic will be returned instead.
+     * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
+     * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
      * Required permissions:
      * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for org_id.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -7449,14 +7450,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Swaps a list of shift instances to have a different &#64;wfm_agent_sid.
+     * Swaps shift instances with the given &#64;shift_instance_sids that belong to &#64;wfm_agent_sid1 to belong to &#64;wfm_agent_sid2 (and viceversa).
      * Returns the swapped &#64;shift_instances after they are succesfully updated.
-     * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, a diagnostic will be returned instead.
+     * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
+     * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
      * Required permissions:
      * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for org_id.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -9452,14 +9454,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Swaps a list of shift instances to have a different &#64;wfm_agent_sid.
+     * Swaps shift instances with the given &#64;shift_instance_sids that belong to &#64;wfm_agent_sid1 to belong to &#64;wfm_agent_sid2 (and viceversa).
      * Returns the swapped &#64;shift_instances after they are succesfully updated.
-     * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, a diagnostic will be returned instead.
+     * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
+     * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
      * Required permissions:
      * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for org_id.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -11446,14 +11449,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Swaps a list of shift instances to have a different &#64;wfm_agent_sid.
+     * Swaps shift instances with the given &#64;shift_instance_sids that belong to &#64;wfm_agent_sid1 to belong to &#64;wfm_agent_sid2 (and viceversa).
      * Returns the swapped &#64;shift_instances after they are succesfully updated.
-     * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, a diagnostic will be returned instead.
+     * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
+     * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
      * Required permissions:
      * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
-     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for the org sending the request.
+     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for org_id.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */

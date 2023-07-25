@@ -47,7 +47,7 @@ private static final long serialVersionUID = 0L;
   private long wfmAgentSid1_ = 0L;
   /**
    * <pre>
-   * ID of the wfm agent sid that the shift instances had.
+   * ID of the wfm agent that will swap instances with &#64;wfm_agent_sid2.
    * </pre>
    *
    * <code>int64 wfm_agent_sid1 = 1 [json_name = "wfmAgentSid1"];</code>
@@ -62,7 +62,7 @@ private static final long serialVersionUID = 0L;
   private long wfmAgentSid2_ = 0L;
   /**
    * <pre>
-   * ID of the wfm agent sid that the shift instances will have.
+   * ID of the wfm agent that will swap instances with &#64;wfm_agent_sid1.
    * </pre>
    *
    * <code>int64 wfm_agent_sid2 = 2 [json_name = "wfmAgentSid2"];</code>
@@ -535,7 +535,7 @@ private static final long serialVersionUID = 0L;
     private long wfmAgentSid1_ ;
     /**
      * <pre>
-     * ID of the wfm agent sid that the shift instances had.
+     * ID of the wfm agent that will swap instances with &#64;wfm_agent_sid2.
      * </pre>
      *
      * <code>int64 wfm_agent_sid1 = 1 [json_name = "wfmAgentSid1"];</code>
@@ -547,7 +547,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the wfm agent sid that the shift instances had.
+     * ID of the wfm agent that will swap instances with &#64;wfm_agent_sid2.
      * </pre>
      *
      * <code>int64 wfm_agent_sid1 = 1 [json_name = "wfmAgentSid1"];</code>
@@ -563,7 +563,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the wfm agent sid that the shift instances had.
+     * ID of the wfm agent that will swap instances with &#64;wfm_agent_sid2.
      * </pre>
      *
      * <code>int64 wfm_agent_sid1 = 1 [json_name = "wfmAgentSid1"];</code>
@@ -579,7 +579,7 @@ private static final long serialVersionUID = 0L;
     private long wfmAgentSid2_ ;
     /**
      * <pre>
-     * ID of the wfm agent sid that the shift instances will have.
+     * ID of the wfm agent that will swap instances with &#64;wfm_agent_sid1.
      * </pre>
      *
      * <code>int64 wfm_agent_sid2 = 2 [json_name = "wfmAgentSid2"];</code>
@@ -591,7 +591,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the wfm agent sid that the shift instances will have.
+     * ID of the wfm agent that will swap instances with &#64;wfm_agent_sid1.
      * </pre>
      *
      * <code>int64 wfm_agent_sid2 = 2 [json_name = "wfmAgentSid2"];</code>
@@ -607,7 +607,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the wfm agent sid that the shift instances will have.
+     * ID of the wfm agent that will swap instances with &#64;wfm_agent_sid1.
      * </pre>
      *
      * <code>int64 wfm_agent_sid2 = 2 [json_name = "wfmAgentSid2"];</code>
