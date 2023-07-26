@@ -50,4 +50,48 @@ public interface SwapShiftInstancesResOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder getShiftInstancesOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Diagnostics for any overlapping shift instances.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> 
+      getDiagnosticsList();
+  /**
+   * <pre>
+   * Diagnostics for any overlapping shift instances.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic getDiagnostics(int index);
+  /**
+   * <pre>
+   * Diagnostics for any overlapping shift instances.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+   */
+  int getDiagnosticsCount();
+  /**
+   * <pre>
+   * Diagnostics for any overlapping shift instances.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> 
+      getDiagnosticsOrBuilderList();
+  /**
+   * <pre>
+   * Diagnostics for any overlapping shift instances.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder getDiagnosticsOrBuilder(
+      int index);
 }

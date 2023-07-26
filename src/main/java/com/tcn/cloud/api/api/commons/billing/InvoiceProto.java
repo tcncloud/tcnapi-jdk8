@@ -51,11 +51,13 @@ public final class InvoiceProto {
       "CEIVED\020\313\001\022\026\n\021PRODUCT_CHAT_SENT\020\314\001\022\032\n\025PRO" +
       "DUCT_CHAT_RECEIVED\020\315\001\022\021\n\014PRODUCT_OMNI\020\254\002" +
       "\022\021\n\014PRODUCT_VANA\020\220\003\022\027\n\022PRODUCT_COMPLIANC" +
-      "E\020\364\003B\243\001\n%com.tcn.cloud.api.api.commons.b" +
-      "illingB\014InvoiceProtoP\001\242\002\003ACB\252\002\023Api.Commo" +
-      "ns.Billing\312\002\023Api\\Commons\\Billing\342\002\037Api\\C" +
-      "ommons\\Billing\\GPBMetadata\352\002\025Api::Common" +
-      "s::Billingb\006proto3"
+      "E\020\364\003*a\n\rInvoiceFormat\022\036\n\032INVOICE_FORMAT_" +
+      "UNSPECIFIED\020\000\022\030\n\024INVOICE_FORMAT_PROTO\020\001\022" +
+      "\026\n\022INVOICE_FORMAT_CSV\020\002B\243\001\n%com.tcn.clou" +
+      "d.api.api.commons.billingB\014InvoiceProtoP" +
+      "\001\242\002\003ACB\252\002\023Api.Commons.Billing\312\002\023Api\\Comm" +
+      "ons\\Billing\342\002\037Api\\Commons\\Billing\\GPBMet" +
+      "adata\352\002\025Api::Commons::Billingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
