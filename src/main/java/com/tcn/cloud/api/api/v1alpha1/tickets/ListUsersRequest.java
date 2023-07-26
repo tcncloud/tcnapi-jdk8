@@ -5,41 +5,41 @@ package com.tcn.cloud.api.api.v1alpha1.tickets;
 
 /**
  * <pre>
- * ListAllocatedTicketReq -
+ * ListUsersRequest - Users request message
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.tickets.ListAllocatedTicketReq}
+ * Protobuf type {@code api.v1alpha1.tickets.ListUsersRequest}
  */
-@java.lang.Deprecated public final class ListAllocatedTicketReq extends
+public final class ListUsersRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.tickets.ListAllocatedTicketReq)
-    ListAllocatedTicketReqOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.tickets.ListUsersRequest)
+    ListUsersRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ListAllocatedTicketReq.newBuilder() to construct.
-  private ListAllocatedTicketReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ListUsersRequest.newBuilder() to construct.
+  private ListUsersRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ListAllocatedTicketReq() {
+  private ListUsersRequest() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ListAllocatedTicketReq();
+    return new ListUsersRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_ListAllocatedTicketReq_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_ListUsersRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_ListAllocatedTicketReq_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_ListUsersRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq.class, com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest.class, com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -75,10 +75,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq other = (com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq) obj;
+    com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest other = (com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -96,44 +96,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -141,26 +141,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -173,7 +173,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -190,29 +190,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * ListAllocatedTicketReq -
+   * ListUsersRequest - Users request message
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.tickets.ListAllocatedTicketReq}
+   * Protobuf type {@code api.v1alpha1.tickets.ListUsersRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.tickets.ListAllocatedTicketReq)
-      com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReqOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.tickets.ListUsersRequest)
+      com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_ListAllocatedTicketReq_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_ListUsersRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_ListAllocatedTicketReq_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_ListUsersRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq.class, com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest.class, com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest.newBuilder()
     private Builder() {
 
     }
@@ -231,17 +231,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_ListAllocatedTicketReq_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_ListUsersRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq build() {
-      com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest build() {
+      com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -249,8 +249,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq result = new com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq(this);
+    public com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest result = new com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest(this);
       onBuilt();
       return result;
     }
@@ -289,16 +289,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -353,23 +353,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.tickets.ListAllocatedTicketReq)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.tickets.ListUsersRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.tickets.ListAllocatedTicketReq)
-  private static final com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.tickets.ListUsersRequest)
+  private static final com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ListAllocatedTicketReq>
-      PARSER = new com.google.protobuf.AbstractParser<ListAllocatedTicketReq>() {
+  private static final com.google.protobuf.Parser<ListUsersRequest>
+      PARSER = new com.google.protobuf.AbstractParser<ListUsersRequest>() {
     @java.lang.Override
-    public ListAllocatedTicketReq parsePartialFrom(
+    public ListUsersRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -388,17 +388,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ListAllocatedTicketReq> parser() {
+  public static com.google.protobuf.Parser<ListUsersRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ListAllocatedTicketReq> getParserForType() {
+  public com.google.protobuf.Parser<ListUsersRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.tickets.ListAllocatedTicketReq getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.tickets.ListUsersRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

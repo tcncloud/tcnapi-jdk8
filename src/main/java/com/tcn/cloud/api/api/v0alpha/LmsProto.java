@@ -1940,7 +1940,7 @@ public final class LmsProto {
       "xSize\022\031\n\010max_size\030\001 \001(\005R\007maxSize\"0\n\021Spli" +
       "tByEqualParts\022\033\n\tpart_size\030\001 \001(\005R\010partSi" +
       "ze*F\n\010TimeUnit\022\013\n\007DEFAULT\020\000\022\016\n\nTIME_WEEK" +
-      "S\020\001\022\r\n\tTIME_DAYS\020\002\022\016\n\nTIME_HOURS\020\0032\271:\n\003L" +
+      "S\020\001\022\r\n\tTIME_DAYS\020\002\022\016\n\nTIME_HOURS\020\0032\337;\n\003L" +
       "MS\022v\n\014GetPublicKey\022\034.api.v0alpha.GetPubl" +
       "icKeyReq\032\026.api.v0alpha.PublicKey\"0\272\270\221\002\005\n" +
       "\003\010\351\007\202\323\344\223\002 \"\033/api/v0alpha/lms/pgpkey/get:" +
@@ -2127,11 +2127,15 @@ public final class LmsProto {
       "ureSearchCriteria\022$.api.v0alpha.CjsSecur" +
       "eSearchCriteria\032\026.google.protobuf.Empty\"" +
       "M\272\270\221\002\005\n\003\010\351\007\202\323\344\223\002=\"8/api/v0alpha/lms/coll" +
-      "ections/updatesecuresearchdcriteria:\001*Bv" +
-      "\n\035com.tcn.cloud.api.api.v0alphaB\010LmsProt" +
-      "oP\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027" +
-      "Api\\V0alpha\\GPBMetadata\352\002\014Api::V0alphab\006" +
-      "proto3"
+      "ections/updatesecuresearchdcriteria:\001*\022\243" +
+      "\001\n GetQueuedEventsStatusByElementId\022\026.ap" +
+      "i.v0alpha.ElementPK\032\023.api.v0alpha.Events" +
+      "\"R\272\270\221\002\005\n\003\010\350\007\202\323\344\223\002B\"=/api/v0alpha/lms/col" +
+      "lections/getqueuedeventsstatusbyelementi" +
+      "d:\001*Bv\n\035com.tcn.cloud.api.api.v0alphaB\010L" +
+      "msProtoP\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0al" +
+      "pha\342\002\027Api\\V0alpha\\GPBMetadata\352\002\014Api::V0a" +
+      "lphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
