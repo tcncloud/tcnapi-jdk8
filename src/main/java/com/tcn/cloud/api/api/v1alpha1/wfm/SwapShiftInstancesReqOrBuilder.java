@@ -9,7 +9,7 @@ public interface SwapShiftInstancesReqOrBuilder extends
 
   /**
    * <pre>
-   * ID of the wfm agent sid that the shift instances had.
+   * ID of the wfm agent that will swap instances with &#64;wfm_agent_sid2.
    * </pre>
    *
    * <code>int64 wfm_agent_sid1 = 1 [json_name = "wfmAgentSid1"];</code>
@@ -19,7 +19,7 @@ public interface SwapShiftInstancesReqOrBuilder extends
 
   /**
    * <pre>
-   * ID of the wfm agent sid that the shift instances will have.
+   * ID of the wfm agent that will swap instances with &#64;wfm_agent_sid1.
    * </pre>
    *
    * <code>int64 wfm_agent_sid2 = 2 [json_name = "wfmAgentSid2"];</code>

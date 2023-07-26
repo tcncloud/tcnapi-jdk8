@@ -3273,6 +3273,37 @@ public final class WFMGrpc {
     return getUpdateShiftInstanceV2Method;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes> getListShiftInstanceSidsForAgentMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListShiftInstanceSidsForAgent",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes> getListShiftInstanceSidsForAgentMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes> getListShiftInstanceSidsForAgentMethod;
+    if ((getListShiftInstanceSidsForAgentMethod = WFMGrpc.getListShiftInstanceSidsForAgentMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListShiftInstanceSidsForAgentMethod = WFMGrpc.getListShiftInstanceSidsForAgentMethod) == null) {
+          WFMGrpc.getListShiftInstanceSidsForAgentMethod = getListShiftInstanceSidsForAgentMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListShiftInstanceSidsForAgent"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListShiftInstanceSidsForAgent"))
+              .build();
+        }
+      }
+    }
+    return getListShiftInstanceSidsForAgentMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsRes> getListShiftSegmentsByShiftInstanceSidsMethod;
 
@@ -5314,11 +5345,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Swaps a list of shift instances to have a different &#64;wfm_agent_sid.
+     * Swaps shift instances with the given &#64;shift_instance_sids that belong to &#64;wfm_agent_sid1 to belong to &#64;wfm_agent_sid2 (and viceversa).
+     * Returns the swapped &#64;shift_instances after they are succesfully updated.
+     * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
+     * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
      * Required permissions:
      * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for org_id.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -5356,6 +5391,21 @@ public final class WFMGrpc {
     default void updateShiftInstanceV2(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Res> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateShiftInstanceV2Method(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the shift_instance_sids for the Shift Instances associated with &#64;wfm_agent_sid over the given &#64;datetime_range and &#64;schedule_selector.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the data.
+     * </pre>
+     */
+    default void listShiftInstanceSidsForAgent(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListShiftInstanceSidsForAgentMethod(), responseObserver);
     }
 
     /**
@@ -7400,11 +7450,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Swaps a list of shift instances to have a different &#64;wfm_agent_sid.
+     * Swaps shift instances with the given &#64;shift_instance_sids that belong to &#64;wfm_agent_sid1 to belong to &#64;wfm_agent_sid2 (and viceversa).
+     * Returns the swapped &#64;shift_instances after they are succesfully updated.
+     * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
+     * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
      * Required permissions:
      * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for org_id.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -7445,6 +7499,22 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Res> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateShiftInstanceV2Method(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the shift_instance_sids for the Shift Instances associated with &#64;wfm_agent_sid over the given &#64;datetime_range and &#64;schedule_selector.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the data.
+     * </pre>
+     */
+    public void listShiftInstanceSidsForAgent(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListShiftInstanceSidsForAgentMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -9384,11 +9454,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Swaps a list of shift instances to have a different &#64;wfm_agent_sid.
+     * Swaps shift instances with the given &#64;shift_instance_sids that belong to &#64;wfm_agent_sid1 to belong to &#64;wfm_agent_sid2 (and viceversa).
+     * Returns the swapped &#64;shift_instances after they are succesfully updated.
+     * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
+     * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
      * Required permissions:
      * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for org_id.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -9426,6 +9500,21 @@ public final class WFMGrpc {
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Res updateShiftInstanceV2(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateShiftInstanceV2Method(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the shift_instance_sids for the Shift Instances associated with &#64;wfm_agent_sid over the given &#64;datetime_range and &#64;schedule_selector.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the data.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes listShiftInstanceSidsForAgent(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListShiftInstanceSidsForAgentMethod(), getCallOptions(), request);
     }
 
     /**
@@ -11360,11 +11449,15 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Swaps a list of shift instances to have a different &#64;wfm_agent_sid.
+     * Swaps shift instances with the given &#64;shift_instance_sids that belong to &#64;wfm_agent_sid1 to belong to &#64;wfm_agent_sid2 (and viceversa).
+     * Returns the swapped &#64;shift_instances after they are succesfully updated.
+     * If there are other shifts for the given &#64;wfm_agent_sids with an overlap conflict, diagnostics will be returned instead.
+     * All &#64;shift_instance_sids must belong to the same schedule, and be from a draft schedule.
      * Required permissions:
      * NONE
      * Errors:
      *   - grpc.Invalid: one or more fields in the request have invalid values.
+     *   - grpc.NotFound: wfm_agent_sid_1, wfm_agent_sid_2, or shift_instance_sids do not exist for org_id.
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
@@ -11405,6 +11498,22 @@ public final class WFMGrpc {
         com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateShiftInstanceV2Method(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the shift_instance_sids for the Shift Instances associated with &#64;wfm_agent_sid over the given &#64;datetime_range and &#64;schedule_selector.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the request data is invalid.
+     *   - grpc.Internal: error occurs when getting the data.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes> listShiftInstanceSidsForAgent(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListShiftInstanceSidsForAgentMethod(), getCallOptions()), request);
     }
 
     /**
@@ -11621,12 +11730,13 @@ public final class WFMGrpc {
   private static final int METHODID_SWAP_SHIFT_INSTANCES = 102;
   private static final int METHODID_UPDATE_SHIFT_INSTANCE = 103;
   private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 104;
-  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 105;
-  private static final int METHODID_SET_SCHEDULING_TARGET = 106;
-  private static final int METHODID_GET_SCHEDULING_TARGET = 107;
-  private static final int METHODID_DELETE_SCHEDULING_TARGET = 108;
-  private static final int METHODID_GET_PERFORMANCE_METRICS = 109;
-  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 110;
+  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 105;
+  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 106;
+  private static final int METHODID_SET_SCHEDULING_TARGET = 107;
+  private static final int METHODID_GET_SCHEDULING_TARGET = 108;
+  private static final int METHODID_DELETE_SCHEDULING_TARGET = 109;
+  private static final int METHODID_GET_PERFORMANCE_METRICS = 110;
+  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 111;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -12064,6 +12174,10 @@ public final class WFMGrpc {
         case METHODID_UPDATE_SHIFT_INSTANCE_V2:
           serviceImpl.updateShiftInstanceV2((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Req) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Res>) responseObserver);
+          break;
+        case METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT:
+          serviceImpl.listShiftInstanceSidsForAgent((com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes>) responseObserver);
           break;
         case METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS:
           serviceImpl.listShiftSegmentsByShiftInstanceSids((com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsReq) request,
@@ -12843,6 +12957,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceV2Res>(
                 service, METHODID_UPDATE_SHIFT_INSTANCE_V2)))
         .addMethod(
+          getListShiftInstanceSidsForAgentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes>(
+                service, METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT)))
+        .addMethod(
           getListShiftSegmentsByShiftInstanceSidsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -13037,6 +13158,7 @@ public final class WFMGrpc {
               .addMethod(getSwapShiftInstancesMethod())
               .addMethod(getUpdateShiftInstanceMethod())
               .addMethod(getUpdateShiftInstanceV2Method())
+              .addMethod(getListShiftInstanceSidsForAgentMethod())
               .addMethod(getListShiftSegmentsByShiftInstanceSidsMethod())
               .addMethod(getSetSchedulingTargetMethod())
               .addMethod(getGetSchedulingTargetMethod())

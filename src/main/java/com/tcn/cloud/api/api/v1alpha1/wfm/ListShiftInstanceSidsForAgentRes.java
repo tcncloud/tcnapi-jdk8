@@ -5,21 +5,21 @@ package com.tcn.cloud.api.api.v1alpha1.wfm;
 
 /**
  * <pre>
- * Request message for the SwapShiftInstances RPC
+ * ListShiftInstanceSidsForAgent response RPC.
  * </pre>
  *
- * Protobuf type {@code api.v1alpha1.wfm.SwapShiftInstancesReq}
+ * Protobuf type {@code api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes}
  */
-public final class SwapShiftInstancesReq extends
+public final class ListShiftInstanceSidsForAgentRes extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.SwapShiftInstancesReq)
-    SwapShiftInstancesReqOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes)
+    ListShiftInstanceSidsForAgentResOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use SwapShiftInstancesReq.newBuilder() to construct.
-  private SwapShiftInstancesReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ListShiftInstanceSidsForAgentRes.newBuilder() to construct.
+  private ListShiftInstanceSidsForAgentRes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private SwapShiftInstancesReq() {
+  private ListShiftInstanceSidsForAgentRes() {
     shiftInstanceSids_ = emptyLongList();
   }
 
@@ -27,61 +27,31 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new SwapShiftInstancesReq();
+    return new ListShiftInstanceSidsForAgentRes();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_SwapShiftInstancesReq_descriptor;
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListShiftInstanceSidsForAgentRes_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_SwapShiftInstancesReq_fieldAccessorTable
+    return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListShiftInstanceSidsForAgentRes_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq.class, com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq.Builder.class);
+            com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes.class, com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes.Builder.class);
   }
 
-  public static final int WFM_AGENT_SID1_FIELD_NUMBER = 1;
-  private long wfmAgentSid1_ = 0L;
-  /**
-   * <pre>
-   * ID of the wfm agent that will swap instances with &#64;wfm_agent_sid2.
-   * </pre>
-   *
-   * <code>int64 wfm_agent_sid1 = 1 [json_name = "wfmAgentSid1"];</code>
-   * @return The wfmAgentSid1.
-   */
-  @java.lang.Override
-  public long getWfmAgentSid1() {
-    return wfmAgentSid1_;
-  }
-
-  public static final int WFM_AGENT_SID2_FIELD_NUMBER = 2;
-  private long wfmAgentSid2_ = 0L;
-  /**
-   * <pre>
-   * ID of the wfm agent that will swap instances with &#64;wfm_agent_sid1.
-   * </pre>
-   *
-   * <code>int64 wfm_agent_sid2 = 2 [json_name = "wfmAgentSid2"];</code>
-   * @return The wfmAgentSid2.
-   */
-  @java.lang.Override
-  public long getWfmAgentSid2() {
-    return wfmAgentSid2_;
-  }
-
-  public static final int SHIFT_INSTANCE_SIDS_FIELD_NUMBER = 3;
+  public static final int SHIFT_INSTANCE_SIDS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList shiftInstanceSids_;
   /**
    * <pre>
-   * IDs of the shift instances that will be swapped.
+   * Requested shift instance sids.
    * </pre>
    *
-   * <code>repeated int64 shift_instance_sids = 3 [json_name = "shiftInstanceSids"];</code>
+   * <code>repeated int64 shift_instance_sids = 1 [json_name = "shiftInstanceSids"];</code>
    * @return A list containing the shiftInstanceSids.
    */
   @java.lang.Override
@@ -91,10 +61,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * IDs of the shift instances that will be swapped.
+   * Requested shift instance sids.
    * </pre>
    *
-   * <code>repeated int64 shift_instance_sids = 3 [json_name = "shiftInstanceSids"];</code>
+   * <code>repeated int64 shift_instance_sids = 1 [json_name = "shiftInstanceSids"];</code>
    * @return The count of shiftInstanceSids.
    */
   public int getShiftInstanceSidsCount() {
@@ -102,10 +72,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * IDs of the shift instances that will be swapped.
+   * Requested shift instance sids.
    * </pre>
    *
-   * <code>repeated int64 shift_instance_sids = 3 [json_name = "shiftInstanceSids"];</code>
+   * <code>repeated int64 shift_instance_sids = 1 [json_name = "shiftInstanceSids"];</code>
    * @param index The index of the element to return.
    * @return The shiftInstanceSids at the given index.
    */
@@ -129,14 +99,8 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     getSerializedSize();
-    if (wfmAgentSid1_ != 0L) {
-      output.writeInt64(1, wfmAgentSid1_);
-    }
-    if (wfmAgentSid2_ != 0L) {
-      output.writeInt64(2, wfmAgentSid2_);
-    }
     if (getShiftInstanceSidsList().size() > 0) {
-      output.writeUInt32NoTag(26);
+      output.writeUInt32NoTag(10);
       output.writeUInt32NoTag(shiftInstanceSidsMemoizedSerializedSize);
     }
     for (int i = 0; i < shiftInstanceSids_.size(); i++) {
@@ -151,14 +115,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (wfmAgentSid1_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, wfmAgentSid1_);
-    }
-    if (wfmAgentSid2_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(2, wfmAgentSid2_);
-    }
     {
       int dataSize = 0;
       for (int i = 0; i < shiftInstanceSids_.size(); i++) {
@@ -183,15 +139,11 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq other = (com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq) obj;
+    com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes other = (com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes) obj;
 
-    if (getWfmAgentSid1()
-        != other.getWfmAgentSid1()) return false;
-    if (getWfmAgentSid2()
-        != other.getWfmAgentSid2()) return false;
     if (!getShiftInstanceSidsList()
         .equals(other.getShiftInstanceSidsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -205,12 +157,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + WFM_AGENT_SID1_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getWfmAgentSid1());
-    hash = (37 * hash) + WFM_AGENT_SID2_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getWfmAgentSid2());
     if (getShiftInstanceSidsCount() > 0) {
       hash = (37 * hash) + SHIFT_INSTANCE_SIDS_FIELD_NUMBER;
       hash = (53 * hash) + getShiftInstanceSidsList().hashCode();
@@ -220,44 +166,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -265,26 +211,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq parseFrom(
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -297,7 +243,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -314,29 +260,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for the SwapShiftInstances RPC
+   * ListShiftInstanceSidsForAgent response RPC.
    * </pre>
    *
-   * Protobuf type {@code api.v1alpha1.wfm.SwapShiftInstancesReq}
+   * Protobuf type {@code api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.SwapShiftInstancesReq)
-      com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReqOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes)
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentResOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_SwapShiftInstancesReq_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListShiftInstanceSidsForAgentRes_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_SwapShiftInstancesReq_fieldAccessorTable
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListShiftInstanceSidsForAgentRes_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq.class, com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq.Builder.class);
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes.class, com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes.newBuilder()
     private Builder() {
 
     }
@@ -350,8 +296,6 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      wfmAgentSid1_ = 0L;
-      wfmAgentSid2_ = 0L;
       shiftInstanceSids_ = emptyLongList();
       return this;
     }
@@ -359,17 +303,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_SwapShiftInstancesReq_descriptor;
+      return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListShiftInstanceSidsForAgentRes_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq.getDefaultInstance();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq build() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq result = buildPartial();
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes build() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -377,30 +321,24 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq buildPartial() {
-      com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq(this);
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes buildPartial() {
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes result = new com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq result) {
-      if (((bitField0_ & 0x00000004) != 0)) {
+    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes result) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         shiftInstanceSids_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.shiftInstanceSids_ = shiftInstanceSids_;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.wfmAgentSid1_ = wfmAgentSid1_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.wfmAgentSid2_ = wfmAgentSid2_;
-      }
     }
 
     @java.lang.Override
@@ -437,26 +375,20 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq) {
-        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq)other);
+      if (other instanceof com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes) {
+        return mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq other) {
-      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq.getDefaultInstance()) return this;
-      if (other.getWfmAgentSid1() != 0L) {
-        setWfmAgentSid1(other.getWfmAgentSid1());
-      }
-      if (other.getWfmAgentSid2() != 0L) {
-        setWfmAgentSid2(other.getWfmAgentSid2());
-      }
+    public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes other) {
+      if (other == com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes.getDefaultInstance()) return this;
       if (!other.shiftInstanceSids_.isEmpty()) {
         if (shiftInstanceSids_.isEmpty()) {
           shiftInstanceSids_ = other.shiftInstanceSids_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureShiftInstanceSidsIsMutable();
           shiftInstanceSids_.addAll(other.shiftInstanceSids_);
@@ -490,22 +422,12 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 8: {
-              wfmAgentSid1_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 16: {
-              wfmAgentSid2_ = input.readInt64();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 24: {
               long v = input.readInt64();
               ensureShiftInstanceSidsIsMutable();
               shiftInstanceSids_.addLong(v);
               break;
-            } // case 24
-            case 26: {
+            } // case 8
+            case 10: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               ensureShiftInstanceSidsIsMutable();
@@ -514,7 +436,7 @@ private static final long serialVersionUID = 0L;
               }
               input.popLimit(limit);
               break;
-            } // case 26
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -532,120 +454,32 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private long wfmAgentSid1_ ;
-    /**
-     * <pre>
-     * ID of the wfm agent that will swap instances with &#64;wfm_agent_sid2.
-     * </pre>
-     *
-     * <code>int64 wfm_agent_sid1 = 1 [json_name = "wfmAgentSid1"];</code>
-     * @return The wfmAgentSid1.
-     */
-    @java.lang.Override
-    public long getWfmAgentSid1() {
-      return wfmAgentSid1_;
-    }
-    /**
-     * <pre>
-     * ID of the wfm agent that will swap instances with &#64;wfm_agent_sid2.
-     * </pre>
-     *
-     * <code>int64 wfm_agent_sid1 = 1 [json_name = "wfmAgentSid1"];</code>
-     * @param value The wfmAgentSid1 to set.
-     * @return This builder for chaining.
-     */
-    public Builder setWfmAgentSid1(long value) {
-
-      wfmAgentSid1_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * ID of the wfm agent that will swap instances with &#64;wfm_agent_sid2.
-     * </pre>
-     *
-     * <code>int64 wfm_agent_sid1 = 1 [json_name = "wfmAgentSid1"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearWfmAgentSid1() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      wfmAgentSid1_ = 0L;
-      onChanged();
-      return this;
-    }
-
-    private long wfmAgentSid2_ ;
-    /**
-     * <pre>
-     * ID of the wfm agent that will swap instances with &#64;wfm_agent_sid1.
-     * </pre>
-     *
-     * <code>int64 wfm_agent_sid2 = 2 [json_name = "wfmAgentSid2"];</code>
-     * @return The wfmAgentSid2.
-     */
-    @java.lang.Override
-    public long getWfmAgentSid2() {
-      return wfmAgentSid2_;
-    }
-    /**
-     * <pre>
-     * ID of the wfm agent that will swap instances with &#64;wfm_agent_sid1.
-     * </pre>
-     *
-     * <code>int64 wfm_agent_sid2 = 2 [json_name = "wfmAgentSid2"];</code>
-     * @param value The wfmAgentSid2 to set.
-     * @return This builder for chaining.
-     */
-    public Builder setWfmAgentSid2(long value) {
-
-      wfmAgentSid2_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * ID of the wfm agent that will swap instances with &#64;wfm_agent_sid1.
-     * </pre>
-     *
-     * <code>int64 wfm_agent_sid2 = 2 [json_name = "wfmAgentSid2"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearWfmAgentSid2() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      wfmAgentSid2_ = 0L;
-      onChanged();
-      return this;
-    }
-
     private com.google.protobuf.Internal.LongList shiftInstanceSids_ = emptyLongList();
     private void ensureShiftInstanceSidsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         shiftInstanceSids_ = mutableCopy(shiftInstanceSids_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000001;
       }
     }
     /**
      * <pre>
-     * IDs of the shift instances that will be swapped.
+     * Requested shift instance sids.
      * </pre>
      *
-     * <code>repeated int64 shift_instance_sids = 3 [json_name = "shiftInstanceSids"];</code>
+     * <code>repeated int64 shift_instance_sids = 1 [json_name = "shiftInstanceSids"];</code>
      * @return A list containing the shiftInstanceSids.
      */
     public java.util.List<java.lang.Long>
         getShiftInstanceSidsList() {
-      return ((bitField0_ & 0x00000004) != 0) ?
+      return ((bitField0_ & 0x00000001) != 0) ?
                java.util.Collections.unmodifiableList(shiftInstanceSids_) : shiftInstanceSids_;
     }
     /**
      * <pre>
-     * IDs of the shift instances that will be swapped.
+     * Requested shift instance sids.
      * </pre>
      *
-     * <code>repeated int64 shift_instance_sids = 3 [json_name = "shiftInstanceSids"];</code>
+     * <code>repeated int64 shift_instance_sids = 1 [json_name = "shiftInstanceSids"];</code>
      * @return The count of shiftInstanceSids.
      */
     public int getShiftInstanceSidsCount() {
@@ -653,10 +487,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the shift instances that will be swapped.
+     * Requested shift instance sids.
      * </pre>
      *
-     * <code>repeated int64 shift_instance_sids = 3 [json_name = "shiftInstanceSids"];</code>
+     * <code>repeated int64 shift_instance_sids = 1 [json_name = "shiftInstanceSids"];</code>
      * @param index The index of the element to return.
      * @return The shiftInstanceSids at the given index.
      */
@@ -665,10 +499,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the shift instances that will be swapped.
+     * Requested shift instance sids.
      * </pre>
      *
-     * <code>repeated int64 shift_instance_sids = 3 [json_name = "shiftInstanceSids"];</code>
+     * <code>repeated int64 shift_instance_sids = 1 [json_name = "shiftInstanceSids"];</code>
      * @param index The index to set the value at.
      * @param value The shiftInstanceSids to set.
      * @return This builder for chaining.
@@ -683,10 +517,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the shift instances that will be swapped.
+     * Requested shift instance sids.
      * </pre>
      *
-     * <code>repeated int64 shift_instance_sids = 3 [json_name = "shiftInstanceSids"];</code>
+     * <code>repeated int64 shift_instance_sids = 1 [json_name = "shiftInstanceSids"];</code>
      * @param value The shiftInstanceSids to add.
      * @return This builder for chaining.
      */
@@ -699,10 +533,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the shift instances that will be swapped.
+     * Requested shift instance sids.
      * </pre>
      *
-     * <code>repeated int64 shift_instance_sids = 3 [json_name = "shiftInstanceSids"];</code>
+     * <code>repeated int64 shift_instance_sids = 1 [json_name = "shiftInstanceSids"];</code>
      * @param values The shiftInstanceSids to add.
      * @return This builder for chaining.
      */
@@ -716,15 +550,15 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * IDs of the shift instances that will be swapped.
+     * Requested shift instance sids.
      * </pre>
      *
-     * <code>repeated int64 shift_instance_sids = 3 [json_name = "shiftInstanceSids"];</code>
+     * <code>repeated int64 shift_instance_sids = 1 [json_name = "shiftInstanceSids"];</code>
      * @return This builder for chaining.
      */
     public Builder clearShiftInstanceSids() {
       shiftInstanceSids_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -741,23 +575,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.SwapShiftInstancesReq)
+    // @@protoc_insertion_point(builder_scope:api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.SwapShiftInstancesReq)
-  private static final com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes)
+  private static final com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes();
   }
 
-  public static com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<SwapShiftInstancesReq>
-      PARSER = new com.google.protobuf.AbstractParser<SwapShiftInstancesReq>() {
+  private static final com.google.protobuf.Parser<ListShiftInstanceSidsForAgentRes>
+      PARSER = new com.google.protobuf.AbstractParser<ListShiftInstanceSidsForAgentRes>() {
     @java.lang.Override
-    public SwapShiftInstancesReq parsePartialFrom(
+    public ListShiftInstanceSidsForAgentRes parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -776,17 +610,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<SwapShiftInstancesReq> parser() {
+  public static com.google.protobuf.Parser<ListShiftInstanceSidsForAgentRes> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<SwapShiftInstancesReq> getParserForType() {
+  public com.google.protobuf.Parser<ListShiftInstanceSidsForAgentRes> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstanceSidsForAgentRes getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
