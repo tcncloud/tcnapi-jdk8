@@ -221,11 +221,11 @@ public final class BillingGrpc {
 
     /**
      * <pre>
-     * GetInvoice - returns the invoice for the organization. If a date is
-     * provided, this will return the invoice for the organization that
-     * corresponds to the billing cycle that contains the provided date. If
-     * no date is provided, this will return the invoice as it currently
-     * stands for the current billing cycle.
+     * GetInvoice - returns the invoice for the organization.
+     * If a date is provided, this will return the invoice for the
+     * organization that corresponds to the billing cycle that contains
+     * the provided date. If no date is provided, this will return the
+     * invoice as it currently stands for the current billing cycle.
      * </pre>
      */
     default void getInvoice(com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceReq request,
@@ -234,6 +234,16 @@ public final class BillingGrpc {
     }
 
     /**
+     * <pre>
+     * ExportGeneratedInvoice - returns the invoice for the organization.
+     * If a date is provided, this will return the invoice for the
+     * organization that corresponds to the billing cycle that contains
+     * the provided date. If no date is provided, this will return the
+     * invoice, as it has been last generated, for the current billing cycle.
+     * This differs from GetInvoice in that it returns the invoice as
+     * it was last generated. It will not take into account new billing
+     * events since the last generation.
+     * </pre>
      */
     default void exportGeneratedInvoice(com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes> responseObserver) {
@@ -304,11 +314,11 @@ public final class BillingGrpc {
 
     /**
      * <pre>
-     * GetInvoice - returns the invoice for the organization. If a date is
-     * provided, this will return the invoice for the organization that
-     * corresponds to the billing cycle that contains the provided date. If
-     * no date is provided, this will return the invoice as it currently
-     * stands for the current billing cycle.
+     * GetInvoice - returns the invoice for the organization.
+     * If a date is provided, this will return the invoice for the
+     * organization that corresponds to the billing cycle that contains
+     * the provided date. If no date is provided, this will return the
+     * invoice as it currently stands for the current billing cycle.
      * </pre>
      */
     public void getInvoice(com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceReq request,
@@ -318,6 +328,16 @@ public final class BillingGrpc {
     }
 
     /**
+     * <pre>
+     * ExportGeneratedInvoice - returns the invoice for the organization.
+     * If a date is provided, this will return the invoice for the
+     * organization that corresponds to the billing cycle that contains
+     * the provided date. If no date is provided, this will return the
+     * invoice, as it has been last generated, for the current billing cycle.
+     * This differs from GetInvoice in that it returns the invoice as
+     * it was last generated. It will not take into account new billing
+     * events since the last generation.
+     * </pre>
      */
     public void exportGeneratedInvoice(com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes> responseObserver) {
@@ -373,11 +393,11 @@ public final class BillingGrpc {
 
     /**
      * <pre>
-     * GetInvoice - returns the invoice for the organization. If a date is
-     * provided, this will return the invoice for the organization that
-     * corresponds to the billing cycle that contains the provided date. If
-     * no date is provided, this will return the invoice as it currently
-     * stands for the current billing cycle.
+     * GetInvoice - returns the invoice for the organization.
+     * If a date is provided, this will return the invoice for the
+     * organization that corresponds to the billing cycle that contains
+     * the provided date. If no date is provided, this will return the
+     * invoice as it currently stands for the current billing cycle.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes getInvoice(com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceReq request) {
@@ -386,6 +406,16 @@ public final class BillingGrpc {
     }
 
     /**
+     * <pre>
+     * ExportGeneratedInvoice - returns the invoice for the organization.
+     * If a date is provided, this will return the invoice for the
+     * organization that corresponds to the billing cycle that contains
+     * the provided date. If no date is provided, this will return the
+     * invoice, as it has been last generated, for the current billing cycle.
+     * This differs from GetInvoice in that it returns the invoice as
+     * it was last generated. It will not take into account new billing
+     * events since the last generation.
+     * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes exportGeneratedInvoice(com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -442,11 +472,11 @@ public final class BillingGrpc {
 
     /**
      * <pre>
-     * GetInvoice - returns the invoice for the organization. If a date is
-     * provided, this will return the invoice for the organization that
-     * corresponds to the billing cycle that contains the provided date. If
-     * no date is provided, this will return the invoice as it currently
-     * stands for the current billing cycle.
+     * GetInvoice - returns the invoice for the organization.
+     * If a date is provided, this will return the invoice for the
+     * organization that corresponds to the billing cycle that contains
+     * the provided date. If no date is provided, this will return the
+     * invoice as it currently stands for the current billing cycle.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes> getInvoice(
@@ -456,6 +486,16 @@ public final class BillingGrpc {
     }
 
     /**
+     * <pre>
+     * ExportGeneratedInvoice - returns the invoice for the organization.
+     * If a date is provided, this will return the invoice for the
+     * organization that corresponds to the billing cycle that contains
+     * the provided date. If no date is provided, this will return the
+     * invoice, as it has been last generated, for the current billing cycle.
+     * This differs from GetInvoice in that it returns the invoice as
+     * it was last generated. It will not take into account new billing
+     * events since the last generation.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes> exportGeneratedInvoice(
         com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq request) {
