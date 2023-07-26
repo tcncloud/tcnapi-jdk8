@@ -278,4 +278,19 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue);
    */
   com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse getAgentResponseOrThrow(
       java.lang.String key);
+
+  /**
+   * <code>.api.v1alpha1.vanalytics.Transcript.Phone phone = 23 [json_name = "phone"];</code>
+   * @return Whether the phone field is set.
+   */
+  boolean hasPhone();
+  /**
+   * <code>.api.v1alpha1.vanalytics.Transcript.Phone phone = 23 [json_name = "phone"];</code>
+   * @return The phone.
+   */
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.Transcript.Phone getPhone();
+  /**
+   * <code>.api.v1alpha1.vanalytics.Transcript.Phone phone = 23 [json_name = "phone"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.Transcript.PhoneOrBuilder getPhoneOrBuilder();
 }
