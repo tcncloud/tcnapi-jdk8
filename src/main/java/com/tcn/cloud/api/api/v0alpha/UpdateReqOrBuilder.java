@@ -62,4 +62,24 @@ public interface UpdateReqOrBuilder extends
    */
   com.google.protobuf.ByteString
       getMessageBytes();
+
+  /**
+   * <pre>
+   * title of the article
+   * </pre>
+   *
+   * <code>string title = 13 [json_name = "title"];</code>
+   * @return The title.
+   */
+  java.lang.String getTitle();
+  /**
+   * <pre>
+   * title of the article
+   * </pre>
+   *
+   * <code>string title = 13 [json_name = "title"];</code>
+   * @return The bytes for title.
+   */
+  com.google.protobuf.ByteString
+      getTitleBytes();
 }
