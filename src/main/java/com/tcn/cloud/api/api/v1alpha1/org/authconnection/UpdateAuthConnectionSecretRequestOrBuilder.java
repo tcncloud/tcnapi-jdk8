@@ -46,4 +46,31 @@ public interface UpdateAuthConnectionSecretRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getClientSecretBytes();
+
+  /**
+   * <pre>
+   * OPTIONAL: The date the secret will expire.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration secret_expiration = 3 [json_name = "secretExpiration"];</code>
+   * @return Whether the secretExpiration field is set.
+   */
+  boolean hasSecretExpiration();
+  /**
+   * <pre>
+   * OPTIONAL: The date the secret will expire.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration secret_expiration = 3 [json_name = "secretExpiration"];</code>
+   * @return The secretExpiration.
+   */
+  com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration getSecretExpiration();
+  /**
+   * <pre>
+   * OPTIONAL: The date the secret will expire.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration secret_expiration = 3 [json_name = "secretExpiration"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpirationOrBuilder getSecretExpirationOrBuilder();
 }

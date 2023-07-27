@@ -44,6 +44,606 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.class, com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.Builder.class);
   }
 
+  public interface SecretExpirationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.google.protobuf.Timestamp date = 1 [json_name = "date"];</code>
+     * @return Whether the date field is set.
+     */
+    boolean hasDate();
+    /**
+     * <code>.google.protobuf.Timestamp date = 1 [json_name = "date"];</code>
+     * @return The date.
+     */
+    com.google.protobuf.Timestamp getDate();
+    /**
+     * <code>.google.protobuf.Timestamp date = 1 [json_name = "date"];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDateOrBuilder();
+  }
+  /**
+   * Protobuf type {@code api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration}
+   */
+  public static final class SecretExpiration extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration)
+      SecretExpirationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SecretExpiration.newBuilder() to construct.
+    private SecretExpiration(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SecretExpiration() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SecretExpiration();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v1alpha1.org.authconnection.EntitiesProto.internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretRequest_SecretExpiration_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v1alpha1.org.authconnection.EntitiesProto.internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretRequest_SecretExpiration_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration.class, com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration.Builder.class);
+    }
+
+    public static final int DATE_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp date_;
+    /**
+     * <code>.google.protobuf.Timestamp date = 1 [json_name = "date"];</code>
+     * @return Whether the date field is set.
+     */
+    @java.lang.Override
+    public boolean hasDate() {
+      return date_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp date = 1 [json_name = "date"];</code>
+     * @return The date.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getDate() {
+      return date_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : date_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp date = 1 [json_name = "date"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getDateOrBuilder() {
+      return date_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : date_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (date_ != null) {
+        output.writeMessage(1, getDate());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (date_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDate());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration other = (com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration) obj;
+
+      if (hasDate() != other.hasDate()) return false;
+      if (hasDate()) {
+        if (!getDate()
+            .equals(other.getDate())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDate()) {
+        hash = (37 * hash) + DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getDate().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration)
+        com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpirationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.org.authconnection.EntitiesProto.internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretRequest_SecretExpiration_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.org.authconnection.EntitiesProto.internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretRequest_SecretExpiration_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration.class, com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        date_ = null;
+        if (dateBuilder_ != null) {
+          dateBuilder_.dispose();
+          dateBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v1alpha1.org.authconnection.EntitiesProto.internal_static_api_v1alpha1_org_authconnection_UpdateAuthConnectionSecretRequest_SecretExpiration_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration build() {
+        com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration buildPartial() {
+        com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration result = new com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.date_ = dateBuilder_ == null
+              ? date_
+              : dateBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration) {
+          return mergeFrom((com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration other) {
+        if (other == com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration.getDefaultInstance()) return this;
+        if (other.hasDate()) {
+          mergeDate(other.getDate());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Timestamp date_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> dateBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp date = 1 [json_name = "date"];</code>
+       * @return Whether the date field is set.
+       */
+      public boolean hasDate() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp date = 1 [json_name = "date"];</code>
+       * @return The date.
+       */
+      public com.google.protobuf.Timestamp getDate() {
+        if (dateBuilder_ == null) {
+          return date_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : date_;
+        } else {
+          return dateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp date = 1 [json_name = "date"];</code>
+       */
+      public Builder setDate(com.google.protobuf.Timestamp value) {
+        if (dateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          date_ = value;
+        } else {
+          dateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp date = 1 [json_name = "date"];</code>
+       */
+      public Builder setDate(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (dateBuilder_ == null) {
+          date_ = builderForValue.build();
+        } else {
+          dateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp date = 1 [json_name = "date"];</code>
+       */
+      public Builder mergeDate(com.google.protobuf.Timestamp value) {
+        if (dateBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            date_ != null &&
+            date_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getDateBuilder().mergeFrom(value);
+          } else {
+            date_ = value;
+          }
+        } else {
+          dateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp date = 1 [json_name = "date"];</code>
+       */
+      public Builder clearDate() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        date_ = null;
+        if (dateBuilder_ != null) {
+          dateBuilder_.dispose();
+          dateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp date = 1 [json_name = "date"];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDateBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp date = 1 [json_name = "date"];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDateOrBuilder() {
+        if (dateBuilder_ != null) {
+          return dateBuilder_.getMessageOrBuilder();
+        } else {
+          return date_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : date_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp date = 1 [json_name = "date"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDateFieldBuilder() {
+        if (dateBuilder_ == null) {
+          dateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDate(),
+                  getParentForChildren(),
+                  isClean());
+          date_ = null;
+        }
+        return dateBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration)
+    private static final com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration();
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SecretExpiration>
+        PARSER = new com.google.protobuf.AbstractParser<SecretExpiration>() {
+      @java.lang.Override
+      public SecretExpiration parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SecretExpiration> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SecretExpiration> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public static final int CONNECTION_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object connectionId_ = "";
@@ -138,6 +738,44 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int SECRET_EXPIRATION_FIELD_NUMBER = 3;
+  private com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration secretExpiration_;
+  /**
+   * <pre>
+   * OPTIONAL: The date the secret will expire.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration secret_expiration = 3 [json_name = "secretExpiration"];</code>
+   * @return Whether the secretExpiration field is set.
+   */
+  @java.lang.Override
+  public boolean hasSecretExpiration() {
+    return secretExpiration_ != null;
+  }
+  /**
+   * <pre>
+   * OPTIONAL: The date the secret will expire.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration secret_expiration = 3 [json_name = "secretExpiration"];</code>
+   * @return The secretExpiration.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration getSecretExpiration() {
+    return secretExpiration_ == null ? com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration.getDefaultInstance() : secretExpiration_;
+  }
+  /**
+   * <pre>
+   * OPTIONAL: The date the secret will expire.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration secret_expiration = 3 [json_name = "secretExpiration"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpirationOrBuilder getSecretExpirationOrBuilder() {
+    return secretExpiration_ == null ? com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration.getDefaultInstance() : secretExpiration_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -158,6 +796,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientSecret_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, clientSecret_);
     }
+    if (secretExpiration_ != null) {
+      output.writeMessage(3, getSecretExpiration());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -172,6 +813,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientSecret_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, clientSecret_);
+    }
+    if (secretExpiration_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getSecretExpiration());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -192,6 +837,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getConnectionId())) return false;
     if (!getClientSecret()
         .equals(other.getClientSecret())) return false;
+    if (hasSecretExpiration() != other.hasSecretExpiration()) return false;
+    if (hasSecretExpiration()) {
+      if (!getSecretExpiration()
+          .equals(other.getSecretExpiration())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -207,6 +857,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getConnectionId().hashCode();
     hash = (37 * hash) + CLIENT_SECRET_FIELD_NUMBER;
     hash = (53 * hash) + getClientSecret().hashCode();
+    if (hasSecretExpiration()) {
+      hash = (37 * hash) + SECRET_EXPIRATION_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretExpiration().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -344,6 +998,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       connectionId_ = "";
       clientSecret_ = "";
+      secretExpiration_ = null;
+      if (secretExpirationBuilder_ != null) {
+        secretExpirationBuilder_.dispose();
+        secretExpirationBuilder_ = null;
+      }
       return this;
     }
 
@@ -382,6 +1041,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.clientSecret_ = clientSecret_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.secretExpiration_ = secretExpirationBuilder_ == null
+            ? secretExpiration_
+            : secretExpirationBuilder_.build();
       }
     }
 
@@ -439,6 +1103,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
+      if (other.hasSecretExpiration()) {
+        mergeSecretExpiration(other.getSecretExpiration());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -475,6 +1142,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getSecretExpirationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -674,6 +1348,161 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
+    }
+
+    private com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration secretExpiration_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration, com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration.Builder, com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpirationOrBuilder> secretExpirationBuilder_;
+    /**
+     * <pre>
+     * OPTIONAL: The date the secret will expire.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration secret_expiration = 3 [json_name = "secretExpiration"];</code>
+     * @return Whether the secretExpiration field is set.
+     */
+    public boolean hasSecretExpiration() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * OPTIONAL: The date the secret will expire.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration secret_expiration = 3 [json_name = "secretExpiration"];</code>
+     * @return The secretExpiration.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration getSecretExpiration() {
+      if (secretExpirationBuilder_ == null) {
+        return secretExpiration_ == null ? com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration.getDefaultInstance() : secretExpiration_;
+      } else {
+        return secretExpirationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * OPTIONAL: The date the secret will expire.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration secret_expiration = 3 [json_name = "secretExpiration"];</code>
+     */
+    public Builder setSecretExpiration(com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration value) {
+      if (secretExpirationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        secretExpiration_ = value;
+      } else {
+        secretExpirationBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * OPTIONAL: The date the secret will expire.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration secret_expiration = 3 [json_name = "secretExpiration"];</code>
+     */
+    public Builder setSecretExpiration(
+        com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration.Builder builderForValue) {
+      if (secretExpirationBuilder_ == null) {
+        secretExpiration_ = builderForValue.build();
+      } else {
+        secretExpirationBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * OPTIONAL: The date the secret will expire.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration secret_expiration = 3 [json_name = "secretExpiration"];</code>
+     */
+    public Builder mergeSecretExpiration(com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration value) {
+      if (secretExpirationBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          secretExpiration_ != null &&
+          secretExpiration_ != com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration.getDefaultInstance()) {
+          getSecretExpirationBuilder().mergeFrom(value);
+        } else {
+          secretExpiration_ = value;
+        }
+      } else {
+        secretExpirationBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * OPTIONAL: The date the secret will expire.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration secret_expiration = 3 [json_name = "secretExpiration"];</code>
+     */
+    public Builder clearSecretExpiration() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      secretExpiration_ = null;
+      if (secretExpirationBuilder_ != null) {
+        secretExpirationBuilder_.dispose();
+        secretExpirationBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * OPTIONAL: The date the secret will expire.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration secret_expiration = 3 [json_name = "secretExpiration"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration.Builder getSecretExpirationBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getSecretExpirationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * OPTIONAL: The date the secret will expire.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration secret_expiration = 3 [json_name = "secretExpiration"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpirationOrBuilder getSecretExpirationOrBuilder() {
+      if (secretExpirationBuilder_ != null) {
+        return secretExpirationBuilder_.getMessageOrBuilder();
+      } else {
+        return secretExpiration_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration.getDefaultInstance() : secretExpiration_;
+      }
+    }
+    /**
+     * <pre>
+     * OPTIONAL: The date the secret will expire.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration secret_expiration = 3 [json_name = "secretExpiration"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration, com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration.Builder, com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpirationOrBuilder> 
+        getSecretExpirationFieldBuilder() {
+      if (secretExpirationBuilder_ == null) {
+        secretExpirationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration, com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpiration.Builder, com.tcn.cloud.api.api.v1alpha1.org.authconnection.UpdateAuthConnectionSecretRequest.SecretExpirationOrBuilder>(
+                getSecretExpiration(),
+                getParentForChildren(),
+                isClean());
+        secretExpiration_ = null;
+      }
+      return secretExpirationBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
