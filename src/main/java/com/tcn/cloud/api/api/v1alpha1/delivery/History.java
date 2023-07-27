@@ -484,7 +484,7 @@ private static final long serialVersionUID = 0L;
   public static final int TRANSACTION_SID_FIELD_NUMBER = 17;
   private long transactionSid_ = 0L;
   /**
-   * <code>int64 transaction_sid = 17 [json_name = "transactionSid"];</code>
+   * <code>int64 transaction_sid = 17 [json_name = "transactionSid", jstype = JS_STRING];</code>
    * @return The transactionSid.
    */
   @java.lang.Override
@@ -2394,7 +2394,7 @@ private static final long serialVersionUID = 0L;
 
     private long transactionSid_ ;
     /**
-     * <code>int64 transaction_sid = 17 [json_name = "transactionSid"];</code>
+     * <code>int64 transaction_sid = 17 [json_name = "transactionSid", jstype = JS_STRING];</code>
      * @return The transactionSid.
      */
     @java.lang.Override
@@ -2402,7 +2402,7 @@ private static final long serialVersionUID = 0L;
       return transactionSid_;
     }
     /**
-     * <code>int64 transaction_sid = 17 [json_name = "transactionSid"];</code>
+     * <code>int64 transaction_sid = 17 [json_name = "transactionSid", jstype = JS_STRING];</code>
      * @param value The transactionSid to set.
      * @return This builder for chaining.
      */
@@ -2414,7 +2414,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 transaction_sid = 17 [json_name = "transactionSid"];</code>
+     * <code>int64 transaction_sid = 17 [json_name = "transactionSid", jstype = JS_STRING];</code>
      * @return This builder for chaining.
      */
     public Builder clearTransactionSid() {

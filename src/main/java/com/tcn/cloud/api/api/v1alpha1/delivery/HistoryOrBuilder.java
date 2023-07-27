@@ -237,7 +237,7 @@ public interface HistoryOrBuilder extends
   boolean getIsInbound();
 
   /**
-   * <code>int64 transaction_sid = 17 [json_name = "transactionSid"];</code>
+   * <code>int64 transaction_sid = 17 [json_name = "transactionSid", jstype = JS_STRING];</code>
    * @return The transactionSid.
    */
   long getTransactionSid();
