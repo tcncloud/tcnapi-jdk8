@@ -56,6 +56,10 @@ public enum Card
    * <code>CARD_SUBSCRIPTIONS = 9;</code>
    */
   CARD_SUBSCRIPTIONS(9),
+  /**
+   * <code>CARD_PBX_MANAGER = 10;</code>
+   */
+  CARD_PBX_MANAGER(10),
   UNRECOGNIZED(-1),
   ;
 
@@ -103,6 +107,10 @@ public enum Card
    * <code>CARD_SUBSCRIPTIONS = 9;</code>
    */
   public static final int CARD_SUBSCRIPTIONS_VALUE = 9;
+  /**
+   * <code>CARD_PBX_MANAGER = 10;</code>
+   */
+  public static final int CARD_PBX_MANAGER_VALUE = 10;
 
 
   public final int getNumber() {
@@ -139,6 +147,7 @@ public enum Card
       case 7: return CARD_HUNT_GROUPS;
       case 8: return CARD_SOUNDBOARD;
       case 9: return CARD_SUBSCRIPTIONS;
+      case 10: return CARD_PBX_MANAGER;
       default: return null;
     }
   }
