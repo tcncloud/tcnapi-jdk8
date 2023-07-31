@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.57.0)",
     comments = "Source: api/v0alpha/lms.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class LMSGrpc {
 
   private LMSGrpc() {}
 
-  public static final String SERVICE_NAME = "api.v0alpha.LMS";
+  public static final java.lang.String SERVICE_NAME = "api.v0alpha.LMS";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetPublicKeyReq,
@@ -4301,9 +4301,9 @@ public final class LMSGrpc {
   private static final class LMSMethodDescriptorSupplier
       extends LMSBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    LMSMethodDescriptorSupplier(String methodName) {
+    LMSMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.57.0)",
     comments = "Source: api/v1alpha1/srec/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SrecGrpc {
 
   private SrecGrpc() {}
 
-  public static final String SERVICE_NAME = "api.v1alpha1.srec.Srec";
+  public static final java.lang.String SERVICE_NAME = "api.v1alpha1.srec.Srec";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.srec.ListScreenRecordingsRequest,
@@ -443,9 +443,9 @@ public final class SrecGrpc {
   private static final class SrecMethodDescriptorSupplier
       extends SrecBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    SrecMethodDescriptorSupplier(String methodName) {
+    SrecMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
