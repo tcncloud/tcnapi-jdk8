@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.57.0)",
     comments = "Source: api/v0alpha/cbs.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CBSGrpc {
 
   private CBSGrpc() {}
 
-  public static final String SERVICE_NAME = "api.v0alpha.CBS";
+  public static final java.lang.String SERVICE_NAME = "api.v0alpha.CBS";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateServiceIdReq,
@@ -996,9 +996,9 @@ public final class CBSGrpc {
   private static final class CBSMethodDescriptorSupplier
       extends CBSBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    CBSMethodDescriptorSupplier(String methodName) {
+    CBSMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.57.0)",
     comments = "Source: api/v0alpha/fts.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class FTSGrpc {
 
   private FTSGrpc() {}
 
-  public static final String SERVICE_NAME = "api.v0alpha.FTS";
+  public static final java.lang.String SERVICE_NAME = "api.v0alpha.FTS";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetUploadFileUrlReq,
@@ -261,9 +261,9 @@ public final class FTSGrpc {
   private static final class FTSMethodDescriptorSupplier
       extends FTSBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    FTSMethodDescriptorSupplier(String methodName) {
+    FTSMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

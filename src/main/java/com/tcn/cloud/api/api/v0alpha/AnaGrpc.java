@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.57.0)",
     comments = "Source: api/v0alpha/ana.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AnaGrpc {
 
   private AnaGrpc() {}
 
-  public static final String SERVICE_NAME = "api.v0alpha.Ana";
+  public static final java.lang.String SERVICE_NAME = "api.v0alpha.Ana";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetSpecifiedVisualizationsReq,
@@ -2943,9 +2943,9 @@ public final class AnaGrpc {
   private static final class AnaMethodDescriptorSupplier
       extends AnaBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    AnaMethodDescriptorSupplier(String methodName) {
+    AnaMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
