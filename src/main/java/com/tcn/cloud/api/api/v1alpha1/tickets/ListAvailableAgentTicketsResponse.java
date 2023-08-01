@@ -20,7 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListAvailableAgentTicketsResponse() {
-    ticketSid_ = emptyLongList();
+    ticket_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -43,34 +43,66 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.class, com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.Builder.class);
   }
 
-  public static final int TICKET_SID_FIELD_NUMBER = 1;
+  public static final int TICKET_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList ticketSid_;
+  private java.util.List<com.tcn.cloud.api.api.commons.Ticket> ticket_;
   /**
-   * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
-   * @return A list containing the ticketSid.
+   * <pre>
+   *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+   * </pre>
+   *
+   * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
    */
   @java.lang.Override
-  public java.util.List<java.lang.Long>
-      getTicketSidList() {
-    return ticketSid_;
+  public java.util.List<com.tcn.cloud.api.api.commons.Ticket> getTicketList() {
+    return ticket_;
   }
   /**
-   * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
-   * @return The count of ticketSid.
+   * <pre>
+   *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+   * </pre>
+   *
+   * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
    */
-  public int getTicketSidCount() {
-    return ticketSid_.size();
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.TicketOrBuilder> 
+      getTicketOrBuilderList() {
+    return ticket_;
   }
   /**
-   * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
-   * @param index The index of the element to return.
-   * @return The ticketSid at the given index.
+   * <pre>
+   *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+   * </pre>
+   *
+   * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
    */
-  public long getTicketSid(int index) {
-    return ticketSid_.getLong(index);
+  @java.lang.Override
+  public int getTicketCount() {
+    return ticket_.size();
   }
-  private int ticketSidMemoizedSerializedSize = -1;
+  /**
+   * <pre>
+   *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+   * </pre>
+   *
+   * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.Ticket getTicket(int index) {
+    return ticket_.get(index);
+  }
+  /**
+   * <pre>
+   *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+   * </pre>
+   *
+   * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.TicketOrBuilder getTicketOrBuilder(
+      int index) {
+    return ticket_.get(index);
+  }
 
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
@@ -86,13 +118,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    getSerializedSize();
-    if (getTicketSidList().size() > 0) {
-      output.writeUInt32NoTag(10);
-      output.writeUInt32NoTag(ticketSidMemoizedSerializedSize);
-    }
-    for (int i = 0; i < ticketSid_.size(); i++) {
-      output.writeInt64NoTag(ticketSid_.getLong(i));
+    for (int i = 0; i < ticket_.size(); i++) {
+      output.writeMessage(2, ticket_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -103,19 +130,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    {
-      int dataSize = 0;
-      for (int i = 0; i < ticketSid_.size(); i++) {
-        dataSize += com.google.protobuf.CodedOutputStream
-          .computeInt64SizeNoTag(ticketSid_.getLong(i));
-      }
-      size += dataSize;
-      if (!getTicketSidList().isEmpty()) {
-        size += 1;
-        size += com.google.protobuf.CodedOutputStream
-            .computeInt32SizeNoTag(dataSize);
-      }
-      ticketSidMemoizedSerializedSize = dataSize;
+    for (int i = 0; i < ticket_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, ticket_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -132,8 +149,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse other = (com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse) obj;
 
-    if (!getTicketSidList()
-        .equals(other.getTicketSidList())) return false;
+    if (!getTicketList()
+        .equals(other.getTicketList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -145,9 +162,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (getTicketSidCount() > 0) {
-      hash = (37 * hash) + TICKET_SID_FIELD_NUMBER;
-      hash = (53 * hash) + getTicketSidList().hashCode();
+    if (getTicketCount() > 0) {
+      hash = (37 * hash) + TICKET_FIELD_NUMBER;
+      hash = (53 * hash) + getTicketList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -284,7 +301,13 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      ticketSid_ = emptyLongList();
+      if (ticketBuilder_ == null) {
+        ticket_ = java.util.Collections.emptyList();
+      } else {
+        ticket_ = null;
+        ticketBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -318,11 +341,15 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse result) {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        ticketSid_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000001);
+      if (ticketBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          ticket_ = java.util.Collections.unmodifiableList(ticket_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.ticket_ = ticket_;
+      } else {
+        result.ticket_ = ticketBuilder_.build();
       }
-      result.ticketSid_ = ticketSid_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse result) {
@@ -373,15 +400,31 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.tickets.ListAvailableAgentTicketsResponse.getDefaultInstance()) return this;
-      if (!other.ticketSid_.isEmpty()) {
-        if (ticketSid_.isEmpty()) {
-          ticketSid_ = other.ticketSid_;
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          ensureTicketSidIsMutable();
-          ticketSid_.addAll(other.ticketSid_);
+      if (ticketBuilder_ == null) {
+        if (!other.ticket_.isEmpty()) {
+          if (ticket_.isEmpty()) {
+            ticket_ = other.ticket_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureTicketIsMutable();
+            ticket_.addAll(other.ticket_);
+          }
+          onChanged();
         }
-        onChanged();
+      } else {
+        if (!other.ticket_.isEmpty()) {
+          if (ticketBuilder_.isEmpty()) {
+            ticketBuilder_.dispose();
+            ticketBuilder_ = null;
+            ticket_ = other.ticket_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            ticketBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getTicketFieldBuilder() : null;
+          } else {
+            ticketBuilder_.addAllMessages(other.ticket_);
+          }
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -409,22 +452,19 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 8: {
-              long v = input.readInt64();
-              ensureTicketSidIsMutable();
-              ticketSid_.addLong(v);
-              break;
-            } // case 8
-            case 10: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              ensureTicketSidIsMutable();
-              while (input.getBytesUntilLimit() > 0) {
-                ticketSid_.addLong(input.readInt64());
+            case 18: {
+              com.tcn.cloud.api.api.commons.Ticket m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.commons.Ticket.parser(),
+                      extensionRegistry);
+              if (ticketBuilder_ == null) {
+                ensureTicketIsMutable();
+                ticket_.add(m);
+              } else {
+                ticketBuilder_.addMessage(m);
               }
-              input.popLimit(limit);
               break;
-            } // case 10
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -442,85 +482,316 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.Internal.LongList ticketSid_ = emptyLongList();
-    private void ensureTicketSidIsMutable() {
+    private java.util.List<com.tcn.cloud.api.api.commons.Ticket> ticket_ =
+      java.util.Collections.emptyList();
+    private void ensureTicketIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        ticketSid_ = mutableCopy(ticketSid_);
+        ticket_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.Ticket>(ticket_);
         bitField0_ |= 0x00000001;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.Ticket, com.tcn.cloud.api.api.commons.Ticket.Builder, com.tcn.cloud.api.api.commons.TicketOrBuilder> ticketBuilder_;
+
+    /**
+     * <pre>
+     *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+     * </pre>
+     *
+     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.Ticket> getTicketList() {
+      if (ticketBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(ticket_);
+      } else {
+        return ticketBuilder_.getMessageList();
       }
     }
     /**
-     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
-     * @return A list containing the ticketSid.
+     * <pre>
+     *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+     * </pre>
+     *
+     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
      */
-    public java.util.List<java.lang.Long>
-        getTicketSidList() {
-      return ((bitField0_ & 0x00000001) != 0) ?
-               java.util.Collections.unmodifiableList(ticketSid_) : ticketSid_;
+    public int getTicketCount() {
+      if (ticketBuilder_ == null) {
+        return ticket_.size();
+      } else {
+        return ticketBuilder_.getCount();
+      }
     }
     /**
-     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
-     * @return The count of ticketSid.
+     * <pre>
+     *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+     * </pre>
+     *
+     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
      */
-    public int getTicketSidCount() {
-      return ticketSid_.size();
+    public com.tcn.cloud.api.api.commons.Ticket getTicket(int index) {
+      if (ticketBuilder_ == null) {
+        return ticket_.get(index);
+      } else {
+        return ticketBuilder_.getMessage(index);
+      }
     }
     /**
-     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
-     * @param index The index of the element to return.
-     * @return The ticketSid at the given index.
+     * <pre>
+     *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+     * </pre>
+     *
+     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
      */
-    public long getTicketSid(int index) {
-      return ticketSid_.getLong(index);
-    }
-    /**
-     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
-     * @param index The index to set the value at.
-     * @param value The ticketSid to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTicketSid(
-        int index, long value) {
-
-      ensureTicketSidIsMutable();
-      ticketSid_.setLong(index, value);
-      onChanged();
+    public Builder setTicket(
+        int index, com.tcn.cloud.api.api.commons.Ticket value) {
+      if (ticketBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTicketIsMutable();
+        ticket_.set(index, value);
+        onChanged();
+      } else {
+        ticketBuilder_.setMessage(index, value);
+      }
       return this;
     }
     /**
-     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
-     * @param value The ticketSid to add.
-     * @return This builder for chaining.
+     * <pre>
+     *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+     * </pre>
+     *
+     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
      */
-    public Builder addTicketSid(long value) {
-
-      ensureTicketSidIsMutable();
-      ticketSid_.addLong(value);
-      onChanged();
+    public Builder setTicket(
+        int index, com.tcn.cloud.api.api.commons.Ticket.Builder builderForValue) {
+      if (ticketBuilder_ == null) {
+        ensureTicketIsMutable();
+        ticket_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        ticketBuilder_.setMessage(index, builderForValue.build());
+      }
       return this;
     }
     /**
-     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
-     * @param values The ticketSid to add.
-     * @return This builder for chaining.
+     * <pre>
+     *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+     * </pre>
+     *
+     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
      */
-    public Builder addAllTicketSid(
-        java.lang.Iterable<? extends java.lang.Long> values) {
-      ensureTicketSidIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, ticketSid_);
-      onChanged();
+    public Builder addTicket(com.tcn.cloud.api.api.commons.Ticket value) {
+      if (ticketBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTicketIsMutable();
+        ticket_.add(value);
+        onChanged();
+      } else {
+        ticketBuilder_.addMessage(value);
+      }
       return this;
     }
     /**
-     * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
-     * @return This builder for chaining.
+     * <pre>
+     *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+     * </pre>
+     *
+     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
      */
-    public Builder clearTicketSid() {
-      ticketSid_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
+    public Builder addTicket(
+        int index, com.tcn.cloud.api.api.commons.Ticket value) {
+      if (ticketBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTicketIsMutable();
+        ticket_.add(index, value);
+        onChanged();
+      } else {
+        ticketBuilder_.addMessage(index, value);
+      }
       return this;
+    }
+    /**
+     * <pre>
+     *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+     * </pre>
+     *
+     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     */
+    public Builder addTicket(
+        com.tcn.cloud.api.api.commons.Ticket.Builder builderForValue) {
+      if (ticketBuilder_ == null) {
+        ensureTicketIsMutable();
+        ticket_.add(builderForValue.build());
+        onChanged();
+      } else {
+        ticketBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+     * </pre>
+     *
+     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     */
+    public Builder addTicket(
+        int index, com.tcn.cloud.api.api.commons.Ticket.Builder builderForValue) {
+      if (ticketBuilder_ == null) {
+        ensureTicketIsMutable();
+        ticket_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        ticketBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+     * </pre>
+     *
+     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     */
+    public Builder addAllTicket(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.Ticket> values) {
+      if (ticketBuilder_ == null) {
+        ensureTicketIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, ticket_);
+        onChanged();
+      } else {
+        ticketBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+     * </pre>
+     *
+     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     */
+    public Builder clearTicket() {
+      if (ticketBuilder_ == null) {
+        ticket_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+      } else {
+        ticketBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+     * </pre>
+     *
+     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     */
+    public Builder removeTicket(int index) {
+      if (ticketBuilder_ == null) {
+        ensureTicketIsMutable();
+        ticket_.remove(index);
+        onChanged();
+      } else {
+        ticketBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+     * </pre>
+     *
+     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.Ticket.Builder getTicketBuilder(
+        int index) {
+      return getTicketFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+     * </pre>
+     *
+     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.TicketOrBuilder getTicketOrBuilder(
+        int index) {
+      if (ticketBuilder_ == null) {
+        return ticket_.get(index);  } else {
+        return ticketBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+     * </pre>
+     *
+     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.TicketOrBuilder> 
+         getTicketOrBuilderList() {
+      if (ticketBuilder_ != null) {
+        return ticketBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(ticket_);
+      }
+    }
+    /**
+     * <pre>
+     *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+     * </pre>
+     *
+     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.Ticket.Builder addTicketBuilder() {
+      return getTicketFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.commons.Ticket.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+     * </pre>
+     *
+     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.Ticket.Builder addTicketBuilder(
+        int index) {
+      return getTicketFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.commons.Ticket.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
+     * </pre>
+     *
+     * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.Ticket.Builder> 
+         getTicketBuilderList() {
+      return getTicketFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.Ticket, com.tcn.cloud.api.api.commons.Ticket.Builder, com.tcn.cloud.api.api.commons.TicketOrBuilder> 
+        getTicketFieldBuilder() {
+      if (ticketBuilder_ == null) {
+        ticketBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.Ticket, com.tcn.cloud.api.api.commons.Ticket.Builder, com.tcn.cloud.api.api.commons.TicketOrBuilder>(
+                ticket_,
+                ((bitField0_ & 0x00000001) != 0),
+                getParentForChildren(),
+                isClean());
+        ticket_ = null;
+      }
+      return ticketBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
