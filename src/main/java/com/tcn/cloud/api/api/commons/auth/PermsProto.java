@@ -24,7 +24,7 @@ public final class PermsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\034api/commons/auth/perms.proto\022\020api.comm" +
-      "ons.auth\032\033annotations/perms/tcn.proto*\263\036" +
+      "ons.auth\032\033annotations/perms/tcn.proto*\341\036" +
       "\n\nPermission\022\032\n\026PERMISSION_UNSPECIFIED\020\000" +
       "\022\022\n\016PERMISSION_DEV\020\001\022\031\n\025PERMISSION_LEARN" +
       "_EDIT\020\n\022!\n\023PERMISSION_ORG_EDIT\020d\032\010\212\265\030\004\020\t" +
@@ -115,18 +115,19 @@ public final class PermsProto {
       "\020Agent Management\022\"\n\025PERMISSION_SCORECAR" +
       "DS\020\300\014\032\006\212\265\030\002\020\013\022)\n\034PERMISSION_SCORECARDS_M" +
       "ANAGE\020\301\014\032\006\212\265\030\002\020\013\022+\n\036PERMISSION_SCORECARD" +
-      "S_EVALUATE\020\302\014\032\006\212\265\030\002\020\013\022/\n\024PERMISSION_DEV_" +
-      "TOOLS\020\210\016\032\024\212\265\030\020\020\004\"\014API Explorer\0223\n&PERMIS" +
-      "SION_DELIVERY_NOTIFICATIONS_VIEW\020\320\017\032\006\212\265\030" +
-      "\002\020\003\0223\n&PERMISSION_DELIVERY_NOTIFICATIONS" +
-      "_EDIT\020\321\017\032\006\212\265\030\002\020\003\022%\n\026PERMISSION_TICKETS_A" +
-      "PP\020\234\030\032\010\212\265\030\004\010\001\020\r\022\'\n\030PERMISSION_TICKETS_AD" +
-      "MIN\020\235\030\032\010\212\265\030\004\010\001\020\r\022!\n\024PERMISSION_WORKFLOWS" +
-      "\020\240\037\032\006\212\265\030\002\020\020B\222\001\n\"com.tcn.cloud.api.api.co" +
-      "mmons.authB\nPermsProtoP\001\242\002\003ACA\252\002\020Api.Com" +
-      "mons.Auth\312\002\020Api\\Commons\\Auth\342\002\034Api\\Commo" +
-      "ns\\Auth\\GPBMetadata\352\002\022Api::Commons::Auth" +
-      "b\006proto3"
+      "S_EVALUATE\020\302\014\032\006\212\265\030\002\020\013\022,\n\037PERMISSION_SCOR" +
+      "ECARDS_FLAG_EVAL\020\303\014\032\006\212\265\030\002\020\013\022/\n\024PERMISSIO" +
+      "N_DEV_TOOLS\020\210\016\032\024\212\265\030\020\020\004\"\014API Explorer\0223\n&" +
+      "PERMISSION_DELIVERY_NOTIFICATIONS_VIEW\020\320" +
+      "\017\032\006\212\265\030\002\020\003\0223\n&PERMISSION_DELIVERY_NOTIFIC" +
+      "ATIONS_EDIT\020\321\017\032\006\212\265\030\002\020\003\022%\n\026PERMISSION_TIC" +
+      "KETS_APP\020\234\030\032\010\212\265\030\004\010\001\020\r\022\'\n\030PERMISSION_TICK" +
+      "ETS_ADMIN\020\235\030\032\010\212\265\030\004\010\001\020\r\022!\n\024PERMISSION_WOR" +
+      "KFLOWS\020\240\037\032\006\212\265\030\002\020\020B\222\001\n\"com.tcn.cloud.api." +
+      "api.commons.authB\nPermsProtoP\001\242\002\003ACA\252\002\020A" +
+      "pi.Commons.Auth\312\002\020Api\\Commons\\Auth\342\002\034Api" +
+      "\\Commons\\Auth\\GPBMetadata\352\002\022Api::Commons" +
+      "::Authb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
