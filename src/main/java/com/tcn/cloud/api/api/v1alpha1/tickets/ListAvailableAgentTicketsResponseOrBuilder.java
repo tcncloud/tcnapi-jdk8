@@ -8,44 +8,41 @@ public interface ListAvailableAgentTicketsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
-   * </pre>
-   *
+   * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+   * @return A list containing the ticketSid.
+   */
+  java.util.List<java.lang.Long> getTicketSidList();
+  /**
+   * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+   * @return The count of ticketSid.
+   */
+  int getTicketSidCount();
+  /**
+   * <code>repeated int64 ticket_sid = 1 [json_name = "ticketSid", jstype = JS_STRING];</code>
+   * @param index The index of the element to return.
+   * @return The ticketSid at the given index.
+   */
+  long getTicketSid(int index);
+
+  /**
    * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
    */
   java.util.List<com.tcn.cloud.api.api.commons.Ticket> 
       getTicketList();
   /**
-   * <pre>
-   *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
-   * </pre>
-   *
    * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
    */
   com.tcn.cloud.api.api.commons.Ticket getTicket(int index);
   /**
-   * <pre>
-   *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
-   * </pre>
-   *
    * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
    */
   int getTicketCount();
   /**
-   * <pre>
-   *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
-   * </pre>
-   *
    * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
    */
   java.util.List<? extends com.tcn.cloud.api.api.commons.TicketOrBuilder> 
       getTicketOrBuilderList();
   /**
-   * <pre>
-   *repeated int64 ticket_sid = 1 [jstype = JS_STRING];
-   * </pre>
-   *
    * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
    */
   com.tcn.cloud.api.api.commons.TicketOrBuilder getTicketOrBuilder(
