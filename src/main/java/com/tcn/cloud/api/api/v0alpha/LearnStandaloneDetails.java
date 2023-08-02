@@ -97,14 +97,16 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object content_ = "";
   /**
    * <pre>
-   * markdown content
+   * deprecated
    * </pre>
    *
-   * <code>string content = 2 [json_name = "content"];</code>
+   * <code>string content = 2 [json_name = "content", deprecated = true];</code>
+   * @deprecated api.v0alpha.LearnStandaloneDetails.content is deprecated.
+   *     See api/v0alpha/learn.proto;l=313
    * @return The content.
    */
   @java.lang.Override
-  public java.lang.String getContent() {
+  @java.lang.Deprecated public java.lang.String getContent() {
     java.lang.Object ref = content_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -118,14 +120,16 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * markdown content
+   * deprecated
    * </pre>
    *
-   * <code>string content = 2 [json_name = "content"];</code>
+   * <code>string content = 2 [json_name = "content", deprecated = true];</code>
+   * @deprecated api.v0alpha.LearnStandaloneDetails.content is deprecated.
+   *     See api/v0alpha/learn.proto;l=313
    * @return The bytes for content.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getContentBytes() {
     java.lang.Object ref = content_;
     if (ref instanceof java.lang.String) {
@@ -143,37 +147,41 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Timestamp lastEditedTimestamp_;
   /**
    * <pre>
-   * The last time this learning content was edited.
+   * deprecated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp"];</code>
+   * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
+   * @deprecated api.v0alpha.LearnStandaloneDetails.last_edited_timestamp is deprecated.
+   *     See api/v0alpha/learn.proto;l=315
    * @return Whether the lastEditedTimestamp field is set.
    */
   @java.lang.Override
-  public boolean hasLastEditedTimestamp() {
+  @java.lang.Deprecated public boolean hasLastEditedTimestamp() {
     return lastEditedTimestamp_ != null;
   }
   /**
    * <pre>
-   * The last time this learning content was edited.
+   * deprecated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp"];</code>
+   * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
+   * @deprecated api.v0alpha.LearnStandaloneDetails.last_edited_timestamp is deprecated.
+   *     See api/v0alpha/learn.proto;l=315
    * @return The lastEditedTimestamp.
    */
   @java.lang.Override
-  public com.google.protobuf.Timestamp getLastEditedTimestamp() {
+  @java.lang.Deprecated public com.google.protobuf.Timestamp getLastEditedTimestamp() {
     return lastEditedTimestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastEditedTimestamp_;
   }
   /**
    * <pre>
-   * The last time this learning content was edited.
+   * deprecated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp"];</code>
+   * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.TimestampOrBuilder getLastEditedTimestampOrBuilder() {
+  @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getLastEditedTimestampOrBuilder() {
     return lastEditedTimestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastEditedTimestamp_;
   }
 
@@ -733,13 +741,15 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object content_ = "";
     /**
      * <pre>
-     * markdown content
+     * deprecated
      * </pre>
      *
-     * <code>string content = 2 [json_name = "content"];</code>
+     * <code>string content = 2 [json_name = "content", deprecated = true];</code>
+     * @deprecated api.v0alpha.LearnStandaloneDetails.content is deprecated.
+     *     See api/v0alpha/learn.proto;l=313
      * @return The content.
      */
-    public java.lang.String getContent() {
+    @java.lang.Deprecated public java.lang.String getContent() {
       java.lang.Object ref = content_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -753,13 +763,15 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * markdown content
+     * deprecated
      * </pre>
      *
-     * <code>string content = 2 [json_name = "content"];</code>
+     * <code>string content = 2 [json_name = "content", deprecated = true];</code>
+     * @deprecated api.v0alpha.LearnStandaloneDetails.content is deprecated.
+     *     See api/v0alpha/learn.proto;l=313
      * @return The bytes for content.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getContentBytes() {
       java.lang.Object ref = content_;
       if (ref instanceof String) {
@@ -774,14 +786,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * markdown content
+     * deprecated
      * </pre>
      *
-     * <code>string content = 2 [json_name = "content"];</code>
+     * <code>string content = 2 [json_name = "content", deprecated = true];</code>
+     * @deprecated api.v0alpha.LearnStandaloneDetails.content is deprecated.
+     *     See api/v0alpha/learn.proto;l=313
      * @param value The content to set.
      * @return This builder for chaining.
      */
-    public Builder setContent(
+    @java.lang.Deprecated public Builder setContent(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       content_ = value;
@@ -791,13 +805,15 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * markdown content
+     * deprecated
      * </pre>
      *
-     * <code>string content = 2 [json_name = "content"];</code>
+     * <code>string content = 2 [json_name = "content", deprecated = true];</code>
+     * @deprecated api.v0alpha.LearnStandaloneDetails.content is deprecated.
+     *     See api/v0alpha/learn.proto;l=313
      * @return This builder for chaining.
      */
-    public Builder clearContent() {
+    @java.lang.Deprecated public Builder clearContent() {
       content_ = getDefaultInstance().getContent();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
@@ -805,14 +821,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * markdown content
+     * deprecated
      * </pre>
      *
-     * <code>string content = 2 [json_name = "content"];</code>
+     * <code>string content = 2 [json_name = "content", deprecated = true];</code>
+     * @deprecated api.v0alpha.LearnStandaloneDetails.content is deprecated.
+     *     See api/v0alpha/learn.proto;l=313
      * @param value The bytes for content to set.
      * @return This builder for chaining.
      */
-    public Builder setContentBytes(
+    @java.lang.Deprecated public Builder setContentBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -827,24 +845,28 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastEditedTimestampBuilder_;
     /**
      * <pre>
-     * The last time this learning content was edited.
+     * deprecated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp"];</code>
+     * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
+     * @deprecated api.v0alpha.LearnStandaloneDetails.last_edited_timestamp is deprecated.
+     *     See api/v0alpha/learn.proto;l=315
      * @return Whether the lastEditedTimestamp field is set.
      */
-    public boolean hasLastEditedTimestamp() {
+    @java.lang.Deprecated public boolean hasLastEditedTimestamp() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * The last time this learning content was edited.
+     * deprecated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp"];</code>
+     * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
+     * @deprecated api.v0alpha.LearnStandaloneDetails.last_edited_timestamp is deprecated.
+     *     See api/v0alpha/learn.proto;l=315
      * @return The lastEditedTimestamp.
      */
-    public com.google.protobuf.Timestamp getLastEditedTimestamp() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp getLastEditedTimestamp() {
       if (lastEditedTimestampBuilder_ == null) {
         return lastEditedTimestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastEditedTimestamp_;
       } else {
@@ -853,12 +875,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The last time this learning content was edited.
+     * deprecated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp"];</code>
+     * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
      */
-    public Builder setLastEditedTimestamp(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder setLastEditedTimestamp(com.google.protobuf.Timestamp value) {
       if (lastEditedTimestampBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -873,12 +895,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The last time this learning content was edited.
+     * deprecated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp"];</code>
+     * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
      */
-    public Builder setLastEditedTimestamp(
+    @java.lang.Deprecated public Builder setLastEditedTimestamp(
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (lastEditedTimestampBuilder_ == null) {
         lastEditedTimestamp_ = builderForValue.build();
@@ -891,12 +913,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The last time this learning content was edited.
+     * deprecated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp"];</code>
+     * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
      */
-    public Builder mergeLastEditedTimestamp(com.google.protobuf.Timestamp value) {
+    @java.lang.Deprecated public Builder mergeLastEditedTimestamp(com.google.protobuf.Timestamp value) {
       if (lastEditedTimestampBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0) &&
           lastEditedTimestamp_ != null &&
@@ -914,12 +936,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The last time this learning content was edited.
+     * deprecated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp"];</code>
+     * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
      */
-    public Builder clearLastEditedTimestamp() {
+    @java.lang.Deprecated public Builder clearLastEditedTimestamp() {
       bitField0_ = (bitField0_ & ~0x00000004);
       lastEditedTimestamp_ = null;
       if (lastEditedTimestampBuilder_ != null) {
@@ -931,24 +953,24 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The last time this learning content was edited.
+     * deprecated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp"];</code>
+     * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
      */
-    public com.google.protobuf.Timestamp.Builder getLastEditedTimestampBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.Timestamp.Builder getLastEditedTimestampBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
       return getLastEditedTimestampFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * The last time this learning content was edited.
+     * deprecated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp"];</code>
+     * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
      */
-    public com.google.protobuf.TimestampOrBuilder getLastEditedTimestampOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.TimestampOrBuilder getLastEditedTimestampOrBuilder() {
       if (lastEditedTimestampBuilder_ != null) {
         return lastEditedTimestampBuilder_.getMessageOrBuilder();
       } else {
@@ -958,10 +980,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The last time this learning content was edited.
+     * deprecated
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp"];</code>
+     * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 

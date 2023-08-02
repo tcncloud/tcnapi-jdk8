@@ -56,6 +56,10 @@ public enum AppName
    * <code>LEARN = 11;</code>
    */
   LEARN(11),
+  /**
+   * <code>BILLING = 12;</code>
+   */
+  BILLING(12),
   UNRECOGNIZED(-1),
   ;
 
@@ -107,6 +111,10 @@ public enum AppName
    * <code>LEARN = 11;</code>
    */
   public static final int LEARN_VALUE = 11;
+  /**
+   * <code>BILLING = 12;</code>
+   */
+  public static final int BILLING_VALUE = 12;
 
 
   public final int getNumber() {
@@ -145,6 +153,7 @@ public enum AppName
       case 9: return INTEGRATIONS;
       case 10: return OMNICHANNEL;
       case 11: return LEARN;
+      case 12: return BILLING;
       default: return null;
     }
   }
