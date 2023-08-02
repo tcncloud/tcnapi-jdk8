@@ -89,4 +89,24 @@ public interface ContentResOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.LearnImageOrBuilder getImagesOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * title of the article
+   * </pre>
+   *
+   * <code>string title = 4 [json_name = "title"];</code>
+   * @return The title.
+   */
+  java.lang.String getTitle();
+  /**
+   * <pre>
+   * title of the article
+   * </pre>
+   *
+   * <code>string title = 4 [json_name = "title"];</code>
+   * @return The bytes for title.
+   */
+  com.google.protobuf.ByteString
+      getTitleBytes();
 }

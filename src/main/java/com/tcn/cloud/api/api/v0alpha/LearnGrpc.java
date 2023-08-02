@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.57.0)",
     comments = "Source: api/v0alpha/learn.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class LearnGrpc {
 
   private LearnGrpc() {}
 
-  public static final String SERVICE_NAME = "api.v0alpha.Learn";
+  public static final java.lang.String SERVICE_NAME = "api.v0alpha.Learn";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ExistReq,
@@ -1316,9 +1316,9 @@ public final class LearnGrpc {
   private static final class LearnMethodDescriptorSupplier
       extends LearnBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    LearnMethodDescriptorSupplier(String methodName) {
+    LearnMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

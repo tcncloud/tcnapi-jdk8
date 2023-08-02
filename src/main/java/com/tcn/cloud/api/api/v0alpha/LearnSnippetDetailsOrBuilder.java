@@ -73,4 +73,24 @@ public interface LearnSnippetDetailsOrBuilder extends
    * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getLastEditedTimestampOrBuilder();
+
+  /**
+   * <pre>
+   * title of the article
+   * </pre>
+   *
+   * <code>string title = 4 [json_name = "title"];</code>
+   * @return The title.
+   */
+  java.lang.String getTitle();
+  /**
+   * <pre>
+   * title of the article
+   * </pre>
+   *
+   * <code>string title = 4 [json_name = "title"];</code>
+   * @return The bytes for title.
+   */
+  com.google.protobuf.ByteString
+      getTitleBytes();
 }

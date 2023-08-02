@@ -3,7 +3,7 @@
 
 package com.tcn.cloud.api.api.v1alpha1.tickets;
 
-public interface ListAllocatedTicketResOrBuilder extends
+@java.lang.Deprecated public interface ListAllocatedTicketResOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.tickets.ListAllocatedTicketRes)
     com.google.protobuf.MessageOrBuilder {
 

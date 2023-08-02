@@ -34,7 +34,7 @@ public interface LearnStandaloneDetailsOrBuilder extends
    *
    * <code>string content = 2 [json_name = "content", deprecated = true];</code>
    * @deprecated api.v0alpha.LearnStandaloneDetails.content is deprecated.
-   *     See api/v0alpha/learn.proto;l=308
+   *     See api/v0alpha/learn.proto;l=313
    * @return The content.
    */
   @java.lang.Deprecated java.lang.String getContent();
@@ -45,7 +45,7 @@ public interface LearnStandaloneDetailsOrBuilder extends
    *
    * <code>string content = 2 [json_name = "content", deprecated = true];</code>
    * @deprecated api.v0alpha.LearnStandaloneDetails.content is deprecated.
-   *     See api/v0alpha/learn.proto;l=308
+   *     See api/v0alpha/learn.proto;l=313
    * @return The bytes for content.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -58,7 +58,7 @@ public interface LearnStandaloneDetailsOrBuilder extends
    *
    * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
    * @deprecated api.v0alpha.LearnStandaloneDetails.last_edited_timestamp is deprecated.
-   *     See api/v0alpha/learn.proto;l=310
+   *     See api/v0alpha/learn.proto;l=315
    * @return Whether the lastEditedTimestamp field is set.
    */
   @java.lang.Deprecated boolean hasLastEditedTimestamp();
@@ -69,7 +69,7 @@ public interface LearnStandaloneDetailsOrBuilder extends
    *
    * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
    * @deprecated api.v0alpha.LearnStandaloneDetails.last_edited_timestamp is deprecated.
-   *     See api/v0alpha/learn.proto;l=310
+   *     See api/v0alpha/learn.proto;l=315
    * @return The lastEditedTimestamp.
    */
   @java.lang.Deprecated com.google.protobuf.Timestamp getLastEditedTimestamp();
@@ -81,4 +81,24 @@ public interface LearnStandaloneDetailsOrBuilder extends
    * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
    */
   @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getLastEditedTimestampOrBuilder();
+
+  /**
+   * <pre>
+   * title of the article
+   * </pre>
+   *
+   * <code>string title = 4 [json_name = "title"];</code>
+   * @return The title.
+   */
+  java.lang.String getTitle();
+  /**
+   * <pre>
+   * title of the article
+   * </pre>
+   *
+   * <code>string title = 4 [json_name = "title"];</code>
+   * @return The bytes for title.
+   */
+  com.google.protobuf.ByteString
+      getTitleBytes();
 }

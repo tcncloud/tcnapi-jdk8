@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.57.0)",
     comments = "Source: api/v1alpha1/billing/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class BillingGrpc {
 
   private BillingGrpc() {}
 
-  public static final String SERVICE_NAME = "api.v1alpha1.billing.Billing";
+  public static final java.lang.String SERVICE_NAME = "api.v1alpha1.billing.Billing";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.billing.GetBillingPlanReq,
@@ -221,11 +221,11 @@ public final class BillingGrpc {
 
     /**
      * <pre>
-     * GetInvoice - returns the invoice for the organization. If a date is
-     * provided, this will return the invoice for the organization that
-     * corresponds to the billing cycle that contains the provided date. If
-     * no date is provided, this will return the invoice as it currently
-     * stands for the current billing cycle.
+     * GetInvoice - returns the invoice for the organization.
+     * If a date is provided, this will return the invoice for the
+     * organization that corresponds to the billing cycle that contains
+     * the provided date. If no date is provided, this will return the
+     * invoice as it currently stands for the current billing cycle.
      * </pre>
      */
     default void getInvoice(com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceReq request,
@@ -234,6 +234,16 @@ public final class BillingGrpc {
     }
 
     /**
+     * <pre>
+     * ExportGeneratedInvoice - returns the invoice for the organization.
+     * If a date is provided, this will return the invoice for the
+     * organization that corresponds to the billing cycle that contains
+     * the provided date. If no date is provided, this will return the
+     * invoice, as it has been last generated, for the current billing cycle.
+     * This differs from GetInvoice in that it returns the invoice as
+     * it was last generated. It will not take into account new billing
+     * events since the last generation.
+     * </pre>
      */
     default void exportGeneratedInvoice(com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes> responseObserver) {
@@ -304,11 +314,11 @@ public final class BillingGrpc {
 
     /**
      * <pre>
-     * GetInvoice - returns the invoice for the organization. If a date is
-     * provided, this will return the invoice for the organization that
-     * corresponds to the billing cycle that contains the provided date. If
-     * no date is provided, this will return the invoice as it currently
-     * stands for the current billing cycle.
+     * GetInvoice - returns the invoice for the organization.
+     * If a date is provided, this will return the invoice for the
+     * organization that corresponds to the billing cycle that contains
+     * the provided date. If no date is provided, this will return the
+     * invoice as it currently stands for the current billing cycle.
      * </pre>
      */
     public void getInvoice(com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceReq request,
@@ -318,6 +328,16 @@ public final class BillingGrpc {
     }
 
     /**
+     * <pre>
+     * ExportGeneratedInvoice - returns the invoice for the organization.
+     * If a date is provided, this will return the invoice for the
+     * organization that corresponds to the billing cycle that contains
+     * the provided date. If no date is provided, this will return the
+     * invoice, as it has been last generated, for the current billing cycle.
+     * This differs from GetInvoice in that it returns the invoice as
+     * it was last generated. It will not take into account new billing
+     * events since the last generation.
+     * </pre>
      */
     public void exportGeneratedInvoice(com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes> responseObserver) {
@@ -373,11 +393,11 @@ public final class BillingGrpc {
 
     /**
      * <pre>
-     * GetInvoice - returns the invoice for the organization. If a date is
-     * provided, this will return the invoice for the organization that
-     * corresponds to the billing cycle that contains the provided date. If
-     * no date is provided, this will return the invoice as it currently
-     * stands for the current billing cycle.
+     * GetInvoice - returns the invoice for the organization.
+     * If a date is provided, this will return the invoice for the
+     * organization that corresponds to the billing cycle that contains
+     * the provided date. If no date is provided, this will return the
+     * invoice as it currently stands for the current billing cycle.
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes getInvoice(com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceReq request) {
@@ -386,6 +406,16 @@ public final class BillingGrpc {
     }
 
     /**
+     * <pre>
+     * ExportGeneratedInvoice - returns the invoice for the organization.
+     * If a date is provided, this will return the invoice for the
+     * organization that corresponds to the billing cycle that contains
+     * the provided date. If no date is provided, this will return the
+     * invoice, as it has been last generated, for the current billing cycle.
+     * This differs from GetInvoice in that it returns the invoice as
+     * it was last generated. It will not take into account new billing
+     * events since the last generation.
+     * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes exportGeneratedInvoice(com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -442,11 +472,11 @@ public final class BillingGrpc {
 
     /**
      * <pre>
-     * GetInvoice - returns the invoice for the organization. If a date is
-     * provided, this will return the invoice for the organization that
-     * corresponds to the billing cycle that contains the provided date. If
-     * no date is provided, this will return the invoice as it currently
-     * stands for the current billing cycle.
+     * GetInvoice - returns the invoice for the organization.
+     * If a date is provided, this will return the invoice for the
+     * organization that corresponds to the billing cycle that contains
+     * the provided date. If no date is provided, this will return the
+     * invoice as it currently stands for the current billing cycle.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes> getInvoice(
@@ -456,6 +486,16 @@ public final class BillingGrpc {
     }
 
     /**
+     * <pre>
+     * ExportGeneratedInvoice - returns the invoice for the organization.
+     * If a date is provided, this will return the invoice for the
+     * organization that corresponds to the billing cycle that contains
+     * the provided date. If no date is provided, this will return the
+     * invoice, as it has been last generated, for the current billing cycle.
+     * This differs from GetInvoice in that it returns the invoice as
+     * it was last generated. It will not take into account new billing
+     * events since the last generation.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceRes> exportGeneratedInvoice(
         com.tcn.cloud.api.api.v1alpha1.billing.ExportGeneratedInvoiceReq request) {
@@ -574,9 +614,9 @@ public final class BillingGrpc {
   private static final class BillingMethodDescriptorSupplier
       extends BillingBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    BillingMethodDescriptorSupplier(String methodName) {
+    BillingMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
