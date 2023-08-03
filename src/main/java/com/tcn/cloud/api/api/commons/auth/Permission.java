@@ -192,6 +192,14 @@ public enum Permission
   PERMISSION_SUBSCRIPTION_MANAGEMENT(140),
   /**
    * <pre>
+   * Enables access to experimental features or feature extensions to org features that have existing permissions but are not ready for customers.  Never to be used alone must accompany another permission.
+   * </pre>
+   *
+   * <code>PERMISSION_ORG_EXPERIMENTAL_FEATURE = 190;</code>
+   */
+  PERMISSION_ORG_EXPERIMENTAL_FEATURE(190),
+  /**
+   * <pre>
    * Enables the customer support tools.
    * </pre>
    *
@@ -230,6 +238,14 @@ public enum Permission
    * <code>PERMISSION_TCN_BILLING = 240;</code>
    */
   PERMISSION_TCN_BILLING(240),
+  /**
+   * <pre>
+   * Enables access to experimental features or feature extensions to support features that have existing permissions but are not ready for employee access.  Never to be used alone must accompany another permission.
+   * </pre>
+   *
+   * <code>PERMISSION_SUPPORT_EXPERIMENTAL_FEATURE = 250;</code>
+   */
+  PERMISSION_SUPPORT_EXPERIMENTAL_FEATURE(250),
   /**
    * <pre>
    * Enables access to agent.
@@ -753,6 +769,14 @@ public enum Permission
   public static final int PERMISSION_SUBSCRIPTION_MANAGEMENT_VALUE = 140;
   /**
    * <pre>
+   * Enables access to experimental features or feature extensions to org features that have existing permissions but are not ready for customers.  Never to be used alone must accompany another permission.
+   * </pre>
+   *
+   * <code>PERMISSION_ORG_EXPERIMENTAL_FEATURE = 190;</code>
+   */
+  public static final int PERMISSION_ORG_EXPERIMENTAL_FEATURE_VALUE = 190;
+  /**
+   * <pre>
    * Enables the customer support tools.
    * </pre>
    *
@@ -791,6 +815,14 @@ public enum Permission
    * <code>PERMISSION_TCN_BILLING = 240;</code>
    */
   public static final int PERMISSION_TCN_BILLING_VALUE = 240;
+  /**
+   * <pre>
+   * Enables access to experimental features or feature extensions to support features that have existing permissions but are not ready for employee access.  Never to be used alone must accompany another permission.
+   * </pre>
+   *
+   * <code>PERMISSION_SUPPORT_EXPERIMENTAL_FEATURE = 250;</code>
+   */
+  public static final int PERMISSION_SUPPORT_EXPERIMENTAL_FEATURE_VALUE = 250;
   /**
    * <pre>
    * Enables access to agent.
@@ -1179,11 +1211,13 @@ public enum Permission
       case 1700: return PERMISSION_SOUNDBOARD_VIEW;
       case 1701: return PERMISSION_SOUNDBOARD_EDIT;
       case 140: return PERMISSION_SUBSCRIPTION_MANAGEMENT;
+      case 190: return PERMISSION_ORG_EXPERIMENTAL_FEATURE;
       case 200: return PERMISSION_CUSTOMER_SUPPORT;
       case 210: return PERMISSION_IMITATION;
       case 220: return PERMISSION_BILLING_EDIT;
       case 230: return PERMISSION_TCN_ADMIN_SETTINGS;
       case 240: return PERMISSION_TCN_BILLING;
+      case 250: return PERMISSION_SUPPORT_EXPERIMENTAL_FEATURE;
       case 300: return PERMISSION_AGENT;
       case 310: return PERMISSION_ACCEPT_QUEUED_CALLS;
       case 320: return PERMISSION_VIEW_CAMPAIGN_COMPLETION;
