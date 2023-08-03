@@ -23,4 +23,28 @@ public interface ListAvailableAgentTicketsResponseOrBuilder extends
    * @return The ticketSid at the given index.
    */
   long getTicketSid(int index);
+
+  /**
+   * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.Ticket> 
+      getTicketList();
+  /**
+   * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+   */
+  com.tcn.cloud.api.api.commons.Ticket getTicket(int index);
+  /**
+   * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+   */
+  int getTicketCount();
+  /**
+   * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.commons.TicketOrBuilder> 
+      getTicketOrBuilderList();
+  /**
+   * <code>repeated .api.commons.Ticket ticket = 2 [json_name = "ticket"];</code>
+   */
+  com.tcn.cloud.api.api.commons.TicketOrBuilder getTicketOrBuilder(
+      int index);
 }
