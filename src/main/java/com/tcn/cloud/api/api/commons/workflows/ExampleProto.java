@@ -78,7 +78,7 @@ public final class ExampleProto {
       "odeComparator\022\037\n\013first_field\030\001 \001(\tR\nfirs" +
       "tField\022!\n\014second_field\030\002 \001(\tR\013secondFiel" +
       "d\"\'\n\013NodeChatbot\022\030\n\007message\030\001 \001(\tR\007messa" +
-      "ge\"\351\002\n\014DiceDocument\022\035\n\ndice_value\030\001 \001(\005R" +
+      "ge\"\302\002\n\014DiceDocument\022\035\n\ndice_value\030\001 \001(\005R" +
       "\tdiceValue\022$\n\016dice_value_max\030\002 \001(\005R\014dice" +
       "ValueMax\022$\n\016dice_value_min\030\003 \001(\005R\014diceVa" +
       "lueMin\022!\n\014last_message\030\004 \001(\tR\013lastMessag" +
@@ -86,15 +86,14 @@ public final class ExampleProto {
       "lows.DiceDocument.VariablesEntryR\tvariab" +
       "les\022\024\n\005error\030d \001(\tR\005error\032<\n\016VariablesEn" +
       "try\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005va" +
-      "lue:\0028\001R\tdiceValueR\014diceValueMaxR\014diceVa" +
-      "lueMin\"g\n\017ChatbotDocument\022\035\n\nin_message\030" +
-      "\001 \001(\tR\tinMessage\022\037\n\013out_message\030\002 \001(\tR\no" +
-      "utMessage\022\024\n\005error\030d \001(\tR\005errorB\255\001\n\'com." +
-      "tcn.cloud.api.api.commons.workflowsB\014Exa" +
-      "mpleProtoP\001\242\002\003ACW\252\002\025Api.Commons.Workflow" +
-      "s\312\002\025Api\\Commons\\Workflows\342\002!Api\\Commons\\" +
-      "Workflows\\GPBMetadata\352\002\027Api::Commons::Wo" +
-      "rkflowsb\006proto3"
+      "lue:\0028\001\"g\n\017ChatbotDocument\022\035\n\nin_message" +
+      "\030\001 \001(\tR\tinMessage\022\037\n\013out_message\030\002 \001(\tR\n" +
+      "outMessage\022\024\n\005error\030d \001(\tR\005errorB\255\001\n\'com" +
+      ".tcn.cloud.api.api.commons.workflowsB\014Ex" +
+      "ampleProtoP\001\242\002\003ACW\252\002\025Api.Commons.Workflo" +
+      "ws\312\002\025Api\\Commons\\Workflows\342\002!Api\\Commons" +
+      "\\Workflows\\GPBMetadata\352\002\027Api::Commons::W" +
+      "orkflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
