@@ -80,6 +80,10 @@ public enum Application
    * <code>APPLICATION_WORKFLOWS = 16;</code>
    */
   APPLICATION_WORKFLOWS(16),
+  /**
+   * <code>APPLICATION_OMNI_AGENT = 17;</code>
+   */
+  APPLICATION_OMNI_AGENT(17),
   UNRECOGNIZED(-1),
   ;
 
@@ -151,6 +155,10 @@ public enum Application
    * <code>APPLICATION_WORKFLOWS = 16;</code>
    */
   public static final int APPLICATION_WORKFLOWS_VALUE = 16;
+  /**
+   * <code>APPLICATION_OMNI_AGENT = 17;</code>
+   */
+  public static final int APPLICATION_OMNI_AGENT_VALUE = 17;
 
 
   public final int getNumber() {
@@ -194,6 +202,7 @@ public enum Application
       case 14: return APPLICATION_VOICE_ANALYTICS;
       case 15: return APPLICATION_WORK_FORCE_MANAGEMENT;
       case 16: return APPLICATION_WORKFLOWS;
+      case 17: return APPLICATION_OMNI_AGENT;
       default: return null;
     }
   }
