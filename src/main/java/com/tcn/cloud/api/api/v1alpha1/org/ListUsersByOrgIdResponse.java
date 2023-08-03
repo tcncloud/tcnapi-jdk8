@@ -220,6 +220,50 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * A list of the labels associated with the user
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+     */
+    java.util.List<com.tcn.cloud.api.api.commons.org.Label> 
+        getLabelsList();
+    /**
+     * <pre>
+     * A list of the labels associated with the user
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+     */
+    com.tcn.cloud.api.api.commons.org.Label getLabels(int index);
+    /**
+     * <pre>
+     * A list of the labels associated with the user
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * A list of the labels associated with the user
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+     */
+    java.util.List<? extends com.tcn.cloud.api.api.commons.org.LabelOrBuilder> 
+        getLabelsOrBuilderList();
+    /**
+     * <pre>
+     * A list of the labels associated with the user
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+     */
+    com.tcn.cloud.api.api.commons.org.LabelOrBuilder getLabelsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
      * Whether the user is an account owner
      * </pre>
      *
@@ -304,6 +348,7 @@ private static final long serialVersionUID = 0L;
       username_ = "";
       permissionGroupIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      labels_ = java.util.Collections.emptyList();
       trustIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
     }
@@ -678,6 +723,67 @@ private static final long serialVersionUID = 0L;
       return permissionGroupIds_.getByteString(index);
     }
 
+    public static final int LABELS_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private java.util.List<com.tcn.cloud.api.api.commons.org.Label> labels_;
+    /**
+     * <pre>
+     * A list of the labels associated with the user
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.tcn.cloud.api.api.commons.org.Label> getLabelsList() {
+      return labels_;
+    }
+    /**
+     * <pre>
+     * A list of the labels associated with the user
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.org.LabelOrBuilder> 
+        getLabelsOrBuilderList() {
+      return labels_;
+    }
+    /**
+     * <pre>
+     * A list of the labels associated with the user
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+     */
+    @java.lang.Override
+    public int getLabelsCount() {
+      return labels_.size();
+    }
+    /**
+     * <pre>
+     * A list of the labels associated with the user
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.org.Label getLabels(int index) {
+      return labels_.get(index);
+    }
+    /**
+     * <pre>
+     * A list of the labels associated with the user
+     * </pre>
+     *
+     * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.org.LabelOrBuilder getLabelsOrBuilder(
+        int index) {
+      return labels_.get(index);
+    }
+
     public static final int ACCOUNT_OWNER_FIELD_NUMBER = 10;
     private boolean accountOwner_ = false;
     /**
@@ -799,6 +905,9 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < permissionGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, permissionGroupIds_.getRaw(i));
       }
+      for (int i = 0; i < labels_.size(); i++) {
+        output.writeMessage(9, labels_.get(i));
+      }
       if (accountOwner_ != false) {
         output.writeBool(10, accountOwner_);
       }
@@ -847,6 +956,10 @@ private static final long serialVersionUID = 0L;
         size += dataSize;
         size += 1 * getPermissionGroupIdsList().size();
       }
+      for (int i = 0; i < labels_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, labels_.get(i));
+      }
       if (accountOwner_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(10, accountOwner_);
@@ -894,6 +1007,8 @@ private static final long serialVersionUID = 0L;
           != other.getLoginDisabled()) return false;
       if (!getPermissionGroupIdsList()
           .equals(other.getPermissionGroupIdsList())) return false;
+      if (!getLabelsList()
+          .equals(other.getLabelsList())) return false;
       if (getAccountOwner()
           != other.getAccountOwner()) return false;
       if (getAgent()
@@ -929,6 +1044,10 @@ private static final long serialVersionUID = 0L;
       if (getPermissionGroupIdsCount() > 0) {
         hash = (37 * hash) + PERMISSION_GROUP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getPermissionGroupIdsList().hashCode();
+      }
+      if (getLabelsCount() > 0) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + getLabelsList().hashCode();
       }
       hash = (37 * hash) + ACCOUNT_OWNER_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
@@ -1084,6 +1203,13 @@ private static final long serialVersionUID = 0L;
         loginDisabled_ = false;
         permissionGroupIds_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
+        if (labelsBuilder_ == null) {
+          labels_ = java.util.Collections.emptyList();
+        } else {
+          labels_ = null;
+          labelsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
         accountOwner_ = false;
         agent_ = false;
         trustIds_ =
@@ -1114,9 +1240,22 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.v1alpha1.org.ListUsersByOrgIdResponse.UserDetails buildPartial() {
         com.tcn.cloud.api.api.v1alpha1.org.ListUsersByOrgIdResponse.UserDetails result = new com.tcn.cloud.api.api.v1alpha1.org.ListUsersByOrgIdResponse.UserDetails(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.org.ListUsersByOrgIdResponse.UserDetails result) {
+        if (labelsBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0)) {
+            labels_ = java.util.Collections.unmodifiableList(labels_);
+            bitField0_ = (bitField0_ & ~0x00000100);
+          }
+          result.labels_ = labels_;
+        } else {
+          result.labels_ = labelsBuilder_.build();
+        }
       }
 
       private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.ListUsersByOrgIdResponse.UserDetails result) {
@@ -1146,13 +1285,13 @@ private static final long serialVersionUID = 0L;
           permissionGroupIds_.makeImmutable();
           result.permissionGroupIds_ = permissionGroupIds_;
         }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
+        if (((from_bitField0_ & 0x00000200) != 0)) {
           result.accountOwner_ = accountOwner_;
         }
-        if (((from_bitField0_ & 0x00000200) != 0)) {
+        if (((from_bitField0_ & 0x00000400) != 0)) {
           result.agent_ = agent_;
         }
-        if (((from_bitField0_ & 0x00000400) != 0)) {
+        if (((from_bitField0_ & 0x00000800) != 0)) {
           trustIds_.makeImmutable();
           result.trustIds_ = trustIds_;
         }
@@ -1245,6 +1384,32 @@ private static final long serialVersionUID = 0L;
           }
           onChanged();
         }
+        if (labelsBuilder_ == null) {
+          if (!other.labels_.isEmpty()) {
+            if (labels_.isEmpty()) {
+              labels_ = other.labels_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+            } else {
+              ensureLabelsIsMutable();
+              labels_.addAll(other.labels_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.labels_.isEmpty()) {
+            if (labelsBuilder_.isEmpty()) {
+              labelsBuilder_.dispose();
+              labelsBuilder_ = null;
+              labels_ = other.labels_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+              labelsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLabelsFieldBuilder() : null;
+            } else {
+              labelsBuilder_.addAllMessages(other.labels_);
+            }
+          }
+        }
         if (other.getAccountOwner() != false) {
           setAccountOwner(other.getAccountOwner());
         }
@@ -1254,7 +1419,7 @@ private static final long serialVersionUID = 0L;
         if (!other.trustIds_.isEmpty()) {
           if (trustIds_.isEmpty()) {
             trustIds_ = other.trustIds_;
-            bitField0_ |= 0x00000400;
+            bitField0_ |= 0x00000800;
           } else {
             ensureTrustIdsIsMutable();
             trustIds_.addAll(other.trustIds_);
@@ -1328,14 +1493,27 @@ private static final long serialVersionUID = 0L;
                 permissionGroupIds_.add(s);
                 break;
               } // case 66
+              case 74: {
+                com.tcn.cloud.api.api.commons.org.Label m =
+                    input.readMessage(
+                        com.tcn.cloud.api.api.commons.org.Label.parser(),
+                        extensionRegistry);
+                if (labelsBuilder_ == null) {
+                  ensureLabelsIsMutable();
+                  labels_.add(m);
+                } else {
+                  labelsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
               case 80: {
                 accountOwner_ = input.readBool();
-                bitField0_ |= 0x00000100;
+                bitField0_ |= 0x00000200;
                 break;
               } // case 80
               case 88: {
                 agent_ = input.readBool();
-                bitField0_ |= 0x00000200;
+                bitField0_ |= 0x00000400;
                 break;
               } // case 88
               case 98: {
@@ -2104,6 +2282,318 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      private java.util.List<com.tcn.cloud.api.api.commons.org.Label> labels_ =
+        java.util.Collections.emptyList();
+      private void ensureLabelsIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          labels_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.Label>(labels_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.tcn.cloud.api.api.commons.org.Label, com.tcn.cloud.api.api.commons.org.Label.Builder, com.tcn.cloud.api.api.commons.org.LabelOrBuilder> labelsBuilder_;
+
+      /**
+       * <pre>
+       * A list of the labels associated with the user
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+       */
+      public java.util.List<com.tcn.cloud.api.api.commons.org.Label> getLabelsList() {
+        if (labelsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(labels_);
+        } else {
+          return labelsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * A list of the labels associated with the user
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+       */
+      public int getLabelsCount() {
+        if (labelsBuilder_ == null) {
+          return labels_.size();
+        } else {
+          return labelsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * A list of the labels associated with the user
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+       */
+      public com.tcn.cloud.api.api.commons.org.Label getLabels(int index) {
+        if (labelsBuilder_ == null) {
+          return labels_.get(index);
+        } else {
+          return labelsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * A list of the labels associated with the user
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+       */
+      public Builder setLabels(
+          int index, com.tcn.cloud.api.api.commons.org.Label value) {
+        if (labelsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLabelsIsMutable();
+          labels_.set(index, value);
+          onChanged();
+        } else {
+          labelsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of the labels associated with the user
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+       */
+      public Builder setLabels(
+          int index, com.tcn.cloud.api.api.commons.org.Label.Builder builderForValue) {
+        if (labelsBuilder_ == null) {
+          ensureLabelsIsMutable();
+          labels_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          labelsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of the labels associated with the user
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+       */
+      public Builder addLabels(com.tcn.cloud.api.api.commons.org.Label value) {
+        if (labelsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLabelsIsMutable();
+          labels_.add(value);
+          onChanged();
+        } else {
+          labelsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of the labels associated with the user
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+       */
+      public Builder addLabels(
+          int index, com.tcn.cloud.api.api.commons.org.Label value) {
+        if (labelsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLabelsIsMutable();
+          labels_.add(index, value);
+          onChanged();
+        } else {
+          labelsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of the labels associated with the user
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+       */
+      public Builder addLabels(
+          com.tcn.cloud.api.api.commons.org.Label.Builder builderForValue) {
+        if (labelsBuilder_ == null) {
+          ensureLabelsIsMutable();
+          labels_.add(builderForValue.build());
+          onChanged();
+        } else {
+          labelsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of the labels associated with the user
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+       */
+      public Builder addLabels(
+          int index, com.tcn.cloud.api.api.commons.org.Label.Builder builderForValue) {
+        if (labelsBuilder_ == null) {
+          ensureLabelsIsMutable();
+          labels_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          labelsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of the labels associated with the user
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+       */
+      public Builder addAllLabels(
+          java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.org.Label> values) {
+        if (labelsBuilder_ == null) {
+          ensureLabelsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, labels_);
+          onChanged();
+        } else {
+          labelsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of the labels associated with the user
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+       */
+      public Builder clearLabels() {
+        if (labelsBuilder_ == null) {
+          labels_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+          onChanged();
+        } else {
+          labelsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of the labels associated with the user
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+       */
+      public Builder removeLabels(int index) {
+        if (labelsBuilder_ == null) {
+          ensureLabelsIsMutable();
+          labels_.remove(index);
+          onChanged();
+        } else {
+          labelsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of the labels associated with the user
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+       */
+      public com.tcn.cloud.api.api.commons.org.Label.Builder getLabelsBuilder(
+          int index) {
+        return getLabelsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * A list of the labels associated with the user
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+       */
+      public com.tcn.cloud.api.api.commons.org.LabelOrBuilder getLabelsOrBuilder(
+          int index) {
+        if (labelsBuilder_ == null) {
+          return labels_.get(index);  } else {
+          return labelsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * A list of the labels associated with the user
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+       */
+      public java.util.List<? extends com.tcn.cloud.api.api.commons.org.LabelOrBuilder> 
+           getLabelsOrBuilderList() {
+        if (labelsBuilder_ != null) {
+          return labelsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(labels_);
+        }
+      }
+      /**
+       * <pre>
+       * A list of the labels associated with the user
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+       */
+      public com.tcn.cloud.api.api.commons.org.Label.Builder addLabelsBuilder() {
+        return getLabelsFieldBuilder().addBuilder(
+            com.tcn.cloud.api.api.commons.org.Label.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A list of the labels associated with the user
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+       */
+      public com.tcn.cloud.api.api.commons.org.Label.Builder addLabelsBuilder(
+          int index) {
+        return getLabelsFieldBuilder().addBuilder(
+            index, com.tcn.cloud.api.api.commons.org.Label.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A list of the labels associated with the user
+       * </pre>
+       *
+       * <code>repeated .api.commons.org.Label labels = 9 [json_name = "labels"];</code>
+       */
+      public java.util.List<com.tcn.cloud.api.api.commons.org.Label.Builder> 
+           getLabelsBuilderList() {
+        return getLabelsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.tcn.cloud.api.api.commons.org.Label, com.tcn.cloud.api.api.commons.org.Label.Builder, com.tcn.cloud.api.api.commons.org.LabelOrBuilder> 
+          getLabelsFieldBuilder() {
+        if (labelsBuilder_ == null) {
+          labelsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.tcn.cloud.api.api.commons.org.Label, com.tcn.cloud.api.api.commons.org.Label.Builder, com.tcn.cloud.api.api.commons.org.LabelOrBuilder>(
+                  labels_,
+                  ((bitField0_ & 0x00000100) != 0),
+                  getParentForChildren(),
+                  isClean());
+          labels_ = null;
+        }
+        return labelsBuilder_;
+      }
+
       private boolean accountOwner_ ;
       /**
        * <pre>
@@ -2129,7 +2619,7 @@ private static final long serialVersionUID = 0L;
       public Builder setAccountOwner(boolean value) {
 
         accountOwner_ = value;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -2142,7 +2632,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearAccountOwner() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000200);
         accountOwner_ = false;
         onChanged();
         return this;
@@ -2173,7 +2663,7 @@ private static final long serialVersionUID = 0L;
       public Builder setAgent(boolean value) {
 
         agent_ = value;
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -2186,7 +2676,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearAgent() {
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000400);
         agent_ = false;
         onChanged();
         return this;
@@ -2198,7 +2688,7 @@ private static final long serialVersionUID = 0L;
         if (!trustIds_.isModifiable()) {
           trustIds_ = new com.google.protobuf.LazyStringArrayList(trustIds_);
         }
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
       }
       /**
        * <pre>
@@ -2264,7 +2754,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureTrustIdsIsMutable();
         trustIds_.set(index, value);
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -2282,7 +2772,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureTrustIdsIsMutable();
         trustIds_.add(value);
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -2300,7 +2790,7 @@ private static final long serialVersionUID = 0L;
         ensureTrustIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, trustIds_);
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -2315,7 +2805,7 @@ private static final long serialVersionUID = 0L;
       public Builder clearTrustIds() {
         trustIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000400);;
+        bitField0_ = (bitField0_ & ~0x00000800);;
         onChanged();
         return this;
       }
@@ -2334,7 +2824,7 @@ private static final long serialVersionUID = 0L;
         checkByteStringIsUtf8(value);
         ensureTrustIdsIsMutable();
         trustIds_.add(value);
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
