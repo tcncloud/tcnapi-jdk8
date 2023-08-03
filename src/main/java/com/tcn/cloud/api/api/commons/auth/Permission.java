@@ -291,10 +291,6 @@ public enum Permission
    */
   PERMISSION_AGENT_PORTALS_VIEW(340),
   /**
-   * <code>PERMISSION_OMNI_AGENT = 350 [(.annotations.perms.options) = { ... }</code>
-   */
-  PERMISSION_OMNI_AGENT(350),
-  /**
    * <pre>
    * Enables access to voice analytics app.
    * </pre>
@@ -856,10 +852,6 @@ public enum Permission
    */
   public static final int PERMISSION_AGENT_PORTALS_VIEW_VALUE = 340;
   /**
-   * <code>PERMISSION_OMNI_AGENT = 350 [(.annotations.perms.options) = { ... }</code>
-   */
-  public static final int PERMISSION_OMNI_AGENT_VALUE = 350;
-  /**
    * <pre>
    * Enables access to voice analytics app.
    * </pre>
@@ -1200,7 +1192,6 @@ public enum Permission
       case 1400: return PERMISSION_EXTENSION_EDIT;
       case 1401: return PERMISSION_VOICEMAIL_DOWNLOAD;
       case 340: return PERMISSION_AGENT_PORTALS_VIEW;
-      case 350: return PERMISSION_OMNI_AGENT;
       case 500: return PERMISSION_VOICE_ANALYTICS;
       case 501: return PERMISSION_VOICE_ANALYTICS_FLAG;
       case 502: return PERMISSION_VOICE_ANALYTICS_CONFIG;

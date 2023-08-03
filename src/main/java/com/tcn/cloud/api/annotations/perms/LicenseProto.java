@@ -24,7 +24,7 @@ public final class LicenseProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\037annotations/perms/license.proto\022\021annot" +
-      "ations.perms*\272\004\n\013Application\022\033\n\027APPLICAT" +
+      "ations.perms*\236\004\n\013Application\022\033\n\027APPLICAT" +
       "ION_UNSPECIFIED\020\000\022\025\n\021APPLICATION_AGENT\020\001" +
       "\022%\n!APPLICATION_BUSINESS_INTELLIGENCE\020\002\022" +
       " \n\034APPLICATION_DELIVERY_SERVICE\020\003\022\031\n\025APP" +
@@ -37,18 +37,17 @@ public final class LicenseProto {
       "ECARDS\020\013\022\027\n\023APPLICATION_SCRIPTS\020\014\022\027\n\023APP" +
       "LICATION_TICKETS\020\r\022\037\n\033APPLICATION_VOICE_" +
       "ANALYTICS\020\016\022%\n!APPLICATION_WORK_FORCE_MA" +
-      "NAGEMENT\020\017\022\031\n\025APPLICATION_WORKFLOWS\020\020\022\032\n" +
-      "\026APPLICATION_OMNI_AGENT\020\021*\353\001\n\004Card\022\024\n\020CA" +
-      "RD_UNSPECIFIED\020\000\022\025\n\021CARD_ORGANIZATION\020\001\022" +
-      "\016\n\nCARD_USERS\020\002\022\017\n\013CARD_AGENTS\020\003\022\032\n\026CARD" +
-      "_PERMISSION_GROUPS\020\004\022\017\n\013CARD_LABELS\020\005\022\017\n" +
-      "\013CARD_TRUSTS\020\006\022\024\n\020CARD_HUNT_GROUPS\020\007\022\023\n\017" +
-      "CARD_SOUNDBOARD\020\010\022\026\n\022CARD_SUBSCRIPTIONS\020" +
-      "\t\022\024\n\020CARD_PBX_MANAGER\020\nB\230\001\n#com.tcn.clou" +
-      "d.api.annotations.permsB\014LicenseProtoP\001\242" +
-      "\002\003APX\252\002\021Annotations.Perms\312\002\021Annotations\\" +
-      "Perms\342\002\035Annotations\\Perms\\GPBMetadata\352\002\022" +
-      "Annotations::Permsb\006proto3"
+      "NAGEMENT\020\017\022\031\n\025APPLICATION_WORKFLOWS\020\020*\353\001" +
+      "\n\004Card\022\024\n\020CARD_UNSPECIFIED\020\000\022\025\n\021CARD_ORG" +
+      "ANIZATION\020\001\022\016\n\nCARD_USERS\020\002\022\017\n\013CARD_AGEN" +
+      "TS\020\003\022\032\n\026CARD_PERMISSION_GROUPS\020\004\022\017\n\013CARD" +
+      "_LABELS\020\005\022\017\n\013CARD_TRUSTS\020\006\022\024\n\020CARD_HUNT_" +
+      "GROUPS\020\007\022\023\n\017CARD_SOUNDBOARD\020\010\022\026\n\022CARD_SU" +
+      "BSCRIPTIONS\020\t\022\024\n\020CARD_PBX_MANAGER\020\nB\230\001\n#" +
+      "com.tcn.cloud.api.annotations.permsB\014Lic" +
+      "enseProtoP\001\242\002\003APX\252\002\021Annotations.Perms\312\002\021" +
+      "Annotations\\Perms\342\002\035Annotations\\Perms\\GP" +
+      "BMetadata\352\002\022Annotations::Permsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
