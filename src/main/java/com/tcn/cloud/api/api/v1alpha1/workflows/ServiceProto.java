@@ -26,32 +26,32 @@ public final class ServiceProto {
       "\n$api/v1alpha1/workflows/service.proto\022\026" +
       "api.v1alpha1.workflows\032\027annotations/auth" +
       "z.proto\032%api/v1alpha1/workflows/entities" +
-      ".proto\032\034google/api/annotations.proto2\217\006\n" +
-      "\tWorkflows\022\300\001\n\023ListFlowDefinitions\0222.api" +
-      ".v1alpha1.workflows.ListFlowDefinitionsR" +
-      "equest\0323.api.v1alpha1.workflows.ListFlow" +
-      "DefinitionsResponse\"@\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0020\"+/" +
-      "api/v1alpha1/workflows/listflowdefinitio" +
-      "ns:\001*\022\274\001\n\022SaveFlowDefinition\0221.api.v1alp" +
-      "ha1.workflows.SaveFlowDefinitionRequest\032" +
-      "2.api.v1alpha1.workflows.SaveFlowDefinit" +
-      "ionResponse\"?\272\270\221\002\005\n\003\010\240\037\202\323\344\223\002/\"*/api/v1al" +
-      "pha1/workflows/saveflowdefinition:\001*\022\270\001\n" +
-      "\021GetFlowDefinition\0220.api.v1alpha1.workfl" +
-      "ows.GetFlowDefinitionRequest\0321.api.v1alp" +
-      "ha1.workflows.GetFlowDefinitionResponse\"" +
-      ">\272\270\221\002\005\n\003\010\240\037\202\323\344\223\002.\")/api/v1alpha1/workflo" +
-      "ws/getflowdefinition:\001*\022\304\001\n\024DeleteFlowDe" +
-      "finition\0223.api.v1alpha1.workflows.Delete" +
-      "FlowDefinitionRequest\0324.api.v1alpha1.wor" +
-      "kflows.DeleteFlowDefinitionResponse\"A\272\270\221" +
-      "\002\005\n\003\010\240\037\202\323\344\223\0021\",/api/v1alpha1/workflows/d" +
-      "eleteflowdefinition:\001*B\262\001\n(com.tcn.cloud" +
-      ".api.api.v1alpha1.workflowsB\014ServiceProt" +
-      "oP\001\242\002\003AVW\252\002\026Api.V1alpha1.Workflows\312\002\026Api" +
-      "\\V1alpha1\\Workflows\342\002\"Api\\V1alpha1\\Workf" +
-      "lows\\GPBMetadata\352\002\030Api::V1alpha1::Workfl" +
-      "owsb\006proto3"
+      ".proto\032\034google/api/annotations.proto2\226\006\n" +
+      "\020WorkflowsService\022\300\001\n\023ListFlowDefinition" +
+      "s\0222.api.v1alpha1.workflows.ListFlowDefin" +
+      "itionsRequest\0323.api.v1alpha1.workflows.L" +
+      "istFlowDefinitionsResponse\"@\272\270\221\002\005\n\003\010\240\037\202\323" +
+      "\344\223\0020\"+/api/v1alpha1/workflows/listflowde" +
+      "finitions:\001*\022\274\001\n\022SaveFlowDefinition\0221.ap" +
+      "i.v1alpha1.workflows.SaveFlowDefinitionR" +
+      "equest\0322.api.v1alpha1.workflows.SaveFlow" +
+      "DefinitionResponse\"?\272\270\221\002\005\n\003\010\240\037\202\323\344\223\002/\"*/a" +
+      "pi/v1alpha1/workflows/saveflowdefinition" +
+      ":\001*\022\270\001\n\021GetFlowDefinition\0220.api.v1alpha1" +
+      ".workflows.GetFlowDefinitionRequest\0321.ap" +
+      "i.v1alpha1.workflows.GetFlowDefinitionRe" +
+      "sponse\">\272\270\221\002\005\n\003\010\240\037\202\323\344\223\002.\")/api/v1alpha1/" +
+      "workflows/getflowdefinition:\001*\022\304\001\n\024Delet" +
+      "eFlowDefinition\0223.api.v1alpha1.workflows" +
+      ".DeleteFlowDefinitionRequest\0324.api.v1alp" +
+      "ha1.workflows.DeleteFlowDefinitionRespon" +
+      "se\"A\272\270\221\002\005\n\003\010\240\037\202\323\344\223\0021\",/api/v1alpha1/work" +
+      "flows/deleteflowdefinition:\001*B\262\001\n(com.tc" +
+      "n.cloud.api.api.v1alpha1.workflowsB\014Serv" +
+      "iceProtoP\001\242\002\003AVW\252\002\026Api.V1alpha1.Workflow" +
+      "s\312\002\026Api\\V1alpha1\\Workflows\342\002\"Api\\V1alpha" +
+      "1\\Workflows\\GPBMetadata\352\002\030Api::V1alpha1:" +
+      ":Workflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

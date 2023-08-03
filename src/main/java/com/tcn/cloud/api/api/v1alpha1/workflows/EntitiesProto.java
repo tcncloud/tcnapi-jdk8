@@ -67,31 +67,32 @@ public final class EntitiesProto {
       "\026api.v1alpha1.workflows\032$api/commons/wor" +
       "kflows/entities.proto\032 google/protobuf/f" +
       "ield_mask.proto\"4\n\032ListFlowDefinitionsRe" +
-      "quest\022\026\n\006filter\030\001 \001(\tR\006filter\"o\n\033ListFlo" +
-      "wDefinitionsResponse\022P\n\020flow_definitions" +
-      "\030\001 \003(\0132%.api.commons.workflows.FlowDefin" +
-      "itionR\017flowDefinitions\"\250\001\n\031SaveFlowDefin" +
-      "itionRequest\022N\n\017flow_definition\030\001 \001(\0132%." +
+      "quest\022\026\n\006filter\030\001 \001(\tR\006filter\"\254\001\n\033ListFl" +
+      "owDefinitionsResponse\022P\n\020flow_definition" +
+      "s\030\001 \003(\0132%.api.commons.workflows.FlowDefi" +
+      "nitionR\017flowDefinitions\022;\n\013filter_mask\030\002" +
+      " \001(\0132\032.google.protobuf.FieldMaskR\nfilter" +
+      "Mask\"\250\001\n\031SaveFlowDefinitionRequest\022N\n\017fl" +
+      "ow_definition\030\001 \001(\0132%.api.commons.workfl" +
+      "ows.FlowDefinitionR\016flowDefinition\022;\n\013up" +
+      "date_mask\030\002 \001(\0132\032.google.protobuf.FieldM" +
+      "askR\nupdateMask\"\232\001\n\032SaveFlowDefinitionRe" +
+      "sponse\022,\n\022flow_definition_id\030\001 \001(\tR\020flow" +
+      "DefinitionId\022N\n\017flow_definition\030\002 \001(\0132%." +
       "api.commons.workflows.FlowDefinitionR\016fl" +
-      "owDefinition\022;\n\013update_mask\030\002 \001(\0132\032.goog" +
-      "le.protobuf.FieldMaskR\nupdateMask\"\232\001\n\032Sa" +
-      "veFlowDefinitionResponse\022,\n\022flow_definit" +
-      "ion_id\030\001 \001(\tR\020flowDefinitionId\022N\n\017flow_d" +
-      "efinition\030\002 \001(\0132%.api.commons.workflows." +
-      "FlowDefinitionR\016flowDefinition\"H\n\030GetFlo" +
-      "wDefinitionRequest\022,\n\022flow_definition_id" +
-      "\030\001 \001(\tR\020flowDefinitionId\"k\n\031GetFlowDefin" +
-      "itionResponse\022N\n\017flow_definition\030\001 \001(\0132%" +
-      ".api.commons.workflows.FlowDefinitionR\016f" +
-      "lowDefinition\"K\n\033DeleteFlowDefinitionReq" +
-      "uest\022,\n\022flow_definition_id\030\001 \001(\tR\020flowDe" +
-      "finitionId\"6\n\034DeleteFlowDefinitionRespon" +
-      "se\022\026\n\006result\030\001 \001(\010R\006resultB\263\001\n(com.tcn.c" +
-      "loud.api.api.v1alpha1.workflowsB\rEntitie" +
-      "sProtoP\001\242\002\003AVW\252\002\026Api.V1alpha1.Workflows\312" +
-      "\002\026Api\\V1alpha1\\Workflows\342\002\"Api\\V1alpha1\\" +
-      "Workflows\\GPBMetadata\352\002\030Api::V1alpha1::W" +
-      "orkflowsb\006proto3"
+      "owDefinition\"H\n\030GetFlowDefinitionRequest" +
+      "\022,\n\022flow_definition_id\030\001 \001(\tR\020flowDefini" +
+      "tionId\"k\n\031GetFlowDefinitionResponse\022N\n\017f" +
+      "low_definition\030\001 \001(\0132%.api.commons.workf" +
+      "lows.FlowDefinitionR\016flowDefinition\"K\n\033D" +
+      "eleteFlowDefinitionRequest\022,\n\022flow_defin" +
+      "ition_id\030\001 \001(\tR\020flowDefinitionId\"6\n\034Dele" +
+      "teFlowDefinitionResponse\022\026\n\006result\030\001 \001(\010" +
+      "R\006resultB\263\001\n(com.tcn.cloud.api.api.v1alp" +
+      "ha1.workflowsB\rEntitiesProtoP\001\242\002\003AVW\252\002\026A" +
+      "pi.V1alpha1.Workflows\312\002\026Api\\V1alpha1\\Wor" +
+      "kflows\342\002\"Api\\V1alpha1\\Workflows\\GPBMetad" +
+      "ata\352\002\030Api::V1alpha1::Workflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -110,7 +111,7 @@ public final class EntitiesProto {
     internal_static_api_v1alpha1_workflows_ListFlowDefinitionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_workflows_ListFlowDefinitionsResponse_descriptor,
-        new java.lang.String[] { "FlowDefinitions", });
+        new java.lang.String[] { "FlowDefinitions", "FilterMask", });
     internal_static_api_v1alpha1_workflows_SaveFlowDefinitionRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_api_v1alpha1_workflows_SaveFlowDefinitionRequest_fieldAccessorTable = new
