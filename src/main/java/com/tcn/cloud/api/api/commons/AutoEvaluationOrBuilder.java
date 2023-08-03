@@ -192,4 +192,14 @@ public interface AutoEvaluationOrBuilder extends
    * @return The riskLevel.
    */
   com.tcn.cloud.api.api.commons.RiskLevel getRiskLevel();
+
+  /**
+   * <pre>
+   * duration of the call audio
+   * </pre>
+   *
+   * <code>int32 call_length = 16 [json_name = "callLength"];</code>
+   * @return The callLength.
+   */
+  int getCallLength();
 }

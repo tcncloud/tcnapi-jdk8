@@ -554,6 +554,22 @@ public enum Permission
    * <code>PERMISSION_WORKFLOWS = 4000 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_WORKFLOWS(4000),
+  /**
+   * <pre>
+   * Enables access to view PBX Manager.
+   * </pre>
+   *
+   * <code>PERMISSION_PBX_MANAGER_VIEW = 4100 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_PBX_MANAGER_VIEW(4100),
+  /**
+   * <pre>
+   * Enables access to create, update, or delete in PBX Manager.
+   * </pre>
+   *
+   * <code>PERMISSION_PBX_MANAGER_EDIT = 4101 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_PBX_MANAGER_EDIT(4101),
   UNRECOGNIZED(-1),
   ;
 
@@ -1099,6 +1115,22 @@ public enum Permission
    * <code>PERMISSION_WORKFLOWS = 4000 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_WORKFLOWS_VALUE = 4000;
+  /**
+   * <pre>
+   * Enables access to view PBX Manager.
+   * </pre>
+   *
+   * <code>PERMISSION_PBX_MANAGER_VIEW = 4100 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_PBX_MANAGER_VIEW_VALUE = 4100;
+  /**
+   * <pre>
+   * Enables access to create, update, or delete in PBX Manager.
+   * </pre>
+   *
+   * <code>PERMISSION_PBX_MANAGER_EDIT = 4101 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_PBX_MANAGER_EDIT_VALUE = 4101;
 
 
   public final int getNumber() {
@@ -1193,6 +1225,8 @@ public enum Permission
       case 3100: return PERMISSION_TICKETS_APP;
       case 3101: return PERMISSION_TICKETS_ADMIN;
       case 4000: return PERMISSION_WORKFLOWS;
+      case 4100: return PERMISSION_PBX_MANAGER_VIEW;
+      case 4101: return PERMISSION_PBX_MANAGER_EDIT;
       default: return null;
     }
   }

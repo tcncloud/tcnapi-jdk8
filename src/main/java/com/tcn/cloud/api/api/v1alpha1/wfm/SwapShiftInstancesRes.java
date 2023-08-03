@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private SwapShiftInstancesRes() {
     shiftInstances_ = java.util.Collections.emptyList();
+    diagnostics_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -104,6 +105,67 @@ private static final long serialVersionUID = 0L;
     return shiftInstances_.get(index);
   }
 
+  public static final int DIAGNOSTICS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> diagnostics_;
+  /**
+   * <pre>
+   * Diagnostics for any overlapping shift instances.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> getDiagnosticsList() {
+    return diagnostics_;
+  }
+  /**
+   * <pre>
+   * Diagnostics for any overlapping shift instances.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> 
+      getDiagnosticsOrBuilderList() {
+    return diagnostics_;
+  }
+  /**
+   * <pre>
+   * Diagnostics for any overlapping shift instances.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+   */
+  @java.lang.Override
+  public int getDiagnosticsCount() {
+    return diagnostics_.size();
+  }
+  /**
+   * <pre>
+   * Diagnostics for any overlapping shift instances.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic getDiagnostics(int index) {
+    return diagnostics_.get(index);
+  }
+  /**
+   * <pre>
+   * Diagnostics for any overlapping shift instances.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder getDiagnosticsOrBuilder(
+      int index) {
+    return diagnostics_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -121,6 +183,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < shiftInstances_.size(); i++) {
       output.writeMessage(1, shiftInstances_.get(i));
     }
+    for (int i = 0; i < diagnostics_.size(); i++) {
+      output.writeMessage(2, diagnostics_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -133,6 +198,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < shiftInstances_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, shiftInstances_.get(i));
+    }
+    for (int i = 0; i < diagnostics_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, diagnostics_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -151,6 +220,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getShiftInstancesList()
         .equals(other.getShiftInstancesList())) return false;
+    if (!getDiagnosticsList()
+        .equals(other.getDiagnosticsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -165,6 +236,10 @@ private static final long serialVersionUID = 0L;
     if (getShiftInstancesCount() > 0) {
       hash = (37 * hash) + SHIFT_INSTANCES_FIELD_NUMBER;
       hash = (53 * hash) + getShiftInstancesList().hashCode();
+    }
+    if (getDiagnosticsCount() > 0) {
+      hash = (37 * hash) + DIAGNOSTICS_FIELD_NUMBER;
+      hash = (53 * hash) + getDiagnosticsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -308,6 +383,13 @@ private static final long serialVersionUID = 0L;
         shiftInstancesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
+      if (diagnosticsBuilder_ == null) {
+        diagnostics_ = java.util.Collections.emptyList();
+      } else {
+        diagnostics_ = null;
+        diagnosticsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -349,6 +431,15 @@ private static final long serialVersionUID = 0L;
         result.shiftInstances_ = shiftInstances_;
       } else {
         result.shiftInstances_ = shiftInstancesBuilder_.build();
+      }
+      if (diagnosticsBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          diagnostics_ = java.util.Collections.unmodifiableList(diagnostics_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.diagnostics_ = diagnostics_;
+      } else {
+        result.diagnostics_ = diagnosticsBuilder_.build();
       }
     }
 
@@ -426,6 +517,32 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (diagnosticsBuilder_ == null) {
+        if (!other.diagnostics_.isEmpty()) {
+          if (diagnostics_.isEmpty()) {
+            diagnostics_ = other.diagnostics_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureDiagnosticsIsMutable();
+            diagnostics_.addAll(other.diagnostics_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.diagnostics_.isEmpty()) {
+          if (diagnosticsBuilder_.isEmpty()) {
+            diagnosticsBuilder_.dispose();
+            diagnosticsBuilder_ = null;
+            diagnostics_ = other.diagnostics_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            diagnosticsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getDiagnosticsFieldBuilder() : null;
+          } else {
+            diagnosticsBuilder_.addAllMessages(other.diagnostics_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -465,6 +582,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 10
+            case 18: {
+              com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.parser(),
+                      extensionRegistry);
+              if (diagnosticsBuilder_ == null) {
+                ensureDiagnosticsIsMutable();
+                diagnostics_.add(m);
+              } else {
+                diagnosticsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -792,6 +922,318 @@ private static final long serialVersionUID = 0L;
         shiftInstances_ = null;
       }
       return shiftInstancesBuilder_;
+    }
+
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> diagnostics_ =
+      java.util.Collections.emptyList();
+    private void ensureDiagnosticsIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        diagnostics_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic>(diagnostics_);
+        bitField0_ |= 0x00000002;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> diagnosticsBuilder_;
+
+    /**
+     * <pre>
+     * Diagnostics for any overlapping shift instances.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> getDiagnosticsList() {
+      if (diagnosticsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(diagnostics_);
+      } else {
+        return diagnosticsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Diagnostics for any overlapping shift instances.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     */
+    public int getDiagnosticsCount() {
+      if (diagnosticsBuilder_ == null) {
+        return diagnostics_.size();
+      } else {
+        return diagnosticsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Diagnostics for any overlapping shift instances.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic getDiagnostics(int index) {
+      if (diagnosticsBuilder_ == null) {
+        return diagnostics_.get(index);
+      } else {
+        return diagnosticsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Diagnostics for any overlapping shift instances.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     */
+    public Builder setDiagnostics(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic value) {
+      if (diagnosticsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDiagnosticsIsMutable();
+        diagnostics_.set(index, value);
+        onChanged();
+      } else {
+        diagnosticsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Diagnostics for any overlapping shift instances.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     */
+    public Builder setDiagnostics(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder builderForValue) {
+      if (diagnosticsBuilder_ == null) {
+        ensureDiagnosticsIsMutable();
+        diagnostics_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        diagnosticsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Diagnostics for any overlapping shift instances.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     */
+    public Builder addDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic value) {
+      if (diagnosticsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDiagnosticsIsMutable();
+        diagnostics_.add(value);
+        onChanged();
+      } else {
+        diagnosticsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Diagnostics for any overlapping shift instances.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     */
+    public Builder addDiagnostics(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic value) {
+      if (diagnosticsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDiagnosticsIsMutable();
+        diagnostics_.add(index, value);
+        onChanged();
+      } else {
+        diagnosticsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Diagnostics for any overlapping shift instances.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     */
+    public Builder addDiagnostics(
+        com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder builderForValue) {
+      if (diagnosticsBuilder_ == null) {
+        ensureDiagnosticsIsMutable();
+        diagnostics_.add(builderForValue.build());
+        onChanged();
+      } else {
+        diagnosticsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Diagnostics for any overlapping shift instances.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     */
+    public Builder addDiagnostics(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder builderForValue) {
+      if (diagnosticsBuilder_ == null) {
+        ensureDiagnosticsIsMutable();
+        diagnostics_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        diagnosticsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Diagnostics for any overlapping shift instances.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     */
+    public Builder addAllDiagnostics(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> values) {
+      if (diagnosticsBuilder_ == null) {
+        ensureDiagnosticsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, diagnostics_);
+        onChanged();
+      } else {
+        diagnosticsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Diagnostics for any overlapping shift instances.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     */
+    public Builder clearDiagnostics() {
+      if (diagnosticsBuilder_ == null) {
+        diagnostics_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+      } else {
+        diagnosticsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Diagnostics for any overlapping shift instances.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     */
+    public Builder removeDiagnostics(int index) {
+      if (diagnosticsBuilder_ == null) {
+        ensureDiagnosticsIsMutable();
+        diagnostics_.remove(index);
+        onChanged();
+      } else {
+        diagnosticsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Diagnostics for any overlapping shift instances.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder getDiagnosticsBuilder(
+        int index) {
+      return getDiagnosticsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Diagnostics for any overlapping shift instances.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder getDiagnosticsOrBuilder(
+        int index) {
+      if (diagnosticsBuilder_ == null) {
+        return diagnostics_.get(index);  } else {
+        return diagnosticsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Diagnostics for any overlapping shift instances.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     */
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> 
+         getDiagnosticsOrBuilderList() {
+      if (diagnosticsBuilder_ != null) {
+        return diagnosticsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(diagnostics_);
+      }
+    }
+    /**
+     * <pre>
+     * Diagnostics for any overlapping shift instances.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder addDiagnosticsBuilder() {
+      return getDiagnosticsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Diagnostics for any overlapping shift instances.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder addDiagnosticsBuilder(
+        int index) {
+      return getDiagnosticsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Diagnostics for any overlapping shift instances.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder> 
+         getDiagnosticsBuilderList() {
+      return getDiagnosticsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> 
+        getDiagnosticsFieldBuilder() {
+      if (diagnosticsBuilder_ == null) {
+        diagnosticsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder>(
+                diagnostics_,
+                ((bitField0_ & 0x00000002) != 0),
+                getParentForChildren(),
+                isClean());
+        diagnostics_ = null;
+      }
+      return diagnosticsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

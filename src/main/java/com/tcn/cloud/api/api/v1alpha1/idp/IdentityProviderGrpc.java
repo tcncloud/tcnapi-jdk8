@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.57.1)",
     comments = "Source: api/v1alpha1/idp/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class IdentityProviderGrpc {
 
   private IdentityProviderGrpc() {}
 
-  public static final String SERVICE_NAME = "api.v1alpha1.idp.IdentityProvider";
+  public static final java.lang.String SERVICE_NAME = "api.v1alpha1.idp.IdentityProvider";
 
   // Static method descriptors that strictly reflect the proto.
   /**
@@ -188,9 +188,9 @@ public final class IdentityProviderGrpc {
   private static final class IdentityProviderMethodDescriptorSupplier
       extends IdentityProviderBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    IdentityProviderMethodDescriptorSupplier(String methodName) {
+    IdentityProviderMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

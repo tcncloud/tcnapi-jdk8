@@ -17,6 +17,7 @@ private static final long serialVersionUID = 0L;
   }
   private ProcessElementReq() {
     elementId_ = "";
+    processMessage_ = "";
   }
 
   @java.lang.Override
@@ -78,6 +79,53 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int PROCESS_MESSAGE_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object processMessage_ = "";
+  /**
+   * <pre>
+   * says if it was triggered by a cron or manually
+   * </pre>
+   *
+   * <code>string process_message = 2 [json_name = "processMessage"];</code>
+   * @return The processMessage.
+   */
+  @java.lang.Override
+  public java.lang.String getProcessMessage() {
+    java.lang.Object ref = processMessage_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      processMessage_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * says if it was triggered by a cron or manually
+   * </pre>
+   *
+   * <code>string process_message = 2 [json_name = "processMessage"];</code>
+   * @return The bytes for processMessage.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getProcessMessageBytes() {
+    java.lang.Object ref = processMessage_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      processMessage_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -95,6 +143,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(elementId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, elementId_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(processMessage_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, processMessage_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -106,6 +157,9 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(elementId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, elementId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(processMessage_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, processMessage_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -124,6 +178,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getElementId()
         .equals(other.getElementId())) return false;
+    if (!getProcessMessage()
+        .equals(other.getProcessMessage())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -137,6 +193,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ELEMENT_ID_FIELD_NUMBER;
     hash = (53 * hash) + getElementId().hashCode();
+    hash = (37 * hash) + PROCESS_MESSAGE_FIELD_NUMBER;
+    hash = (53 * hash) + getProcessMessage().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -269,6 +327,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       elementId_ = "";
+      processMessage_ = "";
       return this;
     }
 
@@ -304,6 +363,9 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.elementId_ = elementId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.processMessage_ = processMessage_;
       }
     }
 
@@ -356,6 +418,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
+      if (!other.getProcessMessage().isEmpty()) {
+        processMessage_ = other.processMessage_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -387,6 +454,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              processMessage_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -472,6 +544,98 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       elementId_ = value;
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object processMessage_ = "";
+    /**
+     * <pre>
+     * says if it was triggered by a cron or manually
+     * </pre>
+     *
+     * <code>string process_message = 2 [json_name = "processMessage"];</code>
+     * @return The processMessage.
+     */
+    public java.lang.String getProcessMessage() {
+      java.lang.Object ref = processMessage_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        processMessage_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * says if it was triggered by a cron or manually
+     * </pre>
+     *
+     * <code>string process_message = 2 [json_name = "processMessage"];</code>
+     * @return The bytes for processMessage.
+     */
+    public com.google.protobuf.ByteString
+        getProcessMessageBytes() {
+      java.lang.Object ref = processMessage_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        processMessage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * says if it was triggered by a cron or manually
+     * </pre>
+     *
+     * <code>string process_message = 2 [json_name = "processMessage"];</code>
+     * @param value The processMessage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProcessMessage(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      processMessage_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * says if it was triggered by a cron or manually
+     * </pre>
+     *
+     * <code>string process_message = 2 [json_name = "processMessage"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearProcessMessage() {
+      processMessage_ = getDefaultInstance().getProcessMessage();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * says if it was triggered by a cron or manually
+     * </pre>
+     *
+     * <code>string process_message = 2 [json_name = "processMessage"];</code>
+     * @param value The bytes for processMessage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProcessMessageBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      processMessage_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

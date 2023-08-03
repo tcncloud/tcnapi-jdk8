@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private GetInvoiceReq() {
     orgId_ = "";
     format_ = 0;
+    invoiceFormat_ = 0;
   }
 
   @java.lang.Override
@@ -142,28 +143,58 @@ private static final long serialVersionUID = 0L;
   private int format_ = 0;
   /**
    * <pre>
-   * Optional. the invoice for the organization. If not specified,
-   * will use the proto format as the default
+   * deprecated
    * </pre>
    *
-   * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
+   * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.GetInvoiceReq.format is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=47
    * @return The enum numeric value on the wire for format.
    */
-  @java.lang.Override public int getFormatValue() {
+  @java.lang.Override @java.lang.Deprecated public int getFormatValue() {
     return format_;
   }
   /**
    * <pre>
-   * Optional. the invoice for the organization. If not specified,
+   * deprecated
+   * </pre>
+   *
+   * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.GetInvoiceReq.format is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=47
+   * @return The format.
+   */
+  @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat getFormat() {
+    com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat result = com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat.forNumber(format_);
+    return result == null ? com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat.UNRECOGNIZED : result;
+  }
+
+  public static final int INVOICE_FORMAT_FIELD_NUMBER = 4;
+  private int invoiceFormat_ = 0;
+  /**
+   * <pre>
+   * Optional. the format the invoice is returned using. If not specified,
    * will use the proto format as the default
    * </pre>
    *
-   * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
-   * @return The format.
+   * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+   * @return The enum numeric value on the wire for invoiceFormat.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat getFormat() {
-    com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat result = com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat.forNumber(format_);
-    return result == null ? com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat.UNRECOGNIZED : result;
+  @java.lang.Override public int getInvoiceFormatValue() {
+    return invoiceFormat_;
+  }
+  /**
+   * <pre>
+   * Optional. the format the invoice is returned using. If not specified,
+   * will use the proto format as the default
+   * </pre>
+   *
+   * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+   * @return The invoiceFormat.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.billing.InvoiceFormat getInvoiceFormat() {
+    com.tcn.cloud.api.api.commons.billing.InvoiceFormat result = com.tcn.cloud.api.api.commons.billing.InvoiceFormat.forNumber(invoiceFormat_);
+    return result == null ? com.tcn.cloud.api.api.commons.billing.InvoiceFormat.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -189,6 +220,9 @@ private static final long serialVersionUID = 0L;
     if (format_ != com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat.INVOICE_FORMAT_UNSPECIFIED.getNumber()) {
       output.writeEnum(3, format_);
     }
+    if (invoiceFormat_ != com.tcn.cloud.api.api.commons.billing.InvoiceFormat.INVOICE_FORMAT_UNSPECIFIED.getNumber()) {
+      output.writeEnum(4, invoiceFormat_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -208,6 +242,10 @@ private static final long serialVersionUID = 0L;
     if (format_ != com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat.INVOICE_FORMAT_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, format_);
+    }
+    if (invoiceFormat_ != com.tcn.cloud.api.api.commons.billing.InvoiceFormat.INVOICE_FORMAT_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, invoiceFormat_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -232,6 +270,7 @@ private static final long serialVersionUID = 0L;
     if (!getOrgId()
         .equals(other.getOrgId())) return false;
     if (format_ != other.format_) return false;
+    if (invoiceFormat_ != other.invoiceFormat_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -251,6 +290,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getOrgId().hashCode();
     hash = (37 * hash) + FORMAT_FIELD_NUMBER;
     hash = (53 * hash) + format_;
+    hash = (37 * hash) + INVOICE_FORMAT_FIELD_NUMBER;
+    hash = (53 * hash) + invoiceFormat_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -393,6 +434,7 @@ private static final long serialVersionUID = 0L;
       }
       orgId_ = "";
       format_ = 0;
+      invoiceFormat_ = 0;
       return this;
     }
 
@@ -436,6 +478,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.format_ = format_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.invoiceFormat_ = invoiceFormat_;
       }
     }
 
@@ -494,6 +539,9 @@ private static final long serialVersionUID = 0L;
       if (other.format_ != 0) {
         setFormatValue(other.getFormatValue());
       }
+      if (other.invoiceFormat_ != 0) {
+        setInvoiceFormatValue(other.getInvoiceFormatValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -537,6 +585,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
+            case 32: {
+              invoiceFormat_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -831,27 +884,29 @@ private static final long serialVersionUID = 0L;
     private int format_ = 0;
     /**
      * <pre>
-     * Optional. the invoice for the organization. If not specified,
-     * will use the proto format as the default
+     * deprecated
      * </pre>
      *
-     * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
+     * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.GetInvoiceReq.format is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=47
      * @return The enum numeric value on the wire for format.
      */
-    @java.lang.Override public int getFormatValue() {
+    @java.lang.Override @java.lang.Deprecated public int getFormatValue() {
       return format_;
     }
     /**
      * <pre>
-     * Optional. the invoice for the organization. If not specified,
-     * will use the proto format as the default
+     * deprecated
      * </pre>
      *
-     * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
+     * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.GetInvoiceReq.format is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=47
      * @param value The enum numeric value on the wire for format to set.
      * @return This builder for chaining.
      */
-    public Builder setFormatValue(int value) {
+    @java.lang.Deprecated public Builder setFormatValue(int value) {
       format_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -859,29 +914,31 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. the invoice for the organization. If not specified,
-     * will use the proto format as the default
+     * deprecated
      * </pre>
      *
-     * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
+     * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.GetInvoiceReq.format is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=47
      * @return The format.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat getFormat() {
+    @java.lang.Deprecated public com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat getFormat() {
       com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat result = com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat.forNumber(format_);
       return result == null ? com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat.UNRECOGNIZED : result;
     }
     /**
      * <pre>
-     * Optional. the invoice for the organization. If not specified,
-     * will use the proto format as the default
+     * deprecated
      * </pre>
      *
-     * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
+     * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.GetInvoiceReq.format is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=47
      * @param value The format to set.
      * @return This builder for chaining.
      */
-    public Builder setFormat(com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat value) {
+    @java.lang.Deprecated public Builder setFormat(com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -892,16 +949,95 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. the invoice for the organization. If not specified,
+     * deprecated
+     * </pre>
+     *
+     * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
+     * @deprecated api.v1alpha1.billing.GetInvoiceReq.format is deprecated.
+     *     See api/v1alpha1/billing/entities.proto;l=47
+     * @return This builder for chaining.
+     */
+    @java.lang.Deprecated public Builder clearFormat() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      format_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int invoiceFormat_ = 0;
+    /**
+     * <pre>
+     * Optional. the format the invoice is returned using. If not specified,
      * will use the proto format as the default
      * </pre>
      *
-     * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
+     * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+     * @return The enum numeric value on the wire for invoiceFormat.
+     */
+    @java.lang.Override public int getInvoiceFormatValue() {
+      return invoiceFormat_;
+    }
+    /**
+     * <pre>
+     * Optional. the format the invoice is returned using. If not specified,
+     * will use the proto format as the default
+     * </pre>
+     *
+     * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+     * @param value The enum numeric value on the wire for invoiceFormat to set.
      * @return This builder for chaining.
      */
-    public Builder clearFormat() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      format_ = 0;
+    public Builder setInvoiceFormatValue(int value) {
+      invoiceFormat_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. the format the invoice is returned using. If not specified,
+     * will use the proto format as the default
+     * </pre>
+     *
+     * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+     * @return The invoiceFormat.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.billing.InvoiceFormat getInvoiceFormat() {
+      com.tcn.cloud.api.api.commons.billing.InvoiceFormat result = com.tcn.cloud.api.api.commons.billing.InvoiceFormat.forNumber(invoiceFormat_);
+      return result == null ? com.tcn.cloud.api.api.commons.billing.InvoiceFormat.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Optional. the format the invoice is returned using. If not specified,
+     * will use the proto format as the default
+     * </pre>
+     *
+     * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+     * @param value The invoiceFormat to set.
+     * @return This builder for chaining.
+     */
+    public Builder setInvoiceFormat(com.tcn.cloud.api.api.commons.billing.InvoiceFormat value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000008;
+      invoiceFormat_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. the format the invoice is returned using. If not specified,
+     * will use the proto format as the default
+     * </pre>
+     *
+     * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearInvoiceFormat() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      invoiceFormat_ = 0;
       onChanged();
       return this;
     }

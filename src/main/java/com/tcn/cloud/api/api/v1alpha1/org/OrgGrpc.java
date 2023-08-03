@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.57.1)",
     comments = "Source: api/v1alpha1/org/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class OrgGrpc {
 
   private OrgGrpc() {}
 
-  public static final String SERVICE_NAME = "api.v1alpha1.org.Org";
+  public static final java.lang.String SERVICE_NAME = "api.v1alpha1.org.Org";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.CreateOrganizationRequest,
@@ -13145,9 +13145,9 @@ public final class OrgGrpc {
   private static final class OrgMethodDescriptorSupplier
       extends OrgBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    OrgMethodDescriptorSupplier(String methodName) {
+    OrgMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

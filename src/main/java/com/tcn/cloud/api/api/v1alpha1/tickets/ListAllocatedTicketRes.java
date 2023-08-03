@@ -10,7 +10,7 @@ package com.tcn.cloud.api.api.v1alpha1.tickets;
  *
  * Protobuf type {@code api.v1alpha1.tickets.ListAllocatedTicketRes}
  */
-public final class ListAllocatedTicketRes extends
+@java.lang.Deprecated public final class ListAllocatedTicketRes extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:api.v1alpha1.tickets.ListAllocatedTicketRes)
     ListAllocatedTicketResOrBuilder {

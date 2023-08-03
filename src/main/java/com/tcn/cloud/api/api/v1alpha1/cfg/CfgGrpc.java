@@ -10,14 +10,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.57.1)",
     comments = "Source: api/v1alpha1/cfg/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CfgGrpc {
 
   private CfgGrpc() {}
 
-  public static final String SERVICE_NAME = "api.v1alpha1.cfg.Cfg";
+  public static final java.lang.String SERVICE_NAME = "api.v1alpha1.cfg.Cfg";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.cfg.GetWebAgentConfigReq,
@@ -303,9 +303,9 @@ public final class CfgGrpc {
   private static final class CfgMethodDescriptorSupplier
       extends CfgBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    CfgMethodDescriptorSupplier(String methodName) {
+    CfgMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

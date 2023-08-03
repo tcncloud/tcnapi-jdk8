@@ -44,6 +44,11697 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Builder.class);
   }
 
+  public interface PhoneOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v1alpha1.vanalytics.SearchQuery.Phone)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Optional. Queries on phone country code.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Cc cc = 1 [json_name = "cc"];</code>
+     * @return Whether the cc field is set.
+     */
+    boolean hasCc();
+    /**
+     * <pre>
+     * Optional. Queries on phone country code.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Cc cc = 1 [json_name = "cc"];</code>
+     * @return The cc.
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc getCc();
+    /**
+     * <pre>
+     * Optional. Queries on phone country code.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Cc cc = 1 [json_name = "cc"];</code>
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.CcOrBuilder getCcOrBuilder();
+
+    /**
+     * <pre>
+     * Optional. Queries on phone ndc (area code).
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Ndc ndc = 2 [json_name = "ndc"];</code>
+     * @return Whether the ndc field is set.
+     */
+    boolean hasNdc();
+    /**
+     * <pre>
+     * Optional. Queries on phone ndc (area code).
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Ndc ndc = 2 [json_name = "ndc"];</code>
+     * @return The ndc.
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc getNdc();
+    /**
+     * <pre>
+     * Optional. Queries on phone ndc (area code).
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Ndc ndc = 2 [json_name = "ndc"];</code>
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.NdcOrBuilder getNdcOrBuilder();
+
+    /**
+     * <pre>
+     * Optional. Queries on phone subscriber number prefix.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Prefix prefix = 3 [json_name = "prefix"];</code>
+     * @return Whether the prefix field is set.
+     */
+    boolean hasPrefix();
+    /**
+     * <pre>
+     * Optional. Queries on phone subscriber number prefix.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Prefix prefix = 3 [json_name = "prefix"];</code>
+     * @return The prefix.
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix getPrefix();
+    /**
+     * <pre>
+     * Optional. Queries on phone subscriber number prefix.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Prefix prefix = 3 [json_name = "prefix"];</code>
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.PrefixOrBuilder getPrefixOrBuilder();
+
+    /**
+     * <pre>
+     * Optional. Queries on phone city.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.City city = 4 [json_name = "city"];</code>
+     * @return Whether the city field is set.
+     */
+    boolean hasCity();
+    /**
+     * <pre>
+     * Optional. Queries on phone city.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.City city = 4 [json_name = "city"];</code>
+     * @return The city.
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City getCity();
+    /**
+     * <pre>
+     * Optional. Queries on phone city.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.City city = 4 [json_name = "city"];</code>
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.CityOrBuilder getCityOrBuilder();
+
+    /**
+     * <pre>
+     * Optional. Queries on phone iso2 country code.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Iso2 iso2 = 5 [json_name = "iso2"];</code>
+     * @return Whether the iso2 field is set.
+     */
+    boolean hasIso2();
+    /**
+     * <pre>
+     * Optional. Queries on phone iso2 country code.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Iso2 iso2 = 5 [json_name = "iso2"];</code>
+     * @return The iso2.
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 getIso2();
+    /**
+     * <pre>
+     * Optional. Queries on phone iso2 country code.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Iso2 iso2 = 5 [json_name = "iso2"];</code>
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2OrBuilder getIso2OrBuilder();
+
+    /**
+     * <pre>
+     * Optional. Queries on phone region code.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionCode region_code = 6 [json_name = "regionCode"];</code>
+     * @return Whether the regionCode field is set.
+     */
+    boolean hasRegionCode();
+    /**
+     * <pre>
+     * Optional. Queries on phone region code.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionCode region_code = 6 [json_name = "regionCode"];</code>
+     * @return The regionCode.
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode getRegionCode();
+    /**
+     * <pre>
+     * Optional. Queries on phone region code.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionCode region_code = 6 [json_name = "regionCode"];</code>
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCodeOrBuilder getRegionCodeOrBuilder();
+
+    /**
+     * <pre>
+     * Optional. Queries on phone region name.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionName region_name = 7 [json_name = "regionName"];</code>
+     * @return Whether the regionName field is set.
+     */
+    boolean hasRegionName();
+    /**
+     * <pre>
+     * Optional. Queries on phone region name.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionName region_name = 7 [json_name = "regionName"];</code>
+     * @return The regionName.
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName getRegionName();
+    /**
+     * <pre>
+     * Optional. Queries on phone region name.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionName region_name = 7 [json_name = "regionName"];</code>
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionNameOrBuilder getRegionNameOrBuilder();
+
+    /**
+     * <pre>
+     * Optional. Queries on phone time zone.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.TimeZone time_zone = 8 [json_name = "timeZone"];</code>
+     * @return Whether the timeZone field is set.
+     */
+    boolean hasTimeZone();
+    /**
+     * <pre>
+     * Optional. Queries on phone time zone.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.TimeZone time_zone = 8 [json_name = "timeZone"];</code>
+     * @return The timeZone.
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone getTimeZone();
+    /**
+     * <pre>
+     * Optional. Queries on phone time zone.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.TimeZone time_zone = 8 [json_name = "timeZone"];</code>
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZoneOrBuilder getTimeZoneOrBuilder();
+
+    /**
+     * <pre>
+     * Optional. Queries on phone number type.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Type type = 9 [json_name = "type"];</code>
+     * @return Whether the type field is set.
+     */
+    boolean hasType();
+    /**
+     * <pre>
+     * Optional. Queries on phone number type.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Type type = 9 [json_name = "type"];</code>
+     * @return The type.
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type getType();
+    /**
+     * <pre>
+     * Optional. Queries on phone number type.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Type type = 9 [json_name = "type"];</code>
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TypeOrBuilder getTypeOrBuilder();
+
+    /**
+     * <pre>
+     * Optional. Queries on phone number utc.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Utc utc = 10 [json_name = "utc"];</code>
+     * @return Whether the utc field is set.
+     */
+    boolean hasUtc();
+    /**
+     * <pre>
+     * Optional. Queries on phone number utc.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Utc utc = 10 [json_name = "utc"];</code>
+     * @return The utc.
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc getUtc();
+    /**
+     * <pre>
+     * Optional. Queries on phone number utc.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Utc utc = 10 [json_name = "utc"];</code>
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.UtcOrBuilder getUtcOrBuilder();
+
+    /**
+     * <pre>
+     * Optional. Queries on phone number location.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Location location = 11 [json_name = "location"];</code>
+     * @return Whether the location field is set.
+     */
+    boolean hasLocation();
+    /**
+     * <pre>
+     * Optional. Queries on phone number location.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Location location = 11 [json_name = "location"];</code>
+     * @return The location.
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location getLocation();
+    /**
+     * <pre>
+     * Optional. Queries on phone number location.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Location location = 11 [json_name = "location"];</code>
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.LocationOrBuilder getLocationOrBuilder();
+  }
+  /**
+   * <pre>
+   * Phone defines a query on the phone.
+   * </pre>
+   *
+   * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.Phone}
+   */
+  public static final class Phone extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v1alpha1.vanalytics.SearchQuery.Phone)
+      PhoneOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Phone.newBuilder() to construct.
+    private Phone(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Phone() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Phone();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Phone_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Phone_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone.Builder.class);
+    }
+
+    public static final int CC_FIELD_NUMBER = 1;
+    private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc cc_;
+    /**
+     * <pre>
+     * Optional. Queries on phone country code.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Cc cc = 1 [json_name = "cc"];</code>
+     * @return Whether the cc field is set.
+     */
+    @java.lang.Override
+    public boolean hasCc() {
+      return cc_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone country code.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Cc cc = 1 [json_name = "cc"];</code>
+     * @return The cc.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc getCc() {
+      return cc_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc.getDefaultInstance() : cc_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone country code.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Cc cc = 1 [json_name = "cc"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.CcOrBuilder getCcOrBuilder() {
+      return cc_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc.getDefaultInstance() : cc_;
+    }
+
+    public static final int NDC_FIELD_NUMBER = 2;
+    private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc ndc_;
+    /**
+     * <pre>
+     * Optional. Queries on phone ndc (area code).
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Ndc ndc = 2 [json_name = "ndc"];</code>
+     * @return Whether the ndc field is set.
+     */
+    @java.lang.Override
+    public boolean hasNdc() {
+      return ndc_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone ndc (area code).
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Ndc ndc = 2 [json_name = "ndc"];</code>
+     * @return The ndc.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc getNdc() {
+      return ndc_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc.getDefaultInstance() : ndc_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone ndc (area code).
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Ndc ndc = 2 [json_name = "ndc"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.NdcOrBuilder getNdcOrBuilder() {
+      return ndc_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc.getDefaultInstance() : ndc_;
+    }
+
+    public static final int PREFIX_FIELD_NUMBER = 3;
+    private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix prefix_;
+    /**
+     * <pre>
+     * Optional. Queries on phone subscriber number prefix.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Prefix prefix = 3 [json_name = "prefix"];</code>
+     * @return Whether the prefix field is set.
+     */
+    @java.lang.Override
+    public boolean hasPrefix() {
+      return prefix_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone subscriber number prefix.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Prefix prefix = 3 [json_name = "prefix"];</code>
+     * @return The prefix.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix getPrefix() {
+      return prefix_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix.getDefaultInstance() : prefix_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone subscriber number prefix.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Prefix prefix = 3 [json_name = "prefix"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.PrefixOrBuilder getPrefixOrBuilder() {
+      return prefix_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix.getDefaultInstance() : prefix_;
+    }
+
+    public static final int CITY_FIELD_NUMBER = 4;
+    private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City city_;
+    /**
+     * <pre>
+     * Optional. Queries on phone city.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.City city = 4 [json_name = "city"];</code>
+     * @return Whether the city field is set.
+     */
+    @java.lang.Override
+    public boolean hasCity() {
+      return city_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone city.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.City city = 4 [json_name = "city"];</code>
+     * @return The city.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City getCity() {
+      return city_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City.getDefaultInstance() : city_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone city.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.City city = 4 [json_name = "city"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.CityOrBuilder getCityOrBuilder() {
+      return city_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City.getDefaultInstance() : city_;
+    }
+
+    public static final int ISO2_FIELD_NUMBER = 5;
+    private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 iso2_;
+    /**
+     * <pre>
+     * Optional. Queries on phone iso2 country code.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Iso2 iso2 = 5 [json_name = "iso2"];</code>
+     * @return Whether the iso2 field is set.
+     */
+    @java.lang.Override
+    public boolean hasIso2() {
+      return iso2_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone iso2 country code.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Iso2 iso2 = 5 [json_name = "iso2"];</code>
+     * @return The iso2.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 getIso2() {
+      return iso2_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2.getDefaultInstance() : iso2_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone iso2 country code.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Iso2 iso2 = 5 [json_name = "iso2"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2OrBuilder getIso2OrBuilder() {
+      return iso2_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2.getDefaultInstance() : iso2_;
+    }
+
+    public static final int REGION_CODE_FIELD_NUMBER = 6;
+    private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode regionCode_;
+    /**
+     * <pre>
+     * Optional. Queries on phone region code.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionCode region_code = 6 [json_name = "regionCode"];</code>
+     * @return Whether the regionCode field is set.
+     */
+    @java.lang.Override
+    public boolean hasRegionCode() {
+      return regionCode_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone region code.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionCode region_code = 6 [json_name = "regionCode"];</code>
+     * @return The regionCode.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode getRegionCode() {
+      return regionCode_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode.getDefaultInstance() : regionCode_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone region code.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionCode region_code = 6 [json_name = "regionCode"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCodeOrBuilder getRegionCodeOrBuilder() {
+      return regionCode_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode.getDefaultInstance() : regionCode_;
+    }
+
+    public static final int REGION_NAME_FIELD_NUMBER = 7;
+    private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName regionName_;
+    /**
+     * <pre>
+     * Optional. Queries on phone region name.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionName region_name = 7 [json_name = "regionName"];</code>
+     * @return Whether the regionName field is set.
+     */
+    @java.lang.Override
+    public boolean hasRegionName() {
+      return regionName_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone region name.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionName region_name = 7 [json_name = "regionName"];</code>
+     * @return The regionName.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName getRegionName() {
+      return regionName_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName.getDefaultInstance() : regionName_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone region name.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionName region_name = 7 [json_name = "regionName"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionNameOrBuilder getRegionNameOrBuilder() {
+      return regionName_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName.getDefaultInstance() : regionName_;
+    }
+
+    public static final int TIME_ZONE_FIELD_NUMBER = 8;
+    private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone timeZone_;
+    /**
+     * <pre>
+     * Optional. Queries on phone time zone.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.TimeZone time_zone = 8 [json_name = "timeZone"];</code>
+     * @return Whether the timeZone field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimeZone() {
+      return timeZone_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone time zone.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.TimeZone time_zone = 8 [json_name = "timeZone"];</code>
+     * @return The timeZone.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone getTimeZone() {
+      return timeZone_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone.getDefaultInstance() : timeZone_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone time zone.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.TimeZone time_zone = 8 [json_name = "timeZone"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZoneOrBuilder getTimeZoneOrBuilder() {
+      return timeZone_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone.getDefaultInstance() : timeZone_;
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 9;
+    private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type type_;
+    /**
+     * <pre>
+     * Optional. Queries on phone number type.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Type type = 9 [json_name = "type"];</code>
+     * @return Whether the type field is set.
+     */
+    @java.lang.Override
+    public boolean hasType() {
+      return type_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone number type.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Type type = 9 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type getType() {
+      return type_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type.getDefaultInstance() : type_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone number type.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Type type = 9 [json_name = "type"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TypeOrBuilder getTypeOrBuilder() {
+      return type_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type.getDefaultInstance() : type_;
+    }
+
+    public static final int UTC_FIELD_NUMBER = 10;
+    private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc utc_;
+    /**
+     * <pre>
+     * Optional. Queries on phone number utc.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Utc utc = 10 [json_name = "utc"];</code>
+     * @return Whether the utc field is set.
+     */
+    @java.lang.Override
+    public boolean hasUtc() {
+      return utc_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone number utc.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Utc utc = 10 [json_name = "utc"];</code>
+     * @return The utc.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc getUtc() {
+      return utc_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc.getDefaultInstance() : utc_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone number utc.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Utc utc = 10 [json_name = "utc"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.UtcOrBuilder getUtcOrBuilder() {
+      return utc_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc.getDefaultInstance() : utc_;
+    }
+
+    public static final int LOCATION_FIELD_NUMBER = 11;
+    private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location location_;
+    /**
+     * <pre>
+     * Optional. Queries on phone number location.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Location location = 11 [json_name = "location"];</code>
+     * @return Whether the location field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocation() {
+      return location_ != null;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone number location.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Location location = 11 [json_name = "location"];</code>
+     * @return The location.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location getLocation() {
+      return location_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.getDefaultInstance() : location_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone number location.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Location location = 11 [json_name = "location"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.LocationOrBuilder getLocationOrBuilder() {
+      return location_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.getDefaultInstance() : location_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (cc_ != null) {
+        output.writeMessage(1, getCc());
+      }
+      if (ndc_ != null) {
+        output.writeMessage(2, getNdc());
+      }
+      if (prefix_ != null) {
+        output.writeMessage(3, getPrefix());
+      }
+      if (city_ != null) {
+        output.writeMessage(4, getCity());
+      }
+      if (iso2_ != null) {
+        output.writeMessage(5, getIso2());
+      }
+      if (regionCode_ != null) {
+        output.writeMessage(6, getRegionCode());
+      }
+      if (regionName_ != null) {
+        output.writeMessage(7, getRegionName());
+      }
+      if (timeZone_ != null) {
+        output.writeMessage(8, getTimeZone());
+      }
+      if (type_ != null) {
+        output.writeMessage(9, getType());
+      }
+      if (utc_ != null) {
+        output.writeMessage(10, getUtc());
+      }
+      if (location_ != null) {
+        output.writeMessage(11, getLocation());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (cc_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCc());
+      }
+      if (ndc_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getNdc());
+      }
+      if (prefix_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPrefix());
+      }
+      if (city_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getCity());
+      }
+      if (iso2_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getIso2());
+      }
+      if (regionCode_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getRegionCode());
+      }
+      if (regionName_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getRegionName());
+      }
+      if (timeZone_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getTimeZone());
+      }
+      if (type_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getType());
+      }
+      if (utc_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getUtc());
+      }
+      if (location_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getLocation());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone other = (com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone) obj;
+
+      if (hasCc() != other.hasCc()) return false;
+      if (hasCc()) {
+        if (!getCc()
+            .equals(other.getCc())) return false;
+      }
+      if (hasNdc() != other.hasNdc()) return false;
+      if (hasNdc()) {
+        if (!getNdc()
+            .equals(other.getNdc())) return false;
+      }
+      if (hasPrefix() != other.hasPrefix()) return false;
+      if (hasPrefix()) {
+        if (!getPrefix()
+            .equals(other.getPrefix())) return false;
+      }
+      if (hasCity() != other.hasCity()) return false;
+      if (hasCity()) {
+        if (!getCity()
+            .equals(other.getCity())) return false;
+      }
+      if (hasIso2() != other.hasIso2()) return false;
+      if (hasIso2()) {
+        if (!getIso2()
+            .equals(other.getIso2())) return false;
+      }
+      if (hasRegionCode() != other.hasRegionCode()) return false;
+      if (hasRegionCode()) {
+        if (!getRegionCode()
+            .equals(other.getRegionCode())) return false;
+      }
+      if (hasRegionName() != other.hasRegionName()) return false;
+      if (hasRegionName()) {
+        if (!getRegionName()
+            .equals(other.getRegionName())) return false;
+      }
+      if (hasTimeZone() != other.hasTimeZone()) return false;
+      if (hasTimeZone()) {
+        if (!getTimeZone()
+            .equals(other.getTimeZone())) return false;
+      }
+      if (hasType() != other.hasType()) return false;
+      if (hasType()) {
+        if (!getType()
+            .equals(other.getType())) return false;
+      }
+      if (hasUtc() != other.hasUtc()) return false;
+      if (hasUtc()) {
+        if (!getUtc()
+            .equals(other.getUtc())) return false;
+      }
+      if (hasLocation() != other.hasLocation()) return false;
+      if (hasLocation()) {
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCc()) {
+        hash = (37 * hash) + CC_FIELD_NUMBER;
+        hash = (53 * hash) + getCc().hashCode();
+      }
+      if (hasNdc()) {
+        hash = (37 * hash) + NDC_FIELD_NUMBER;
+        hash = (53 * hash) + getNdc().hashCode();
+      }
+      if (hasPrefix()) {
+        hash = (37 * hash) + PREFIX_FIELD_NUMBER;
+        hash = (53 * hash) + getPrefix().hashCode();
+      }
+      if (hasCity()) {
+        hash = (37 * hash) + CITY_FIELD_NUMBER;
+        hash = (53 * hash) + getCity().hashCode();
+      }
+      if (hasIso2()) {
+        hash = (37 * hash) + ISO2_FIELD_NUMBER;
+        hash = (53 * hash) + getIso2().hashCode();
+      }
+      if (hasRegionCode()) {
+        hash = (37 * hash) + REGION_CODE_FIELD_NUMBER;
+        hash = (53 * hash) + getRegionCode().hashCode();
+      }
+      if (hasRegionName()) {
+        hash = (37 * hash) + REGION_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getRegionName().hashCode();
+      }
+      if (hasTimeZone()) {
+        hash = (37 * hash) + TIME_ZONE_FIELD_NUMBER;
+        hash = (53 * hash) + getTimeZone().hashCode();
+      }
+      if (hasType()) {
+        hash = (37 * hash) + TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getType().hashCode();
+      }
+      if (hasUtc()) {
+        hash = (37 * hash) + UTC_FIELD_NUMBER;
+        hash = (53 * hash) + getUtc().hashCode();
+      }
+      if (hasLocation()) {
+        hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getLocation().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Phone defines a query on the phone.
+     * </pre>
+     *
+     * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.Phone}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v1alpha1.vanalytics.SearchQuery.Phone)
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.PhoneOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Phone_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Phone_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        cc_ = null;
+        if (ccBuilder_ != null) {
+          ccBuilder_.dispose();
+          ccBuilder_ = null;
+        }
+        ndc_ = null;
+        if (ndcBuilder_ != null) {
+          ndcBuilder_.dispose();
+          ndcBuilder_ = null;
+        }
+        prefix_ = null;
+        if (prefixBuilder_ != null) {
+          prefixBuilder_.dispose();
+          prefixBuilder_ = null;
+        }
+        city_ = null;
+        if (cityBuilder_ != null) {
+          cityBuilder_.dispose();
+          cityBuilder_ = null;
+        }
+        iso2_ = null;
+        if (iso2Builder_ != null) {
+          iso2Builder_.dispose();
+          iso2Builder_ = null;
+        }
+        regionCode_ = null;
+        if (regionCodeBuilder_ != null) {
+          regionCodeBuilder_.dispose();
+          regionCodeBuilder_ = null;
+        }
+        regionName_ = null;
+        if (regionNameBuilder_ != null) {
+          regionNameBuilder_.dispose();
+          regionNameBuilder_ = null;
+        }
+        timeZone_ = null;
+        if (timeZoneBuilder_ != null) {
+          timeZoneBuilder_.dispose();
+          timeZoneBuilder_ = null;
+        }
+        type_ = null;
+        if (typeBuilder_ != null) {
+          typeBuilder_.dispose();
+          typeBuilder_ = null;
+        }
+        utc_ = null;
+        if (utcBuilder_ != null) {
+          utcBuilder_.dispose();
+          utcBuilder_ = null;
+        }
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Phone_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone build() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone buildPartial() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.cc_ = ccBuilder_ == null
+              ? cc_
+              : ccBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.ndc_ = ndcBuilder_ == null
+              ? ndc_
+              : ndcBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.prefix_ = prefixBuilder_ == null
+              ? prefix_
+              : prefixBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.city_ = cityBuilder_ == null
+              ? city_
+              : cityBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.iso2_ = iso2Builder_ == null
+              ? iso2_
+              : iso2Builder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.regionCode_ = regionCodeBuilder_ == null
+              ? regionCode_
+              : regionCodeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.regionName_ = regionNameBuilder_ == null
+              ? regionName_
+              : regionNameBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.timeZone_ = timeZoneBuilder_ == null
+              ? timeZone_
+              : timeZoneBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.type_ = typeBuilder_ == null
+              ? type_
+              : typeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.utc_ = utcBuilder_ == null
+              ? utc_
+              : utcBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.location_ = locationBuilder_ == null
+              ? location_
+              : locationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone) {
+          return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone other) {
+        if (other == com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone.getDefaultInstance()) return this;
+        if (other.hasCc()) {
+          mergeCc(other.getCc());
+        }
+        if (other.hasNdc()) {
+          mergeNdc(other.getNdc());
+        }
+        if (other.hasPrefix()) {
+          mergePrefix(other.getPrefix());
+        }
+        if (other.hasCity()) {
+          mergeCity(other.getCity());
+        }
+        if (other.hasIso2()) {
+          mergeIso2(other.getIso2());
+        }
+        if (other.hasRegionCode()) {
+          mergeRegionCode(other.getRegionCode());
+        }
+        if (other.hasRegionName()) {
+          mergeRegionName(other.getRegionName());
+        }
+        if (other.hasTimeZone()) {
+          mergeTimeZone(other.getTimeZone());
+        }
+        if (other.hasType()) {
+          mergeType(other.getType());
+        }
+        if (other.hasUtc()) {
+          mergeUtc(other.getUtc());
+        }
+        if (other.hasLocation()) {
+          mergeLocation(other.getLocation());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getCcFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getNdcFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPrefixFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getCityFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getIso2FieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getRegionCodeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getRegionNameFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                input.readMessage(
+                    getTimeZoneFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                input.readMessage(
+                    getTypeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                input.readMessage(
+                    getUtcFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 90: {
+                input.readMessage(
+                    getLocationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc cc_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.CcOrBuilder> ccBuilder_;
+      /**
+       * <pre>
+       * Optional. Queries on phone country code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Cc cc = 1 [json_name = "cc"];</code>
+       * @return Whether the cc field is set.
+       */
+      public boolean hasCc() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone country code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Cc cc = 1 [json_name = "cc"];</code>
+       * @return The cc.
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc getCc() {
+        if (ccBuilder_ == null) {
+          return cc_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc.getDefaultInstance() : cc_;
+        } else {
+          return ccBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone country code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Cc cc = 1 [json_name = "cc"];</code>
+       */
+      public Builder setCc(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc value) {
+        if (ccBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cc_ = value;
+        } else {
+          ccBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone country code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Cc cc = 1 [json_name = "cc"];</code>
+       */
+      public Builder setCc(
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc.Builder builderForValue) {
+        if (ccBuilder_ == null) {
+          cc_ = builderForValue.build();
+        } else {
+          ccBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone country code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Cc cc = 1 [json_name = "cc"];</code>
+       */
+      public Builder mergeCc(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc value) {
+        if (ccBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            cc_ != null &&
+            cc_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc.getDefaultInstance()) {
+            getCcBuilder().mergeFrom(value);
+          } else {
+            cc_ = value;
+          }
+        } else {
+          ccBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone country code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Cc cc = 1 [json_name = "cc"];</code>
+       */
+      public Builder clearCc() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        cc_ = null;
+        if (ccBuilder_ != null) {
+          ccBuilder_.dispose();
+          ccBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone country code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Cc cc = 1 [json_name = "cc"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc.Builder getCcBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getCcFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone country code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Cc cc = 1 [json_name = "cc"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.CcOrBuilder getCcOrBuilder() {
+        if (ccBuilder_ != null) {
+          return ccBuilder_.getMessageOrBuilder();
+        } else {
+          return cc_ == null ?
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc.getDefaultInstance() : cc_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone country code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Cc cc = 1 [json_name = "cc"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.CcOrBuilder> 
+          getCcFieldBuilder() {
+        if (ccBuilder_ == null) {
+          ccBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.CcOrBuilder>(
+                  getCc(),
+                  getParentForChildren(),
+                  isClean());
+          cc_ = null;
+        }
+        return ccBuilder_;
+      }
+
+      private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc ndc_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.NdcOrBuilder> ndcBuilder_;
+      /**
+       * <pre>
+       * Optional. Queries on phone ndc (area code).
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Ndc ndc = 2 [json_name = "ndc"];</code>
+       * @return Whether the ndc field is set.
+       */
+      public boolean hasNdc() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone ndc (area code).
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Ndc ndc = 2 [json_name = "ndc"];</code>
+       * @return The ndc.
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc getNdc() {
+        if (ndcBuilder_ == null) {
+          return ndc_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc.getDefaultInstance() : ndc_;
+        } else {
+          return ndcBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone ndc (area code).
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Ndc ndc = 2 [json_name = "ndc"];</code>
+       */
+      public Builder setNdc(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc value) {
+        if (ndcBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ndc_ = value;
+        } else {
+          ndcBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone ndc (area code).
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Ndc ndc = 2 [json_name = "ndc"];</code>
+       */
+      public Builder setNdc(
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc.Builder builderForValue) {
+        if (ndcBuilder_ == null) {
+          ndc_ = builderForValue.build();
+        } else {
+          ndcBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone ndc (area code).
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Ndc ndc = 2 [json_name = "ndc"];</code>
+       */
+      public Builder mergeNdc(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc value) {
+        if (ndcBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            ndc_ != null &&
+            ndc_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc.getDefaultInstance()) {
+            getNdcBuilder().mergeFrom(value);
+          } else {
+            ndc_ = value;
+          }
+        } else {
+          ndcBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone ndc (area code).
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Ndc ndc = 2 [json_name = "ndc"];</code>
+       */
+      public Builder clearNdc() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        ndc_ = null;
+        if (ndcBuilder_ != null) {
+          ndcBuilder_.dispose();
+          ndcBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone ndc (area code).
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Ndc ndc = 2 [json_name = "ndc"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc.Builder getNdcBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getNdcFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone ndc (area code).
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Ndc ndc = 2 [json_name = "ndc"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.NdcOrBuilder getNdcOrBuilder() {
+        if (ndcBuilder_ != null) {
+          return ndcBuilder_.getMessageOrBuilder();
+        } else {
+          return ndc_ == null ?
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc.getDefaultInstance() : ndc_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone ndc (area code).
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Ndc ndc = 2 [json_name = "ndc"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.NdcOrBuilder> 
+          getNdcFieldBuilder() {
+        if (ndcBuilder_ == null) {
+          ndcBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.NdcOrBuilder>(
+                  getNdc(),
+                  getParentForChildren(),
+                  isClean());
+          ndc_ = null;
+        }
+        return ndcBuilder_;
+      }
+
+      private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix prefix_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.PrefixOrBuilder> prefixBuilder_;
+      /**
+       * <pre>
+       * Optional. Queries on phone subscriber number prefix.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Prefix prefix = 3 [json_name = "prefix"];</code>
+       * @return Whether the prefix field is set.
+       */
+      public boolean hasPrefix() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone subscriber number prefix.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Prefix prefix = 3 [json_name = "prefix"];</code>
+       * @return The prefix.
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix getPrefix() {
+        if (prefixBuilder_ == null) {
+          return prefix_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix.getDefaultInstance() : prefix_;
+        } else {
+          return prefixBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone subscriber number prefix.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Prefix prefix = 3 [json_name = "prefix"];</code>
+       */
+      public Builder setPrefix(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix value) {
+        if (prefixBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          prefix_ = value;
+        } else {
+          prefixBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone subscriber number prefix.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Prefix prefix = 3 [json_name = "prefix"];</code>
+       */
+      public Builder setPrefix(
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix.Builder builderForValue) {
+        if (prefixBuilder_ == null) {
+          prefix_ = builderForValue.build();
+        } else {
+          prefixBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone subscriber number prefix.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Prefix prefix = 3 [json_name = "prefix"];</code>
+       */
+      public Builder mergePrefix(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix value) {
+        if (prefixBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            prefix_ != null &&
+            prefix_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix.getDefaultInstance()) {
+            getPrefixBuilder().mergeFrom(value);
+          } else {
+            prefix_ = value;
+          }
+        } else {
+          prefixBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone subscriber number prefix.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Prefix prefix = 3 [json_name = "prefix"];</code>
+       */
+      public Builder clearPrefix() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        prefix_ = null;
+        if (prefixBuilder_ != null) {
+          prefixBuilder_.dispose();
+          prefixBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone subscriber number prefix.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Prefix prefix = 3 [json_name = "prefix"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix.Builder getPrefixBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPrefixFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone subscriber number prefix.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Prefix prefix = 3 [json_name = "prefix"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.PrefixOrBuilder getPrefixOrBuilder() {
+        if (prefixBuilder_ != null) {
+          return prefixBuilder_.getMessageOrBuilder();
+        } else {
+          return prefix_ == null ?
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix.getDefaultInstance() : prefix_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone subscriber number prefix.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Prefix prefix = 3 [json_name = "prefix"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.PrefixOrBuilder> 
+          getPrefixFieldBuilder() {
+        if (prefixBuilder_ == null) {
+          prefixBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.PrefixOrBuilder>(
+                  getPrefix(),
+                  getParentForChildren(),
+                  isClean());
+          prefix_ = null;
+        }
+        return prefixBuilder_;
+      }
+
+      private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City city_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.CityOrBuilder> cityBuilder_;
+      /**
+       * <pre>
+       * Optional. Queries on phone city.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.City city = 4 [json_name = "city"];</code>
+       * @return Whether the city field is set.
+       */
+      public boolean hasCity() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone city.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.City city = 4 [json_name = "city"];</code>
+       * @return The city.
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City getCity() {
+        if (cityBuilder_ == null) {
+          return city_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City.getDefaultInstance() : city_;
+        } else {
+          return cityBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone city.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.City city = 4 [json_name = "city"];</code>
+       */
+      public Builder setCity(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City value) {
+        if (cityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          city_ = value;
+        } else {
+          cityBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone city.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.City city = 4 [json_name = "city"];</code>
+       */
+      public Builder setCity(
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City.Builder builderForValue) {
+        if (cityBuilder_ == null) {
+          city_ = builderForValue.build();
+        } else {
+          cityBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone city.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.City city = 4 [json_name = "city"];</code>
+       */
+      public Builder mergeCity(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City value) {
+        if (cityBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            city_ != null &&
+            city_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City.getDefaultInstance()) {
+            getCityBuilder().mergeFrom(value);
+          } else {
+            city_ = value;
+          }
+        } else {
+          cityBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone city.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.City city = 4 [json_name = "city"];</code>
+       */
+      public Builder clearCity() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        city_ = null;
+        if (cityBuilder_ != null) {
+          cityBuilder_.dispose();
+          cityBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone city.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.City city = 4 [json_name = "city"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City.Builder getCityBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getCityFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone city.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.City city = 4 [json_name = "city"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.CityOrBuilder getCityOrBuilder() {
+        if (cityBuilder_ != null) {
+          return cityBuilder_.getMessageOrBuilder();
+        } else {
+          return city_ == null ?
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City.getDefaultInstance() : city_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone city.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.City city = 4 [json_name = "city"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.CityOrBuilder> 
+          getCityFieldBuilder() {
+        if (cityBuilder_ == null) {
+          cityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.CityOrBuilder>(
+                  getCity(),
+                  getParentForChildren(),
+                  isClean());
+          city_ = null;
+        }
+        return cityBuilder_;
+      }
+
+      private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 iso2_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2OrBuilder> iso2Builder_;
+      /**
+       * <pre>
+       * Optional. Queries on phone iso2 country code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Iso2 iso2 = 5 [json_name = "iso2"];</code>
+       * @return Whether the iso2 field is set.
+       */
+      public boolean hasIso2() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone iso2 country code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Iso2 iso2 = 5 [json_name = "iso2"];</code>
+       * @return The iso2.
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 getIso2() {
+        if (iso2Builder_ == null) {
+          return iso2_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2.getDefaultInstance() : iso2_;
+        } else {
+          return iso2Builder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone iso2 country code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Iso2 iso2 = 5 [json_name = "iso2"];</code>
+       */
+      public Builder setIso2(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 value) {
+        if (iso2Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          iso2_ = value;
+        } else {
+          iso2Builder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone iso2 country code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Iso2 iso2 = 5 [json_name = "iso2"];</code>
+       */
+      public Builder setIso2(
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2.Builder builderForValue) {
+        if (iso2Builder_ == null) {
+          iso2_ = builderForValue.build();
+        } else {
+          iso2Builder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone iso2 country code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Iso2 iso2 = 5 [json_name = "iso2"];</code>
+       */
+      public Builder mergeIso2(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 value) {
+        if (iso2Builder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            iso2_ != null &&
+            iso2_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2.getDefaultInstance()) {
+            getIso2Builder().mergeFrom(value);
+          } else {
+            iso2_ = value;
+          }
+        } else {
+          iso2Builder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone iso2 country code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Iso2 iso2 = 5 [json_name = "iso2"];</code>
+       */
+      public Builder clearIso2() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        iso2_ = null;
+        if (iso2Builder_ != null) {
+          iso2Builder_.dispose();
+          iso2Builder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone iso2 country code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Iso2 iso2 = 5 [json_name = "iso2"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2.Builder getIso2Builder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getIso2FieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone iso2 country code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Iso2 iso2 = 5 [json_name = "iso2"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2OrBuilder getIso2OrBuilder() {
+        if (iso2Builder_ != null) {
+          return iso2Builder_.getMessageOrBuilder();
+        } else {
+          return iso2_ == null ?
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2.getDefaultInstance() : iso2_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone iso2 country code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Iso2 iso2 = 5 [json_name = "iso2"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2OrBuilder> 
+          getIso2FieldBuilder() {
+        if (iso2Builder_ == null) {
+          iso2Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2OrBuilder>(
+                  getIso2(),
+                  getParentForChildren(),
+                  isClean());
+          iso2_ = null;
+        }
+        return iso2Builder_;
+      }
+
+      private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode regionCode_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCodeOrBuilder> regionCodeBuilder_;
+      /**
+       * <pre>
+       * Optional. Queries on phone region code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionCode region_code = 6 [json_name = "regionCode"];</code>
+       * @return Whether the regionCode field is set.
+       */
+      public boolean hasRegionCode() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone region code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionCode region_code = 6 [json_name = "regionCode"];</code>
+       * @return The regionCode.
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode getRegionCode() {
+        if (regionCodeBuilder_ == null) {
+          return regionCode_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode.getDefaultInstance() : regionCode_;
+        } else {
+          return regionCodeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone region code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionCode region_code = 6 [json_name = "regionCode"];</code>
+       */
+      public Builder setRegionCode(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode value) {
+        if (regionCodeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          regionCode_ = value;
+        } else {
+          regionCodeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone region code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionCode region_code = 6 [json_name = "regionCode"];</code>
+       */
+      public Builder setRegionCode(
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode.Builder builderForValue) {
+        if (regionCodeBuilder_ == null) {
+          regionCode_ = builderForValue.build();
+        } else {
+          regionCodeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone region code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionCode region_code = 6 [json_name = "regionCode"];</code>
+       */
+      public Builder mergeRegionCode(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode value) {
+        if (regionCodeBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            regionCode_ != null &&
+            regionCode_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode.getDefaultInstance()) {
+            getRegionCodeBuilder().mergeFrom(value);
+          } else {
+            regionCode_ = value;
+          }
+        } else {
+          regionCodeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone region code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionCode region_code = 6 [json_name = "regionCode"];</code>
+       */
+      public Builder clearRegionCode() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        regionCode_ = null;
+        if (regionCodeBuilder_ != null) {
+          regionCodeBuilder_.dispose();
+          regionCodeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone region code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionCode region_code = 6 [json_name = "regionCode"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode.Builder getRegionCodeBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getRegionCodeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone region code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionCode region_code = 6 [json_name = "regionCode"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCodeOrBuilder getRegionCodeOrBuilder() {
+        if (regionCodeBuilder_ != null) {
+          return regionCodeBuilder_.getMessageOrBuilder();
+        } else {
+          return regionCode_ == null ?
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode.getDefaultInstance() : regionCode_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone region code.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionCode region_code = 6 [json_name = "regionCode"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCodeOrBuilder> 
+          getRegionCodeFieldBuilder() {
+        if (regionCodeBuilder_ == null) {
+          regionCodeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCodeOrBuilder>(
+                  getRegionCode(),
+                  getParentForChildren(),
+                  isClean());
+          regionCode_ = null;
+        }
+        return regionCodeBuilder_;
+      }
+
+      private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName regionName_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionNameOrBuilder> regionNameBuilder_;
+      /**
+       * <pre>
+       * Optional. Queries on phone region name.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionName region_name = 7 [json_name = "regionName"];</code>
+       * @return Whether the regionName field is set.
+       */
+      public boolean hasRegionName() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone region name.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionName region_name = 7 [json_name = "regionName"];</code>
+       * @return The regionName.
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName getRegionName() {
+        if (regionNameBuilder_ == null) {
+          return regionName_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName.getDefaultInstance() : regionName_;
+        } else {
+          return regionNameBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone region name.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionName region_name = 7 [json_name = "regionName"];</code>
+       */
+      public Builder setRegionName(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName value) {
+        if (regionNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          regionName_ = value;
+        } else {
+          regionNameBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone region name.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionName region_name = 7 [json_name = "regionName"];</code>
+       */
+      public Builder setRegionName(
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName.Builder builderForValue) {
+        if (regionNameBuilder_ == null) {
+          regionName_ = builderForValue.build();
+        } else {
+          regionNameBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone region name.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionName region_name = 7 [json_name = "regionName"];</code>
+       */
+      public Builder mergeRegionName(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName value) {
+        if (regionNameBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+            regionName_ != null &&
+            regionName_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName.getDefaultInstance()) {
+            getRegionNameBuilder().mergeFrom(value);
+          } else {
+            regionName_ = value;
+          }
+        } else {
+          regionNameBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone region name.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionName region_name = 7 [json_name = "regionName"];</code>
+       */
+      public Builder clearRegionName() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        regionName_ = null;
+        if (regionNameBuilder_ != null) {
+          regionNameBuilder_.dispose();
+          regionNameBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone region name.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionName region_name = 7 [json_name = "regionName"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName.Builder getRegionNameBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getRegionNameFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone region name.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionName region_name = 7 [json_name = "regionName"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionNameOrBuilder getRegionNameOrBuilder() {
+        if (regionNameBuilder_ != null) {
+          return regionNameBuilder_.getMessageOrBuilder();
+        } else {
+          return regionName_ == null ?
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName.getDefaultInstance() : regionName_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone region name.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.RegionName region_name = 7 [json_name = "regionName"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionNameOrBuilder> 
+          getRegionNameFieldBuilder() {
+        if (regionNameBuilder_ == null) {
+          regionNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionNameOrBuilder>(
+                  getRegionName(),
+                  getParentForChildren(),
+                  isClean());
+          regionName_ = null;
+        }
+        return regionNameBuilder_;
+      }
+
+      private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone timeZone_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZoneOrBuilder> timeZoneBuilder_;
+      /**
+       * <pre>
+       * Optional. Queries on phone time zone.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.TimeZone time_zone = 8 [json_name = "timeZone"];</code>
+       * @return Whether the timeZone field is set.
+       */
+      public boolean hasTimeZone() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone time zone.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.TimeZone time_zone = 8 [json_name = "timeZone"];</code>
+       * @return The timeZone.
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone getTimeZone() {
+        if (timeZoneBuilder_ == null) {
+          return timeZone_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone.getDefaultInstance() : timeZone_;
+        } else {
+          return timeZoneBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone time zone.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.TimeZone time_zone = 8 [json_name = "timeZone"];</code>
+       */
+      public Builder setTimeZone(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone value) {
+        if (timeZoneBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          timeZone_ = value;
+        } else {
+          timeZoneBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone time zone.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.TimeZone time_zone = 8 [json_name = "timeZone"];</code>
+       */
+      public Builder setTimeZone(
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone.Builder builderForValue) {
+        if (timeZoneBuilder_ == null) {
+          timeZone_ = builderForValue.build();
+        } else {
+          timeZoneBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone time zone.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.TimeZone time_zone = 8 [json_name = "timeZone"];</code>
+       */
+      public Builder mergeTimeZone(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone value) {
+        if (timeZoneBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0) &&
+            timeZone_ != null &&
+            timeZone_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone.getDefaultInstance()) {
+            getTimeZoneBuilder().mergeFrom(value);
+          } else {
+            timeZone_ = value;
+          }
+        } else {
+          timeZoneBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone time zone.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.TimeZone time_zone = 8 [json_name = "timeZone"];</code>
+       */
+      public Builder clearTimeZone() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        timeZone_ = null;
+        if (timeZoneBuilder_ != null) {
+          timeZoneBuilder_.dispose();
+          timeZoneBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone time zone.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.TimeZone time_zone = 8 [json_name = "timeZone"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone.Builder getTimeZoneBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getTimeZoneFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone time zone.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.TimeZone time_zone = 8 [json_name = "timeZone"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZoneOrBuilder getTimeZoneOrBuilder() {
+        if (timeZoneBuilder_ != null) {
+          return timeZoneBuilder_.getMessageOrBuilder();
+        } else {
+          return timeZone_ == null ?
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone.getDefaultInstance() : timeZone_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone time zone.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.TimeZone time_zone = 8 [json_name = "timeZone"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZoneOrBuilder> 
+          getTimeZoneFieldBuilder() {
+        if (timeZoneBuilder_ == null) {
+          timeZoneBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZoneOrBuilder>(
+                  getTimeZone(),
+                  getParentForChildren(),
+                  isClean());
+          timeZone_ = null;
+        }
+        return timeZoneBuilder_;
+      }
+
+      private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type type_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TypeOrBuilder> typeBuilder_;
+      /**
+       * <pre>
+       * Optional. Queries on phone number type.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Type type = 9 [json_name = "type"];</code>
+       * @return Whether the type field is set.
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number type.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Type type = 9 [json_name = "type"];</code>
+       * @return The type.
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type getType() {
+        if (typeBuilder_ == null) {
+          return type_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type.getDefaultInstance() : type_;
+        } else {
+          return typeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number type.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Type type = 9 [json_name = "type"];</code>
+       */
+      public Builder setType(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type value) {
+        if (typeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+        } else {
+          typeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number type.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Type type = 9 [json_name = "type"];</code>
+       */
+      public Builder setType(
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type.Builder builderForValue) {
+        if (typeBuilder_ == null) {
+          type_ = builderForValue.build();
+        } else {
+          typeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number type.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Type type = 9 [json_name = "type"];</code>
+       */
+      public Builder mergeType(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type value) {
+        if (typeBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0) &&
+            type_ != null &&
+            type_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type.getDefaultInstance()) {
+            getTypeBuilder().mergeFrom(value);
+          } else {
+            type_ = value;
+          }
+        } else {
+          typeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number type.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Type type = 9 [json_name = "type"];</code>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        type_ = null;
+        if (typeBuilder_ != null) {
+          typeBuilder_.dispose();
+          typeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number type.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Type type = 9 [json_name = "type"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type.Builder getTypeBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return getTypeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number type.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Type type = 9 [json_name = "type"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TypeOrBuilder getTypeOrBuilder() {
+        if (typeBuilder_ != null) {
+          return typeBuilder_.getMessageOrBuilder();
+        } else {
+          return type_ == null ?
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type.getDefaultInstance() : type_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number type.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Type type = 9 [json_name = "type"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TypeOrBuilder> 
+          getTypeFieldBuilder() {
+        if (typeBuilder_ == null) {
+          typeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TypeOrBuilder>(
+                  getType(),
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        return typeBuilder_;
+      }
+
+      private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc utc_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.UtcOrBuilder> utcBuilder_;
+      /**
+       * <pre>
+       * Optional. Queries on phone number utc.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Utc utc = 10 [json_name = "utc"];</code>
+       * @return Whether the utc field is set.
+       */
+      public boolean hasUtc() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number utc.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Utc utc = 10 [json_name = "utc"];</code>
+       * @return The utc.
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc getUtc() {
+        if (utcBuilder_ == null) {
+          return utc_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc.getDefaultInstance() : utc_;
+        } else {
+          return utcBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number utc.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Utc utc = 10 [json_name = "utc"];</code>
+       */
+      public Builder setUtc(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc value) {
+        if (utcBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          utc_ = value;
+        } else {
+          utcBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number utc.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Utc utc = 10 [json_name = "utc"];</code>
+       */
+      public Builder setUtc(
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc.Builder builderForValue) {
+        if (utcBuilder_ == null) {
+          utc_ = builderForValue.build();
+        } else {
+          utcBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number utc.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Utc utc = 10 [json_name = "utc"];</code>
+       */
+      public Builder mergeUtc(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc value) {
+        if (utcBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0) &&
+            utc_ != null &&
+            utc_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc.getDefaultInstance()) {
+            getUtcBuilder().mergeFrom(value);
+          } else {
+            utc_ = value;
+          }
+        } else {
+          utcBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number utc.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Utc utc = 10 [json_name = "utc"];</code>
+       */
+      public Builder clearUtc() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        utc_ = null;
+        if (utcBuilder_ != null) {
+          utcBuilder_.dispose();
+          utcBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number utc.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Utc utc = 10 [json_name = "utc"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc.Builder getUtcBuilder() {
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return getUtcFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number utc.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Utc utc = 10 [json_name = "utc"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.UtcOrBuilder getUtcOrBuilder() {
+        if (utcBuilder_ != null) {
+          return utcBuilder_.getMessageOrBuilder();
+        } else {
+          return utc_ == null ?
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc.getDefaultInstance() : utc_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number utc.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Utc utc = 10 [json_name = "utc"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.UtcOrBuilder> 
+          getUtcFieldBuilder() {
+        if (utcBuilder_ == null) {
+          utcBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.UtcOrBuilder>(
+                  getUtc(),
+                  getParentForChildren(),
+                  isClean());
+          utc_ = null;
+        }
+        return utcBuilder_;
+      }
+
+      private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location location_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.LocationOrBuilder> locationBuilder_;
+      /**
+       * <pre>
+       * Optional. Queries on phone number location.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Location location = 11 [json_name = "location"];</code>
+       * @return Whether the location field is set.
+       */
+      public boolean hasLocation() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number location.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Location location = 11 [json_name = "location"];</code>
+       * @return The location.
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location getLocation() {
+        if (locationBuilder_ == null) {
+          return location_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.getDefaultInstance() : location_;
+        } else {
+          return locationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number location.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Location location = 11 [json_name = "location"];</code>
+       */
+      public Builder setLocation(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location value) {
+        if (locationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          location_ = value;
+        } else {
+          locationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number location.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Location location = 11 [json_name = "location"];</code>
+       */
+      public Builder setLocation(
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.Builder builderForValue) {
+        if (locationBuilder_ == null) {
+          location_ = builderForValue.build();
+        } else {
+          locationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number location.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Location location = 11 [json_name = "location"];</code>
+       */
+      public Builder mergeLocation(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location value) {
+        if (locationBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) != 0) &&
+            location_ != null &&
+            location_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.getDefaultInstance()) {
+            getLocationBuilder().mergeFrom(value);
+          } else {
+            location_ = value;
+          }
+        } else {
+          locationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number location.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Location location = 11 [json_name = "location"];</code>
+       */
+      public Builder clearLocation() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
+          locationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number location.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Location location = 11 [json_name = "location"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.Builder getLocationBuilder() {
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return getLocationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number location.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Location location = 11 [json_name = "location"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.LocationOrBuilder getLocationOrBuilder() {
+        if (locationBuilder_ != null) {
+          return locationBuilder_.getMessageOrBuilder();
+        } else {
+          return location_ == null ?
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.getDefaultInstance() : location_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries on phone number location.
+       * </pre>
+       *
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Location location = 11 [json_name = "location"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.LocationOrBuilder> 
+          getLocationFieldBuilder() {
+        if (locationBuilder_ == null) {
+          locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.LocationOrBuilder>(
+                  getLocation(),
+                  getParentForChildren(),
+                  isClean());
+          location_ = null;
+        }
+        return locationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v1alpha1.vanalytics.SearchQuery.Phone)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v1alpha1.vanalytics.SearchQuery.Phone)
+    private static final com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone();
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Phone>
+        PARSER = new com.google.protobuf.AbstractParser<Phone>() {
+      @java.lang.Override
+      public Phone parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Phone> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Phone> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CcOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v1alpha1.vanalytics.SearchQuery.Cc)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Optional. Queries where cc in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return A list containing the in.
+     */
+    java.util.List<java.lang.String>
+        getInList();
+    /**
+     * <pre>
+     * Optional. Queries where cc in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return The count of in.
+     */
+    int getInCount();
+    /**
+     * <pre>
+     * Optional. Queries where cc in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the element to return.
+     * @return The in at the given index.
+     */
+    java.lang.String getIn(int index);
+    /**
+     * <pre>
+     * Optional. Queries where cc in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the in at the given index.
+     */
+    com.google.protobuf.ByteString
+        getInBytes(int index);
+  }
+  /**
+   * <pre>
+   * Cc defines a query on the phone country code.
+   * </pre>
+   *
+   * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.Cc}
+   */
+  public static final class Cc extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v1alpha1.vanalytics.SearchQuery.Cc)
+      CcOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Cc.newBuilder() to construct.
+    private Cc(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Cc() {
+      in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Cc();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Cc_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Cc_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc.Builder.class);
+    }
+
+    public static final int IN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList in_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * Optional. Queries where cc in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return A list containing the in.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getInList() {
+      return in_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries where cc in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return The count of in.
+     */
+    public int getInCount() {
+      return in_.size();
+    }
+    /**
+     * <pre>
+     * Optional. Queries where cc in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the element to return.
+     * @return The in at the given index.
+     */
+    public java.lang.String getIn(int index) {
+      return in_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional. Queries where cc in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the in at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getInBytes(int index) {
+      return in_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < in_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, in_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < in_.size(); i++) {
+          dataSize += computeStringSizeNoTag(in_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getInList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc other = (com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc) obj;
+
+      if (!getInList()
+          .equals(other.getInList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getInCount() > 0) {
+        hash = (37 * hash) + IN_FIELD_NUMBER;
+        hash = (53 * hash) + getInList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Cc defines a query on the phone country code.
+     * </pre>
+     *
+     * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.Cc}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v1alpha1.vanalytics.SearchQuery.Cc)
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.CcOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Cc_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Cc_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        in_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Cc_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc build() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc buildPartial() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          in_.makeImmutable();
+          result.in_ = in_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc) {
+          return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc other) {
+        if (other == com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc.getDefaultInstance()) return this;
+        if (!other.in_.isEmpty()) {
+          if (in_.isEmpty()) {
+            in_ = other.in_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureInIsMutable();
+            in_.addAll(other.in_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureInIsMutable();
+                in_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureInIsMutable() {
+        if (!in_.isModifiable()) {
+          in_ = new com.google.protobuf.LazyStringArrayList(in_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where cc in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return A list containing the in.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getInList() {
+        in_.makeImmutable();
+        return in_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where cc in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return The count of in.
+       */
+      public int getInCount() {
+        return in_.size();
+      }
+      /**
+       * <pre>
+       * Optional. Queries where cc in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the element to return.
+       * @return The in at the given index.
+       */
+      public java.lang.String getIn(int index) {
+        return in_.get(index);
+      }
+      /**
+       * <pre>
+       * Optional. Queries where cc in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the in at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getInBytes(int index) {
+        return in_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Optional. Queries where cc in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index to set the value at.
+       * @param value The in to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIn(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureInIsMutable();
+        in_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where cc in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param value The in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIn(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureInIsMutable();
+        in_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where cc in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param values The in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllIn(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureInIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, in_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where cc in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIn() {
+        in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where cc in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param value The bytes of the in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addInBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureInIsMutable();
+        in_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v1alpha1.vanalytics.SearchQuery.Cc)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v1alpha1.vanalytics.SearchQuery.Cc)
+    private static final com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc();
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Cc>
+        PARSER = new com.google.protobuf.AbstractParser<Cc>() {
+      @java.lang.Override
+      public Cc parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Cc> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Cc> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Cc getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface NdcOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v1alpha1.vanalytics.SearchQuery.Ndc)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Optional. Queries where ndc in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return A list containing the in.
+     */
+    java.util.List<java.lang.String>
+        getInList();
+    /**
+     * <pre>
+     * Optional. Queries where ndc in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return The count of in.
+     */
+    int getInCount();
+    /**
+     * <pre>
+     * Optional. Queries where ndc in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the element to return.
+     * @return The in at the given index.
+     */
+    java.lang.String getIn(int index);
+    /**
+     * <pre>
+     * Optional. Queries where ndc in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the in at the given index.
+     */
+    com.google.protobuf.ByteString
+        getInBytes(int index);
+  }
+  /**
+   * <pre>
+   * Ndc defines a query on the phone ndc.
+   * </pre>
+   *
+   * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.Ndc}
+   */
+  public static final class Ndc extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v1alpha1.vanalytics.SearchQuery.Ndc)
+      NdcOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Ndc.newBuilder() to construct.
+    private Ndc(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Ndc() {
+      in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Ndc();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Ndc_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Ndc_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc.Builder.class);
+    }
+
+    public static final int IN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList in_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * Optional. Queries where ndc in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return A list containing the in.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getInList() {
+      return in_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries where ndc in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return The count of in.
+     */
+    public int getInCount() {
+      return in_.size();
+    }
+    /**
+     * <pre>
+     * Optional. Queries where ndc in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the element to return.
+     * @return The in at the given index.
+     */
+    public java.lang.String getIn(int index) {
+      return in_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional. Queries where ndc in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the in at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getInBytes(int index) {
+      return in_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < in_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, in_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < in_.size(); i++) {
+          dataSize += computeStringSizeNoTag(in_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getInList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc other = (com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc) obj;
+
+      if (!getInList()
+          .equals(other.getInList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getInCount() > 0) {
+        hash = (37 * hash) + IN_FIELD_NUMBER;
+        hash = (53 * hash) + getInList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Ndc defines a query on the phone ndc.
+     * </pre>
+     *
+     * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.Ndc}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v1alpha1.vanalytics.SearchQuery.Ndc)
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.NdcOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Ndc_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Ndc_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        in_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Ndc_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc build() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc buildPartial() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          in_.makeImmutable();
+          result.in_ = in_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc) {
+          return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc other) {
+        if (other == com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc.getDefaultInstance()) return this;
+        if (!other.in_.isEmpty()) {
+          if (in_.isEmpty()) {
+            in_ = other.in_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureInIsMutable();
+            in_.addAll(other.in_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureInIsMutable();
+                in_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureInIsMutable() {
+        if (!in_.isModifiable()) {
+          in_ = new com.google.protobuf.LazyStringArrayList(in_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where ndc in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return A list containing the in.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getInList() {
+        in_.makeImmutable();
+        return in_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where ndc in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return The count of in.
+       */
+      public int getInCount() {
+        return in_.size();
+      }
+      /**
+       * <pre>
+       * Optional. Queries where ndc in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the element to return.
+       * @return The in at the given index.
+       */
+      public java.lang.String getIn(int index) {
+        return in_.get(index);
+      }
+      /**
+       * <pre>
+       * Optional. Queries where ndc in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the in at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getInBytes(int index) {
+        return in_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Optional. Queries where ndc in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index to set the value at.
+       * @param value The in to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIn(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureInIsMutable();
+        in_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where ndc in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param value The in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIn(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureInIsMutable();
+        in_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where ndc in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param values The in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllIn(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureInIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, in_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where ndc in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIn() {
+        in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where ndc in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param value The bytes of the in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addInBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureInIsMutable();
+        in_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v1alpha1.vanalytics.SearchQuery.Ndc)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v1alpha1.vanalytics.SearchQuery.Ndc)
+    private static final com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc();
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Ndc>
+        PARSER = new com.google.protobuf.AbstractParser<Ndc>() {
+      @java.lang.Override
+      public Ndc parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Ndc> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Ndc> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Ndc getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PrefixOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v1alpha1.vanalytics.SearchQuery.Prefix)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Optional. Queries where prefix in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return A list containing the in.
+     */
+    java.util.List<java.lang.String>
+        getInList();
+    /**
+     * <pre>
+     * Optional. Queries where prefix in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return The count of in.
+     */
+    int getInCount();
+    /**
+     * <pre>
+     * Optional. Queries where prefix in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the element to return.
+     * @return The in at the given index.
+     */
+    java.lang.String getIn(int index);
+    /**
+     * <pre>
+     * Optional. Queries where prefix in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the in at the given index.
+     */
+    com.google.protobuf.ByteString
+        getInBytes(int index);
+  }
+  /**
+   * <pre>
+   * Prefix defines a query on the phone prefix.
+   * </pre>
+   *
+   * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.Prefix}
+   */
+  public static final class Prefix extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v1alpha1.vanalytics.SearchQuery.Prefix)
+      PrefixOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Prefix.newBuilder() to construct.
+    private Prefix(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Prefix() {
+      in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Prefix();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Prefix_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Prefix_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix.Builder.class);
+    }
+
+    public static final int IN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList in_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * Optional. Queries where prefix in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return A list containing the in.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getInList() {
+      return in_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries where prefix in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return The count of in.
+     */
+    public int getInCount() {
+      return in_.size();
+    }
+    /**
+     * <pre>
+     * Optional. Queries where prefix in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the element to return.
+     * @return The in at the given index.
+     */
+    public java.lang.String getIn(int index) {
+      return in_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional. Queries where prefix in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the in at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getInBytes(int index) {
+      return in_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < in_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, in_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < in_.size(); i++) {
+          dataSize += computeStringSizeNoTag(in_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getInList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix other = (com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix) obj;
+
+      if (!getInList()
+          .equals(other.getInList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getInCount() > 0) {
+        hash = (37 * hash) + IN_FIELD_NUMBER;
+        hash = (53 * hash) + getInList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Prefix defines a query on the phone prefix.
+     * </pre>
+     *
+     * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.Prefix}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v1alpha1.vanalytics.SearchQuery.Prefix)
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.PrefixOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Prefix_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Prefix_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        in_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Prefix_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix build() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix buildPartial() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          in_.makeImmutable();
+          result.in_ = in_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix) {
+          return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix other) {
+        if (other == com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix.getDefaultInstance()) return this;
+        if (!other.in_.isEmpty()) {
+          if (in_.isEmpty()) {
+            in_ = other.in_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureInIsMutable();
+            in_.addAll(other.in_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureInIsMutable();
+                in_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureInIsMutable() {
+        if (!in_.isModifiable()) {
+          in_ = new com.google.protobuf.LazyStringArrayList(in_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where prefix in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return A list containing the in.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getInList() {
+        in_.makeImmutable();
+        return in_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where prefix in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return The count of in.
+       */
+      public int getInCount() {
+        return in_.size();
+      }
+      /**
+       * <pre>
+       * Optional. Queries where prefix in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the element to return.
+       * @return The in at the given index.
+       */
+      public java.lang.String getIn(int index) {
+        return in_.get(index);
+      }
+      /**
+       * <pre>
+       * Optional. Queries where prefix in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the in at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getInBytes(int index) {
+        return in_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Optional. Queries where prefix in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index to set the value at.
+       * @param value The in to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIn(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureInIsMutable();
+        in_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where prefix in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param value The in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIn(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureInIsMutable();
+        in_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where prefix in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param values The in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllIn(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureInIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, in_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where prefix in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIn() {
+        in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where prefix in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param value The bytes of the in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addInBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureInIsMutable();
+        in_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v1alpha1.vanalytics.SearchQuery.Prefix)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v1alpha1.vanalytics.SearchQuery.Prefix)
+    private static final com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix();
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Prefix>
+        PARSER = new com.google.protobuf.AbstractParser<Prefix>() {
+      @java.lang.Override
+      public Prefix parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Prefix> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Prefix> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Prefix getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CityOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v1alpha1.vanalytics.SearchQuery.City)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Optional. Queries where city in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return A list containing the in.
+     */
+    java.util.List<java.lang.String>
+        getInList();
+    /**
+     * <pre>
+     * Optional. Queries where city in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return The count of in.
+     */
+    int getInCount();
+    /**
+     * <pre>
+     * Optional. Queries where city in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the element to return.
+     * @return The in at the given index.
+     */
+    java.lang.String getIn(int index);
+    /**
+     * <pre>
+     * Optional. Queries where city in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the in at the given index.
+     */
+    com.google.protobuf.ByteString
+        getInBytes(int index);
+  }
+  /**
+   * <pre>
+   * City defines a query on the phone city.
+   * </pre>
+   *
+   * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.City}
+   */
+  public static final class City extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v1alpha1.vanalytics.SearchQuery.City)
+      CityOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use City.newBuilder() to construct.
+    private City(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private City() {
+      in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new City();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_City_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_City_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City.Builder.class);
+    }
+
+    public static final int IN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList in_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * Optional. Queries where city in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return A list containing the in.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getInList() {
+      return in_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries where city in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return The count of in.
+     */
+    public int getInCount() {
+      return in_.size();
+    }
+    /**
+     * <pre>
+     * Optional. Queries where city in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the element to return.
+     * @return The in at the given index.
+     */
+    public java.lang.String getIn(int index) {
+      return in_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional. Queries where city in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the in at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getInBytes(int index) {
+      return in_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < in_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, in_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < in_.size(); i++) {
+          dataSize += computeStringSizeNoTag(in_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getInList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City other = (com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City) obj;
+
+      if (!getInList()
+          .equals(other.getInList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getInCount() > 0) {
+        hash = (37 * hash) + IN_FIELD_NUMBER;
+        hash = (53 * hash) + getInList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * City defines a query on the phone city.
+     * </pre>
+     *
+     * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.City}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v1alpha1.vanalytics.SearchQuery.City)
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.CityOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_City_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_City_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        in_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_City_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City build() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City buildPartial() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          in_.makeImmutable();
+          result.in_ = in_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City) {
+          return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City other) {
+        if (other == com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City.getDefaultInstance()) return this;
+        if (!other.in_.isEmpty()) {
+          if (in_.isEmpty()) {
+            in_ = other.in_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureInIsMutable();
+            in_.addAll(other.in_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureInIsMutable();
+                in_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureInIsMutable() {
+        if (!in_.isModifiable()) {
+          in_ = new com.google.protobuf.LazyStringArrayList(in_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where city in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return A list containing the in.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getInList() {
+        in_.makeImmutable();
+        return in_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where city in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return The count of in.
+       */
+      public int getInCount() {
+        return in_.size();
+      }
+      /**
+       * <pre>
+       * Optional. Queries where city in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the element to return.
+       * @return The in at the given index.
+       */
+      public java.lang.String getIn(int index) {
+        return in_.get(index);
+      }
+      /**
+       * <pre>
+       * Optional. Queries where city in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the in at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getInBytes(int index) {
+        return in_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Optional. Queries where city in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index to set the value at.
+       * @param value The in to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIn(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureInIsMutable();
+        in_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where city in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param value The in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIn(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureInIsMutable();
+        in_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where city in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param values The in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllIn(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureInIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, in_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where city in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIn() {
+        in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where city in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param value The bytes of the in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addInBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureInIsMutable();
+        in_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v1alpha1.vanalytics.SearchQuery.City)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v1alpha1.vanalytics.SearchQuery.City)
+    private static final com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City();
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<City>
+        PARSER = new com.google.protobuf.AbstractParser<City>() {
+      @java.lang.Override
+      public City parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<City> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<City> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.City getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Iso2OrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v1alpha1.vanalytics.SearchQuery.Iso2)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Optional. Queries where iso2 in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return A list containing the in.
+     */
+    java.util.List<java.lang.String>
+        getInList();
+    /**
+     * <pre>
+     * Optional. Queries where iso2 in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return The count of in.
+     */
+    int getInCount();
+    /**
+     * <pre>
+     * Optional. Queries where iso2 in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the element to return.
+     * @return The in at the given index.
+     */
+    java.lang.String getIn(int index);
+    /**
+     * <pre>
+     * Optional. Queries where iso2 in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the in at the given index.
+     */
+    com.google.protobuf.ByteString
+        getInBytes(int index);
+  }
+  /**
+   * <pre>
+   * Iso2 defines a query on the phone Iso2.
+   * </pre>
+   *
+   * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.Iso2}
+   */
+  public static final class Iso2 extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v1alpha1.vanalytics.SearchQuery.Iso2)
+      Iso2OrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Iso2.newBuilder() to construct.
+    private Iso2(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Iso2() {
+      in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Iso2();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Iso2_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Iso2_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2.Builder.class);
+    }
+
+    public static final int IN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList in_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * Optional. Queries where iso2 in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return A list containing the in.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getInList() {
+      return in_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries where iso2 in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return The count of in.
+     */
+    public int getInCount() {
+      return in_.size();
+    }
+    /**
+     * <pre>
+     * Optional. Queries where iso2 in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the element to return.
+     * @return The in at the given index.
+     */
+    public java.lang.String getIn(int index) {
+      return in_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional. Queries where iso2 in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the in at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getInBytes(int index) {
+      return in_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < in_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, in_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < in_.size(); i++) {
+          dataSize += computeStringSizeNoTag(in_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getInList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 other = (com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2) obj;
+
+      if (!getInList()
+          .equals(other.getInList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getInCount() > 0) {
+        hash = (37 * hash) + IN_FIELD_NUMBER;
+        hash = (53 * hash) + getInList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Iso2 defines a query on the phone Iso2.
+     * </pre>
+     *
+     * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.Iso2}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v1alpha1.vanalytics.SearchQuery.Iso2)
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Iso2_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Iso2_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        in_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Iso2_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 build() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 buildPartial() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          in_.makeImmutable();
+          result.in_ = in_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2) {
+          return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 other) {
+        if (other == com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2.getDefaultInstance()) return this;
+        if (!other.in_.isEmpty()) {
+          if (in_.isEmpty()) {
+            in_ = other.in_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureInIsMutable();
+            in_.addAll(other.in_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureInIsMutable();
+                in_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureInIsMutable() {
+        if (!in_.isModifiable()) {
+          in_ = new com.google.protobuf.LazyStringArrayList(in_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where iso2 in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return A list containing the in.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getInList() {
+        in_.makeImmutable();
+        return in_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where iso2 in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return The count of in.
+       */
+      public int getInCount() {
+        return in_.size();
+      }
+      /**
+       * <pre>
+       * Optional. Queries where iso2 in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the element to return.
+       * @return The in at the given index.
+       */
+      public java.lang.String getIn(int index) {
+        return in_.get(index);
+      }
+      /**
+       * <pre>
+       * Optional. Queries where iso2 in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the in at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getInBytes(int index) {
+        return in_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Optional. Queries where iso2 in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index to set the value at.
+       * @param value The in to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIn(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureInIsMutable();
+        in_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where iso2 in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param value The in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIn(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureInIsMutable();
+        in_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where iso2 in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param values The in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllIn(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureInIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, in_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where iso2 in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIn() {
+        in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where iso2 in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param value The bytes of the in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addInBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureInIsMutable();
+        in_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v1alpha1.vanalytics.SearchQuery.Iso2)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v1alpha1.vanalytics.SearchQuery.Iso2)
+    private static final com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2();
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Iso2>
+        PARSER = new com.google.protobuf.AbstractParser<Iso2>() {
+      @java.lang.Override
+      public Iso2 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Iso2> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Iso2> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Iso2 getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegionCodeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v1alpha1.vanalytics.SearchQuery.RegionCode)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Optional. Queries where region code in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return A list containing the in.
+     */
+    java.util.List<java.lang.String>
+        getInList();
+    /**
+     * <pre>
+     * Optional. Queries where region code in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return The count of in.
+     */
+    int getInCount();
+    /**
+     * <pre>
+     * Optional. Queries where region code in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the element to return.
+     * @return The in at the given index.
+     */
+    java.lang.String getIn(int index);
+    /**
+     * <pre>
+     * Optional. Queries where region code in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the in at the given index.
+     */
+    com.google.protobuf.ByteString
+        getInBytes(int index);
+  }
+  /**
+   * <pre>
+   * RegionCode defines a query on the phone region code.
+   * </pre>
+   *
+   * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.RegionCode}
+   */
+  public static final class RegionCode extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v1alpha1.vanalytics.SearchQuery.RegionCode)
+      RegionCodeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegionCode.newBuilder() to construct.
+    private RegionCode(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegionCode() {
+      in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegionCode();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_RegionCode_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_RegionCode_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode.Builder.class);
+    }
+
+    public static final int IN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList in_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * Optional. Queries where region code in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return A list containing the in.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getInList() {
+      return in_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries where region code in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return The count of in.
+     */
+    public int getInCount() {
+      return in_.size();
+    }
+    /**
+     * <pre>
+     * Optional. Queries where region code in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the element to return.
+     * @return The in at the given index.
+     */
+    public java.lang.String getIn(int index) {
+      return in_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional. Queries where region code in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the in at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getInBytes(int index) {
+      return in_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < in_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, in_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < in_.size(); i++) {
+          dataSize += computeStringSizeNoTag(in_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getInList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode other = (com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode) obj;
+
+      if (!getInList()
+          .equals(other.getInList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getInCount() > 0) {
+        hash = (37 * hash) + IN_FIELD_NUMBER;
+        hash = (53 * hash) + getInList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RegionCode defines a query on the phone region code.
+     * </pre>
+     *
+     * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.RegionCode}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v1alpha1.vanalytics.SearchQuery.RegionCode)
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCodeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_RegionCode_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_RegionCode_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        in_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_RegionCode_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode build() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode buildPartial() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          in_.makeImmutable();
+          result.in_ = in_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode) {
+          return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode other) {
+        if (other == com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode.getDefaultInstance()) return this;
+        if (!other.in_.isEmpty()) {
+          if (in_.isEmpty()) {
+            in_ = other.in_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureInIsMutable();
+            in_.addAll(other.in_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureInIsMutable();
+                in_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureInIsMutable() {
+        if (!in_.isModifiable()) {
+          in_ = new com.google.protobuf.LazyStringArrayList(in_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where region code in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return A list containing the in.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getInList() {
+        in_.makeImmutable();
+        return in_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where region code in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return The count of in.
+       */
+      public int getInCount() {
+        return in_.size();
+      }
+      /**
+       * <pre>
+       * Optional. Queries where region code in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the element to return.
+       * @return The in at the given index.
+       */
+      public java.lang.String getIn(int index) {
+        return in_.get(index);
+      }
+      /**
+       * <pre>
+       * Optional. Queries where region code in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the in at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getInBytes(int index) {
+        return in_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Optional. Queries where region code in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index to set the value at.
+       * @param value The in to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIn(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureInIsMutable();
+        in_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where region code in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param value The in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIn(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureInIsMutable();
+        in_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where region code in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param values The in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllIn(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureInIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, in_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where region code in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIn() {
+        in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where region code in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param value The bytes of the in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addInBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureInIsMutable();
+        in_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v1alpha1.vanalytics.SearchQuery.RegionCode)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v1alpha1.vanalytics.SearchQuery.RegionCode)
+    private static final com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode();
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegionCode>
+        PARSER = new com.google.protobuf.AbstractParser<RegionCode>() {
+      @java.lang.Override
+      public RegionCode parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegionCode> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegionCode> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionCode getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegionNameOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v1alpha1.vanalytics.SearchQuery.RegionName)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Optional. Queries where region name in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return A list containing the in.
+     */
+    java.util.List<java.lang.String>
+        getInList();
+    /**
+     * <pre>
+     * Optional. Queries where region name in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return The count of in.
+     */
+    int getInCount();
+    /**
+     * <pre>
+     * Optional. Queries where region name in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the element to return.
+     * @return The in at the given index.
+     */
+    java.lang.String getIn(int index);
+    /**
+     * <pre>
+     * Optional. Queries where region name in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the in at the given index.
+     */
+    com.google.protobuf.ByteString
+        getInBytes(int index);
+  }
+  /**
+   * <pre>
+   * RegionName defines a query on the phone region name.
+   * </pre>
+   *
+   * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.RegionName}
+   */
+  public static final class RegionName extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v1alpha1.vanalytics.SearchQuery.RegionName)
+      RegionNameOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegionName.newBuilder() to construct.
+    private RegionName(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegionName() {
+      in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegionName();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_RegionName_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_RegionName_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName.Builder.class);
+    }
+
+    public static final int IN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList in_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * Optional. Queries where region name in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return A list containing the in.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getInList() {
+      return in_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries where region name in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return The count of in.
+     */
+    public int getInCount() {
+      return in_.size();
+    }
+    /**
+     * <pre>
+     * Optional. Queries where region name in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the element to return.
+     * @return The in at the given index.
+     */
+    public java.lang.String getIn(int index) {
+      return in_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional. Queries where region name in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the in at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getInBytes(int index) {
+      return in_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < in_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, in_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < in_.size(); i++) {
+          dataSize += computeStringSizeNoTag(in_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getInList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName other = (com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName) obj;
+
+      if (!getInList()
+          .equals(other.getInList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getInCount() > 0) {
+        hash = (37 * hash) + IN_FIELD_NUMBER;
+        hash = (53 * hash) + getInList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RegionName defines a query on the phone region name.
+     * </pre>
+     *
+     * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.RegionName}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v1alpha1.vanalytics.SearchQuery.RegionName)
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionNameOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_RegionName_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_RegionName_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        in_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_RegionName_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName build() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName buildPartial() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          in_.makeImmutable();
+          result.in_ = in_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName) {
+          return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName other) {
+        if (other == com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName.getDefaultInstance()) return this;
+        if (!other.in_.isEmpty()) {
+          if (in_.isEmpty()) {
+            in_ = other.in_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureInIsMutable();
+            in_.addAll(other.in_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureInIsMutable();
+                in_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureInIsMutable() {
+        if (!in_.isModifiable()) {
+          in_ = new com.google.protobuf.LazyStringArrayList(in_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where region name in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return A list containing the in.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getInList() {
+        in_.makeImmutable();
+        return in_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where region name in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return The count of in.
+       */
+      public int getInCount() {
+        return in_.size();
+      }
+      /**
+       * <pre>
+       * Optional. Queries where region name in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the element to return.
+       * @return The in at the given index.
+       */
+      public java.lang.String getIn(int index) {
+        return in_.get(index);
+      }
+      /**
+       * <pre>
+       * Optional. Queries where region name in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the in at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getInBytes(int index) {
+        return in_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Optional. Queries where region name in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index to set the value at.
+       * @param value The in to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIn(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureInIsMutable();
+        in_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where region name in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param value The in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIn(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureInIsMutable();
+        in_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where region name in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param values The in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllIn(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureInIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, in_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where region name in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIn() {
+        in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where region name in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param value The bytes of the in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addInBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureInIsMutable();
+        in_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v1alpha1.vanalytics.SearchQuery.RegionName)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v1alpha1.vanalytics.SearchQuery.RegionName)
+    private static final com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName();
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegionName>
+        PARSER = new com.google.protobuf.AbstractParser<RegionName>() {
+      @java.lang.Override
+      public RegionName parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegionName> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegionName> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.RegionName getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TimeZoneOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v1alpha1.vanalytics.SearchQuery.TimeZone)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Optional. Queries where time zone in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return A list containing the in.
+     */
+    java.util.List<java.lang.String>
+        getInList();
+    /**
+     * <pre>
+     * Optional. Queries where time zone in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return The count of in.
+     */
+    int getInCount();
+    /**
+     * <pre>
+     * Optional. Queries where time zone in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the element to return.
+     * @return The in at the given index.
+     */
+    java.lang.String getIn(int index);
+    /**
+     * <pre>
+     * Optional. Queries where time zone in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the in at the given index.
+     */
+    com.google.protobuf.ByteString
+        getInBytes(int index);
+  }
+  /**
+   * <pre>
+   * TimeZone defines a query on the phone time zone.
+   * </pre>
+   *
+   * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.TimeZone}
+   */
+  public static final class TimeZone extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v1alpha1.vanalytics.SearchQuery.TimeZone)
+      TimeZoneOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TimeZone.newBuilder() to construct.
+    private TimeZone(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TimeZone() {
+      in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TimeZone();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_TimeZone_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_TimeZone_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone.Builder.class);
+    }
+
+    public static final int IN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList in_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * Optional. Queries where time zone in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return A list containing the in.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getInList() {
+      return in_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries where time zone in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return The count of in.
+     */
+    public int getInCount() {
+      return in_.size();
+    }
+    /**
+     * <pre>
+     * Optional. Queries where time zone in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the element to return.
+     * @return The in at the given index.
+     */
+    public java.lang.String getIn(int index) {
+      return in_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional. Queries where time zone in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the in at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getInBytes(int index) {
+      return in_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < in_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, in_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < in_.size(); i++) {
+          dataSize += computeStringSizeNoTag(in_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getInList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone other = (com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone) obj;
+
+      if (!getInList()
+          .equals(other.getInList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getInCount() > 0) {
+        hash = (37 * hash) + IN_FIELD_NUMBER;
+        hash = (53 * hash) + getInList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * TimeZone defines a query on the phone time zone.
+     * </pre>
+     *
+     * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.TimeZone}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v1alpha1.vanalytics.SearchQuery.TimeZone)
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZoneOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_TimeZone_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_TimeZone_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        in_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_TimeZone_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone build() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone buildPartial() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          in_.makeImmutable();
+          result.in_ = in_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone) {
+          return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone other) {
+        if (other == com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone.getDefaultInstance()) return this;
+        if (!other.in_.isEmpty()) {
+          if (in_.isEmpty()) {
+            in_ = other.in_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureInIsMutable();
+            in_.addAll(other.in_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureInIsMutable();
+                in_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureInIsMutable() {
+        if (!in_.isModifiable()) {
+          in_ = new com.google.protobuf.LazyStringArrayList(in_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where time zone in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return A list containing the in.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getInList() {
+        in_.makeImmutable();
+        return in_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where time zone in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return The count of in.
+       */
+      public int getInCount() {
+        return in_.size();
+      }
+      /**
+       * <pre>
+       * Optional. Queries where time zone in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the element to return.
+       * @return The in at the given index.
+       */
+      public java.lang.String getIn(int index) {
+        return in_.get(index);
+      }
+      /**
+       * <pre>
+       * Optional. Queries where time zone in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the in at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getInBytes(int index) {
+        return in_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Optional. Queries where time zone in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index to set the value at.
+       * @param value The in to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIn(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureInIsMutable();
+        in_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where time zone in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param value The in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIn(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureInIsMutable();
+        in_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where time zone in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param values The in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllIn(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureInIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, in_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where time zone in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIn() {
+        in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where time zone in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param value The bytes of the in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addInBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureInIsMutable();
+        in_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v1alpha1.vanalytics.SearchQuery.TimeZone)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v1alpha1.vanalytics.SearchQuery.TimeZone)
+    private static final com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone();
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TimeZone>
+        PARSER = new com.google.protobuf.AbstractParser<TimeZone>() {
+      @java.lang.Override
+      public TimeZone parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TimeZone> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TimeZone> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TimeZone getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TypeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v1alpha1.vanalytics.SearchQuery.Type)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Optional. Queries where type in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return A list containing the in.
+     */
+    java.util.List<java.lang.String>
+        getInList();
+    /**
+     * <pre>
+     * Optional. Queries where type in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return The count of in.
+     */
+    int getInCount();
+    /**
+     * <pre>
+     * Optional. Queries where type in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the element to return.
+     * @return The in at the given index.
+     */
+    java.lang.String getIn(int index);
+    /**
+     * <pre>
+     * Optional. Queries where type in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the in at the given index.
+     */
+    com.google.protobuf.ByteString
+        getInBytes(int index);
+  }
+  /**
+   * <pre>
+   * Type defines a query on the phone type.
+   * </pre>
+   *
+   * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.Type}
+   */
+  public static final class Type extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v1alpha1.vanalytics.SearchQuery.Type)
+      TypeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Type.newBuilder() to construct.
+    private Type(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Type() {
+      in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Type();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Type_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Type_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type.Builder.class);
+    }
+
+    public static final int IN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList in_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * Optional. Queries where type in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return A list containing the in.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getInList() {
+      return in_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries where type in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @return The count of in.
+     */
+    public int getInCount() {
+      return in_.size();
+    }
+    /**
+     * <pre>
+     * Optional. Queries where type in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the element to return.
+     * @return The in at the given index.
+     */
+    public java.lang.String getIn(int index) {
+      return in_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional. Queries where type in list provided.
+     * </pre>
+     *
+     * <code>repeated string in = 1 [json_name = "in"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the in at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getInBytes(int index) {
+      return in_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < in_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, in_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < in_.size(); i++) {
+          dataSize += computeStringSizeNoTag(in_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getInList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type other = (com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type) obj;
+
+      if (!getInList()
+          .equals(other.getInList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getInCount() > 0) {
+        hash = (37 * hash) + IN_FIELD_NUMBER;
+        hash = (53 * hash) + getInList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Type defines a query on the phone type.
+     * </pre>
+     *
+     * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.Type}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v1alpha1.vanalytics.SearchQuery.Type)
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TypeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Type_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Type_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        in_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Type_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type build() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type buildPartial() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          in_.makeImmutable();
+          result.in_ = in_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type) {
+          return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type other) {
+        if (other == com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type.getDefaultInstance()) return this;
+        if (!other.in_.isEmpty()) {
+          if (in_.isEmpty()) {
+            in_ = other.in_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureInIsMutable();
+            in_.addAll(other.in_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureInIsMutable();
+                in_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureInIsMutable() {
+        if (!in_.isModifiable()) {
+          in_ = new com.google.protobuf.LazyStringArrayList(in_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where type in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return A list containing the in.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getInList() {
+        in_.makeImmutable();
+        return in_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where type in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return The count of in.
+       */
+      public int getInCount() {
+        return in_.size();
+      }
+      /**
+       * <pre>
+       * Optional. Queries where type in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the element to return.
+       * @return The in at the given index.
+       */
+      public java.lang.String getIn(int index) {
+        return in_.get(index);
+      }
+      /**
+       * <pre>
+       * Optional. Queries where type in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the in at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getInBytes(int index) {
+        return in_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Optional. Queries where type in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param index The index to set the value at.
+       * @param value The in to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIn(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureInIsMutable();
+        in_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where type in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param value The in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIn(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureInIsMutable();
+        in_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where type in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param values The in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllIn(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureInIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, in_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where type in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIn() {
+        in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where type in list provided.
+       * </pre>
+       *
+       * <code>repeated string in = 1 [json_name = "in"];</code>
+       * @param value The bytes of the in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addInBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureInIsMutable();
+        in_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v1alpha1.vanalytics.SearchQuery.Type)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v1alpha1.vanalytics.SearchQuery.Type)
+    private static final com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type();
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Type>
+        PARSER = new com.google.protobuf.AbstractParser<Type>() {
+      @java.lang.Override
+      public Type parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Type> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Type> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Type getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UtcOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v1alpha1.vanalytics.SearchQuery.Utc)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Optional. Queries where utc in list provided.
+     * </pre>
+     *
+     * <code>repeated float in = 1 [json_name = "in"];</code>
+     * @return A list containing the in.
+     */
+    java.util.List<java.lang.Float> getInList();
+    /**
+     * <pre>
+     * Optional. Queries where utc in list provided.
+     * </pre>
+     *
+     * <code>repeated float in = 1 [json_name = "in"];</code>
+     * @return The count of in.
+     */
+    int getInCount();
+    /**
+     * <pre>
+     * Optional. Queries where utc in list provided.
+     * </pre>
+     *
+     * <code>repeated float in = 1 [json_name = "in"];</code>
+     * @param index The index of the element to return.
+     * @return The in at the given index.
+     */
+    float getIn(int index);
+  }
+  /**
+   * <pre>
+   * Utc defines a query on the phone utc.
+   * </pre>
+   *
+   * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.Utc}
+   */
+  public static final class Utc extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v1alpha1.vanalytics.SearchQuery.Utc)
+      UtcOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Utc.newBuilder() to construct.
+    private Utc(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Utc() {
+      in_ = emptyFloatList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Utc();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Utc_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Utc_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc.Builder.class);
+    }
+
+    public static final int IN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.FloatList in_;
+    /**
+     * <pre>
+     * Optional. Queries where utc in list provided.
+     * </pre>
+     *
+     * <code>repeated float in = 1 [json_name = "in"];</code>
+     * @return A list containing the in.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Float>
+        getInList() {
+      return in_;
+    }
+    /**
+     * <pre>
+     * Optional. Queries where utc in list provided.
+     * </pre>
+     *
+     * <code>repeated float in = 1 [json_name = "in"];</code>
+     * @return The count of in.
+     */
+    public int getInCount() {
+      return in_.size();
+    }
+    /**
+     * <pre>
+     * Optional. Queries where utc in list provided.
+     * </pre>
+     *
+     * <code>repeated float in = 1 [json_name = "in"];</code>
+     * @param index The index of the element to return.
+     * @return The in at the given index.
+     */
+    public float getIn(int index) {
+      return in_.getFloat(index);
+    }
+    private int inMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (getInList().size() > 0) {
+        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(inMemoizedSerializedSize);
+      }
+      for (int i = 0; i < in_.size(); i++) {
+        output.writeFloatNoTag(in_.getFloat(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        dataSize = 4 * getInList().size();
+        size += dataSize;
+        if (!getInList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        inMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc other = (com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc) obj;
+
+      if (!getInList()
+          .equals(other.getInList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getInCount() > 0) {
+        hash = (37 * hash) + IN_FIELD_NUMBER;
+        hash = (53 * hash) + getInList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Utc defines a query on the phone utc.
+     * </pre>
+     *
+     * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.Utc}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v1alpha1.vanalytics.SearchQuery.Utc)
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.UtcOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Utc_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Utc_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        in_ = emptyFloatList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Utc_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc build() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc buildPartial() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          in_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.in_ = in_;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc) {
+          return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc other) {
+        if (other == com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc.getDefaultInstance()) return this;
+        if (!other.in_.isEmpty()) {
+          if (in_.isEmpty()) {
+            in_ = other.in_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureInIsMutable();
+            in_.addAll(other.in_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 13: {
+                float v = input.readFloat();
+                ensureInIsMutable();
+                in_.addFloat(v);
+                break;
+              } // case 13
+              case 10: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureInIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  in_.addFloat(input.readFloat());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Internal.FloatList in_ = emptyFloatList();
+      private void ensureInIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          in_ = mutableCopy(in_);
+          bitField0_ |= 0x00000001;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Queries where utc in list provided.
+       * </pre>
+       *
+       * <code>repeated float in = 1 [json_name = "in"];</code>
+       * @return A list containing the in.
+       */
+      public java.util.List<java.lang.Float>
+          getInList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(in_) : in_;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where utc in list provided.
+       * </pre>
+       *
+       * <code>repeated float in = 1 [json_name = "in"];</code>
+       * @return The count of in.
+       */
+      public int getInCount() {
+        return in_.size();
+      }
+      /**
+       * <pre>
+       * Optional. Queries where utc in list provided.
+       * </pre>
+       *
+       * <code>repeated float in = 1 [json_name = "in"];</code>
+       * @param index The index of the element to return.
+       * @return The in at the given index.
+       */
+      public float getIn(int index) {
+        return in_.getFloat(index);
+      }
+      /**
+       * <pre>
+       * Optional. Queries where utc in list provided.
+       * </pre>
+       *
+       * <code>repeated float in = 1 [json_name = "in"];</code>
+       * @param index The index to set the value at.
+       * @param value The in to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIn(
+          int index, float value) {
+
+        ensureInIsMutable();
+        in_.setFloat(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where utc in list provided.
+       * </pre>
+       *
+       * <code>repeated float in = 1 [json_name = "in"];</code>
+       * @param value The in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIn(float value) {
+
+        ensureInIsMutable();
+        in_.addFloat(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where utc in list provided.
+       * </pre>
+       *
+       * <code>repeated float in = 1 [json_name = "in"];</code>
+       * @param values The in to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllIn(
+          java.lang.Iterable<? extends java.lang.Float> values) {
+        ensureInIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, in_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Queries where utc in list provided.
+       * </pre>
+       *
+       * <code>repeated float in = 1 [json_name = "in"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIn() {
+        in_ = emptyFloatList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v1alpha1.vanalytics.SearchQuery.Utc)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v1alpha1.vanalytics.SearchQuery.Utc)
+    private static final com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc();
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Utc>
+        PARSER = new com.google.protobuf.AbstractParser<Utc>() {
+      @java.lang.Override
+      public Utc parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Utc> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Utc> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Utc getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LocationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v1alpha1.vanalytics.SearchQuery.Location)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity zip_code_proximity = 1 [json_name = "zipCodeProximity"];</code>
+     * @return Whether the zipCodeProximity field is set.
+     */
+    boolean hasZipCodeProximity();
+    /**
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity zip_code_proximity = 1 [json_name = "zipCodeProximity"];</code>
+     * @return The zipCodeProximity.
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity getZipCodeProximity();
+    /**
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity zip_code_proximity = 1 [json_name = "zipCodeProximity"];</code>
+     */
+    com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximityOrBuilder getZipCodeProximityOrBuilder();
+  }
+  /**
+   * <pre>
+   * Location defines a query on the phone location.
+   * </pre>
+   *
+   * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.Location}
+   */
+  public static final class Location extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v1alpha1.vanalytics.SearchQuery.Location)
+      LocationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Location.newBuilder() to construct.
+    private Location(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Location() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Location();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Location_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Location_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.Builder.class);
+    }
+
+    public interface ZipCodeProximityOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Required. Queries on phone number country code.
+       * </pre>
+       *
+       * <code>string country_code = 1 [json_name = "countryCode"];</code>
+       * @return The countryCode.
+       */
+      java.lang.String getCountryCode();
+      /**
+       * <pre>
+       * Required. Queries on phone number country code.
+       * </pre>
+       *
+       * <code>string country_code = 1 [json_name = "countryCode"];</code>
+       * @return The bytes for countryCode.
+       */
+      com.google.protobuf.ByteString
+          getCountryCodeBytes();
+
+      /**
+       * <pre>
+       * Required. Queries where phone location is within distance of zipcode.
+       * </pre>
+       *
+       * <code>string zip_code = 2 [json_name = "zipCode"];</code>
+       * @return The zipCode.
+       */
+      java.lang.String getZipCode();
+      /**
+       * <pre>
+       * Required. Queries where phone location is within distance of zipcode.
+       * </pre>
+       *
+       * <code>string zip_code = 2 [json_name = "zipCode"];</code>
+       * @return The bytes for zipCode.
+       */
+      com.google.protobuf.ByteString
+          getZipCodeBytes();
+
+      /**
+       * <pre>
+       * Required. Queries where phone location is within distance (km or mi) of zipcode. For example: 100km.
+       * </pre>
+       *
+       * <code>string distance = 3 [json_name = "distance"];</code>
+       * @return The distance.
+       */
+      java.lang.String getDistance();
+      /**
+       * <pre>
+       * Required. Queries where phone location is within distance (km or mi) of zipcode. For example: 100km.
+       * </pre>
+       *
+       * <code>string distance = 3 [json_name = "distance"];</code>
+       * @return The bytes for distance.
+       */
+      com.google.protobuf.ByteString
+          getDistanceBytes();
+    }
+    /**
+     * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity}
+     */
+    public static final class ZipCodeProximity extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity)
+        ZipCodeProximityOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ZipCodeProximity.newBuilder() to construct.
+      private ZipCodeProximity(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ZipCodeProximity() {
+        countryCode_ = "";
+        zipCode_ = "";
+        distance_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ZipCodeProximity();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Location_ZipCodeProximity_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Location_ZipCodeProximity_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity.Builder.class);
+      }
+
+      public static final int COUNTRY_CODE_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object countryCode_ = "";
+      /**
+       * <pre>
+       * Required. Queries on phone number country code.
+       * </pre>
+       *
+       * <code>string country_code = 1 [json_name = "countryCode"];</code>
+       * @return The countryCode.
+       */
+      @java.lang.Override
+      public java.lang.String getCountryCode() {
+        java.lang.Object ref = countryCode_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          countryCode_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Queries on phone number country code.
+       * </pre>
+       *
+       * <code>string country_code = 1 [json_name = "countryCode"];</code>
+       * @return The bytes for countryCode.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getCountryCodeBytes() {
+        java.lang.Object ref = countryCode_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          countryCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int ZIP_CODE_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object zipCode_ = "";
+      /**
+       * <pre>
+       * Required. Queries where phone location is within distance of zipcode.
+       * </pre>
+       *
+       * <code>string zip_code = 2 [json_name = "zipCode"];</code>
+       * @return The zipCode.
+       */
+      @java.lang.Override
+      public java.lang.String getZipCode() {
+        java.lang.Object ref = zipCode_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          zipCode_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Queries where phone location is within distance of zipcode.
+       * </pre>
+       *
+       * <code>string zip_code = 2 [json_name = "zipCode"];</code>
+       * @return The bytes for zipCode.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getZipCodeBytes() {
+        java.lang.Object ref = zipCode_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          zipCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int DISTANCE_FIELD_NUMBER = 3;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object distance_ = "";
+      /**
+       * <pre>
+       * Required. Queries where phone location is within distance (km or mi) of zipcode. For example: 100km.
+       * </pre>
+       *
+       * <code>string distance = 3 [json_name = "distance"];</code>
+       * @return The distance.
+       */
+      @java.lang.Override
+      public java.lang.String getDistance() {
+        java.lang.Object ref = distance_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          distance_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Queries where phone location is within distance (km or mi) of zipcode. For example: 100km.
+       * </pre>
+       *
+       * <code>string distance = 3 [json_name = "distance"];</code>
+       * @return The bytes for distance.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDistanceBytes() {
+        java.lang.Object ref = distance_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          distance_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, countryCode_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zipCode_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, zipCode_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(distance_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, distance_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, countryCode_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zipCode_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, zipCode_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(distance_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, distance_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity)) {
+          return super.equals(obj);
+        }
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity other = (com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity) obj;
+
+        if (!getCountryCode()
+            .equals(other.getCountryCode())) return false;
+        if (!getZipCode()
+            .equals(other.getZipCode())) return false;
+        if (!getDistance()
+            .equals(other.getDistance())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + COUNTRY_CODE_FIELD_NUMBER;
+        hash = (53 * hash) + getCountryCode().hashCode();
+        hash = (37 * hash) + ZIP_CODE_FIELD_NUMBER;
+        hash = (53 * hash) + getZipCode().hashCode();
+        hash = (37 * hash) + DISTANCE_FIELD_NUMBER;
+        hash = (53 * hash) + getDistance().hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity)
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximityOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Location_ZipCodeProximity_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Location_ZipCodeProximity_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity.Builder.class);
+        }
+
+        // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          countryCode_ = "";
+          zipCode_ = "";
+          distance_ = "";
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Location_ZipCodeProximity_descriptor;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity getDefaultInstanceForType() {
+          return com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity build() {
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity buildPartial() {
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.countryCode_ = countryCode_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.zipCode_ = zipCode_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.distance_ = distance_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity) {
+            return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity other) {
+          if (other == com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity.getDefaultInstance()) return this;
+          if (!other.getCountryCode().isEmpty()) {
+            countryCode_ = other.countryCode_;
+            bitField0_ |= 0x00000001;
+            onChanged();
+          }
+          if (!other.getZipCode().isEmpty()) {
+            zipCode_ = other.zipCode_;
+            bitField0_ |= 0x00000002;
+            onChanged();
+          }
+          if (!other.getDistance().isEmpty()) {
+            distance_ = other.distance_;
+            bitField0_ |= 0x00000004;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  countryCode_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                case 18: {
+                  zipCode_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                case 26: {
+                  distance_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object countryCode_ = "";
+        /**
+         * <pre>
+         * Required. Queries on phone number country code.
+         * </pre>
+         *
+         * <code>string country_code = 1 [json_name = "countryCode"];</code>
+         * @return The countryCode.
+         */
+        public java.lang.String getCountryCode() {
+          java.lang.Object ref = countryCode_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            countryCode_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Required. Queries on phone number country code.
+         * </pre>
+         *
+         * <code>string country_code = 1 [json_name = "countryCode"];</code>
+         * @return The bytes for countryCode.
+         */
+        public com.google.protobuf.ByteString
+            getCountryCodeBytes() {
+          java.lang.Object ref = countryCode_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            countryCode_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Required. Queries on phone number country code.
+         * </pre>
+         *
+         * <code>string country_code = 1 [json_name = "countryCode"];</code>
+         * @param value The countryCode to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCountryCode(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          countryCode_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Queries on phone number country code.
+         * </pre>
+         *
+         * <code>string country_code = 1 [json_name = "countryCode"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCountryCode() {
+          countryCode_ = getDefaultInstance().getCountryCode();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Queries on phone number country code.
+         * </pre>
+         *
+         * <code>string country_code = 1 [json_name = "countryCode"];</code>
+         * @param value The bytes for countryCode to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCountryCodeBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          countryCode_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object zipCode_ = "";
+        /**
+         * <pre>
+         * Required. Queries where phone location is within distance of zipcode.
+         * </pre>
+         *
+         * <code>string zip_code = 2 [json_name = "zipCode"];</code>
+         * @return The zipCode.
+         */
+        public java.lang.String getZipCode() {
+          java.lang.Object ref = zipCode_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            zipCode_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Required. Queries where phone location is within distance of zipcode.
+         * </pre>
+         *
+         * <code>string zip_code = 2 [json_name = "zipCode"];</code>
+         * @return The bytes for zipCode.
+         */
+        public com.google.protobuf.ByteString
+            getZipCodeBytes() {
+          java.lang.Object ref = zipCode_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            zipCode_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Required. Queries where phone location is within distance of zipcode.
+         * </pre>
+         *
+         * <code>string zip_code = 2 [json_name = "zipCode"];</code>
+         * @param value The zipCode to set.
+         * @return This builder for chaining.
+         */
+        public Builder setZipCode(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          zipCode_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Queries where phone location is within distance of zipcode.
+         * </pre>
+         *
+         * <code>string zip_code = 2 [json_name = "zipCode"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearZipCode() {
+          zipCode_ = getDefaultInstance().getZipCode();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Queries where phone location is within distance of zipcode.
+         * </pre>
+         *
+         * <code>string zip_code = 2 [json_name = "zipCode"];</code>
+         * @param value The bytes for zipCode to set.
+         * @return This builder for chaining.
+         */
+        public Builder setZipCodeBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          zipCode_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object distance_ = "";
+        /**
+         * <pre>
+         * Required. Queries where phone location is within distance (km or mi) of zipcode. For example: 100km.
+         * </pre>
+         *
+         * <code>string distance = 3 [json_name = "distance"];</code>
+         * @return The distance.
+         */
+        public java.lang.String getDistance() {
+          java.lang.Object ref = distance_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            distance_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Required. Queries where phone location is within distance (km or mi) of zipcode. For example: 100km.
+         * </pre>
+         *
+         * <code>string distance = 3 [json_name = "distance"];</code>
+         * @return The bytes for distance.
+         */
+        public com.google.protobuf.ByteString
+            getDistanceBytes() {
+          java.lang.Object ref = distance_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            distance_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Required. Queries where phone location is within distance (km or mi) of zipcode. For example: 100km.
+         * </pre>
+         *
+         * <code>string distance = 3 [json_name = "distance"];</code>
+         * @param value The distance to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDistance(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          distance_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Queries where phone location is within distance (km or mi) of zipcode. For example: 100km.
+         * </pre>
+         *
+         * <code>string distance = 3 [json_name = "distance"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDistance() {
+          distance_ = getDefaultInstance().getDistance();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Queries where phone location is within distance (km or mi) of zipcode. For example: 100km.
+         * </pre>
+         *
+         * <code>string distance = 3 [json_name = "distance"];</code>
+         * @param value The bytes for distance to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDistanceBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          distance_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity)
+      }
+
+      // @@protoc_insertion_point(class_scope:api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity)
+      private static final com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity();
+      }
+
+      public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<ZipCodeProximity>
+          PARSER = new com.google.protobuf.AbstractParser<ZipCodeProximity>() {
+        @java.lang.Override
+        public ZipCodeProximity parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<ZipCodeProximity> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ZipCodeProximity> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int ZIP_CODE_PROXIMITY_FIELD_NUMBER = 1;
+    private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity zipCodeProximity_;
+    /**
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity zip_code_proximity = 1 [json_name = "zipCodeProximity"];</code>
+     * @return Whether the zipCodeProximity field is set.
+     */
+    @java.lang.Override
+    public boolean hasZipCodeProximity() {
+      return zipCodeProximity_ != null;
+    }
+    /**
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity zip_code_proximity = 1 [json_name = "zipCodeProximity"];</code>
+     * @return The zipCodeProximity.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity getZipCodeProximity() {
+      return zipCodeProximity_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity.getDefaultInstance() : zipCodeProximity_;
+    }
+    /**
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity zip_code_proximity = 1 [json_name = "zipCodeProximity"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximityOrBuilder getZipCodeProximityOrBuilder() {
+      return zipCodeProximity_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity.getDefaultInstance() : zipCodeProximity_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (zipCodeProximity_ != null) {
+        output.writeMessage(1, getZipCodeProximity());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (zipCodeProximity_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getZipCodeProximity());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location other = (com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location) obj;
+
+      if (hasZipCodeProximity() != other.hasZipCodeProximity()) return false;
+      if (hasZipCodeProximity()) {
+        if (!getZipCodeProximity()
+            .equals(other.getZipCodeProximity())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasZipCodeProximity()) {
+        hash = (37 * hash) + ZIP_CODE_PROXIMITY_FIELD_NUMBER;
+        hash = (53 * hash) + getZipCodeProximity().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Location defines a query on the phone location.
+     * </pre>
+     *
+     * Protobuf type {@code api.v1alpha1.vanalytics.SearchQuery.Location}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v1alpha1.vanalytics.SearchQuery.Location)
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.LocationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Location_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Location_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        zipCodeProximity_ = null;
+        if (zipCodeProximityBuilder_ != null) {
+          zipCodeProximityBuilder_.dispose();
+          zipCodeProximityBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_SearchQuery_Location_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location build() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location buildPartial() {
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.zipCodeProximity_ = zipCodeProximityBuilder_ == null
+              ? zipCodeProximity_
+              : zipCodeProximityBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location) {
+          return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location other) {
+        if (other == com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.getDefaultInstance()) return this;
+        if (other.hasZipCodeProximity()) {
+          mergeZipCodeProximity(other.getZipCodeProximity());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getZipCodeProximityFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity zipCodeProximity_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximityOrBuilder> zipCodeProximityBuilder_;
+      /**
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity zip_code_proximity = 1 [json_name = "zipCodeProximity"];</code>
+       * @return Whether the zipCodeProximity field is set.
+       */
+      public boolean hasZipCodeProximity() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity zip_code_proximity = 1 [json_name = "zipCodeProximity"];</code>
+       * @return The zipCodeProximity.
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity getZipCodeProximity() {
+        if (zipCodeProximityBuilder_ == null) {
+          return zipCodeProximity_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity.getDefaultInstance() : zipCodeProximity_;
+        } else {
+          return zipCodeProximityBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity zip_code_proximity = 1 [json_name = "zipCodeProximity"];</code>
+       */
+      public Builder setZipCodeProximity(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity value) {
+        if (zipCodeProximityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          zipCodeProximity_ = value;
+        } else {
+          zipCodeProximityBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity zip_code_proximity = 1 [json_name = "zipCodeProximity"];</code>
+       */
+      public Builder setZipCodeProximity(
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity.Builder builderForValue) {
+        if (zipCodeProximityBuilder_ == null) {
+          zipCodeProximity_ = builderForValue.build();
+        } else {
+          zipCodeProximityBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity zip_code_proximity = 1 [json_name = "zipCodeProximity"];</code>
+       */
+      public Builder mergeZipCodeProximity(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity value) {
+        if (zipCodeProximityBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            zipCodeProximity_ != null &&
+            zipCodeProximity_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity.getDefaultInstance()) {
+            getZipCodeProximityBuilder().mergeFrom(value);
+          } else {
+            zipCodeProximity_ = value;
+          }
+        } else {
+          zipCodeProximityBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity zip_code_proximity = 1 [json_name = "zipCodeProximity"];</code>
+       */
+      public Builder clearZipCodeProximity() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        zipCodeProximity_ = null;
+        if (zipCodeProximityBuilder_ != null) {
+          zipCodeProximityBuilder_.dispose();
+          zipCodeProximityBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity zip_code_proximity = 1 [json_name = "zipCodeProximity"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity.Builder getZipCodeProximityBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getZipCodeProximityFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity zip_code_proximity = 1 [json_name = "zipCodeProximity"];</code>
+       */
+      public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximityOrBuilder getZipCodeProximityOrBuilder() {
+        if (zipCodeProximityBuilder_ != null) {
+          return zipCodeProximityBuilder_.getMessageOrBuilder();
+        } else {
+          return zipCodeProximity_ == null ?
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity.getDefaultInstance() : zipCodeProximity_;
+        }
+      }
+      /**
+       * <code>.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity zip_code_proximity = 1 [json_name = "zipCodeProximity"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximityOrBuilder> 
+          getZipCodeProximityFieldBuilder() {
+        if (zipCodeProximityBuilder_ == null) {
+          zipCodeProximityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximity.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location.ZipCodeProximityOrBuilder>(
+                  getZipCodeProximity(),
+                  getParentForChildren(),
+                  isClean());
+          zipCodeProximity_ = null;
+        }
+        return zipCodeProximityBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v1alpha1.vanalytics.SearchQuery.Location)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v1alpha1.vanalytics.SearchQuery.Location)
+    private static final com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location();
+    }
+
+    public static com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Location>
+        PARSER = new com.google.protobuf.AbstractParser<Location>() {
+      @java.lang.Override
+      public Location parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Location> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Location> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Location getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface AgentCallLogOrBuilder extends
       // @@protoc_insertion_point(interface_extends:api.v1alpha1.vanalytics.SearchQuery.AgentCallLog)
       com.google.protobuf.MessageOrBuilder {
@@ -23395,6 +35086,44 @@ private static final long serialVersionUID = 0L;
     return agentCallLog_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.AgentCallLog.getDefaultInstance() : agentCallLog_;
   }
 
+  public static final int PHONE_FIELD_NUMBER = 11;
+  private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone phone_;
+  /**
+   * <pre>
+   * Optional. Queries on phone.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.SearchQuery.Phone phone = 11 [json_name = "phone"];</code>
+   * @return Whether the phone field is set.
+   */
+  @java.lang.Override
+  public boolean hasPhone() {
+    return phone_ != null;
+  }
+  /**
+   * <pre>
+   * Optional. Queries on phone.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.SearchQuery.Phone phone = 11 [json_name = "phone"];</code>
+   * @return The phone.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone getPhone() {
+    return phone_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone.getDefaultInstance() : phone_;
+  }
+  /**
+   * <pre>
+   * Optional. Queries on phone.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.SearchQuery.Phone phone = 11 [json_name = "phone"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.PhoneOrBuilder getPhoneOrBuilder() {
+    return phone_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone.getDefaultInstance() : phone_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -23438,6 +35167,9 @@ private static final long serialVersionUID = 0L;
     }
     if (agentCallLog_ != null) {
       output.writeMessage(10, getAgentCallLog());
+    }
+    if (phone_ != null) {
+      output.writeMessage(11, getPhone());
     }
     getUnknownFields().writeTo(output);
   }
@@ -23487,6 +35219,10 @@ private static final long serialVersionUID = 0L;
     if (agentCallLog_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getAgentCallLog());
+    }
+    if (phone_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, getPhone());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -23547,6 +35283,11 @@ private static final long serialVersionUID = 0L;
       if (!getAgentCallLog()
           .equals(other.getAgentCallLog())) return false;
     }
+    if (hasPhone() != other.hasPhone()) return false;
+    if (hasPhone()) {
+      if (!getPhone()
+          .equals(other.getPhone())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -23597,6 +35338,10 @@ private static final long serialVersionUID = 0L;
     if (hasAgentCallLog()) {
       hash = (37 * hash) + AGENT_CALL_LOG_FIELD_NUMBER;
       hash = (53 * hash) + getAgentCallLog().hashCode();
+    }
+    if (hasPhone()) {
+      hash = (37 * hash) + PHONE_FIELD_NUMBER;
+      hash = (53 * hash) + getPhone().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -23787,6 +35532,11 @@ private static final long serialVersionUID = 0L;
         agentCallLogBuilder_.dispose();
         agentCallLogBuilder_ = null;
       }
+      phone_ = null;
+      if (phoneBuilder_ != null) {
+        phoneBuilder_.dispose();
+        phoneBuilder_ = null;
+      }
       return this;
     }
 
@@ -23881,6 +35631,11 @@ private static final long serialVersionUID = 0L;
         result.agentCallLog_ = agentCallLogBuilder_ == null
             ? agentCallLog_
             : agentCallLogBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.phone_ = phoneBuilder_ == null
+            ? phone_
+            : phoneBuilder_.build();
       }
     }
 
@@ -24004,6 +35759,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasAgentCallLog()) {
         mergeAgentCallLog(other.getAgentCallLog());
       }
+      if (other.hasPhone()) {
+        mergePhone(other.getPhone());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -24112,6 +35870,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 82
+            case 90: {
+              input.readMessage(
+                  getPhoneFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -25955,6 +37720,161 @@ private static final long serialVersionUID = 0L;
         agentCallLog_ = null;
       }
       return agentCallLogBuilder_;
+    }
+
+    private com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone phone_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.PhoneOrBuilder> phoneBuilder_;
+    /**
+     * <pre>
+     * Optional. Queries on phone.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Phone phone = 11 [json_name = "phone"];</code>
+     * @return Whether the phone field is set.
+     */
+    public boolean hasPhone() {
+      return ((bitField0_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Phone phone = 11 [json_name = "phone"];</code>
+     * @return The phone.
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone getPhone() {
+      if (phoneBuilder_ == null) {
+        return phone_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone.getDefaultInstance() : phone_;
+      } else {
+        return phoneBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Phone phone = 11 [json_name = "phone"];</code>
+     */
+    public Builder setPhone(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone value) {
+      if (phoneBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        phone_ = value;
+      } else {
+        phoneBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Phone phone = 11 [json_name = "phone"];</code>
+     */
+    public Builder setPhone(
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone.Builder builderForValue) {
+      if (phoneBuilder_ == null) {
+        phone_ = builderForValue.build();
+      } else {
+        phoneBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Phone phone = 11 [json_name = "phone"];</code>
+     */
+    public Builder mergePhone(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone value) {
+      if (phoneBuilder_ == null) {
+        if (((bitField0_ & 0x00000400) != 0) &&
+          phone_ != null &&
+          phone_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone.getDefaultInstance()) {
+          getPhoneBuilder().mergeFrom(value);
+        } else {
+          phone_ = value;
+        }
+      } else {
+        phoneBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Phone phone = 11 [json_name = "phone"];</code>
+     */
+    public Builder clearPhone() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      phone_ = null;
+      if (phoneBuilder_ != null) {
+        phoneBuilder_.dispose();
+        phoneBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Phone phone = 11 [json_name = "phone"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone.Builder getPhoneBuilder() {
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return getPhoneFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Phone phone = 11 [json_name = "phone"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.PhoneOrBuilder getPhoneOrBuilder() {
+      if (phoneBuilder_ != null) {
+        return phoneBuilder_.getMessageOrBuilder();
+      } else {
+        return phone_ == null ?
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone.getDefaultInstance() : phone_;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Queries on phone.
+     * </pre>
+     *
+     * <code>.api.v1alpha1.vanalytics.SearchQuery.Phone phone = 11 [json_name = "phone"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.PhoneOrBuilder> 
+        getPhoneFieldBuilder() {
+      if (phoneBuilder_ == null) {
+        phoneBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.PhoneOrBuilder>(
+                getPhone(),
+                getParentForChildren(),
+                isClean());
+        phone_ = null;
+      }
+      return phoneBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

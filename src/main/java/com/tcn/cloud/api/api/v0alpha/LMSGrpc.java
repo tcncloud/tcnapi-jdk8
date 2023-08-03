@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.57.1)",
     comments = "Source: api/v0alpha/lms.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class LMSGrpc {
 
   private LMSGrpc() {}
 
-  public static final String SERVICE_NAME = "api.v0alpha.LMS";
+  public static final java.lang.String SERVICE_NAME = "api.v0alpha.LMS";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetPublicKeyReq,
@@ -1658,6 +1658,37 @@ public final class LMSGrpc {
     return getUpdateCjsSecureSearchCriteriaMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ElementPK,
+      com.tcn.cloud.api.api.v0alpha.Events> getGetQueuedEventsStatusByElementIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetQueuedEventsStatusByElementId",
+      requestType = com.tcn.cloud.api.api.v0alpha.ElementPK.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.Events.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ElementPK,
+      com.tcn.cloud.api.api.v0alpha.Events> getGetQueuedEventsStatusByElementIdMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ElementPK, com.tcn.cloud.api.api.v0alpha.Events> getGetQueuedEventsStatusByElementIdMethod;
+    if ((getGetQueuedEventsStatusByElementIdMethod = LMSGrpc.getGetQueuedEventsStatusByElementIdMethod) == null) {
+      synchronized (LMSGrpc.class) {
+        if ((getGetQueuedEventsStatusByElementIdMethod = LMSGrpc.getGetQueuedEventsStatusByElementIdMethod) == null) {
+          LMSGrpc.getGetQueuedEventsStatusByElementIdMethod = getGetQueuedEventsStatusByElementIdMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ElementPK, com.tcn.cloud.api.api.v0alpha.Events>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetQueuedEventsStatusByElementId"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ElementPK.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.Events.getDefaultInstance()))
+              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetQueuedEventsStatusByElementId"))
+              .build();
+        }
+      }
+    }
+    return getGetQueuedEventsStatusByElementIdMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -2129,6 +2160,13 @@ public final class LMSGrpc {
     default void updateCjsSecureSearchCriteria(com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCjsSecureSearchCriteriaMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void getQueuedEventsStatusByElementId(com.tcn.cloud.api.api.v0alpha.ElementPK request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Events> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetQueuedEventsStatusByElementIdMethod(), responseObserver);
     }
   }
 
@@ -2636,6 +2674,14 @@ public final class LMSGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateCjsSecureSearchCriteriaMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getQueuedEventsStatusByElementId(com.tcn.cloud.api.api.v0alpha.ElementPK request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Events> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetQueuedEventsStatusByElementIdMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -3083,6 +3129,13 @@ public final class LMSGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateCjsSecureSearchCriteriaMethod(), getCallOptions(), request);
     }
+
+    /**
+     */
+    public com.tcn.cloud.api.api.v0alpha.Events getQueuedEventsStatusByElementId(com.tcn.cloud.api.api.v0alpha.ElementPK request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetQueuedEventsStatusByElementIdMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -3528,6 +3581,14 @@ public final class LMSGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateCjsSecureSearchCriteriaMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Events> getQueuedEventsStatusByElementId(
+        com.tcn.cloud.api.api.v0alpha.ElementPK request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetQueuedEventsStatusByElementIdMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_PUBLIC_KEY = 0;
@@ -3583,6 +3644,7 @@ public final class LMSGrpc {
   private static final int METHODID_GET_CJS_SECURE_SEARCH_CRITERIA = 50;
   private static final int METHODID_CREATE_CJS_SECURE_SEARCH_CRITERIA = 51;
   private static final int METHODID_UPDATE_CJS_SECURE_SEARCH_CRITERIA = 52;
+  private static final int METHODID_GET_QUEUED_EVENTS_STATUS_BY_ELEMENT_ID = 53;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3812,6 +3874,10 @@ public final class LMSGrpc {
         case METHODID_UPDATE_CJS_SECURE_SEARCH_CRITERIA:
           serviceImpl.updateCjsSecureSearchCriteria((com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_GET_QUEUED_EVENTS_STATUS_BY_ELEMENT_ID:
+          serviceImpl.getQueuedEventsStatusByElementId((com.tcn.cloud.api.api.v0alpha.ElementPK) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Events>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -4202,6 +4268,13 @@ public final class LMSGrpc {
               com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria,
               com.google.protobuf.Empty>(
                 service, METHODID_UPDATE_CJS_SECURE_SEARCH_CRITERIA)))
+        .addMethod(
+          getGetQueuedEventsStatusByElementIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ElementPK,
+              com.tcn.cloud.api.api.v0alpha.Events>(
+                service, METHODID_GET_QUEUED_EVENTS_STATUS_BY_ELEMENT_ID)))
         .build();
   }
 
@@ -4228,9 +4301,9 @@ public final class LMSGrpc {
   private static final class LMSMethodDescriptorSupplier
       extends LMSBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    LMSMethodDescriptorSupplier(String methodName) {
+    LMSMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -4303,6 +4376,7 @@ public final class LMSGrpc {
               .addMethod(getGetCjsSecureSearchCriteriaMethod())
               .addMethod(getCreateCjsSecureSearchCriteriaMethod())
               .addMethod(getUpdateCjsSecureSearchCriteriaMethod())
+              .addMethod(getGetQueuedEventsStatusByElementIdMethod())
               .build();
         }
       }

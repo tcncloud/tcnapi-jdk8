@@ -6,4 +6,24 @@ package com.tcn.cloud.api.api.v1alpha1.org.authconnection;
 public interface CreateAuthConnectionResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v1alpha1.org.authconnection.CreateAuthConnectionResponse)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   * The id of the newly created auth connection.
+   * </pre>
+   *
+   * <code>string connection_id = 1 [json_name = "connectionId"];</code>
+   * @return The connectionId.
+   */
+  java.lang.String getConnectionId();
+  /**
+   * <pre>
+   * The id of the newly created auth connection.
+   * </pre>
+   *
+   * <code>string connection_id = 1 [json_name = "connectionId"];</code>
+   * @return The bytes for connectionId.
+   */
+  com.google.protobuf.ByteString
+      getConnectionIdBytes();
 }

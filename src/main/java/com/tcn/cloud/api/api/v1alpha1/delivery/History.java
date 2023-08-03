@@ -20,6 +20,9 @@ private static final long serialVersionUID = 0L;
     deliveryType_ = "";
     error_ = "";
     origin_ = 0;
+    orgId_ = "";
+    messagePayload_ = "";
+    status_ = 0;
   }
 
   @java.lang.Override
@@ -340,6 +343,155 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.OperatorApplications.UNRECOGNIZED : result;
   }
 
+  public static final int ORG_ID_FIELD_NUMBER = 12;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object orgId_ = "";
+  /**
+   * <code>string org_id = 12 [json_name = "orgId"];</code>
+   * @return The orgId.
+   */
+  @java.lang.Override
+  public java.lang.String getOrgId() {
+    java.lang.Object ref = orgId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      orgId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string org_id = 12 [json_name = "orgId"];</code>
+   * @return The bytes for orgId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getOrgIdBytes() {
+    java.lang.Object ref = orgId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      orgId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int MESSAGE_PAYLOAD_FIELD_NUMBER = 13;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object messagePayload_ = "";
+  /**
+   * <pre>
+   * this should only be the first 64 chars of the message_payload
+   * </pre>
+   *
+   * <code>string message_payload = 13 [json_name = "messagePayload"];</code>
+   * @return The messagePayload.
+   */
+  @java.lang.Override
+  public java.lang.String getMessagePayload() {
+    java.lang.Object ref = messagePayload_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      messagePayload_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * this should only be the first 64 chars of the message_payload
+   * </pre>
+   *
+   * <code>string message_payload = 13 [json_name = "messagePayload"];</code>
+   * @return The bytes for messagePayload.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getMessagePayloadBytes() {
+    java.lang.Object ref = messagePayload_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      messagePayload_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int MESSAGE_PAYLOAD_LEN_FIELD_NUMBER = 14;
+  private int messagePayloadLen_ = 0;
+  /**
+   * <pre>
+   * this represents the full actual length of the message_payload from the frontend
+   * </pre>
+   *
+   * <code>int32 message_payload_len = 14 [json_name = "messagePayloadLen"];</code>
+   * @return The messagePayloadLen.
+   */
+  @java.lang.Override
+  public int getMessagePayloadLen() {
+    return messagePayloadLen_;
+  }
+
+  public static final int STATUS_FIELD_NUMBER = 15;
+  private int status_ = 0;
+  /**
+   * <pre>
+   * the status of the delivery
+   * </pre>
+   *
+   * <code>.api.commons.TransferStatus status = 15 [json_name = "status"];</code>
+   * @return The enum numeric value on the wire for status.
+   */
+  @java.lang.Override public int getStatusValue() {
+    return status_;
+  }
+  /**
+   * <pre>
+   * the status of the delivery
+   * </pre>
+   *
+   * <code>.api.commons.TransferStatus status = 15 [json_name = "status"];</code>
+   * @return The status.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.TransferStatus getStatus() {
+    com.tcn.cloud.api.api.commons.TransferStatus result = com.tcn.cloud.api.api.commons.TransferStatus.forNumber(status_);
+    return result == null ? com.tcn.cloud.api.api.commons.TransferStatus.UNRECOGNIZED : result;
+  }
+
+  public static final int IS_INBOUND_FIELD_NUMBER = 16;
+  private boolean isInbound_ = false;
+  /**
+   * <code>bool is_inbound = 16 [json_name = "isInbound"];</code>
+   * @return The isInbound.
+   */
+  @java.lang.Override
+  public boolean getIsInbound() {
+    return isInbound_;
+  }
+
+  public static final int TRANSACTION_SID_FIELD_NUMBER = 17;
+  private long transactionSid_ = 0L;
+  /**
+   * <code>int64 transaction_sid = 17 [json_name = "transactionSid", jstype = JS_STRING];</code>
+   * @return The transactionSid.
+   */
+  @java.lang.Override
+  public long getTransactionSid() {
+    return transactionSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -383,6 +535,24 @@ private static final long serialVersionUID = 0L;
     }
     if (origin_ != com.tcn.cloud.api.api.commons.OperatorApplications.AGENT_APP.getNumber()) {
       output.writeEnum(11, origin_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 12, orgId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(messagePayload_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 13, messagePayload_);
+    }
+    if (messagePayloadLen_ != 0) {
+      output.writeInt32(14, messagePayloadLen_);
+    }
+    if (status_ != com.tcn.cloud.api.api.commons.TransferStatus.TRANSFER_STATUS_WAITING.getNumber()) {
+      output.writeEnum(15, status_);
+    }
+    if (isInbound_ != false) {
+      output.writeBool(16, isInbound_);
+    }
+    if (transactionSid_ != 0L) {
+      output.writeInt64(17, transactionSid_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -430,6 +600,28 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(11, origin_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, orgId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(messagePayload_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, messagePayload_);
+    }
+    if (messagePayloadLen_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(14, messagePayloadLen_);
+    }
+    if (status_ != com.tcn.cloud.api.api.commons.TransferStatus.TRANSFER_STATUS_WAITING.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(15, status_);
+    }
+    if (isInbound_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(16, isInbound_);
+    }
+    if (transactionSid_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(17, transactionSid_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -473,6 +665,17 @@ private static final long serialVersionUID = 0L;
           .equals(other.getTransferComplete())) return false;
     }
     if (origin_ != other.origin_) return false;
+    if (!getOrgId()
+        .equals(other.getOrgId())) return false;
+    if (!getMessagePayload()
+        .equals(other.getMessagePayload())) return false;
+    if (getMessagePayloadLen()
+        != other.getMessagePayloadLen()) return false;
+    if (status_ != other.status_) return false;
+    if (getIsInbound()
+        != other.getIsInbound()) return false;
+    if (getTransactionSid()
+        != other.getTransactionSid()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -513,6 +716,20 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + ORIGIN_FIELD_NUMBER;
     hash = (53 * hash) + origin_;
+    hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getOrgId().hashCode();
+    hash = (37 * hash) + MESSAGE_PAYLOAD_FIELD_NUMBER;
+    hash = (53 * hash) + getMessagePayload().hashCode();
+    hash = (37 * hash) + MESSAGE_PAYLOAD_LEN_FIELD_NUMBER;
+    hash = (53 * hash) + getMessagePayloadLen();
+    hash = (37 * hash) + STATUS_FIELD_NUMBER;
+    hash = (53 * hash) + status_;
+    hash = (37 * hash) + IS_INBOUND_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIsInbound());
+    hash = (37 * hash) + TRANSACTION_SID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getTransactionSid());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -666,6 +883,12 @@ private static final long serialVersionUID = 0L;
         transferCompleteBuilder_ = null;
       }
       origin_ = 0;
+      orgId_ = "";
+      messagePayload_ = "";
+      messagePayloadLen_ = 0;
+      status_ = 0;
+      isInbound_ = false;
+      transactionSid_ = 0L;
       return this;
     }
 
@@ -734,6 +957,24 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.origin_ = origin_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.orgId_ = orgId_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.messagePayload_ = messagePayload_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.messagePayloadLen_ = messagePayloadLen_;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.isInbound_ = isInbound_;
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.transactionSid_ = transactionSid_;
       }
     }
 
@@ -817,6 +1058,28 @@ private static final long serialVersionUID = 0L;
       if (other.origin_ != 0) {
         setOriginValue(other.getOriginValue());
       }
+      if (!other.getOrgId().isEmpty()) {
+        orgId_ = other.orgId_;
+        bitField0_ |= 0x00000400;
+        onChanged();
+      }
+      if (!other.getMessagePayload().isEmpty()) {
+        messagePayload_ = other.messagePayload_;
+        bitField0_ |= 0x00000800;
+        onChanged();
+      }
+      if (other.getMessagePayloadLen() != 0) {
+        setMessagePayloadLen(other.getMessagePayloadLen());
+      }
+      if (other.status_ != 0) {
+        setStatusValue(other.getStatusValue());
+      }
+      if (other.getIsInbound() != false) {
+        setIsInbound(other.getIsInbound());
+      }
+      if (other.getTransactionSid() != 0L) {
+        setTransactionSid(other.getTransactionSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -899,6 +1162,36 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 88
+            case 98: {
+              orgId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 98
+            case 106: {
+              messagePayload_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 106
+            case 112: {
+              messagePayloadLen_ = input.readInt32();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 112
+            case 120: {
+              status_ = input.readEnum();
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 120
+            case 128: {
+              isInbound_ = input.readBool();
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 128
+            case 136: {
+              transactionSid_ = input.readInt64();
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 136
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1782,6 +2075,351 @@ private static final long serialVersionUID = 0L;
     public Builder clearOrigin() {
       bitField0_ = (bitField0_ & ~0x00000200);
       origin_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object orgId_ = "";
+    /**
+     * <code>string org_id = 12 [json_name = "orgId"];</code>
+     * @return The orgId.
+     */
+    public java.lang.String getOrgId() {
+      java.lang.Object ref = orgId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orgId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string org_id = 12 [json_name = "orgId"];</code>
+     * @return The bytes for orgId.
+     */
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      java.lang.Object ref = orgId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orgId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string org_id = 12 [json_name = "orgId"];</code>
+     * @param value The orgId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOrgId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      orgId_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string org_id = 12 [json_name = "orgId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOrgId() {
+      orgId_ = getDefaultInstance().getOrgId();
+      bitField0_ = (bitField0_ & ~0x00000400);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string org_id = 12 [json_name = "orgId"];</code>
+     * @param value The bytes for orgId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      orgId_ = value;
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object messagePayload_ = "";
+    /**
+     * <pre>
+     * this should only be the first 64 chars of the message_payload
+     * </pre>
+     *
+     * <code>string message_payload = 13 [json_name = "messagePayload"];</code>
+     * @return The messagePayload.
+     */
+    public java.lang.String getMessagePayload() {
+      java.lang.Object ref = messagePayload_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        messagePayload_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * this should only be the first 64 chars of the message_payload
+     * </pre>
+     *
+     * <code>string message_payload = 13 [json_name = "messagePayload"];</code>
+     * @return The bytes for messagePayload.
+     */
+    public com.google.protobuf.ByteString
+        getMessagePayloadBytes() {
+      java.lang.Object ref = messagePayload_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        messagePayload_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * this should only be the first 64 chars of the message_payload
+     * </pre>
+     *
+     * <code>string message_payload = 13 [json_name = "messagePayload"];</code>
+     * @param value The messagePayload to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMessagePayload(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      messagePayload_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * this should only be the first 64 chars of the message_payload
+     * </pre>
+     *
+     * <code>string message_payload = 13 [json_name = "messagePayload"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMessagePayload() {
+      messagePayload_ = getDefaultInstance().getMessagePayload();
+      bitField0_ = (bitField0_ & ~0x00000800);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * this should only be the first 64 chars of the message_payload
+     * </pre>
+     *
+     * <code>string message_payload = 13 [json_name = "messagePayload"];</code>
+     * @param value The bytes for messagePayload to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMessagePayloadBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      messagePayload_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+
+    private int messagePayloadLen_ ;
+    /**
+     * <pre>
+     * this represents the full actual length of the message_payload from the frontend
+     * </pre>
+     *
+     * <code>int32 message_payload_len = 14 [json_name = "messagePayloadLen"];</code>
+     * @return The messagePayloadLen.
+     */
+    @java.lang.Override
+    public int getMessagePayloadLen() {
+      return messagePayloadLen_;
+    }
+    /**
+     * <pre>
+     * this represents the full actual length of the message_payload from the frontend
+     * </pre>
+     *
+     * <code>int32 message_payload_len = 14 [json_name = "messagePayloadLen"];</code>
+     * @param value The messagePayloadLen to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMessagePayloadLen(int value) {
+
+      messagePayloadLen_ = value;
+      bitField0_ |= 0x00001000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * this represents the full actual length of the message_payload from the frontend
+     * </pre>
+     *
+     * <code>int32 message_payload_len = 14 [json_name = "messagePayloadLen"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMessagePayloadLen() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      messagePayloadLen_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int status_ = 0;
+    /**
+     * <pre>
+     * the status of the delivery
+     * </pre>
+     *
+     * <code>.api.commons.TransferStatus status = 15 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * the status of the delivery
+     * </pre>
+     *
+     * <code>.api.commons.TransferStatus status = 15 [json_name = "status"];</code>
+     * @param value The enum numeric value on the wire for status to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStatusValue(int value) {
+      status_ = value;
+      bitField0_ |= 0x00002000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the status of the delivery
+     * </pre>
+     *
+     * <code>.api.commons.TransferStatus status = 15 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.TransferStatus getStatus() {
+      com.tcn.cloud.api.api.commons.TransferStatus result = com.tcn.cloud.api.api.commons.TransferStatus.forNumber(status_);
+      return result == null ? com.tcn.cloud.api.api.commons.TransferStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * the status of the delivery
+     * </pre>
+     *
+     * <code>.api.commons.TransferStatus status = 15 [json_name = "status"];</code>
+     * @param value The status to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStatus(com.tcn.cloud.api.api.commons.TransferStatus value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00002000;
+      status_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the status of the delivery
+     * </pre>
+     *
+     * <code>.api.commons.TransferStatus status = 15 [json_name = "status"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearStatus() {
+      bitField0_ = (bitField0_ & ~0x00002000);
+      status_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private boolean isInbound_ ;
+    /**
+     * <code>bool is_inbound = 16 [json_name = "isInbound"];</code>
+     * @return The isInbound.
+     */
+    @java.lang.Override
+    public boolean getIsInbound() {
+      return isInbound_;
+    }
+    /**
+     * <code>bool is_inbound = 16 [json_name = "isInbound"];</code>
+     * @param value The isInbound to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIsInbound(boolean value) {
+
+      isInbound_ = value;
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool is_inbound = 16 [json_name = "isInbound"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIsInbound() {
+      bitField0_ = (bitField0_ & ~0x00004000);
+      isInbound_ = false;
+      onChanged();
+      return this;
+    }
+
+    private long transactionSid_ ;
+    /**
+     * <code>int64 transaction_sid = 17 [json_name = "transactionSid", jstype = JS_STRING];</code>
+     * @return The transactionSid.
+     */
+    @java.lang.Override
+    public long getTransactionSid() {
+      return transactionSid_;
+    }
+    /**
+     * <code>int64 transaction_sid = 17 [json_name = "transactionSid", jstype = JS_STRING];</code>
+     * @param value The transactionSid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTransactionSid(long value) {
+
+      transactionSid_ = value;
+      bitField0_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 transaction_sid = 17 [json_name = "transactionSid", jstype = JS_STRING];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTransactionSid() {
+      bitField0_ = (bitField0_ & ~0x00008000);
+      transactionSid_ = 0L;
       onChanged();
       return this;
     }

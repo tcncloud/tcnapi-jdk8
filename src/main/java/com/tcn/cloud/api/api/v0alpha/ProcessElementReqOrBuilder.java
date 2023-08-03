@@ -18,4 +18,24 @@ public interface ProcessElementReqOrBuilder extends
    */
   com.google.protobuf.ByteString
       getElementIdBytes();
+
+  /**
+   * <pre>
+   * says if it was triggered by a cron or manually
+   * </pre>
+   *
+   * <code>string process_message = 2 [json_name = "processMessage"];</code>
+   * @return The processMessage.
+   */
+  java.lang.String getProcessMessage();
+  /**
+   * <pre>
+   * says if it was triggered by a cron or manually
+   * </pre>
+   *
+   * <code>string process_message = 2 [json_name = "processMessage"];</code>
+   * @return The bytes for processMessage.
+   */
+  com.google.protobuf.ByteString
+      getProcessMessageBytes();
 }

@@ -85,4 +85,24 @@ public interface UpdateAuthConnectionGroupsRequestOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.org.GroupItemOrBuilder getCustomGroupsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * the connection that will be updated.
+   * </pre>
+   *
+   * <code>string connection_id = 3 [json_name = "connectionId"];</code>
+   * @return The connectionId.
+   */
+  java.lang.String getConnectionId();
+  /**
+   * <pre>
+   * the connection that will be updated.
+   * </pre>
+   *
+   * <code>string connection_id = 3 [json_name = "connectionId"];</code>
+   * @return The bytes for connectionId.
+   */
+  com.google.protobuf.ByteString
+      getConnectionIdBytes();
 }

@@ -10,14 +10,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.57.1)",
     comments = "Source: api/v0alpha/smsapi.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SmsApiGrpc {
 
   private SmsApiGrpc() {}
 
-  public static final String SERVICE_NAME = "api.v0alpha.SmsApi";
+  public static final java.lang.String SERVICE_NAME = "api.v0alpha.SmsApi";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListSmsTemplatesReq,
@@ -6181,9 +6181,9 @@ public final class SmsApiGrpc {
   private static final class SmsApiMethodDescriptorSupplier
       extends SmsApiBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    SmsApiMethodDescriptorSupplier(String methodName) {
+    SmsApiMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

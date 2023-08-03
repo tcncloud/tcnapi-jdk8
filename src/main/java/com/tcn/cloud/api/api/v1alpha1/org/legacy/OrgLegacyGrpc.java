@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.57.1)",
     comments = "Source: api/v1alpha1/org/legacy/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class OrgLegacyGrpc {
 
   private OrgLegacyGrpc() {}
 
-  public static final String SERVICE_NAME = "api.v1alpha1.org.legacy.OrgLegacy";
+  public static final java.lang.String SERVICE_NAME = "api.v1alpha1.org.legacy.OrgLegacy";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.org.legacy.RegisterOrganizationRequest,
@@ -273,9 +273,9 @@ public final class OrgLegacyGrpc {
   private static final class OrgLegacyMethodDescriptorSupplier
       extends OrgLegacyBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    OrgLegacyMethodDescriptorSupplier(String methodName) {
+    OrgLegacyMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

@@ -298,4 +298,31 @@ public interface SearchQueryOrBuilder extends
    * <code>.api.v1alpha1.vanalytics.SearchQuery.AgentCallLog agent_call_log = 10 [json_name = "agentCallLog"];</code>
    */
   com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.AgentCallLogOrBuilder getAgentCallLogOrBuilder();
+
+  /**
+   * <pre>
+   * Optional. Queries on phone.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.SearchQuery.Phone phone = 11 [json_name = "phone"];</code>
+   * @return Whether the phone field is set.
+   */
+  boolean hasPhone();
+  /**
+   * <pre>
+   * Optional. Queries on phone.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.SearchQuery.Phone phone = 11 [json_name = "phone"];</code>
+   * @return The phone.
+   */
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Phone getPhone();
+  /**
+   * <pre>
+   * Optional. Queries on phone.
+   * </pre>
+   *
+   * <code>.api.v1alpha1.vanalytics.SearchQuery.Phone phone = 11 [json_name = "phone"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.PhoneOrBuilder getPhoneOrBuilder();
 }

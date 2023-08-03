@@ -65,22 +65,45 @@ public interface GetInvoiceReqOrBuilder extends
 
   /**
    * <pre>
-   * Optional. the invoice for the organization. If not specified,
-   * will use the proto format as the default
+   * deprecated
    * </pre>
    *
-   * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
+   * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.GetInvoiceReq.format is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=47
    * @return The enum numeric value on the wire for format.
    */
-  int getFormatValue();
+  @java.lang.Deprecated int getFormatValue();
   /**
    * <pre>
-   * Optional. the invoice for the organization. If not specified,
+   * deprecated
+   * </pre>
+   *
+   * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format", deprecated = true];</code>
+   * @deprecated api.v1alpha1.billing.GetInvoiceReq.format is deprecated.
+   *     See api/v1alpha1/billing/entities.proto;l=47
+   * @return The format.
+   */
+  @java.lang.Deprecated com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat getFormat();
+
+  /**
+   * <pre>
+   * Optional. the format the invoice is returned using. If not specified,
    * will use the proto format as the default
    * </pre>
    *
-   * <code>.api.v1alpha1.billing.InvoiceFormat format = 3 [json_name = "format"];</code>
-   * @return The format.
+   * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+   * @return The enum numeric value on the wire for invoiceFormat.
    */
-  com.tcn.cloud.api.api.v1alpha1.billing.InvoiceFormat getFormat();
+  int getInvoiceFormatValue();
+  /**
+   * <pre>
+   * Optional. the format the invoice is returned using. If not specified,
+   * will use the proto format as the default
+   * </pre>
+   *
+   * <code>.api.commons.billing.InvoiceFormat invoice_format = 4 [json_name = "invoiceFormat"];</code>
+   * @return The invoiceFormat.
+   */
+  com.tcn.cloud.api.api.commons.billing.InvoiceFormat getInvoiceFormat();
 }

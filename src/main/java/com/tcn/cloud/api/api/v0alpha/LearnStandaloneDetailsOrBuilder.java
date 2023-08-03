@@ -29,48 +29,76 @@ public interface LearnStandaloneDetailsOrBuilder extends
 
   /**
    * <pre>
-   * markdown content
+   * deprecated
    * </pre>
    *
-   * <code>string content = 2 [json_name = "content"];</code>
+   * <code>string content = 2 [json_name = "content", deprecated = true];</code>
+   * @deprecated api.v0alpha.LearnStandaloneDetails.content is deprecated.
+   *     See api/v0alpha/learn.proto;l=313
    * @return The content.
    */
-  java.lang.String getContent();
+  @java.lang.Deprecated java.lang.String getContent();
   /**
    * <pre>
-   * markdown content
+   * deprecated
    * </pre>
    *
-   * <code>string content = 2 [json_name = "content"];</code>
+   * <code>string content = 2 [json_name = "content", deprecated = true];</code>
+   * @deprecated api.v0alpha.LearnStandaloneDetails.content is deprecated.
+   *     See api/v0alpha/learn.proto;l=313
    * @return The bytes for content.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getContentBytes();
 
   /**
    * <pre>
-   * The last time this learning content was edited.
+   * deprecated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp"];</code>
+   * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
+   * @deprecated api.v0alpha.LearnStandaloneDetails.last_edited_timestamp is deprecated.
+   *     See api/v0alpha/learn.proto;l=315
    * @return Whether the lastEditedTimestamp field is set.
    */
-  boolean hasLastEditedTimestamp();
+  @java.lang.Deprecated boolean hasLastEditedTimestamp();
   /**
    * <pre>
-   * The last time this learning content was edited.
+   * deprecated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp"];</code>
+   * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
+   * @deprecated api.v0alpha.LearnStandaloneDetails.last_edited_timestamp is deprecated.
+   *     See api/v0alpha/learn.proto;l=315
    * @return The lastEditedTimestamp.
    */
-  com.google.protobuf.Timestamp getLastEditedTimestamp();
+  @java.lang.Deprecated com.google.protobuf.Timestamp getLastEditedTimestamp();
   /**
    * <pre>
-   * The last time this learning content was edited.
+   * deprecated
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp"];</code>
+   * <code>.google.protobuf.Timestamp last_edited_timestamp = 3 [json_name = "lastEditedTimestamp", deprecated = true];</code>
    */
-  com.google.protobuf.TimestampOrBuilder getLastEditedTimestampOrBuilder();
+  @java.lang.Deprecated com.google.protobuf.TimestampOrBuilder getLastEditedTimestampOrBuilder();
+
+  /**
+   * <pre>
+   * title of the article
+   * </pre>
+   *
+   * <code>string title = 4 [json_name = "title"];</code>
+   * @return The title.
+   */
+  java.lang.String getTitle();
+  /**
+   * <pre>
+   * title of the article
+   * </pre>
+   *
+   * <code>string title = 4 [json_name = "title"];</code>
+   * @return The bytes for title.
+   */
+  com.google.protobuf.ByteString
+      getTitleBytes();
 }
