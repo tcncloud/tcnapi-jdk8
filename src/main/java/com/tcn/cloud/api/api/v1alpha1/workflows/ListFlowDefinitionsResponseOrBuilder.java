@@ -50,31 +50,4 @@ public interface ListFlowDefinitionsResponseOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.workflows.FlowDefinitionOrBuilder getFlowDefinitionsOrBuilder(
       int index);
-
-  /**
-   * <pre>
-   * The fields to filter
-   * </pre>
-   *
-   * <code>.google.protobuf.FieldMask filter_mask = 2 [json_name = "filterMask"];</code>
-   * @return Whether the filterMask field is set.
-   */
-  boolean hasFilterMask();
-  /**
-   * <pre>
-   * The fields to filter
-   * </pre>
-   *
-   * <code>.google.protobuf.FieldMask filter_mask = 2 [json_name = "filterMask"];</code>
-   * @return The filterMask.
-   */
-  com.google.protobuf.FieldMask getFilterMask();
-  /**
-   * <pre>
-   * The fields to filter
-   * </pre>
-   *
-   * <code>.google.protobuf.FieldMask filter_mask = 2 [json_name = "filterMask"];</code>
-   */
-  com.google.protobuf.FieldMaskOrBuilder getFilterMaskOrBuilder();
 }
