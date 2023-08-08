@@ -2115,6 +2115,10 @@ public enum Permission
    */
   EXECUTE_INTEGRATION_MESSAGES(291),
   /**
+   * <pre>
+   * Control whether a user can resend a campaign.
+   * </pre>
+   *
    * <code>SCHEDULE_RESEND_CAMPAIGN = 292;</code>
    */
   SCHEDULE_RESEND_CAMPAIGN(292),
@@ -4240,6 +4244,10 @@ public enum Permission
    */
   public static final int EXECUTE_INTEGRATION_MESSAGES_VALUE = 291;
   /**
+   * <pre>
+   * Control whether a user can resend a campaign.
+   * </pre>
+   *
    * <code>SCHEDULE_RESEND_CAMPAIGN = 292;</code>
    */
   public static final int SCHEDULE_RESEND_CAMPAIGN_VALUE = 292;
