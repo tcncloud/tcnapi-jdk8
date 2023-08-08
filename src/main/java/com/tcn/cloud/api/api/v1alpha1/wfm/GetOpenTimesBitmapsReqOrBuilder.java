@@ -83,21 +83,20 @@ public interface GetOpenTimesBitmapsReqOrBuilder extends
 
   /**
    * <pre>
-   * Indicates that only the weekmaps of the patterns will be used to generate the bitmaps.
+   * Indicates the type of bitmaps to generate.
    * </pre>
    *
-   * <code>bool only_weekmaps = 5 [json_name = "onlyWeekmaps"];</code>
-   * @return The onlyWeekmaps.
+   * <code>.api.commons.BitmapType bitmap_type = 5 [json_name = "bitmapType"];</code>
+   * @return The enum numeric value on the wire for bitmapType.
    */
-  boolean getOnlyWeekmaps();
-
+  int getBitmapTypeValue();
   /**
    * <pre>
-   * Indicates that only the calendar items of the patterns will be used to generate the bitmaps.
+   * Indicates the type of bitmaps to generate.
    * </pre>
    *
-   * <code>bool only_calendar_items = 6 [json_name = "onlyCalendarItems"];</code>
-   * @return The onlyCalendarItems.
+   * <code>.api.commons.BitmapType bitmap_type = 5 [json_name = "bitmapType"];</code>
+   * @return The bitmapType.
    */
-  boolean getOnlyCalendarItems();
+  com.tcn.cloud.api.api.commons.BitmapType getBitmapType();
 }

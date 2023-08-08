@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private GetAvailabilityBitmapsReq() {
     entitiesToCheck_ = java.util.Collections.emptyList();
+    bitmapType_ = 0;
   }
 
   @java.lang.Override
@@ -177,34 +178,30 @@ private static final long serialVersionUID = 0L;
     return datetimeRange_ == null ? com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : datetimeRange_;
   }
 
-  public static final int ONLY_WEEKMAPS_FIELD_NUMBER = 5;
-  private boolean onlyWeekmaps_ = false;
+  public static final int BITMAP_TYPE_FIELD_NUMBER = 5;
+  private int bitmapType_ = 0;
   /**
    * <pre>
-   * Indicates that only the weekmaps of the patterns will be used to generate the bitmaps.
+   * Indicates the type of bitmaps to generate.
    * </pre>
    *
-   * <code>bool only_weekmaps = 5 [json_name = "onlyWeekmaps"];</code>
-   * @return The onlyWeekmaps.
+   * <code>.api.commons.BitmapType bitmap_type = 5 [json_name = "bitmapType"];</code>
+   * @return The enum numeric value on the wire for bitmapType.
    */
-  @java.lang.Override
-  public boolean getOnlyWeekmaps() {
-    return onlyWeekmaps_;
+  @java.lang.Override public int getBitmapTypeValue() {
+    return bitmapType_;
   }
-
-  public static final int ONLY_CALENDAR_ITEMS_FIELD_NUMBER = 6;
-  private boolean onlyCalendarItems_ = false;
   /**
    * <pre>
-   * Indicates that only the calendar items of the patterns will be used to generate the bitmaps.
+   * Indicates the type of bitmaps to generate.
    * </pre>
    *
-   * <code>bool only_calendar_items = 6 [json_name = "onlyCalendarItems"];</code>
-   * @return The onlyCalendarItems.
+   * <code>.api.commons.BitmapType bitmap_type = 5 [json_name = "bitmapType"];</code>
+   * @return The bitmapType.
    */
-  @java.lang.Override
-  public boolean getOnlyCalendarItems() {
-    return onlyCalendarItems_;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.BitmapType getBitmapType() {
+    com.tcn.cloud.api.api.commons.BitmapType result = com.tcn.cloud.api.api.commons.BitmapType.forNumber(bitmapType_);
+    return result == null ? com.tcn.cloud.api.api.commons.BitmapType.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -233,11 +230,8 @@ private static final long serialVersionUID = 0L;
     if (datetimeRange_ != null) {
       output.writeMessage(4, getDatetimeRange());
     }
-    if (onlyWeekmaps_ != false) {
-      output.writeBool(5, onlyWeekmaps_);
-    }
-    if (onlyCalendarItems_ != false) {
-      output.writeBool(6, onlyCalendarItems_);
+    if (bitmapType_ != com.tcn.cloud.api.api.commons.BitmapType.COMPLETE.getNumber()) {
+      output.writeEnum(5, bitmapType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -264,13 +258,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getDatetimeRange());
     }
-    if (onlyWeekmaps_ != false) {
+    if (bitmapType_ != com.tcn.cloud.api.api.commons.BitmapType.COMPLETE.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(5, onlyWeekmaps_);
-    }
-    if (onlyCalendarItems_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(6, onlyCalendarItems_);
+        .computeEnumSize(5, bitmapType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -298,10 +288,7 @@ private static final long serialVersionUID = 0L;
       if (!getDatetimeRange()
           .equals(other.getDatetimeRange())) return false;
     }
-    if (getOnlyWeekmaps()
-        != other.getOnlyWeekmaps()) return false;
-    if (getOnlyCalendarItems()
-        != other.getOnlyCalendarItems()) return false;
+    if (bitmapType_ != other.bitmapType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -327,12 +314,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DATETIME_RANGE_FIELD_NUMBER;
       hash = (53 * hash) + getDatetimeRange().hashCode();
     }
-    hash = (37 * hash) + ONLY_WEEKMAPS_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getOnlyWeekmaps());
-    hash = (37 * hash) + ONLY_CALENDAR_ITEMS_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getOnlyCalendarItems());
+    hash = (37 * hash) + BITMAP_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + bitmapType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -482,8 +465,7 @@ private static final long serialVersionUID = 0L;
         datetimeRangeBuilder_.dispose();
         datetimeRangeBuilder_ = null;
       }
-      onlyWeekmaps_ = false;
-      onlyCalendarItems_ = false;
+      bitmapType_ = 0;
       return this;
     }
 
@@ -542,10 +524,7 @@ private static final long serialVersionUID = 0L;
             : datetimeRangeBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.onlyWeekmaps_ = onlyWeekmaps_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.onlyCalendarItems_ = onlyCalendarItems_;
+        result.bitmapType_ = bitmapType_;
       }
     }
 
@@ -628,11 +607,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasDatetimeRange()) {
         mergeDatetimeRange(other.getDatetimeRange());
       }
-      if (other.getOnlyWeekmaps() != false) {
-        setOnlyWeekmaps(other.getOnlyWeekmaps());
-      }
-      if (other.getOnlyCalendarItems() != false) {
-        setOnlyCalendarItems(other.getOnlyCalendarItems());
+      if (other.bitmapType_ != 0) {
+        setBitmapTypeValue(other.getBitmapTypeValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -691,15 +667,10 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 34
             case 40: {
-              onlyWeekmaps_ = input.readBool();
+              bitmapType_ = input.readEnum();
               bitField0_ |= 0x00000010;
               break;
             } // case 40
-            case 48: {
-              onlyCalendarItems_ = input.readBool();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1290,90 +1261,75 @@ private static final long serialVersionUID = 0L;
       return datetimeRangeBuilder_;
     }
 
-    private boolean onlyWeekmaps_ ;
+    private int bitmapType_ = 0;
     /**
      * <pre>
-     * Indicates that only the weekmaps of the patterns will be used to generate the bitmaps.
+     * Indicates the type of bitmaps to generate.
      * </pre>
      *
-     * <code>bool only_weekmaps = 5 [json_name = "onlyWeekmaps"];</code>
-     * @return The onlyWeekmaps.
+     * <code>.api.commons.BitmapType bitmap_type = 5 [json_name = "bitmapType"];</code>
+     * @return The enum numeric value on the wire for bitmapType.
      */
-    @java.lang.Override
-    public boolean getOnlyWeekmaps() {
-      return onlyWeekmaps_;
+    @java.lang.Override public int getBitmapTypeValue() {
+      return bitmapType_;
     }
     /**
      * <pre>
-     * Indicates that only the weekmaps of the patterns will be used to generate the bitmaps.
+     * Indicates the type of bitmaps to generate.
      * </pre>
      *
-     * <code>bool only_weekmaps = 5 [json_name = "onlyWeekmaps"];</code>
-     * @param value The onlyWeekmaps to set.
+     * <code>.api.commons.BitmapType bitmap_type = 5 [json_name = "bitmapType"];</code>
+     * @param value The enum numeric value on the wire for bitmapType to set.
      * @return This builder for chaining.
      */
-    public Builder setOnlyWeekmaps(boolean value) {
-
-      onlyWeekmaps_ = value;
+    public Builder setBitmapTypeValue(int value) {
+      bitmapType_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Indicates that only the weekmaps of the patterns will be used to generate the bitmaps.
+     * Indicates the type of bitmaps to generate.
      * </pre>
      *
-     * <code>bool only_weekmaps = 5 [json_name = "onlyWeekmaps"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearOnlyWeekmaps() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      onlyWeekmaps_ = false;
-      onChanged();
-      return this;
-    }
-
-    private boolean onlyCalendarItems_ ;
-    /**
-     * <pre>
-     * Indicates that only the calendar items of the patterns will be used to generate the bitmaps.
-     * </pre>
-     *
-     * <code>bool only_calendar_items = 6 [json_name = "onlyCalendarItems"];</code>
-     * @return The onlyCalendarItems.
+     * <code>.api.commons.BitmapType bitmap_type = 5 [json_name = "bitmapType"];</code>
+     * @return The bitmapType.
      */
     @java.lang.Override
-    public boolean getOnlyCalendarItems() {
-      return onlyCalendarItems_;
+    public com.tcn.cloud.api.api.commons.BitmapType getBitmapType() {
+      com.tcn.cloud.api.api.commons.BitmapType result = com.tcn.cloud.api.api.commons.BitmapType.forNumber(bitmapType_);
+      return result == null ? com.tcn.cloud.api.api.commons.BitmapType.UNRECOGNIZED : result;
     }
     /**
      * <pre>
-     * Indicates that only the calendar items of the patterns will be used to generate the bitmaps.
+     * Indicates the type of bitmaps to generate.
      * </pre>
      *
-     * <code>bool only_calendar_items = 6 [json_name = "onlyCalendarItems"];</code>
-     * @param value The onlyCalendarItems to set.
+     * <code>.api.commons.BitmapType bitmap_type = 5 [json_name = "bitmapType"];</code>
+     * @param value The bitmapType to set.
      * @return This builder for chaining.
      */
-    public Builder setOnlyCalendarItems(boolean value) {
-
-      onlyCalendarItems_ = value;
-      bitField0_ |= 0x00000020;
+    public Builder setBitmapType(com.tcn.cloud.api.api.commons.BitmapType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000010;
+      bitmapType_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Indicates that only the calendar items of the patterns will be used to generate the bitmaps.
+     * Indicates the type of bitmaps to generate.
      * </pre>
      *
-     * <code>bool only_calendar_items = 6 [json_name = "onlyCalendarItems"];</code>
+     * <code>.api.commons.BitmapType bitmap_type = 5 [json_name = "bitmapType"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearOnlyCalendarItems() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      onlyCalendarItems_ = false;
+    public Builder clearBitmapType() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      bitmapType_ = 0;
       onChanged();
       return this;
     }

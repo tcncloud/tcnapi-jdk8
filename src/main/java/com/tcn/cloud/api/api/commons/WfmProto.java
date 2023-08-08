@@ -228,10 +228,12 @@ public final class WfmProto {
       "+\n\'SHIFT_INSTANCES_AND_PERFORMANCE_METRI" +
       "CS\020\002*(\n\014ScheduleType\022\t\n\005DRAFT\020\000\022\r\n\tPUBLI" +
       "SHED\020\001*7\n\024SchedulingTargetType\022\014\n\010COVERA" +
-      "GE\020\000\022\021\n\rSERVICE_LEVEL\020\001Bv\n\035com.tcn.cloud" +
-      ".api.api.commonsB\010WfmProtoP\001\242\002\003ACX\252\002\013Api" +
-      ".Commons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPB" +
-      "Metadata\352\002\014Api::Commonsb\006proto3"
+      "GE\020\000\022\021\n\rSERVICE_LEVEL\020\001*F\n\nBitmapType\022\014\n" +
+      "\010COMPLETE\020\000\022\021\n\rONLY_WEEKMAPS\020\001\022\027\n\023ONLY_C" +
+      "ALENDAR_ITEMS\020\002Bv\n\035com.tcn.cloud.api.api" +
+      ".commonsB\010WfmProtoP\001\242\002\003ACX\252\002\013Api.Commons" +
+      "\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetadata" +
+      "\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
