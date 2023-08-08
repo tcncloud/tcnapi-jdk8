@@ -4867,6 +4867,9 @@ public final class WFMGrpc {
      * <pre>
      * Gets the inherited, own, and resulting bitmaps for the open times patterns of &#64;node_to_check for &#64;schedule_scenario_sid and the org sending the request.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;node_to_check.
+     * If &#64;only_weekmaps is set to true, the bitmaps will be generated only using weekmaps.
+     * If &#64;only_calendar_items is set to true, the birmaps will be generated only using calendar items.
+     * Both &#64;only_weekmaps and &#64;only_calendar_items must be set to false in order to generate the effective bitmaps for the &#64;entities_to_check.
      * The bitmaps will be generated for the span of &#64;datetime_range.
      * Required permissions:
      *   NONE
@@ -4941,6 +4944,9 @@ public final class WFMGrpc {
      * &#64;entities_to_check must have the entity_type field set with a wfm agent, agent group or a type of node.
      * If an availability bitmap is requested for an agent group, the bitmaps for all of it's member agents will be returned instead.
      * The bitmaps will be generated for the span of &#64;datetime_range.
+     * If &#64;only_weekmaps is set to true, the bitmaps will be generated only using weekmaps.
+     * If &#64;only_calendar_items is set to true, the birmaps will be generated only using calendar items.
+     * Both &#64;only_weekmaps and &#64;only_calendar_items must be set to false in order to generate the effective bitmaps for the &#64;entities_to_check.
      * Required permissions:
      *   NONE
      * Errors:
@@ -6963,6 +6969,9 @@ public final class WFMGrpc {
      * <pre>
      * Gets the inherited, own, and resulting bitmaps for the open times patterns of &#64;node_to_check for &#64;schedule_scenario_sid and the org sending the request.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;node_to_check.
+     * If &#64;only_weekmaps is set to true, the bitmaps will be generated only using weekmaps.
+     * If &#64;only_calendar_items is set to true, the birmaps will be generated only using calendar items.
+     * Both &#64;only_weekmaps and &#64;only_calendar_items must be set to false in order to generate the effective bitmaps for the &#64;entities_to_check.
      * The bitmaps will be generated for the span of &#64;datetime_range.
      * Required permissions:
      *   NONE
@@ -7041,6 +7050,9 @@ public final class WFMGrpc {
      * &#64;entities_to_check must have the entity_type field set with a wfm agent, agent group or a type of node.
      * If an availability bitmap is requested for an agent group, the bitmaps for all of it's member agents will be returned instead.
      * The bitmaps will be generated for the span of &#64;datetime_range.
+     * If &#64;only_weekmaps is set to true, the bitmaps will be generated only using weekmaps.
+     * If &#64;only_calendar_items is set to true, the birmaps will be generated only using calendar items.
+     * Both &#64;only_weekmaps and &#64;only_calendar_items must be set to false in order to generate the effective bitmaps for the &#64;entities_to_check.
      * Required permissions:
      *   NONE
      * Errors:
@@ -9015,6 +9027,9 @@ public final class WFMGrpc {
      * <pre>
      * Gets the inherited, own, and resulting bitmaps for the open times patterns of &#64;node_to_check for &#64;schedule_scenario_sid and the org sending the request.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;node_to_check.
+     * If &#64;only_weekmaps is set to true, the bitmaps will be generated only using weekmaps.
+     * If &#64;only_calendar_items is set to true, the birmaps will be generated only using calendar items.
+     * Both &#64;only_weekmaps and &#64;only_calendar_items must be set to false in order to generate the effective bitmaps for the &#64;entities_to_check.
      * The bitmaps will be generated for the span of &#64;datetime_range.
      * Required permissions:
      *   NONE
@@ -9089,6 +9104,9 @@ public final class WFMGrpc {
      * &#64;entities_to_check must have the entity_type field set with a wfm agent, agent group or a type of node.
      * If an availability bitmap is requested for an agent group, the bitmaps for all of it's member agents will be returned instead.
      * The bitmaps will be generated for the span of &#64;datetime_range.
+     * If &#64;only_weekmaps is set to true, the bitmaps will be generated only using weekmaps.
+     * If &#64;only_calendar_items is set to true, the birmaps will be generated only using calendar items.
+     * Both &#64;only_weekmaps and &#64;only_calendar_items must be set to false in order to generate the effective bitmaps for the &#64;entities_to_check.
      * Required permissions:
      *   NONE
      * Errors:
@@ -11001,6 +11019,9 @@ public final class WFMGrpc {
      * <pre>
      * Gets the inherited, own, and resulting bitmaps for the open times patterns of &#64;node_to_check for &#64;schedule_scenario_sid and the org sending the request.
      * The &#64;schedule_scenario_sid must match the scenario of the &#64;node_to_check.
+     * If &#64;only_weekmaps is set to true, the bitmaps will be generated only using weekmaps.
+     * If &#64;only_calendar_items is set to true, the birmaps will be generated only using calendar items.
+     * Both &#64;only_weekmaps and &#64;only_calendar_items must be set to false in order to generate the effective bitmaps for the &#64;entities_to_check.
      * The bitmaps will be generated for the span of &#64;datetime_range.
      * Required permissions:
      *   NONE
@@ -11079,6 +11100,9 @@ public final class WFMGrpc {
      * &#64;entities_to_check must have the entity_type field set with a wfm agent, agent group or a type of node.
      * If an availability bitmap is requested for an agent group, the bitmaps for all of it's member agents will be returned instead.
      * The bitmaps will be generated for the span of &#64;datetime_range.
+     * If &#64;only_weekmaps is set to true, the bitmaps will be generated only using weekmaps.
+     * If &#64;only_calendar_items is set to true, the birmaps will be generated only using calendar items.
+     * Both &#64;only_weekmaps and &#64;only_calendar_items must be set to false in order to generate the effective bitmaps for the &#64;entities_to_check.
      * Required permissions:
      *   NONE
      * Errors:

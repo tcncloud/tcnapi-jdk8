@@ -148,6 +148,36 @@ private static final long serialVersionUID = 0L;
     return datetimeRange_ == null ? com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : datetimeRange_;
   }
 
+  public static final int ONLY_WEEKMAPS_FIELD_NUMBER = 5;
+  private boolean onlyWeekmaps_ = false;
+  /**
+   * <pre>
+   * Indicates that only the weekmaps of the patterns will be used to generate the bitmaps.
+   * </pre>
+   *
+   * <code>bool only_weekmaps = 5 [json_name = "onlyWeekmaps"];</code>
+   * @return The onlyWeekmaps.
+   */
+  @java.lang.Override
+  public boolean getOnlyWeekmaps() {
+    return onlyWeekmaps_;
+  }
+
+  public static final int ONLY_CALENDAR_ITEMS_FIELD_NUMBER = 6;
+  private boolean onlyCalendarItems_ = false;
+  /**
+   * <pre>
+   * Indicates that only the calendar items of the patterns will be used to generate the bitmaps.
+   * </pre>
+   *
+   * <code>bool only_calendar_items = 6 [json_name = "onlyCalendarItems"];</code>
+   * @return The onlyCalendarItems.
+   */
+  @java.lang.Override
+  public boolean getOnlyCalendarItems() {
+    return onlyCalendarItems_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -174,6 +204,12 @@ private static final long serialVersionUID = 0L;
     if (datetimeRange_ != null) {
       output.writeMessage(4, getDatetimeRange());
     }
+    if (onlyWeekmaps_ != false) {
+      output.writeBool(5, onlyWeekmaps_);
+    }
+    if (onlyCalendarItems_ != false) {
+      output.writeBool(6, onlyCalendarItems_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -198,6 +234,14 @@ private static final long serialVersionUID = 0L;
     if (datetimeRange_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getDatetimeRange());
+    }
+    if (onlyWeekmaps_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(5, onlyWeekmaps_);
+    }
+    if (onlyCalendarItems_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(6, onlyCalendarItems_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -228,6 +272,10 @@ private static final long serialVersionUID = 0L;
       if (!getDatetimeRange()
           .equals(other.getDatetimeRange())) return false;
     }
+    if (getOnlyWeekmaps()
+        != other.getOnlyWeekmaps()) return false;
+    if (getOnlyCalendarItems()
+        != other.getOnlyCalendarItems()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -253,6 +301,12 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DATETIME_RANGE_FIELD_NUMBER;
       hash = (53 * hash) + getDatetimeRange().hashCode();
     }
+    hash = (37 * hash) + ONLY_WEEKMAPS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getOnlyWeekmaps());
+    hash = (37 * hash) + ONLY_CALENDAR_ITEMS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getOnlyCalendarItems());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -400,6 +454,8 @@ private static final long serialVersionUID = 0L;
         datetimeRangeBuilder_.dispose();
         datetimeRangeBuilder_ = null;
       }
+      onlyWeekmaps_ = false;
+      onlyCalendarItems_ = false;
       return this;
     }
 
@@ -448,6 +504,12 @@ private static final long serialVersionUID = 0L;
         result.datetimeRange_ = datetimeRangeBuilder_ == null
             ? datetimeRange_
             : datetimeRangeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.onlyWeekmaps_ = onlyWeekmaps_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.onlyCalendarItems_ = onlyCalendarItems_;
       }
     }
 
@@ -507,6 +569,12 @@ private static final long serialVersionUID = 0L;
       if (other.hasDatetimeRange()) {
         mergeDatetimeRange(other.getDatetimeRange());
       }
+      if (other.getOnlyWeekmaps() != false) {
+        setOnlyWeekmaps(other.getOnlyWeekmaps());
+      }
+      if (other.getOnlyCalendarItems() != false) {
+        setOnlyCalendarItems(other.getOnlyCalendarItems());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -557,6 +625,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 40: {
+              onlyWeekmaps_ = input.readBool();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
+            case 48: {
+              onlyCalendarItems_ = input.readBool();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -970,6 +1048,94 @@ private static final long serialVersionUID = 0L;
         datetimeRange_ = null;
       }
       return datetimeRangeBuilder_;
+    }
+
+    private boolean onlyWeekmaps_ ;
+    /**
+     * <pre>
+     * Indicates that only the weekmaps of the patterns will be used to generate the bitmaps.
+     * </pre>
+     *
+     * <code>bool only_weekmaps = 5 [json_name = "onlyWeekmaps"];</code>
+     * @return The onlyWeekmaps.
+     */
+    @java.lang.Override
+    public boolean getOnlyWeekmaps() {
+      return onlyWeekmaps_;
+    }
+    /**
+     * <pre>
+     * Indicates that only the weekmaps of the patterns will be used to generate the bitmaps.
+     * </pre>
+     *
+     * <code>bool only_weekmaps = 5 [json_name = "onlyWeekmaps"];</code>
+     * @param value The onlyWeekmaps to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOnlyWeekmaps(boolean value) {
+
+      onlyWeekmaps_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Indicates that only the weekmaps of the patterns will be used to generate the bitmaps.
+     * </pre>
+     *
+     * <code>bool only_weekmaps = 5 [json_name = "onlyWeekmaps"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOnlyWeekmaps() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onlyWeekmaps_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean onlyCalendarItems_ ;
+    /**
+     * <pre>
+     * Indicates that only the calendar items of the patterns will be used to generate the bitmaps.
+     * </pre>
+     *
+     * <code>bool only_calendar_items = 6 [json_name = "onlyCalendarItems"];</code>
+     * @return The onlyCalendarItems.
+     */
+    @java.lang.Override
+    public boolean getOnlyCalendarItems() {
+      return onlyCalendarItems_;
+    }
+    /**
+     * <pre>
+     * Indicates that only the calendar items of the patterns will be used to generate the bitmaps.
+     * </pre>
+     *
+     * <code>bool only_calendar_items = 6 [json_name = "onlyCalendarItems"];</code>
+     * @param value The onlyCalendarItems to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOnlyCalendarItems(boolean value) {
+
+      onlyCalendarItems_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Indicates that only the calendar items of the patterns will be used to generate the bitmaps.
+     * </pre>
+     *
+     * <code>bool only_calendar_items = 6 [json_name = "onlyCalendarItems"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOnlyCalendarItems() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onlyCalendarItems_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

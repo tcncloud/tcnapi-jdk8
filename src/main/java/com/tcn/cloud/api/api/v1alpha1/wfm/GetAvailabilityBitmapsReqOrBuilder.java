@@ -102,4 +102,24 @@ public interface GetAvailabilityBitmapsReqOrBuilder extends
    * <code>.api.commons.DatetimeRange datetime_range = 4 [json_name = "datetimeRange"];</code>
    */
   com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getDatetimeRangeOrBuilder();
+
+  /**
+   * <pre>
+   * Indicates that only the weekmaps of the patterns will be used to generate the bitmaps.
+   * </pre>
+   *
+   * <code>bool only_weekmaps = 5 [json_name = "onlyWeekmaps"];</code>
+   * @return The onlyWeekmaps.
+   */
+  boolean getOnlyWeekmaps();
+
+  /**
+   * <pre>
+   * Indicates that only the calendar items of the patterns will be used to generate the bitmaps.
+   * </pre>
+   *
+   * <code>bool only_calendar_items = 6 [json_name = "onlyCalendarItems"];</code>
+   * @return The onlyCalendarItems.
+   */
+  boolean getOnlyCalendarItems();
 }
