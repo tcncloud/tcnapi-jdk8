@@ -104,6 +104,11 @@ public final class AcdProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_AgentState_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_AudioSenderPacket_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_AudioSenderPacket_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -386,37 +391,38 @@ public final class AcdProto {
       "nt\022\027\n\007user_id\030\020 \001(\tR\006userId\022\033\n\tagent_sid" +
       "\030\021 \001(\003R\010agentSid\022&\n\017asm_session_sid\030\022 \001(" +
       "\003R\rasmSessionSid\022$\n\016agent_is_muted\030\023 \001(\010" +
-      "R\014agentIsMuted*\267\001\n\tACDStatus\022\017\n\013ACD_UNKN" +
-      "OWN\020\000\022\035\n\030AGENT_SESSION_LOGGING_IN\020\204 \022\034\n\027" +
-      "AGENT_SESSION_LOGGED_IN\020\216 \022\034\n\027AGENT_SESS" +
-      "ION_COMPLETED\020\350 \022\031\n\024AGENT_SESSION_SUMMED" +
-      "\020\314!\022#\n\036AGENT_SESSION_ACCOUNTINGEXPORT\020\260\"" +
-      "*\244\001\n\025AgentCallLogCallEnded\022\023\n\017AGENT_CANC" +
-      "ELLED\020\000\022\027\n\023CALLER_DISCONNECTED\020\001\022\021\n\rNOT_" +
-      "CONNECTED\020\002\022\016\n\nAGENT_LOST\020\003\022\020\n\014AGENT_HAN" +
-      "GUP\020\004\022\021\n\rCALLER_HANGUP\020\005\022\025\n\021CALL_END_EST" +
-      "IMATE\020\006*.\n\010HoldType\022\013\n\007UNKNOWN\020\000\022\n\n\006SIMP" +
-      "LE\020\001\022\t\n\005MULTI\020\002*\372\001\n\026QueuedNotificationTy" +
-      "pe\022*\n&QueuedNotificationType_GENERAL_INI" +
-      "TIAL\020\000\022&\n\"QueuedNotificationType_PBX_INI" +
-      "TIAL\020\001\022.\n*QueuedNotificationType_AGENT_B" +
-      "OUND_INITIAL\020\002\022+\n\'QueuedNotificationType" +
-      "_GENERAL_REQUEUED\020\003\022/\n+QueuedNotificatio" +
-      "nType_AGENT_BOUND_REQUEUED\020\004*r\n\022Transfer" +
-      "MemberType\022\034\n\030TransferMemberType_AGENT\020\000" +
-      "\022\035\n\031TransferMemberType_CALLER\020\001\022\037\n\033Trans" +
-      "ferMemberType_OUTBOUND\020\002*\242\002\n\tDTMFDigit\022\017" +
-      "\n\013DTMFDigit_0\020\000\022\017\n\013DTMFDigit_1\020\001\022\017\n\013DTMF" +
-      "Digit_2\020\002\022\017\n\013DTMFDigit_3\020\003\022\017\n\013DTMFDigit_" +
-      "4\020\004\022\017\n\013DTMFDigit_5\020\005\022\017\n\013DTMFDigit_6\020\006\022\017\n" +
-      "\013DTMFDigit_7\020\007\022\017\n\013DTMFDigit_8\020\010\022\017\n\013DTMFD" +
-      "igit_9\020\t\022\017\n\013DTMFDigit_A\020\n\022\017\n\013DTMFDigit_B" +
-      "\020\013\022\017\n\013DTMFDigit_C\020\014\022\017\n\013DTMFDigit_D\020\r\022\022\n\016" +
-      "DTMFDigit_STAR\020\016\022\023\n\017DTMFDigit_POUND\020\017Bv\n" +
-      "\035com.tcn.cloud.api.api.commonsB\010AcdProto" +
-      "P\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027A" +
-      "pi\\Commons\\GPBMetadata\352\002\014Api::Commonsb\006p" +
-      "roto3"
+      "R\014agentIsMuted\"G\n\021AudioSenderPacket\022\034\n\td" +
+      "irection\030\001 \001(\005R\tdirection\022\024\n\005frame\030\002 \001(\014" +
+      "R\005frame*\267\001\n\tACDStatus\022\017\n\013ACD_UNKNOWN\020\000\022\035" +
+      "\n\030AGENT_SESSION_LOGGING_IN\020\204 \022\034\n\027AGENT_S" +
+      "ESSION_LOGGED_IN\020\216 \022\034\n\027AGENT_SESSION_COM" +
+      "PLETED\020\350 \022\031\n\024AGENT_SESSION_SUMMED\020\314!\022#\n\036" +
+      "AGENT_SESSION_ACCOUNTINGEXPORT\020\260\"*\244\001\n\025Ag" +
+      "entCallLogCallEnded\022\023\n\017AGENT_CANCELLED\020\000" +
+      "\022\027\n\023CALLER_DISCONNECTED\020\001\022\021\n\rNOT_CONNECT" +
+      "ED\020\002\022\016\n\nAGENT_LOST\020\003\022\020\n\014AGENT_HANGUP\020\004\022\021" +
+      "\n\rCALLER_HANGUP\020\005\022\025\n\021CALL_END_ESTIMATE\020\006" +
+      "*.\n\010HoldType\022\013\n\007UNKNOWN\020\000\022\n\n\006SIMPLE\020\001\022\t\n" +
+      "\005MULTI\020\002*\372\001\n\026QueuedNotificationType\022*\n&Q" +
+      "ueuedNotificationType_GENERAL_INITIAL\020\000\022" +
+      "&\n\"QueuedNotificationType_PBX_INITIAL\020\001\022" +
+      ".\n*QueuedNotificationType_AGENT_BOUND_IN" +
+      "ITIAL\020\002\022+\n\'QueuedNotificationType_GENERA" +
+      "L_REQUEUED\020\003\022/\n+QueuedNotificationType_A" +
+      "GENT_BOUND_REQUEUED\020\004*r\n\022TransferMemberT" +
+      "ype\022\034\n\030TransferMemberType_AGENT\020\000\022\035\n\031Tra" +
+      "nsferMemberType_CALLER\020\001\022\037\n\033TransferMemb" +
+      "erType_OUTBOUND\020\002*\242\002\n\tDTMFDigit\022\017\n\013DTMFD" +
+      "igit_0\020\000\022\017\n\013DTMFDigit_1\020\001\022\017\n\013DTMFDigit_2" +
+      "\020\002\022\017\n\013DTMFDigit_3\020\003\022\017\n\013DTMFDigit_4\020\004\022\017\n\013" +
+      "DTMFDigit_5\020\005\022\017\n\013DTMFDigit_6\020\006\022\017\n\013DTMFDi" +
+      "git_7\020\007\022\017\n\013DTMFDigit_8\020\010\022\017\n\013DTMFDigit_9\020" +
+      "\t\022\017\n\013DTMFDigit_A\020\n\022\017\n\013DTMFDigit_B\020\013\022\017\n\013D" +
+      "TMFDigit_C\020\014\022\017\n\013DTMFDigit_D\020\r\022\022\n\016DTMFDig" +
+      "it_STAR\020\016\022\023\n\017DTMFDigit_POUND\020\017Bv\n\035com.tc" +
+      "n.cloud.api.api.commonsB\010AcdProtoP\001\242\002\003AC" +
+      "X\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Comm" +
+      "ons\\GPBMetadata\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -531,6 +537,12 @@ public final class AcdProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AgentState_descriptor,
         new java.lang.String[] { "Status", "StatusDesc", "Paused", "Queue", "CurrentSessionId", "LastStatusChange", "Monitoring", "CallsCount", "LastSipCode", "AgentPeerIsLostCall", "Disabled", "CallerWasSuspended", "TransferMembers", "AgentPeerIsDirectToAgent", "UserId", "AgentSid", "AsmSessionSid", "AgentIsMuted", });
+    internal_static_api_commons_AudioSenderPacket_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_api_commons_AudioSenderPacket_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_AudioSenderPacket_descriptor,
+        new java.lang.String[] { "Direction", "Frame", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
