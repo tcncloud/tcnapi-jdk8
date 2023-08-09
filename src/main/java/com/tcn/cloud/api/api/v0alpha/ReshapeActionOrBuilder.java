@@ -34,7 +34,7 @@ public interface ReshapeActionOrBuilder extends
    *
    * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
    * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-   *     See api/v0alpha/lms.proto;l=2188
+   *     See api/v0alpha/lms.proto;l=2210
    * @return The enum numeric value on the wire for matchingType.
    */
   @java.lang.Deprecated int getMatchingTypeValue();
@@ -45,7 +45,7 @@ public interface ReshapeActionOrBuilder extends
    *
    * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
    * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-   *     See api/v0alpha/lms.proto;l=2188
+   *     See api/v0alpha/lms.proto;l=2210
    * @return The matchingType.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.RecordType getMatchingType();
@@ -214,6 +214,51 @@ public interface ReshapeActionOrBuilder extends
    * <code>.api.v0alpha.ReshapeAction.ChangeCurrencyType change_currency_type = 31 [json_name = "changeCurrencyType"];</code>
    */
   com.tcn.cloud.api.api.v0alpha.ReshapeAction.ChangeCurrencyTypeOrBuilder getChangeCurrencyTypeOrBuilder();
+
+  /**
+   * <code>.api.v0alpha.ReshapeAction.Divide divide = 32 [json_name = "divide"];</code>
+   * @return Whether the divide field is set.
+   */
+  boolean hasDivide();
+  /**
+   * <code>.api.v0alpha.ReshapeAction.Divide divide = 32 [json_name = "divide"];</code>
+   * @return The divide.
+   */
+  com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide getDivide();
+  /**
+   * <code>.api.v0alpha.ReshapeAction.Divide divide = 32 [json_name = "divide"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.ReshapeAction.DivideOrBuilder getDivideOrBuilder();
+
+  /**
+   * <code>.api.v0alpha.ReshapeAction.Multiply multiply = 33 [json_name = "multiply"];</code>
+   * @return Whether the multiply field is set.
+   */
+  boolean hasMultiply();
+  /**
+   * <code>.api.v0alpha.ReshapeAction.Multiply multiply = 33 [json_name = "multiply"];</code>
+   * @return The multiply.
+   */
+  com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply getMultiply();
+  /**
+   * <code>.api.v0alpha.ReshapeAction.Multiply multiply = 33 [json_name = "multiply"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.ReshapeAction.MultiplyOrBuilder getMultiplyOrBuilder();
+
+  /**
+   * <code>.api.v0alpha.ReshapeAction.Modulo modulo = 34 [json_name = "modulo"];</code>
+   * @return Whether the modulo field is set.
+   */
+  boolean hasModulo();
+  /**
+   * <code>.api.v0alpha.ReshapeAction.Modulo modulo = 34 [json_name = "modulo"];</code>
+   * @return The modulo.
+   */
+  com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo getModulo();
+  /**
+   * <code>.api.v0alpha.ReshapeAction.Modulo modulo = 34 [json_name = "modulo"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.ReshapeAction.ModuloOrBuilder getModuloOrBuilder();
 
   /**
    * <code>.api.v0alpha.ReshapeAction.Merge merge = 40 [json_name = "merge"];</code>
