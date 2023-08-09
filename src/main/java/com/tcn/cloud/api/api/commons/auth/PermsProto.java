@@ -24,7 +24,7 @@ public final class PermsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\034api/commons/auth/perms.proto\022\020api.comm" +
-      "ons.auth\032\033annotations/perms/tcn.proto*\351\037" +
+      "ons.auth\032\033annotations/perms/tcn.proto*\313 " +
       "\n\nPermission\022\032\n\026PERMISSION_UNSPECIFIED\020\000" +
       "\022\022\n\016PERMISSION_DEV\020\001\022\031\n\025PERMISSION_LEARN" +
       "_EDIT\020\n\022!\n\023PERMISSION_ORG_EDIT\020d\032\010\212\265\030\004\020\t" +
@@ -102,35 +102,38 @@ public final class PermsProto {
       " \n\023PERMISSION_LMS_EDIT\020\351\007\032\006\212\265\030\002\020\006\022n\n\024PER" +
       "MISSION_OMNI_BOSS\020\260\t\032S\212\265\030O\020\010\"\014SSO Settin" +
       "gs\"\013Form Emails\"\017Canned Messages\"\014Dispos" +
-      "itions\"\021Unsubscribe Links\022K\n\034PERMISSION_" +
-      "INTEGRATIONS_VIEW\020\224\n\032(\212\265\030$\020\005\"\016Configurat" +
-      "ions\"\007Plugins\"\007Portals\022B\n\037PERMISSION_INT" +
-      "EGRATIONS_PAYMENT\020\225\n\032\034\212\265\030\030\020\005\"\024Payment In" +
-      "tegrations\022B\n\037PERMISSION_INTEGRATIONS_JO" +
-      "URNEY\020\226\n\032\034\212\265\030\030\020\005\"\024Journey Integrations\022\260" +
-      "\001\n\016PERMISSION_WFM\020\334\013\032\232\001\212\265\030\225\001\020\017\"\nForecast" +
-      "er\"\016Skill Profiles\"\026Forecasting Paramete" +
-      "rs\"\023Profile Forecasting\"\026Regression Fore" +
-      "casting\"\023Current Forecasting\"\tScheduler\"" +
-      "\020Agent Management\022\"\n\025PERMISSION_SCORECAR" +
-      "DS\020\300\014\032\006\212\265\030\002\020\013\022)\n\034PERMISSION_SCORECARDS_M" +
-      "ANAGE\020\301\014\032\006\212\265\030\002\020\013\022+\n\036PERMISSION_SCORECARD" +
-      "S_EVALUATE\020\302\014\032\006\212\265\030\002\020\013\022/\n\024PERMISSION_DEV_" +
-      "TOOLS\020\210\016\032\024\212\265\030\020\020\004\"\014API Explorer\0223\n&PERMIS" +
-      "SION_DELIVERY_NOTIFICATIONS_VIEW\020\320\017\032\006\212\265\030" +
-      "\002\020\003\0223\n&PERMISSION_DELIVERY_NOTIFICATIONS" +
-      "_EDIT\020\321\017\032\006\212\265\030\002\020\003\022%\n\026PERMISSION_TICKETS_A" +
-      "PP\020\234\030\032\010\212\265\030\004\010\001\020\r\022\'\n\030PERMISSION_TICKETS_AD" +
-      "MIN\020\235\030\032\010\212\265\030\004\010\001\020\r\022!\n\024PERMISSION_WORKFLOWS" +
-      "\020\240\037\032\006\212\265\030\002\020\020\022Y\n\033PERMISSION_PBX_MANAGER_VI" +
-      "EW\020\204 \0327\212\265\0303\020\t\030\n\"\022PBX User Managment\"\031Ext" +
-      "ension Group Managment\022Y\n\033PERMISSION_PBX" +
-      "_MANAGER_EDIT\020\205 \0327\212\265\0303\020\t\030\n\"\022PBX User Man" +
-      "agment\"\031Extension Group ManagmentB\222\001\n\"co" +
-      "m.tcn.cloud.api.api.commons.authB\nPermsP" +
-      "rotoP\001\242\002\003ACA\252\002\020Api.Commons.Auth\312\002\020Api\\Co" +
-      "mmons\\Auth\342\002\034Api\\Commons\\Auth\\GPBMetadat" +
-      "a\352\002\022Api::Commons::Authb\006proto3"
+      "itions\"\021Unsubscribe Links\0222\n\034PERMISSION_" +
+      "OMNI_PORTALS_VIEW\020\272\t\032\017\212\265\030\013\020\010\"\007Portals\022K\n" +
+      "\034PERMISSION_INTEGRATIONS_VIEW\020\224\n\032(\212\265\030$\020\005" +
+      "\"\016Configurations\"\007Plugins\"\007Portals\022B\n\037PE" +
+      "RMISSION_INTEGRATIONS_PAYMENT\020\225\n\032\034\212\265\030\030\020\005" +
+      "\"\024Payment Integrations\022B\n\037PERMISSION_INT" +
+      "EGRATIONS_JOURNEY\020\226\n\032\034\212\265\030\030\020\005\"\024Journey In" +
+      "tegrations\022\260\001\n\016PERMISSION_WFM\020\334\013\032\232\001\212\265\030\225\001" +
+      "\020\017\"\nForecaster\"\016Skill Profiles\"\026Forecast" +
+      "ing Parameters\"\023Profile Forecasting\"\026Reg" +
+      "ression Forecasting\"\023Current Forecasting" +
+      "\"\tScheduler\"\020Agent Management\022\"\n\025PERMISS" +
+      "ION_SCORECARDS\020\300\014\032\006\212\265\030\002\020\013\022)\n\034PERMISSION_" +
+      "SCORECARDS_MANAGE\020\301\014\032\006\212\265\030\002\020\013\022+\n\036PERMISSI" +
+      "ON_SCORECARDS_EVALUATE\020\302\014\032\006\212\265\030\002\020\013\022,\n\037PER" +
+      "MISSION_SCORECARDS_FLAG_EVAL\020\303\014\032\006\212\265\030\002\020\013\022" +
+      "/\n\024PERMISSION_DEV_TOOLS\020\210\016\032\024\212\265\030\020\020\004\"\014API " +
+      "Explorer\0223\n&PERMISSION_DELIVERY_NOTIFICA" +
+      "TIONS_VIEW\020\320\017\032\006\212\265\030\002\020\003\0223\n&PERMISSION_DELI" +
+      "VERY_NOTIFICATIONS_EDIT\020\321\017\032\006\212\265\030\002\020\003\022%\n\026PE" +
+      "RMISSION_TICKETS_APP\020\234\030\032\010\212\265\030\004\010\001\020\r\022\'\n\030PER" +
+      "MISSION_TICKETS_ADMIN\020\235\030\032\010\212\265\030\004\010\001\020\r\022!\n\024PE" +
+      "RMISSION_WORKFLOWS\020\240\037\032\006\212\265\030\002\020\020\022Y\n\033PERMISS" +
+      "ION_PBX_MANAGER_VIEW\020\204 \0327\212\265\0303\020\t\030\n\"\022PBX U" +
+      "ser Managment\"\031Extension Group Managment" +
+      "\022Y\n\033PERMISSION_PBX_MANAGER_EDIT\020\205 \0327\212\265\0303" +
+      "\020\t\030\n\"\022PBX User Managment\"\031Extension Grou" +
+      "p ManagmentB\222\001\n\"com.tcn.cloud.api.api.co" +
+      "mmons.authB\nPermsProtoP\001\242\002\003ACA\252\002\020Api.Com" +
+      "mons.Auth\312\002\020Api\\Commons\\Auth\342\002\034Api\\Commo" +
+      "ns\\Auth\\GPBMetadata\352\002\022Api::Commons::Auth" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -239,49 +239,106 @@ public interface NodeDefinitionOrBuilder extends
   com.tcn.cloud.api.api.commons.workflows.OmniNodeErrorOrBuilder getOmniErrorOrBuilder();
 
   /**
-   * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart"];</code>
+   * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart", deprecated = true];</code>
+   * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_start is deprecated.
+   *     See api/commons/workflows/nodes.proto;l=32
    * @return Whether the omniBotTestStart field is set.
    */
-  boolean hasOmniBotTestStart();
+  @java.lang.Deprecated boolean hasOmniBotTestStart();
   /**
-   * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart"];</code>
+   * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart", deprecated = true];</code>
+   * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_start is deprecated.
+   *     See api/commons/workflows/nodes.proto;l=32
    * @return The omniBotTestStart.
    */
-  com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart getOmniBotTestStart();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart getOmniBotTestStart();
   /**
-   * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart"];</code>
+   * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStartOrBuilder getOmniBotTestStartOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStartOrBuilder getOmniBotTestStartOrBuilder();
 
   /**
-   * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep"];</code>
+   * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep", deprecated = true];</code>
+   * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_step is deprecated.
+   *     See api/commons/workflows/nodes.proto;l=33
    * @return Whether the omniBotTestStep field is set.
    */
-  boolean hasOmniBotTestStep();
+  @java.lang.Deprecated boolean hasOmniBotTestStep();
   /**
-   * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep"];</code>
+   * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep", deprecated = true];</code>
+   * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_step is deprecated.
+   *     See api/commons/workflows/nodes.proto;l=33
    * @return The omniBotTestStep.
    */
-  com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep getOmniBotTestStep();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep getOmniBotTestStep();
   /**
-   * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep"];</code>
+   * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStepOrBuilder getOmniBotTestStepOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStepOrBuilder getOmniBotTestStepOrBuilder();
 
   /**
-   * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd"];</code>
+   * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd", deprecated = true];</code>
+   * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_end is deprecated.
+   *     See api/commons/workflows/nodes.proto;l=34
    * @return Whether the omniBotTestEnd field is set.
    */
-  boolean hasOmniBotTestEnd();
+  @java.lang.Deprecated boolean hasOmniBotTestEnd();
   /**
-   * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd"];</code>
+   * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd", deprecated = true];</code>
+   * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_end is deprecated.
+   *     See api/commons/workflows/nodes.proto;l=34
    * @return The omniBotTestEnd.
    */
-  com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd getOmniBotTestEnd();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd getOmniBotTestEnd();
   /**
-   * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd"];</code>
+   * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd", deprecated = true];</code>
    */
-  com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEndOrBuilder getOmniBotTestEndOrBuilder();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEndOrBuilder getOmniBotTestEndOrBuilder();
+
+  /**
+   * <code>.api.commons.workflows.TestBotNodeTestStart test_bot_test_start = 401 [json_name = "testBotTestStart"];</code>
+   * @return Whether the testBotTestStart field is set.
+   */
+  boolean hasTestBotTestStart();
+  /**
+   * <code>.api.commons.workflows.TestBotNodeTestStart test_bot_test_start = 401 [json_name = "testBotTestStart"];</code>
+   * @return The testBotTestStart.
+   */
+  com.tcn.cloud.api.api.commons.workflows.TestBotNodeTestStart getTestBotTestStart();
+  /**
+   * <code>.api.commons.workflows.TestBotNodeTestStart test_bot_test_start = 401 [json_name = "testBotTestStart"];</code>
+   */
+  com.tcn.cloud.api.api.commons.workflows.TestBotNodeTestStartOrBuilder getTestBotTestStartOrBuilder();
+
+  /**
+   * <code>.api.commons.workflows.TestBotNodeTestStep test_bot_test_step = 402 [json_name = "testBotTestStep"];</code>
+   * @return Whether the testBotTestStep field is set.
+   */
+  boolean hasTestBotTestStep();
+  /**
+   * <code>.api.commons.workflows.TestBotNodeTestStep test_bot_test_step = 402 [json_name = "testBotTestStep"];</code>
+   * @return The testBotTestStep.
+   */
+  com.tcn.cloud.api.api.commons.workflows.TestBotNodeTestStep getTestBotTestStep();
+  /**
+   * <code>.api.commons.workflows.TestBotNodeTestStep test_bot_test_step = 402 [json_name = "testBotTestStep"];</code>
+   */
+  com.tcn.cloud.api.api.commons.workflows.TestBotNodeTestStepOrBuilder getTestBotTestStepOrBuilder();
+
+  /**
+   * <code>.api.commons.workflows.TestBotNodeTestEnd test_bot_test_end = 403 [json_name = "testBotTestEnd"];</code>
+   * @return Whether the testBotTestEnd field is set.
+   */
+  boolean hasTestBotTestEnd();
+  /**
+   * <code>.api.commons.workflows.TestBotNodeTestEnd test_bot_test_end = 403 [json_name = "testBotTestEnd"];</code>
+   * @return The testBotTestEnd.
+   */
+  com.tcn.cloud.api.api.commons.workflows.TestBotNodeTestEnd getTestBotTestEnd();
+  /**
+   * <code>.api.commons.workflows.TestBotNodeTestEnd test_bot_test_end = 403 [json_name = "testBotTestEnd"];</code>
+   */
+  com.tcn.cloud.api.api.commons.workflows.TestBotNodeTestEndOrBuilder getTestBotTestEndOrBuilder();
 
   com.tcn.cloud.api.api.commons.workflows.NodeDefinition.DefinitionCase getDefinitionCase();
 }
