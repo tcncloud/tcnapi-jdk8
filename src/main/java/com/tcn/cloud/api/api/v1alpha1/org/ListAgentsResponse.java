@@ -230,6 +230,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * Reserving a space for labels
+     * reserved "labels";
+     * reserved 9;
      * Whether the agent is delegated (sso related)
      * </pre>
      *
@@ -2405,6 +2408,9 @@ private static final long serialVersionUID = 0L;
     private boolean delegated_ = false;
     /**
      * <pre>
+     * Reserving a space for labels
+     * reserved "labels";
+     * reserved 9;
      * Whether the agent is delegated (sso related)
      * </pre>
      *
@@ -4851,6 +4857,9 @@ private static final long serialVersionUID = 0L;
       private boolean delegated_ ;
       /**
        * <pre>
+       * Reserving a space for labels
+       * reserved "labels";
+       * reserved 9;
        * Whether the agent is delegated (sso related)
        * </pre>
        *
@@ -4863,6 +4872,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
+       * Reserving a space for labels
+       * reserved "labels";
+       * reserved 9;
        * Whether the agent is delegated (sso related)
        * </pre>
        *
@@ -4879,6 +4891,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
+       * Reserving a space for labels
+       * reserved "labels";
+       * reserved 9;
        * Whether the agent is delegated (sso related)
        * </pre>
        *
