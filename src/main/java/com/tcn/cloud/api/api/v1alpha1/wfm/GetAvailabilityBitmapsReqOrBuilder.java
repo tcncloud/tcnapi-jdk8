@@ -102,4 +102,23 @@ public interface GetAvailabilityBitmapsReqOrBuilder extends
    * <code>.api.commons.DatetimeRange datetime_range = 4 [json_name = "datetimeRange"];</code>
    */
   com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getDatetimeRangeOrBuilder();
+
+  /**
+   * <pre>
+   * Indicates the type of bitmaps to generate.
+   * </pre>
+   *
+   * <code>.api.commons.BitmapType bitmap_type = 5 [json_name = "bitmapType"];</code>
+   * @return The enum numeric value on the wire for bitmapType.
+   */
+  int getBitmapTypeValue();
+  /**
+   * <pre>
+   * Indicates the type of bitmaps to generate.
+   * </pre>
+   *
+   * <code>.api.commons.BitmapType bitmap_type = 5 [json_name = "bitmapType"];</code>
+   * @return The bitmapType.
+   */
+  com.tcn.cloud.api.api.commons.BitmapType getBitmapType();
 }

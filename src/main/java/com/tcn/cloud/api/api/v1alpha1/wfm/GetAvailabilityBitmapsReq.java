@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private GetAvailabilityBitmapsReq() {
     entitiesToCheck_ = java.util.Collections.emptyList();
+    bitmapType_ = 0;
   }
 
   @java.lang.Override
@@ -177,6 +178,32 @@ private static final long serialVersionUID = 0L;
     return datetimeRange_ == null ? com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : datetimeRange_;
   }
 
+  public static final int BITMAP_TYPE_FIELD_NUMBER = 5;
+  private int bitmapType_ = 0;
+  /**
+   * <pre>
+   * Indicates the type of bitmaps to generate.
+   * </pre>
+   *
+   * <code>.api.commons.BitmapType bitmap_type = 5 [json_name = "bitmapType"];</code>
+   * @return The enum numeric value on the wire for bitmapType.
+   */
+  @java.lang.Override public int getBitmapTypeValue() {
+    return bitmapType_;
+  }
+  /**
+   * <pre>
+   * Indicates the type of bitmaps to generate.
+   * </pre>
+   *
+   * <code>.api.commons.BitmapType bitmap_type = 5 [json_name = "bitmapType"];</code>
+   * @return The bitmapType.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.BitmapType getBitmapType() {
+    com.tcn.cloud.api.api.commons.BitmapType result = com.tcn.cloud.api.api.commons.BitmapType.forNumber(bitmapType_);
+    return result == null ? com.tcn.cloud.api.api.commons.BitmapType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -203,6 +230,9 @@ private static final long serialVersionUID = 0L;
     if (datetimeRange_ != null) {
       output.writeMessage(4, getDatetimeRange());
     }
+    if (bitmapType_ != com.tcn.cloud.api.api.commons.BitmapType.COMPLETE.getNumber()) {
+      output.writeEnum(5, bitmapType_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -227,6 +257,10 @@ private static final long serialVersionUID = 0L;
     if (datetimeRange_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getDatetimeRange());
+    }
+    if (bitmapType_ != com.tcn.cloud.api.api.commons.BitmapType.COMPLETE.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(5, bitmapType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -254,6 +288,7 @@ private static final long serialVersionUID = 0L;
       if (!getDatetimeRange()
           .equals(other.getDatetimeRange())) return false;
     }
+    if (bitmapType_ != other.bitmapType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -279,6 +314,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DATETIME_RANGE_FIELD_NUMBER;
       hash = (53 * hash) + getDatetimeRange().hashCode();
     }
+    hash = (37 * hash) + BITMAP_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + bitmapType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -428,6 +465,7 @@ private static final long serialVersionUID = 0L;
         datetimeRangeBuilder_.dispose();
         datetimeRangeBuilder_ = null;
       }
+      bitmapType_ = 0;
       return this;
     }
 
@@ -484,6 +522,9 @@ private static final long serialVersionUID = 0L;
         result.datetimeRange_ = datetimeRangeBuilder_ == null
             ? datetimeRange_
             : datetimeRangeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.bitmapType_ = bitmapType_;
       }
     }
 
@@ -566,6 +607,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasDatetimeRange()) {
         mergeDatetimeRange(other.getDatetimeRange());
       }
+      if (other.bitmapType_ != 0) {
+        setBitmapTypeValue(other.getBitmapTypeValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -622,6 +666,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
+            case 40: {
+              bitmapType_ = input.readEnum();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1210,6 +1259,79 @@ private static final long serialVersionUID = 0L;
         datetimeRange_ = null;
       }
       return datetimeRangeBuilder_;
+    }
+
+    private int bitmapType_ = 0;
+    /**
+     * <pre>
+     * Indicates the type of bitmaps to generate.
+     * </pre>
+     *
+     * <code>.api.commons.BitmapType bitmap_type = 5 [json_name = "bitmapType"];</code>
+     * @return The enum numeric value on the wire for bitmapType.
+     */
+    @java.lang.Override public int getBitmapTypeValue() {
+      return bitmapType_;
+    }
+    /**
+     * <pre>
+     * Indicates the type of bitmaps to generate.
+     * </pre>
+     *
+     * <code>.api.commons.BitmapType bitmap_type = 5 [json_name = "bitmapType"];</code>
+     * @param value The enum numeric value on the wire for bitmapType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBitmapTypeValue(int value) {
+      bitmapType_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Indicates the type of bitmaps to generate.
+     * </pre>
+     *
+     * <code>.api.commons.BitmapType bitmap_type = 5 [json_name = "bitmapType"];</code>
+     * @return The bitmapType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.BitmapType getBitmapType() {
+      com.tcn.cloud.api.api.commons.BitmapType result = com.tcn.cloud.api.api.commons.BitmapType.forNumber(bitmapType_);
+      return result == null ? com.tcn.cloud.api.api.commons.BitmapType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Indicates the type of bitmaps to generate.
+     * </pre>
+     *
+     * <code>.api.commons.BitmapType bitmap_type = 5 [json_name = "bitmapType"];</code>
+     * @param value The bitmapType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBitmapType(com.tcn.cloud.api.api.commons.BitmapType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000010;
+      bitmapType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Indicates the type of bitmaps to generate.
+     * </pre>
+     *
+     * <code>.api.commons.BitmapType bitmap_type = 5 [json_name = "bitmapType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBitmapType() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      bitmapType_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -3445,15 +3445,49 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.api.commons.RecordType newType = 17 [json_name = "newType"];</code>
+     * <code>.api.commons.RecordType newType = 17 [json_name = "newType", deprecated = true];</code>
+     * @deprecated api.v0alpha.ReshapeAction.Convert.newType is deprecated.
+     *     See api/v0alpha/lms.proto;l=2078
      * @return The enum numeric value on the wire for newType.
      */
-    int getNewTypeValue();
+    @java.lang.Deprecated int getNewTypeValue();
     /**
-     * <code>.api.commons.RecordType newType = 17 [json_name = "newType"];</code>
+     * <code>.api.commons.RecordType newType = 17 [json_name = "newType", deprecated = true];</code>
+     * @deprecated api.v0alpha.ReshapeAction.Convert.newType is deprecated.
+     *     See api/v0alpha/lms.proto;l=2078
      * @return The newType.
      */
-    com.tcn.cloud.api.api.commons.RecordType getNewType();
+    @java.lang.Deprecated com.tcn.cloud.api.api.commons.RecordType getNewType();
+
+    /**
+     * <code>.api.v0alpha.Field new_field = 18 [json_name = "newField"];</code>
+     * @return Whether the newField field is set.
+     */
+    boolean hasNewField();
+    /**
+     * <code>.api.v0alpha.Field new_field = 18 [json_name = "newField"];</code>
+     * @return The newField.
+     */
+    com.tcn.cloud.api.api.v0alpha.Field getNewField();
+    /**
+     * <code>.api.v0alpha.Field new_field = 18 [json_name = "newField"];</code>
+     */
+    com.tcn.cloud.api.api.v0alpha.FieldOrBuilder getNewFieldOrBuilder();
+
+    /**
+     * <code>.api.v0alpha.RecordFieldProto default_value = 19 [json_name = "defaultValue"];</code>
+     * @return Whether the defaultValue field is set.
+     */
+    boolean hasDefaultValue();
+    /**
+     * <code>.api.v0alpha.RecordFieldProto default_value = 19 [json_name = "defaultValue"];</code>
+     * @return The defaultValue.
+     */
+    com.tcn.cloud.api.api.v0alpha.RecordFieldProto getDefaultValue();
+    /**
+     * <code>.api.v0alpha.RecordFieldProto default_value = 19 [json_name = "defaultValue"];</code>
+     */
+    com.tcn.cloud.api.api.v0alpha.RecordFieldProtoOrBuilder getDefaultValueOrBuilder();
   }
   /**
    * <pre>
@@ -3499,19 +3533,75 @@ private static final long serialVersionUID = 0L;
     public static final int NEWTYPE_FIELD_NUMBER = 17;
     private int newType_ = 0;
     /**
-     * <code>.api.commons.RecordType newType = 17 [json_name = "newType"];</code>
+     * <code>.api.commons.RecordType newType = 17 [json_name = "newType", deprecated = true];</code>
+     * @deprecated api.v0alpha.ReshapeAction.Convert.newType is deprecated.
+     *     See api/v0alpha/lms.proto;l=2078
      * @return The enum numeric value on the wire for newType.
      */
-    @java.lang.Override public int getNewTypeValue() {
+    @java.lang.Override @java.lang.Deprecated public int getNewTypeValue() {
       return newType_;
     }
     /**
-     * <code>.api.commons.RecordType newType = 17 [json_name = "newType"];</code>
+     * <code>.api.commons.RecordType newType = 17 [json_name = "newType", deprecated = true];</code>
+     * @deprecated api.v0alpha.ReshapeAction.Convert.newType is deprecated.
+     *     See api/v0alpha/lms.proto;l=2078
      * @return The newType.
      */
-    @java.lang.Override public com.tcn.cloud.api.api.commons.RecordType getNewType() {
+    @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.RecordType getNewType() {
       com.tcn.cloud.api.api.commons.RecordType result = com.tcn.cloud.api.api.commons.RecordType.forNumber(newType_);
       return result == null ? com.tcn.cloud.api.api.commons.RecordType.UNRECOGNIZED : result;
+    }
+
+    public static final int NEW_FIELD_FIELD_NUMBER = 18;
+    private com.tcn.cloud.api.api.v0alpha.Field newField_;
+    /**
+     * <code>.api.v0alpha.Field new_field = 18 [json_name = "newField"];</code>
+     * @return Whether the newField field is set.
+     */
+    @java.lang.Override
+    public boolean hasNewField() {
+      return newField_ != null;
+    }
+    /**
+     * <code>.api.v0alpha.Field new_field = 18 [json_name = "newField"];</code>
+     * @return The newField.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.Field getNewField() {
+      return newField_ == null ? com.tcn.cloud.api.api.v0alpha.Field.getDefaultInstance() : newField_;
+    }
+    /**
+     * <code>.api.v0alpha.Field new_field = 18 [json_name = "newField"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.FieldOrBuilder getNewFieldOrBuilder() {
+      return newField_ == null ? com.tcn.cloud.api.api.v0alpha.Field.getDefaultInstance() : newField_;
+    }
+
+    public static final int DEFAULT_VALUE_FIELD_NUMBER = 19;
+    private com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue_;
+    /**
+     * <code>.api.v0alpha.RecordFieldProto default_value = 19 [json_name = "defaultValue"];</code>
+     * @return Whether the defaultValue field is set.
+     */
+    @java.lang.Override
+    public boolean hasDefaultValue() {
+      return defaultValue_ != null;
+    }
+    /**
+     * <code>.api.v0alpha.RecordFieldProto default_value = 19 [json_name = "defaultValue"];</code>
+     * @return The defaultValue.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.RecordFieldProto getDefaultValue() {
+      return defaultValue_ == null ? com.tcn.cloud.api.api.v0alpha.RecordFieldProto.getDefaultInstance() : defaultValue_;
+    }
+    /**
+     * <code>.api.v0alpha.RecordFieldProto default_value = 19 [json_name = "defaultValue"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.RecordFieldProtoOrBuilder getDefaultValueOrBuilder() {
+      return defaultValue_ == null ? com.tcn.cloud.api.api.v0alpha.RecordFieldProto.getDefaultInstance() : defaultValue_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3531,6 +3621,12 @@ private static final long serialVersionUID = 0L;
       if (newType_ != com.tcn.cloud.api.api.commons.RecordType.RECORD_TYPE_ALL.getNumber()) {
         output.writeEnum(17, newType_);
       }
+      if (newField_ != null) {
+        output.writeMessage(18, getNewField());
+      }
+      if (defaultValue_ != null) {
+        output.writeMessage(19, getDefaultValue());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -3543,6 +3639,14 @@ private static final long serialVersionUID = 0L;
       if (newType_ != com.tcn.cloud.api.api.commons.RecordType.RECORD_TYPE_ALL.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(17, newType_);
+      }
+      if (newField_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(18, getNewField());
+      }
+      if (defaultValue_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, getDefaultValue());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3560,6 +3664,16 @@ private static final long serialVersionUID = 0L;
       com.tcn.cloud.api.api.v0alpha.ReshapeAction.Convert other = (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Convert) obj;
 
       if (newType_ != other.newType_) return false;
+      if (hasNewField() != other.hasNewField()) return false;
+      if (hasNewField()) {
+        if (!getNewField()
+            .equals(other.getNewField())) return false;
+      }
+      if (hasDefaultValue() != other.hasDefaultValue()) return false;
+      if (hasDefaultValue()) {
+        if (!getDefaultValue()
+            .equals(other.getDefaultValue())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3573,6 +3687,14 @@ private static final long serialVersionUID = 0L;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + NEWTYPE_FIELD_NUMBER;
       hash = (53 * hash) + newType_;
+      if (hasNewField()) {
+        hash = (37 * hash) + NEW_FIELD_FIELD_NUMBER;
+        hash = (53 * hash) + getNewField().hashCode();
+      }
+      if (hasDefaultValue()) {
+        hash = (37 * hash) + DEFAULT_VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getDefaultValue().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3710,6 +3832,16 @@ private static final long serialVersionUID = 0L;
         super.clear();
         bitField0_ = 0;
         newType_ = 0;
+        newField_ = null;
+        if (newFieldBuilder_ != null) {
+          newFieldBuilder_.dispose();
+          newFieldBuilder_ = null;
+        }
+        defaultValue_ = null;
+        if (defaultValueBuilder_ != null) {
+          defaultValueBuilder_.dispose();
+          defaultValueBuilder_ = null;
+        }
         return this;
       }
 
@@ -3745,6 +3877,16 @@ private static final long serialVersionUID = 0L;
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.newType_ = newType_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.newField_ = newFieldBuilder_ == null
+              ? newField_
+              : newFieldBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.defaultValue_ = defaultValueBuilder_ == null
+              ? defaultValue_
+              : defaultValueBuilder_.build();
         }
       }
 
@@ -3795,6 +3937,12 @@ private static final long serialVersionUID = 0L;
         if (other.newType_ != 0) {
           setNewTypeValue(other.getNewTypeValue());
         }
+        if (other.hasNewField()) {
+          mergeNewField(other.getNewField());
+        }
+        if (other.hasDefaultValue()) {
+          mergeDefaultValue(other.getDefaultValue());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -3826,6 +3974,20 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000001;
                 break;
               } // case 136
+              case 146: {
+                input.readMessage(
+                    getNewFieldFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 146
+              case 154: {
+                input.readMessage(
+                    getDefaultValueFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 154
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3845,38 +4007,46 @@ private static final long serialVersionUID = 0L;
 
       private int newType_ = 0;
       /**
-       * <code>.api.commons.RecordType newType = 17 [json_name = "newType"];</code>
+       * <code>.api.commons.RecordType newType = 17 [json_name = "newType", deprecated = true];</code>
+       * @deprecated api.v0alpha.ReshapeAction.Convert.newType is deprecated.
+       *     See api/v0alpha/lms.proto;l=2078
        * @return The enum numeric value on the wire for newType.
        */
-      @java.lang.Override public int getNewTypeValue() {
+      @java.lang.Override @java.lang.Deprecated public int getNewTypeValue() {
         return newType_;
       }
       /**
-       * <code>.api.commons.RecordType newType = 17 [json_name = "newType"];</code>
+       * <code>.api.commons.RecordType newType = 17 [json_name = "newType", deprecated = true];</code>
+       * @deprecated api.v0alpha.ReshapeAction.Convert.newType is deprecated.
+       *     See api/v0alpha/lms.proto;l=2078
        * @param value The enum numeric value on the wire for newType to set.
        * @return This builder for chaining.
        */
-      public Builder setNewTypeValue(int value) {
+      @java.lang.Deprecated public Builder setNewTypeValue(int value) {
         newType_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>.api.commons.RecordType newType = 17 [json_name = "newType"];</code>
+       * <code>.api.commons.RecordType newType = 17 [json_name = "newType", deprecated = true];</code>
+       * @deprecated api.v0alpha.ReshapeAction.Convert.newType is deprecated.
+       *     See api/v0alpha/lms.proto;l=2078
        * @return The newType.
        */
       @java.lang.Override
-      public com.tcn.cloud.api.api.commons.RecordType getNewType() {
+      @java.lang.Deprecated public com.tcn.cloud.api.api.commons.RecordType getNewType() {
         com.tcn.cloud.api.api.commons.RecordType result = com.tcn.cloud.api.api.commons.RecordType.forNumber(newType_);
         return result == null ? com.tcn.cloud.api.api.commons.RecordType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.api.commons.RecordType newType = 17 [json_name = "newType"];</code>
+       * <code>.api.commons.RecordType newType = 17 [json_name = "newType", deprecated = true];</code>
+       * @deprecated api.v0alpha.ReshapeAction.Convert.newType is deprecated.
+       *     See api/v0alpha/lms.proto;l=2078
        * @param value The newType to set.
        * @return This builder for chaining.
        */
-      public Builder setNewType(com.tcn.cloud.api.api.commons.RecordType value) {
+      @java.lang.Deprecated public Builder setNewType(com.tcn.cloud.api.api.commons.RecordType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -3886,14 +4056,254 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
-       * <code>.api.commons.RecordType newType = 17 [json_name = "newType"];</code>
+       * <code>.api.commons.RecordType newType = 17 [json_name = "newType", deprecated = true];</code>
+       * @deprecated api.v0alpha.ReshapeAction.Convert.newType is deprecated.
+       *     See api/v0alpha/lms.proto;l=2078
        * @return This builder for chaining.
        */
-      public Builder clearNewType() {
+      @java.lang.Deprecated public Builder clearNewType() {
         bitField0_ = (bitField0_ & ~0x00000001);
         newType_ = 0;
         onChanged();
         return this;
+      }
+
+      private com.tcn.cloud.api.api.v0alpha.Field newField_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v0alpha.Field, com.tcn.cloud.api.api.v0alpha.Field.Builder, com.tcn.cloud.api.api.v0alpha.FieldOrBuilder> newFieldBuilder_;
+      /**
+       * <code>.api.v0alpha.Field new_field = 18 [json_name = "newField"];</code>
+       * @return Whether the newField field is set.
+       */
+      public boolean hasNewField() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.api.v0alpha.Field new_field = 18 [json_name = "newField"];</code>
+       * @return The newField.
+       */
+      public com.tcn.cloud.api.api.v0alpha.Field getNewField() {
+        if (newFieldBuilder_ == null) {
+          return newField_ == null ? com.tcn.cloud.api.api.v0alpha.Field.getDefaultInstance() : newField_;
+        } else {
+          return newFieldBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.api.v0alpha.Field new_field = 18 [json_name = "newField"];</code>
+       */
+      public Builder setNewField(com.tcn.cloud.api.api.v0alpha.Field value) {
+        if (newFieldBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          newField_ = value;
+        } else {
+          newFieldBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v0alpha.Field new_field = 18 [json_name = "newField"];</code>
+       */
+      public Builder setNewField(
+          com.tcn.cloud.api.api.v0alpha.Field.Builder builderForValue) {
+        if (newFieldBuilder_ == null) {
+          newField_ = builderForValue.build();
+        } else {
+          newFieldBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v0alpha.Field new_field = 18 [json_name = "newField"];</code>
+       */
+      public Builder mergeNewField(com.tcn.cloud.api.api.v0alpha.Field value) {
+        if (newFieldBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            newField_ != null &&
+            newField_ != com.tcn.cloud.api.api.v0alpha.Field.getDefaultInstance()) {
+            getNewFieldBuilder().mergeFrom(value);
+          } else {
+            newField_ = value;
+          }
+        } else {
+          newFieldBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v0alpha.Field new_field = 18 [json_name = "newField"];</code>
+       */
+      public Builder clearNewField() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        newField_ = null;
+        if (newFieldBuilder_ != null) {
+          newFieldBuilder_.dispose();
+          newFieldBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v0alpha.Field new_field = 18 [json_name = "newField"];</code>
+       */
+      public com.tcn.cloud.api.api.v0alpha.Field.Builder getNewFieldBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getNewFieldFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.api.v0alpha.Field new_field = 18 [json_name = "newField"];</code>
+       */
+      public com.tcn.cloud.api.api.v0alpha.FieldOrBuilder getNewFieldOrBuilder() {
+        if (newFieldBuilder_ != null) {
+          return newFieldBuilder_.getMessageOrBuilder();
+        } else {
+          return newField_ == null ?
+              com.tcn.cloud.api.api.v0alpha.Field.getDefaultInstance() : newField_;
+        }
+      }
+      /**
+       * <code>.api.v0alpha.Field new_field = 18 [json_name = "newField"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v0alpha.Field, com.tcn.cloud.api.api.v0alpha.Field.Builder, com.tcn.cloud.api.api.v0alpha.FieldOrBuilder> 
+          getNewFieldFieldBuilder() {
+        if (newFieldBuilder_ == null) {
+          newFieldBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.v0alpha.Field, com.tcn.cloud.api.api.v0alpha.Field.Builder, com.tcn.cloud.api.api.v0alpha.FieldOrBuilder>(
+                  getNewField(),
+                  getParentForChildren(),
+                  isClean());
+          newField_ = null;
+        }
+        return newFieldBuilder_;
+      }
+
+      private com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v0alpha.RecordFieldProto, com.tcn.cloud.api.api.v0alpha.RecordFieldProto.Builder, com.tcn.cloud.api.api.v0alpha.RecordFieldProtoOrBuilder> defaultValueBuilder_;
+      /**
+       * <code>.api.v0alpha.RecordFieldProto default_value = 19 [json_name = "defaultValue"];</code>
+       * @return Whether the defaultValue field is set.
+       */
+      public boolean hasDefaultValue() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.api.v0alpha.RecordFieldProto default_value = 19 [json_name = "defaultValue"];</code>
+       * @return The defaultValue.
+       */
+      public com.tcn.cloud.api.api.v0alpha.RecordFieldProto getDefaultValue() {
+        if (defaultValueBuilder_ == null) {
+          return defaultValue_ == null ? com.tcn.cloud.api.api.v0alpha.RecordFieldProto.getDefaultInstance() : defaultValue_;
+        } else {
+          return defaultValueBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.api.v0alpha.RecordFieldProto default_value = 19 [json_name = "defaultValue"];</code>
+       */
+      public Builder setDefaultValue(com.tcn.cloud.api.api.v0alpha.RecordFieldProto value) {
+        if (defaultValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          defaultValue_ = value;
+        } else {
+          defaultValueBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v0alpha.RecordFieldProto default_value = 19 [json_name = "defaultValue"];</code>
+       */
+      public Builder setDefaultValue(
+          com.tcn.cloud.api.api.v0alpha.RecordFieldProto.Builder builderForValue) {
+        if (defaultValueBuilder_ == null) {
+          defaultValue_ = builderForValue.build();
+        } else {
+          defaultValueBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v0alpha.RecordFieldProto default_value = 19 [json_name = "defaultValue"];</code>
+       */
+      public Builder mergeDefaultValue(com.tcn.cloud.api.api.v0alpha.RecordFieldProto value) {
+        if (defaultValueBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            defaultValue_ != null &&
+            defaultValue_ != com.tcn.cloud.api.api.v0alpha.RecordFieldProto.getDefaultInstance()) {
+            getDefaultValueBuilder().mergeFrom(value);
+          } else {
+            defaultValue_ = value;
+          }
+        } else {
+          defaultValueBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v0alpha.RecordFieldProto default_value = 19 [json_name = "defaultValue"];</code>
+       */
+      public Builder clearDefaultValue() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        defaultValue_ = null;
+        if (defaultValueBuilder_ != null) {
+          defaultValueBuilder_.dispose();
+          defaultValueBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.api.v0alpha.RecordFieldProto default_value = 19 [json_name = "defaultValue"];</code>
+       */
+      public com.tcn.cloud.api.api.v0alpha.RecordFieldProto.Builder getDefaultValueBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getDefaultValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.api.v0alpha.RecordFieldProto default_value = 19 [json_name = "defaultValue"];</code>
+       */
+      public com.tcn.cloud.api.api.v0alpha.RecordFieldProtoOrBuilder getDefaultValueOrBuilder() {
+        if (defaultValueBuilder_ != null) {
+          return defaultValueBuilder_.getMessageOrBuilder();
+        } else {
+          return defaultValue_ == null ?
+              com.tcn.cloud.api.api.v0alpha.RecordFieldProto.getDefaultInstance() : defaultValue_;
+        }
+      }
+      /**
+       * <code>.api.v0alpha.RecordFieldProto default_value = 19 [json_name = "defaultValue"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcn.cloud.api.api.v0alpha.RecordFieldProto, com.tcn.cloud.api.api.v0alpha.RecordFieldProto.Builder, com.tcn.cloud.api.api.v0alpha.RecordFieldProtoOrBuilder> 
+          getDefaultValueFieldBuilder() {
+        if (defaultValueBuilder_ == null) {
+          defaultValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcn.cloud.api.api.v0alpha.RecordFieldProto, com.tcn.cloud.api.api.v0alpha.RecordFieldProto.Builder, com.tcn.cloud.api.api.v0alpha.RecordFieldProtoOrBuilder>(
+                  getDefaultValue(),
+                  getParentForChildren(),
+                  isClean());
+          defaultValue_ = null;
+        }
+        return defaultValueBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -14893,7 +15303,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
    * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-   *     See api/v0alpha/lms.proto;l=2186
+   *     See api/v0alpha/lms.proto;l=2188
    * @return The enum numeric value on the wire for matchingType.
    */
   @java.lang.Override @java.lang.Deprecated public int getMatchingTypeValue() {
@@ -14906,7 +15316,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
    * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-   *     See api/v0alpha/lms.proto;l=2186
+   *     See api/v0alpha/lms.proto;l=2188
    * @return The matchingType.
    */
   @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.RecordType getMatchingType() {
@@ -16549,7 +16959,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
      * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-     *     See api/v0alpha/lms.proto;l=2186
+     *     See api/v0alpha/lms.proto;l=2188
      * @return The enum numeric value on the wire for matchingType.
      */
     @java.lang.Override @java.lang.Deprecated public int getMatchingTypeValue() {
@@ -16562,7 +16972,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
      * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-     *     See api/v0alpha/lms.proto;l=2186
+     *     See api/v0alpha/lms.proto;l=2188
      * @param value The enum numeric value on the wire for matchingType to set.
      * @return This builder for chaining.
      */
@@ -16579,7 +16989,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
      * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-     *     See api/v0alpha/lms.proto;l=2186
+     *     See api/v0alpha/lms.proto;l=2188
      * @return The matchingType.
      */
     @java.lang.Override
@@ -16594,7 +17004,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
      * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-     *     See api/v0alpha/lms.proto;l=2186
+     *     See api/v0alpha/lms.proto;l=2188
      * @param value The matchingType to set.
      * @return This builder for chaining.
      */
@@ -16614,7 +17024,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
      * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-     *     See api/v0alpha/lms.proto;l=2186
+     *     See api/v0alpha/lms.proto;l=2188
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearMatchingType() {
