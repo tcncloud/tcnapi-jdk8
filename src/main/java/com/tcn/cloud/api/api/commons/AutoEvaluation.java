@@ -337,6 +337,21 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.RiskLevel.UNRECOGNIZED : result;
   }
 
+  public static final int CALL_LENGTH_FIELD_NUMBER = 16;
+  private int callLength_ = 0;
+  /**
+   * <pre>
+   * duration of the call audio
+   * </pre>
+   *
+   * <code>int32 call_length = 16 [json_name = "callLength"];</code>
+   * @return The callLength.
+   */
+  @java.lang.Override
+  public int getCallLength() {
+    return callLength_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -383,6 +398,9 @@ private static final long serialVersionUID = 0L;
     }
     if (riskLevel_ != com.tcn.cloud.api.api.commons.RiskLevel.RISK_LEVEL_NONE.getNumber()) {
       output.writeEnum(12, riskLevel_);
+    }
+    if (callLength_ != 0) {
+      output.writeInt32(16, callLength_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -436,6 +454,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(12, riskLevel_);
     }
+    if (callLength_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(16, callLength_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -477,6 +499,8 @@ private static final long serialVersionUID = 0L;
     if (getExpressionMatched()
         != other.getExpressionMatched()) return false;
     if (riskLevel_ != other.riskLevel_) return false;
+    if (getCallLength()
+        != other.getCallLength()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -521,6 +545,8 @@ private static final long serialVersionUID = 0L;
         getExpressionMatched());
     hash = (37 * hash) + RISK_LEVEL_FIELD_NUMBER;
     hash = (53 * hash) + riskLevel_;
+    hash = (37 * hash) + CALL_LENGTH_FIELD_NUMBER;
+    hash = (53 * hash) + getCallLength();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -681,6 +707,7 @@ private static final long serialVersionUID = 0L;
       transcriptSid_ = 0L;
       expressionMatched_ = false;
       riskLevel_ = 0;
+      callLength_ = 0;
       return this;
     }
 
@@ -760,6 +787,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.riskLevel_ = riskLevel_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.callLength_ = callLength_;
       }
     }
 
@@ -865,6 +895,9 @@ private static final long serialVersionUID = 0L;
       if (other.riskLevel_ != 0) {
         setRiskLevelValue(other.getRiskLevelValue());
       }
+      if (other.getCallLength() != 0) {
+        setCallLength(other.getCallLength());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -958,6 +991,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000400;
               break;
             } // case 96
+            case 128: {
+              callLength_ = input.readInt32();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 128
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1979,6 +2017,50 @@ private static final long serialVersionUID = 0L;
     public Builder clearRiskLevel() {
       bitField0_ = (bitField0_ & ~0x00000400);
       riskLevel_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int callLength_ ;
+    /**
+     * <pre>
+     * duration of the call audio
+     * </pre>
+     *
+     * <code>int32 call_length = 16 [json_name = "callLength"];</code>
+     * @return The callLength.
+     */
+    @java.lang.Override
+    public int getCallLength() {
+      return callLength_;
+    }
+    /**
+     * <pre>
+     * duration of the call audio
+     * </pre>
+     *
+     * <code>int32 call_length = 16 [json_name = "callLength"];</code>
+     * @param value The callLength to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCallLength(int value) {
+
+      callLength_ = value;
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * duration of the call audio
+     * </pre>
+     *
+     * <code>int32 call_length = 16 [json_name = "callLength"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCallLength() {
+      bitField0_ = (bitField0_ & ~0x00000800);
+      callLength_ = 0;
       onChanged();
       return this;
     }

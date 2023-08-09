@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private StandaloneReq() {
     locale_ = "";
+    category_ = "";
   }
 
   @java.lang.Override
@@ -90,6 +91,53 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int CATEGORY_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object category_ = "";
+  /**
+   * <pre>
+   * categorize the articles
+   * </pre>
+   *
+   * <code>string category = 2 [json_name = "category"];</code>
+   * @return The category.
+   */
+  @java.lang.Override
+  public java.lang.String getCategory() {
+    java.lang.Object ref = category_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      category_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * categorize the articles
+   * </pre>
+   *
+   * <code>string category = 2 [json_name = "category"];</code>
+   * @return The bytes for category.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCategoryBytes() {
+    java.lang.Object ref = category_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      category_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -107,6 +155,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locale_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, locale_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(category_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, category_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -118,6 +169,9 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locale_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, locale_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(category_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, category_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -136,6 +190,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getLocale()
         .equals(other.getLocale())) return false;
+    if (!getCategory()
+        .equals(other.getCategory())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -149,6 +205,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + LOCALE_FIELD_NUMBER;
     hash = (53 * hash) + getLocale().hashCode();
+    hash = (37 * hash) + CATEGORY_FIELD_NUMBER;
+    hash = (53 * hash) + getCategory().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -285,6 +343,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       locale_ = "";
+      category_ = "";
       return this;
     }
 
@@ -320,6 +379,9 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.locale_ = locale_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.category_ = category_;
       }
     }
 
@@ -372,6 +434,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
+      if (!other.getCategory().isEmpty()) {
+        category_ = other.category_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -403,6 +470,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              category_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -508,6 +580,98 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       locale_ = value;
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object category_ = "";
+    /**
+     * <pre>
+     * categorize the articles
+     * </pre>
+     *
+     * <code>string category = 2 [json_name = "category"];</code>
+     * @return The category.
+     */
+    public java.lang.String getCategory() {
+      java.lang.Object ref = category_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        category_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * categorize the articles
+     * </pre>
+     *
+     * <code>string category = 2 [json_name = "category"];</code>
+     * @return The bytes for category.
+     */
+    public com.google.protobuf.ByteString
+        getCategoryBytes() {
+      java.lang.Object ref = category_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        category_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * categorize the articles
+     * </pre>
+     *
+     * <code>string category = 2 [json_name = "category"];</code>
+     * @param value The category to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCategory(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      category_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * categorize the articles
+     * </pre>
+     *
+     * <code>string category = 2 [json_name = "category"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCategory() {
+      category_ = getDefaultInstance().getCategory();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * categorize the articles
+     * </pre>
+     *
+     * <code>string category = 2 [json_name = "category"];</code>
+     * @param value The bytes for category to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCategoryBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      category_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

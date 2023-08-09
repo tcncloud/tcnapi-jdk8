@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.57.0)",
+    value = "by gRPC proto compiler (version 1.57.1)",
     comments = "Source: api/v1alpha1/scorecards/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ScorecardsGrpc {
@@ -1379,6 +1379,37 @@ public final class ScorecardsGrpc {
     return getDeleteAutoEvaluationMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreResponse> getPreviewEvaluationScoreMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "PreviewEvaluationScore",
+      requestType = com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreResponse> getPreviewEvaluationScoreMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreResponse> getPreviewEvaluationScoreMethod;
+    if ((getPreviewEvaluationScoreMethod = ScorecardsGrpc.getPreviewEvaluationScoreMethod) == null) {
+      synchronized (ScorecardsGrpc.class) {
+        if ((getPreviewEvaluationScoreMethod = ScorecardsGrpc.getPreviewEvaluationScoreMethod) == null) {
+          ScorecardsGrpc.getPreviewEvaluationScoreMethod = getPreviewEvaluationScoreMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PreviewEvaluationScore"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("PreviewEvaluationScore"))
+              .build();
+        }
+      }
+    }
+    return getPreviewEvaluationScoreMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1866,6 +1897,16 @@ public final class ScorecardsGrpc {
     default void deleteAutoEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAutoEvaluationMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * PreviewEvaluationScore previews the score for an evaluation
+     * </pre>
+     */
+    default void previewEvaluationScore(com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPreviewEvaluationScoreMethod(), responseObserver);
     }
   }
 
@@ -2380,6 +2421,17 @@ public final class ScorecardsGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteAutoEvaluationMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * PreviewEvaluationScore previews the score for an evaluation
+     * </pre>
+     */
+    public void previewEvaluationScore(com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getPreviewEvaluationScoreMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -2837,6 +2889,16 @@ public final class ScorecardsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationResponse deleteAutoEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteAutoEvaluationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * PreviewEvaluationScore previews the score for an evaluation
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreResponse previewEvaluationScore(com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getPreviewEvaluationScoreMethod(), getCallOptions(), request);
     }
   }
 
@@ -3340,6 +3402,17 @@ public final class ScorecardsGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteAutoEvaluationMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * PreviewEvaluationScore previews the score for an evaluation
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreResponse> previewEvaluationScore(
+        com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getPreviewEvaluationScoreMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_SCORECARD = 0;
@@ -3386,6 +3459,7 @@ public final class ScorecardsGrpc {
   private static final int METHODID_GET_AUTO_EVALUATION = 41;
   private static final int METHODID_LIST_AUTO_EVALUATIONS = 42;
   private static final int METHODID_DELETE_AUTO_EVALUATION = 43;
+  private static final int METHODID_PREVIEW_EVALUATION_SCORE = 44;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3579,6 +3653,10 @@ public final class ScorecardsGrpc {
         case METHODID_DELETE_AUTO_EVALUATION:
           serviceImpl.deleteAutoEvaluation((com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationResponse>) responseObserver);
+          break;
+        case METHODID_PREVIEW_EVALUATION_SCORE:
+          serviceImpl.previewEvaluationScore((com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -3906,6 +3984,13 @@ public final class ScorecardsGrpc {
               com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationRequest,
               com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationResponse>(
                 service, METHODID_DELETE_AUTO_EVALUATION)))
+        .addMethod(
+          getPreviewEvaluationScoreMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.PreviewEvaluationScoreResponse>(
+                service, METHODID_PREVIEW_EVALUATION_SCORE)))
         .build();
   }
 
@@ -3998,6 +4083,7 @@ public final class ScorecardsGrpc {
               .addMethod(getGetAutoEvaluationMethod())
               .addMethod(getListAutoEvaluationsMethod())
               .addMethod(getDeleteAutoEvaluationMethod())
+              .addMethod(getPreviewEvaluationScoreMethod())
               .build();
         }
       }

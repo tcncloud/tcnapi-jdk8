@@ -8,7 +8,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.57.0)",
+    value = "by gRPC proto compiler (version 1.57.1)",
     comments = "Source: api/v0alpha/learn.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class LearnGrpc {
@@ -527,6 +527,7 @@ public final class LearnGrpc {
     /**
      * <pre>
      * get standalone articles from learning pages
+     * we allow all the logged in agents/admins to view standalone articles
      * </pre>
      */
     default void standalone(com.tcn.cloud.api.api.v0alpha.StandaloneReq request,
@@ -699,6 +700,7 @@ public final class LearnGrpc {
     /**
      * <pre>
      * get standalone articles from learning pages
+     * we allow all the logged in agents/admins to view standalone articles
      * </pre>
      */
     public void standalone(com.tcn.cloud.api.api.v0alpha.StandaloneReq request,
@@ -861,6 +863,7 @@ public final class LearnGrpc {
     /**
      * <pre>
      * get standalone articles from learning pages
+     * we allow all the logged in agents/admins to view standalone articles
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.StandaloneRes standalone(com.tcn.cloud.api.api.v0alpha.StandaloneReq request) {
@@ -1007,6 +1010,7 @@ public final class LearnGrpc {
     /**
      * <pre>
      * get standalone articles from learning pages
+     * we allow all the logged in agents/admins to view standalone articles
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.StandaloneRes> standalone(
