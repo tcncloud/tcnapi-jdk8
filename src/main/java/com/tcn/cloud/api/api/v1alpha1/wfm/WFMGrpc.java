@@ -5379,7 +5379,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Copies the shifts from &#64;source_schedule_selector to &#64;destination_schedule_selector, constrained by the given parameters for &#64;org_id.
+     * Copies the shifts from &#64;source_schedule_selector to &#64;destination_schedule_selector, constrained by the given parameters for the org sending the request.
      * If &#64;datetime_range is set, all shifts within the datetime range will be copied.
      * If &#64;datetime_range is not set, all shifts in the &#64;source_schedule_selector within the schedule range of the &#64;destination_schedule_selector will be copied. However if one of them is a published schedule, it will use the schedule range of the draft schedule.
      * If &#64;start_datetimes_only is set to false, then shifts are considered to be within the &#64;datetime range if any portion of them is within the range.
@@ -5390,7 +5390,7 @@ public final class WFMGrpc {
      *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values.
-     *   -grpc.NotFound: the &#64;source_schedule_selector or &#64;destination_schedule_selector don't exist for &#64;org_id.
+     *   -grpc.NotFound: the &#64;source_schedule_selector or &#64;destination_schedule_selector don't exist for the org sending the request.
      *   -grpc.Internal: error occurs when creating the copied shift instances.
      * </pre>
      */
@@ -7529,7 +7529,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Copies the shifts from &#64;source_schedule_selector to &#64;destination_schedule_selector, constrained by the given parameters for &#64;org_id.
+     * Copies the shifts from &#64;source_schedule_selector to &#64;destination_schedule_selector, constrained by the given parameters for the org sending the request.
      * If &#64;datetime_range is set, all shifts within the datetime range will be copied.
      * If &#64;datetime_range is not set, all shifts in the &#64;source_schedule_selector within the schedule range of the &#64;destination_schedule_selector will be copied. However if one of them is a published schedule, it will use the schedule range of the draft schedule.
      * If &#64;start_datetimes_only is set to false, then shifts are considered to be within the &#64;datetime range if any portion of them is within the range.
@@ -7540,7 +7540,7 @@ public final class WFMGrpc {
      *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values.
-     *   -grpc.NotFound: the &#64;source_schedule_selector or &#64;destination_schedule_selector don't exist for &#64;org_id.
+     *   -grpc.NotFound: the &#64;source_schedule_selector or &#64;destination_schedule_selector don't exist for the org sending the request.
      *   -grpc.Internal: error occurs when creating the copied shift instances.
      * </pre>
      */
@@ -9584,7 +9584,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Copies the shifts from &#64;source_schedule_selector to &#64;destination_schedule_selector, constrained by the given parameters for &#64;org_id.
+     * Copies the shifts from &#64;source_schedule_selector to &#64;destination_schedule_selector, constrained by the given parameters for the org sending the request.
      * If &#64;datetime_range is set, all shifts within the datetime range will be copied.
      * If &#64;datetime_range is not set, all shifts in the &#64;source_schedule_selector within the schedule range of the &#64;destination_schedule_selector will be copied. However if one of them is a published schedule, it will use the schedule range of the draft schedule.
      * If &#64;start_datetimes_only is set to false, then shifts are considered to be within the &#64;datetime range if any portion of them is within the range.
@@ -9595,7 +9595,7 @@ public final class WFMGrpc {
      *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values.
-     *   -grpc.NotFound: the &#64;source_schedule_selector or &#64;destination_schedule_selector don't exist for &#64;org_id.
+     *   -grpc.NotFound: the &#64;source_schedule_selector or &#64;destination_schedule_selector don't exist for the org sending the request.
      *   -grpc.Internal: error occurs when creating the copied shift instances.
      * </pre>
      */
@@ -11624,7 +11624,7 @@ public final class WFMGrpc {
 
     /**
      * <pre>
-     * Copies the shifts from &#64;source_schedule_selector to &#64;destination_schedule_selector, constrained by the given parameters for &#64;org_id.
+     * Copies the shifts from &#64;source_schedule_selector to &#64;destination_schedule_selector, constrained by the given parameters for the org sending the request.
      * If &#64;datetime_range is set, all shifts within the datetime range will be copied.
      * If &#64;datetime_range is not set, all shifts in the &#64;source_schedule_selector within the schedule range of the &#64;destination_schedule_selector will be copied. However if one of them is a published schedule, it will use the schedule range of the draft schedule.
      * If &#64;start_datetimes_only is set to false, then shifts are considered to be within the &#64;datetime range if any portion of them is within the range.
@@ -11635,7 +11635,7 @@ public final class WFMGrpc {
      *   NONE
      * Errors:
      *   -grpc.Invalid: one or more fields in the request have invalid values.
-     *   -grpc.NotFound: the &#64;source_schedule_selector or &#64;destination_schedule_selector don't exist for &#64;org_id.
+     *   -grpc.NotFound: the &#64;source_schedule_selector or &#64;destination_schedule_selector don't exist for the org sending the request.
      *   -grpc.Internal: error occurs when creating the copied shift instances.
      * </pre>
      */
