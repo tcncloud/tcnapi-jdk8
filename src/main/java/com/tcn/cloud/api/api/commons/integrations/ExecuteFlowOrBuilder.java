@@ -2599,5 +2599,110 @@ public interface ExecuteFlowOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUserOrBuilder getPIANOUPDATEUSEROrBuilder();
 
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
+   * @return Whether the epicGetToken field is set.
+   */
+  boolean hasEpicGetToken();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
+   * @return The epicGetToken.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken getEpicGetToken();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetTokenOrBuilder getEpicGetTokenOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetPatient epic_get_patient = 3702 [json_name = "epicGetPatient"];</code>
+   * @return Whether the epicGetPatient field is set.
+   */
+  boolean hasEpicGetPatient();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetPatient epic_get_patient = 3702 [json_name = "epicGetPatient"];</code>
+   * @return The epicGetPatient.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient getEpicGetPatient();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetPatient epic_get_patient = 3702 [json_name = "epicGetPatient"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientOrBuilder getEpicGetPatientOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicMatchPatient epic_match_patient = 3703 [json_name = "epicMatchPatient"];</code>
+   * @return Whether the epicMatchPatient field is set.
+   */
+  boolean hasEpicMatchPatient();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicMatchPatient epic_match_patient = 3703 [json_name = "epicMatchPatient"];</code>
+   * @return The epicMatchPatient.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient getEpicMatchPatient();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicMatchPatient epic_match_patient = 3703 [json_name = "epicMatchPatient"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatientOrBuilder getEpicMatchPatientOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicSearchAppointment epic_search_appointment = 3704 [json_name = "epicSearchAppointment"];</code>
+   * @return Whether the epicSearchAppointment field is set.
+   */
+  boolean hasEpicSearchAppointment();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicSearchAppointment epic_search_appointment = 3704 [json_name = "epicSearchAppointment"];</code>
+   * @return The epicSearchAppointment.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment getEpicSearchAppointment();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicSearchAppointment epic_search_appointment = 3704 [json_name = "epicSearchAppointment"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointmentOrBuilder getEpicSearchAppointmentOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicFindAppointment epic_find_appointment = 3705 [json_name = "epicFindAppointment"];</code>
+   * @return Whether the epicFindAppointment field is set.
+   */
+  boolean hasEpicFindAppointment();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicFindAppointment epic_find_appointment = 3705 [json_name = "epicFindAppointment"];</code>
+   * @return The epicFindAppointment.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment getEpicFindAppointment();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicFindAppointment epic_find_appointment = 3705 [json_name = "epicFindAppointment"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointmentOrBuilder getEpicFindAppointmentOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicBookAppointment epic_book_appointment = 3706 [json_name = "epicBookAppointment"];</code>
+   * @return Whether the epicBookAppointment field is set.
+   */
+  boolean hasEpicBookAppointment();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicBookAppointment epic_book_appointment = 3706 [json_name = "epicBookAppointment"];</code>
+   * @return The epicBookAppointment.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment getEpicBookAppointment();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicBookAppointment epic_book_appointment = 3706 [json_name = "epicBookAppointment"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointmentOrBuilder getEpicBookAppointmentOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccount epic_get_account = 3707 [json_name = "epicGetAccount"];</code>
+   * @return Whether the epicGetAccount field is set.
+   */
+  boolean hasEpicGetAccount();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccount epic_get_account = 3707 [json_name = "epicGetAccount"];</code>
+   * @return The epicGetAccount.
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount getEpicGetAccount();
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccount epic_get_account = 3707 [json_name = "epicGetAccount"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountOrBuilder getEpicGetAccountOrBuilder();
+
   com.tcn.cloud.api.api.commons.integrations.ExecuteFlow.ValueCase getValueCase();
 }
