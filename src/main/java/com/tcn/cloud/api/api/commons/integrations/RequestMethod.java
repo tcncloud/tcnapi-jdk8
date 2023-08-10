@@ -705,6 +705,34 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_PIANO_UPDATE_USER = 3602;</code>
    */
   REQUEST_METHOD_PIANO_UPDATE_USER(3602),
+  /**
+   * <code>REQUEST_METHOD_EPIC_GET_TOKEN = 3701;</code>
+   */
+  REQUEST_METHOD_EPIC_GET_TOKEN(3701),
+  /**
+   * <code>REQUEST_METHOD_EPIC_GET_PATIENT = 3702;</code>
+   */
+  REQUEST_METHOD_EPIC_GET_PATIENT(3702),
+  /**
+   * <code>REQUEST_METHOD_EPIC_MATCH_PATIENT = 3703;</code>
+   */
+  REQUEST_METHOD_EPIC_MATCH_PATIENT(3703),
+  /**
+   * <code>REQUEST_METHOD_EPIC_SEARCH_APPOINTMENT = 3704;</code>
+   */
+  REQUEST_METHOD_EPIC_SEARCH_APPOINTMENT(3704),
+  /**
+   * <code>REQUEST_METHOD_EPIC_FIND_APPOINTMENT = 3705;</code>
+   */
+  REQUEST_METHOD_EPIC_FIND_APPOINTMENT(3705),
+  /**
+   * <code>REQUEST_METHOD_EPIC_BOOK_APPOINTMENT = 3706;</code>
+   */
+  REQUEST_METHOD_EPIC_BOOK_APPOINTMENT(3706),
+  /**
+   * <code>REQUEST_METHOD_EPIC_GET_ACCOUNT = 3707;</code>
+   */
+  REQUEST_METHOD_EPIC_GET_ACCOUNT(3707),
   UNRECOGNIZED(-1),
   ;
 
@@ -1400,6 +1428,34 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_PIANO_UPDATE_USER = 3602;</code>
    */
   public static final int REQUEST_METHOD_PIANO_UPDATE_USER_VALUE = 3602;
+  /**
+   * <code>REQUEST_METHOD_EPIC_GET_TOKEN = 3701;</code>
+   */
+  public static final int REQUEST_METHOD_EPIC_GET_TOKEN_VALUE = 3701;
+  /**
+   * <code>REQUEST_METHOD_EPIC_GET_PATIENT = 3702;</code>
+   */
+  public static final int REQUEST_METHOD_EPIC_GET_PATIENT_VALUE = 3702;
+  /**
+   * <code>REQUEST_METHOD_EPIC_MATCH_PATIENT = 3703;</code>
+   */
+  public static final int REQUEST_METHOD_EPIC_MATCH_PATIENT_VALUE = 3703;
+  /**
+   * <code>REQUEST_METHOD_EPIC_SEARCH_APPOINTMENT = 3704;</code>
+   */
+  public static final int REQUEST_METHOD_EPIC_SEARCH_APPOINTMENT_VALUE = 3704;
+  /**
+   * <code>REQUEST_METHOD_EPIC_FIND_APPOINTMENT = 3705;</code>
+   */
+  public static final int REQUEST_METHOD_EPIC_FIND_APPOINTMENT_VALUE = 3705;
+  /**
+   * <code>REQUEST_METHOD_EPIC_BOOK_APPOINTMENT = 3706;</code>
+   */
+  public static final int REQUEST_METHOD_EPIC_BOOK_APPOINTMENT_VALUE = 3706;
+  /**
+   * <code>REQUEST_METHOD_EPIC_GET_ACCOUNT = 3707;</code>
+   */
+  public static final int REQUEST_METHOD_EPIC_GET_ACCOUNT_VALUE = 3707;
 
 
   public final int getNumber() {
@@ -1599,6 +1655,13 @@ public enum RequestMethod
       case 3503: return REQUEST_METHOD_POSCORP_UPDATE_PAYMENT_STATUS;
       case 3601: return REQUEST_METHOD_PIANO_GET_USER;
       case 3602: return REQUEST_METHOD_PIANO_UPDATE_USER;
+      case 3701: return REQUEST_METHOD_EPIC_GET_TOKEN;
+      case 3702: return REQUEST_METHOD_EPIC_GET_PATIENT;
+      case 3703: return REQUEST_METHOD_EPIC_MATCH_PATIENT;
+      case 3704: return REQUEST_METHOD_EPIC_SEARCH_APPOINTMENT;
+      case 3705: return REQUEST_METHOD_EPIC_FIND_APPOINTMENT;
+      case 3706: return REQUEST_METHOD_EPIC_BOOK_APPOINTMENT;
+      case 3707: return REQUEST_METHOD_EPIC_GET_ACCOUNT;
       default: return null;
     }
   }

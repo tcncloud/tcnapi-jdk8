@@ -224,6 +224,13 @@ private static final long serialVersionUID = 0L;
     POSCORP_UPDATE_PAYMENT_STATUS(3503),
     PIANO_GET_USER(3601),
     PIANO_UPDATE_USER(3602),
+    EPIC_GET_TOKEN(3701),
+    EPIC_GET_PATIENT(3702),
+    EPIC_MATCH_PATIENT(3703),
+    EPIC_SEARCH_APPOINTMENT(3704),
+    EPIC_FIND_APPOINTMENT(3705),
+    EPIC_BOOK_APPOINTMENT(3706),
+    EPIC_GET_ACCOUNT(3707),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -413,6 +420,13 @@ private static final long serialVersionUID = 0L;
         case 3503: return POSCORP_UPDATE_PAYMENT_STATUS;
         case 3601: return PIANO_GET_USER;
         case 3602: return PIANO_UPDATE_USER;
+        case 3701: return EPIC_GET_TOKEN;
+        case 3702: return EPIC_GET_PATIENT;
+        case 3703: return EPIC_MATCH_PATIENT;
+        case 3704: return EPIC_SEARCH_APPOINTMENT;
+        case 3705: return EPIC_FIND_APPOINTMENT;
+        case 3706: return EPIC_BOOK_APPOINTMENT;
+        case 3707: return EPIC_GET_ACCOUNT;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -5799,6 +5813,223 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser.getDefaultInstance();
   }
 
+  public static final int EPIC_GET_TOKEN_FIELD_NUMBER = 3701;
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
+   * @return Whether the epicGetToken field is set.
+   */
+  @java.lang.Override
+  public boolean hasEpicGetToken() {
+    return valueCase_ == 3701;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
+   * @return The epicGetToken.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken getEpicGetToken() {
+    if (valueCase_ == 3701) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetTokenOrBuilder getEpicGetTokenOrBuilder() {
+    if (valueCase_ == 3701) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken.getDefaultInstance();
+  }
+
+  public static final int EPIC_GET_PATIENT_FIELD_NUMBER = 3702;
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetPatient epic_get_patient = 3702 [json_name = "epicGetPatient"];</code>
+   * @return Whether the epicGetPatient field is set.
+   */
+  @java.lang.Override
+  public boolean hasEpicGetPatient() {
+    return valueCase_ == 3702;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetPatient epic_get_patient = 3702 [json_name = "epicGetPatient"];</code>
+   * @return The epicGetPatient.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient getEpicGetPatient() {
+    if (valueCase_ == 3702) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetPatient epic_get_patient = 3702 [json_name = "epicGetPatient"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientOrBuilder getEpicGetPatientOrBuilder() {
+    if (valueCase_ == 3702) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient.getDefaultInstance();
+  }
+
+  public static final int EPIC_MATCH_PATIENT_FIELD_NUMBER = 3703;
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicMatchPatient epic_match_patient = 3703 [json_name = "epicMatchPatient"];</code>
+   * @return Whether the epicMatchPatient field is set.
+   */
+  @java.lang.Override
+  public boolean hasEpicMatchPatient() {
+    return valueCase_ == 3703;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicMatchPatient epic_match_patient = 3703 [json_name = "epicMatchPatient"];</code>
+   * @return The epicMatchPatient.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient getEpicMatchPatient() {
+    if (valueCase_ == 3703) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicMatchPatient epic_match_patient = 3703 [json_name = "epicMatchPatient"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatientOrBuilder getEpicMatchPatientOrBuilder() {
+    if (valueCase_ == 3703) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient.getDefaultInstance();
+  }
+
+  public static final int EPIC_SEARCH_APPOINTMENT_FIELD_NUMBER = 3704;
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicSearchAppointment epic_search_appointment = 3704 [json_name = "epicSearchAppointment"];</code>
+   * @return Whether the epicSearchAppointment field is set.
+   */
+  @java.lang.Override
+  public boolean hasEpicSearchAppointment() {
+    return valueCase_ == 3704;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicSearchAppointment epic_search_appointment = 3704 [json_name = "epicSearchAppointment"];</code>
+   * @return The epicSearchAppointment.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment getEpicSearchAppointment() {
+    if (valueCase_ == 3704) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicSearchAppointment epic_search_appointment = 3704 [json_name = "epicSearchAppointment"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointmentOrBuilder getEpicSearchAppointmentOrBuilder() {
+    if (valueCase_ == 3704) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment.getDefaultInstance();
+  }
+
+  public static final int EPIC_FIND_APPOINTMENT_FIELD_NUMBER = 3705;
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicFindAppointment epic_find_appointment = 3705 [json_name = "epicFindAppointment"];</code>
+   * @return Whether the epicFindAppointment field is set.
+   */
+  @java.lang.Override
+  public boolean hasEpicFindAppointment() {
+    return valueCase_ == 3705;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicFindAppointment epic_find_appointment = 3705 [json_name = "epicFindAppointment"];</code>
+   * @return The epicFindAppointment.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment getEpicFindAppointment() {
+    if (valueCase_ == 3705) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicFindAppointment epic_find_appointment = 3705 [json_name = "epicFindAppointment"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointmentOrBuilder getEpicFindAppointmentOrBuilder() {
+    if (valueCase_ == 3705) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment.getDefaultInstance();
+  }
+
+  public static final int EPIC_BOOK_APPOINTMENT_FIELD_NUMBER = 3706;
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicBookAppointment epic_book_appointment = 3706 [json_name = "epicBookAppointment"];</code>
+   * @return Whether the epicBookAppointment field is set.
+   */
+  @java.lang.Override
+  public boolean hasEpicBookAppointment() {
+    return valueCase_ == 3706;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicBookAppointment epic_book_appointment = 3706 [json_name = "epicBookAppointment"];</code>
+   * @return The epicBookAppointment.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment getEpicBookAppointment() {
+    if (valueCase_ == 3706) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicBookAppointment epic_book_appointment = 3706 [json_name = "epicBookAppointment"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointmentOrBuilder getEpicBookAppointmentOrBuilder() {
+    if (valueCase_ == 3706) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment.getDefaultInstance();
+  }
+
+  public static final int EPIC_GET_ACCOUNT_FIELD_NUMBER = 3707;
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccount epic_get_account = 3707 [json_name = "epicGetAccount"];</code>
+   * @return Whether the epicGetAccount field is set.
+   */
+  @java.lang.Override
+  public boolean hasEpicGetAccount() {
+    return valueCase_ == 3707;
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccount epic_get_account = 3707 [json_name = "epicGetAccount"];</code>
+   * @return The epicGetAccount.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount getEpicGetAccount() {
+    if (valueCase_ == 3707) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.ExecuteEpicGetAccount epic_get_account = 3707 [json_name = "epicGetAccount"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountOrBuilder getEpicGetAccountOrBuilder() {
+    if (valueCase_ == 3707) {
+       return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -6331,6 +6562,27 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 3602) {
       output.writeMessage(3602, (com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser) value_);
+    }
+    if (valueCase_ == 3701) {
+      output.writeMessage(3701, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken) value_);
+    }
+    if (valueCase_ == 3702) {
+      output.writeMessage(3702, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient) value_);
+    }
+    if (valueCase_ == 3703) {
+      output.writeMessage(3703, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient) value_);
+    }
+    if (valueCase_ == 3704) {
+      output.writeMessage(3704, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment) value_);
+    }
+    if (valueCase_ == 3705) {
+      output.writeMessage(3705, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment) value_);
+    }
+    if (valueCase_ == 3706) {
+      output.writeMessage(3706, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment) value_);
+    }
+    if (valueCase_ == 3707) {
+      output.writeMessage(3707, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount) value_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -7031,6 +7283,34 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 3602) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3602, (com.tcn.cloud.api.api.commons.integrations.ExecutePianoUpdateUser) value_);
+    }
+    if (valueCase_ == 3701) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3701, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken) value_);
+    }
+    if (valueCase_ == 3702) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3702, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient) value_);
+    }
+    if (valueCase_ == 3703) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3703, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient) value_);
+    }
+    if (valueCase_ == 3704) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3704, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment) value_);
+    }
+    if (valueCase_ == 3705) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3705, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment) value_);
+    }
+    if (valueCase_ == 3706) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3706, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment) value_);
+    }
+    if (valueCase_ == 3707) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3707, (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount) value_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -7739,6 +8019,34 @@ private static final long serialVersionUID = 0L;
         if (!getPIANOUPDATEUSER()
             .equals(other.getPIANOUPDATEUSER())) return false;
         break;
+      case 3701:
+        if (!getEpicGetToken()
+            .equals(other.getEpicGetToken())) return false;
+        break;
+      case 3702:
+        if (!getEpicGetPatient()
+            .equals(other.getEpicGetPatient())) return false;
+        break;
+      case 3703:
+        if (!getEpicMatchPatient()
+            .equals(other.getEpicMatchPatient())) return false;
+        break;
+      case 3704:
+        if (!getEpicSearchAppointment()
+            .equals(other.getEpicSearchAppointment())) return false;
+        break;
+      case 3705:
+        if (!getEpicFindAppointment()
+            .equals(other.getEpicFindAppointment())) return false;
+        break;
+      case 3706:
+        if (!getEpicBookAppointment()
+            .equals(other.getEpicBookAppointment())) return false;
+        break;
+      case 3707:
+        if (!getEpicGetAccount()
+            .equals(other.getEpicGetAccount())) return false;
+        break;
       case 0:
       default:
     }
@@ -8444,6 +8752,34 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + PIANO_UPDATE_USER_FIELD_NUMBER;
         hash = (53 * hash) + getPIANOUPDATEUSER().hashCode();
         break;
+      case 3701:
+        hash = (37 * hash) + EPIC_GET_TOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getEpicGetToken().hashCode();
+        break;
+      case 3702:
+        hash = (37 * hash) + EPIC_GET_PATIENT_FIELD_NUMBER;
+        hash = (53 * hash) + getEpicGetPatient().hashCode();
+        break;
+      case 3703:
+        hash = (37 * hash) + EPIC_MATCH_PATIENT_FIELD_NUMBER;
+        hash = (53 * hash) + getEpicMatchPatient().hashCode();
+        break;
+      case 3704:
+        hash = (37 * hash) + EPIC_SEARCH_APPOINTMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getEpicSearchAppointment().hashCode();
+        break;
+      case 3705:
+        hash = (37 * hash) + EPIC_FIND_APPOINTMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getEpicFindAppointment().hashCode();
+        break;
+      case 3706:
+        hash = (37 * hash) + EPIC_BOOK_APPOINTMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getEpicBookAppointment().hashCode();
+        break;
+      case 3707:
+        hash = (37 * hash) + EPIC_GET_ACCOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getEpicGetAccount().hashCode();
+        break;
       case 0:
       default:
     }
@@ -9106,6 +9442,27 @@ private static final long serialVersionUID = 0L;
       }
       if (pIANOUPDATEUSERBuilder_ != null) {
         pIANOUPDATEUSERBuilder_.clear();
+      }
+      if (epicGetTokenBuilder_ != null) {
+        epicGetTokenBuilder_.clear();
+      }
+      if (epicGetPatientBuilder_ != null) {
+        epicGetPatientBuilder_.clear();
+      }
+      if (epicMatchPatientBuilder_ != null) {
+        epicMatchPatientBuilder_.clear();
+      }
+      if (epicSearchAppointmentBuilder_ != null) {
+        epicSearchAppointmentBuilder_.clear();
+      }
+      if (epicFindAppointmentBuilder_ != null) {
+        epicFindAppointmentBuilder_.clear();
+      }
+      if (epicBookAppointmentBuilder_ != null) {
+        epicBookAppointmentBuilder_.clear();
+      }
+      if (epicGetAccountBuilder_ != null) {
+        epicGetAccountBuilder_.clear();
       }
       valueCase_ = 0;
       value_ = null;
@@ -9864,6 +10221,34 @@ private static final long serialVersionUID = 0L;
           pIANOUPDATEUSERBuilder_ != null) {
         result.value_ = pIANOUPDATEUSERBuilder_.build();
       }
+      if (valueCase_ == 3701 &&
+          epicGetTokenBuilder_ != null) {
+        result.value_ = epicGetTokenBuilder_.build();
+      }
+      if (valueCase_ == 3702 &&
+          epicGetPatientBuilder_ != null) {
+        result.value_ = epicGetPatientBuilder_.build();
+      }
+      if (valueCase_ == 3703 &&
+          epicMatchPatientBuilder_ != null) {
+        result.value_ = epicMatchPatientBuilder_.build();
+      }
+      if (valueCase_ == 3704 &&
+          epicSearchAppointmentBuilder_ != null) {
+        result.value_ = epicSearchAppointmentBuilder_.build();
+      }
+      if (valueCase_ == 3705 &&
+          epicFindAppointmentBuilder_ != null) {
+        result.value_ = epicFindAppointmentBuilder_.build();
+      }
+      if (valueCase_ == 3706 &&
+          epicBookAppointmentBuilder_ != null) {
+        result.value_ = epicBookAppointmentBuilder_.build();
+      }
+      if (valueCase_ == 3707 &&
+          epicGetAccountBuilder_ != null) {
+        result.value_ = epicGetAccountBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -10602,6 +10987,34 @@ private static final long serialVersionUID = 0L;
         }
         case PIANO_UPDATE_USER: {
           mergePIANOUPDATEUSER(other.getPIANOUPDATEUSER());
+          break;
+        }
+        case EPIC_GET_TOKEN: {
+          mergeEpicGetToken(other.getEpicGetToken());
+          break;
+        }
+        case EPIC_GET_PATIENT: {
+          mergeEpicGetPatient(other.getEpicGetPatient());
+          break;
+        }
+        case EPIC_MATCH_PATIENT: {
+          mergeEpicMatchPatient(other.getEpicMatchPatient());
+          break;
+        }
+        case EPIC_SEARCH_APPOINTMENT: {
+          mergeEpicSearchAppointment(other.getEpicSearchAppointment());
+          break;
+        }
+        case EPIC_FIND_APPOINTMENT: {
+          mergeEpicFindAppointment(other.getEpicFindAppointment());
+          break;
+        }
+        case EPIC_BOOK_APPOINTMENT: {
+          mergeEpicBookAppointment(other.getEpicBookAppointment());
+          break;
+        }
+        case EPIC_GET_ACCOUNT: {
+          mergeEpicGetAccount(other.getEpicGetAccount());
           break;
         }
         case VALUE_NOT_SET: {
@@ -11843,6 +12256,55 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 3602;
               break;
             } // case 28818
+            case 29610: {
+              input.readMessage(
+                  getEpicGetTokenFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3701;
+              break;
+            } // case 29610
+            case 29618: {
+              input.readMessage(
+                  getEpicGetPatientFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3702;
+              break;
+            } // case 29618
+            case 29626: {
+              input.readMessage(
+                  getEpicMatchPatientFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3703;
+              break;
+            } // case 29626
+            case 29634: {
+              input.readMessage(
+                  getEpicSearchAppointmentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3704;
+              break;
+            } // case 29634
+            case 29642: {
+              input.readMessage(
+                  getEpicFindAppointmentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3705;
+              break;
+            } // case 29642
+            case 29650: {
+              input.readMessage(
+                  getEpicBookAppointmentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3706;
+              break;
+            } // case 29650
+            case 29658: {
+              input.readMessage(
+                  getEpicGetAccountFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 3707;
+              break;
+            } // case 29658
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -36374,6 +36836,1000 @@ private static final long serialVersionUID = 0L;
       valueCase_ = 3602;
       onChanged();
       return pIANOUPDATEUSERBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetTokenOrBuilder> epicGetTokenBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
+     * @return Whether the epicGetToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasEpicGetToken() {
+      return valueCase_ == 3701;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
+     * @return The epicGetToken.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken getEpicGetToken() {
+      if (epicGetTokenBuilder_ == null) {
+        if (valueCase_ == 3701) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3701) {
+          return epicGetTokenBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
+     */
+    public Builder setEpicGetToken(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken value) {
+      if (epicGetTokenBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        epicGetTokenBuilder_.setMessage(value);
+      }
+      valueCase_ = 3701;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
+     */
+    public Builder setEpicGetToken(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken.Builder builderForValue) {
+      if (epicGetTokenBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        epicGetTokenBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3701;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
+     */
+    public Builder mergeEpicGetToken(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken value) {
+      if (epicGetTokenBuilder_ == null) {
+        if (valueCase_ == 3701 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3701) {
+          epicGetTokenBuilder_.mergeFrom(value);
+        } else {
+          epicGetTokenBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3701;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
+     */
+    public Builder clearEpicGetToken() {
+      if (epicGetTokenBuilder_ == null) {
+        if (valueCase_ == 3701) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3701) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        epicGetTokenBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken.Builder getEpicGetTokenBuilder() {
+      return getEpicGetTokenFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetTokenOrBuilder getEpicGetTokenOrBuilder() {
+      if ((valueCase_ == 3701) && (epicGetTokenBuilder_ != null)) {
+        return epicGetTokenBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3701) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetToken epic_get_token = 3701 [json_name = "epicGetToken"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetTokenOrBuilder> 
+        getEpicGetTokenFieldBuilder() {
+      if (epicGetTokenBuilder_ == null) {
+        if (!(valueCase_ == 3701)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken.getDefaultInstance();
+        }
+        epicGetTokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetTokenOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetToken) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3701;
+      onChanged();
+      return epicGetTokenBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientOrBuilder> epicGetPatientBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetPatient epic_get_patient = 3702 [json_name = "epicGetPatient"];</code>
+     * @return Whether the epicGetPatient field is set.
+     */
+    @java.lang.Override
+    public boolean hasEpicGetPatient() {
+      return valueCase_ == 3702;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetPatient epic_get_patient = 3702 [json_name = "epicGetPatient"];</code>
+     * @return The epicGetPatient.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient getEpicGetPatient() {
+      if (epicGetPatientBuilder_ == null) {
+        if (valueCase_ == 3702) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3702) {
+          return epicGetPatientBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetPatient epic_get_patient = 3702 [json_name = "epicGetPatient"];</code>
+     */
+    public Builder setEpicGetPatient(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient value) {
+      if (epicGetPatientBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        epicGetPatientBuilder_.setMessage(value);
+      }
+      valueCase_ = 3702;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetPatient epic_get_patient = 3702 [json_name = "epicGetPatient"];</code>
+     */
+    public Builder setEpicGetPatient(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient.Builder builderForValue) {
+      if (epicGetPatientBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        epicGetPatientBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3702;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetPatient epic_get_patient = 3702 [json_name = "epicGetPatient"];</code>
+     */
+    public Builder mergeEpicGetPatient(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient value) {
+      if (epicGetPatientBuilder_ == null) {
+        if (valueCase_ == 3702 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3702) {
+          epicGetPatientBuilder_.mergeFrom(value);
+        } else {
+          epicGetPatientBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3702;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetPatient epic_get_patient = 3702 [json_name = "epicGetPatient"];</code>
+     */
+    public Builder clearEpicGetPatient() {
+      if (epicGetPatientBuilder_ == null) {
+        if (valueCase_ == 3702) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3702) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        epicGetPatientBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetPatient epic_get_patient = 3702 [json_name = "epicGetPatient"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient.Builder getEpicGetPatientBuilder() {
+      return getEpicGetPatientFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetPatient epic_get_patient = 3702 [json_name = "epicGetPatient"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientOrBuilder getEpicGetPatientOrBuilder() {
+      if ((valueCase_ == 3702) && (epicGetPatientBuilder_ != null)) {
+        return epicGetPatientBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3702) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetPatient epic_get_patient = 3702 [json_name = "epicGetPatient"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientOrBuilder> 
+        getEpicGetPatientFieldBuilder() {
+      if (epicGetPatientBuilder_ == null) {
+        if (!(valueCase_ == 3702)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient.getDefaultInstance();
+        }
+        epicGetPatientBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatientOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetPatient) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3702;
+      onChanged();
+      return epicGetPatientBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatientOrBuilder> epicMatchPatientBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicMatchPatient epic_match_patient = 3703 [json_name = "epicMatchPatient"];</code>
+     * @return Whether the epicMatchPatient field is set.
+     */
+    @java.lang.Override
+    public boolean hasEpicMatchPatient() {
+      return valueCase_ == 3703;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicMatchPatient epic_match_patient = 3703 [json_name = "epicMatchPatient"];</code>
+     * @return The epicMatchPatient.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient getEpicMatchPatient() {
+      if (epicMatchPatientBuilder_ == null) {
+        if (valueCase_ == 3703) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3703) {
+          return epicMatchPatientBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicMatchPatient epic_match_patient = 3703 [json_name = "epicMatchPatient"];</code>
+     */
+    public Builder setEpicMatchPatient(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient value) {
+      if (epicMatchPatientBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        epicMatchPatientBuilder_.setMessage(value);
+      }
+      valueCase_ = 3703;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicMatchPatient epic_match_patient = 3703 [json_name = "epicMatchPatient"];</code>
+     */
+    public Builder setEpicMatchPatient(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient.Builder builderForValue) {
+      if (epicMatchPatientBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        epicMatchPatientBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3703;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicMatchPatient epic_match_patient = 3703 [json_name = "epicMatchPatient"];</code>
+     */
+    public Builder mergeEpicMatchPatient(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient value) {
+      if (epicMatchPatientBuilder_ == null) {
+        if (valueCase_ == 3703 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3703) {
+          epicMatchPatientBuilder_.mergeFrom(value);
+        } else {
+          epicMatchPatientBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3703;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicMatchPatient epic_match_patient = 3703 [json_name = "epicMatchPatient"];</code>
+     */
+    public Builder clearEpicMatchPatient() {
+      if (epicMatchPatientBuilder_ == null) {
+        if (valueCase_ == 3703) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3703) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        epicMatchPatientBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicMatchPatient epic_match_patient = 3703 [json_name = "epicMatchPatient"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient.Builder getEpicMatchPatientBuilder() {
+      return getEpicMatchPatientFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicMatchPatient epic_match_patient = 3703 [json_name = "epicMatchPatient"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatientOrBuilder getEpicMatchPatientOrBuilder() {
+      if ((valueCase_ == 3703) && (epicMatchPatientBuilder_ != null)) {
+        return epicMatchPatientBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3703) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicMatchPatient epic_match_patient = 3703 [json_name = "epicMatchPatient"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatientOrBuilder> 
+        getEpicMatchPatientFieldBuilder() {
+      if (epicMatchPatientBuilder_ == null) {
+        if (!(valueCase_ == 3703)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient.getDefaultInstance();
+        }
+        epicMatchPatientBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatientOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicMatchPatient) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3703;
+      onChanged();
+      return epicMatchPatientBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointmentOrBuilder> epicSearchAppointmentBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicSearchAppointment epic_search_appointment = 3704 [json_name = "epicSearchAppointment"];</code>
+     * @return Whether the epicSearchAppointment field is set.
+     */
+    @java.lang.Override
+    public boolean hasEpicSearchAppointment() {
+      return valueCase_ == 3704;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicSearchAppointment epic_search_appointment = 3704 [json_name = "epicSearchAppointment"];</code>
+     * @return The epicSearchAppointment.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment getEpicSearchAppointment() {
+      if (epicSearchAppointmentBuilder_ == null) {
+        if (valueCase_ == 3704) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3704) {
+          return epicSearchAppointmentBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicSearchAppointment epic_search_appointment = 3704 [json_name = "epicSearchAppointment"];</code>
+     */
+    public Builder setEpicSearchAppointment(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment value) {
+      if (epicSearchAppointmentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        epicSearchAppointmentBuilder_.setMessage(value);
+      }
+      valueCase_ = 3704;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicSearchAppointment epic_search_appointment = 3704 [json_name = "epicSearchAppointment"];</code>
+     */
+    public Builder setEpicSearchAppointment(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment.Builder builderForValue) {
+      if (epicSearchAppointmentBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        epicSearchAppointmentBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3704;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicSearchAppointment epic_search_appointment = 3704 [json_name = "epicSearchAppointment"];</code>
+     */
+    public Builder mergeEpicSearchAppointment(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment value) {
+      if (epicSearchAppointmentBuilder_ == null) {
+        if (valueCase_ == 3704 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3704) {
+          epicSearchAppointmentBuilder_.mergeFrom(value);
+        } else {
+          epicSearchAppointmentBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3704;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicSearchAppointment epic_search_appointment = 3704 [json_name = "epicSearchAppointment"];</code>
+     */
+    public Builder clearEpicSearchAppointment() {
+      if (epicSearchAppointmentBuilder_ == null) {
+        if (valueCase_ == 3704) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3704) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        epicSearchAppointmentBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicSearchAppointment epic_search_appointment = 3704 [json_name = "epicSearchAppointment"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment.Builder getEpicSearchAppointmentBuilder() {
+      return getEpicSearchAppointmentFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicSearchAppointment epic_search_appointment = 3704 [json_name = "epicSearchAppointment"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointmentOrBuilder getEpicSearchAppointmentOrBuilder() {
+      if ((valueCase_ == 3704) && (epicSearchAppointmentBuilder_ != null)) {
+        return epicSearchAppointmentBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3704) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicSearchAppointment epic_search_appointment = 3704 [json_name = "epicSearchAppointment"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointmentOrBuilder> 
+        getEpicSearchAppointmentFieldBuilder() {
+      if (epicSearchAppointmentBuilder_ == null) {
+        if (!(valueCase_ == 3704)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment.getDefaultInstance();
+        }
+        epicSearchAppointmentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointmentOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicSearchAppointment) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3704;
+      onChanged();
+      return epicSearchAppointmentBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointmentOrBuilder> epicFindAppointmentBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicFindAppointment epic_find_appointment = 3705 [json_name = "epicFindAppointment"];</code>
+     * @return Whether the epicFindAppointment field is set.
+     */
+    @java.lang.Override
+    public boolean hasEpicFindAppointment() {
+      return valueCase_ == 3705;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicFindAppointment epic_find_appointment = 3705 [json_name = "epicFindAppointment"];</code>
+     * @return The epicFindAppointment.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment getEpicFindAppointment() {
+      if (epicFindAppointmentBuilder_ == null) {
+        if (valueCase_ == 3705) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3705) {
+          return epicFindAppointmentBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicFindAppointment epic_find_appointment = 3705 [json_name = "epicFindAppointment"];</code>
+     */
+    public Builder setEpicFindAppointment(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment value) {
+      if (epicFindAppointmentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        epicFindAppointmentBuilder_.setMessage(value);
+      }
+      valueCase_ = 3705;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicFindAppointment epic_find_appointment = 3705 [json_name = "epicFindAppointment"];</code>
+     */
+    public Builder setEpicFindAppointment(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment.Builder builderForValue) {
+      if (epicFindAppointmentBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        epicFindAppointmentBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3705;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicFindAppointment epic_find_appointment = 3705 [json_name = "epicFindAppointment"];</code>
+     */
+    public Builder mergeEpicFindAppointment(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment value) {
+      if (epicFindAppointmentBuilder_ == null) {
+        if (valueCase_ == 3705 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3705) {
+          epicFindAppointmentBuilder_.mergeFrom(value);
+        } else {
+          epicFindAppointmentBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3705;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicFindAppointment epic_find_appointment = 3705 [json_name = "epicFindAppointment"];</code>
+     */
+    public Builder clearEpicFindAppointment() {
+      if (epicFindAppointmentBuilder_ == null) {
+        if (valueCase_ == 3705) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3705) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        epicFindAppointmentBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicFindAppointment epic_find_appointment = 3705 [json_name = "epicFindAppointment"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment.Builder getEpicFindAppointmentBuilder() {
+      return getEpicFindAppointmentFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicFindAppointment epic_find_appointment = 3705 [json_name = "epicFindAppointment"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointmentOrBuilder getEpicFindAppointmentOrBuilder() {
+      if ((valueCase_ == 3705) && (epicFindAppointmentBuilder_ != null)) {
+        return epicFindAppointmentBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3705) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicFindAppointment epic_find_appointment = 3705 [json_name = "epicFindAppointment"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointmentOrBuilder> 
+        getEpicFindAppointmentFieldBuilder() {
+      if (epicFindAppointmentBuilder_ == null) {
+        if (!(valueCase_ == 3705)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment.getDefaultInstance();
+        }
+        epicFindAppointmentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointmentOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicFindAppointment) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3705;
+      onChanged();
+      return epicFindAppointmentBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointmentOrBuilder> epicBookAppointmentBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicBookAppointment epic_book_appointment = 3706 [json_name = "epicBookAppointment"];</code>
+     * @return Whether the epicBookAppointment field is set.
+     */
+    @java.lang.Override
+    public boolean hasEpicBookAppointment() {
+      return valueCase_ == 3706;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicBookAppointment epic_book_appointment = 3706 [json_name = "epicBookAppointment"];</code>
+     * @return The epicBookAppointment.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment getEpicBookAppointment() {
+      if (epicBookAppointmentBuilder_ == null) {
+        if (valueCase_ == 3706) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3706) {
+          return epicBookAppointmentBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicBookAppointment epic_book_appointment = 3706 [json_name = "epicBookAppointment"];</code>
+     */
+    public Builder setEpicBookAppointment(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment value) {
+      if (epicBookAppointmentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        epicBookAppointmentBuilder_.setMessage(value);
+      }
+      valueCase_ = 3706;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicBookAppointment epic_book_appointment = 3706 [json_name = "epicBookAppointment"];</code>
+     */
+    public Builder setEpicBookAppointment(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment.Builder builderForValue) {
+      if (epicBookAppointmentBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        epicBookAppointmentBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3706;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicBookAppointment epic_book_appointment = 3706 [json_name = "epicBookAppointment"];</code>
+     */
+    public Builder mergeEpicBookAppointment(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment value) {
+      if (epicBookAppointmentBuilder_ == null) {
+        if (valueCase_ == 3706 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3706) {
+          epicBookAppointmentBuilder_.mergeFrom(value);
+        } else {
+          epicBookAppointmentBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3706;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicBookAppointment epic_book_appointment = 3706 [json_name = "epicBookAppointment"];</code>
+     */
+    public Builder clearEpicBookAppointment() {
+      if (epicBookAppointmentBuilder_ == null) {
+        if (valueCase_ == 3706) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3706) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        epicBookAppointmentBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicBookAppointment epic_book_appointment = 3706 [json_name = "epicBookAppointment"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment.Builder getEpicBookAppointmentBuilder() {
+      return getEpicBookAppointmentFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicBookAppointment epic_book_appointment = 3706 [json_name = "epicBookAppointment"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointmentOrBuilder getEpicBookAppointmentOrBuilder() {
+      if ((valueCase_ == 3706) && (epicBookAppointmentBuilder_ != null)) {
+        return epicBookAppointmentBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3706) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicBookAppointment epic_book_appointment = 3706 [json_name = "epicBookAppointment"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointmentOrBuilder> 
+        getEpicBookAppointmentFieldBuilder() {
+      if (epicBookAppointmentBuilder_ == null) {
+        if (!(valueCase_ == 3706)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment.getDefaultInstance();
+        }
+        epicBookAppointmentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointmentOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicBookAppointment) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3706;
+      onChanged();
+      return epicBookAppointmentBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountOrBuilder> epicGetAccountBuilder_;
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccount epic_get_account = 3707 [json_name = "epicGetAccount"];</code>
+     * @return Whether the epicGetAccount field is set.
+     */
+    @java.lang.Override
+    public boolean hasEpicGetAccount() {
+      return valueCase_ == 3707;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccount epic_get_account = 3707 [json_name = "epicGetAccount"];</code>
+     * @return The epicGetAccount.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount getEpicGetAccount() {
+      if (epicGetAccountBuilder_ == null) {
+        if (valueCase_ == 3707) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount.getDefaultInstance();
+      } else {
+        if (valueCase_ == 3707) {
+          return epicGetAccountBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccount epic_get_account = 3707 [json_name = "epicGetAccount"];</code>
+     */
+    public Builder setEpicGetAccount(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount value) {
+      if (epicGetAccountBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        epicGetAccountBuilder_.setMessage(value);
+      }
+      valueCase_ = 3707;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccount epic_get_account = 3707 [json_name = "epicGetAccount"];</code>
+     */
+    public Builder setEpicGetAccount(
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount.Builder builderForValue) {
+      if (epicGetAccountBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        epicGetAccountBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 3707;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccount epic_get_account = 3707 [json_name = "epicGetAccount"];</code>
+     */
+    public Builder mergeEpicGetAccount(com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount value) {
+      if (epicGetAccountBuilder_ == null) {
+        if (valueCase_ == 3707 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount.newBuilder((com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 3707) {
+          epicGetAccountBuilder_.mergeFrom(value);
+        } else {
+          epicGetAccountBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 3707;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccount epic_get_account = 3707 [json_name = "epicGetAccount"];</code>
+     */
+    public Builder clearEpicGetAccount() {
+      if (epicGetAccountBuilder_ == null) {
+        if (valueCase_ == 3707) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 3707) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        epicGetAccountBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccount epic_get_account = 3707 [json_name = "epicGetAccount"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount.Builder getEpicGetAccountBuilder() {
+      return getEpicGetAccountFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccount epic_get_account = 3707 [json_name = "epicGetAccount"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountOrBuilder getEpicGetAccountOrBuilder() {
+      if ((valueCase_ == 3707) && (epicGetAccountBuilder_ != null)) {
+        return epicGetAccountBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 3707) {
+          return (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.ExecuteEpicGetAccount epic_get_account = 3707 [json_name = "epicGetAccount"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountOrBuilder> 
+        getEpicGetAccountFieldBuilder() {
+      if (epicGetAccountBuilder_ == null) {
+        if (!(valueCase_ == 3707)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount.getDefaultInstance();
+        }
+        epicGetAccountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount.Builder, com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccountOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.ExecuteEpicGetAccount) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 3707;
+      onChanged();
+      return epicGetAccountBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

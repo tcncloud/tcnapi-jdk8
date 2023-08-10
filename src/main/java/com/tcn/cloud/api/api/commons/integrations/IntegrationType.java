@@ -160,6 +160,10 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_PIANO = 3600;</code>
    */
   INTEGRATION_TYPE_PIANO(3600),
+  /**
+   * <code>INTEGRATION_TYPE_EPIC = 3700;</code>
+   */
+  INTEGRATION_TYPE_EPIC(3700),
   UNRECOGNIZED(-1),
   ;
 
@@ -311,6 +315,10 @@ public enum IntegrationType
    * <code>INTEGRATION_TYPE_PIANO = 3600;</code>
    */
   public static final int INTEGRATION_TYPE_PIANO_VALUE = 3600;
+  /**
+   * <code>INTEGRATION_TYPE_EPIC = 3700;</code>
+   */
+  public static final int INTEGRATION_TYPE_EPIC_VALUE = 3700;
 
 
   public final int getNumber() {
@@ -374,6 +382,7 @@ public enum IntegrationType
       case 3400: return INTEGRATION_TYPE_SHIFT4;
       case 3500: return INTEGRATION_TYPE_POSCORP;
       case 3600: return INTEGRATION_TYPE_PIANO;
+      case 3700: return INTEGRATION_TYPE_EPIC;
       default: return null;
     }
   }
