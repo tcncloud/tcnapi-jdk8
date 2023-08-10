@@ -3118,6 +3118,37 @@ public final class WFMGrpc {
     return getDeleteDraftScheduleMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleRes> getCopyScheduleToScheduleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CopyScheduleToSchedule",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleRes> getCopyScheduleToScheduleMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleReq, com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleRes> getCopyScheduleToScheduleMethod;
+    if ((getCopyScheduleToScheduleMethod = WFMGrpc.getCopyScheduleToScheduleMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getCopyScheduleToScheduleMethod = WFMGrpc.getCopyScheduleToScheduleMethod) == null) {
+          WFMGrpc.getCopyScheduleToScheduleMethod = getCopyScheduleToScheduleMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleReq, com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CopyScheduleToSchedule"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("CopyScheduleToSchedule"))
+              .build();
+        }
+      }
+    }
+    return getCopyScheduleToScheduleMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes> getCreateShiftInstanceMethod;
 
@@ -5348,6 +5379,28 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Copies the shifts from &#64;source_schedule_selector to &#64;destination_schedule_selector, constrained by the given parameters for the org sending the request.
+     * If &#64;datetime_range is set, all shifts within the datetime range will be copied.
+     * If &#64;datetime_range is not set, all shifts in the &#64;source_schedule_selector within the schedule range of the &#64;destination_schedule_selector will be copied. However if one of them is a published schedule, it will use the schedule range of the draft schedule.
+     * If &#64;start_datetimes_only is set to false, then shifts are considered to be within the &#64;datetime range if any portion of them is within the range.
+     * If &#64;start_datetimes_only is set to true, then only shifts with start times within the &#64;datetime range will be copied.
+     * If &#64;overlap_as_warning is set to false, any overlapping shifts for a given agent will return a diagnostic error, and prevent any shifts from being copied.
+     * If &#64;overlap_as_warning is set to true, the shifts will be copied regardless of overlap conflicts, and any conflicts will cause a diagnostic warning to be returned after.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   -grpc.Invalid: one or more fields in the request have invalid values.
+     *   -grpc.NotFound: the &#64;source_schedule_selector or &#64;destination_schedule_selector don't exist for the org sending the request.
+     *   -grpc.Internal: error occurs when creating the copied shift instances.
+     * </pre>
+     */
+    default void copyScheduleToSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyScheduleToScheduleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates a shift instance for the org sending the request with the provided parameters.
      * This method is not implemented. Do not use.
      * Required permissions:
@@ -7476,6 +7529,29 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Copies the shifts from &#64;source_schedule_selector to &#64;destination_schedule_selector, constrained by the given parameters for the org sending the request.
+     * If &#64;datetime_range is set, all shifts within the datetime range will be copied.
+     * If &#64;datetime_range is not set, all shifts in the &#64;source_schedule_selector within the schedule range of the &#64;destination_schedule_selector will be copied. However if one of them is a published schedule, it will use the schedule range of the draft schedule.
+     * If &#64;start_datetimes_only is set to false, then shifts are considered to be within the &#64;datetime range if any portion of them is within the range.
+     * If &#64;start_datetimes_only is set to true, then only shifts with start times within the &#64;datetime range will be copied.
+     * If &#64;overlap_as_warning is set to false, any overlapping shifts for a given agent will return a diagnostic error, and prevent any shifts from being copied.
+     * If &#64;overlap_as_warning is set to true, the shifts will be copied regardless of overlap conflicts, and any conflicts will cause a diagnostic warning to be returned after.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   -grpc.Invalid: one or more fields in the request have invalid values.
+     *   -grpc.NotFound: the &#64;source_schedule_selector or &#64;destination_schedule_selector don't exist for the org sending the request.
+     *   -grpc.Internal: error occurs when creating the copied shift instances.
+     * </pre>
+     */
+    public void copyScheduleToSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCopyScheduleToScheduleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates a shift instance for the org sending the request with the provided parameters.
      * This method is not implemented. Do not use.
      * Required permissions:
@@ -9508,6 +9584,28 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Copies the shifts from &#64;source_schedule_selector to &#64;destination_schedule_selector, constrained by the given parameters for the org sending the request.
+     * If &#64;datetime_range is set, all shifts within the datetime range will be copied.
+     * If &#64;datetime_range is not set, all shifts in the &#64;source_schedule_selector within the schedule range of the &#64;destination_schedule_selector will be copied. However if one of them is a published schedule, it will use the schedule range of the draft schedule.
+     * If &#64;start_datetimes_only is set to false, then shifts are considered to be within the &#64;datetime range if any portion of them is within the range.
+     * If &#64;start_datetimes_only is set to true, then only shifts with start times within the &#64;datetime range will be copied.
+     * If &#64;overlap_as_warning is set to false, any overlapping shifts for a given agent will return a diagnostic error, and prevent any shifts from being copied.
+     * If &#64;overlap_as_warning is set to true, the shifts will be copied regardless of overlap conflicts, and any conflicts will cause a diagnostic warning to be returned after.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   -grpc.Invalid: one or more fields in the request have invalid values.
+     *   -grpc.NotFound: the &#64;source_schedule_selector or &#64;destination_schedule_selector don't exist for the org sending the request.
+     *   -grpc.Internal: error occurs when creating the copied shift instances.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleRes copyScheduleToSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCopyScheduleToScheduleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Creates a shift instance for the org sending the request with the provided parameters.
      * This method is not implemented. Do not use.
      * Required permissions:
@@ -11526,6 +11624,29 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Copies the shifts from &#64;source_schedule_selector to &#64;destination_schedule_selector, constrained by the given parameters for the org sending the request.
+     * If &#64;datetime_range is set, all shifts within the datetime range will be copied.
+     * If &#64;datetime_range is not set, all shifts in the &#64;source_schedule_selector within the schedule range of the &#64;destination_schedule_selector will be copied. However if one of them is a published schedule, it will use the schedule range of the draft schedule.
+     * If &#64;start_datetimes_only is set to false, then shifts are considered to be within the &#64;datetime range if any portion of them is within the range.
+     * If &#64;start_datetimes_only is set to true, then only shifts with start times within the &#64;datetime range will be copied.
+     * If &#64;overlap_as_warning is set to false, any overlapping shifts for a given agent will return a diagnostic error, and prevent any shifts from being copied.
+     * If &#64;overlap_as_warning is set to true, the shifts will be copied regardless of overlap conflicts, and any conflicts will cause a diagnostic warning to be returned after.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   -grpc.Invalid: one or more fields in the request have invalid values.
+     *   -grpc.NotFound: the &#64;source_schedule_selector or &#64;destination_schedule_selector don't exist for the org sending the request.
+     *   -grpc.Internal: error occurs when creating the copied shift instances.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleRes> copyScheduleToSchedule(
+        com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCopyScheduleToScheduleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Creates a shift instance for the org sending the request with the provided parameters.
      * This method is not implemented. Do not use.
      * Required permissions:
@@ -11858,19 +11979,20 @@ public final class WFMGrpc {
   private static final int METHODID_GET_DRAFT_SCHEDULE = 97;
   private static final int METHODID_LIST_DRAFT_SCHEDULES = 98;
   private static final int METHODID_DELETE_DRAFT_SCHEDULE = 99;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE = 100;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 101;
-  private static final int METHODID_SWAP_SHIFT_INSTANCES = 102;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 103;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 104;
-  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 105;
-  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 106;
-  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 107;
-  private static final int METHODID_SET_SCHEDULING_TARGET = 108;
-  private static final int METHODID_GET_SCHEDULING_TARGET = 109;
-  private static final int METHODID_DELETE_SCHEDULING_TARGET = 110;
-  private static final int METHODID_GET_PERFORMANCE_METRICS = 111;
-  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 112;
+  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 100;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE = 101;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 102;
+  private static final int METHODID_SWAP_SHIFT_INSTANCES = 103;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 104;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 105;
+  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 106;
+  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 107;
+  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 108;
+  private static final int METHODID_SET_SCHEDULING_TARGET = 109;
+  private static final int METHODID_GET_SCHEDULING_TARGET = 110;
+  private static final int METHODID_DELETE_SCHEDULING_TARGET = 111;
+  private static final int METHODID_GET_PERFORMANCE_METRICS = 112;
+  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 113;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -12288,6 +12410,10 @@ public final class WFMGrpc {
         case METHODID_DELETE_DRAFT_SCHEDULE:
           serviceImpl.deleteDraftSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes>) responseObserver);
+          break;
+        case METHODID_COPY_SCHEDULE_TO_SCHEDULE:
+          serviceImpl.copyScheduleToSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleRes>) responseObserver);
           break;
         case METHODID_CREATE_SHIFT_INSTANCE:
           serviceImpl.createShiftInstance((com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq) request,
@@ -13060,6 +13186,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes>(
                 service, METHODID_DELETE_DRAFT_SCHEDULE)))
         .addMethod(
+          getCopyScheduleToScheduleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleRes>(
+                service, METHODID_COPY_SCHEDULE_TO_SCHEDULE)))
+        .addMethod(
           getCreateShiftInstanceMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -13298,6 +13431,7 @@ public final class WFMGrpc {
               .addMethod(getGetDraftScheduleMethod())
               .addMethod(getListDraftSchedulesMethod())
               .addMethod(getDeleteDraftScheduleMethod())
+              .addMethod(getCopyScheduleToScheduleMethod())
               .addMethod(getCreateShiftInstanceMethod())
               .addMethod(getCreateShiftInstanceV2Method())
               .addMethod(getSwapShiftInstancesMethod())
