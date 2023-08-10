@@ -582,6 +582,23 @@ public enum Permission
    * <code>PERMISSION_PBX_MANAGER_EDIT = 4101 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_PBX_MANAGER_EDIT(4101),
+  /**
+   * <pre>
+   * No view permissions required for Newsroom home
+   * Enables access to create, update, and archive in Newsroom manager
+   * </pre>
+   *
+   * <code>PERMISSION_NEWSROOM_EDIT = 4200 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_NEWSROOM_EDIT(4200),
+  /**
+   * <pre>
+   * Enables access to publish in Newsroom manager
+   * </pre>
+   *
+   * <code>PERMISSION_NEWSROOM_PUBLISH = 4201 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_NEWSROOM_PUBLISH(4201),
   UNRECOGNIZED(-1),
   ;
 
@@ -1155,6 +1172,23 @@ public enum Permission
    * <code>PERMISSION_PBX_MANAGER_EDIT = 4101 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_PBX_MANAGER_EDIT_VALUE = 4101;
+  /**
+   * <pre>
+   * No view permissions required for Newsroom home
+   * Enables access to create, update, and archive in Newsroom manager
+   * </pre>
+   *
+   * <code>PERMISSION_NEWSROOM_EDIT = 4200 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_NEWSROOM_EDIT_VALUE = 4200;
+  /**
+   * <pre>
+   * Enables access to publish in Newsroom manager
+   * </pre>
+   *
+   * <code>PERMISSION_NEWSROOM_PUBLISH = 4201 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_NEWSROOM_PUBLISH_VALUE = 4201;
 
 
   public final int getNumber() {
@@ -1253,6 +1287,8 @@ public enum Permission
       case 4000: return PERMISSION_WORKFLOWS;
       case 4100: return PERMISSION_PBX_MANAGER_VIEW;
       case 4101: return PERMISSION_PBX_MANAGER_EDIT;
+      case 4200: return PERMISSION_NEWSROOM_EDIT;
+      case 4201: return PERMISSION_NEWSROOM_PUBLISH;
       default: return null;
     }
   }
