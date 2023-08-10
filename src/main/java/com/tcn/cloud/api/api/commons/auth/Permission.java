@@ -512,6 +512,14 @@ public enum Permission
   PERMISSION_SCORECARDS_EVALUATE(1602),
   /**
    * <pre>
+   * Enables access to flag eval features.
+   * </pre>
+   *
+   * <code>PERMISSION_SCORECARDS_FLAG_EVAL = 1603 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_SCORECARDS_FLAG_EVAL(1603),
+  /**
+   * <pre>
    * Enables access to Dev Tools app.
    * </pre>
    *
@@ -574,6 +582,23 @@ public enum Permission
    * <code>PERMISSION_PBX_MANAGER_EDIT = 4101 [(.annotations.perms.options) = { ... }</code>
    */
   PERMISSION_PBX_MANAGER_EDIT(4101),
+  /**
+   * <pre>
+   * No view permissions required for Newsroom home
+   * Enables access to create, update, and archive in Newsroom manager
+   * </pre>
+   *
+   * <code>PERMISSION_NEWSROOM_EDIT = 4200 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_NEWSROOM_EDIT(4200),
+  /**
+   * <pre>
+   * Enables access to publish in Newsroom manager
+   * </pre>
+   *
+   * <code>PERMISSION_NEWSROOM_PUBLISH = 4201 [(.annotations.perms.options) = { ... }</code>
+   */
+  PERMISSION_NEWSROOM_PUBLISH(4201),
   UNRECOGNIZED(-1),
   ;
 
@@ -1077,6 +1102,14 @@ public enum Permission
   public static final int PERMISSION_SCORECARDS_EVALUATE_VALUE = 1602;
   /**
    * <pre>
+   * Enables access to flag eval features.
+   * </pre>
+   *
+   * <code>PERMISSION_SCORECARDS_FLAG_EVAL = 1603 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_SCORECARDS_FLAG_EVAL_VALUE = 1603;
+  /**
+   * <pre>
    * Enables access to Dev Tools app.
    * </pre>
    *
@@ -1139,6 +1172,23 @@ public enum Permission
    * <code>PERMISSION_PBX_MANAGER_EDIT = 4101 [(.annotations.perms.options) = { ... }</code>
    */
   public static final int PERMISSION_PBX_MANAGER_EDIT_VALUE = 4101;
+  /**
+   * <pre>
+   * No view permissions required for Newsroom home
+   * Enables access to create, update, and archive in Newsroom manager
+   * </pre>
+   *
+   * <code>PERMISSION_NEWSROOM_EDIT = 4200 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_NEWSROOM_EDIT_VALUE = 4200;
+  /**
+   * <pre>
+   * Enables access to publish in Newsroom manager
+   * </pre>
+   *
+   * <code>PERMISSION_NEWSROOM_PUBLISH = 4201 [(.annotations.perms.options) = { ... }</code>
+   */
+  public static final int PERMISSION_NEWSROOM_PUBLISH_VALUE = 4201;
 
 
   public final int getNumber() {
@@ -1228,6 +1278,7 @@ public enum Permission
       case 1600: return PERMISSION_SCORECARDS;
       case 1601: return PERMISSION_SCORECARDS_MANAGE;
       case 1602: return PERMISSION_SCORECARDS_EVALUATE;
+      case 1603: return PERMISSION_SCORECARDS_FLAG_EVAL;
       case 1800: return PERMISSION_DEV_TOOLS;
       case 2000: return PERMISSION_DELIVERY_NOTIFICATIONS_VIEW;
       case 2001: return PERMISSION_DELIVERY_NOTIFICATIONS_EDIT;
@@ -1236,6 +1287,8 @@ public enum Permission
       case 4000: return PERMISSION_WORKFLOWS;
       case 4100: return PERMISSION_PBX_MANAGER_VIEW;
       case 4101: return PERMISSION_PBX_MANAGER_EDIT;
+      case 4200: return PERMISSION_NEWSROOM_EDIT;
+      case 4201: return PERMISSION_NEWSROOM_PUBLISH;
       default: return null;
     }
   }
