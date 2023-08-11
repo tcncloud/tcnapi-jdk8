@@ -4369,6 +4369,1802 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface DivideOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v0alpha.ReshapeAction.Divide)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The default value to be used if no other value is provided.
+     * </pre>
+     *
+     * <code>double default_value = 1 [json_name = "defaultValue"];</code>
+     * @return The defaultValue.
+     */
+    double getDefaultValue();
+
+    /**
+     * <pre>
+     * The divisor to be used for the division operation.
+     * </pre>
+     *
+     * <code>double divisor = 2 [json_name = "divisor"];</code>
+     * @return The divisor.
+     */
+    double getDivisor();
+  }
+  /**
+   * <pre>
+   * Represents a message for division operation.
+   * </pre>
+   *
+   * Protobuf type {@code api.v0alpha.ReshapeAction.Divide}
+   */
+  public static final class Divide extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v0alpha.ReshapeAction.Divide)
+      DivideOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Divide.newBuilder() to construct.
+    private Divide(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Divide() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Divide();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_ReshapeAction_Divide_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_ReshapeAction_Divide_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide.class, com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide.Builder.class);
+    }
+
+    public static final int DEFAULT_VALUE_FIELD_NUMBER = 1;
+    private double defaultValue_ = 0D;
+    /**
+     * <pre>
+     * The default value to be used if no other value is provided.
+     * </pre>
+     *
+     * <code>double default_value = 1 [json_name = "defaultValue"];</code>
+     * @return The defaultValue.
+     */
+    @java.lang.Override
+    public double getDefaultValue() {
+      return defaultValue_;
+    }
+
+    public static final int DIVISOR_FIELD_NUMBER = 2;
+    private double divisor_ = 0D;
+    /**
+     * <pre>
+     * The divisor to be used for the division operation.
+     * </pre>
+     *
+     * <code>double divisor = 2 [json_name = "divisor"];</code>
+     * @return The divisor.
+     */
+    @java.lang.Override
+    public double getDivisor() {
+      return divisor_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (java.lang.Double.doubleToRawLongBits(defaultValue_) != 0) {
+        output.writeDouble(1, defaultValue_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(divisor_) != 0) {
+        output.writeDouble(2, divisor_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (java.lang.Double.doubleToRawLongBits(defaultValue_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(1, defaultValue_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(divisor_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, divisor_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide other = (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide) obj;
+
+      if (java.lang.Double.doubleToLongBits(getDefaultValue())
+          != java.lang.Double.doubleToLongBits(
+              other.getDefaultValue())) return false;
+      if (java.lang.Double.doubleToLongBits(getDivisor())
+          != java.lang.Double.doubleToLongBits(
+              other.getDivisor())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DEFAULT_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getDefaultValue()));
+      hash = (37 * hash) + DIVISOR_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getDivisor()));
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents a message for division operation.
+     * </pre>
+     *
+     * Protobuf type {@code api.v0alpha.ReshapeAction.Divide}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v0alpha.ReshapeAction.Divide)
+        com.tcn.cloud.api.api.v0alpha.ReshapeAction.DivideOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_ReshapeAction_Divide_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_ReshapeAction_Divide_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide.class, com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        defaultValue_ = 0D;
+        divisor_ = 0D;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_ReshapeAction_Divide_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide build() {
+        com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide buildPartial() {
+        com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide result = new com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.defaultValue_ = defaultValue_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.divisor_ = divisor_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide) {
+          return mergeFrom((com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide other) {
+        if (other == com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide.getDefaultInstance()) return this;
+        if (other.getDefaultValue() != 0D) {
+          setDefaultValue(other.getDefaultValue());
+        }
+        if (other.getDivisor() != 0D) {
+          setDivisor(other.getDivisor());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 9: {
+                defaultValue_ = input.readDouble();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 9
+              case 17: {
+                divisor_ = input.readDouble();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 17
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private double defaultValue_ ;
+      /**
+       * <pre>
+       * The default value to be used if no other value is provided.
+       * </pre>
+       *
+       * <code>double default_value = 1 [json_name = "defaultValue"];</code>
+       * @return The defaultValue.
+       */
+      @java.lang.Override
+      public double getDefaultValue() {
+        return defaultValue_;
+      }
+      /**
+       * <pre>
+       * The default value to be used if no other value is provided.
+       * </pre>
+       *
+       * <code>double default_value = 1 [json_name = "defaultValue"];</code>
+       * @param value The defaultValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultValue(double value) {
+
+        defaultValue_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The default value to be used if no other value is provided.
+       * </pre>
+       *
+       * <code>double default_value = 1 [json_name = "defaultValue"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultValue() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        defaultValue_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private double divisor_ ;
+      /**
+       * <pre>
+       * The divisor to be used for the division operation.
+       * </pre>
+       *
+       * <code>double divisor = 2 [json_name = "divisor"];</code>
+       * @return The divisor.
+       */
+      @java.lang.Override
+      public double getDivisor() {
+        return divisor_;
+      }
+      /**
+       * <pre>
+       * The divisor to be used for the division operation.
+       * </pre>
+       *
+       * <code>double divisor = 2 [json_name = "divisor"];</code>
+       * @param value The divisor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDivisor(double value) {
+
+        divisor_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The divisor to be used for the division operation.
+       * </pre>
+       *
+       * <code>double divisor = 2 [json_name = "divisor"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDivisor() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        divisor_ = 0D;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v0alpha.ReshapeAction.Divide)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v0alpha.ReshapeAction.Divide)
+    private static final com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide();
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Divide>
+        PARSER = new com.google.protobuf.AbstractParser<Divide>() {
+      @java.lang.Override
+      public Divide parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Divide> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Divide> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MultiplyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v0alpha.ReshapeAction.Multiply)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The default value to be used if no other value is provided.
+     * </pre>
+     *
+     * <code>double default_value = 1 [json_name = "defaultValue"];</code>
+     * @return The defaultValue.
+     */
+    double getDefaultValue();
+
+    /**
+     * <pre>
+     * The multiplier to be used for the multiplication operation.
+     * </pre>
+     *
+     * <code>double multiplier = 2 [json_name = "multiplier"];</code>
+     * @return The multiplier.
+     */
+    double getMultiplier();
+  }
+  /**
+   * <pre>
+   * Represents a message for multiplication operation.
+   * </pre>
+   *
+   * Protobuf type {@code api.v0alpha.ReshapeAction.Multiply}
+   */
+  public static final class Multiply extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v0alpha.ReshapeAction.Multiply)
+      MultiplyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Multiply.newBuilder() to construct.
+    private Multiply(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Multiply() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Multiply();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_ReshapeAction_Multiply_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_ReshapeAction_Multiply_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply.class, com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply.Builder.class);
+    }
+
+    public static final int DEFAULT_VALUE_FIELD_NUMBER = 1;
+    private double defaultValue_ = 0D;
+    /**
+     * <pre>
+     * The default value to be used if no other value is provided.
+     * </pre>
+     *
+     * <code>double default_value = 1 [json_name = "defaultValue"];</code>
+     * @return The defaultValue.
+     */
+    @java.lang.Override
+    public double getDefaultValue() {
+      return defaultValue_;
+    }
+
+    public static final int MULTIPLIER_FIELD_NUMBER = 2;
+    private double multiplier_ = 0D;
+    /**
+     * <pre>
+     * The multiplier to be used for the multiplication operation.
+     * </pre>
+     *
+     * <code>double multiplier = 2 [json_name = "multiplier"];</code>
+     * @return The multiplier.
+     */
+    @java.lang.Override
+    public double getMultiplier() {
+      return multiplier_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (java.lang.Double.doubleToRawLongBits(defaultValue_) != 0) {
+        output.writeDouble(1, defaultValue_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(multiplier_) != 0) {
+        output.writeDouble(2, multiplier_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (java.lang.Double.doubleToRawLongBits(defaultValue_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(1, defaultValue_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(multiplier_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, multiplier_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply other = (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply) obj;
+
+      if (java.lang.Double.doubleToLongBits(getDefaultValue())
+          != java.lang.Double.doubleToLongBits(
+              other.getDefaultValue())) return false;
+      if (java.lang.Double.doubleToLongBits(getMultiplier())
+          != java.lang.Double.doubleToLongBits(
+              other.getMultiplier())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DEFAULT_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getDefaultValue()));
+      hash = (37 * hash) + MULTIPLIER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getMultiplier()));
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents a message for multiplication operation.
+     * </pre>
+     *
+     * Protobuf type {@code api.v0alpha.ReshapeAction.Multiply}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v0alpha.ReshapeAction.Multiply)
+        com.tcn.cloud.api.api.v0alpha.ReshapeAction.MultiplyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_ReshapeAction_Multiply_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_ReshapeAction_Multiply_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply.class, com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        defaultValue_ = 0D;
+        multiplier_ = 0D;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_ReshapeAction_Multiply_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply build() {
+        com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply buildPartial() {
+        com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply result = new com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.defaultValue_ = defaultValue_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.multiplier_ = multiplier_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply) {
+          return mergeFrom((com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply other) {
+        if (other == com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply.getDefaultInstance()) return this;
+        if (other.getDefaultValue() != 0D) {
+          setDefaultValue(other.getDefaultValue());
+        }
+        if (other.getMultiplier() != 0D) {
+          setMultiplier(other.getMultiplier());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 9: {
+                defaultValue_ = input.readDouble();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 9
+              case 17: {
+                multiplier_ = input.readDouble();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 17
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private double defaultValue_ ;
+      /**
+       * <pre>
+       * The default value to be used if no other value is provided.
+       * </pre>
+       *
+       * <code>double default_value = 1 [json_name = "defaultValue"];</code>
+       * @return The defaultValue.
+       */
+      @java.lang.Override
+      public double getDefaultValue() {
+        return defaultValue_;
+      }
+      /**
+       * <pre>
+       * The default value to be used if no other value is provided.
+       * </pre>
+       *
+       * <code>double default_value = 1 [json_name = "defaultValue"];</code>
+       * @param value The defaultValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultValue(double value) {
+
+        defaultValue_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The default value to be used if no other value is provided.
+       * </pre>
+       *
+       * <code>double default_value = 1 [json_name = "defaultValue"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultValue() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        defaultValue_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private double multiplier_ ;
+      /**
+       * <pre>
+       * The multiplier to be used for the multiplication operation.
+       * </pre>
+       *
+       * <code>double multiplier = 2 [json_name = "multiplier"];</code>
+       * @return The multiplier.
+       */
+      @java.lang.Override
+      public double getMultiplier() {
+        return multiplier_;
+      }
+      /**
+       * <pre>
+       * The multiplier to be used for the multiplication operation.
+       * </pre>
+       *
+       * <code>double multiplier = 2 [json_name = "multiplier"];</code>
+       * @param value The multiplier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMultiplier(double value) {
+
+        multiplier_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The multiplier to be used for the multiplication operation.
+       * </pre>
+       *
+       * <code>double multiplier = 2 [json_name = "multiplier"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMultiplier() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        multiplier_ = 0D;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v0alpha.ReshapeAction.Multiply)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v0alpha.ReshapeAction.Multiply)
+    private static final com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply();
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Multiply>
+        PARSER = new com.google.protobuf.AbstractParser<Multiply>() {
+      @java.lang.Override
+      public Multiply parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Multiply> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Multiply> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ModuloOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:api.v0alpha.ReshapeAction.Modulo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The default value to be used if no other value is provided.
+     * </pre>
+     *
+     * <code>int32 default_value = 1 [json_name = "defaultValue"];</code>
+     * @return The defaultValue.
+     */
+    int getDefaultValue();
+
+    /**
+     * <pre>
+     * The modulus to be used for the modulo operation.
+     * </pre>
+     *
+     * <code>int32 modulus = 2 [json_name = "modulus"];</code>
+     * @return The modulus.
+     */
+    int getModulus();
+  }
+  /**
+   * <pre>
+   * Represents a message for modulo operation.
+   * </pre>
+   *
+   * Protobuf type {@code api.v0alpha.ReshapeAction.Modulo}
+   */
+  public static final class Modulo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:api.v0alpha.ReshapeAction.Modulo)
+      ModuloOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Modulo.newBuilder() to construct.
+    private Modulo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Modulo() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Modulo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_ReshapeAction_Modulo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_ReshapeAction_Modulo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo.class, com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo.Builder.class);
+    }
+
+    public static final int DEFAULT_VALUE_FIELD_NUMBER = 1;
+    private int defaultValue_ = 0;
+    /**
+     * <pre>
+     * The default value to be used if no other value is provided.
+     * </pre>
+     *
+     * <code>int32 default_value = 1 [json_name = "defaultValue"];</code>
+     * @return The defaultValue.
+     */
+    @java.lang.Override
+    public int getDefaultValue() {
+      return defaultValue_;
+    }
+
+    public static final int MODULUS_FIELD_NUMBER = 2;
+    private int modulus_ = 0;
+    /**
+     * <pre>
+     * The modulus to be used for the modulo operation.
+     * </pre>
+     *
+     * <code>int32 modulus = 2 [json_name = "modulus"];</code>
+     * @return The modulus.
+     */
+    @java.lang.Override
+    public int getModulus() {
+      return modulus_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (defaultValue_ != 0) {
+        output.writeInt32(1, defaultValue_);
+      }
+      if (modulus_ != 0) {
+        output.writeInt32(2, modulus_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (defaultValue_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, defaultValue_);
+      }
+      if (modulus_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, modulus_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo)) {
+        return super.equals(obj);
+      }
+      com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo other = (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo) obj;
+
+      if (getDefaultValue()
+          != other.getDefaultValue()) return false;
+      if (getModulus()
+          != other.getModulus()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DEFAULT_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultValue();
+      hash = (37 * hash) + MODULUS_FIELD_NUMBER;
+      hash = (53 * hash) + getModulus();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents a message for modulo operation.
+     * </pre>
+     *
+     * Protobuf type {@code api.v0alpha.ReshapeAction.Modulo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:api.v0alpha.ReshapeAction.Modulo)
+        com.tcn.cloud.api.api.v0alpha.ReshapeAction.ModuloOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_ReshapeAction_Modulo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_ReshapeAction_Modulo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo.class, com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo.Builder.class);
+      }
+
+      // Construct using com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        defaultValue_ = 0;
+        modulus_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_ReshapeAction_Modulo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo getDefaultInstanceForType() {
+        return com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo build() {
+        com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo buildPartial() {
+        com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo result = new com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.defaultValue_ = defaultValue_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.modulus_ = modulus_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo) {
+          return mergeFrom((com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo other) {
+        if (other == com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo.getDefaultInstance()) return this;
+        if (other.getDefaultValue() != 0) {
+          setDefaultValue(other.getDefaultValue());
+        }
+        if (other.getModulus() != 0) {
+          setModulus(other.getModulus());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                defaultValue_ = input.readInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                modulus_ = input.readInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int defaultValue_ ;
+      /**
+       * <pre>
+       * The default value to be used if no other value is provided.
+       * </pre>
+       *
+       * <code>int32 default_value = 1 [json_name = "defaultValue"];</code>
+       * @return The defaultValue.
+       */
+      @java.lang.Override
+      public int getDefaultValue() {
+        return defaultValue_;
+      }
+      /**
+       * <pre>
+       * The default value to be used if no other value is provided.
+       * </pre>
+       *
+       * <code>int32 default_value = 1 [json_name = "defaultValue"];</code>
+       * @param value The defaultValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultValue(int value) {
+
+        defaultValue_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The default value to be used if no other value is provided.
+       * </pre>
+       *
+       * <code>int32 default_value = 1 [json_name = "defaultValue"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultValue() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        defaultValue_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int modulus_ ;
+      /**
+       * <pre>
+       * The modulus to be used for the modulo operation.
+       * </pre>
+       *
+       * <code>int32 modulus = 2 [json_name = "modulus"];</code>
+       * @return The modulus.
+       */
+      @java.lang.Override
+      public int getModulus() {
+        return modulus_;
+      }
+      /**
+       * <pre>
+       * The modulus to be used for the modulo operation.
+       * </pre>
+       *
+       * <code>int32 modulus = 2 [json_name = "modulus"];</code>
+       * @param value The modulus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModulus(int value) {
+
+        modulus_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The modulus to be used for the modulo operation.
+       * </pre>
+       *
+       * <code>int32 modulus = 2 [json_name = "modulus"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModulus() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        modulus_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:api.v0alpha.ReshapeAction.Modulo)
+    }
+
+    // @@protoc_insertion_point(class_scope:api.v0alpha.ReshapeAction.Modulo)
+    private static final com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo();
+    }
+
+    public static com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Modulo>
+        PARSER = new com.google.protobuf.AbstractParser<Modulo>() {
+      @java.lang.Override
+      public Modulo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Modulo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Modulo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface RemoveFieldOrBuilder extends
       // @@protoc_insertion_point(interface_extends:api.v0alpha.ReshapeAction.RemoveField)
       com.google.protobuf.MessageOrBuilder {
@@ -15191,6 +16987,9 @@ private static final long serialVersionUID = 0L;
     REMOVE_FIELD(29),
     ADD_NEW_FIELD(30),
     CHANGE_CURRENCY_TYPE(31),
+    DIVIDE(32),
+    MULTIPLY(33),
+    MODULO(34),
     MERGE(40),
     SET_FIELD_VALUE(41),
     ADD_NEW_FIELD_FROM_FIELD(45),
@@ -15225,6 +17024,9 @@ private static final long serialVersionUID = 0L;
         case 29: return REMOVE_FIELD;
         case 30: return ADD_NEW_FIELD;
         case 31: return CHANGE_CURRENCY_TYPE;
+        case 32: return DIVIDE;
+        case 33: return MULTIPLY;
+        case 34: return MODULO;
         case 40: return MERGE;
         case 41: return SET_FIELD_VALUE;
         case 45: return ADD_NEW_FIELD_FROM_FIELD;
@@ -15303,7 +17105,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
    * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-   *     See api/v0alpha/lms.proto;l=2188
+   *     See api/v0alpha/lms.proto;l=2210
    * @return The enum numeric value on the wire for matchingType.
    */
   @java.lang.Override @java.lang.Deprecated public int getMatchingTypeValue() {
@@ -15316,7 +17118,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
    * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-   *     See api/v0alpha/lms.proto;l=2188
+   *     See api/v0alpha/lms.proto;l=2210
    * @return The matchingType.
    */
   @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.RecordType getMatchingType() {
@@ -15660,6 +17462,99 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v0alpha.ReshapeAction.ChangeCurrencyType.getDefaultInstance();
   }
 
+  public static final int DIVIDE_FIELD_NUMBER = 32;
+  /**
+   * <code>.api.v0alpha.ReshapeAction.Divide divide = 32 [json_name = "divide"];</code>
+   * @return Whether the divide field is set.
+   */
+  @java.lang.Override
+  public boolean hasDivide() {
+    return actionCase_ == 32;
+  }
+  /**
+   * <code>.api.v0alpha.ReshapeAction.Divide divide = 32 [json_name = "divide"];</code>
+   * @return The divide.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide getDivide() {
+    if (actionCase_ == 32) {
+       return (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide) action_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide.getDefaultInstance();
+  }
+  /**
+   * <code>.api.v0alpha.ReshapeAction.Divide divide = 32 [json_name = "divide"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.ReshapeAction.DivideOrBuilder getDivideOrBuilder() {
+    if (actionCase_ == 32) {
+       return (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide) action_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide.getDefaultInstance();
+  }
+
+  public static final int MULTIPLY_FIELD_NUMBER = 33;
+  /**
+   * <code>.api.v0alpha.ReshapeAction.Multiply multiply = 33 [json_name = "multiply"];</code>
+   * @return Whether the multiply field is set.
+   */
+  @java.lang.Override
+  public boolean hasMultiply() {
+    return actionCase_ == 33;
+  }
+  /**
+   * <code>.api.v0alpha.ReshapeAction.Multiply multiply = 33 [json_name = "multiply"];</code>
+   * @return The multiply.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply getMultiply() {
+    if (actionCase_ == 33) {
+       return (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply) action_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply.getDefaultInstance();
+  }
+  /**
+   * <code>.api.v0alpha.ReshapeAction.Multiply multiply = 33 [json_name = "multiply"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.ReshapeAction.MultiplyOrBuilder getMultiplyOrBuilder() {
+    if (actionCase_ == 33) {
+       return (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply) action_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply.getDefaultInstance();
+  }
+
+  public static final int MODULO_FIELD_NUMBER = 34;
+  /**
+   * <code>.api.v0alpha.ReshapeAction.Modulo modulo = 34 [json_name = "modulo"];</code>
+   * @return Whether the modulo field is set.
+   */
+  @java.lang.Override
+  public boolean hasModulo() {
+    return actionCase_ == 34;
+  }
+  /**
+   * <code>.api.v0alpha.ReshapeAction.Modulo modulo = 34 [json_name = "modulo"];</code>
+   * @return The modulo.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo getModulo() {
+    if (actionCase_ == 34) {
+       return (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo) action_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo.getDefaultInstance();
+  }
+  /**
+   * <code>.api.v0alpha.ReshapeAction.Modulo modulo = 34 [json_name = "modulo"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v0alpha.ReshapeAction.ModuloOrBuilder getModuloOrBuilder() {
+    if (actionCase_ == 34) {
+       return (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo) action_;
+    }
+    return com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo.getDefaultInstance();
+  }
+
   public static final int MERGE_FIELD_NUMBER = 40;
   /**
    * <code>.api.v0alpha.ReshapeAction.Merge merge = 40 [json_name = "merge"];</code>
@@ -15924,6 +17819,15 @@ private static final long serialVersionUID = 0L;
     if (actionCase_ == 31) {
       output.writeMessage(31, (com.tcn.cloud.api.api.v0alpha.ReshapeAction.ChangeCurrencyType) action_);
     }
+    if (actionCase_ == 32) {
+      output.writeMessage(32, (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide) action_);
+    }
+    if (actionCase_ == 33) {
+      output.writeMessage(33, (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply) action_);
+    }
+    if (actionCase_ == 34) {
+      output.writeMessage(34, (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo) action_);
+    }
     if (actionCase_ == 40) {
       output.writeMessage(40, (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Merge) action_);
     }
@@ -16002,6 +17906,18 @@ private static final long serialVersionUID = 0L;
     if (actionCase_ == 31) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(31, (com.tcn.cloud.api.api.v0alpha.ReshapeAction.ChangeCurrencyType) action_);
+    }
+    if (actionCase_ == 32) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(32, (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide) action_);
+    }
+    if (actionCase_ == 33) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(33, (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply) action_);
+    }
+    if (actionCase_ == 34) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(34, (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo) action_);
     }
     if (actionCase_ == 40) {
       size += com.google.protobuf.CodedOutputStream
@@ -16104,6 +18020,18 @@ private static final long serialVersionUID = 0L;
         if (!getChangeCurrencyType()
             .equals(other.getChangeCurrencyType())) return false;
         break;
+      case 32:
+        if (!getDivide()
+            .equals(other.getDivide())) return false;
+        break;
+      case 33:
+        if (!getMultiply()
+            .equals(other.getMultiply())) return false;
+        break;
+      case 34:
+        if (!getModulo()
+            .equals(other.getModulo())) return false;
+        break;
       case 40:
         if (!getMerge()
             .equals(other.getMerge())) return false;
@@ -16194,6 +18122,18 @@ private static final long serialVersionUID = 0L;
       case 31:
         hash = (37 * hash) + CHANGE_CURRENCY_TYPE_FIELD_NUMBER;
         hash = (53 * hash) + getChangeCurrencyType().hashCode();
+        break;
+      case 32:
+        hash = (37 * hash) + DIVIDE_FIELD_NUMBER;
+        hash = (53 * hash) + getDivide().hashCode();
+        break;
+      case 33:
+        hash = (37 * hash) + MULTIPLY_FIELD_NUMBER;
+        hash = (53 * hash) + getMultiply().hashCode();
+        break;
+      case 34:
+        hash = (37 * hash) + MODULO_FIELD_NUMBER;
+        hash = (53 * hash) + getModulo().hashCode();
         break;
       case 40:
         hash = (37 * hash) + MERGE_FIELD_NUMBER;
@@ -16394,6 +18334,15 @@ private static final long serialVersionUID = 0L;
       if (changeCurrencyTypeBuilder_ != null) {
         changeCurrencyTypeBuilder_.clear();
       }
+      if (divideBuilder_ != null) {
+        divideBuilder_.clear();
+      }
+      if (multiplyBuilder_ != null) {
+        multiplyBuilder_.clear();
+      }
+      if (moduloBuilder_ != null) {
+        moduloBuilder_.clear();
+      }
       if (mergeBuilder_ != null) {
         mergeBuilder_.clear();
       }
@@ -16506,6 +18455,18 @@ private static final long serialVersionUID = 0L;
       if (actionCase_ == 31 &&
           changeCurrencyTypeBuilder_ != null) {
         result.action_ = changeCurrencyTypeBuilder_.build();
+      }
+      if (actionCase_ == 32 &&
+          divideBuilder_ != null) {
+        result.action_ = divideBuilder_.build();
+      }
+      if (actionCase_ == 33 &&
+          multiplyBuilder_ != null) {
+        result.action_ = multiplyBuilder_.build();
+      }
+      if (actionCase_ == 34 &&
+          moduloBuilder_ != null) {
+        result.action_ = moduloBuilder_.build();
       }
       if (actionCase_ == 40 &&
           mergeBuilder_ != null) {
@@ -16631,6 +18592,18 @@ private static final long serialVersionUID = 0L;
         }
         case CHANGE_CURRENCY_TYPE: {
           mergeChangeCurrencyType(other.getChangeCurrencyType());
+          break;
+        }
+        case DIVIDE: {
+          mergeDivide(other.getDivide());
+          break;
+        }
+        case MULTIPLY: {
+          mergeMultiply(other.getMultiply());
+          break;
+        }
+        case MODULO: {
+          mergeModulo(other.getModulo());
           break;
         }
         case MERGE: {
@@ -16764,6 +18737,27 @@ private static final long serialVersionUID = 0L;
               actionCase_ = 31;
               break;
             } // case 250
+            case 258: {
+              input.readMessage(
+                  getDivideFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              actionCase_ = 32;
+              break;
+            } // case 258
+            case 266: {
+              input.readMessage(
+                  getMultiplyFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              actionCase_ = 33;
+              break;
+            } // case 266
+            case 274: {
+              input.readMessage(
+                  getModuloFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              actionCase_ = 34;
+              break;
+            } // case 274
             case 322: {
               input.readMessage(
                   getMergeFieldBuilder().getBuilder(),
@@ -16959,7 +18953,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
      * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-     *     See api/v0alpha/lms.proto;l=2188
+     *     See api/v0alpha/lms.proto;l=2210
      * @return The enum numeric value on the wire for matchingType.
      */
     @java.lang.Override @java.lang.Deprecated public int getMatchingTypeValue() {
@@ -16972,7 +18966,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
      * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-     *     See api/v0alpha/lms.proto;l=2188
+     *     See api/v0alpha/lms.proto;l=2210
      * @param value The enum numeric value on the wire for matchingType to set.
      * @return This builder for chaining.
      */
@@ -16989,7 +18983,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
      * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-     *     See api/v0alpha/lms.proto;l=2188
+     *     See api/v0alpha/lms.proto;l=2210
      * @return The matchingType.
      */
     @java.lang.Override
@@ -17004,7 +18998,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
      * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-     *     See api/v0alpha/lms.proto;l=2188
+     *     See api/v0alpha/lms.proto;l=2210
      * @param value The matchingType to set.
      * @return This builder for chaining.
      */
@@ -17024,7 +19018,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
      * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-     *     See api/v0alpha/lms.proto;l=2188
+     *     See api/v0alpha/lms.proto;l=2210
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearMatchingType() {
@@ -18571,6 +20565,432 @@ private static final long serialVersionUID = 0L;
       actionCase_ = 31;
       onChanged();
       return changeCurrencyTypeBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide, com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide.Builder, com.tcn.cloud.api.api.v0alpha.ReshapeAction.DivideOrBuilder> divideBuilder_;
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Divide divide = 32 [json_name = "divide"];</code>
+     * @return Whether the divide field is set.
+     */
+    @java.lang.Override
+    public boolean hasDivide() {
+      return actionCase_ == 32;
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Divide divide = 32 [json_name = "divide"];</code>
+     * @return The divide.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide getDivide() {
+      if (divideBuilder_ == null) {
+        if (actionCase_ == 32) {
+          return (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide) action_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide.getDefaultInstance();
+      } else {
+        if (actionCase_ == 32) {
+          return divideBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Divide divide = 32 [json_name = "divide"];</code>
+     */
+    public Builder setDivide(com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide value) {
+      if (divideBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        action_ = value;
+        onChanged();
+      } else {
+        divideBuilder_.setMessage(value);
+      }
+      actionCase_ = 32;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Divide divide = 32 [json_name = "divide"];</code>
+     */
+    public Builder setDivide(
+        com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide.Builder builderForValue) {
+      if (divideBuilder_ == null) {
+        action_ = builderForValue.build();
+        onChanged();
+      } else {
+        divideBuilder_.setMessage(builderForValue.build());
+      }
+      actionCase_ = 32;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Divide divide = 32 [json_name = "divide"];</code>
+     */
+    public Builder mergeDivide(com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide value) {
+      if (divideBuilder_ == null) {
+        if (actionCase_ == 32 &&
+            action_ != com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide.getDefaultInstance()) {
+          action_ = com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide.newBuilder((com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide) action_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          action_ = value;
+        }
+        onChanged();
+      } else {
+        if (actionCase_ == 32) {
+          divideBuilder_.mergeFrom(value);
+        } else {
+          divideBuilder_.setMessage(value);
+        }
+      }
+      actionCase_ = 32;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Divide divide = 32 [json_name = "divide"];</code>
+     */
+    public Builder clearDivide() {
+      if (divideBuilder_ == null) {
+        if (actionCase_ == 32) {
+          actionCase_ = 0;
+          action_ = null;
+          onChanged();
+        }
+      } else {
+        if (actionCase_ == 32) {
+          actionCase_ = 0;
+          action_ = null;
+        }
+        divideBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Divide divide = 32 [json_name = "divide"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide.Builder getDivideBuilder() {
+      return getDivideFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Divide divide = 32 [json_name = "divide"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ReshapeAction.DivideOrBuilder getDivideOrBuilder() {
+      if ((actionCase_ == 32) && (divideBuilder_ != null)) {
+        return divideBuilder_.getMessageOrBuilder();
+      } else {
+        if (actionCase_ == 32) {
+          return (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide) action_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Divide divide = 32 [json_name = "divide"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide, com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide.Builder, com.tcn.cloud.api.api.v0alpha.ReshapeAction.DivideOrBuilder> 
+        getDivideFieldBuilder() {
+      if (divideBuilder_ == null) {
+        if (!(actionCase_ == 32)) {
+          action_ = com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide.getDefaultInstance();
+        }
+        divideBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide, com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide.Builder, com.tcn.cloud.api.api.v0alpha.ReshapeAction.DivideOrBuilder>(
+                (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Divide) action_,
+                getParentForChildren(),
+                isClean());
+        action_ = null;
+      }
+      actionCase_ = 32;
+      onChanged();
+      return divideBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply, com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply.Builder, com.tcn.cloud.api.api.v0alpha.ReshapeAction.MultiplyOrBuilder> multiplyBuilder_;
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Multiply multiply = 33 [json_name = "multiply"];</code>
+     * @return Whether the multiply field is set.
+     */
+    @java.lang.Override
+    public boolean hasMultiply() {
+      return actionCase_ == 33;
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Multiply multiply = 33 [json_name = "multiply"];</code>
+     * @return The multiply.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply getMultiply() {
+      if (multiplyBuilder_ == null) {
+        if (actionCase_ == 33) {
+          return (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply) action_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply.getDefaultInstance();
+      } else {
+        if (actionCase_ == 33) {
+          return multiplyBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Multiply multiply = 33 [json_name = "multiply"];</code>
+     */
+    public Builder setMultiply(com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply value) {
+      if (multiplyBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        action_ = value;
+        onChanged();
+      } else {
+        multiplyBuilder_.setMessage(value);
+      }
+      actionCase_ = 33;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Multiply multiply = 33 [json_name = "multiply"];</code>
+     */
+    public Builder setMultiply(
+        com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply.Builder builderForValue) {
+      if (multiplyBuilder_ == null) {
+        action_ = builderForValue.build();
+        onChanged();
+      } else {
+        multiplyBuilder_.setMessage(builderForValue.build());
+      }
+      actionCase_ = 33;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Multiply multiply = 33 [json_name = "multiply"];</code>
+     */
+    public Builder mergeMultiply(com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply value) {
+      if (multiplyBuilder_ == null) {
+        if (actionCase_ == 33 &&
+            action_ != com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply.getDefaultInstance()) {
+          action_ = com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply.newBuilder((com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply) action_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          action_ = value;
+        }
+        onChanged();
+      } else {
+        if (actionCase_ == 33) {
+          multiplyBuilder_.mergeFrom(value);
+        } else {
+          multiplyBuilder_.setMessage(value);
+        }
+      }
+      actionCase_ = 33;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Multiply multiply = 33 [json_name = "multiply"];</code>
+     */
+    public Builder clearMultiply() {
+      if (multiplyBuilder_ == null) {
+        if (actionCase_ == 33) {
+          actionCase_ = 0;
+          action_ = null;
+          onChanged();
+        }
+      } else {
+        if (actionCase_ == 33) {
+          actionCase_ = 0;
+          action_ = null;
+        }
+        multiplyBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Multiply multiply = 33 [json_name = "multiply"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply.Builder getMultiplyBuilder() {
+      return getMultiplyFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Multiply multiply = 33 [json_name = "multiply"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ReshapeAction.MultiplyOrBuilder getMultiplyOrBuilder() {
+      if ((actionCase_ == 33) && (multiplyBuilder_ != null)) {
+        return multiplyBuilder_.getMessageOrBuilder();
+      } else {
+        if (actionCase_ == 33) {
+          return (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply) action_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Multiply multiply = 33 [json_name = "multiply"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply, com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply.Builder, com.tcn.cloud.api.api.v0alpha.ReshapeAction.MultiplyOrBuilder> 
+        getMultiplyFieldBuilder() {
+      if (multiplyBuilder_ == null) {
+        if (!(actionCase_ == 33)) {
+          action_ = com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply.getDefaultInstance();
+        }
+        multiplyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply, com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply.Builder, com.tcn.cloud.api.api.v0alpha.ReshapeAction.MultiplyOrBuilder>(
+                (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Multiply) action_,
+                getParentForChildren(),
+                isClean());
+        action_ = null;
+      }
+      actionCase_ = 33;
+      onChanged();
+      return multiplyBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo, com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo.Builder, com.tcn.cloud.api.api.v0alpha.ReshapeAction.ModuloOrBuilder> moduloBuilder_;
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Modulo modulo = 34 [json_name = "modulo"];</code>
+     * @return Whether the modulo field is set.
+     */
+    @java.lang.Override
+    public boolean hasModulo() {
+      return actionCase_ == 34;
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Modulo modulo = 34 [json_name = "modulo"];</code>
+     * @return The modulo.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo getModulo() {
+      if (moduloBuilder_ == null) {
+        if (actionCase_ == 34) {
+          return (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo) action_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo.getDefaultInstance();
+      } else {
+        if (actionCase_ == 34) {
+          return moduloBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Modulo modulo = 34 [json_name = "modulo"];</code>
+     */
+    public Builder setModulo(com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo value) {
+      if (moduloBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        action_ = value;
+        onChanged();
+      } else {
+        moduloBuilder_.setMessage(value);
+      }
+      actionCase_ = 34;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Modulo modulo = 34 [json_name = "modulo"];</code>
+     */
+    public Builder setModulo(
+        com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo.Builder builderForValue) {
+      if (moduloBuilder_ == null) {
+        action_ = builderForValue.build();
+        onChanged();
+      } else {
+        moduloBuilder_.setMessage(builderForValue.build());
+      }
+      actionCase_ = 34;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Modulo modulo = 34 [json_name = "modulo"];</code>
+     */
+    public Builder mergeModulo(com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo value) {
+      if (moduloBuilder_ == null) {
+        if (actionCase_ == 34 &&
+            action_ != com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo.getDefaultInstance()) {
+          action_ = com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo.newBuilder((com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo) action_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          action_ = value;
+        }
+        onChanged();
+      } else {
+        if (actionCase_ == 34) {
+          moduloBuilder_.mergeFrom(value);
+        } else {
+          moduloBuilder_.setMessage(value);
+        }
+      }
+      actionCase_ = 34;
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Modulo modulo = 34 [json_name = "modulo"];</code>
+     */
+    public Builder clearModulo() {
+      if (moduloBuilder_ == null) {
+        if (actionCase_ == 34) {
+          actionCase_ = 0;
+          action_ = null;
+          onChanged();
+        }
+      } else {
+        if (actionCase_ == 34) {
+          actionCase_ = 0;
+          action_ = null;
+        }
+        moduloBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Modulo modulo = 34 [json_name = "modulo"];</code>
+     */
+    public com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo.Builder getModuloBuilder() {
+      return getModuloFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Modulo modulo = 34 [json_name = "modulo"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.v0alpha.ReshapeAction.ModuloOrBuilder getModuloOrBuilder() {
+      if ((actionCase_ == 34) && (moduloBuilder_ != null)) {
+        return moduloBuilder_.getMessageOrBuilder();
+      } else {
+        if (actionCase_ == 34) {
+          return (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo) action_;
+        }
+        return com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.v0alpha.ReshapeAction.Modulo modulo = 34 [json_name = "modulo"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo, com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo.Builder, com.tcn.cloud.api.api.v0alpha.ReshapeAction.ModuloOrBuilder> 
+        getModuloFieldBuilder() {
+      if (moduloBuilder_ == null) {
+        if (!(actionCase_ == 34)) {
+          action_ = com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo.getDefaultInstance();
+        }
+        moduloBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo, com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo.Builder, com.tcn.cloud.api.api.v0alpha.ReshapeAction.ModuloOrBuilder>(
+                (com.tcn.cloud.api.api.v0alpha.ReshapeAction.Modulo) action_,
+                getParentForChildren(),
+                isClean());
+        action_ = null;
+      }
+      actionCase_ = 34;
+      onChanged();
+      return moduloBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
