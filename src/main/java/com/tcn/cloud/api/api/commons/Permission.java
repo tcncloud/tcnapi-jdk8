@@ -2116,6 +2116,14 @@ public enum Permission
   EXECUTE_INTEGRATION_MESSAGES(291),
   /**
    * <pre>
+   * Control whether a user can resend a campaign.
+   * </pre>
+   *
+   * <code>SCHEDULE_RESEND_CAMPAIGN = 292;</code>
+   */
+  SCHEDULE_RESEND_CAMPAIGN(292),
+  /**
+   * <pre>
    * migration permissions
    * </pre>
    *
@@ -4237,6 +4245,14 @@ public enum Permission
   public static final int EXECUTE_INTEGRATION_MESSAGES_VALUE = 291;
   /**
    * <pre>
+   * Control whether a user can resend a campaign.
+   * </pre>
+   *
+   * <code>SCHEDULE_RESEND_CAMPAIGN = 292;</code>
+   */
+  public static final int SCHEDULE_RESEND_CAMPAIGN_VALUE = 292;
+  /**
+   * <pre>
    * migration permissions
    * </pre>
    *
@@ -4553,6 +4569,7 @@ public enum Permission
       case 289: return DELETE_INTEGRATION_MESSAGES;
       case 290: return EDIT_INTEGRATION_MESSAGES;
       case 291: return EXECUTE_INTEGRATION_MESSAGES;
+      case 292: return SCHEDULE_RESEND_CAMPAIGN;
       case 2000: return APP_AGENT;
       case 2001: return APP_BACKOFFICE;
       default: return null;

@@ -23,8 +23,8 @@ public final class PermsProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\027api/commons/perms.proto\022\013api.commons*\345" +
-      "<\n\nPermission\022\021\n\rNO_PERMISSION\020\000\022\025\n\021VIEW" +
+      "\n\027api/commons/perms.proto\022\013api.commons*\204" +
+      "=\n\nPermission\022\021\n\rNO_PERMISSION\020\000\022\025\n\021VIEW" +
       "_LIST_MANAGER\020\001\022\027\n\023CREATE_LIST_MANAGER\020\002" +
       "\022\025\n\021EDIT_LIST_MANAGER\020\003\022\027\n\023DELETE_LIST_M" +
       "ANAGER\020\004\022\030\n\024EXECUTE_LIST_MANAGER\020\005\022\032\n\026VI" +
@@ -217,11 +217,12 @@ public final class PermsProto {
       "\237\002\022 \n\033CREATE_INTEGRATION_MESSAGES\020\240\002\022 \n\033" +
       "DELETE_INTEGRATION_MESSAGES\020\241\002\022\036\n\031EDIT_I" +
       "NTEGRATION_MESSAGES\020\242\002\022!\n\034EXECUTE_INTEGR" +
-      "ATION_MESSAGES\020\243\002\022\016\n\tAPP_AGENT\020\320\017\022\023\n\016APP" +
-      "_BACKOFFICE\020\321\017\"\006\010\364\003\020\364\003Bx\n\035com.tcn.cloud." +
-      "api.api.commonsB\nPermsProtoP\001\242\002\003ACX\252\002\013Ap" +
-      "i.Commons\312\002\013Api\\Commons\342\002\027Api\\Commons\\GP" +
-      "BMetadata\352\002\014Api::Commonsb\006proto3"
+      "ATION_MESSAGES\020\243\002\022\035\n\030SCHEDULE_RESEND_CAM" +
+      "PAIGN\020\244\002\022\016\n\tAPP_AGENT\020\320\017\022\023\n\016APP_BACKOFFI" +
+      "CE\020\321\017\"\006\010\364\003\020\364\003Bx\n\035com.tcn.cloud.api.api.c" +
+      "ommonsB\nPermsProtoP\001\242\002\003ACX\252\002\013Api.Commons" +
+      "\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetadata" +
+      "\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
