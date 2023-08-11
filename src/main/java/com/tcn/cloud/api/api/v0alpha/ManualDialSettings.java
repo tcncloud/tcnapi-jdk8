@@ -781,6 +781,21 @@ java.lang.String defaultValue) {
     return result == null ? com.tcn.cloud.api.api.v0alpha.ManualDialDataDipHandling.Enum.UNRECOGNIZED : result;
   }
 
+  public static final int ENABLE_REJECT_OPTION_FOR_APPROVERS_FIELD_NUMBER = 29;
+  private boolean enableRejectOptionForApprovers_ = false;
+  /**
+   * <pre>
+   * Control whether the reject option is available to the approvers.
+   * </pre>
+   *
+   * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers"];</code>
+   * @return The enableRejectOptionForApprovers.
+   */
+  @java.lang.Override
+  public boolean getEnableRejectOptionForApprovers() {
+    return enableRejectOptionForApprovers_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -869,6 +884,9 @@ java.lang.String defaultValue) {
     }
     if (useTimezoneValidationZip_ != com.tcn.cloud.api.api.v0alpha.ManualDialSettings.ZipCodeValidation.FALSE.getNumber()) {
       output.writeEnum(28, useTimezoneValidationZip_);
+    }
+    if (enableRejectOptionForApprovers_ != false) {
+      output.writeBool(29, enableRejectOptionForApprovers_);
     }
     if (enableSipAddress_ != false) {
       output.writeBool(30, enableSipAddress_);
@@ -1001,6 +1019,10 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(28, useTimezoneValidationZip_);
     }
+    if (enableRejectOptionForApprovers_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(29, enableRejectOptionForApprovers_);
+    }
     if (enableSipAddress_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(30, enableSipAddress_);
@@ -1110,6 +1132,8 @@ java.lang.String defaultValue) {
     if (!internalGetDataDipManualDialIntegration().equals(
         other.internalGetDataDipManualDialIntegration())) return false;
     if (dataDipManualDialIntegrationHandling_ != other.dataDipManualDialIntegrationHandling_) return false;
+    if (getEnableRejectOptionForApprovers()
+        != other.getEnableRejectOptionForApprovers()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1213,6 +1237,9 @@ java.lang.String defaultValue) {
     }
     hash = (37 * hash) + DATA_DIP_MANUAL_DIAL_INTEGRATION_HANDLING_FIELD_NUMBER;
     hash = (53 * hash) + dataDipManualDialIntegrationHandling_;
+    hash = (37 * hash) + ENABLE_REJECT_OPTION_FOR_APPROVERS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getEnableRejectOptionForApprovers());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1366,6 +1393,7 @@ java.lang.String defaultValue) {
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      bitField1_ = 0;
       enabled_ = false;
       showOutboundPhoneBook_ = false;
       showCallerIdPhoneBook_ = false;
@@ -1404,6 +1432,7 @@ java.lang.String defaultValue) {
       manualDialDataDipResultHandling_ = 0;
       internalGetMutableDataDipManualDialIntegration().clear();
       dataDipManualDialIntegrationHandling_ = 0;
+      enableRejectOptionForApprovers_ = false;
       return this;
     }
 
@@ -1432,6 +1461,7 @@ java.lang.String defaultValue) {
       com.tcn.cloud.api.api.v0alpha.ManualDialSettings result = new com.tcn.cloud.api.api.v0alpha.ManualDialSettings(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
+      if (bitField1_ != 0) { buildPartial1(result); }
       onBuilt();
       return result;
     }
@@ -1543,6 +1573,13 @@ java.lang.String defaultValue) {
       }
       if (((from_bitField0_ & 0x80000000) != 0)) {
         result.dataDipManualDialIntegrationHandling_ = dataDipManualDialIntegrationHandling_;
+      }
+    }
+
+    private void buildPartial1(com.tcn.cloud.api.api.v0alpha.ManualDialSettings result) {
+      int from_bitField1_ = bitField1_;
+      if (((from_bitField1_ & 0x00000001) != 0)) {
+        result.enableRejectOptionForApprovers_ = enableRejectOptionForApprovers_;
       }
     }
 
@@ -1715,6 +1752,9 @@ java.lang.String defaultValue) {
       if (other.dataDipManualDialIntegrationHandling_ != 0) {
         setDataDipManualDialIntegrationHandlingValue(other.getDataDipManualDialIntegrationHandlingValue());
       }
+      if (other.getEnableRejectOptionForApprovers() != false) {
+        setEnableRejectOptionForApprovers(other.getEnableRejectOptionForApprovers());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1874,6 +1914,11 @@ java.lang.String defaultValue) {
               bitField0_ |= 0x01000000;
               break;
             } // case 224
+            case 232: {
+              enableRejectOptionForApprovers_ = input.readBool();
+              bitField1_ |= 0x00000001;
+              break;
+            } // case 232
             case 240: {
               enableSipAddress_ = input.readBool();
               bitField0_ |= 0x02000000;
@@ -1929,6 +1974,7 @@ java.lang.String defaultValue) {
       return this;
     }
     private int bitField0_;
+    private int bitField1_;
 
     private boolean enabled_ ;
     /**
@@ -3560,6 +3606,50 @@ java.lang.String defaultValue) {
     public Builder clearDataDipManualDialIntegrationHandling() {
       bitField0_ = (bitField0_ & ~0x80000000);
       dataDipManualDialIntegrationHandling_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private boolean enableRejectOptionForApprovers_ ;
+    /**
+     * <pre>
+     * Control whether the reject option is available to the approvers.
+     * </pre>
+     *
+     * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers"];</code>
+     * @return The enableRejectOptionForApprovers.
+     */
+    @java.lang.Override
+    public boolean getEnableRejectOptionForApprovers() {
+      return enableRejectOptionForApprovers_;
+    }
+    /**
+     * <pre>
+     * Control whether the reject option is available to the approvers.
+     * </pre>
+     *
+     * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers"];</code>
+     * @param value The enableRejectOptionForApprovers to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEnableRejectOptionForApprovers(boolean value) {
+
+      enableRejectOptionForApprovers_ = value;
+      bitField1_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Control whether the reject option is available to the approvers.
+     * </pre>
+     *
+     * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEnableRejectOptionForApprovers() {
+      bitField1_ = (bitField1_ & ~0x00000001);
+      enableRejectOptionForApprovers_ = false;
       onChanged();
       return this;
     }

@@ -333,4 +333,14 @@ java.lang.String defaultValue);
    * @return The dataDipManualDialIntegrationHandling.
    */
   com.tcn.cloud.api.api.v0alpha.ManualDialDataDipHandling.Enum getDataDipManualDialIntegrationHandling();
+
+  /**
+   * <pre>
+   * Control whether the reject option is available to the approvers.
+   * </pre>
+   *
+   * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers"];</code>
+   * @return The enableRejectOptionForApprovers.
+   */
+  boolean getEnableRejectOptionForApprovers();
 }
