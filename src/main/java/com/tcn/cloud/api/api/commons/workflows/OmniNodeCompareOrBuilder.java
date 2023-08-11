@@ -20,17 +20,12 @@ public interface OmniNodeCompareOrBuilder extends
       getInputBytes();
 
   /**
-   * <code>optional string options_key = 2 [json_name = "optionsKey"];</code>
-   * @return Whether the optionsKey field is set.
-   */
-  boolean hasOptionsKey();
-  /**
-   * <code>optional string options_key = 2 [json_name = "optionsKey"];</code>
+   * <code>string options_key = 2 [json_name = "optionsKey"];</code>
    * @return The optionsKey.
    */
   java.lang.String getOptionsKey();
   /**
-   * <code>optional string options_key = 2 [json_name = "optionsKey"];</code>
+   * <code>string options_key = 2 [json_name = "optionsKey"];</code>
    * @return The bytes for optionsKey.
    */
   com.google.protobuf.ByteString

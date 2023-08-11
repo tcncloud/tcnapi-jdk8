@@ -40,7 +40,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.workflows.OmniNodeInject.class, com.tcn.cloud.api.api.commons.workflows.OmniNodeInject.Builder.class);
   }
 
-  private int bitField0_;
   public static final int STORE_TO_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object storeTo_ = "";
@@ -84,15 +83,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object data_ = "";
   /**
-   * <code>optional string data = 2 [json_name = "data"];</code>
-   * @return Whether the data field is set.
-   */
-  @java.lang.Override
-  public boolean hasData() {
-    return ((bitField0_ & 0x00000001) != 0);
-  }
-  /**
-   * <code>optional string data = 2 [json_name = "data"];</code>
+   * <code>string data = 2 [json_name = "data"];</code>
    * @return The data.
    */
   @java.lang.Override
@@ -109,7 +100,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>optional string data = 2 [json_name = "data"];</code>
+   * <code>string data = 2 [json_name = "data"];</code>
    * @return The bytes for data.
    */
   @java.lang.Override
@@ -144,7 +135,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(storeTo_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, storeTo_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(data_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, data_);
     }
     getUnknownFields().writeTo(output);
@@ -159,7 +150,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(storeTo_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, storeTo_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(data_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, data_);
     }
     size += getUnknownFields().getSerializedSize();
@@ -179,11 +170,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getStoreTo()
         .equals(other.getStoreTo())) return false;
-    if (hasData() != other.hasData()) return false;
-    if (hasData()) {
-      if (!getData()
-          .equals(other.getData())) return false;
-    }
+    if (!getData()
+        .equals(other.getData())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -197,10 +185,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + STORE_TO_FIELD_NUMBER;
     hash = (53 * hash) + getStoreTo().hashCode();
-    if (hasData()) {
-      hash = (37 * hash) + DATA_FIELD_NUMBER;
-      hash = (53 * hash) + getData().hashCode();
-    }
+    hash = (37 * hash) + DATA_FIELD_NUMBER;
+    hash = (53 * hash) + getData().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -370,12 +356,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.storeTo_ = storeTo_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.data_ = data_;
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -427,7 +410,7 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (other.hasData()) {
+      if (!other.getData().isEmpty()) {
         data_ = other.data_;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -559,14 +542,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object data_ = "";
     /**
-     * <code>optional string data = 2 [json_name = "data"];</code>
-     * @return Whether the data field is set.
-     */
-    public boolean hasData() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <code>optional string data = 2 [json_name = "data"];</code>
+     * <code>string data = 2 [json_name = "data"];</code>
      * @return The data.
      */
     public java.lang.String getData() {
@@ -582,7 +558,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>optional string data = 2 [json_name = "data"];</code>
+     * <code>string data = 2 [json_name = "data"];</code>
      * @return The bytes for data.
      */
     public com.google.protobuf.ByteString
@@ -599,7 +575,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>optional string data = 2 [json_name = "data"];</code>
+     * <code>string data = 2 [json_name = "data"];</code>
      * @param value The data to set.
      * @return This builder for chaining.
      */
@@ -612,7 +588,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional string data = 2 [json_name = "data"];</code>
+     * <code>string data = 2 [json_name = "data"];</code>
      * @return This builder for chaining.
      */
     public Builder clearData() {
@@ -622,7 +598,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional string data = 2 [json_name = "data"];</code>
+     * <code>string data = 2 [json_name = "data"];</code>
      * @param value The bytes for data to set.
      * @return This builder for chaining.
      */

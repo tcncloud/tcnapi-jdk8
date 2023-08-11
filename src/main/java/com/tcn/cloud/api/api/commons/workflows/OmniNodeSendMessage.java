@@ -40,7 +40,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage.class, com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage.Builder.class);
   }
 
-  private int bitField0_;
   public static final int PROMPT_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object prompt_ = "";
@@ -84,15 +83,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object optionsKey_ = "";
   /**
-   * <code>optional string options_key = 3 [json_name = "optionsKey"];</code>
-   * @return Whether the optionsKey field is set.
-   */
-  @java.lang.Override
-  public boolean hasOptionsKey() {
-    return ((bitField0_ & 0x00000001) != 0);
-  }
-  /**
-   * <code>optional string options_key = 3 [json_name = "optionsKey"];</code>
+   * <code>string options_key = 3 [json_name = "optionsKey"];</code>
    * @return The optionsKey.
    */
   @java.lang.Override
@@ -109,7 +100,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>optional string options_key = 3 [json_name = "optionsKey"];</code>
+   * <code>string options_key = 3 [json_name = "optionsKey"];</code>
    * @return The bytes for optionsKey.
    */
   @java.lang.Override
@@ -144,7 +135,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prompt_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, prompt_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(optionsKey_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, optionsKey_);
     }
     getUnknownFields().writeTo(output);
@@ -159,7 +150,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prompt_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, prompt_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(optionsKey_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, optionsKey_);
     }
     size += getUnknownFields().getSerializedSize();
@@ -179,11 +170,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getPrompt()
         .equals(other.getPrompt())) return false;
-    if (hasOptionsKey() != other.hasOptionsKey()) return false;
-    if (hasOptionsKey()) {
-      if (!getOptionsKey()
-          .equals(other.getOptionsKey())) return false;
-    }
+    if (!getOptionsKey()
+        .equals(other.getOptionsKey())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -197,10 +185,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + PROMPT_FIELD_NUMBER;
     hash = (53 * hash) + getPrompt().hashCode();
-    if (hasOptionsKey()) {
-      hash = (37 * hash) + OPTIONS_KEY_FIELD_NUMBER;
-      hash = (53 * hash) + getOptionsKey().hashCode();
-    }
+    hash = (37 * hash) + OPTIONS_KEY_FIELD_NUMBER;
+    hash = (53 * hash) + getOptionsKey().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -370,12 +356,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.prompt_ = prompt_;
       }
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.optionsKey_ = optionsKey_;
-        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -427,7 +410,7 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (other.hasOptionsKey()) {
+      if (!other.getOptionsKey().isEmpty()) {
         optionsKey_ = other.optionsKey_;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -559,14 +542,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object optionsKey_ = "";
     /**
-     * <code>optional string options_key = 3 [json_name = "optionsKey"];</code>
-     * @return Whether the optionsKey field is set.
-     */
-    public boolean hasOptionsKey() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <code>optional string options_key = 3 [json_name = "optionsKey"];</code>
+     * <code>string options_key = 3 [json_name = "optionsKey"];</code>
      * @return The optionsKey.
      */
     public java.lang.String getOptionsKey() {
@@ -582,7 +558,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>optional string options_key = 3 [json_name = "optionsKey"];</code>
+     * <code>string options_key = 3 [json_name = "optionsKey"];</code>
      * @return The bytes for optionsKey.
      */
     public com.google.protobuf.ByteString
@@ -599,7 +575,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>optional string options_key = 3 [json_name = "optionsKey"];</code>
+     * <code>string options_key = 3 [json_name = "optionsKey"];</code>
      * @param value The optionsKey to set.
      * @return This builder for chaining.
      */
@@ -612,7 +588,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional string options_key = 3 [json_name = "optionsKey"];</code>
+     * <code>string options_key = 3 [json_name = "optionsKey"];</code>
      * @return This builder for chaining.
      */
     public Builder clearOptionsKey() {
@@ -622,7 +598,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>optional string options_key = 3 [json_name = "optionsKey"];</code>
+     * <code>string options_key = 3 [json_name = "optionsKey"];</code>
      * @param value The bytes for optionsKey to set.
      * @return This builder for chaining.
      */

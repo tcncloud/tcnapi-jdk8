@@ -66,22 +66,21 @@ public final class OmniProto {
       "\n api/commons/workflows/omni.proto\022\025api." +
       "commons.workflows\"]\n\016OmniNodePrompt\022\026\n\006p" +
       "rompt\030\001 \001(\tR\006prompt\022\031\n\010store_to\030\002 \001(\tR\007s" +
-      "toreTo\022\030\n\007options\030\003 \003(\tR\007options\"M\n\016Omni" +
-      "NodeInject\022\031\n\010store_to\030\001 \001(\tR\007storeTo\022\027\n" +
-      "\004data\030\002 \001(\tH\000R\004data\210\001\001B\007\n\005_data\"c\n\023OmniN" +
-      "odeSendMessage\022\026\n\006prompt\030\001 \001(\tR\006prompt\022$" +
-      "\n\013options_key\030\003 \001(\tH\000R\noptionsKey\210\001\001B\016\n\014" +
-      "_options_key\"*\n\rOmniNodeStore\022\031\n\010store_t" +
-      "o\030\001 \001(\tR\007storeTo\"]\n\017OmniNodeCompare\022\024\n\005i" +
-      "nput\030\001 \001(\tR\005input\022$\n\013options_key\030\002 \001(\tH\000" +
-      "R\noptionsKey\210\001\001B\016\n\014_options_key\"(\n\020OmniN" +
-      "odeSetSkill\022\024\n\005skill\030\001 \001(\tR\005skill\"\021\n\017Omn" +
-      "iNodeToAgent\"%\n\rOmniNodeError\022\024\n\005error\030\001" +
-      " \001(\tR\005errorB\252\001\n\'com.tcn.cloud.api.api.co" +
-      "mmons.workflowsB\tOmniProtoP\001\242\002\003ACW\252\002\025Api" +
-      ".Commons.Workflows\312\002\025Api\\Commons\\Workflo" +
-      "ws\342\002!Api\\Commons\\Workflows\\GPBMetadata\352\002" +
-      "\027Api::Commons::Workflowsb\006proto3"
+      "toreTo\022\030\n\007options\030\003 \003(\tR\007options\"?\n\016Omni" +
+      "NodeInject\022\031\n\010store_to\030\001 \001(\tR\007storeTo\022\022\n" +
+      "\004data\030\002 \001(\tR\004data\"N\n\023OmniNodeSendMessage" +
+      "\022\026\n\006prompt\030\001 \001(\tR\006prompt\022\037\n\013options_key\030" +
+      "\003 \001(\tR\noptionsKey\"*\n\rOmniNodeStore\022\031\n\010st" +
+      "ore_to\030\001 \001(\tR\007storeTo\"H\n\017OmniNodeCompare" +
+      "\022\024\n\005input\030\001 \001(\tR\005input\022\037\n\013options_key\030\002 " +
+      "\001(\tR\noptionsKey\"(\n\020OmniNodeSetSkill\022\024\n\005s" +
+      "kill\030\001 \001(\tR\005skill\"\021\n\017OmniNodeToAgent\"%\n\r" +
+      "OmniNodeError\022\024\n\005error\030\001 \001(\tR\005errorB\252\001\n\'" +
+      "com.tcn.cloud.api.api.commons.workflowsB" +
+      "\tOmniProtoP\001\242\002\003ACW\252\002\025Api.Commons.Workflo" +
+      "ws\312\002\025Api\\Commons\\Workflows\342\002!Api\\Commons" +
+      "\\Workflows\\GPBMetadata\352\002\027Api::Commons::W" +
+      "orkflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -98,13 +97,13 @@ public final class OmniProto {
     internal_static_api_commons_workflows_OmniNodeInject_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_workflows_OmniNodeInject_descriptor,
-        new java.lang.String[] { "StoreTo", "Data", "Data", });
+        new java.lang.String[] { "StoreTo", "Data", });
     internal_static_api_commons_workflows_OmniNodeSendMessage_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_api_commons_workflows_OmniNodeSendMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_workflows_OmniNodeSendMessage_descriptor,
-        new java.lang.String[] { "Prompt", "OptionsKey", "OptionsKey", });
+        new java.lang.String[] { "Prompt", "OptionsKey", });
     internal_static_api_commons_workflows_OmniNodeStore_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_api_commons_workflows_OmniNodeStore_fieldAccessorTable = new
@@ -116,7 +115,7 @@ public final class OmniProto {
     internal_static_api_commons_workflows_OmniNodeCompare_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_workflows_OmniNodeCompare_descriptor,
-        new java.lang.String[] { "Input", "OptionsKey", "OptionsKey", });
+        new java.lang.String[] { "Input", "OptionsKey", });
     internal_static_api_commons_workflows_OmniNodeSetSkill_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_api_commons_workflows_OmniNodeSetSkill_fieldAccessorTable = new

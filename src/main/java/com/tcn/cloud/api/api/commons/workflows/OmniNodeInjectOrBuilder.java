@@ -20,17 +20,12 @@ public interface OmniNodeInjectOrBuilder extends
       getStoreToBytes();
 
   /**
-   * <code>optional string data = 2 [json_name = "data"];</code>
-   * @return Whether the data field is set.
-   */
-  boolean hasData();
-  /**
-   * <code>optional string data = 2 [json_name = "data"];</code>
+   * <code>string data = 2 [json_name = "data"];</code>
    * @return The data.
    */
   java.lang.String getData();
   /**
-   * <code>optional string data = 2 [json_name = "data"];</code>
+   * <code>string data = 2 [json_name = "data"];</code>
    * @return The bytes for data.
    */
   com.google.protobuf.ByteString
