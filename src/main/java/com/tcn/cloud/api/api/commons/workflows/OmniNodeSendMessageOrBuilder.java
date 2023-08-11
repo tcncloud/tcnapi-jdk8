@@ -20,27 +20,19 @@ public interface OmniNodeSendMessageOrBuilder extends
       getPromptBytes();
 
   /**
-   * <code>repeated string options = 3 [json_name = "options"];</code>
-   * @return A list containing the options.
+   * <code>optional string options_key = 3 [json_name = "optionsKey"];</code>
+   * @return Whether the optionsKey field is set.
    */
-  java.util.List<java.lang.String>
-      getOptionsList();
+  boolean hasOptionsKey();
   /**
-   * <code>repeated string options = 3 [json_name = "options"];</code>
-   * @return The count of options.
+   * <code>optional string options_key = 3 [json_name = "optionsKey"];</code>
+   * @return The optionsKey.
    */
-  int getOptionsCount();
+  java.lang.String getOptionsKey();
   /**
-   * <code>repeated string options = 3 [json_name = "options"];</code>
-   * @param index The index of the element to return.
-   * @return The options at the given index.
-   */
-  java.lang.String getOptions(int index);
-  /**
-   * <code>repeated string options = 3 [json_name = "options"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the options at the given index.
+   * <code>optional string options_key = 3 [json_name = "optionsKey"];</code>
+   * @return The bytes for optionsKey.
    */
   com.google.protobuf.ByteString
-      getOptionsBytes(int index);
+      getOptionsKeyBytes();
 }

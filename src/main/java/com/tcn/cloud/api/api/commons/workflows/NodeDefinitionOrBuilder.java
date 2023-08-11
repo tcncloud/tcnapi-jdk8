@@ -239,61 +239,76 @@ public interface NodeDefinitionOrBuilder extends
   com.tcn.cloud.api.api.commons.workflows.OmniNodeErrorOrBuilder getOmniErrorOrBuilder();
 
   /**
-   * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 205 [json_name = "omniSendMessage"];</code>
+   * <code>.api.commons.workflows.OmniNodeInject omni_inject = 205 [json_name = "omniInject"];</code>
+   * @return Whether the omniInject field is set.
+   */
+  boolean hasOmniInject();
+  /**
+   * <code>.api.commons.workflows.OmniNodeInject omni_inject = 205 [json_name = "omniInject"];</code>
+   * @return The omniInject.
+   */
+  com.tcn.cloud.api.api.commons.workflows.OmniNodeInject getOmniInject();
+  /**
+   * <code>.api.commons.workflows.OmniNodeInject omni_inject = 205 [json_name = "omniInject"];</code>
+   */
+  com.tcn.cloud.api.api.commons.workflows.OmniNodeInjectOrBuilder getOmniInjectOrBuilder();
+
+  /**
+   * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 206 [json_name = "omniSendMessage"];</code>
    * @return Whether the omniSendMessage field is set.
    */
   boolean hasOmniSendMessage();
   /**
-   * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 205 [json_name = "omniSendMessage"];</code>
+   * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 206 [json_name = "omniSendMessage"];</code>
    * @return The omniSendMessage.
    */
   com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage getOmniSendMessage();
   /**
-   * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 205 [json_name = "omniSendMessage"];</code>
+   * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 206 [json_name = "omniSendMessage"];</code>
    */
   com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessageOrBuilder getOmniSendMessageOrBuilder();
 
   /**
-   * <code>.api.commons.workflows.OmniNodeStore omni_store = 206 [json_name = "omniStore"];</code>
+   * <code>.api.commons.workflows.OmniNodeStore omni_store = 207 [json_name = "omniStore"];</code>
    * @return Whether the omniStore field is set.
    */
   boolean hasOmniStore();
   /**
-   * <code>.api.commons.workflows.OmniNodeStore omni_store = 206 [json_name = "omniStore"];</code>
+   * <code>.api.commons.workflows.OmniNodeStore omni_store = 207 [json_name = "omniStore"];</code>
    * @return The omniStore.
    */
   com.tcn.cloud.api.api.commons.workflows.OmniNodeStore getOmniStore();
   /**
-   * <code>.api.commons.workflows.OmniNodeStore omni_store = 206 [json_name = "omniStore"];</code>
+   * <code>.api.commons.workflows.OmniNodeStore omni_store = 207 [json_name = "omniStore"];</code>
    */
   com.tcn.cloud.api.api.commons.workflows.OmniNodeStoreOrBuilder getOmniStoreOrBuilder();
 
   /**
-   * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 207 [json_name = "omniCompare"];</code>
+   * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 208 [json_name = "omniCompare"];</code>
    * @return Whether the omniCompare field is set.
    */
   boolean hasOmniCompare();
   /**
-   * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 207 [json_name = "omniCompare"];</code>
+   * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 208 [json_name = "omniCompare"];</code>
    * @return The omniCompare.
    */
   com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare getOmniCompare();
   /**
-   * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 207 [json_name = "omniCompare"];</code>
+   * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 208 [json_name = "omniCompare"];</code>
    */
   com.tcn.cloud.api.api.commons.workflows.OmniNodeCompareOrBuilder getOmniCompareOrBuilder();
 
   /**
    * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart", deprecated = true];</code>
    * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_start is deprecated.
-   *     See api/commons/workflows/nodes.proto;l=35
+   *     See api/commons/workflows/nodes.proto;l=36
    * @return Whether the omniBotTestStart field is set.
    */
   @java.lang.Deprecated boolean hasOmniBotTestStart();
   /**
    * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart", deprecated = true];</code>
    * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_start is deprecated.
-   *     See api/commons/workflows/nodes.proto;l=35
+   *     See api/commons/workflows/nodes.proto;l=36
    * @return The omniBotTestStart.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart getOmniBotTestStart();
@@ -305,14 +320,14 @@ public interface NodeDefinitionOrBuilder extends
   /**
    * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep", deprecated = true];</code>
    * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_step is deprecated.
-   *     See api/commons/workflows/nodes.proto;l=36
+   *     See api/commons/workflows/nodes.proto;l=37
    * @return Whether the omniBotTestStep field is set.
    */
   @java.lang.Deprecated boolean hasOmniBotTestStep();
   /**
    * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep", deprecated = true];</code>
    * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_step is deprecated.
-   *     See api/commons/workflows/nodes.proto;l=36
+   *     See api/commons/workflows/nodes.proto;l=37
    * @return The omniBotTestStep.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStep getOmniBotTestStep();
@@ -324,14 +339,14 @@ public interface NodeDefinitionOrBuilder extends
   /**
    * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd", deprecated = true];</code>
    * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_end is deprecated.
-   *     See api/commons/workflows/nodes.proto;l=37
+   *     See api/commons/workflows/nodes.proto;l=38
    * @return Whether the omniBotTestEnd field is set.
    */
   @java.lang.Deprecated boolean hasOmniBotTestEnd();
   /**
    * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd", deprecated = true];</code>
    * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_end is deprecated.
-   *     See api/commons/workflows/nodes.proto;l=37
+   *     See api/commons/workflows/nodes.proto;l=38
    * @return The omniBotTestEnd.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestEnd getOmniBotTestEnd();

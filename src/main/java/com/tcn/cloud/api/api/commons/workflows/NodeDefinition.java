@@ -64,9 +64,10 @@ private static final long serialVersionUID = 0L;
     OMNI_SET_SKILL(202),
     OMNI_TO_AGENT(203),
     OMNI_ERROR(204),
-    OMNI_SEND_MESSAGE(205),
-    OMNI_STORE(206),
-    OMNI_COMPARE(207),
+    OMNI_INJECT(205),
+    OMNI_SEND_MESSAGE(206),
+    OMNI_STORE(207),
+    OMNI_COMPARE(208),
     @java.lang.Deprecated OMNI_BOT_TEST_START(301),
     @java.lang.Deprecated OMNI_BOT_TEST_STEP(302),
     @java.lang.Deprecated OMNI_BOT_TEST_END(303),
@@ -100,9 +101,10 @@ private static final long serialVersionUID = 0L;
         case 202: return OMNI_SET_SKILL;
         case 203: return OMNI_TO_AGENT;
         case 204: return OMNI_ERROR;
-        case 205: return OMNI_SEND_MESSAGE;
-        case 206: return OMNI_STORE;
-        case 207: return OMNI_COMPARE;
+        case 205: return OMNI_INJECT;
+        case 206: return OMNI_SEND_MESSAGE;
+        case 207: return OMNI_STORE;
+        case 208: return OMNI_COMPARE;
         case 301: return OMNI_BOT_TEST_START;
         case 302: return OMNI_BOT_TEST_STEP;
         case 303: return OMNI_BOT_TEST_END;
@@ -635,94 +637,125 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.workflows.OmniNodeError.getDefaultInstance();
   }
 
-  public static final int OMNI_SEND_MESSAGE_FIELD_NUMBER = 205;
+  public static final int OMNI_INJECT_FIELD_NUMBER = 205;
   /**
-   * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 205 [json_name = "omniSendMessage"];</code>
+   * <code>.api.commons.workflows.OmniNodeInject omni_inject = 205 [json_name = "omniInject"];</code>
+   * @return Whether the omniInject field is set.
+   */
+  @java.lang.Override
+  public boolean hasOmniInject() {
+    return definitionCase_ == 205;
+  }
+  /**
+   * <code>.api.commons.workflows.OmniNodeInject omni_inject = 205 [json_name = "omniInject"];</code>
+   * @return The omniInject.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.OmniNodeInject getOmniInject() {
+    if (definitionCase_ == 205) {
+       return (com.tcn.cloud.api.api.commons.workflows.OmniNodeInject) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.OmniNodeInject.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.workflows.OmniNodeInject omni_inject = 205 [json_name = "omniInject"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.OmniNodeInjectOrBuilder getOmniInjectOrBuilder() {
+    if (definitionCase_ == 205) {
+       return (com.tcn.cloud.api.api.commons.workflows.OmniNodeInject) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.OmniNodeInject.getDefaultInstance();
+  }
+
+  public static final int OMNI_SEND_MESSAGE_FIELD_NUMBER = 206;
+  /**
+   * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 206 [json_name = "omniSendMessage"];</code>
    * @return Whether the omniSendMessage field is set.
    */
   @java.lang.Override
   public boolean hasOmniSendMessage() {
-    return definitionCase_ == 205;
+    return definitionCase_ == 206;
   }
   /**
-   * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 205 [json_name = "omniSendMessage"];</code>
+   * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 206 [json_name = "omniSendMessage"];</code>
    * @return The omniSendMessage.
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage getOmniSendMessage() {
-    if (definitionCase_ == 205) {
+    if (definitionCase_ == 206) {
        return (com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage) definition_;
     }
     return com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 205 [json_name = "omniSendMessage"];</code>
+   * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 206 [json_name = "omniSendMessage"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessageOrBuilder getOmniSendMessageOrBuilder() {
-    if (definitionCase_ == 205) {
+    if (definitionCase_ == 206) {
        return (com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage) definition_;
     }
     return com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage.getDefaultInstance();
   }
 
-  public static final int OMNI_STORE_FIELD_NUMBER = 206;
+  public static final int OMNI_STORE_FIELD_NUMBER = 207;
   /**
-   * <code>.api.commons.workflows.OmniNodeStore omni_store = 206 [json_name = "omniStore"];</code>
+   * <code>.api.commons.workflows.OmniNodeStore omni_store = 207 [json_name = "omniStore"];</code>
    * @return Whether the omniStore field is set.
    */
   @java.lang.Override
   public boolean hasOmniStore() {
-    return definitionCase_ == 206;
+    return definitionCase_ == 207;
   }
   /**
-   * <code>.api.commons.workflows.OmniNodeStore omni_store = 206 [json_name = "omniStore"];</code>
+   * <code>.api.commons.workflows.OmniNodeStore omni_store = 207 [json_name = "omniStore"];</code>
    * @return The omniStore.
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.workflows.OmniNodeStore getOmniStore() {
-    if (definitionCase_ == 206) {
+    if (definitionCase_ == 207) {
        return (com.tcn.cloud.api.api.commons.workflows.OmniNodeStore) definition_;
     }
     return com.tcn.cloud.api.api.commons.workflows.OmniNodeStore.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.workflows.OmniNodeStore omni_store = 206 [json_name = "omniStore"];</code>
+   * <code>.api.commons.workflows.OmniNodeStore omni_store = 207 [json_name = "omniStore"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.workflows.OmniNodeStoreOrBuilder getOmniStoreOrBuilder() {
-    if (definitionCase_ == 206) {
+    if (definitionCase_ == 207) {
        return (com.tcn.cloud.api.api.commons.workflows.OmniNodeStore) definition_;
     }
     return com.tcn.cloud.api.api.commons.workflows.OmniNodeStore.getDefaultInstance();
   }
 
-  public static final int OMNI_COMPARE_FIELD_NUMBER = 207;
+  public static final int OMNI_COMPARE_FIELD_NUMBER = 208;
   /**
-   * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 207 [json_name = "omniCompare"];</code>
+   * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 208 [json_name = "omniCompare"];</code>
    * @return Whether the omniCompare field is set.
    */
   @java.lang.Override
   public boolean hasOmniCompare() {
-    return definitionCase_ == 207;
+    return definitionCase_ == 208;
   }
   /**
-   * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 207 [json_name = "omniCompare"];</code>
+   * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 208 [json_name = "omniCompare"];</code>
    * @return The omniCompare.
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare getOmniCompare() {
-    if (definitionCase_ == 207) {
+    if (definitionCase_ == 208) {
        return (com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare) definition_;
     }
     return com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 207 [json_name = "omniCompare"];</code>
+   * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 208 [json_name = "omniCompare"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.workflows.OmniNodeCompareOrBuilder getOmniCompareOrBuilder() {
-    if (definitionCase_ == 207) {
+    if (definitionCase_ == 208) {
        return (com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare) definition_;
     }
     return com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare.getDefaultInstance();
@@ -732,7 +765,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart", deprecated = true];</code>
    * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_start is deprecated.
-   *     See api/commons/workflows/nodes.proto;l=35
+   *     See api/commons/workflows/nodes.proto;l=36
    * @return Whether the omniBotTestStart field is set.
    */
   @java.lang.Override
@@ -742,7 +775,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart", deprecated = true];</code>
    * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_start is deprecated.
-   *     See api/commons/workflows/nodes.proto;l=35
+   *     See api/commons/workflows/nodes.proto;l=36
    * @return The omniBotTestStart.
    */
   @java.lang.Override
@@ -767,7 +800,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep", deprecated = true];</code>
    * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_step is deprecated.
-   *     See api/commons/workflows/nodes.proto;l=36
+   *     See api/commons/workflows/nodes.proto;l=37
    * @return Whether the omniBotTestStep field is set.
    */
   @java.lang.Override
@@ -777,7 +810,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep", deprecated = true];</code>
    * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_step is deprecated.
-   *     See api/commons/workflows/nodes.proto;l=36
+   *     See api/commons/workflows/nodes.proto;l=37
    * @return The omniBotTestStep.
    */
   @java.lang.Override
@@ -802,7 +835,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd", deprecated = true];</code>
    * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_end is deprecated.
-   *     See api/commons/workflows/nodes.proto;l=37
+   *     See api/commons/workflows/nodes.proto;l=38
    * @return Whether the omniBotTestEnd field is set.
    */
   @java.lang.Override
@@ -812,7 +845,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd", deprecated = true];</code>
    * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_end is deprecated.
-   *     See api/commons/workflows/nodes.proto;l=37
+   *     See api/commons/workflows/nodes.proto;l=38
    * @return The omniBotTestEnd.
    */
   @java.lang.Override
@@ -983,13 +1016,16 @@ private static final long serialVersionUID = 0L;
       output.writeMessage(204, (com.tcn.cloud.api.api.commons.workflows.OmniNodeError) definition_);
     }
     if (definitionCase_ == 205) {
-      output.writeMessage(205, (com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage) definition_);
+      output.writeMessage(205, (com.tcn.cloud.api.api.commons.workflows.OmniNodeInject) definition_);
     }
     if (definitionCase_ == 206) {
-      output.writeMessage(206, (com.tcn.cloud.api.api.commons.workflows.OmniNodeStore) definition_);
+      output.writeMessage(206, (com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage) definition_);
     }
     if (definitionCase_ == 207) {
-      output.writeMessage(207, (com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare) definition_);
+      output.writeMessage(207, (com.tcn.cloud.api.api.commons.workflows.OmniNodeStore) definition_);
+    }
+    if (definitionCase_ == 208) {
+      output.writeMessage(208, (com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare) definition_);
     }
     if (definitionCase_ == 301) {
       output.writeMessage(301, (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart) definition_);
@@ -1079,15 +1115,19 @@ private static final long serialVersionUID = 0L;
     }
     if (definitionCase_ == 205) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(205, (com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage) definition_);
+        .computeMessageSize(205, (com.tcn.cloud.api.api.commons.workflows.OmniNodeInject) definition_);
     }
     if (definitionCase_ == 206) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(206, (com.tcn.cloud.api.api.commons.workflows.OmniNodeStore) definition_);
+        .computeMessageSize(206, (com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage) definition_);
     }
     if (definitionCase_ == 207) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(207, (com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare) definition_);
+        .computeMessageSize(207, (com.tcn.cloud.api.api.commons.workflows.OmniNodeStore) definition_);
+    }
+    if (definitionCase_ == 208) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(208, (com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare) definition_);
     }
     if (definitionCase_ == 301) {
       size += com.google.protobuf.CodedOutputStream
@@ -1185,14 +1225,18 @@ private static final long serialVersionUID = 0L;
             .equals(other.getOmniError())) return false;
         break;
       case 205:
+        if (!getOmniInject()
+            .equals(other.getOmniInject())) return false;
+        break;
+      case 206:
         if (!getOmniSendMessage()
             .equals(other.getOmniSendMessage())) return false;
         break;
-      case 206:
+      case 207:
         if (!getOmniStore()
             .equals(other.getOmniStore())) return false;
         break;
-      case 207:
+      case 208:
         if (!getOmniCompare()
             .equals(other.getOmniCompare())) return false;
         break;
@@ -1288,14 +1332,18 @@ private static final long serialVersionUID = 0L;
         hash = (53 * hash) + getOmniError().hashCode();
         break;
       case 205:
+        hash = (37 * hash) + OMNI_INJECT_FIELD_NUMBER;
+        hash = (53 * hash) + getOmniInject().hashCode();
+        break;
+      case 206:
         hash = (37 * hash) + OMNI_SEND_MESSAGE_FIELD_NUMBER;
         hash = (53 * hash) + getOmniSendMessage().hashCode();
         break;
-      case 206:
+      case 207:
         hash = (37 * hash) + OMNI_STORE_FIELD_NUMBER;
         hash = (53 * hash) + getOmniStore().hashCode();
         break;
-      case 207:
+      case 208:
         hash = (37 * hash) + OMNI_COMPARE_FIELD_NUMBER;
         hash = (53 * hash) + getOmniCompare().hashCode();
         break;
@@ -1497,6 +1545,9 @@ private static final long serialVersionUID = 0L;
       if (omniErrorBuilder_ != null) {
         omniErrorBuilder_.clear();
       }
+      if (omniInjectBuilder_ != null) {
+        omniInjectBuilder_.clear();
+      }
       if (omniSendMessageBuilder_ != null) {
         omniSendMessageBuilder_.clear();
       }
@@ -1622,14 +1673,18 @@ private static final long serialVersionUID = 0L;
         result.definition_ = omniErrorBuilder_.build();
       }
       if (definitionCase_ == 205 &&
+          omniInjectBuilder_ != null) {
+        result.definition_ = omniInjectBuilder_.build();
+      }
+      if (definitionCase_ == 206 &&
           omniSendMessageBuilder_ != null) {
         result.definition_ = omniSendMessageBuilder_.build();
       }
-      if (definitionCase_ == 206 &&
+      if (definitionCase_ == 207 &&
           omniStoreBuilder_ != null) {
         result.definition_ = omniStoreBuilder_.build();
       }
-      if (definitionCase_ == 207 &&
+      if (definitionCase_ == 208 &&
           omniCompareBuilder_ != null) {
         result.definition_ = omniCompareBuilder_.build();
       }
@@ -1772,6 +1827,10 @@ private static final long serialVersionUID = 0L;
         }
         case OMNI_ERROR: {
           mergeOmniError(other.getOmniError());
+          break;
+        }
+        case OMNI_INJECT: {
+          mergeOmniInject(other.getOmniInject());
           break;
         }
         case OMNI_SEND_MESSAGE: {
@@ -1931,25 +1990,32 @@ private static final long serialVersionUID = 0L;
             } // case 1634
             case 1642: {
               input.readMessage(
-                  getOmniSendMessageFieldBuilder().getBuilder(),
+                  getOmniInjectFieldBuilder().getBuilder(),
                   extensionRegistry);
               definitionCase_ = 205;
               break;
             } // case 1642
             case 1650: {
               input.readMessage(
-                  getOmniStoreFieldBuilder().getBuilder(),
+                  getOmniSendMessageFieldBuilder().getBuilder(),
                   extensionRegistry);
               definitionCase_ = 206;
               break;
             } // case 1650
             case 1658: {
               input.readMessage(
-                  getOmniCompareFieldBuilder().getBuilder(),
+                  getOmniStoreFieldBuilder().getBuilder(),
                   extensionRegistry);
               definitionCase_ = 207;
               break;
             } // case 1658
+            case 1666: {
+              input.readMessage(
+                  getOmniCompareFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              definitionCase_ = 208;
+              break;
+            } // case 1666
             case 2410: {
               input.readMessage(
                   getOmniBotTestStartFieldBuilder().getBuilder(),
@@ -3871,35 +3937,177 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.OmniNodeInject, com.tcn.cloud.api.api.commons.workflows.OmniNodeInject.Builder, com.tcn.cloud.api.api.commons.workflows.OmniNodeInjectOrBuilder> omniInjectBuilder_;
+    /**
+     * <code>.api.commons.workflows.OmniNodeInject omni_inject = 205 [json_name = "omniInject"];</code>
+     * @return Whether the omniInject field is set.
+     */
+    @java.lang.Override
+    public boolean hasOmniInject() {
+      return definitionCase_ == 205;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeInject omni_inject = 205 [json_name = "omniInject"];</code>
+     * @return The omniInject.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeInject getOmniInject() {
+      if (omniInjectBuilder_ == null) {
+        if (definitionCase_ == 205) {
+          return (com.tcn.cloud.api.api.commons.workflows.OmniNodeInject) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.OmniNodeInject.getDefaultInstance();
+      } else {
+        if (definitionCase_ == 205) {
+          return omniInjectBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.workflows.OmniNodeInject.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeInject omni_inject = 205 [json_name = "omniInject"];</code>
+     */
+    public Builder setOmniInject(com.tcn.cloud.api.api.commons.workflows.OmniNodeInject value) {
+      if (omniInjectBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        definition_ = value;
+        onChanged();
+      } else {
+        omniInjectBuilder_.setMessage(value);
+      }
+      definitionCase_ = 205;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeInject omni_inject = 205 [json_name = "omniInject"];</code>
+     */
+    public Builder setOmniInject(
+        com.tcn.cloud.api.api.commons.workflows.OmniNodeInject.Builder builderForValue) {
+      if (omniInjectBuilder_ == null) {
+        definition_ = builderForValue.build();
+        onChanged();
+      } else {
+        omniInjectBuilder_.setMessage(builderForValue.build());
+      }
+      definitionCase_ = 205;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeInject omni_inject = 205 [json_name = "omniInject"];</code>
+     */
+    public Builder mergeOmniInject(com.tcn.cloud.api.api.commons.workflows.OmniNodeInject value) {
+      if (omniInjectBuilder_ == null) {
+        if (definitionCase_ == 205 &&
+            definition_ != com.tcn.cloud.api.api.commons.workflows.OmniNodeInject.getDefaultInstance()) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.OmniNodeInject.newBuilder((com.tcn.cloud.api.api.commons.workflows.OmniNodeInject) definition_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          definition_ = value;
+        }
+        onChanged();
+      } else {
+        if (definitionCase_ == 205) {
+          omniInjectBuilder_.mergeFrom(value);
+        } else {
+          omniInjectBuilder_.setMessage(value);
+        }
+      }
+      definitionCase_ = 205;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeInject omni_inject = 205 [json_name = "omniInject"];</code>
+     */
+    public Builder clearOmniInject() {
+      if (omniInjectBuilder_ == null) {
+        if (definitionCase_ == 205) {
+          definitionCase_ = 0;
+          definition_ = null;
+          onChanged();
+        }
+      } else {
+        if (definitionCase_ == 205) {
+          definitionCase_ = 0;
+          definition_ = null;
+        }
+        omniInjectBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeInject omni_inject = 205 [json_name = "omniInject"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeInject.Builder getOmniInjectBuilder() {
+      return getOmniInjectFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeInject omni_inject = 205 [json_name = "omniInject"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeInjectOrBuilder getOmniInjectOrBuilder() {
+      if ((definitionCase_ == 205) && (omniInjectBuilder_ != null)) {
+        return omniInjectBuilder_.getMessageOrBuilder();
+      } else {
+        if (definitionCase_ == 205) {
+          return (com.tcn.cloud.api.api.commons.workflows.OmniNodeInject) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.OmniNodeInject.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeInject omni_inject = 205 [json_name = "omniInject"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.OmniNodeInject, com.tcn.cloud.api.api.commons.workflows.OmniNodeInject.Builder, com.tcn.cloud.api.api.commons.workflows.OmniNodeInjectOrBuilder> 
+        getOmniInjectFieldBuilder() {
+      if (omniInjectBuilder_ == null) {
+        if (!(definitionCase_ == 205)) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.OmniNodeInject.getDefaultInstance();
+        }
+        omniInjectBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.workflows.OmniNodeInject, com.tcn.cloud.api.api.commons.workflows.OmniNodeInject.Builder, com.tcn.cloud.api.api.commons.workflows.OmniNodeInjectOrBuilder>(
+                (com.tcn.cloud.api.api.commons.workflows.OmniNodeInject) definition_,
+                getParentForChildren(),
+                isClean());
+        definition_ = null;
+      }
+      definitionCase_ = 205;
+      onChanged();
+      return omniInjectBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage, com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage.Builder, com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessageOrBuilder> omniSendMessageBuilder_;
     /**
-     * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 205 [json_name = "omniSendMessage"];</code>
+     * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 206 [json_name = "omniSendMessage"];</code>
      * @return Whether the omniSendMessage field is set.
      */
     @java.lang.Override
     public boolean hasOmniSendMessage() {
-      return definitionCase_ == 205;
+      return definitionCase_ == 206;
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 205 [json_name = "omniSendMessage"];</code>
+     * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 206 [json_name = "omniSendMessage"];</code>
      * @return The omniSendMessage.
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage getOmniSendMessage() {
       if (omniSendMessageBuilder_ == null) {
-        if (definitionCase_ == 205) {
+        if (definitionCase_ == 206) {
           return (com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage) definition_;
         }
         return com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage.getDefaultInstance();
       } else {
-        if (definitionCase_ == 205) {
+        if (definitionCase_ == 206) {
           return omniSendMessageBuilder_.getMessage();
         }
         return com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage.getDefaultInstance();
       }
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 205 [json_name = "omniSendMessage"];</code>
+     * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 206 [json_name = "omniSendMessage"];</code>
      */
     public Builder setOmniSendMessage(com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage value) {
       if (omniSendMessageBuilder_ == null) {
@@ -3911,11 +4119,11 @@ private static final long serialVersionUID = 0L;
       } else {
         omniSendMessageBuilder_.setMessage(value);
       }
-      definitionCase_ = 205;
+      definitionCase_ = 206;
       return this;
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 205 [json_name = "omniSendMessage"];</code>
+     * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 206 [json_name = "omniSendMessage"];</code>
      */
     public Builder setOmniSendMessage(
         com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage.Builder builderForValue) {
@@ -3925,15 +4133,15 @@ private static final long serialVersionUID = 0L;
       } else {
         omniSendMessageBuilder_.setMessage(builderForValue.build());
       }
-      definitionCase_ = 205;
+      definitionCase_ = 206;
       return this;
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 205 [json_name = "omniSendMessage"];</code>
+     * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 206 [json_name = "omniSendMessage"];</code>
      */
     public Builder mergeOmniSendMessage(com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage value) {
       if (omniSendMessageBuilder_ == null) {
-        if (definitionCase_ == 205 &&
+        if (definitionCase_ == 206 &&
             definition_ != com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage.getDefaultInstance()) {
           definition_ = com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage.newBuilder((com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage) definition_)
               .mergeFrom(value).buildPartial();
@@ -3942,27 +4150,27 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       } else {
-        if (definitionCase_ == 205) {
+        if (definitionCase_ == 206) {
           omniSendMessageBuilder_.mergeFrom(value);
         } else {
           omniSendMessageBuilder_.setMessage(value);
         }
       }
-      definitionCase_ = 205;
+      definitionCase_ = 206;
       return this;
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 205 [json_name = "omniSendMessage"];</code>
+     * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 206 [json_name = "omniSendMessage"];</code>
      */
     public Builder clearOmniSendMessage() {
       if (omniSendMessageBuilder_ == null) {
-        if (definitionCase_ == 205) {
+        if (definitionCase_ == 206) {
           definitionCase_ = 0;
           definition_ = null;
           onChanged();
         }
       } else {
-        if (definitionCase_ == 205) {
+        if (definitionCase_ == 206) {
           definitionCase_ = 0;
           definition_ = null;
         }
@@ -3971,33 +4179,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 205 [json_name = "omniSendMessage"];</code>
+     * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 206 [json_name = "omniSendMessage"];</code>
      */
     public com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage.Builder getOmniSendMessageBuilder() {
       return getOmniSendMessageFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 205 [json_name = "omniSendMessage"];</code>
+     * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 206 [json_name = "omniSendMessage"];</code>
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessageOrBuilder getOmniSendMessageOrBuilder() {
-      if ((definitionCase_ == 205) && (omniSendMessageBuilder_ != null)) {
+      if ((definitionCase_ == 206) && (omniSendMessageBuilder_ != null)) {
         return omniSendMessageBuilder_.getMessageOrBuilder();
       } else {
-        if (definitionCase_ == 205) {
+        if (definitionCase_ == 206) {
           return (com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage) definition_;
         }
         return com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage.getDefaultInstance();
       }
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 205 [json_name = "omniSendMessage"];</code>
+     * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 206 [json_name = "omniSendMessage"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage, com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage.Builder, com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessageOrBuilder> 
         getOmniSendMessageFieldBuilder() {
       if (omniSendMessageBuilder_ == null) {
-        if (!(definitionCase_ == 205)) {
+        if (!(definitionCase_ == 206)) {
           definition_ = com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessage.getDefaultInstance();
         }
         omniSendMessageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -4007,7 +4215,7 @@ private static final long serialVersionUID = 0L;
                 isClean());
         definition_ = null;
       }
-      definitionCase_ = 205;
+      definitionCase_ = 206;
       onChanged();
       return omniSendMessageBuilder_;
     }
@@ -4015,33 +4223,33 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.workflows.OmniNodeStore, com.tcn.cloud.api.api.commons.workflows.OmniNodeStore.Builder, com.tcn.cloud.api.api.commons.workflows.OmniNodeStoreOrBuilder> omniStoreBuilder_;
     /**
-     * <code>.api.commons.workflows.OmniNodeStore omni_store = 206 [json_name = "omniStore"];</code>
+     * <code>.api.commons.workflows.OmniNodeStore omni_store = 207 [json_name = "omniStore"];</code>
      * @return Whether the omniStore field is set.
      */
     @java.lang.Override
     public boolean hasOmniStore() {
-      return definitionCase_ == 206;
+      return definitionCase_ == 207;
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeStore omni_store = 206 [json_name = "omniStore"];</code>
+     * <code>.api.commons.workflows.OmniNodeStore omni_store = 207 [json_name = "omniStore"];</code>
      * @return The omniStore.
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.workflows.OmniNodeStore getOmniStore() {
       if (omniStoreBuilder_ == null) {
-        if (definitionCase_ == 206) {
+        if (definitionCase_ == 207) {
           return (com.tcn.cloud.api.api.commons.workflows.OmniNodeStore) definition_;
         }
         return com.tcn.cloud.api.api.commons.workflows.OmniNodeStore.getDefaultInstance();
       } else {
-        if (definitionCase_ == 206) {
+        if (definitionCase_ == 207) {
           return omniStoreBuilder_.getMessage();
         }
         return com.tcn.cloud.api.api.commons.workflows.OmniNodeStore.getDefaultInstance();
       }
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeStore omni_store = 206 [json_name = "omniStore"];</code>
+     * <code>.api.commons.workflows.OmniNodeStore omni_store = 207 [json_name = "omniStore"];</code>
      */
     public Builder setOmniStore(com.tcn.cloud.api.api.commons.workflows.OmniNodeStore value) {
       if (omniStoreBuilder_ == null) {
@@ -4053,11 +4261,11 @@ private static final long serialVersionUID = 0L;
       } else {
         omniStoreBuilder_.setMessage(value);
       }
-      definitionCase_ = 206;
+      definitionCase_ = 207;
       return this;
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeStore omni_store = 206 [json_name = "omniStore"];</code>
+     * <code>.api.commons.workflows.OmniNodeStore omni_store = 207 [json_name = "omniStore"];</code>
      */
     public Builder setOmniStore(
         com.tcn.cloud.api.api.commons.workflows.OmniNodeStore.Builder builderForValue) {
@@ -4067,15 +4275,15 @@ private static final long serialVersionUID = 0L;
       } else {
         omniStoreBuilder_.setMessage(builderForValue.build());
       }
-      definitionCase_ = 206;
+      definitionCase_ = 207;
       return this;
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeStore omni_store = 206 [json_name = "omniStore"];</code>
+     * <code>.api.commons.workflows.OmniNodeStore omni_store = 207 [json_name = "omniStore"];</code>
      */
     public Builder mergeOmniStore(com.tcn.cloud.api.api.commons.workflows.OmniNodeStore value) {
       if (omniStoreBuilder_ == null) {
-        if (definitionCase_ == 206 &&
+        if (definitionCase_ == 207 &&
             definition_ != com.tcn.cloud.api.api.commons.workflows.OmniNodeStore.getDefaultInstance()) {
           definition_ = com.tcn.cloud.api.api.commons.workflows.OmniNodeStore.newBuilder((com.tcn.cloud.api.api.commons.workflows.OmniNodeStore) definition_)
               .mergeFrom(value).buildPartial();
@@ -4084,27 +4292,27 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       } else {
-        if (definitionCase_ == 206) {
+        if (definitionCase_ == 207) {
           omniStoreBuilder_.mergeFrom(value);
         } else {
           omniStoreBuilder_.setMessage(value);
         }
       }
-      definitionCase_ = 206;
+      definitionCase_ = 207;
       return this;
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeStore omni_store = 206 [json_name = "omniStore"];</code>
+     * <code>.api.commons.workflows.OmniNodeStore omni_store = 207 [json_name = "omniStore"];</code>
      */
     public Builder clearOmniStore() {
       if (omniStoreBuilder_ == null) {
-        if (definitionCase_ == 206) {
+        if (definitionCase_ == 207) {
           definitionCase_ = 0;
           definition_ = null;
           onChanged();
         }
       } else {
-        if (definitionCase_ == 206) {
+        if (definitionCase_ == 207) {
           definitionCase_ = 0;
           definition_ = null;
         }
@@ -4113,33 +4321,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeStore omni_store = 206 [json_name = "omniStore"];</code>
+     * <code>.api.commons.workflows.OmniNodeStore omni_store = 207 [json_name = "omniStore"];</code>
      */
     public com.tcn.cloud.api.api.commons.workflows.OmniNodeStore.Builder getOmniStoreBuilder() {
       return getOmniStoreFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeStore omni_store = 206 [json_name = "omniStore"];</code>
+     * <code>.api.commons.workflows.OmniNodeStore omni_store = 207 [json_name = "omniStore"];</code>
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.workflows.OmniNodeStoreOrBuilder getOmniStoreOrBuilder() {
-      if ((definitionCase_ == 206) && (omniStoreBuilder_ != null)) {
+      if ((definitionCase_ == 207) && (omniStoreBuilder_ != null)) {
         return omniStoreBuilder_.getMessageOrBuilder();
       } else {
-        if (definitionCase_ == 206) {
+        if (definitionCase_ == 207) {
           return (com.tcn.cloud.api.api.commons.workflows.OmniNodeStore) definition_;
         }
         return com.tcn.cloud.api.api.commons.workflows.OmniNodeStore.getDefaultInstance();
       }
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeStore omni_store = 206 [json_name = "omniStore"];</code>
+     * <code>.api.commons.workflows.OmniNodeStore omni_store = 207 [json_name = "omniStore"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.workflows.OmniNodeStore, com.tcn.cloud.api.api.commons.workflows.OmniNodeStore.Builder, com.tcn.cloud.api.api.commons.workflows.OmniNodeStoreOrBuilder> 
         getOmniStoreFieldBuilder() {
       if (omniStoreBuilder_ == null) {
-        if (!(definitionCase_ == 206)) {
+        if (!(definitionCase_ == 207)) {
           definition_ = com.tcn.cloud.api.api.commons.workflows.OmniNodeStore.getDefaultInstance();
         }
         omniStoreBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -4149,7 +4357,7 @@ private static final long serialVersionUID = 0L;
                 isClean());
         definition_ = null;
       }
-      definitionCase_ = 206;
+      definitionCase_ = 207;
       onChanged();
       return omniStoreBuilder_;
     }
@@ -4157,33 +4365,33 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare, com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare.Builder, com.tcn.cloud.api.api.commons.workflows.OmniNodeCompareOrBuilder> omniCompareBuilder_;
     /**
-     * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 207 [json_name = "omniCompare"];</code>
+     * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 208 [json_name = "omniCompare"];</code>
      * @return Whether the omniCompare field is set.
      */
     @java.lang.Override
     public boolean hasOmniCompare() {
-      return definitionCase_ == 207;
+      return definitionCase_ == 208;
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 207 [json_name = "omniCompare"];</code>
+     * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 208 [json_name = "omniCompare"];</code>
      * @return The omniCompare.
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare getOmniCompare() {
       if (omniCompareBuilder_ == null) {
-        if (definitionCase_ == 207) {
+        if (definitionCase_ == 208) {
           return (com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare) definition_;
         }
         return com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare.getDefaultInstance();
       } else {
-        if (definitionCase_ == 207) {
+        if (definitionCase_ == 208) {
           return omniCompareBuilder_.getMessage();
         }
         return com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare.getDefaultInstance();
       }
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 207 [json_name = "omniCompare"];</code>
+     * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 208 [json_name = "omniCompare"];</code>
      */
     public Builder setOmniCompare(com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare value) {
       if (omniCompareBuilder_ == null) {
@@ -4195,11 +4403,11 @@ private static final long serialVersionUID = 0L;
       } else {
         omniCompareBuilder_.setMessage(value);
       }
-      definitionCase_ = 207;
+      definitionCase_ = 208;
       return this;
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 207 [json_name = "omniCompare"];</code>
+     * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 208 [json_name = "omniCompare"];</code>
      */
     public Builder setOmniCompare(
         com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare.Builder builderForValue) {
@@ -4209,15 +4417,15 @@ private static final long serialVersionUID = 0L;
       } else {
         omniCompareBuilder_.setMessage(builderForValue.build());
       }
-      definitionCase_ = 207;
+      definitionCase_ = 208;
       return this;
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 207 [json_name = "omniCompare"];</code>
+     * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 208 [json_name = "omniCompare"];</code>
      */
     public Builder mergeOmniCompare(com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare value) {
       if (omniCompareBuilder_ == null) {
-        if (definitionCase_ == 207 &&
+        if (definitionCase_ == 208 &&
             definition_ != com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare.getDefaultInstance()) {
           definition_ = com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare.newBuilder((com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare) definition_)
               .mergeFrom(value).buildPartial();
@@ -4226,27 +4434,27 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       } else {
-        if (definitionCase_ == 207) {
+        if (definitionCase_ == 208) {
           omniCompareBuilder_.mergeFrom(value);
         } else {
           omniCompareBuilder_.setMessage(value);
         }
       }
-      definitionCase_ = 207;
+      definitionCase_ = 208;
       return this;
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 207 [json_name = "omniCompare"];</code>
+     * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 208 [json_name = "omniCompare"];</code>
      */
     public Builder clearOmniCompare() {
       if (omniCompareBuilder_ == null) {
-        if (definitionCase_ == 207) {
+        if (definitionCase_ == 208) {
           definitionCase_ = 0;
           definition_ = null;
           onChanged();
         }
       } else {
-        if (definitionCase_ == 207) {
+        if (definitionCase_ == 208) {
           definitionCase_ = 0;
           definition_ = null;
         }
@@ -4255,33 +4463,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 207 [json_name = "omniCompare"];</code>
+     * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 208 [json_name = "omniCompare"];</code>
      */
     public com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare.Builder getOmniCompareBuilder() {
       return getOmniCompareFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 207 [json_name = "omniCompare"];</code>
+     * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 208 [json_name = "omniCompare"];</code>
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.workflows.OmniNodeCompareOrBuilder getOmniCompareOrBuilder() {
-      if ((definitionCase_ == 207) && (omniCompareBuilder_ != null)) {
+      if ((definitionCase_ == 208) && (omniCompareBuilder_ != null)) {
         return omniCompareBuilder_.getMessageOrBuilder();
       } else {
-        if (definitionCase_ == 207) {
+        if (definitionCase_ == 208) {
           return (com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare) definition_;
         }
         return com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare.getDefaultInstance();
       }
     }
     /**
-     * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 207 [json_name = "omniCompare"];</code>
+     * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 208 [json_name = "omniCompare"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare, com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare.Builder, com.tcn.cloud.api.api.commons.workflows.OmniNodeCompareOrBuilder> 
         getOmniCompareFieldBuilder() {
       if (omniCompareBuilder_ == null) {
-        if (!(definitionCase_ == 207)) {
+        if (!(definitionCase_ == 208)) {
           definition_ = com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare.getDefaultInstance();
         }
         omniCompareBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -4291,7 +4499,7 @@ private static final long serialVersionUID = 0L;
                 isClean());
         definition_ = null;
       }
-      definitionCase_ = 207;
+      definitionCase_ = 208;
       onChanged();
       return omniCompareBuilder_;
     }
@@ -4301,7 +4509,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart", deprecated = true];</code>
      * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_start is deprecated.
-     *     See api/commons/workflows/nodes.proto;l=35
+     *     See api/commons/workflows/nodes.proto;l=36
      * @return Whether the omniBotTestStart field is set.
      */
     @java.lang.Override
@@ -4311,7 +4519,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart", deprecated = true];</code>
      * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_start is deprecated.
-     *     See api/commons/workflows/nodes.proto;l=35
+     *     See api/commons/workflows/nodes.proto;l=36
      * @return The omniBotTestStart.
      */
     @java.lang.Override
@@ -4447,7 +4655,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep", deprecated = true];</code>
      * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_step is deprecated.
-     *     See api/commons/workflows/nodes.proto;l=36
+     *     See api/commons/workflows/nodes.proto;l=37
      * @return Whether the omniBotTestStep field is set.
      */
     @java.lang.Override
@@ -4457,7 +4665,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep", deprecated = true];</code>
      * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_step is deprecated.
-     *     See api/commons/workflows/nodes.proto;l=36
+     *     See api/commons/workflows/nodes.proto;l=37
      * @return The omniBotTestStep.
      */
     @java.lang.Override
@@ -4593,7 +4801,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd", deprecated = true];</code>
      * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_end is deprecated.
-     *     See api/commons/workflows/nodes.proto;l=37
+     *     See api/commons/workflows/nodes.proto;l=38
      * @return Whether the omniBotTestEnd field is set.
      */
     @java.lang.Override
@@ -4603,7 +4811,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd", deprecated = true];</code>
      * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_end is deprecated.
-     *     See api/commons/workflows/nodes.proto;l=37
+     *     See api/commons/workflows/nodes.proto;l=38
      * @return The omniBotTestEnd.
      */
     @java.lang.Override

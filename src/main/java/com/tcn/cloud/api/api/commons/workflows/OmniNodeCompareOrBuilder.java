@@ -20,27 +20,19 @@ public interface OmniNodeCompareOrBuilder extends
       getInputBytes();
 
   /**
-   * <code>repeated string validOptions = 2 [json_name = "validOptions"];</code>
-   * @return A list containing the validOptions.
+   * <code>optional string options_key = 2 [json_name = "optionsKey"];</code>
+   * @return Whether the optionsKey field is set.
    */
-  java.util.List<java.lang.String>
-      getValidOptionsList();
+  boolean hasOptionsKey();
   /**
-   * <code>repeated string validOptions = 2 [json_name = "validOptions"];</code>
-   * @return The count of validOptions.
+   * <code>optional string options_key = 2 [json_name = "optionsKey"];</code>
+   * @return The optionsKey.
    */
-  int getValidOptionsCount();
+  java.lang.String getOptionsKey();
   /**
-   * <code>repeated string validOptions = 2 [json_name = "validOptions"];</code>
-   * @param index The index of the element to return.
-   * @return The validOptions at the given index.
-   */
-  java.lang.String getValidOptions(int index);
-  /**
-   * <code>repeated string validOptions = 2 [json_name = "validOptions"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the validOptions at the given index.
+   * <code>optional string options_key = 2 [json_name = "optionsKey"];</code>
+   * @return The bytes for optionsKey.
    */
   com.google.protobuf.ByteString
-      getValidOptionsBytes(int index);
+      getOptionsKeyBytes();
 }
