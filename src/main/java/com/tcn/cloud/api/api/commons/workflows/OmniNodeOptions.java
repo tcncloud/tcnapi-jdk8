@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private OmniNodeOptions() {
+    storeTo_ = "";
     options_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
   }
@@ -40,12 +41,51 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.workflows.OmniNodeOptions.class, com.tcn.cloud.api.api.commons.workflows.OmniNodeOptions.Builder.class);
   }
 
-  public static final int OPTIONS_FIELD_NUMBER = 1;
+  public static final int STORE_TO_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object storeTo_ = "";
+  /**
+   * <code>string store_to = 1 [json_name = "storeTo"];</code>
+   * @return The storeTo.
+   */
+  @java.lang.Override
+  public java.lang.String getStoreTo() {
+    java.lang.Object ref = storeTo_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      storeTo_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string store_to = 1 [json_name = "storeTo"];</code>
+   * @return The bytes for storeTo.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getStoreToBytes() {
+    java.lang.Object ref = storeTo_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      storeTo_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int OPTIONS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringArrayList options_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <code>repeated string options = 1 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @return A list containing the options.
    */
   public com.google.protobuf.ProtocolStringList
@@ -53,14 +93,14 @@ private static final long serialVersionUID = 0L;
     return options_;
   }
   /**
-   * <code>repeated string options = 1 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @return The count of options.
    */
   public int getOptionsCount() {
     return options_.size();
   }
   /**
-   * <code>repeated string options = 1 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @param index The index of the element to return.
    * @return The options at the given index.
    */
@@ -68,7 +108,7 @@ private static final long serialVersionUID = 0L;
     return options_.get(index);
   }
   /**
-   * <code>repeated string options = 1 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the options at the given index.
    */
@@ -91,8 +131,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(storeTo_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, storeTo_);
+    }
     for (int i = 0; i < options_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, options_.getRaw(i));
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, options_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -103,6 +146,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(storeTo_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, storeTo_);
+    }
     {
       int dataSize = 0;
       for (int i = 0; i < options_.size(); i++) {
@@ -126,6 +172,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.workflows.OmniNodeOptions other = (com.tcn.cloud.api.api.commons.workflows.OmniNodeOptions) obj;
 
+    if (!getStoreTo()
+        .equals(other.getStoreTo())) return false;
     if (!getOptionsList()
         .equals(other.getOptionsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -139,6 +187,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + STORE_TO_FIELD_NUMBER;
+    hash = (53 * hash) + getStoreTo().hashCode();
     if (getOptionsCount() > 0) {
       hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
       hash = (53 * hash) + getOptionsList().hashCode();
@@ -274,6 +324,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      storeTo_ = "";
       options_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
@@ -310,6 +361,9 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.commons.workflows.OmniNodeOptions result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.storeTo_ = storeTo_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         options_.makeImmutable();
         result.options_ = options_;
       }
@@ -359,10 +413,15 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.workflows.OmniNodeOptions other) {
       if (other == com.tcn.cloud.api.api.commons.workflows.OmniNodeOptions.getDefaultInstance()) return this;
+      if (!other.getStoreTo().isEmpty()) {
+        storeTo_ = other.storeTo_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       if (!other.options_.isEmpty()) {
         if (options_.isEmpty()) {
           options_ = other.options_;
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
         } else {
           ensureOptionsIsMutable();
           options_.addAll(other.options_);
@@ -396,11 +455,16 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
+              storeTo_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
               java.lang.String s = input.readStringRequireUtf8();
               ensureOptionsIsMutable();
               options_.add(s);
               break;
-            } // case 10
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -418,16 +482,88 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
+    private java.lang.Object storeTo_ = "";
+    /**
+     * <code>string store_to = 1 [json_name = "storeTo"];</code>
+     * @return The storeTo.
+     */
+    public java.lang.String getStoreTo() {
+      java.lang.Object ref = storeTo_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        storeTo_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string store_to = 1 [json_name = "storeTo"];</code>
+     * @return The bytes for storeTo.
+     */
+    public com.google.protobuf.ByteString
+        getStoreToBytes() {
+      java.lang.Object ref = storeTo_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        storeTo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string store_to = 1 [json_name = "storeTo"];</code>
+     * @param value The storeTo to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStoreTo(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      storeTo_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string store_to = 1 [json_name = "storeTo"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearStoreTo() {
+      storeTo_ = getDefaultInstance().getStoreTo();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string store_to = 1 [json_name = "storeTo"];</code>
+     * @param value The bytes for storeTo to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStoreToBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      storeTo_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
     private com.google.protobuf.LazyStringArrayList options_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureOptionsIsMutable() {
       if (!options_.isModifiable()) {
         options_ = new com.google.protobuf.LazyStringArrayList(options_);
       }
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
     }
     /**
-     * <code>repeated string options = 1 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @return A list containing the options.
      */
     public com.google.protobuf.ProtocolStringList
@@ -436,14 +572,14 @@ private static final long serialVersionUID = 0L;
       return options_;
     }
     /**
-     * <code>repeated string options = 1 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @return The count of options.
      */
     public int getOptionsCount() {
       return options_.size();
     }
     /**
-     * <code>repeated string options = 1 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param index The index of the element to return.
      * @return The options at the given index.
      */
@@ -451,7 +587,7 @@ private static final long serialVersionUID = 0L;
       return options_.get(index);
     }
     /**
-     * <code>repeated string options = 1 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the options at the given index.
      */
@@ -460,7 +596,7 @@ private static final long serialVersionUID = 0L;
       return options_.getByteString(index);
     }
     /**
-     * <code>repeated string options = 1 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param index The index to set the value at.
      * @param value The options to set.
      * @return This builder for chaining.
@@ -470,12 +606,12 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureOptionsIsMutable();
       options_.set(index, value);
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string options = 1 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param value The options to add.
      * @return This builder for chaining.
      */
@@ -484,12 +620,12 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureOptionsIsMutable();
       options_.add(value);
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string options = 1 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param values The options to add.
      * @return This builder for chaining.
      */
@@ -498,23 +634,23 @@ private static final long serialVersionUID = 0L;
       ensureOptionsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, options_);
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string options = 1 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @return This builder for chaining.
      */
     public Builder clearOptions() {
       options_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000001);;
+      bitField0_ = (bitField0_ & ~0x00000002);;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string options = 1 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param value The bytes of the options to add.
      * @return This builder for chaining.
      */
@@ -524,7 +660,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureOptionsIsMutable();
       options_.add(value);
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
