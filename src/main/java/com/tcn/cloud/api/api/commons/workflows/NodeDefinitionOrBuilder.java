@@ -239,19 +239,19 @@ public interface NodeDefinitionOrBuilder extends
   com.tcn.cloud.api.api.commons.workflows.OmniNodeErrorOrBuilder getOmniErrorOrBuilder();
 
   /**
-   * <code>.api.commons.workflows.OmniNodeInject omni_inject = 205 [json_name = "omniInject"];</code>
-   * @return Whether the omniInject field is set.
+   * <code>.api.commons.workflows.OmniNodeOptions omni_options = 205 [json_name = "omniOptions"];</code>
+   * @return Whether the omniOptions field is set.
    */
-  boolean hasOmniInject();
+  boolean hasOmniOptions();
   /**
-   * <code>.api.commons.workflows.OmniNodeInject omni_inject = 205 [json_name = "omniInject"];</code>
-   * @return The omniInject.
+   * <code>.api.commons.workflows.OmniNodeOptions omni_options = 205 [json_name = "omniOptions"];</code>
+   * @return The omniOptions.
    */
-  com.tcn.cloud.api.api.commons.workflows.OmniNodeInject getOmniInject();
+  com.tcn.cloud.api.api.commons.workflows.OmniNodeOptions getOmniOptions();
   /**
-   * <code>.api.commons.workflows.OmniNodeInject omni_inject = 205 [json_name = "omniInject"];</code>
+   * <code>.api.commons.workflows.OmniNodeOptions omni_options = 205 [json_name = "omniOptions"];</code>
    */
-  com.tcn.cloud.api.api.commons.workflows.OmniNodeInjectOrBuilder getOmniInjectOrBuilder();
+  com.tcn.cloud.api.api.commons.workflows.OmniNodeOptionsOrBuilder getOmniOptionsOrBuilder();
 
   /**
    * <code>.api.commons.workflows.OmniNodeSendMessage omni_send_message = 206 [json_name = "omniSendMessage"];</code>
@@ -284,19 +284,19 @@ public interface NodeDefinitionOrBuilder extends
   com.tcn.cloud.api.api.commons.workflows.OmniNodeStoreOrBuilder getOmniStoreOrBuilder();
 
   /**
-   * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 208 [json_name = "omniCompare"];</code>
-   * @return Whether the omniCompare field is set.
+   * <code>.api.commons.workflows.OmniNodeDecision omni_decision = 208 [json_name = "omniDecision"];</code>
+   * @return Whether the omniDecision field is set.
    */
-  boolean hasOmniCompare();
+  boolean hasOmniDecision();
   /**
-   * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 208 [json_name = "omniCompare"];</code>
-   * @return The omniCompare.
+   * <code>.api.commons.workflows.OmniNodeDecision omni_decision = 208 [json_name = "omniDecision"];</code>
+   * @return The omniDecision.
    */
-  com.tcn.cloud.api.api.commons.workflows.OmniNodeCompare getOmniCompare();
+  com.tcn.cloud.api.api.commons.workflows.OmniNodeDecision getOmniDecision();
   /**
-   * <code>.api.commons.workflows.OmniNodeCompare omni_compare = 208 [json_name = "omniCompare"];</code>
+   * <code>.api.commons.workflows.OmniNodeDecision omni_decision = 208 [json_name = "omniDecision"];</code>
    */
-  com.tcn.cloud.api.api.commons.workflows.OmniNodeCompareOrBuilder getOmniCompareOrBuilder();
+  com.tcn.cloud.api.api.commons.workflows.OmniNodeDecisionOrBuilder getOmniDecisionOrBuilder();
 
   /**
    * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart", deprecated = true];</code>

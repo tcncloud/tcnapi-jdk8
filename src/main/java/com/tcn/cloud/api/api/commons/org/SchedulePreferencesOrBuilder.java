@@ -189,4 +189,14 @@ java.lang.String defaultValue);
    */
   com.google.protobuf.ByteString
       getDefaultCampaignLinkIdBytes();
+
+  /**
+   * <pre>
+   * Whether user canceled campaigns can be resent in the organization.
+   * </pre>
+   *
+   * <code>bool resend_cancelled_campaigns = 20 [json_name = "resendCancelledCampaigns"];</code>
+   * @return The resendCancelledCampaigns.
+   */
+  boolean getResendCancelledCampaigns();
 }

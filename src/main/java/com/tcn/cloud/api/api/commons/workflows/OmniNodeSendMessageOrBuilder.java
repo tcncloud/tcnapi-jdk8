@@ -20,14 +20,14 @@ public interface OmniNodeSendMessageOrBuilder extends
       getPromptBytes();
 
   /**
-   * <code>string options_key = 3 [json_name = "optionsKey"];</code>
-   * @return The optionsKey.
+   * <code>string options = 3 [json_name = "options"];</code>
+   * @return The options.
    */
-  java.lang.String getOptionsKey();
+  java.lang.String getOptions();
   /**
-   * <code>string options_key = 3 [json_name = "optionsKey"];</code>
-   * @return The bytes for optionsKey.
+   * <code>string options = 3 [json_name = "options"];</code>
+   * @return The bytes for options.
    */
   com.google.protobuf.ByteString
-      getOptionsKeyBytes();
+      getOptionsBytes();
 }

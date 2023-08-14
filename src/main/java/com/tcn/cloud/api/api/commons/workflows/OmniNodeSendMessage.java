@@ -17,7 +17,7 @@ private static final long serialVersionUID = 0L;
   }
   private OmniNodeSendMessage() {
     prompt_ = "";
-    optionsKey_ = "";
+    options_ = "";
   }
 
   @java.lang.Override
@@ -79,39 +79,39 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int OPTIONS_KEY_FIELD_NUMBER = 3;
+  public static final int OPTIONS_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object optionsKey_ = "";
+  private volatile java.lang.Object options_ = "";
   /**
-   * <code>string options_key = 3 [json_name = "optionsKey"];</code>
-   * @return The optionsKey.
+   * <code>string options = 3 [json_name = "options"];</code>
+   * @return The options.
    */
   @java.lang.Override
-  public java.lang.String getOptionsKey() {
-    java.lang.Object ref = optionsKey_;
+  public java.lang.String getOptions() {
+    java.lang.Object ref = options_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      optionsKey_ = s;
+      options_ = s;
       return s;
     }
   }
   /**
-   * <code>string options_key = 3 [json_name = "optionsKey"];</code>
-   * @return The bytes for optionsKey.
+   * <code>string options = 3 [json_name = "options"];</code>
+   * @return The bytes for options.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getOptionsKeyBytes() {
-    java.lang.Object ref = optionsKey_;
+      getOptionsBytes() {
+    java.lang.Object ref = options_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      optionsKey_ = b;
+      options_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -135,8 +135,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prompt_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, prompt_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(optionsKey_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, optionsKey_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(options_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, options_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -150,8 +150,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prompt_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, prompt_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(optionsKey_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, optionsKey_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(options_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, options_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -170,8 +170,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getPrompt()
         .equals(other.getPrompt())) return false;
-    if (!getOptionsKey()
-        .equals(other.getOptionsKey())) return false;
+    if (!getOptions()
+        .equals(other.getOptions())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -185,8 +185,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + PROMPT_FIELD_NUMBER;
     hash = (53 * hash) + getPrompt().hashCode();
-    hash = (37 * hash) + OPTIONS_KEY_FIELD_NUMBER;
-    hash = (53 * hash) + getOptionsKey().hashCode();
+    hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
+    hash = (53 * hash) + getOptions().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -319,7 +319,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       prompt_ = "";
-      optionsKey_ = "";
+      options_ = "";
       return this;
     }
 
@@ -357,7 +357,7 @@ private static final long serialVersionUID = 0L;
         result.prompt_ = prompt_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.optionsKey_ = optionsKey_;
+        result.options_ = options_;
       }
     }
 
@@ -410,8 +410,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getOptionsKey().isEmpty()) {
-        optionsKey_ = other.optionsKey_;
+      if (!other.getOptions().isEmpty()) {
+        options_ = other.options_;
         bitField0_ |= 0x00000002;
         onChanged();
       }
@@ -447,7 +447,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 10
             case 26: {
-              optionsKey_ = input.readStringRequireUtf8();
+              options_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 26
@@ -540,73 +540,73 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object optionsKey_ = "";
+    private java.lang.Object options_ = "";
     /**
-     * <code>string options_key = 3 [json_name = "optionsKey"];</code>
-     * @return The optionsKey.
+     * <code>string options = 3 [json_name = "options"];</code>
+     * @return The options.
      */
-    public java.lang.String getOptionsKey() {
-      java.lang.Object ref = optionsKey_;
+    public java.lang.String getOptions() {
+      java.lang.Object ref = options_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        optionsKey_ = s;
+        options_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string options_key = 3 [json_name = "optionsKey"];</code>
-     * @return The bytes for optionsKey.
+     * <code>string options = 3 [json_name = "options"];</code>
+     * @return The bytes for options.
      */
     public com.google.protobuf.ByteString
-        getOptionsKeyBytes() {
-      java.lang.Object ref = optionsKey_;
+        getOptionsBytes() {
+      java.lang.Object ref = options_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        optionsKey_ = b;
+        options_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string options_key = 3 [json_name = "optionsKey"];</code>
-     * @param value The optionsKey to set.
+     * <code>string options = 3 [json_name = "options"];</code>
+     * @param value The options to set.
      * @return This builder for chaining.
      */
-    public Builder setOptionsKey(
+    public Builder setOptions(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      optionsKey_ = value;
+      options_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>string options_key = 3 [json_name = "optionsKey"];</code>
+     * <code>string options = 3 [json_name = "options"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearOptionsKey() {
-      optionsKey_ = getDefaultInstance().getOptionsKey();
+    public Builder clearOptions() {
+      options_ = getDefaultInstance().getOptions();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>string options_key = 3 [json_name = "optionsKey"];</code>
-     * @param value The bytes for optionsKey to set.
+     * <code>string options = 3 [json_name = "options"];</code>
+     * @param value The bytes for options to set.
      * @return This builder for chaining.
      */
-    public Builder setOptionsKeyBytes(
+    public Builder setOptionsBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      optionsKey_ = value;
+      options_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;

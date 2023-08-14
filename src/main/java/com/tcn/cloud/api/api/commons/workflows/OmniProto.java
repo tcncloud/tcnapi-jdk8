@@ -20,10 +20,10 @@ public final class OmniProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_workflows_OmniNodePrompt_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_commons_workflows_OmniNodeInject_descriptor;
+    internal_static_api_commons_workflows_OmniNodeOptions_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_commons_workflows_OmniNodeInject_fieldAccessorTable;
+      internal_static_api_commons_workflows_OmniNodeOptions_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_workflows_OmniNodeSendMessage_descriptor;
   static final 
@@ -35,10 +35,10 @@ public final class OmniProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_workflows_OmniNodeStore_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_commons_workflows_OmniNodeCompare_descriptor;
+    internal_static_api_commons_workflows_OmniNodeDecision_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_commons_workflows_OmniNodeCompare_fieldAccessorTable;
+      internal_static_api_commons_workflows_OmniNodeDecision_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_workflows_OmniNodeSetSkill_descriptor;
   static final 
@@ -66,21 +66,20 @@ public final class OmniProto {
       "\n api/commons/workflows/omni.proto\022\025api." +
       "commons.workflows\"]\n\016OmniNodePrompt\022\026\n\006p" +
       "rompt\030\001 \001(\tR\006prompt\022\031\n\010store_to\030\002 \001(\tR\007s" +
-      "toreTo\022\030\n\007options\030\003 \003(\tR\007options\"?\n\016Omni" +
-      "NodeInject\022\031\n\010store_to\030\001 \001(\tR\007storeTo\022\022\n" +
-      "\004data\030\002 \001(\tR\004data\"N\n\023OmniNodeSendMessage" +
-      "\022\026\n\006prompt\030\001 \001(\tR\006prompt\022\037\n\013options_key\030" +
-      "\003 \001(\tR\noptionsKey\"*\n\rOmniNodeStore\022\031\n\010st" +
-      "ore_to\030\001 \001(\tR\007storeTo\"H\n\017OmniNodeCompare" +
-      "\022\024\n\005input\030\001 \001(\tR\005input\022\037\n\013options_key\030\002 " +
-      "\001(\tR\noptionsKey\"(\n\020OmniNodeSetSkill\022\024\n\005s" +
-      "kill\030\001 \001(\tR\005skill\"\021\n\017OmniNodeToAgent\"%\n\r" +
-      "OmniNodeError\022\024\n\005error\030\001 \001(\tR\005errorB\252\001\n\'" +
-      "com.tcn.cloud.api.api.commons.workflowsB" +
-      "\tOmniProtoP\001\242\002\003ACW\252\002\025Api.Commons.Workflo" +
-      "ws\312\002\025Api\\Commons\\Workflows\342\002!Api\\Commons" +
-      "\\Workflows\\GPBMetadata\352\002\027Api::Commons::W" +
-      "orkflowsb\006proto3"
+      "toreTo\022\030\n\007options\030\003 \003(\tR\007options\"+\n\017Omni" +
+      "NodeOptions\022\030\n\007options\030\001 \003(\tR\007options\"G\n" +
+      "\023OmniNodeSendMessage\022\026\n\006prompt\030\001 \001(\tR\006pr" +
+      "ompt\022\030\n\007options\030\003 \001(\tR\007options\"*\n\rOmniNo" +
+      "deStore\022\031\n\010store_to\030\001 \001(\tR\007storeTo\"B\n\020Om" +
+      "niNodeDecision\022\030\n\007options\030\001 \001(\tR\007options" +
+      "\022\024\n\005input\030\002 \001(\tR\005input\"(\n\020OmniNodeSetSki" +
+      "ll\022\024\n\005skill\030\001 \001(\tR\005skill\"\021\n\017OmniNodeToAg" +
+      "ent\"%\n\rOmniNodeError\022\024\n\005error\030\001 \001(\tR\005err" +
+      "orB\252\001\n\'com.tcn.cloud.api.api.commons.wor" +
+      "kflowsB\tOmniProtoP\001\242\002\003ACW\252\002\025Api.Commons." +
+      "Workflows\312\002\025Api\\Commons\\Workflows\342\002!Api\\" +
+      "Commons\\Workflows\\GPBMetadata\352\002\027Api::Com" +
+      "mons::Workflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -92,30 +91,30 @@ public final class OmniProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_workflows_OmniNodePrompt_descriptor,
         new java.lang.String[] { "Prompt", "StoreTo", "Options", });
-    internal_static_api_commons_workflows_OmniNodeInject_descriptor =
+    internal_static_api_commons_workflows_OmniNodeOptions_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_api_commons_workflows_OmniNodeInject_fieldAccessorTable = new
+    internal_static_api_commons_workflows_OmniNodeOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_commons_workflows_OmniNodeInject_descriptor,
-        new java.lang.String[] { "StoreTo", "Data", });
+        internal_static_api_commons_workflows_OmniNodeOptions_descriptor,
+        new java.lang.String[] { "Options", });
     internal_static_api_commons_workflows_OmniNodeSendMessage_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_api_commons_workflows_OmniNodeSendMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_workflows_OmniNodeSendMessage_descriptor,
-        new java.lang.String[] { "Prompt", "OptionsKey", });
+        new java.lang.String[] { "Prompt", "Options", });
     internal_static_api_commons_workflows_OmniNodeStore_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_api_commons_workflows_OmniNodeStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_workflows_OmniNodeStore_descriptor,
         new java.lang.String[] { "StoreTo", });
-    internal_static_api_commons_workflows_OmniNodeCompare_descriptor =
+    internal_static_api_commons_workflows_OmniNodeDecision_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_api_commons_workflows_OmniNodeCompare_fieldAccessorTable = new
+    internal_static_api_commons_workflows_OmniNodeDecision_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_commons_workflows_OmniNodeCompare_descriptor,
-        new java.lang.String[] { "Input", "OptionsKey", });
+        internal_static_api_commons_workflows_OmniNodeDecision_descriptor,
+        new java.lang.String[] { "Options", "Input", });
     internal_static_api_commons_workflows_OmniNodeSetSkill_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_api_commons_workflows_OmniNodeSetSkill_fieldAccessorTable = new
