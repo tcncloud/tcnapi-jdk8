@@ -24,16 +24,59 @@ public final class ServiceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\036api/v1alpha1/idp/service.proto\022\020api.v1" +
-      "alpha1.idp2\022\n\020IdentityProviderB\224\001\n\"com.t" +
-      "cn.cloud.api.api.v1alpha1.idpB\014ServicePr" +
-      "otoP\001\242\002\003AVI\252\002\020Api.V1alpha1.Idp\312\002\020Api\\V1a" +
-      "lpha1\\Idp\342\002\034Api\\V1alpha1\\Idp\\GPBMetadata" +
-      "\352\002\022Api::V1alpha1::Idpb\006proto3"
+      "alpha1.idp\032\027annotations/authz.proto\032\037api" +
+      "/v1alpha1/idp/entities.proto\032\034google/api" +
+      "/annotations.proto2\377\010\n\027IdentityProviderS" +
+      "ervice\022\257\001\n\024CreateAuthConnection\022-.api.v1" +
+      "alpha1.idp.CreateAuthConnectionRequest\032." +
+      ".api.v1alpha1.idp.CreateAuthConnectionRe" +
+      "sponse\"8\272\270\221\002\005\n\003\010\204\002\202\323\344\223\002(\"#/api/v1alpha1/" +
+      "idp/connection/create:\001*\022\303\001\n\031GetAuthConn" +
+      "ectionSettings\0222.api.v1alpha1.idp.GetAut" +
+      "hConnectionSettingsRequest\0323.api.v1alpha" +
+      "1.idp.GetAuthConnectionSettingsResponse\"" +
+      "=\272\270\221\002\005\n\003\010\204\002\202\323\344\223\002-\"(/api/v1alpha1/idp/con" +
+      "nection/getsettings:\001*\022\243\001\n\021GetAuthConnec" +
+      "tion\022*.api.v1alpha1.idp.GetAuthConnectio" +
+      "nRequest\032+.api.v1alpha1.idp.GetAuthConne" +
+      "ctionResponse\"5\272\270\221\002\005\n\003\010\204\002\202\323\344\223\002%\" /api/v1" +
+      "alpha1/idp/connection/get:\001*\022\257\001\n\024DeleteA" +
+      "uthConnection\022-.api.v1alpha1.idp.DeleteA" +
+      "uthConnectionRequest\032..api.v1alpha1.idp." +
+      "DeleteAuthConnectionResponse\"8\272\270\221\002\005\n\003\010\204\002" +
+      "\202\323\344\223\002(\"#/api/v1alpha1/idp/connection/del" +
+      "ete:\001*\022\310\001\n\032UpdateAuthConnectionSecret\0223." +
+      "api.v1alpha1.idp.UpdateAuthConnectionSec" +
+      "retRequest\0324.api.v1alpha1.idp.UpdateAuth" +
+      "ConnectionSecretResponse\"?\272\270\221\002\005\n\003\010\204\002\202\323\344\223" +
+      "\002/\"*/api/v1alpha1/idp/connection/update/" +
+      "secret:\001*\022\310\001\n\032UpdateAuthConnectionGroups" +
+      "\0223.api.v1alpha1.idp.UpdateAuthConnection" +
+      "GroupsRequest\0324.api.v1alpha1.idp.UpdateA" +
+      "uthConnectionGroupsResponse\"?\272\270\221\002\005\n\003\010\204\002\202" +
+      "\323\344\223\002/\"*/api/v1alpha1/idp/connection/upda" +
+      "te/groups:\001*B\224\001\n\"com.tcn.cloud.api.api.v" +
+      "1alpha1.idpB\014ServiceProtoP\001\242\002\003AVI\252\002\020Api." +
+      "V1alpha1.Idp\312\002\020Api\\V1alpha1\\Idp\342\002\034Api\\V1" +
+      "alpha1\\Idp\\GPBMetadata\352\002\022Api::V1alpha1::" +
+      "Idpb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
+          com.tcn.cloud.api.api.v1alpha1.idp.EntitiesProto.getDescriptor(),
+          com.google.api.AnnotationsProto.getDescriptor(),
         });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
+    registry.add(com.google.api.AnnotationsProto.http);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
+    com.tcn.cloud.api.api.v1alpha1.idp.EntitiesProto.getDescriptor();
+    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

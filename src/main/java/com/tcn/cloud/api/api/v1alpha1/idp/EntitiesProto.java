@@ -14,6 +14,71 @@ public final class EntitiesProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_idp_CreateAuthConnectionRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_idp_CreateAuthConnectionRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_idp_CreateAuthConnectionResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_idp_CreateAuthConnectionResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_idp_GetAuthConnectionSettingsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_idp_GetAuthConnectionSettingsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_idp_GetAuthConnectionSettingsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_idp_GetAuthConnectionSettingsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_idp_GetAuthConnectionRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_idp_GetAuthConnectionRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_idp_GetAuthConnectionResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_idp_GetAuthConnectionResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_idp_DeleteAuthConnectionRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_idp_DeleteAuthConnectionRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_idp_DeleteAuthConnectionResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_idp_DeleteAuthConnectionResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_idp_UpdateAuthConnectionSecretRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_idp_UpdateAuthConnectionSecretRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_idp_UpdateAuthConnectionSecretRequest_SecretExpiration_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_idp_UpdateAuthConnectionSecretRequest_SecretExpiration_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_idp_UpdateAuthConnectionSecretResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_idp_UpdateAuthConnectionSecretResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_idp_UpdateAuthConnectionGroupsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_idp_UpdateAuthConnectionGroupsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v1alpha1_idp_UpdateAuthConnectionGroupsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v1alpha1_idp_UpdateAuthConnectionGroupsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -24,16 +89,129 @@ public final class EntitiesProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\037api/v1alpha1/idp/entities.proto\022\020api.v" +
-      "1alpha1.idpB\225\001\n\"com.tcn.cloud.api.api.v1" +
-      "alpha1.idpB\rEntitiesProtoP\001\242\002\003AVI\252\002\020Api." +
-      "V1alpha1.Idp\312\002\020Api\\V1alpha1\\Idp\342\002\034Api\\V1" +
-      "alpha1\\Idp\\GPBMetadata\352\002\022Api::V1alpha1::" +
-      "Idpb\006proto3"
+      "1alpha1.idp\032&api/commons/org/auth_connec" +
+      "tions.proto\032\037google/protobuf/timestamp.p" +
+      "roto\"\207\001\n\033CreateAuthConnectionRequest\022C\n\010" +
+      "settings\030\001 \001(\0132\'.api.commons.org.AuthCon" +
+      "nectionSettingsR\010settings\022#\n\rclient_secr" +
+      "et\030\002 \001(\tR\014clientSecret\"C\n\034CreateAuthConn" +
+      "ectionResponse\022#\n\rconnection_id\030\001 \001(\tR\014c" +
+      "onnectionId\"\"\n GetAuthConnectionSettings" +
+      "Request\"h\n!GetAuthConnectionSettingsResp" +
+      "onse\022C\n\010settings\030\001 \001(\0132\'.api.commons.org" +
+      ".AuthConnectionSettingsR\010settings\"?\n\030Get" +
+      "AuthConnectionRequest\022#\n\rconnection_id\030\001" +
+      " \001(\tR\014connectionId\"`\n\031GetAuthConnectionR" +
+      "esponse\022C\n\010settings\030\001 \001(\0132\'.api.commons." +
+      "org.AuthConnectionSettingsR\010settings\"B\n\033" +
+      "DeleteAuthConnectionRequest\022#\n\rconnectio" +
+      "n_id\030\001 \001(\tR\014connectionId\"\036\n\034DeleteAuthCo" +
+      "nnectionResponse\"\244\002\n!UpdateAuthConnectio" +
+      "nSecretRequest\022#\n\rconnection_id\030\001 \001(\tR\014c" +
+      "onnectionId\022#\n\rclient_secret\030\002 \001(\tR\014clie" +
+      "ntSecret\022q\n\021secret_expiration\030\003 \001(\0132D.ap" +
+      "i.v1alpha1.idp.UpdateAuthConnectionSecre" +
+      "tRequest.SecretExpirationR\020secretExpirat" +
+      "ion\032B\n\020SecretExpiration\022.\n\004date\030\001 \001(\0132\032." +
+      "google.protobuf.TimestampR\004date\"$\n\"Updat" +
+      "eAuthConnectionSecretResponse\"\312\001\n!Update" +
+      "AuthConnectionGroupsRequest\022?\n\rdefault_g" +
+      "roup\030\001 \001(\0132\032.api.commons.org.GroupItemR\014" +
+      "defaultGroup\022?\n\rcustom_groups\030\002 \003(\0132\032.ap" +
+      "i.commons.org.GroupItemR\014customGroups\022#\n" +
+      "\rconnection_id\030\003 \001(\tR\014connectionId\"$\n\"Up" +
+      "dateAuthConnectionGroupsResponseB\225\001\n\"com" +
+      ".tcn.cloud.api.api.v1alpha1.idpB\rEntitie" +
+      "sProtoP\001\242\002\003AVI\252\002\020Api.V1alpha1.Idp\312\002\020Api\\" +
+      "V1alpha1\\Idp\342\002\034Api\\V1alpha1\\Idp\\GPBMetad" +
+      "ata\352\002\022Api::V1alpha1::Idpb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.api.commons.org.AuthConnectionsProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
+    internal_static_api_v1alpha1_idp_CreateAuthConnectionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_api_v1alpha1_idp_CreateAuthConnectionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_idp_CreateAuthConnectionRequest_descriptor,
+        new java.lang.String[] { "Settings", "ClientSecret", });
+    internal_static_api_v1alpha1_idp_CreateAuthConnectionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_api_v1alpha1_idp_CreateAuthConnectionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_idp_CreateAuthConnectionResponse_descriptor,
+        new java.lang.String[] { "ConnectionId", });
+    internal_static_api_v1alpha1_idp_GetAuthConnectionSettingsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_api_v1alpha1_idp_GetAuthConnectionSettingsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_idp_GetAuthConnectionSettingsRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_idp_GetAuthConnectionSettingsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_api_v1alpha1_idp_GetAuthConnectionSettingsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_idp_GetAuthConnectionSettingsResponse_descriptor,
+        new java.lang.String[] { "Settings", });
+    internal_static_api_v1alpha1_idp_GetAuthConnectionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_api_v1alpha1_idp_GetAuthConnectionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_idp_GetAuthConnectionRequest_descriptor,
+        new java.lang.String[] { "ConnectionId", });
+    internal_static_api_v1alpha1_idp_GetAuthConnectionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_api_v1alpha1_idp_GetAuthConnectionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_idp_GetAuthConnectionResponse_descriptor,
+        new java.lang.String[] { "Settings", });
+    internal_static_api_v1alpha1_idp_DeleteAuthConnectionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_api_v1alpha1_idp_DeleteAuthConnectionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_idp_DeleteAuthConnectionRequest_descriptor,
+        new java.lang.String[] { "ConnectionId", });
+    internal_static_api_v1alpha1_idp_DeleteAuthConnectionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_api_v1alpha1_idp_DeleteAuthConnectionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_idp_DeleteAuthConnectionResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_idp_UpdateAuthConnectionSecretRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_api_v1alpha1_idp_UpdateAuthConnectionSecretRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_idp_UpdateAuthConnectionSecretRequest_descriptor,
+        new java.lang.String[] { "ConnectionId", "ClientSecret", "SecretExpiration", });
+    internal_static_api_v1alpha1_idp_UpdateAuthConnectionSecretRequest_SecretExpiration_descriptor =
+      internal_static_api_v1alpha1_idp_UpdateAuthConnectionSecretRequest_descriptor.getNestedTypes().get(0);
+    internal_static_api_v1alpha1_idp_UpdateAuthConnectionSecretRequest_SecretExpiration_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_idp_UpdateAuthConnectionSecretRequest_SecretExpiration_descriptor,
+        new java.lang.String[] { "Date", });
+    internal_static_api_v1alpha1_idp_UpdateAuthConnectionSecretResponse_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_api_v1alpha1_idp_UpdateAuthConnectionSecretResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_idp_UpdateAuthConnectionSecretResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_api_v1alpha1_idp_UpdateAuthConnectionGroupsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_api_v1alpha1_idp_UpdateAuthConnectionGroupsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_idp_UpdateAuthConnectionGroupsRequest_descriptor,
+        new java.lang.String[] { "DefaultGroup", "CustomGroups", "ConnectionId", });
+    internal_static_api_v1alpha1_idp_UpdateAuthConnectionGroupsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_api_v1alpha1_idp_UpdateAuthConnectionGroupsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v1alpha1_idp_UpdateAuthConnectionGroupsResponse_descriptor,
+        new java.lang.String[] { });
+    com.tcn.cloud.api.api.commons.org.AuthConnectionsProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
