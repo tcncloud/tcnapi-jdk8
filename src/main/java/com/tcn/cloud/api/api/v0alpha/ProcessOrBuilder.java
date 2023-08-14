@@ -676,5 +676,20 @@ public interface ProcessOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.SplitCriteriaOrBuilder getSplitOrBuilder();
 
+  /**
+   * <code>.api.v0alpha.EpicEntrypoint epic_entry_point = 76 [json_name = "epicEntryPoint"];</code>
+   * @return Whether the epicEntryPoint field is set.
+   */
+  boolean hasEpicEntryPoint();
+  /**
+   * <code>.api.v0alpha.EpicEntrypoint epic_entry_point = 76 [json_name = "epicEntryPoint"];</code>
+   * @return The epicEntryPoint.
+   */
+  com.tcn.cloud.api.api.v0alpha.EpicEntrypoint getEpicEntryPoint();
+  /**
+   * <code>.api.v0alpha.EpicEntrypoint epic_entry_point = 76 [json_name = "epicEntryPoint"];</code>
+   */
+  com.tcn.cloud.api.api.v0alpha.EpicEntrypointOrBuilder getEpicEntryPointOrBuilder();
+
   com.tcn.cloud.api.api.v0alpha.Process.ProcCase getProcCase();
 }
