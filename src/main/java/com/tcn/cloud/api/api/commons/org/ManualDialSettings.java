@@ -3117,6 +3117,24 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.ManualDialDataDipHandling.UNRECOGNIZED : result;
   }
 
+  public static final int ENABLE_REJECT_OPTION_FOR_APPROVERS_FIELD_NUMBER = 29;
+  private boolean enableRejectOptionForApprovers_ = false;
+  /**
+   * <pre>
+   * Control whether the reject option is available to the approvers.
+   * Please use disable_reject_option_for_approvers under GeneralSettings.
+   * </pre>
+   *
+   * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
+   * @deprecated api.commons.org.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
+   *     See api/commons/org/huntgroup.proto;l=471
+   * @return The enableRejectOptionForApprovers.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated public boolean getEnableRejectOptionForApprovers() {
+    return enableRejectOptionForApprovers_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -3214,6 +3232,9 @@ private static final long serialVersionUID = 0L;
     }
     if (dataDipIntegrationHandling_ != com.tcn.cloud.api.api.commons.ManualDialDataDipHandling.MANUAL_DIAL_DATA_DIP_HANDLING_CANCEL.getNumber()) {
       output.writeEnum(28, dataDipIntegrationHandling_);
+    }
+    if (enableRejectOptionForApprovers_ != false) {
+      output.writeBool(29, enableRejectOptionForApprovers_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -3335,6 +3356,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(28, dataDipIntegrationHandling_);
     }
+    if (enableRejectOptionForApprovers_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(29, enableRejectOptionForApprovers_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3409,6 +3434,8 @@ private static final long serialVersionUID = 0L;
     if (!getDataDipIntegrationMappingsList()
         .equals(other.getDataDipIntegrationMappingsList())) return false;
     if (dataDipIntegrationHandling_ != other.dataDipIntegrationHandling_) return false;
+    if (getEnableRejectOptionForApprovers()
+        != other.getEnableRejectOptionForApprovers()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -3499,6 +3526,9 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + DATA_DIP_INTEGRATION_HANDLING_FIELD_NUMBER;
     hash = (53 * hash) + dataDipIntegrationHandling_;
+    hash = (37 * hash) + ENABLE_REJECT_OPTION_FOR_APPROVERS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getEnableRejectOptionForApprovers());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -3685,6 +3715,7 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x04000000);
       dataDipIntegrationHandling_ = 0;
+      enableRejectOptionForApprovers_ = false;
       return this;
     }
 
@@ -3819,6 +3850,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x08000000) != 0)) {
         result.dataDipIntegrationHandling_ = dataDipIntegrationHandling_;
+      }
+      if (((from_bitField0_ & 0x10000000) != 0)) {
+        result.enableRejectOptionForApprovers_ = enableRejectOptionForApprovers_;
       }
     }
 
@@ -3974,6 +4008,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.dataDipIntegrationHandling_ != 0) {
         setDataDipIntegrationHandlingValue(other.getDataDipIntegrationHandlingValue());
+      }
+      if (other.getEnableRejectOptionForApprovers() != false) {
+        setEnableRejectOptionForApprovers(other.getEnableRejectOptionForApprovers());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -4157,6 +4194,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x08000000;
               break;
             } // case 224
+            case 232: {
+              enableRejectOptionForApprovers_ = input.readBool();
+              bitField0_ |= 0x10000000;
+              break;
+            } // case 232
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -6490,6 +6532,59 @@ private static final long serialVersionUID = 0L;
     public Builder clearDataDipIntegrationHandling() {
       bitField0_ = (bitField0_ & ~0x08000000);
       dataDipIntegrationHandling_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private boolean enableRejectOptionForApprovers_ ;
+    /**
+     * <pre>
+     * Control whether the reject option is available to the approvers.
+     * Please use disable_reject_option_for_approvers under GeneralSettings.
+     * </pre>
+     *
+     * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
+     * @deprecated api.commons.org.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=471
+     * @return The enableRejectOptionForApprovers.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public boolean getEnableRejectOptionForApprovers() {
+      return enableRejectOptionForApprovers_;
+    }
+    /**
+     * <pre>
+     * Control whether the reject option is available to the approvers.
+     * Please use disable_reject_option_for_approvers under GeneralSettings.
+     * </pre>
+     *
+     * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
+     * @deprecated api.commons.org.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=471
+     * @param value The enableRejectOptionForApprovers to set.
+     * @return This builder for chaining.
+     */
+    @java.lang.Deprecated public Builder setEnableRejectOptionForApprovers(boolean value) {
+
+      enableRejectOptionForApprovers_ = value;
+      bitField0_ |= 0x10000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Control whether the reject option is available to the approvers.
+     * Please use disable_reject_option_for_approvers under GeneralSettings.
+     * </pre>
+     *
+     * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
+     * @deprecated api.commons.org.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
+     *     See api/commons/org/huntgroup.proto;l=471
+     * @return This builder for chaining.
+     */
+    @java.lang.Deprecated public Builder clearEnableRejectOptionForApprovers() {
+      bitField0_ = (bitField0_ & ~0x10000000);
+      enableRejectOptionForApprovers_ = false;
       onChanged();
       return this;
     }

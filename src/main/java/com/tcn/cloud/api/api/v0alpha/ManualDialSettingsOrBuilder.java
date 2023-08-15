@@ -194,6 +194,19 @@ public interface ManualDialSettingsOrBuilder extends
 
   /**
    * <pre>
+   * Control whether the reject option is available to the approvers.
+   * Please use disable_reject_option_for_approvers under GeneralSettings.
+   * </pre>
+   *
+   * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers", deprecated = true];</code>
+   * @deprecated api.v0alpha.ManualDialSettings.enable_reject_option_for_approvers is deprecated.
+   *     See api/v0alpha/p3api.proto;l=1553
+   * @return The enableRejectOptionForApprovers.
+   */
+  @java.lang.Deprecated boolean getEnableRejectOptionForApprovers();
+
+  /**
+   * <pre>
    * enable/disable the SIP address
    * </pre>
    *
