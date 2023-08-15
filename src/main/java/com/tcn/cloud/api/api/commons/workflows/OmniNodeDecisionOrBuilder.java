@@ -12,25 +12,25 @@ public interface OmniNodeDecisionOrBuilder extends
    * an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
    * </pre>
    *
-   * <code>string options = 1 [json_name = "options"];</code>
-   * @return The options.
+   * <code>string options_id = 1 [json_name = "optionsId"];</code>
+   * @return The optionsId.
    */
-  java.lang.String getOptions();
+  java.lang.String getOptionsId();
   /**
    * <pre>
    * an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
    * </pre>
    *
-   * <code>string options = 1 [json_name = "options"];</code>
-   * @return The bytes for options.
+   * <code>string options_id = 1 [json_name = "optionsId"];</code>
+   * @return The bytes for optionsId.
    */
   com.google.protobuf.ByteString
-      getOptionsBytes();
+      getOptionsIdBytes();
 
   /**
    * <pre>
    * the input stored in the payload, to extract from json
-   *   e.g. "{{input_text}}" a previously stored key from OmniNodeStore
+   *   e.g. "{{input_text}}" to extract a previously stored key from OmniNodeStore
    * </pre>
    *
    * <code>string input = 2 [json_name = "input"];</code>
@@ -40,7 +40,7 @@ public interface OmniNodeDecisionOrBuilder extends
   /**
    * <pre>
    * the input stored in the payload, to extract from json
-   *   e.g. "{{input_text}}" a previously stored key from OmniNodeStore
+   *   e.g. "{{input_text}}" to extract a previously stored key from OmniNodeStore
    * </pre>
    *
    * <code>string input = 2 [json_name = "input"];</code>

@@ -21,7 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private OmniNodeSendMessage() {
     prompt_ = "";
-    options_ = "";
+    optionsId_ = "";
   }
 
   @java.lang.Override
@@ -91,27 +91,27 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int OPTIONS_FIELD_NUMBER = 2;
+  public static final int OPTIONS_ID_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object options_ = "";
+  private volatile java.lang.Object optionsId_ = "";
   /**
    * <pre>
    * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
    * </pre>
    *
-   * <code>string options = 2 [json_name = "options"];</code>
-   * @return The options.
+   * <code>string options_id = 2 [json_name = "optionsId"];</code>
+   * @return The optionsId.
    */
   @java.lang.Override
-  public java.lang.String getOptions() {
-    java.lang.Object ref = options_;
+  public java.lang.String getOptionsId() {
+    java.lang.Object ref = optionsId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      options_ = s;
+      optionsId_ = s;
       return s;
     }
   }
@@ -120,18 +120,18 @@ private static final long serialVersionUID = 0L;
    * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
    * </pre>
    *
-   * <code>string options = 2 [json_name = "options"];</code>
-   * @return The bytes for options.
+   * <code>string options_id = 2 [json_name = "optionsId"];</code>
+   * @return The bytes for optionsId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getOptionsBytes() {
-    java.lang.Object ref = options_;
+      getOptionsIdBytes() {
+    java.lang.Object ref = optionsId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      options_ = b;
+      optionsId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -155,8 +155,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prompt_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, prompt_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(options_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, options_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(optionsId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, optionsId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -170,8 +170,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prompt_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, prompt_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(options_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, options_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(optionsId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, optionsId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -190,8 +190,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getPrompt()
         .equals(other.getPrompt())) return false;
-    if (!getOptions()
-        .equals(other.getOptions())) return false;
+    if (!getOptionsId()
+        .equals(other.getOptionsId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -205,8 +205,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + PROMPT_FIELD_NUMBER;
     hash = (53 * hash) + getPrompt().hashCode();
-    hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
-    hash = (53 * hash) + getOptions().hashCode();
+    hash = (37 * hash) + OPTIONS_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getOptionsId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -343,7 +343,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       prompt_ = "";
-      options_ = "";
+      optionsId_ = "";
       return this;
     }
 
@@ -381,7 +381,7 @@ private static final long serialVersionUID = 0L;
         result.prompt_ = prompt_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.options_ = options_;
+        result.optionsId_ = optionsId_;
       }
     }
 
@@ -434,8 +434,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getOptions().isEmpty()) {
-        options_ = other.options_;
+      if (!other.getOptionsId().isEmpty()) {
+        optionsId_ = other.optionsId_;
         bitField0_ |= 0x00000002;
         onChanged();
       }
@@ -471,7 +471,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 10
             case 18: {
-              options_ = input.readStringRequireUtf8();
+              optionsId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
@@ -584,22 +584,22 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object options_ = "";
+    private java.lang.Object optionsId_ = "";
     /**
      * <pre>
      * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
      * </pre>
      *
-     * <code>string options = 2 [json_name = "options"];</code>
-     * @return The options.
+     * <code>string options_id = 2 [json_name = "optionsId"];</code>
+     * @return The optionsId.
      */
-    public java.lang.String getOptions() {
-      java.lang.Object ref = options_;
+    public java.lang.String getOptionsId() {
+      java.lang.Object ref = optionsId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        options_ = s;
+        optionsId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -610,17 +610,17 @@ private static final long serialVersionUID = 0L;
      * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
      * </pre>
      *
-     * <code>string options = 2 [json_name = "options"];</code>
-     * @return The bytes for options.
+     * <code>string options_id = 2 [json_name = "optionsId"];</code>
+     * @return The bytes for optionsId.
      */
     public com.google.protobuf.ByteString
-        getOptionsBytes() {
-      java.lang.Object ref = options_;
+        getOptionsIdBytes() {
+      java.lang.Object ref = optionsId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        options_ = b;
+        optionsId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -631,14 +631,14 @@ private static final long serialVersionUID = 0L;
      * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
      * </pre>
      *
-     * <code>string options = 2 [json_name = "options"];</code>
-     * @param value The options to set.
+     * <code>string options_id = 2 [json_name = "optionsId"];</code>
+     * @param value The optionsId to set.
      * @return This builder for chaining.
      */
-    public Builder setOptions(
+    public Builder setOptionsId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      options_ = value;
+      optionsId_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
@@ -648,11 +648,11 @@ private static final long serialVersionUID = 0L;
      * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
      * </pre>
      *
-     * <code>string options = 2 [json_name = "options"];</code>
+     * <code>string options_id = 2 [json_name = "optionsId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearOptions() {
-      options_ = getDefaultInstance().getOptions();
+    public Builder clearOptionsId() {
+      optionsId_ = getDefaultInstance().getOptionsId();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
@@ -662,15 +662,15 @@ private static final long serialVersionUID = 0L;
      * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
      * </pre>
      *
-     * <code>string options = 2 [json_name = "options"];</code>
-     * @param value The bytes for options to set.
+     * <code>string options_id = 2 [json_name = "optionsId"];</code>
+     * @param value The bytes for optionsId to set.
      * @return This builder for chaining.
      */
-    public Builder setOptionsBytes(
+    public Builder setOptionsIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      options_ = value;
+      optionsId_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;

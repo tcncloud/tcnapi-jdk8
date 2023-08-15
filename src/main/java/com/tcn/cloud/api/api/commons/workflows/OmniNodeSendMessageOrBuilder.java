@@ -32,18 +32,18 @@ public interface OmniNodeSendMessageOrBuilder extends
    * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
    * </pre>
    *
-   * <code>string options = 2 [json_name = "options"];</code>
-   * @return The options.
+   * <code>string options_id = 2 [json_name = "optionsId"];</code>
+   * @return The optionsId.
    */
-  java.lang.String getOptions();
+  java.lang.String getOptionsId();
   /**
    * <pre>
    * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
    * </pre>
    *
-   * <code>string options = 2 [json_name = "options"];</code>
-   * @return The bytes for options.
+   * <code>string options_id = 2 [json_name = "optionsId"];</code>
+   * @return The bytes for optionsId.
    */
   com.google.protobuf.ByteString
-      getOptionsBytes();
+      getOptionsIdBytes();
 }

@@ -20,7 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private OmniNodeDecision() {
-    options_ = "";
+    optionsId_ = "";
     input_ = "";
   }
 
@@ -44,27 +44,27 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.workflows.OmniNodeDecision.class, com.tcn.cloud.api.api.commons.workflows.OmniNodeDecision.Builder.class);
   }
 
-  public static final int OPTIONS_FIELD_NUMBER = 1;
+  public static final int OPTIONS_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object options_ = "";
+  private volatile java.lang.Object optionsId_ = "";
   /**
    * <pre>
    * an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
    * </pre>
    *
-   * <code>string options = 1 [json_name = "options"];</code>
-   * @return The options.
+   * <code>string options_id = 1 [json_name = "optionsId"];</code>
+   * @return The optionsId.
    */
   @java.lang.Override
-  public java.lang.String getOptions() {
-    java.lang.Object ref = options_;
+  public java.lang.String getOptionsId() {
+    java.lang.Object ref = optionsId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      options_ = s;
+      optionsId_ = s;
       return s;
     }
   }
@@ -73,18 +73,18 @@ private static final long serialVersionUID = 0L;
    * an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
    * </pre>
    *
-   * <code>string options = 1 [json_name = "options"];</code>
-   * @return The bytes for options.
+   * <code>string options_id = 1 [json_name = "optionsId"];</code>
+   * @return The bytes for optionsId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getOptionsBytes() {
-    java.lang.Object ref = options_;
+      getOptionsIdBytes() {
+    java.lang.Object ref = optionsId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      options_ = b;
+      optionsId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -97,7 +97,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * the input stored in the payload, to extract from json
-   *   e.g. "{{input_text}}" a previously stored key from OmniNodeStore
+   *   e.g. "{{input_text}}" to extract a previously stored key from OmniNodeStore
    * </pre>
    *
    * <code>string input = 2 [json_name = "input"];</code>
@@ -119,7 +119,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * the input stored in the payload, to extract from json
-   *   e.g. "{{input_text}}" a previously stored key from OmniNodeStore
+   *   e.g. "{{input_text}}" to extract a previously stored key from OmniNodeStore
    * </pre>
    *
    * <code>string input = 2 [json_name = "input"];</code>
@@ -154,8 +154,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(options_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, options_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(optionsId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, optionsId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(input_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, input_);
@@ -169,8 +169,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(options_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, options_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(optionsId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, optionsId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(input_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, input_);
@@ -190,8 +190,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.workflows.OmniNodeDecision other = (com.tcn.cloud.api.api.commons.workflows.OmniNodeDecision) obj;
 
-    if (!getOptions()
-        .equals(other.getOptions())) return false;
+    if (!getOptionsId()
+        .equals(other.getOptionsId())) return false;
     if (!getInput()
         .equals(other.getInput())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -205,8 +205,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
-    hash = (53 * hash) + getOptions().hashCode();
+    hash = (37 * hash) + OPTIONS_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getOptionsId().hashCode();
     hash = (37 * hash) + INPUT_FIELD_NUMBER;
     hash = (53 * hash) + getInput().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -344,7 +344,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      options_ = "";
+      optionsId_ = "";
       input_ = "";
       return this;
     }
@@ -380,7 +380,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.commons.workflows.OmniNodeDecision result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.options_ = options_;
+        result.optionsId_ = optionsId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.input_ = input_;
@@ -431,8 +431,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.workflows.OmniNodeDecision other) {
       if (other == com.tcn.cloud.api.api.commons.workflows.OmniNodeDecision.getDefaultInstance()) return this;
-      if (!other.getOptions().isEmpty()) {
-        options_ = other.options_;
+      if (!other.getOptionsId().isEmpty()) {
+        optionsId_ = other.optionsId_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
@@ -468,7 +468,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              options_ = input.readStringRequireUtf8();
+              optionsId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -494,22 +494,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object options_ = "";
+    private java.lang.Object optionsId_ = "";
     /**
      * <pre>
      * an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
      * </pre>
      *
-     * <code>string options = 1 [json_name = "options"];</code>
-     * @return The options.
+     * <code>string options_id = 1 [json_name = "optionsId"];</code>
+     * @return The optionsId.
      */
-    public java.lang.String getOptions() {
-      java.lang.Object ref = options_;
+    public java.lang.String getOptionsId() {
+      java.lang.Object ref = optionsId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        options_ = s;
+        optionsId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -520,17 +520,17 @@ private static final long serialVersionUID = 0L;
      * an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
      * </pre>
      *
-     * <code>string options = 1 [json_name = "options"];</code>
-     * @return The bytes for options.
+     * <code>string options_id = 1 [json_name = "optionsId"];</code>
+     * @return The bytes for optionsId.
      */
     public com.google.protobuf.ByteString
-        getOptionsBytes() {
-      java.lang.Object ref = options_;
+        getOptionsIdBytes() {
+      java.lang.Object ref = optionsId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        options_ = b;
+        optionsId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -541,14 +541,14 @@ private static final long serialVersionUID = 0L;
      * an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
      * </pre>
      *
-     * <code>string options = 1 [json_name = "options"];</code>
-     * @param value The options to set.
+     * <code>string options_id = 1 [json_name = "optionsId"];</code>
+     * @param value The optionsId to set.
      * @return This builder for chaining.
      */
-    public Builder setOptions(
+    public Builder setOptionsId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      options_ = value;
+      optionsId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
@@ -558,11 +558,11 @@ private static final long serialVersionUID = 0L;
      * an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
      * </pre>
      *
-     * <code>string options = 1 [json_name = "options"];</code>
+     * <code>string options_id = 1 [json_name = "optionsId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearOptions() {
-      options_ = getDefaultInstance().getOptions();
+    public Builder clearOptionsId() {
+      optionsId_ = getDefaultInstance().getOptionsId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
@@ -572,15 +572,15 @@ private static final long serialVersionUID = 0L;
      * an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
      * </pre>
      *
-     * <code>string options = 1 [json_name = "options"];</code>
-     * @param value The bytes for options to set.
+     * <code>string options_id = 1 [json_name = "optionsId"];</code>
+     * @param value The bytes for optionsId to set.
      * @return This builder for chaining.
      */
-    public Builder setOptionsBytes(
+    public Builder setOptionsIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      options_ = value;
+      optionsId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
@@ -590,7 +590,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * the input stored in the payload, to extract from json
-     *   e.g. "{{input_text}}" a previously stored key from OmniNodeStore
+     *   e.g. "{{input_text}}" to extract a previously stored key from OmniNodeStore
      * </pre>
      *
      * <code>string input = 2 [json_name = "input"];</code>
@@ -611,7 +611,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * the input stored in the payload, to extract from json
-     *   e.g. "{{input_text}}" a previously stored key from OmniNodeStore
+     *   e.g. "{{input_text}}" to extract a previously stored key from OmniNodeStore
      * </pre>
      *
      * <code>string input = 2 [json_name = "input"];</code>
@@ -633,7 +633,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * the input stored in the payload, to extract from json
-     *   e.g. "{{input_text}}" a previously stored key from OmniNodeStore
+     *   e.g. "{{input_text}}" to extract a previously stored key from OmniNodeStore
      * </pre>
      *
      * <code>string input = 2 [json_name = "input"];</code>
@@ -651,7 +651,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * the input stored in the payload, to extract from json
-     *   e.g. "{{input_text}}" a previously stored key from OmniNodeStore
+     *   e.g. "{{input_text}}" to extract a previously stored key from OmniNodeStore
      * </pre>
      *
      * <code>string input = 2 [json_name = "input"];</code>
@@ -666,7 +666,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * the input stored in the payload, to extract from json
-     *   e.g. "{{input_text}}" a previously stored key from OmniNodeStore
+     *   e.g. "{{input_text}}" to extract a previously stored key from OmniNodeStore
      * </pre>
      *
      * <code>string input = 2 [json_name = "input"];</code>

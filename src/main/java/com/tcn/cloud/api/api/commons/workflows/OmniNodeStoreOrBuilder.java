@@ -12,18 +12,18 @@ public interface OmniNodeStoreOrBuilder extends
    * the name (key in payload) under which to store the input (e.g. "input_text")
    * </pre>
    *
-   * <code>string store_to = 1 [json_name = "storeTo"];</code>
-   * @return The storeTo.
+   * <code>string store_id = 1 [json_name = "storeId"];</code>
+   * @return The storeId.
    */
-  java.lang.String getStoreTo();
+  java.lang.String getStoreId();
   /**
    * <pre>
    * the name (key in payload) under which to store the input (e.g. "input_text")
    * </pre>
    *
-   * <code>string store_to = 1 [json_name = "storeTo"];</code>
-   * @return The bytes for storeTo.
+   * <code>string store_id = 1 [json_name = "storeId"];</code>
+   * @return The bytes for storeId.
    */
   com.google.protobuf.ByteString
-      getStoreToBytes();
+      getStoreIdBytes();
 }
