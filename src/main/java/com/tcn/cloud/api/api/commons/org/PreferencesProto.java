@@ -415,7 +415,7 @@ public final class PreferencesProto {
       "tTimeR\017defaultStopTime\"r\n\rBroadcastTime\022" +
       "\024\n\005hours\030\001 \001(\005R\005hours\022\030\n\007minutes\030\002 \001(\005R\007" +
       "minutes\0221\n\010timezone\030\003 \001(\0162\025.api.commons." +
-      "TimeZoneR\010timezone\"\274\006\n\023SchedulePreferenc" +
+      "TimeZoneR\010timezone\"\276\006\n\023SchedulePreferenc" +
       "es\022\025\n\006org_id\030\001 \001(\tR\005orgId\022@\n\035display_sch" +
       "edule_by_time_zone\030\n \001(\010R\031displaySchedul" +
       "eByTimeZone\0228\n\031use_schedule_by_time_zone" +
@@ -433,121 +433,121 @@ public final class PreferencesProto {
       ".commons.org.SchedulePreferences.Campaig" +
       "nLinksEntryR\rcampaignLinks\0227\n\030default_ca" +
       "mpaign_link_id\030\023 \001(\tR\025defaultCampaignLin" +
-      "kId\022:\n\031prohibit_cancelled_resend\030\024 \001(\010R\027" +
-      "prohibitCancelledResend\032@\n\022CampaignLinks" +
-      "Entry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005" +
-      "value:\0028\001\"\277\001\n\023EmailSmsPreferences\022\025\n\006org" +
-      "_id\030\001 \001(\tR\005orgId\022(\n\020use_custom_links\030\n \001" +
-      "(\010R\016useCustomLinks\0225\n\026client_acknowledge" +
-      "ment\030\013 \001(\010R\025clientAcknowledgement\0220\n\024ema" +
-      "il_from_addresses\030\014 \003(\tR\022emailFromAddres" +
-      "ses\"\215\002\n\023BusinessPreferences\022\025\n\006org_id\030\001 " +
-      "\001(\tR\005orgId\022\"\n\rweeks_of_data\030\n \001(\005R\013weeks" +
-      "OfData\0225\n\ttime_zone\030\013 \001(\0162\030.api.commons." +
-      "AnaTimeZoneR\010timeZone\022.\n\023multi_client_ac" +
-      "cess\030\014 \001(\010R\021multiClientAccess\0223\n\025custom_" +
-      "visualizations\030\r \001(\010R\024customVisualizatio" +
-      "ns\022\037\n\013time_filter\030\016 \001(\tR\ntimeFilter\"\367\001\n\025" +
-      "ScorecardsPreferences\022\025\n\006org_id\030\001 \001(\tR\005o" +
-      "rgId\0224\n\026call_sample_percentage\030\002 \001(\rR\024ca" +
-      "llSamplePercentage\0220\n\024max_user_evaluatio" +
-      "ns\030\003 \001(\rR\022maxUserEvaluations\022_\n\023evaluati" +
-      "on_interval\030\004 \001(\0162..api.commons.org.Scor" +
-      "ecards.EvaluationIntervalR\022evaluationInt" +
-      "erval\"\210\001\n\nScorecards\"z\n\022EvaluationInterv" +
-      "al\022\'\n#EVALUATION_INTERVAL_DAY_UNSPECIFIE" +
-      "D\020\000\022\034\n\030EVALUATION_INTERVAL_WEEK\020\001\022\035\n\031EVA" +
-      "LUATION_INTERVAL_MONTH\020\002\"\312\003\n\031VoiceAnalyt" +
-      "icsPreferences\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\030\n" +
-      "\007enabled\030\002 \001(\010R\007enabled\022>\n\006redact\030\003 \003(\0132" +
-      "&.api.commons.org.VoiceAnalytics.RedactR" +
-      "\006redact\022>\n\006notify\030\004 \001(\0132&.api.commons.or" +
-      "g.VoiceAnalytics.NotifyR\006notify\022M\n\016billi" +
-      "ng_notify\030\005 \001(\0132&.api.commons.org.VoiceA" +
-      "nalytics.NotifyR\rbillingNotify\022#\n\rnumber" +
-      "_format\030\006 \001(\tR\014numberFormat\022*\n\021redact_al" +
-      "l_digits\030\n \001(\010R\017redactAllDigits\022+\n\021silen" +
-      "ce_threshold\030d \001(\rR\020silenceThreshold\022/\n\023" +
-      "talk_over_threshold\030\310\001 \001(\rR\021talkOverThre" +
-      "shold\"\374\002\n\016VoiceAnalytics\032S\n\006Redact\022@\n\006nu" +
-      "mber\030\001 \001(\0132&.api.commons.org.VoiceAnalyt" +
-      "ics.NumberH\000R\006numberB\007\n\005where\032\366\001\n\006Number" +
-      "\022?\n\004kind\030\001 \001(\0162+.api.commons.org.VoiceAn" +
-      "alytics.Number.KindR\004kind\022\'\n\017min_consecu" +
-      "tive\030\002 \001(\rR\016minConsecutive\022\'\n\017max_consec" +
-      "utive\030\003 \001(\rR\016maxConsecutive\022\022\n\004slop\030\004 \001(" +
-      "\rR\004slop\"E\n\004Kind\022\035\n\031KIND_CARDINAL_UNSPECI" +
-      "FIED\020\000\022\020\n\014KIND_ORDINAL\020\001\022\014\n\010KIND_ANY\020\002\032\034" +
-      "\n\006Notify\022\022\n\004cron\030\001 \001(\tR\004cron\"\225\002\n\023EndOfDa" +
-      "yPreferences\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\035\n\ne" +
-      "od_monday\030\n \001(\005R\teodMonday\022\037\n\013eod_tuesda" +
-      "y\030\013 \001(\005R\neodTuesday\022#\n\reod_wednesday\030\014 \001" +
-      "(\005R\014eodWednesday\022!\n\014eod_thursday\030\r \001(\005R\013" +
-      "eodThursday\022\035\n\neod_friday\030\016 \001(\005R\teodFrid" +
-      "ay\022!\n\014eod_saturday\030\017 \001(\005R\013eodSaturday\022\035\n" +
-      "\neod_sunday\030\020 \001(\005R\teodSunday\"\352\002\n\021FilterP" +
-      "references\022\025\n\006org_id\030\001 \001(\tR\005orgId\022Z\n\032def" +
-      "ault_auto_report_filter\030\n \001(\0132\035.api.comm" +
-      "ons.org.ReportFilterR\027defaultAutoReportF" +
-      "ilter\0225\n\027send_empty_auto_reports\030\013 \001(\010R\024" +
-      "sendEmptyAutoReports\022E\n\037display_broadcas" +
-      "t_resend_filter\030\014 \001(\010R\034displayBroadcastR" +
-      "esendFilter\022d\n\037default_broadcast_resend_" +
-      "filter\030\r \001(\0132\035.api.commons.org.ReportFil" +
-      "terR\034defaultBroadcastResendFilter\"s\n\014Rep" +
-      "ortFilter\022?\n\010standard\030\001 \001(\0162!.api.common" +
-      "s.StandardReportFilterH\000R\010standard\022\030\n\006cu" +
-      "stom\030\002 \001(\003H\000R\006customB\010\n\006choice\"\254\003\n\024Recor" +
-      "dingPreferences\022\025\n\006org_id\030\001 \001(\tR\005orgId\022-" +
-      "\n\022convention_enabled\030\n \001(\010R\021conventionEn" +
-      "abled\022a\n\024file_name_convention\030\013 \001(\0132/.ap" +
-      "i.commons.org.RecordingsFileNamingConven" +
-      "tionR\022fileNameConvention\0224\n\026zip_conventi" +
-      "on_enabled\030\014 \001(\010R\024zipConventionEnabled\022k" +
-      "\n\030zip_file_name_convention\030\r \001(\01322.api.c" +
-      "ommons.org.RecordingsZipFileNamingConven" +
-      "tionR\025zipFileNameConvention\022H\n\020export_fi" +
-      "le_type\030\016 \001(\0162\036.api.commons.RecordingFil" +
-      "eTypeR\016exportFileType\"\333\002\n\036RecordingsFile" +
-      "NamingConvention\0225\n\027xml_client_property_" +
-      "sid\030\001 \001(\003R\024xmlClientPropertySid\022?\n\007inbou" +
-      "nd\030\002 \001(\0132%.api.commons.org.FileNamingCon" +
-      "ventionR\007inbound\022=\n\006manual\030\003 \001(\0132%.api.c" +
-      "ommons.org.FileNamingConventionR\006manual\022" +
-      "A\n\010outbound\030\004 \001(\0132%.api.commons.org.File" +
-      "NamingConventionR\010outbound\022?\n\007preview\030\005 " +
+      "kId\022<\n\032resend_cancelled_campaigns\030\024 \001(\010R" +
+      "\030resendCancelledCampaigns\032@\n\022CampaignLin" +
+      "ksEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\t" +
+      "R\005value:\0028\001\"\277\001\n\023EmailSmsPreferences\022\025\n\006o" +
+      "rg_id\030\001 \001(\tR\005orgId\022(\n\020use_custom_links\030\n" +
+      " \001(\010R\016useCustomLinks\0225\n\026client_acknowled" +
+      "gement\030\013 \001(\010R\025clientAcknowledgement\0220\n\024e" +
+      "mail_from_addresses\030\014 \003(\tR\022emailFromAddr" +
+      "esses\"\215\002\n\023BusinessPreferences\022\025\n\006org_id\030" +
+      "\001 \001(\tR\005orgId\022\"\n\rweeks_of_data\030\n \001(\005R\013wee" +
+      "ksOfData\0225\n\ttime_zone\030\013 \001(\0162\030.api.common" +
+      "s.AnaTimeZoneR\010timeZone\022.\n\023multi_client_" +
+      "access\030\014 \001(\010R\021multiClientAccess\0223\n\025custo" +
+      "m_visualizations\030\r \001(\010R\024customVisualizat" +
+      "ions\022\037\n\013time_filter\030\016 \001(\tR\ntimeFilter\"\367\001" +
+      "\n\025ScorecardsPreferences\022\025\n\006org_id\030\001 \001(\tR" +
+      "\005orgId\0224\n\026call_sample_percentage\030\002 \001(\rR\024" +
+      "callSamplePercentage\0220\n\024max_user_evaluat" +
+      "ions\030\003 \001(\rR\022maxUserEvaluations\022_\n\023evalua" +
+      "tion_interval\030\004 \001(\0162..api.commons.org.Sc" +
+      "orecards.EvaluationIntervalR\022evaluationI" +
+      "nterval\"\210\001\n\nScorecards\"z\n\022EvaluationInte" +
+      "rval\022\'\n#EVALUATION_INTERVAL_DAY_UNSPECIF" +
+      "IED\020\000\022\034\n\030EVALUATION_INTERVAL_WEEK\020\001\022\035\n\031E" +
+      "VALUATION_INTERVAL_MONTH\020\002\"\312\003\n\031VoiceAnal" +
+      "yticsPreferences\022\025\n\006org_id\030\001 \001(\tR\005orgId\022" +
+      "\030\n\007enabled\030\002 \001(\010R\007enabled\022>\n\006redact\030\003 \003(" +
+      "\0132&.api.commons.org.VoiceAnalytics.Redac" +
+      "tR\006redact\022>\n\006notify\030\004 \001(\0132&.api.commons." +
+      "org.VoiceAnalytics.NotifyR\006notify\022M\n\016bil" +
+      "ling_notify\030\005 \001(\0132&.api.commons.org.Voic" +
+      "eAnalytics.NotifyR\rbillingNotify\022#\n\rnumb" +
+      "er_format\030\006 \001(\tR\014numberFormat\022*\n\021redact_" +
+      "all_digits\030\n \001(\010R\017redactAllDigits\022+\n\021sil" +
+      "ence_threshold\030d \001(\rR\020silenceThreshold\022/" +
+      "\n\023talk_over_threshold\030\310\001 \001(\rR\021talkOverTh" +
+      "reshold\"\374\002\n\016VoiceAnalytics\032S\n\006Redact\022@\n\006" +
+      "number\030\001 \001(\0132&.api.commons.org.VoiceAnal" +
+      "ytics.NumberH\000R\006numberB\007\n\005where\032\366\001\n\006Numb" +
+      "er\022?\n\004kind\030\001 \001(\0162+.api.commons.org.Voice" +
+      "Analytics.Number.KindR\004kind\022\'\n\017min_conse" +
+      "cutive\030\002 \001(\rR\016minConsecutive\022\'\n\017max_cons" +
+      "ecutive\030\003 \001(\rR\016maxConsecutive\022\022\n\004slop\030\004 " +
+      "\001(\rR\004slop\"E\n\004Kind\022\035\n\031KIND_CARDINAL_UNSPE" +
+      "CIFIED\020\000\022\020\n\014KIND_ORDINAL\020\001\022\014\n\010KIND_ANY\020\002" +
+      "\032\034\n\006Notify\022\022\n\004cron\030\001 \001(\tR\004cron\"\225\002\n\023EndOf" +
+      "DayPreferences\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\035\n" +
+      "\neod_monday\030\n \001(\005R\teodMonday\022\037\n\013eod_tues" +
+      "day\030\013 \001(\005R\neodTuesday\022#\n\reod_wednesday\030\014" +
+      " \001(\005R\014eodWednesday\022!\n\014eod_thursday\030\r \001(\005" +
+      "R\013eodThursday\022\035\n\neod_friday\030\016 \001(\005R\teodFr" +
+      "iday\022!\n\014eod_saturday\030\017 \001(\005R\013eodSaturday\022" +
+      "\035\n\neod_sunday\030\020 \001(\005R\teodSunday\"\352\002\n\021Filte" +
+      "rPreferences\022\025\n\006org_id\030\001 \001(\tR\005orgId\022Z\n\032d" +
+      "efault_auto_report_filter\030\n \001(\0132\035.api.co" +
+      "mmons.org.ReportFilterR\027defaultAutoRepor" +
+      "tFilter\0225\n\027send_empty_auto_reports\030\013 \001(\010" +
+      "R\024sendEmptyAutoReports\022E\n\037display_broadc" +
+      "ast_resend_filter\030\014 \001(\010R\034displayBroadcas" +
+      "tResendFilter\022d\n\037default_broadcast_resen" +
+      "d_filter\030\r \001(\0132\035.api.commons.org.ReportF" +
+      "ilterR\034defaultBroadcastResendFilter\"s\n\014R" +
+      "eportFilter\022?\n\010standard\030\001 \001(\0162!.api.comm" +
+      "ons.StandardReportFilterH\000R\010standard\022\030\n\006" +
+      "custom\030\002 \001(\003H\000R\006customB\010\n\006choice\"\254\003\n\024Rec" +
+      "ordingPreferences\022\025\n\006org_id\030\001 \001(\tR\005orgId" +
+      "\022-\n\022convention_enabled\030\n \001(\010R\021convention" +
+      "Enabled\022a\n\024file_name_convention\030\013 \001(\0132/." +
+      "api.commons.org.RecordingsFileNamingConv" +
+      "entionR\022fileNameConvention\0224\n\026zip_conven" +
+      "tion_enabled\030\014 \001(\010R\024zipConventionEnabled" +
+      "\022k\n\030zip_file_name_convention\030\r \001(\01322.api" +
+      ".commons.org.RecordingsZipFileNamingConv" +
+      "entionR\025zipFileNameConvention\022H\n\020export_" +
+      "file_type\030\016 \001(\0162\036.api.commons.RecordingF" +
+      "ileTypeR\016exportFileType\"\333\002\n\036RecordingsFi" +
+      "leNamingConvention\0225\n\027xml_client_propert" +
+      "y_sid\030\001 \001(\003R\024xmlClientPropertySid\022?\n\007inb" +
+      "ound\030\002 \001(\0132%.api.commons.org.FileNamingC" +
+      "onventionR\007inbound\022=\n\006manual\030\003 \001(\0132%.api" +
+      ".commons.org.FileNamingConventionR\006manua" +
+      "l\022A\n\010outbound\030\004 \001(\0132%.api.commons.org.Fi" +
+      "leNamingConventionR\010outbound\022?\n\007preview\030" +
+      "\005 \001(\0132%.api.commons.org.FileNamingConven" +
+      "tionR\007preview\"\340\002\n!RecordingsZipFileNamin" +
+      "gConvention\0225\n\027xml_client_property_sid\030\001" +
+      " \001(\003R\024xmlClientPropertySid\022?\n\007inbound\030\002 " +
       "\001(\0132%.api.commons.org.FileNamingConventi" +
-      "onR\007preview\"\340\002\n!RecordingsZipFileNamingC" +
-      "onvention\0225\n\027xml_client_property_sid\030\001 \001" +
-      "(\003R\024xmlClientPropertySid\022?\n\007inbound\030\002 \001(" +
-      "\0132%.api.commons.org.FileNamingConvention" +
-      "R\007inbound\022=\n\006manual\030\003 \001(\0132%.api.commons." +
-      "org.FileNamingConventionR\006manual\022A\n\010outb" +
-      "ound\030\004 \001(\0132%.api.commons.org.FileNamingC" +
-      "onventionR\010outbound\022A\n\010combined\030\005 \001(\0132%." +
-      "api.commons.org.FileNamingConventionR\010co" +
-      "mbined\"T\n\024FileNamingConvention\022<\n\010segmen" +
-      "ts\030\001 \003(\0132 .api.commons.org.FileNameSegme" +
-      "ntR\010segments\"}\n\017FileNameSegment\022!\n\014segme" +
-      "nt_type\030\001 \001(\tR\013segmentType\022%\n\016format_pat" +
-      "tern\030\002 \001(\tR\rformatPattern\022 \n\014time_zone_i" +
-      "d\030\003 \001(\tR\ntimeZoneId\"\342\003\n\026AdminClientPrefe" +
-      "rences\022\025\n\006org_id\030\001 \001(\tR\005orgId\0220\n\024use_res" +
-      "erved_carrier\030\n \001(\010R\022useReservedCarrier\022" +
-      "+\n\021reserved_carriers\030\013 \003(\tR\020reservedCarr" +
-      "iers\022\033\n\temail_key\030\014 \001(\tR\010emailKey\022\031\n\010ema" +
-      "il_id\030\r \001(\tR\007emailId\022\035\n\nemail_name\030\016 \001(\t" +
-      "R\temailName\022#\n\rwhitelist_ips\030\017 \003(\tR\014whit" +
-      "elistIps\022+\n\021whitelist_domains\030\020 \003(\tR\020whi" +
-      "telistDomains\0220\n\024callbacks_service_id\030\021 " +
-      "\001(\tR\022callbacksServiceId\0224\n\026agent_screen_" +
-      "recording\030\022 \001(\010R\024agentScreenRecording\022A\n" +
-      "\021allowed_countries\030\023 \003(\0162\024.api.commons.C" +
-      "ountryR\020allowedCountriesB\223\001\n!com.tcn.clo" +
-      "ud.api.api.commons.orgB\020PreferencesProto" +
-      "P\001\242\002\003ACO\252\002\017Api.Commons.Org\312\002\017Api\\Commons" +
-      "\\Org\342\002\033Api\\Commons\\Org\\GPBMetadata\352\002\021Api" +
-      "::Commons::Orgb\006proto3"
+      "onR\007inbound\022=\n\006manual\030\003 \001(\0132%.api.common" +
+      "s.org.FileNamingConventionR\006manual\022A\n\010ou" +
+      "tbound\030\004 \001(\0132%.api.commons.org.FileNamin" +
+      "gConventionR\010outbound\022A\n\010combined\030\005 \001(\0132" +
+      "%.api.commons.org.FileNamingConventionR\010" +
+      "combined\"T\n\024FileNamingConvention\022<\n\010segm" +
+      "ents\030\001 \003(\0132 .api.commons.org.FileNameSeg" +
+      "mentR\010segments\"}\n\017FileNameSegment\022!\n\014seg" +
+      "ment_type\030\001 \001(\tR\013segmentType\022%\n\016format_p" +
+      "attern\030\002 \001(\tR\rformatPattern\022 \n\014time_zone" +
+      "_id\030\003 \001(\tR\ntimeZoneId\"\342\003\n\026AdminClientPre" +
+      "ferences\022\025\n\006org_id\030\001 \001(\tR\005orgId\0220\n\024use_r" +
+      "eserved_carrier\030\n \001(\010R\022useReservedCarrie" +
+      "r\022+\n\021reserved_carriers\030\013 \003(\tR\020reservedCa" +
+      "rriers\022\033\n\temail_key\030\014 \001(\tR\010emailKey\022\031\n\010e" +
+      "mail_id\030\r \001(\tR\007emailId\022\035\n\nemail_name\030\016 \001" +
+      "(\tR\temailName\022#\n\rwhitelist_ips\030\017 \003(\tR\014wh" +
+      "itelistIps\022+\n\021whitelist_domains\030\020 \003(\tR\020w" +
+      "hitelistDomains\0220\n\024callbacks_service_id\030" +
+      "\021 \001(\tR\022callbacksServiceId\0224\n\026agent_scree" +
+      "n_recording\030\022 \001(\010R\024agentScreenRecording\022" +
+      "A\n\021allowed_countries\030\023 \003(\0162\024.api.commons" +
+      ".CountryR\020allowedCountriesB\223\001\n!com.tcn.c" +
+      "loud.api.api.commons.orgB\020PreferencesPro" +
+      "toP\001\242\002\003ACO\252\002\017Api.Commons.Org\312\002\017Api\\Commo" +
+      "ns\\Org\342\002\033Api\\Commons\\Org\\GPBMetadata\352\002\021A" +
+      "pi::Commons::Orgb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -707,7 +707,7 @@ public final class PreferencesProto {
     internal_static_api_commons_org_SchedulePreferences_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_org_SchedulePreferences_descriptor,
-        new java.lang.String[] { "OrgId", "DisplayScheduleByTimeZone", "UseScheduleByTimeZone", "ScheduleByTimeZoneScope", "DisplayScheduleAsPaused", "ScheduleAsPaused", "DefaultCompletionThreshold", "DisplayCampaignLinking", "UseCampaignLinking", "CampaignLinks", "DefaultCampaignLinkId", "ProhibitCancelledResend", });
+        new java.lang.String[] { "OrgId", "DisplayScheduleByTimeZone", "UseScheduleByTimeZone", "ScheduleByTimeZoneScope", "DisplayScheduleAsPaused", "ScheduleAsPaused", "DefaultCompletionThreshold", "DisplayCampaignLinking", "UseCampaignLinking", "CampaignLinks", "DefaultCampaignLinkId", "ResendCancelledCampaigns", });
     internal_static_api_commons_org_SchedulePreferences_CampaignLinksEntry_descriptor =
       internal_static_api_commons_org_SchedulePreferences_descriptor.getNestedTypes().get(0);
     internal_static_api_commons_org_SchedulePreferences_CampaignLinksEntry_fieldAccessorTable = new

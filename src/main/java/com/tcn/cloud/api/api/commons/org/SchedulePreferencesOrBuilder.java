@@ -195,8 +195,8 @@ java.lang.String defaultValue);
    * Whether user canceled campaigns can be resent in the organization.
    * </pre>
    *
-   * <code>bool prohibit_cancelled_resend = 20 [json_name = "prohibitCancelledResend"];</code>
-   * @return The prohibitCancelledResend.
+   * <code>bool resend_cancelled_campaigns = 20 [json_name = "resendCancelledCampaigns"];</code>
+   * @return The resendCancelledCampaigns.
    */
-  boolean getProhibitCancelledResend();
+  boolean getResendCancelledCampaigns();
 }
