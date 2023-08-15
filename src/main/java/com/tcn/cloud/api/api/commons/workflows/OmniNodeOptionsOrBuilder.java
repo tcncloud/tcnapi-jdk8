@@ -8,16 +8,16 @@ public interface OmniNodeOptionsOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string store_to = 1 [json_name = "storeTo"];</code>
-   * @return The storeTo.
+   * <code>string options_id = 1 [json_name = "optionsId"];</code>
+   * @return The optionsId.
    */
-  java.lang.String getStoreTo();
+  java.lang.String getOptionsId();
   /**
-   * <code>string store_to = 1 [json_name = "storeTo"];</code>
-   * @return The bytes for storeTo.
+   * <code>string options_id = 1 [json_name = "optionsId"];</code>
+   * @return The bytes for optionsId.
    */
   com.google.protobuf.ByteString
-      getStoreToBytes();
+      getOptionsIdBytes();
 
   /**
    * <code>repeated string options = 2 [json_name = "options"];</code>

@@ -66,21 +66,21 @@ public final class OmniProto {
       "\n api/commons/workflows/omni.proto\022\025api." +
       "commons.workflows\"]\n\016OmniNodePrompt\022\026\n\006p" +
       "rompt\030\001 \001(\tR\006prompt\022\031\n\010store_to\030\002 \001(\tR\007s" +
-      "toreTo\022\030\n\007options\030\003 \003(\tR\007options\"F\n\017Omni" +
-      "NodeOptions\022\031\n\010store_to\030\001 \001(\tR\007storeTo\022\030" +
-      "\n\007options\030\002 \003(\tR\007options\"G\n\023OmniNodeSend" +
-      "Message\022\026\n\006prompt\030\001 \001(\tR\006prompt\022\030\n\007optio" +
-      "ns\030\003 \001(\tR\007options\"*\n\rOmniNodeStore\022\031\n\010st" +
-      "ore_to\030\001 \001(\tR\007storeTo\"B\n\020OmniNodeDecisio" +
-      "n\022\030\n\007options\030\001 \001(\tR\007options\022\024\n\005input\030\002 \001" +
-      "(\tR\005input\"(\n\020OmniNodeSetSkill\022\024\n\005skill\030\001" +
-      " \001(\tR\005skill\"\021\n\017OmniNodeToAgent\"%\n\rOmniNo" +
-      "deError\022\024\n\005error\030\001 \001(\tR\005errorB\252\001\n\'com.tc" +
-      "n.cloud.api.api.commons.workflowsB\tOmniP" +
-      "rotoP\001\242\002\003ACW\252\002\025Api.Commons.Workflows\312\002\025A" +
-      "pi\\Commons\\Workflows\342\002!Api\\Commons\\Workf" +
-      "lows\\GPBMetadata\352\002\027Api::Commons::Workflo" +
-      "wsb\006proto3"
+      "toreTo\022\030\n\007options\030\003 \003(\tR\007options\"J\n\017Omni" +
+      "NodeOptions\022\035\n\noptions_id\030\001 \001(\tR\toptions" +
+      "Id\022\030\n\007options\030\002 \003(\tR\007options\"G\n\023OmniNode" +
+      "SendMessage\022\026\n\006prompt\030\001 \001(\tR\006prompt\022\030\n\007o" +
+      "ptions\030\003 \001(\tR\007options\"*\n\rOmniNodeStore\022\031" +
+      "\n\010store_to\030\001 \001(\tR\007storeTo\"B\n\020OmniNodeDec" +
+      "ision\022\030\n\007options\030\001 \001(\tR\007options\022\024\n\005input" +
+      "\030\002 \001(\tR\005input\"(\n\020OmniNodeSetSkill\022\024\n\005ski" +
+      "ll\030\001 \001(\tR\005skill\"\021\n\017OmniNodeToAgent\"%\n\rOm" +
+      "niNodeError\022\024\n\005error\030\001 \001(\tR\005errorB\252\001\n\'co" +
+      "m.tcn.cloud.api.api.commons.workflowsB\tO" +
+      "mniProtoP\001\242\002\003ACW\252\002\025Api.Commons.Workflows" +
+      "\312\002\025Api\\Commons\\Workflows\342\002!Api\\Commons\\W" +
+      "orkflows\\GPBMetadata\352\002\027Api::Commons::Wor" +
+      "kflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -97,7 +97,7 @@ public final class OmniProto {
     internal_static_api_commons_workflows_OmniNodeOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_workflows_OmniNodeOptions_descriptor,
-        new java.lang.String[] { "StoreTo", "Options", });
+        new java.lang.String[] { "OptionsId", "Options", });
     internal_static_api_commons_workflows_OmniNodeSendMessage_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_api_commons_workflows_OmniNodeSendMessage_fieldAccessorTable = new
