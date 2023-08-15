@@ -377,19 +377,19 @@ java.lang.String defaultValue) {
     }
   }
 
-  public static final int RESEND_CANCELLED_CAMPAIGNS_FIELD_NUMBER = 20;
-  private boolean resendCancelledCampaigns_ = false;
+  public static final int PROHIBIT_CANCELLED_RESEND_FIELD_NUMBER = 20;
+  private boolean prohibitCancelledResend_ = false;
   /**
    * <pre>
    * Whether user canceled campaigns can be resent in the organization.
    * </pre>
    *
-   * <code>bool resend_cancelled_campaigns = 20 [json_name = "resendCancelledCampaigns"];</code>
-   * @return The resendCancelledCampaigns.
+   * <code>bool prohibit_cancelled_resend = 20 [json_name = "prohibitCancelledResend"];</code>
+   * @return The prohibitCancelledResend.
    */
   @java.lang.Override
-  public boolean getResendCancelledCampaigns() {
-    return resendCancelledCampaigns_;
+  public boolean getProhibitCancelledResend() {
+    return prohibitCancelledResend_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -442,8 +442,8 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCampaignLinkId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 19, defaultCampaignLinkId_);
     }
-    if (resendCancelledCampaigns_ != false) {
-      output.writeBool(20, resendCancelledCampaigns_);
+    if (prohibitCancelledResend_ != false) {
+      output.writeBool(20, prohibitCancelledResend_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -502,9 +502,9 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCampaignLinkId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, defaultCampaignLinkId_);
     }
-    if (resendCancelledCampaigns_ != false) {
+    if (prohibitCancelledResend_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(20, resendCancelledCampaigns_);
+        .computeBoolSize(20, prohibitCancelledResend_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -542,8 +542,8 @@ java.lang.String defaultValue) {
         other.internalGetCampaignLinks())) return false;
     if (!getDefaultCampaignLinkId()
         .equals(other.getDefaultCampaignLinkId())) return false;
-    if (getResendCancelledCampaigns()
-        != other.getResendCancelledCampaigns()) return false;
+    if (getProhibitCancelledResend()
+        != other.getProhibitCancelledResend()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -586,9 +586,9 @@ java.lang.String defaultValue) {
     }
     hash = (37 * hash) + DEFAULT_CAMPAIGN_LINK_ID_FIELD_NUMBER;
     hash = (53 * hash) + getDefaultCampaignLinkId().hashCode();
-    hash = (37 * hash) + RESEND_CANCELLED_CAMPAIGNS_FIELD_NUMBER;
+    hash = (37 * hash) + PROHIBIT_CANCELLED_RESEND_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getResendCancelledCampaigns());
+        getProhibitCancelledResend());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -757,7 +757,7 @@ java.lang.String defaultValue) {
       useCampaignLinking_ = false;
       internalGetMutableCampaignLinks().clear();
       defaultCampaignLinkId_ = "";
-      resendCancelledCampaigns_ = false;
+      prohibitCancelledResend_ = false;
       return this;
     }
 
@@ -826,7 +826,7 @@ java.lang.String defaultValue) {
         result.defaultCampaignLinkId_ = defaultCampaignLinkId_;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.resendCancelledCampaigns_ = resendCancelledCampaigns_;
+        result.prohibitCancelledResend_ = prohibitCancelledResend_;
       }
     }
 
@@ -911,8 +911,8 @@ java.lang.String defaultValue) {
         bitField0_ |= 0x00000400;
         onChanged();
       }
-      if (other.getResendCancelledCampaigns() != false) {
-        setResendCancelledCampaigns(other.getResendCancelledCampaigns());
+      if (other.getProhibitCancelledResend() != false) {
+        setProhibitCancelledResend(other.getProhibitCancelledResend());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1000,7 +1000,7 @@ java.lang.String defaultValue) {
               break;
             } // case 154
             case 160: {
-              resendCancelledCampaigns_ = input.readBool();
+              prohibitCancelledResend_ = input.readBool();
               bitField0_ |= 0x00000800;
               break;
             } // case 160
@@ -1741,31 +1741,31 @@ java.lang.String defaultValue) {
       return this;
     }
 
-    private boolean resendCancelledCampaigns_ ;
+    private boolean prohibitCancelledResend_ ;
     /**
      * <pre>
      * Whether user canceled campaigns can be resent in the organization.
      * </pre>
      *
-     * <code>bool resend_cancelled_campaigns = 20 [json_name = "resendCancelledCampaigns"];</code>
-     * @return The resendCancelledCampaigns.
+     * <code>bool prohibit_cancelled_resend = 20 [json_name = "prohibitCancelledResend"];</code>
+     * @return The prohibitCancelledResend.
      */
     @java.lang.Override
-    public boolean getResendCancelledCampaigns() {
-      return resendCancelledCampaigns_;
+    public boolean getProhibitCancelledResend() {
+      return prohibitCancelledResend_;
     }
     /**
      * <pre>
      * Whether user canceled campaigns can be resent in the organization.
      * </pre>
      *
-     * <code>bool resend_cancelled_campaigns = 20 [json_name = "resendCancelledCampaigns"];</code>
-     * @param value The resendCancelledCampaigns to set.
+     * <code>bool prohibit_cancelled_resend = 20 [json_name = "prohibitCancelledResend"];</code>
+     * @param value The prohibitCancelledResend to set.
      * @return This builder for chaining.
      */
-    public Builder setResendCancelledCampaigns(boolean value) {
+    public Builder setProhibitCancelledResend(boolean value) {
 
-      resendCancelledCampaigns_ = value;
+      prohibitCancelledResend_ = value;
       bitField0_ |= 0x00000800;
       onChanged();
       return this;
@@ -1775,12 +1775,12 @@ java.lang.String defaultValue) {
      * Whether user canceled campaigns can be resent in the organization.
      * </pre>
      *
-     * <code>bool resend_cancelled_campaigns = 20 [json_name = "resendCancelledCampaigns"];</code>
+     * <code>bool prohibit_cancelled_resend = 20 [json_name = "prohibitCancelledResend"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearResendCancelledCampaigns() {
+    public Builder clearProhibitCancelledResend() {
       bitField0_ = (bitField0_ & ~0x00000800);
-      resendCancelledCampaigns_ = false;
+      prohibitCancelledResend_ = false;
       onChanged();
       return this;
     }
