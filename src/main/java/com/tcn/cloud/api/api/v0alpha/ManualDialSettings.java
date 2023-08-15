@@ -542,21 +542,6 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.v0alpha.ManualDialSettings.ZipCodeValidation.UNRECOGNIZED : result;
   }
 
-  public static final int ENABLE_REJECT_OPTION_FOR_APPROVERS_FIELD_NUMBER = 29;
-  private boolean enableRejectOptionForApprovers_ = false;
-  /**
-   * <pre>
-   * Control whether the reject option is available to the approvers.
-   * </pre>
-   *
-   * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers"];</code>
-   * @return The enableRejectOptionForApprovers.
-   */
-  @java.lang.Override
-  public boolean getEnableRejectOptionForApprovers() {
-    return enableRejectOptionForApprovers_;
-  }
-
   public static final int ENABLE_SIP_ADDRESS_FIELD_NUMBER = 30;
   private boolean enableSipAddress_ = false;
   /**
@@ -885,9 +870,6 @@ java.lang.String defaultValue) {
     if (useTimezoneValidationZip_ != com.tcn.cloud.api.api.v0alpha.ManualDialSettings.ZipCodeValidation.FALSE.getNumber()) {
       output.writeEnum(28, useTimezoneValidationZip_);
     }
-    if (enableRejectOptionForApprovers_ != false) {
-      output.writeBool(29, enableRejectOptionForApprovers_);
-    }
     if (enableSipAddress_ != false) {
       output.writeBool(30, enableSipAddress_);
     }
@@ -1019,10 +1001,6 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(28, useTimezoneValidationZip_);
     }
-    if (enableRejectOptionForApprovers_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(29, enableRejectOptionForApprovers_);
-    }
     if (enableSipAddress_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(30, enableSipAddress_);
@@ -1120,8 +1098,6 @@ java.lang.String defaultValue) {
     if (getEnableMetadata()
         != other.getEnableMetadata()) return false;
     if (useTimezoneValidationZip_ != other.useTimezoneValidationZip_) return false;
-    if (getEnableRejectOptionForApprovers()
-        != other.getEnableRejectOptionForApprovers()) return false;
     if (getEnableSipAddress()
         != other.getEnableSipAddress()) return false;
     if (getMaskManualDialCallerId()
@@ -1218,9 +1194,6 @@ java.lang.String defaultValue) {
         getEnableMetadata());
     hash = (37 * hash) + USE_TIMEZONE_VALIDATION_ZIP_FIELD_NUMBER;
     hash = (53 * hash) + useTimezoneValidationZip_;
-    hash = (37 * hash) + ENABLE_REJECT_OPTION_FOR_APPROVERS_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getEnableRejectOptionForApprovers());
     hash = (37 * hash) + ENABLE_SIP_ADDRESS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getEnableSipAddress());
@@ -1393,7 +1366,6 @@ java.lang.String defaultValue) {
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      bitField1_ = 0;
       enabled_ = false;
       showOutboundPhoneBook_ = false;
       showCallerIdPhoneBook_ = false;
@@ -1425,7 +1397,6 @@ java.lang.String defaultValue) {
       bitField0_ = (bitField0_ & ~0x00400000);
       enableMetadata_ = false;
       useTimezoneValidationZip_ = 0;
-      enableRejectOptionForApprovers_ = false;
       enableSipAddress_ = false;
       maskManualDialCallerId_ = false;
       enableManualDialDataDip_ = "";
@@ -1461,7 +1432,6 @@ java.lang.String defaultValue) {
       com.tcn.cloud.api.api.v0alpha.ManualDialSettings result = new com.tcn.cloud.api.api.v0alpha.ManualDialSettings(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
-      if (bitField1_ != 0) { buildPartial1(result); }
       onBuilt();
       return result;
     }
@@ -1553,32 +1523,25 @@ java.lang.String defaultValue) {
         result.useTimezoneValidationZip_ = useTimezoneValidationZip_;
       }
       if (((from_bitField0_ & 0x02000000) != 0)) {
-        result.enableRejectOptionForApprovers_ = enableRejectOptionForApprovers_;
-      }
-      if (((from_bitField0_ & 0x04000000) != 0)) {
         result.enableSipAddress_ = enableSipAddress_;
       }
-      if (((from_bitField0_ & 0x08000000) != 0)) {
+      if (((from_bitField0_ & 0x04000000) != 0)) {
         result.maskManualDialCallerId_ = maskManualDialCallerId_;
       }
-      if (((from_bitField0_ & 0x10000000) != 0)) {
+      if (((from_bitField0_ & 0x08000000) != 0)) {
         result.enableManualDialDataDip_ = enableManualDialDataDip_;
       }
-      if (((from_bitField0_ & 0x20000000) != 0)) {
+      if (((from_bitField0_ & 0x10000000) != 0)) {
         result.manualDialDataDipConfig_ = manualDialDataDipConfig_;
       }
-      if (((from_bitField0_ & 0x40000000) != 0)) {
+      if (((from_bitField0_ & 0x20000000) != 0)) {
         result.manualDialDataDipResultHandling_ = manualDialDataDipResultHandling_;
       }
-      if (((from_bitField0_ & 0x80000000) != 0)) {
+      if (((from_bitField0_ & 0x40000000) != 0)) {
         result.dataDipManualDialIntegration_ = internalGetDataDipManualDialIntegration();
         result.dataDipManualDialIntegration_.makeImmutable();
       }
-    }
-
-    private void buildPartial1(com.tcn.cloud.api.api.v0alpha.ManualDialSettings result) {
-      int from_bitField1_ = bitField1_;
-      if (((from_bitField1_ & 0x00000001) != 0)) {
+      if (((from_bitField0_ & 0x80000000) != 0)) {
         result.dataDipManualDialIntegrationHandling_ = dataDipManualDialIntegrationHandling_;
       }
     }
@@ -1729,9 +1692,6 @@ java.lang.String defaultValue) {
       if (other.useTimezoneValidationZip_ != 0) {
         setUseTimezoneValidationZipValue(other.getUseTimezoneValidationZipValue());
       }
-      if (other.getEnableRejectOptionForApprovers() != false) {
-        setEnableRejectOptionForApprovers(other.getEnableRejectOptionForApprovers());
-      }
       if (other.getEnableSipAddress() != false) {
         setEnableSipAddress(other.getEnableSipAddress());
       }
@@ -1740,7 +1700,7 @@ java.lang.String defaultValue) {
       }
       if (!other.getEnableManualDialDataDip().isEmpty()) {
         enableManualDialDataDip_ = other.enableManualDialDataDip_;
-        bitField0_ |= 0x10000000;
+        bitField0_ |= 0x08000000;
         onChanged();
       }
       if (other.getManualDialDataDipConfig() != 0L) {
@@ -1751,7 +1711,7 @@ java.lang.String defaultValue) {
       }
       internalGetMutableDataDipManualDialIntegration().mergeFrom(
           other.internalGetDataDipManualDialIntegration());
-      bitField0_ |= 0x80000000;
+      bitField0_ |= 0x40000000;
       if (other.dataDipManualDialIntegrationHandling_ != 0) {
         setDataDipManualDialIntegrationHandlingValue(other.getDataDipManualDialIntegrationHandlingValue());
       }
@@ -1914,34 +1874,29 @@ java.lang.String defaultValue) {
               bitField0_ |= 0x01000000;
               break;
             } // case 224
-            case 232: {
-              enableRejectOptionForApprovers_ = input.readBool();
-              bitField0_ |= 0x02000000;
-              break;
-            } // case 232
             case 240: {
               enableSipAddress_ = input.readBool();
-              bitField0_ |= 0x04000000;
+              bitField0_ |= 0x02000000;
               break;
             } // case 240
             case 248: {
               maskManualDialCallerId_ = input.readBool();
-              bitField0_ |= 0x08000000;
+              bitField0_ |= 0x04000000;
               break;
             } // case 248
             case 258: {
               enableManualDialDataDip_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x10000000;
+              bitField0_ |= 0x08000000;
               break;
             } // case 258
             case 264: {
               manualDialDataDipConfig_ = input.readInt64();
-              bitField0_ |= 0x20000000;
+              bitField0_ |= 0x10000000;
               break;
             } // case 264
             case 272: {
               manualDialDataDipResultHandling_ = input.readEnum();
-              bitField0_ |= 0x40000000;
+              bitField0_ |= 0x20000000;
               break;
             } // case 272
             case 282: {
@@ -1950,12 +1905,12 @@ java.lang.String defaultValue) {
                   DataDipManualDialIntegrationDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               internalGetMutableDataDipManualDialIntegration().getMutableMap().put(
                   dataDipManualDialIntegration__.getKey(), dataDipManualDialIntegration__.getValue());
-              bitField0_ |= 0x80000000;
+              bitField0_ |= 0x40000000;
               break;
             } // case 282
             case 288: {
               dataDipManualDialIntegrationHandling_ = input.readEnum();
-              bitField1_ |= 0x00000001;
+              bitField0_ |= 0x80000000;
               break;
             } // case 288
             default: {
@@ -1974,7 +1929,6 @@ java.lang.String defaultValue) {
       return this;
     }
     private int bitField0_;
-    private int bitField1_;
 
     private boolean enabled_ ;
     /**
@@ -3085,50 +3039,6 @@ java.lang.String defaultValue) {
       return this;
     }
 
-    private boolean enableRejectOptionForApprovers_ ;
-    /**
-     * <pre>
-     * Control whether the reject option is available to the approvers.
-     * </pre>
-     *
-     * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers"];</code>
-     * @return The enableRejectOptionForApprovers.
-     */
-    @java.lang.Override
-    public boolean getEnableRejectOptionForApprovers() {
-      return enableRejectOptionForApprovers_;
-    }
-    /**
-     * <pre>
-     * Control whether the reject option is available to the approvers.
-     * </pre>
-     *
-     * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers"];</code>
-     * @param value The enableRejectOptionForApprovers to set.
-     * @return This builder for chaining.
-     */
-    public Builder setEnableRejectOptionForApprovers(boolean value) {
-
-      enableRejectOptionForApprovers_ = value;
-      bitField0_ |= 0x02000000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Control whether the reject option is available to the approvers.
-     * </pre>
-     *
-     * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearEnableRejectOptionForApprovers() {
-      bitField0_ = (bitField0_ & ~0x02000000);
-      enableRejectOptionForApprovers_ = false;
-      onChanged();
-      return this;
-    }
-
     private boolean enableSipAddress_ ;
     /**
      * <pre>
@@ -3154,7 +3064,7 @@ java.lang.String defaultValue) {
     public Builder setEnableSipAddress(boolean value) {
 
       enableSipAddress_ = value;
-      bitField0_ |= 0x04000000;
+      bitField0_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -3167,7 +3077,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearEnableSipAddress() {
-      bitField0_ = (bitField0_ & ~0x04000000);
+      bitField0_ = (bitField0_ & ~0x02000000);
       enableSipAddress_ = false;
       onChanged();
       return this;
@@ -3198,7 +3108,7 @@ java.lang.String defaultValue) {
     public Builder setMaskManualDialCallerId(boolean value) {
 
       maskManualDialCallerId_ = value;
-      bitField0_ |= 0x08000000;
+      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -3211,7 +3121,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearMaskManualDialCallerId() {
-      bitField0_ = (bitField0_ & ~0x08000000);
+      bitField0_ = (bitField0_ & ~0x04000000);
       maskManualDialCallerId_ = false;
       onChanged();
       return this;
@@ -3272,7 +3182,7 @@ java.lang.String defaultValue) {
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       enableManualDialDataDip_ = value;
-      bitField0_ |= 0x10000000;
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -3286,7 +3196,7 @@ java.lang.String defaultValue) {
      */
     public Builder clearEnableManualDialDataDip() {
       enableManualDialDataDip_ = getDefaultInstance().getEnableManualDialDataDip();
-      bitField0_ = (bitField0_ & ~0x10000000);
+      bitField0_ = (bitField0_ & ~0x08000000);
       onChanged();
       return this;
     }
@@ -3304,7 +3214,7 @@ java.lang.String defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       enableManualDialDataDip_ = value;
-      bitField0_ |= 0x10000000;
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -3334,7 +3244,7 @@ java.lang.String defaultValue) {
     public Builder setManualDialDataDipConfig(long value) {
 
       manualDialDataDipConfig_ = value;
-      bitField0_ |= 0x20000000;
+      bitField0_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -3347,7 +3257,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearManualDialDataDipConfig() {
-      bitField0_ = (bitField0_ & ~0x20000000);
+      bitField0_ = (bitField0_ & ~0x10000000);
       manualDialDataDipConfig_ = 0L;
       onChanged();
       return this;
@@ -3376,7 +3286,7 @@ java.lang.String defaultValue) {
      */
     public Builder setManualDialDataDipResultHandlingValue(int value) {
       manualDialDataDipResultHandling_ = value;
-      bitField0_ |= 0x40000000;
+      bitField0_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -3406,7 +3316,7 @@ java.lang.String defaultValue) {
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x40000000;
+      bitField0_ |= 0x20000000;
       manualDialDataDipResultHandling_ = value.getNumber();
       onChanged();
       return this;
@@ -3420,7 +3330,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearManualDialDataDipResultHandling() {
-      bitField0_ = (bitField0_ & ~0x40000000);
+      bitField0_ = (bitField0_ & ~0x20000000);
       manualDialDataDipResultHandling_ = 0;
       onChanged();
       return this;
@@ -3445,7 +3355,7 @@ java.lang.String defaultValue) {
       if (!dataDipManualDialIntegration_.isMutable()) {
         dataDipManualDialIntegration_ = dataDipManualDialIntegration_.copy();
       }
-      bitField0_ |= 0x80000000;
+      bitField0_ |= 0x40000000;
       onChanged();
       return dataDipManualDialIntegration_;
     }
@@ -3521,7 +3431,7 @@ java.lang.String defaultValue) {
       return map.get(key);
     }
     public Builder clearDataDipManualDialIntegration() {
-      bitField0_ = (bitField0_ & ~0x80000000);
+      bitField0_ = (bitField0_ & ~0x40000000);
       internalGetMutableDataDipManualDialIntegration().getMutableMap()
           .clear();
       return this;
@@ -3546,7 +3456,7 @@ java.lang.String defaultValue) {
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
         getMutableDataDipManualDialIntegration() {
-      bitField0_ |= 0x80000000;
+      bitField0_ |= 0x40000000;
       return internalGetMutableDataDipManualDialIntegration().getMutableMap();
     }
     /**
@@ -3563,7 +3473,7 @@ java.lang.String defaultValue) {
       if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableDataDipManualDialIntegration().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x80000000;
+      bitField0_ |= 0x40000000;
       return this;
     }
     /**
@@ -3577,7 +3487,7 @@ java.lang.String defaultValue) {
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableDataDipManualDialIntegration().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x80000000;
+      bitField0_ |= 0x40000000;
       return this;
     }
 
@@ -3604,7 +3514,7 @@ java.lang.String defaultValue) {
      */
     public Builder setDataDipManualDialIntegrationHandlingValue(int value) {
       dataDipManualDialIntegrationHandling_ = value;
-      bitField1_ |= 0x00000001;
+      bitField0_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -3634,7 +3544,7 @@ java.lang.String defaultValue) {
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField1_ |= 0x00000001;
+      bitField0_ |= 0x80000000;
       dataDipManualDialIntegrationHandling_ = value.getNumber();
       onChanged();
       return this;
@@ -3648,7 +3558,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearDataDipManualDialIntegrationHandling() {
-      bitField1_ = (bitField1_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x80000000);
       dataDipManualDialIntegrationHandling_ = 0;
       onChanged();
       return this;

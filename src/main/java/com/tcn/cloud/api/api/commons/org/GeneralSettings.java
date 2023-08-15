@@ -8651,6 +8651,21 @@ private static final long serialVersionUID = 0L;
     return requireManualApprovalNumberSms_;
   }
 
+  public static final int DISABLE_REJECT_OPTION_FOR_APPROVERS_FIELD_NUMBER = 704;
+  private boolean disableRejectOptionForApprovers_ = false;
+  /**
+   * <pre>
+   * Control whether the reject option is available to the approvers.
+   * </pre>
+   *
+   * <code>bool disable_reject_option_for_approvers = 704 [json_name = "disableRejectOptionForApprovers"];</code>
+   * @return The disableRejectOptionForApprovers.
+   */
+  @java.lang.Override
+  public boolean getDisableRejectOptionForApprovers() {
+    return disableRejectOptionForApprovers_;
+  }
+
   public static final int ALPHANUMERIC_KEYPAD_FIELD_NUMBER = 800;
   private com.tcn.cloud.api.api.commons.org.GeneralSettings.AlphanumericKeypad alphanumericKeypad_;
   /**
@@ -8895,6 +8910,9 @@ private static final long serialVersionUID = 0L;
     if (requireManualApprovalNumberSms_ != false) {
       output.writeBool(703, requireManualApprovalNumberSms_);
     }
+    if (disableRejectOptionForApprovers_ != false) {
+      output.writeBool(704, disableRejectOptionForApprovers_);
+    }
     if (alphanumericKeypad_ != null) {
       output.writeMessage(800, getAlphanumericKeypad());
     }
@@ -9074,6 +9092,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(703, requireManualApprovalNumberSms_);
     }
+    if (disableRejectOptionForApprovers_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(704, disableRejectOptionForApprovers_);
+    }
     if (alphanumericKeypad_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(800, getAlphanumericKeypad());
@@ -9205,6 +9227,8 @@ private static final long serialVersionUID = 0L;
         != other.getEnableManualApprovalOfSms()) return false;
     if (getRequireManualApprovalNumberSms()
         != other.getRequireManualApprovalNumberSms()) return false;
+    if (getDisableRejectOptionForApprovers()
+        != other.getDisableRejectOptionForApprovers()) return false;
     if (hasAlphanumericKeypad() != other.hasAlphanumericKeypad()) return false;
     if (hasAlphanumericKeypad()) {
       if (!getAlphanumericKeypad()
@@ -9352,6 +9376,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + REQUIRE_MANUAL_APPROVAL_NUMBER_SMS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getRequireManualApprovalNumberSms());
+    hash = (37 * hash) + DISABLE_REJECT_OPTION_FOR_APPROVERS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getDisableRejectOptionForApprovers());
     if (hasAlphanumericKeypad()) {
       hash = (37 * hash) + ALPHANUMERIC_KEYPAD_FIELD_NUMBER;
       hash = (53 * hash) + getAlphanumericKeypad().hashCode();
@@ -9575,6 +9602,7 @@ private static final long serialVersionUID = 0L;
       requireManualApprovalNumber_ = false;
       enableManualApprovalOfSms_ = false;
       requireManualApprovalNumberSms_ = false;
+      disableRejectOptionForApprovers_ = false;
       alphanumericKeypad_ = null;
       if (alphanumericKeypadBuilder_ != null) {
         alphanumericKeypadBuilder_.dispose();
@@ -9760,19 +9788,22 @@ private static final long serialVersionUID = 0L;
         result.requireManualApprovalNumberSms_ = requireManualApprovalNumberSms_;
       }
       if (((from_bitField1_ & 0x00000080) != 0)) {
+        result.disableRejectOptionForApprovers_ = disableRejectOptionForApprovers_;
+      }
+      if (((from_bitField1_ & 0x00000100) != 0)) {
         result.alphanumericKeypad_ = alphanumericKeypadBuilder_ == null
             ? alphanumericKeypad_
             : alphanumericKeypadBuilder_.build();
       }
-      if (((from_bitField1_ & 0x00000100) != 0)) {
+      if (((from_bitField1_ & 0x00000200) != 0)) {
         result.enableCallDesktopNotifications_ = enableCallDesktopNotifications_;
       }
-      if (((from_bitField1_ & 0x00000200) != 0)) {
+      if (((from_bitField1_ & 0x00000400) != 0)) {
         result.inboundComplianceMetadata_ = inboundComplianceMetadataBuilder_ == null
             ? inboundComplianceMetadata_
             : inboundComplianceMetadataBuilder_.build();
       }
-      if (((from_bitField1_ & 0x00000400) != 0)) {
+      if (((from_bitField1_ & 0x00000800) != 0)) {
         result.enableAgentIntercom_ = enableAgentIntercom_;
       }
     }
@@ -9948,6 +9979,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getRequireManualApprovalNumberSms() != false) {
         setRequireManualApprovalNumberSms(other.getRequireManualApprovalNumberSms());
+      }
+      if (other.getDisableRejectOptionForApprovers() != false) {
+        setDisableRejectOptionForApprovers(other.getDisableRejectOptionForApprovers());
       }
       if (other.hasAlphanumericKeypad()) {
         mergeAlphanumericKeypad(other.getAlphanumericKeypad());
@@ -10199,28 +10233,33 @@ private static final long serialVersionUID = 0L;
               bitField1_ |= 0x00000040;
               break;
             } // case 5624
+            case 5632: {
+              disableRejectOptionForApprovers_ = input.readBool();
+              bitField1_ |= 0x00000080;
+              break;
+            } // case 5632
             case 6402: {
               input.readMessage(
                   getAlphanumericKeypadFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField1_ |= 0x00000080;
+              bitField1_ |= 0x00000100;
               break;
             } // case 6402
             case 6408: {
               enableCallDesktopNotifications_ = input.readBool();
-              bitField1_ |= 0x00000100;
+              bitField1_ |= 0x00000200;
               break;
             } // case 6408
             case 6418: {
               input.readMessage(
                   getInboundComplianceMetadataFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField1_ |= 0x00000200;
+              bitField1_ |= 0x00000400;
               break;
             } // case 6418
             case 6424: {
               enableAgentIntercom_ = input.readBool();
-              bitField1_ |= 0x00000400;
+              bitField1_ |= 0x00000800;
               break;
             } // case 6424
             default: {
@@ -13108,6 +13147,50 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private boolean disableRejectOptionForApprovers_ ;
+    /**
+     * <pre>
+     * Control whether the reject option is available to the approvers.
+     * </pre>
+     *
+     * <code>bool disable_reject_option_for_approvers = 704 [json_name = "disableRejectOptionForApprovers"];</code>
+     * @return The disableRejectOptionForApprovers.
+     */
+    @java.lang.Override
+    public boolean getDisableRejectOptionForApprovers() {
+      return disableRejectOptionForApprovers_;
+    }
+    /**
+     * <pre>
+     * Control whether the reject option is available to the approvers.
+     * </pre>
+     *
+     * <code>bool disable_reject_option_for_approvers = 704 [json_name = "disableRejectOptionForApprovers"];</code>
+     * @param value The disableRejectOptionForApprovers to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDisableRejectOptionForApprovers(boolean value) {
+
+      disableRejectOptionForApprovers_ = value;
+      bitField1_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Control whether the reject option is available to the approvers.
+     * </pre>
+     *
+     * <code>bool disable_reject_option_for_approvers = 704 [json_name = "disableRejectOptionForApprovers"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDisableRejectOptionForApprovers() {
+      bitField1_ = (bitField1_ & ~0x00000080);
+      disableRejectOptionForApprovers_ = false;
+      onChanged();
+      return this;
+    }
+
     private com.tcn.cloud.api.api.commons.org.GeneralSettings.AlphanumericKeypad alphanumericKeypad_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.org.GeneralSettings.AlphanumericKeypad, com.tcn.cloud.api.api.commons.org.GeneralSettings.AlphanumericKeypad.Builder, com.tcn.cloud.api.api.commons.org.GeneralSettings.AlphanumericKeypadOrBuilder> alphanumericKeypadBuilder_;
@@ -13120,7 +13203,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the alphanumericKeypad field is set.
      */
     public boolean hasAlphanumericKeypad() {
-      return ((bitField1_ & 0x00000080) != 0);
+      return ((bitField1_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -13153,7 +13236,7 @@ private static final long serialVersionUID = 0L;
       } else {
         alphanumericKeypadBuilder_.setMessage(value);
       }
-      bitField1_ |= 0x00000080;
+      bitField1_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -13171,7 +13254,7 @@ private static final long serialVersionUID = 0L;
       } else {
         alphanumericKeypadBuilder_.setMessage(builderForValue.build());
       }
-      bitField1_ |= 0x00000080;
+      bitField1_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -13184,7 +13267,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAlphanumericKeypad(com.tcn.cloud.api.api.commons.org.GeneralSettings.AlphanumericKeypad value) {
       if (alphanumericKeypadBuilder_ == null) {
-        if (((bitField1_ & 0x00000080) != 0) &&
+        if (((bitField1_ & 0x00000100) != 0) &&
           alphanumericKeypad_ != null &&
           alphanumericKeypad_ != com.tcn.cloud.api.api.commons.org.GeneralSettings.AlphanumericKeypad.getDefaultInstance()) {
           getAlphanumericKeypadBuilder().mergeFrom(value);
@@ -13194,7 +13277,7 @@ private static final long serialVersionUID = 0L;
       } else {
         alphanumericKeypadBuilder_.mergeFrom(value);
       }
-      bitField1_ |= 0x00000080;
+      bitField1_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -13206,7 +13289,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.AlphanumericKeypad alphanumeric_keypad = 800 [json_name = "alphanumericKeypad"];</code>
      */
     public Builder clearAlphanumericKeypad() {
-      bitField1_ = (bitField1_ & ~0x00000080);
+      bitField1_ = (bitField1_ & ~0x00000100);
       alphanumericKeypad_ = null;
       if (alphanumericKeypadBuilder_ != null) {
         alphanumericKeypadBuilder_.dispose();
@@ -13223,7 +13306,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.AlphanumericKeypad alphanumeric_keypad = 800 [json_name = "alphanumericKeypad"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.GeneralSettings.AlphanumericKeypad.Builder getAlphanumericKeypadBuilder() {
-      bitField1_ |= 0x00000080;
+      bitField1_ |= 0x00000100;
       onChanged();
       return getAlphanumericKeypadFieldBuilder().getBuilder();
     }
@@ -13288,7 +13371,7 @@ private static final long serialVersionUID = 0L;
     public Builder setEnableCallDesktopNotifications(boolean value) {
 
       enableCallDesktopNotifications_ = value;
-      bitField1_ |= 0x00000100;
+      bitField1_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -13301,7 +13384,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableCallDesktopNotifications() {
-      bitField1_ = (bitField1_ & ~0x00000100);
+      bitField1_ = (bitField1_ & ~0x00000200);
       enableCallDesktopNotifications_ = false;
       onChanged();
       return this;
@@ -13321,7 +13404,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the inboundComplianceMetadata field is set.
      */
     public boolean hasInboundComplianceMetadata() {
-      return ((bitField1_ & 0x00000200) != 0);
+      return ((bitField1_ & 0x00000400) != 0);
     }
     /**
      * <pre>
@@ -13358,7 +13441,7 @@ private static final long serialVersionUID = 0L;
       } else {
         inboundComplianceMetadataBuilder_.setMessage(value);
       }
-      bitField1_ |= 0x00000200;
+      bitField1_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -13378,7 +13461,7 @@ private static final long serialVersionUID = 0L;
       } else {
         inboundComplianceMetadataBuilder_.setMessage(builderForValue.build());
       }
-      bitField1_ |= 0x00000200;
+      bitField1_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -13393,7 +13476,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeInboundComplianceMetadata(com.tcn.cloud.api.api.commons.org.GeneralSettings.InboundComplianceMetadata value) {
       if (inboundComplianceMetadataBuilder_ == null) {
-        if (((bitField1_ & 0x00000200) != 0) &&
+        if (((bitField1_ & 0x00000400) != 0) &&
           inboundComplianceMetadata_ != null &&
           inboundComplianceMetadata_ != com.tcn.cloud.api.api.commons.org.GeneralSettings.InboundComplianceMetadata.getDefaultInstance()) {
           getInboundComplianceMetadataBuilder().mergeFrom(value);
@@ -13403,7 +13486,7 @@ private static final long serialVersionUID = 0L;
       } else {
         inboundComplianceMetadataBuilder_.mergeFrom(value);
       }
-      bitField1_ |= 0x00000200;
+      bitField1_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -13417,7 +13500,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.InboundComplianceMetadata inbound_compliance_metadata = 802 [json_name = "inboundComplianceMetadata"];</code>
      */
     public Builder clearInboundComplianceMetadata() {
-      bitField1_ = (bitField1_ & ~0x00000200);
+      bitField1_ = (bitField1_ & ~0x00000400);
       inboundComplianceMetadata_ = null;
       if (inboundComplianceMetadataBuilder_ != null) {
         inboundComplianceMetadataBuilder_.dispose();
@@ -13436,7 +13519,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.GeneralSettings.InboundComplianceMetadata inbound_compliance_metadata = 802 [json_name = "inboundComplianceMetadata"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.GeneralSettings.InboundComplianceMetadata.Builder getInboundComplianceMetadataBuilder() {
-      bitField1_ |= 0x00000200;
+      bitField1_ |= 0x00000400;
       onChanged();
       return getInboundComplianceMetadataFieldBuilder().getBuilder();
     }
@@ -13507,7 +13590,7 @@ private static final long serialVersionUID = 0L;
     public Builder setEnableAgentIntercom(boolean value) {
 
       enableAgentIntercom_ = value;
-      bitField1_ |= 0x00000400;
+      bitField1_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -13521,7 +13604,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableAgentIntercom() {
-      bitField1_ = (bitField1_ & ~0x00000400);
+      bitField1_ = (bitField1_ & ~0x00000800);
       enableAgentIntercom_ = false;
       onChanged();
       return this;

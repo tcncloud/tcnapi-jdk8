@@ -606,6 +606,16 @@ public interface GeneralSettingsOrBuilder extends
 
   /**
    * <pre>
+   * Control whether the reject option is available to the approvers.
+   * </pre>
+   *
+   * <code>bool disable_reject_option_for_approvers = 704 [json_name = "disableRejectOptionForApprovers"];</code>
+   * @return The disableRejectOptionForApprovers.
+   */
+  boolean getDisableRejectOptionForApprovers();
+
+  /**
+   * <pre>
    * Alphanumeric keypad properties. `Alphanumeric Keypad`
    * </pre>
    *
