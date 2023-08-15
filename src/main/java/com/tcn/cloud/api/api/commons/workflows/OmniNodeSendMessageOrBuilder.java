@@ -8,11 +8,19 @@ public interface OmniNodeSendMessageOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * the base message to send
+   * </pre>
+   *
    * <code>string prompt = 1 [json_name = "prompt"];</code>
    * @return The prompt.
    */
   java.lang.String getPrompt();
   /**
+   * <pre>
+   * the base message to send
+   * </pre>
+   *
    * <code>string prompt = 1 [json_name = "prompt"];</code>
    * @return The bytes for prompt.
    */
@@ -20,11 +28,19 @@ public interface OmniNodeSendMessageOrBuilder extends
       getPromptBytes();
 
   /**
+   * <pre>
+   * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
+   * </pre>
+   *
    * <code>string options = 2 [json_name = "options"];</code>
    * @return The options.
    */
   java.lang.String getOptions();
   /**
+   * <pre>
+   * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
+   * </pre>
+   *
    * <code>string options = 2 [json_name = "options"];</code>
    * @return The bytes for options.
    */

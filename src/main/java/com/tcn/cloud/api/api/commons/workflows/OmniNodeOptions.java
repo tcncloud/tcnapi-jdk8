@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.commons.workflows;
 
 /**
+ * <pre>
+ * OmniNodeOptions will store a list of options under a given subkey in the payload.options
+ * </pre>
+ *
  * Protobuf type {@code api.commons.workflows.OmniNodeOptions}
  */
 public final class OmniNodeOptions extends
@@ -45,6 +49,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object optionsId_ = "";
   /**
+   * <pre>
+   * the name (key in payload.options) under which to store the options
+   * </pre>
+   *
    * <code>string options_id = 1 [json_name = "optionsId"];</code>
    * @return The optionsId.
    */
@@ -62,6 +70,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * the name (key in payload.options) under which to store the options
+   * </pre>
+   *
    * <code>string options_id = 1 [json_name = "optionsId"];</code>
    * @return The bytes for optionsId.
    */
@@ -85,6 +97,10 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringArrayList options_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
+   * <pre>
+   * the list of options to store
+   * </pre>
+   *
    * <code>repeated string options = 2 [json_name = "options"];</code>
    * @return A list containing the options.
    */
@@ -93,6 +109,10 @@ private static final long serialVersionUID = 0L;
     return options_;
   }
   /**
+   * <pre>
+   * the list of options to store
+   * </pre>
+   *
    * <code>repeated string options = 2 [json_name = "options"];</code>
    * @return The count of options.
    */
@@ -100,6 +120,10 @@ private static final long serialVersionUID = 0L;
     return options_.size();
   }
   /**
+   * <pre>
+   * the list of options to store
+   * </pre>
+   *
    * <code>repeated string options = 2 [json_name = "options"];</code>
    * @param index The index of the element to return.
    * @return The options at the given index.
@@ -108,6 +132,10 @@ private static final long serialVersionUID = 0L;
     return options_.get(index);
   }
   /**
+   * <pre>
+   * the list of options to store
+   * </pre>
+   *
    * <code>repeated string options = 2 [json_name = "options"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the options at the given index.
@@ -291,6 +319,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * OmniNodeOptions will store a list of options under a given subkey in the payload.options
+   * </pre>
+   *
    * Protobuf type {@code api.commons.workflows.OmniNodeOptions}
    */
   public static final class Builder extends
@@ -484,6 +516,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object optionsId_ = "";
     /**
+     * <pre>
+     * the name (key in payload.options) under which to store the options
+     * </pre>
+     *
      * <code>string options_id = 1 [json_name = "optionsId"];</code>
      * @return The optionsId.
      */
@@ -500,6 +536,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * the name (key in payload.options) under which to store the options
+     * </pre>
+     *
      * <code>string options_id = 1 [json_name = "optionsId"];</code>
      * @return The bytes for optionsId.
      */
@@ -517,6 +557,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * the name (key in payload.options) under which to store the options
+     * </pre>
+     *
      * <code>string options_id = 1 [json_name = "optionsId"];</code>
      * @param value The optionsId to set.
      * @return This builder for chaining.
@@ -530,6 +574,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the name (key in payload.options) under which to store the options
+     * </pre>
+     *
      * <code>string options_id = 1 [json_name = "optionsId"];</code>
      * @return This builder for chaining.
      */
@@ -540,6 +588,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the name (key in payload.options) under which to store the options
+     * </pre>
+     *
      * <code>string options_id = 1 [json_name = "optionsId"];</code>
      * @param value The bytes for optionsId to set.
      * @return This builder for chaining.
@@ -563,6 +615,10 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000002;
     }
     /**
+     * <pre>
+     * the list of options to store
+     * </pre>
+     *
      * <code>repeated string options = 2 [json_name = "options"];</code>
      * @return A list containing the options.
      */
@@ -572,6 +628,10 @@ private static final long serialVersionUID = 0L;
       return options_;
     }
     /**
+     * <pre>
+     * the list of options to store
+     * </pre>
+     *
      * <code>repeated string options = 2 [json_name = "options"];</code>
      * @return The count of options.
      */
@@ -579,6 +639,10 @@ private static final long serialVersionUID = 0L;
       return options_.size();
     }
     /**
+     * <pre>
+     * the list of options to store
+     * </pre>
+     *
      * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param index The index of the element to return.
      * @return The options at the given index.
@@ -587,6 +651,10 @@ private static final long serialVersionUID = 0L;
       return options_.get(index);
     }
     /**
+     * <pre>
+     * the list of options to store
+     * </pre>
+     *
      * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the options at the given index.
@@ -596,6 +664,10 @@ private static final long serialVersionUID = 0L;
       return options_.getByteString(index);
     }
     /**
+     * <pre>
+     * the list of options to store
+     * </pre>
+     *
      * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param index The index to set the value at.
      * @param value The options to set.
@@ -611,6 +683,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the list of options to store
+     * </pre>
+     *
      * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param value The options to add.
      * @return This builder for chaining.
@@ -625,6 +701,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the list of options to store
+     * </pre>
+     *
      * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param values The options to add.
      * @return This builder for chaining.
@@ -639,6 +719,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the list of options to store
+     * </pre>
+     *
      * <code>repeated string options = 2 [json_name = "options"];</code>
      * @return This builder for chaining.
      */
@@ -650,6 +734,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the list of options to store
+     * </pre>
+     *
      * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param value The bytes of the options to add.
      * @return This builder for chaining.

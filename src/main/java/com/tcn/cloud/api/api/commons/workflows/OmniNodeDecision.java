@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.commons.workflows;
 
 /**
+ * <pre>
+ * OmniNodeDecision compares the input against previously stored options (via OmniNodeOptions)
+ * </pre>
+ *
  * Protobuf type {@code api.commons.workflows.OmniNodeDecision}
  */
 public final class OmniNodeDecision extends
@@ -44,6 +48,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object options_ = "";
   /**
+   * <pre>
+   * an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
+   * </pre>
+   *
    * <code>string options = 1 [json_name = "options"];</code>
    * @return The options.
    */
@@ -61,6 +69,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
+   * </pre>
+   *
    * <code>string options = 1 [json_name = "options"];</code>
    * @return The bytes for options.
    */
@@ -83,6 +95,11 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object input_ = "";
   /**
+   * <pre>
+   * the input stored in the payload, to extract from json
+   *   e.g. "{{input_text}}" a previously stored key from OmniNodeStore
+   * </pre>
+   *
    * <code>string input = 2 [json_name = "input"];</code>
    * @return The input.
    */
@@ -100,6 +117,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * the input stored in the payload, to extract from json
+   *   e.g. "{{input_text}}" a previously stored key from OmniNodeStore
+   * </pre>
+   *
    * <code>string input = 2 [json_name = "input"];</code>
    * @return The bytes for input.
    */
@@ -285,6 +307,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * OmniNodeDecision compares the input against previously stored options (via OmniNodeOptions)
+   * </pre>
+   *
    * Protobuf type {@code api.commons.workflows.OmniNodeDecision}
    */
   public static final class Builder extends
@@ -470,6 +496,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object options_ = "";
     /**
+     * <pre>
+     * an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
+     * </pre>
+     *
      * <code>string options = 1 [json_name = "options"];</code>
      * @return The options.
      */
@@ -486,6 +516,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
+     * </pre>
+     *
      * <code>string options = 1 [json_name = "options"];</code>
      * @return The bytes for options.
      */
@@ -503,6 +537,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
+     * </pre>
+     *
      * <code>string options = 1 [json_name = "options"];</code>
      * @param value The options to set.
      * @return This builder for chaining.
@@ -516,6 +554,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
+     * </pre>
+     *
      * <code>string options = 1 [json_name = "options"];</code>
      * @return This builder for chaining.
      */
@@ -526,6 +568,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
+     * </pre>
+     *
      * <code>string options = 1 [json_name = "options"];</code>
      * @param value The bytes for options to set.
      * @return This builder for chaining.
@@ -542,6 +588,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object input_ = "";
     /**
+     * <pre>
+     * the input stored in the payload, to extract from json
+     *   e.g. "{{input_text}}" a previously stored key from OmniNodeStore
+     * </pre>
+     *
      * <code>string input = 2 [json_name = "input"];</code>
      * @return The input.
      */
@@ -558,6 +609,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * the input stored in the payload, to extract from json
+     *   e.g. "{{input_text}}" a previously stored key from OmniNodeStore
+     * </pre>
+     *
      * <code>string input = 2 [json_name = "input"];</code>
      * @return The bytes for input.
      */
@@ -575,6 +631,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * the input stored in the payload, to extract from json
+     *   e.g. "{{input_text}}" a previously stored key from OmniNodeStore
+     * </pre>
+     *
      * <code>string input = 2 [json_name = "input"];</code>
      * @param value The input to set.
      * @return This builder for chaining.
@@ -588,6 +649,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the input stored in the payload, to extract from json
+     *   e.g. "{{input_text}}" a previously stored key from OmniNodeStore
+     * </pre>
+     *
      * <code>string input = 2 [json_name = "input"];</code>
      * @return This builder for chaining.
      */
@@ -598,6 +664,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the input stored in the payload, to extract from json
+     *   e.g. "{{input_text}}" a previously stored key from OmniNodeStore
+     * </pre>
+     *
      * <code>string input = 2 [json_name = "input"];</code>
      * @param value The bytes for input to set.
      * @return This builder for chaining.

@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.commons.workflows;
 
 /**
+ * <pre>
+ * OmniNodeStore will store the text value of an incoming message under a given key in the payload
+ * </pre>
+ *
  * Protobuf type {@code api.commons.workflows.OmniNodeStore}
  */
 public final class OmniNodeStore extends
@@ -43,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object storeTo_ = "";
   /**
+   * <pre>
+   * the name (key in payload) under which to store the input (e.g. "input_text")
+   * </pre>
+   *
    * <code>string store_to = 1 [json_name = "storeTo"];</code>
    * @return The storeTo.
    */
@@ -60,6 +68,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * the name (key in payload) under which to store the input (e.g. "input_text")
+   * </pre>
+   *
    * <code>string store_to = 1 [json_name = "storeTo"];</code>
    * @return The bytes for storeTo.
    */
@@ -235,6 +247,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * OmniNodeStore will store the text value of an incoming message under a given key in the payload
+   * </pre>
+   *
    * Protobuf type {@code api.commons.workflows.OmniNodeStore}
    */
   public static final class Builder extends
@@ -406,6 +422,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object storeTo_ = "";
     /**
+     * <pre>
+     * the name (key in payload) under which to store the input (e.g. "input_text")
+     * </pre>
+     *
      * <code>string store_to = 1 [json_name = "storeTo"];</code>
      * @return The storeTo.
      */
@@ -422,6 +442,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * the name (key in payload) under which to store the input (e.g. "input_text")
+     * </pre>
+     *
      * <code>string store_to = 1 [json_name = "storeTo"];</code>
      * @return The bytes for storeTo.
      */
@@ -439,6 +463,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * the name (key in payload) under which to store the input (e.g. "input_text")
+     * </pre>
+     *
      * <code>string store_to = 1 [json_name = "storeTo"];</code>
      * @param value The storeTo to set.
      * @return This builder for chaining.
@@ -452,6 +480,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the name (key in payload) under which to store the input (e.g. "input_text")
+     * </pre>
+     *
      * <code>string store_to = 1 [json_name = "storeTo"];</code>
      * @return This builder for chaining.
      */
@@ -462,6 +494,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the name (key in payload) under which to store the input (e.g. "input_text")
+     * </pre>
+     *
      * <code>string store_to = 1 [json_name = "storeTo"];</code>
      * @param value The bytes for storeTo to set.
      * @return This builder for chaining.

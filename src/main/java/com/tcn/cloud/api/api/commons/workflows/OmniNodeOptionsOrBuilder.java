@@ -8,11 +8,19 @@ public interface OmniNodeOptionsOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * the name (key in payload.options) under which to store the options
+   * </pre>
+   *
    * <code>string options_id = 1 [json_name = "optionsId"];</code>
    * @return The optionsId.
    */
   java.lang.String getOptionsId();
   /**
+   * <pre>
+   * the name (key in payload.options) under which to store the options
+   * </pre>
+   *
    * <code>string options_id = 1 [json_name = "optionsId"];</code>
    * @return The bytes for optionsId.
    */
@@ -20,23 +28,39 @@ public interface OmniNodeOptionsOrBuilder extends
       getOptionsIdBytes();
 
   /**
+   * <pre>
+   * the list of options to store
+   * </pre>
+   *
    * <code>repeated string options = 2 [json_name = "options"];</code>
    * @return A list containing the options.
    */
   java.util.List<java.lang.String>
       getOptionsList();
   /**
+   * <pre>
+   * the list of options to store
+   * </pre>
+   *
    * <code>repeated string options = 2 [json_name = "options"];</code>
    * @return The count of options.
    */
   int getOptionsCount();
   /**
+   * <pre>
+   * the list of options to store
+   * </pre>
+   *
    * <code>repeated string options = 2 [json_name = "options"];</code>
    * @param index The index of the element to return.
    * @return The options at the given index.
    */
   java.lang.String getOptions(int index);
   /**
+   * <pre>
+   * the list of options to store
+   * </pre>
+   *
    * <code>repeated string options = 2 [json_name = "options"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the options at the given index.

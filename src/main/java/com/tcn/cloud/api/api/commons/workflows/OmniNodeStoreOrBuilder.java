@@ -8,11 +8,19 @@ public interface OmniNodeStoreOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * the name (key in payload) under which to store the input (e.g. "input_text")
+   * </pre>
+   *
    * <code>string store_to = 1 [json_name = "storeTo"];</code>
    * @return The storeTo.
    */
   java.lang.String getStoreTo();
   /**
+   * <pre>
+   * the name (key in payload) under which to store the input (e.g. "input_text")
+   * </pre>
+   *
    * <code>string store_to = 1 [json_name = "storeTo"];</code>
    * @return The bytes for storeTo.
    */

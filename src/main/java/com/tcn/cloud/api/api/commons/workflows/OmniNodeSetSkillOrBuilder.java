@@ -8,11 +8,19 @@ public interface OmniNodeSetSkillOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * the skill to add to the conversation
+   * </pre>
+   *
    * <code>string skill = 1 [json_name = "skill"];</code>
    * @return The skill.
    */
   java.lang.String getSkill();
   /**
+   * <pre>
+   * the skill to add to the conversation
+   * </pre>
+   *
    * <code>string skill = 1 [json_name = "skill"];</code>
    * @return The bytes for skill.
    */

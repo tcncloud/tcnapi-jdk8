@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.commons.workflows;
 
 /**
+ * <pre>
+ * OmniNodeSendMessage will send a message, optionally displaying options
+ * </pre>
+ *
  * Protobuf type {@code api.commons.workflows.OmniNodeSendMessage}
  */
 public final class OmniNodeSendMessage extends
@@ -44,6 +48,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object prompt_ = "";
   /**
+   * <pre>
+   * the base message to send
+   * </pre>
+   *
    * <code>string prompt = 1 [json_name = "prompt"];</code>
    * @return The prompt.
    */
@@ -61,6 +69,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * the base message to send
+   * </pre>
+   *
    * <code>string prompt = 1 [json_name = "prompt"];</code>
    * @return The bytes for prompt.
    */
@@ -83,6 +95,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object options_ = "";
   /**
+   * <pre>
+   * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
+   * </pre>
+   *
    * <code>string options = 2 [json_name = "options"];</code>
    * @return The options.
    */
@@ -100,6 +116,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
+   * </pre>
+   *
    * <code>string options = 2 [json_name = "options"];</code>
    * @return The bytes for options.
    */
@@ -285,6 +305,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * OmniNodeSendMessage will send a message, optionally displaying options
+   * </pre>
+   *
    * Protobuf type {@code api.commons.workflows.OmniNodeSendMessage}
    */
   public static final class Builder extends
@@ -470,6 +494,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object prompt_ = "";
     /**
+     * <pre>
+     * the base message to send
+     * </pre>
+     *
      * <code>string prompt = 1 [json_name = "prompt"];</code>
      * @return The prompt.
      */
@@ -486,6 +514,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * the base message to send
+     * </pre>
+     *
      * <code>string prompt = 1 [json_name = "prompt"];</code>
      * @return The bytes for prompt.
      */
@@ -503,6 +535,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * the base message to send
+     * </pre>
+     *
      * <code>string prompt = 1 [json_name = "prompt"];</code>
      * @param value The prompt to set.
      * @return This builder for chaining.
@@ -516,6 +552,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the base message to send
+     * </pre>
+     *
      * <code>string prompt = 1 [json_name = "prompt"];</code>
      * @return This builder for chaining.
      */
@@ -526,6 +566,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the base message to send
+     * </pre>
+     *
      * <code>string prompt = 1 [json_name = "prompt"];</code>
      * @param value The bytes for prompt to set.
      * @return This builder for chaining.
@@ -542,6 +586,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object options_ = "";
     /**
+     * <pre>
+     * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
+     * </pre>
+     *
      * <code>string options = 2 [json_name = "options"];</code>
      * @return The options.
      */
@@ -558,6 +606,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
+     * </pre>
+     *
      * <code>string options = 2 [json_name = "options"];</code>
      * @return The bytes for options.
      */
@@ -575,6 +627,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
+     * </pre>
+     *
      * <code>string options = 2 [json_name = "options"];</code>
      * @param value The options to set.
      * @return This builder for chaining.
@@ -588,6 +644,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
+     * </pre>
+     *
      * <code>string options = 2 [json_name = "options"];</code>
      * @return This builder for chaining.
      */
@@ -598,6 +658,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
+     * </pre>
+     *
      * <code>string options = 2 [json_name = "options"];</code>
      * @param value The bytes for options to set.
      * @return This builder for chaining.

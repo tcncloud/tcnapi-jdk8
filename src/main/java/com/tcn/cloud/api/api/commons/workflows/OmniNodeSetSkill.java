@@ -4,6 +4,10 @@
 package com.tcn.cloud.api.api.commons.workflows;
 
 /**
+ * <pre>
+ * OmniNodeSetSkill adds the given string as a skill on the coversation
+ * </pre>
+ *
  * Protobuf type {@code api.commons.workflows.OmniNodeSetSkill}
  */
 public final class OmniNodeSetSkill extends
@@ -43,6 +47,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object skill_ = "";
   /**
+   * <pre>
+   * the skill to add to the conversation
+   * </pre>
+   *
    * <code>string skill = 1 [json_name = "skill"];</code>
    * @return The skill.
    */
@@ -60,6 +68,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * the skill to add to the conversation
+   * </pre>
+   *
    * <code>string skill = 1 [json_name = "skill"];</code>
    * @return The bytes for skill.
    */
@@ -235,6 +247,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * OmniNodeSetSkill adds the given string as a skill on the coversation
+   * </pre>
+   *
    * Protobuf type {@code api.commons.workflows.OmniNodeSetSkill}
    */
   public static final class Builder extends
@@ -406,6 +422,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object skill_ = "";
     /**
+     * <pre>
+     * the skill to add to the conversation
+     * </pre>
+     *
      * <code>string skill = 1 [json_name = "skill"];</code>
      * @return The skill.
      */
@@ -422,6 +442,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * the skill to add to the conversation
+     * </pre>
+     *
      * <code>string skill = 1 [json_name = "skill"];</code>
      * @return The bytes for skill.
      */
@@ -439,6 +463,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * the skill to add to the conversation
+     * </pre>
+     *
      * <code>string skill = 1 [json_name = "skill"];</code>
      * @param value The skill to set.
      * @return This builder for chaining.
@@ -452,6 +480,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the skill to add to the conversation
+     * </pre>
+     *
      * <code>string skill = 1 [json_name = "skill"];</code>
      * @return This builder for chaining.
      */
@@ -462,6 +494,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * the skill to add to the conversation
+     * </pre>
+     *
      * <code>string skill = 1 [json_name = "skill"];</code>
      * @param value The bytes for skill to set.
      * @return This builder for chaining.
