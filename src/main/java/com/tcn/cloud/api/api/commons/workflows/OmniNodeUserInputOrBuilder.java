@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.commons.workflows;
 
-public interface OmniNodeStoreOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.workflows.OmniNodeStore)
+public interface OmniNodeUserInputOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.workflows.OmniNodeUserInput)
     com.google.protobuf.MessageOrBuilder {
 
   /**

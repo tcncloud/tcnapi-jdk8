@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.commons.workflows;
 
-public interface OmniNodeDecisionOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.commons.workflows.OmniNodeDecision)
+public interface OmniNodeBranchingOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.commons.workflows.OmniNodeBranching)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -29,23 +29,21 @@ public interface OmniNodeDecisionOrBuilder extends
 
   /**
    * <pre>
-   * the input stored in the payload, to extract from json
-   *   e.g. "{{input_text}}" to extract a previously stored key from OmniNodeStore
+   * key of data stored in the payload to compare against the options (likely references an OmniNodeUserInput.store_id)
    * </pre>
    *
-   * <code>string input = 2 [json_name = "input"];</code>
-   * @return The input.
+   * <code>string store_id = 2 [json_name = "storeId"];</code>
+   * @return The storeId.
    */
-  java.lang.String getInput();
+  java.lang.String getStoreId();
   /**
    * <pre>
-   * the input stored in the payload, to extract from json
-   *   e.g. "{{input_text}}" to extract a previously stored key from OmniNodeStore
+   * key of data stored in the payload to compare against the options (likely references an OmniNodeUserInput.store_id)
    * </pre>
    *
-   * <code>string input = 2 [json_name = "input"];</code>
-   * @return The bytes for input.
+   * <code>string store_id = 2 [json_name = "storeId"];</code>
+   * @return The bytes for storeId.
    */
   com.google.protobuf.ByteString
-      getInputBytes();
+      getStoreIdBytes();
 }

@@ -269,34 +269,34 @@ public interface NodeDefinitionOrBuilder extends
   com.tcn.cloud.api.api.commons.workflows.OmniNodeSendMessageOrBuilder getOmniSendMessageOrBuilder();
 
   /**
-   * <code>.api.commons.workflows.OmniNodeStore omni_store = 207 [json_name = "omniStore"];</code>
-   * @return Whether the omniStore field is set.
+   * <code>.api.commons.workflows.OmniNodeUserInput omni_user_input = 207 [json_name = "omniUserInput"];</code>
+   * @return Whether the omniUserInput field is set.
    */
-  boolean hasOmniStore();
+  boolean hasOmniUserInput();
   /**
-   * <code>.api.commons.workflows.OmniNodeStore omni_store = 207 [json_name = "omniStore"];</code>
-   * @return The omniStore.
+   * <code>.api.commons.workflows.OmniNodeUserInput omni_user_input = 207 [json_name = "omniUserInput"];</code>
+   * @return The omniUserInput.
    */
-  com.tcn.cloud.api.api.commons.workflows.OmniNodeStore getOmniStore();
+  com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInput getOmniUserInput();
   /**
-   * <code>.api.commons.workflows.OmniNodeStore omni_store = 207 [json_name = "omniStore"];</code>
+   * <code>.api.commons.workflows.OmniNodeUserInput omni_user_input = 207 [json_name = "omniUserInput"];</code>
    */
-  com.tcn.cloud.api.api.commons.workflows.OmniNodeStoreOrBuilder getOmniStoreOrBuilder();
+  com.tcn.cloud.api.api.commons.workflows.OmniNodeUserInputOrBuilder getOmniUserInputOrBuilder();
 
   /**
-   * <code>.api.commons.workflows.OmniNodeDecision omni_decision = 208 [json_name = "omniDecision"];</code>
-   * @return Whether the omniDecision field is set.
+   * <code>.api.commons.workflows.OmniNodeBranching omni_branching = 208 [json_name = "omniBranching"];</code>
+   * @return Whether the omniBranching field is set.
    */
-  boolean hasOmniDecision();
+  boolean hasOmniBranching();
   /**
-   * <code>.api.commons.workflows.OmniNodeDecision omni_decision = 208 [json_name = "omniDecision"];</code>
-   * @return The omniDecision.
+   * <code>.api.commons.workflows.OmniNodeBranching omni_branching = 208 [json_name = "omniBranching"];</code>
+   * @return The omniBranching.
    */
-  com.tcn.cloud.api.api.commons.workflows.OmniNodeDecision getOmniDecision();
+  com.tcn.cloud.api.api.commons.workflows.OmniNodeBranching getOmniBranching();
   /**
-   * <code>.api.commons.workflows.OmniNodeDecision omni_decision = 208 [json_name = "omniDecision"];</code>
+   * <code>.api.commons.workflows.OmniNodeBranching omni_branching = 208 [json_name = "omniBranching"];</code>
    */
-  com.tcn.cloud.api.api.commons.workflows.OmniNodeDecisionOrBuilder getOmniDecisionOrBuilder();
+  com.tcn.cloud.api.api.commons.workflows.OmniNodeBranchingOrBuilder getOmniBranchingOrBuilder();
 
   /**
    * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart", deprecated = true];</code>
