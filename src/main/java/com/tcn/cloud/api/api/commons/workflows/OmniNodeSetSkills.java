@@ -5,22 +5,21 @@ package com.tcn.cloud.api.api.commons.workflows;
 
 /**
  * <pre>
- * OmniNodeSetSkill adds the given string as a skill on the coversation
+ * OmniNodeSetSkills adds the given strings as a skills on the coversation
  * </pre>
  *
- * Protobuf type {@code api.commons.workflows.OmniNodeSetSkill}
+ * Protobuf type {@code api.commons.workflows.OmniNodeSetSkills}
  */
-public final class OmniNodeSetSkill extends
+public final class OmniNodeSetSkills extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.commons.workflows.OmniNodeSetSkill)
-    OmniNodeSetSkillOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.commons.workflows.OmniNodeSetSkills)
+    OmniNodeSetSkillsOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use OmniNodeSetSkill.newBuilder() to construct.
-  private OmniNodeSetSkill(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use OmniNodeSetSkills.newBuilder() to construct.
+  private OmniNodeSetSkills(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private OmniNodeSetSkill() {
-    skill_ = "";
+  private OmniNodeSetSkills() {
     skills_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
   }
@@ -29,83 +28,32 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new OmniNodeSetSkill();
+    return new OmniNodeSetSkills();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeSetSkill_descriptor;
+    return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeSetSkills_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeSetSkill_fieldAccessorTable
+    return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeSetSkills_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill.class, com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill.Builder.class);
+            com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills.class, com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills.Builder.class);
   }
 
-  public static final int SKILL_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object skill_ = "";
-  /**
-   * <pre>
-   * a single skill to add to the conversation (deprecated)
-   * </pre>
-   *
-   * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
-   * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-   *     See api/commons/workflows/omni.proto;l=47
-   * @return The skill.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated public java.lang.String getSkill() {
-    java.lang.Object ref = skill_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      skill_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * a single skill to add to the conversation (deprecated)
-   * </pre>
-   *
-   * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
-   * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-   *     See api/commons/workflows/omni.proto;l=47
-   * @return The bytes for skill.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated public com.google.protobuf.ByteString
-      getSkillBytes() {
-    java.lang.Object ref = skill_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      skill_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int SKILLS_FIELD_NUMBER = 2;
+  public static final int SKILLS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringArrayList skills_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
-   * list of skills to add to the conversation
+   * the skills to add to the conversation
    * </pre>
    *
-   * <code>repeated string skills = 2 [json_name = "skills"];</code>
+   * <code>repeated string skills = 1 [json_name = "skills"];</code>
    * @return A list containing the skills.
    */
   public com.google.protobuf.ProtocolStringList
@@ -114,10 +62,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * list of skills to add to the conversation
+   * the skills to add to the conversation
    * </pre>
    *
-   * <code>repeated string skills = 2 [json_name = "skills"];</code>
+   * <code>repeated string skills = 1 [json_name = "skills"];</code>
    * @return The count of skills.
    */
   public int getSkillsCount() {
@@ -125,10 +73,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * list of skills to add to the conversation
+   * the skills to add to the conversation
    * </pre>
    *
-   * <code>repeated string skills = 2 [json_name = "skills"];</code>
+   * <code>repeated string skills = 1 [json_name = "skills"];</code>
    * @param index The index of the element to return.
    * @return The skills at the given index.
    */
@@ -137,10 +85,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * list of skills to add to the conversation
+   * the skills to add to the conversation
    * </pre>
    *
-   * <code>repeated string skills = 2 [json_name = "skills"];</code>
+   * <code>repeated string skills = 1 [json_name = "skills"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the skills at the given index.
    */
@@ -163,11 +111,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(skill_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, skill_);
-    }
     for (int i = 0; i < skills_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, skills_.getRaw(i));
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, skills_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -178,9 +123,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(skill_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, skill_);
-    }
     {
       int dataSize = 0;
       for (int i = 0; i < skills_.size(); i++) {
@@ -199,13 +141,11 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill other = (com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill) obj;
+    com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills other = (com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills) obj;
 
-    if (!getSkill()
-        .equals(other.getSkill())) return false;
     if (!getSkillsList()
         .equals(other.getSkillsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -219,8 +159,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + SKILL_FIELD_NUMBER;
-    hash = (53 * hash) + getSkill().hashCode();
     if (getSkillsCount() > 0) {
       hash = (37 * hash) + SKILLS_FIELD_NUMBER;
       hash = (53 * hash) + getSkillsList().hashCode();
@@ -230,44 +168,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -275,26 +213,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill parseFrom(
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -307,7 +245,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -324,29 +262,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * OmniNodeSetSkill adds the given string as a skill on the coversation
+   * OmniNodeSetSkills adds the given strings as a skills on the coversation
    * </pre>
    *
-   * Protobuf type {@code api.commons.workflows.OmniNodeSetSkill}
+   * Protobuf type {@code api.commons.workflows.OmniNodeSetSkills}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.commons.workflows.OmniNodeSetSkill)
-      com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkillOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.commons.workflows.OmniNodeSetSkills)
+      com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkillsOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeSetSkill_descriptor;
+      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeSetSkills_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeSetSkill_fieldAccessorTable
+      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeSetSkills_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill.class, com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill.Builder.class);
+              com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills.class, com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill.newBuilder()
+    // Construct using com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills.newBuilder()
     private Builder() {
 
     }
@@ -360,7 +298,6 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      skill_ = "";
       skills_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
@@ -369,17 +306,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeSetSkill_descriptor;
+      return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodeSetSkills_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill.getDefaultInstance();
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill build() {
-      com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill result = buildPartial();
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills build() {
+      com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -387,19 +324,16 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill buildPartial() {
-      com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill result = new com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill(this);
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills buildPartial() {
+      com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills result = new com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill result) {
+    private void buildPartial0(com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.skill_ = skill_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
         skills_.makeImmutable();
         result.skills_ = skills_;
       }
@@ -439,25 +373,20 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill) {
-        return mergeFrom((com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill)other);
+      if (other instanceof com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills) {
+        return mergeFrom((com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill other) {
-      if (other == com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill.getDefaultInstance()) return this;
-      if (!other.getSkill().isEmpty()) {
-        skill_ = other.skill_;
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
+    public Builder mergeFrom(com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills other) {
+      if (other == com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills.getDefaultInstance()) return this;
       if (!other.skills_.isEmpty()) {
         if (skills_.isEmpty()) {
           skills_ = other.skills_;
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
         } else {
           ensureSkillsIsMutable();
           skills_.addAll(other.skills_);
@@ -491,16 +420,11 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              skill_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
               java.lang.String s = input.readStringRequireUtf8();
               ensureSkillsIsMutable();
               skills_.add(s);
               break;
-            } // case 18
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -518,122 +442,20 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object skill_ = "";
-    /**
-     * <pre>
-     * a single skill to add to the conversation (deprecated)
-     * </pre>
-     *
-     * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
-     * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-     *     See api/commons/workflows/omni.proto;l=47
-     * @return The skill.
-     */
-    @java.lang.Deprecated public java.lang.String getSkill() {
-      java.lang.Object ref = skill_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        skill_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * a single skill to add to the conversation (deprecated)
-     * </pre>
-     *
-     * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
-     * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-     *     See api/commons/workflows/omni.proto;l=47
-     * @return The bytes for skill.
-     */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
-        getSkillBytes() {
-      java.lang.Object ref = skill_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        skill_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * a single skill to add to the conversation (deprecated)
-     * </pre>
-     *
-     * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
-     * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-     *     See api/commons/workflows/omni.proto;l=47
-     * @param value The skill to set.
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder setSkill(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      skill_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * a single skill to add to the conversation (deprecated)
-     * </pre>
-     *
-     * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
-     * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-     *     See api/commons/workflows/omni.proto;l=47
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder clearSkill() {
-      skill_ = getDefaultInstance().getSkill();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * a single skill to add to the conversation (deprecated)
-     * </pre>
-     *
-     * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
-     * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-     *     See api/commons/workflows/omni.proto;l=47
-     * @param value The bytes for skill to set.
-     * @return This builder for chaining.
-     */
-    @java.lang.Deprecated public Builder setSkillBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      skill_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
     private com.google.protobuf.LazyStringArrayList skills_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureSkillsIsMutable() {
       if (!skills_.isModifiable()) {
         skills_ = new com.google.protobuf.LazyStringArrayList(skills_);
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
-     * list of skills to add to the conversation
+     * the skills to add to the conversation
      * </pre>
      *
-     * <code>repeated string skills = 2 [json_name = "skills"];</code>
+     * <code>repeated string skills = 1 [json_name = "skills"];</code>
      * @return A list containing the skills.
      */
     public com.google.protobuf.ProtocolStringList
@@ -643,10 +465,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * list of skills to add to the conversation
+     * the skills to add to the conversation
      * </pre>
      *
-     * <code>repeated string skills = 2 [json_name = "skills"];</code>
+     * <code>repeated string skills = 1 [json_name = "skills"];</code>
      * @return The count of skills.
      */
     public int getSkillsCount() {
@@ -654,10 +476,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * list of skills to add to the conversation
+     * the skills to add to the conversation
      * </pre>
      *
-     * <code>repeated string skills = 2 [json_name = "skills"];</code>
+     * <code>repeated string skills = 1 [json_name = "skills"];</code>
      * @param index The index of the element to return.
      * @return The skills at the given index.
      */
@@ -666,10 +488,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * list of skills to add to the conversation
+     * the skills to add to the conversation
      * </pre>
      *
-     * <code>repeated string skills = 2 [json_name = "skills"];</code>
+     * <code>repeated string skills = 1 [json_name = "skills"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the skills at the given index.
      */
@@ -679,10 +501,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * list of skills to add to the conversation
+     * the skills to add to the conversation
      * </pre>
      *
-     * <code>repeated string skills = 2 [json_name = "skills"];</code>
+     * <code>repeated string skills = 1 [json_name = "skills"];</code>
      * @param index The index to set the value at.
      * @param value The skills to set.
      * @return This builder for chaining.
@@ -692,16 +514,16 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureSkillsIsMutable();
       skills_.set(index, value);
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * list of skills to add to the conversation
+     * the skills to add to the conversation
      * </pre>
      *
-     * <code>repeated string skills = 2 [json_name = "skills"];</code>
+     * <code>repeated string skills = 1 [json_name = "skills"];</code>
      * @param value The skills to add.
      * @return This builder for chaining.
      */
@@ -710,16 +532,16 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureSkillsIsMutable();
       skills_.add(value);
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * list of skills to add to the conversation
+     * the skills to add to the conversation
      * </pre>
      *
-     * <code>repeated string skills = 2 [json_name = "skills"];</code>
+     * <code>repeated string skills = 1 [json_name = "skills"];</code>
      * @param values The skills to add.
      * @return This builder for chaining.
      */
@@ -728,31 +550,31 @@ private static final long serialVersionUID = 0L;
       ensureSkillsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, skills_);
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * list of skills to add to the conversation
+     * the skills to add to the conversation
      * </pre>
      *
-     * <code>repeated string skills = 2 [json_name = "skills"];</code>
+     * <code>repeated string skills = 1 [json_name = "skills"];</code>
      * @return This builder for chaining.
      */
     public Builder clearSkills() {
       skills_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000002);;
+      bitField0_ = (bitField0_ & ~0x00000001);;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * list of skills to add to the conversation
+     * the skills to add to the conversation
      * </pre>
      *
-     * <code>repeated string skills = 2 [json_name = "skills"];</code>
+     * <code>repeated string skills = 1 [json_name = "skills"];</code>
      * @param value The bytes of the skills to add.
      * @return This builder for chaining.
      */
@@ -762,7 +584,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureSkillsIsMutable();
       skills_.add(value);
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -779,23 +601,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.commons.workflows.OmniNodeSetSkill)
+    // @@protoc_insertion_point(builder_scope:api.commons.workflows.OmniNodeSetSkills)
   }
 
-  // @@protoc_insertion_point(class_scope:api.commons.workflows.OmniNodeSetSkill)
-  private static final com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.commons.workflows.OmniNodeSetSkills)
+  private static final com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills();
   }
 
-  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill getDefaultInstance() {
+  public static com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<OmniNodeSetSkill>
-      PARSER = new com.google.protobuf.AbstractParser<OmniNodeSetSkill>() {
+  private static final com.google.protobuf.Parser<OmniNodeSetSkills>
+      PARSER = new com.google.protobuf.AbstractParser<OmniNodeSetSkills>() {
     @java.lang.Override
-    public OmniNodeSetSkill parsePartialFrom(
+    public OmniNodeSetSkills parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -814,17 +636,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<OmniNodeSetSkill> parser() {
+  public static com.google.protobuf.Parser<OmniNodeSetSkills> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<OmniNodeSetSkill> getParserForType() {
+  public com.google.protobuf.Parser<OmniNodeSetSkills> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkill getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.commons.workflows.OmniNodeSetSkills getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
