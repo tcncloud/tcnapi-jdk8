@@ -33,7 +33,7 @@ public final class NodesProto {
       "s/example.proto\032 api/commons/workflows/o" +
       "mni.proto\032$api/commons/workflows/omni_bo" +
       "t.proto\032$api/commons/workflows/test_bot." +
-      "proto\"\367\r\n\016NodeDefinition\022\016\n\002id\030\001 \001(\tR\002id" +
+      "proto\"\314\016\n\016NodeDefinition\022\016\n\002id\030\001 \001(\tR\002id" +
       "\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013description\030\004 \001(" +
       "\tR\013description\022\030\n\007outputs\030\005 \003(\tR\007outputs" +
       "\022\"\n\rerror_node_id\030\006 \001(\tR\013errorNodeId\0228\n\005" +
@@ -63,26 +63,28 @@ public final class NodesProto {
       "mons.workflows.OmniNodeUserInputH\000R\romni" +
       "UserInput\022R\n\016omni_branching\030\320\001 \001(\0132(.api" +
       ".commons.workflows.OmniNodeBranchingH\000R\r" +
-      "omniBranching\022a\n\023omni_bot_test_start\030\255\002 " +
-      "\001(\0132+.api.commons.workflows.OmniBotNodeT" +
-      "estStartB\002\030\001H\000R\020omniBotTestStart\022^\n\022omni" +
-      "_bot_test_step\030\256\002 \001(\0132*.api.commons.work" +
-      "flows.OmniBotNodeTestStepB\002\030\001H\000R\017omniBot" +
-      "TestStep\022[\n\021omni_bot_test_end\030\257\002 \001(\0132).a" +
-      "pi.commons.workflows.OmniBotNodeTestEndB" +
-      "\002\030\001H\000R\016omniBotTestEnd\022]\n\023test_bot_test_s" +
-      "tart\030\221\003 \001(\0132+.api.commons.workflows.Test" +
-      "BotNodeTestStartH\000R\020testBotTestStart\022Z\n\022" +
-      "test_bot_test_step\030\222\003 \001(\0132*.api.commons." +
-      "workflows.TestBotNodeTestStepH\000R\017testBot" +
-      "TestStep\022W\n\021test_bot_test_end\030\223\003 \001(\0132).a" +
-      "pi.commons.workflows.TestBotNodeTestEndH" +
-      "\000R\016testBotTestEndB\014\n\ndefinitionB\253\001\n\'com." +
-      "tcn.cloud.api.api.commons.workflowsB\nNod" +
-      "esProtoP\001\242\002\003ACW\252\002\025Api.Commons.Workflows\312" +
-      "\002\025Api\\Commons\\Workflows\342\002!Api\\Commons\\Wo" +
-      "rkflows\\GPBMetadata\352\002\027Api::Commons::Work" +
-      "flowsb\006proto3"
+      "omniBranching\022S\n\017omni_to_matcher\030\321\001 \001(\0132" +
+      "(.api.commons.workflows.OmniNodeToMatche" +
+      "rH\000R\romniToMatcher\022a\n\023omni_bot_test_star" +
+      "t\030\255\002 \001(\0132+.api.commons.workflows.OmniBot" +
+      "NodeTestStartB\002\030\001H\000R\020omniBotTestStart\022^\n" +
+      "\022omni_bot_test_step\030\256\002 \001(\0132*.api.commons" +
+      ".workflows.OmniBotNodeTestStepB\002\030\001H\000R\017om" +
+      "niBotTestStep\022[\n\021omni_bot_test_end\030\257\002 \001(" +
+      "\0132).api.commons.workflows.OmniBotNodeTes" +
+      "tEndB\002\030\001H\000R\016omniBotTestEnd\022]\n\023test_bot_t" +
+      "est_start\030\221\003 \001(\0132+.api.commons.workflows" +
+      ".TestBotNodeTestStartH\000R\020testBotTestStar" +
+      "t\022Z\n\022test_bot_test_step\030\222\003 \001(\0132*.api.com" +
+      "mons.workflows.TestBotNodeTestStepH\000R\017te" +
+      "stBotTestStep\022W\n\021test_bot_test_end\030\223\003 \001(" +
+      "\0132).api.commons.workflows.TestBotNodeTes" +
+      "tEndH\000R\016testBotTestEndB\014\n\ndefinitionB\253\001\n" +
+      "\'com.tcn.cloud.api.api.commons.workflows" +
+      "B\nNodesProtoP\001\242\002\003ACW\252\002\025Api.Commons.Workf" +
+      "lows\312\002\025Api\\Commons\\Workflows\342\002!Api\\Commo" +
+      "ns\\Workflows\\GPBMetadata\352\002\027Api::Commons:" +
+      ":Workflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -97,7 +99,7 @@ public final class NodesProto {
     internal_static_api_commons_workflows_NodeDefinition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_workflows_NodeDefinition_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "Outputs", "ErrorNodeId", "Print", "Random", "ConsoleInput", "Comparator", "StoreInput", "Chatbot", "OmniPrompt", "OmniSetSkill", "OmniToAgent", "OmniError", "OmniOptions", "OmniSendMessage", "OmniUserInput", "OmniBranching", "OmniBotTestStart", "OmniBotTestStep", "OmniBotTestEnd", "TestBotTestStart", "TestBotTestStep", "TestBotTestEnd", "Definition", });
+        new java.lang.String[] { "Id", "Name", "Description", "Outputs", "ErrorNodeId", "Print", "Random", "ConsoleInput", "Comparator", "StoreInput", "Chatbot", "OmniPrompt", "OmniSetSkill", "OmniToAgent", "OmniError", "OmniOptions", "OmniSendMessage", "OmniUserInput", "OmniBranching", "OmniToMatcher", "OmniBotTestStart", "OmniBotTestStep", "OmniBotTestEnd", "TestBotTestStart", "TestBotTestStep", "TestBotTestEnd", "Definition", });
     com.tcn.cloud.api.api.commons.workflows.ExampleProto.getDescriptor();
     com.tcn.cloud.api.api.commons.workflows.OmniProto.getDescriptor();
     com.tcn.cloud.api.api.commons.workflows.OmniBotProto.getDescriptor();
