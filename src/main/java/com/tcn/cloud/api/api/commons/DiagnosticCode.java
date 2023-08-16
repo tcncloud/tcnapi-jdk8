@@ -16,7 +16,8 @@ public enum DiagnosticCode
    * <pre>
    * DiagnosticCodeGeneral integer value for a diagnostic coded as 'general' type.
    * The code type used when no other code is appropriate.
-   * cannot be described by a code. The consumer must interpret the text message for further details
+   * GENERAL means that this diagnostic message cannot be described by a code.
+   * The consumer must interpret the text message for further details.
    * </pre>
    *
    * <code>GENERAL = 0;</code>
@@ -42,7 +43,8 @@ public enum DiagnosticCode
   NO_SKILLS_IN_DICTIONARY(2),
   /**
    * <pre>
-   * DiagnosticCodeAgentHasNoSkillProficiencies integer value for a diagnostic coded as 'agent has no skill proficiencies' type.
+   * DiagnosticCodeAgentHasNoSkillProficiencies integer value for a diagnostic coded as
+   * 'agent has no skill proficiencies' type.
    * The diagnostic is reporting a wfm agent with no skill proficiencies.
    * </pre>
    *
@@ -60,7 +62,8 @@ public enum DiagnosticCode
   AGENT_HAS_NO_SKILLS(4),
   /**
    * <pre>
-   * DiagnosticCodeNoSchedulingActivitiesForConstraintRules integer value for a diagnostic coded as 'no scheduling activity for constraint rules' type.
+   * DiagnosticCodeNoSchedulingActivitiesForConstraintRules integer value for a diagnostic coded as
+   * 'no scheduling activity for constraint rules' type.
    * The diagnostic is reporting the constraint rules don't have a scheduling activity.
    * </pre>
    *
@@ -69,7 +72,8 @@ public enum DiagnosticCode
   NO_SCHEDULING_ACTIVITIES_FOR_CONSTRAINT_RULES(5),
   /**
    * <pre>
-   * DiagnosticCodeSchedulingActivityForConstraintRuleNotFound integer value for a diagnostic coded as 'scheduling activity for constraint rule not found' type.
+   * DiagnosticCodeSchedulingActivityForConstraintRuleNotFound integer value for a diagnostic coded as
+   * 'scheduling activity for constraint rule not found' type.
    * The diagnostic is reporting a constraint rule pointing to a scheduling activity that cannot be found.
    * </pre>
    *
@@ -78,7 +82,8 @@ public enum DiagnosticCode
   SCHEDULING_ACTIVITY_FOR_CONSTRAINT_RULE_NOT_FOUND(6),
   /**
    * <pre>
-   * DiagnosticCodeShiftTemplateCannotBeNone integer value for a diagnostic coded as 'shift template cannot be none' type.
+   * DiagnosticCodeShiftTemplateCannotBeNone integer value for a diagnostic coded as
+   * 'shift template cannot be none' type.
    * The diagnostic is reporting a NONE value for a shift template
    * </pre>
    *
@@ -87,7 +92,8 @@ public enum DiagnosticCode
   SHIFT_TEMPLATE_CANNOT_BE_NONE(7),
   /**
    * <pre>
-   * DiagnosticCodeShiftTemplateHasNoPlacementRules integer value for a diagnostic coded as 'shift template has no placement rules' type.
+   * DiagnosticCodeShiftTemplateHasNoPlacementRules integer value for a diagnostic coded as
+   * 'shift template has no placement rules' type.
    * The diagnostic is reporting a shift template with no member placement rules.
    * </pre>
    *
@@ -96,7 +102,8 @@ public enum DiagnosticCode
   SHIFT_TEMPLATE_HAS_NO_PLACEMENT_RULES(8),
   /**
    * <pre>
-   * DiagnosticCodeNoOncallInShiftTemplatePlacementRules integer value for a diagnostic coded as 'no on-call in shift template placement rules' type.
+   * DiagnosticCodeNoOncallInShiftTemplatePlacementRules integer value for a diagnostic coded as
+   * 'no on-call in shift template placement rules' type.
    * The diagnostic is reporting a shift template whose placement rules do not include an on-call placement.
    * </pre>
    *
@@ -105,8 +112,9 @@ public enum DiagnosticCode
   NO_ONCALL_IN_SHIFT_TEMPLATE_PLACEMENT_RULES(9),
   /**
    * <pre>
-   * DiagnosticCodeMinGtMaxDurationInShiftTemplatePlacementRules integer value for a diagnostic coded as 'min greater than max in shift template placement rules' type.
-   * The diagnostic is reporting the min duration for a shift templates placement rule being greater than the max duration.
+   * DiagnosticCodeMinGtMaxDurationInShiftTemplatePlacementRules integer value for a diagnostic coded as
+   * 'min greater than max in shift template placement rules' type.
+   * The diagnostic is reporting the min duration for a shift templates placement rule is greater than max duration.
    * </pre>
    *
    * <code>MIN_GT_MAX_DURATION_IN_SHIFT_TEMPLATE_PLACEMENT_RULES = 10;</code>
@@ -114,7 +122,8 @@ public enum DiagnosticCode
   MIN_GT_MAX_DURATION_IN_SHIFT_TEMPLATE_PLACEMENT_RULES(10),
   /**
    * <pre>
-   * DiagnosticCodeMinGtMaxAgentsInShiftTemplate integer value for a diagnostic coded as 'min greater than max agents in shift template' type.
+   * DiagnosticCodeMinGtMaxAgentsInShiftTemplate integer value for a diagnostic coded as
+   * 'min greater than max agents in shift template' type.
    * The diagnostic is reporting a shift template with a min_agents value greater than it's max_agents value.
    * </pre>
    *
@@ -123,7 +132,8 @@ public enum DiagnosticCode
   MIN_GT_MAX_AGENTS_IN_SHIFT_TEMPLATE(11),
   /**
    * <pre>
-   * DiagnosticCodeNoPlacementRulesForShiftTemplate integer value for a diagnostic coded as 'no placement rules for shift template' type.
+   * DiagnosticCodeNoPlacementRulesForShiftTemplate integer value for a diagnostic coded as
+   * 'no placement rules for shift template' type.
    * The diagnostic is reporting no placement rules as members of the shift template.
    * </pre>
    *
@@ -132,7 +142,8 @@ public enum DiagnosticCode
   NO_PLACEMENT_RULES_FOR_SHIFT_TEMPLATE(12),
   /**
    * <pre>
-   * DiagnosticCodeActivitiesShorterThanShift integer value for a diagnostic coded as 'activities shorter than shift' type.
+   * DiagnosticCodeActivitiesShorterThanShift integer value for a diagnostic coded as
+   * 'activities shorter than shift' type.
    * The diagnostic is reporting that the activities are too short for the shift.
    * </pre>
    *
@@ -159,7 +170,8 @@ public enum DiagnosticCode
   PROGRAM_HAS_NO_AGENT_GROUPS(15),
   /**
    * <pre>
-   * DiagnosticCodeProgramHasNoShiftTemplates integer value for a diagnostic coded as 'program has no shift templates' type.
+   * DiagnosticCodeProgramHasNoShiftTemplates integer value for a diagnostic coded as
+   * 'program has no shift templates' type.
    * The diagnostic is reporting that a program node has no member shift templates.
    * </pre>
    *
@@ -195,7 +207,8 @@ public enum DiagnosticCode
   CALL_CENTER_HAS_NO_CLIENTS(19),
   /**
    * <pre>
-   * DiagnosticCodeProgramHasInvalidParentLocation integer value for a diagnostic coded as 'program has invalid parent location' type.
+   * DiagnosticCodeProgramHasInvalidParentLocation integer value for a diagnostic coded as
+   * 'program has invalid parent location' type.
    * The diagnostic is reporting that a program node has an invalid parent location node.
    * </pre>
    *
@@ -204,7 +217,8 @@ public enum DiagnosticCode
   PROGRAM_HAS_INVALID_PARENT_LOCATION(20),
   /**
    * <pre>
-   * DiagnosticCodeLocationHasInvalidParentClient integer value for a diagnostic coded as 'location has invalid parent client' type.
+   * DiagnosticCodeLocationHasInvalidParentClient integer value for a diagnostic coded as
+   * 'location has invalid parent client' type.
    * The diagnostic is reporting that a location node has an invalid parent client node.
    * </pre>
    *
@@ -213,7 +227,8 @@ public enum DiagnosticCode
   LOCATION_HAS_INVALID_PARENT_CLIENT(21),
   /**
    * <pre>
-   * DiagnosticCodeClientHasInvalidParentCallCenter integer value for a diagnostic coded as 'client has invalid parent call center' type.
+   * DiagnosticCodeClientHasInvalidParentCallCenter integer value for a diagnostic coded as
+   * 'client has invalid parent call center' type.
    * The diagnostic is reporting that a client node has an invalid parent call center.
    * </pre>
    *
@@ -222,7 +237,8 @@ public enum DiagnosticCode
   CLIENT_HAS_INVALID_PARENT_CALL_CENTER(22),
   /**
    * <pre>
-   * DiagnosticCodeAgentGroupHasInvalidParentNode integer value for a diagnostic coded as 'agent group has invalid parent node' type.
+   * DiagnosticCodeAgentGroupHasInvalidParentNode integer value for a diagnostic coded as
+   * 'agent group has invalid parent node' type.
    * The diagnostic is reporting that an agent group has an invalid parent node.
    * </pre>
    *
@@ -231,7 +247,8 @@ public enum DiagnosticCode
   AGENT_GROUP_HAS_INVALID_PARENT_NODE(23),
   /**
    * <pre>
-   * DiagnosticCodeShiftTemplateHasInvalidParentProgram integer value for a diagnostic coded as 'shift template has invalid parent program' type.
+   * DiagnosticCodeShiftTemplateHasInvalidParentProgram integer value for a diagnostic coded as
+   * 'shift template has invalid parent program' type.
    * The diagnostic is reporting an invalid parent program for a shift template.
    * </pre>
    *
@@ -240,7 +257,8 @@ public enum DiagnosticCode
   SHIFT_TEMPLATE_HAS_INVALID_PARENT_PROGRAM(24),
   /**
    * <pre>
-   * DiagnosticCodeNoSkillProficiencyForMinSkillProficiencyConstraintRule integer value for a diagnostic coded as 'skill proficiency for constraint rule not found' type.
+   * DiagnosticCodeNoSkillProficiencyForMinSkillProficiencyConstraintRule integer value for a diagnostic coded as
+   * 'skill proficiency for constraint rule not found' type.
    * The diagnostic is reporting a constraint rule pointing to a missing skill proficiency.
    * </pre>
    *
@@ -249,7 +267,8 @@ public enum DiagnosticCode
   NO_SKILL_PROFICIENCY_FOR_MIN_SKILL_PROFICIENCY_CONSTRAINT_RULE(25),
   /**
    * <pre>
-   * DiagnosticCodeTooManyAgentsWithLockedShiftsForMinAgents integer value for a diagnostic coded as 'too many agent with locked shifts' type.
+   * DiagnosticCodeTooManyAgentsWithLockedShiftsForMinAgents integer value for a diagnostic coded as
+   * 'too many agent with locked shifts' type.
    * </pre>
    *
    * <code>TOO_MANY_AGENTS_WITH_LOCKED_SHIFTS_FOR_MIN_AGENTS = 26;</code>
@@ -257,7 +276,8 @@ public enum DiagnosticCode
   TOO_MANY_AGENTS_WITH_LOCKED_SHIFTS_FOR_MIN_AGENTS(26),
   /**
    * <pre>
-   * DiagnosticCodeAgentDoesNotBelongToAnAgentGroup integer value for a diagnostic coded as 'agent does not belong to an agent group' type.
+   * DiagnosticCodeAgentDoesNotBelongToAnAgentGroup integer value for a diagnostic coded as
+   * 'agent does not belong to an agent group' type.
    * </pre>
    *
    * <code>AGENT_DOES_NOT_BELONG_TO_AN_AGENT_GROUP = 27;</code>
@@ -265,7 +285,8 @@ public enum DiagnosticCode
   AGENT_DOES_NOT_BELONG_TO_AN_AGENT_GROUP(27),
   /**
    * <pre>
-   * DiagnosticCodeInvalidConstraintValUnits integer value for a diagnostic coded as 'Invalid constraint val units' type.
+   * DiagnosticCodeInvalidConstraintValUnits integer value for a diagnostic coded as
+   * 'Invalid constraint val units' type.
    * </pre>
    *
    * <code>INVALID_CONSTRAINT_VAL_UNITS = 28;</code>
@@ -281,7 +302,8 @@ public enum DiagnosticCode
   CONSTRAINT_GENERAL_FAILURE(29),
   /**
    * <pre>
-   * DiagnosticCodeCandidateShiftCollisionDetected integer value for a diagnostic coded as 'Candidate shift collision detected' type.
+   * DiagnosticCodeCandidateShiftCollisionDetected integer value for a diagnostic coded as
+   * 'Candidate shift collision detected' type.
    * </pre>
    *
    * <code>CANDIDATE_SHIFT_COLLISION_DETECTED = 30;</code>
@@ -289,7 +311,8 @@ public enum DiagnosticCode
   CANDIDATE_SHIFT_COLLISION_DETECTED(30),
   /**
    * <pre>
-   * DiagnosticCodeCandidateShiftAgentNotAvailable integer value for a diagnostic coded as 'Candidate shift agent not available' type.
+   * DiagnosticCodeCandidateShiftAgentNotAvailable integer value for a diagnostic coded as
+   * 'Candidate shift agent not available' type.
    * </pre>
    *
    * <code>CANDIDATE_SHIFT_AGENT_NOT_AVAILABLE = 31;</code>
@@ -305,7 +328,8 @@ public enum DiagnosticCode
   CANDIDATE_CLOSED(32),
   /**
    * <pre>
-   * DiagnosticCodeConstraintActivityNotFound integer value for a diagnostic coded as 'Constraint activity not found' type.
+   * DiagnosticCodeConstraintActivityNotFound integer value for a diagnostic coded as
+   * 'Constraint activity not found' type.
    * </pre>
    *
    * <code>CONSTRAINT_ACTIVITY_NOT_FOUND = 33;</code>
@@ -313,7 +337,8 @@ public enum DiagnosticCode
   CONSTRAINT_ACTIVITY_NOT_FOUND(33),
   /**
    * <pre>
-   * DiagnosticCodeConstraintAgentDoesNotHaveProficiency integer value for a diagnostic coded as 'Constraint agent does not have proficiency' type.
+   * DiagnosticCodeConstraintAgentDoesNotHaveProficiency integer value for a diagnostic coded as
+   * 'Constraint agent does not have proficiency' type.
    * </pre>
    *
    * <code>CONSTRAINT_AGENT_DOES_NOT_HAVE_PROFICIENCY = 34;</code>
@@ -321,7 +346,8 @@ public enum DiagnosticCode
   CONSTRAINT_AGENT_DOES_NOT_HAVE_PROFICIENCY(34),
   /**
    * <pre>
-   * DiagnosticCodeConstraintAgentProficiencyTooLow integer value for a diagnostic coded as 'Constraint agent proficiency too low' type.
+   * DiagnosticCodeConstraintAgentProficiencyTooLow integer value for a diagnostic coded as
+   * 'Constraint agent proficiency too low' type.
    * </pre>
    *
    * <code>CONSTRAINT_AGENT_PROFICIENCY_TOO_LOW = 35;</code>
@@ -329,7 +355,8 @@ public enum DiagnosticCode
   CONSTRAINT_AGENT_PROFICIENCY_TOO_LOW(35),
   /**
    * <pre>
-   * DiagnosticCodeConstraintMaxTotalOnFailure integer value for a diagnostic coded as 'Constraint max total on failure' type.
+   * DiagnosticCodeConstraintMaxTotalOnFailure integer value for a diagnostic coded as
+   * 'Constraint max total on failure' type.
    * </pre>
    *
    * <code>CONSTRAINT_MAX_TOTAL_ON_FAILURE = 36;</code>
@@ -337,7 +364,8 @@ public enum DiagnosticCode
   CONSTRAINT_MAX_TOTAL_ON_FAILURE(36),
   /**
    * <pre>
-   * DiagnosticCodeConstraintMinTotalOnFailure integer value for a diagnostic coded as 'Constraint min total on failure' type.
+   * DiagnosticCodeConstraintMinTotalOnFailure integer value for a diagnostic coded as
+   * 'Constraint min total on failure' type.
    * </pre>
    *
    * <code>CONSTRAINT_MIN_TOTAL_ON_FAILURE = 37;</code>
@@ -345,7 +373,8 @@ public enum DiagnosticCode
   CONSTRAINT_MIN_TOTAL_ON_FAILURE(37),
   /**
    * <pre>
-   * DiagnosticCodeConstraintMaxTotalOffFailure integer value for a diagnostic coded as 'Constraint max total off failure' type.
+   * DiagnosticCodeConstraintMaxTotalOffFailure integer value for a diagnostic coded as
+   * 'Constraint max total off failure' type.
    * </pre>
    *
    * <code>CONSTRAINT_MAX_TOTAL_OFF_FAILURE = 38;</code>
@@ -353,7 +382,8 @@ public enum DiagnosticCode
   CONSTRAINT_MAX_TOTAL_OFF_FAILURE(38),
   /**
    * <pre>
-   * DiagnosticCodeConstraintMinTotalOffFailure integer value for a diagnostic coded as 'Constraint min total off failure' type.
+   * DiagnosticCodeConstraintMinTotalOffFailure integer value for a diagnostic coded as
+   * 'Constraint min total off failure' type.
    * </pre>
    *
    * <code>CONSTRAINT_MIN_TOTAL_OFF_FAILURE = 39;</code>
@@ -361,7 +391,8 @@ public enum DiagnosticCode
   CONSTRAINT_MIN_TOTAL_OFF_FAILURE(39),
   /**
    * <pre>
-   * DiagnosticCodeConstraintMaxConsecOnFailure integer value for a diagnostic coded as 'Constraint max consec on failure' type.
+   * DiagnosticCodeConstraintMaxConsecOnFailure integer value for a diagnostic coded as
+   * 'Constraint max consec on failure' type.
    * </pre>
    *
    * <code>CONSTRAINT_MAX_CONSEC_ON_FAILURE = 40;</code>
@@ -369,7 +400,8 @@ public enum DiagnosticCode
   CONSTRAINT_MAX_CONSEC_ON_FAILURE(40),
   /**
    * <pre>
-   * DiagnosticCodeConstraintMinConsecOnFailure integer value for a diagnostic coded as 'Constraint min consec on failure' type.
+   * DiagnosticCodeConstraintMinConsecOnFailure integer value for a diagnostic coded as
+   * 'Constraint min consec on failure' type.
    * </pre>
    *
    * <code>CONSTRAINT_MIN_CONSEC_ON_FAILURE = 41;</code>
@@ -377,7 +409,8 @@ public enum DiagnosticCode
   CONSTRAINT_MIN_CONSEC_ON_FAILURE(41),
   /**
    * <pre>
-   * DiagnosticCodeConstraintMaxConsecOffFailure integer value for a diagnostic coded as 'Constraint max consec off failure' type.
+   * DiagnosticCodeConstraintMaxConsecOffFailure integer value for a diagnostic coded as
+   * 'Constraint max consec off failure' type.
    * </pre>
    *
    * <code>CONSTRAINT_MAX_CONSEC_OFF_FAILURE = 42;</code>
@@ -385,7 +418,8 @@ public enum DiagnosticCode
   CONSTRAINT_MAX_CONSEC_OFF_FAILURE(42),
   /**
    * <pre>
-   * DiagnosticCodeConstraintMinConsecOffFailure integer value for a diagnostic coded as 'Constraint min consec off failure' type.
+   * DiagnosticCodeConstraintMinConsecOffFailure integer value for a diagnostic coded as
+   * 'Constraint min consec off failure' type.
    * </pre>
    *
    * <code>CONSTRAINT_MIN_CONSEC_OFF_FAILURE = 43;</code>
@@ -393,7 +427,8 @@ public enum DiagnosticCode
   CONSTRAINT_MIN_CONSEC_OFF_FAILURE(43),
   /**
    * <pre>
-   * DiagnosticCodeConstraintCannotHaveDayWeekMonthYearShiftPerShift integer value for a diagnostic coded as 'Constraint cannot have day week month year shift per shift' type.
+   * DiagnosticCodeConstraintCannotHaveDayWeekMonthYearShiftPerShift integer value for a diagnostic coded as
+   * 'Constraint cannot have day week month year shift per shift' type.
    * </pre>
    *
    * <code>CONSTRAINT_CANNOT_HAVE_DAY_WEEK_MONTH_YEAR_SHIFT__PER_SHIFT = 44;</code>
@@ -401,7 +436,8 @@ public enum DiagnosticCode
   CONSTRAINT_CANNOT_HAVE_DAY_WEEK_MONTH_YEAR_SHIFT__PER_SHIFT(44),
   /**
    * <pre>
-   * DiagnosticCodeConstraintCannotHaveDayWeekMonthYearPerMinutesHours integer value for a diagnostic coded as 'Constraint cannot have day week month year per minutes hours' type.
+   * DiagnosticCodeConstraintCannotHaveDayWeekMonthYearPerMinutesHours integer value for a diagnostic coded as
+   * 'Constraint cannot have day week month year per minutes hours' type.
    * </pre>
    *
    * <code>CONSTRAINT_CANNOT_HAVE_DAY_WEEK_MONTH_YEAR__PER_MINUTES_HOURS = 45;</code>
@@ -409,7 +445,8 @@ public enum DiagnosticCode
   CONSTRAINT_CANNOT_HAVE_DAY_WEEK_MONTH_YEAR__PER_MINUTES_HOURS(45),
   /**
    * <pre>
-   * DiagnosticCodeConstraintConsecutiveShiftsRuleNotAllowed integer value for a diagnostic coded as 'Constraint consecutive shifts rule not allowed' type.
+   * DiagnosticCodeConstraintConsecutiveShiftsRuleNotAllowed integer value for a diagnostic coded as
+   * 'Constraint consecutive shifts rule not allowed' type.
    * </pre>
    *
    * <code>CONSTRAINT_CONSECUTIVE_SHIFTS_RULE_NOT_ALLOWED = 46;</code>
@@ -417,7 +454,8 @@ public enum DiagnosticCode
   CONSTRAINT_CONSECUTIVE_SHIFTS_RULE_NOT_ALLOWED(46),
   /**
    * <pre>
-   * DiagnosticCodeConstraintWithLargerPeriodPerSmallPeriodNotAllowed integer value for a diagnostic coded as 'Constraint with larger period per small period not allowed' type.
+   * DiagnosticCodeConstraintWithLargerPeriodPerSmallPeriodNotAllowed integer value for a diagnostic coded as
+   * 'Constraint with larger period per small period not allowed' type.
    * </pre>
    *
    * <code>CONSTRAINT_WITH_LARGER_PERIOD_PER_SMALL_PERIOD_NOT_ALLOWED = 47;</code>
@@ -425,7 +463,8 @@ public enum DiagnosticCode
   CONSTRAINT_WITH_LARGER_PERIOD_PER_SMALL_PERIOD_NOT_ALLOWED(47),
   /**
    * <pre>
-   * DiagnosticCodeConstraintMinMaxOffTimeForShiftsNotAllowed integer value for a diagnostic coded as 'Constraint min max off time for shifts not allowed' type.
+   * DiagnosticCodeConstraintMinMaxOffTimeForShiftsNotAllowed integer value for a diagnostic coded as
+   * 'Constraint min max off time for shifts not allowed' type.
    * </pre>
    *
    * <code>CONSTRAINT_MIN_MAX_OFF_TIME_FOR_SHIFTS_NOT_ALLOWED = 48;</code>
@@ -433,7 +472,8 @@ public enum DiagnosticCode
   CONSTRAINT_MIN_MAX_OFF_TIME_FOR_SHIFTS_NOT_ALLOWED(48),
   /**
    * <pre>
-   * DiagnosticCodeConstraintCannotHaveConsecutiveTimePerMultipleShifts integer value for a diagnostic coded as 'Constraint cannot have consecutive time per multiple shifts' type.
+   * DiagnosticCodeConstraintCannotHaveConsecutiveTimePerMultipleShifts integer value for a diagnostic coded as
+   * 'Constraint cannot have consecutive time per multiple shifts' type.
    * </pre>
    *
    * <code>CONSTRAINT_CANNOT_HAVE_CONSECUTIVE_TIME_PER_MULTIPLE_SHIFTS = 49;</code>
@@ -446,7 +486,8 @@ public enum DiagnosticCode
    * <pre>
    * DiagnosticCodeGeneral integer value for a diagnostic coded as 'general' type.
    * The code type used when no other code is appropriate.
-   * cannot be described by a code. The consumer must interpret the text message for further details
+   * GENERAL means that this diagnostic message cannot be described by a code.
+   * The consumer must interpret the text message for further details.
    * </pre>
    *
    * <code>GENERAL = 0;</code>
@@ -472,7 +513,8 @@ public enum DiagnosticCode
   public static final int NO_SKILLS_IN_DICTIONARY_VALUE = 2;
   /**
    * <pre>
-   * DiagnosticCodeAgentHasNoSkillProficiencies integer value for a diagnostic coded as 'agent has no skill proficiencies' type.
+   * DiagnosticCodeAgentHasNoSkillProficiencies integer value for a diagnostic coded as
+   * 'agent has no skill proficiencies' type.
    * The diagnostic is reporting a wfm agent with no skill proficiencies.
    * </pre>
    *
@@ -490,7 +532,8 @@ public enum DiagnosticCode
   public static final int AGENT_HAS_NO_SKILLS_VALUE = 4;
   /**
    * <pre>
-   * DiagnosticCodeNoSchedulingActivitiesForConstraintRules integer value for a diagnostic coded as 'no scheduling activity for constraint rules' type.
+   * DiagnosticCodeNoSchedulingActivitiesForConstraintRules integer value for a diagnostic coded as
+   * 'no scheduling activity for constraint rules' type.
    * The diagnostic is reporting the constraint rules don't have a scheduling activity.
    * </pre>
    *
@@ -499,7 +542,8 @@ public enum DiagnosticCode
   public static final int NO_SCHEDULING_ACTIVITIES_FOR_CONSTRAINT_RULES_VALUE = 5;
   /**
    * <pre>
-   * DiagnosticCodeSchedulingActivityForConstraintRuleNotFound integer value for a diagnostic coded as 'scheduling activity for constraint rule not found' type.
+   * DiagnosticCodeSchedulingActivityForConstraintRuleNotFound integer value for a diagnostic coded as
+   * 'scheduling activity for constraint rule not found' type.
    * The diagnostic is reporting a constraint rule pointing to a scheduling activity that cannot be found.
    * </pre>
    *
@@ -508,7 +552,8 @@ public enum DiagnosticCode
   public static final int SCHEDULING_ACTIVITY_FOR_CONSTRAINT_RULE_NOT_FOUND_VALUE = 6;
   /**
    * <pre>
-   * DiagnosticCodeShiftTemplateCannotBeNone integer value for a diagnostic coded as 'shift template cannot be none' type.
+   * DiagnosticCodeShiftTemplateCannotBeNone integer value for a diagnostic coded as
+   * 'shift template cannot be none' type.
    * The diagnostic is reporting a NONE value for a shift template
    * </pre>
    *
@@ -517,7 +562,8 @@ public enum DiagnosticCode
   public static final int SHIFT_TEMPLATE_CANNOT_BE_NONE_VALUE = 7;
   /**
    * <pre>
-   * DiagnosticCodeShiftTemplateHasNoPlacementRules integer value for a diagnostic coded as 'shift template has no placement rules' type.
+   * DiagnosticCodeShiftTemplateHasNoPlacementRules integer value for a diagnostic coded as
+   * 'shift template has no placement rules' type.
    * The diagnostic is reporting a shift template with no member placement rules.
    * </pre>
    *
@@ -526,7 +572,8 @@ public enum DiagnosticCode
   public static final int SHIFT_TEMPLATE_HAS_NO_PLACEMENT_RULES_VALUE = 8;
   /**
    * <pre>
-   * DiagnosticCodeNoOncallInShiftTemplatePlacementRules integer value for a diagnostic coded as 'no on-call in shift template placement rules' type.
+   * DiagnosticCodeNoOncallInShiftTemplatePlacementRules integer value for a diagnostic coded as
+   * 'no on-call in shift template placement rules' type.
    * The diagnostic is reporting a shift template whose placement rules do not include an on-call placement.
    * </pre>
    *
@@ -535,8 +582,9 @@ public enum DiagnosticCode
   public static final int NO_ONCALL_IN_SHIFT_TEMPLATE_PLACEMENT_RULES_VALUE = 9;
   /**
    * <pre>
-   * DiagnosticCodeMinGtMaxDurationInShiftTemplatePlacementRules integer value for a diagnostic coded as 'min greater than max in shift template placement rules' type.
-   * The diagnostic is reporting the min duration for a shift templates placement rule being greater than the max duration.
+   * DiagnosticCodeMinGtMaxDurationInShiftTemplatePlacementRules integer value for a diagnostic coded as
+   * 'min greater than max in shift template placement rules' type.
+   * The diagnostic is reporting the min duration for a shift templates placement rule is greater than max duration.
    * </pre>
    *
    * <code>MIN_GT_MAX_DURATION_IN_SHIFT_TEMPLATE_PLACEMENT_RULES = 10;</code>
@@ -544,7 +592,8 @@ public enum DiagnosticCode
   public static final int MIN_GT_MAX_DURATION_IN_SHIFT_TEMPLATE_PLACEMENT_RULES_VALUE = 10;
   /**
    * <pre>
-   * DiagnosticCodeMinGtMaxAgentsInShiftTemplate integer value for a diagnostic coded as 'min greater than max agents in shift template' type.
+   * DiagnosticCodeMinGtMaxAgentsInShiftTemplate integer value for a diagnostic coded as
+   * 'min greater than max agents in shift template' type.
    * The diagnostic is reporting a shift template with a min_agents value greater than it's max_agents value.
    * </pre>
    *
@@ -553,7 +602,8 @@ public enum DiagnosticCode
   public static final int MIN_GT_MAX_AGENTS_IN_SHIFT_TEMPLATE_VALUE = 11;
   /**
    * <pre>
-   * DiagnosticCodeNoPlacementRulesForShiftTemplate integer value for a diagnostic coded as 'no placement rules for shift template' type.
+   * DiagnosticCodeNoPlacementRulesForShiftTemplate integer value for a diagnostic coded as
+   * 'no placement rules for shift template' type.
    * The diagnostic is reporting no placement rules as members of the shift template.
    * </pre>
    *
@@ -562,7 +612,8 @@ public enum DiagnosticCode
   public static final int NO_PLACEMENT_RULES_FOR_SHIFT_TEMPLATE_VALUE = 12;
   /**
    * <pre>
-   * DiagnosticCodeActivitiesShorterThanShift integer value for a diagnostic coded as 'activities shorter than shift' type.
+   * DiagnosticCodeActivitiesShorterThanShift integer value for a diagnostic coded as
+   * 'activities shorter than shift' type.
    * The diagnostic is reporting that the activities are too short for the shift.
    * </pre>
    *
@@ -589,7 +640,8 @@ public enum DiagnosticCode
   public static final int PROGRAM_HAS_NO_AGENT_GROUPS_VALUE = 15;
   /**
    * <pre>
-   * DiagnosticCodeProgramHasNoShiftTemplates integer value for a diagnostic coded as 'program has no shift templates' type.
+   * DiagnosticCodeProgramHasNoShiftTemplates integer value for a diagnostic coded as
+   * 'program has no shift templates' type.
    * The diagnostic is reporting that a program node has no member shift templates.
    * </pre>
    *
@@ -625,7 +677,8 @@ public enum DiagnosticCode
   public static final int CALL_CENTER_HAS_NO_CLIENTS_VALUE = 19;
   /**
    * <pre>
-   * DiagnosticCodeProgramHasInvalidParentLocation integer value for a diagnostic coded as 'program has invalid parent location' type.
+   * DiagnosticCodeProgramHasInvalidParentLocation integer value for a diagnostic coded as
+   * 'program has invalid parent location' type.
    * The diagnostic is reporting that a program node has an invalid parent location node.
    * </pre>
    *
@@ -634,7 +687,8 @@ public enum DiagnosticCode
   public static final int PROGRAM_HAS_INVALID_PARENT_LOCATION_VALUE = 20;
   /**
    * <pre>
-   * DiagnosticCodeLocationHasInvalidParentClient integer value for a diagnostic coded as 'location has invalid parent client' type.
+   * DiagnosticCodeLocationHasInvalidParentClient integer value for a diagnostic coded as
+   * 'location has invalid parent client' type.
    * The diagnostic is reporting that a location node has an invalid parent client node.
    * </pre>
    *
@@ -643,7 +697,8 @@ public enum DiagnosticCode
   public static final int LOCATION_HAS_INVALID_PARENT_CLIENT_VALUE = 21;
   /**
    * <pre>
-   * DiagnosticCodeClientHasInvalidParentCallCenter integer value for a diagnostic coded as 'client has invalid parent call center' type.
+   * DiagnosticCodeClientHasInvalidParentCallCenter integer value for a diagnostic coded as
+   * 'client has invalid parent call center' type.
    * The diagnostic is reporting that a client node has an invalid parent call center.
    * </pre>
    *
@@ -652,7 +707,8 @@ public enum DiagnosticCode
   public static final int CLIENT_HAS_INVALID_PARENT_CALL_CENTER_VALUE = 22;
   /**
    * <pre>
-   * DiagnosticCodeAgentGroupHasInvalidParentNode integer value for a diagnostic coded as 'agent group has invalid parent node' type.
+   * DiagnosticCodeAgentGroupHasInvalidParentNode integer value for a diagnostic coded as
+   * 'agent group has invalid parent node' type.
    * The diagnostic is reporting that an agent group has an invalid parent node.
    * </pre>
    *
@@ -661,7 +717,8 @@ public enum DiagnosticCode
   public static final int AGENT_GROUP_HAS_INVALID_PARENT_NODE_VALUE = 23;
   /**
    * <pre>
-   * DiagnosticCodeShiftTemplateHasInvalidParentProgram integer value for a diagnostic coded as 'shift template has invalid parent program' type.
+   * DiagnosticCodeShiftTemplateHasInvalidParentProgram integer value for a diagnostic coded as
+   * 'shift template has invalid parent program' type.
    * The diagnostic is reporting an invalid parent program for a shift template.
    * </pre>
    *
@@ -670,7 +727,8 @@ public enum DiagnosticCode
   public static final int SHIFT_TEMPLATE_HAS_INVALID_PARENT_PROGRAM_VALUE = 24;
   /**
    * <pre>
-   * DiagnosticCodeNoSkillProficiencyForMinSkillProficiencyConstraintRule integer value for a diagnostic coded as 'skill proficiency for constraint rule not found' type.
+   * DiagnosticCodeNoSkillProficiencyForMinSkillProficiencyConstraintRule integer value for a diagnostic coded as
+   * 'skill proficiency for constraint rule not found' type.
    * The diagnostic is reporting a constraint rule pointing to a missing skill proficiency.
    * </pre>
    *
@@ -679,7 +737,8 @@ public enum DiagnosticCode
   public static final int NO_SKILL_PROFICIENCY_FOR_MIN_SKILL_PROFICIENCY_CONSTRAINT_RULE_VALUE = 25;
   /**
    * <pre>
-   * DiagnosticCodeTooManyAgentsWithLockedShiftsForMinAgents integer value for a diagnostic coded as 'too many agent with locked shifts' type.
+   * DiagnosticCodeTooManyAgentsWithLockedShiftsForMinAgents integer value for a diagnostic coded as
+   * 'too many agent with locked shifts' type.
    * </pre>
    *
    * <code>TOO_MANY_AGENTS_WITH_LOCKED_SHIFTS_FOR_MIN_AGENTS = 26;</code>
@@ -687,7 +746,8 @@ public enum DiagnosticCode
   public static final int TOO_MANY_AGENTS_WITH_LOCKED_SHIFTS_FOR_MIN_AGENTS_VALUE = 26;
   /**
    * <pre>
-   * DiagnosticCodeAgentDoesNotBelongToAnAgentGroup integer value for a diagnostic coded as 'agent does not belong to an agent group' type.
+   * DiagnosticCodeAgentDoesNotBelongToAnAgentGroup integer value for a diagnostic coded as
+   * 'agent does not belong to an agent group' type.
    * </pre>
    *
    * <code>AGENT_DOES_NOT_BELONG_TO_AN_AGENT_GROUP = 27;</code>
@@ -695,7 +755,8 @@ public enum DiagnosticCode
   public static final int AGENT_DOES_NOT_BELONG_TO_AN_AGENT_GROUP_VALUE = 27;
   /**
    * <pre>
-   * DiagnosticCodeInvalidConstraintValUnits integer value for a diagnostic coded as 'Invalid constraint val units' type.
+   * DiagnosticCodeInvalidConstraintValUnits integer value for a diagnostic coded as
+   * 'Invalid constraint val units' type.
    * </pre>
    *
    * <code>INVALID_CONSTRAINT_VAL_UNITS = 28;</code>
@@ -711,7 +772,8 @@ public enum DiagnosticCode
   public static final int CONSTRAINT_GENERAL_FAILURE_VALUE = 29;
   /**
    * <pre>
-   * DiagnosticCodeCandidateShiftCollisionDetected integer value for a diagnostic coded as 'Candidate shift collision detected' type.
+   * DiagnosticCodeCandidateShiftCollisionDetected integer value for a diagnostic coded as
+   * 'Candidate shift collision detected' type.
    * </pre>
    *
    * <code>CANDIDATE_SHIFT_COLLISION_DETECTED = 30;</code>
@@ -719,7 +781,8 @@ public enum DiagnosticCode
   public static final int CANDIDATE_SHIFT_COLLISION_DETECTED_VALUE = 30;
   /**
    * <pre>
-   * DiagnosticCodeCandidateShiftAgentNotAvailable integer value for a diagnostic coded as 'Candidate shift agent not available' type.
+   * DiagnosticCodeCandidateShiftAgentNotAvailable integer value for a diagnostic coded as
+   * 'Candidate shift agent not available' type.
    * </pre>
    *
    * <code>CANDIDATE_SHIFT_AGENT_NOT_AVAILABLE = 31;</code>
@@ -735,7 +798,8 @@ public enum DiagnosticCode
   public static final int CANDIDATE_CLOSED_VALUE = 32;
   /**
    * <pre>
-   * DiagnosticCodeConstraintActivityNotFound integer value for a diagnostic coded as 'Constraint activity not found' type.
+   * DiagnosticCodeConstraintActivityNotFound integer value for a diagnostic coded as
+   * 'Constraint activity not found' type.
    * </pre>
    *
    * <code>CONSTRAINT_ACTIVITY_NOT_FOUND = 33;</code>
@@ -743,7 +807,8 @@ public enum DiagnosticCode
   public static final int CONSTRAINT_ACTIVITY_NOT_FOUND_VALUE = 33;
   /**
    * <pre>
-   * DiagnosticCodeConstraintAgentDoesNotHaveProficiency integer value for a diagnostic coded as 'Constraint agent does not have proficiency' type.
+   * DiagnosticCodeConstraintAgentDoesNotHaveProficiency integer value for a diagnostic coded as
+   * 'Constraint agent does not have proficiency' type.
    * </pre>
    *
    * <code>CONSTRAINT_AGENT_DOES_NOT_HAVE_PROFICIENCY = 34;</code>
@@ -751,7 +816,8 @@ public enum DiagnosticCode
   public static final int CONSTRAINT_AGENT_DOES_NOT_HAVE_PROFICIENCY_VALUE = 34;
   /**
    * <pre>
-   * DiagnosticCodeConstraintAgentProficiencyTooLow integer value for a diagnostic coded as 'Constraint agent proficiency too low' type.
+   * DiagnosticCodeConstraintAgentProficiencyTooLow integer value for a diagnostic coded as
+   * 'Constraint agent proficiency too low' type.
    * </pre>
    *
    * <code>CONSTRAINT_AGENT_PROFICIENCY_TOO_LOW = 35;</code>
@@ -759,7 +825,8 @@ public enum DiagnosticCode
   public static final int CONSTRAINT_AGENT_PROFICIENCY_TOO_LOW_VALUE = 35;
   /**
    * <pre>
-   * DiagnosticCodeConstraintMaxTotalOnFailure integer value for a diagnostic coded as 'Constraint max total on failure' type.
+   * DiagnosticCodeConstraintMaxTotalOnFailure integer value for a diagnostic coded as
+   * 'Constraint max total on failure' type.
    * </pre>
    *
    * <code>CONSTRAINT_MAX_TOTAL_ON_FAILURE = 36;</code>
@@ -767,7 +834,8 @@ public enum DiagnosticCode
   public static final int CONSTRAINT_MAX_TOTAL_ON_FAILURE_VALUE = 36;
   /**
    * <pre>
-   * DiagnosticCodeConstraintMinTotalOnFailure integer value for a diagnostic coded as 'Constraint min total on failure' type.
+   * DiagnosticCodeConstraintMinTotalOnFailure integer value for a diagnostic coded as
+   * 'Constraint min total on failure' type.
    * </pre>
    *
    * <code>CONSTRAINT_MIN_TOTAL_ON_FAILURE = 37;</code>
@@ -775,7 +843,8 @@ public enum DiagnosticCode
   public static final int CONSTRAINT_MIN_TOTAL_ON_FAILURE_VALUE = 37;
   /**
    * <pre>
-   * DiagnosticCodeConstraintMaxTotalOffFailure integer value for a diagnostic coded as 'Constraint max total off failure' type.
+   * DiagnosticCodeConstraintMaxTotalOffFailure integer value for a diagnostic coded as
+   * 'Constraint max total off failure' type.
    * </pre>
    *
    * <code>CONSTRAINT_MAX_TOTAL_OFF_FAILURE = 38;</code>
@@ -783,7 +852,8 @@ public enum DiagnosticCode
   public static final int CONSTRAINT_MAX_TOTAL_OFF_FAILURE_VALUE = 38;
   /**
    * <pre>
-   * DiagnosticCodeConstraintMinTotalOffFailure integer value for a diagnostic coded as 'Constraint min total off failure' type.
+   * DiagnosticCodeConstraintMinTotalOffFailure integer value for a diagnostic coded as
+   * 'Constraint min total off failure' type.
    * </pre>
    *
    * <code>CONSTRAINT_MIN_TOTAL_OFF_FAILURE = 39;</code>
@@ -791,7 +861,8 @@ public enum DiagnosticCode
   public static final int CONSTRAINT_MIN_TOTAL_OFF_FAILURE_VALUE = 39;
   /**
    * <pre>
-   * DiagnosticCodeConstraintMaxConsecOnFailure integer value for a diagnostic coded as 'Constraint max consec on failure' type.
+   * DiagnosticCodeConstraintMaxConsecOnFailure integer value for a diagnostic coded as
+   * 'Constraint max consec on failure' type.
    * </pre>
    *
    * <code>CONSTRAINT_MAX_CONSEC_ON_FAILURE = 40;</code>
@@ -799,7 +870,8 @@ public enum DiagnosticCode
   public static final int CONSTRAINT_MAX_CONSEC_ON_FAILURE_VALUE = 40;
   /**
    * <pre>
-   * DiagnosticCodeConstraintMinConsecOnFailure integer value for a diagnostic coded as 'Constraint min consec on failure' type.
+   * DiagnosticCodeConstraintMinConsecOnFailure integer value for a diagnostic coded as
+   * 'Constraint min consec on failure' type.
    * </pre>
    *
    * <code>CONSTRAINT_MIN_CONSEC_ON_FAILURE = 41;</code>
@@ -807,7 +879,8 @@ public enum DiagnosticCode
   public static final int CONSTRAINT_MIN_CONSEC_ON_FAILURE_VALUE = 41;
   /**
    * <pre>
-   * DiagnosticCodeConstraintMaxConsecOffFailure integer value for a diagnostic coded as 'Constraint max consec off failure' type.
+   * DiagnosticCodeConstraintMaxConsecOffFailure integer value for a diagnostic coded as
+   * 'Constraint max consec off failure' type.
    * </pre>
    *
    * <code>CONSTRAINT_MAX_CONSEC_OFF_FAILURE = 42;</code>
@@ -815,7 +888,8 @@ public enum DiagnosticCode
   public static final int CONSTRAINT_MAX_CONSEC_OFF_FAILURE_VALUE = 42;
   /**
    * <pre>
-   * DiagnosticCodeConstraintMinConsecOffFailure integer value for a diagnostic coded as 'Constraint min consec off failure' type.
+   * DiagnosticCodeConstraintMinConsecOffFailure integer value for a diagnostic coded as
+   * 'Constraint min consec off failure' type.
    * </pre>
    *
    * <code>CONSTRAINT_MIN_CONSEC_OFF_FAILURE = 43;</code>
@@ -823,7 +897,8 @@ public enum DiagnosticCode
   public static final int CONSTRAINT_MIN_CONSEC_OFF_FAILURE_VALUE = 43;
   /**
    * <pre>
-   * DiagnosticCodeConstraintCannotHaveDayWeekMonthYearShiftPerShift integer value for a diagnostic coded as 'Constraint cannot have day week month year shift per shift' type.
+   * DiagnosticCodeConstraintCannotHaveDayWeekMonthYearShiftPerShift integer value for a diagnostic coded as
+   * 'Constraint cannot have day week month year shift per shift' type.
    * </pre>
    *
    * <code>CONSTRAINT_CANNOT_HAVE_DAY_WEEK_MONTH_YEAR_SHIFT__PER_SHIFT = 44;</code>
@@ -831,7 +906,8 @@ public enum DiagnosticCode
   public static final int CONSTRAINT_CANNOT_HAVE_DAY_WEEK_MONTH_YEAR_SHIFT__PER_SHIFT_VALUE = 44;
   /**
    * <pre>
-   * DiagnosticCodeConstraintCannotHaveDayWeekMonthYearPerMinutesHours integer value for a diagnostic coded as 'Constraint cannot have day week month year per minutes hours' type.
+   * DiagnosticCodeConstraintCannotHaveDayWeekMonthYearPerMinutesHours integer value for a diagnostic coded as
+   * 'Constraint cannot have day week month year per minutes hours' type.
    * </pre>
    *
    * <code>CONSTRAINT_CANNOT_HAVE_DAY_WEEK_MONTH_YEAR__PER_MINUTES_HOURS = 45;</code>
@@ -839,7 +915,8 @@ public enum DiagnosticCode
   public static final int CONSTRAINT_CANNOT_HAVE_DAY_WEEK_MONTH_YEAR__PER_MINUTES_HOURS_VALUE = 45;
   /**
    * <pre>
-   * DiagnosticCodeConstraintConsecutiveShiftsRuleNotAllowed integer value for a diagnostic coded as 'Constraint consecutive shifts rule not allowed' type.
+   * DiagnosticCodeConstraintConsecutiveShiftsRuleNotAllowed integer value for a diagnostic coded as
+   * 'Constraint consecutive shifts rule not allowed' type.
    * </pre>
    *
    * <code>CONSTRAINT_CONSECUTIVE_SHIFTS_RULE_NOT_ALLOWED = 46;</code>
@@ -847,7 +924,8 @@ public enum DiagnosticCode
   public static final int CONSTRAINT_CONSECUTIVE_SHIFTS_RULE_NOT_ALLOWED_VALUE = 46;
   /**
    * <pre>
-   * DiagnosticCodeConstraintWithLargerPeriodPerSmallPeriodNotAllowed integer value for a diagnostic coded as 'Constraint with larger period per small period not allowed' type.
+   * DiagnosticCodeConstraintWithLargerPeriodPerSmallPeriodNotAllowed integer value for a diagnostic coded as
+   * 'Constraint with larger period per small period not allowed' type.
    * </pre>
    *
    * <code>CONSTRAINT_WITH_LARGER_PERIOD_PER_SMALL_PERIOD_NOT_ALLOWED = 47;</code>
@@ -855,7 +933,8 @@ public enum DiagnosticCode
   public static final int CONSTRAINT_WITH_LARGER_PERIOD_PER_SMALL_PERIOD_NOT_ALLOWED_VALUE = 47;
   /**
    * <pre>
-   * DiagnosticCodeConstraintMinMaxOffTimeForShiftsNotAllowed integer value for a diagnostic coded as 'Constraint min max off time for shifts not allowed' type.
+   * DiagnosticCodeConstraintMinMaxOffTimeForShiftsNotAllowed integer value for a diagnostic coded as
+   * 'Constraint min max off time for shifts not allowed' type.
    * </pre>
    *
    * <code>CONSTRAINT_MIN_MAX_OFF_TIME_FOR_SHIFTS_NOT_ALLOWED = 48;</code>
@@ -863,7 +942,8 @@ public enum DiagnosticCode
   public static final int CONSTRAINT_MIN_MAX_OFF_TIME_FOR_SHIFTS_NOT_ALLOWED_VALUE = 48;
   /**
    * <pre>
-   * DiagnosticCodeConstraintCannotHaveConsecutiveTimePerMultipleShifts integer value for a diagnostic coded as 'Constraint cannot have consecutive time per multiple shifts' type.
+   * DiagnosticCodeConstraintCannotHaveConsecutiveTimePerMultipleShifts integer value for a diagnostic coded as
+   * 'Constraint cannot have consecutive time per multiple shifts' type.
    * </pre>
    *
    * <code>CONSTRAINT_CANNOT_HAVE_CONSECUTIVE_TIME_PER_MULTIPLE_SHIFTS = 49;</code>

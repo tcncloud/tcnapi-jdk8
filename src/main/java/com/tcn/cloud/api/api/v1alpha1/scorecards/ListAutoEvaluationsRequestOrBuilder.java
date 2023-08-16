@@ -35,4 +35,31 @@ public interface ListAutoEvaluationsRequestOrBuilder extends
    * @return The scorecardIds at the given index.
    */
   long getScorecardIds(int index);
+
+  /**
+   * <pre>
+   * Optional, filter completed timestamp by a specific range
+   * </pre>
+   *
+   * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
+   * @return Whether the completedAt field is set.
+   */
+  boolean hasCompletedAt();
+  /**
+   * <pre>
+   * Optional, filter completed timestamp by a specific range
+   * </pre>
+   *
+   * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
+   * @return The completedAt.
+   */
+  com.tcn.cloud.api.api.commons.TimeFilter getCompletedAt();
+  /**
+   * <pre>
+   * Optional, filter completed timestamp by a specific range
+   * </pre>
+   *
+   * <code>.api.commons.TimeFilter completed_at = 3 [json_name = "completedAt"];</code>
+   */
+  com.tcn.cloud.api.api.commons.TimeFilterOrBuilder getCompletedAtOrBuilder();
 }
