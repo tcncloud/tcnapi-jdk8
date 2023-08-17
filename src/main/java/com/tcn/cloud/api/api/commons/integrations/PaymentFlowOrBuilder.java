@@ -155,6 +155,36 @@ public interface PaymentFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequestOrBuilder getPaywaySubmitAchAlertRequestOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.PaymentNewzwareCc newzware_cc = 11 [json_name = "newzwareCc"];</code>
+   * @return Whether the newzwareCc field is set.
+   */
+  boolean hasNewzwareCc();
+  /**
+   * <code>.api.commons.integrations.PaymentNewzwareCc newzware_cc = 11 [json_name = "newzwareCc"];</code>
+   * @return The newzwareCc.
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc getNewzwareCc();
+  /**
+   * <code>.api.commons.integrations.PaymentNewzwareCc newzware_cc = 11 [json_name = "newzwareCc"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCcOrBuilder getNewzwareCcOrBuilder();
+
+  /**
+   * <code>.api.commons.integrations.PaymentNewzwareAch newzware_ach = 12 [json_name = "newzwareAch"];</code>
+   * @return Whether the newzwareAch field is set.
+   */
+  boolean hasNewzwareAch();
+  /**
+   * <code>.api.commons.integrations.PaymentNewzwareAch newzware_ach = 12 [json_name = "newzwareAch"];</code>
+   * @return The newzwareAch.
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch getNewzwareAch();
+  /**
+   * <code>.api.commons.integrations.PaymentNewzwareAch newzware_ach = 12 [json_name = "newzwareAch"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAchOrBuilder getNewzwareAchOrBuilder();
+
+  /**
    * <pre>
    * the fields the user will use for the payment form
    * must be a subset of fields that is enough data to make the api call.
