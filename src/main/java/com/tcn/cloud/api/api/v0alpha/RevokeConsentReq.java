@@ -43,6 +43,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.RevokeConsentReq.class, com.tcn.cloud.api.api.v0alpha.RevokeConsentReq.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CONSENT_ID_FIELD_NUMBER = 1;
   private long consentId_ = 0L;
   /**
@@ -62,7 +63,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasRevoked() {
-    return revoked_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp revoked = 3 [json_name = "revoked"];</code>
@@ -250,7 +251,7 @@ private static final long serialVersionUID = 0L;
     if (consentId_ != 0L) {
       output.writeInt64(1, consentId_);
     }
-    if (revoked_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(3, getRevoked());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consentProfileId_)) {
@@ -281,7 +282,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, consentId_);
     }
-    if (revoked_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getRevoked());
     }
@@ -479,13 +480,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.RevokeConsentReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getRevokedFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -538,10 +545,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.consentId_ = consentId_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.revoked_ = revokedBuilder_ == null
             ? revoked_
             : revokedBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.consentProfileId_ = consentProfileId_;
@@ -558,6 +567,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.contentType_ = contentType_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -809,8 +819,10 @@ private static final long serialVersionUID = 0L;
       } else {
         revokedBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (revoked_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**

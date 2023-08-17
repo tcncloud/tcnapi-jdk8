@@ -48,6 +48,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketReq.class, com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketReq.Builder.class);
   }
 
+  private int bitField0_;
   public static final int TITLE_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object title_ = "";
@@ -169,7 +170,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDueDate() {
-    return dueDate_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -466,7 +467,7 @@ private static final long serialVersionUID = 0L;
     if (projectSid_ != 0L) {
       output.writeInt64(3, projectSid_);
     }
-    if (dueDate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(8, getDueDate());
     }
     for (int i = 0; i < metadata_.size(); i++) {
@@ -506,7 +507,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(3, projectSid_);
     }
-    if (dueDate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getDueDate());
     }
@@ -736,13 +737,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getDueDateFieldBuilder();
+        getMetadataFieldBuilder();
+        getTicketSkillsFieldBuilder();
+        getTicketSlaFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -853,10 +863,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.projectSid_ = projectSid_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.dueDate_ = dueDateBuilder_ == null
             ? dueDate_
             : dueDateBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.status_ = status_;
@@ -867,6 +879,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.assignOther_ = assignOther_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1451,8 +1464,10 @@ private static final long serialVersionUID = 0L;
       } else {
         dueDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (dueDate_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**

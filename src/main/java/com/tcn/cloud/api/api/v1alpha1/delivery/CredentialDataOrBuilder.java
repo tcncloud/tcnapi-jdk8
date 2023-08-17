@@ -82,20 +82,5 @@ public interface CredentialDataOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.delivery.AESPasswordOrBuilder getAesPasswordOrBuilder();
 
-  /**
-   * <code>.api.v1alpha1.delivery.UserDefaultSSH user_default_ssh = 6 [json_name = "userDefaultSsh"];</code>
-   * @return Whether the userDefaultSsh field is set.
-   */
-  boolean hasUserDefaultSsh();
-  /**
-   * <code>.api.v1alpha1.delivery.UserDefaultSSH user_default_ssh = 6 [json_name = "userDefaultSsh"];</code>
-   * @return The userDefaultSsh.
-   */
-  com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH getUserDefaultSsh();
-  /**
-   * <code>.api.v1alpha1.delivery.UserDefaultSSH user_default_ssh = 6 [json_name = "userDefaultSsh"];</code>
-   */
-  com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSHOrBuilder getUserDefaultSshOrBuilder();
-
   com.tcn.cloud.api.api.v1alpha1.delivery.CredentialData.DataCase getDataCase();
 }

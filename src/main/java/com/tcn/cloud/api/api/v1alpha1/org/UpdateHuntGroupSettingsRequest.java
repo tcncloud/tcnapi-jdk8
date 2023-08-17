@@ -42,6 +42,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupSettingsRequest.class, com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupSettingsRequest.Builder.class);
   }
 
+  private int bitField0_;
   public static final int HUNT_GROUP_SID_FIELD_NUMBER = 1;
   private long huntGroupSid_ = 0L;
   /**
@@ -69,7 +70,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasGeneralSettings() {
-    return generalSettings_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -107,7 +108,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCommunicationSettings() {
-    return communicationSettings_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -145,7 +146,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCallbackSettings() {
-    return callbackSettings_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -183,7 +184,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPreviewDialSettings() {
-    return previewDialSettings_ != null;
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <pre>
@@ -221,7 +222,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasManualDialSettings() {
-    return manualDialSettings_ != null;
+    return ((bitField0_ & 0x00000010) != 0);
   }
   /**
    * <pre>
@@ -259,7 +260,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTransferCallSettings() {
-    return transferCallSettings_ != null;
+    return ((bitField0_ & 0x00000020) != 0);
   }
   /**
    * <pre>
@@ -297,7 +298,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasNumberHistorySettings() {
-    return numberHistorySettings_ != null;
+    return ((bitField0_ & 0x00000040) != 0);
   }
   /**
    * <pre>
@@ -335,7 +336,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasFieldMask() {
-    return fieldMask_ != null;
+    return ((bitField0_ & 0x00000080) != 0);
   }
   /**
    * <pre>
@@ -378,28 +379,28 @@ private static final long serialVersionUID = 0L;
     if (huntGroupSid_ != 0L) {
       output.writeInt64(1, huntGroupSid_);
     }
-    if (generalSettings_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getGeneralSettings());
     }
-    if (communicationSettings_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(3, getCommunicationSettings());
     }
-    if (callbackSettings_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(4, getCallbackSettings());
     }
-    if (previewDialSettings_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(5, getPreviewDialSettings());
     }
-    if (manualDialSettings_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       output.writeMessage(6, getManualDialSettings());
     }
-    if (transferCallSettings_ != null) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       output.writeMessage(7, getTransferCallSettings());
     }
-    if (numberHistorySettings_ != null) {
+    if (((bitField0_ & 0x00000040) != 0)) {
       output.writeMessage(8, getNumberHistorySettings());
     }
-    if (fieldMask_ != null) {
+    if (((bitField0_ & 0x00000080) != 0)) {
       output.writeMessage(100, getFieldMask());
     }
     getUnknownFields().writeTo(output);
@@ -415,35 +416,35 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, huntGroupSid_);
     }
-    if (generalSettings_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getGeneralSettings());
     }
-    if (communicationSettings_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getCommunicationSettings());
     }
-    if (callbackSettings_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getCallbackSettings());
     }
-    if (previewDialSettings_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getPreviewDialSettings());
     }
-    if (manualDialSettings_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getManualDialSettings());
     }
-    if (transferCallSettings_ != null) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getTransferCallSettings());
     }
-    if (numberHistorySettings_ != null) {
+    if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getNumberHistorySettings());
     }
-    if (fieldMask_ != null) {
+    if (((bitField0_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(100, getFieldMask());
     }
@@ -673,13 +674,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.UpdateHuntGroupSettingsRequest.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getGeneralSettingsFieldBuilder();
+        getCommunicationSettingsFieldBuilder();
+        getCallbackSettingsFieldBuilder();
+        getPreviewDialSettingsFieldBuilder();
+        getManualDialSettingsFieldBuilder();
+        getTransferCallSettingsFieldBuilder();
+        getNumberHistorySettingsFieldBuilder();
+        getFieldMaskFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -762,46 +776,56 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.huntGroupSid_ = huntGroupSid_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.generalSettings_ = generalSettingsBuilder_ == null
             ? generalSettings_
             : generalSettingsBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.communicationSettings_ = communicationSettingsBuilder_ == null
             ? communicationSettings_
             : communicationSettingsBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.callbackSettings_ = callbackSettingsBuilder_ == null
             ? callbackSettings_
             : callbackSettingsBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.previewDialSettings_ = previewDialSettingsBuilder_ == null
             ? previewDialSettings_
             : previewDialSettingsBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.manualDialSettings_ = manualDialSettingsBuilder_ == null
             ? manualDialSettings_
             : manualDialSettingsBuilder_.build();
+        to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.transferCallSettings_ = transferCallSettingsBuilder_ == null
             ? transferCallSettings_
             : transferCallSettingsBuilder_.build();
+        to_bitField0_ |= 0x00000020;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.numberHistorySettings_ = numberHistorySettingsBuilder_ == null
             ? numberHistorySettings_
             : numberHistorySettingsBuilder_.build();
+        to_bitField0_ |= 0x00000040;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.fieldMask_ = fieldMaskBuilder_ == null
             ? fieldMask_
             : fieldMaskBuilder_.build();
+        to_bitField0_ |= 0x00000080;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1109,8 +1133,10 @@ private static final long serialVersionUID = 0L;
       } else {
         generalSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (generalSettings_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1264,8 +1290,10 @@ private static final long serialVersionUID = 0L;
       } else {
         communicationSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (communicationSettings_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1419,8 +1447,10 @@ private static final long serialVersionUID = 0L;
       } else {
         callbackSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (callbackSettings_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1574,8 +1604,10 @@ private static final long serialVersionUID = 0L;
       } else {
         previewDialSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (previewDialSettings_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1729,8 +1761,10 @@ private static final long serialVersionUID = 0L;
       } else {
         manualDialSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (manualDialSettings_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1884,8 +1918,10 @@ private static final long serialVersionUID = 0L;
       } else {
         transferCallSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (transferCallSettings_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2039,8 +2075,10 @@ private static final long serialVersionUID = 0L;
       } else {
         numberHistorySettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+      if (numberHistorySettings_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2194,8 +2232,10 @@ private static final long serialVersionUID = 0L;
       } else {
         fieldMaskBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+      if (fieldMask_ != null) {
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
       return this;
     }
     /**

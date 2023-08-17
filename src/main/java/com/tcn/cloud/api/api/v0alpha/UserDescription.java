@@ -58,6 +58,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.UserDescription.class, com.tcn.cloud.api.api.v0alpha.UserDescription.Builder.class);
   }
 
+  private int bitField0_;
   public static final int USER_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object userId_ = "";
@@ -697,7 +698,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCreated() {
-    return created_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp created = 163 [json_name = "created"];</code>
@@ -723,7 +724,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastUpdated() {
-    return lastUpdated_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp last_updated = 164 [json_name = "lastUpdated"];</code>
@@ -830,7 +831,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTimeZoneOverride() {
-    return timeZoneOverride_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -1097,16 +1098,16 @@ private static final long serialVersionUID = 0L;
     if (strikeCount_ != 0) {
       output.writeInt32(110, strikeCount_);
     }
-    if (created_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(163, getCreated());
     }
-    if (lastUpdated_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(164, getLastUpdated());
     }
     if (delegated_ != false) {
       output.writeBool(166, delegated_);
     }
-    if (timeZoneOverride_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(167, getTimeZoneOverride());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
@@ -1206,11 +1207,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(110, strikeCount_);
     }
-    if (created_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(163, getCreated());
     }
-    if (lastUpdated_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(164, getLastUpdated());
     }
@@ -1218,7 +1219,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(166, delegated_);
     }
-    if (timeZoneOverride_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(167, getTimeZoneOverride());
     }
@@ -1528,13 +1529,24 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.UserDescription.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getPermissionGroupsFieldBuilder();
+        getCreatedFieldBuilder();
+        getLastUpdatedFieldBuilder();
+        getLabelEntitiesFieldBuilder();
+        getTimeZoneOverrideFieldBuilder();
+        getTrustsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -1720,15 +1732,18 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00040000) != 0)) {
         result.strikeCount_ = strikeCount_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00080000) != 0)) {
         result.created_ = createdBuilder_ == null
             ? created_
             : createdBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00100000) != 0)) {
         result.lastUpdated_ = lastUpdatedBuilder_ == null
             ? lastUpdated_
             : lastUpdatedBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00400000) != 0)) {
         result.delegated_ = delegated_;
@@ -1737,6 +1752,7 @@ private static final long serialVersionUID = 0L;
         result.timeZoneOverride_ = timeZoneOverrideBuilder_ == null
             ? timeZoneOverride_
             : timeZoneOverrideBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x01000000) != 0)) {
         result.email_ = email_;
@@ -1747,6 +1763,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x04000000) != 0)) {
         result.huntGroupName_ = huntGroupName_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -3761,8 +3778,10 @@ private static final long serialVersionUID = 0L;
       } else {
         createdBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00080000;
-      onChanged();
+      if (created_ != null) {
+        bitField0_ |= 0x00080000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3880,8 +3899,10 @@ private static final long serialVersionUID = 0L;
       } else {
         lastUpdatedBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00100000;
-      onChanged();
+      if (lastUpdated_ != null) {
+        bitField0_ |= 0x00100000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -4378,8 +4399,10 @@ private static final long serialVersionUID = 0L;
       } else {
         timeZoneOverrideBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00800000;
-      onChanged();
+      if (timeZoneOverride_ != null) {
+        bitField0_ |= 0x00800000;
+        onChanged();
+      }
       return this;
     }
     /**

@@ -39,6 +39,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.integrations.PaymentPortal.class, com.tcn.cloud.api.api.v1alpha1.integrations.PaymentPortal.Builder.class);
   }
 
+  private int bitField0_;
   public static final int VERIFICATION_FIELD_NUMBER = 8;
   private com.tcn.cloud.api.api.commons.integrations.VerificationFlow verification_;
   /**
@@ -47,7 +48,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVerification() {
-    return verification_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.commons.integrations.VerificationFlow verification = 8 [json_name = "verification"];</code>
@@ -73,7 +74,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasInvoice() {
-    return invoice_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.api.commons.integrations.InvoiceFlow invoice = 9 [json_name = "invoice"];</code>
@@ -140,7 +141,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPortalText() {
-    return portalText_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <code>.api.v1alpha1.integrations.PortalText portal_text = 20 [json_name = "portalText"];</code>
@@ -172,16 +173,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (verification_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(8, getVerification());
     }
-    if (invoice_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(9, getInvoice());
     }
     for (int i = 0; i < payments_.size(); i++) {
       output.writeMessage(10, payments_.get(i));
     }
-    if (portalText_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(20, getPortalText());
     }
     getUnknownFields().writeTo(output);
@@ -193,11 +194,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (verification_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getVerification());
     }
-    if (invoice_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getInvoice());
     }
@@ -205,7 +206,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, payments_.get(i));
     }
-    if (portalText_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(20, getPortalText());
     }
@@ -387,13 +388,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.PaymentPortal.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getVerificationFieldBuilder();
+        getInvoiceFieldBuilder();
+        getPaymentsFieldBuilder();
+        getPortalTextFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -467,21 +477,26 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.PaymentPortal result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.verification_ = verificationBuilder_ == null
             ? verification_
             : verificationBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.invoice_ = invoiceBuilder_ == null
             ? invoice_
             : invoiceBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.portalText_ = portalTextBuilder_ == null
             ? portalText_
             : portalTextBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -706,8 +721,10 @@ private static final long serialVersionUID = 0L;
       } else {
         verificationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (verification_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -825,8 +842,10 @@ private static final long serialVersionUID = 0L;
       } else {
         invoiceBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (invoice_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1184,8 +1203,10 @@ private static final long serialVersionUID = 0L;
       } else {
         portalTextBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (portalText_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**

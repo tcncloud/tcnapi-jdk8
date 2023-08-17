@@ -43,6 +43,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.SmsNumbers.class, com.tcn.cloud.api.api.v0alpha.SmsNumbers.Builder.class);
   }
 
+  private int bitField0_;
   public static final int SMS_NUMBER_SID_FIELD_NUMBER = 1;
   private long smsNumberSid_ = 0L;
   /**
@@ -190,7 +191,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasIvrReference() {
-    return ivrReference_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.google.protobuf.StringValue ivr_reference = 6 [json_name = "ivrReference"];</code>
@@ -305,7 +306,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastUpdated() {
-    return lastUpdated_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp last_updated = 10 [json_name = "lastUpdated"];</code>
@@ -352,7 +353,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(notes_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, notes_);
     }
-    if (ivrReference_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(6, getIvrReference());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientName_)) {
@@ -364,7 +365,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(srcNumberType_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, srcNumberType_);
     }
-    if (lastUpdated_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(10, getLastUpdated());
     }
     getUnknownFields().writeTo(output);
@@ -393,7 +394,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(notes_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, notes_);
     }
-    if (ivrReference_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getIvrReference());
     }
@@ -407,7 +408,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(srcNumberType_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, srcNumberType_);
     }
-    if (lastUpdated_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getLastUpdated());
     }
@@ -609,13 +610,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.SmsNumbers.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getIvrReferenceFieldBuilder();
+        getLastUpdatedFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -687,10 +695,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.notes_ = notes_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.ivrReference_ = ivrReferenceBuilder_ == null
             ? ivrReference_
             : ivrReferenceBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.clientName_ = clientName_;
@@ -705,7 +715,9 @@ private static final long serialVersionUID = 0L;
         result.lastUpdated_ = lastUpdatedBuilder_ == null
             ? lastUpdated_
             : lastUpdatedBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1235,8 +1247,10 @@ private static final long serialVersionUID = 0L;
       } else {
         ivrReferenceBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (ivrReference_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1530,8 +1544,10 @@ private static final long serialVersionUID = 0L;
       } else {
         lastUpdatedBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000200;
-      onChanged();
+      if (lastUpdated_ != null) {
+        bitField0_ |= 0x00000200;
+        onChanged();
+      }
       return this;
     }
     /**

@@ -49,7 +49,6 @@ private static final long serialVersionUID = 0L;
     SSH_KEY_PAIR(3),
     PGP_KEY_PAIR(4),
     AES_PASSWORD(5),
-    USER_DEFAULT_SSH(6),
     DATA_NOT_SET(0);
     private final int value;
     private DataCase(int value) {
@@ -72,7 +71,6 @@ private static final long serialVersionUID = 0L;
         case 3: return SSH_KEY_PAIR;
         case 4: return PGP_KEY_PAIR;
         case 5: return AES_PASSWORD;
-        case 6: return USER_DEFAULT_SSH;
         case 0: return DATA_NOT_SET;
         default: return null;
       }
@@ -243,37 +241,6 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v1alpha1.delivery.AESPassword.getDefaultInstance();
   }
 
-  public static final int USER_DEFAULT_SSH_FIELD_NUMBER = 6;
-  /**
-   * <code>.api.v1alpha1.delivery.UserDefaultSSH user_default_ssh = 6 [json_name = "userDefaultSsh"];</code>
-   * @return Whether the userDefaultSsh field is set.
-   */
-  @java.lang.Override
-  public boolean hasUserDefaultSsh() {
-    return dataCase_ == 6;
-  }
-  /**
-   * <code>.api.v1alpha1.delivery.UserDefaultSSH user_default_ssh = 6 [json_name = "userDefaultSsh"];</code>
-   * @return The userDefaultSsh.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH getUserDefaultSsh() {
-    if (dataCase_ == 6) {
-       return (com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH) data_;
-    }
-    return com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH.getDefaultInstance();
-  }
-  /**
-   * <code>.api.v1alpha1.delivery.UserDefaultSSH user_default_ssh = 6 [json_name = "userDefaultSsh"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSHOrBuilder getUserDefaultSshOrBuilder() {
-    if (dataCase_ == 6) {
-       return (com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH) data_;
-    }
-    return com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH.getDefaultInstance();
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -303,9 +270,6 @@ private static final long serialVersionUID = 0L;
     if (dataCase_ == 5) {
       output.writeMessage(5, (com.tcn.cloud.api.api.v1alpha1.delivery.AESPassword) data_);
     }
-    if (dataCase_ == 6) {
-      output.writeMessage(6, (com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH) data_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -334,10 +298,6 @@ private static final long serialVersionUID = 0L;
     if (dataCase_ == 5) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, (com.tcn.cloud.api.api.v1alpha1.delivery.AESPassword) data_);
-    }
-    if (dataCase_ == 6) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, (com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH) data_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -376,10 +336,6 @@ private static final long serialVersionUID = 0L;
         if (!getAesPassword()
             .equals(other.getAesPassword())) return false;
         break;
-      case 6:
-        if (!getUserDefaultSsh()
-            .equals(other.getUserDefaultSsh())) return false;
-        break;
       case 0:
       default:
     }
@@ -414,10 +370,6 @@ private static final long serialVersionUID = 0L;
       case 5:
         hash = (37 * hash) + AES_PASSWORD_FIELD_NUMBER;
         hash = (53 * hash) + getAesPassword().hashCode();
-        break;
-      case 6:
-        hash = (37 * hash) + USER_DEFAULT_SSH_FIELD_NUMBER;
-        hash = (53 * hash) + getUserDefaultSsh().hashCode();
         break;
       case 0:
       default:
@@ -568,9 +520,6 @@ private static final long serialVersionUID = 0L;
       if (aesPasswordBuilder_ != null) {
         aesPasswordBuilder_.clear();
       }
-      if (userDefaultSshBuilder_ != null) {
-        userDefaultSshBuilder_.clear();
-      }
       dataCase_ = 0;
       data_ = null;
       return this;
@@ -631,10 +580,6 @@ private static final long serialVersionUID = 0L;
       if (dataCase_ == 5 &&
           aesPasswordBuilder_ != null) {
         result.data_ = aesPasswordBuilder_.build();
-      }
-      if (dataCase_ == 6 &&
-          userDefaultSshBuilder_ != null) {
-        result.data_ = userDefaultSshBuilder_.build();
       }
     }
 
@@ -703,10 +648,6 @@ private static final long serialVersionUID = 0L;
           mergeAesPassword(other.getAesPassword());
           break;
         }
-        case USER_DEFAULT_SSH: {
-          mergeUserDefaultSsh(other.getUserDefaultSsh());
-          break;
-        }
         case DATA_NOT_SET: {
           break;
         }
@@ -772,13 +713,6 @@ private static final long serialVersionUID = 0L;
               dataCase_ = 5;
               break;
             } // case 42
-            case 50: {
-              input.readMessage(
-                  getUserDefaultSshFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              dataCase_ = 6;
-              break;
-            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1519,148 +1453,6 @@ private static final long serialVersionUID = 0L;
       dataCase_ = 5;
       onChanged();
       return aesPasswordBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH, com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSHOrBuilder> userDefaultSshBuilder_;
-    /**
-     * <code>.api.v1alpha1.delivery.UserDefaultSSH user_default_ssh = 6 [json_name = "userDefaultSsh"];</code>
-     * @return Whether the userDefaultSsh field is set.
-     */
-    @java.lang.Override
-    public boolean hasUserDefaultSsh() {
-      return dataCase_ == 6;
-    }
-    /**
-     * <code>.api.v1alpha1.delivery.UserDefaultSSH user_default_ssh = 6 [json_name = "userDefaultSsh"];</code>
-     * @return The userDefaultSsh.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH getUserDefaultSsh() {
-      if (userDefaultSshBuilder_ == null) {
-        if (dataCase_ == 6) {
-          return (com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH) data_;
-        }
-        return com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH.getDefaultInstance();
-      } else {
-        if (dataCase_ == 6) {
-          return userDefaultSshBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.v1alpha1.delivery.UserDefaultSSH user_default_ssh = 6 [json_name = "userDefaultSsh"];</code>
-     */
-    public Builder setUserDefaultSsh(com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH value) {
-      if (userDefaultSshBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        data_ = value;
-        onChanged();
-      } else {
-        userDefaultSshBuilder_.setMessage(value);
-      }
-      dataCase_ = 6;
-      return this;
-    }
-    /**
-     * <code>.api.v1alpha1.delivery.UserDefaultSSH user_default_ssh = 6 [json_name = "userDefaultSsh"];</code>
-     */
-    public Builder setUserDefaultSsh(
-        com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH.Builder builderForValue) {
-      if (userDefaultSshBuilder_ == null) {
-        data_ = builderForValue.build();
-        onChanged();
-      } else {
-        userDefaultSshBuilder_.setMessage(builderForValue.build());
-      }
-      dataCase_ = 6;
-      return this;
-    }
-    /**
-     * <code>.api.v1alpha1.delivery.UserDefaultSSH user_default_ssh = 6 [json_name = "userDefaultSsh"];</code>
-     */
-    public Builder mergeUserDefaultSsh(com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH value) {
-      if (userDefaultSshBuilder_ == null) {
-        if (dataCase_ == 6 &&
-            data_ != com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH.getDefaultInstance()) {
-          data_ = com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH.newBuilder((com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH) data_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          data_ = value;
-        }
-        onChanged();
-      } else {
-        if (dataCase_ == 6) {
-          userDefaultSshBuilder_.mergeFrom(value);
-        } else {
-          userDefaultSshBuilder_.setMessage(value);
-        }
-      }
-      dataCase_ = 6;
-      return this;
-    }
-    /**
-     * <code>.api.v1alpha1.delivery.UserDefaultSSH user_default_ssh = 6 [json_name = "userDefaultSsh"];</code>
-     */
-    public Builder clearUserDefaultSsh() {
-      if (userDefaultSshBuilder_ == null) {
-        if (dataCase_ == 6) {
-          dataCase_ = 0;
-          data_ = null;
-          onChanged();
-        }
-      } else {
-        if (dataCase_ == 6) {
-          dataCase_ = 0;
-          data_ = null;
-        }
-        userDefaultSshBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.v1alpha1.delivery.UserDefaultSSH user_default_ssh = 6 [json_name = "userDefaultSsh"];</code>
-     */
-    public com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH.Builder getUserDefaultSshBuilder() {
-      return getUserDefaultSshFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.v1alpha1.delivery.UserDefaultSSH user_default_ssh = 6 [json_name = "userDefaultSsh"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSHOrBuilder getUserDefaultSshOrBuilder() {
-      if ((dataCase_ == 6) && (userDefaultSshBuilder_ != null)) {
-        return userDefaultSshBuilder_.getMessageOrBuilder();
-      } else {
-        if (dataCase_ == 6) {
-          return (com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH) data_;
-        }
-        return com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.v1alpha1.delivery.UserDefaultSSH user_default_ssh = 6 [json_name = "userDefaultSsh"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH, com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSHOrBuilder> 
-        getUserDefaultSshFieldBuilder() {
-      if (userDefaultSshBuilder_ == null) {
-        if (!(dataCase_ == 6)) {
-          data_ = com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH.getDefaultInstance();
-        }
-        userDefaultSshBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH, com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSHOrBuilder>(
-                (com.tcn.cloud.api.api.v1alpha1.delivery.UserDefaultSSH) data_,
-                getParentForChildren(),
-                isClean());
-        data_ = null;
-      }
-      dataCase_ = 6;
-      onChanged();
-      return userDefaultSshBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

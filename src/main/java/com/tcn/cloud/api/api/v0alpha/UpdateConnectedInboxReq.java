@@ -42,6 +42,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.UpdateConnectedInboxReq.class, com.tcn.cloud.api.api.v0alpha.UpdateConnectedInboxReq.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CONNECTED_INBOX_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.ConnectedInbox connectedInbox_;
   /**
@@ -54,7 +55,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConnectedInbox() {
-    return connectedInbox_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -92,7 +93,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasFieldMask() {
-    return fieldMask_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -132,10 +133,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (connectedInbox_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getConnectedInbox());
     }
-    if (fieldMask_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(2, getFieldMask());
     }
     getUnknownFields().writeTo(output);
@@ -147,11 +148,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (connectedInbox_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getConnectedInbox());
     }
-    if (fieldMask_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getFieldMask());
     }
@@ -322,13 +323,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.UpdateConnectedInboxReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getConnectedInboxFieldBuilder();
+        getFieldMaskFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -377,16 +385,20 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.UpdateConnectedInboxReq result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.connectedInbox_ = connectedInboxBuilder_ == null
             ? connectedInbox_
             : connectedInboxBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.fieldMask_ = fieldMaskBuilder_ == null
             ? fieldMask_
             : fieldMaskBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -582,8 +594,10 @@ private static final long serialVersionUID = 0L;
       } else {
         connectedInboxBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (connectedInbox_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -737,8 +751,10 @@ private static final long serialVersionUID = 0L;
       } else {
         fieldMaskBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (fieldMask_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**

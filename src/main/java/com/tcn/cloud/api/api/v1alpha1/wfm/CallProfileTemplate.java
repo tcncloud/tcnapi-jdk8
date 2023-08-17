@@ -43,6 +43,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.CallProfileTemplate.class, com.tcn.cloud.api.api.v1alpha1.wfm.CallProfileTemplate.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CALL_PROFILE_TEMPLATE_SID_FIELD_NUMBER = 1;
   private long callProfileTemplateSid_ = 0L;
   /**
@@ -117,7 +118,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTotalCallsProfile() {
-    return totalCallsProfile_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -155,7 +156,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTotalAbandonedCallsProfile() {
-    return totalAbandonedCallsProfile_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -193,7 +194,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAverageSpeedOfAnswerProfile() {
-    return averageSpeedOfAnswerProfile_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -231,7 +232,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAverageHandleTimeProfile() {
-    return averageHandleTimeProfile_ != null;
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <pre>
@@ -269,7 +270,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAverageAfterCallWorkProfile() {
-    return averageAfterCallWorkProfile_ != null;
+    return ((bitField0_ & 0x00000010) != 0);
   }
   /**
    * <pre>
@@ -307,7 +308,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAverageTimeToAbortProfile() {
-    return averageTimeToAbortProfile_ != null;
+    return ((bitField0_ & 0x00000020) != 0);
   }
   /**
    * <pre>
@@ -428,22 +429,22 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
     }
-    if (totalCallsProfile_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(3, getTotalCallsProfile());
     }
-    if (totalAbandonedCallsProfile_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(4, getTotalAbandonedCallsProfile());
     }
-    if (averageSpeedOfAnswerProfile_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(5, getAverageSpeedOfAnswerProfile());
     }
-    if (averageHandleTimeProfile_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(6, getAverageHandleTimeProfile());
     }
-    if (averageAfterCallWorkProfile_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       output.writeMessage(7, getAverageAfterCallWorkProfile());
     }
-    if (averageTimeToAbortProfile_ != null) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       output.writeMessage(8, getAverageTimeToAbortProfile());
     }
     if (java.lang.Float.floatToRawIntBits(fixedAverageSpeedOfAnswer_) != 0) {
@@ -477,27 +478,27 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
     }
-    if (totalCallsProfile_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getTotalCallsProfile());
     }
-    if (totalAbandonedCallsProfile_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getTotalAbandonedCallsProfile());
     }
-    if (averageSpeedOfAnswerProfile_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getAverageSpeedOfAnswerProfile());
     }
-    if (averageHandleTimeProfile_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getAverageHandleTimeProfile());
     }
-    if (averageAfterCallWorkProfile_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getAverageAfterCallWorkProfile());
     }
-    if (averageTimeToAbortProfile_ != null) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getAverageTimeToAbortProfile());
     }
@@ -762,13 +763,24 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.CallProfileTemplate.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getTotalCallsProfileFieldBuilder();
+        getTotalAbandonedCallsProfileFieldBuilder();
+        getAverageSpeedOfAnswerProfileFieldBuilder();
+        getAverageHandleTimeProfileFieldBuilder();
+        getAverageAfterCallWorkProfileFieldBuilder();
+        getAverageTimeToAbortProfileFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -850,35 +862,42 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.name_ = name_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.totalCallsProfile_ = totalCallsProfileBuilder_ == null
             ? totalCallsProfile_
             : totalCallsProfileBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.totalAbandonedCallsProfile_ = totalAbandonedCallsProfileBuilder_ == null
             ? totalAbandonedCallsProfile_
             : totalAbandonedCallsProfileBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.averageSpeedOfAnswerProfile_ = averageSpeedOfAnswerProfileBuilder_ == null
             ? averageSpeedOfAnswerProfile_
             : averageSpeedOfAnswerProfileBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.averageHandleTimeProfile_ = averageHandleTimeProfileBuilder_ == null
             ? averageHandleTimeProfile_
             : averageHandleTimeProfileBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.averageAfterCallWorkProfile_ = averageAfterCallWorkProfileBuilder_ == null
             ? averageAfterCallWorkProfile_
             : averageAfterCallWorkProfileBuilder_.build();
+        to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.averageTimeToAbortProfile_ = averageTimeToAbortProfileBuilder_ == null
             ? averageTimeToAbortProfile_
             : averageTimeToAbortProfileBuilder_.build();
+        to_bitField0_ |= 0x00000020;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.fixedAverageSpeedOfAnswer_ = fixedAverageSpeedOfAnswer_;
@@ -895,6 +914,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.defaultToFixedAveragesForecast_ = defaultToFixedAveragesForecast_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1324,8 +1344,10 @@ private static final long serialVersionUID = 0L;
       } else {
         totalCallsProfileBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (totalCallsProfile_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1479,8 +1501,10 @@ private static final long serialVersionUID = 0L;
       } else {
         totalAbandonedCallsProfileBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (totalAbandonedCallsProfile_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1634,8 +1658,10 @@ private static final long serialVersionUID = 0L;
       } else {
         averageSpeedOfAnswerProfileBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (averageSpeedOfAnswerProfile_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1789,8 +1815,10 @@ private static final long serialVersionUID = 0L;
       } else {
         averageHandleTimeProfileBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (averageHandleTimeProfile_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1944,8 +1972,10 @@ private static final long serialVersionUID = 0L;
       } else {
         averageAfterCallWorkProfileBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (averageAfterCallWorkProfile_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2099,8 +2129,10 @@ private static final long serialVersionUID = 0L;
       } else {
         averageTimeToAbortProfileBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+      if (averageTimeToAbortProfile_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       return this;
     }
     /**

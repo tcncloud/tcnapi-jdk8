@@ -42,6 +42,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsReq.class, com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsReq.Builder.class);
   }
 
+  private int bitField0_;
   public static final int DRAFT_SCHEDULE_SID_FIELD_NUMBER = 1;
   private long draftScheduleSid_ = 0L;
   /**
@@ -69,7 +70,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasViewingRange() {
-    return viewingRange_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -127,7 +128,7 @@ private static final long serialVersionUID = 0L;
     if (draftScheduleSid_ != 0L) {
       output.writeInt64(1, draftScheduleSid_);
     }
-    if (viewingRange_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getViewingRange());
     }
     if (intervalWidthInMinutes_ != 0) {
@@ -146,7 +147,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, draftScheduleSid_);
     }
-    if (viewingRange_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getViewingRange());
     }
@@ -321,13 +322,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getViewingRangeFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -376,14 +383,17 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.draftScheduleSid_ = draftScheduleSid_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.viewingRange_ = viewingRangeBuilder_ == null
             ? viewingRange_
             : viewingRangeBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.intervalWidthInMinutes_ = intervalWidthInMinutes_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -629,8 +639,10 @@ private static final long serialVersionUID = 0L;
       } else {
         viewingRangeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (viewingRange_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
