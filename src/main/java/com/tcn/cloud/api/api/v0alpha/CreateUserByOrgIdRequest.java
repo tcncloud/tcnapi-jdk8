@@ -57,6 +57,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.CreateUserByOrgIdRequest.class, com.tcn.cloud.api.api.v0alpha.CreateUserByOrgIdRequest.Builder.class);
   }
 
+  private int bitField0_;
   public static final int ORG_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
@@ -660,7 +661,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTimeZoneOverride() {
-    return timeZoneOverride_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -748,7 +749,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < labels_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 22, labels_.getRaw(i));
     }
-    if (timeZoneOverride_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(23, getTimeZoneOverride());
     }
     getUnknownFields().writeTo(output);
@@ -830,7 +831,7 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 2 * getLabelsList().size();
     }
-    if (timeZoneOverride_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(23, getTimeZoneOverride());
     }
@@ -1060,13 +1061,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CreateUserByOrgIdRequest.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getTimeZoneOverrideFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -1182,11 +1189,14 @@ private static final long serialVersionUID = 0L;
         labels_.makeImmutable();
         result.labels_ = labels_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00010000) != 0)) {
         result.timeZoneOverride_ = timeZoneOverrideBuilder_ == null
             ? timeZoneOverride_
             : timeZoneOverrideBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -2857,8 +2867,10 @@ private static final long serialVersionUID = 0L;
       } else {
         timeZoneOverrideBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00010000;
-      onChanged();
+      if (timeZoneOverride_ != null) {
+        bitField0_ |= 0x00010000;
+        onChanged();
+      }
       return this;
     }
     /**

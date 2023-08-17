@@ -42,6 +42,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.GetDataReq.class, com.tcn.cloud.api.api.v0alpha.GetDataReq.Builder.class);
   }
 
+  private int bitField0_;
   public static final int GROUPINGS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.Grouping> groupings_;
@@ -128,7 +129,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasFilter() {
-    return filter_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.v0alpha.Filter filter = 4 [json_name = "filter"];</code>
@@ -229,7 +230,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < fieldDatapointIds_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, fieldDatapointIds_.getRaw(i));
     }
-    if (filter_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(4, getFilter());
     }
     if (resultsOnEveryLevel_ != false) {
@@ -262,7 +263,7 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getFieldDatapointIdsList().size();
     }
-    if (filter_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getFilter());
     }
@@ -460,13 +461,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetDataReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getGroupingsFieldBuilder();
+        getFilterFieldBuilder();
+        getOrdersFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -554,10 +563,12 @@ private static final long serialVersionUID = 0L;
         fieldDatapointIds_.makeImmutable();
         result.fieldDatapointIds_ = fieldDatapointIds_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.filter_ = filterBuilder_ == null
             ? filter_
             : filterBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.resultsOnEveryLevel_ = resultsOnEveryLevel_;
@@ -565,6 +576,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.limit_ = limit_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1191,8 +1203,10 @@ private static final long serialVersionUID = 0L;
       } else {
         filterBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (filter_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**

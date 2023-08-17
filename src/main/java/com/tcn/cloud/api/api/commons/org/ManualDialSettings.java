@@ -2405,6 +2405,7 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  private int bitField0_;
   public static final int ENABLE_MANUAL_DIAL_FIELD_NUMBER = 1;
   private boolean enableManualDial_ = false;
   /**
@@ -2585,7 +2586,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasNaturalComplianceScrub() {
-    return naturalComplianceScrub_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -2623,7 +2624,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasScrubOverride() {
-    return scrubOverride_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -2810,7 +2811,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDefaultCallerId() {
-    return defaultCallerId_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -2933,7 +2934,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasNaturalLanguageComplianceMetadata() {
-    return naturalLanguageComplianceMetadata_ != null;
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <pre>
@@ -3164,10 +3165,10 @@ private static final long serialVersionUID = 0L;
     if (timeZoneValidationPostalCode_ != com.tcn.cloud.api.api.commons.ManualDialTimeZoneValidation.MANUAL_DIAL_TIME_ZONE_VALIDATION_DISABLED.getNumber()) {
       output.writeEnum(6, timeZoneValidationPostalCode_);
     }
-    if (naturalComplianceScrub_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(7, getNaturalComplianceScrub());
     }
-    if (scrubOverride_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(8, getScrubOverride());
     }
     if (enableWhitelist_ != false) {
@@ -3194,7 +3195,7 @@ private static final long serialVersionUID = 0L;
     if (enableCustomizableCallerId_ != false) {
       output.writeBool(16, enableCustomizableCallerId_);
     }
-    if (defaultCallerId_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(17, getDefaultCallerId());
     }
     if (enableCallerIdBucket_ != false) {
@@ -3212,7 +3213,7 @@ private static final long serialVersionUID = 0L;
     if (enableSipAddress_ != false) {
       output.writeBool(22, enableSipAddress_);
     }
-    if (naturalLanguageComplianceMetadata_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(23, getNaturalLanguageComplianceMetadata());
     }
     if (dataDipScope_ != com.tcn.cloud.api.api.commons.ManualDialDataDipScope.MANUAL_DIAL_DATA_DIP_SCOPE_DISABLED.getNumber()) {
@@ -3265,11 +3266,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(6, timeZoneValidationPostalCode_);
     }
-    if (naturalComplianceScrub_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getNaturalComplianceScrub());
     }
-    if (scrubOverride_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getScrubOverride());
     }
@@ -3305,7 +3306,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(16, enableCustomizableCallerId_);
     }
-    if (defaultCallerId_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(17, getDefaultCallerId());
     }
@@ -3329,7 +3330,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(22, enableSipAddress_);
     }
-    if (naturalLanguageComplianceMetadata_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(23, getNaturalLanguageComplianceMetadata());
     }
@@ -3650,13 +3651,23 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.org.ManualDialSettings.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getNaturalComplianceScrubFieldBuilder();
+        getScrubOverrideFieldBuilder();
+        getDefaultCallerIdFieldBuilder();
+        getNaturalLanguageComplianceMetadataFieldBuilder();
+        getDataDipIntegrationMappingsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -3777,15 +3788,18 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.timeZoneValidationPostalCode_ = timeZoneValidationPostalCode_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.naturalComplianceScrub_ = naturalComplianceScrubBuilder_ == null
             ? naturalComplianceScrub_
             : naturalComplianceScrubBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.scrubOverride_ = scrubOverrideBuilder_ == null
             ? scrubOverride_
             : scrubOverrideBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.enableWhitelist_ = enableWhitelist_;
@@ -3815,6 +3829,7 @@ private static final long serialVersionUID = 0L;
         result.defaultCallerId_ = defaultCallerIdBuilder_ == null
             ? defaultCallerId_
             : defaultCallerIdBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00020000) != 0)) {
         result.enableCallerIdBucket_ = enableCallerIdBucket_;
@@ -3835,6 +3850,7 @@ private static final long serialVersionUID = 0L;
         result.naturalLanguageComplianceMetadata_ = naturalLanguageComplianceMetadataBuilder_ == null
             ? naturalLanguageComplianceMetadata_
             : naturalLanguageComplianceMetadataBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00800000) != 0)) {
         result.dataDipScope_ = dataDipScope_;
@@ -3851,6 +3867,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x10000000) != 0)) {
         result.enableRejectOptionForApprovers_ = enableRejectOptionForApprovers_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -4732,8 +4749,10 @@ private static final long serialVersionUID = 0L;
       } else {
         naturalComplianceScrubBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (naturalComplianceScrub_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -4887,8 +4906,10 @@ private static final long serialVersionUID = 0L;
       } else {
         scrubOverrideBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+      if (scrubOverride_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -5474,8 +5495,10 @@ private static final long serialVersionUID = 0L;
       } else {
         defaultCallerIdBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00010000;
-      onChanged();
+      if (defaultCallerId_ != null) {
+        bitField0_ |= 0x00010000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -5881,8 +5904,10 @@ private static final long serialVersionUID = 0L;
       } else {
         naturalLanguageComplianceMetadataBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00400000;
-      onChanged();
+      if (naturalLanguageComplianceMetadata_ != null) {
+        bitField0_ |= 0x00400000;
+        onChanged();
+      }
       return this;
     }
     /**

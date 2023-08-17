@@ -230,7 +230,8 @@ private static final long serialVersionUID = 0L;
 
     public static final int SIDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.LongList sids_;
+    private com.google.protobuf.Internal.LongList sids_ =
+        emptyLongList();
     /**
      * <pre>
      * sids of the intervals/deltas to be deleted
@@ -508,22 +509,17 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids buildPartial() {
         com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids result = new com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          sids_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.sids_ = sids_;
-      }
-
       private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.IntervalSids result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          sids_.makeImmutable();
+          result.sids_ = sids_;
+        }
       }
 
       @java.lang.Override
@@ -573,7 +569,8 @@ private static final long serialVersionUID = 0L;
         if (!other.sids_.isEmpty()) {
           if (sids_.isEmpty()) {
             sids_ = other.sids_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            sids_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensureSidsIsMutable();
             sids_.addAll(other.sids_);
@@ -641,10 +638,10 @@ private static final long serialVersionUID = 0L;
 
       private com.google.protobuf.Internal.LongList sids_ = emptyLongList();
       private void ensureSidsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          sids_ = mutableCopy(sids_);
-          bitField0_ |= 0x00000001;
+        if (!sids_.isModifiable()) {
+          sids_ = makeMutableCopy(sids_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -656,8 +653,8 @@ private static final long serialVersionUID = 0L;
        */
       public java.util.List<java.lang.Long>
           getSidsList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(sids_) : sids_;
+        sids_.makeImmutable();
+        return sids_;
       }
       /**
        * <pre>
@@ -697,6 +694,7 @@ private static final long serialVersionUID = 0L;
 
         ensureSidsIsMutable();
         sids_.setLong(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -713,6 +711,7 @@ private static final long serialVersionUID = 0L;
 
         ensureSidsIsMutable();
         sids_.addLong(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -730,6 +729,7 @@ private static final long serialVersionUID = 0L;
         ensureSidsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, sids_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }

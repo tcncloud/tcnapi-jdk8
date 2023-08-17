@@ -75,7 +75,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int SHIFT_INSTANCE_SIDS_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList shiftInstanceSids_;
+  private com.google.protobuf.Internal.LongList shiftInstanceSids_ =
+      emptyLongList();
   /**
    * <pre>
    * IDs of the shift instances that will be swapped.
@@ -379,18 +380,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq result) {
-      if (((bitField0_ & 0x00000004) != 0)) {
-        shiftInstanceSids_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000004);
-      }
-      result.shiftInstanceSids_ = shiftInstanceSids_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq result) {
@@ -400,6 +392,10 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.wfmAgentSid2_ = wfmAgentSid2_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        shiftInstanceSids_.makeImmutable();
+        result.shiftInstanceSids_ = shiftInstanceSids_;
       }
     }
 
@@ -456,7 +452,8 @@ private static final long serialVersionUID = 0L;
       if (!other.shiftInstanceSids_.isEmpty()) {
         if (shiftInstanceSids_.isEmpty()) {
           shiftInstanceSids_ = other.shiftInstanceSids_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          shiftInstanceSids_.makeImmutable();
+          bitField0_ |= 0x00000004;
         } else {
           ensureShiftInstanceSidsIsMutable();
           shiftInstanceSids_.addAll(other.shiftInstanceSids_);
@@ -622,10 +619,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList shiftInstanceSids_ = emptyLongList();
     private void ensureShiftInstanceSidsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
-        shiftInstanceSids_ = mutableCopy(shiftInstanceSids_);
-        bitField0_ |= 0x00000004;
+      if (!shiftInstanceSids_.isModifiable()) {
+        shiftInstanceSids_ = makeMutableCopy(shiftInstanceSids_);
       }
+      bitField0_ |= 0x00000004;
     }
     /**
      * <pre>
@@ -637,8 +634,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getShiftInstanceSidsList() {
-      return ((bitField0_ & 0x00000004) != 0) ?
-               java.util.Collections.unmodifiableList(shiftInstanceSids_) : shiftInstanceSids_;
+      shiftInstanceSids_.makeImmutable();
+      return shiftInstanceSids_;
     }
     /**
      * <pre>
@@ -678,6 +675,7 @@ private static final long serialVersionUID = 0L;
 
       ensureShiftInstanceSidsIsMutable();
       shiftInstanceSids_.setLong(index, value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -694,6 +692,7 @@ private static final long serialVersionUID = 0L;
 
       ensureShiftInstanceSidsIsMutable();
       shiftInstanceSids_.addLong(value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -711,6 +710,7 @@ private static final long serialVersionUID = 0L;
       ensureShiftInstanceSidsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, shiftInstanceSids_);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

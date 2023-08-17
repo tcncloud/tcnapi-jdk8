@@ -44,6 +44,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.CreateDashboardRequest.class, com.tcn.cloud.api.api.v0alpha.CreateDashboardRequest.Builder.class);
   }
 
+  private int bitField0_;
   public static final int TITLE_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object title_ = "";
@@ -150,7 +151,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLayout() {
-    return layout_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -188,7 +189,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasView() {
-    return view_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -226,7 +227,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasType() {
-    return type_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -272,13 +273,13 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
     }
-    if (layout_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(3, getLayout());
     }
-    if (view_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(4, getView());
     }
-    if (type_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(5, getType());
     }
     getUnknownFields().writeTo(output);
@@ -296,15 +297,15 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
     }
-    if (layout_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getLayout());
     }
-    if (view_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getView());
     }
-    if (type_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getType());
     }
@@ -492,13 +493,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CreateDashboardRequest.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getLayoutFieldBuilder();
+        getViewFieldBuilder();
+        getTypeFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -560,21 +569,26 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.description_ = description_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.layout_ = layoutBuilder_ == null
             ? layout_
             : layoutBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.view_ = viewBuilder_ == null
             ? view_
             : viewBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.type_ = typeBuilder_ == null
             ? type_
             : typeBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -984,8 +998,10 @@ private static final long serialVersionUID = 0L;
       } else {
         layoutBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (layout_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1139,8 +1155,10 @@ private static final long serialVersionUID = 0L;
       } else {
         viewBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (view_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1294,8 +1312,10 @@ private static final long serialVersionUID = 0L;
       } else {
         typeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (type_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**

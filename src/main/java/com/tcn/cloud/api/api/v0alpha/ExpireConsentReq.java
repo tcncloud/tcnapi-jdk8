@@ -38,6 +38,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.ExpireConsentReq.class, com.tcn.cloud.api.api.v0alpha.ExpireConsentReq.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CONSENT_ID_FIELD_NUMBER = 1;
   private long consentId_ = 0L;
   /**
@@ -57,7 +58,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasExpire() {
-    return expire_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp expire = 3 [json_name = "expire"];</code>
@@ -92,7 +93,7 @@ private static final long serialVersionUID = 0L;
     if (consentId_ != 0L) {
       output.writeInt64(1, consentId_);
     }
-    if (expire_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(3, getExpire());
     }
     getUnknownFields().writeTo(output);
@@ -108,7 +109,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, consentId_);
     }
-    if (expire_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getExpire());
     }
@@ -271,13 +272,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ExpireConsentReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getExpireFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -325,11 +332,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.consentId_ = consentId_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.expire_ = expireBuilder_ == null
             ? expire_
             : expireBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -535,8 +545,10 @@ private static final long serialVersionUID = 0L;
       } else {
         expireBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (expire_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**

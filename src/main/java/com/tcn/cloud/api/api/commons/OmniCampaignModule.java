@@ -250,6 +250,7 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.api.commons.OmniCampaignModule.Details.class, com.tcn.cloud.api.api.commons.OmniCampaignModule.Details.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TOTAL_TASK_COUNT_FIELD_NUMBER = 1;
     private com.google.protobuf.Int64Value totalTaskCount_;
     /**
@@ -262,7 +263,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasTotalTaskCount() {
-      return totalTaskCount_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -300,7 +301,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCompletedTaskCount() {
-      return completedTaskCount_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -338,7 +339,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasConnectedInboxAddress() {
-      return connectedInboxAddress_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -376,7 +377,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVerifiedEmailAddress() {
-      return verifiedEmailAddress_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -414,7 +415,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasPendingTaskCount() {
-      return pendingTaskCount_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -452,7 +453,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasFailedTaskCount() {
-      return failedTaskCount_ != null;
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -492,22 +493,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (totalTaskCount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(1, getTotalTaskCount());
       }
-      if (completedTaskCount_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getCompletedTaskCount());
       }
-      if (connectedInboxAddress_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getConnectedInboxAddress());
       }
-      if (verifiedEmailAddress_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(4, getVerifiedEmailAddress());
       }
-      if (pendingTaskCount_ != null) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         output.writeMessage(5, getPendingTaskCount());
       }
-      if (failedTaskCount_ != null) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         output.writeMessage(6, getFailedTaskCount());
       }
       getUnknownFields().writeTo(output);
@@ -519,27 +520,27 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (totalTaskCount_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTotalTaskCount());
       }
-      if (completedTaskCount_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCompletedTaskCount());
       }
-      if (connectedInboxAddress_ != null) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getConnectedInboxAddress());
       }
-      if (verifiedEmailAddress_ != null) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getVerifiedEmailAddress());
       }
-      if (pendingTaskCount_ != null) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getPendingTaskCount());
       }
-      if (failedTaskCount_ != null) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getFailedTaskCount());
       }
@@ -746,13 +747,24 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.commons.OmniCampaignModule.Details.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTotalTaskCountFieldBuilder();
+          getCompletedTaskCountFieldBuilder();
+          getConnectedInboxAddressFieldBuilder();
+          getVerifiedEmailAddressFieldBuilder();
+          getPendingTaskCountFieldBuilder();
+          getFailedTaskCountFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -821,36 +833,44 @@ private static final long serialVersionUID = 0L;
 
       private void buildPartial0(com.tcn.cloud.api.api.commons.OmniCampaignModule.Details result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.totalTaskCount_ = totalTaskCountBuilder_ == null
               ? totalTaskCount_
               : totalTaskCountBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.completedTaskCount_ = completedTaskCountBuilder_ == null
               ? completedTaskCount_
               : completedTaskCountBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.connectedInboxAddress_ = connectedInboxAddressBuilder_ == null
               ? connectedInboxAddress_
               : connectedInboxAddressBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.verifiedEmailAddress_ = verifiedEmailAddressBuilder_ == null
               ? verifiedEmailAddress_
               : verifiedEmailAddressBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.pendingTaskCount_ = pendingTaskCountBuilder_ == null
               ? pendingTaskCount_
               : pendingTaskCountBuilder_.build();
+          to_bitField0_ |= 0x00000010;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.failedTaskCount_ = failedTaskCountBuilder_ == null
               ? failedTaskCount_
               : failedTaskCountBuilder_.build();
+          to_bitField0_ |= 0x00000020;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1086,8 +1106,10 @@ private static final long serialVersionUID = 0L;
         } else {
           totalTaskCountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (totalTaskCount_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1241,8 +1263,10 @@ private static final long serialVersionUID = 0L;
         } else {
           completedTaskCountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (completedTaskCount_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1396,8 +1420,10 @@ private static final long serialVersionUID = 0L;
         } else {
           connectedInboxAddressBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (connectedInboxAddress_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1551,8 +1577,10 @@ private static final long serialVersionUID = 0L;
         } else {
           verifiedEmailAddressBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (verifiedEmailAddress_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1706,8 +1734,10 @@ private static final long serialVersionUID = 0L;
         } else {
           pendingTaskCountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (pendingTaskCount_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1861,8 +1891,10 @@ private static final long serialVersionUID = 0L;
         } else {
           failedTaskCountBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        if (failedTaskCount_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1993,6 +2025,7 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  private int bitField0_;
   public static final int CAMPAIGN_MODULE_SID_FIELD_NUMBER = 1;
   private long campaignModuleSid_ = 0L;
   /**
@@ -2087,7 +2120,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConfig() {
-    return config_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -2125,7 +2158,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDateCreated() {
-    return dateCreated_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -2163,7 +2196,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDateModified() {
-    return dateModified_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -2201,7 +2234,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasScheduledStopDate() {
-    return scheduledStopDate_ != null;
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <pre>
@@ -2239,7 +2272,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasActualStopDate() {
-    return actualStopDate_ != null;
+    return ((bitField0_ & 0x00000010) != 0);
   }
   /**
    * <pre>
@@ -2277,7 +2310,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHoursOfOperation() {
-    return hoursOfOperation_ != null;
+    return ((bitField0_ & 0x00000020) != 0);
   }
   /**
    * <pre>
@@ -2315,7 +2348,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDetails() {
-    return details_ != null;
+    return ((bitField0_ & 0x00000040) != 0);
   }
   /**
    * <pre>
@@ -2428,25 +2461,25 @@ private static final long serialVersionUID = 0L;
     if (status_ != com.tcn.cloud.api.api.commons.OmniCampaignModuleStatus.MODULE_PREPARING.getNumber()) {
       output.writeEnum(4, status_);
     }
-    if (config_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(5, getConfig());
     }
-    if (dateCreated_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(6, getDateCreated());
     }
-    if (dateModified_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(7, getDateModified());
     }
-    if (scheduledStopDate_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(8, getScheduledStopDate());
     }
-    if (actualStopDate_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       output.writeMessage(9, getActualStopDate());
     }
-    if (hoursOfOperation_ != null) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       output.writeMessage(10, getHoursOfOperation());
     }
-    if (details_ != null) {
+    if (((bitField0_ & 0x00000040) != 0)) {
       output.writeMessage(11, getDetails());
     }
     for (int i = 0; i < attachments_.size(); i++) {
@@ -2477,31 +2510,31 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, status_);
     }
-    if (config_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getConfig());
     }
-    if (dateCreated_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getDateCreated());
     }
-    if (dateModified_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getDateModified());
     }
-    if (scheduledStopDate_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getScheduledStopDate());
     }
-    if (actualStopDate_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getActualStopDate());
     }
-    if (hoursOfOperation_ != null) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getHoursOfOperation());
     }
-    if (details_ != null) {
+    if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getDetails());
     }
@@ -2743,13 +2776,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.OmniCampaignModule.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getConfigFieldBuilder();
+        getDateCreatedFieldBuilder();
+        getDateModifiedFieldBuilder();
+        getScheduledStopDateFieldBuilder();
+        getActualStopDateFieldBuilder();
+        getHoursOfOperationFieldBuilder();
+        getDetailsFieldBuilder();
+        getAttachmentsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -2859,41 +2905,50 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.status_ = status_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.config_ = configBuilder_ == null
             ? config_
             : configBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.dateCreated_ = dateCreatedBuilder_ == null
             ? dateCreated_
             : dateCreatedBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.dateModified_ = dateModifiedBuilder_ == null
             ? dateModified_
             : dateModifiedBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.scheduledStopDate_ = scheduledStopDateBuilder_ == null
             ? scheduledStopDate_
             : scheduledStopDateBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.actualStopDate_ = actualStopDateBuilder_ == null
             ? actualStopDate_
             : actualStopDateBuilder_.build();
+        to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.hoursOfOperation_ = hoursOfOperationBuilder_ == null
             ? hoursOfOperation_
             : hoursOfOperationBuilder_.build();
+        to_bitField0_ |= 0x00000020;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.details_ = detailsBuilder_ == null
             ? details_
             : detailsBuilder_.build();
+        to_bitField0_ |= 0x00000040;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -3444,8 +3499,10 @@ private static final long serialVersionUID = 0L;
       } else {
         configBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (config_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3599,8 +3656,10 @@ private static final long serialVersionUID = 0L;
       } else {
         dateCreatedBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (dateCreated_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3754,8 +3813,10 @@ private static final long serialVersionUID = 0L;
       } else {
         dateModifiedBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (dateModified_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3909,8 +3970,10 @@ private static final long serialVersionUID = 0L;
       } else {
         scheduledStopDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+      if (scheduledStopDate_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -4064,8 +4127,10 @@ private static final long serialVersionUID = 0L;
       } else {
         actualStopDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+      if (actualStopDate_ != null) {
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -4219,8 +4284,10 @@ private static final long serialVersionUID = 0L;
       } else {
         hoursOfOperationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000200;
-      onChanged();
+      if (hoursOfOperation_ != null) {
+        bitField0_ |= 0x00000200;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -4374,8 +4441,10 @@ private static final long serialVersionUID = 0L;
       } else {
         detailsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000400;
-      onChanged();
+      if (details_ != null) {
+        bitField0_ |= 0x00000400;
+        onChanged();
+      }
       return this;
     }
     /**
