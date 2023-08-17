@@ -39,6 +39,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.CreateScenarioReq.class, com.tcn.cloud.api.api.v0alpha.CreateScenarioReq.Builder.class);
   }
 
+  private int bitField0_;
   public static final int SHOULD_ALLOW_FIELD_NUMBER = 2;
   private com.tcn.cloud.api.api.commons.ScenarioData shouldAllow_;
   /**
@@ -47,7 +48,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasShouldAllow() {
-    return shouldAllow_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.commons.ScenarioData should_allow = 2 [json_name = "shouldAllow"];</code>
@@ -73,7 +74,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasShouldDeny() {
-    return shouldDeny_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.api.commons.ScenarioData should_deny = 3 [json_name = "shouldDeny"];</code>
@@ -144,10 +145,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (shouldAllow_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getShouldAllow());
     }
-    if (shouldDeny_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(3, getShouldDeny());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
@@ -162,11 +163,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (shouldAllow_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getShouldAllow());
     }
-    if (shouldDeny_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getShouldDeny());
     }
@@ -340,13 +341,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CreateScenarioReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getShouldAllowFieldBuilder();
+        getShouldDenyFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -396,19 +404,23 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.CreateScenarioReq result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.shouldAllow_ = shouldAllowBuilder_ == null
             ? shouldAllow_
             : shouldAllowBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.shouldDeny_ = shouldDenyBuilder_ == null
             ? shouldDeny_
             : shouldDenyBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.name_ = name_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -594,8 +606,10 @@ private static final long serialVersionUID = 0L;
       } else {
         shouldAllowBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (shouldAllow_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -713,8 +727,10 @@ private static final long serialVersionUID = 0L;
       } else {
         shouldDenyBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (shouldDeny_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**

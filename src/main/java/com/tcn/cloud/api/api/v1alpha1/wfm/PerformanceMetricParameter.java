@@ -43,6 +43,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter.class, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter.Builder.class);
   }
 
+  private int bitField0_;
   public static final int METRIC_TYPE_FIELD_NUMBER = 1;
   private int metricType_ = 0;
   /**
@@ -82,7 +83,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasServiceLevelTargetDurationSeconds() {
-    return serviceLevelTargetDurationSeconds_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -127,7 +128,7 @@ private static final long serialVersionUID = 0L;
     if (metricType_ != com.tcn.cloud.api.api.commons.PerformanceMetricType.FTE_REQUIRED_VS_ACHIEVED_SIMPLE.getNumber()) {
       output.writeEnum(1, metricType_);
     }
-    if (serviceLevelTargetDurationSeconds_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getServiceLevelTargetDurationSeconds());
     }
     getUnknownFields().writeTo(output);
@@ -143,7 +144,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, metricType_);
     }
-    if (serviceLevelTargetDurationSeconds_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getServiceLevelTargetDurationSeconds());
     }
@@ -308,13 +309,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricParameter.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getServiceLevelTargetDurationSecondsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -362,11 +369,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.metricType_ = metricType_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.serviceLevelTargetDurationSeconds_ = serviceLevelTargetDurationSecondsBuilder_ == null
             ? serviceLevelTargetDurationSeconds_
             : serviceLevelTargetDurationSecondsBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -638,8 +648,10 @@ private static final long serialVersionUID = 0L;
       } else {
         serviceLevelTargetDurationSecondsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (serviceLevelTargetDurationSeconds_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**

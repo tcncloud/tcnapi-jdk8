@@ -39,6 +39,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.AgentSession.class, com.tcn.cloud.api.api.v0alpha.AgentSession.Builder.class);
   }
 
+  private int bitField0_;
   public static final int AGENT_SESSION_SID_FIELD_NUMBER = 1;
   private long agentSessionSid_ = 0L;
   /**
@@ -58,7 +59,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasWebLoginTime() {
-    return webLoginTime_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp web_login_time = 2 [json_name = "webLoginTime"];</code>
@@ -84,7 +85,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasWebLogoutTime() {
-    return webLogoutTime_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp web_logout_time = 3 [json_name = "webLogoutTime"];</code>
@@ -110,7 +111,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasIvrLoginTime() {
-    return ivrLoginTime_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp ivr_login_time = 4 [json_name = "ivrLoginTime"];</code>
@@ -136,7 +137,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasIvrLogoutTime() {
-    return ivrLogoutTime_ != null;
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp ivr_logout_time = 5 [json_name = "ivrLogoutTime"];</code>
@@ -162,7 +163,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasIvrDuration() {
-    return ivrDuration_ != null;
+    return ((bitField0_ & 0x00000010) != 0);
   }
   /**
    * <code>.google.protobuf.Int32Value ivr_duration = 6 [json_name = "ivrDuration"];</code>
@@ -188,7 +189,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasIvrBilledDuration() {
-    return ivrBilledDuration_ != null;
+    return ((bitField0_ & 0x00000020) != 0);
   }
   /**
    * <code>.google.protobuf.Int32Value ivr_billed_duration = 7 [json_name = "ivrBilledDuration"];</code>
@@ -214,7 +215,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCost() {
-    return cost_ != null;
+    return ((bitField0_ & 0x00000040) != 0);
   }
   /**
    * <code>.google.protobuf.DoubleValue cost = 8 [json_name = "cost"];</code>
@@ -240,7 +241,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAgentSid() {
-    return agentSid_ != null;
+    return ((bitField0_ & 0x00000080) != 0);
   }
   /**
    * <code>.google.protobuf.Int64Value agent_sid = 9 [json_name = "agentSid"];</code>
@@ -266,7 +267,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasStatus() {
-    return status_ != null;
+    return ((bitField0_ & 0x00000100) != 0);
   }
   /**
    * <code>.google.protobuf.Int32Value status = 10 [json_name = "status"];</code>
@@ -292,7 +293,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSoftphoneUser() {
-    return softphoneUser_ != null;
+    return ((bitField0_ & 0x00000200) != 0);
   }
   /**
    * <code>.google.protobuf.BoolValue softphone_user = 11 [json_name = "softphoneUser"];</code>
@@ -336,7 +337,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAgentCallerid() {
-    return agentCallerid_ != null;
+    return ((bitField0_ & 0x00000400) != 0);
   }
   /**
    * <code>.google.protobuf.StringValue agent_callerid = 13 [json_name = "agentCallerid"];</code>
@@ -362,7 +363,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAgentDialedNumber() {
-    return agentDialedNumber_ != null;
+    return ((bitField0_ & 0x00000800) != 0);
   }
   /**
    * <code>.google.protobuf.StringValue agent_dialed_number = 14 [json_name = "agentDialedNumber"];</code>
@@ -388,7 +389,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasWorker() {
-    return worker_ != null;
+    return ((bitField0_ & 0x00001000) != 0);
   }
   /**
    * <code>.google.protobuf.StringValue worker = 15 [json_name = "worker"];</code>
@@ -414,7 +415,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHuntGroupSid() {
-    return huntGroupSid_ != null;
+    return ((bitField0_ & 0x00002000) != 0);
   }
   /**
    * <code>.google.protobuf.Int64Value hunt_group_sid = 16 [json_name = "huntGroupSid"];</code>
@@ -440,7 +441,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasWaitDuration() {
-    return waitDuration_ != null;
+    return ((bitField0_ & 0x00004000) != 0);
   }
   /**
    * <code>.google.protobuf.Int32Value wait_duration = 17 [json_name = "waitDuration"];</code>
@@ -466,7 +467,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPauseDuration() {
-    return pauseDuration_ != null;
+    return ((bitField0_ & 0x00008000) != 0);
   }
   /**
    * <code>.google.protobuf.Int32Value pause_duration = 18 [json_name = "pauseDuration"];</code>
@@ -492,7 +493,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTransferDuration() {
-    return transferDuration_ != null;
+    return ((bitField0_ & 0x00010000) != 0);
   }
   /**
    * <code>.google.protobuf.Int32Value transfer_duration = 19 [json_name = "transferDuration"];</code>
@@ -518,7 +519,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasWrapUpDuration() {
-    return wrapUpDuration_ != null;
+    return ((bitField0_ & 0x00020000) != 0);
   }
   /**
    * <code>.google.protobuf.Int32Value wrap_up_duration = 20 [json_name = "wrapUpDuration"];</code>
@@ -544,7 +545,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTalkDuration() {
-    return talkDuration_ != null;
+    return ((bitField0_ & 0x00040000) != 0);
   }
   /**
    * <code>.google.protobuf.Int32Value talk_duration = 21 [json_name = "talkDuration"];</code>
@@ -570,7 +571,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasManualDuration() {
-    return manualDuration_ != null;
+    return ((bitField0_ & 0x00080000) != 0);
   }
   /**
    * <code>.google.protobuf.Int32Value manual_duration = 22 [json_name = "manualDuration"];</code>
@@ -596,7 +597,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPreviewDuration() {
-    return previewDuration_ != null;
+    return ((bitField0_ & 0x00100000) != 0);
   }
   /**
    * <code>.google.protobuf.Int32Value preview_duration = 23 [json_name = "previewDuration"];</code>
@@ -622,7 +623,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHoldDuration() {
-    return holdDuration_ != null;
+    return ((bitField0_ & 0x00200000) != 0);
   }
   /**
    * <code>.google.protobuf.Int32Value hold_duration = 24 [json_name = "holdDuration"];</code>
@@ -657,73 +658,73 @@ private static final long serialVersionUID = 0L;
     if (agentSessionSid_ != 0L) {
       output.writeInt64(1, agentSessionSid_);
     }
-    if (webLoginTime_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getWebLoginTime());
     }
-    if (webLogoutTime_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(3, getWebLogoutTime());
     }
-    if (ivrLoginTime_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(4, getIvrLoginTime());
     }
-    if (ivrLogoutTime_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(5, getIvrLogoutTime());
     }
-    if (ivrDuration_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       output.writeMessage(6, getIvrDuration());
     }
-    if (ivrBilledDuration_ != null) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       output.writeMessage(7, getIvrBilledDuration());
     }
-    if (cost_ != null) {
+    if (((bitField0_ & 0x00000040) != 0)) {
       output.writeMessage(8, getCost());
     }
-    if (agentSid_ != null) {
+    if (((bitField0_ & 0x00000080) != 0)) {
       output.writeMessage(9, getAgentSid());
     }
-    if (status_ != null) {
+    if (((bitField0_ & 0x00000100) != 0)) {
       output.writeMessage(10, getStatus());
     }
-    if (softphoneUser_ != null) {
+    if (((bitField0_ & 0x00000200) != 0)) {
       output.writeMessage(11, getSoftphoneUser());
     }
     if (agentDialIn_ != com.tcn.cloud.api.api.commons.AgentDialIn.Enum.TOLL_FREE.getNumber()) {
       output.writeEnum(12, agentDialIn_);
     }
-    if (agentCallerid_ != null) {
+    if (((bitField0_ & 0x00000400) != 0)) {
       output.writeMessage(13, getAgentCallerid());
     }
-    if (agentDialedNumber_ != null) {
+    if (((bitField0_ & 0x00000800) != 0)) {
       output.writeMessage(14, getAgentDialedNumber());
     }
-    if (worker_ != null) {
+    if (((bitField0_ & 0x00001000) != 0)) {
       output.writeMessage(15, getWorker());
     }
-    if (huntGroupSid_ != null) {
+    if (((bitField0_ & 0x00002000) != 0)) {
       output.writeMessage(16, getHuntGroupSid());
     }
-    if (waitDuration_ != null) {
+    if (((bitField0_ & 0x00004000) != 0)) {
       output.writeMessage(17, getWaitDuration());
     }
-    if (pauseDuration_ != null) {
+    if (((bitField0_ & 0x00008000) != 0)) {
       output.writeMessage(18, getPauseDuration());
     }
-    if (transferDuration_ != null) {
+    if (((bitField0_ & 0x00010000) != 0)) {
       output.writeMessage(19, getTransferDuration());
     }
-    if (wrapUpDuration_ != null) {
+    if (((bitField0_ & 0x00020000) != 0)) {
       output.writeMessage(20, getWrapUpDuration());
     }
-    if (talkDuration_ != null) {
+    if (((bitField0_ & 0x00040000) != 0)) {
       output.writeMessage(21, getTalkDuration());
     }
-    if (manualDuration_ != null) {
+    if (((bitField0_ & 0x00080000) != 0)) {
       output.writeMessage(22, getManualDuration());
     }
-    if (previewDuration_ != null) {
+    if (((bitField0_ & 0x00100000) != 0)) {
       output.writeMessage(23, getPreviewDuration());
     }
-    if (holdDuration_ != null) {
+    if (((bitField0_ & 0x00200000) != 0)) {
       output.writeMessage(24, getHoldDuration());
     }
     getUnknownFields().writeTo(output);
@@ -739,43 +740,43 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, agentSessionSid_);
     }
-    if (webLoginTime_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getWebLoginTime());
     }
-    if (webLogoutTime_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getWebLogoutTime());
     }
-    if (ivrLoginTime_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getIvrLoginTime());
     }
-    if (ivrLogoutTime_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getIvrLogoutTime());
     }
-    if (ivrDuration_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getIvrDuration());
     }
-    if (ivrBilledDuration_ != null) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getIvrBilledDuration());
     }
-    if (cost_ != null) {
+    if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getCost());
     }
-    if (agentSid_ != null) {
+    if (((bitField0_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getAgentSid());
     }
-    if (status_ != null) {
+    if (((bitField0_ & 0x00000100) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getStatus());
     }
-    if (softphoneUser_ != null) {
+    if (((bitField0_ & 0x00000200) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getSoftphoneUser());
     }
@@ -783,51 +784,51 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(12, agentDialIn_);
     }
-    if (agentCallerid_ != null) {
+    if (((bitField0_ & 0x00000400) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getAgentCallerid());
     }
-    if (agentDialedNumber_ != null) {
+    if (((bitField0_ & 0x00000800) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, getAgentDialedNumber());
     }
-    if (worker_ != null) {
+    if (((bitField0_ & 0x00001000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, getWorker());
     }
-    if (huntGroupSid_ != null) {
+    if (((bitField0_ & 0x00002000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(16, getHuntGroupSid());
     }
-    if (waitDuration_ != null) {
+    if (((bitField0_ & 0x00004000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(17, getWaitDuration());
     }
-    if (pauseDuration_ != null) {
+    if (((bitField0_ & 0x00008000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(18, getPauseDuration());
     }
-    if (transferDuration_ != null) {
+    if (((bitField0_ & 0x00010000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(19, getTransferDuration());
     }
-    if (wrapUpDuration_ != null) {
+    if (((bitField0_ & 0x00020000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(20, getWrapUpDuration());
     }
-    if (talkDuration_ != null) {
+    if (((bitField0_ & 0x00040000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(21, getTalkDuration());
     }
-    if (manualDuration_ != null) {
+    if (((bitField0_ & 0x00080000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(22, getManualDuration());
     }
-    if (previewDuration_ != null) {
+    if (((bitField0_ & 0x00100000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(23, getPreviewDuration());
     }
-    if (holdDuration_ != null) {
+    if (((bitField0_ & 0x00200000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(24, getHoldDuration());
     }
@@ -1182,13 +1183,40 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.AgentSession.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getWebLoginTimeFieldBuilder();
+        getWebLogoutTimeFieldBuilder();
+        getIvrLoginTimeFieldBuilder();
+        getIvrLogoutTimeFieldBuilder();
+        getIvrDurationFieldBuilder();
+        getIvrBilledDurationFieldBuilder();
+        getCostFieldBuilder();
+        getAgentSidFieldBuilder();
+        getStatusFieldBuilder();
+        getSoftphoneUserFieldBuilder();
+        getAgentCalleridFieldBuilder();
+        getAgentDialedNumberFieldBuilder();
+        getWorkerFieldBuilder();
+        getHuntGroupSidFieldBuilder();
+        getWaitDurationFieldBuilder();
+        getPauseDurationFieldBuilder();
+        getTransferDurationFieldBuilder();
+        getWrapUpDurationFieldBuilder();
+        getTalkDurationFieldBuilder();
+        getManualDurationFieldBuilder();
+        getPreviewDurationFieldBuilder();
+        getHoldDurationFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -1342,55 +1370,66 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.agentSessionSid_ = agentSessionSid_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.webLoginTime_ = webLoginTimeBuilder_ == null
             ? webLoginTime_
             : webLoginTimeBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.webLogoutTime_ = webLogoutTimeBuilder_ == null
             ? webLogoutTime_
             : webLogoutTimeBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.ivrLoginTime_ = ivrLoginTimeBuilder_ == null
             ? ivrLoginTime_
             : ivrLoginTimeBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.ivrLogoutTime_ = ivrLogoutTimeBuilder_ == null
             ? ivrLogoutTime_
             : ivrLogoutTimeBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.ivrDuration_ = ivrDurationBuilder_ == null
             ? ivrDuration_
             : ivrDurationBuilder_.build();
+        to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.ivrBilledDuration_ = ivrBilledDurationBuilder_ == null
             ? ivrBilledDuration_
             : ivrBilledDurationBuilder_.build();
+        to_bitField0_ |= 0x00000020;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.cost_ = costBuilder_ == null
             ? cost_
             : costBuilder_.build();
+        to_bitField0_ |= 0x00000040;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.agentSid_ = agentSidBuilder_ == null
             ? agentSid_
             : agentSidBuilder_.build();
+        to_bitField0_ |= 0x00000080;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.status_ = statusBuilder_ == null
             ? status_
             : statusBuilder_.build();
+        to_bitField0_ |= 0x00000100;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.softphoneUser_ = softphoneUserBuilder_ == null
             ? softphoneUser_
             : softphoneUserBuilder_.build();
+        to_bitField0_ |= 0x00000200;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.agentDialIn_ = agentDialIn_;
@@ -1399,62 +1438,75 @@ private static final long serialVersionUID = 0L;
         result.agentCallerid_ = agentCalleridBuilder_ == null
             ? agentCallerid_
             : agentCalleridBuilder_.build();
+        to_bitField0_ |= 0x00000400;
       }
       if (((from_bitField0_ & 0x00002000) != 0)) {
         result.agentDialedNumber_ = agentDialedNumberBuilder_ == null
             ? agentDialedNumber_
             : agentDialedNumberBuilder_.build();
+        to_bitField0_ |= 0x00000800;
       }
       if (((from_bitField0_ & 0x00004000) != 0)) {
         result.worker_ = workerBuilder_ == null
             ? worker_
             : workerBuilder_.build();
+        to_bitField0_ |= 0x00001000;
       }
       if (((from_bitField0_ & 0x00008000) != 0)) {
         result.huntGroupSid_ = huntGroupSidBuilder_ == null
             ? huntGroupSid_
             : huntGroupSidBuilder_.build();
+        to_bitField0_ |= 0x00002000;
       }
       if (((from_bitField0_ & 0x00010000) != 0)) {
         result.waitDuration_ = waitDurationBuilder_ == null
             ? waitDuration_
             : waitDurationBuilder_.build();
+        to_bitField0_ |= 0x00004000;
       }
       if (((from_bitField0_ & 0x00020000) != 0)) {
         result.pauseDuration_ = pauseDurationBuilder_ == null
             ? pauseDuration_
             : pauseDurationBuilder_.build();
+        to_bitField0_ |= 0x00008000;
       }
       if (((from_bitField0_ & 0x00040000) != 0)) {
         result.transferDuration_ = transferDurationBuilder_ == null
             ? transferDuration_
             : transferDurationBuilder_.build();
+        to_bitField0_ |= 0x00010000;
       }
       if (((from_bitField0_ & 0x00080000) != 0)) {
         result.wrapUpDuration_ = wrapUpDurationBuilder_ == null
             ? wrapUpDuration_
             : wrapUpDurationBuilder_.build();
+        to_bitField0_ |= 0x00020000;
       }
       if (((from_bitField0_ & 0x00100000) != 0)) {
         result.talkDuration_ = talkDurationBuilder_ == null
             ? talkDuration_
             : talkDurationBuilder_.build();
+        to_bitField0_ |= 0x00040000;
       }
       if (((from_bitField0_ & 0x00200000) != 0)) {
         result.manualDuration_ = manualDurationBuilder_ == null
             ? manualDuration_
             : manualDurationBuilder_.build();
+        to_bitField0_ |= 0x00080000;
       }
       if (((from_bitField0_ & 0x00400000) != 0)) {
         result.previewDuration_ = previewDurationBuilder_ == null
             ? previewDuration_
             : previewDurationBuilder_.build();
+        to_bitField0_ |= 0x00100000;
       }
       if (((from_bitField0_ & 0x00800000) != 0)) {
         result.holdDuration_ = holdDurationBuilder_ == null
             ? holdDuration_
             : holdDurationBuilder_.build();
+        to_bitField0_ |= 0x00200000;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1878,8 +1930,10 @@ private static final long serialVersionUID = 0L;
       } else {
         webLoginTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (webLoginTime_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1997,8 +2051,10 @@ private static final long serialVersionUID = 0L;
       } else {
         webLogoutTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (webLogoutTime_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2116,8 +2172,10 @@ private static final long serialVersionUID = 0L;
       } else {
         ivrLoginTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (ivrLoginTime_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2235,8 +2293,10 @@ private static final long serialVersionUID = 0L;
       } else {
         ivrLogoutTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (ivrLogoutTime_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2354,8 +2414,10 @@ private static final long serialVersionUID = 0L;
       } else {
         ivrDurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (ivrDuration_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2473,8 +2535,10 @@ private static final long serialVersionUID = 0L;
       } else {
         ivrBilledDurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (ivrBilledDuration_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2592,8 +2656,10 @@ private static final long serialVersionUID = 0L;
       } else {
         costBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+      if (cost_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2711,8 +2777,10 @@ private static final long serialVersionUID = 0L;
       } else {
         agentSidBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+      if (agentSid_ != null) {
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2830,8 +2898,10 @@ private static final long serialVersionUID = 0L;
       } else {
         statusBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000200;
-      onChanged();
+      if (status_ != null) {
+        bitField0_ |= 0x00000200;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2949,8 +3019,10 @@ private static final long serialVersionUID = 0L;
       } else {
         softphoneUserBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000400;
-      onChanged();
+      if (softphoneUser_ != null) {
+        bitField0_ |= 0x00000400;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3121,8 +3193,10 @@ private static final long serialVersionUID = 0L;
       } else {
         agentCalleridBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00001000;
-      onChanged();
+      if (agentCallerid_ != null) {
+        bitField0_ |= 0x00001000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3240,8 +3314,10 @@ private static final long serialVersionUID = 0L;
       } else {
         agentDialedNumberBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00002000;
-      onChanged();
+      if (agentDialedNumber_ != null) {
+        bitField0_ |= 0x00002000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3359,8 +3435,10 @@ private static final long serialVersionUID = 0L;
       } else {
         workerBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00004000;
-      onChanged();
+      if (worker_ != null) {
+        bitField0_ |= 0x00004000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3478,8 +3556,10 @@ private static final long serialVersionUID = 0L;
       } else {
         huntGroupSidBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00008000;
-      onChanged();
+      if (huntGroupSid_ != null) {
+        bitField0_ |= 0x00008000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3597,8 +3677,10 @@ private static final long serialVersionUID = 0L;
       } else {
         waitDurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00010000;
-      onChanged();
+      if (waitDuration_ != null) {
+        bitField0_ |= 0x00010000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3716,8 +3798,10 @@ private static final long serialVersionUID = 0L;
       } else {
         pauseDurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00020000;
-      onChanged();
+      if (pauseDuration_ != null) {
+        bitField0_ |= 0x00020000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3835,8 +3919,10 @@ private static final long serialVersionUID = 0L;
       } else {
         transferDurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00040000;
-      onChanged();
+      if (transferDuration_ != null) {
+        bitField0_ |= 0x00040000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3954,8 +4040,10 @@ private static final long serialVersionUID = 0L;
       } else {
         wrapUpDurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00080000;
-      onChanged();
+      if (wrapUpDuration_ != null) {
+        bitField0_ |= 0x00080000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -4073,8 +4161,10 @@ private static final long serialVersionUID = 0L;
       } else {
         talkDurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00100000;
-      onChanged();
+      if (talkDuration_ != null) {
+        bitField0_ |= 0x00100000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -4192,8 +4282,10 @@ private static final long serialVersionUID = 0L;
       } else {
         manualDurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00200000;
-      onChanged();
+      if (manualDuration_ != null) {
+        bitField0_ |= 0x00200000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -4311,8 +4403,10 @@ private static final long serialVersionUID = 0L;
       } else {
         previewDurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00400000;
-      onChanged();
+      if (previewDuration_ != null) {
+        bitField0_ |= 0x00400000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -4430,8 +4524,10 @@ private static final long serialVersionUID = 0L;
       } else {
         holdDurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00800000;
-      onChanged();
+      if (holdDuration_ != null) {
+        bitField0_ |= 0x00800000;
+        onChanged();
+      }
       return this;
     }
     /**

@@ -92,7 +92,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int SMS_INTENT_TEMPLATE_SID_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList smsIntentTemplateSid_;
+  private com.google.protobuf.Internal.LongList smsIntentTemplateSid_ =
+      emptyLongList();
   /**
    * <code>repeated int64 sms_intent_template_sid = 3 [json_name = "smsIntentTemplateSid"];</code>
    * @return A list containing the smsIntentTemplateSid.
@@ -378,18 +379,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateReq result = new com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateReq(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateReq result) {
-      if (((bitField0_ & 0x00000004) != 0)) {
-        smsIntentTemplateSid_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000004);
-      }
-      result.smsIntentTemplateSid_ = smsIntentTemplateSid_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.UpdateSmsTemplateReq result) {
@@ -399,6 +391,10 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.message_ = message_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        smsIntentTemplateSid_.makeImmutable();
+        result.smsIntentTemplateSid_ = smsIntentTemplateSid_;
       }
     }
 
@@ -457,7 +453,8 @@ private static final long serialVersionUID = 0L;
       if (!other.smsIntentTemplateSid_.isEmpty()) {
         if (smsIntentTemplateSid_.isEmpty()) {
           smsIntentTemplateSid_ = other.smsIntentTemplateSid_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          smsIntentTemplateSid_.makeImmutable();
+          bitField0_ |= 0x00000004;
         } else {
           ensureSmsIntentTemplateSidIsMutable();
           smsIntentTemplateSid_.addAll(other.smsIntentTemplateSid_);
@@ -639,10 +636,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList smsIntentTemplateSid_ = emptyLongList();
     private void ensureSmsIntentTemplateSidIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
-        smsIntentTemplateSid_ = mutableCopy(smsIntentTemplateSid_);
-        bitField0_ |= 0x00000004;
+      if (!smsIntentTemplateSid_.isModifiable()) {
+        smsIntentTemplateSid_ = makeMutableCopy(smsIntentTemplateSid_);
       }
+      bitField0_ |= 0x00000004;
     }
     /**
      * <code>repeated int64 sms_intent_template_sid = 3 [json_name = "smsIntentTemplateSid"];</code>
@@ -650,8 +647,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getSmsIntentTemplateSidList() {
-      return ((bitField0_ & 0x00000004) != 0) ?
-               java.util.Collections.unmodifiableList(smsIntentTemplateSid_) : smsIntentTemplateSid_;
+      smsIntentTemplateSid_.makeImmutable();
+      return smsIntentTemplateSid_;
     }
     /**
      * <code>repeated int64 sms_intent_template_sid = 3 [json_name = "smsIntentTemplateSid"];</code>
@@ -679,6 +676,7 @@ private static final long serialVersionUID = 0L;
 
       ensureSmsIntentTemplateSidIsMutable();
       smsIntentTemplateSid_.setLong(index, value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -691,6 +689,7 @@ private static final long serialVersionUID = 0L;
 
       ensureSmsIntentTemplateSidIsMutable();
       smsIntentTemplateSid_.addLong(value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -704,6 +703,7 @@ private static final long serialVersionUID = 0L;
       ensureSmsIntentTemplateSidIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, smsIntentTemplateSid_);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

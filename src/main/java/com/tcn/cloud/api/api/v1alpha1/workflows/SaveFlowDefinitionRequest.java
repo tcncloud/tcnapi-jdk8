@@ -42,6 +42,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.workflows.SaveFlowDefinitionRequest.class, com.tcn.cloud.api.api.v1alpha1.workflows.SaveFlowDefinitionRequest.Builder.class);
   }
 
+  private int bitField0_;
   public static final int FLOW_DEFINITION_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.workflows.FlowDefinition flowDefinition_;
   /**
@@ -54,7 +55,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasFlowDefinition() {
-    return flowDefinition_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -92,7 +93,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasUpdateMask() {
-    return updateMask_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -132,10 +133,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (flowDefinition_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getFlowDefinition());
     }
-    if (updateMask_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(2, getUpdateMask());
     }
     getUnknownFields().writeTo(output);
@@ -147,11 +148,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (flowDefinition_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getFlowDefinition());
     }
-    if (updateMask_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getUpdateMask());
     }
@@ -322,13 +323,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.workflows.SaveFlowDefinitionRequest.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getFlowDefinitionFieldBuilder();
+        getUpdateMaskFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -377,16 +385,20 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.workflows.SaveFlowDefinitionRequest result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.flowDefinition_ = flowDefinitionBuilder_ == null
             ? flowDefinition_
             : flowDefinitionBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.updateMask_ = updateMaskBuilder_ == null
             ? updateMask_
             : updateMaskBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -582,8 +594,10 @@ private static final long serialVersionUID = 0L;
       } else {
         flowDefinitionBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (flowDefinition_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -737,8 +751,10 @@ private static final long serialVersionUID = 0L;
       } else {
         updateMaskBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (updateMask_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**

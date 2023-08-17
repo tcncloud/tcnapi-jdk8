@@ -40,6 +40,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.SmsActivitySearchReq.class, com.tcn.cloud.api.api.v0alpha.SmsActivitySearchReq.Builder.class);
   }
 
+  private int bitField0_;
   public static final int TO_NUMBER_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object toNumber_ = "";
@@ -126,7 +127,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasFromDate() {
-    return fromDate_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp from_date = 3 [json_name = "fromDate"];</code>
@@ -152,7 +153,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasToDate() {
-    return toDate_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp to_date = 4 [json_name = "toDate"];</code>
@@ -212,10 +213,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(srcNumber_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, srcNumber_);
     }
-    if (fromDate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(3, getFromDate());
     }
-    if (toDate_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(4, getToDate());
     }
     if (entireHistory_ != false) {
@@ -239,11 +240,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(srcNumber_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, srcNumber_);
     }
-    if (fromDate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getFromDate());
     }
-    if (toDate_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getToDate());
     }
@@ -436,13 +437,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.SmsActivitySearchReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getFromDateFieldBuilder();
+        getToDateFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -501,15 +509,18 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.srcNumber_ = srcNumber_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.fromDate_ = fromDateBuilder_ == null
             ? fromDate_
             : fromDateBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.toDate_ = toDateBuilder_ == null
             ? toDate_
             : toDateBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.entireHistory_ = entireHistory_;
@@ -517,6 +528,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.sentOnly_ = sentOnly_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -872,8 +884,10 @@ private static final long serialVersionUID = 0L;
       } else {
         fromDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (fromDate_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -991,8 +1005,10 @@ private static final long serialVersionUID = 0L;
       } else {
         toDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (toDate_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**

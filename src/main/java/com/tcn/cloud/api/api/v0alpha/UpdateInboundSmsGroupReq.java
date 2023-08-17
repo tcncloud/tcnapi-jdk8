@@ -42,6 +42,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq.class, com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq.Builder.class);
   }
 
+  private int bitField0_;
   public static final int INBOUND_SMS_GROUP_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object inboundSmsGroupId_ = "";
@@ -157,7 +158,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasStartTime() {
-    return startTime_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp start_time = 7 [json_name = "startTime"];</code>
@@ -183,7 +184,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasStopTime() {
-    return stopTime_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp stop_time = 8 [json_name = "stopTime"];</code>
@@ -259,7 +260,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasReportSettings() {
-    return reportSettings_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <code>.api.v0alpha.ReportSettings report_settings = 11 [json_name = "reportSettings"];</code>
@@ -303,10 +304,10 @@ private static final long serialVersionUID = 0L;
     if (status_ != com.tcn.cloud.api.api.commons.SMSIBGroupStatus.IB_SMS_GROUP_UNKNOWN.getNumber()) {
       output.writeEnum(6, status_);
     }
-    if (startTime_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(7, getStartTime());
     }
-    if (stopTime_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(8, getStopTime());
     }
     if (java.lang.Double.doubleToRawLongBits(totalCost_) != 0) {
@@ -315,7 +316,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inboundSmsTemplateId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 10, inboundSmsTemplateId_);
     }
-    if (reportSettings_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(11, getReportSettings());
     }
     getUnknownFields().writeTo(output);
@@ -341,11 +342,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(6, status_);
     }
-    if (startTime_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getStartTime());
     }
-    if (stopTime_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getStopTime());
     }
@@ -356,7 +357,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inboundSmsTemplateId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, inboundSmsTemplateId_);
     }
-    if (reportSettings_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getReportSettings());
     }
@@ -558,13 +559,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getStartTimeFieldBuilder();
+        getStopTimeFieldBuilder();
+        getReportSettingsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -636,15 +645,18 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.status_ = status_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.startTime_ = startTimeBuilder_ == null
             ? startTime_
             : startTimeBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.stopTime_ = stopTimeBuilder_ == null
             ? stopTime_
             : stopTimeBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.totalCost_ = totalCost_;
@@ -656,7 +668,9 @@ private static final long serialVersionUID = 0L;
         result.reportSettings_ = reportSettingsBuilder_ == null
             ? reportSettings_
             : reportSettingsBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1125,8 +1139,10 @@ private static final long serialVersionUID = 0L;
       } else {
         startTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (startTime_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1244,8 +1260,10 @@ private static final long serialVersionUID = 0L;
       } else {
         stopTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (stopTime_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1467,8 +1485,10 @@ private static final long serialVersionUID = 0L;
       } else {
         reportSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+      if (reportSettings_ != null) {
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
       return this;
     }
     /**

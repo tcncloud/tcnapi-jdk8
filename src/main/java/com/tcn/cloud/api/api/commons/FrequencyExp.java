@@ -39,6 +39,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.FrequencyExp.class, com.tcn.cloud.api.api.commons.FrequencyExp.Builder.class);
   }
 
+  private int bitField0_;
   public static final int COUNT_FIELD_NUMBER = 1;
   private long count_ = 0L;
   /**
@@ -77,7 +78,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasResults() {
-    return results_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.commons.ResultsMod results = 3 [json_name = "results"];</code>
@@ -103,7 +104,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDispositions() {
-    return dispositions_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.api.commons.DispositionMod dispositions = 4 [json_name = "dispositions"];</code>
@@ -129,7 +130,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasFieldNames() {
-    return fieldNames_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <code>.api.commons.FieldNamesMod field_names = 5 [json_name = "fieldNames"];</code>
@@ -208,13 +209,13 @@ private static final long serialVersionUID = 0L;
     if (duration_ != 0L) {
       output.writeInt64(2, duration_);
     }
-    if (results_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(3, getResults());
     }
-    if (dispositions_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(4, getDispositions());
     }
-    if (fieldNames_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(5, getFieldNames());
     }
     for (int i = 0; i < checkingEntities_.size(); i++) {
@@ -237,15 +238,15 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, duration_);
     }
-    if (results_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getResults());
     }
-    if (dispositions_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getDispositions());
     }
-    if (fieldNames_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getFieldNames());
     }
@@ -441,13 +442,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.FrequencyExp.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getResultsFieldBuilder();
+        getDispositionsFieldBuilder();
+        getFieldNamesFieldBuilder();
+        getCheckingEntitiesFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -529,21 +539,26 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.duration_ = duration_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.results_ = resultsBuilder_ == null
             ? results_
             : resultsBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.dispositions_ = dispositionsBuilder_ == null
             ? dispositions_
             : dispositionsBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.fieldNames_ = fieldNamesBuilder_ == null
             ? fieldNames_
             : fieldNamesBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -872,8 +887,10 @@ private static final long serialVersionUID = 0L;
       } else {
         resultsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (results_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -991,8 +1008,10 @@ private static final long serialVersionUID = 0L;
       } else {
         dispositionsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (dispositions_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1110,8 +1129,10 @@ private static final long serialVersionUID = 0L;
       } else {
         fieldNamesBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (fieldNames_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**

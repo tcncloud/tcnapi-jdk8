@@ -44,6 +44,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.SkillProficiency.class, com.tcn.cloud.api.api.v1alpha1.wfm.SkillProficiency.Builder.class);
   }
 
+  private int bitField0_;
   public static final int SKILL_PROFICIENCY_SID_FIELD_NUMBER = 1;
   private long skillProficiencySid_ = 0L;
   /**
@@ -88,7 +89,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPreferredSkillProfileSid() {
-    return preferredSkillProfileSid_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -145,7 +146,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasParentEntity() {
-    return parentEntity_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -302,13 +303,13 @@ private static final long serialVersionUID = 0L;
     if (skillSid_ != 0L) {
       output.writeInt64(2, skillSid_);
     }
-    if (preferredSkillProfileSid_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(3, getPreferredSkillProfileSid());
     }
     if (manualProficiencyValue_ != 0) {
       output.writeInt32(4, manualProficiencyValue_);
     }
-    if (parentEntity_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(5, getParentEntity());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(skillName_)) {
@@ -337,7 +338,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, skillSid_);
     }
-    if (preferredSkillProfileSid_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getPreferredSkillProfileSid());
     }
@@ -345,7 +346,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(4, manualProficiencyValue_);
     }
-    if (parentEntity_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getParentEntity());
     }
@@ -552,13 +553,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.SkillProficiency.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getPreferredSkillProfileSidFieldBuilder();
+        getParentEntityFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -619,10 +627,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.skillSid_ = skillSid_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.preferredSkillProfileSid_ = preferredSkillProfileSidBuilder_ == null
             ? preferredSkillProfileSid_
             : preferredSkillProfileSidBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.manualProficiencyValue_ = manualProficiencyValue_;
@@ -631,6 +641,7 @@ private static final long serialVersionUID = 0L;
         result.parentEntity_ = parentEntityBuilder_ == null
             ? parentEntity_
             : parentEntityBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.skillName_ = skillName_;
@@ -641,6 +652,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.skillProfileProficiencyValue_ = skillProfileProficiencyValue_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -986,8 +998,10 @@ private static final long serialVersionUID = 0L;
       } else {
         preferredSkillProfileSidBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (preferredSkillProfileSid_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1193,8 +1207,10 @@ private static final long serialVersionUID = 0L;
       } else {
         parentEntityBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (parentEntity_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**

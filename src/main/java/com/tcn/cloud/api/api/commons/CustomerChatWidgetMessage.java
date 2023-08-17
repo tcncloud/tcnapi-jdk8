@@ -39,6 +39,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.CustomerChatWidgetMessage.class, com.tcn.cloud.api.api.commons.CustomerChatWidgetMessage.Builder.class);
   }
 
+  private int bitField0_;
   public static final int MESSAGE_SID_FIELD_NUMBER = 1;
   private long messageSid_ = 0L;
   /**
@@ -66,7 +67,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPayload() {
-    return payload_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -104,7 +105,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDateCreated() {
-    return dateCreated_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -189,7 +190,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCustomerInformation() {
-    return customerInformation_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -232,16 +233,16 @@ private static final long serialVersionUID = 0L;
     if (messageSid_ != 0L) {
       output.writeInt64(1, messageSid_);
     }
-    if (payload_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getPayload());
     }
-    if (dateCreated_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(3, getDateCreated());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uiReferenceId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, uiReferenceId_);
     }
-    if (customerInformation_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(5, getCustomerInformation());
     }
     getUnknownFields().writeTo(output);
@@ -257,18 +258,18 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, messageSid_);
     }
-    if (payload_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getPayload());
     }
-    if (dateCreated_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getDateCreated());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uiReferenceId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, uiReferenceId_);
     }
-    if (customerInformation_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getCustomerInformation());
     }
@@ -453,13 +454,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.CustomerChatWidgetMessage.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getPayloadFieldBuilder();
+        getDateCreatedFieldBuilder();
+        getCustomerInformationFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -518,15 +527,18 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.messageSid_ = messageSid_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.payload_ = payloadBuilder_ == null
             ? payload_
             : payloadBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.dateCreated_ = dateCreatedBuilder_ == null
             ? dateCreated_
             : dateCreatedBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.uiReferenceId_ = uiReferenceId_;
@@ -535,7 +547,9 @@ private static final long serialVersionUID = 0L;
         result.customerInformation_ = customerInformationBuilder_ == null
             ? customerInformation_
             : customerInformationBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -803,8 +817,10 @@ private static final long serialVersionUID = 0L;
       } else {
         payloadBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (payload_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -958,8 +974,10 @@ private static final long serialVersionUID = 0L;
       } else {
         dateCreatedBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (dateCreated_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1205,8 +1223,10 @@ private static final long serialVersionUID = 0L;
       } else {
         customerInformationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (customerInformation_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**

@@ -44,6 +44,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.Room.class, com.tcn.cloud.api.api.commons.Room.Builder.class);
   }
 
+  private int bitField0_;
   public static final int ORG_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
@@ -176,7 +177,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCreatedAt() {
-    return createdAt_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -214,7 +215,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasUpdatedAt() {
-    return updatedAt_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -387,10 +388,10 @@ private static final long serialVersionUID = 0L;
     if (type_ != com.tcn.cloud.api.api.commons.RoomType.ROOM_TYPE_DIRECT.getNumber()) {
       output.writeEnum(4, type_);
     }
-    if (createdAt_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(5, getCreatedAt());
     }
-    if (updatedAt_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(6, getUpdatedAt());
     }
     if (status_ != com.tcn.cloud.api.api.commons.RoomStatus.ROOM_STATUS_ACTIVE.getNumber()) {
@@ -421,11 +422,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, type_);
     }
-    if (createdAt_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getCreatedAt());
     }
-    if (updatedAt_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getUpdatedAt());
     }
@@ -624,13 +625,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.Room.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getCreatedAtFieldBuilder();
+        getUpdatedAtFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -694,15 +702,18 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.type_ = type_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.createdAt_ = createdAtBuilder_ == null
             ? createdAt_
             : createdAtBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.updatedAt_ = updatedAtBuilder_ == null
             ? updatedAt_
             : updatedAtBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.status_ = status_;
@@ -713,6 +724,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.displayName_ = displayName_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1221,8 +1233,10 @@ private static final long serialVersionUID = 0L;
       } else {
         createdAtBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (createdAt_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1376,8 +1390,10 @@ private static final long serialVersionUID = 0L;
       } else {
         updatedAtBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (updatedAt_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**

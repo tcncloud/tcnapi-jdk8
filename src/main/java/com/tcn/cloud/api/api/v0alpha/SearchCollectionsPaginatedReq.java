@@ -40,6 +40,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.SearchCollectionsPaginatedReq.class, com.tcn.cloud.api.api.v0alpha.SearchCollectionsPaginatedReq.Builder.class);
   }
 
+  private int bitField0_;
   public static final int COLLECTION_IDS_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringArrayList collectionIds_ =
@@ -109,7 +110,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSearch() {
-    return search_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -182,7 +183,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < collectionIds_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, collectionIds_.getRaw(i));
     }
-    if (search_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(4, getSearch());
     }
     if (from_ != 0L) {
@@ -208,7 +209,7 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getCollectionIdsList().size();
     }
-    if (search_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getSearch());
     }
@@ -390,13 +391,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.SearchCollectionsPaginatedReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getSearchFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -448,10 +455,12 @@ private static final long serialVersionUID = 0L;
         collectionIds_.makeImmutable();
         result.collectionIds_ = collectionIds_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.search_ = searchBuilder_ == null
             ? search_
             : searchBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.from_ = from_;
@@ -459,6 +468,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.pageSize_ = pageSize_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -832,8 +842,10 @@ private static final long serialVersionUID = 0L;
       } else {
         searchBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (search_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**

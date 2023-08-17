@@ -40,6 +40,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.InboundSmsTemplate.class, com.tcn.cloud.api.api.v0alpha.InboundSmsTemplate.Builder.class);
   }
 
+  private int bitField0_;
   public static final int INBOUND_SMS_TEMPLATE_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object inboundSmsTemplateId_ = "";
@@ -137,7 +138,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasReportSettings() {
-    return reportSettings_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.v0alpha.ReportSettings report_settings = 4 [json_name = "reportSettings"];</code>
@@ -163,7 +164,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastUpdated() {
-    return lastUpdated_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp last_updated = 5 [json_name = "lastUpdated"];</code>
@@ -204,10 +205,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
     }
-    if (reportSettings_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(4, getReportSettings());
     }
-    if (lastUpdated_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(5, getLastUpdated());
     }
     getUnknownFields().writeTo(output);
@@ -229,11 +230,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
     }
-    if (reportSettings_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getReportSettings());
     }
-    if (lastUpdated_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getLastUpdated());
     }
@@ -413,13 +414,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.InboundSmsTemplate.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getReportSettingsFieldBuilder();
+        getLastUpdatedFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -480,16 +488,20 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.name_ = name_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.reportSettings_ = reportSettingsBuilder_ == null
             ? reportSettings_
             : reportSettingsBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.lastUpdated_ = lastUpdatedBuilder_ == null
             ? lastUpdated_
             : lastUpdatedBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -869,8 +881,10 @@ private static final long serialVersionUID = 0L;
       } else {
         reportSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (reportSettings_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -988,8 +1002,10 @@ private static final long serialVersionUID = 0L;
       } else {
         lastUpdatedBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (lastUpdated_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**

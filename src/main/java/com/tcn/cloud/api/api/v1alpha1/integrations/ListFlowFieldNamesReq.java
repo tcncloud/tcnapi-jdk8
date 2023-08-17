@@ -130,6 +130,7 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity.class, com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FLOW_FIELD_NUMBER = 3;
     private com.tcn.cloud.api.api.commons.integrations.Flow flow_;
     /**
@@ -142,7 +143,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasFlow() {
-      return flow_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -208,7 +209,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (flow_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getFlow());
       }
       if (loc_ != com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc.FFL_ANY.getNumber()) {
@@ -223,7 +224,7 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (flow_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getFlow());
       }
@@ -388,13 +389,19 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFlowFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -439,14 +446,17 @@ private static final long serialVersionUID = 0L;
 
       private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.flow_ = flowBuilder_ == null
               ? flow_
               : flowBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.loc_ = loc_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -640,8 +650,10 @@ private static final long serialVersionUID = 0L;
         } else {
           flowBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (flow_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -845,6 +857,7 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  private int bitField0_;
   public static final int ENTITY_FIELD_NUMBER = 5;
   private com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity entity_;
   /**
@@ -853,7 +866,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEntity() {
-    return entity_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity entity = 5 [json_name = "entity"];</code>
@@ -885,7 +898,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (entity_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(5, getEntity());
     }
     getUnknownFields().writeTo(output);
@@ -897,7 +910,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (entity_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getEntity());
     }
@@ -1061,13 +1074,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getEntityFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -1111,11 +1130,14 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.ListFlowFieldNamesReq result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.entity_ = entityBuilder_ == null
             ? entity_
             : entityBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1281,8 +1303,10 @@ private static final long serialVersionUID = 0L;
       } else {
         entityBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (entity_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**

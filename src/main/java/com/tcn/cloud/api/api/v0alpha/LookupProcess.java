@@ -1619,6 +1619,7 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.api.v0alpha.LookupProcess.UrlLookup.class, com.tcn.cloud.api.api.v0alpha.LookupProcess.UrlLookup.Builder.class);
     }
 
+    private int bitField0_;
     public static final int URL_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
     private volatile java.lang.Object url_ = "";
@@ -1671,7 +1672,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasFileTemplate() {
-      return fileTemplate_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1716,7 +1717,7 @@ private static final long serialVersionUID = 0L;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, url_);
       }
-      if (fileTemplate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(10, getFileTemplate());
       }
       getUnknownFields().writeTo(output);
@@ -1731,7 +1732,7 @@ private static final long serialVersionUID = 0L;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, url_);
       }
-      if (fileTemplate_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getFileTemplate());
       }
@@ -1893,13 +1894,19 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v0alpha.LookupProcess.UrlLookup.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFileTemplateFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1947,11 +1954,14 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.url_ = url_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.fileTemplate_ = fileTemplateBuilder_ == null
               ? fileTemplate_
               : fileTemplateBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2224,8 +2234,10 @@ private static final long serialVersionUID = 0L;
         } else {
           fileTemplateBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (fileTemplate_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
