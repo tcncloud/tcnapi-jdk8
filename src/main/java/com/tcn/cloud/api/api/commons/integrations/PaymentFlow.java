@@ -55,6 +55,8 @@ private static final long serialVersionUID = 0L;
     AUTHORIZE_NET_GOOGLE_PAY(8),
     PAYWAY_SUBMIT_CARD_SALE_REQUEST(9),
     PAYWAY_SUBMIT_ACH_ALERT_REQUEST(10),
+    NEWZWARE_CC(11),
+    NEWZWARE_ACH(12),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -81,6 +83,8 @@ private static final long serialVersionUID = 0L;
         case 8: return AUTHORIZE_NET_GOOGLE_PAY;
         case 9: return PAYWAY_SUBMIT_CARD_SALE_REQUEST;
         case 10: return PAYWAY_SUBMIT_ACH_ALERT_REQUEST;
+        case 11: return NEWZWARE_CC;
+        case 12: return NEWZWARE_ACH;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -414,6 +418,68 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest.getDefaultInstance();
   }
 
+  public static final int NEWZWARE_CC_FIELD_NUMBER = 11;
+  /**
+   * <code>.api.commons.integrations.PaymentNewzwareCc newzware_cc = 11 [json_name = "newzwareCc"];</code>
+   * @return Whether the newzwareCc field is set.
+   */
+  @java.lang.Override
+  public boolean hasNewzwareCc() {
+    return valueCase_ == 11;
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentNewzwareCc newzware_cc = 11 [json_name = "newzwareCc"];</code>
+   * @return The newzwareCc.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc getNewzwareCc() {
+    if (valueCase_ == 11) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentNewzwareCc newzware_cc = 11 [json_name = "newzwareCc"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCcOrBuilder getNewzwareCcOrBuilder() {
+    if (valueCase_ == 11) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc.getDefaultInstance();
+  }
+
+  public static final int NEWZWARE_ACH_FIELD_NUMBER = 12;
+  /**
+   * <code>.api.commons.integrations.PaymentNewzwareAch newzware_ach = 12 [json_name = "newzwareAch"];</code>
+   * @return Whether the newzwareAch field is set.
+   */
+  @java.lang.Override
+  public boolean hasNewzwareAch() {
+    return valueCase_ == 12;
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentNewzwareAch newzware_ach = 12 [json_name = "newzwareAch"];</code>
+   * @return The newzwareAch.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch getNewzwareAch() {
+    if (valueCase_ == 12) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.integrations.PaymentNewzwareAch newzware_ach = 12 [json_name = "newzwareAch"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAchOrBuilder getNewzwareAchOrBuilder() {
+    if (valueCase_ == 12) {
+       return (com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch) value_;
+    }
+    return com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch.getDefaultInstance();
+  }
+
   public static final int PAYMENT_FIELDS_FIELD_NUMBER = 20;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> paymentFields_;
@@ -534,6 +600,12 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 10) {
       output.writeMessage(10, (com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest) value_);
     }
+    if (valueCase_ == 11) {
+      output.writeMessage(11, (com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc) value_);
+    }
+    if (valueCase_ == 12) {
+      output.writeMessage(12, (com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch) value_);
+    }
     for (int i = 0; i < paymentFields_.size(); i++) {
       output.writeMessage(20, paymentFields_.get(i));
     }
@@ -584,6 +656,14 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 10) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, (com.tcn.cloud.api.api.commons.integrations.PaymentPaywaySubmitACHAlertRequest) value_);
+    }
+    if (valueCase_ == 11) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, (com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc) value_);
+    }
+    if (valueCase_ == 12) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, (com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch) value_);
     }
     for (int i = 0; i < paymentFields_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
@@ -646,6 +726,14 @@ private static final long serialVersionUID = 0L;
         if (!getPaywaySubmitAchAlertRequest()
             .equals(other.getPaywaySubmitAchAlertRequest())) return false;
         break;
+      case 11:
+        if (!getNewzwareCc()
+            .equals(other.getNewzwareCc())) return false;
+        break;
+      case 12:
+        if (!getNewzwareAch()
+            .equals(other.getNewzwareAch())) return false;
+        break;
       case 0:
       default:
     }
@@ -702,6 +790,14 @@ private static final long serialVersionUID = 0L;
       case 10:
         hash = (37 * hash) + PAYWAY_SUBMIT_ACH_ALERT_REQUEST_FIELD_NUMBER;
         hash = (53 * hash) + getPaywaySubmitAchAlertRequest().hashCode();
+        break;
+      case 11:
+        hash = (37 * hash) + NEWZWARE_CC_FIELD_NUMBER;
+        hash = (53 * hash) + getNewzwareCc().hashCode();
+        break;
+      case 12:
+        hash = (37 * hash) + NEWZWARE_ACH_FIELD_NUMBER;
+        hash = (53 * hash) + getNewzwareAch().hashCode();
         break;
       case 0:
       default:
@@ -865,13 +961,19 @@ private static final long serialVersionUID = 0L;
       if (paywaySubmitAchAlertRequestBuilder_ != null) {
         paywaySubmitAchAlertRequestBuilder_.clear();
       }
+      if (newzwareCcBuilder_ != null) {
+        newzwareCcBuilder_.clear();
+      }
+      if (newzwareAchBuilder_ != null) {
+        newzwareAchBuilder_.clear();
+      }
       if (paymentFieldsBuilder_ == null) {
         paymentFields_ = java.util.Collections.emptyList();
       } else {
         paymentFields_ = null;
         paymentFieldsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000400);
+      bitField0_ = (bitField0_ & ~0x00001000);
       valueCase_ = 0;
       value_ = null;
       return this;
@@ -909,9 +1011,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.integrations.PaymentFlow result) {
       if (paymentFieldsBuilder_ == null) {
-        if (((bitField0_ & 0x00000400) != 0)) {
+        if (((bitField0_ & 0x00001000) != 0)) {
           paymentFields_ = java.util.Collections.unmodifiableList(paymentFields_);
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00001000);
         }
         result.paymentFields_ = paymentFields_;
       } else {
@@ -964,6 +1066,14 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 10 &&
           paywaySubmitAchAlertRequestBuilder_ != null) {
         result.value_ = paywaySubmitAchAlertRequestBuilder_.build();
+      }
+      if (valueCase_ == 11 &&
+          newzwareCcBuilder_ != null) {
+        result.value_ = newzwareCcBuilder_.build();
+      }
+      if (valueCase_ == 12 &&
+          newzwareAchBuilder_ != null) {
+        result.value_ = newzwareAchBuilder_.build();
       }
     }
 
@@ -1020,7 +1130,7 @@ private static final long serialVersionUID = 0L;
         if (!other.paymentFields_.isEmpty()) {
           if (paymentFields_.isEmpty()) {
             paymentFields_ = other.paymentFields_;
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00001000);
           } else {
             ensurePaymentFieldsIsMutable();
             paymentFields_.addAll(other.paymentFields_);
@@ -1033,7 +1143,7 @@ private static final long serialVersionUID = 0L;
             paymentFieldsBuilder_.dispose();
             paymentFieldsBuilder_ = null;
             paymentFields_ = other.paymentFields_;
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00001000);
             paymentFieldsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getPaymentFieldsFieldBuilder() : null;
@@ -1077,6 +1187,14 @@ private static final long serialVersionUID = 0L;
         }
         case PAYWAY_SUBMIT_ACH_ALERT_REQUEST: {
           mergePaywaySubmitAchAlertRequest(other.getPaywaySubmitAchAlertRequest());
+          break;
+        }
+        case NEWZWARE_CC: {
+          mergeNewzwareCc(other.getNewzwareCc());
+          break;
+        }
+        case NEWZWARE_ACH: {
+          mergeNewzwareAch(other.getNewzwareAch());
           break;
         }
         case VALUE_NOT_SET: {
@@ -1177,6 +1295,20 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 10;
               break;
             } // case 82
+            case 90: {
+              input.readMessage(
+                  getNewzwareCcFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 11;
+              break;
+            } // case 90
+            case 98: {
+              input.readMessage(
+                  getNewzwareAchFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              valueCase_ = 12;
+              break;
+            } // case 98
             case 162: {
               com.tcn.cloud.api.api.commons.integrations.FieldDefinition m =
                   input.readMessage(
@@ -2572,12 +2704,296 @@ private static final long serialVersionUID = 0L;
       return paywaySubmitAchAlertRequestBuilder_;
     }
 
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc, com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCcOrBuilder> newzwareCcBuilder_;
+    /**
+     * <code>.api.commons.integrations.PaymentNewzwareCc newzware_cc = 11 [json_name = "newzwareCc"];</code>
+     * @return Whether the newzwareCc field is set.
+     */
+    @java.lang.Override
+    public boolean hasNewzwareCc() {
+      return valueCase_ == 11;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentNewzwareCc newzware_cc = 11 [json_name = "newzwareCc"];</code>
+     * @return The newzwareCc.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc getNewzwareCc() {
+      if (newzwareCcBuilder_ == null) {
+        if (valueCase_ == 11) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc.getDefaultInstance();
+      } else {
+        if (valueCase_ == 11) {
+          return newzwareCcBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentNewzwareCc newzware_cc = 11 [json_name = "newzwareCc"];</code>
+     */
+    public Builder setNewzwareCc(com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc value) {
+      if (newzwareCcBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        newzwareCcBuilder_.setMessage(value);
+      }
+      valueCase_ = 11;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentNewzwareCc newzware_cc = 11 [json_name = "newzwareCc"];</code>
+     */
+    public Builder setNewzwareCc(
+        com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc.Builder builderForValue) {
+      if (newzwareCcBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        newzwareCcBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 11;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentNewzwareCc newzware_cc = 11 [json_name = "newzwareCc"];</code>
+     */
+    public Builder mergeNewzwareCc(com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc value) {
+      if (newzwareCcBuilder_ == null) {
+        if (valueCase_ == 11 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc.newBuilder((com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 11) {
+          newzwareCcBuilder_.mergeFrom(value);
+        } else {
+          newzwareCcBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 11;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentNewzwareCc newzware_cc = 11 [json_name = "newzwareCc"];</code>
+     */
+    public Builder clearNewzwareCc() {
+      if (newzwareCcBuilder_ == null) {
+        if (valueCase_ == 11) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 11) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        newzwareCcBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentNewzwareCc newzware_cc = 11 [json_name = "newzwareCc"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc.Builder getNewzwareCcBuilder() {
+      return getNewzwareCcFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentNewzwareCc newzware_cc = 11 [json_name = "newzwareCc"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCcOrBuilder getNewzwareCcOrBuilder() {
+      if ((valueCase_ == 11) && (newzwareCcBuilder_ != null)) {
+        return newzwareCcBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 11) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentNewzwareCc newzware_cc = 11 [json_name = "newzwareCc"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc, com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCcOrBuilder> 
+        getNewzwareCcFieldBuilder() {
+      if (newzwareCcBuilder_ == null) {
+        if (!(valueCase_ == 11)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc.getDefaultInstance();
+        }
+        newzwareCcBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc, com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCcOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareCc) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 11;
+      onChanged();
+      return newzwareCcBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch, com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAchOrBuilder> newzwareAchBuilder_;
+    /**
+     * <code>.api.commons.integrations.PaymentNewzwareAch newzware_ach = 12 [json_name = "newzwareAch"];</code>
+     * @return Whether the newzwareAch field is set.
+     */
+    @java.lang.Override
+    public boolean hasNewzwareAch() {
+      return valueCase_ == 12;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentNewzwareAch newzware_ach = 12 [json_name = "newzwareAch"];</code>
+     * @return The newzwareAch.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch getNewzwareAch() {
+      if (newzwareAchBuilder_ == null) {
+        if (valueCase_ == 12) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch.getDefaultInstance();
+      } else {
+        if (valueCase_ == 12) {
+          return newzwareAchBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentNewzwareAch newzware_ach = 12 [json_name = "newzwareAch"];</code>
+     */
+    public Builder setNewzwareAch(com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch value) {
+      if (newzwareAchBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        value_ = value;
+        onChanged();
+      } else {
+        newzwareAchBuilder_.setMessage(value);
+      }
+      valueCase_ = 12;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentNewzwareAch newzware_ach = 12 [json_name = "newzwareAch"];</code>
+     */
+    public Builder setNewzwareAch(
+        com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch.Builder builderForValue) {
+      if (newzwareAchBuilder_ == null) {
+        value_ = builderForValue.build();
+        onChanged();
+      } else {
+        newzwareAchBuilder_.setMessage(builderForValue.build());
+      }
+      valueCase_ = 12;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentNewzwareAch newzware_ach = 12 [json_name = "newzwareAch"];</code>
+     */
+    public Builder mergeNewzwareAch(com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch value) {
+      if (newzwareAchBuilder_ == null) {
+        if (valueCase_ == 12 &&
+            value_ != com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch.getDefaultInstance()) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch.newBuilder((com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch) value_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          value_ = value;
+        }
+        onChanged();
+      } else {
+        if (valueCase_ == 12) {
+          newzwareAchBuilder_.mergeFrom(value);
+        } else {
+          newzwareAchBuilder_.setMessage(value);
+        }
+      }
+      valueCase_ = 12;
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentNewzwareAch newzware_ach = 12 [json_name = "newzwareAch"];</code>
+     */
+    public Builder clearNewzwareAch() {
+      if (newzwareAchBuilder_ == null) {
+        if (valueCase_ == 12) {
+          valueCase_ = 0;
+          value_ = null;
+          onChanged();
+        }
+      } else {
+        if (valueCase_ == 12) {
+          valueCase_ = 0;
+          value_ = null;
+        }
+        newzwareAchBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentNewzwareAch newzware_ach = 12 [json_name = "newzwareAch"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch.Builder getNewzwareAchBuilder() {
+      return getNewzwareAchFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentNewzwareAch newzware_ach = 12 [json_name = "newzwareAch"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAchOrBuilder getNewzwareAchOrBuilder() {
+      if ((valueCase_ == 12) && (newzwareAchBuilder_ != null)) {
+        return newzwareAchBuilder_.getMessageOrBuilder();
+      } else {
+        if (valueCase_ == 12) {
+          return (com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch) value_;
+        }
+        return com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.integrations.PaymentNewzwareAch newzware_ach = 12 [json_name = "newzwareAch"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch, com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAchOrBuilder> 
+        getNewzwareAchFieldBuilder() {
+      if (newzwareAchBuilder_ == null) {
+        if (!(valueCase_ == 12)) {
+          value_ = com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch.getDefaultInstance();
+        }
+        newzwareAchBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch, com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAchOrBuilder>(
+                (com.tcn.cloud.api.api.commons.integrations.PaymentNewzwareAch) value_,
+                getParentForChildren(),
+                isClean());
+        value_ = null;
+      }
+      valueCase_ = 12;
+      onChanged();
+      return newzwareAchBuilder_;
+    }
+
     private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> paymentFields_ =
       java.util.Collections.emptyList();
     private void ensurePaymentFieldsIsMutable() {
-      if (!((bitField0_ & 0x00000400) != 0)) {
+      if (!((bitField0_ & 0x00001000) != 0)) {
         paymentFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.integrations.FieldDefinition>(paymentFields_);
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00001000;
        }
     }
 
@@ -2804,7 +3220,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearPaymentFields() {
       if (paymentFieldsBuilder_ == null) {
         paymentFields_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00001000);
         onChanged();
       } else {
         paymentFieldsBuilder_.clear();
@@ -2930,7 +3346,7 @@ private static final long serialVersionUID = 0L;
         paymentFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder>(
                 paymentFields_,
-                ((bitField0_ & 0x00000400) != 0),
+                ((bitField0_ & 0x00001000) != 0),
                 getParentForChildren(),
                 isClean());
         paymentFields_ = null;
