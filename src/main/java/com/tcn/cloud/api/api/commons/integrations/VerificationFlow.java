@@ -52,8 +52,6 @@ private static final long serialVersionUID = 0L;
     AUTHORIZE_NET_CUSTOMER_PROFILE(6),
     AUTHORIZE_NET_LINK_DATA(7),
     JOURNEY(12),
-    NEWZWARE_LOOKUP_PHONE(13),
-    NEWZWARE_ACCOUNT_INQUIRY(14),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -77,8 +75,6 @@ private static final long serialVersionUID = 0L;
         case 6: return AUTHORIZE_NET_CUSTOMER_PROFILE;
         case 7: return AUTHORIZE_NET_LINK_DATA;
         case 12: return JOURNEY;
-        case 13: return NEWZWARE_LOOKUP_PHONE;
-        case 14: return NEWZWARE_ACCOUNT_INQUIRY;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -319,68 +315,6 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.VerificationJourney.getDefaultInstance();
   }
 
-  public static final int NEWZWARE_LOOKUP_PHONE_FIELD_NUMBER = 13;
-  /**
-   * <code>.api.commons.integrations.VerificationNewzwareLookupPhone newzware_lookup_phone = 13 [json_name = "newzwareLookupPhone"];</code>
-   * @return Whether the newzwareLookupPhone field is set.
-   */
-  @java.lang.Override
-  public boolean hasNewzwareLookupPhone() {
-    return valueCase_ == 13;
-  }
-  /**
-   * <code>.api.commons.integrations.VerificationNewzwareLookupPhone newzware_lookup_phone = 13 [json_name = "newzwareLookupPhone"];</code>
-   * @return The newzwareLookupPhone.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone getNewzwareLookupPhone() {
-    if (valueCase_ == 13) {
-       return (com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.VerificationNewzwareLookupPhone newzware_lookup_phone = 13 [json_name = "newzwareLookupPhone"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhoneOrBuilder getNewzwareLookupPhoneOrBuilder() {
-    if (valueCase_ == 13) {
-       return (com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone.getDefaultInstance();
-  }
-
-  public static final int NEWZWARE_ACCOUNT_INQUIRY_FIELD_NUMBER = 14;
-  /**
-   * <code>.api.commons.integrations.VerificationNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
-   * @return Whether the newzwareAccountInquiry field is set.
-   */
-  @java.lang.Override
-  public boolean hasNewzwareAccountInquiry() {
-    return valueCase_ == 14;
-  }
-  /**
-   * <code>.api.commons.integrations.VerificationNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
-   * @return The newzwareAccountInquiry.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry getNewzwareAccountInquiry() {
-    if (valueCase_ == 14) {
-       return (com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.VerificationNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiryOrBuilder getNewzwareAccountInquiryOrBuilder() {
-    if (valueCase_ == 14) {
-       return (com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry.getDefaultInstance();
-  }
-
   public static final int VERIFICATION_FIELDS_FIELD_NUMBER = 20;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> verificationFields_;
@@ -482,12 +416,6 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 12) {
       output.writeMessage(12, (com.tcn.cloud.api.api.commons.integrations.VerificationJourney) value_);
     }
-    if (valueCase_ == 13) {
-      output.writeMessage(13, (com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone) value_);
-    }
-    if (valueCase_ == 14) {
-      output.writeMessage(14, (com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry) value_);
-    }
     for (int i = 0; i < verificationFields_.size(); i++) {
       output.writeMessage(20, verificationFields_.get(i));
     }
@@ -526,14 +454,6 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 12) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, (com.tcn.cloud.api.api.commons.integrations.VerificationJourney) value_);
-    }
-    if (valueCase_ == 13) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(13, (com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone) value_);
-    }
-    if (valueCase_ == 14) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(14, (com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry) value_);
     }
     for (int i = 0; i < verificationFields_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
@@ -584,14 +504,6 @@ private static final long serialVersionUID = 0L;
         if (!getJourney()
             .equals(other.getJourney())) return false;
         break;
-      case 13:
-        if (!getNewzwareLookupPhone()
-            .equals(other.getNewzwareLookupPhone())) return false;
-        break;
-      case 14:
-        if (!getNewzwareAccountInquiry()
-            .equals(other.getNewzwareAccountInquiry())) return false;
-        break;
       case 0:
       default:
     }
@@ -636,14 +548,6 @@ private static final long serialVersionUID = 0L;
       case 12:
         hash = (37 * hash) + JOURNEY_FIELD_NUMBER;
         hash = (53 * hash) + getJourney().hashCode();
-        break;
-      case 13:
-        hash = (37 * hash) + NEWZWARE_LOOKUP_PHONE_FIELD_NUMBER;
-        hash = (53 * hash) + getNewzwareLookupPhone().hashCode();
-        break;
-      case 14:
-        hash = (37 * hash) + NEWZWARE_ACCOUNT_INQUIRY_FIELD_NUMBER;
-        hash = (53 * hash) + getNewzwareAccountInquiry().hashCode();
         break;
       case 0:
       default:
@@ -798,19 +702,13 @@ private static final long serialVersionUID = 0L;
       if (journeyBuilder_ != null) {
         journeyBuilder_.clear();
       }
-      if (newzwareLookupPhoneBuilder_ != null) {
-        newzwareLookupPhoneBuilder_.clear();
-      }
-      if (newzwareAccountInquiryBuilder_ != null) {
-        newzwareAccountInquiryBuilder_.clear();
-      }
       if (verificationFieldsBuilder_ == null) {
         verificationFields_ = java.util.Collections.emptyList();
       } else {
         verificationFields_ = null;
         verificationFieldsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000080);
       valueCase_ = 0;
       value_ = null;
       return this;
@@ -848,9 +746,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.integrations.VerificationFlow result) {
       if (verificationFieldsBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) != 0)) {
+        if (((bitField0_ & 0x00000080) != 0)) {
           verificationFields_ = java.util.Collections.unmodifiableList(verificationFields_);
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000080);
         }
         result.verificationFields_ = verificationFields_;
       } else {
@@ -891,14 +789,6 @@ private static final long serialVersionUID = 0L;
       if (valueCase_ == 12 &&
           journeyBuilder_ != null) {
         result.value_ = journeyBuilder_.build();
-      }
-      if (valueCase_ == 13 &&
-          newzwareLookupPhoneBuilder_ != null) {
-        result.value_ = newzwareLookupPhoneBuilder_.build();
-      }
-      if (valueCase_ == 14 &&
-          newzwareAccountInquiryBuilder_ != null) {
-        result.value_ = newzwareAccountInquiryBuilder_.build();
       }
     }
 
@@ -955,7 +845,7 @@ private static final long serialVersionUID = 0L;
         if (!other.verificationFields_.isEmpty()) {
           if (verificationFields_.isEmpty()) {
             verificationFields_ = other.verificationFields_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000080);
           } else {
             ensureVerificationFieldsIsMutable();
             verificationFields_.addAll(other.verificationFields_);
@@ -968,7 +858,7 @@ private static final long serialVersionUID = 0L;
             verificationFieldsBuilder_.dispose();
             verificationFieldsBuilder_ = null;
             verificationFields_ = other.verificationFields_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000080);
             verificationFieldsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getVerificationFieldsFieldBuilder() : null;
@@ -1000,14 +890,6 @@ private static final long serialVersionUID = 0L;
         }
         case JOURNEY: {
           mergeJourney(other.getJourney());
-          break;
-        }
-        case NEWZWARE_LOOKUP_PHONE: {
-          mergeNewzwareLookupPhone(other.getNewzwareLookupPhone());
-          break;
-        }
-        case NEWZWARE_ACCOUNT_INQUIRY: {
-          mergeNewzwareAccountInquiry(other.getNewzwareAccountInquiry());
           break;
         }
         case VALUE_NOT_SET: {
@@ -1087,20 +969,6 @@ private static final long serialVersionUID = 0L;
               valueCase_ = 12;
               break;
             } // case 98
-            case 106: {
-              input.readMessage(
-                  getNewzwareLookupPhoneFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 13;
-              break;
-            } // case 106
-            case 114: {
-              input.readMessage(
-                  getNewzwareAccountInquiryFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 14;
-              break;
-            } // case 114
             case 162: {
               com.tcn.cloud.api.api.commons.integrations.FieldDefinition m =
                   input.readMessage(
@@ -2070,296 +1938,12 @@ private static final long serialVersionUID = 0L;
       return journeyBuilder_;
     }
 
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone, com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone.Builder, com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhoneOrBuilder> newzwareLookupPhoneBuilder_;
-    /**
-     * <code>.api.commons.integrations.VerificationNewzwareLookupPhone newzware_lookup_phone = 13 [json_name = "newzwareLookupPhone"];</code>
-     * @return Whether the newzwareLookupPhone field is set.
-     */
-    @java.lang.Override
-    public boolean hasNewzwareLookupPhone() {
-      return valueCase_ == 13;
-    }
-    /**
-     * <code>.api.commons.integrations.VerificationNewzwareLookupPhone newzware_lookup_phone = 13 [json_name = "newzwareLookupPhone"];</code>
-     * @return The newzwareLookupPhone.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone getNewzwareLookupPhone() {
-      if (newzwareLookupPhoneBuilder_ == null) {
-        if (valueCase_ == 13) {
-          return (com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone.getDefaultInstance();
-      } else {
-        if (valueCase_ == 13) {
-          return newzwareLookupPhoneBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.VerificationNewzwareLookupPhone newzware_lookup_phone = 13 [json_name = "newzwareLookupPhone"];</code>
-     */
-    public Builder setNewzwareLookupPhone(com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone value) {
-      if (newzwareLookupPhoneBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        newzwareLookupPhoneBuilder_.setMessage(value);
-      }
-      valueCase_ = 13;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.VerificationNewzwareLookupPhone newzware_lookup_phone = 13 [json_name = "newzwareLookupPhone"];</code>
-     */
-    public Builder setNewzwareLookupPhone(
-        com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone.Builder builderForValue) {
-      if (newzwareLookupPhoneBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        newzwareLookupPhoneBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 13;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.VerificationNewzwareLookupPhone newzware_lookup_phone = 13 [json_name = "newzwareLookupPhone"];</code>
-     */
-    public Builder mergeNewzwareLookupPhone(com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone value) {
-      if (newzwareLookupPhoneBuilder_ == null) {
-        if (valueCase_ == 13 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone.newBuilder((com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 13) {
-          newzwareLookupPhoneBuilder_.mergeFrom(value);
-        } else {
-          newzwareLookupPhoneBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 13;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.VerificationNewzwareLookupPhone newzware_lookup_phone = 13 [json_name = "newzwareLookupPhone"];</code>
-     */
-    public Builder clearNewzwareLookupPhone() {
-      if (newzwareLookupPhoneBuilder_ == null) {
-        if (valueCase_ == 13) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 13) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        newzwareLookupPhoneBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.VerificationNewzwareLookupPhone newzware_lookup_phone = 13 [json_name = "newzwareLookupPhone"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone.Builder getNewzwareLookupPhoneBuilder() {
-      return getNewzwareLookupPhoneFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.VerificationNewzwareLookupPhone newzware_lookup_phone = 13 [json_name = "newzwareLookupPhone"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhoneOrBuilder getNewzwareLookupPhoneOrBuilder() {
-      if ((valueCase_ == 13) && (newzwareLookupPhoneBuilder_ != null)) {
-        return newzwareLookupPhoneBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 13) {
-          return (com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.VerificationNewzwareLookupPhone newzware_lookup_phone = 13 [json_name = "newzwareLookupPhone"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone, com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone.Builder, com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhoneOrBuilder> 
-        getNewzwareLookupPhoneFieldBuilder() {
-      if (newzwareLookupPhoneBuilder_ == null) {
-        if (!(valueCase_ == 13)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone.getDefaultInstance();
-        }
-        newzwareLookupPhoneBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone, com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone.Builder, com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhoneOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 13;
-      onChanged();
-      return newzwareLookupPhoneBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry, com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry.Builder, com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiryOrBuilder> newzwareAccountInquiryBuilder_;
-    /**
-     * <code>.api.commons.integrations.VerificationNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
-     * @return Whether the newzwareAccountInquiry field is set.
-     */
-    @java.lang.Override
-    public boolean hasNewzwareAccountInquiry() {
-      return valueCase_ == 14;
-    }
-    /**
-     * <code>.api.commons.integrations.VerificationNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
-     * @return The newzwareAccountInquiry.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry getNewzwareAccountInquiry() {
-      if (newzwareAccountInquiryBuilder_ == null) {
-        if (valueCase_ == 14) {
-          return (com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry.getDefaultInstance();
-      } else {
-        if (valueCase_ == 14) {
-          return newzwareAccountInquiryBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.VerificationNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
-     */
-    public Builder setNewzwareAccountInquiry(com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry value) {
-      if (newzwareAccountInquiryBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        newzwareAccountInquiryBuilder_.setMessage(value);
-      }
-      valueCase_ = 14;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.VerificationNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
-     */
-    public Builder setNewzwareAccountInquiry(
-        com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry.Builder builderForValue) {
-      if (newzwareAccountInquiryBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        newzwareAccountInquiryBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 14;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.VerificationNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
-     */
-    public Builder mergeNewzwareAccountInquiry(com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry value) {
-      if (newzwareAccountInquiryBuilder_ == null) {
-        if (valueCase_ == 14 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry.newBuilder((com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 14) {
-          newzwareAccountInquiryBuilder_.mergeFrom(value);
-        } else {
-          newzwareAccountInquiryBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 14;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.VerificationNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
-     */
-    public Builder clearNewzwareAccountInquiry() {
-      if (newzwareAccountInquiryBuilder_ == null) {
-        if (valueCase_ == 14) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 14) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        newzwareAccountInquiryBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.VerificationNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry.Builder getNewzwareAccountInquiryBuilder() {
-      return getNewzwareAccountInquiryFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.VerificationNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiryOrBuilder getNewzwareAccountInquiryOrBuilder() {
-      if ((valueCase_ == 14) && (newzwareAccountInquiryBuilder_ != null)) {
-        return newzwareAccountInquiryBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 14) {
-          return (com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.VerificationNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry, com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry.Builder, com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiryOrBuilder> 
-        getNewzwareAccountInquiryFieldBuilder() {
-      if (newzwareAccountInquiryBuilder_ == null) {
-        if (!(valueCase_ == 14)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry.getDefaultInstance();
-        }
-        newzwareAccountInquiryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry, com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry.Builder, com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiryOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 14;
-      onChanged();
-      return newzwareAccountInquiryBuilder_;
-    }
-
     private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> verificationFields_ =
       java.util.Collections.emptyList();
     private void ensureVerificationFieldsIsMutable() {
-      if (!((bitField0_ & 0x00000200) != 0)) {
+      if (!((bitField0_ & 0x00000080) != 0)) {
         verificationFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.integrations.FieldDefinition>(verificationFields_);
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000080;
        }
     }
 
@@ -2564,7 +2148,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearVerificationFields() {
       if (verificationFieldsBuilder_ == null) {
         verificationFields_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
       } else {
         verificationFieldsBuilder_.clear();
@@ -2676,7 +2260,7 @@ private static final long serialVersionUID = 0L;
         verificationFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder>(
                 verificationFields_,
-                ((bitField0_ & 0x00000200) != 0),
+                ((bitField0_ & 0x00000080) != 0),
                 getParentForChildren(),
                 isClean());
         verificationFields_ = null;

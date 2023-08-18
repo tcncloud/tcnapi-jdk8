@@ -733,22 +733,6 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_EPIC_GET_ACCOUNT = 3707;</code>
    */
   REQUEST_METHOD_EPIC_GET_ACCOUNT(3707),
-  /**
-   * <code>REQUEST_METHOD_NEWZWARE_PHONE_LOOKUP = 3801;</code>
-   */
-  REQUEST_METHOD_NEWZWARE_PHONE_LOOKUP(3801),
-  /**
-   * <code>REQUEST_METHOD_NEWZWARE_ACCOUNT_INQUIRY = 3802;</code>
-   */
-  REQUEST_METHOD_NEWZWARE_ACCOUNT_INQUIRY(3802),
-  /**
-   * <code>REQUEST_METHOD_NEWZWARE_CC_PAYMENT = 3803;</code>
-   */
-  REQUEST_METHOD_NEWZWARE_CC_PAYMENT(3803),
-  /**
-   * <code>REQUEST_METHOD_NEWZWARE_ACH_PAYMENT = 3804;</code>
-   */
-  REQUEST_METHOD_NEWZWARE_ACH_PAYMENT(3804),
   UNRECOGNIZED(-1),
   ;
 
@@ -1472,22 +1456,6 @@ public enum RequestMethod
    * <code>REQUEST_METHOD_EPIC_GET_ACCOUNT = 3707;</code>
    */
   public static final int REQUEST_METHOD_EPIC_GET_ACCOUNT_VALUE = 3707;
-  /**
-   * <code>REQUEST_METHOD_NEWZWARE_PHONE_LOOKUP = 3801;</code>
-   */
-  public static final int REQUEST_METHOD_NEWZWARE_PHONE_LOOKUP_VALUE = 3801;
-  /**
-   * <code>REQUEST_METHOD_NEWZWARE_ACCOUNT_INQUIRY = 3802;</code>
-   */
-  public static final int REQUEST_METHOD_NEWZWARE_ACCOUNT_INQUIRY_VALUE = 3802;
-  /**
-   * <code>REQUEST_METHOD_NEWZWARE_CC_PAYMENT = 3803;</code>
-   */
-  public static final int REQUEST_METHOD_NEWZWARE_CC_PAYMENT_VALUE = 3803;
-  /**
-   * <code>REQUEST_METHOD_NEWZWARE_ACH_PAYMENT = 3804;</code>
-   */
-  public static final int REQUEST_METHOD_NEWZWARE_ACH_PAYMENT_VALUE = 3804;
 
 
   public final int getNumber() {
@@ -1694,10 +1662,6 @@ public enum RequestMethod
       case 3705: return REQUEST_METHOD_EPIC_FIND_APPOINTMENT;
       case 3706: return REQUEST_METHOD_EPIC_BOOK_APPOINTMENT;
       case 3707: return REQUEST_METHOD_EPIC_GET_ACCOUNT;
-      case 3801: return REQUEST_METHOD_NEWZWARE_PHONE_LOOKUP;
-      case 3802: return REQUEST_METHOD_NEWZWARE_ACCOUNT_INQUIRY;
-      case 3803: return REQUEST_METHOD_NEWZWARE_CC_PAYMENT;
-      case 3804: return REQUEST_METHOD_NEWZWARE_ACH_PAYMENT;
       default: return null;
     }
   }

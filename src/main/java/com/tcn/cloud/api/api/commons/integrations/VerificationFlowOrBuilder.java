@@ -110,36 +110,6 @@ public interface VerificationFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.VerificationJourneyOrBuilder getJourneyOrBuilder();
 
   /**
-   * <code>.api.commons.integrations.VerificationNewzwareLookupPhone newzware_lookup_phone = 13 [json_name = "newzwareLookupPhone"];</code>
-   * @return Whether the newzwareLookupPhone field is set.
-   */
-  boolean hasNewzwareLookupPhone();
-  /**
-   * <code>.api.commons.integrations.VerificationNewzwareLookupPhone newzware_lookup_phone = 13 [json_name = "newzwareLookupPhone"];</code>
-   * @return The newzwareLookupPhone.
-   */
-  com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhone getNewzwareLookupPhone();
-  /**
-   * <code>.api.commons.integrations.VerificationNewzwareLookupPhone newzware_lookup_phone = 13 [json_name = "newzwareLookupPhone"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareLookupPhoneOrBuilder getNewzwareLookupPhoneOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.VerificationNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
-   * @return Whether the newzwareAccountInquiry field is set.
-   */
-  boolean hasNewzwareAccountInquiry();
-  /**
-   * <code>.api.commons.integrations.VerificationNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
-   * @return The newzwareAccountInquiry.
-   */
-  com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiry getNewzwareAccountInquiry();
-  /**
-   * <code>.api.commons.integrations.VerificationNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.VerificationNewzwareAccountInquiryOrBuilder getNewzwareAccountInquiryOrBuilder();
-
-  /**
    * <pre>
    * the fields the user must verify for this flow.
    * must conform to the list of fields returned from the flow
