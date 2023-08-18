@@ -46,6 +46,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteQuestionEvent.class, com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteQuestionEvent.Builder.class);
   }
 
+  private int bitField0_;
   public static final int USER_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object userId_ = "";
@@ -189,7 +190,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int CATEGORY_IDS_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList categoryIds_;
+  private com.google.protobuf.Internal.LongList categoryIds_ =
+      emptyLongList();
   /**
    * <pre>
    * category ids linked to question
@@ -240,7 +242,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasQuestion() {
-    return question_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -297,7 +299,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < categoryIds_.size(); i++) {
       output.writeInt64NoTag(categoryIds_.getLong(i));
     }
-    if (question_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(5, getQuestion());
     }
     getUnknownFields().writeTo(output);
@@ -332,7 +334,7 @@ private static final long serialVersionUID = 0L;
       }
       categoryIdsMemoizedSerializedSize = dataSize;
     }
-    if (question_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getQuestion());
     }
@@ -512,13 +514,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteQuestionEvent.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getQuestionFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -559,18 +567,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteQuestionEvent buildPartial() {
       com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteQuestionEvent result = new com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteQuestionEvent(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteQuestionEvent result) {
-      if (((bitField0_ & 0x00000008) != 0)) {
-        categoryIds_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000008);
-      }
-      result.categoryIds_ = categoryIds_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteQuestionEvent result) {
@@ -584,11 +583,18 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.description_ = description_;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        categoryIds_.makeImmutable();
+        result.categoryIds_ = categoryIds_;
+      }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.question_ = questionBuilder_ == null
             ? question_
             : questionBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -653,7 +659,8 @@ private static final long serialVersionUID = 0L;
       if (!other.categoryIds_.isEmpty()) {
         if (categoryIds_.isEmpty()) {
           categoryIds_ = other.categoryIds_;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          categoryIds_.makeImmutable();
+          bitField0_ |= 0x00000008;
         } else {
           ensureCategoryIdsIsMutable();
           categoryIds_.addAll(other.categoryIds_);
@@ -1022,10 +1029,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList categoryIds_ = emptyLongList();
     private void ensureCategoryIdsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
-        categoryIds_ = mutableCopy(categoryIds_);
-        bitField0_ |= 0x00000008;
+      if (!categoryIds_.isModifiable()) {
+        categoryIds_ = makeMutableCopy(categoryIds_);
       }
+      bitField0_ |= 0x00000008;
     }
     /**
      * <pre>
@@ -1037,8 +1044,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getCategoryIdsList() {
-      return ((bitField0_ & 0x00000008) != 0) ?
-               java.util.Collections.unmodifiableList(categoryIds_) : categoryIds_;
+      categoryIds_.makeImmutable();
+      return categoryIds_;
     }
     /**
      * <pre>
@@ -1078,6 +1085,7 @@ private static final long serialVersionUID = 0L;
 
       ensureCategoryIdsIsMutable();
       categoryIds_.setLong(index, value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1094,6 +1102,7 @@ private static final long serialVersionUID = 0L;
 
       ensureCategoryIdsIsMutable();
       categoryIds_.addLong(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1111,6 +1120,7 @@ private static final long serialVersionUID = 0L;
       ensureCategoryIdsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, categoryIds_);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1215,8 +1225,10 @@ private static final long serialVersionUID = 0L;
       } else {
         questionBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (question_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**

@@ -42,6 +42,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.Chart.class, com.tcn.cloud.api.api.v0alpha.Chart.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CHART_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object chartId_ = "";
@@ -128,7 +129,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasChartDetails() {
-    return chartDetails_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.v0alpha.ChartDetails chart_details = 4 [json_name = "chartDetails"];</code>
@@ -223,7 +224,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, title_);
     }
-    if (chartDetails_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(4, getChartDetails());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rootId_)) {
@@ -247,7 +248,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, title_);
     }
-    if (chartDetails_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getChartDetails());
     }
@@ -427,13 +428,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.Chart.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getChartDetailsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -487,10 +494,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.title_ = title_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.chartDetails_ = chartDetailsBuilder_ == null
             ? chartDetails_
             : chartDetailsBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.rootId_ = rootId_;
@@ -498,6 +507,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.displayLabels_ = displayLabels_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -845,8 +855,10 @@ private static final long serialVersionUID = 0L;
       } else {
         chartDetailsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (chartDetails_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**

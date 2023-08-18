@@ -39,6 +39,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.integrations.SearchIntegrationTransactionsReq.class, com.tcn.cloud.api.api.v1alpha1.integrations.SearchIntegrationTransactionsReq.Builder.class);
   }
 
+  private int bitField0_;
   public static final int START_DATE_FIELD_NUMBER = 8;
   private com.google.protobuf.Timestamp startDate_;
   /**
@@ -51,7 +52,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasStartDate() {
-    return startDate_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -85,7 +86,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEndDate() {
-    return endDate_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp end_date = 9 [json_name = "endDate"];</code>
@@ -111,7 +112,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasIntegrationType() {
-    return integrationType_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <code>.api.v1alpha1.integrations.IntegrationType integration_type = 10 [json_name = "integrationType"];</code>
@@ -137,7 +138,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasRequestMethod() {
-    return requestMethod_ != null;
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <code>.api.v1alpha1.integrations.RequestMethod request_method = 11 [json_name = "requestMethod"];</code>
@@ -163,7 +164,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTransactionType() {
-    return transactionType_ != null;
+    return ((bitField0_ & 0x00000010) != 0);
   }
   /**
    * <code>.api.v1alpha1.integrations.TransactionType transaction_type = 12 [json_name = "transactionType"];</code>
@@ -189,7 +190,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasRequestSource() {
-    return requestSource_ != null;
+    return ((bitField0_ & 0x00000020) != 0);
   }
   /**
    * <code>.api.v1alpha1.integrations.RequestSource request_source = 13 [json_name = "requestSource"];</code>
@@ -215,7 +216,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasResult() {
-    return result_ != null;
+    return ((bitField0_ & 0x00000040) != 0);
   }
   /**
    * <code>.api.v1alpha1.integrations.TransactionResult result = 14 [json_name = "result"];</code>
@@ -286,25 +287,25 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (startDate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(8, getStartDate());
     }
-    if (endDate_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(9, getEndDate());
     }
-    if (integrationType_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(10, getIntegrationType());
     }
-    if (requestMethod_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(11, getRequestMethod());
     }
-    if (transactionType_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       output.writeMessage(12, getTransactionType());
     }
-    if (requestSource_ != null) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       output.writeMessage(13, getRequestSource());
     }
-    if (result_ != null) {
+    if (((bitField0_ & 0x00000040) != 0)) {
       output.writeMessage(14, getResult());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taskId_)) {
@@ -319,31 +320,31 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (startDate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getStartDate());
     }
-    if (endDate_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getEndDate());
     }
-    if (integrationType_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getIntegrationType());
     }
-    if (requestMethod_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getRequestMethod());
     }
-    if (transactionType_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, getTransactionType());
     }
-    if (requestSource_ != null) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getRequestSource());
     }
-    if (result_ != null) {
+    if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, getResult());
     }
@@ -562,13 +563,25 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.SearchIntegrationTransactionsReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getStartDateFieldBuilder();
+        getEndDateFieldBuilder();
+        getIntegrationTypeFieldBuilder();
+        getRequestMethodFieldBuilder();
+        getTransactionTypeFieldBuilder();
+        getRequestSourceFieldBuilder();
+        getResultFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -643,44 +656,53 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.SearchIntegrationTransactionsReq result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.startDate_ = startDateBuilder_ == null
             ? startDate_
             : startDateBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.endDate_ = endDateBuilder_ == null
             ? endDate_
             : endDateBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.integrationType_ = integrationTypeBuilder_ == null
             ? integrationType_
             : integrationTypeBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.requestMethod_ = requestMethodBuilder_ == null
             ? requestMethod_
             : requestMethodBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.transactionType_ = transactionTypeBuilder_ == null
             ? transactionType_
             : transactionTypeBuilder_.build();
+        to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.requestSource_ = requestSourceBuilder_ == null
             ? requestSource_
             : requestSourceBuilder_.build();
+        to_bitField0_ |= 0x00000020;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.result_ = resultBuilder_ == null
             ? result_
             : resultBuilder_.build();
+        to_bitField0_ |= 0x00000040;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.taskId_ = taskId_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -936,8 +958,10 @@ private static final long serialVersionUID = 0L;
       } else {
         startDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (startDate_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1071,8 +1095,10 @@ private static final long serialVersionUID = 0L;
       } else {
         endDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (endDate_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1190,8 +1216,10 @@ private static final long serialVersionUID = 0L;
       } else {
         integrationTypeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (integrationType_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1309,8 +1337,10 @@ private static final long serialVersionUID = 0L;
       } else {
         requestMethodBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (requestMethod_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1428,8 +1458,10 @@ private static final long serialVersionUID = 0L;
       } else {
         transactionTypeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (transactionType_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1547,8 +1579,10 @@ private static final long serialVersionUID = 0L;
       } else {
         requestSourceBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (requestSource_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1666,8 +1700,10 @@ private static final long serialVersionUID = 0L;
       } else {
         resultBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (result_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
     /**

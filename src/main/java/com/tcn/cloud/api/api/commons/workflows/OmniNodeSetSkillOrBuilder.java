@@ -14,7 +14,7 @@ public interface OmniNodeSetSkillOrBuilder extends
    *
    * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
    * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-   *     See api/commons/workflows/omni.proto;l=47
+   *     See api/commons/workflows/omni.proto;l=51
    * @return The skill.
    */
   @java.lang.Deprecated java.lang.String getSkill();
@@ -25,7 +25,7 @@ public interface OmniNodeSetSkillOrBuilder extends
    *
    * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
    * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-   *     See api/commons/workflows/omni.proto;l=47
+   *     See api/commons/workflows/omni.proto;l=51
    * @return The bytes for skill.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString

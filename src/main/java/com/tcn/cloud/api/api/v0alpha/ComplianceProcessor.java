@@ -56,6 +56,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.ComplianceProcessor.class, com.tcn.cloud.api.api.v0alpha.ComplianceProcessor.Builder.class);
   }
 
+  private int bitField0_;
   public static final int RULE_SET_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object ruleSetId_ = "";
@@ -115,7 +116,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCommType() {
-    return commType_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -500,7 +501,7 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ruleSetId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ruleSetId_);
     }
-    if (commType_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(5, getCommType());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callType_)) {
@@ -536,7 +537,7 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ruleSetId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, ruleSetId_);
     }
-    if (commType_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getCommType());
     }
@@ -771,13 +772,19 @@ java.lang.String defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ComplianceProcessor.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getCommTypeFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -831,10 +838,12 @@ java.lang.String defaultValue) {
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.ruleSetId_ = ruleSetId_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.commType_ = commTypeBuilder_ == null
             ? commType_
             : commTypeBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.callType_ = callType_;
@@ -855,6 +864,7 @@ java.lang.String defaultValue) {
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.countryCode_ = countryCode_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1204,8 +1214,10 @@ java.lang.String defaultValue) {
       } else {
         commTypeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (commType_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**

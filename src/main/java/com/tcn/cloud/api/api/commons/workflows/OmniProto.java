@@ -78,22 +78,23 @@ public final class OmniProto {
       "rompt\030\001 \001(\tR\006prompt\022\031\n\010store_to\030\002 \001(\tR\007s" +
       "toreTo\022\030\n\007options\030\003 \003(\tR\007options\"J\n\017Omni" +
       "NodeOptions\022\035\n\noptions_id\030\001 \001(\tR\toptions" +
-      "Id\022\030\n\007options\030\002 \003(\tR\007options\"L\n\023OmniNode" +
+      "Id\022\030\n\007options\030\002 \003(\tR\007options\"f\n\023OmniNode" +
       "SendMessage\022\026\n\006prompt\030\001 \001(\tR\006prompt\022\035\n\no" +
-      "ptions_id\030\002 \001(\tR\toptionsId\".\n\021OmniNodeUs" +
-      "erInput\022\031\n\010store_id\030\001 \001(\tR\007storeId\"M\n\021Om" +
-      "niNodeBranching\022\035\n\noptions_id\030\001 \001(\tR\topt" +
-      "ionsId\022\031\n\010store_id\030\002 \001(\tR\007storeId\"D\n\020Omn" +
-      "iNodeSetSkill\022\030\n\005skill\030\001 \001(\tB\002\030\001R\005skill\022" +
-      "\026\n\006skills\030\002 \003(\tR\006skills\"+\n\021OmniNodeSetSk" +
-      "ills\022\026\n\006skills\030\001 \003(\tR\006skills\"\021\n\017OmniNode" +
-      "ToAgent\"\023\n\021OmniNodeToMatcher\"%\n\rOmniNode" +
-      "Error\022\024\n\005error\030\001 \001(\tR\005errorB\252\001\n\'com.tcn." +
-      "cloud.api.api.commons.workflowsB\tOmniPro" +
-      "toP\001\242\002\003ACW\252\002\025Api.Commons.Workflows\312\002\025Api" +
-      "\\Commons\\Workflows\342\002!Api\\Commons\\Workflo" +
-      "ws\\GPBMetadata\352\002\027Api::Commons::Workflows" +
-      "b\006proto3"
+      "ptions_id\030\002 \001(\tR\toptionsId\022\030\n\007options\030\003 " +
+      "\003(\tR\007options\".\n\021OmniNodeUserInput\022\031\n\010sto" +
+      "re_id\030\001 \001(\tR\007storeId\"g\n\021OmniNodeBranchin" +
+      "g\022\035\n\noptions_id\030\001 \001(\tR\toptionsId\022\031\n\010stor" +
+      "e_id\030\002 \001(\tR\007storeId\022\030\n\007options\030\003 \003(\tR\007op" +
+      "tions\"D\n\020OmniNodeSetSkill\022\030\n\005skill\030\001 \001(\t" +
+      "B\002\030\001R\005skill\022\026\n\006skills\030\002 \003(\tR\006skills\"+\n\021O" +
+      "mniNodeSetSkills\022\026\n\006skills\030\001 \003(\tR\006skills" +
+      "\"\021\n\017OmniNodeToAgent\"\023\n\021OmniNodeToMatcher" +
+      "\"%\n\rOmniNodeError\022\024\n\005error\030\001 \001(\tR\005errorB" +
+      "\252\001\n\'com.tcn.cloud.api.api.commons.workfl" +
+      "owsB\tOmniProtoP\001\242\002\003ACW\252\002\025Api.Commons.Wor" +
+      "kflows\312\002\025Api\\Commons\\Workflows\342\002!Api\\Com" +
+      "mons\\Workflows\\GPBMetadata\352\002\027Api::Common" +
+      "s::Workflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -116,7 +117,7 @@ public final class OmniProto {
     internal_static_api_commons_workflows_OmniNodeSendMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_workflows_OmniNodeSendMessage_descriptor,
-        new java.lang.String[] { "Prompt", "OptionsId", });
+        new java.lang.String[] { "Prompt", "OptionsId", "Options", });
     internal_static_api_commons_workflows_OmniNodeUserInput_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_api_commons_workflows_OmniNodeUserInput_fieldAccessorTable = new
@@ -128,7 +129,7 @@ public final class OmniProto {
     internal_static_api_commons_workflows_OmniNodeBranching_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_workflows_OmniNodeBranching_descriptor,
-        new java.lang.String[] { "OptionsId", "StoreId", });
+        new java.lang.String[] { "OptionsId", "StoreId", "Options", });
     internal_static_api_commons_workflows_OmniNodeSetSkill_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_api_commons_workflows_OmniNodeSetSkill_fieldAccessorTable = new

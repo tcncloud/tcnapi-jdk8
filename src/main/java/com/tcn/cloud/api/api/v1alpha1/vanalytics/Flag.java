@@ -738,6 +738,7 @@ private static final long serialVersionUID = 0L;
 
     }
 
+    private int bitField0_;
     public static final int AND_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.vanalytics.Flag.BoolExpr> and_;
@@ -872,7 +873,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasFilter() {
-      return filter_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -910,7 +911,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasNot() {
-      return not_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -956,10 +957,10 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < or_.size(); i++) {
         output.writeMessage(2, or_.get(i));
       }
-      if (filter_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getFilter());
       }
-      if (not_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getNot());
       }
       getUnknownFields().writeTo(output);
@@ -979,11 +980,11 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, or_.get(i));
       }
-      if (filter_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getFilter());
       }
-      if (not_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getNot());
       }
@@ -1166,13 +1167,22 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.Flag.BoolExpr.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAndFieldBuilder();
+          getOrFieldBuilder();
+          getFilterFieldBuilder();
+          getNotFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1257,16 +1267,20 @@ private static final long serialVersionUID = 0L;
 
       private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.Flag.BoolExpr result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.filter_ = filterBuilder_ == null
               ? filter_
               : filterBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.not_ = notBuilder_ == null
               ? not_
               : notBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2164,8 +2178,10 @@ private static final long serialVersionUID = 0L;
         } else {
           filterBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (filter_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2319,8 +2335,10 @@ private static final long serialVersionUID = 0L;
         } else {
           notBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
+        if (not_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -2451,6 +2469,7 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  private int bitField0_;
   public static final int FLAG_SID_FIELD_NUMBER = 1;
   private long flagSid_ = 0L;
   /**
@@ -2747,7 +2766,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasBoolExpr() {
-    return boolExpr_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -2816,7 +2835,7 @@ private static final long serialVersionUID = 0L;
     if (mustNotify_ != false) {
       output.writeBool(10, mustNotify_);
     }
-    if (boolExpr_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(11, getBoolExpr());
     }
     getUnknownFields().writeTo(output);
@@ -2861,7 +2880,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(10, mustNotify_);
     }
-    if (boolExpr_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getBoolExpr());
     }
@@ -3065,13 +3084,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.Flag.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getFiltersFieldBuilder();
+        getBoolExprFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -3167,11 +3193,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.mustNotify_ = mustNotify_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.boolExpr_ = boolExprBuilder_ == null
             ? boolExpr_
             : boolExprBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -4294,8 +4323,10 @@ private static final long serialVersionUID = 0L;
       } else {
         boolExprBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000200;
-      onChanged();
+      if (boolExpr_ != null) {
+        bitField0_ |= 0x00000200;
+        onChanged();
+      }
       return this;
     }
     /**

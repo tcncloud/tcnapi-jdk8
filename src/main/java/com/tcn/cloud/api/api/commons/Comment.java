@@ -45,6 +45,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.Comment.class, com.tcn.cloud.api.api.commons.Comment.Builder.class);
   }
 
+  private int bitField0_;
   public static final int COMMENT_SID_FIELD_NUMBER = 1;
   private long commentSid_ = 0L;
   /**
@@ -228,7 +229,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCreatedByDate() {
-    return createdByDate_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -283,7 +284,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdByName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, createdByName_);
     }
-    if (createdByDate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(6, getCreatedByDate());
     }
     getUnknownFields().writeTo(output);
@@ -312,7 +313,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdByName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, createdByName_);
     }
-    if (createdByDate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getCreatedByDate());
     }
@@ -496,13 +497,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.Comment.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getCreatedByDateFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -566,11 +573,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.createdByName_ = createdByName_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.createdByDate_ = createdByDateBuilder_ == null
             ? createdByDate_
             : createdByDateBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1166,8 +1176,10 @@ private static final long serialVersionUID = 0L;
       } else {
         createdByDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (createdByDate_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**

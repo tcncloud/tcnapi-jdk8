@@ -46,4 +46,45 @@ public interface OmniNodeBranchingOrBuilder extends
    */
   com.google.protobuf.ByteString
       getStoreIdBytes();
+
+  /**
+   * <pre>
+   * the list of options to use for branching
+   * </pre>
+   *
+   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * @return A list containing the options.
+   */
+  java.util.List<java.lang.String>
+      getOptionsList();
+  /**
+   * <pre>
+   * the list of options to use for branching
+   * </pre>
+   *
+   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * @return The count of options.
+   */
+  int getOptionsCount();
+  /**
+   * <pre>
+   * the list of options to use for branching
+   * </pre>
+   *
+   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * @param index The index of the element to return.
+   * @return The options at the given index.
+   */
+  java.lang.String getOptions(int index);
+  /**
+   * <pre>
+   * the list of options to use for branching
+   * </pre>
+   *
+   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the options at the given index.
+   */
+  com.google.protobuf.ByteString
+      getOptionsBytes(int index);
 }

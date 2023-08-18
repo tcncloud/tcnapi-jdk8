@@ -39,6 +39,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.ReportSettings.class, com.tcn.cloud.api.api.v0alpha.ReportSettings.Builder.class);
   }
 
+  private int bitField0_;
   public static final int ENABLED_FIELD_NUMBER = 1;
   private boolean enabled_ = false;
   /**
@@ -108,7 +109,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSmsSettings() {
-    return smsSettings_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.v0alpha.SmsSettings sms_settings = 4 [json_name = "smsSettings"];</code>
@@ -134,7 +135,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEmailSettings() {
-    return emailSettings_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.api.v0alpha.EmailSettings email_settings = 5 [json_name = "emailSettings"];</code>
@@ -160,7 +161,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasFtpSettings() {
-    return ftpSettings_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <code>.api.v0alpha.FtpSettings ftp_settings = 6 [json_name = "ftpSettings"];</code>
@@ -186,7 +187,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSftpSettings() {
-    return sftpSettings_ != null;
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <code>.api.v0alpha.SftpSettings sftp_settings = 7 [json_name = "sftpSettings"];</code>
@@ -227,16 +228,16 @@ private static final long serialVersionUID = 0L;
     if (reportTemplateSid_ != 0L) {
       output.writeInt64(3, reportTemplateSid_);
     }
-    if (smsSettings_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(4, getSmsSettings());
     }
-    if (emailSettings_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(5, getEmailSettings());
     }
-    if (ftpSettings_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(6, getFtpSettings());
     }
-    if (sftpSettings_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(7, getSftpSettings());
     }
     getUnknownFields().writeTo(output);
@@ -259,19 +260,19 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(3, reportTemplateSid_);
     }
-    if (smsSettings_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getSmsSettings());
     }
-    if (emailSettings_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getEmailSettings());
     }
-    if (ftpSettings_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getFtpSettings());
     }
-    if (sftpSettings_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getSftpSettings());
     }
@@ -470,13 +471,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ReportSettings.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getSmsSettingsFieldBuilder();
+        getEmailSettingsFieldBuilder();
+        getFtpSettingsFieldBuilder();
+        getSftpSettingsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -547,26 +557,32 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.reportTemplateSid_ = reportTemplateSid_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.smsSettings_ = smsSettingsBuilder_ == null
             ? smsSettings_
             : smsSettingsBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.emailSettings_ = emailSettingsBuilder_ == null
             ? emailSettings_
             : emailSettingsBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.ftpSettings_ = ftpSettingsBuilder_ == null
             ? ftpSettings_
             : ftpSettingsBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.sftpSettings_ = sftpSettingsBuilder_ == null
             ? sftpSettings_
             : sftpSettingsBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -924,8 +940,10 @@ private static final long serialVersionUID = 0L;
       } else {
         smsSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (smsSettings_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1043,8 +1061,10 @@ private static final long serialVersionUID = 0L;
       } else {
         emailSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (emailSettings_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1162,8 +1182,10 @@ private static final long serialVersionUID = 0L;
       } else {
         ftpSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (ftpSettings_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1281,8 +1303,10 @@ private static final long serialVersionUID = 0L;
       } else {
         sftpSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (sftpSettings_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
     /**

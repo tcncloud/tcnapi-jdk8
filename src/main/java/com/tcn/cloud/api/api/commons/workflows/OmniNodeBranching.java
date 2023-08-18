@@ -22,6 +22,8 @@ private static final long serialVersionUID = 0L;
   private OmniNodeBranching() {
     optionsId_ = "";
     storeId_ = "";
+    options_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -138,6 +140,59 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int OPTIONS_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList options_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <pre>
+   * the list of options to use for branching
+   * </pre>
+   *
+   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * @return A list containing the options.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getOptionsList() {
+    return options_;
+  }
+  /**
+   * <pre>
+   * the list of options to use for branching
+   * </pre>
+   *
+   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * @return The count of options.
+   */
+  public int getOptionsCount() {
+    return options_.size();
+  }
+  /**
+   * <pre>
+   * the list of options to use for branching
+   * </pre>
+   *
+   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * @param index The index of the element to return.
+   * @return The options at the given index.
+   */
+  public java.lang.String getOptions(int index) {
+    return options_.get(index);
+  }
+  /**
+   * <pre>
+   * the list of options to use for branching
+   * </pre>
+   *
+   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the options at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getOptionsBytes(int index) {
+    return options_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -158,6 +213,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(storeId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, storeId_);
     }
+    for (int i = 0; i < options_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, options_.getRaw(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -172,6 +230,14 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(storeId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, storeId_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < options_.size(); i++) {
+        dataSize += computeStringSizeNoTag(options_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getOptionsList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -192,6 +258,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getOptionsId())) return false;
     if (!getStoreId()
         .equals(other.getStoreId())) return false;
+    if (!getOptionsList()
+        .equals(other.getOptionsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -207,6 +275,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getOptionsId().hashCode();
     hash = (37 * hash) + STORE_ID_FIELD_NUMBER;
     hash = (53 * hash) + getStoreId().hashCode();
+    if (getOptionsCount() > 0) {
+      hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getOptionsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -344,6 +416,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       optionsId_ = "";
       storeId_ = "";
+      options_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -382,6 +456,10 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.storeId_ = storeId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        options_.makeImmutable();
+        result.options_ = options_;
       }
     }
 
@@ -439,6 +517,16 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
+      if (!other.options_.isEmpty()) {
+        if (options_.isEmpty()) {
+          options_ = other.options_;
+          bitField0_ |= 0x00000004;
+        } else {
+          ensureOptionsIsMutable();
+          options_.addAll(other.options_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -475,6 +563,12 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureOptionsIsMutable();
+              options_.add(s);
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -672,6 +766,153 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       storeId_ = value;
       bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList options_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureOptionsIsMutable() {
+      if (!options_.isModifiable()) {
+        options_ = new com.google.protobuf.LazyStringArrayList(options_);
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * the list of options to use for branching
+     * </pre>
+     *
+     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * @return A list containing the options.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getOptionsList() {
+      options_.makeImmutable();
+      return options_;
+    }
+    /**
+     * <pre>
+     * the list of options to use for branching
+     * </pre>
+     *
+     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * @return The count of options.
+     */
+    public int getOptionsCount() {
+      return options_.size();
+    }
+    /**
+     * <pre>
+     * the list of options to use for branching
+     * </pre>
+     *
+     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * @param index The index of the element to return.
+     * @return The options at the given index.
+     */
+    public java.lang.String getOptions(int index) {
+      return options_.get(index);
+    }
+    /**
+     * <pre>
+     * the list of options to use for branching
+     * </pre>
+     *
+     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the options at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getOptionsBytes(int index) {
+      return options_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * the list of options to use for branching
+     * </pre>
+     *
+     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * @param index The index to set the value at.
+     * @param value The options to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOptions(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureOptionsIsMutable();
+      options_.set(index, value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the list of options to use for branching
+     * </pre>
+     *
+     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * @param value The options to add.
+     * @return This builder for chaining.
+     */
+    public Builder addOptions(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureOptionsIsMutable();
+      options_.add(value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the list of options to use for branching
+     * </pre>
+     *
+     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * @param values The options to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllOptions(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureOptionsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, options_);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the list of options to use for branching
+     * </pre>
+     *
+     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOptions() {
+      options_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the list of options to use for branching
+     * </pre>
+     *
+     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * @param value The bytes of the options to add.
+     * @return This builder for chaining.
+     */
+    public Builder addOptionsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureOptionsIsMutable();
+      options_.add(value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

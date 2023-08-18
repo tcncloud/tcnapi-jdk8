@@ -45,6 +45,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.PhoneBook.class, com.tcn.cloud.api.api.v0alpha.PhoneBook.Builder.class);
   }
 
+  private int bitField0_;
   public static final int ENTRY_TYPE_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object entryType_ = "";
@@ -152,7 +153,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHuntGroupSid() {
-    return huntGroupSid_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -241,7 +242,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPhoneNumberType() {
-    return phoneNumberType_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -306,13 +307,13 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entryName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, entryName_);
     }
-    if (huntGroupSid_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(5, getHuntGroupSid());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumber_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, phoneNumber_);
     }
-    if (phoneNumberType_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(7, getPhoneNumberType());
     }
     if (phoneNumberHidden_ != false) {
@@ -333,14 +334,14 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entryName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, entryName_);
     }
-    if (huntGroupSid_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getHuntGroupSid());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumber_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, phoneNumber_);
     }
-    if (phoneNumberType_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getPhoneNumberType());
     }
@@ -532,13 +533,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.PhoneBook.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getHuntGroupSidFieldBuilder();
+        getPhoneNumberTypeFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -597,10 +605,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.entryName_ = entryName_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.huntGroupSid_ = huntGroupSidBuilder_ == null
             ? huntGroupSid_
             : huntGroupSidBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.phoneNumber_ = phoneNumber_;
@@ -609,10 +619,12 @@ private static final long serialVersionUID = 0L;
         result.phoneNumberType_ = phoneNumberTypeBuilder_ == null
             ? phoneNumberType_
             : phoneNumberTypeBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.phoneNumberHidden_ = phoneNumberHidden_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1035,8 +1047,10 @@ private static final long serialVersionUID = 0L;
       } else {
         huntGroupSidBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (huntGroupSid_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1296,8 +1310,10 @@ private static final long serialVersionUID = 0L;
       } else {
         phoneNumberTypeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (phoneNumberType_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**

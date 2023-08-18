@@ -40,6 +40,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.integrations.SummaryRes.class, com.tcn.cloud.api.api.v1alpha1.integrations.SummaryRes.Builder.class);
   }
 
+  private int bitField0_;
   public static final int YEAR_SUMMARY_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary yearSummary_;
   /**
@@ -48,7 +49,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasYearSummary() {
-    return yearSummary_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.v1alpha1.integrations.CalendarSummary year_summary = 1 [json_name = "yearSummary"];</code>
@@ -162,7 +163,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (yearSummary_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getYearSummary());
     }
     for (int i = 0; i < monthSummaries_.size(); i++) {
@@ -180,7 +181,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (yearSummary_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getYearSummary());
     }
@@ -358,13 +359,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.SummaryRes.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getYearSummaryFieldBuilder();
+        getMonthSummariesFieldBuilder();
+        getWeekSummariesFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -444,11 +453,14 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.SummaryRes result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.yearSummary_ = yearSummaryBuilder_ == null
             ? yearSummary_
             : yearSummaryBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -692,8 +704,10 @@ private static final long serialVersionUID = 0L;
       } else {
         yearSummaryBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (yearSummary_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**

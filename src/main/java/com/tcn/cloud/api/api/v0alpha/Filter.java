@@ -42,6 +42,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.Filter.class, com.tcn.cloud.api.api.v0alpha.Filter.Builder.class);
   }
 
+  private int bitField0_;
   public static final int TIME_FROM_FIELD_NUMBER = 1;
   private com.google.protobuf.Timestamp timeFrom_;
   /**
@@ -50,7 +51,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTimeFrom() {
-    return timeFrom_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp time_from = 1 [json_name = "timeFrom"];</code>
@@ -76,7 +77,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTimeTo() {
-    return timeTo_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp time_to = 2 [json_name = "timeTo"];</code>
@@ -202,10 +203,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (timeFrom_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getTimeFrom());
     }
-    if (timeTo_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(2, getTimeTo());
     }
     if (timeZone_ != com.tcn.cloud.api.api.commons.AnaTimeZone.ANA_TIME_ZONE_UNKNOWN.getNumber()) {
@@ -226,11 +227,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (timeFrom_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getTimeFrom());
     }
-    if (timeTo_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getTimeTo());
     }
@@ -425,13 +426,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.Filter.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getTimeFromFieldBuilder();
+        getTimeToFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -484,15 +492,18 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.Filter result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.timeFrom_ = timeFromBuilder_ == null
             ? timeFrom_
             : timeFromBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.timeTo_ = timeToBuilder_ == null
             ? timeTo_
             : timeToBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.timeZone_ = timeZone_;
@@ -504,6 +515,7 @@ private static final long serialVersionUID = 0L;
         orgIds_.makeImmutable();
         result.orgIds_ = orgIds_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -713,8 +725,10 @@ private static final long serialVersionUID = 0L;
       } else {
         timeFromBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (timeFrom_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -832,8 +846,10 @@ private static final long serialVersionUID = 0L;
       } else {
         timeToBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (timeTo_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
