@@ -51,8 +51,7 @@ private static final long serialVersionUID = 0L;
     AUTHORIZE_NET_CUSTOM_HTTP(11),
     JOURNEY(12),
     DYNAMIC_JOURNEY(13),
-    NEWZWARE_LOOKUP_PHONE(14),
-    NEWZWARE_ACCOUNT_INQUIRY(15),
+    NEWZWARE_ACCOUNT_INQUIRY(14),
     VALUE_NOT_SET(0);
     private final int value;
     private ValueCase(int value) {
@@ -75,8 +74,7 @@ private static final long serialVersionUID = 0L;
         case 11: return AUTHORIZE_NET_CUSTOM_HTTP;
         case 12: return JOURNEY;
         case 13: return DYNAMIC_JOURNEY;
-        case 14: return NEWZWARE_LOOKUP_PHONE;
-        case 15: return NEWZWARE_ACCOUNT_INQUIRY;
+        case 14: return NEWZWARE_ACCOUNT_INQUIRY;
         case 0: return VALUE_NOT_SET;
         default: return null;
       }
@@ -298,63 +296,32 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.integrations.InvoiceDynamicJourney.getDefaultInstance();
   }
 
-  public static final int NEWZWARE_LOOKUP_PHONE_FIELD_NUMBER = 14;
+  public static final int NEWZWARE_ACCOUNT_INQUIRY_FIELD_NUMBER = 14;
   /**
-   * <code>.api.commons.integrations.InvoiceNewzwareLookupPhone newzware_lookup_phone = 14 [json_name = "newzwareLookupPhone"];</code>
-   * @return Whether the newzwareLookupPhone field is set.
-   */
-  @java.lang.Override
-  public boolean hasNewzwareLookupPhone() {
-    return valueCase_ == 14;
-  }
-  /**
-   * <code>.api.commons.integrations.InvoiceNewzwareLookupPhone newzware_lookup_phone = 14 [json_name = "newzwareLookupPhone"];</code>
-   * @return The newzwareLookupPhone.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone getNewzwareLookupPhone() {
-    if (valueCase_ == 14) {
-       return (com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone.getDefaultInstance();
-  }
-  /**
-   * <code>.api.commons.integrations.InvoiceNewzwareLookupPhone newzware_lookup_phone = 14 [json_name = "newzwareLookupPhone"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhoneOrBuilder getNewzwareLookupPhoneOrBuilder() {
-    if (valueCase_ == 14) {
-       return (com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone) value_;
-    }
-    return com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone.getDefaultInstance();
-  }
-
-  public static final int NEWZWARE_ACCOUNT_INQUIRY_FIELD_NUMBER = 15;
-  /**
-   * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 15 [json_name = "newzwareAccountInquiry"];</code>
+   * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
    * @return Whether the newzwareAccountInquiry field is set.
    */
   @java.lang.Override
   public boolean hasNewzwareAccountInquiry() {
-    return valueCase_ == 15;
+    return valueCase_ == 14;
   }
   /**
-   * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 15 [json_name = "newzwareAccountInquiry"];</code>
+   * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
    * @return The newzwareAccountInquiry.
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry getNewzwareAccountInquiry() {
-    if (valueCase_ == 15) {
+    if (valueCase_ == 14) {
        return (com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry.getDefaultInstance();
   }
   /**
-   * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 15 [json_name = "newzwareAccountInquiry"];</code>
+   * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiryOrBuilder getNewzwareAccountInquiryOrBuilder() {
-    if (valueCase_ == 15) {
+    if (valueCase_ == 14) {
        return (com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry) value_;
     }
     return com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry.getDefaultInstance();
@@ -434,10 +401,7 @@ private static final long serialVersionUID = 0L;
       output.writeMessage(13, (com.tcn.cloud.api.api.commons.integrations.InvoiceDynamicJourney) value_);
     }
     if (valueCase_ == 14) {
-      output.writeMessage(14, (com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone) value_);
-    }
-    if (valueCase_ == 15) {
-      output.writeMessage(15, (com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry) value_);
+      output.writeMessage(14, (com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry) value_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -477,11 +441,7 @@ private static final long serialVersionUID = 0L;
     }
     if (valueCase_ == 14) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(14, (com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone) value_);
-    }
-    if (valueCase_ == 15) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(15, (com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry) value_);
+        .computeMessageSize(14, (com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry) value_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -528,10 +488,6 @@ private static final long serialVersionUID = 0L;
             .equals(other.getDynamicJourney())) return false;
         break;
       case 14:
-        if (!getNewzwareLookupPhone()
-            .equals(other.getNewzwareLookupPhone())) return false;
-        break;
-      case 15:
         if (!getNewzwareAccountInquiry()
             .equals(other.getNewzwareAccountInquiry())) return false;
         break;
@@ -577,10 +533,6 @@ private static final long serialVersionUID = 0L;
         hash = (53 * hash) + getDynamicJourney().hashCode();
         break;
       case 14:
-        hash = (37 * hash) + NEWZWARE_LOOKUP_PHONE_FIELD_NUMBER;
-        hash = (53 * hash) + getNewzwareLookupPhone().hashCode();
-        break;
-      case 15:
         hash = (37 * hash) + NEWZWARE_ACCOUNT_INQUIRY_FIELD_NUMBER;
         hash = (53 * hash) + getNewzwareAccountInquiry().hashCode();
         break;
@@ -740,9 +692,6 @@ private static final long serialVersionUID = 0L;
       if (dynamicJourneyBuilder_ != null) {
         dynamicJourneyBuilder_.clear();
       }
-      if (newzwareLookupPhoneBuilder_ != null) {
-        newzwareLookupPhoneBuilder_.clear();
-      }
       if (newzwareAccountInquiryBuilder_ != null) {
         newzwareAccountInquiryBuilder_.clear();
       }
@@ -791,7 +740,7 @@ private static final long serialVersionUID = 0L;
         result.pluginInstanceId_ = pluginInstanceId_;
       }
       int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000100) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.invoiceTemplate_ = invoiceTemplateBuilder_ == null
             ? invoiceTemplate_
             : invoiceTemplateBuilder_.build();
@@ -824,10 +773,6 @@ private static final long serialVersionUID = 0L;
         result.value_ = dynamicJourneyBuilder_.build();
       }
       if (valueCase_ == 14 &&
-          newzwareLookupPhoneBuilder_ != null) {
-        result.value_ = newzwareLookupPhoneBuilder_.build();
-      }
-      if (valueCase_ == 15 &&
           newzwareAccountInquiryBuilder_ != null) {
         result.value_ = newzwareAccountInquiryBuilder_.build();
       }
@@ -906,10 +851,6 @@ private static final long serialVersionUID = 0L;
           mergeDynamicJourney(other.getDynamicJourney());
           break;
         }
-        case NEWZWARE_LOOKUP_PHONE: {
-          mergeNewzwareLookupPhone(other.getNewzwareLookupPhone());
-          break;
-        }
         case NEWZWARE_ACCOUNT_INQUIRY: {
           mergeNewzwareAccountInquiry(other.getNewzwareAccountInquiry());
           break;
@@ -960,7 +901,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getInvoiceTemplateFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000080;
               break;
             } // case 26
             case 82: {
@@ -993,18 +934,11 @@ private static final long serialVersionUID = 0L;
             } // case 106
             case 114: {
               input.readMessage(
-                  getNewzwareLookupPhoneFieldBuilder().getBuilder(),
+                  getNewzwareAccountInquiryFieldBuilder().getBuilder(),
                   extensionRegistry);
               valueCase_ = 14;
               break;
             } // case 114
-            case 122: {
-              input.readMessage(
-                  getNewzwareAccountInquiryFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valueCase_ = 15;
-              break;
-            } // case 122
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1856,177 +1790,35 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone, com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone.Builder, com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhoneOrBuilder> newzwareLookupPhoneBuilder_;
-    /**
-     * <code>.api.commons.integrations.InvoiceNewzwareLookupPhone newzware_lookup_phone = 14 [json_name = "newzwareLookupPhone"];</code>
-     * @return Whether the newzwareLookupPhone field is set.
-     */
-    @java.lang.Override
-    public boolean hasNewzwareLookupPhone() {
-      return valueCase_ == 14;
-    }
-    /**
-     * <code>.api.commons.integrations.InvoiceNewzwareLookupPhone newzware_lookup_phone = 14 [json_name = "newzwareLookupPhone"];</code>
-     * @return The newzwareLookupPhone.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone getNewzwareLookupPhone() {
-      if (newzwareLookupPhoneBuilder_ == null) {
-        if (valueCase_ == 14) {
-          return (com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone.getDefaultInstance();
-      } else {
-        if (valueCase_ == 14) {
-          return newzwareLookupPhoneBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.InvoiceNewzwareLookupPhone newzware_lookup_phone = 14 [json_name = "newzwareLookupPhone"];</code>
-     */
-    public Builder setNewzwareLookupPhone(com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone value) {
-      if (newzwareLookupPhoneBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        value_ = value;
-        onChanged();
-      } else {
-        newzwareLookupPhoneBuilder_.setMessage(value);
-      }
-      valueCase_ = 14;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.InvoiceNewzwareLookupPhone newzware_lookup_phone = 14 [json_name = "newzwareLookupPhone"];</code>
-     */
-    public Builder setNewzwareLookupPhone(
-        com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone.Builder builderForValue) {
-      if (newzwareLookupPhoneBuilder_ == null) {
-        value_ = builderForValue.build();
-        onChanged();
-      } else {
-        newzwareLookupPhoneBuilder_.setMessage(builderForValue.build());
-      }
-      valueCase_ = 14;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.InvoiceNewzwareLookupPhone newzware_lookup_phone = 14 [json_name = "newzwareLookupPhone"];</code>
-     */
-    public Builder mergeNewzwareLookupPhone(com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone value) {
-      if (newzwareLookupPhoneBuilder_ == null) {
-        if (valueCase_ == 14 &&
-            value_ != com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone.getDefaultInstance()) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone.newBuilder((com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone) value_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          value_ = value;
-        }
-        onChanged();
-      } else {
-        if (valueCase_ == 14) {
-          newzwareLookupPhoneBuilder_.mergeFrom(value);
-        } else {
-          newzwareLookupPhoneBuilder_.setMessage(value);
-        }
-      }
-      valueCase_ = 14;
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.InvoiceNewzwareLookupPhone newzware_lookup_phone = 14 [json_name = "newzwareLookupPhone"];</code>
-     */
-    public Builder clearNewzwareLookupPhone() {
-      if (newzwareLookupPhoneBuilder_ == null) {
-        if (valueCase_ == 14) {
-          valueCase_ = 0;
-          value_ = null;
-          onChanged();
-        }
-      } else {
-        if (valueCase_ == 14) {
-          valueCase_ = 0;
-          value_ = null;
-        }
-        newzwareLookupPhoneBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.api.commons.integrations.InvoiceNewzwareLookupPhone newzware_lookup_phone = 14 [json_name = "newzwareLookupPhone"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone.Builder getNewzwareLookupPhoneBuilder() {
-      return getNewzwareLookupPhoneFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.integrations.InvoiceNewzwareLookupPhone newzware_lookup_phone = 14 [json_name = "newzwareLookupPhone"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhoneOrBuilder getNewzwareLookupPhoneOrBuilder() {
-      if ((valueCase_ == 14) && (newzwareLookupPhoneBuilder_ != null)) {
-        return newzwareLookupPhoneBuilder_.getMessageOrBuilder();
-      } else {
-        if (valueCase_ == 14) {
-          return (com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone) value_;
-        }
-        return com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.api.commons.integrations.InvoiceNewzwareLookupPhone newzware_lookup_phone = 14 [json_name = "newzwareLookupPhone"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone, com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone.Builder, com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhoneOrBuilder> 
-        getNewzwareLookupPhoneFieldBuilder() {
-      if (newzwareLookupPhoneBuilder_ == null) {
-        if (!(valueCase_ == 14)) {
-          value_ = com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone.getDefaultInstance();
-        }
-        newzwareLookupPhoneBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone, com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone.Builder, com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhoneOrBuilder>(
-                (com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone) value_,
-                getParentForChildren(),
-                isClean());
-        value_ = null;
-      }
-      valueCase_ = 14;
-      onChanged();
-      return newzwareLookupPhoneBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry, com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry.Builder, com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiryOrBuilder> newzwareAccountInquiryBuilder_;
     /**
-     * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 15 [json_name = "newzwareAccountInquiry"];</code>
+     * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
      * @return Whether the newzwareAccountInquiry field is set.
      */
     @java.lang.Override
     public boolean hasNewzwareAccountInquiry() {
-      return valueCase_ == 15;
+      return valueCase_ == 14;
     }
     /**
-     * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 15 [json_name = "newzwareAccountInquiry"];</code>
+     * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
      * @return The newzwareAccountInquiry.
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry getNewzwareAccountInquiry() {
       if (newzwareAccountInquiryBuilder_ == null) {
-        if (valueCase_ == 15) {
+        if (valueCase_ == 14) {
           return (com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry) value_;
         }
         return com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry.getDefaultInstance();
       } else {
-        if (valueCase_ == 15) {
+        if (valueCase_ == 14) {
           return newzwareAccountInquiryBuilder_.getMessage();
         }
         return com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry.getDefaultInstance();
       }
     }
     /**
-     * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 15 [json_name = "newzwareAccountInquiry"];</code>
+     * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
      */
     public Builder setNewzwareAccountInquiry(com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry value) {
       if (newzwareAccountInquiryBuilder_ == null) {
@@ -2038,11 +1830,11 @@ private static final long serialVersionUID = 0L;
       } else {
         newzwareAccountInquiryBuilder_.setMessage(value);
       }
-      valueCase_ = 15;
+      valueCase_ = 14;
       return this;
     }
     /**
-     * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 15 [json_name = "newzwareAccountInquiry"];</code>
+     * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
      */
     public Builder setNewzwareAccountInquiry(
         com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry.Builder builderForValue) {
@@ -2052,15 +1844,15 @@ private static final long serialVersionUID = 0L;
       } else {
         newzwareAccountInquiryBuilder_.setMessage(builderForValue.build());
       }
-      valueCase_ = 15;
+      valueCase_ = 14;
       return this;
     }
     /**
-     * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 15 [json_name = "newzwareAccountInquiry"];</code>
+     * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
      */
     public Builder mergeNewzwareAccountInquiry(com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry value) {
       if (newzwareAccountInquiryBuilder_ == null) {
-        if (valueCase_ == 15 &&
+        if (valueCase_ == 14 &&
             value_ != com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry.getDefaultInstance()) {
           value_ = com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry.newBuilder((com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry) value_)
               .mergeFrom(value).buildPartial();
@@ -2069,27 +1861,27 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       } else {
-        if (valueCase_ == 15) {
+        if (valueCase_ == 14) {
           newzwareAccountInquiryBuilder_.mergeFrom(value);
         } else {
           newzwareAccountInquiryBuilder_.setMessage(value);
         }
       }
-      valueCase_ = 15;
+      valueCase_ = 14;
       return this;
     }
     /**
-     * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 15 [json_name = "newzwareAccountInquiry"];</code>
+     * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
      */
     public Builder clearNewzwareAccountInquiry() {
       if (newzwareAccountInquiryBuilder_ == null) {
-        if (valueCase_ == 15) {
+        if (valueCase_ == 14) {
           valueCase_ = 0;
           value_ = null;
           onChanged();
         }
       } else {
-        if (valueCase_ == 15) {
+        if (valueCase_ == 14) {
           valueCase_ = 0;
           value_ = null;
         }
@@ -2098,33 +1890,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 15 [json_name = "newzwareAccountInquiry"];</code>
+     * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
      */
     public com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry.Builder getNewzwareAccountInquiryBuilder() {
       return getNewzwareAccountInquiryFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 15 [json_name = "newzwareAccountInquiry"];</code>
+     * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiryOrBuilder getNewzwareAccountInquiryOrBuilder() {
-      if ((valueCase_ == 15) && (newzwareAccountInquiryBuilder_ != null)) {
+      if ((valueCase_ == 14) && (newzwareAccountInquiryBuilder_ != null)) {
         return newzwareAccountInquiryBuilder_.getMessageOrBuilder();
       } else {
-        if (valueCase_ == 15) {
+        if (valueCase_ == 14) {
           return (com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry) value_;
         }
         return com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry.getDefaultInstance();
       }
     }
     /**
-     * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 15 [json_name = "newzwareAccountInquiry"];</code>
+     * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry, com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry.Builder, com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiryOrBuilder> 
         getNewzwareAccountInquiryFieldBuilder() {
       if (newzwareAccountInquiryBuilder_ == null) {
-        if (!(valueCase_ == 15)) {
+        if (!(valueCase_ == 14)) {
           value_ = com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry.getDefaultInstance();
         }
         newzwareAccountInquiryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -2134,7 +1926,7 @@ private static final long serialVersionUID = 0L;
                 isClean());
         value_ = null;
       }
-      valueCase_ = 15;
+      valueCase_ = 14;
       onChanged();
       return newzwareAccountInquiryBuilder_;
     }
@@ -2151,7 +1943,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the invoiceTemplate field is set.
      */
     public boolean hasInvoiceTemplate() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -2184,7 +1976,7 @@ private static final long serialVersionUID = 0L;
       } else {
         invoiceTemplateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2202,7 +1994,7 @@ private static final long serialVersionUID = 0L;
       } else {
         invoiceTemplateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2215,7 +2007,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeInvoiceTemplate(com.tcn.cloud.api.api.commons.integrations.InvoiceTemplate value) {
       if (invoiceTemplateBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0) &&
+        if (((bitField0_ & 0x00000080) != 0) &&
           invoiceTemplate_ != null &&
           invoiceTemplate_ != com.tcn.cloud.api.api.commons.integrations.InvoiceTemplate.getDefaultInstance()) {
           getInvoiceTemplateBuilder().mergeFrom(value);
@@ -2226,7 +2018,7 @@ private static final long serialVersionUID = 0L;
         invoiceTemplateBuilder_.mergeFrom(value);
       }
       if (invoiceTemplate_ != null) {
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       return this;
@@ -2239,7 +2031,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.integrations.InvoiceTemplate invoice_template = 3 [json_name = "invoiceTemplate"];</code>
      */
     public Builder clearInvoiceTemplate() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000080);
       invoiceTemplate_ = null;
       if (invoiceTemplateBuilder_ != null) {
         invoiceTemplateBuilder_.dispose();
@@ -2256,7 +2048,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.integrations.InvoiceTemplate invoice_template = 3 [json_name = "invoiceTemplate"];</code>
      */
     public com.tcn.cloud.api.api.commons.integrations.InvoiceTemplate.Builder getInvoiceTemplateBuilder() {
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000080;
       onChanged();
       return getInvoiceTemplateFieldBuilder().getBuilder();
     }

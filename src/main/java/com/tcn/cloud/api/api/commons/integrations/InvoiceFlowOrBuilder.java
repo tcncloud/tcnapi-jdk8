@@ -107,32 +107,17 @@ public interface InvoiceFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.InvoiceDynamicJourneyOrBuilder getDynamicJourneyOrBuilder();
 
   /**
-   * <code>.api.commons.integrations.InvoiceNewzwareLookupPhone newzware_lookup_phone = 14 [json_name = "newzwareLookupPhone"];</code>
-   * @return Whether the newzwareLookupPhone field is set.
-   */
-  boolean hasNewzwareLookupPhone();
-  /**
-   * <code>.api.commons.integrations.InvoiceNewzwareLookupPhone newzware_lookup_phone = 14 [json_name = "newzwareLookupPhone"];</code>
-   * @return The newzwareLookupPhone.
-   */
-  com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhone getNewzwareLookupPhone();
-  /**
-   * <code>.api.commons.integrations.InvoiceNewzwareLookupPhone newzware_lookup_phone = 14 [json_name = "newzwareLookupPhone"];</code>
-   */
-  com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareLookupPhoneOrBuilder getNewzwareLookupPhoneOrBuilder();
-
-  /**
-   * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 15 [json_name = "newzwareAccountInquiry"];</code>
+   * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
    * @return Whether the newzwareAccountInquiry field is set.
    */
   boolean hasNewzwareAccountInquiry();
   /**
-   * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 15 [json_name = "newzwareAccountInquiry"];</code>
+   * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
    * @return The newzwareAccountInquiry.
    */
   com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry getNewzwareAccountInquiry();
   /**
-   * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 15 [json_name = "newzwareAccountInquiry"];</code>
+   * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
    */
   com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiryOrBuilder getNewzwareAccountInquiryOrBuilder();
 
