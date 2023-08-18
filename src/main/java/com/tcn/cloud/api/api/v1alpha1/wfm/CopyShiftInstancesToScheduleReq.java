@@ -43,6 +43,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftInstancesToScheduleReq.class, com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftInstancesToScheduleReq.Builder.class);
   }
 
+  private int bitField0_;
   public static final int DESTINATION_SCHEDULE_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.ScheduleSelector destinationSchedule_;
   /**
@@ -55,7 +56,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDestinationSchedule() {
-    return destinationSchedule_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -83,7 +84,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int SHIFT_INSTANCE_SIDS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList shiftInstanceSids_;
+  private com.google.protobuf.Internal.LongList shiftInstanceSids_ =
+      emptyLongList();
   /**
    * <pre>
    * IDs of the shift instances to copy into &#64;destination_schedule.
@@ -153,7 +155,7 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     getSerializedSize();
-    if (destinationSchedule_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getDestinationSchedule());
     }
     if (getShiftInstanceSidsList().size() > 0) {
@@ -175,7 +177,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (destinationSchedule_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getDestinationSchedule());
     }
@@ -366,13 +368,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftInstancesToScheduleReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getDestinationScheduleFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -411,30 +419,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftInstancesToScheduleReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftInstancesToScheduleReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftInstancesToScheduleReq(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftInstancesToScheduleReq result) {
-      if (((bitField0_ & 0x00000002) != 0)) {
-        shiftInstanceSids_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.shiftInstanceSids_ = shiftInstanceSids_;
-    }
-
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.CopyShiftInstancesToScheduleReq result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.destinationSchedule_ = destinationScheduleBuilder_ == null
             ? destinationSchedule_
             : destinationScheduleBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        shiftInstanceSids_.makeImmutable();
+        result.shiftInstanceSids_ = shiftInstanceSids_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.overlapAsWarning_ = overlapAsWarning_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -487,7 +493,8 @@ private static final long serialVersionUID = 0L;
       if (!other.shiftInstanceSids_.isEmpty()) {
         if (shiftInstanceSids_.isEmpty()) {
           shiftInstanceSids_ = other.shiftInstanceSids_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          shiftInstanceSids_.makeImmutable();
+          bitField0_ |= 0x00000002;
         } else {
           ensureShiftInstanceSidsIsMutable();
           shiftInstanceSids_.addAll(other.shiftInstanceSids_);
@@ -654,8 +661,10 @@ private static final long serialVersionUID = 0L;
       } else {
         destinationScheduleBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (destinationSchedule_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -725,10 +734,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList shiftInstanceSids_ = emptyLongList();
     private void ensureShiftInstanceSidsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
-        shiftInstanceSids_ = mutableCopy(shiftInstanceSids_);
-        bitField0_ |= 0x00000002;
+      if (!shiftInstanceSids_.isModifiable()) {
+        shiftInstanceSids_ = makeMutableCopy(shiftInstanceSids_);
       }
+      bitField0_ |= 0x00000002;
     }
     /**
      * <pre>
@@ -740,8 +749,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getShiftInstanceSidsList() {
-      return ((bitField0_ & 0x00000002) != 0) ?
-               java.util.Collections.unmodifiableList(shiftInstanceSids_) : shiftInstanceSids_;
+      shiftInstanceSids_.makeImmutable();
+      return shiftInstanceSids_;
     }
     /**
      * <pre>
@@ -781,6 +790,7 @@ private static final long serialVersionUID = 0L;
 
       ensureShiftInstanceSidsIsMutable();
       shiftInstanceSids_.setLong(index, value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -797,6 +807,7 @@ private static final long serialVersionUID = 0L;
 
       ensureShiftInstanceSidsIsMutable();
       shiftInstanceSids_.addLong(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -814,6 +825,7 @@ private static final long serialVersionUID = 0L;
       ensureShiftInstanceSidsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, shiftInstanceSids_);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

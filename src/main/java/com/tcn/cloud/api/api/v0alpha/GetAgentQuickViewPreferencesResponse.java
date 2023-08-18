@@ -38,6 +38,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.GetAgentQuickViewPreferencesResponse.class, com.tcn.cloud.api.api.v0alpha.GetAgentQuickViewPreferencesResponse.Builder.class);
   }
 
+  private int bitField0_;
   public static final int AGENT_STATUS_DISPLAY_TEMPLATE_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v0alpha.AgentStatusDisplayTemplate agentStatusDisplayTemplate_;
   /**
@@ -46,7 +47,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAgentStatusDisplayTemplate() {
-    return agentStatusDisplayTemplate_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.v0alpha.AgentStatusDisplayTemplate agent_status_display_template = 1 [json_name = "agentStatusDisplayTemplate"];</code>
@@ -78,7 +79,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (agentStatusDisplayTemplate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getAgentStatusDisplayTemplate());
     }
     getUnknownFields().writeTo(output);
@@ -90,7 +91,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (agentStatusDisplayTemplate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getAgentStatusDisplayTemplate());
     }
@@ -248,13 +249,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetAgentQuickViewPreferencesResponse.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getAgentStatusDisplayTemplateFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -298,11 +305,14 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetAgentQuickViewPreferencesResponse result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.agentStatusDisplayTemplate_ = agentStatusDisplayTemplateBuilder_ == null
             ? agentStatusDisplayTemplate_
             : agentStatusDisplayTemplateBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -468,8 +478,10 @@ private static final long serialVersionUID = 0L;
       } else {
         agentStatusDisplayTemplateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (agentStatusDisplayTemplate_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**

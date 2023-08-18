@@ -44,6 +44,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq.class, com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq.Builder.class);
   }
 
+  private int bitField0_;
   public static final int DRAFT_SCHEDULE_SID_FIELD_NUMBER = 1;
   private long draftScheduleSid_ = 0L;
   /**
@@ -86,7 +87,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasStartDatetime() {
-    return startDatetime_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -155,7 +156,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasWfmAgentSid() {
-    return wfmAgentSid_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -282,7 +283,7 @@ private static final long serialVersionUID = 0L;
     if (shiftTemplateSid_ != 0L) {
       output.writeInt64(2, shiftTemplateSid_);
     }
-    if (startDatetime_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(3, getStartDatetime());
     }
     if (widthInMinutes_ != 0) {
@@ -291,7 +292,7 @@ private static final long serialVersionUID = 0L;
     if (isLocked_ != false) {
       output.writeBool(5, isLocked_);
     }
-    if (wfmAgentSid_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(6, getWfmAgentSid());
     }
     if (getMetricTypesList().size() > 0) {
@@ -318,7 +319,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, shiftTemplateSid_);
     }
-    if (startDatetime_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getStartDatetime());
     }
@@ -330,7 +331,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(5, isLocked_);
     }
-    if (wfmAgentSid_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getWfmAgentSid());
     }
@@ -538,13 +539,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getStartDatetimeFieldBuilder();
+        getWfmAgentSidFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -614,10 +622,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.shiftTemplateSid_ = shiftTemplateSid_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.startDatetime_ = startDatetimeBuilder_ == null
             ? startDatetime_
             : startDatetimeBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.widthInMinutes_ = widthInMinutes_;
@@ -629,7 +639,9 @@ private static final long serialVersionUID = 0L;
         result.wfmAgentSid_ = wfmAgentSidBuilder_ == null
             ? wfmAgentSid_
             : wfmAgentSidBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -972,8 +984,10 @@ private static final long serialVersionUID = 0L;
       } else {
         startDatetimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (startDatetime_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1220,8 +1234,10 @@ private static final long serialVersionUID = 0L;
       } else {
         wfmAgentSidBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (wfmAgentSid_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**

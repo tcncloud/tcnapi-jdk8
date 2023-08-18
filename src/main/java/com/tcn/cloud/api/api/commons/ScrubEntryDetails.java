@@ -43,6 +43,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.ScrubEntryDetails.class, com.tcn.cloud.api.api.commons.ScrubEntryDetails.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CONTENT_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object content_ = "";
@@ -102,7 +103,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasExpirationDate() {
-    return expirationDate_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -136,7 +137,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasNotes() {
-    return notes_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.google.protobuf.StringValue notes = 3 [json_name = "notes"];</code>
@@ -171,10 +172,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, content_);
     }
-    if (expirationDate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getExpirationDate());
     }
-    if (notes_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(3, getNotes());
     }
     getUnknownFields().writeTo(output);
@@ -189,11 +190,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, content_);
     }
-    if (expirationDate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getExpirationDate());
     }
-    if (notes_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getNotes());
     }
@@ -368,13 +369,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.ScrubEntryDetails.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getExpirationDateFieldBuilder();
+        getNotesFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -427,16 +435,20 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.content_ = content_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.expirationDate_ = expirationDateBuilder_ == null
             ? expirationDate_
             : expirationDateBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.notes_ = notesBuilder_ == null
             ? notes_
             : notesBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -734,8 +746,10 @@ private static final long serialVersionUID = 0L;
       } else {
         expirationDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (expirationDate_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -869,8 +883,10 @@ private static final long serialVersionUID = 0L;
       } else {
         notesBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (notes_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**

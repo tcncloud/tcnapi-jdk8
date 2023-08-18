@@ -146,6 +146,7 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetLinkDataRes.FieldNames.class, com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetLinkDataRes.FieldNames.Builder.class);
     }
 
+    private int bitField0_;
     public static final int FLOW_FIELD_NUMBER = 8;
     private com.tcn.cloud.api.api.commons.integrations.Flow flow_;
     /**
@@ -154,7 +155,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasFlow() {
-      return flow_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.api.commons.integrations.Flow flow = 8 [json_name = "flow"];</code>
@@ -264,7 +265,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (flow_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(8, getFlow());
       }
       for (int i = 0; i < fieldNames_.size(); i++) {
@@ -282,7 +283,7 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (flow_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getFlow());
       }
@@ -464,13 +465,20 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetLinkDataRes.FieldNames.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFlowFieldBuilder();
+          getFieldsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -536,15 +544,18 @@ private static final long serialVersionUID = 0L;
 
       private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetLinkDataRes.FieldNames result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.flow_ = flowBuilder_ == null
               ? flow_
               : flowBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           fieldNames_.makeImmutable();
           result.fieldNames_ = fieldNames_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -765,8 +776,10 @@ private static final long serialVersionUID = 0L;
         } else {
           flowBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        if (flow_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1232,6 +1245,7 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  private int bitField0_;
   public static final int COMPLETE_FIELD_NUMBER = 2;
   private boolean complete_ = false;
   /**
@@ -1274,7 +1288,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPortalConfig() {
-    return portalConfig_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -1312,7 +1326,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVerification() {
-    return verification_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -1350,7 +1364,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasInvoice() {
-    return invoice_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -1490,7 +1504,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPortalText() {
-    return portalText_ != null;
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <pre>
@@ -1536,13 +1550,13 @@ private static final long serialVersionUID = 0L;
     if (expired_ != false) {
       output.writeBool(3, expired_);
     }
-    if (portalConfig_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(4, getPortalConfig());
     }
-    if (verification_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(5, getVerification());
     }
-    if (invoice_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(6, getInvoice());
     }
     for (int i = 0; i < payments_.size(); i++) {
@@ -1551,7 +1565,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < flowForms_.size(); i++) {
       output.writeMessage(9, flowForms_.get(i));
     }
-    if (portalText_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(15, getPortalText());
     }
     getUnknownFields().writeTo(output);
@@ -1571,15 +1585,15 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(3, expired_);
     }
-    if (portalConfig_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getPortalConfig());
     }
-    if (verification_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getVerification());
     }
-    if (invoice_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getInvoice());
     }
@@ -1591,7 +1605,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, flowForms_.get(i));
     }
-    if (portalText_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, getPortalText());
     }
@@ -1798,13 +1812,24 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetLinkDataRes.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getPortalConfigFieldBuilder();
+        getVerificationFieldBuilder();
+        getInvoiceFieldBuilder();
+        getPaymentsFieldBuilder();
+        getFlowFormsFieldBuilder();
+        getPortalTextFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -1907,26 +1932,32 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.expired_ = expired_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.portalConfig_ = portalConfigBuilder_ == null
             ? portalConfig_
             : portalConfigBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.verification_ = verificationBuilder_ == null
             ? verification_
             : verificationBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.invoice_ = invoiceBuilder_ == null
             ? invoice_
             : invoiceBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.portalText_ = portalTextBuilder_ == null
             ? portalText_
             : portalTextBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -2324,8 +2355,10 @@ private static final long serialVersionUID = 0L;
       } else {
         portalConfigBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (portalConfig_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2479,8 +2512,10 @@ private static final long serialVersionUID = 0L;
       } else {
         verificationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (verification_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2634,8 +2669,10 @@ private static final long serialVersionUID = 0L;
       } else {
         invoiceBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (invoice_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3341,8 +3378,10 @@ private static final long serialVersionUID = 0L;
       } else {
         portalTextBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+      if (portalText_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       return this;
     }
     /**

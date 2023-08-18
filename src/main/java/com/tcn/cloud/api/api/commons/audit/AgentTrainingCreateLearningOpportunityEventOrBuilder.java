@@ -9,50 +9,10 @@ public interface AgentTrainingCreateLearningOpportunityEventOrBuilder extends
 
   /**
    * <pre>
-   * the agent receiving the learning opportunity
-   * </pre>
-   *
-   * <code>string agent_user_id = 1 [json_name = "agentUserId"];</code>
-   * @return The agentUserId.
-   */
-  java.lang.String getAgentUserId();
-  /**
-   * <pre>
-   * the agent receiving the learning opportunity
-   * </pre>
-   *
-   * <code>string agent_user_id = 1 [json_name = "agentUserId"];</code>
-   * @return The bytes for agentUserId.
-   */
-  com.google.protobuf.ByteString
-      getAgentUserIdBytes();
-
-  /**
-   * <pre>
-   * info or context for the learning opportunity
-   * </pre>
-   *
-   * <code>string description = 2 [json_name = "description"];</code>
-   * @return The description.
-   */
-  java.lang.String getDescription();
-  /**
-   * <pre>
-   * info or context for the learning opportunity
-   * </pre>
-   *
-   * <code>string description = 2 [json_name = "description"];</code>
-   * @return The bytes for description.
-   */
-  com.google.protobuf.ByteString
-      getDescriptionBytes();
-
-  /**
-   * <pre>
    * learning opportunity created
    * </pre>
    *
-   * <code>.api.commons.LearningOpportunity learning_opportunity = 3 [json_name = "learningOpportunity"];</code>
+   * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
    * @return Whether the learningOpportunity field is set.
    */
   boolean hasLearningOpportunity();
@@ -61,7 +21,7 @@ public interface AgentTrainingCreateLearningOpportunityEventOrBuilder extends
    * learning opportunity created
    * </pre>
    *
-   * <code>.api.commons.LearningOpportunity learning_opportunity = 3 [json_name = "learningOpportunity"];</code>
+   * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
    * @return The learningOpportunity.
    */
   com.tcn.cloud.api.api.commons.LearningOpportunity getLearningOpportunity();
@@ -70,7 +30,7 @@ public interface AgentTrainingCreateLearningOpportunityEventOrBuilder extends
    * learning opportunity created
    * </pre>
    *
-   * <code>.api.commons.LearningOpportunity learning_opportunity = 3 [json_name = "learningOpportunity"];</code>
+   * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
    */
   com.tcn.cloud.api.api.commons.LearningOpportunityOrBuilder getLearningOpportunityOrBuilder();
 }

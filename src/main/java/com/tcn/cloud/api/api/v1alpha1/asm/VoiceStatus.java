@@ -42,6 +42,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.asm.VoiceStatus.class, com.tcn.cloud.api.api.v1alpha1.asm.VoiceStatus.Builder.class);
   }
 
+  private int bitField0_;
   public static final int STATUS_FIELD_NUMBER = 2;
   private long status_ = 0L;
   /**
@@ -267,7 +268,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasQueuedCalls() {
-    return queuedCalls_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.v1alpha1.asm.QueuedCalls queued_calls = 16 [json_name = "queuedCalls"];</code>
@@ -345,7 +346,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAlert() {
-    return alert_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.api.commons.AgentAlert alert = 19 [json_name = "alert"];</code>
@@ -449,7 +450,7 @@ private static final long serialVersionUID = 0L;
     if (messageTimestamp_ != 0L) {
       output.writeInt64(15, messageTimestamp_);
     }
-    if (queuedCalls_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(16, getQueuedCalls());
     }
     if (callerWasSuspended_ != false) {
@@ -458,7 +459,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < transferMembers_.size(); i++) {
       output.writeMessage(18, transferMembers_.get(i));
     }
-    if (alert_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(19, getAlert());
     }
     if (agentPeerIsDirectToAgent_ != false) {
@@ -530,7 +531,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(15, messageTimestamp_);
     }
-    if (queuedCalls_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(16, getQueuedCalls());
     }
@@ -542,7 +543,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(18, transferMembers_.get(i));
     }
-    if (alert_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(19, getAlert());
     }
@@ -804,13 +805,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.asm.VoiceStatus.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getQueuedCallsFieldBuilder();
+        getTransferMembersFieldBuilder();
+        getAlertFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -938,10 +947,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00002000) != 0)) {
         result.messageTimestamp_ = messageTimestamp_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00004000) != 0)) {
         result.queuedCalls_ = queuedCallsBuilder_ == null
             ? queuedCalls_
             : queuedCallsBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00008000) != 0)) {
         result.callerWasSuspended_ = callerWasSuspended_;
@@ -950,6 +961,7 @@ private static final long serialVersionUID = 0L;
         result.alert_ = alertBuilder_ == null
             ? alert_
             : alertBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00040000) != 0)) {
         result.agentPeerIsDirectToAgent_ = agentPeerIsDirectToAgent_;
@@ -957,6 +969,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00080000) != 0)) {
         result.agentIsMuted_ = agentIsMuted_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1860,8 +1873,10 @@ private static final long serialVersionUID = 0L;
       } else {
         queuedCallsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00004000;
-      onChanged();
+      if (queuedCalls_ != null) {
+        bitField0_ |= 0x00004000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2251,8 +2266,10 @@ private static final long serialVersionUID = 0L;
       } else {
         alertBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00020000;
-      onChanged();
+      if (alert_ != null) {
+        bitField0_ |= 0x00020000;
+        onChanged();
+      }
       return this;
     }
     /**

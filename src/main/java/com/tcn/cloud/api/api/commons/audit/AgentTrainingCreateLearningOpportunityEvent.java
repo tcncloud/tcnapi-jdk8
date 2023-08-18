@@ -20,8 +20,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private AgentTrainingCreateLearningOpportunityEvent() {
-    agentUserId_ = "";
-    description_ = "";
   }
 
   @java.lang.Override
@@ -44,120 +42,27 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.class, com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.Builder.class);
   }
 
-  public static final int AGENT_USER_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object agentUserId_ = "";
-  /**
-   * <pre>
-   * the agent receiving the learning opportunity
-   * </pre>
-   *
-   * <code>string agent_user_id = 1 [json_name = "agentUserId"];</code>
-   * @return The agentUserId.
-   */
-  @java.lang.Override
-  public java.lang.String getAgentUserId() {
-    java.lang.Object ref = agentUserId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      agentUserId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * the agent receiving the learning opportunity
-   * </pre>
-   *
-   * <code>string agent_user_id = 1 [json_name = "agentUserId"];</code>
-   * @return The bytes for agentUserId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getAgentUserIdBytes() {
-    java.lang.Object ref = agentUserId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      agentUserId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int DESCRIPTION_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object description_ = "";
-  /**
-   * <pre>
-   * info or context for the learning opportunity
-   * </pre>
-   *
-   * <code>string description = 2 [json_name = "description"];</code>
-   * @return The description.
-   */
-  @java.lang.Override
-  public java.lang.String getDescription() {
-    java.lang.Object ref = description_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      description_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * info or context for the learning opportunity
-   * </pre>
-   *
-   * <code>string description = 2 [json_name = "description"];</code>
-   * @return The bytes for description.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getDescriptionBytes() {
-    java.lang.Object ref = description_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      description_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int LEARNING_OPPORTUNITY_FIELD_NUMBER = 3;
+  private int bitField0_;
+  public static final int LEARNING_OPPORTUNITY_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.LearningOpportunity learningOpportunity_;
   /**
    * <pre>
    * learning opportunity created
    * </pre>
    *
-   * <code>.api.commons.LearningOpportunity learning_opportunity = 3 [json_name = "learningOpportunity"];</code>
+   * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
    * @return Whether the learningOpportunity field is set.
    */
   @java.lang.Override
   public boolean hasLearningOpportunity() {
-    return learningOpportunity_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
    * learning opportunity created
    * </pre>
    *
-   * <code>.api.commons.LearningOpportunity learning_opportunity = 3 [json_name = "learningOpportunity"];</code>
+   * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
    * @return The learningOpportunity.
    */
   @java.lang.Override
@@ -169,7 +74,7 @@ private static final long serialVersionUID = 0L;
    * learning opportunity created
    * </pre>
    *
-   * <code>.api.commons.LearningOpportunity learning_opportunity = 3 [json_name = "learningOpportunity"];</code>
+   * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.LearningOpportunityOrBuilder getLearningOpportunityOrBuilder() {
@@ -190,14 +95,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentUserId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, agentUserId_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
-    }
-    if (learningOpportunity_ != null) {
-      output.writeMessage(3, getLearningOpportunity());
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(1, getLearningOpportunity());
     }
     getUnknownFields().writeTo(output);
   }
@@ -208,15 +107,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentUserId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, agentUserId_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
-    }
-    if (learningOpportunity_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getLearningOpportunity());
+        .computeMessageSize(1, getLearningOpportunity());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -233,10 +126,6 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent other = (com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent) obj;
 
-    if (!getAgentUserId()
-        .equals(other.getAgentUserId())) return false;
-    if (!getDescription()
-        .equals(other.getDescription())) return false;
     if (hasLearningOpportunity() != other.hasLearningOpportunity()) return false;
     if (hasLearningOpportunity()) {
       if (!getLearningOpportunity()
@@ -253,10 +142,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + AGENT_USER_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getAgentUserId().hashCode();
-    hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
-    hash = (53 * hash) + getDescription().hashCode();
     if (hasLearningOpportunity()) {
       hash = (37 * hash) + LEARNING_OPPORTUNITY_FIELD_NUMBER;
       hash = (53 * hash) + getLearningOpportunity().hashCode();
@@ -384,20 +269,24 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getLearningOpportunityFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      agentUserId_ = "";
-      description_ = "";
       learningOpportunity_ = null;
       if (learningOpportunityBuilder_ != null) {
         learningOpportunityBuilder_.dispose();
@@ -436,17 +325,14 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.agentUserId_ = agentUserId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.description_ = description_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.learningOpportunity_ = learningOpportunityBuilder_ == null
             ? learningOpportunity_
             : learningOpportunityBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -493,16 +379,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent other) {
       if (other == com.tcn.cloud.api.api.commons.audit.AgentTrainingCreateLearningOpportunityEvent.getDefaultInstance()) return this;
-      if (!other.getAgentUserId().isEmpty()) {
-        agentUserId_ = other.agentUserId_;
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
-      if (!other.getDescription().isEmpty()) {
-        description_ = other.description_;
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
       if (other.hasLearningOpportunity()) {
         mergeLearningOpportunity(other.getLearningOpportunity());
       }
@@ -533,22 +409,12 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              agentUserId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              description_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
               input.readMessage(
                   getLearningOpportunityFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000001;
               break;
-            } // case 26
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -566,190 +432,6 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object agentUserId_ = "";
-    /**
-     * <pre>
-     * the agent receiving the learning opportunity
-     * </pre>
-     *
-     * <code>string agent_user_id = 1 [json_name = "agentUserId"];</code>
-     * @return The agentUserId.
-     */
-    public java.lang.String getAgentUserId() {
-      java.lang.Object ref = agentUserId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        agentUserId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * the agent receiving the learning opportunity
-     * </pre>
-     *
-     * <code>string agent_user_id = 1 [json_name = "agentUserId"];</code>
-     * @return The bytes for agentUserId.
-     */
-    public com.google.protobuf.ByteString
-        getAgentUserIdBytes() {
-      java.lang.Object ref = agentUserId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        agentUserId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * the agent receiving the learning opportunity
-     * </pre>
-     *
-     * <code>string agent_user_id = 1 [json_name = "agentUserId"];</code>
-     * @param value The agentUserId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAgentUserId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      agentUserId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * the agent receiving the learning opportunity
-     * </pre>
-     *
-     * <code>string agent_user_id = 1 [json_name = "agentUserId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearAgentUserId() {
-      agentUserId_ = getDefaultInstance().getAgentUserId();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * the agent receiving the learning opportunity
-     * </pre>
-     *
-     * <code>string agent_user_id = 1 [json_name = "agentUserId"];</code>
-     * @param value The bytes for agentUserId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAgentUserIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      agentUserId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object description_ = "";
-    /**
-     * <pre>
-     * info or context for the learning opportunity
-     * </pre>
-     *
-     * <code>string description = 2 [json_name = "description"];</code>
-     * @return The description.
-     */
-    public java.lang.String getDescription() {
-      java.lang.Object ref = description_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        description_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * info or context for the learning opportunity
-     * </pre>
-     *
-     * <code>string description = 2 [json_name = "description"];</code>
-     * @return The bytes for description.
-     */
-    public com.google.protobuf.ByteString
-        getDescriptionBytes() {
-      java.lang.Object ref = description_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        description_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * info or context for the learning opportunity
-     * </pre>
-     *
-     * <code>string description = 2 [json_name = "description"];</code>
-     * @param value The description to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDescription(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      description_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * info or context for the learning opportunity
-     * </pre>
-     *
-     * <code>string description = 2 [json_name = "description"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearDescription() {
-      description_ = getDefaultInstance().getDescription();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * info or context for the learning opportunity
-     * </pre>
-     *
-     * <code>string description = 2 [json_name = "description"];</code>
-     * @param value The bytes for description to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDescriptionBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      description_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
     private com.tcn.cloud.api.api.commons.LearningOpportunity learningOpportunity_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.LearningOpportunity, com.tcn.cloud.api.api.commons.LearningOpportunity.Builder, com.tcn.cloud.api.api.commons.LearningOpportunityOrBuilder> learningOpportunityBuilder_;
@@ -758,18 +440,18 @@ private static final long serialVersionUID = 0L;
      * learning opportunity created
      * </pre>
      *
-     * <code>.api.commons.LearningOpportunity learning_opportunity = 3 [json_name = "learningOpportunity"];</code>
+     * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
      * @return Whether the learningOpportunity field is set.
      */
     public boolean hasLearningOpportunity() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
      * learning opportunity created
      * </pre>
      *
-     * <code>.api.commons.LearningOpportunity learning_opportunity = 3 [json_name = "learningOpportunity"];</code>
+     * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
      * @return The learningOpportunity.
      */
     public com.tcn.cloud.api.api.commons.LearningOpportunity getLearningOpportunity() {
@@ -784,7 +466,7 @@ private static final long serialVersionUID = 0L;
      * learning opportunity created
      * </pre>
      *
-     * <code>.api.commons.LearningOpportunity learning_opportunity = 3 [json_name = "learningOpportunity"];</code>
+     * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
      */
     public Builder setLearningOpportunity(com.tcn.cloud.api.api.commons.LearningOpportunity value) {
       if (learningOpportunityBuilder_ == null) {
@@ -795,7 +477,7 @@ private static final long serialVersionUID = 0L;
       } else {
         learningOpportunityBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -804,7 +486,7 @@ private static final long serialVersionUID = 0L;
      * learning opportunity created
      * </pre>
      *
-     * <code>.api.commons.LearningOpportunity learning_opportunity = 3 [json_name = "learningOpportunity"];</code>
+     * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
      */
     public Builder setLearningOpportunity(
         com.tcn.cloud.api.api.commons.LearningOpportunity.Builder builderForValue) {
@@ -813,7 +495,7 @@ private static final long serialVersionUID = 0L;
       } else {
         learningOpportunityBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -822,11 +504,11 @@ private static final long serialVersionUID = 0L;
      * learning opportunity created
      * </pre>
      *
-     * <code>.api.commons.LearningOpportunity learning_opportunity = 3 [json_name = "learningOpportunity"];</code>
+     * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
      */
     public Builder mergeLearningOpportunity(com.tcn.cloud.api.api.commons.LearningOpportunity value) {
       if (learningOpportunityBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
+        if (((bitField0_ & 0x00000001) != 0) &&
           learningOpportunity_ != null &&
           learningOpportunity_ != com.tcn.cloud.api.api.commons.LearningOpportunity.getDefaultInstance()) {
           getLearningOpportunityBuilder().mergeFrom(value);
@@ -836,8 +518,10 @@ private static final long serialVersionUID = 0L;
       } else {
         learningOpportunityBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (learningOpportunity_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -845,10 +529,10 @@ private static final long serialVersionUID = 0L;
      * learning opportunity created
      * </pre>
      *
-     * <code>.api.commons.LearningOpportunity learning_opportunity = 3 [json_name = "learningOpportunity"];</code>
+     * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
      */
     public Builder clearLearningOpportunity() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000001);
       learningOpportunity_ = null;
       if (learningOpportunityBuilder_ != null) {
         learningOpportunityBuilder_.dispose();
@@ -862,10 +546,10 @@ private static final long serialVersionUID = 0L;
      * learning opportunity created
      * </pre>
      *
-     * <code>.api.commons.LearningOpportunity learning_opportunity = 3 [json_name = "learningOpportunity"];</code>
+     * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
      */
     public com.tcn.cloud.api.api.commons.LearningOpportunity.Builder getLearningOpportunityBuilder() {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000001;
       onChanged();
       return getLearningOpportunityFieldBuilder().getBuilder();
     }
@@ -874,7 +558,7 @@ private static final long serialVersionUID = 0L;
      * learning opportunity created
      * </pre>
      *
-     * <code>.api.commons.LearningOpportunity learning_opportunity = 3 [json_name = "learningOpportunity"];</code>
+     * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
      */
     public com.tcn.cloud.api.api.commons.LearningOpportunityOrBuilder getLearningOpportunityOrBuilder() {
       if (learningOpportunityBuilder_ != null) {
@@ -889,7 +573,7 @@ private static final long serialVersionUID = 0L;
      * learning opportunity created
      * </pre>
      *
-     * <code>.api.commons.LearningOpportunity learning_opportunity = 3 [json_name = "learningOpportunity"];</code>
+     * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.LearningOpportunity, com.tcn.cloud.api.api.commons.LearningOpportunity.Builder, com.tcn.cloud.api.api.commons.LearningOpportunityOrBuilder> 

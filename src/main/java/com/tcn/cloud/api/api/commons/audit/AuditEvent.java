@@ -47,6 +47,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.AuditEvent.class, com.tcn.cloud.api.api.commons.audit.AuditEvent.Builder.class);
   }
 
+  private int bitField0_;
   private int eventCase_ = 0;
   @SuppressWarnings("serial")
   private java.lang.Object event_;
@@ -410,7 +411,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEventTime() {
-    return eventTime_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -4179,7 +4180,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, clusterId_);
     }
-    if (eventTime_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(4, getEventTime());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(auditId_)) {
@@ -4464,7 +4465,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, clusterId_);
     }
-    if (eventTime_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getEventTime());
     }
@@ -5693,13 +5694,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.audit.AuditEvent.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getEventTimeFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -6022,10 +6029,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.clusterId_ = clusterId_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.eventTime_ = eventTimeBuilder_ == null
             ? eventTime_
             : eventTimeBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.auditId_ = auditId_;
@@ -6033,6 +6042,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.eventType_ = eventType_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     private void buildPartial1(com.tcn.cloud.api.api.commons.audit.AuditEvent result) {
@@ -7867,8 +7877,10 @@ private static final long serialVersionUID = 0L;
       } else {
         eventTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (eventTime_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**

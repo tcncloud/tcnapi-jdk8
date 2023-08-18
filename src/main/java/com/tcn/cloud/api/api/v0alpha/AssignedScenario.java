@@ -38,6 +38,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.AssignedScenario.class, com.tcn.cloud.api.api.v0alpha.AssignedScenario.Builder.class);
   }
 
+  private int bitField0_;
   public static final int SCENARIO_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v0alpha.Scenario scenario_;
   /**
@@ -46,7 +47,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasScenario() {
-    return scenario_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.v0alpha.Scenario scenario = 1 [json_name = "scenario"];</code>
@@ -83,7 +84,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastExecutionResult() {
-    return lastExecutionResult_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.api.commons.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
@@ -115,13 +116,13 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (scenario_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getScenario());
     }
     if (enabled_ != false) {
       output.writeBool(2, enabled_);
     }
-    if (lastExecutionResult_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(3, getLastExecutionResult());
     }
     getUnknownFields().writeTo(output);
@@ -133,7 +134,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (scenario_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getScenario());
     }
@@ -141,7 +142,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(2, enabled_);
     }
-    if (lastExecutionResult_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getLastExecutionResult());
     }
@@ -313,13 +314,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.AssignedScenario.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getScenarioFieldBuilder();
+        getLastExecutionResultFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -369,10 +377,12 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.AssignedScenario result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.scenario_ = scenarioBuilder_ == null
             ? scenario_
             : scenarioBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.enabled_ = enabled_;
@@ -381,7 +391,9 @@ private static final long serialVersionUID = 0L;
         result.lastExecutionResult_ = lastExecutionResultBuilder_ == null
             ? lastExecutionResult_
             : lastExecutionResultBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -565,8 +577,10 @@ private static final long serialVersionUID = 0L;
       } else {
         scenarioBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (scenario_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -716,8 +730,10 @@ private static final long serialVersionUID = 0L;
       } else {
         lastExecutionResultBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (lastExecutionResult_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**

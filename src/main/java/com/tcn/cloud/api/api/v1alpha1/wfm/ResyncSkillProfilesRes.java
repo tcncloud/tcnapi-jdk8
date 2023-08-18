@@ -45,7 +45,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int CREATED_SKILL_PROFILE_SIDS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList createdSkillProfileSids_;
+  private com.google.protobuf.Internal.LongList createdSkillProfileSids_ =
+      emptyLongList();
   /**
    * <pre>
    * IDs of the newly created skill profiles.
@@ -323,22 +324,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesRes buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesRes result = new com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesRes(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesRes result) {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        createdSkillProfileSids_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.createdSkillProfileSids_ = createdSkillProfileSids_;
-    }
-
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesRes result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        createdSkillProfileSids_.makeImmutable();
+        result.createdSkillProfileSids_ = createdSkillProfileSids_;
+      }
     }
 
     @java.lang.Override
@@ -388,7 +384,8 @@ private static final long serialVersionUID = 0L;
       if (!other.createdSkillProfileSids_.isEmpty()) {
         if (createdSkillProfileSids_.isEmpty()) {
           createdSkillProfileSids_ = other.createdSkillProfileSids_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          createdSkillProfileSids_.makeImmutable();
+          bitField0_ |= 0x00000001;
         } else {
           ensureCreatedSkillProfileSidsIsMutable();
           createdSkillProfileSids_.addAll(other.createdSkillProfileSids_);
@@ -456,10 +453,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList createdSkillProfileSids_ = emptyLongList();
     private void ensureCreatedSkillProfileSidsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
-        createdSkillProfileSids_ = mutableCopy(createdSkillProfileSids_);
-        bitField0_ |= 0x00000001;
+      if (!createdSkillProfileSids_.isModifiable()) {
+        createdSkillProfileSids_ = makeMutableCopy(createdSkillProfileSids_);
       }
+      bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
@@ -471,8 +468,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getCreatedSkillProfileSidsList() {
-      return ((bitField0_ & 0x00000001) != 0) ?
-               java.util.Collections.unmodifiableList(createdSkillProfileSids_) : createdSkillProfileSids_;
+      createdSkillProfileSids_.makeImmutable();
+      return createdSkillProfileSids_;
     }
     /**
      * <pre>
@@ -512,6 +509,7 @@ private static final long serialVersionUID = 0L;
 
       ensureCreatedSkillProfileSidsIsMutable();
       createdSkillProfileSids_.setLong(index, value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -528,6 +526,7 @@ private static final long serialVersionUID = 0L;
 
       ensureCreatedSkillProfileSidsIsMutable();
       createdSkillProfileSids_.addLong(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -545,6 +544,7 @@ private static final long serialVersionUID = 0L;
       ensureCreatedSkillProfileSidsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, createdSkillProfileSids_);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

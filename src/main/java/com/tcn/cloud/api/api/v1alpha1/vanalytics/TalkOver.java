@@ -838,6 +838,7 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.api.v1alpha1.vanalytics.TalkOver.Result.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.TalkOver.Result.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CHANNEL_FIELD_NUMBER = 1;
     private int channel_ = 0;
     /**
@@ -857,7 +858,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasOccurrence() {
-      return occurrence_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.api.v1alpha1.vanalytics.TalkOver.Occurrence occurrence = 2 [json_name = "occurrence"];</code>
@@ -883,7 +884,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasDuration() {
-      return duration_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.api.v1alpha1.vanalytics.TalkOver.Duration duration = 3 [json_name = "duration"];</code>
@@ -1009,10 +1010,10 @@ private static final long serialVersionUID = 0L;
       if (channel_ != 0) {
         output.writeInt32(1, channel_);
       }
-      if (occurrence_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getOccurrence());
       }
-      if (duration_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(3, getDuration());
       }
       for (int i = 0; i < segments_.size(); i++) {
@@ -1037,11 +1038,11 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, channel_);
       }
-      if (occurrence_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getOccurrence());
       }
-      if (duration_ != null) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDuration());
       }
@@ -1238,13 +1239,21 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.TalkOver.Result.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOccurrenceFieldBuilder();
+          getDurationFieldBuilder();
+          getSegmentsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1319,15 +1328,18 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.channel_ = channel_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.occurrence_ = occurrenceBuilder_ == null
               ? occurrence_
               : occurrenceBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.duration_ = durationBuilder_ == null
               ? duration_
               : durationBuilder_.build();
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.agentUserName_ = agentUserName_;
@@ -1335,6 +1347,7 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.agentSessionSid_ = agentSessionSid_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1607,8 +1620,10 @@ private static final long serialVersionUID = 0L;
         } else {
           occurrenceBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (occurrence_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -1726,8 +1741,10 @@ private static final long serialVersionUID = 0L;
         } else {
           durationBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (duration_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**
@@ -3270,6 +3287,7 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  private int bitField0_;
   public static final int OCCURRENCE_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v1alpha1.vanalytics.TalkOver.Occurrence occurrence_;
   /**
@@ -3278,7 +3296,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasOccurrence() {
-    return occurrence_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.v1alpha1.vanalytics.TalkOver.Occurrence occurrence = 1 [json_name = "occurrence"];</code>
@@ -3304,7 +3322,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDuration() {
-    return duration_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.api.v1alpha1.vanalytics.TalkOver.Duration duration = 2 [json_name = "duration"];</code>
@@ -3393,10 +3411,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (occurrence_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getOccurrence());
     }
-    if (duration_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(2, getDuration());
     }
     for (int i = 0; i < results_.size(); i++) {
@@ -3414,11 +3432,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (occurrence_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getOccurrence());
     }
-    if (duration_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getDuration());
     }
@@ -3603,13 +3621,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.TalkOver.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getOccurrenceFieldBuilder();
+        getDurationFieldBuilder();
+        getResultsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -3679,19 +3705,23 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.TalkOver result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.occurrence_ = occurrenceBuilder_ == null
             ? occurrence_
             : occurrenceBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.duration_ = durationBuilder_ == null
             ? duration_
             : durationBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.threshold_ = threshold_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -3914,8 +3944,10 @@ private static final long serialVersionUID = 0L;
       } else {
         occurrenceBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (occurrence_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -4033,8 +4065,10 @@ private static final long serialVersionUID = 0L;
       } else {
         durationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (duration_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**

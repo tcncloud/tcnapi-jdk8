@@ -50,6 +50,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.ConsentByContent.class, com.tcn.cloud.api.api.v0alpha.ConsentByContent.Builder.class);
   }
 
+  private int bitField0_;
   public static final int ORG_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
@@ -233,7 +234,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasRevoked() {
-    return revoked_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp revoked = 10 [json_name = "revoked"];</code>
@@ -259,7 +260,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasExpire() {
-    return expire_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp expire = 11 [json_name = "expire"];</code>
@@ -302,7 +303,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   @java.lang.Deprecated public boolean hasChannel() {
-    return channel_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -541,7 +542,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConditionFrom() {
-    return conditionFrom_ != null;
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp condition_from = 18 [json_name = "conditionFrom"];</code>
@@ -567,7 +568,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConditionTo() {
-    return conditionTo_ != null;
+    return ((bitField0_ & 0x00000010) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp condition_to = 19 [json_name = "conditionTo"];</code>
@@ -759,16 +760,16 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, content_);
     }
-    if (revoked_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(10, getRevoked());
     }
-    if (expire_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(11, getExpire());
     }
     if (disabled_ != false) {
       output.writeBool(12, disabled_);
     }
-    if (channel_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(13, getChannel());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topic_)) {
@@ -787,10 +788,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(conditionTimeOfDayTo_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 17, conditionTimeOfDayTo_);
     }
-    if (conditionFrom_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(18, getConditionFrom());
     }
-    if (conditionTo_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       output.writeMessage(19, getConditionTo());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(notes_)) {
@@ -830,11 +831,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, content_);
     }
-    if (revoked_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getRevoked());
     }
-    if (expire_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getExpire());
     }
@@ -842,7 +843,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(12, disabled_);
     }
-    if (channel_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getChannel());
     }
@@ -867,11 +868,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(conditionTimeOfDayTo_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, conditionTimeOfDayTo_);
     }
-    if (conditionFrom_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(18, getConditionFrom());
     }
-    if (conditionTo_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(19, getConditionTo());
     }
@@ -1139,13 +1140,24 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ConsentByContent.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getRevokedFieldBuilder();
+        getExpireFieldBuilder();
+        getChannelFieldBuilder();
+        getConditionFromFieldBuilder();
+        getConditionToFieldBuilder();
+        getConditionsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -1263,15 +1275,18 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.content_ = content_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.revoked_ = revokedBuilder_ == null
             ? revoked_
             : revokedBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.expire_ = expireBuilder_ == null
             ? expire_
             : expireBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.disabled_ = disabled_;
@@ -1280,6 +1295,7 @@ private static final long serialVersionUID = 0L;
         result.channel_ = channelBuilder_ == null
             ? channel_
             : channelBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.topic_ = topic_;
@@ -1294,11 +1310,13 @@ private static final long serialVersionUID = 0L;
         result.conditionFrom_ = conditionFromBuilder_ == null
             ? conditionFrom_
             : conditionFromBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00004000) != 0)) {
         result.conditionTo_ = conditionToBuilder_ == null
             ? conditionTo_
             : conditionToBuilder_.build();
+        to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00008000) != 0)) {
         result.notes_ = notes_;
@@ -1309,6 +1327,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00040000) != 0)) {
         result.channelType_ = channelType_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -2032,8 +2051,10 @@ private static final long serialVersionUID = 0L;
       } else {
         revokedBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (revoked_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2151,8 +2172,10 @@ private static final long serialVersionUID = 0L;
       } else {
         expireBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (expire_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2326,8 +2349,10 @@ private static final long serialVersionUID = 0L;
       } else {
         channelBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+      if (channel_ != null) {
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2885,8 +2910,10 @@ private static final long serialVersionUID = 0L;
       } else {
         conditionFromBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00002000;
-      onChanged();
+      if (conditionFrom_ != null) {
+        bitField0_ |= 0x00002000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3004,8 +3031,10 @@ private static final long serialVersionUID = 0L;
       } else {
         conditionToBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00004000;
-      onChanged();
+      if (conditionTo_ != null) {
+        bitField0_ |= 0x00004000;
+        onChanged();
+      }
       return this;
     }
     /**

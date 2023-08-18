@@ -39,6 +39,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.integrations.InvoiceFlow.class, com.tcn.cloud.api.api.commons.integrations.InvoiceFlow.Builder.class);
   }
 
+  private int bitField0_;
   private int valueCase_ = 0;
   @SuppressWarnings("serial")
   private java.lang.Object value_;
@@ -305,7 +306,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasInvoiceTemplate() {
-    return invoiceTemplate_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -351,7 +352,7 @@ private static final long serialVersionUID = 0L;
     if (valueCase_ == 2) {
       output.writeMessage(2, (com.tcn.cloud.api.api.commons.integrations.InvoiceExperianQueryBalance) value_);
     }
-    if (invoiceTemplate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(3, getInvoiceTemplate());
     }
     if (valueCase_ == 10) {
@@ -382,7 +383,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, (com.tcn.cloud.api.api.commons.integrations.InvoiceExperianQueryBalance) value_);
     }
-    if (invoiceTemplate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getInvoiceTemplate());
     }
@@ -609,13 +610,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.integrations.InvoiceFlow.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getInvoiceTemplateFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -681,11 +688,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.pluginInstanceId_ = pluginInstanceId_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.invoiceTemplate_ = invoiceTemplateBuilder_ == null
             ? invoiceTemplate_
             : invoiceTemplateBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     private void buildPartialOneofs(com.tcn.cloud.api.api.commons.integrations.InvoiceFlow result) {
@@ -1799,8 +1809,10 @@ private static final long serialVersionUID = 0L;
       } else {
         invoiceTemplateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (invoiceTemplate_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
     /**

@@ -38,6 +38,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.DialedNumberFieldStyle.class, com.tcn.cloud.api.api.v0alpha.DialedNumberFieldStyle.Builder.class);
   }
 
+  private int bitField0_;
   public static final int TEXT_COLOR_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v0alpha.Color textColor_;
   /**
@@ -46,7 +47,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTextColor() {
-    return textColor_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.v0alpha.Color text_color = 1 [json_name = "textColor"];</code>
@@ -72,7 +73,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasBackgroundColor() {
-    return backgroundColor_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.api.v0alpha.Color background_color = 2 [json_name = "backgroundColor"];</code>
@@ -104,10 +105,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (textColor_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getTextColor());
     }
-    if (backgroundColor_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(2, getBackgroundColor());
     }
     getUnknownFields().writeTo(output);
@@ -119,11 +120,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (textColor_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getTextColor());
     }
-    if (backgroundColor_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getBackgroundColor());
     }
@@ -290,13 +291,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.DialedNumberFieldStyle.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getTextColorFieldBuilder();
+        getBackgroundColorFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -345,16 +353,20 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.DialedNumberFieldStyle result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.textColor_ = textColorBuilder_ == null
             ? textColor_
             : textColorBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.backgroundColor_ = backgroundColorBuilder_ == null
             ? backgroundColor_
             : backgroundColorBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -530,8 +542,10 @@ private static final long serialVersionUID = 0L;
       } else {
         textColorBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (textColor_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -649,8 +663,10 @@ private static final long serialVersionUID = 0L;
       } else {
         backgroundColorBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (backgroundColor_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**

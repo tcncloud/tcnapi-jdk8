@@ -45,7 +45,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int SCORECARD_IDS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList scorecardIds_;
+  private com.google.protobuf.Internal.LongList scorecardIds_ =
+      emptyLongList();
   /**
    * <pre>
    * Optional - filter by scorecard ids.
@@ -323,22 +324,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest result = new com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest result) {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        scorecardIds_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.scorecardIds_ = scorecardIds_;
-    }
-
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        scorecardIds_.makeImmutable();
+        result.scorecardIds_ = scorecardIds_;
+      }
     }
 
     @java.lang.Override
@@ -388,7 +384,8 @@ private static final long serialVersionUID = 0L;
       if (!other.scorecardIds_.isEmpty()) {
         if (scorecardIds_.isEmpty()) {
           scorecardIds_ = other.scorecardIds_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          scorecardIds_.makeImmutable();
+          bitField0_ |= 0x00000001;
         } else {
           ensureScorecardIdsIsMutable();
           scorecardIds_.addAll(other.scorecardIds_);
@@ -456,10 +453,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList scorecardIds_ = emptyLongList();
     private void ensureScorecardIdsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
-        scorecardIds_ = mutableCopy(scorecardIds_);
-        bitField0_ |= 0x00000001;
+      if (!scorecardIds_.isModifiable()) {
+        scorecardIds_ = makeMutableCopy(scorecardIds_);
       }
+      bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
@@ -471,8 +468,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getScorecardIdsList() {
-      return ((bitField0_ & 0x00000001) != 0) ?
-               java.util.Collections.unmodifiableList(scorecardIds_) : scorecardIds_;
+      scorecardIds_.makeImmutable();
+      return scorecardIds_;
     }
     /**
      * <pre>
@@ -512,6 +509,7 @@ private static final long serialVersionUID = 0L;
 
       ensureScorecardIdsIsMutable();
       scorecardIds_.setLong(index, value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -528,6 +526,7 @@ private static final long serialVersionUID = 0L;
 
       ensureScorecardIdsIsMutable();
       scorecardIds_.addLong(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -545,6 +544,7 @@ private static final long serialVersionUID = 0L;
       ensureScorecardIdsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, scorecardIds_);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

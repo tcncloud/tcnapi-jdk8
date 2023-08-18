@@ -30,16 +30,15 @@ public final class AgentTrainingEventsProto {
     java.lang.String[] descriptorData = {
       "\n-api/commons/audit/agent_training_event" +
       "s.proto\022\021api.commons.audit\032 api/commons/" +
-      "agent_training.proto\"\310\001\n+AgentTrainingCr" +
-      "eateLearningOpportunityEvent\022\"\n\ragent_us" +
-      "er_id\030\001 \001(\tR\013agentUserId\022 \n\013description\030" +
-      "\002 \001(\tR\013description\022S\n\024learning_opportuni" +
-      "ty\030\003 \001(\0132 .api.commons.LearningOpportuni" +
-      "tyR\023learningOpportunityB\245\001\n#com.tcn.clou" +
-      "d.api.api.commons.auditB\030AgentTrainingEv" +
-      "entsProtoP\001\242\002\003ACA\252\002\021Api.Commons.Audit\312\002\021" +
-      "Api\\Commons\\Audit\342\002\035Api\\Commons\\Audit\\GP" +
-      "BMetadata\352\002\023Api::Commons::Auditb\006proto3"
+      "agent_training.proto\"\202\001\n+AgentTrainingCr" +
+      "eateLearningOpportunityEvent\022S\n\024learning" +
+      "_opportunity\030\001 \001(\0132 .api.commons.Learnin" +
+      "gOpportunityR\023learningOpportunityB\245\001\n#co" +
+      "m.tcn.cloud.api.api.commons.auditB\030Agent" +
+      "TrainingEventsProtoP\001\242\002\003ACA\252\002\021Api.Common" +
+      "s.Audit\312\002\021Api\\Commons\\Audit\342\002\035Api\\Common" +
+      "s\\Audit\\GPBMetadata\352\002\023Api::Commons::Audi" +
+      "tb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -51,7 +50,7 @@ public final class AgentTrainingEventsProto {
     internal_static_api_commons_audit_AgentTrainingCreateLearningOpportunityEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_AgentTrainingCreateLearningOpportunityEvent_descriptor,
-        new java.lang.String[] { "AgentUserId", "Description", "LearningOpportunity", });
+        new java.lang.String[] { "LearningOpportunity", });
     com.tcn.cloud.api.api.commons.AgentTrainingProto.getDescriptor();
   }
 
