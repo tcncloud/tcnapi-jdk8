@@ -912,6 +912,7 @@ private static final long serialVersionUID = 0L;
               com.tcn.cloud.api.api.v0alpha.CreateFilterReq.Simple.class, com.tcn.cloud.api.api.v0alpha.CreateFilterReq.Simple.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DATAPOINT_ID_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object datapointId_ = "";
@@ -959,7 +960,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasComparison() {
-      return comparison_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.api.v0alpha.Comparison comparison = 2 [json_name = "comparison"];</code>
@@ -994,7 +995,7 @@ private static final long serialVersionUID = 0L;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datapointId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datapointId_);
       }
-      if (comparison_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getComparison());
       }
       getUnknownFields().writeTo(output);
@@ -1009,7 +1010,7 @@ private static final long serialVersionUID = 0L;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datapointId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datapointId_);
       }
-      if (comparison_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getComparison());
       }
@@ -1171,13 +1172,19 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v0alpha.CreateFilterReq.Simple.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getComparisonFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1225,11 +1232,14 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.datapointId_ = datapointId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.comparison_ = comparisonBuilder_ == null
               ? comparison_
               : comparisonBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1477,8 +1487,10 @@ private static final long serialVersionUID = 0L;
         } else {
           comparisonBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        if (comparison_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         return this;
       }
       /**

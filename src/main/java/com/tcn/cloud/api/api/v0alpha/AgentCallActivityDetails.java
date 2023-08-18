@@ -39,6 +39,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.AgentCallActivityDetails.class, com.tcn.cloud.api.api.v0alpha.AgentCallActivityDetails.Builder.class);
   }
 
+  private int bitField0_;
   public static final int AGENT_SID_FIELD_NUMBER = 1;
   private long agentSid_ = 0L;
   /**
@@ -58,7 +59,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAgentName() {
-    return agentName_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.google.protobuf.StringValue agent_name = 2 [json_name = "agentName"];</code>
@@ -84,7 +85,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAgentSessionSid() {
-    return agentSessionSid_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.google.protobuf.Int64Value agent_session_sid = 3 [json_name = "agentSessionSid"];</code>
@@ -110,7 +111,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHuntGroupSid() {
-    return huntGroupSid_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <code>.google.protobuf.Int64Value hunt_group_sid = 4 [json_name = "huntGroupSid"];</code>
@@ -136,7 +137,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHuntGroupName() {
-    return huntGroupName_ != null;
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <code>.google.protobuf.StringValue hunt_group_name = 5 [json_name = "huntGroupName"];</code>
@@ -162,7 +163,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAgentCallCost() {
-    return agentCallCost_ != null;
+    return ((bitField0_ & 0x00000010) != 0);
   }
   /**
    * <code>.google.protobuf.DoubleValue agent_call_cost = 6 [json_name = "agentCallCost"];</code>
@@ -188,7 +189,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAgentWaitDuration() {
-    return agentWaitDuration_ != null;
+    return ((bitField0_ & 0x00000020) != 0);
   }
   /**
    * <code>.google.protobuf.Int64Value agent_wait_duration = 7 [json_name = "agentWaitDuration"];</code>
@@ -214,7 +215,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCallWaitDuration() {
-    return callWaitDuration_ != null;
+    return ((bitField0_ & 0x00000040) != 0);
   }
   /**
    * <code>.google.protobuf.Int64Value call_wait_duration = 8 [json_name = "callWaitDuration"];</code>
@@ -240,7 +241,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHoldDuration() {
-    return holdDuration_ != null;
+    return ((bitField0_ & 0x00000080) != 0);
   }
   /**
    * <code>.google.protobuf.Int64Value hold_duration = 9 [json_name = "holdDuration"];</code>
@@ -266,7 +267,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasManualDuration() {
-    return manualDuration_ != null;
+    return ((bitField0_ & 0x00000100) != 0);
   }
   /**
    * <code>.google.protobuf.Int64Value manual_duration = 10 [json_name = "manualDuration"];</code>
@@ -292,7 +293,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPauseDuration() {
-    return pauseDuration_ != null;
+    return ((bitField0_ & 0x00000200) != 0);
   }
   /**
    * <code>.google.protobuf.Int64Value pause_duration = 11 [json_name = "pauseDuration"];</code>
@@ -318,7 +319,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPreviewDuration() {
-    return previewDuration_ != null;
+    return ((bitField0_ & 0x00000400) != 0);
   }
   /**
    * <code>.google.protobuf.Int64Value preview_duration = 12 [json_name = "previewDuration"];</code>
@@ -344,7 +345,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSuspendedDuration() {
-    return suspendedDuration_ != null;
+    return ((bitField0_ & 0x00000800) != 0);
   }
   /**
    * <code>.google.protobuf.Int64Value suspended_duration = 13 [json_name = "suspendedDuration"];</code>
@@ -370,7 +371,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTalkDuration() {
-    return talkDuration_ != null;
+    return ((bitField0_ & 0x00001000) != 0);
   }
   /**
    * <code>.google.protobuf.Int64Value talk_duration = 14 [json_name = "talkDuration"];</code>
@@ -396,7 +397,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTransferDuration() {
-    return transferDuration_ != null;
+    return ((bitField0_ & 0x00002000) != 0);
   }
   /**
    * <code>.google.protobuf.Int64Value transfer_duration = 15 [json_name = "transferDuration"];</code>
@@ -422,7 +423,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasWrapUpDuration() {
-    return wrapUpDuration_ != null;
+    return ((bitField0_ & 0x00004000) != 0);
   }
   /**
    * <code>.google.protobuf.Int64Value wrap_up_duration = 16 [json_name = "wrapUpDuration"];</code>
@@ -448,7 +449,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAgentCallSid() {
-    return agentCallSid_ != null;
+    return ((bitField0_ & 0x00008000) != 0);
   }
   /**
    * <code>.google.protobuf.Int64Value agent_call_sid = 17 [json_name = "agentCallSid"];</code>
@@ -501,52 +502,52 @@ private static final long serialVersionUID = 0L;
     if (agentSid_ != 0L) {
       output.writeInt64(1, agentSid_);
     }
-    if (agentName_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getAgentName());
     }
-    if (agentSessionSid_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(3, getAgentSessionSid());
     }
-    if (huntGroupSid_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(4, getHuntGroupSid());
     }
-    if (huntGroupName_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(5, getHuntGroupName());
     }
-    if (agentCallCost_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       output.writeMessage(6, getAgentCallCost());
     }
-    if (agentWaitDuration_ != null) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       output.writeMessage(7, getAgentWaitDuration());
     }
-    if (callWaitDuration_ != null) {
+    if (((bitField0_ & 0x00000040) != 0)) {
       output.writeMessage(8, getCallWaitDuration());
     }
-    if (holdDuration_ != null) {
+    if (((bitField0_ & 0x00000080) != 0)) {
       output.writeMessage(9, getHoldDuration());
     }
-    if (manualDuration_ != null) {
+    if (((bitField0_ & 0x00000100) != 0)) {
       output.writeMessage(10, getManualDuration());
     }
-    if (pauseDuration_ != null) {
+    if (((bitField0_ & 0x00000200) != 0)) {
       output.writeMessage(11, getPauseDuration());
     }
-    if (previewDuration_ != null) {
+    if (((bitField0_ & 0x00000400) != 0)) {
       output.writeMessage(12, getPreviewDuration());
     }
-    if (suspendedDuration_ != null) {
+    if (((bitField0_ & 0x00000800) != 0)) {
       output.writeMessage(13, getSuspendedDuration());
     }
-    if (talkDuration_ != null) {
+    if (((bitField0_ & 0x00001000) != 0)) {
       output.writeMessage(14, getTalkDuration());
     }
-    if (transferDuration_ != null) {
+    if (((bitField0_ & 0x00002000) != 0)) {
       output.writeMessage(15, getTransferDuration());
     }
-    if (wrapUpDuration_ != null) {
+    if (((bitField0_ & 0x00004000) != 0)) {
       output.writeMessage(16, getWrapUpDuration());
     }
-    if (agentCallSid_ != null) {
+    if (((bitField0_ & 0x00008000) != 0)) {
       output.writeMessage(17, getAgentCallSid());
     }
     if (huntGroupType_ != com.tcn.cloud.api.api.commons.HuntGroupType.Enum.UNCONNECTED.getNumber()) {
@@ -565,67 +566,67 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, agentSid_);
     }
-    if (agentName_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getAgentName());
     }
-    if (agentSessionSid_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getAgentSessionSid());
     }
-    if (huntGroupSid_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getHuntGroupSid());
     }
-    if (huntGroupName_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getHuntGroupName());
     }
-    if (agentCallCost_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getAgentCallCost());
     }
-    if (agentWaitDuration_ != null) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getAgentWaitDuration());
     }
-    if (callWaitDuration_ != null) {
+    if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getCallWaitDuration());
     }
-    if (holdDuration_ != null) {
+    if (((bitField0_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getHoldDuration());
     }
-    if (manualDuration_ != null) {
+    if (((bitField0_ & 0x00000100) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getManualDuration());
     }
-    if (pauseDuration_ != null) {
+    if (((bitField0_ & 0x00000200) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getPauseDuration());
     }
-    if (previewDuration_ != null) {
+    if (((bitField0_ & 0x00000400) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, getPreviewDuration());
     }
-    if (suspendedDuration_ != null) {
+    if (((bitField0_ & 0x00000800) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getSuspendedDuration());
     }
-    if (talkDuration_ != null) {
+    if (((bitField0_ & 0x00001000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, getTalkDuration());
     }
-    if (transferDuration_ != null) {
+    if (((bitField0_ & 0x00002000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(15, getTransferDuration());
     }
-    if (wrapUpDuration_ != null) {
+    if (((bitField0_ & 0x00004000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(16, getWrapUpDuration());
     }
-    if (agentCallSid_ != null) {
+    if (((bitField0_ & 0x00008000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(17, getAgentCallSid());
     }
@@ -930,13 +931,34 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.AgentCallActivityDetails.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getAgentNameFieldBuilder();
+        getAgentSessionSidFieldBuilder();
+        getHuntGroupSidFieldBuilder();
+        getHuntGroupNameFieldBuilder();
+        getAgentCallCostFieldBuilder();
+        getAgentWaitDurationFieldBuilder();
+        getCallWaitDurationFieldBuilder();
+        getHoldDurationFieldBuilder();
+        getManualDurationFieldBuilder();
+        getPauseDurationFieldBuilder();
+        getPreviewDurationFieldBuilder();
+        getSuspendedDurationFieldBuilder();
+        getTalkDurationFieldBuilder();
+        getTransferDurationFieldBuilder();
+        getWrapUpDurationFieldBuilder();
+        getAgentCallSidFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -1060,89 +1082,107 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.agentSid_ = agentSid_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.agentName_ = agentNameBuilder_ == null
             ? agentName_
             : agentNameBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.agentSessionSid_ = agentSessionSidBuilder_ == null
             ? agentSessionSid_
             : agentSessionSidBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.huntGroupSid_ = huntGroupSidBuilder_ == null
             ? huntGroupSid_
             : huntGroupSidBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.huntGroupName_ = huntGroupNameBuilder_ == null
             ? huntGroupName_
             : huntGroupNameBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.agentCallCost_ = agentCallCostBuilder_ == null
             ? agentCallCost_
             : agentCallCostBuilder_.build();
+        to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.agentWaitDuration_ = agentWaitDurationBuilder_ == null
             ? agentWaitDuration_
             : agentWaitDurationBuilder_.build();
+        to_bitField0_ |= 0x00000020;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.callWaitDuration_ = callWaitDurationBuilder_ == null
             ? callWaitDuration_
             : callWaitDurationBuilder_.build();
+        to_bitField0_ |= 0x00000040;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.holdDuration_ = holdDurationBuilder_ == null
             ? holdDuration_
             : holdDurationBuilder_.build();
+        to_bitField0_ |= 0x00000080;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.manualDuration_ = manualDurationBuilder_ == null
             ? manualDuration_
             : manualDurationBuilder_.build();
+        to_bitField0_ |= 0x00000100;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.pauseDuration_ = pauseDurationBuilder_ == null
             ? pauseDuration_
             : pauseDurationBuilder_.build();
+        to_bitField0_ |= 0x00000200;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.previewDuration_ = previewDurationBuilder_ == null
             ? previewDuration_
             : previewDurationBuilder_.build();
+        to_bitField0_ |= 0x00000400;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.suspendedDuration_ = suspendedDurationBuilder_ == null
             ? suspendedDuration_
             : suspendedDurationBuilder_.build();
+        to_bitField0_ |= 0x00000800;
       }
       if (((from_bitField0_ & 0x00002000) != 0)) {
         result.talkDuration_ = talkDurationBuilder_ == null
             ? talkDuration_
             : talkDurationBuilder_.build();
+        to_bitField0_ |= 0x00001000;
       }
       if (((from_bitField0_ & 0x00004000) != 0)) {
         result.transferDuration_ = transferDurationBuilder_ == null
             ? transferDuration_
             : transferDurationBuilder_.build();
+        to_bitField0_ |= 0x00002000;
       }
       if (((from_bitField0_ & 0x00008000) != 0)) {
         result.wrapUpDuration_ = wrapUpDurationBuilder_ == null
             ? wrapUpDuration_
             : wrapUpDurationBuilder_.build();
+        to_bitField0_ |= 0x00004000;
       }
       if (((from_bitField0_ & 0x00010000) != 0)) {
         result.agentCallSid_ = agentCallSidBuilder_ == null
             ? agentCallSid_
             : agentCallSidBuilder_.build();
+        to_bitField0_ |= 0x00008000;
       }
       if (((from_bitField0_ & 0x00020000) != 0)) {
         result.huntGroupType_ = huntGroupType_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1506,8 +1546,10 @@ private static final long serialVersionUID = 0L;
       } else {
         agentNameBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (agentName_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1625,8 +1667,10 @@ private static final long serialVersionUID = 0L;
       } else {
         agentSessionSidBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (agentSessionSid_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1744,8 +1788,10 @@ private static final long serialVersionUID = 0L;
       } else {
         huntGroupSidBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (huntGroupSid_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1863,8 +1909,10 @@ private static final long serialVersionUID = 0L;
       } else {
         huntGroupNameBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (huntGroupName_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1982,8 +2030,10 @@ private static final long serialVersionUID = 0L;
       } else {
         agentCallCostBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (agentCallCost_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2101,8 +2151,10 @@ private static final long serialVersionUID = 0L;
       } else {
         agentWaitDurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (agentWaitDuration_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2220,8 +2272,10 @@ private static final long serialVersionUID = 0L;
       } else {
         callWaitDurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+      if (callWaitDuration_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2339,8 +2393,10 @@ private static final long serialVersionUID = 0L;
       } else {
         holdDurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+      if (holdDuration_ != null) {
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2458,8 +2514,10 @@ private static final long serialVersionUID = 0L;
       } else {
         manualDurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000200;
-      onChanged();
+      if (manualDuration_ != null) {
+        bitField0_ |= 0x00000200;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2577,8 +2635,10 @@ private static final long serialVersionUID = 0L;
       } else {
         pauseDurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000400;
-      onChanged();
+      if (pauseDuration_ != null) {
+        bitField0_ |= 0x00000400;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2696,8 +2756,10 @@ private static final long serialVersionUID = 0L;
       } else {
         previewDurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000800;
-      onChanged();
+      if (previewDuration_ != null) {
+        bitField0_ |= 0x00000800;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2815,8 +2877,10 @@ private static final long serialVersionUID = 0L;
       } else {
         suspendedDurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00001000;
-      onChanged();
+      if (suspendedDuration_ != null) {
+        bitField0_ |= 0x00001000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2934,8 +2998,10 @@ private static final long serialVersionUID = 0L;
       } else {
         talkDurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00002000;
-      onChanged();
+      if (talkDuration_ != null) {
+        bitField0_ |= 0x00002000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3053,8 +3119,10 @@ private static final long serialVersionUID = 0L;
       } else {
         transferDurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00004000;
-      onChanged();
+      if (transferDuration_ != null) {
+        bitField0_ |= 0x00004000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3172,8 +3240,10 @@ private static final long serialVersionUID = 0L;
       } else {
         wrapUpDurationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00008000;
-      onChanged();
+      if (wrapUpDuration_ != null) {
+        bitField0_ |= 0x00008000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3291,8 +3361,10 @@ private static final long serialVersionUID = 0L;
       } else {
         agentCallSidBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00010000;
-      onChanged();
+      if (agentCallSid_ != null) {
+        bitField0_ |= 0x00010000;
+        onChanged();
+      }
       return this;
     }
     /**

@@ -38,6 +38,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.asm.VoiceSession.class, com.tcn.cloud.api.api.v1alpha1.asm.VoiceSession.Builder.class);
   }
 
+  private int bitField0_;
   public static final int VOICE_SESSION_SID_FIELD_NUMBER = 1;
   private long voiceSessionSid_ = 0L;
   /**
@@ -57,7 +58,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVoiceSessionStart() {
-    return voiceSessionStart_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp voice_session_start = 2 [json_name = "voiceSessionStart"];</code>
@@ -83,7 +84,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVoiceSessionEnd() {
-    return voiceSessionEnd_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp voice_session_end = 3 [json_name = "voiceSessionEnd"];</code>
@@ -118,10 +119,10 @@ private static final long serialVersionUID = 0L;
     if (voiceSessionSid_ != 0L) {
       output.writeInt64(1, voiceSessionSid_);
     }
-    if (voiceSessionStart_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getVoiceSessionStart());
     }
-    if (voiceSessionEnd_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(3, getVoiceSessionEnd());
     }
     getUnknownFields().writeTo(output);
@@ -137,11 +138,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, voiceSessionSid_);
     }
-    if (voiceSessionStart_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getVoiceSessionStart());
     }
-    if (voiceSessionEnd_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getVoiceSessionEnd());
     }
@@ -313,13 +314,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.asm.VoiceSession.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getVoiceSessionStartFieldBuilder();
+        getVoiceSessionEndFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -372,16 +380,20 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.voiceSessionSid_ = voiceSessionSid_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.voiceSessionStart_ = voiceSessionStartBuilder_ == null
             ? voiceSessionStart_
             : voiceSessionStartBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.voiceSessionEnd_ = voiceSessionEndBuilder_ == null
             ? voiceSessionEnd_
             : voiceSessionEndBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -597,8 +609,10 @@ private static final long serialVersionUID = 0L;
       } else {
         voiceSessionStartBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (voiceSessionStart_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -716,8 +730,10 @@ private static final long serialVersionUID = 0L;
       } else {
         voiceSessionEndBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (voiceSessionEnd_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**

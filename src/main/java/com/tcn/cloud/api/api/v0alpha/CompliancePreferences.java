@@ -45,6 +45,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.CompliancePreferences.class, com.tcn.cloud.api.api.v0alpha.CompliancePreferences.Builder.class);
   }
 
+  private int bitField0_;
   public static final int DISPLAY_AFTER_HOURS_CALLS_FIELD_NUMBER = 10;
   private boolean displayAfterHoursCalls_ = false;
   /**
@@ -224,7 +225,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDefaultScheduleRule() {
-    return defaultScheduleRule_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -277,7 +278,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasZipCodeScrub() {
-    return zipCodeScrub_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -438,13 +439,13 @@ private static final long serialVersionUID = 0L;
     if (useScheduleRules_ != false) {
       output.writeBool(18, useScheduleRules_);
     }
-    if (defaultScheduleRule_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(19, getDefaultScheduleRule());
     }
     if (doZipCodeScrub_ != false) {
       output.writeBool(20, doZipCodeScrub_);
     }
-    if (zipCodeScrub_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(21, getZipCodeScrub());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultEmailComplianceList_)) {
@@ -497,7 +498,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(18, useScheduleRules_);
     }
-    if (defaultScheduleRule_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(19, getDefaultScheduleRule());
     }
@@ -505,7 +506,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(20, doZipCodeScrub_);
     }
-    if (zipCodeScrub_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(21, getZipCodeScrub());
     }
@@ -739,13 +740,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CompliancePreferences.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getDefaultScheduleRuleFieldBuilder();
+        getZipCodeScrubFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -833,10 +841,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.useScheduleRules_ = useScheduleRules_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.defaultScheduleRule_ = defaultScheduleRuleBuilder_ == null
             ? defaultScheduleRule_
             : defaultScheduleRuleBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.doZipCodeScrub_ = doZipCodeScrub_;
@@ -845,6 +855,7 @@ private static final long serialVersionUID = 0L;
         result.zipCodeScrub_ = zipCodeScrubBuilder_ == null
             ? zipCodeScrub_
             : zipCodeScrubBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.defaultEmailComplianceList_ = defaultEmailComplianceList_;
@@ -852,6 +863,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00002000) != 0)) {
         result.defaultSmsComplianceList_ = defaultSmsComplianceList_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1593,8 +1605,10 @@ private static final long serialVersionUID = 0L;
       } else {
         defaultScheduleRuleBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000200;
-      onChanged();
+      if (defaultScheduleRule_ != null) {
+        bitField0_ |= 0x00000200;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1792,8 +1806,10 @@ private static final long serialVersionUID = 0L;
       } else {
         zipCodeScrubBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000800;
-      onChanged();
+      if (zipCodeScrub_ != null) {
+        bitField0_ |= 0x00000800;
+        onChanged();
+      }
       return this;
     }
     /**

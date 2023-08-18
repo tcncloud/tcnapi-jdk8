@@ -43,6 +43,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigReq.class, com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigReq.Builder.class);
   }
 
+  private int bitField0_;
   public static final int ENTITY_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfigId entity_;
   /**
@@ -51,7 +52,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEntity() {
-    return entity_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.v1alpha1.integrations.PortalConfigId entity = 1 [json_name = "entity"];</code>
@@ -77,7 +78,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMask() {
-    return mask_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.google.protobuf.FieldMask mask = 2 [json_name = "mask"];</code>
@@ -156,10 +157,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (entity_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getEntity());
     }
-    if (mask_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(2, getMask());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
@@ -174,11 +175,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (entity_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getEntity());
     }
-    if (mask_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getMask());
     }
@@ -356,13 +357,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getEntityFieldBuilder();
+        getMaskFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -412,19 +420,23 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigReq result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.entity_ = entityBuilder_ == null
             ? entity_
             : entityBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.mask_ = maskBuilder_ == null
             ? mask_
             : maskBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.id_ = id_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -610,8 +622,10 @@ private static final long serialVersionUID = 0L;
       } else {
         entityBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (entity_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -729,8 +743,10 @@ private static final long serialVersionUID = 0L;
       } else {
         maskBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (mask_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**

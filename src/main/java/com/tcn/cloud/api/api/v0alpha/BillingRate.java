@@ -38,6 +38,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.BillingRate.class, com.tcn.cloud.api.api.v0alpha.BillingRate.Builder.class);
   }
 
+  private int bitField0_;
   public static final int STANDARD_PPI_FIELD_NUMBER = 1;
   private double standardPpi_ = 0D;
   /**
@@ -123,7 +124,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasInboundPpi() {
-    return inboundPpi_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.google.protobuf.DoubleValue inbound_ppi = 20 [json_name = "inboundPpi"];</code>
@@ -149,7 +150,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMaxBilledIncrements() {
-    return maxBilledIncrements_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.google.protobuf.Int64Value max_billed_increments = 21 [json_name = "maxBilledIncrements"];</code>
@@ -175,7 +176,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMaxLinkbackBilledIncrements() {
-    return maxLinkbackBilledIncrements_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <code>.google.protobuf.Int64Value max_linkback_billed_increments = 22 [json_name = "maxLinkbackBilledIncrements"];</code>
@@ -201,7 +202,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMachineHangupIncrements() {
-    return machineHangupIncrements_ != null;
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <code>.google.protobuf.Int64Value machine_hangup_increments = 23 [json_name = "machineHangupIncrements"];</code>
@@ -227,7 +228,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHumanHangupIncrements() {
-    return humanHangupIncrements_ != null;
+    return ((bitField0_ & 0x00000010) != 0);
   }
   /**
    * <code>.google.protobuf.Int64Value human_hangup_increments = 24 [json_name = "humanHangupIncrements"];</code>
@@ -280,19 +281,19 @@ private static final long serialVersionUID = 0L;
     if (minLinkbackBilledIncrements_ != 0L) {
       output.writeInt64(7, minLinkbackBilledIncrements_);
     }
-    if (inboundPpi_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(20, getInboundPpi());
     }
-    if (maxBilledIncrements_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(21, getMaxBilledIncrements());
     }
-    if (maxLinkbackBilledIncrements_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(22, getMaxLinkbackBilledIncrements());
     }
-    if (machineHangupIncrements_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(23, getMachineHangupIncrements());
     }
-    if (humanHangupIncrements_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       output.writeMessage(24, getHumanHangupIncrements());
     }
     getUnknownFields().writeTo(output);
@@ -332,23 +333,23 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(7, minLinkbackBilledIncrements_);
     }
-    if (inboundPpi_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(20, getInboundPpi());
     }
-    if (maxBilledIncrements_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(21, getMaxBilledIncrements());
     }
-    if (maxLinkbackBilledIncrements_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(22, getMaxLinkbackBilledIncrements());
     }
-    if (machineHangupIncrements_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(23, getMachineHangupIncrements());
     }
-    if (humanHangupIncrements_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(24, getHumanHangupIncrements());
     }
@@ -581,13 +582,23 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.BillingRate.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getInboundPpiFieldBuilder();
+        getMaxBilledIncrementsFieldBuilder();
+        getMaxLinkbackBilledIncrementsFieldBuilder();
+        getMachineHangupIncrementsFieldBuilder();
+        getHumanHangupIncrementsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -679,31 +690,38 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.minLinkbackBilledIncrements_ = minLinkbackBilledIncrements_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.inboundPpi_ = inboundPpiBuilder_ == null
             ? inboundPpi_
             : inboundPpiBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.maxBilledIncrements_ = maxBilledIncrementsBuilder_ == null
             ? maxBilledIncrements_
             : maxBilledIncrementsBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.maxLinkbackBilledIncrements_ = maxLinkbackBilledIncrementsBuilder_ == null
             ? maxLinkbackBilledIncrements_
             : maxLinkbackBilledIncrementsBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.machineHangupIncrements_ = machineHangupIncrementsBuilder_ == null
             ? machineHangupIncrements_
             : machineHangupIncrementsBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.humanHangupIncrements_ = humanHangupIncrementsBuilder_ == null
             ? humanHangupIncrements_
             : humanHangupIncrementsBuilder_.build();
+        to_bitField0_ |= 0x00000010;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1189,8 +1207,10 @@ private static final long serialVersionUID = 0L;
       } else {
         inboundPpiBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+      if (inboundPpi_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1308,8 +1328,10 @@ private static final long serialVersionUID = 0L;
       } else {
         maxBilledIncrementsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+      if (maxBilledIncrements_ != null) {
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1427,8 +1449,10 @@ private static final long serialVersionUID = 0L;
       } else {
         maxLinkbackBilledIncrementsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000200;
-      onChanged();
+      if (maxLinkbackBilledIncrements_ != null) {
+        bitField0_ |= 0x00000200;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1546,8 +1570,10 @@ private static final long serialVersionUID = 0L;
       } else {
         machineHangupIncrementsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000400;
-      onChanged();
+      if (machineHangupIncrements_ != null) {
+        bitField0_ |= 0x00000400;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1665,8 +1691,10 @@ private static final long serialVersionUID = 0L;
       } else {
         humanHangupIncrementsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000800;
-      onChanged();
+      if (humanHangupIncrements_ != null) {
+        bitField0_ |= 0x00000800;
+        onChanged();
+      }
       return this;
     }
     /**

@@ -42,6 +42,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionRequest.class, com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionRequest.Builder.class);
   }
 
+  private int bitField0_;
   public static final int SECTION_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.Section section_;
   /**
@@ -50,7 +51,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSection() {
-    return section_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.commons.Section section = 1 [json_name = "section"];</code>
@@ -82,7 +83,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (section_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getSection());
     }
     getUnknownFields().writeTo(output);
@@ -94,7 +95,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (section_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getSection());
     }
@@ -256,13 +257,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionRequest.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getSectionFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -306,11 +313,14 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionRequest result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.section_ = sectionBuilder_ == null
             ? section_
             : sectionBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -476,8 +486,10 @@ private static final long serialVersionUID = 0L;
       } else {
         sectionBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (section_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**

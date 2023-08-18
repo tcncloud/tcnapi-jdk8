@@ -40,6 +40,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.MamAgentResponse.class, com.tcn.cloud.api.api.v0alpha.MamAgentResponse.Builder.class);
   }
 
+  private int bitField0_;
   public static final int STATUS_FIELD_NUMBER = 2;
   private int status_ = 0;
   /**
@@ -66,7 +67,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAgentResponseTime() {
-    return agentResponseTime_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp agent_response_time = 3 [json_name = "agentResponseTime"];</code>
@@ -140,7 +141,7 @@ private static final long serialVersionUID = 0L;
     if (status_ != com.tcn.cloud.api.api.commons.SMSMamStatus.QUEUED.getNumber()) {
       output.writeEnum(2, status_);
     }
-    if (agentResponseTime_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(3, getAgentResponseTime());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentName_)) {
@@ -159,7 +160,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, status_);
     }
-    if (agentResponseTime_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getAgentResponseTime());
     }
@@ -327,13 +328,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.MamAgentResponse.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getAgentResponseTimeFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -382,14 +389,17 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.status_ = status_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.agentResponseTime_ = agentResponseTimeBuilder_ == null
             ? agentResponseTime_
             : agentResponseTimeBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.agentName_ = agentName_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -626,8 +636,10 @@ private static final long serialVersionUID = 0L;
       } else {
         agentResponseTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (agentResponseTime_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**

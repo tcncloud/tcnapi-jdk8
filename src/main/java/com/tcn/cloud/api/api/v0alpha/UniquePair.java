@@ -39,6 +39,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.UniquePair.class, com.tcn.cloud.api.api.v0alpha.UniquePair.Builder.class);
   }
 
+  private int bitField0_;
   public static final int SPLIT_ON_FIELDS_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v0alpha.FieldIndex splitOnFields_;
   /**
@@ -47,7 +48,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSplitOnFields() {
-    return splitOnFields_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.v0alpha.FieldIndex split_on_fields = 1 [json_name = "splitOnFields"];</code>
@@ -118,7 +119,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (splitOnFields_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getSplitOnFields());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(splitValue_)) {
@@ -133,7 +134,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (splitOnFields_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getSplitOnFields());
     }
@@ -298,13 +299,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.UniquePair.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getSplitOnFieldsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -349,14 +356,17 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.UniquePair result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.splitOnFields_ = splitOnFieldsBuilder_ == null
             ? splitOnFields_
             : splitOnFieldsBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.splitValue_ = splitValue_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -532,8 +542,10 @@ private static final long serialVersionUID = 0L;
       } else {
         splitOnFieldsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (splitOnFields_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**

@@ -47,6 +47,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.TicketAuditLog.class, com.tcn.cloud.api.api.commons.TicketAuditLog.Builder.class);
   }
 
+  private int bitField0_;
   public static final int TICKET_AUDIT_EVENT_LOG_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object ticketAuditEventLogId_ = "";
@@ -309,7 +310,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCreatedByDate() {
-    return createdByDate_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -367,7 +368,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdById_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, createdById_);
     }
-    if (createdByDate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(7, getCreatedByDate());
     }
     getUnknownFields().writeTo(output);
@@ -398,7 +399,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdById_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, createdById_);
     }
-    if (createdByDate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getCreatedByDate());
     }
@@ -585,13 +586,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.TicketAuditLog.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getCreatedByDateFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -659,11 +666,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.createdById_ = createdById_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.createdByDate_ = createdByDateBuilder_ == null
             ? createdByDate_
             : createdByDateBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1411,8 +1421,10 @@ private static final long serialVersionUID = 0L;
       } else {
         createdByDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (createdByDate_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
     /**

@@ -46,6 +46,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.OmniReassignmentNotification.class, com.tcn.cloud.api.api.commons.OmniReassignmentNotification.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CURRENT_USER_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object currentUserId_ = "";
@@ -250,7 +251,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasNewUserAsmSessionSid() {
-    return newUserAsmSessionSid_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -302,7 +303,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newUserName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, newUserName_);
     }
-    if (newUserAsmSessionSid_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(5, getNewUserAsmSessionSid());
     }
     getUnknownFields().writeTo(output);
@@ -326,7 +327,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newUserName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, newUserName_);
     }
-    if (newUserAsmSessionSid_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getNewUserAsmSessionSid());
     }
@@ -504,13 +505,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.OmniReassignmentNotification.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getNewUserAsmSessionSidFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -570,11 +577,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.newUserName_ = newUserName_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.newUserAsmSessionSid_ = newUserAsmSessionSidBuilder_ == null
             ? newUserAsmSessionSid_
             : newUserAsmSessionSidBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1178,8 +1188,10 @@ private static final long serialVersionUID = 0L;
       } else {
         newUserAsmSessionSidBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (newUserAsmSessionSid_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**

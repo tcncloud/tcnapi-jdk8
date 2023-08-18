@@ -42,6 +42,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.GetDashboardQueuePreferencesResponse.class, com.tcn.cloud.api.api.v1alpha1.org.GetDashboardQueuePreferencesResponse.Builder.class);
   }
 
+  private int bitField0_;
   public static final int DASHBOARD_QUEUE_PREFERENCES_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.org.DashboardQueuePreferences dashboardQueuePreferences_;
   /**
@@ -54,7 +55,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDashboardQueuePreferences() {
-    return dashboardQueuePreferences_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -94,7 +95,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (dashboardQueuePreferences_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getDashboardQueuePreferences());
     }
     getUnknownFields().writeTo(output);
@@ -106,7 +107,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (dashboardQueuePreferences_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getDashboardQueuePreferences());
     }
@@ -268,13 +269,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.GetDashboardQueuePreferencesResponse.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getDashboardQueuePreferencesFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -318,11 +325,14 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.GetDashboardQueuePreferencesResponse result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.dashboardQueuePreferences_ = dashboardQueuePreferencesBuilder_ == null
             ? dashboardQueuePreferences_
             : dashboardQueuePreferencesBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -508,8 +518,10 @@ private static final long serialVersionUID = 0L;
       } else {
         dashboardQueuePreferencesBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (dashboardQueuePreferences_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**

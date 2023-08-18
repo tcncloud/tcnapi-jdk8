@@ -42,6 +42,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.legacy.GetSystemDefaultBillingRatesResponse.class, com.tcn.cloud.api.api.v1alpha1.org.legacy.GetSystemDefaultBillingRatesResponse.Builder.class);
   }
 
+  private int bitField0_;
   public static final int EMAIL_PRICE_PER_MESSAGE_FIELD_NUMBER = 1;
   private float emailPricePerMessage_ = 0F;
   /**
@@ -69,7 +70,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPhoneRates() {
-    return phoneRates_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -107,7 +108,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAgentRates() {
-    return agentRates_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -150,10 +151,10 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Float.floatToRawIntBits(emailPricePerMessage_) != 0) {
       output.writeFloat(1, emailPricePerMessage_);
     }
-    if (phoneRates_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getPhoneRates());
     }
-    if (agentRates_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(3, getAgentRates());
     }
     getUnknownFields().writeTo(output);
@@ -169,11 +170,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(1, emailPricePerMessage_);
     }
-    if (phoneRates_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getPhoneRates());
     }
-    if (agentRates_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getAgentRates());
     }
@@ -350,13 +351,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.GetSystemDefaultBillingRatesResponse.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getPhoneRatesFieldBuilder();
+        getAgentRatesFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -409,16 +417,20 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.emailPricePerMessage_ = emailPricePerMessage_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.phoneRates_ = phoneRatesBuilder_ == null
             ? phoneRates_
             : phoneRatesBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.agentRates_ = agentRatesBuilder_ == null
             ? agentRates_
             : agentRatesBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -666,8 +678,10 @@ private static final long serialVersionUID = 0L;
       } else {
         phoneRatesBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (phoneRates_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -821,8 +835,10 @@ private static final long serialVersionUID = 0L;
       } else {
         agentRatesBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (agentRates_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**

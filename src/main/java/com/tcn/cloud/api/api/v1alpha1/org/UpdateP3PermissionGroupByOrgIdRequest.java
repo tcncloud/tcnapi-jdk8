@@ -44,6 +44,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.UpdateP3PermissionGroupByOrgIdRequest.class, com.tcn.cloud.api.api.v1alpha1.org.UpdateP3PermissionGroupByOrgIdRequest.Builder.class);
   }
 
+  private int bitField0_;
   public static final int P3_PERMISSION_GROUP_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object p3PermissionGroupId_ = "";
@@ -151,7 +152,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasP3PermissionGroup() {
-    return p3PermissionGroup_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -191,7 +192,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasFieldMask() {
-    return fieldMask_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -237,10 +238,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orgId_);
     }
-    if (p3PermissionGroup_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(3, getP3PermissionGroup());
     }
-    if (fieldMask_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(10, getFieldMask());
     }
     getUnknownFields().writeTo(output);
@@ -258,11 +259,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orgId_);
     }
-    if (p3PermissionGroup_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getP3PermissionGroup());
     }
-    if (fieldMask_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getFieldMask());
     }
@@ -441,13 +442,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.UpdateP3PermissionGroupByOrgIdRequest.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getP3PermissionGroupFieldBuilder();
+        getFieldMaskFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -504,16 +512,20 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.orgId_ = orgId_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.p3PermissionGroup_ = p3PermissionGroupBuilder_ == null
             ? p3PermissionGroup_
             : p3PermissionGroupBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.fieldMask_ = fieldMaskBuilder_ == null
             ? fieldMask_
             : fieldMaskBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -918,8 +930,10 @@ private static final long serialVersionUID = 0L;
       } else {
         p3PermissionGroupBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (p3PermissionGroup_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1077,8 +1091,10 @@ private static final long serialVersionUID = 0L;
       } else {
         fieldMaskBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (fieldMask_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**

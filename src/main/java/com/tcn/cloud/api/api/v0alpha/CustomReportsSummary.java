@@ -38,6 +38,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.CustomReportsSummary.class, com.tcn.cloud.api.api.v0alpha.CustomReportsSummary.Builder.class);
   }
 
+  private int bitField0_;
   public static final int ENABLED_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v0alpha.CustomReportsEnabledSummary enabled_;
   /**
@@ -46,7 +47,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEnabled() {
-    return enabled_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.v0alpha.CustomReportsEnabledSummary enabled = 1 [json_name = "enabled"];</code>
@@ -72,7 +73,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVisualizations() {
-    return visualizations_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.api.v0alpha.CustomVisualizationsSummary visualizations = 2 [json_name = "visualizations"];</code>
@@ -98,7 +99,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDashboards() {
-    return dashboards_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <code>.api.v0alpha.CustomDashboardsSummary dashboards = 3 [json_name = "dashboards"];</code>
@@ -141,13 +142,13 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (enabled_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getEnabled());
     }
-    if (visualizations_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(2, getVisualizations());
     }
-    if (dashboards_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(3, getDashboards());
     }
     if (proStatus_ != false) {
@@ -162,15 +163,15 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (enabled_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getEnabled());
     }
-    if (visualizations_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getVisualizations());
     }
-    if (dashboards_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getDashboards());
     }
@@ -355,13 +356,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CustomReportsSummary.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getEnabledFieldBuilder();
+        getVisualizationsFieldBuilder();
+        getDashboardsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -416,24 +425,29 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.CustomReportsSummary result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.enabled_ = enabledBuilder_ == null
             ? enabled_
             : enabledBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.visualizations_ = visualizationsBuilder_ == null
             ? visualizations_
             : visualizationsBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.dashboards_ = dashboardsBuilder_ == null
             ? dashboards_
             : dashboardsBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.proStatus_ = proStatus_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -627,8 +641,10 @@ private static final long serialVersionUID = 0L;
       } else {
         enabledBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (enabled_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -746,8 +762,10 @@ private static final long serialVersionUID = 0L;
       } else {
         visualizationsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (visualizations_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -865,8 +883,10 @@ private static final long serialVersionUID = 0L;
       } else {
         dashboardsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (dashboards_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**

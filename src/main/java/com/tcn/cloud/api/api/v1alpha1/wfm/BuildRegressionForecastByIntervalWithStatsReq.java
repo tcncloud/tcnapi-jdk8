@@ -43,6 +43,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq.class, com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq.Builder.class);
   }
 
+  private int bitField0_;
   public static final int AVERAGE_SPEED_OF_ANSWER_IN_SECONDS_FIELD_NUMBER = 1;
   private float averageSpeedOfAnswerInSeconds_ = 0F;
   /**
@@ -116,7 +117,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasRegressionTemplate() {
-    return regressionTemplate_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -144,7 +145,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int SKILL_PROFILE_SIDS_TO_FORECAST_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList skillProfileSidsToForecast_;
+  private com.google.protobuf.Internal.LongList skillProfileSidsToForecast_ =
+      emptyLongList();
   /**
    * <pre>
    * IDs of the skill profiles to generate the forecasts,
@@ -213,7 +215,7 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Float.floatToRawIntBits(averageTimeToAbortInSeconds_) != 0) {
       output.writeFloat(4, averageTimeToAbortInSeconds_);
     }
-    if (regressionTemplate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(5, getRegressionTemplate());
     }
     if (getSkillProfileSidsToForecastList().size() > 0) {
@@ -248,7 +250,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(4, averageTimeToAbortInSeconds_);
     }
-    if (regressionTemplate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getRegressionTemplate());
     }
@@ -454,13 +456,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getRegressionTemplateFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -502,18 +510,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq result) {
-      if (((bitField0_ & 0x00000020) != 0)) {
-        skillProfileSidsToForecast_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000020);
-      }
-      result.skillProfileSidsToForecast_ = skillProfileSidsToForecast_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq result) {
@@ -530,11 +529,18 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.averageTimeToAbortInSeconds_ = averageTimeToAbortInSeconds_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.regressionTemplate_ = regressionTemplateBuilder_ == null
             ? regressionTemplate_
             : regressionTemplateBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        skillProfileSidsToForecast_.makeImmutable();
+        result.skillProfileSidsToForecast_ = skillProfileSidsToForecast_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -599,7 +605,8 @@ private static final long serialVersionUID = 0L;
       if (!other.skillProfileSidsToForecast_.isEmpty()) {
         if (skillProfileSidsToForecast_.isEmpty()) {
           skillProfileSidsToForecast_ = other.skillProfileSidsToForecast_;
-          bitField0_ = (bitField0_ & ~0x00000020);
+          skillProfileSidsToForecast_.makeImmutable();
+          bitField0_ |= 0x00000020;
         } else {
           ensureSkillProfileSidsToForecastIsMutable();
           skillProfileSidsToForecast_.addAll(other.skillProfileSidsToForecast_);
@@ -957,8 +964,10 @@ private static final long serialVersionUID = 0L;
       } else {
         regressionTemplateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (regressionTemplate_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1028,10 +1037,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList skillProfileSidsToForecast_ = emptyLongList();
     private void ensureSkillProfileSidsToForecastIsMutable() {
-      if (!((bitField0_ & 0x00000020) != 0)) {
-        skillProfileSidsToForecast_ = mutableCopy(skillProfileSidsToForecast_);
-        bitField0_ |= 0x00000020;
+      if (!skillProfileSidsToForecast_.isModifiable()) {
+        skillProfileSidsToForecast_ = makeMutableCopy(skillProfileSidsToForecast_);
       }
+      bitField0_ |= 0x00000020;
     }
     /**
      * <pre>
@@ -1044,8 +1053,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getSkillProfileSidsToForecastList() {
-      return ((bitField0_ & 0x00000020) != 0) ?
-               java.util.Collections.unmodifiableList(skillProfileSidsToForecast_) : skillProfileSidsToForecast_;
+      skillProfileSidsToForecast_.makeImmutable();
+      return skillProfileSidsToForecast_;
     }
     /**
      * <pre>
@@ -1088,6 +1097,7 @@ private static final long serialVersionUID = 0L;
 
       ensureSkillProfileSidsToForecastIsMutable();
       skillProfileSidsToForecast_.setLong(index, value);
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1105,6 +1115,7 @@ private static final long serialVersionUID = 0L;
 
       ensureSkillProfileSidsToForecastIsMutable();
       skillProfileSidsToForecast_.addLong(value);
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1123,6 +1134,7 @@ private static final long serialVersionUID = 0L;
       ensureSkillProfileSidsToForecastIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, skillProfileSidsToForecast_);
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
