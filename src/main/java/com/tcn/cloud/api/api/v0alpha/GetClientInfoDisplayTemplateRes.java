@@ -39,6 +39,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateRes.class, com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateRes.Builder.class);
   }
 
+  private int bitField0_;
   public static final int DISPLAY_ALL_FIELDS_FIELD_NUMBER = 1;
   private boolean displayAllFields_ = false;
   /**
@@ -58,7 +59,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDialedNumberSettings() {
-    return dialedNumberSettings_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.commons.DialedNumberFieldSettings dialed_number_settings = 2 [json_name = "dialedNumberSettings"];</code>
@@ -134,7 +135,7 @@ private static final long serialVersionUID = 0L;
     if (displayAllFields_ != false) {
       output.writeBool(1, displayAllFields_);
     }
-    if (dialedNumberSettings_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getDialedNumberSettings());
     }
     for (int i = 0; i < rows_.size(); i++) {
@@ -153,7 +154,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(1, displayAllFields_);
     }
-    if (dialedNumberSettings_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getDialedNumberSettings());
     }
@@ -326,13 +327,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateRes.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getDialedNumberSettingsFieldBuilder();
+        getRowsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -400,11 +408,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.displayAllFields_ = displayAllFields_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.dialedNumberSettings_ = dialedNumberSettingsBuilder_ == null
             ? dialedNumberSettings_
             : dialedNumberSettingsBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -649,8 +660,10 @@ private static final long serialVersionUID = 0L;
       } else {
         dialedNumberSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (dialedNumberSettings_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**

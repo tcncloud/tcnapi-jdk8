@@ -42,6 +42,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.class, com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.Builder.class);
   }
 
+  private int bitField0_;
   public static final int MIN_AVERAGE_FIELD_NUMBER = 1;
   private float minAverage_ = 0F;
   /**
@@ -80,7 +81,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDistributionProfile() {
-    return distributionProfile_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.commons.DistributionProfile distribution_profile = 3 [json_name = "distributionProfile"];</code>
@@ -118,7 +119,7 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Float.floatToRawIntBits(maxAverage_) != 0) {
       output.writeFloat(2, maxAverage_);
     }
-    if (distributionProfile_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(3, getDistributionProfile());
     }
     getUnknownFields().writeTo(output);
@@ -138,7 +139,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(2, maxAverage_);
     }
-    if (distributionProfile_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getDistributionProfile());
     }
@@ -312,13 +313,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getDistributionProfileFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -370,11 +377,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.maxAverage_ = maxAverage_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.distributionProfile_ = distributionProfileBuilder_ == null
             ? distributionProfile_
             : distributionProfileBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -644,8 +654,10 @@ private static final long serialVersionUID = 0L;
       } else {
         distributionProfileBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (distributionProfile_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**

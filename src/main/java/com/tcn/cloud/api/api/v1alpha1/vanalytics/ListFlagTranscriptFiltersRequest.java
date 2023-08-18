@@ -42,6 +42,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagTranscriptFiltersRequest.class, com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagTranscriptFiltersRequest.Builder.class);
   }
 
+  private int bitField0_;
   public static final int TRANSCRIPT_SID_FIELD_NUMBER = 2;
   private long transcriptSid_ = 0L;
   /**
@@ -69,7 +70,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasFlagSnapshotMask() {
-    return flagSnapshotMask_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -107,7 +108,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasFilterSnapshotMask() {
-    return filterSnapshotMask_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -150,10 +151,10 @@ private static final long serialVersionUID = 0L;
     if (transcriptSid_ != 0L) {
       output.writeInt64(2, transcriptSid_);
     }
-    if (flagSnapshotMask_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(3, getFlagSnapshotMask());
     }
-    if (filterSnapshotMask_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(4, getFilterSnapshotMask());
     }
     getUnknownFields().writeTo(output);
@@ -169,11 +170,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, transcriptSid_);
     }
-    if (flagSnapshotMask_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getFlagSnapshotMask());
     }
-    if (filterSnapshotMask_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getFilterSnapshotMask());
     }
@@ -349,13 +350,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagTranscriptFiltersRequest.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getFlagSnapshotMaskFieldBuilder();
+        getFilterSnapshotMaskFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -408,16 +416,20 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.transcriptSid_ = transcriptSid_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.flagSnapshotMask_ = flagSnapshotMaskBuilder_ == null
             ? flagSnapshotMask_
             : flagSnapshotMaskBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.filterSnapshotMask_ = filterSnapshotMaskBuilder_ == null
             ? filterSnapshotMask_
             : filterSnapshotMaskBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -665,8 +677,10 @@ private static final long serialVersionUID = 0L;
       } else {
         flagSnapshotMaskBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (flagSnapshotMask_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -820,8 +834,10 @@ private static final long serialVersionUID = 0L;
       } else {
         filterSnapshotMaskBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (filterSnapshotMask_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**

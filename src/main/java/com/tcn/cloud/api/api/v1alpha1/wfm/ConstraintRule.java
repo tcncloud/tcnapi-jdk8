@@ -43,6 +43,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.ConstraintRule.class, com.tcn.cloud.api.api.v1alpha1.wfm.ConstraintRule.Builder.class);
   }
 
+  private int bitField0_;
   private int memberTargetEntityCase_ = 0;
   @SuppressWarnings("serial")
   private java.lang.Object memberTargetEntity_;
@@ -112,7 +113,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasParentEntity() {
-    return parentEntity_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -503,7 +504,7 @@ private static final long serialVersionUID = 0L;
     if (constraintRuleSid_ != 0L) {
       output.writeInt64(1, constraintRuleSid_);
     }
-    if (parentEntity_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getParentEntity());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
@@ -558,7 +559,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, constraintRuleSid_);
     }
-    if (parentEntity_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getParentEntity());
     }
@@ -840,13 +841,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.ConstraintRule.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getParentEntityFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -914,10 +921,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.constraintRuleSid_ = constraintRuleSid_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.parentEntity_ = parentEntityBuilder_ == null
             ? parentEntity_
             : parentEntityBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.name_ = name_;
@@ -952,6 +961,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.scheduleScenarioSid_ = scheduleScenarioSid_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     private void buildPartialOneofs(com.tcn.cloud.api.api.v1alpha1.wfm.ConstraintRule result) {
@@ -1336,8 +1346,10 @@ private static final long serialVersionUID = 0L;
       } else {
         parentEntityBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (parentEntity_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**

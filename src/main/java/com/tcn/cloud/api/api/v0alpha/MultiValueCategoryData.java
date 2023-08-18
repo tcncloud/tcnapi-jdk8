@@ -81,7 +81,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int VALUES_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList values_;
+  private com.google.protobuf.Internal.FloatList values_ =
+      emptyFloatList();
   /**
    * <code>repeated float values = 2 [json_name = "values"];</code>
    * @return A list containing the values.
@@ -351,24 +352,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.MultiValueCategoryData buildPartial() {
       com.tcn.cloud.api.api.v0alpha.MultiValueCategoryData result = new com.tcn.cloud.api.api.v0alpha.MultiValueCategoryData(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.MultiValueCategoryData result) {
-      if (((bitField0_ & 0x00000002) != 0)) {
-        values_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.values_ = values_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.MultiValueCategoryData result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.category_ = category_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        values_.makeImmutable();
+        result.values_ = values_;
       }
     }
 
@@ -424,7 +420,8 @@ private static final long serialVersionUID = 0L;
       if (!other.values_.isEmpty()) {
         if (values_.isEmpty()) {
           values_ = other.values_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          values_.makeImmutable();
+          bitField0_ |= 0x00000002;
         } else {
           ensureValuesIsMutable();
           values_.addAll(other.values_);
@@ -471,7 +468,8 @@ private static final long serialVersionUID = 0L;
             case 18: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              ensureValuesIsMutable();
+              int alloc = length > 4096 ? 4096 : length;
+              ensureValuesIsMutable(alloc / 4);
               while (input.getBytesUntilLimit() > 0) {
                 values_.addFloat(input.readFloat());
               }
@@ -569,10 +567,16 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.FloatList values_ = emptyFloatList();
     private void ensureValuesIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
-        values_ = mutableCopy(values_);
-        bitField0_ |= 0x00000002;
+      if (!values_.isModifiable()) {
+        values_ = makeMutableCopy(values_);
       }
+      bitField0_ |= 0x00000002;
+    }
+    private void ensureValuesIsMutable(int capacity) {
+      if (!values_.isModifiable()) {
+        values_ = makeMutableCopy(values_, capacity);
+      }
+      bitField0_ |= 0x00000002;
     }
     /**
      * <code>repeated float values = 2 [json_name = "values"];</code>
@@ -580,8 +584,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Float>
         getValuesList() {
-      return ((bitField0_ & 0x00000002) != 0) ?
-               java.util.Collections.unmodifiableList(values_) : values_;
+      values_.makeImmutable();
+      return values_;
     }
     /**
      * <code>repeated float values = 2 [json_name = "values"];</code>
@@ -609,6 +613,7 @@ private static final long serialVersionUID = 0L;
 
       ensureValuesIsMutable();
       values_.setFloat(index, value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -621,6 +626,7 @@ private static final long serialVersionUID = 0L;
 
       ensureValuesIsMutable();
       values_.addFloat(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -634,6 +640,7 @@ private static final long serialVersionUID = 0L;
       ensureValuesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, values_);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

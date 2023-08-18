@@ -38,6 +38,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.workflows.FlowState.class, com.tcn.cloud.api.api.commons.workflows.FlowState.Builder.class);
   }
 
+  private int bitField0_;
   public static final int ENVELOPE_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.workflows.Envelope envelope_;
   /**
@@ -46,7 +47,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEnvelope() {
-    return envelope_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.commons.workflows.Envelope envelope = 1 [json_name = "envelope"];</code>
@@ -72,7 +73,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasState() {
-    return state_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.api.commons.workflows.State state = 2 [json_name = "state"];</code>
@@ -98,7 +99,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPayload() {
-    return payload_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <code>.api.commons.workflows.Payload payload = 100 [json_name = "payload"];</code>
@@ -130,13 +131,13 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (envelope_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getEnvelope());
     }
-    if (state_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(2, getState());
     }
-    if (payload_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(100, getPayload());
     }
     getUnknownFields().writeTo(output);
@@ -148,15 +149,15 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (envelope_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getEnvelope());
     }
-    if (state_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getState());
     }
-    if (payload_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(100, getPayload());
     }
@@ -332,13 +333,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.workflows.FlowState.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getEnvelopeFieldBuilder();
+        getStateFieldBuilder();
+        getPayloadFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -392,21 +401,26 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.workflows.FlowState result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.envelope_ = envelopeBuilder_ == null
             ? envelope_
             : envelopeBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.state_ = stateBuilder_ == null
             ? state_
             : stateBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.payload_ = payloadBuilder_ == null
             ? payload_
             : payloadBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -592,8 +606,10 @@ private static final long serialVersionUID = 0L;
       } else {
         envelopeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (envelope_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -711,8 +727,10 @@ private static final long serialVersionUID = 0L;
       } else {
         stateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (state_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -830,8 +848,10 @@ private static final long serialVersionUID = 0L;
       } else {
         payloadBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (payload_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**

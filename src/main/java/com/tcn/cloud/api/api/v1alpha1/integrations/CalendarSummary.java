@@ -39,6 +39,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary.class, com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CALENDAR_NUM_FIELD_NUMBER = 1;
   private int calendarNum_ = 0;
   /**
@@ -62,7 +63,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSummary() {
-    return summary_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.v1alpha1.integrations.TransactionSummary summary = 2 [json_name = "summary"];</code>
@@ -158,7 +159,7 @@ private static final long serialVersionUID = 0L;
     if (calendarNum_ != 0) {
       output.writeInt32(1, calendarNum_);
     }
-    if (summary_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getSummary());
     }
     for (int i = 0; i < typeSummaries_.size(); i++) {
@@ -177,7 +178,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(1, calendarNum_);
     }
-    if (summary_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getSummary());
     }
@@ -349,13 +350,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.CalendarSummary.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getSummaryFieldBuilder();
+        getTypeSummariesFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -423,11 +431,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.calendarNum_ = calendarNum_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.summary_ = summaryBuilder_ == null
             ? summary_
             : summaryBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -684,8 +695,10 @@ private static final long serialVersionUID = 0L;
       } else {
         summaryBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (summary_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**

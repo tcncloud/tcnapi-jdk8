@@ -3365,6 +3365,7 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  private int bitField0_;
   public static final int ENABLE_SCRUB_LIST_ADDING_FIELD_NUMBER = 1;
   private boolean enableScrubListAdding_ = false;
   /**
@@ -3560,7 +3561,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasInboundScrubListExpiration() {
-    return inboundScrubListExpiration_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -3598,7 +3599,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasManualScrubListExpiration() {
-    return manualScrubListExpiration_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -3636,7 +3637,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasOutboundScrubListExpiration() {
-    return outboundScrubListExpiration_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -3674,7 +3675,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPreviewScrubListExpiration() {
-    return previewScrubListExpiration_ != null;
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <pre>
@@ -3742,7 +3743,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAutomateResponseRules() {
-    return automateResponseRules_ != null;
+    return ((bitField0_ & 0x00000010) != 0);
   }
   /**
    * <pre>
@@ -3781,7 +3782,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAutomateScrubListCallData() {
-    return automateScrubListCallData_ != null;
+    return ((bitField0_ & 0x00000020) != 0);
   }
   /**
    * <pre>
@@ -3841,16 +3842,16 @@ private static final long serialVersionUID = 0L;
     if (displayOptionsInWrapup_ != false) {
       output.writeBool(6, displayOptionsInWrapup_);
     }
-    if (inboundScrubListExpiration_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(100, getInboundScrubListExpiration());
     }
-    if (manualScrubListExpiration_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(101, getManualScrubListExpiration());
     }
-    if (outboundScrubListExpiration_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(102, getOutboundScrubListExpiration());
     }
-    if (previewScrubListExpiration_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(103, getPreviewScrubListExpiration());
     }
     if (automateManuallyDialedScrubList_ != false) {
@@ -3859,10 +3860,10 @@ private static final long serialVersionUID = 0L;
     if (automatePreviewDialedScrubList_ != false) {
       output.writeBool(201, automatePreviewDialedScrubList_);
     }
-    if (automateResponseRules_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       output.writeMessage(202, getAutomateResponseRules());
     }
-    if (automateScrubListCallData_ != null) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       output.writeMessage(203, getAutomateScrubListCallData());
     }
     getUnknownFields().writeTo(output);
@@ -3906,19 +3907,19 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(6, displayOptionsInWrapup_);
     }
-    if (inboundScrubListExpiration_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(100, getInboundScrubListExpiration());
     }
-    if (manualScrubListExpiration_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(101, getManualScrubListExpiration());
     }
-    if (outboundScrubListExpiration_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(102, getOutboundScrubListExpiration());
     }
-    if (previewScrubListExpiration_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(103, getPreviewScrubListExpiration());
     }
@@ -3930,11 +3931,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(201, automatePreviewDialedScrubList_);
     }
-    if (automateResponseRules_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(202, getAutomateResponseRules());
     }
-    if (automateScrubListCallData_ != null) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(203, getAutomateScrubListCallData());
     }
@@ -4182,13 +4183,24 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.org.CommunicationSettings.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getInboundScrubListExpirationFieldBuilder();
+        getManualScrubListExpirationFieldBuilder();
+        getOutboundScrubListExpirationFieldBuilder();
+        getPreviewScrubListExpirationFieldBuilder();
+        getAutomateResponseRulesFieldBuilder();
+        getAutomateScrubListCallDataFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -4287,25 +4299,30 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.displayOptionsInWrapup_ = displayOptionsInWrapup_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.inboundScrubListExpiration_ = inboundScrubListExpirationBuilder_ == null
             ? inboundScrubListExpiration_
             : inboundScrubListExpirationBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.manualScrubListExpiration_ = manualScrubListExpirationBuilder_ == null
             ? manualScrubListExpiration_
             : manualScrubListExpirationBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.outboundScrubListExpiration_ = outboundScrubListExpirationBuilder_ == null
             ? outboundScrubListExpiration_
             : outboundScrubListExpirationBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.previewScrubListExpiration_ = previewScrubListExpirationBuilder_ == null
             ? previewScrubListExpiration_
             : previewScrubListExpirationBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.automateManuallyDialedScrubList_ = automateManuallyDialedScrubList_;
@@ -4317,12 +4334,15 @@ private static final long serialVersionUID = 0L;
         result.automateResponseRules_ = automateResponseRulesBuilder_ == null
             ? automateResponseRules_
             : automateResponseRulesBuilder_.build();
+        to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00002000) != 0)) {
         result.automateScrubListCallData_ = automateScrubListCallDataBuilder_ == null
             ? automateScrubListCallData_
             : automateScrubListCallDataBuilder_.build();
+        to_bitField0_ |= 0x00000020;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -5152,8 +5172,10 @@ private static final long serialVersionUID = 0L;
       } else {
         inboundScrubListExpirationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (inboundScrubListExpiration_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -5307,8 +5329,10 @@ private static final long serialVersionUID = 0L;
       } else {
         manualScrubListExpirationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+      if (manualScrubListExpiration_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -5462,8 +5486,10 @@ private static final long serialVersionUID = 0L;
       } else {
         outboundScrubListExpirationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+      if (outboundScrubListExpiration_ != null) {
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -5617,8 +5643,10 @@ private static final long serialVersionUID = 0L;
       } else {
         previewScrubListExpirationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000200;
-      onChanged();
+      if (previewScrubListExpiration_ != null) {
+        bitField0_ |= 0x00000200;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -5860,8 +5888,10 @@ private static final long serialVersionUID = 0L;
       } else {
         automateResponseRulesBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00001000;
-      onChanged();
+      if (automateResponseRules_ != null) {
+        bitField0_ |= 0x00001000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -6020,8 +6050,10 @@ private static final long serialVersionUID = 0L;
       } else {
         automateScrubListCallDataBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00002000;
-      onChanged();
+      if (automateScrubListCallData_ != null) {
+        bitField0_ |= 0x00002000;
+        onChanged();
+      }
       return this;
     }
     /**

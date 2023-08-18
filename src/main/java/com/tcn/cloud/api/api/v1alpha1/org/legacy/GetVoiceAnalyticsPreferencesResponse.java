@@ -42,6 +42,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.legacy.GetVoiceAnalyticsPreferencesResponse.class, com.tcn.cloud.api.api.v1alpha1.org.legacy.GetVoiceAnalyticsPreferencesResponse.Builder.class);
   }
 
+  private int bitField0_;
   public static final int VOICE_ANALYTICS_PREFERENCES_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v1alpha1.org.legacy.VoiceAnalyticsPreferences voiceAnalyticsPreferences_;
   /**
@@ -54,7 +55,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVoiceAnalyticsPreferences() {
-    return voiceAnalyticsPreferences_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -94,7 +95,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (voiceAnalyticsPreferences_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getVoiceAnalyticsPreferences());
     }
     getUnknownFields().writeTo(output);
@@ -106,7 +107,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (voiceAnalyticsPreferences_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getVoiceAnalyticsPreferences());
     }
@@ -268,13 +269,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.GetVoiceAnalyticsPreferencesResponse.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getVoiceAnalyticsPreferencesFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -318,11 +325,14 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.GetVoiceAnalyticsPreferencesResponse result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.voiceAnalyticsPreferences_ = voiceAnalyticsPreferencesBuilder_ == null
             ? voiceAnalyticsPreferences_
             : voiceAnalyticsPreferencesBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -508,8 +518,10 @@ private static final long serialVersionUID = 0L;
       } else {
         voiceAnalyticsPreferencesBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (voiceAnalyticsPreferences_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**

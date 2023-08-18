@@ -1554,6 +1554,7 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  private int bitField0_;
   public static final int SCORECARD_QUESTION_ID_FIELD_NUMBER = 2;
   private long scorecardQuestionId_ = 0L;
   /**
@@ -1766,7 +1767,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMultiSelect() {
-    return multiSelect_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -1884,7 +1885,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < answers_.size(); i++) {
       output.writeMessage(7, answers_.get(i));
     }
-    if (multiSelect_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(8, getMultiSelect());
     }
     if (scorecardId_ != 0L) {
@@ -1930,7 +1931,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, answers_.get(i));
     }
-    if (multiSelect_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getMultiSelect());
     }
@@ -2155,13 +2156,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.ScorecardQuestion.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getAnswersFieldBuilder();
+        getMultiSelectFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -2249,10 +2257,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.allowSkip_ = allowSkip_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.multiSelect_ = multiSelectBuilder_ == null
             ? multiSelect_
             : multiSelectBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.scorecardId_ = scorecardId_;
@@ -2266,6 +2276,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.sortOrder_ = sortOrder_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -3194,8 +3205,10 @@ private static final long serialVersionUID = 0L;
       } else {
         multiSelectBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (multiSelect_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
     /**

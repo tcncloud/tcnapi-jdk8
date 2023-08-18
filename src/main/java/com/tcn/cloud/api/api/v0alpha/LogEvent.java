@@ -60,6 +60,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.LogEvent.class, com.tcn.cloud.api.api.v0alpha.LogEvent.Builder.class);
   }
 
+  private int bitField0_;
   public static final int TRACE_ID_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object traceId_ = "";
@@ -279,7 +280,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTimestamp() {
-    return timestamp_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp timestamp = 8 [json_name = "timestamp"];</code>
@@ -423,7 +424,7 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stackTrace_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, stackTrace_);
     }
-    if (timestamp_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(8, getTimestamp());
     }
     com.google.protobuf.GeneratedMessageV3
@@ -459,7 +460,7 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stackTrace_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, stackTrace_);
     }
-    if (timestamp_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getTimestamp());
     }
@@ -686,13 +687,19 @@ java.lang.String defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v0alpha.LogEvent.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getTimestampFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -758,10 +765,12 @@ java.lang.String defaultValue) {
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.stackTrace_ = stackTrace_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.timestamp_ = timestampBuilder_ == null
             ? timestamp_
             : timestampBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.metadata_ = internalGetMetadata();
@@ -770,6 +779,7 @@ java.lang.String defaultValue) {
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.severity_ = severity_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1405,8 +1415,10 @@ java.lang.String defaultValue) {
       } else {
         timestampBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (timestamp_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**

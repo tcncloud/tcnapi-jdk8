@@ -41,6 +41,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateReq.class, com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateReq.Builder.class);
   }
 
+  private int bitField0_;
   public static final int INBOUND_SMS_TEMPLATE_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object inboundSmsTemplateId_ = "";
@@ -132,7 +133,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int SMS_INTENT_TEMPLATE_SID_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList smsIntentTemplateSid_;
+  private com.google.protobuf.Internal.LongList smsIntentTemplateSid_ =
+      emptyLongList();
   /**
    * <code>repeated int64 sms_intent_template_sid = 6 [json_name = "smsIntentTemplateSid"];</code>
    * @return A list containing the smsIntentTemplateSid.
@@ -167,7 +169,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasReportSettings() {
-    return reportSettings_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.v0alpha.ReportSettings report_settings = 7 [json_name = "reportSettings"];</code>
@@ -216,7 +218,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < smsIntentTemplateSid_.size(); i++) {
       output.writeInt64NoTag(smsIntentTemplateSid_.getLong(i));
     }
-    if (reportSettings_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(7, getReportSettings());
     }
     getUnknownFields().writeTo(output);
@@ -252,7 +254,7 @@ private static final long serialVersionUID = 0L;
       }
       smsIntentTemplateSidMemoizedSerializedSize = dataSize;
     }
-    if (reportSettings_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getReportSettings());
     }
@@ -429,13 +431,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getReportSettingsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -476,18 +484,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateReq result = new com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateReq(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateReq result) {
-      if (((bitField0_ & 0x00000008) != 0)) {
-        smsIntentTemplateSid_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000008);
-      }
-      result.smsIntentTemplateSid_ = smsIntentTemplateSid_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsTemplateReq result) {
@@ -501,11 +500,18 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.name_ = name_;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        smsIntentTemplateSid_.makeImmutable();
+        result.smsIntentTemplateSid_ = smsIntentTemplateSid_;
+      }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.reportSettings_ = reportSettingsBuilder_ == null
             ? reportSettings_
             : reportSettingsBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -568,7 +574,8 @@ private static final long serialVersionUID = 0L;
       if (!other.smsIntentTemplateSid_.isEmpty()) {
         if (smsIntentTemplateSid_.isEmpty()) {
           smsIntentTemplateSid_ = other.smsIntentTemplateSid_;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          smsIntentTemplateSid_.makeImmutable();
+          bitField0_ |= 0x00000008;
         } else {
           ensureSmsIntentTemplateSidIsMutable();
           smsIntentTemplateSid_.addAll(other.smsIntentTemplateSid_);
@@ -837,10 +844,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList smsIntentTemplateSid_ = emptyLongList();
     private void ensureSmsIntentTemplateSidIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
-        smsIntentTemplateSid_ = mutableCopy(smsIntentTemplateSid_);
-        bitField0_ |= 0x00000008;
+      if (!smsIntentTemplateSid_.isModifiable()) {
+        smsIntentTemplateSid_ = makeMutableCopy(smsIntentTemplateSid_);
       }
+      bitField0_ |= 0x00000008;
     }
     /**
      * <code>repeated int64 sms_intent_template_sid = 6 [json_name = "smsIntentTemplateSid"];</code>
@@ -848,8 +855,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getSmsIntentTemplateSidList() {
-      return ((bitField0_ & 0x00000008) != 0) ?
-               java.util.Collections.unmodifiableList(smsIntentTemplateSid_) : smsIntentTemplateSid_;
+      smsIntentTemplateSid_.makeImmutable();
+      return smsIntentTemplateSid_;
     }
     /**
      * <code>repeated int64 sms_intent_template_sid = 6 [json_name = "smsIntentTemplateSid"];</code>
@@ -877,6 +884,7 @@ private static final long serialVersionUID = 0L;
 
       ensureSmsIntentTemplateSidIsMutable();
       smsIntentTemplateSid_.setLong(index, value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -889,6 +897,7 @@ private static final long serialVersionUID = 0L;
 
       ensureSmsIntentTemplateSidIsMutable();
       smsIntentTemplateSid_.addLong(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -902,6 +911,7 @@ private static final long serialVersionUID = 0L;
       ensureSmsIntentTemplateSidIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, smsIntentTemplateSid_);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -982,8 +992,10 @@ private static final long serialVersionUID = 0L;
       } else {
         reportSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (reportSettings_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**
