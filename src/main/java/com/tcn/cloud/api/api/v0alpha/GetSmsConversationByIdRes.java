@@ -38,6 +38,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.GetSmsConversationByIdRes.class, com.tcn.cloud.api.api.v0alpha.GetSmsConversationByIdRes.Builder.class);
   }
 
+  private int bitField0_;
   public static final int SMS_CONVERSATION_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v0alpha.SmsConversation smsConversation_;
   /**
@@ -46,7 +47,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSmsConversation() {
-    return smsConversation_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.v0alpha.SmsConversation sms_conversation = 1 [json_name = "smsConversation"];</code>
@@ -78,7 +79,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (smsConversation_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getSmsConversation());
     }
     getUnknownFields().writeTo(output);
@@ -90,7 +91,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (smsConversation_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getSmsConversation());
     }
@@ -248,13 +249,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetSmsConversationByIdRes.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getSmsConversationFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -298,11 +305,14 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetSmsConversationByIdRes result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.smsConversation_ = smsConversationBuilder_ == null
             ? smsConversation_
             : smsConversationBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -468,8 +478,10 @@ private static final long serialVersionUID = 0L;
       } else {
         smsConversationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (smsConversation_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**

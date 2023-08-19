@@ -45,6 +45,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings.class, com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings.Builder.class);
   }
 
+  private int bitField0_;
   public static final int KEYPAD_ENABLED_FIELD_NUMBER = 1;
   private boolean keypadEnabled_ = false;
   /**
@@ -103,7 +104,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasStatistics() {
-    return statistics_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.v0alpha.AgentStatisticsSettings statistics = 3 [json_name = "statistics"];</code>
@@ -140,7 +141,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPause() {
-    return pause_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.api.v0alpha.PauseSettings pause = 6 [json_name = "pause"];</code>
@@ -166,7 +167,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHqm() {
-    return hqm_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <code>.api.v0alpha.HoldQueueMonitorSettings hqm = 7 [json_name = "hqm"];</code>
@@ -192,7 +193,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasManualDial() {
-    return manualDial_ != null;
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <code>.api.v0alpha.ManualDialSettings manual_dial = 8 [json_name = "manualDial"];</code>
@@ -218,7 +219,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTransfer() {
-    return transfer_ != null;
+    return ((bitField0_ & 0x00000010) != 0);
   }
   /**
    * <code>.api.v0alpha.TransferSettings transfer = 9 [json_name = "transfer"];</code>
@@ -244,7 +245,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPreviewDial() {
-    return previewDial_ != null;
+    return ((bitField0_ & 0x00000020) != 0);
   }
   /**
    * <code>.api.v0alpha.PreviewDialSettings preview_dial = 10 [json_name = "previewDial"];</code>
@@ -270,7 +271,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPhoneNumberActivity() {
-    return phoneNumberActivity_ != null;
+    return ((bitField0_ & 0x00000040) != 0);
   }
   /**
    * <code>.api.v0alpha.PhoneNumberActivitySettings phone_number_activity = 11 [json_name = "phoneNumberActivity"];</code>
@@ -296,7 +297,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDncl() {
-    return dncl_ != null;
+    return ((bitField0_ & 0x00000080) != 0);
   }
   /**
    * <code>.api.v0alpha.DnclSettings dncl = 12 [json_name = "dncl"];</code>
@@ -322,7 +323,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHold() {
-    return hold_ != null;
+    return ((bitField0_ & 0x00000100) != 0);
   }
   /**
    * <code>.api.v0alpha.AgentHoldSettings hold = 13 [json_name = "hold"];</code>
@@ -348,7 +349,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasManualApproval() {
-    return manualApproval_ != null;
+    return ((bitField0_ & 0x00000200) != 0);
   }
   /**
    * <code>.api.v0alpha.ManualApprovalSettings manual_approval = 14 [json_name = "manualApproval"];</code>
@@ -385,7 +386,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasScheduleCallback() {
-    return scheduleCallback_ != null;
+    return ((bitField0_ & 0x00000400) != 0);
   }
   /**
    * <code>.api.v0alpha.ScheduleCallBackSettings schedule_callback = 16 [json_name = "scheduleCallback"];</code>
@@ -411,7 +412,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasRecording() {
-    return recording_ != null;
+    return ((bitField0_ & 0x00000800) != 0);
   }
   /**
    * <code>.api.v0alpha.RecordingSettings recording = 18 [json_name = "recording"];</code>
@@ -507,7 +508,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDisplayDataSettings() {
-    return displayDataSettings_ != null;
+    return ((bitField0_ & 0x00001000) != 0);
   }
   /**
    * <code>.api.v0alpha.DisplayDataSettings display_data_settings = 23 [json_name = "displayDataSettings"];</code>
@@ -791,46 +792,46 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keypadDelimiter_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, keypadDelimiter_);
     }
-    if (statistics_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(3, getStatistics());
     }
     if (endCallConfirmation_ != false) {
       output.writeBool(5, endCallConfirmation_);
     }
-    if (pause_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(6, getPause());
     }
-    if (hqm_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(7, getHqm());
     }
-    if (manualDial_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(8, getManualDial());
     }
-    if (transfer_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       output.writeMessage(9, getTransfer());
     }
-    if (previewDial_ != null) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       output.writeMessage(10, getPreviewDial());
     }
-    if (phoneNumberActivity_ != null) {
+    if (((bitField0_ & 0x00000040) != 0)) {
       output.writeMessage(11, getPhoneNumberActivity());
     }
-    if (dncl_ != null) {
+    if (((bitField0_ & 0x00000080) != 0)) {
       output.writeMessage(12, getDncl());
     }
-    if (hold_ != null) {
+    if (((bitField0_ & 0x00000100) != 0)) {
       output.writeMessage(13, getHold());
     }
-    if (manualApproval_ != null) {
+    if (((bitField0_ & 0x00000200) != 0)) {
       output.writeMessage(14, getManualApproval());
     }
     if (displayLinkbackHuntgroup_ != false) {
       output.writeBool(15, displayLinkbackHuntgroup_);
     }
-    if (scheduleCallback_ != null) {
+    if (((bitField0_ & 0x00000400) != 0)) {
       output.writeMessage(16, getScheduleCallback());
     }
-    if (recording_ != null) {
+    if (((bitField0_ & 0x00000800) != 0)) {
       output.writeMessage(18, getRecording());
     }
     if (displayPhoneZipMetadata_ != false) {
@@ -845,7 +846,7 @@ private static final long serialVersionUID = 0L;
     if (allowAgentIntercom_ != false) {
       output.writeBool(22, allowAgentIntercom_);
     }
-    if (displayDataSettings_ != null) {
+    if (((bitField0_ & 0x00001000) != 0)) {
       output.writeMessage(23, getDisplayDataSettings());
     }
     if (allowChangeHuntGroup_ != false) {
@@ -898,7 +899,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keypadDelimiter_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, keypadDelimiter_);
     }
-    if (statistics_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getStatistics());
     }
@@ -906,39 +907,39 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(5, endCallConfirmation_);
     }
-    if (pause_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getPause());
     }
-    if (hqm_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getHqm());
     }
-    if (manualDial_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getManualDial());
     }
-    if (transfer_ != null) {
+    if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getTransfer());
     }
-    if (previewDial_ != null) {
+    if (((bitField0_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getPreviewDial());
     }
-    if (phoneNumberActivity_ != null) {
+    if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getPhoneNumberActivity());
     }
-    if (dncl_ != null) {
+    if (((bitField0_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, getDncl());
     }
-    if (hold_ != null) {
+    if (((bitField0_ & 0x00000100) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getHold());
     }
-    if (manualApproval_ != null) {
+    if (((bitField0_ & 0x00000200) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, getManualApproval());
     }
@@ -946,11 +947,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(15, displayLinkbackHuntgroup_);
     }
-    if (scheduleCallback_ != null) {
+    if (((bitField0_ & 0x00000400) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(16, getScheduleCallback());
     }
-    if (recording_ != null) {
+    if (((bitField0_ & 0x00000800) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(18, getRecording());
     }
@@ -974,7 +975,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(22, allowAgentIntercom_);
     }
-    if (displayDataSettings_ != null) {
+    if (((bitField0_ & 0x00001000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(23, getDisplayDataSettings());
     }
@@ -1384,13 +1385,32 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getStatisticsFieldBuilder();
+        getPauseFieldBuilder();
+        getHqmFieldBuilder();
+        getManualDialFieldBuilder();
+        getTransferFieldBuilder();
+        getPreviewDialFieldBuilder();
+        getPhoneNumberActivityFieldBuilder();
+        getDnclFieldBuilder();
+        getHoldFieldBuilder();
+        getManualApprovalFieldBuilder();
+        getScheduleCallbackFieldBuilder();
+        getRecordingFieldBuilder();
+        getDisplayDataSettingsFieldBuilder();
+        getInboundComplianceMetadataFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -1545,10 +1565,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.keypadDelimiter_ = keypadDelimiter_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.statistics_ = statisticsBuilder_ == null
             ? statistics_
             : statisticsBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.endCallConfirmation_ = endCallConfirmation_;
@@ -1557,46 +1579,55 @@ private static final long serialVersionUID = 0L;
         result.pause_ = pauseBuilder_ == null
             ? pause_
             : pauseBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.hqm_ = hqmBuilder_ == null
             ? hqm_
             : hqmBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.manualDial_ = manualDialBuilder_ == null
             ? manualDial_
             : manualDialBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.transfer_ = transferBuilder_ == null
             ? transfer_
             : transferBuilder_.build();
+        to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.previewDial_ = previewDialBuilder_ == null
             ? previewDial_
             : previewDialBuilder_.build();
+        to_bitField0_ |= 0x00000020;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.phoneNumberActivity_ = phoneNumberActivityBuilder_ == null
             ? phoneNumberActivity_
             : phoneNumberActivityBuilder_.build();
+        to_bitField0_ |= 0x00000040;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.dncl_ = dnclBuilder_ == null
             ? dncl_
             : dnclBuilder_.build();
+        to_bitField0_ |= 0x00000080;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.hold_ = holdBuilder_ == null
             ? hold_
             : holdBuilder_.build();
+        to_bitField0_ |= 0x00000100;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.manualApproval_ = manualApprovalBuilder_ == null
             ? manualApproval_
             : manualApprovalBuilder_.build();
+        to_bitField0_ |= 0x00000200;
       }
       if (((from_bitField0_ & 0x00002000) != 0)) {
         result.displayLinkbackHuntgroup_ = displayLinkbackHuntgroup_;
@@ -1605,11 +1636,13 @@ private static final long serialVersionUID = 0L;
         result.scheduleCallback_ = scheduleCallbackBuilder_ == null
             ? scheduleCallback_
             : scheduleCallbackBuilder_.build();
+        to_bitField0_ |= 0x00000400;
       }
       if (((from_bitField0_ & 0x00008000) != 0)) {
         result.recording_ = recordingBuilder_ == null
             ? recording_
             : recordingBuilder_.build();
+        to_bitField0_ |= 0x00000800;
       }
       if (((from_bitField0_ & 0x00010000) != 0)) {
         result.displayPhoneZipMetadata_ = displayPhoneZipMetadata_;
@@ -1628,6 +1661,7 @@ private static final long serialVersionUID = 0L;
         result.displayDataSettings_ = displayDataSettingsBuilder_ == null
             ? displayDataSettings_
             : displayDataSettingsBuilder_.build();
+        to_bitField0_ |= 0x00001000;
       }
       if (((from_bitField0_ & 0x00200000) != 0)) {
         result.allowChangeHuntGroup_ = allowChangeHuntGroup_;
@@ -1654,6 +1688,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x20000000) != 0)) {
         result.displaySkills_ = displaySkills_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -2255,8 +2290,10 @@ private static final long serialVersionUID = 0L;
       } else {
         statisticsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (statistics_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2406,8 +2443,10 @@ private static final long serialVersionUID = 0L;
       } else {
         pauseBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (pause_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2525,8 +2564,10 @@ private static final long serialVersionUID = 0L;
       } else {
         hqmBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (hqm_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2644,8 +2685,10 @@ private static final long serialVersionUID = 0L;
       } else {
         manualDialBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (manualDial_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2763,8 +2806,10 @@ private static final long serialVersionUID = 0L;
       } else {
         transferBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+      if (transfer_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2882,8 +2927,10 @@ private static final long serialVersionUID = 0L;
       } else {
         previewDialBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+      if (previewDial_ != null) {
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3001,8 +3048,10 @@ private static final long serialVersionUID = 0L;
       } else {
         phoneNumberActivityBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000200;
-      onChanged();
+      if (phoneNumberActivity_ != null) {
+        bitField0_ |= 0x00000200;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3120,8 +3169,10 @@ private static final long serialVersionUID = 0L;
       } else {
         dnclBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000400;
-      onChanged();
+      if (dncl_ != null) {
+        bitField0_ |= 0x00000400;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3239,8 +3290,10 @@ private static final long serialVersionUID = 0L;
       } else {
         holdBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000800;
-      onChanged();
+      if (hold_ != null) {
+        bitField0_ |= 0x00000800;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3358,8 +3411,10 @@ private static final long serialVersionUID = 0L;
       } else {
         manualApprovalBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00001000;
-      onChanged();
+      if (manualApproval_ != null) {
+        bitField0_ |= 0x00001000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3509,8 +3564,10 @@ private static final long serialVersionUID = 0L;
       } else {
         scheduleCallbackBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00004000;
-      onChanged();
+      if (scheduleCallback_ != null) {
+        bitField0_ |= 0x00004000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3628,8 +3685,10 @@ private static final long serialVersionUID = 0L;
       } else {
         recordingBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00008000;
-      onChanged();
+      if (recording_ != null) {
+        bitField0_ |= 0x00008000;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -3954,8 +4013,10 @@ private static final long serialVersionUID = 0L;
       } else {
         displayDataSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00100000;
-      onChanged();
+      if (displayDataSettings_ != null) {
+        bitField0_ |= 0x00100000;
+        onChanged();
+      }
       return this;
     }
     /**

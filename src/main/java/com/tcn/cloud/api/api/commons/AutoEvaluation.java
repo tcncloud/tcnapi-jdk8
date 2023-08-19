@@ -46,6 +46,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.AutoEvaluation.class, com.tcn.cloud.api.api.commons.AutoEvaluation.Builder.class);
   }
 
+  private int bitField0_;
   public static final int AUTO_EVALUATION_ID_FIELD_NUMBER = 2;
   private long autoEvaluationId_ = 0L;
   /**
@@ -191,7 +192,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCompletedAt() {
-    return completedAt_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -229,7 +230,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDeletedAt() {
-    return deletedAt_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -381,10 +382,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < autoEvaluationSections_.size(); i++) {
       output.writeMessage(6, autoEvaluationSections_.get(i));
     }
-    if (completedAt_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(7, getCompletedAt());
     }
-    if (deletedAt_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(8, getDeletedAt());
     }
     if (callType_ != com.tcn.cloud.api.api.commons.CallType.Enum.INBOUND.getNumber()) {
@@ -430,11 +431,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, autoEvaluationSections_.get(i));
     }
-    if (completedAt_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getCompletedAt());
     }
-    if (deletedAt_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getDeletedAt());
     }
@@ -670,13 +671,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.AutoEvaluation.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getAutoEvaluationSectionsFieldBuilder();
+        getCompletedAtFieldBuilder();
+        getDeletedAtFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -766,15 +775,18 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.agentUserId_ = agentUserId_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.completedAt_ = completedAtBuilder_ == null
             ? completedAt_
             : completedAtBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.deletedAt_ = deletedAtBuilder_ == null
             ? deletedAt_
             : deletedAtBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.callType_ = callType_;
@@ -791,6 +803,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.callLength_ = callLength_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1563,8 +1576,10 @@ private static final long serialVersionUID = 0L;
       } else {
         completedAtBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (completedAt_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1718,8 +1733,10 @@ private static final long serialVersionUID = 0L;
       } else {
         deletedAtBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (deletedAt_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
     /**

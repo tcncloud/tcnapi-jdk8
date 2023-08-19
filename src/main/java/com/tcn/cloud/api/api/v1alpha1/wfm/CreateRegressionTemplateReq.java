@@ -42,6 +42,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq.class, com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq.Builder.class);
   }
 
+  private int bitField0_;
   public static final int REGRESSION_TEMPLATE_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate regressionTemplate_;
   /**
@@ -54,7 +55,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasRegressionTemplate() {
-    return regressionTemplate_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -94,7 +95,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (regressionTemplate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getRegressionTemplate());
     }
     getUnknownFields().writeTo(output);
@@ -106,7 +107,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (regressionTemplate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getRegressionTemplate());
     }
@@ -268,13 +269,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getRegressionTemplateFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -318,11 +325,14 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.regressionTemplate_ = regressionTemplateBuilder_ == null
             ? regressionTemplate_
             : regressionTemplateBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -508,8 +518,10 @@ private static final long serialVersionUID = 0L;
       } else {
         regressionTemplateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (regressionTemplate_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**

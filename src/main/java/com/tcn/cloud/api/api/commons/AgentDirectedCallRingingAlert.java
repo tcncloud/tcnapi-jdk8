@@ -45,6 +45,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.AgentDirectedCallRingingAlert.class, com.tcn.cloud.api.api.commons.AgentDirectedCallRingingAlert.Builder.class);
   }
 
+  private int bitField0_;
   public static final int EXPIRE_DURATION_FIELD_NUMBER = 1;
   private long expireDuration_ = 0L;
   /**
@@ -72,7 +73,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTimestamp() {
-    return timestamp_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -110,7 +111,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTargetAgentSession() {
-    return targetAgentSession_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -148,7 +149,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCallerSid() {
-    return callerSid_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -332,13 +333,13 @@ private static final long serialVersionUID = 0L;
     if (expireDuration_ != 0L) {
       output.writeInt64(1, expireDuration_);
     }
-    if (timestamp_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getTimestamp());
     }
-    if (targetAgentSession_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(3, getTargetAgentSession());
     }
-    if (callerSid_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(4, getCallerSid());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
@@ -363,15 +364,15 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, expireDuration_);
     }
-    if (timestamp_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getTimestamp());
     }
-    if (targetAgentSession_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getTargetAgentSession());
     }
-    if (callerSid_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getCallerSid());
     }
@@ -577,13 +578,21 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.AgentDirectedCallRingingAlert.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getTimestampFieldBuilder();
+        getTargetAgentSessionFieldBuilder();
+        getCallerSidFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -644,20 +653,24 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.expireDuration_ = expireDuration_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.timestamp_ = timestampBuilder_ == null
             ? timestamp_
             : timestampBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.targetAgentSession_ = targetAgentSessionBuilder_ == null
             ? targetAgentSession_
             : targetAgentSessionBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.callerSid_ = callerSidBuilder_ == null
             ? callerSid_
             : callerSidBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.callerId_ = callerId_;
@@ -668,6 +681,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.id_ = id_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -955,8 +969,10 @@ private static final long serialVersionUID = 0L;
       } else {
         timestampBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (timestamp_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1110,8 +1126,10 @@ private static final long serialVersionUID = 0L;
       } else {
         targetAgentSessionBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (targetAgentSession_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1265,8 +1283,10 @@ private static final long serialVersionUID = 0L;
       } else {
         callerSidBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (callerSid_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**

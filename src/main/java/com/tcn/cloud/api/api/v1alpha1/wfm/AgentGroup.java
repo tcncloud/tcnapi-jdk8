@@ -48,6 +48,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.class, com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.Builder.class);
   }
 
+  private int bitField0_;
   public static final int AGENT_GROUP_SID_FIELD_NUMBER = 1;
   private long agentGroupSid_ = 0L;
   /**
@@ -75,7 +76,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasParentEntity() {
-    return parentEntity_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -207,7 +208,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDatetimeSetToInactive() {
-    return datetimeSetToInactive_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -509,7 +510,7 @@ private static final long serialVersionUID = 0L;
     if (agentGroupSid_ != 0L) {
       output.writeInt64(1, agentGroupSid_);
     }
-    if (parentEntity_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getParentEntity());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
@@ -518,7 +519,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
     }
-    if (datetimeSetToInactive_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(5, getDatetimeSetToInactive());
     }
     if (scheduleScenarioSid_ != 0L) {
@@ -549,7 +550,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, agentGroupSid_);
     }
-    if (parentEntity_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getParentEntity());
     }
@@ -559,7 +560,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
     }
-    if (datetimeSetToInactive_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getDatetimeSetToInactive());
     }
@@ -792,13 +793,24 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.AgentGroup.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getParentEntityFieldBuilder();
+        getDatetimeSetToInactiveFieldBuilder();
+        getMemberConstraintRulesFieldBuilder();
+        getMemberWfmAgentsFieldBuilder();
+        getMemberSkillProficienciesFieldBuilder();
+        getMemberAgentAvailabilityPatternsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -922,10 +934,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.agentGroupSid_ = agentGroupSid_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.parentEntity_ = parentEntityBuilder_ == null
             ? parentEntity_
             : parentEntityBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.name_ = name_;
@@ -937,10 +951,12 @@ private static final long serialVersionUID = 0L;
         result.datetimeSetToInactive_ = datetimeSetToInactiveBuilder_ == null
             ? datetimeSetToInactive_
             : datetimeSetToInactiveBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.scheduleScenarioSid_ = scheduleScenarioSid_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1372,8 +1388,10 @@ private static final long serialVersionUID = 0L;
       } else {
         parentEntityBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (parentEntity_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1711,8 +1729,10 @@ private static final long serialVersionUID = 0L;
       } else {
         datetimeSetToInactiveBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (datetimeSetToInactive_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**

@@ -62,6 +62,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.ScenarioData.class, com.tcn.cloud.api.api.commons.ScenarioData.Builder.class);
   }
 
+  private int bitField0_;
   public static final int COMM_TYPE_FIELD_NUMBER = 1;
   private com.tcn.cloud.api.api.commons.CommType commType_;
   /**
@@ -70,7 +71,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCommType() {
-    return commType_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.commons.CommType comm_type = 1 [json_name = "commType"];</code>
@@ -296,7 +297,7 @@ java.lang.String defaultValue) {
    */
   @java.lang.Override
   public boolean hasTimeOfCall() {
-    return timeOfCall_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp time_of_call = 6 [json_name = "timeOfCall"];</code>
@@ -652,7 +653,7 @@ java.lang.String defaultValue) {
    */
   @java.lang.Override
   public boolean hasCountryCodeData() {
-    return countryCodeData_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <code>.api.commons.CountryCode country_code_data = 18 [json_name = "countryCodeData"];</code>
@@ -684,7 +685,7 @@ java.lang.String defaultValue) {
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (commType_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getCommType());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumber_)) {
@@ -702,7 +703,7 @@ java.lang.String defaultValue) {
         internalGetCallMetadata(),
         CallMetadataDefaultEntryHolder.defaultEntry,
         5);
-    if (timeOfCall_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(6, getTimeOfCall());
     }
     if (frequencyCount_ != 0L) {
@@ -738,7 +739,7 @@ java.lang.String defaultValue) {
     for (int i = 0; i < holidays_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 17, holidays_.getRaw(i));
     }
-    if (countryCodeData_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(18, getCountryCodeData());
     }
     getUnknownFields().writeTo(output);
@@ -750,7 +751,7 @@ java.lang.String defaultValue) {
     if (size != -1) return size;
 
     size = 0;
-    if (commType_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getCommType());
     }
@@ -773,7 +774,7 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, callMetadata__);
     }
-    if (timeOfCall_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getTimeOfCall());
     }
@@ -819,7 +820,7 @@ java.lang.String defaultValue) {
       size += dataSize;
       size += 2 * getHolidaysList().size();
     }
-    if (countryCodeData_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(18, getCountryCodeData());
     }
@@ -1083,13 +1084,21 @@ java.lang.String defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.commons.ScenarioData.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getCommTypeFieldBuilder();
+        getTimeOfCallFieldBuilder();
+        getCountryCodeDataFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -1159,10 +1168,12 @@ java.lang.String defaultValue) {
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.ScenarioData result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.commType_ = commTypeBuilder_ == null
             ? commType_
             : commTypeBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.phoneNumber_ = phoneNumber_;
@@ -1181,6 +1192,7 @@ java.lang.String defaultValue) {
         result.timeOfCall_ = timeOfCallBuilder_ == null
             ? timeOfCall_
             : timeOfCallBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.frequencyCount_ = frequencyCount_;
@@ -1220,7 +1232,9 @@ java.lang.String defaultValue) {
         result.countryCodeData_ = countryCodeDataBuilder_ == null
             ? countryCodeData_
             : countryCodeDataBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1556,8 +1570,10 @@ java.lang.String defaultValue) {
       } else {
         commTypeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+      if (commType_ != null) {
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2028,8 +2044,10 @@ java.lang.String defaultValue) {
       } else {
         timeOfCallBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (timeOfCall_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -2859,8 +2877,10 @@ java.lang.String defaultValue) {
       } else {
         countryCodeDataBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00020000;
-      onChanged();
+      if (countryCodeData_ != null) {
+        bitField0_ |= 0x00020000;
+        onChanged();
+      }
       return this;
     }
     /**

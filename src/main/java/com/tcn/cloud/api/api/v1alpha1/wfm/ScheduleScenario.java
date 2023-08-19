@@ -45,6 +45,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.ScheduleScenario.class, com.tcn.cloud.api.api.v1alpha1.wfm.ScheduleScenario.Builder.class);
   }
 
+  private int bitField0_;
   public static final int SCHEDULE_SCENARIO_SID_FIELD_NUMBER = 1;
   private long scheduleScenarioSid_ = 0L;
   /**
@@ -166,7 +167,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCreationDatetime() {
-    return creationDatetime_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -268,7 +269,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCopiedFromScenarioSid() {
-    return copiedFromScenarioSid_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -306,7 +307,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasScheduleRange() {
-    return scheduleRange_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -344,7 +345,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDatetimeSetToInactive() {
-    return datetimeSetToInactive_ != null;
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <pre>
@@ -408,7 +409,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
     }
-    if (creationDatetime_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(4, getCreationDatetime());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdByUserId_)) {
@@ -417,13 +418,13 @@ private static final long serialVersionUID = 0L;
     if (isDefault_ != false) {
       output.writeBool(6, isDefault_);
     }
-    if (copiedFromScenarioSid_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(7, getCopiedFromScenarioSid());
     }
-    if (scheduleRange_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(8, getScheduleRange());
     }
-    if (datetimeSetToInactive_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(9, getDatetimeSetToInactive());
     }
     if (isActive_ != false) {
@@ -448,7 +449,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
     }
-    if (creationDatetime_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getCreationDatetime());
     }
@@ -459,15 +460,15 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(6, isDefault_);
     }
-    if (copiedFromScenarioSid_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getCopiedFromScenarioSid());
     }
-    if (scheduleRange_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getScheduleRange());
     }
-    if (datetimeSetToInactive_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getDatetimeSetToInactive());
     }
@@ -687,13 +688,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.ScheduleScenario.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getCreationDatetimeFieldBuilder();
+        getCopiedFromScenarioSidFieldBuilder();
+        getScheduleRangeFieldBuilder();
+        getDatetimeSetToInactiveFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -767,10 +777,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.description_ = description_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.creationDatetime_ = creationDatetimeBuilder_ == null
             ? creationDatetime_
             : creationDatetimeBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.createdByUserId_ = createdByUserId_;
@@ -782,20 +794,24 @@ private static final long serialVersionUID = 0L;
         result.copiedFromScenarioSid_ = copiedFromScenarioSidBuilder_ == null
             ? copiedFromScenarioSid_
             : copiedFromScenarioSidBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.scheduleRange_ = scheduleRangeBuilder_ == null
             ? scheduleRange_
             : scheduleRangeBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.datetimeSetToInactive_ = datetimeSetToInactiveBuilder_ == null
             ? datetimeSetToInactive_
             : datetimeSetToInactiveBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.isActive_ = isActive_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1293,8 +1309,10 @@ private static final long serialVersionUID = 0L;
       } else {
         creationDatetimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (creationDatetime_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1589,8 +1607,10 @@ private static final long serialVersionUID = 0L;
       } else {
         copiedFromScenarioSidBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (copiedFromScenarioSid_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1744,8 +1764,10 @@ private static final long serialVersionUID = 0L;
       } else {
         scheduleRangeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+      if (scheduleRange_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1899,8 +1921,10 @@ private static final long serialVersionUID = 0L;
       } else {
         datetimeSetToInactiveBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+      if (datetimeSetToInactive_ != null) {
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
       return this;
     }
     /**

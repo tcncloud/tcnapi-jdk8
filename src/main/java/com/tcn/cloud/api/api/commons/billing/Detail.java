@@ -44,6 +44,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.billing.Detail.class, com.tcn.cloud.api.api.commons.billing.Detail.Builder.class);
   }
 
+  private int bitField0_;
   public static final int BILLING_DETAIL_SID_FIELD_NUMBER = 1;
   private long billingDetailSid_ = 0L;
   /**
@@ -123,7 +124,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasConfig() {
-    return config_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -161,7 +162,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDateCreated() {
-    return dateCreated_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -199,7 +200,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDateModified() {
-    return dateModified_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -237,7 +238,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDeletedOn() {
-    return deletedOn_ != null;
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <pre>
@@ -286,16 +287,16 @@ private static final long serialVersionUID = 0L;
     if (configType_ != com.tcn.cloud.api.api.commons.billing.DetailConfigType.DETAIL_CONFIG_TYPE_UNSPECIFIED.getNumber()) {
       output.writeEnum(3, configType_);
     }
-    if (config_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(4, getConfig());
     }
-    if (dateCreated_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(5, getDateCreated());
     }
-    if (dateModified_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(6, getDateModified());
     }
-    if (deletedOn_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(7, getDeletedOn());
     }
     getUnknownFields().writeTo(output);
@@ -319,19 +320,19 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, configType_);
     }
-    if (config_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getConfig());
     }
-    if (dateCreated_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getDateCreated());
     }
-    if (dateModified_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getDateModified());
     }
-    if (deletedOn_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getDeletedOn());
     }
@@ -531,13 +532,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.billing.Detail.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getConfigFieldBuilder();
+        getDateCreatedFieldBuilder();
+        getDateModifiedFieldBuilder();
+        getDeletedOnFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -608,26 +618,32 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.configType_ = configType_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.config_ = configBuilder_ == null
             ? config_
             : configBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.dateCreated_ = dateCreatedBuilder_ == null
             ? dateCreated_
             : dateCreatedBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.dateModified_ = dateModifiedBuilder_ == null
             ? dateModified_
             : dateModifiedBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.deletedOn_ = deletedOnBuilder_ == null
             ? deletedOn_
             : deletedOnBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1057,8 +1073,10 @@ private static final long serialVersionUID = 0L;
       } else {
         configBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (config_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1212,8 +1230,10 @@ private static final long serialVersionUID = 0L;
       } else {
         dateCreatedBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (dateCreated_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1367,8 +1387,10 @@ private static final long serialVersionUID = 0L;
       } else {
         dateModifiedBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (dateModified_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1522,8 +1544,10 @@ private static final long serialVersionUID = 0L;
       } else {
         deletedOnBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (deletedOn_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
     /**

@@ -48,7 +48,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int OUTBOUND_EXPIRATION_LIMIT_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList outboundExpirationLimit_;
+  private com.google.protobuf.Internal.LongList outboundExpirationLimit_ =
+      emptyLongList();
   /**
    * <pre>
    * expiration limit options for outbound calls
@@ -89,7 +90,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int INBOUND_EXPIRATION_LIMIT_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList inboundExpirationLimit_;
+  private com.google.protobuf.Internal.LongList inboundExpirationLimit_ =
+      emptyLongList();
   /**
    * <pre>
    * expiration limit options for inbound calls
@@ -130,7 +132,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int MANUAL_DIAL_EXPIRATION_LIMIT_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList manualDialExpirationLimit_;
+  private com.google.protobuf.Internal.LongList manualDialExpirationLimit_ =
+      emptyLongList();
   /**
    * <pre>
    * expiration limit options for manual dial calls
@@ -171,7 +174,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int PREVIEW_DIAL_EXPIRATION_LIMIT_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList previewDialExpirationLimit_;
+  private com.google.protobuf.Internal.LongList previewDialExpirationLimit_ =
+      emptyLongList();
   /**
    * <pre>
    * expiration limit options for preview dial calls
@@ -533,37 +537,29 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ScrubListsExpirationLimits buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ScrubListsExpirationLimits result = new com.tcn.cloud.api.api.v0alpha.ScrubListsExpirationLimits(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.ScrubListsExpirationLimits result) {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        outboundExpirationLimit_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.outboundExpirationLimit_ = outboundExpirationLimit_;
-      if (((bitField0_ & 0x00000002) != 0)) {
-        inboundExpirationLimit_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.inboundExpirationLimit_ = inboundExpirationLimit_;
-      if (((bitField0_ & 0x00000004) != 0)) {
-        manualDialExpirationLimit_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000004);
-      }
-      result.manualDialExpirationLimit_ = manualDialExpirationLimit_;
-      if (((bitField0_ & 0x00000008) != 0)) {
-        previewDialExpirationLimit_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000008);
-      }
-      result.previewDialExpirationLimit_ = previewDialExpirationLimit_;
-    }
-
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ScrubListsExpirationLimits result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        outboundExpirationLimit_.makeImmutable();
+        result.outboundExpirationLimit_ = outboundExpirationLimit_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        inboundExpirationLimit_.makeImmutable();
+        result.inboundExpirationLimit_ = inboundExpirationLimit_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        manualDialExpirationLimit_.makeImmutable();
+        result.manualDialExpirationLimit_ = manualDialExpirationLimit_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        previewDialExpirationLimit_.makeImmutable();
+        result.previewDialExpirationLimit_ = previewDialExpirationLimit_;
+      }
     }
 
     @java.lang.Override
@@ -613,7 +609,8 @@ private static final long serialVersionUID = 0L;
       if (!other.outboundExpirationLimit_.isEmpty()) {
         if (outboundExpirationLimit_.isEmpty()) {
           outboundExpirationLimit_ = other.outboundExpirationLimit_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          outboundExpirationLimit_.makeImmutable();
+          bitField0_ |= 0x00000001;
         } else {
           ensureOutboundExpirationLimitIsMutable();
           outboundExpirationLimit_.addAll(other.outboundExpirationLimit_);
@@ -623,7 +620,8 @@ private static final long serialVersionUID = 0L;
       if (!other.inboundExpirationLimit_.isEmpty()) {
         if (inboundExpirationLimit_.isEmpty()) {
           inboundExpirationLimit_ = other.inboundExpirationLimit_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          inboundExpirationLimit_.makeImmutable();
+          bitField0_ |= 0x00000002;
         } else {
           ensureInboundExpirationLimitIsMutable();
           inboundExpirationLimit_.addAll(other.inboundExpirationLimit_);
@@ -633,7 +631,8 @@ private static final long serialVersionUID = 0L;
       if (!other.manualDialExpirationLimit_.isEmpty()) {
         if (manualDialExpirationLimit_.isEmpty()) {
           manualDialExpirationLimit_ = other.manualDialExpirationLimit_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          manualDialExpirationLimit_.makeImmutable();
+          bitField0_ |= 0x00000004;
         } else {
           ensureManualDialExpirationLimitIsMutable();
           manualDialExpirationLimit_.addAll(other.manualDialExpirationLimit_);
@@ -643,7 +642,8 @@ private static final long serialVersionUID = 0L;
       if (!other.previewDialExpirationLimit_.isEmpty()) {
         if (previewDialExpirationLimit_.isEmpty()) {
           previewDialExpirationLimit_ = other.previewDialExpirationLimit_;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          previewDialExpirationLimit_.makeImmutable();
+          bitField0_ |= 0x00000008;
         } else {
           ensurePreviewDialExpirationLimitIsMutable();
           previewDialExpirationLimit_.addAll(other.previewDialExpirationLimit_);
@@ -759,10 +759,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList outboundExpirationLimit_ = emptyLongList();
     private void ensureOutboundExpirationLimitIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
-        outboundExpirationLimit_ = mutableCopy(outboundExpirationLimit_);
-        bitField0_ |= 0x00000001;
+      if (!outboundExpirationLimit_.isModifiable()) {
+        outboundExpirationLimit_ = makeMutableCopy(outboundExpirationLimit_);
       }
+      bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
@@ -774,8 +774,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getOutboundExpirationLimitList() {
-      return ((bitField0_ & 0x00000001) != 0) ?
-               java.util.Collections.unmodifiableList(outboundExpirationLimit_) : outboundExpirationLimit_;
+      outboundExpirationLimit_.makeImmutable();
+      return outboundExpirationLimit_;
     }
     /**
      * <pre>
@@ -815,6 +815,7 @@ private static final long serialVersionUID = 0L;
 
       ensureOutboundExpirationLimitIsMutable();
       outboundExpirationLimit_.setLong(index, value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -831,6 +832,7 @@ private static final long serialVersionUID = 0L;
 
       ensureOutboundExpirationLimitIsMutable();
       outboundExpirationLimit_.addLong(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -848,6 +850,7 @@ private static final long serialVersionUID = 0L;
       ensureOutboundExpirationLimitIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, outboundExpirationLimit_);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -868,10 +871,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList inboundExpirationLimit_ = emptyLongList();
     private void ensureInboundExpirationLimitIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
-        inboundExpirationLimit_ = mutableCopy(inboundExpirationLimit_);
-        bitField0_ |= 0x00000002;
+      if (!inboundExpirationLimit_.isModifiable()) {
+        inboundExpirationLimit_ = makeMutableCopy(inboundExpirationLimit_);
       }
+      bitField0_ |= 0x00000002;
     }
     /**
      * <pre>
@@ -883,8 +886,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getInboundExpirationLimitList() {
-      return ((bitField0_ & 0x00000002) != 0) ?
-               java.util.Collections.unmodifiableList(inboundExpirationLimit_) : inboundExpirationLimit_;
+      inboundExpirationLimit_.makeImmutable();
+      return inboundExpirationLimit_;
     }
     /**
      * <pre>
@@ -924,6 +927,7 @@ private static final long serialVersionUID = 0L;
 
       ensureInboundExpirationLimitIsMutable();
       inboundExpirationLimit_.setLong(index, value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -940,6 +944,7 @@ private static final long serialVersionUID = 0L;
 
       ensureInboundExpirationLimitIsMutable();
       inboundExpirationLimit_.addLong(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -957,6 +962,7 @@ private static final long serialVersionUID = 0L;
       ensureInboundExpirationLimitIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, inboundExpirationLimit_);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -977,10 +983,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList manualDialExpirationLimit_ = emptyLongList();
     private void ensureManualDialExpirationLimitIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
-        manualDialExpirationLimit_ = mutableCopy(manualDialExpirationLimit_);
-        bitField0_ |= 0x00000004;
+      if (!manualDialExpirationLimit_.isModifiable()) {
+        manualDialExpirationLimit_ = makeMutableCopy(manualDialExpirationLimit_);
       }
+      bitField0_ |= 0x00000004;
     }
     /**
      * <pre>
@@ -992,8 +998,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getManualDialExpirationLimitList() {
-      return ((bitField0_ & 0x00000004) != 0) ?
-               java.util.Collections.unmodifiableList(manualDialExpirationLimit_) : manualDialExpirationLimit_;
+      manualDialExpirationLimit_.makeImmutable();
+      return manualDialExpirationLimit_;
     }
     /**
      * <pre>
@@ -1033,6 +1039,7 @@ private static final long serialVersionUID = 0L;
 
       ensureManualDialExpirationLimitIsMutable();
       manualDialExpirationLimit_.setLong(index, value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1049,6 +1056,7 @@ private static final long serialVersionUID = 0L;
 
       ensureManualDialExpirationLimitIsMutable();
       manualDialExpirationLimit_.addLong(value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1066,6 +1074,7 @@ private static final long serialVersionUID = 0L;
       ensureManualDialExpirationLimitIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, manualDialExpirationLimit_);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1086,10 +1095,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList previewDialExpirationLimit_ = emptyLongList();
     private void ensurePreviewDialExpirationLimitIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
-        previewDialExpirationLimit_ = mutableCopy(previewDialExpirationLimit_);
-        bitField0_ |= 0x00000008;
+      if (!previewDialExpirationLimit_.isModifiable()) {
+        previewDialExpirationLimit_ = makeMutableCopy(previewDialExpirationLimit_);
       }
+      bitField0_ |= 0x00000008;
     }
     /**
      * <pre>
@@ -1101,8 +1110,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getPreviewDialExpirationLimitList() {
-      return ((bitField0_ & 0x00000008) != 0) ?
-               java.util.Collections.unmodifiableList(previewDialExpirationLimit_) : previewDialExpirationLimit_;
+      previewDialExpirationLimit_.makeImmutable();
+      return previewDialExpirationLimit_;
     }
     /**
      * <pre>
@@ -1142,6 +1151,7 @@ private static final long serialVersionUID = 0L;
 
       ensurePreviewDialExpirationLimitIsMutable();
       previewDialExpirationLimit_.setLong(index, value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1158,6 +1168,7 @@ private static final long serialVersionUID = 0L;
 
       ensurePreviewDialExpirationLimitIsMutable();
       previewDialExpirationLimit_.addLong(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1175,6 +1186,7 @@ private static final long serialVersionUID = 0L;
       ensurePreviewDialExpirationLimitIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, previewDialExpirationLimit_);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

@@ -38,6 +38,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactFieldStyle.class, com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactFieldStyle.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CONTACT_FIELD_DESCRIPTION_SID_FIELD_NUMBER = 1;
   private long contactFieldDescriptionSid_ = 0L;
   /**
@@ -57,7 +58,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTextColor() {
-    return textColor_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.api.v1alpha1.org.legacy.Color text_color = 2 [json_name = "textColor"];</code>
@@ -83,7 +84,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasBackgroundColor() {
-    return backgroundColor_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.api.v1alpha1.org.legacy.Color background_color = 3 [json_name = "backgroundColor"];</code>
@@ -118,10 +119,10 @@ private static final long serialVersionUID = 0L;
     if (contactFieldDescriptionSid_ != 0L) {
       output.writeInt64(1, contactFieldDescriptionSid_);
     }
-    if (textColor_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getTextColor());
     }
-    if (backgroundColor_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(3, getBackgroundColor());
     }
     getUnknownFields().writeTo(output);
@@ -137,11 +138,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, contactFieldDescriptionSid_);
     }
-    if (textColor_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getTextColor());
     }
-    if (backgroundColor_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getBackgroundColor());
     }
@@ -313,13 +314,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactFieldStyle.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getTextColorFieldBuilder();
+        getBackgroundColorFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -372,16 +380,20 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.contactFieldDescriptionSid_ = contactFieldDescriptionSid_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.textColor_ = textColorBuilder_ == null
             ? textColor_
             : textColorBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.backgroundColor_ = backgroundColorBuilder_ == null
             ? backgroundColor_
             : backgroundColorBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -597,8 +609,10 @@ private static final long serialVersionUID = 0L;
       } else {
         textColorBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (textColor_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -716,8 +730,10 @@ private static final long serialVersionUID = 0L;
       } else {
         backgroundColorBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (backgroundColor_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**

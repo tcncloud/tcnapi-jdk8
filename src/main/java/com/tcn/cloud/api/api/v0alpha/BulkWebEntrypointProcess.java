@@ -50,6 +50,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.BulkWebEntrypointProcess.class, com.tcn.cloud.api.api.v0alpha.BulkWebEntrypointProcess.Builder.class);
   }
 
+  private int bitField0_;
   public static final int PRELIMINARY_REQUESTS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.HttpReq> preliminaryRequests_;
@@ -140,7 +141,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPaginatedRequest() {
-    return paginatedRequest_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -452,7 +453,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < preliminaryRequests_.size(); i++) {
       output.writeMessage(2, preliminaryRequests_.get(i));
     }
-    if (paginatedRequest_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(4, getPaginatedRequest());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileTemplateId_)) {
@@ -492,7 +493,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, preliminaryRequests_.get(i));
     }
-    if (paginatedRequest_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getPaginatedRequest());
     }
@@ -727,13 +728,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.BulkWebEntrypointProcess.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getPreliminaryRequestsFieldBuilder();
+        getPaginatedRequestFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -805,10 +813,12 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.BulkWebEntrypointProcess result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.paginatedRequest_ = paginatedRequestBuilder_ == null
             ? paginatedRequest_
             : paginatedRequestBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.fileTemplateId_ = fileTemplateId_;
@@ -834,6 +844,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.flushDuringCheck_ = flushDuringCheck_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1506,8 +1517,10 @@ private static final long serialVersionUID = 0L;
       } else {
         paginatedRequestBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (paginatedRequest_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
