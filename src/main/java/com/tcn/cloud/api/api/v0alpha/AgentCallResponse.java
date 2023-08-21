@@ -38,6 +38,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.AgentCallResponse.class, com.tcn.cloud.api.api.v0alpha.AgentCallResponse.Builder.class);
   }
 
+  private int bitField0_;
   public static final int AGENT_CALL_RESPONSE_SID_FIELD_NUMBER = 1;
   private long agentCallResponseSid_ = 0L;
   /**
@@ -57,7 +58,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAgentCallSid() {
-    return agentCallSid_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.google.protobuf.Int64Value agent_call_sid = 2 [json_name = "agentCallSid"];</code>
@@ -83,7 +84,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasKey() {
-    return key_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.google.protobuf.StringValue key = 3 [json_name = "key"];</code>
@@ -109,7 +110,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasValue() {
-    return value_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <code>.google.protobuf.StringValue value = 4 [json_name = "value"];</code>
@@ -135,7 +136,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasOrder() {
-    return order_ != null;
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <code>.google.protobuf.Int32Value order = 5 [json_name = "order"];</code>
@@ -170,16 +171,16 @@ private static final long serialVersionUID = 0L;
     if (agentCallResponseSid_ != 0L) {
       output.writeInt64(1, agentCallResponseSid_);
     }
-    if (agentCallSid_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getAgentCallSid());
     }
-    if (key_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(3, getKey());
     }
-    if (value_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(4, getValue());
     }
-    if (order_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(5, getOrder());
     }
     getUnknownFields().writeTo(output);
@@ -195,19 +196,19 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, agentCallResponseSid_);
     }
-    if (agentCallSid_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getAgentCallSid());
     }
-    if (key_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getKey());
     }
-    if (value_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getValue());
     }
-    if (order_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getOrder());
     }
@@ -397,13 +398,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.AgentCallResponse.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getAgentCallSidFieldBuilder();
+        getKeyFieldBuilder();
+        getValueFieldBuilder();
+        getOrderFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -466,26 +476,32 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.agentCallResponseSid_ = agentCallResponseSid_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.agentCallSid_ = agentCallSidBuilder_ == null
             ? agentCallSid_
             : agentCallSidBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.key_ = keyBuilder_ == null
             ? key_
             : keyBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.value_ = valueBuilder_ == null
             ? value_
             : valueBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.order_ = orderBuilder_ == null
             ? order_
             : orderBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -721,8 +737,10 @@ private static final long serialVersionUID = 0L;
       } else {
         agentCallSidBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (agentCallSid_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -840,8 +858,10 @@ private static final long serialVersionUID = 0L;
       } else {
         keyBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (key_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -959,8 +979,10 @@ private static final long serialVersionUID = 0L;
       } else {
         valueBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (value_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1078,8 +1100,10 @@ private static final long serialVersionUID = 0L;
       } else {
         orderBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+      if (order_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       return this;
     }
     /**

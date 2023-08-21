@@ -41,6 +41,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.Field.class, com.tcn.cloud.api.api.v0alpha.Field.Builder.class);
   }
 
+  private int bitField0_;
   public static final int NAME_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
@@ -106,7 +107,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDateModified() {
-    return dateModified_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp date_modified = 5 [json_name = "dateModified"];</code>
@@ -132,7 +133,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasMetadata() {
-    return metadata_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.api.v0alpha.FieldMetadata metadata = 10 [json_name = "metadata"];</code>
@@ -209,10 +210,10 @@ private static final long serialVersionUID = 0L;
     if (type_ != com.tcn.cloud.api.api.commons.FieldType.FIELD_TYPE_STRING.getNumber()) {
       output.writeEnum(4, type_);
     }
-    if (dateModified_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(5, getDateModified());
     }
-    if (metadata_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(10, getMetadata());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
@@ -234,11 +235,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, type_);
     }
-    if (dateModified_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getDateModified());
     }
-    if (metadata_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getMetadata());
     }
@@ -419,13 +420,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.Field.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getDateModifiedFieldBuilder();
+        getMetadataFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -483,19 +491,23 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.type_ = type_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.dateModified_ = dateModifiedBuilder_ == null
             ? dateModified_
             : dateModifiedBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.metadata_ = metadataBuilder_ == null
             ? metadata_
             : metadataBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.description_ = description_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -824,8 +836,10 @@ private static final long serialVersionUID = 0L;
       } else {
         dateModifiedBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (dateModified_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -943,8 +957,10 @@ private static final long serialVersionUID = 0L;
       } else {
         metadataBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (metadata_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**

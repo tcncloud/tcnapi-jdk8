@@ -45,6 +45,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.AvailabilityBitmapSet.class, com.tcn.cloud.api.api.v1alpha1.wfm.AvailabilityBitmapSet.Builder.class);
   }
 
+  private int bitField0_;
   public static final int OWN_BITMAP_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> ownBitmap_;
@@ -291,7 +292,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasParentEntity() {
-    return parentEntity_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -353,7 +354,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < resultingBitmap_.size(); i++) {
       output.writeEnumNoTag(resultingBitmap_.get(i));
     }
-    if (parentEntity_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(4, getParentEntity());
     }
     getUnknownFields().writeTo(output);
@@ -401,7 +402,7 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }resultingBitmapMemoizedSerializedSize = dataSize;
     }
-    if (parentEntity_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getParentEntity());
     }
@@ -578,13 +579,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.AvailabilityBitmapSet.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getParentEntityFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -653,11 +660,14 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.AvailabilityBitmapSet result) {
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.parentEntity_ = parentEntityBuilder_ == null
             ? parentEntity_
             : parentEntityBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1488,8 +1498,10 @@ private static final long serialVersionUID = 0L;
       } else {
         parentEntityBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (parentEntity_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**

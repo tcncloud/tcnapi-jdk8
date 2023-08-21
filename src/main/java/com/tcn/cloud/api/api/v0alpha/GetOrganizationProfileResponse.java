@@ -56,6 +56,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileResponse.class, com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileResponse.Builder.class);
   }
 
+  private int bitField0_;
   public static final int ORG_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
@@ -288,7 +289,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAddDate() {
-    return addDate_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp add_date = 14 [json_name = "addDate"];</code>
@@ -436,7 +437,7 @@ com.tcn.cloud.api.api.v0alpha.RegionUrls defaultValue) {
     if (timezone_ != com.tcn.cloud.api.api.commons.TimeZone.TIME_ZONE_AMERICA_PUERTO_RICO.getNumber()) {
       output.writeEnum(10, timezone_);
     }
-    if (addDate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(14, getAddDate());
     }
     com.google.protobuf.GeneratedMessageV3
@@ -477,7 +478,7 @@ com.tcn.cloud.api.api.v0alpha.RegionUrls defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(10, timezone_);
     }
-    if (addDate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, getAddDate());
     }
@@ -701,13 +702,19 @@ com.tcn.cloud.api.api.v0alpha.RegionUrls defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileResponse.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getAddDateFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -780,15 +787,18 @@ com.tcn.cloud.api.api.v0alpha.RegionUrls defaultValue) {
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.timezone_ = timezone_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.addDate_ = addDateBuilder_ == null
             ? addDate_
             : addDateBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.allowedRegions_ = internalGetAllowedRegions();
         result.allowedRegions_.makeImmutable();
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1477,8 +1487,10 @@ com.tcn.cloud.api.api.v0alpha.RegionUrls defaultValue) {
       } else {
         addDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+      if (addDate_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       return this;
     }
     /**

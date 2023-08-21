@@ -39,6 +39,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.org.legacy.GetUserBlockedResponse.class, com.tcn.cloud.api.api.v1alpha1.org.legacy.GetUserBlockedResponse.Builder.class);
   }
 
+  private int bitField0_;
   public static final int BLOCKED_FIELD_NUMBER = 1;
   private boolean blocked_ = false;
   /**
@@ -97,7 +98,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastLogin() {
-    return lastLogin_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp last_login = 3 [json_name = "lastLogin"];</code>
@@ -123,7 +124,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastPasswordReset() {
-    return lastPasswordReset_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp last_password_reset = 4 [json_name = "lastPasswordReset"];</code>
@@ -160,7 +161,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCreatedAt() {
-    return createdAt_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp created_at = 6 [json_name = "createdAt"];</code>
@@ -186,7 +187,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasUpdatedAt() {
-    return updatedAt_ != null;
+    return ((bitField0_ & 0x00000008) != 0);
   }
   /**
    * <code>.google.protobuf.Timestamp updated_at = 7 [json_name = "updatedAt"];</code>
@@ -235,19 +236,19 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastIp_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, lastIp_);
     }
-    if (lastLogin_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(3, getLastLogin());
     }
-    if (lastPasswordReset_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(4, getLastPasswordReset());
     }
     if (loginsCount_ != 0L) {
       output.writeInt64(5, loginsCount_);
     }
-    if (createdAt_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(6, getCreatedAt());
     }
-    if (updatedAt_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(7, getUpdatedAt());
     }
     if (hasBlockedIps_ != false) {
@@ -269,11 +270,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastIp_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, lastIp_);
     }
-    if (lastLogin_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getLastLogin());
     }
-    if (lastPasswordReset_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getLastPasswordReset());
     }
@@ -281,11 +282,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(5, loginsCount_);
     }
-    if (createdAt_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getCreatedAt());
     }
-    if (updatedAt_ != null) {
+    if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getUpdatedAt());
     }
@@ -493,13 +494,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.GetUserBlockedResponse.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getLastLoginFieldBuilder();
+        getLastPasswordResetFieldBuilder();
+        getCreatedAtFieldBuilder();
+        getUpdatedAtFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -568,15 +578,18 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.lastIp_ = lastIp_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.lastLogin_ = lastLoginBuilder_ == null
             ? lastLogin_
             : lastLoginBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.lastPasswordReset_ = lastPasswordResetBuilder_ == null
             ? lastPasswordReset_
             : lastPasswordResetBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.loginsCount_ = loginsCount_;
@@ -585,15 +598,18 @@ private static final long serialVersionUID = 0L;
         result.createdAt_ = createdAtBuilder_ == null
             ? createdAt_
             : createdAtBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.updatedAt_ = updatedAtBuilder_ == null
             ? updatedAt_
             : updatedAtBuilder_.build();
+        to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.hasBlockedIps_ = hasBlockedIps_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -927,8 +943,10 @@ private static final long serialVersionUID = 0L;
       } else {
         lastLoginBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (lastLogin_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1046,8 +1064,10 @@ private static final long serialVersionUID = 0L;
       } else {
         lastPasswordResetBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+      if (lastPasswordReset_ != null) {
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1197,8 +1217,10 @@ private static final long serialVersionUID = 0L;
       } else {
         createdAtBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (createdAt_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1316,8 +1338,10 @@ private static final long serialVersionUID = 0L;
       } else {
         updatedAtBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (updatedAt_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
     /**

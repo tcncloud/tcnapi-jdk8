@@ -45,7 +45,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int WFM_AGENT_SIDS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList wfmAgentSids_;
+  private com.google.protobuf.Internal.LongList wfmAgentSids_ =
+      emptyLongList();
   /**
    * <pre>
    * ID of the wfm agents to delete the association of.
@@ -351,22 +352,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq result) {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        wfmAgentSids_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.wfmAgentSids_ = wfmAgentSids_;
-    }
-
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        wfmAgentSids_.makeImmutable();
+        result.wfmAgentSids_ = wfmAgentSids_;
+      }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.agentGroupSid_ = agentGroupSid_;
       }
@@ -419,7 +415,8 @@ private static final long serialVersionUID = 0L;
       if (!other.wfmAgentSids_.isEmpty()) {
         if (wfmAgentSids_.isEmpty()) {
           wfmAgentSids_ = other.wfmAgentSids_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          wfmAgentSids_.makeImmutable();
+          bitField0_ |= 0x00000001;
         } else {
           ensureWfmAgentSidsIsMutable();
           wfmAgentSids_.addAll(other.wfmAgentSids_);
@@ -495,10 +492,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList wfmAgentSids_ = emptyLongList();
     private void ensureWfmAgentSidsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
-        wfmAgentSids_ = mutableCopy(wfmAgentSids_);
-        bitField0_ |= 0x00000001;
+      if (!wfmAgentSids_.isModifiable()) {
+        wfmAgentSids_ = makeMutableCopy(wfmAgentSids_);
       }
+      bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
@@ -510,8 +507,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getWfmAgentSidsList() {
-      return ((bitField0_ & 0x00000001) != 0) ?
-               java.util.Collections.unmodifiableList(wfmAgentSids_) : wfmAgentSids_;
+      wfmAgentSids_.makeImmutable();
+      return wfmAgentSids_;
     }
     /**
      * <pre>
@@ -551,6 +548,7 @@ private static final long serialVersionUID = 0L;
 
       ensureWfmAgentSidsIsMutable();
       wfmAgentSids_.setLong(index, value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -567,6 +565,7 @@ private static final long serialVersionUID = 0L;
 
       ensureWfmAgentSidsIsMutable();
       wfmAgentSids_.addLong(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -584,6 +583,7 @@ private static final long serialVersionUID = 0L;
       ensureWfmAgentSidsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, wfmAgentSids_);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

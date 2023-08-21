@@ -84,7 +84,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int SKILL_SIDS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.LongList skillSids_;
+  private com.google.protobuf.Internal.LongList skillSids_ =
+      emptyLongList();
   /**
    * <code>repeated int64 skill_sids = 2 [json_name = "skillSids"];</code>
    * @return A list containing the skillSids.
@@ -369,18 +370,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentReq result = new com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentReq(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentReq result) {
-      if (((bitField0_ & 0x00000002) != 0)) {
-        skillSids_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.skillSids_ = skillSids_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.MultiAgentSkillUnassignmentReq result) {
@@ -388,6 +380,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         userIds_.makeImmutable();
         result.userIds_ = userIds_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        skillSids_.makeImmutable();
+        result.skillSids_ = skillSids_;
       }
     }
 
@@ -448,7 +444,8 @@ private static final long serialVersionUID = 0L;
       if (!other.skillSids_.isEmpty()) {
         if (skillSids_.isEmpty()) {
           skillSids_ = other.skillSids_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          skillSids_.makeImmutable();
+          bitField0_ |= 0x00000002;
         } else {
           ensureSkillSidsIsMutable();
           skillSids_.addAll(other.skillSids_);
@@ -633,10 +630,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList skillSids_ = emptyLongList();
     private void ensureSkillSidsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
-        skillSids_ = mutableCopy(skillSids_);
-        bitField0_ |= 0x00000002;
+      if (!skillSids_.isModifiable()) {
+        skillSids_ = makeMutableCopy(skillSids_);
       }
+      bitField0_ |= 0x00000002;
     }
     /**
      * <code>repeated int64 skill_sids = 2 [json_name = "skillSids"];</code>
@@ -644,8 +641,8 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getSkillSidsList() {
-      return ((bitField0_ & 0x00000002) != 0) ?
-               java.util.Collections.unmodifiableList(skillSids_) : skillSids_;
+      skillSids_.makeImmutable();
+      return skillSids_;
     }
     /**
      * <code>repeated int64 skill_sids = 2 [json_name = "skillSids"];</code>
@@ -673,6 +670,7 @@ private static final long serialVersionUID = 0L;
 
       ensureSkillSidsIsMutable();
       skillSids_.setLong(index, value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -685,6 +683,7 @@ private static final long serialVersionUID = 0L;
 
       ensureSkillSidsIsMutable();
       skillSids_.addLong(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -698,6 +697,7 @@ private static final long serialVersionUID = 0L;
       ensureSkillSidsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, skillSids_);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

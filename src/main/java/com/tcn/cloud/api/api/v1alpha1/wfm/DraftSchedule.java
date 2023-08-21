@@ -47,6 +47,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.DraftSchedule.class, com.tcn.cloud.api.api.v1alpha1.wfm.DraftSchedule.Builder.class);
   }
 
+  private int bitField0_;
   public static final int DRAFT_SCHEDULE_SID_FIELD_NUMBER = 1;
   private long draftScheduleSid_ = 0L;
   /**
@@ -74,7 +75,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCreatedAt() {
-    return createdAt_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -112,7 +113,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasLastUpdatedAt() {
-    return lastUpdatedAt_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -246,7 +247,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDatetimeRange() {
-    return datetimeRange_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -482,10 +483,10 @@ private static final long serialVersionUID = 0L;
     if (draftScheduleSid_ != 0L) {
       output.writeInt64(1, draftScheduleSid_);
     }
-    if (createdAt_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getCreatedAt());
     }
-    if (lastUpdatedAt_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(3, getLastUpdatedAt());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
@@ -494,7 +495,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
     }
-    if (datetimeRange_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(6, getDatetimeRange());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdByUserId_)) {
@@ -522,11 +523,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, draftScheduleSid_);
     }
-    if (createdAt_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getCreatedAt());
     }
-    if (lastUpdatedAt_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getLastUpdatedAt());
     }
@@ -536,7 +537,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
     }
-    if (datetimeRange_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getDatetimeRange());
     }
@@ -765,13 +766,23 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.DraftSchedule.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getCreatedAtFieldBuilder();
+        getLastUpdatedAtFieldBuilder();
+        getDatetimeRangeFieldBuilder();
+        getShiftInstancesFieldBuilder();
+        getPerformanceMetricsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -869,15 +880,18 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.draftScheduleSid_ = draftScheduleSid_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.createdAt_ = createdAtBuilder_ == null
             ? createdAt_
             : createdAtBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.lastUpdatedAt_ = lastUpdatedAtBuilder_ == null
             ? lastUpdatedAt_
             : lastUpdatedAtBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.name_ = name_;
@@ -889,6 +903,7 @@ private static final long serialVersionUID = 0L;
         result.datetimeRange_ = datetimeRangeBuilder_ == null
             ? datetimeRange_
             : datetimeRangeBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.createdByUserId_ = createdByUserId_;
@@ -896,6 +911,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.scheduleScenarioSid_ = scheduleScenarioSid_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1269,8 +1285,10 @@ private static final long serialVersionUID = 0L;
       } else {
         createdAtBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (createdAt_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1424,8 +1442,10 @@ private static final long serialVersionUID = 0L;
       } else {
         lastUpdatedAtBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+      if (lastUpdatedAt_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1773,8 +1793,10 @@ private static final long serialVersionUID = 0L;
       } else {
         datetimeRangeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (datetimeRange_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**

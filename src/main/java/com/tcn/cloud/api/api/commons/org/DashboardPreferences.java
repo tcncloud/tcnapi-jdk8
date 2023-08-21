@@ -44,6 +44,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.org.DashboardPreferences.class, com.tcn.cloud.api.api.commons.org.DashboardPreferences.Builder.class);
   }
 
+  private int bitField0_;
   public static final int ORG_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orgId_ = "";
@@ -193,7 +194,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDefaultCallTypes() {
-    return defaultCallTypes_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -257,7 +258,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasDefaultBargeInFiltering() {
-    return defaultBargeInFiltering_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -318,13 +319,13 @@ private static final long serialVersionUID = 0L;
     if (tableTemplateSid_ != 0L) {
       output.writeInt64(15, tableTemplateSid_);
     }
-    if (defaultCallTypes_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(16, getDefaultCallTypes());
     }
     if (defaultInfoSortByValue_ != com.tcn.cloud.api.api.commons.AgentInfoSortBy.AGENT_INFO_SORT_BY_NONE.getNumber()) {
       output.writeEnum(17, defaultInfoSortByValue_);
     }
-    if (defaultBargeInFiltering_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(18, getDefaultBargeInFiltering());
     }
     getUnknownFields().writeTo(output);
@@ -363,7 +364,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(15, tableTemplateSid_);
     }
-    if (defaultCallTypes_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(16, getDefaultCallTypes());
     }
@@ -371,7 +372,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(17, defaultInfoSortByValue_);
     }
-    if (defaultBargeInFiltering_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(18, getDefaultBargeInFiltering());
     }
@@ -579,13 +580,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.org.DashboardPreferences.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getDefaultCallTypesFieldBuilder();
+        getDefaultBargeInFilteringFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -663,10 +671,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.tableTemplateSid_ = tableTemplateSid_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.defaultCallTypes_ = defaultCallTypesBuilder_ == null
             ? defaultCallTypes_
             : defaultCallTypesBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.defaultInfoSortByValue_ = defaultInfoSortByValue_;
@@ -675,7 +685,9 @@ private static final long serialVersionUID = 0L;
         result.defaultBargeInFiltering_ = defaultBargeInFilteringBuilder_ == null
             ? defaultBargeInFiltering_
             : defaultBargeInFilteringBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1293,8 +1305,10 @@ private static final long serialVersionUID = 0L;
       } else {
         defaultCallTypesBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+      if (defaultCallTypes_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1521,8 +1535,10 @@ private static final long serialVersionUID = 0L;
       } else {
         defaultBargeInFilteringBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000200;
-      onChanged();
+      if (defaultBargeInFiltering_ != null) {
+        bitField0_ |= 0x00000200;
+        onChanged();
+      }
       return this;
     }
     /**

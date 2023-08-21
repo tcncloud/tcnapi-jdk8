@@ -1519,6 +1519,7 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  private int bitField0_;
   public static final int USER_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object userId_ = "";
@@ -1734,7 +1735,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasHuntGroup() {
-    return huntGroup_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -1955,7 +1956,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasP3PermissionGroup() {
-    return p3PermissionGroup_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -1993,7 +1994,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAgentProfileGroup() {
-    return agentProfileGroup_ != null;
+    return ((bitField0_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -2121,7 +2122,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, orgName_);
     }
-    if (huntGroup_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(5, getHuntGroup());
     }
     for (int i = 0; i < labels_.size(); i++) {
@@ -2133,10 +2134,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < permissionGroups_.size(); i++) {
       output.writeMessage(8, permissionGroups_.get(i));
     }
-    if (p3PermissionGroup_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(9, getP3PermissionGroup());
     }
-    if (agentProfileGroup_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(10, getAgentProfileGroup());
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
@@ -2170,7 +2171,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, orgName_);
     }
-    if (huntGroup_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getHuntGroup());
     }
@@ -2186,11 +2187,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, permissionGroups_.get(i));
     }
-    if (p3PermissionGroup_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, getP3PermissionGroup());
     }
-    if (agentProfileGroup_ != null) {
+    if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getAgentProfileGroup());
     }
@@ -2431,13 +2432,25 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.GetUserByOrgIdResponse.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getHuntGroupFieldBuilder();
+        getLabelsFieldBuilder();
+        getSkillsFieldBuilder();
+        getPermissionGroupsFieldBuilder();
+        getP3PermissionGroupFieldBuilder();
+        getAgentProfileGroupFieldBuilder();
+        getTrustsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -2580,24 +2593,29 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.orgName_ = orgName_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.huntGroup_ = huntGroupBuilder_ == null
             ? huntGroup_
             : huntGroupBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.p3PermissionGroup_ = p3PermissionGroupBuilder_ == null
             ? p3PermissionGroup_
             : p3PermissionGroupBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.agentProfileGroup_ = agentProfileGroupBuilder_ == null
             ? agentProfileGroup_
             : agentProfileGroupBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.accountOwner_ = accountOwner_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -3427,8 +3445,10 @@ private static final long serialVersionUID = 0L;
       } else {
         huntGroupBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (huntGroup_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -4518,8 +4538,10 @@ private static final long serialVersionUID = 0L;
       } else {
         p3PermissionGroupBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000200;
-      onChanged();
+      if (p3PermissionGroup_ != null) {
+        bitField0_ |= 0x00000200;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -4673,8 +4695,10 @@ private static final long serialVersionUID = 0L;
       } else {
         agentProfileGroupBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000400;
-      onChanged();
+      if (agentProfileGroup_ != null) {
+        bitField0_ |= 0x00000400;
+        onChanged();
+      }
       return this;
     }
     /**

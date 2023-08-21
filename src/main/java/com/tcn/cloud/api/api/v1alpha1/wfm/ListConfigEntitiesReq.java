@@ -43,6 +43,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesReq.class, com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesReq.Builder.class);
   }
 
+  private int bitField0_;
   public static final int ENTITY_TYPE_FIELD_NUMBER = 1;
   private int entityType_ = 0;
   /**
@@ -81,7 +82,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasBelongsToEntity() {
-    return belongsToEntity_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -171,7 +172,7 @@ private static final long serialVersionUID = 0L;
     if (entityType_ != com.tcn.cloud.api.api.commons.ConfigEntityType.CALL_CENTER_NODE.getNumber()) {
       output.writeEnum(1, entityType_);
     }
-    if (belongsToEntity_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getBelongsToEntity());
     }
     if (includeInactive_ != false) {
@@ -196,7 +197,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, entityType_);
     }
-    if (belongsToEntity_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getBelongsToEntity());
     }
@@ -387,13 +388,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getBelongsToEntityFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -444,10 +451,12 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.entityType_ = entityType_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.belongsToEntity_ = belongsToEntityBuilder_ == null
             ? belongsToEntity_
             : belongsToEntityBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.includeInactive_ = includeInactive_;
@@ -458,6 +467,7 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.scheduleScenarioSid_ = scheduleScenarioSid_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -748,8 +758,10 @@ private static final long serialVersionUID = 0L;
       } else {
         belongsToEntityBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      if (belongsToEntity_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       return this;
     }
     /**

@@ -46,6 +46,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.ConsentCondition.class, com.tcn.cloud.api.api.commons.ConsentCondition.Builder.class);
   }
 
+  private int bitField0_;
   public static final int CONSENT_CONDITION_ID_FIELD_NUMBER = 1;
   private long consentConditionId_ = 0L;
   /**
@@ -260,7 +261,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasFromDate() {
-    return fromDate_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -298,7 +299,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasToDate() {
-    return toDate_ != null;
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -358,10 +359,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeOfDayTo_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, timeOfDayTo_);
     }
-    if (fromDate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(13, getFromDate());
     }
-    if (toDate_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(14, getToDate());
     }
     getUnknownFields().writeTo(output);
@@ -399,11 +400,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeOfDayTo_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, timeOfDayTo_);
     }
-    if (fromDate_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, getFromDate());
     }
-    if (toDate_ != null) {
+    if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, getToDate());
     }
@@ -598,13 +599,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.ConsentCondition.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getFromDateFieldBuilder();
+        getToDateFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -680,16 +688,20 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.timeOfDayTo_ = timeOfDayTo_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.fromDate_ = fromDateBuilder_ == null
             ? fromDate_
             : fromDateBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.toDate_ = toDateBuilder_ == null
             ? toDate_
             : toDateBuilder_.build();
+        to_bitField0_ |= 0x00000002;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1408,8 +1420,10 @@ private static final long serialVersionUID = 0L;
       } else {
         fromDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (fromDate_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**
@@ -1563,8 +1577,10 @@ private static final long serialVersionUID = 0L;
       } else {
         toDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+      if (toDate_ != null) {
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       return this;
     }
     /**

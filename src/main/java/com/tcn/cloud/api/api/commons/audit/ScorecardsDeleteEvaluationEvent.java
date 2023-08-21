@@ -44,6 +44,7 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteEvaluationEvent.class, com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteEvaluationEvent.Builder.class);
   }
 
+  private int bitField0_;
   public static final int EVALUATION_ID_FIELD_NUMBER = 1;
   private long evaluationId_ = 0L;
   /**
@@ -195,7 +196,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEvaluation() {
-    return evaluation_ != null;
+    return ((bitField0_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -250,7 +251,7 @@ private static final long serialVersionUID = 0L;
     if (callSid_ != 0L) {
       output.writeInt64(5, callSid_);
     }
-    if (evaluation_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(6, getEvaluation());
     }
     getUnknownFields().writeTo(output);
@@ -280,7 +281,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(5, callSid_);
     }
-    if (evaluation_ != null) {
+    if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getEvaluation());
     }
@@ -465,13 +466,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteEvaluationEvent.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getEvaluationFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -535,11 +542,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.callSid_ = callSid_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.evaluation_ = evaluationBuilder_ == null
             ? evaluation_
             : evaluationBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1085,8 +1095,10 @@ private static final long serialVersionUID = 0L;
       } else {
         evaluationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+      if (evaluation_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       return this;
     }
     /**
