@@ -64,6 +64,9 @@ private static final long serialVersionUID = 0L;
     OMNI_SET_SKILL(202),
     OMNI_TO_AGENT(203),
     OMNI_ERROR(204),
+    OMNI_WEBHOOK(210),
+    OMNI_SCRUBLIST(211),
+    OMNI_END_CONVERSATION(212),
     @java.lang.Deprecated OMNI_BOT_TEST_START(301),
     @java.lang.Deprecated OMNI_BOT_TEST_STEP(302),
     @java.lang.Deprecated OMNI_BOT_TEST_END(303),
@@ -97,6 +100,9 @@ private static final long serialVersionUID = 0L;
         case 202: return OMNI_SET_SKILL;
         case 203: return OMNI_TO_AGENT;
         case 204: return OMNI_ERROR;
+        case 210: return OMNI_WEBHOOK;
+        case 211: return OMNI_SCRUBLIST;
+        case 212: return OMNI_END_CONVERSATION;
         case 301: return OMNI_BOT_TEST_START;
         case 302: return OMNI_BOT_TEST_STEP;
         case 303: return OMNI_BOT_TEST_END;
@@ -629,11 +635,104 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.workflows.OmniNodeError.getDefaultInstance();
   }
 
+  public static final int OMNI_WEBHOOK_FIELD_NUMBER = 210;
+  /**
+   * <code>.api.commons.workflows.OmniNodeWebhook omni_webhook = 210 [json_name = "omniWebhook"];</code>
+   * @return Whether the omniWebhook field is set.
+   */
+  @java.lang.Override
+  public boolean hasOmniWebhook() {
+    return definitionCase_ == 210;
+  }
+  /**
+   * <code>.api.commons.workflows.OmniNodeWebhook omni_webhook = 210 [json_name = "omniWebhook"];</code>
+   * @return The omniWebhook.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook getOmniWebhook() {
+    if (definitionCase_ == 210) {
+       return (com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.workflows.OmniNodeWebhook omni_webhook = 210 [json_name = "omniWebhook"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhookOrBuilder getOmniWebhookOrBuilder() {
+    if (definitionCase_ == 210) {
+       return (com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook.getDefaultInstance();
+  }
+
+  public static final int OMNI_SCRUBLIST_FIELD_NUMBER = 211;
+  /**
+   * <code>.api.commons.workflows.OmniNodeScrublist omni_scrublist = 211 [json_name = "omniScrublist"];</code>
+   * @return Whether the omniScrublist field is set.
+   */
+  @java.lang.Override
+  public boolean hasOmniScrublist() {
+    return definitionCase_ == 211;
+  }
+  /**
+   * <code>.api.commons.workflows.OmniNodeScrublist omni_scrublist = 211 [json_name = "omniScrublist"];</code>
+   * @return The omniScrublist.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist getOmniScrublist() {
+    if (definitionCase_ == 211) {
+       return (com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.workflows.OmniNodeScrublist omni_scrublist = 211 [json_name = "omniScrublist"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublistOrBuilder getOmniScrublistOrBuilder() {
+    if (definitionCase_ == 211) {
+       return (com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist.getDefaultInstance();
+  }
+
+  public static final int OMNI_END_CONVERSATION_FIELD_NUMBER = 212;
+  /**
+   * <code>.api.commons.workflows.OmniNodeEndConversation omni_end_conversation = 212 [json_name = "omniEndConversation"];</code>
+   * @return Whether the omniEndConversation field is set.
+   */
+  @java.lang.Override
+  public boolean hasOmniEndConversation() {
+    return definitionCase_ == 212;
+  }
+  /**
+   * <code>.api.commons.workflows.OmniNodeEndConversation omni_end_conversation = 212 [json_name = "omniEndConversation"];</code>
+   * @return The omniEndConversation.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation getOmniEndConversation() {
+    if (definitionCase_ == 212) {
+       return (com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.workflows.OmniNodeEndConversation omni_end_conversation = 212 [json_name = "omniEndConversation"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversationOrBuilder getOmniEndConversationOrBuilder() {
+    if (definitionCase_ == 212) {
+       return (com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation) definition_;
+    }
+    return com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation.getDefaultInstance();
+  }
+
   public static final int OMNI_BOT_TEST_START_FIELD_NUMBER = 301;
   /**
    * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart", deprecated = true];</code>
    * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_start is deprecated.
-   *     See api/commons/workflows/nodes.proto;l=32
+   *     See api/commons/workflows/nodes.proto;l=35
    * @return Whether the omniBotTestStart field is set.
    */
   @java.lang.Override
@@ -643,7 +742,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart", deprecated = true];</code>
    * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_start is deprecated.
-   *     See api/commons/workflows/nodes.proto;l=32
+   *     See api/commons/workflows/nodes.proto;l=35
    * @return The omniBotTestStart.
    */
   @java.lang.Override
@@ -668,7 +767,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep", deprecated = true];</code>
    * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_step is deprecated.
-   *     See api/commons/workflows/nodes.proto;l=33
+   *     See api/commons/workflows/nodes.proto;l=36
    * @return Whether the omniBotTestStep field is set.
    */
   @java.lang.Override
@@ -678,7 +777,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep", deprecated = true];</code>
    * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_step is deprecated.
-   *     See api/commons/workflows/nodes.proto;l=33
+   *     See api/commons/workflows/nodes.proto;l=36
    * @return The omniBotTestStep.
    */
   @java.lang.Override
@@ -703,7 +802,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd", deprecated = true];</code>
    * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_end is deprecated.
-   *     See api/commons/workflows/nodes.proto;l=34
+   *     See api/commons/workflows/nodes.proto;l=37
    * @return Whether the omniBotTestEnd field is set.
    */
   @java.lang.Override
@@ -713,7 +812,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd", deprecated = true];</code>
    * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_end is deprecated.
-   *     See api/commons/workflows/nodes.proto;l=34
+   *     See api/commons/workflows/nodes.proto;l=37
    * @return The omniBotTestEnd.
    */
   @java.lang.Override
@@ -883,6 +982,15 @@ private static final long serialVersionUID = 0L;
     if (definitionCase_ == 204) {
       output.writeMessage(204, (com.tcn.cloud.api.api.commons.workflows.OmniNodeError) definition_);
     }
+    if (definitionCase_ == 210) {
+      output.writeMessage(210, (com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook) definition_);
+    }
+    if (definitionCase_ == 211) {
+      output.writeMessage(211, (com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist) definition_);
+    }
+    if (definitionCase_ == 212) {
+      output.writeMessage(212, (com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation) definition_);
+    }
     if (definitionCase_ == 301) {
       output.writeMessage(301, (com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart) definition_);
     }
@@ -968,6 +1076,18 @@ private static final long serialVersionUID = 0L;
     if (definitionCase_ == 204) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(204, (com.tcn.cloud.api.api.commons.workflows.OmniNodeError) definition_);
+    }
+    if (definitionCase_ == 210) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(210, (com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook) definition_);
+    }
+    if (definitionCase_ == 211) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(211, (com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist) definition_);
+    }
+    if (definitionCase_ == 212) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(212, (com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation) definition_);
     }
     if (definitionCase_ == 301) {
       size += com.google.protobuf.CodedOutputStream
@@ -1064,6 +1184,18 @@ private static final long serialVersionUID = 0L;
         if (!getOmniError()
             .equals(other.getOmniError())) return false;
         break;
+      case 210:
+        if (!getOmniWebhook()
+            .equals(other.getOmniWebhook())) return false;
+        break;
+      case 211:
+        if (!getOmniScrublist()
+            .equals(other.getOmniScrublist())) return false;
+        break;
+      case 212:
+        if (!getOmniEndConversation()
+            .equals(other.getOmniEndConversation())) return false;
+        break;
       case 301:
         if (!getOmniBotTestStart()
             .equals(other.getOmniBotTestStart())) return false;
@@ -1154,6 +1286,18 @@ private static final long serialVersionUID = 0L;
       case 204:
         hash = (37 * hash) + OMNI_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getOmniError().hashCode();
+        break;
+      case 210:
+        hash = (37 * hash) + OMNI_WEBHOOK_FIELD_NUMBER;
+        hash = (53 * hash) + getOmniWebhook().hashCode();
+        break;
+      case 211:
+        hash = (37 * hash) + OMNI_SCRUBLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getOmniScrublist().hashCode();
+        break;
+      case 212:
+        hash = (37 * hash) + OMNI_END_CONVERSATION_FIELD_NUMBER;
+        hash = (53 * hash) + getOmniEndConversation().hashCode();
         break;
       case 301:
         hash = (37 * hash) + OMNI_BOT_TEST_START_FIELD_NUMBER;
@@ -1353,6 +1497,15 @@ private static final long serialVersionUID = 0L;
       if (omniErrorBuilder_ != null) {
         omniErrorBuilder_.clear();
       }
+      if (omniWebhookBuilder_ != null) {
+        omniWebhookBuilder_.clear();
+      }
+      if (omniScrublistBuilder_ != null) {
+        omniScrublistBuilder_.clear();
+      }
+      if (omniEndConversationBuilder_ != null) {
+        omniEndConversationBuilder_.clear();
+      }
       if (omniBotTestStartBuilder_ != null) {
         omniBotTestStartBuilder_.clear();
       }
@@ -1467,6 +1620,18 @@ private static final long serialVersionUID = 0L;
       if (definitionCase_ == 204 &&
           omniErrorBuilder_ != null) {
         result.definition_ = omniErrorBuilder_.build();
+      }
+      if (definitionCase_ == 210 &&
+          omniWebhookBuilder_ != null) {
+        result.definition_ = omniWebhookBuilder_.build();
+      }
+      if (definitionCase_ == 211 &&
+          omniScrublistBuilder_ != null) {
+        result.definition_ = omniScrublistBuilder_.build();
+      }
+      if (definitionCase_ == 212 &&
+          omniEndConversationBuilder_ != null) {
+        result.definition_ = omniEndConversationBuilder_.build();
       }
       if (definitionCase_ == 301 &&
           omniBotTestStartBuilder_ != null) {
@@ -1607,6 +1772,18 @@ private static final long serialVersionUID = 0L;
         }
         case OMNI_ERROR: {
           mergeOmniError(other.getOmniError());
+          break;
+        }
+        case OMNI_WEBHOOK: {
+          mergeOmniWebhook(other.getOmniWebhook());
+          break;
+        }
+        case OMNI_SCRUBLIST: {
+          mergeOmniScrublist(other.getOmniScrublist());
+          break;
+        }
+        case OMNI_END_CONVERSATION: {
+          mergeOmniEndConversation(other.getOmniEndConversation());
           break;
         }
         case OMNI_BOT_TEST_START: {
@@ -1752,6 +1929,27 @@ private static final long serialVersionUID = 0L;
               definitionCase_ = 204;
               break;
             } // case 1634
+            case 1682: {
+              input.readMessage(
+                  getOmniWebhookFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              definitionCase_ = 210;
+              break;
+            } // case 1682
+            case 1690: {
+              input.readMessage(
+                  getOmniScrublistFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              definitionCase_ = 211;
+              break;
+            } // case 1690
+            case 1698: {
+              input.readMessage(
+                  getOmniEndConversationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              definitionCase_ = 212;
+              break;
+            } // case 1698
             case 2410: {
               input.readMessage(
                   getOmniBotTestStartFieldBuilder().getBuilder(),
@@ -3673,11 +3871,437 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook, com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook.Builder, com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhookOrBuilder> omniWebhookBuilder_;
+    /**
+     * <code>.api.commons.workflows.OmniNodeWebhook omni_webhook = 210 [json_name = "omniWebhook"];</code>
+     * @return Whether the omniWebhook field is set.
+     */
+    @java.lang.Override
+    public boolean hasOmniWebhook() {
+      return definitionCase_ == 210;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeWebhook omni_webhook = 210 [json_name = "omniWebhook"];</code>
+     * @return The omniWebhook.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook getOmniWebhook() {
+      if (omniWebhookBuilder_ == null) {
+        if (definitionCase_ == 210) {
+          return (com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook.getDefaultInstance();
+      } else {
+        if (definitionCase_ == 210) {
+          return omniWebhookBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeWebhook omni_webhook = 210 [json_name = "omniWebhook"];</code>
+     */
+    public Builder setOmniWebhook(com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook value) {
+      if (omniWebhookBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        definition_ = value;
+        onChanged();
+      } else {
+        omniWebhookBuilder_.setMessage(value);
+      }
+      definitionCase_ = 210;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeWebhook omni_webhook = 210 [json_name = "omniWebhook"];</code>
+     */
+    public Builder setOmniWebhook(
+        com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook.Builder builderForValue) {
+      if (omniWebhookBuilder_ == null) {
+        definition_ = builderForValue.build();
+        onChanged();
+      } else {
+        omniWebhookBuilder_.setMessage(builderForValue.build());
+      }
+      definitionCase_ = 210;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeWebhook omni_webhook = 210 [json_name = "omniWebhook"];</code>
+     */
+    public Builder mergeOmniWebhook(com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook value) {
+      if (omniWebhookBuilder_ == null) {
+        if (definitionCase_ == 210 &&
+            definition_ != com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook.getDefaultInstance()) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook.newBuilder((com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook) definition_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          definition_ = value;
+        }
+        onChanged();
+      } else {
+        if (definitionCase_ == 210) {
+          omniWebhookBuilder_.mergeFrom(value);
+        } else {
+          omniWebhookBuilder_.setMessage(value);
+        }
+      }
+      definitionCase_ = 210;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeWebhook omni_webhook = 210 [json_name = "omniWebhook"];</code>
+     */
+    public Builder clearOmniWebhook() {
+      if (omniWebhookBuilder_ == null) {
+        if (definitionCase_ == 210) {
+          definitionCase_ = 0;
+          definition_ = null;
+          onChanged();
+        }
+      } else {
+        if (definitionCase_ == 210) {
+          definitionCase_ = 0;
+          definition_ = null;
+        }
+        omniWebhookBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeWebhook omni_webhook = 210 [json_name = "omniWebhook"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook.Builder getOmniWebhookBuilder() {
+      return getOmniWebhookFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeWebhook omni_webhook = 210 [json_name = "omniWebhook"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhookOrBuilder getOmniWebhookOrBuilder() {
+      if ((definitionCase_ == 210) && (omniWebhookBuilder_ != null)) {
+        return omniWebhookBuilder_.getMessageOrBuilder();
+      } else {
+        if (definitionCase_ == 210) {
+          return (com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeWebhook omni_webhook = 210 [json_name = "omniWebhook"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook, com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook.Builder, com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhookOrBuilder> 
+        getOmniWebhookFieldBuilder() {
+      if (omniWebhookBuilder_ == null) {
+        if (!(definitionCase_ == 210)) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook.getDefaultInstance();
+        }
+        omniWebhookBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook, com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook.Builder, com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhookOrBuilder>(
+                (com.tcn.cloud.api.api.commons.workflows.OmniNodeWebhook) definition_,
+                getParentForChildren(),
+                isClean());
+        definition_ = null;
+      }
+      definitionCase_ = 210;
+      onChanged();
+      return omniWebhookBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist, com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist.Builder, com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublistOrBuilder> omniScrublistBuilder_;
+    /**
+     * <code>.api.commons.workflows.OmniNodeScrublist omni_scrublist = 211 [json_name = "omniScrublist"];</code>
+     * @return Whether the omniScrublist field is set.
+     */
+    @java.lang.Override
+    public boolean hasOmniScrublist() {
+      return definitionCase_ == 211;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeScrublist omni_scrublist = 211 [json_name = "omniScrublist"];</code>
+     * @return The omniScrublist.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist getOmniScrublist() {
+      if (omniScrublistBuilder_ == null) {
+        if (definitionCase_ == 211) {
+          return (com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist.getDefaultInstance();
+      } else {
+        if (definitionCase_ == 211) {
+          return omniScrublistBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeScrublist omni_scrublist = 211 [json_name = "omniScrublist"];</code>
+     */
+    public Builder setOmniScrublist(com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist value) {
+      if (omniScrublistBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        definition_ = value;
+        onChanged();
+      } else {
+        omniScrublistBuilder_.setMessage(value);
+      }
+      definitionCase_ = 211;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeScrublist omni_scrublist = 211 [json_name = "omniScrublist"];</code>
+     */
+    public Builder setOmniScrublist(
+        com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist.Builder builderForValue) {
+      if (omniScrublistBuilder_ == null) {
+        definition_ = builderForValue.build();
+        onChanged();
+      } else {
+        omniScrublistBuilder_.setMessage(builderForValue.build());
+      }
+      definitionCase_ = 211;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeScrublist omni_scrublist = 211 [json_name = "omniScrublist"];</code>
+     */
+    public Builder mergeOmniScrublist(com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist value) {
+      if (omniScrublistBuilder_ == null) {
+        if (definitionCase_ == 211 &&
+            definition_ != com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist.getDefaultInstance()) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist.newBuilder((com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist) definition_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          definition_ = value;
+        }
+        onChanged();
+      } else {
+        if (definitionCase_ == 211) {
+          omniScrublistBuilder_.mergeFrom(value);
+        } else {
+          omniScrublistBuilder_.setMessage(value);
+        }
+      }
+      definitionCase_ = 211;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeScrublist omni_scrublist = 211 [json_name = "omniScrublist"];</code>
+     */
+    public Builder clearOmniScrublist() {
+      if (omniScrublistBuilder_ == null) {
+        if (definitionCase_ == 211) {
+          definitionCase_ = 0;
+          definition_ = null;
+          onChanged();
+        }
+      } else {
+        if (definitionCase_ == 211) {
+          definitionCase_ = 0;
+          definition_ = null;
+        }
+        omniScrublistBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeScrublist omni_scrublist = 211 [json_name = "omniScrublist"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist.Builder getOmniScrublistBuilder() {
+      return getOmniScrublistFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeScrublist omni_scrublist = 211 [json_name = "omniScrublist"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublistOrBuilder getOmniScrublistOrBuilder() {
+      if ((definitionCase_ == 211) && (omniScrublistBuilder_ != null)) {
+        return omniScrublistBuilder_.getMessageOrBuilder();
+      } else {
+        if (definitionCase_ == 211) {
+          return (com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeScrublist omni_scrublist = 211 [json_name = "omniScrublist"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist, com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist.Builder, com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublistOrBuilder> 
+        getOmniScrublistFieldBuilder() {
+      if (omniScrublistBuilder_ == null) {
+        if (!(definitionCase_ == 211)) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist.getDefaultInstance();
+        }
+        omniScrublistBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist, com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist.Builder, com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublistOrBuilder>(
+                (com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublist) definition_,
+                getParentForChildren(),
+                isClean());
+        definition_ = null;
+      }
+      definitionCase_ = 211;
+      onChanged();
+      return omniScrublistBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation, com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation.Builder, com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversationOrBuilder> omniEndConversationBuilder_;
+    /**
+     * <code>.api.commons.workflows.OmniNodeEndConversation omni_end_conversation = 212 [json_name = "omniEndConversation"];</code>
+     * @return Whether the omniEndConversation field is set.
+     */
+    @java.lang.Override
+    public boolean hasOmniEndConversation() {
+      return definitionCase_ == 212;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeEndConversation omni_end_conversation = 212 [json_name = "omniEndConversation"];</code>
+     * @return The omniEndConversation.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation getOmniEndConversation() {
+      if (omniEndConversationBuilder_ == null) {
+        if (definitionCase_ == 212) {
+          return (com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation.getDefaultInstance();
+      } else {
+        if (definitionCase_ == 212) {
+          return omniEndConversationBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeEndConversation omni_end_conversation = 212 [json_name = "omniEndConversation"];</code>
+     */
+    public Builder setOmniEndConversation(com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation value) {
+      if (omniEndConversationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        definition_ = value;
+        onChanged();
+      } else {
+        omniEndConversationBuilder_.setMessage(value);
+      }
+      definitionCase_ = 212;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeEndConversation omni_end_conversation = 212 [json_name = "omniEndConversation"];</code>
+     */
+    public Builder setOmniEndConversation(
+        com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation.Builder builderForValue) {
+      if (omniEndConversationBuilder_ == null) {
+        definition_ = builderForValue.build();
+        onChanged();
+      } else {
+        omniEndConversationBuilder_.setMessage(builderForValue.build());
+      }
+      definitionCase_ = 212;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeEndConversation omni_end_conversation = 212 [json_name = "omniEndConversation"];</code>
+     */
+    public Builder mergeOmniEndConversation(com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation value) {
+      if (omniEndConversationBuilder_ == null) {
+        if (definitionCase_ == 212 &&
+            definition_ != com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation.getDefaultInstance()) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation.newBuilder((com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation) definition_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          definition_ = value;
+        }
+        onChanged();
+      } else {
+        if (definitionCase_ == 212) {
+          omniEndConversationBuilder_.mergeFrom(value);
+        } else {
+          omniEndConversationBuilder_.setMessage(value);
+        }
+      }
+      definitionCase_ = 212;
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeEndConversation omni_end_conversation = 212 [json_name = "omniEndConversation"];</code>
+     */
+    public Builder clearOmniEndConversation() {
+      if (omniEndConversationBuilder_ == null) {
+        if (definitionCase_ == 212) {
+          definitionCase_ = 0;
+          definition_ = null;
+          onChanged();
+        }
+      } else {
+        if (definitionCase_ == 212) {
+          definitionCase_ = 0;
+          definition_ = null;
+        }
+        omniEndConversationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeEndConversation omni_end_conversation = 212 [json_name = "omniEndConversation"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation.Builder getOmniEndConversationBuilder() {
+      return getOmniEndConversationFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeEndConversation omni_end_conversation = 212 [json_name = "omniEndConversation"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversationOrBuilder getOmniEndConversationOrBuilder() {
+      if ((definitionCase_ == 212) && (omniEndConversationBuilder_ != null)) {
+        return omniEndConversationBuilder_.getMessageOrBuilder();
+      } else {
+        if (definitionCase_ == 212) {
+          return (com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation) definition_;
+        }
+        return com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.workflows.OmniNodeEndConversation omni_end_conversation = 212 [json_name = "omniEndConversation"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation, com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation.Builder, com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversationOrBuilder> 
+        getOmniEndConversationFieldBuilder() {
+      if (omniEndConversationBuilder_ == null) {
+        if (!(definitionCase_ == 212)) {
+          definition_ = com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation.getDefaultInstance();
+        }
+        omniEndConversationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation, com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation.Builder, com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversationOrBuilder>(
+                (com.tcn.cloud.api.api.commons.workflows.OmniNodeEndConversation) definition_,
+                getParentForChildren(),
+                isClean());
+        definition_ = null;
+      }
+      definitionCase_ = 212;
+      onChanged();
+      return omniEndConversationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart, com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStart.Builder, com.tcn.cloud.api.api.commons.workflows.OmniBotNodeTestStartOrBuilder> omniBotTestStartBuilder_;
     /**
      * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart", deprecated = true];</code>
      * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_start is deprecated.
-     *     See api/commons/workflows/nodes.proto;l=32
+     *     See api/commons/workflows/nodes.proto;l=35
      * @return Whether the omniBotTestStart field is set.
      */
     @java.lang.Override
@@ -3687,7 +4311,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.workflows.OmniBotNodeTestStart omni_bot_test_start = 301 [json_name = "omniBotTestStart", deprecated = true];</code>
      * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_start is deprecated.
-     *     See api/commons/workflows/nodes.proto;l=32
+     *     See api/commons/workflows/nodes.proto;l=35
      * @return The omniBotTestStart.
      */
     @java.lang.Override
@@ -3823,7 +4447,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep", deprecated = true];</code>
      * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_step is deprecated.
-     *     See api/commons/workflows/nodes.proto;l=33
+     *     See api/commons/workflows/nodes.proto;l=36
      * @return Whether the omniBotTestStep field is set.
      */
     @java.lang.Override
@@ -3833,7 +4457,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.workflows.OmniBotNodeTestStep omni_bot_test_step = 302 [json_name = "omniBotTestStep", deprecated = true];</code>
      * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_step is deprecated.
-     *     See api/commons/workflows/nodes.proto;l=33
+     *     See api/commons/workflows/nodes.proto;l=36
      * @return The omniBotTestStep.
      */
     @java.lang.Override
@@ -3969,7 +4593,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd", deprecated = true];</code>
      * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_end is deprecated.
-     *     See api/commons/workflows/nodes.proto;l=34
+     *     See api/commons/workflows/nodes.proto;l=37
      * @return Whether the omniBotTestEnd field is set.
      */
     @java.lang.Override
@@ -3979,7 +4603,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.api.commons.workflows.OmniBotNodeTestEnd omni_bot_test_end = 303 [json_name = "omniBotTestEnd", deprecated = true];</code>
      * @deprecated api.commons.workflows.NodeDefinition.omni_bot_test_end is deprecated.
-     *     See api/commons/workflows/nodes.proto;l=34
+     *     See api/commons/workflows/nodes.proto;l=37
      * @return The omniBotTestEnd.
      */
     @java.lang.Override
