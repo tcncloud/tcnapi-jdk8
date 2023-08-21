@@ -9,30 +9,10 @@ public interface OmniNodeBranchingOrBuilder extends
 
   /**
    * <pre>
-   * an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
-   * </pre>
-   *
-   * <code>string options_id = 1 [json_name = "optionsId"];</code>
-   * @return The optionsId.
-   */
-  java.lang.String getOptionsId();
-  /**
-   * <pre>
-   * an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
-   * </pre>
-   *
-   * <code>string options_id = 1 [json_name = "optionsId"];</code>
-   * @return The bytes for optionsId.
-   */
-  com.google.protobuf.ByteString
-      getOptionsIdBytes();
-
-  /**
-   * <pre>
    * key of data stored in the payload to compare against the options (likely references an OmniNodeUserInput.store_id)
    * </pre>
    *
-   * <code>string store_id = 2 [json_name = "storeId"];</code>
+   * <code>string store_id = 1 [json_name = "storeId"];</code>
    * @return The storeId.
    */
   java.lang.String getStoreId();
@@ -41,7 +21,7 @@ public interface OmniNodeBranchingOrBuilder extends
    * key of data stored in the payload to compare against the options (likely references an OmniNodeUserInput.store_id)
    * </pre>
    *
-   * <code>string store_id = 2 [json_name = "storeId"];</code>
+   * <code>string store_id = 1 [json_name = "storeId"];</code>
    * @return The bytes for storeId.
    */
   com.google.protobuf.ByteString
@@ -52,7 +32,7 @@ public interface OmniNodeBranchingOrBuilder extends
    * the list of options to use for branching
    * </pre>
    *
-   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @return A list containing the options.
    */
   java.util.List<java.lang.String>
@@ -62,7 +42,7 @@ public interface OmniNodeBranchingOrBuilder extends
    * the list of options to use for branching
    * </pre>
    *
-   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @return The count of options.
    */
   int getOptionsCount();
@@ -71,7 +51,7 @@ public interface OmniNodeBranchingOrBuilder extends
    * the list of options to use for branching
    * </pre>
    *
-   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @param index The index of the element to return.
    * @return The options at the given index.
    */
@@ -81,7 +61,7 @@ public interface OmniNodeBranchingOrBuilder extends
    * the list of options to use for branching
    * </pre>
    *
-   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the options at the given index.
    */

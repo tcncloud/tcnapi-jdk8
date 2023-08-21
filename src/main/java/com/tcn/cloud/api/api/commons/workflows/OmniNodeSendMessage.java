@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.commons.workflows;
 
 /**
  * <pre>
- * OmniNodeSendMessage will send a message, optionally displaying options
+ * OmniNodeSendMessage will send a message, displaying options if provided
  * </pre>
  *
  * Protobuf type {@code api.commons.workflows.OmniNodeSendMessage}
@@ -21,7 +21,6 @@ private static final long serialVersionUID = 0L;
   }
   private OmniNodeSendMessage() {
     prompt_ = "";
-    optionsId_ = "";
     options_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
   }
@@ -93,54 +92,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int OPTIONS_ID_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object optionsId_ = "";
-  /**
-   * <pre>
-   * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
-   * </pre>
-   *
-   * <code>string options_id = 2 [json_name = "optionsId"];</code>
-   * @return The optionsId.
-   */
-  @java.lang.Override
-  public java.lang.String getOptionsId() {
-    java.lang.Object ref = optionsId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      optionsId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
-   * </pre>
-   *
-   * <code>string options_id = 2 [json_name = "optionsId"];</code>
-   * @return The bytes for optionsId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getOptionsIdBytes() {
-    java.lang.Object ref = optionsId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      optionsId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int OPTIONS_FIELD_NUMBER = 3;
+  public static final int OPTIONS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringArrayList options_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
@@ -149,7 +101,7 @@ private static final long serialVersionUID = 0L;
    * the list of options to select from as the correct response
    * </pre>
    *
-   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @return A list containing the options.
    */
   public com.google.protobuf.ProtocolStringList
@@ -161,7 +113,7 @@ private static final long serialVersionUID = 0L;
    * the list of options to select from as the correct response
    * </pre>
    *
-   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @return The count of options.
    */
   public int getOptionsCount() {
@@ -172,7 +124,7 @@ private static final long serialVersionUID = 0L;
    * the list of options to select from as the correct response
    * </pre>
    *
-   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @param index The index of the element to return.
    * @return The options at the given index.
    */
@@ -184,7 +136,7 @@ private static final long serialVersionUID = 0L;
    * the list of options to select from as the correct response
    * </pre>
    *
-   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the options at the given index.
    */
@@ -210,11 +162,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prompt_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, prompt_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(optionsId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, optionsId_);
-    }
     for (int i = 0; i < options_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, options_.getRaw(i));
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, options_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -227,9 +176,6 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prompt_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, prompt_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(optionsId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, optionsId_);
     }
     {
       int dataSize = 0;
@@ -256,8 +202,6 @@ private static final long serialVersionUID = 0L;
 
     if (!getPrompt()
         .equals(other.getPrompt())) return false;
-    if (!getOptionsId()
-        .equals(other.getOptionsId())) return false;
     if (!getOptionsList()
         .equals(other.getOptionsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -273,8 +217,6 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + PROMPT_FIELD_NUMBER;
     hash = (53 * hash) + getPrompt().hashCode();
-    hash = (37 * hash) + OPTIONS_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getOptionsId().hashCode();
     if (getOptionsCount() > 0) {
       hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
       hash = (53 * hash) + getOptionsList().hashCode();
@@ -378,7 +320,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * OmniNodeSendMessage will send a message, optionally displaying options
+   * OmniNodeSendMessage will send a message, displaying options if provided
    * </pre>
    *
    * Protobuf type {@code api.commons.workflows.OmniNodeSendMessage}
@@ -415,7 +357,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       prompt_ = "";
-      optionsId_ = "";
       options_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
@@ -455,9 +396,6 @@ private static final long serialVersionUID = 0L;
         result.prompt_ = prompt_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.optionsId_ = optionsId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
         options_.makeImmutable();
         result.options_ = options_;
       }
@@ -512,15 +450,10 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getOptionsId().isEmpty()) {
-        optionsId_ = other.optionsId_;
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
       if (!other.options_.isEmpty()) {
         if (options_.isEmpty()) {
           options_ = other.options_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
         } else {
           ensureOptionsIsMutable();
           options_.addAll(other.options_);
@@ -559,16 +492,11 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 10
             case 18: {
-              optionsId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
               java.lang.String s = input.readStringRequireUtf8();
               ensureOptionsIsMutable();
               options_.add(s);
               break;
-            } // case 26
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -678,112 +606,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object optionsId_ = "";
-    /**
-     * <pre>
-     * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
-     * </pre>
-     *
-     * <code>string options_id = 2 [json_name = "optionsId"];</code>
-     * @return The optionsId.
-     */
-    public java.lang.String getOptionsId() {
-      java.lang.Object ref = optionsId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        optionsId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
-     * </pre>
-     *
-     * <code>string options_id = 2 [json_name = "optionsId"];</code>
-     * @return The bytes for optionsId.
-     */
-    public com.google.protobuf.ByteString
-        getOptionsIdBytes() {
-      java.lang.Object ref = optionsId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        optionsId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
-     * </pre>
-     *
-     * <code>string options_id = 2 [json_name = "optionsId"];</code>
-     * @param value The optionsId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOptionsId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      optionsId_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
-     * </pre>
-     *
-     * <code>string options_id = 2 [json_name = "optionsId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearOptionsId() {
-      optionsId_ = getDefaultInstance().getOptionsId();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
-     * </pre>
-     *
-     * <code>string options_id = 2 [json_name = "optionsId"];</code>
-     * @param value The bytes for optionsId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOptionsIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      optionsId_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
     private com.google.protobuf.LazyStringArrayList options_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureOptionsIsMutable() {
       if (!options_.isModifiable()) {
         options_ = new com.google.protobuf.LazyStringArrayList(options_);
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
     }
     /**
      * <pre>
      * the list of options to select from as the correct response
      * </pre>
      *
-     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @return A list containing the options.
      */
     public com.google.protobuf.ProtocolStringList
@@ -796,7 +632,7 @@ private static final long serialVersionUID = 0L;
      * the list of options to select from as the correct response
      * </pre>
      *
-     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @return The count of options.
      */
     public int getOptionsCount() {
@@ -807,7 +643,7 @@ private static final long serialVersionUID = 0L;
      * the list of options to select from as the correct response
      * </pre>
      *
-     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param index The index of the element to return.
      * @return The options at the given index.
      */
@@ -819,7 +655,7 @@ private static final long serialVersionUID = 0L;
      * the list of options to select from as the correct response
      * </pre>
      *
-     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the options at the given index.
      */
@@ -832,7 +668,7 @@ private static final long serialVersionUID = 0L;
      * the list of options to select from as the correct response
      * </pre>
      *
-     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param index The index to set the value at.
      * @param value The options to set.
      * @return This builder for chaining.
@@ -842,7 +678,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureOptionsIsMutable();
       options_.set(index, value);
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -851,7 +687,7 @@ private static final long serialVersionUID = 0L;
      * the list of options to select from as the correct response
      * </pre>
      *
-     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param value The options to add.
      * @return This builder for chaining.
      */
@@ -860,7 +696,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureOptionsIsMutable();
       options_.add(value);
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -869,7 +705,7 @@ private static final long serialVersionUID = 0L;
      * the list of options to select from as the correct response
      * </pre>
      *
-     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param values The options to add.
      * @return This builder for chaining.
      */
@@ -878,7 +714,7 @@ private static final long serialVersionUID = 0L;
       ensureOptionsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, options_);
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -887,13 +723,13 @@ private static final long serialVersionUID = 0L;
      * the list of options to select from as the correct response
      * </pre>
      *
-     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @return This builder for chaining.
      */
     public Builder clearOptions() {
       options_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000004);;
+      bitField0_ = (bitField0_ & ~0x00000002);;
       onChanged();
       return this;
     }
@@ -902,7 +738,7 @@ private static final long serialVersionUID = 0L;
      * the list of options to select from as the correct response
      * </pre>
      *
-     * <code>repeated string options = 3 [json_name = "options"];</code>
+     * <code>repeated string options = 2 [json_name = "options"];</code>
      * @param value The bytes of the options to add.
      * @return This builder for chaining.
      */
@@ -912,7 +748,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureOptionsIsMutable();
       options_.add(value);
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

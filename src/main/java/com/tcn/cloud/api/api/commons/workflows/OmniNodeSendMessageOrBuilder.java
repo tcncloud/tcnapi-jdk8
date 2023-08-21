@@ -29,30 +29,10 @@ public interface OmniNodeSendMessageOrBuilder extends
 
   /**
    * <pre>
-   * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
-   * </pre>
-   *
-   * <code>string options_id = 2 [json_name = "optionsId"];</code>
-   * @return The optionsId.
-   */
-  java.lang.String getOptionsId();
-  /**
-   * <pre>
-   * (Optional) an options ID previously stored via OmniNodeOptions (references an OmniNodeOptions.options_id)
-   * </pre>
-   *
-   * <code>string options_id = 2 [json_name = "optionsId"];</code>
-   * @return The bytes for optionsId.
-   */
-  com.google.protobuf.ByteString
-      getOptionsIdBytes();
-
-  /**
-   * <pre>
    * the list of options to select from as the correct response
    * </pre>
    *
-   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @return A list containing the options.
    */
   java.util.List<java.lang.String>
@@ -62,7 +42,7 @@ public interface OmniNodeSendMessageOrBuilder extends
    * the list of options to select from as the correct response
    * </pre>
    *
-   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @return The count of options.
    */
   int getOptionsCount();
@@ -71,7 +51,7 @@ public interface OmniNodeSendMessageOrBuilder extends
    * the list of options to select from as the correct response
    * </pre>
    *
-   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @param index The index of the element to return.
    * @return The options at the given index.
    */
@@ -81,7 +61,7 @@ public interface OmniNodeSendMessageOrBuilder extends
    * the list of options to select from as the correct response
    * </pre>
    *
-   * <code>repeated string options = 3 [json_name = "options"];</code>
+   * <code>repeated string options = 2 [json_name = "options"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the options at the given index.
    */

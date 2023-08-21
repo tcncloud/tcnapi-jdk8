@@ -55,7 +55,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
    * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-   *     See api/commons/workflows/omni.proto;l=51
+   *     See api/commons/workflows/omni.proto;l=39
    * @return The skill.
    */
   @java.lang.Override
@@ -78,7 +78,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
    * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-   *     See api/commons/workflows/omni.proto;l=51
+   *     See api/commons/workflows/omni.proto;l=39
    * @return The bytes for skill.
    */
   @java.lang.Override
@@ -526,7 +526,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
      * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-     *     See api/commons/workflows/omni.proto;l=51
+     *     See api/commons/workflows/omni.proto;l=39
      * @return The skill.
      */
     @java.lang.Deprecated public java.lang.String getSkill() {
@@ -548,7 +548,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
      * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-     *     See api/commons/workflows/omni.proto;l=51
+     *     See api/commons/workflows/omni.proto;l=39
      * @return The bytes for skill.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -571,7 +571,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
      * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-     *     See api/commons/workflows/omni.proto;l=51
+     *     See api/commons/workflows/omni.proto;l=39
      * @param value The skill to set.
      * @return This builder for chaining.
      */
@@ -590,7 +590,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
      * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-     *     See api/commons/workflows/omni.proto;l=51
+     *     See api/commons/workflows/omni.proto;l=39
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearSkill() {
@@ -606,7 +606,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>string skill = 1 [json_name = "skill", deprecated = true];</code>
      * @deprecated api.commons.workflows.OmniNodeSetSkill.skill is deprecated.
-     *     See api/commons/workflows/omni.proto;l=51
+     *     See api/commons/workflows/omni.proto;l=39
      * @param value The bytes for skill to set.
      * @return This builder for chaining.
      */
