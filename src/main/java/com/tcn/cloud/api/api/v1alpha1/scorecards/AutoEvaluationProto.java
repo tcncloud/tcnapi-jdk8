@@ -59,21 +59,23 @@ public final class AutoEvaluationProto {
       "ionRequest\022,\n\022auto_evaluation_id\030\002 \001(\003R\020" +
       "autoEvaluationId\"a\n\031GetAutoEvaluationRes" +
       "ponse\022D\n\017auto_evaluation\030\001 \001(\0132\033.api.com" +
-      "mons.AutoEvaluationR\016autoEvaluation\"A\n\032L" +
+      "mons.AutoEvaluationR\016autoEvaluation\"}\n\032L" +
       "istAutoEvaluationsRequest\022#\n\rscorecard_i" +
-      "ds\030\002 \003(\003R\014scorecardIds\"e\n\033ListAutoEvalua" +
-      "tionsResponse\022F\n\020auto_evaluations\030\001 \003(\0132" +
-      "\033.api.commons.AutoEvaluationR\017autoEvalua" +
-      "tions\"K\n\033DeleteAutoEvaluationRequest\022,\n\022" +
-      "auto_evaluation_id\030\002 \001(\003R\020autoEvaluation" +
-      "Id\"d\n\034DeleteAutoEvaluationResponse\022D\n\017au" +
-      "to_evaluation\030\001 \001(\0132\033.api.commons.AutoEv" +
-      "aluationR\016autoEvaluationB\276\001\n)com.tcn.clo" +
-      "ud.api.api.v1alpha1.scorecardsB\023AutoEval" +
-      "uationProtoP\001\242\002\003AVS\252\002\027Api.V1alpha1.Score" +
-      "cards\312\002\027Api\\V1alpha1\\Scorecards\342\002#Api\\V1" +
-      "alpha1\\Scorecards\\GPBMetadata\352\002\031Api::V1a" +
-      "lpha1::Scorecardsb\006proto3"
+      "ds\030\002 \003(\003R\014scorecardIds\022:\n\014completed_at\030\003" +
+      " \001(\0132\027.api.commons.TimeFilterR\013completed" +
+      "At\"e\n\033ListAutoEvaluationsResponse\022F\n\020aut" +
+      "o_evaluations\030\001 \003(\0132\033.api.commons.AutoEv" +
+      "aluationR\017autoEvaluations\"K\n\033DeleteAutoE" +
+      "valuationRequest\022,\n\022auto_evaluation_id\030\002" +
+      " \001(\003R\020autoEvaluationId\"d\n\034DeleteAutoEval" +
+      "uationResponse\022D\n\017auto_evaluation\030\001 \001(\0132" +
+      "\033.api.commons.AutoEvaluationR\016autoEvalua" +
+      "tionB\276\001\n)com.tcn.cloud.api.api.v1alpha1." +
+      "scorecardsB\023AutoEvaluationProtoP\001\242\002\003AVS\252" +
+      "\002\027Api.V1alpha1.Scorecards\312\002\027Api\\V1alpha1" +
+      "\\Scorecards\342\002#Api\\V1alpha1\\Scorecards\\GP" +
+      "BMetadata\352\002\031Api::V1alpha1::Scorecardsb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -97,7 +99,7 @@ public final class AutoEvaluationProto {
     internal_static_api_v1alpha1_scorecards_ListAutoEvaluationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_ListAutoEvaluationsRequest_descriptor,
-        new java.lang.String[] { "ScorecardIds", });
+        new java.lang.String[] { "ScorecardIds", "CompletedAt", });
     internal_static_api_v1alpha1_scorecards_ListAutoEvaluationsResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_api_v1alpha1_scorecards_ListAutoEvaluationsResponse_fieldAccessorTable = new

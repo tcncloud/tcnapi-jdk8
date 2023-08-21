@@ -107,6 +107,21 @@ public interface InvoiceFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.InvoiceDynamicJourneyOrBuilder getDynamicJourneyOrBuilder();
 
   /**
+   * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
+   * @return Whether the newzwareAccountInquiry field is set.
+   */
+  boolean hasNewzwareAccountInquiry();
+  /**
+   * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
+   * @return The newzwareAccountInquiry.
+   */
+  com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiry getNewzwareAccountInquiry();
+  /**
+   * <code>.api.commons.integrations.InvoiceNewzwareAccountInquiry newzware_account_inquiry = 14 [json_name = "newzwareAccountInquiry"];</code>
+   */
+  com.tcn.cloud.api.api.commons.integrations.InvoiceNewzwareAccountInquiryOrBuilder getNewzwareAccountInquiryOrBuilder();
+
+  /**
    * <pre>
    * the template of how the fields map on an invoice
    * </pre>

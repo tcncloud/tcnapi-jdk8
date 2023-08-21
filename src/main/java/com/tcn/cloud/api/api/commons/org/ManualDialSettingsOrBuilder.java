@@ -502,4 +502,14 @@ public interface ManualDialSettingsOrBuilder extends
    * @return The dataDipIntegrationHandling.
    */
   com.tcn.cloud.api.api.commons.ManualDialDataDipHandling getDataDipIntegrationHandling();
+
+  /**
+   * <pre>
+   * Control whether the reject option is available to the approvers.
+   * </pre>
+   *
+   * <code>bool enable_reject_option_for_approvers = 29 [json_name = "enableRejectOptionForApprovers"];</code>
+   * @return The enableRejectOptionForApprovers.
+   */
+  boolean getEnableRejectOptionForApprovers();
 }
