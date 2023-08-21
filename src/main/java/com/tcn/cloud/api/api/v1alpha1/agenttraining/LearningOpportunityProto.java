@@ -88,20 +88,20 @@ public final class LearningOpportunityProto {
       "opportunities\030\001 \003(\0132 .api.commons.Learni" +
       "ngOpportunityR\025learningOpportunities\"\264\001\n" +
       " UpdateLearningOpportunityRequest\022S\n\024lea" +
-      "rning_opportunity\030\001 \001(\0132 .api.commons.Le" +
+      "rning_opportunity\030\002 \001(\0132 .api.commons.Le" +
       "arningOpportunityR\023learningOpportunity\022;" +
-      "\n\013update_mask\030\002 \001(\0132\032.google.protobuf.Fi" +
+      "\n\013update_mask\030\003 \001(\0132\032.google.protobuf.Fi" +
       "eldMaskR\nupdateMask\"x\n!UpdateLearningOpp" +
       "ortunityResponse\022S\n\024learning_opportunity" +
       "\030\001 \001(\0132 .api.commons.LearningOpportunity" +
       "R\023learningOpportunity\"Z\n DeleteLearningO" +
       "pportunityRequest\0226\n\027learning_opportunit" +
-      "y_id\030\001 \001(\003R\025learningOpportunityId\"x\n!Del" +
+      "y_id\030\003 \001(\003R\025learningOpportunityId\"x\n!Del" +
       "eteLearningOpportunityResponse\022S\n\024learni" +
       "ng_opportunity\030\001 \001(\0132 .api.commons.Learn" +
       "ingOpportunityR\023learningOpportunity\"R\n\035G" +
       "etLearningOpportunityRequest\0221\n\024learning" +
-      "_opportunity\030\001 \001(\003R\023learningOpportunity\"" +
+      "_opportunity\030\002 \001(\003R\023learningOpportunity\"" +
       "u\n\036GetLearningOpportunityResponse\022S\n\024lea" +
       "rning_opportunity\030\001 \001(\0132 .api.commons.Le" +
       "arningOpportunityR\023learningOpportunityB\322" +

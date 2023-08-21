@@ -8,7 +8,7 @@ public interface DeleteLearningOpportunityRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 learning_opportunity_id = 1 [json_name = "learningOpportunityId"];</code>
+   * <code>int64 learning_opportunity_id = 3 [json_name = "learningOpportunityId"];</code>
    * @return The learningOpportunityId.
    */
   long getLearningOpportunityId();

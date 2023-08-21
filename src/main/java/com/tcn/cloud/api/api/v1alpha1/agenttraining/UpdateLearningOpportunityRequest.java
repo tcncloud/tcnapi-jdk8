@@ -43,10 +43,10 @@ private static final long serialVersionUID = 0L;
   }
 
   private int bitField0_;
-  public static final int LEARNING_OPPORTUNITY_FIELD_NUMBER = 1;
+  public static final int LEARNING_OPPORTUNITY_FIELD_NUMBER = 2;
   private com.tcn.cloud.api.api.commons.LearningOpportunity learningOpportunity_;
   /**
-   * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
+   * <code>.api.commons.LearningOpportunity learning_opportunity = 2 [json_name = "learningOpportunity"];</code>
    * @return Whether the learningOpportunity field is set.
    */
   @java.lang.Override
@@ -54,7 +54,7 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000001) != 0);
   }
   /**
-   * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
+   * <code>.api.commons.LearningOpportunity learning_opportunity = 2 [json_name = "learningOpportunity"];</code>
    * @return The learningOpportunity.
    */
   @java.lang.Override
@@ -62,17 +62,17 @@ private static final long serialVersionUID = 0L;
     return learningOpportunity_ == null ? com.tcn.cloud.api.api.commons.LearningOpportunity.getDefaultInstance() : learningOpportunity_;
   }
   /**
-   * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
+   * <code>.api.commons.LearningOpportunity learning_opportunity = 2 [json_name = "learningOpportunity"];</code>
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.LearningOpportunityOrBuilder getLearningOpportunityOrBuilder() {
     return learningOpportunity_ == null ? com.tcn.cloud.api.api.commons.LearningOpportunity.getDefaultInstance() : learningOpportunity_;
   }
 
-  public static final int UPDATE_MASK_FIELD_NUMBER = 2;
+  public static final int UPDATE_MASK_FIELD_NUMBER = 3;
   private com.google.protobuf.FieldMask updateMask_;
   /**
-   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+   * <code>.google.protobuf.FieldMask update_mask = 3 [json_name = "updateMask"];</code>
    * @return Whether the updateMask field is set.
    */
   @java.lang.Override
@@ -80,7 +80,7 @@ private static final long serialVersionUID = 0L;
     return ((bitField0_ & 0x00000002) != 0);
   }
   /**
-   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+   * <code>.google.protobuf.FieldMask update_mask = 3 [json_name = "updateMask"];</code>
    * @return The updateMask.
    */
   @java.lang.Override
@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
     return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
   }
   /**
-   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+   * <code>.google.protobuf.FieldMask update_mask = 3 [json_name = "updateMask"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -110,10 +110,10 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (((bitField0_ & 0x00000001) != 0)) {
-      output.writeMessage(1, getLearningOpportunity());
+      output.writeMessage(2, getLearningOpportunity());
     }
     if (((bitField0_ & 0x00000002) != 0)) {
-      output.writeMessage(2, getUpdateMask());
+      output.writeMessage(3, getUpdateMask());
     }
     getUnknownFields().writeTo(output);
   }
@@ -126,11 +126,11 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getLearningOpportunity());
+        .computeMessageSize(2, getLearningOpportunity());
     }
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getUpdateMask());
+        .computeMessageSize(3, getUpdateMask());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -453,20 +453,20 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
+            case 18: {
               input.readMessage(
                   getLearningOpportunityFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000001;
               break;
-            } // case 10
-            case 18: {
+            } // case 18
+            case 26: {
               input.readMessage(
                   getUpdateMaskFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000002;
               break;
-            } // case 18
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -488,14 +488,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.LearningOpportunity, com.tcn.cloud.api.api.commons.LearningOpportunity.Builder, com.tcn.cloud.api.api.commons.LearningOpportunityOrBuilder> learningOpportunityBuilder_;
     /**
-     * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
+     * <code>.api.commons.LearningOpportunity learning_opportunity = 2 [json_name = "learningOpportunity"];</code>
      * @return Whether the learningOpportunity field is set.
      */
     public boolean hasLearningOpportunity() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
+     * <code>.api.commons.LearningOpportunity learning_opportunity = 2 [json_name = "learningOpportunity"];</code>
      * @return The learningOpportunity.
      */
     public com.tcn.cloud.api.api.commons.LearningOpportunity getLearningOpportunity() {
@@ -506,7 +506,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
+     * <code>.api.commons.LearningOpportunity learning_opportunity = 2 [json_name = "learningOpportunity"];</code>
      */
     public Builder setLearningOpportunity(com.tcn.cloud.api.api.commons.LearningOpportunity value) {
       if (learningOpportunityBuilder_ == null) {
@@ -522,7 +522,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
+     * <code>.api.commons.LearningOpportunity learning_opportunity = 2 [json_name = "learningOpportunity"];</code>
      */
     public Builder setLearningOpportunity(
         com.tcn.cloud.api.api.commons.LearningOpportunity.Builder builderForValue) {
@@ -536,7 +536,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
+     * <code>.api.commons.LearningOpportunity learning_opportunity = 2 [json_name = "learningOpportunity"];</code>
      */
     public Builder mergeLearningOpportunity(com.tcn.cloud.api.api.commons.LearningOpportunity value) {
       if (learningOpportunityBuilder_ == null) {
@@ -557,7 +557,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
+     * <code>.api.commons.LearningOpportunity learning_opportunity = 2 [json_name = "learningOpportunity"];</code>
      */
     public Builder clearLearningOpportunity() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -570,7 +570,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
+     * <code>.api.commons.LearningOpportunity learning_opportunity = 2 [json_name = "learningOpportunity"];</code>
      */
     public com.tcn.cloud.api.api.commons.LearningOpportunity.Builder getLearningOpportunityBuilder() {
       bitField0_ |= 0x00000001;
@@ -578,7 +578,7 @@ private static final long serialVersionUID = 0L;
       return getLearningOpportunityFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
+     * <code>.api.commons.LearningOpportunity learning_opportunity = 2 [json_name = "learningOpportunity"];</code>
      */
     public com.tcn.cloud.api.api.commons.LearningOpportunityOrBuilder getLearningOpportunityOrBuilder() {
       if (learningOpportunityBuilder_ != null) {
@@ -589,7 +589,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
+     * <code>.api.commons.LearningOpportunity learning_opportunity = 2 [json_name = "learningOpportunity"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.LearningOpportunity, com.tcn.cloud.api.api.commons.LearningOpportunity.Builder, com.tcn.cloud.api.api.commons.LearningOpportunityOrBuilder> 
@@ -609,14 +609,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
     /**
-     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 3 [json_name = "updateMask"];</code>
      * @return Whether the updateMask field is set.
      */
     public boolean hasUpdateMask() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 3 [json_name = "updateMask"];</code>
      * @return The updateMask.
      */
     public com.google.protobuf.FieldMask getUpdateMask() {
@@ -627,7 +627,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 3 [json_name = "updateMask"];</code>
      */
     public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
       if (updateMaskBuilder_ == null) {
@@ -643,7 +643,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 3 [json_name = "updateMask"];</code>
      */
     public Builder setUpdateMask(
         com.google.protobuf.FieldMask.Builder builderForValue) {
@@ -657,7 +657,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 3 [json_name = "updateMask"];</code>
      */
     public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
       if (updateMaskBuilder_ == null) {
@@ -678,7 +678,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 3 [json_name = "updateMask"];</code>
      */
     public Builder clearUpdateMask() {
       bitField0_ = (bitField0_ & ~0x00000002);
@@ -691,7 +691,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 3 [json_name = "updateMask"];</code>
      */
     public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
       bitField0_ |= 0x00000002;
@@ -699,7 +699,7 @@ private static final long serialVersionUID = 0L;
       return getUpdateMaskFieldBuilder().getBuilder();
     }
     /**
-     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 3 [json_name = "updateMask"];</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       if (updateMaskBuilder_ != null) {
@@ -710,7 +710,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 3 [json_name = "updateMask"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 

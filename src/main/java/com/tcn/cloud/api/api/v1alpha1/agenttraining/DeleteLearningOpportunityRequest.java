@@ -42,10 +42,10 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityRequest.class, com.tcn.cloud.api.api.v1alpha1.agenttraining.DeleteLearningOpportunityRequest.Builder.class);
   }
 
-  public static final int LEARNING_OPPORTUNITY_ID_FIELD_NUMBER = 1;
+  public static final int LEARNING_OPPORTUNITY_ID_FIELD_NUMBER = 3;
   private long learningOpportunityId_ = 0L;
   /**
-   * <code>int64 learning_opportunity_id = 1 [json_name = "learningOpportunityId"];</code>
+   * <code>int64 learning_opportunity_id = 3 [json_name = "learningOpportunityId"];</code>
    * @return The learningOpportunityId.
    */
   @java.lang.Override
@@ -68,7 +68,7 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (learningOpportunityId_ != 0L) {
-      output.writeInt64(1, learningOpportunityId_);
+      output.writeInt64(3, learningOpportunityId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -81,7 +81,7 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (learningOpportunityId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, learningOpportunityId_);
+        .computeInt64Size(3, learningOpportunityId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -361,11 +361,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 8: {
+            case 24: {
               learningOpportunityId_ = input.readInt64();
               bitField0_ |= 0x00000001;
               break;
-            } // case 8
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -385,7 +385,7 @@ private static final long serialVersionUID = 0L;
 
     private long learningOpportunityId_ ;
     /**
-     * <code>int64 learning_opportunity_id = 1 [json_name = "learningOpportunityId"];</code>
+     * <code>int64 learning_opportunity_id = 3 [json_name = "learningOpportunityId"];</code>
      * @return The learningOpportunityId.
      */
     @java.lang.Override
@@ -393,7 +393,7 @@ private static final long serialVersionUID = 0L;
       return learningOpportunityId_;
     }
     /**
-     * <code>int64 learning_opportunity_id = 1 [json_name = "learningOpportunityId"];</code>
+     * <code>int64 learning_opportunity_id = 3 [json_name = "learningOpportunityId"];</code>
      * @param value The learningOpportunityId to set.
      * @return This builder for chaining.
      */
@@ -405,7 +405,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 learning_opportunity_id = 1 [json_name = "learningOpportunityId"];</code>
+     * <code>int64 learning_opportunity_id = 3 [json_name = "learningOpportunityId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearLearningOpportunityId() {

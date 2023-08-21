@@ -8,7 +8,7 @@ public interface GetLearningOpportunityRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
+   * <code>int64 learning_opportunity = 2 [json_name = "learningOpportunity"];</code>
    * @return The learningOpportunity.
    */
   long getLearningOpportunity();

@@ -8,32 +8,32 @@ public interface UpdateLearningOpportunityRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
+   * <code>.api.commons.LearningOpportunity learning_opportunity = 2 [json_name = "learningOpportunity"];</code>
    * @return Whether the learningOpportunity field is set.
    */
   boolean hasLearningOpportunity();
   /**
-   * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
+   * <code>.api.commons.LearningOpportunity learning_opportunity = 2 [json_name = "learningOpportunity"];</code>
    * @return The learningOpportunity.
    */
   com.tcn.cloud.api.api.commons.LearningOpportunity getLearningOpportunity();
   /**
-   * <code>.api.commons.LearningOpportunity learning_opportunity = 1 [json_name = "learningOpportunity"];</code>
+   * <code>.api.commons.LearningOpportunity learning_opportunity = 2 [json_name = "learningOpportunity"];</code>
    */
   com.tcn.cloud.api.api.commons.LearningOpportunityOrBuilder getLearningOpportunityOrBuilder();
 
   /**
-   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+   * <code>.google.protobuf.FieldMask update_mask = 3 [json_name = "updateMask"];</code>
    * @return Whether the updateMask field is set.
    */
   boolean hasUpdateMask();
   /**
-   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+   * <code>.google.protobuf.FieldMask update_mask = 3 [json_name = "updateMask"];</code>
    * @return The updateMask.
    */
   com.google.protobuf.FieldMask getUpdateMask();
   /**
-   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+   * <code>.google.protobuf.FieldMask update_mask = 3 [json_name = "updateMask"];</code>
    */
   com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 }
