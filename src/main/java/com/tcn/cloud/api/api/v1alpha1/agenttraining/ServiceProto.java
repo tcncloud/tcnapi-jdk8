@@ -27,7 +27,7 @@ public final class ServiceProto {
       "to\022\032api.v1alpha1.agenttraining\032\027annotati" +
       "ons/authz.proto\0325api/v1alpha1/agenttrain" +
       "ing/learning_opportunity.proto\032\034google/a" +
-      "pi/annotations.proto2\371\t\n\024AgentTrainingSe" +
+      "pi/annotations.proto2\366\t\n\024AgentTrainingSe" +
       "rvice\022\371\001\n\031CreateLearningOpportunity\022<.ap" +
       "i.v1alpha1.agenttraining.CreateLearningO" +
       "pportunityRequest\032=.api.v1alpha1.agenttr" +
@@ -52,19 +52,19 @@ public final class ServiceProto {
       "tunityRequest\032=.api.v1alpha1.agenttraini" +
       "ng.DeleteLearningOpportunityResponse\"_\272\270" +
       "\221\002\005\n\003\010\301\014\202\323\344\223\002O\"J/api/v1alpha1/agenttrain" +
-      "ing/agenttrainingservice/updatelearningo" +
-      "pportunity:\001*\022\360\001\n\026GetLearningOpportunity" +
+      "ing/agenttrainingservice/deletelearningo" +
+      "pportunity:\001*\022\355\001\n\026GetLearningOpportunity" +
       "\0229.api.v1alpha1.agenttraining.GetLearnin" +
       "gOpportunityRequest\032:.api.v1alpha1.agent" +
       "training.GetLearningOpportunityResponse\"" +
-      "_\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002O\"J/api/v1alpha1/agenttr" +
-      "aining/agenttrainingservice/updatelearni" +
-      "ngopportunity:\001*B\306\001\n,com.tcn.cloud.api.a" +
-      "pi.v1alpha1.agenttrainingB\014ServiceProtoP" +
-      "\001\242\002\003AVA\252\002\032Api.V1alpha1.Agenttraining\312\002\032A" +
-      "pi\\V1alpha1\\Agenttraining\342\002&Api\\V1alpha1" +
-      "\\Agenttraining\\GPBMetadata\352\002\034Api::V1alph" +
-      "a1::Agenttrainingb\006proto3"
+      "\\\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002L\"G/api/v1alpha1/agenttr" +
+      "aining/agenttrainingservice/getlearningo" +
+      "pportunity:\001*B\306\001\n,com.tcn.cloud.api.api." +
+      "v1alpha1.agenttrainingB\014ServiceProtoP\001\242\002" +
+      "\003AVA\252\002\032Api.V1alpha1.Agenttraining\312\002\032Api\\" +
+      "V1alpha1\\Agenttraining\342\002&Api\\V1alpha1\\Ag" +
+      "enttraining\\GPBMetadata\352\002\034Api::V1alpha1:" +
+      ":Agenttrainingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
