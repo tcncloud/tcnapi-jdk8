@@ -3149,6 +3149,37 @@ public final class WFMGrpc {
     return getDeleteDraftScheduleMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes> getListShiftInstancesBySidMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListShiftInstancesBySid",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes> getListShiftInstancesBySidMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes> getListShiftInstancesBySidMethod;
+    if ((getListShiftInstancesBySidMethod = WFMGrpc.getListShiftInstancesBySidMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getListShiftInstancesBySidMethod = WFMGrpc.getListShiftInstancesBySidMethod) == null) {
+          WFMGrpc.getListShiftInstancesBySidMethod = getListShiftInstancesBySidMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq, com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListShiftInstancesBySid"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes.getDefaultInstance()))
+              .setSchemaDescriptor(new WFMMethodDescriptorSupplier("ListShiftInstancesBySid"))
+              .build();
+        }
+      }
+    }
+    return getListShiftInstancesBySidMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleRes> getCopyScheduleToScheduleMethod;
 
@@ -5430,6 +5461,23 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists the shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
+     * If &#64;include_shift_segments is set to true, the returned shifts will have their shift segments returned as well.
+     * If &#64;include_shift_segments is set to false, the shift instances will be returned without their shift segments.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;org_id or &#64;shift_instance_sids in the request are invalid.
+     *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
+     * </pre>
+     */
+    default void listShiftInstancesBySid(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListShiftInstancesBySidMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Copies the shifts from &#64;source_schedule_selector to &#64;destination_schedule_selector, constrained by the given parameters for the org sending the request.
      * If &#64;datetime_range is set, all shifts within the datetime range will be copied.
      * If &#64;datetime_range is not set, all shifts in the &#64;source_schedule_selector within the schedule range of the &#64;destination_schedule_selector will be copied. However if one of them is a published schedule, it will use the schedule range of the draft schedule.
@@ -7601,6 +7649,24 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists the shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
+     * If &#64;include_shift_segments is set to true, the returned shifts will have their shift segments returned as well.
+     * If &#64;include_shift_segments is set to false, the shift instances will be returned without their shift segments.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;org_id or &#64;shift_instance_sids in the request are invalid.
+     *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
+     * </pre>
+     */
+    public void listShiftInstancesBySid(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListShiftInstancesBySidMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Copies the shifts from &#64;source_schedule_selector to &#64;destination_schedule_selector, constrained by the given parameters for the org sending the request.
      * If &#64;datetime_range is set, all shifts within the datetime range will be copied.
      * If &#64;datetime_range is not set, all shifts in the &#64;source_schedule_selector within the schedule range of the &#64;destination_schedule_selector will be copied. However if one of them is a published schedule, it will use the schedule range of the draft schedule.
@@ -9676,6 +9742,23 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists the shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
+     * If &#64;include_shift_segments is set to true, the returned shifts will have their shift segments returned as well.
+     * If &#64;include_shift_segments is set to false, the shift instances will be returned without their shift segments.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;org_id or &#64;shift_instance_sids in the request are invalid.
+     *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes listShiftInstancesBySid(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListShiftInstancesBySidMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Copies the shifts from &#64;source_schedule_selector to &#64;destination_schedule_selector, constrained by the given parameters for the org sending the request.
      * If &#64;datetime_range is set, all shifts within the datetime range will be copied.
      * If &#64;datetime_range is not set, all shifts in the &#64;source_schedule_selector within the schedule range of the &#64;destination_schedule_selector will be copied. However if one of them is a published schedule, it will use the schedule range of the draft schedule.
@@ -11737,6 +11820,24 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Lists the shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
+     * If &#64;include_shift_segments is set to true, the returned shifts will have their shift segments returned as well.
+     * If &#64;include_shift_segments is set to false, the shift instances will be returned without their shift segments.
+     * Required permissions:
+     *   NONE
+     * Errors:
+     *   - grpc.Invalid: the &#64;org_id or &#64;shift_instance_sids in the request are invalid.
+     *   - grpc.Internal: error occurs when listing the shift instances or their shift segments.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes> listShiftInstancesBySid(
+        com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListShiftInstancesBySidMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Copies the shifts from &#64;source_schedule_selector to &#64;destination_schedule_selector, constrained by the given parameters for the org sending the request.
      * If &#64;datetime_range is set, all shifts within the datetime range will be copied.
      * If &#64;datetime_range is not set, all shifts in the &#64;source_schedule_selector within the schedule range of the &#64;destination_schedule_selector will be copied. However if one of them is a published schedule, it will use the schedule range of the draft schedule.
@@ -12093,20 +12194,21 @@ public final class WFMGrpc {
   private static final int METHODID_GET_DRAFT_SCHEDULE = 98;
   private static final int METHODID_LIST_DRAFT_SCHEDULES = 99;
   private static final int METHODID_DELETE_DRAFT_SCHEDULE = 100;
-  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 101;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE = 102;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 103;
-  private static final int METHODID_SWAP_SHIFT_INSTANCES = 104;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 105;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 106;
-  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 107;
-  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 108;
-  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 109;
-  private static final int METHODID_SET_SCHEDULING_TARGET = 110;
-  private static final int METHODID_GET_SCHEDULING_TARGET = 111;
-  private static final int METHODID_DELETE_SCHEDULING_TARGET = 112;
-  private static final int METHODID_GET_PERFORMANCE_METRICS = 113;
-  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 114;
+  private static final int METHODID_LIST_SHIFT_INSTANCES_BY_SID = 101;
+  private static final int METHODID_COPY_SCHEDULE_TO_SCHEDULE = 102;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE = 103;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE_V2 = 104;
+  private static final int METHODID_SWAP_SHIFT_INSTANCES = 105;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 106;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE_V2 = 107;
+  private static final int METHODID_COPY_SHIFT_INSTANCES_TO_SCHEDULE = 108;
+  private static final int METHODID_LIST_SHIFT_INSTANCE_SIDS_FOR_AGENT = 109;
+  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 110;
+  private static final int METHODID_SET_SCHEDULING_TARGET = 111;
+  private static final int METHODID_GET_SCHEDULING_TARGET = 112;
+  private static final int METHODID_DELETE_SCHEDULING_TARGET = 113;
+  private static final int METHODID_GET_PERFORMANCE_METRICS = 114;
+  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 115;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -12528,6 +12630,10 @@ public final class WFMGrpc {
         case METHODID_DELETE_DRAFT_SCHEDULE:
           serviceImpl.deleteDraftSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes>) responseObserver);
+          break;
+        case METHODID_LIST_SHIFT_INSTANCES_BY_SID:
+          serviceImpl.listShiftInstancesBySid((com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes>) responseObserver);
           break;
         case METHODID_COPY_SCHEDULE_TO_SCHEDULE:
           serviceImpl.copyScheduleToSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.CopyScheduleToScheduleReq) request,
@@ -13311,6 +13417,13 @@ public final class WFMGrpc {
               com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes>(
                 service, METHODID_DELETE_DRAFT_SCHEDULE)))
         .addMethod(
+          getListShiftInstancesBySidMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidReq,
+              com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftInstancesBySidRes>(
+                service, METHODID_LIST_SHIFT_INSTANCES_BY_SID)))
+        .addMethod(
           getCopyScheduleToScheduleMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -13557,6 +13670,7 @@ public final class WFMGrpc {
               .addMethod(getGetDraftScheduleMethod())
               .addMethod(getListDraftSchedulesMethod())
               .addMethod(getDeleteDraftScheduleMethod())
+              .addMethod(getListShiftInstancesBySidMethod())
               .addMethod(getCopyScheduleToScheduleMethod())
               .addMethod(getCreateShiftInstanceMethod())
               .addMethod(getCreateShiftInstanceV2Method())
