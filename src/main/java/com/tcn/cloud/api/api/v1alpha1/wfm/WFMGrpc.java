@@ -5462,8 +5462,12 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
-     * If &#64;include_shift_segments is set to true, the returned shifts will have their shift segments returned as well.
-     * If &#64;include_shift_segments is set to false, the shift instances will be returned without their shift segments.
+     * If &#64;include_shift_template is set to true then the related shift template for the shift instances will be returned in the shift template field.
+     * If &#64;include_shift_segments is set to true then the related shift segments for the shift instances will be returned in the shift segments field.
+     * If &#64;include_scheduling_activity is set to true then the related scheduling activity for the shift segment will be returned in the scheduling activity field.
+     * &#64;include_shift_segments must be true to take effect.
+     * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling
+     * activities member non skill activity field. &#64;include_scheduling_activity must be true to take effect.
      * Required permissions:
      *   NONE
      * Errors:
@@ -7650,8 +7654,12 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
-     * If &#64;include_shift_segments is set to true, the returned shifts will have their shift segments returned as well.
-     * If &#64;include_shift_segments is set to false, the shift instances will be returned without their shift segments.
+     * If &#64;include_shift_template is set to true then the related shift template for the shift instances will be returned in the shift template field.
+     * If &#64;include_shift_segments is set to true then the related shift segments for the shift instances will be returned in the shift segments field.
+     * If &#64;include_scheduling_activity is set to true then the related scheduling activity for the shift segment will be returned in the scheduling activity field.
+     * &#64;include_shift_segments must be true to take effect.
+     * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling
+     * activities member non skill activity field. &#64;include_scheduling_activity must be true to take effect.
      * Required permissions:
      *   NONE
      * Errors:
@@ -9743,8 +9751,12 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
-     * If &#64;include_shift_segments is set to true, the returned shifts will have their shift segments returned as well.
-     * If &#64;include_shift_segments is set to false, the shift instances will be returned without their shift segments.
+     * If &#64;include_shift_template is set to true then the related shift template for the shift instances will be returned in the shift template field.
+     * If &#64;include_shift_segments is set to true then the related shift segments for the shift instances will be returned in the shift segments field.
+     * If &#64;include_scheduling_activity is set to true then the related scheduling activity for the shift segment will be returned in the scheduling activity field.
+     * &#64;include_shift_segments must be true to take effect.
+     * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling
+     * activities member non skill activity field. &#64;include_scheduling_activity must be true to take effect.
      * Required permissions:
      *   NONE
      * Errors:
@@ -11821,8 +11833,12 @@ public final class WFMGrpc {
     /**
      * <pre>
      * Lists the shift instances with the corresponding &#64;shift_instance_sids for the org sending the request.
-     * If &#64;include_shift_segments is set to true, the returned shifts will have their shift segments returned as well.
-     * If &#64;include_shift_segments is set to false, the shift instances will be returned without their shift segments.
+     * If &#64;include_shift_template is set to true then the related shift template for the shift instances will be returned in the shift template field.
+     * If &#64;include_shift_segments is set to true then the related shift segments for the shift instances will be returned in the shift segments field.
+     * If &#64;include_scheduling_activity is set to true then the related scheduling activity for the shift segment will be returned in the scheduling activity field.
+     * &#64;include_shift_segments must be true to take effect.
+     * If &#64;include_activity is set to true then the related non skill activity for the scheduling activity will be returned in the scheduling
+     * activities member non skill activity field. &#64;include_scheduling_activity must be true to take effect.
      * Required permissions:
      *   NONE
      * Errors:

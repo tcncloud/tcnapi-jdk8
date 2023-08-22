@@ -46,4 +46,36 @@ public interface ListShiftInstancesBySidReqOrBuilder extends
    * @return The includeShiftSegments.
    */
   boolean getIncludeShiftSegments();
+
+  /**
+   * <pre>
+   * Set to true to include shift template in the returned shift instance.
+   * </pre>
+   *
+   * <code>bool include_shift_template = 3 [json_name = "includeShiftTemplate"];</code>
+   * @return The includeShiftTemplate.
+   */
+  boolean getIncludeShiftTemplate();
+
+  /**
+   * <pre>
+   * Set to true to include scheduling activity in each of the returned shift segments.
+   * Only effective when include_shift_segments is also set to true.
+   * </pre>
+   *
+   * <code>bool include_scheduling_activity = 4 [json_name = "includeSchedulingActivity"];</code>
+   * @return The includeSchedulingActivity.
+   */
+  boolean getIncludeSchedulingActivity();
+
+  /**
+   * <pre>
+   * Set to true to include non skill activity in each of the returned scheduling activities.
+   * Only effective when include_scheduling_activity and include_shift_segments are also set to true.
+   * </pre>
+   *
+   * <code>bool include_activity = 5 [json_name = "includeActivity"];</code>
+   * @return The includeActivity.
+   */
+  boolean getIncludeActivity();
 }

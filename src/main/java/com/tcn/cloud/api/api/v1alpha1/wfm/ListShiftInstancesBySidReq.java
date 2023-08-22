@@ -101,6 +101,53 @@ private static final long serialVersionUID = 0L;
     return includeShiftSegments_;
   }
 
+  public static final int INCLUDE_SHIFT_TEMPLATE_FIELD_NUMBER = 3;
+  private boolean includeShiftTemplate_ = false;
+  /**
+   * <pre>
+   * Set to true to include shift template in the returned shift instance.
+   * </pre>
+   *
+   * <code>bool include_shift_template = 3 [json_name = "includeShiftTemplate"];</code>
+   * @return The includeShiftTemplate.
+   */
+  @java.lang.Override
+  public boolean getIncludeShiftTemplate() {
+    return includeShiftTemplate_;
+  }
+
+  public static final int INCLUDE_SCHEDULING_ACTIVITY_FIELD_NUMBER = 4;
+  private boolean includeSchedulingActivity_ = false;
+  /**
+   * <pre>
+   * Set to true to include scheduling activity in each of the returned shift segments.
+   * Only effective when include_shift_segments is also set to true.
+   * </pre>
+   *
+   * <code>bool include_scheduling_activity = 4 [json_name = "includeSchedulingActivity"];</code>
+   * @return The includeSchedulingActivity.
+   */
+  @java.lang.Override
+  public boolean getIncludeSchedulingActivity() {
+    return includeSchedulingActivity_;
+  }
+
+  public static final int INCLUDE_ACTIVITY_FIELD_NUMBER = 5;
+  private boolean includeActivity_ = false;
+  /**
+   * <pre>
+   * Set to true to include non skill activity in each of the returned scheduling activities.
+   * Only effective when include_scheduling_activity and include_shift_segments are also set to true.
+   * </pre>
+   *
+   * <code>bool include_activity = 5 [json_name = "includeActivity"];</code>
+   * @return The includeActivity.
+   */
+  @java.lang.Override
+  public boolean getIncludeActivity() {
+    return includeActivity_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -125,6 +172,15 @@ private static final long serialVersionUID = 0L;
     }
     if (includeShiftSegments_ != false) {
       output.writeBool(2, includeShiftSegments_);
+    }
+    if (includeShiftTemplate_ != false) {
+      output.writeBool(3, includeShiftTemplate_);
+    }
+    if (includeSchedulingActivity_ != false) {
+      output.writeBool(4, includeSchedulingActivity_);
+    }
+    if (includeActivity_ != false) {
+      output.writeBool(5, includeActivity_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -153,6 +209,18 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(2, includeShiftSegments_);
     }
+    if (includeShiftTemplate_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(3, includeShiftTemplate_);
+    }
+    if (includeSchedulingActivity_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, includeSchedulingActivity_);
+    }
+    if (includeActivity_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(5, includeActivity_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -172,6 +240,12 @@ private static final long serialVersionUID = 0L;
         .equals(other.getShiftInstanceSidsList())) return false;
     if (getIncludeShiftSegments()
         != other.getIncludeShiftSegments()) return false;
+    if (getIncludeShiftTemplate()
+        != other.getIncludeShiftTemplate()) return false;
+    if (getIncludeSchedulingActivity()
+        != other.getIncludeSchedulingActivity()) return false;
+    if (getIncludeActivity()
+        != other.getIncludeActivity()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -190,6 +264,15 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + INCLUDE_SHIFT_SEGMENTS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIncludeShiftSegments());
+    hash = (37 * hash) + INCLUDE_SHIFT_TEMPLATE_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIncludeShiftTemplate());
+    hash = (37 * hash) + INCLUDE_SCHEDULING_ACTIVITY_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIncludeSchedulingActivity());
+    hash = (37 * hash) + INCLUDE_ACTIVITY_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIncludeActivity());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -327,6 +410,9 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       shiftInstanceSids_ = emptyLongList();
       includeShiftSegments_ = false;
+      includeShiftTemplate_ = false;
+      includeSchedulingActivity_ = false;
+      includeActivity_ = false;
       return this;
     }
 
@@ -366,6 +452,15 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.includeShiftSegments_ = includeShiftSegments_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.includeShiftTemplate_ = includeShiftTemplate_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.includeSchedulingActivity_ = includeSchedulingActivity_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.includeActivity_ = includeActivity_;
       }
     }
 
@@ -427,6 +522,15 @@ private static final long serialVersionUID = 0L;
       if (other.getIncludeShiftSegments() != false) {
         setIncludeShiftSegments(other.getIncludeShiftSegments());
       }
+      if (other.getIncludeShiftTemplate() != false) {
+        setIncludeShiftTemplate(other.getIncludeShiftTemplate());
+      }
+      if (other.getIncludeSchedulingActivity() != false) {
+        setIncludeSchedulingActivity(other.getIncludeSchedulingActivity());
+      }
+      if (other.getIncludeActivity() != false) {
+        setIncludeActivity(other.getIncludeActivity());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -474,6 +578,21 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
+            case 24: {
+              includeShiftTemplate_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 32: {
+              includeSchedulingActivity_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 40: {
+              includeActivity_ = input.readBool();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 40
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -646,6 +765,144 @@ private static final long serialVersionUID = 0L;
     public Builder clearIncludeShiftSegments() {
       bitField0_ = (bitField0_ & ~0x00000002);
       includeShiftSegments_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean includeShiftTemplate_ ;
+    /**
+     * <pre>
+     * Set to true to include shift template in the returned shift instance.
+     * </pre>
+     *
+     * <code>bool include_shift_template = 3 [json_name = "includeShiftTemplate"];</code>
+     * @return The includeShiftTemplate.
+     */
+    @java.lang.Override
+    public boolean getIncludeShiftTemplate() {
+      return includeShiftTemplate_;
+    }
+    /**
+     * <pre>
+     * Set to true to include shift template in the returned shift instance.
+     * </pre>
+     *
+     * <code>bool include_shift_template = 3 [json_name = "includeShiftTemplate"];</code>
+     * @param value The includeShiftTemplate to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIncludeShiftTemplate(boolean value) {
+
+      includeShiftTemplate_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set to true to include shift template in the returned shift instance.
+     * </pre>
+     *
+     * <code>bool include_shift_template = 3 [json_name = "includeShiftTemplate"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIncludeShiftTemplate() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      includeShiftTemplate_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean includeSchedulingActivity_ ;
+    /**
+     * <pre>
+     * Set to true to include scheduling activity in each of the returned shift segments.
+     * Only effective when include_shift_segments is also set to true.
+     * </pre>
+     *
+     * <code>bool include_scheduling_activity = 4 [json_name = "includeSchedulingActivity"];</code>
+     * @return The includeSchedulingActivity.
+     */
+    @java.lang.Override
+    public boolean getIncludeSchedulingActivity() {
+      return includeSchedulingActivity_;
+    }
+    /**
+     * <pre>
+     * Set to true to include scheduling activity in each of the returned shift segments.
+     * Only effective when include_shift_segments is also set to true.
+     * </pre>
+     *
+     * <code>bool include_scheduling_activity = 4 [json_name = "includeSchedulingActivity"];</code>
+     * @param value The includeSchedulingActivity to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIncludeSchedulingActivity(boolean value) {
+
+      includeSchedulingActivity_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set to true to include scheduling activity in each of the returned shift segments.
+     * Only effective when include_shift_segments is also set to true.
+     * </pre>
+     *
+     * <code>bool include_scheduling_activity = 4 [json_name = "includeSchedulingActivity"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIncludeSchedulingActivity() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      includeSchedulingActivity_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean includeActivity_ ;
+    /**
+     * <pre>
+     * Set to true to include non skill activity in each of the returned scheduling activities.
+     * Only effective when include_scheduling_activity and include_shift_segments are also set to true.
+     * </pre>
+     *
+     * <code>bool include_activity = 5 [json_name = "includeActivity"];</code>
+     * @return The includeActivity.
+     */
+    @java.lang.Override
+    public boolean getIncludeActivity() {
+      return includeActivity_;
+    }
+    /**
+     * <pre>
+     * Set to true to include non skill activity in each of the returned scheduling activities.
+     * Only effective when include_scheduling_activity and include_shift_segments are also set to true.
+     * </pre>
+     *
+     * <code>bool include_activity = 5 [json_name = "includeActivity"];</code>
+     * @param value The includeActivity to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIncludeActivity(boolean value) {
+
+      includeActivity_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set to true to include non skill activity in each of the returned scheduling activities.
+     * Only effective when include_scheduling_activity and include_shift_segments are also set to true.
+     * </pre>
+     *
+     * <code>bool include_activity = 5 [json_name = "includeActivity"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIncludeActivity() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      includeActivity_ = false;
       onChanged();
       return this;
     }
