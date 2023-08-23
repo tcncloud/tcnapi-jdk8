@@ -1355,7 +1355,7 @@ public final class ScorecardsGrpc {
       fullMethodName = SERVICE_NAME + '/' + "StreamAutoEvaluations",
       requestType = com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest.class,
       responseType = com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
   public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest,
       com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse> getStreamAutoEvaluationsMethod() {
     io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse> getStreamAutoEvaluationsMethod;
@@ -1364,7 +1364,7 @@ public final class ScorecardsGrpc {
         if ((getStreamAutoEvaluationsMethod = ScorecardsGrpc.getStreamAutoEvaluationsMethod) == null) {
           ScorecardsGrpc.getStreamAutoEvaluationsMethod = getStreamAutoEvaluationsMethod =
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamAutoEvaluations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -2459,7 +2459,7 @@ public final class ScorecardsGrpc {
      */
     public void streamAutoEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getStreamAutoEvaluationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2938,8 +2938,9 @@ public final class ScorecardsGrpc {
      * StreamAutoEvaluations streams a list of auto evaluations
      * </pre>
      */
-    public com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse streamAutoEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse> streamAutoEvaluations(
+        com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getStreamAutoEvaluationsMethod(), getCallOptions(), request);
     }
 
@@ -3452,17 +3453,6 @@ public final class ScorecardsGrpc {
         com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAutoEvaluationsMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * StreamAutoEvaluations streams a list of auto evaluations
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse> streamAutoEvaluations(
-        com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getStreamAutoEvaluationsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -4057,7 +4047,7 @@ public final class ScorecardsGrpc {
                 service, METHODID_LIST_AUTO_EVALUATIONS)))
         .addMethod(
           getStreamAutoEvaluationsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
             new MethodHandlers<
               com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsRequest,
               com.tcn.cloud.api.api.v1alpha1.scorecards.StreamAutoEvaluationsResponse>(
