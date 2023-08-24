@@ -119,6 +119,44 @@ private static final long serialVersionUID = 0L;
     return conversation_ == null ? com.tcn.cloud.api.api.commons.OmniConversation.getDefaultInstance() : conversation_;
   }
 
+  public static final int ASM_SESSION_SID_FIELD_NUMBER = 3;
+  private com.google.protobuf.Int64Value asmSessionSid_;
+  /**
+   * <pre>
+   * the AsmSession Sid
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value asm_session_sid = 3 [json_name = "asmSessionSid"];</code>
+   * @return Whether the asmSessionSid field is set.
+   */
+  @java.lang.Override
+  public boolean hasAsmSessionSid() {
+    return ((bitField0_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * the AsmSession Sid
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value asm_session_sid = 3 [json_name = "asmSessionSid"];</code>
+   * @return The asmSessionSid.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Int64Value getAsmSessionSid() {
+    return asmSessionSid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asmSessionSid_;
+  }
+  /**
+   * <pre>
+   * the AsmSession Sid
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value asm_session_sid = 3 [json_name = "asmSessionSid"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.Int64ValueOrBuilder getAsmSessionSidOrBuilder() {
+    return asmSessionSid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asmSessionSid_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -139,6 +177,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(2, getConversation());
     }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      output.writeMessage(3, getAsmSessionSid());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -155,6 +196,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getConversation());
+    }
+    if (((bitField0_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getAsmSessionSid());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -181,6 +226,11 @@ private static final long serialVersionUID = 0L;
       if (!getConversation()
           .equals(other.getConversation())) return false;
     }
+    if (hasAsmSessionSid() != other.hasAsmSessionSid()) return false;
+    if (hasAsmSessionSid()) {
+      if (!getAsmSessionSid()
+          .equals(other.getAsmSessionSid())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -199,6 +249,10 @@ private static final long serialVersionUID = 0L;
     if (hasConversation()) {
       hash = (37 * hash) + CONVERSATION_FIELD_NUMBER;
       hash = (53 * hash) + getConversation().hashCode();
+    }
+    if (hasAsmSessionSid()) {
+      hash = (37 * hash) + ASM_SESSION_SID_FIELD_NUMBER;
+      hash = (53 * hash) + getAsmSessionSid().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -336,6 +390,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
         getMessageFieldBuilder();
         getConversationFieldBuilder();
+        getAsmSessionSidFieldBuilder();
       }
     }
     @java.lang.Override
@@ -351,6 +406,11 @@ private static final long serialVersionUID = 0L;
       if (conversationBuilder_ != null) {
         conversationBuilder_.dispose();
         conversationBuilder_ = null;
+      }
+      asmSessionSid_ = null;
+      if (asmSessionSidBuilder_ != null) {
+        asmSessionSidBuilder_.dispose();
+        asmSessionSidBuilder_ = null;
       }
       return this;
     }
@@ -397,6 +457,12 @@ private static final long serialVersionUID = 0L;
             ? conversation_
             : conversationBuilder_.build();
         to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.asmSessionSid_ = asmSessionSidBuilder_ == null
+            ? asmSessionSid_
+            : asmSessionSidBuilder_.build();
+        to_bitField0_ |= 0x00000004;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -451,6 +517,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasConversation()) {
         mergeConversation(other.getConversation());
       }
+      if (other.hasAsmSessionSid()) {
+        mergeAsmSessionSid(other.getAsmSessionSid());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -491,6 +560,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getAsmSessionSidFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -820,6 +896,163 @@ private static final long serialVersionUID = 0L;
         conversation_ = null;
       }
       return conversationBuilder_;
+    }
+
+    private com.google.protobuf.Int64Value asmSessionSid_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asmSessionSidBuilder_;
+    /**
+     * <pre>
+     * the AsmSession Sid
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asm_session_sid = 3 [json_name = "asmSessionSid"];</code>
+     * @return Whether the asmSessionSid field is set.
+     */
+    public boolean hasAsmSessionSid() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * the AsmSession Sid
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asm_session_sid = 3 [json_name = "asmSessionSid"];</code>
+     * @return The asmSessionSid.
+     */
+    public com.google.protobuf.Int64Value getAsmSessionSid() {
+      if (asmSessionSidBuilder_ == null) {
+        return asmSessionSid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asmSessionSid_;
+      } else {
+        return asmSessionSidBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * the AsmSession Sid
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asm_session_sid = 3 [json_name = "asmSessionSid"];</code>
+     */
+    public Builder setAsmSessionSid(com.google.protobuf.Int64Value value) {
+      if (asmSessionSidBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        asmSessionSid_ = value;
+      } else {
+        asmSessionSidBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the AsmSession Sid
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asm_session_sid = 3 [json_name = "asmSessionSid"];</code>
+     */
+    public Builder setAsmSessionSid(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (asmSessionSidBuilder_ == null) {
+        asmSessionSid_ = builderForValue.build();
+      } else {
+        asmSessionSidBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the AsmSession Sid
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asm_session_sid = 3 [json_name = "asmSessionSid"];</code>
+     */
+    public Builder mergeAsmSessionSid(com.google.protobuf.Int64Value value) {
+      if (asmSessionSidBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          asmSessionSid_ != null &&
+          asmSessionSid_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+          getAsmSessionSidBuilder().mergeFrom(value);
+        } else {
+          asmSessionSid_ = value;
+        }
+      } else {
+        asmSessionSidBuilder_.mergeFrom(value);
+      }
+      if (asmSessionSid_ != null) {
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * the AsmSession Sid
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asm_session_sid = 3 [json_name = "asmSessionSid"];</code>
+     */
+    public Builder clearAsmSessionSid() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      asmSessionSid_ = null;
+      if (asmSessionSidBuilder_ != null) {
+        asmSessionSidBuilder_.dispose();
+        asmSessionSidBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the AsmSession Sid
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asm_session_sid = 3 [json_name = "asmSessionSid"];</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getAsmSessionSidBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getAsmSessionSidFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * the AsmSession Sid
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asm_session_sid = 3 [json_name = "asmSessionSid"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getAsmSessionSidOrBuilder() {
+      if (asmSessionSidBuilder_ != null) {
+        return asmSessionSidBuilder_.getMessageOrBuilder();
+      } else {
+        return asmSessionSid_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : asmSessionSid_;
+      }
+    }
+    /**
+     * <pre>
+     * the AsmSession Sid
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asm_session_sid = 3 [json_name = "asmSessionSid"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getAsmSessionSidFieldBuilder() {
+      if (asmSessionSidBuilder_ == null) {
+        asmSessionSidBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getAsmSessionSid(),
+                getParentForChildren(),
+                isClean());
+        asmSessionSid_ = null;
+      }
+      return asmSessionSidBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
