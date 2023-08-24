@@ -97,4 +97,24 @@ public interface OmnichannelManagerTextMessageEventOrBuilder extends
    * <code>.google.protobuf.Int64Value asm_session_sid = 6 [json_name = "asmSessionSid"];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getAsmSessionSidOrBuilder();
+
+  /**
+   * <pre>
+   * user id
+   * </pre>
+   *
+   * <code>string user_id = 7 [json_name = "userId"];</code>
+   * @return The userId.
+   */
+  java.lang.String getUserId();
+  /**
+   * <pre>
+   * user id
+   * </pre>
+   *
+   * <code>string user_id = 7 [json_name = "userId"];</code>
+   * @return The bytes for userId.
+   */
+  com.google.protobuf.ByteString
+      getUserIdBytes();
 }

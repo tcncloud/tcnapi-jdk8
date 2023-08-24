@@ -89,4 +89,14 @@ java.lang.String defaultValue);
    */
   java.lang.String getCollectedDataOrThrow(
       java.lang.String key);
+
+  /**
+   * <pre>
+   * asm session sid
+   * </pre>
+   *
+   * <code>int64 asm_session_sid = 4 [json_name = "asmSessionSid"];</code>
+   * @return The asmSessionSid.
+   */
+  long getAsmSessionSid();
 }
