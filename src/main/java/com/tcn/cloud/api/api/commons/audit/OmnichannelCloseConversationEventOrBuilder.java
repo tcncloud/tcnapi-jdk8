@@ -87,4 +87,24 @@ public interface OmnichannelCloseConversationEventOrBuilder extends
    * <code>.google.protobuf.Int64Value asm_session_sid = 3 [json_name = "asmSessionSid"];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getAsmSessionSidOrBuilder();
+
+  /**
+   * <pre>
+   * the id of the agent
+   * </pre>
+   *
+   * <code>string user_id = 4 [json_name = "userId"];</code>
+   * @return The userId.
+   */
+  java.lang.String getUserId();
+  /**
+   * <pre>
+   * the id of the agent
+   * </pre>
+   *
+   * <code>string user_id = 4 [json_name = "userId"];</code>
+   * @return The bytes for userId.
+   */
+  com.google.protobuf.ByteString
+      getUserIdBytes();
 }
