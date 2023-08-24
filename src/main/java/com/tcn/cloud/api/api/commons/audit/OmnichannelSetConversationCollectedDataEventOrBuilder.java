@@ -104,37 +104,10 @@ public interface OmnichannelSetConversationCollectedDataEventOrBuilder extends
 
   /**
    * <pre>
-   * conversation this message belongs to
-   * </pre>
-   *
-   * <code>.api.commons.OmniConversation conversation = 6 [json_name = "conversation"];</code>
-   * @return Whether the conversation field is set.
-   */
-  boolean hasConversation();
-  /**
-   * <pre>
-   * conversation this message belongs to
-   * </pre>
-   *
-   * <code>.api.commons.OmniConversation conversation = 6 [json_name = "conversation"];</code>
-   * @return The conversation.
-   */
-  com.tcn.cloud.api.api.commons.OmniConversation getConversation();
-  /**
-   * <pre>
-   * conversation this message belongs to
-   * </pre>
-   *
-   * <code>.api.commons.OmniConversation conversation = 6 [json_name = "conversation"];</code>
-   */
-  com.tcn.cloud.api.api.commons.OmniConversationOrBuilder getConversationOrBuilder();
-
-  /**
-   * <pre>
    * the AsmSession Sid
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value asm_session_sid = 7 [json_name = "asmSessionSid"];</code>
+   * <code>.google.protobuf.Int64Value asm_session_sid = 6 [json_name = "asmSessionSid"];</code>
    * @return Whether the asmSessionSid field is set.
    */
   boolean hasAsmSessionSid();
@@ -143,7 +116,7 @@ public interface OmnichannelSetConversationCollectedDataEventOrBuilder extends
    * the AsmSession Sid
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value asm_session_sid = 7 [json_name = "asmSessionSid"];</code>
+   * <code>.google.protobuf.Int64Value asm_session_sid = 6 [json_name = "asmSessionSid"];</code>
    * @return The asmSessionSid.
    */
   com.google.protobuf.Int64Value getAsmSessionSid();
@@ -152,7 +125,7 @@ public interface OmnichannelSetConversationCollectedDataEventOrBuilder extends
    * the AsmSession Sid
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value asm_session_sid = 7 [json_name = "asmSessionSid"];</code>
+   * <code>.google.protobuf.Int64Value asm_session_sid = 6 [json_name = "asmSessionSid"];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getAsmSessionSidOrBuilder();
 }

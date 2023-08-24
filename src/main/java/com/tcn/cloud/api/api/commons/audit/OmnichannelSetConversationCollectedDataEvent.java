@@ -198,64 +198,26 @@ private static final long serialVersionUID = 0L;
     return collectedData_ == null ? com.tcn.cloud.api.api.commons.ConversationCollectedData.getDefaultInstance() : collectedData_;
   }
 
-  public static final int CONVERSATION_FIELD_NUMBER = 6;
-  private com.tcn.cloud.api.api.commons.OmniConversation conversation_;
-  /**
-   * <pre>
-   * conversation this message belongs to
-   * </pre>
-   *
-   * <code>.api.commons.OmniConversation conversation = 6 [json_name = "conversation"];</code>
-   * @return Whether the conversation field is set.
-   */
-  @java.lang.Override
-  public boolean hasConversation() {
-    return ((bitField0_ & 0x00000002) != 0);
-  }
-  /**
-   * <pre>
-   * conversation this message belongs to
-   * </pre>
-   *
-   * <code>.api.commons.OmniConversation conversation = 6 [json_name = "conversation"];</code>
-   * @return The conversation.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.OmniConversation getConversation() {
-    return conversation_ == null ? com.tcn.cloud.api.api.commons.OmniConversation.getDefaultInstance() : conversation_;
-  }
-  /**
-   * <pre>
-   * conversation this message belongs to
-   * </pre>
-   *
-   * <code>.api.commons.OmniConversation conversation = 6 [json_name = "conversation"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.OmniConversationOrBuilder getConversationOrBuilder() {
-    return conversation_ == null ? com.tcn.cloud.api.api.commons.OmniConversation.getDefaultInstance() : conversation_;
-  }
-
-  public static final int ASM_SESSION_SID_FIELD_NUMBER = 7;
+  public static final int ASM_SESSION_SID_FIELD_NUMBER = 6;
   private com.google.protobuf.Int64Value asmSessionSid_;
   /**
    * <pre>
    * the AsmSession Sid
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value asm_session_sid = 7 [json_name = "asmSessionSid"];</code>
+   * <code>.google.protobuf.Int64Value asm_session_sid = 6 [json_name = "asmSessionSid"];</code>
    * @return Whether the asmSessionSid field is set.
    */
   @java.lang.Override
   public boolean hasAsmSessionSid() {
-    return ((bitField0_ & 0x00000004) != 0);
+    return ((bitField0_ & 0x00000002) != 0);
   }
   /**
    * <pre>
    * the AsmSession Sid
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value asm_session_sid = 7 [json_name = "asmSessionSid"];</code>
+   * <code>.google.protobuf.Int64Value asm_session_sid = 6 [json_name = "asmSessionSid"];</code>
    * @return The asmSessionSid.
    */
   @java.lang.Override
@@ -267,7 +229,7 @@ private static final long serialVersionUID = 0L;
    * the AsmSession Sid
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value asm_session_sid = 7 [json_name = "asmSessionSid"];</code>
+   * <code>.google.protobuf.Int64Value asm_session_sid = 6 [json_name = "asmSessionSid"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getAsmSessionSidOrBuilder() {
@@ -304,10 +266,7 @@ private static final long serialVersionUID = 0L;
       output.writeMessage(5, getCollectedData());
     }
     if (((bitField0_ & 0x00000002) != 0)) {
-      output.writeMessage(6, getConversation());
-    }
-    if (((bitField0_ & 0x00000004) != 0)) {
-      output.writeMessage(7, getAsmSessionSid());
+      output.writeMessage(6, getAsmSessionSid());
     }
     getUnknownFields().writeTo(output);
   }
@@ -339,11 +298,7 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, getConversation());
-    }
-    if (((bitField0_ & 0x00000004) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(7, getAsmSessionSid());
+        .computeMessageSize(6, getAsmSessionSid());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -370,11 +325,6 @@ private static final long serialVersionUID = 0L;
     if (hasCollectedData()) {
       if (!getCollectedData()
           .equals(other.getCollectedData())) return false;
-    }
-    if (hasConversation() != other.hasConversation()) return false;
-    if (hasConversation()) {
-      if (!getConversation()
-          .equals(other.getConversation())) return false;
     }
     if (hasAsmSessionSid() != other.hasAsmSessionSid()) return false;
     if (hasAsmSessionSid()) {
@@ -404,10 +354,6 @@ private static final long serialVersionUID = 0L;
     if (hasCollectedData()) {
       hash = (37 * hash) + COLLECTED_DATA_FIELD_NUMBER;
       hash = (53 * hash) + getCollectedData().hashCode();
-    }
-    if (hasConversation()) {
-      hash = (37 * hash) + CONVERSATION_FIELD_NUMBER;
-      hash = (53 * hash) + getConversation().hashCode();
     }
     if (hasAsmSessionSid()) {
       hash = (37 * hash) + ASM_SESSION_SID_FIELD_NUMBER;
@@ -548,7 +494,6 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
         getCollectedDataFieldBuilder();
-        getConversationFieldBuilder();
         getAsmSessionSidFieldBuilder();
       }
     }
@@ -564,11 +509,6 @@ private static final long serialVersionUID = 0L;
       if (collectedDataBuilder_ != null) {
         collectedDataBuilder_.dispose();
         collectedDataBuilder_ = null;
-      }
-      conversation_ = null;
-      if (conversationBuilder_ != null) {
-        conversationBuilder_.dispose();
-        conversationBuilder_ = null;
       }
       asmSessionSid_ = null;
       if (asmSessionSidBuilder_ != null) {
@@ -628,16 +568,10 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.conversation_ = conversationBuilder_ == null
-            ? conversation_
-            : conversationBuilder_.build();
-        to_bitField0_ |= 0x00000002;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.asmSessionSid_ = asmSessionSidBuilder_ == null
             ? asmSessionSid_
             : asmSessionSidBuilder_.build();
-        to_bitField0_ |= 0x00000004;
+        to_bitField0_ |= 0x00000002;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -703,9 +637,6 @@ private static final long serialVersionUID = 0L;
       if (other.hasCollectedData()) {
         mergeCollectedData(other.getCollectedData());
       }
-      if (other.hasConversation()) {
-        mergeConversation(other.getConversation());
-      }
       if (other.hasAsmSessionSid()) {
         mergeAsmSessionSid(other.getAsmSessionSid());
       }
@@ -764,18 +695,11 @@ private static final long serialVersionUID = 0L;
             } // case 42
             case 50: {
               input.readMessage(
-                  getConversationFieldBuilder().getBuilder(),
+                  getAsmSessionSidFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000020;
               break;
             } // case 50
-            case 58: {
-              input.readMessage(
-                  getAsmSessionSidFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1232,163 +1156,6 @@ private static final long serialVersionUID = 0L;
       return collectedDataBuilder_;
     }
 
-    private com.tcn.cloud.api.api.commons.OmniConversation conversation_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.OmniConversation, com.tcn.cloud.api.api.commons.OmniConversation.Builder, com.tcn.cloud.api.api.commons.OmniConversationOrBuilder> conversationBuilder_;
-    /**
-     * <pre>
-     * conversation this message belongs to
-     * </pre>
-     *
-     * <code>.api.commons.OmniConversation conversation = 6 [json_name = "conversation"];</code>
-     * @return Whether the conversation field is set.
-     */
-    public boolean hasConversation() {
-      return ((bitField0_ & 0x00000020) != 0);
-    }
-    /**
-     * <pre>
-     * conversation this message belongs to
-     * </pre>
-     *
-     * <code>.api.commons.OmniConversation conversation = 6 [json_name = "conversation"];</code>
-     * @return The conversation.
-     */
-    public com.tcn.cloud.api.api.commons.OmniConversation getConversation() {
-      if (conversationBuilder_ == null) {
-        return conversation_ == null ? com.tcn.cloud.api.api.commons.OmniConversation.getDefaultInstance() : conversation_;
-      } else {
-        return conversationBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * conversation this message belongs to
-     * </pre>
-     *
-     * <code>.api.commons.OmniConversation conversation = 6 [json_name = "conversation"];</code>
-     */
-    public Builder setConversation(com.tcn.cloud.api.api.commons.OmniConversation value) {
-      if (conversationBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        conversation_ = value;
-      } else {
-        conversationBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * conversation this message belongs to
-     * </pre>
-     *
-     * <code>.api.commons.OmniConversation conversation = 6 [json_name = "conversation"];</code>
-     */
-    public Builder setConversation(
-        com.tcn.cloud.api.api.commons.OmniConversation.Builder builderForValue) {
-      if (conversationBuilder_ == null) {
-        conversation_ = builderForValue.build();
-      } else {
-        conversationBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * conversation this message belongs to
-     * </pre>
-     *
-     * <code>.api.commons.OmniConversation conversation = 6 [json_name = "conversation"];</code>
-     */
-    public Builder mergeConversation(com.tcn.cloud.api.api.commons.OmniConversation value) {
-      if (conversationBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
-          conversation_ != null &&
-          conversation_ != com.tcn.cloud.api.api.commons.OmniConversation.getDefaultInstance()) {
-          getConversationBuilder().mergeFrom(value);
-        } else {
-          conversation_ = value;
-        }
-      } else {
-        conversationBuilder_.mergeFrom(value);
-      }
-      if (conversation_ != null) {
-        bitField0_ |= 0x00000020;
-        onChanged();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * conversation this message belongs to
-     * </pre>
-     *
-     * <code>.api.commons.OmniConversation conversation = 6 [json_name = "conversation"];</code>
-     */
-    public Builder clearConversation() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      conversation_ = null;
-      if (conversationBuilder_ != null) {
-        conversationBuilder_.dispose();
-        conversationBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * conversation this message belongs to
-     * </pre>
-     *
-     * <code>.api.commons.OmniConversation conversation = 6 [json_name = "conversation"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.OmniConversation.Builder getConversationBuilder() {
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return getConversationFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * conversation this message belongs to
-     * </pre>
-     *
-     * <code>.api.commons.OmniConversation conversation = 6 [json_name = "conversation"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.OmniConversationOrBuilder getConversationOrBuilder() {
-      if (conversationBuilder_ != null) {
-        return conversationBuilder_.getMessageOrBuilder();
-      } else {
-        return conversation_ == null ?
-            com.tcn.cloud.api.api.commons.OmniConversation.getDefaultInstance() : conversation_;
-      }
-    }
-    /**
-     * <pre>
-     * conversation this message belongs to
-     * </pre>
-     *
-     * <code>.api.commons.OmniConversation conversation = 6 [json_name = "conversation"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.OmniConversation, com.tcn.cloud.api.api.commons.OmniConversation.Builder, com.tcn.cloud.api.api.commons.OmniConversationOrBuilder> 
-        getConversationFieldBuilder() {
-      if (conversationBuilder_ == null) {
-        conversationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.OmniConversation, com.tcn.cloud.api.api.commons.OmniConversation.Builder, com.tcn.cloud.api.api.commons.OmniConversationOrBuilder>(
-                getConversation(),
-                getParentForChildren(),
-                isClean());
-        conversation_ = null;
-      }
-      return conversationBuilder_;
-    }
-
     private com.google.protobuf.Int64Value asmSessionSid_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asmSessionSidBuilder_;
@@ -1397,18 +1164,18 @@ private static final long serialVersionUID = 0L;
      * the AsmSession Sid
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value asm_session_sid = 7 [json_name = "asmSessionSid"];</code>
+     * <code>.google.protobuf.Int64Value asm_session_sid = 6 [json_name = "asmSessionSid"];</code>
      * @return Whether the asmSessionSid field is set.
      */
     public boolean hasAsmSessionSid() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
      * the AsmSession Sid
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value asm_session_sid = 7 [json_name = "asmSessionSid"];</code>
+     * <code>.google.protobuf.Int64Value asm_session_sid = 6 [json_name = "asmSessionSid"];</code>
      * @return The asmSessionSid.
      */
     public com.google.protobuf.Int64Value getAsmSessionSid() {
@@ -1423,7 +1190,7 @@ private static final long serialVersionUID = 0L;
      * the AsmSession Sid
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value asm_session_sid = 7 [json_name = "asmSessionSid"];</code>
+     * <code>.google.protobuf.Int64Value asm_session_sid = 6 [json_name = "asmSessionSid"];</code>
      */
     public Builder setAsmSessionSid(com.google.protobuf.Int64Value value) {
       if (asmSessionSidBuilder_ == null) {
@@ -1434,7 +1201,7 @@ private static final long serialVersionUID = 0L;
       } else {
         asmSessionSidBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1443,7 +1210,7 @@ private static final long serialVersionUID = 0L;
      * the AsmSession Sid
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value asm_session_sid = 7 [json_name = "asmSessionSid"];</code>
+     * <code>.google.protobuf.Int64Value asm_session_sid = 6 [json_name = "asmSessionSid"];</code>
      */
     public Builder setAsmSessionSid(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1452,7 +1219,7 @@ private static final long serialVersionUID = 0L;
       } else {
         asmSessionSidBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1461,11 +1228,11 @@ private static final long serialVersionUID = 0L;
      * the AsmSession Sid
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value asm_session_sid = 7 [json_name = "asmSessionSid"];</code>
+     * <code>.google.protobuf.Int64Value asm_session_sid = 6 [json_name = "asmSessionSid"];</code>
      */
     public Builder mergeAsmSessionSid(com.google.protobuf.Int64Value value) {
       if (asmSessionSidBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0) &&
+        if (((bitField0_ & 0x00000020) != 0) &&
           asmSessionSid_ != null &&
           asmSessionSid_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
           getAsmSessionSidBuilder().mergeFrom(value);
@@ -1476,7 +1243,7 @@ private static final long serialVersionUID = 0L;
         asmSessionSidBuilder_.mergeFrom(value);
       }
       if (asmSessionSid_ != null) {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       return this;
@@ -1486,10 +1253,10 @@ private static final long serialVersionUID = 0L;
      * the AsmSession Sid
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value asm_session_sid = 7 [json_name = "asmSessionSid"];</code>
+     * <code>.google.protobuf.Int64Value asm_session_sid = 6 [json_name = "asmSessionSid"];</code>
      */
     public Builder clearAsmSessionSid() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000020);
       asmSessionSid_ = null;
       if (asmSessionSidBuilder_ != null) {
         asmSessionSidBuilder_.dispose();
@@ -1503,10 +1270,10 @@ private static final long serialVersionUID = 0L;
      * the AsmSession Sid
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value asm_session_sid = 7 [json_name = "asmSessionSid"];</code>
+     * <code>.google.protobuf.Int64Value asm_session_sid = 6 [json_name = "asmSessionSid"];</code>
      */
     public com.google.protobuf.Int64Value.Builder getAsmSessionSidBuilder() {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       onChanged();
       return getAsmSessionSidFieldBuilder().getBuilder();
     }
@@ -1515,7 +1282,7 @@ private static final long serialVersionUID = 0L;
      * the AsmSession Sid
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value asm_session_sid = 7 [json_name = "asmSessionSid"];</code>
+     * <code>.google.protobuf.Int64Value asm_session_sid = 6 [json_name = "asmSessionSid"];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getAsmSessionSidOrBuilder() {
       if (asmSessionSidBuilder_ != null) {
@@ -1530,7 +1297,7 @@ private static final long serialVersionUID = 0L;
      * the AsmSession Sid
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value asm_session_sid = 7 [json_name = "asmSessionSid"];</code>
+     * <code>.google.protobuf.Int64Value asm_session_sid = 6 [json_name = "asmSessionSid"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
