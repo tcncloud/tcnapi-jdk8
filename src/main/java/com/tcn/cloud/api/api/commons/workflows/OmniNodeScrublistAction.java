@@ -4,9 +4,9 @@
 package com.tcn.cloud.api.api.commons.workflows;
 
 /**
- * Protobuf enum {@code api.commons.workflows.ScrublistAction}
+ * Protobuf enum {@code api.commons.workflows.OmniNodeScrublistAction}
  */
-public enum ScrublistAction
+public enum OmniNodeScrublistAction
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <code>ADD = 0;</code>
@@ -43,7 +43,7 @@ public enum ScrublistAction
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static ScrublistAction valueOf(int value) {
+  public static OmniNodeScrublistAction valueOf(int value) {
     return forNumber(value);
   }
 
@@ -51,7 +51,7 @@ public enum ScrublistAction
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static ScrublistAction forNumber(int value) {
+  public static OmniNodeScrublistAction forNumber(int value) {
     switch (value) {
       case 0: return ADD;
       case 1: return REMOVE;
@@ -59,15 +59,15 @@ public enum ScrublistAction
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<ScrublistAction>
+  public static com.google.protobuf.Internal.EnumLiteMap<OmniNodeScrublistAction>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      ScrublistAction> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<ScrublistAction>() {
-          public ScrublistAction findValueByNumber(int number) {
-            return ScrublistAction.forNumber(number);
+      OmniNodeScrublistAction> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<OmniNodeScrublistAction>() {
+          public OmniNodeScrublistAction findValueByNumber(int number) {
+            return OmniNodeScrublistAction.forNumber(number);
           }
         };
 
@@ -88,9 +88,9 @@ public enum ScrublistAction
     return com.tcn.cloud.api.api.commons.workflows.OmniProto.getDescriptor().getEnumTypes().get(0);
   }
 
-  private static final ScrublistAction[] VALUES = values();
+  private static final OmniNodeScrublistAction[] VALUES = values();
 
-  public static ScrublistAction valueOf(
+  public static OmniNodeScrublistAction valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -104,10 +104,10 @@ public enum ScrublistAction
 
   private final int value;
 
-  private ScrublistAction(int value) {
+  private OmniNodeScrublistAction(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:api.commons.workflows.ScrublistAction)
+  // @@protoc_insertion_point(enum_scope:api.commons.workflows.OmniNodeScrublistAction)
 }
 

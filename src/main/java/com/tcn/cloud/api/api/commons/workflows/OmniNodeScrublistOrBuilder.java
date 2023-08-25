@@ -8,13 +8,13 @@ public interface OmniNodeScrublistOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.commons.workflows.ScrublistAction action = 1 [json_name = "action"];</code>
+   * <code>.api.commons.workflows.OmniNodeScrublistAction action = 1 [json_name = "action"];</code>
    * @return The enum numeric value on the wire for action.
    */
   int getActionValue();
   /**
-   * <code>.api.commons.workflows.ScrublistAction action = 1 [json_name = "action"];</code>
+   * <code>.api.commons.workflows.OmniNodeScrublistAction action = 1 [json_name = "action"];</code>
    * @return The action.
    */
-  com.tcn.cloud.api.api.commons.workflows.ScrublistAction getAction();
+  com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublistAction getAction();
 }

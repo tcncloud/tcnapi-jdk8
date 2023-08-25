@@ -74,16 +74,16 @@ public final class OmniProto {
       "dy\030\003 \001(\tR\004body\022M\n\007headers\030\004 \003(\01323.api.co" +
       "mmons.workflows.OmniNodeWebhook.HeadersE" +
       "ntryR\007headers\032:\n\014HeadersEntry\022\020\n\003key\030\001 \001" +
-      "(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"S\n\021Omn" +
-      "iNodeScrublist\022>\n\006action\030\001 \001(\0162&.api.com" +
-      "mons.workflows.ScrublistActionR\006action\"\031" +
-      "\n\027OmniNodeEndConversation*&\n\017ScrublistAc" +
-      "tion\022\007\n\003ADD\020\000\022\n\n\006REMOVE\020\001B\252\001\n\'com.tcn.cl" +
-      "oud.api.api.commons.workflowsB\tOmniProto" +
-      "P\001\242\002\003ACW\252\002\025Api.Commons.Workflows\312\002\025Api\\C" +
-      "ommons\\Workflows\342\002!Api\\Commons\\Workflows" +
-      "\\GPBMetadata\352\002\027Api::Commons::Workflowsb\006" +
-      "proto3"
+      "(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"[\n\021Omn" +
+      "iNodeScrublist\022F\n\006action\030\001 \001(\0162..api.com" +
+      "mons.workflows.OmniNodeScrublistActionR\006" +
+      "action\"\031\n\027OmniNodeEndConversation*.\n\027Omn" +
+      "iNodeScrublistAction\022\007\n\003ADD\020\000\022\n\n\006REMOVE\020" +
+      "\001B\252\001\n\'com.tcn.cloud.api.api.commons.work" +
+      "flowsB\tOmniProtoP\001\242\002\003ACW\252\002\025Api.Commons.W" +
+      "orkflows\312\002\025Api\\Commons\\Workflows\342\002!Api\\C" +
+      "ommons\\Workflows\\GPBMetadata\352\002\027Api::Comm" +
+      "ons::Workflowsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

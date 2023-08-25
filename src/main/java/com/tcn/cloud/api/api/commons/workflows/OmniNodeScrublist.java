@@ -46,19 +46,19 @@ private static final long serialVersionUID = 0L;
   public static final int ACTION_FIELD_NUMBER = 1;
   private int action_ = 0;
   /**
-   * <code>.api.commons.workflows.ScrublistAction action = 1 [json_name = "action"];</code>
+   * <code>.api.commons.workflows.OmniNodeScrublistAction action = 1 [json_name = "action"];</code>
    * @return The enum numeric value on the wire for action.
    */
   @java.lang.Override public int getActionValue() {
     return action_;
   }
   /**
-   * <code>.api.commons.workflows.ScrublistAction action = 1 [json_name = "action"];</code>
+   * <code>.api.commons.workflows.OmniNodeScrublistAction action = 1 [json_name = "action"];</code>
    * @return The action.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.workflows.ScrublistAction getAction() {
-    com.tcn.cloud.api.api.commons.workflows.ScrublistAction result = com.tcn.cloud.api.api.commons.workflows.ScrublistAction.forNumber(action_);
-    return result == null ? com.tcn.cloud.api.api.commons.workflows.ScrublistAction.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublistAction getAction() {
+    com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublistAction result = com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublistAction.forNumber(action_);
+    return result == null ? com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublistAction.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -75,7 +75,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (action_ != com.tcn.cloud.api.api.commons.workflows.ScrublistAction.ADD.getNumber()) {
+    if (action_ != com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublistAction.ADD.getNumber()) {
       output.writeEnum(1, action_);
     }
     getUnknownFields().writeTo(output);
@@ -87,7 +87,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (action_ != com.tcn.cloud.api.api.commons.workflows.ScrublistAction.ADD.getNumber()) {
+    if (action_ != com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublistAction.ADD.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, action_);
     }
@@ -391,14 +391,14 @@ private static final long serialVersionUID = 0L;
 
     private int action_ = 0;
     /**
-     * <code>.api.commons.workflows.ScrublistAction action = 1 [json_name = "action"];</code>
+     * <code>.api.commons.workflows.OmniNodeScrublistAction action = 1 [json_name = "action"];</code>
      * @return The enum numeric value on the wire for action.
      */
     @java.lang.Override public int getActionValue() {
       return action_;
     }
     /**
-     * <code>.api.commons.workflows.ScrublistAction action = 1 [json_name = "action"];</code>
+     * <code>.api.commons.workflows.OmniNodeScrublistAction action = 1 [json_name = "action"];</code>
      * @param value The enum numeric value on the wire for action to set.
      * @return This builder for chaining.
      */
@@ -409,20 +409,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.workflows.ScrublistAction action = 1 [json_name = "action"];</code>
+     * <code>.api.commons.workflows.OmniNodeScrublistAction action = 1 [json_name = "action"];</code>
      * @return The action.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.workflows.ScrublistAction getAction() {
-      com.tcn.cloud.api.api.commons.workflows.ScrublistAction result = com.tcn.cloud.api.api.commons.workflows.ScrublistAction.forNumber(action_);
-      return result == null ? com.tcn.cloud.api.api.commons.workflows.ScrublistAction.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublistAction getAction() {
+      com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublistAction result = com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublistAction.forNumber(action_);
+      return result == null ? com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublistAction.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api.commons.workflows.ScrublistAction action = 1 [json_name = "action"];</code>
+     * <code>.api.commons.workflows.OmniNodeScrublistAction action = 1 [json_name = "action"];</code>
      * @param value The action to set.
      * @return This builder for chaining.
      */
-    public Builder setAction(com.tcn.cloud.api.api.commons.workflows.ScrublistAction value) {
+    public Builder setAction(com.tcn.cloud.api.api.commons.workflows.OmniNodeScrublistAction value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -432,7 +432,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.workflows.ScrublistAction action = 1 [json_name = "action"];</code>
+     * <code>.api.commons.workflows.OmniNodeScrublistAction action = 1 [json_name = "action"];</code>
      * @return This builder for chaining.
      */
     public Builder clearAction() {
